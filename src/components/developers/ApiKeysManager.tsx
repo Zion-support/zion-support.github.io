@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function ApiKeysManager() {
   const { 
     keys,
@@ -9,7 +7,6 @@ export function ApiKeysManager() {
     createApiKey, 
     regenerateApiKey, 
     revokeApiKey,
-=======
 import { format } from "date-fns",
 import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",
 
@@ -39,7 +36,7 @@ export function ApiKeysManager() {
   const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),
   const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null),
   
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   // Create key form state
   const [keyName, setKeyName] = useState(""),
   const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),
@@ -47,8 +44,7 @@ export function ApiKeysManager() {
   // Load keys on mount
   useState(() => {
     fetchApiKeys()
-<<<<<<< HEAD
-=======
+pr-12325
 keys,
 
     loading, 
@@ -71,7 +67,6 @@ keys,
     if (keyName.trim() === '' || selectedScopes.length === 0) return;
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     await createApiKey(keyName, selectedScopes)
     setShowCreateDialog(false)
     setKeyName('')
@@ -82,14 +77,11 @@ keys,
     fetchApiKeys()
   })
   const handleCreateKey = async () => {
-<<<<<<< HEAD
-=======
 
 
     if (keyName.trim() === "" || selectedScopes.length === 0) return;
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     await createApiKey(keyName, selectedScopes)
     setShowCreateDialog(false)
     setKeyName("")
@@ -155,12 +147,16 @@ function ApiKeysManager() {
   } = useApiKeys ();
   const [showCreateDialog, setShowCreateDialog] = useState (false);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState < string | null>(
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState < string | null>()
+pr-12325
     null);
   const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<;
     string | null;
   >(null);
   // Create key form state;
   const [key_name, setKeyName] = useState ('');
+  const [key_name, setKeyName] = useState ();
+pr-12325
   const [selected_scopes, setSelectedScopes] = useState < ApiKeyScope[]>([]);
   // Load keys on mount;
   useState (() => {
@@ -173,6 +169,13 @@ function ApiKeysManager() {
     await createApiKey (key_name, selected_scopes);
     setShowCreateDialog (false);
     setKeyName ('');
+    if (===  || selected_scopes.length === 0) return) {
+  $2;
+}
+    await createApiKey (key_name, selected_scopes);
+    setShowCreateDialog (false);
+    setKeyName ();
+pr-12325
     setSelectedScopes ([]) }
   const handleRegenerateKey = async (key_id: string) => {
     await regenerateApiKey (key_id);
@@ -187,16 +190,14 @@ function ApiKeysManager() {
     setShowCreateDialog (false);
     setKeyName ("");
     setSelectedScopes ([]);
-<<<<<<< HEAD
   }
   const handleRegenerateKey = async (keyId: string) => {
     await regenerateApiKey(keyId)
     setShowRegenerateConfirm(null)
-=======
   }),
   
   const handleCreateKey = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const handleRevokeKey = async (keyId: string) => {
     await revokeApiKey(keyId)
     setShowDeleteConfirm(null)
@@ -215,11 +216,16 @@ function ApiKeysManager() {
     label: string
     description: string
   }[] = [
-=======
 
   }
   const handleRegenerateKey = async (key_id: string) => {
     await regenerateApiKey (key_id);
+    if (=== "" || selected_scopes.length === 0) return) {"
+    setShowCreateDialog (false);"
+    setKeyName ("");"
+    setSelectedScopes ([]);
+
+pr-12325
     setShowRegenerateConfirm (null);
   const handleRevokeKey = async (key_id: string) => {
     await revokeApiKey (key_id);
@@ -241,7 +247,6 @@ function ApiKeysManager() {
     description: string;
   }[] = [;
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       value: 'jobs:read'
       label: 'Read Jobs'
@@ -263,14 +268,45 @@ function ApiKeysManager() {
       description: 'Create and manage quotes'
     }
     {
-<<<<<<< HEAD
-=======
 
     if (keyName.trim() === "" || selectedScopes.length === 0) return;
     
     await createApiKey(keyName, selectedScopes);
     setShowCreateDialog(false);
     setKeyName("");
+
+  const handleRegenerateKey = async (key_id: string, ) => {
+    await regenerateApiKey (key_id),
+  },
+  const handleRevokeKey = async (key_id: string, ) => {
+    await revokeApiKey (key_id),
+  // Scope options;
+  const scope_options: {,
+  value: ApiKeyScope;
+    label: string;,
+  description: string;
+  }[] = [;
+
+    {"
+      value: 'jobs:read,
+  label: 'Read Jobs
+      description: 'Access to view job listings
+    {
+      value: 'jobs:write,
+  label: 'Write Jobs
+      description: 'Create and manage job listings
+      value: 'talent:read,
+  label: 'Read Talent
+      description: 'Access to view talent profiles
+      value: 'quotes:write,
+  label: 'Write Quotes
+      description: 'Create and manage quotes
+
+    if (keyName.trim() === "" || selectedScopes.length === 0) return;"
+    await createApiKey(keyName, selectedScopes);
+    setShowCreateDialog(false);"
+    setKeyName("");"]
+pr-12325
     setSelectedScopes([])
   };
 
@@ -278,6 +314,7 @@ function ApiKeysManager() {
     await regenerateApiKey(keyId);
     setShowRegenerateConfirm(null)
   };
+pr-12325
   
   const handleRevokeKey = async (keyId: string) => {
     await revokeApiKey(keyId);
@@ -293,18 +330,27 @@ function ApiKeysManager() {
     { value: 'webhooks:manage', label: 'Manage Webhooks', description: 'Set up and manage webhook endpoints' }],
   // Toggle a scope selection
   const toggleScope = (scope: ApiKeyScope) => {
-<<<<<<< HEAD
     setSelectedScopes(prev => 
+  
+  // Scope options;
+  const scopeOptions: { value: ApiKeyScope, label: string, description: string }[] = ["
+    { value: 'jobs:read', label: 'Read Jobs', description: 'Access to view job listings' },
+    { value: 'jobs:write', label: 'Write Jobs', description: 'Create and manage job listings' },
+    { value: 'talent:read', label: 'Read Talent', description: 'Access to view talent profiles' },
+    { value: 'quotes:write', label: 'Write Quotes', description: 'Create and manage quotes' },']
+    { value: 'webhooks:manage', label: 'Manage Webhooks', description: 'Set up and manage webhook endpoints' }],
+  // Toggle a scope selection;
+  const toggleScope = (scope: ApiKeyScope) => {
+    setSelectedScopes(prev => )
+pr-12325
       prev.includes(scope) 
         ? prev.filter(s => s !== scope) 
         : [...prev, scope]
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     )
   }
   const getExampleCode = (key: string) => {    return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\
   -H "Authorization: Bearer ${key}" \\
-<<<<<<< HEAD
                   <Label>Scopes</Label>
                   <div className="grid gap-2 pt-2">
                     {scopeOptions.map((scope) => (
@@ -324,7 +370,6 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",;
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",;
 import CodeBlock from "./CodeBlock",;
-=======
 
       value: 'webhooks:manage',
       label: 'Manage Webhooks',
@@ -349,7 +394,6 @@ import CodeBlock from "./CodeBlock",;
     setKeyName ('');
     setShowCreateDialog (false);
   }
-=======
     setSelectedScopes(prev =>
       prev.includes(scope) ? prev.filter(s => s !== scope) : [...prev, scope]
     );
@@ -367,7 +411,32 @@ setKeyName('');
     setSelectedScopes([]);
     setShowCreateDialog(false);
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+    )
+  const getExampleCode = (key: string) => {    return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\""
+  -H "Authorization: Bearer ${key}" \\""
+      value: 'webhooks:manage',
+      label: 'Manage Webhooks',
+      description: 'Set up and manage webhook endpoints',
+  ];
+  // Toggle a scope selection;
+  const toggle_scope = (scope: ApiKeyScope) =>: any {
+  // TODO: Implement
+    setSelectedScopes (prev =>;)
+      prev.includes (scope) ? prev.filter (string => s !== scope) : [...prev, scope]);
+  }`;
+  const getExampleCode = (key: string) =>: any {    return `curl -X GET "https://api.ziontechgroup.com / v1 / jobs" \\;""
+  -H "Authorization: Bearer ${key}" \\;""`;
+  -H "Content - Type: application / json"` }"
+  // Reset form when dialog closes;
+  const handleDialogClose = () =>: any {
+  // TODO: Implement
+}"`;
+    setKeyName ();  -H "Content - Type: application / json"`;"
+  // Reset form when dialog closes;
+  // TODO: Implement
+}"
+pr-12325
 
   return (
 
@@ -386,6 +455,7 @@ import {;
   CardTitle,;
 } from '@/components/ui/card';
 import {;
+pr-12325
   Dialog,;
   DialogContent,;
   DialogDescription,;
@@ -399,17 +469,20 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
 import { Badge } from '@/components/ui/badge';
 import {;
+pr-12325
   Popover,;
   PopoverContent,;
   PopoverTrigger,;
 } from '@/components/ui/popover';
 import {;
+pr-12325
   DropdownMenu,;
   DropdownMenuContent,;
   DropdownMenuItem,;
   DropdownMenuTrigger,;
 } from '@/components/ui/dropdown-menu';
 import {;
+pr-12325
   AlertDialog,;
   AlertDialogAction,;
   AlertDialogCancel,;
@@ -421,7 +494,8 @@ import {;
 } from '@/components/ui/alert-dialog';
 
 import CodeBlock from './CodeBlock';
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+import CodeBlock from './CodeBlock';')
+pr-12325
 export function ApiKeysManager() {;
   const {;
     keys,;
@@ -431,7 +505,6 @@ export function ApiKeysManager() {;
     createApiKey,;
     regenerateApiKey,;
     revokeApiKey,;
-<<<<<<< HEAD
     await revokeApiKey(keyId),;
     setShowDeleteConfirm(null);
   },;
@@ -440,7 +513,7 @@ export function ApiKeysManager() {;
         </CardDescription>;
       </CardHeader>;
       <CardContent>;
-=======
+pr-12325
     clearNewApiKey,;
   } = useApiKeys();
 
@@ -610,7 +683,6 @@ export function ApiKeysManager() {;
                         key={scope && scope.value}
                         className='flex items-center space-x-2'>;
                         <Checkbox
-<<<<<<< HEAD
 
                           id={scope && scope.value}                          checked={selectedScopes && selectedScopes.includes(scope && scope.value)}                  <div className="grid gap-2 pt-2">;
                     {scopeOptions && scopeOptions.map((scope,) => (;
@@ -658,7 +730,6 @@ export function ApiKeysManager() {;
   // Load keys on mount
   useState(() => {
     fetchApiKeys()
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }),
   
   const handleCreateKey = async () => {
@@ -667,7 +738,6 @@ export function ApiKeysManager() {;
     await createApiKey(keyName, selectedScopes),
     setShowCreateDialog(false),
     setKeyName(""),
-<<<<<<< HEAD
     setSelectedScopes([]),
     setShowCreateDialog(false)
   },
@@ -714,7 +784,6 @@ export function ApiKeysManager() {;
                 </div>
                 
                 <div className="space-y-2">
-=======
     setSelectedScopes([])
   },
 
@@ -732,34 +801,25 @@ export function ApiKeysManager() {;
   }
   // Scope options
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
                   <Label>Scopes</Label>
                   <div className="grid gap-2 pt-2">
                     {scopeOptions.map((scope) => (
                       <div key={scope.value} className="flex items-center space-x-2">
 
-<<<<<<< HEAD
-=======
                         <Checkbox 
                           id={scope.value} 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
                           id={scope.value}
                           checked={selectedScopes.includes(scope.value)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                           onCheckedChange={() => toggleScope(scope.value)}
                         />
                         <Label
                           htmlFor={scope.value}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                         >
                           {scope.label}
@@ -773,8 +833,6 @@ export function ApiKeysManager() {;
 
 
 
-<<<<<<< HEAD
-=======
 className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'
                         >
                           {scope.label}
@@ -782,21 +840,17 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                             {scope.description}
                           </span>
                         </Label>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>
                     ))}
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
               
               <DialogFooter>
                 <Button variant="outline" onClick={handleDialogClose}>Cancel</Button>
                 <Button onClick={handleCreateKey} disabled={keyName.trim() === "" || selectedScopes.length === 0}>
                   Create Key
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 <DialogFooter>
                 <Button variant='outline' onClick={handleDialogClose}>
                   Cancel
@@ -808,15 +862,12 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                   }
                 >
                   Create Key
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </Button>
               </DialogFooter>
             </DialogContent>
           </Dialog>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
                   </div>;
                 </div>;
@@ -914,7 +965,6 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                 <Button variant="outline" on_click={handleDialogClose}>Cancel</Button>;
                 <Button on_click={handleCreateKey} disabled={key_name.trim () === "" || selected_scopes.length === 0}>;
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 </Button>;
               </DialogFooter>;
             </DialogContent>;
@@ -924,9 +974,8 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
         
         {/* New API Key Alert */}
 
-=======
 {/* New API Key Alert */}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         {newApiKey && (
           <div className="mb-6 p-4 border border-green-800 bg-green-900/30 rounded-md">;
             <div className="flex justify-between items-start mb-2">;
@@ -934,7 +983,6 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                 <Check size={16} className="mr-2 text-green-500" /> New API Key Generated;
               </span>;
               <Button
-<<<<<<< HEAD
 
         
 
@@ -951,14 +999,11 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                 variant="ghost"
                 size="icon"
                 className="h-6 w-6"
-=======
                 variant='ghost'
                 size='icon'
                 className='h-6 w-6'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 onClick={clearNewApiKey}
-<<<<<<< HEAD
-=======
 
 
         {/* API Keys List */}
@@ -983,18 +1028,13 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
 
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               >
                 <X size={14} />
               </Button>
             </div>
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
             <p className="text-sm text-zinc-300 mb-2">
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               This key will only be displayed once. Please save it securely.
             </p>
             <CodeBlock code={newApiKey} className="mb-3" />
@@ -1005,11 +1045,8 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
           </div>
         )}
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         {/* API Keys List */}
         <div className='space-y-4'>
 ;
@@ -1026,7 +1063,6 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
               <p className="text-sm mt-1">Create one to access the Zion APIs.</p>
             </div>
           ) : (
-<<<<<<< HEAD
           {loading ? (
             <div className="text-center py-8 text-zinc-500">Loading API keys...</div>
           ) : keys.length === 0 ? (
@@ -1036,9 +1072,7 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
               <p className="text-sm mt-1">Create one to access the Zion APIs.</p>
             </div>
           ) : (
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             keys.map((key) => (
               <div key={key.id} className="p-4 border border-zinc-800 rounded-lg">
                 <div className="flex items-center justify-between">
@@ -1051,16 +1085,12 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                         {key.is_active ? (
                           <Badge className="bg-green-700 text-white">Active</Badge>
                         ) : (
-<<<<<<< HEAD
                         {key.is_active ? (
                           <Badge className="bg-green-700 text-white">Active</Badge>
                         ) : (
-=======
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                           <Badge variant="secondary" className="bg-red-900 text-white border-red-800">Revoked</Badge>
-=======
 <p className='text-sm text-zinc-300 mb-2'>
               This key will only be displayed once. Please save it securely.
             </p>
@@ -1109,14 +1139,11 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                           >
                             Revoked
                           </Badge>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                         )}
                       </div>
                     </div>
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       <Button
@@ -1131,12 +1158,11 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                       align='end'
                       className='bg-zinc-900 border-zinc-800 text-white'
                     >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       <DropdownMenuItem
                         onClick={() => setShowRegenerateConfirm(key.id)}
                         className='cursor-pointer'
                         disabled={!key.is_active}
-=======
 
                       </div>;
                     </div>;
@@ -1195,7 +1221,6 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                       align='end'
                       className='bg-zinc-900 border-zinc-800 text-white'>;
                       <DropdownMenuItem
-<<<<<<< HEAD
                         onClick={() => setShowRegenerateConfirm(key && key.id)}
                         className='cursor-pointer';
                         disabled={!key && key.is_active}
@@ -1205,24 +1230,19 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                       >;
                         <RefreshCw size={14} className='mr-2' /> Regenerate;
                       </DropdownMenuItem>;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       <DropdownMenuItem
 
 
-=======
                         onClick={() => setShowDeleteConfirm(key.id)}
                         className='cursor-pointer text-red-500'
                         disabled={!key.is_active}
                       >
                         <X size={14} className='mr-2' /> Revoke
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       </DropdownMenuItem>
                     </DropdownMenuContent>
                   </DropdownMenu>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
                 
 
@@ -1250,15 +1270,12 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                   {key && key.scopes.map((scope,) => (;
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     <Badge
                       key = {scope,}
                       variant="secondary"
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
 
 
-<<<<<<< HEAD
-=======
 <div className='mt-3 flex flex-wrap gap-2'>
                   {key.scopes.map(scope => (
                     <Badge
@@ -1266,7 +1283,7 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                       variant='secondary'
                       className='bg-zinc-800 text-zinc-300 hover:bg-zinc-800'
                     >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       {scope}
                     </Badge>
                   ))}
@@ -1281,7 +1298,6 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                       {key.last_used_at
                         ? format(new Date(key.last_used_at), 'MMM d, yyyy')
                         : 'Never'}
-=======
                 
                 <div className="mt-3 flex flex-wrap gap-2">
                   {key.scopes.map((scope) => (
@@ -1327,21 +1343,15 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                         ? format(new Date(key.last_used_at), 'MMM d, yyyy') 
                         : 'Never'}
                     </PopoverTrigger>
-<<<<<<< HEAD
                     <PopoverContent className="bg-zinc-900 border-zinc-800 text-white w-64 p-3">
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       <p className="text-sm mb-1">Last Used</p>
                       <p className="text-xs text-zinc-400">
                         {key.last_used_at
                           ? format(new Date(key.last_used_at), 'MMM d, yyyy HH:mm:ss')
-<<<<<<< HEAD
-=======
 
                           : 'This API key has never been used'}
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
                     <PopoverContent className='bg-zinc-900 border-zinc-800 text-white w-64 p-3'>
                       <p className='text-sm mb-1'>Last Used</p>
                       <p className='text-xs text-zinc-400'>
@@ -1351,14 +1361,11 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                               'MMM d, yyyy HH:mm:ss'
                             )
                           : 'This API key has never been used'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       </p>
                     </PopoverContent>
                   </Popover>
                   {key.expires_at && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
                     </PopoverTrigger>;
                     <PopoverContent className='bg-zinc-900 border-zinc-800 text-white w-64 p-3'>;
@@ -1381,27 +1388,22 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                       Expires: {format(new Date(key && key.expires_at), 'MMM d, yyyy')}
                     </span>                  )}                    <span>Expires: {format(new Date(key && key.expires_at), 'MMM d, yyyy')}</span>;
 
-=======
 <span>
                       Expires: {format(new Date(key.expires_at), 'MMM d, yyyy')}
                     </span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   )}
                 </div>;
               </div>;
             ));
           )}
-<<<<<<< HEAD
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <CardFooter className="justify-between border-t border-zinc-800 py-4">
         <div className="text-xs text-zinc-500">
           Keep your API keys secure. They have the same permissions as your account.
         </div>
         <Button variant="outline" size="sm" onClick={fetchApiKeys}>
-<<<<<<< HEAD
-=======
         </div>
       </CardContent>
 <CardFooter className='justify-between border-t border-zinc-800 py-4'>
@@ -1411,10 +1413,9 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
         </div>
         <Button variant='outline' size='sm' onClick={fetchApiKeys}>
           Refresh
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         </Button>
       </CardFooter>
-=======
 
           Refresh
 
@@ -1438,7 +1439,6 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
       </CardFooter>;
 
       {/* Regenerate Key Confirmation Dialog */}
-<<<<<<< HEAD
 
                           <Badge className="bg - green - 700 text - white">Active</Badge>) : (
                           <Badge variant="secondary" className="bg - red - 900 text - white border - red - 800">Revoked</Badge>)}
@@ -1543,6 +1543,399 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
         </Button>;
       </CardFooter>;
       {/* Regenerate Key Confirmation Dialog */}
+</string>
+    string | null;)
+
+  // Create key form state;
+  const [keyName, setKeyName] = useState();
+  const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]);
+
+    <Card className='bg-zinc-900 border-zinc-800 text-white'>;
+
+      <CardHeader>;
+
+        <CardTitle className='text-xl flex items-center'>;
+
+          <Key className='mr-2' size={20} /> API Keys;
+
+        ;
+        <CardDescription className='text-zinc-400'>;
+
+      <CardContent>;
+
+        <div className='flex justify-between items-center mb-6'>;
+</div>
+          <p className='text-sm text-zinc-400'>;
+</p>
+          </p>;
+          <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>;
+
+            <DialogTrigger asChild>;
+
+              <Button variant='default'>Create New API Key;
+            <DialogContent className='bg-zinc-900 border-zinc-800 text-white'>;
+
+              <DialogHeader>;
+
+                <DialogTitle>Create API Key;
+                <DialogDescription className='text-zinc-400'>;
+
+              <div className='space-y-4 py-4'>;
+                <div className='space-y-2'>;
+                  <Label htmlFor='key-name'>Key Name;
+                  <Input;
+                    id='key-name
+                    value={keyName}
+                    onChange={e => setKeyName(e && e.target.value)}
+
+                </div>;
+                  <Label>Scopes;
+                  <div className='grid gap-2 pt-2'>;
+                      <div;
+                        key={scope && scope.value}
+                        className='flex items-center space-x-2'>;
+                        <Checkbox;
+                          id={scope && scope.value}                          checked={selectedScopes && selectedScopes.includes(scope && scope.value)}                  <div className="grid gap-2 pt-2">;"
+"
+                      <div key={scope && scope.value} className="flex items-center space-x-2">;"
+                          id={scope && scope.value} 
+                          onCheckedChange={() => toggleScope(scope && scope.value)}
+
+                        <Label;
+                          htmlFor={scope && scope.value}"
+                          className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'>;
+
+                          <span className='block text-xs text-zinc-400 mt-1'>;
+</span>
+                          </span>                                                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70";""
+                          <span className="block text-xs text-zinc-400 mt-1">{scope && scope.description}</span>;"
+                          id={scope.value} 
+                          checked={selectedScopes.includes(scope.value)}
+
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),
+  const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null),
+
+                  <Label>Scopes"
+                  <div className="grid gap-2 pt-2">"
+</div>"
+                      <div key={scope.value} className="flex items-center space-x-2">"
+
+                          onCheckedChange={() => toggleScope(scope.value)}
+
+                          htmlFor={scope.value}
+
+
+                          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70""
+                        >
+                          <span className="block text-xs text-zinc-400 mt-1">{scope.description}</span>"
+                        
+
+
+
+                
+              
+            
+          
+
+              <DialogFooter>;
+                <Button variant='outline' onClick={handleDialogClose}>;
+
+                <Button;
+                  onClick={handleCreateKey}
+                  disabled={
+                    keyName && keyName.trim() ===  || selectedScopes && selectedScopes.length === 0;
+                  }>                  Create Key              ;
+
+
+                <Button variant="outline" onClick={handleDialogClose}>Cancel;""
+                <Button onClick={handleCreateKey} disabled={keyName && keyName.trim() === "" || selectedScopes && selectedScopes.length === 0}>;"
+    <Card className='bg - zinc - 900 border - zinc - 800 text - white'>;
+
+
+        <CardTitle className='text - xl flex items - center'>;
+
+          <Key className='mr - 2' size={20} /> API Keys;
+
+        <CardDescription className='text - zinc - 400'>;
+
+
+        <div className='flex justify - between items - center mb - 6'>;
+          <p className='text - sm text - zinc - 400'>;
+
+            <DialogTrigger as_child>;
+
+            <DialogContent className='bg - zinc - 900 border - zinc - 800 text - white'>;
+
+
+                <DialogTitle > Create API Key;
+                <DialogDescription className='text - zinc - 400'>;
+
+              <div className='space - y-4 py - 4'>;
+                <div className='space - y-2'>;
+                  <Label html_for='key - name'>Key Name;
+                    id='key - name';
+                    value={key_name}
+                    on_change={e => setKeyName (e.target.value)}
+
+                  <Label > Scopes;
+                  <div className='grid gap - 2 pt - 2'>;
+                        key={scope.value}
+                        className='flex items - center space - x-2';
+                      >;
+                          id={scope.value}                          checked={selected_scopes.includes (scope.value)}                  <div className="grid gap - 2 pt - 2">;"
+                      <div key={scope.value} className="flex items - center space - x-2">;"
+                          onCheckedChange={() => toggle_scope (scope.value)}
+
+                          html_for={scope.value}"
+                          className='text - sm font - medium leading - none peer - disabled:cursor - not - allowed peer - disabled:opacity - 70';
+
+                          <span className='block text - xs text - zinc - 400 mt - 1'>;
+                          </span>                                                  className="text - sm font - medium leading - none peer - disabled:cursor - not - allowed peer - disabled:opacity - 70";""
+                          <span className="block text - xs text - zinc - 400 mt - 1">{scope.description}</span>;"
+                      </div>))}
+                <Button variant='outline' on_click={handleDialogClose}>;
+
+                  on_click={handleCreateKey}
+                    key_name.trim () ===  || selected_scopes.length === 0;
+                >                  Create Key;
+
+
+                <Button variant="outline" on_click={handleDialogClose}>Cancel;""
+                <Button on_click={handleCreateKey} disabled={key_name.trim () === "" || selected_scopes.length === 0}>;"
+
+        </div>;"
+          <div className="mb-6 p-4 border border-green-800 bg-green-900/30 rounded-md">;"
+            <div className="flex justify-between items-start mb-2">;"
+              <span className="font-medium flex items-center">;"
+</span>"
+                <Check size={16} className="mr-2 text-green-500" /> New API Key Generated;"
+
+              </span>;
+        {/* New API Key Alert */}
+        {newApiKey && ("
+          <div className="mb-6 p-4 border border-green-800 bg-green-900/30 rounded-md">"
+            <div className="flex justify-between items-start mb-2">"
+              <span className="font-medium flex items-center">"
+
+              <Button;"
+                variant="ghost"""
+                size="icon"""
+                className="h-6 w-6""
+                onClick={clearNewApiKey}
+
+
+        {/* API Keys List */}"
+        <div className="space - y-4">;"
+)"
+            <div className="text - center py - 8 text - zinc - 500">Loading API keys...</div>) : keys.length === 0 ? (""
+            <div className="text - center py - 8 text - zinc - 500">;"
+              <Key className="mx - auto mb - 2 opacity - 30" size={24} />;"
+
+              <p > No API keys found.</p>;"
+              <p className="text - sm mt - 1">Create one to access the Zion APIs.</p>;")
+            </div>) : ("
+              <div key={key.id} className="p - 4 border border - zinc - 800 rounded - lg">;"
+                <div className="flex items - center justify - between">;"
+                  <div className="flex items - center">;"
+                    <div>;
+                      <h3 className="font - medium">{key.name}</h3>;""
+                      <div className="flex items - center space - x-2 mt - 1">;"
+                        <span className="text - sm text - zinc - 400 font - mono">{key.key_prefix}••••••••••••</span>;"
+                <X size={14} />
+
+              
+            <p className="text-sm text-zinc-300 mb-2">"
+            </p>"
+            <CodeBlock code={newApiKey} className="mb-3" />"
+            <div className="text-sm text-zinc-400">"
+              <span className="font-medium">Example usage:</span>"
+            </div>)"
+            <CodeBlock code={getExampleCode(newApiKey)} language="bash" />"
+
+        <div className='space-y-4'>
+        <div className="space-y-4">"
+            <div className="text-center py-8 text-zinc-500">Loading API keys...</div>""
+            <div className="text-center py-8 text-zinc-500">"
+              <Key className="mx-auto mb-2 opacity-30" size={24} />"
+
+              <p>No API keys found.</p>"
+              <p className="text-sm mt-1">Create one to access the Zion APIs.</p>"
+              <div key={key.id} className="p-4 border border-zinc-800 rounded-lg">"
+                <div className="flex items-center justify-between">"
+                  <div className="flex items-center">"
+                    <div>
+                      <h3 className="font-medium">{key.name}</h3>""
+                      <div className="flex items-center space-x-2 mt-1">"
+                        <span className="text-sm text-zinc-400 font-mono">{key.key_prefix}••••••••••••</span>""
+                          <Badge className="bg-green-700 text-white">Active""
+                          <Badge variant="secondary" className="bg-red-900 text-white border-red-800">Revoked"
+
+                          <Badge variant="secondary" className="bg-red-900 text-white border-red-800">Revoked;"
+            </p>;"
+            <CodeBlock code={newApiKey} className="mb-3" />;"
+            <div className="text-sm text-zinc-400">;"
+              <span className="font-medium">Example usage:</span>;"
+            <CodeBlock code={getExampleCode(newApiKey)} language="bash" />;"
+
+        <div className="space-y-4">;"
+            <div className="text-center py-8 text-zinc-500">Loading API keys...</div>;""
+            <div className="text-center py-8 text-zinc-500">;"
+              <Key className="mx-auto mb-2 opacity-30" size={24} />;"
+
+              <p>No API keys found.</p>;"
+              <p className="text-sm mt-1">Create one to access the Zion APIs.</p>;"
+              <div key={key && key.id} className="p-4 border border-zinc-800 rounded-lg">;"
+                <div className="flex items-center justify-between">;"
+                  <div className="flex items-center">;"
+                      <h3 className="font-medium">{key && key.name}</h3>;""
+                      <div className="flex items-center space-x-2 mt-1">;"
+                        <span className="text-sm text-zinc-400 font-mono">{key && key.key_prefix}••••••••••••</span>;""
+                          <Badge className="bg-green-700 text-white">Active;""
+                  <DropdownMenu>;
+
+                    <DropdownMenuTrigger asChild>;
+
+
+                        variant='ghost
+                        size='icon
+                        aria-label='More options'>;
+
+                        <MoreVertical size={16} />;
+
+                    <DropdownMenuContent;
+                      align='end
+                      className='bg-zinc-900 border-zinc-800 text-white'>;
+
+                      <DropdownMenuItem;
+                        onClick={() => setShowRegenerateConfirm(key && key.id)}
+
+                        <RefreshCw size={14} className='mr-2' /> Regenerate;
+
+                      
+                    
+                  
+
+                
+
+                <div className="mt-3 flex flex-wrap gap-2">"
+                        <X size={14} className='mr-2' /> Revoke                      ;
+
+                </div>                        <X size={14} className="mr-2" /> Revoke;"
+
+                <div className='mt-3 flex flex-wrap gap-2'>;
+                    <Badge;
+                      key={scope}
+                      variant='secondary
+                      className='bg-zinc-800 text-zinc-300 hover:bg-zinc-800'>                ;
+
+                <div className="mt-3 flex flex-wrap gap-2">;"
+                      key = {scope,}"
+                      variant="secondary"""
+                      className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"""
+
+                      key={scope} "
+                      className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800""
+
+                <div className='mt-3 text-xs text-zinc-500 flex items-center space-x-4'>;
+                  <span>;
+                    <PopoverTrigger className='flex items-center hover:text-zinc-300'>;
+
+                      <Clock size={12} className='mr-1' />;
+
+                
+                <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">"
+                  <span>Created: {format(new Date(key.created_at), 'MMM d, yyyy')}</span>
+                  <Popover>
+
+                    <PopoverTrigger className="flex items-center hover:text-zinc-300">"
+                      <Clock size={12} className="mr-1" />"
+
+                    <PopoverContent className="bg-zinc-900 border-zinc-800 text-white w-64 p-3">"
+                      <p className="text-sm mb-1">Last Used</p>""
+                      <p className="text-xs text-zinc-400">"
+                    
+                  
+                    ;"
+                    <PopoverContent className='bg-zinc-900 border-zinc-800 text-white w-64 p-3'>;
+
+                      <p className='text-sm mb-1'>Last Used</p>;
+                      <p className='text-xs text-zinc-400'>;
+                            )                          : 'This API key has never been used'}                    <PopoverContent className="bg-zinc-900 border-zinc-800 text-white w-64 p-3">;"
+                      <p className="text-sm mb-1">Last Used</p>;""
+                      <p className="text-xs text-zinc-400">;"
+                    </span>                  )}                    <span>Expires: {format(new Date(key && key.expires_at), 'MMM d, yyyy')}</span>;
+      <CardFooter className="justify-between border-t border-zinc-800 py-4">"
+        <div className="text-xs text-zinc-500">"
+        <Button variant="outline" size="sm" onClick={fetchApiKeys}>"
+
+        
+      
+      <CardFooter className='justify-between border-t border-zinc-800 py-4'>;
+
+        <div className='text-xs text-zinc-500'>;
+        <Button variant='outline' size='sm' onClick={fetchApiKeys}>          Refresh      ;
+
+      <CardFooter className="justify-between border-t border-zinc-800 py-4">;"
+        <div className="text-xs text-zinc-500">;"
+        <Button variant="outline" size="sm" onClick={fetchApiKeys}>;"
+
+                          <Badge className="bg - green - 700 text - white">Active) : (")"
+                          <Badge variant="secondary" className="bg - red - 900 text - white border - red - 800">Revoked)}"
+
+                    <DropdownMenuTrigger as_child>;
+
+                        variant='ghost';
+                        size='icon';
+                        aria - label='More options';
+
+
+                      align='end';
+                      className='bg - zinc - 900 border - zinc - 800 text - white';
+
+                        on_click={() => setShowRegenerateConfirm (key.id)}
+
+                        <RefreshCw size={14} className='mr - 2' /> Regenerate;
+
+                        on_click={() => setShowDeleteConfirm (key.id)}
+
+                        <X size={14} className='mr - 2' /> Revoke                      ;
+
+                </div>                        <X size={14} className="mr - 2" /> Revoke;"
+
+                <div className='mt - 3 flex flex - wrap gap - 2'>;
+                      variant='secondary';
+                      className='bg - zinc - 800 text - zinc - 300 hover:bg - zinc - 800'                    >;
+
+                <div className="mt - 3 flex flex - wrap gap - 2">;"
+                      key = {scope, }"
+                      variant="secondary";""
+                      className="bg - zinc - 800 text - zinc - 300 hover:bg - zinc - 800";"
+                      {scope}
+                    ))}
+                <div className='mt - 3 text - xs text - zinc - 500 flex items - center space - x-4'>;
+                    <PopoverTrigger className='flex items - center hover:text - zinc - 300'>;
+
+                      <Clock size={12} className='mr - 1' />;
+
+                    <PopoverContent className='bg - zinc - 900 border - zinc - 800 text - white w - 64 p - 3'>;
+
+                      <p className='text - sm mb - 1'>Last Used</p>;
+                      <p className='text - xs text - zinc - 400'>;
+                              'MMM d, yyyy HH:mm:ss')                          : 'This API key has never been used'}                    <PopoverContent className="bg - zinc - 900 border - zinc - 800 text - white w - 64 p - 3">;"
+                      <p className="text - sm mb - 1">Last Used</p>;""
+                      <p className="text - xs text - zinc - 400">;"
+                    </span>                  )}                    <span > Expires: {format (new Date (key.expires_at), 'MMM d, yyyy')}</span>)}
+              </div>)))}
+      <CardFooter className='justify - between border - t border - zinc - 800 py - 4'>;
+
+        <div className='text - xs text - zinc - 500'>;
+        <Button variant='outline' size='sm' on_click={fetchApiKeys}>          Refresh;
+
+      <CardFooter className="justify - between border - t border - zinc - 800 py - 4">;"
+        <div className="text - xs text - zinc - 500">;"
+        <Button variant="outline" size="sm" on_click={fetchApiKeys}>;"
+
+pr-12325
       <AlertDialog;
         open={showRegenerateConfirm !== null}
         onOpenChange={open => !open && setShowRegenerateConfirm (null)}
@@ -1562,7 +1955,6 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
         open={showRegenerateConfirm !== null} 
         onOpenChange={(open) => !open && setShowRegenerateConfirm(null)}
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       >
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">
           <AlertDialogHeader>
@@ -1579,7 +1971,6 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
             <AlertDialogAction
               onClick={() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
               className="bg-blue-600 hover:bg-blue-700"
-=======
 <AlertDialog
         open={showRegenerateConfirm !== null}
         onOpenChange={open => !open && setShowRegenerateConfirm(null)}
@@ -1601,16 +1992,13 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                 handleRegenerateKey(showRegenerateConfirm)
               }
               className='bg-blue-600 hover:bg-blue-700'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               Regenerate
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       {/* Delete Key Confirmation Dialog */}
 <AlertDialog
         open={showDeleteConfirm !== null}
@@ -1628,7 +2016,7 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
               Cancel
             </AlertDialogCancel>
             <AlertDialogAction
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               onClick={() =>
                 showDeleteConfirm && handleRevokeKey(showDeleteConfirm)
               }
@@ -1640,7 +2028,6 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
         </AlertDialogContent>
       </AlertDialog>
     </Card>
-<<<<<<< HEAD
   )
 }
                 </div>;
@@ -1663,19 +2050,15 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
       <AlertDialog;
         open={showRegenerateConfirm !== null} ;
         onOpenChange={(open) => !open && setShowRegenerateConfirm(null)}
-=======
               className='bg-blue-600 hover:bg-blue-700'            >;
             <AlertDialogAction
               onClick = {() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm),}
               className="bg-blue-600 hover:bg-blue-700";
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       >;
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">;
           <AlertDialogHeader>;
             <AlertDialogTitle>Regenerate API Key?</AlertDialogTitle>;
             <AlertDialogDescription className="text-zinc-400">;
-<<<<<<< HEAD
-=======
 
             <AlertDialogCancel className='bg - transparent text - white hover:bg - zinc - 800 border - zinc - 700'>;
               Cancel;
@@ -1695,30 +2078,24 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
             <AlertDialogTitle > Regenerate API Key?</AlertDialogTitle>;
             <AlertDialogDescription className="text - zinc - 400">;
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               This action will invalidate the existing key and generate a new one.;
               Any applications using this key will need to be updated.;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
-<<<<<<< HEAD
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">;
               Cancel;
             </AlertDialogCancel>;
               onClick={() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
               className="bg-blue-600 hover:bg-blue-700";
-=======
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             >;
               Regenerate;
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
-<<<<<<< HEAD
-=======
 
 
               This action will revoke the API key and it can no longer be used;
@@ -1728,14 +2105,11 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
           <AlertDialogFooter>;
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       >;
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">;
           <AlertDialogHeader>;
             <AlertDialogTitle>Revoke API Key?</AlertDialogTitle>;
             <AlertDialogDescription className="text-zinc-400">;
-<<<<<<< HEAD
-=======
 
             <AlertDialogCancel className='bg - transparent text - white hover:bg - zinc - 800 border - zinc - 700'>;
               Cancel;
@@ -1754,30 +2128,85 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
             <AlertDialogTitle > Revoke API Key?</AlertDialogTitle>;
             <AlertDialogDescription className="text - zinc - 400">;
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               This action will revoke the API key and it can no longer be used to access the API.;
               This action cannot be undone.;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             >;
               Revoke;
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
-<<<<<<< HEAD
-=======
 
 
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+          <AlertDialogHeader>;
+
+            <AlertDialogTitle > Regenerate API Key?;
+            <AlertDialogDescription className='text - zinc - 400'>;
+
+          <AlertDialogFooter>;
+
+        onOpenChange={(open) => !open && setShowRegenerateConfirm(null)}
+
+        <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">"
+
+          <AlertDialogHeader>
+
+            <AlertDialogTitle>Regenerate API Key?"
+            <AlertDialogDescription className="text-zinc-400">"
+
+            
+          
+          <AlertDialogFooter>
+            <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">"
+
+            
+            <AlertDialogAction;
+              onClick={() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
+
+            
+          
+        
+      
+              onClick = {() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm),}
+        <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">;"
+
+
+            <AlertDialogTitle>Regenerate API Key?;"
+            <AlertDialogDescription className="text-zinc-400">;"
+            <AlertDialogCancel className='bg - transparent text - white hover:bg - zinc - 800 border - zinc - 700'>;
+
+              on_click={() =>;
+
+              on_click = {() => showRegenerateConfirm && handleRegenerateKey (showRegenerateConfirm), }
+
+        <AlertDialogContent className="bg - zinc - 900 border - zinc - 800 text - white">;"
+
+
+            <AlertDialogTitle > Regenerate API Key?;"
+            <AlertDialogDescription className="text - zinc - 400">;"
+
+
+
+
+            <AlertDialogTitle>Revoke API Key?;"
+
+
+              on_click = {() => showDeleteConfirm && handleRevokeKey (showDeleteConfirm), }
+
+
+
+            <AlertDialogTitle > Revoke API Key?;"
+
+
+      ;"`;
+pr-12325

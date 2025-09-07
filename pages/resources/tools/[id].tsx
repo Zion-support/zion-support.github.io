@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -13,7 +12,6 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-=======
 
       type: 'Interactive Tool',
       estimatedTime: '15 minutes',
@@ -49,17 +47,15 @@ import { useRouter } from 'next/router';
         </ol>
         <h2>Next Steps After Assessment</h2>
 <p>Once you complete the assessment, you'll receive:</p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         <ul>
           <li>A detailed readiness score and analysis</li>
           <li>Specific recommendations for improvement</li>
           <li>Prioritized action items</li>
           <li>Resources and tools for implementation</li>
         </ul>
-<<<<<<< HEAD
-=======
 `,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       features: [
         'Comprehensive evaluation framework',
         'Industry benchmarking',
@@ -69,15 +65,13 @@ import { useRouter } from 'next/router';
       ],
     },
     {
-<<<<<<< HEAD
-=======
       id: 'ai-maturity-model',
       title: 'AI Maturity Model',
       description:
         'Assess your current AI capabilities and plan your transformation journey.',
       type: 'Framework',
       estimatedTime: '30 minutes',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       fullContent: `
         <h2>About This Framework</h2>
         <p>The AI Maturity Model provides a structured approach to understanding and advancing your
@@ -101,11 +95,9 @@ import { useRouter } from 'next/router';
           <li><strong>Processes & Governance:</strong> AI governance, risk management, and operational processes</li>
         </ul>
         <h2>Using the Framework</h2>
-<<<<<<< HEAD
         <p>To effectively use this framework: </p>
-=======
 <p>To effectively use this framework:</p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         <ol>
           <li>Assess your current state across all dimensions</li>
           <li>Identify gaps between current and target maturity levels</li>
@@ -122,10 +114,8 @@ import { useRouter } from 'next/router';
           <li>Progress tracking and measurement</li>
           <li>Stakeholder alignment and communication</li>
         </ul>
-<<<<<<< HEAD
-=======
 `,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       features: [
         '5-level maturity framework',
         'Multi-dimensional assessment',
@@ -135,15 +125,13 @@ import { useRouter } from 'next/router';
       ],
     },
     {
-<<<<<<< HEAD
-=======
       id: 'performance-benchmark',
       title: 'Performance Benchmarking Tool',
       description:
         'Compare your automation performance against industry standards.',
       type: 'Analytics Tool',
       estimatedTime: '20 minutes',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       fullContent: `
         <h2>About This Tool</h2>
         <p>The Performance Benchmarking Tool helps you compare your automation performance against
@@ -185,10 +173,8 @@ import { useRouter } from 'next/router';
           <li>Use results to drive continuous improvement initiatives</li>
         </ul>
         <h2>Action Planning</h2>
-<<<<<<< HEAD
-=======
 <p>Based on benchmark results, develop action plans that include:</p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         <ul>
           <li>Specific performance improvement targets</li>
           <li>Resource requirements and investment plans</li>
@@ -196,7 +182,6 @@ import { useRouter } from 'next/router';
           <li>Success metrics and measurement approaches</li>
           <li>Risk mitigation and contingency planning</li>
         </ul>
-<<<<<<< HEAD
       features: [
         'Industry benchmark databasePerformance gap analysisTrend analysis toolsAction planning frameworkProgress tracking'
       ]
@@ -378,7 +363,6 @@ export default function ToolResourcePage(req, res) {
 }
   ],
   const tool = tools.find(t => t.id === id),
-=======
 `,
       features: [
         'Industry benchmark database',
@@ -392,7 +376,7 @@ export default function ToolResourcePage(req, res) {
 
   const tool = tools.find(t => t.id === id);
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   if (!tool) {
     return (
       <>
@@ -408,18 +392,16 @@ export default function ToolResourcePage(req, res) {
               <p className='text-xl text-white/80 mb-8'>
                 The tool resource you're looking for doesn't exist.
               </p>
-<<<<<<< HEAD
 
 
 
 
                 href="/resources"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
-=======
               <Link
                 href='/resources'
                 className='inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 ← Back to Resources
               </Link>
@@ -437,7 +419,6 @@ export default function ToolResourcePage(req, res) {
         <meta property='og:title' content={`${tool.title} | Zion Tech Group`} />
         <meta property='og:description' content={tool.description} />
       </Head>
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <div className="max-w-4xl mx-auto">
@@ -453,7 +434,6 @@ export default function ToolResourcePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
         <main className='container mx-auto px-6 py-12'>
@@ -471,7 +451,7 @@ export default function ToolResourcePage(req, res) {
               <div className='mb-6'>
                 <span className='px-3 py-1 bg-green-400/20 text-green-400 text-sm rounded-full border border-green-400/30'>
                   {tool.type}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </span>
               </div>
               <h1 className='text-4xl font-bold mb-4 text-white'>
@@ -501,7 +481,6 @@ export default function ToolResourcePage(req, res) {
                   />
                 </div>
               </div>
-<<<<<<< HEAD
 
 
               <div className="space-y-6">
@@ -613,7 +592,6 @@ export default function ToolResourcePage(req, res) {
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                   <h3 className="font-semibold text-blue-400 text-lg mb-4">Tool Details</h3>
                   <div className="space-y-3">
-=======
 <div className='space-y-6'>
                 <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20'>
                   <h3 className='font-semibold text-green-400 text-lg mb-4'>
@@ -636,7 +614,7 @@ export default function ToolResourcePage(req, res) {
                     Tool Details
                   </h3>
                   <div className='space-y-3'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     <div>
                       <span className='text-white/60 text-sm'>Type:</span>
                       <p className='text-white font-medium'>{tool.type}</p>
@@ -653,19 +631,17 @@ export default function ToolResourcePage(req, res) {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
 
 
 
 
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
-=======
 <div className='text-center'>
               <Link
                 href='/contact'
                 className='inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Get Started with Your Project
               </Link>
@@ -674,7 +650,6 @@ export default function ToolResourcePage(req, res) {
         </main>
       </div>
     </>
-<<<<<<< HEAD
 
 }
 
@@ -934,6 +909,5 @@ if ( {) {
         </main>;
 
 
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

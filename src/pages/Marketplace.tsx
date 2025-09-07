@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import ProductCard from '@/components/ProductCard';
 
@@ -139,7 +138,6 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 
-=======
 import { useRouter } from 'next/router';
 import { useApiErrorHandling } from '@/hooks/useApiErrorHandling';
 import ProductCard from '@/components/ProductCard';
@@ -154,7 +152,7 @@ import { ProductsEmptyState  } from '@/components/marketplace/EmptyState';
 import { Button  } from '@/components/ui/button';
 import { Badge  } from '@/components/ui/badge';
 import { Card, CardContent  } from '@/components/ui/card';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import Spinner from '@/components/ui/spinner';
 import { ProductListing  } from '@/types/listings';
 import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
@@ -163,7 +161,6 @@ import { useAuth  } from '@/context/auth/AuthProvider';
 import { MARKETPLACE_LISTINGS  } from '@/data/listingData';
 import { MAX_PRICE, MIN_PRICE  } from '@/data/marketplaceData';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-<<<<<<< HEAD
 
 /**;
  * Marketplace component props;
@@ -532,7 +529,6 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
                       description: "Could not navigate to checkout. Please try again.",
                       variant: "destructive"}),
                     // Re-throw to allow ProductCard's catch to also run if needed,
-=======
 /**
  * Marketplace component props
  */
@@ -541,7 +537,7 @@ export interface MarketplaceProps {
 // Market insights component
 const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
   <Card className;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     // though ProductCard will reset its state in .finally() regardless.
                     throw error
                   try {;
@@ -646,7 +642,6 @@ case 'newest': ;
 }/>) ) ;
 }</div> </motion.div>) ;
 }</AnimatePresence> </div>) ;
-<<<<<<< HEAD
 }'";
   );
 import React from "react";
@@ -725,6 +720,5 @@ import Link from "next/link";
     </div>;
   );
 }
-=======
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

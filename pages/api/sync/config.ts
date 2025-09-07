@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState } from "../../../utils/sync/storage",;
 import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types",;
@@ -35,23 +34,13 @@ import type { NextApiRequest, NextApiResponse } from "next"
 import { readState, writeState } from "../../../utils/sync/storage"
 import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types"
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
   const state = readState()
-=======
-<<<<<<< HEAD
   const state = readState(),
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+ursor/fix-website-loading-errors-and-merge-6662
   const state = readState()
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
+main
+pr-12243
   if (req.method === "GET") {
     return res.status(200).json({ config: state.config })
   }
@@ -67,9 +56,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method === "POST") {
     const { optIn, paused, scope, peers, instanceId } = req.body as Partial<InstanceConfig> & {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       peers?: Peer[],
       scope?: SyncScope,
       instanceId?: string
@@ -83,7 +69,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
     writeState(state),
-<<<<<<< HEAD
     return res.status(200).json({ config: state.config })
     } catch (error) {
     console.error("Error:", error);
@@ -100,13 +85,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
     if (scope && !["full", "dao", "marketplace"].includes(scope)) {
       return res.status(400).json({ error: "Invalid scope" })
-=======
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
+pr-12243
     }
     if (Array.isArray(peers)) {
       state.config.peers = peers.filter((p) => typeof p.baseUrl === "string" && p.baseUrl.length > 0)
@@ -125,12 +105,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     writeState(state)
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
   const state = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(200).json({ config: state.config })
   }
   return res.status(405).json({ error: "Method not allowed" })
@@ -200,26 +176,21 @@ if (state.config.instance_id = instance_id, ) {
 }
 ;
 
-=======
->>>>>>> main
->>>>>>> pr-12243
+main
+pr-12243
     return res.status(200).json({ config: state.config })
     } catch (error) {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
 
   return res.status(405).json({ error: "Method not allowed" })
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

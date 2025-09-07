@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 onViewDetails, }
 
   )
@@ -28,7 +27,6 @@ interface PartnerProfile {
   niche: string,
   audience_size: string,
   social_media?: Record < string, string>;
-=======
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { useRouter } from 'next/router';
@@ -76,12 +74,11 @@ interface PartnerProfile {
   niche: string;
   audience_size: string;
   social_media?: Record<string, string>,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   website?: string;
   bio?: string;
   payout_method?: string;
   fraud_flags?: number;
-<<<<<<< HEAD
   commission_rate?: number;
 }
 export default /**
@@ -249,7 +246,6 @@ function PartnerTable({;
   );
 }
 ;
-=======
   commission_rate?: number
 }
 export default function PartnerManager() {
@@ -425,4 +421,4 @@ return (<div className="container max-w-7xl py-10"> <div className="flex flex-co
 }'"
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

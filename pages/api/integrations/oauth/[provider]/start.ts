@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
   const { provider } = req && req.query as { provider: string };
 
@@ -17,15 +16,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req, res) {
   try {
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const { provider } = req.query as { provider: string };
   const callbackUrl = `/api/integrations/oauth/${provider}/callback?code=mock_code&state=mock_state`;
   res.writeHead(302, { Location: callbackUrl });
 res.end();
 
 }
-<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -39,5 +36,4 @@ res.end();
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

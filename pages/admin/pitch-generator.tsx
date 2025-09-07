@@ -1,12 +1,10 @@
-<<<<<<< HEAD
-=======
 import React, { useCallback, useMemo, useState } from 'react',
 import Head from 'next/head',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { GetServerSideProps  } from 'next';
 import { requireAdminRole } from '../../utils/auth';
 export type Slide = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import React, { useState } from 'react';
 import Head from 'next/head';
 interface Slide {
@@ -44,7 +42,6 @@ export const getServerSideProps: GetServerSideProps = async ctx => {;
   // @ts-ignore;
   if ('redirect' in result) return result;
   return result;
-<<<<<<< HEAD
     mission: ''
     fundingStage: ''
     vision: ''
@@ -64,23 +61,20 @@ export default function PitchGenerator() {;
     assets: [],;
 
 
-=======
 }
 export default function PitchGenerator() {
   const [builder, setBuilder] = useState<BuilderState>({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     mission: '',
     fundingStage: '',
     vision: '',
     roundType: '',
     targetRaise: '',
-<<<<<<< HEAD
     assets: [],;
   });  const [slides, setSlides] = useState<Slide[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [loading, setLoading] = useState(false);
   const [versionTag, setVersionTag] = useState<string | null>(null);
-=======
     assets: [],
   });
   const [slides, setSlides] = useState<Slide[]>([]);
@@ -110,7 +104,7 @@ e.stopPropagation();
   );
 
   const autoFetchMetrics = useCallback(async () => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     setLoading(true);
     try {
       const res = await fetch('/api/admin/pitch/metrics');
@@ -119,14 +113,12 @@ return data;
     } catch (e) {
       return {};
     } finally {
-<<<<<<< HEAD
       setLoading(false);    }
     const files = Array.from(e.dataTransfer.files || []);
     setBuilder((b) => ({ ...b, assets: [...b.assets, ...files] }))
-=======
       setLoading(false);
     }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }, []);
 
   const prevent = (e: React.DragEvent) => {
@@ -170,8 +162,6 @@ if (return result) {
     setLoading(true);
     try {;
       const metrics = await autoFetchMetrics();
-<<<<<<< HEAD
-=======
       const res = await fetch('/api/admin/pitch/generate', {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
@@ -190,7 +180,7 @@ operatorPrompt,
 setHistory(h => [
         { id: uid(), createdAt: new Date().toISOString(), version: v },
         ...h,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       ]);
     } catch (e) {;
       // noop;
@@ -202,7 +192,6 @@ setHistory(h => [
                   ...s
                   title: json.title |s.title
                   content: json.content |s.content
-<<<<<<< HEAD
     } catch (error) {
       return {  } catch (error) {
     console.error("Error:", error);
@@ -268,7 +257,6 @@ setHistory(h => [
     setLoading(true);
     try {;
       const res = await fetch('/api/admin/pitch/add-slide', { method: 'POST' });
-=======
                 }
               : s
           )
@@ -309,13 +297,12 @@ const res = await fetch('/api/admin/pitch/export', {
         body: JSON.stringify({ slides, format: 'pdf', version: versionTag }),
       });
       const blob = await res.blob();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
       a.download = `pitch-deck-${versionTag |'draft'}.pdf`;
       a.click();
-<<<<<<< HEAD
 
         } catch (error) {
     console.error("Error:", error);
@@ -334,7 +321,6 @@ const res = await fetch('/api/admin/pitch/export', {
   const updateActiveSlide = (updates: Partial<Slide>) => {
     setSlides((arr) => arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s)))
   },
-=======
 URL.revokeObjectURL(url);
     } catch (e) {
     } finally {
@@ -368,7 +354,7 @@ setSlides(arr =>
     );
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const renderChartPreview = (slide: Slide) => {
     if (!slide.chart) return null,
     const { type, data } = slide.chart,
@@ -393,7 +379,6 @@ setSlides(arr =>
     if (!slide && slide.chart) return null,;
     const { type, data } = slide && slide.chart;
     return (
-<<<<<<< HEAD
 
 
     return (
@@ -402,7 +387,6 @@ setSlides(arr =>
         <div className="flex gap-2 items-end h-24 mt-2">
           {type === 'bar' && data.map((d) => (
             <div key={d.label} className="bg-blue-500 w-6" style={{ height: `${Math.max(4, d.value)}px` }} title={`${d.label}: ${d.value}`} />
-=======
 <div className='mt-3'>
         <div className='text-xs text-gray-500 dark:text-gray-400'>
           Chart preview: {type}
@@ -417,12 +401,11 @@ setSlides(arr =>
                 title={`${d.label}: ${d.value}`}
               />
             ))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           {type === 'funnel' && (
             <div className="w-full">
               <div className="flex flex-col gap-1">
                 {data.map((d, idx) => (
-<<<<<<< HEAD
                   <div key={d.label} className="bg-purple-500 text-white text-xs px-2 py-1" style={{ width: `${100 - idx * 12}%` }}>{d.label}: {d.value}</div>
                 ))  } catch (error) {
     console.error("Error:", error);
@@ -443,7 +426,6 @@ setSlides(arr =>
               {data.map((d) => (
                 <div key={d.label} className="border p-1 rounded">
                   <div className="font-medium">{d.label}</div>
-=======
                   <div
                     key={d.label}
                     className='bg-purple-500 text-white text-xs px-2 py-1'
@@ -460,12 +442,11 @@ setSlides(arr =>
               {data.map(d => (
                 <div key={d.label} className='border p-1 rounded'>
                   <div className='font-medium'>{d.label}</div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <div>{d.value}</div>
                 </div>
         </div>
       </div>
-<<<<<<< HEAD
     )
   };
 
@@ -489,11 +470,10 @@ setSlides(arr =>
       </div>
     )
   },
-=======
 );
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <EnhancedLayout>
       <Head>
@@ -508,8 +488,6 @@ setSlides(arr =>
             <button onClick={exportGoogleSlides} disabled={loading || slides.length === 0} className="px-3 py-2 rounded bg-green-600 text-white disabled:opacity-50">Export to Google Slides</button>
           </div>
         </div>
-<<<<<<< HEAD
-=======
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
           <div className='lg:col-span-1 space-y-4'>
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
@@ -570,17 +548,15 @@ setSlides(arr =>
                 onDragEnter={prevent}
                 className='mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400'
               >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 Drag & drop logos, photos here
                 <div className="text-xs mt-1">{builder.assets.length} file(s) added</div>
               </div>
             </div>
-<<<<<<< HEAD
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="font-medium mb-2">Auto Data</div>
               <button onClick={autoFetchMetrics} className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm">Refresh</button>
               <ul className="text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300">
-=======
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
               <div className='font-medium mb-2'>Auto Data</div>
               <button
@@ -590,7 +566,7 @@ setSlides(arr =>
                 Refresh
               </button>
               <ul className='text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 <li>Active users (30d)</li>
                 <li>GMV, MRR, YoY growth</li>
                 <li>Total completed projects</li>
@@ -599,14 +575,12 @@ setSlides(arr =>
                 <li>Notable clients or case studies</li>
               </ul>
             </div>
-<<<<<<< HEAD
-=======
 
 <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
               <div className='font-medium mb-2'>History</div>
               <div className='text-xs text-gray-500 dark:text-gray-400'>
                 Version: {versionTag |'—'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
               <ul className='mt-2 space-y-1 text-sm'>
                 {history.map(h => (
@@ -644,7 +618,6 @@ setSlides(arr =>
 
 
                   <li
-<<<<<<< HEAD
                     key={h && h.id}
                     className='flex justify-between border rounded px-2 py-1'>;
                     <span>{h && h.version}</span>;
@@ -668,7 +641,6 @@ setSlides(arr =>
               <div className='mt-3 flex gap-3 overflow-x-auto py-2'>;
                 {slides && slides.map((s, i) => (;
 
-=======
                     key={h.id}
                     className='flex justify-between border rounded px-2 py-1'
                   >
@@ -692,7 +664,7 @@ setSlides(arr =>
               </div>
               <div className='mt-3 flex gap-3 overflow-x-auto py-2'>
                 {slides.map((s, i) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <SlidePreview
                     key={s && s.id}
                     slide={s}
@@ -874,7 +846,6 @@ setSlides(arr =>
                         },
                       });
                     }
-<<<<<<< HEAD
           </div>;
         </div>;
 </main>;
@@ -885,7 +856,6 @@ setSlides(arr =>
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
                     className='border rounded px-2 py-1'
                   >
                     Timeline
@@ -898,4 +868,4 @@ setSlides(arr =>
 </main>
     </>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

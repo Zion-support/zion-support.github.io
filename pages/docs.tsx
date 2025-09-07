@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import MainLayout from '../components/layout/MainLayout';
-=======
 import Head from 'next/head';
 import Link from 'next/link';
 import {
@@ -22,9 +18,7 @@ import {
 } from 'lucide-react';
 
 export default function Documentation() {
-<<<<<<< HEAD
   const docCategories = [
-=======
   const contact = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -32,7 +26,7 @@ export default function Documentation() {
     site: 'https://ziontechgroup.com'
   }
   const documentationSections = [
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
+origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
     {
       title: 'Getting Started',
       description: 'Quick start guides and setup instructions',
@@ -258,11 +252,10 @@ export default function Documentation() {
       ],
     },
   ];
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 const Page = () => {
   return (
-<<<<<<< HEAD
     <MainLayout 
       title="Page - Zion Tech Group"
       description="Zion Tech Group page"
@@ -278,15 +271,10 @@ const Page = () => {
 };
 
 export default Page;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-=======
 import React from 'react',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import React from 'react',;
@@ -297,13 +285,8 @@ import Head from 'next/head'
 import Layout from '../components/layout/Layout'
 
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+ursor/fix-website-loading-errors-and-merge-6662
 export default function DocsPage() {
-<<<<<<< HEAD
 	return (
 		<Layout>
 			<Head>
@@ -316,13 +299,9 @@ export default function DocsPage() {
 			</section>
 		</Layout>
 	)
-<<<<<<< HEAD
-=======
 
 }
 
-<<<<<<< HEAD
-=======
 import React from 'react',
 import Head from 'next / head',
 import Layout from '../components / layout / Layout',
@@ -342,11 +321,8 @@ return (
   </section>;
   </Layout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
 
-=======
 
 		<Layout>
 			<Head>
@@ -364,10 +340,8 @@ return (
 
 import React from 'react';
 
-=======
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import React from 'react',;
@@ -391,31 +365,15 @@ export default function DocsPage() {
 			</section>
 		</Layout>
 	)
-<<<<<<< HEAD
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+ursor/fix-website-loading-errors-and-merge-6662
   return (
     <Layout>
       <Head>
@@ -432,8 +390,7 @@ export default function DocsPage() {
       </section>
     </Layout>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
+origin/cursor/automate-test-improve-and-merge-code-2533
     <>
       <Head>
         <title>Documentation - Zion Tech Group</title>
@@ -654,4 +611,4 @@ export default function DocsPage() {
     </>
   );
 }
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

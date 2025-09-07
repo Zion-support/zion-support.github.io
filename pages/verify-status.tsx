@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router',;
 import { Input } from '@/components/ui/input',;
@@ -6,7 +5,6 @@ import { Button } from '@/components/ui/button',;
 import { Alert, AlertDescription } from '@/components/ui/alert',;
 import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react';
 import { AuthLayout } from '@/layout',;
-=======
 import {
   Mail,
   AlertCircle,
@@ -36,14 +34,13 @@ export default function VerifyStatus() {
   useEffect(() => {
     if (typeof emailParam === 'string') {
 setEmail(emailParam);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import { supabase } from '@/integrations/supabase/client', // Import Supabase client
 import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state
 import { logWarn, logErrorToProduction } from '@/utils/productionLogger',;
 ;
 export default function VerifyStatus() {
 
-<<<<<<< HEAD
   const router = useRouter(),
   const { user: authUser, isLoading: authLoading } = useAuth(), // Get user from AuthContext
   const { email: emailParam } = router.query,
@@ -58,25 +55,21 @@ export default function VerifyStatus() {
   useEffect(() => {
     if (typeof emailParam === 'string') {
       setEmail(emailParam)
-=======
   const router = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }, [emailParam]),
 
   // Countdown timer for resend button
   useEffect(() => {
-<<<<<<< HEAD
     let interval: NodeJS.Timeout,
-=======
 let interval: NodeJS.Timeout;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     if (countdown > 0) {
       interval = setInterval(() => {
         setCountdown(prev => prev - 1);
       }, 1000);
     }
-<<<<<<< HEAD
     return () => clearInterval(interval)
   }, [countdown]),
 
@@ -132,7 +125,6 @@ export default function VerifyStatus(req, res) {
 
 
       return
-=======
     return () => clearInterval(interval);
   }, [countdown]);
 
@@ -140,12 +132,11 @@ export default function VerifyStatus(req, res) {
     if (!email) {
       setError('Please enter your email address');
 return;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
     setIsResending(true)
     setError('')
     setMessage('')
-<<<<<<< HEAD
     }
     return () => clearInterval(interval)
   }, [countdown]),
@@ -164,7 +155,6 @@ return;
 
     }
       return
-=======
     try {
       const response = await fetch('/api/resend-verification-email', {
         method: 'POST',
@@ -193,20 +183,18 @@ setMessage(
     if (!email) {
       setError('Please enter your email address');
 return;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
     setIsCheckingStatus(true)
     setError('')
     setMessage('')
     try {
       // Attempt to refresh the session to get the latest user status
-<<<<<<< HEAD
-=======
 const { error: refreshError } = await supabase.auth.refreshSession();
 
       if (refreshError) {
         // Don't treat all refresh errors as critical for this check,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         // as user might not have a session yet or it might be invalid.
         logWarn('Error during session refresh:', {
           data: refreshError.message,
@@ -250,7 +238,6 @@ router.push(`/auth/login?email=${encodeURIComponent(email)}`);
         setError('');
       }
     } catch (err: any) {
-<<<<<<< HEAD
       logErrorToProduction('Error checking verification status:', { data: err })
       setError('An unexpected error occurred while checking status. Please try again.')
   useEffect(() => {;
@@ -311,7 +298,6 @@ router.push(`/auth/login?email=${encodeURIComponent(email)}`);
       set_error ('Please enter your email address'),
       return;
     }
-=======
       logErrorToProduction('Error checking verification status:', {
         data: err,
       });
@@ -347,7 +333,7 @@ router.push(`/auth/login?email=${encodeURIComponent(email)}`);
     <AuthLayout>
       <div className="flex min-h-screen items-center justify-center p-4">
         <div className="w-full max-w-md space-y-6">
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Header */}
 
 
@@ -380,7 +366,6 @@ router.push(`/auth/login?email=${encodeURIComponent(email)}`);
               <AlertCircle className='h-4 w-4' />
               <AlertDescription>{error}</AlertDescription>
             </Alert>
-<<<<<<< HEAD
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -394,7 +379,6 @@ router.push(`/auth/login?email=${encodeURIComponent(email)}`);
 }
           <div className="space-y-2">
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-=======
           )}
           {/* Email Input */}
 <div className='space-y-2'>
@@ -402,14 +386,13 @@ router.push(`/auth/login?email=${encodeURIComponent(email)}`);
               htmlFor='email'
               className='block text-sm font-medium text-gray-700'
             >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               Email Address
             </label>
             <Input
               id='email'
               type='email'
               value={email}
-<<<<<<< HEAD
               value={email  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -422,11 +405,10 @@ router.push(`/auth/login?email=${encodeURIComponent(email)}`);
 }
               placeholder="Enter your email address"
               className="w-full"
-=======
               onChange={e => setEmail(e.target.value)}
               placeholder='Enter your email address'
               className='w-full'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             />
             {email && (
               <p className='text-xs text-gray-500'>
@@ -447,7 +429,6 @@ router.push(`/auth/login?email=${encodeURIComponent(email)}`);
   }
 }
           {email && (
-<<<<<<< HEAD
 
             <div className="bg - blue - 50 dark:bg - slate - 800 border border - blue - 200 dark:border - slate - 700 rounded - lg p - 4">;
               <h3 className="text - sm font - medium text - slate - 900 dark:text - slate - 100 mb - 2">Verification Status</h3>;
@@ -456,7 +437,6 @@ router.push(`/auth/login?email=${encodeURIComponent(email)}`);
                 <p>• Click the link in the email to verify your account</p>;
                 <p>• Return here or try logging in after verification</p>;
               </div>;
-=======
 <div className='bg-blue-50 dark:bg-slate-800 border border-blue-200 dark:border-slate-700 rounded-lg p-4'>
               <h3 className='text-sm font-medium text-slate-900 dark:text-slate-100 mb-2'>
                 Verification Status
@@ -466,7 +446,7 @@ router.push(`/auth/login?email=${encodeURIComponent(email)}`);
                 <p>• Click the link in the email to verify your account</p>
                 <p>• Return here or try logging in after verification</p>
               </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               {lastSentTime && (
 <p className='text-xs text-slate-600 dark:text-slate-400 mt-2 flex items-center'>
                   <Clock className='h-3 w-3 mr-1' />
@@ -478,7 +458,6 @@ router.push(`/auth/login?email=${encodeURIComponent(email)}`);
           {/* Action Buttons */}
 <div className='space-y-3'>
             {/* Check Status Button */}
-<<<<<<< HEAD
               disabled={!email |isCheckingStatus}
               disabled={!email || isCheckingStatus}
 
@@ -525,13 +504,12 @@ router.push(`/auth/login?email=${encodeURIComponent(email)}`);
 }
               className="w-full"
               variant="outline"
-=======
             <Button
               onClick={handleCheckStatus}
               disabled={!email || isCheckingStatus}
 className='w-full'
               variant='outline'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               {isCheckingStatus ? (
                 <>
@@ -543,7 +521,6 @@ className='w-full'
 <Eye className='h-4 w-4 mr-2' />
                   Check Verification Status
                 </>
-<<<<<<< HEAD
               disabled={!email |isResending |countdown > 0}
               disabled={!email || isResending || countdown > 0}
 
@@ -575,7 +552,6 @@ className='w-full'
 }
               className="w-full"
               variant="secondary"
-=======
               )}
             </Button>
             {/* Resend Email Button */}
@@ -584,7 +560,7 @@ className='w-full'
               disabled={!email || isResending || countdown > 0}
 className='w-full'
               variant='secondary'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               {isResending ? (
                 <>
@@ -598,7 +574,6 @@ className='w-full'
                 </>
               ) : (
                 <>
-<<<<<<< HEAD
               on_click={handleCheckStatus}
               disabled={!email || isCheckingStatus}
               className="w - full";
@@ -636,13 +611,12 @@ className='w-full'
                 </>)}
             </Button>;
 
-=======
 <Mail className='h-4 w-4 mr-2' />
                   Resend Verification Email
                 </>
               )}
             </Button>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Try Login Button */}
             <Button;
               on_click={handleTryLogin}
@@ -652,60 +626,52 @@ className='w-full'
               Try Login
             </Button>
           </div>
-<<<<<<< HEAD
           {/* Help Text */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
           <div className="text-center text-sm text-gray-500 space-y-2">
-=======
           {/* Help Text */}
 <div className='text-center text-sm text-gray-500 space-y-2'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <p>
               Can't find the verification email? Check your spam folder or try a
               different email address.
             </p>
             <Button
-<<<<<<< HEAD
               variant="ghost"
               size="sm"
               className="text-blue-600 hover:text-blue-500"
-=======
               onClick={handleGoBack}
               variant='ghost'
               size='sm'
               className='text-blue-600 hover:text-blue-500'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <ArrowLeft className='h-4 w-4 mr-1' />
               Go Back
             </Button>
           </div>
-<<<<<<< HEAD
               variant="ghost"
               className="w-full text-sm"
-=======
           {/* Additional Options */}
 <div className='border-t pt-4 space-y-2'>
             <Button
               onClick={() => router.push('/signup')}
               variant='ghost'
               className='w-full text-sm'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               Use Different Email Address
             </Button>
             <Button
-<<<<<<< HEAD
               variant="ghost"
               className="w-full text-sm"
-=======
               onClick={() => router.push('/contact')}
 variant='ghost'
               className='w-full text-sm'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               Contact Support
             </Button>
@@ -713,7 +679,6 @@ variant='ghost'
         </div>
       </div>
     </AuthLayout>
-<<<<<<< HEAD
   )
 
 
@@ -725,6 +690,5 @@ variant='ghost'
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

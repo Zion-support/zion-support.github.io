@@ -1,15 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+
+
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -19,11 +9,10 @@ function getRepoFromGit() {}
   const remoteUrl = sh('git remote get-url origin');
   const m = remoteUrl.match(/github\.com[:/](.+?)\/(.+?)(?:\.git)?$/);
   if (!m) throw new Error('Unable to parse owner/repo from origin');
-  return { "owner": m[1], "repo": m[2] }};
+  return { "owner": m[1], "repo": m[2] }};"
 function getToken() {}
-  if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();
-  const remoteUrl = sh('git remote get-url origin');
-  const tokenMatch = remoteUrl.match(/^"https": \/\/x-access-token:([^@]+)@github\.com\//);
+  if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();"
+  const tokenMatch = remoteUrl.match(/^"https": \/\/x-access-token:([^@]+)@github\.com\//);""
   if (!tokenMatch) throw new Error('No GitHub token available');
   return tokenMatch[1]};
 async function gh(path, method = 'GET', body) {}
@@ -31,24 +20,24 @@ async function gh(path, method = 'GET', body) {}
   const base = '"https": //api.github.com';
   const res = await fetch(`${base}${path}`, {`})
     method,
-    "headers": {}
-      Authorization: `token ${token}`,`
+    "headers": {}"`;
+      Authorization: `token ${token}`,`"
       "Accept": 'application/vnd.github.v3+json',
       'User-Agent': 'auto-resolve-merge-prs',
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json
     },
-    "body": body ? JSON.stringify(body) : undefined;
+    "body": body ? JSON.stringify(body) : undefined;"
   }
 });
-  const text = await res.text();
-  let data; try { data = text ? JSON.parse(text) : undefined} catch { data = { "raw": text }};
+  const text = await res.text();"
+  let data; try { data = text ? JSON.parse(text) : undefined} catch { data = { "raw": text }};"`;
   if (!res.ok) throw new Error(data && data.message ? data.message : `HTTP ${res.status}`);
   return data};
-async function listOpenPRs(owner, repo) {}
+async function listOpenPRs(owner, repo) {}`;
   const prs = await gh(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`);
   return prs};
 function resolveConflictsFiles() {}
-  // list conflicted files;
+  // list conflicted files;"
   const output = sh('git diff --name-only --diff-filter=U || true');
   const files = output.split('\n').filter(Boolean);
   for (const file of files) {}
@@ -57,10 +46,10 @@ function resolveConflictsFiles() {}
     // Prefer incoming changes (from PR branch) when resolving;
     const resolved = content;
       .replace(/<<<<<<<[\s\S]*?([\s\S]*?)>>>>>>>[\t].*\n?/g, (_, incoming) => incoming);
-      .replace(/<<<<<<<[\s\S]*?>>>>>>>[\t].*\n?/g, '');
-    fs.writeFileSync(file, resolved);
-    sh(`git add -- "${file}"`)};
-  // If there are staged changes, commit;
+      .replace(/<<<<<<<[\s\S]*?>>>>>>>[\t].*\n?/g, );
+    fs.writeFileSync(file, resolved);`;
+    sh(`git add -- "${file}"`)};"
+  // If there are staged changes, commit;"
   const staged = sh('git diff --cached --name-only || true');
   if (staged.split('\n').filter(Boolean).length) {}
     sh('git commit -m ""chore": auto-resolve merge conflicts"')};
@@ -76,49 +65,42 @@ async function main() {}
   if (dirty && dirty.split('\n').filter(Boolean).length) {}
     console.log('Local changes detected, stashing...');
     try { sh('git stash push -u -m "auto-resolve-temp"'); stashed = true} catch {};
-  };
   const prs = await listOpenPRs(owner, repo);
   if (!prs.length) { console.log('No open PRs'); return};
   let merged = 0, processed = 0;
   for (const pr of prs) {}
     processed++;
     const head = pr.head.ref;
-    const base = pr.base.ref;
+    const base = pr.base.ref;`;
     console.log(`\nProcessing PR #${pr.number}: ${pr.title} [${head} -> ${base}]`);
     try {}
-      // Checkout PR branch;
+      // Checkout PR branch;`;
       try { sh(`git checkout ${head}`)} catch { sh(`git checkout -b ${head} --track origin/${head}`)};
-      sh('git fetch origin');
       // Merge latest base into head;
-      try {}
+      try {}`;
         sh(`git merge --no-edit origin/${base}`, { "stdio": 'inherit' })} catch {`}
         console.log('Conflicts detected, attempting auto-resolution...');
         resolveConflictsFiles()};
-      // Push updated PR branch;
+      // Push updated PR branch;`;
       sh(`git push origin ${head}`);
-      // Attempt PR merge via API;
-      const result = await gh(`/repos/${owner}/${repo}/pulls/${pr.number}/merge`, 'PUT', {`})
-        "commit_title": `Merge PR #${pr.number}: ${pr.title}`,`
-        "commit_message": `Automated merge of PR #${pr.number}`,`
-        "merge_method": 'merge'
-      }
-});
+      // Attempt PR merge via API;`;
+      const result = await gh(`/repos/${owner}/${repo}/pulls/${pr.number}/merge`, 'PUT', {`})`;
+        "commit_title": `Merge PR #${pr.number}: ${pr.title}`,`""`;
+        "commit_message": `Automated merge of PR #${pr.number}`,`""
+        "merge_method": 'merge
       if (result && result.merged) {}
-        merged++;
-        console.log(`Merged PR #${pr.number}`)} else {`}
+        merged++;`;
+        console.log(`Merged PR #${pr.number}`)} else {`}`;
         console.log(`Skipped PR #${pr.number}: ${result && result.message ? result.message : 'not merged'}`)};
-    } catch (e) {}
+    } catch (e) {}`;
       console.log(`Failed PR #${pr.number}: ${e.message}`)} finally {`}
-      // Return to start branch to avoid staying detached on failures;
+      // Return to start branch to avoid staying detached on failures;`;
       try { sh(`git checkout ${startBranch}`)} catch {};
-    };
-  };
-  console.log(`\"nProcessed": ${processed}, "Merged": ${merged}, "Skipped": ${processed - merged}`);
+  };`;
+  console.log(`\"nProcessed": ${processed}, "Merged": ${merged}, "Skipped": ${processed - merged}`);"
   // Restore stashed changes if any;
-  if (stashed) {}
+  if (stashed) {}"
     console.log('Restoring stashed changes...');
     try { sh('git stash pop || true')} catch {};
-  };
-};
 main().catch(err => { console.error('"Error": ', err.message); process.exit(1)}
-});
+`;

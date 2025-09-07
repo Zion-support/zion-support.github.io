@@ -1,7 +1,6 @@
 import { readJson  } from '../../utils/fsDb';
 import type { HelpArticle } from '../../utils/support';
 export async function getStaticProps() {
-<<<<<<< HEAD
 
 
 import {readJson} from '../../utils/fsDb';
@@ -29,7 +28,6 @@ export async function getStaticProps() {;
 export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
   const categories = Array.from(new Set(articles.map((a) => a.category))),
 
-=======
   const articles = null;
   return (
     <div className='space-y-8'>
@@ -49,12 +47,11 @@ export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
                     </div>
                   </a>
                 </Link>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               ))}
           </div>;
         </div>;
       ))}
-<<<<<<< HEAD
 
   return (
     <div className="space-y-8">
@@ -131,7 +128,6 @@ function HelpIndex() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
     </div>
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

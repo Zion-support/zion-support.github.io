@@ -21,4 +21,16 @@ export interface DateRange {;
   to?: Date;
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  // TODO: Implement
+}
+  from?: Date;
+  to?: Date;
+
+
+
+
+export interface DateRange {;
+;
+
+  // TODO: Implement
+pr-12325

@@ -1,50 +1,32 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
 const FaqSection: React.FC = () => {
+import React, { useState } from 'react';
+
+const FaqSection = () => {
+pr-12325
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const faqs = [
     {
-      question: "What services does Zion Tech offer?",
-      answer: "We offer comprehensive AI solutions, IT services, cloud infrastructure, cybersecurity, data analytics, and digital transformation services. Our team specializes in machine learning, cloud migration, system administration, and business process optimization."
+      question: "What services does Zion Tech Group offer?",
+      answer: "We offer a comprehensive range of technology services including web development, mobile app development, cloud solutions, AI/ML implementation, cybersecurity, and digital transformation consulting."
     },
-    {
       question: "How long does a typical project take?",
-      answer: "Project timelines vary based on complexity and scope. Simple implementations can take 2-4 weeks, while comprehensive digital transformations may take 3-6 months. We provide detailed timelines during the discovery phase and keep you updated throughout the project."
-    },
-    {
-      question: "Do you provide ongoing support?",
-      answer: "Yes, we offer 24/7 support for all our clients. Our support includes monitoring, maintenance, troubleshooting, and continuous optimization. We also provide dedicated account managers for enterprise clients."
-    },
-    {
-      question: "What industries do you serve?",
-      answer: "We serve a wide range of industries including healthcare, finance, manufacturing, retail, education, and government. Our solutions are tailored to meet the specific compliance and security requirements of each industry."
-    },
-    {
-      question: "How do you ensure data security?",
-      answer: "We implement enterprise-grade security measures including SOC 2 compliance, end-to-end encryption, regular security audits, and advanced threat detection. All our team members are security-certified and we follow industry best practices."
-    },
-    {
-      question: "Can you work with our existing systems?",
-      answer: "Absolutely! We specialize in integrating with existing systems and can work with virtually any technology stack. Our team will assess your current infrastructure and create a seamless integration plan."
-    },
-    {
+      answer: "Project timelines vary depending on complexity and scope. Simple websites typically take 2-4 weeks, while complex enterprise applications can take 3-6 months. We provide detailed timelines during our initial consultation."
+      question: "Do you provide ongoing support after project completion?",
+      answer: "Yes, we offer comprehensive maintenance and support packages. Our support includes bug fixes, updates, security patches, and technical assistance to ensure your solution continues to perform optimally."
+      question: "What technologies do you specialize in?",
+      answer: "We specialize in modern technologies including React, Next.js, Node.js, Python, AWS, Azure, Docker, Kubernetes, and various AI/ML frameworks. We stay current with the latest industry trends and best practices."
+      question: "How do you ensure data security and privacy?",
+      answer: "We implement enterprise-grade security measures including encryption, secure coding practices, regular security audits, and compliance with industry standards like GDPR and SOC 2. All team members are security-trained and we follow strict data protection protocols."
+      question: "Can you work with our existing team?",
+      answer: "Absolutely! We excel at collaborating with in-house teams. We can augment your existing capabilities, provide training, or work alongside your developers to ensure seamless integration and knowledge transfer."
       question: "What is your pricing model?",
-      answer: "We offer flexible pricing models including project-based, retainer, and subscription options. Pricing depends on the scope of work, timeline, and specific requirements. We provide detailed quotes after understanding your needs."
-    },
-    {
-      question: "Do you offer training for our team?",
-      answer: "Yes, we provide comprehensive training programs for your team to ensure they can effectively use and maintain the solutions we implement. Training includes documentation, hands-on sessions, and ongoing support."
+      answer: "We offer flexible pricing models including fixed-price projects, time and materials, and retainer agreements. Pricing depends on project scope, complexity, and timeline. We provide transparent quotes with no hidden costs."
+      question: "Do you offer 24/7 support?",
+      answer: "Yes, we provide 24/7 support for critical systems and enterprise clients. Our support team is available around the clock to address urgent issues and ensure minimal downtime for your business operations."
     }
   ];
 
@@ -55,67 +37,36 @@ const FaqSection: React.FC = () => {
   return (
     <section className="py-16 px-4 bg-gray-50">
       <div className="container mx-auto max-w-4xl">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Find answers to common questions about our services and solutions.
-          </p>
-        </div>
-
+        <h2 className="text-4xl font-bold text-center mb-4">Frequently Asked Questions</h2>
+        <p className="text-xl text-gray-600 text-center mb-12">
+          Find answers to common questions about our services and processes
+        </p>
+        
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-lg shadow-md overflow-hidden"
-            >
+            <div key={index} className="bg-white rounded-lg shadow-md">
               <button
+                className="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-blue-500"
                 onClick={() => toggleFaq(index)}
-                className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
               >
-                <h3 className="text-lg font-semibold text-gray-900 pr-4">
-                  {faq.question}
-                </h3>
-                {openIndex === index ? (
-                  <ChevronUp className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                ) : (
-                  <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
-                )}
+                <span className="text-lg font-semibold">{faq.question}</span>
+                <span className={`text-2xl transition-transform duration-200 ${
+                  openIndex === index ? 'rotate-45' : `;
+                }`}>
+                  +
+                </span>
               </button>
               {openIndex === index && (
                 <div className="px-6 pb-4">
-                  <p className="text-gray-600 leading-relaxed">
-                    {faq.answer}
-                  </p>
+                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
                 </div>
               )}
-            </div>
           ))}
-        </div>
-
-        <div className="mt-12 text-center">
-          <p className="text-gray-600 mb-4">
-            Still have questions? We&apos;re here to help!
-          </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-            Contact Us
-          </button>
-        </div>
-      </div>
     </section>
   );
-};
 
-<<<<<<< HEAD
 export default FaqSection;
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
->>>>>>> main
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-=======
+main
 
 import { GradientHeading } from "./GradientHeading";
 import {
@@ -129,8 +80,8 @@ import { GradientHeading } from './GradientHeading'
   AccordionItem
   AccordionTrigger
 } from '@/components/ui/accordion'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> pr-12243
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243
 import { FileText } from 'lucide-react'
 const faqs = [
   {
@@ -175,7 +126,6 @@ const faqs = [
   }
 ]
 export function FaqSection() {
-<<<<<<< HEAD
 import { GradientHeading } from './GradientHeading';
   Accordion,;
   AccordionContent,;
@@ -393,7 +343,6 @@ const faqs = [
     answer:
 
 
-=======
   return (
     <section className='py-20 bg-zion-blue' id='faq'>
       <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
@@ -405,11 +354,10 @@ const faqs = [
           </p>
         </div>
                 <AccordionContent className='text-zion-slate-light'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export function FaqSection() {
   return (
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -419,11 +367,9 @@ export function FaqSection() {
             <FileText className="h-6 w-6 text-zion-cyan mr-2" />
             <h3 className="text-xl font-bold text-white">Common Questions</h3>
           </div>
-<<<<<<< HEAD
         </div>
       </div>
     </section>
-=======
 
 
           
@@ -490,7 +436,6 @@ function FaqSection() {
 
                 </AccordionTrigger>
                 <AccordionContent className="text-zion-slate-light">
-<<<<<<< HEAD
 
 import { GradientHeading } from "./GradientHeading",;
 import {;
@@ -555,13 +500,10 @@ export function FaqSection() {;
               <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">;
                 <AccordionTrigger className="text-white hover:text-zion-cyan">;
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   );
 }
 
-<<<<<<< HEAD
 export default FaqSection;
-=======
                 </AccordionContent>;
               </AccordionItem>))}
           </Accordion>;
@@ -569,19 +511,8 @@ export default FaqSection;
       </div>;
     </section>);
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -592,8 +523,8 @@ export default FaqSection;
     </section>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default FaqSection;
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
->>>>>>> pr-12243
+pr-12243
+export default FaqSection;`;
+pr-12325

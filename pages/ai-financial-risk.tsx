@@ -48,7 +48,6 @@
                 ))}
 import {innovativeAIServices} from '../data/innovative-ai-services';
 export default function AIFinancialRiskPage() {
-<<<<<<< HEAD
   const service = innovativeAIServices.find(s =>
     (s.link || '').endsWith('/ai-financial-risk');
   );
@@ -64,9 +63,8 @@ export default function AIFinancialRiskPage() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
   },
-=======
   const service = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <UltraAdvancedFuturisticBackground>
       <NextHead>
@@ -112,7 +110,6 @@ export default function AIFinancialRiskPage() {
                   <div className="text-3xl font-bold text-white">{service?.price || 'Custom pricing'}<span className="text-slate-400 text-base">{service?.period || ''}</span></div>
                 </div>
               </div>
-<<<<<<< HEAD
               <Button href="/contact" variant="quantum" size="lg" className="w-full">Discuss Controls</Button>
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{contactInfo.mobile}</span></div>
@@ -192,7 +189,6 @@ export default function AIFinancialRiskPage() {
               </div>;
 
 
-=======
               <Button
                 href='/contact'
                 variant='quantum'
@@ -215,13 +211,12 @@ export default function AIFinancialRiskPage() {
                   <span className='text-xs'>{contactInfo.address}</span>
                 </div>
               </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-<<<<<<< HEAD
 
 
                 className='w-full'>;
@@ -314,6 +309,5 @@ export default function AIFinancialRiskPage(req, res) {
   }
 }
 ;
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

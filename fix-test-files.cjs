@@ -1,21 +1,9 @@
 const fs = require('fs');
 const path = require('path');
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 // Function to fix malformed test files;
 function fixTestFile(filePath) {}
   try {}
     let content = fs.readFileSync(filePath, 'utf8');
-    
     // Check if the file has malformed syntax (all on one line with missing quotes);
     if (content.includes('import React from \'react" import { render,screen,fireEvent }')) {}
       console.log(`Fixing malformed test file: ${filePath}`);
@@ -24,12 +12,11 @@ function fixTestFile(filePath) {}
       const fileName = path.basename(filePath, '.test.js');
       const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1);
       
-      // Create a proper test file structure;
+      // Create a proper test file structure;`;
       const fixedContent = `import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ${componentName} from '../components/${componentName}';
-
 describe('${componentName}', () => {}
   test('renders without crashing', () => {}
     render(<${componentName} />);
@@ -38,58 +25,34 @@ describe('${componentName}', () => {}
 });
 
   test('displays correct content', () => {}
-    render(<${componentName} />);
     // Add specific content tests here;
-  }
-});
 
   test('handles user interactions', () => {}
-    render(<${componentName} />);
     // Add interaction tests here;
-  }
-});
 
   test('applies correct styling', () => {}
-    render(<${componentName} />);
     // Add styling tests here;
-  }
-});
-}
-});
+});`;
 `;`
       
       fs.writeFileSync(filePath, fixedContent);
       return true;
     };
     return false;
-  } catch (error) {}
+  } catch (error) {}`;
     console.error(`Error fixing file ${filePath}:`, error.message);
-    return false;
-  };
-};
 // Function to remove unused fireEvent imports;
 function removeUnusedFireEvent(filePath) {}
-  try {}
-    let content = fs.readFileSync(filePath, 'utf8');
-    
     // Check if fireEvent is imported but not used;
-    if (content.includes('fireEvent') && !content.includes('fireEvent(')) {}
+    if (content.includes('fireEvent') && !content.includes('fireEvent(')) {}`;
       console.log(`Removing unused fireEvent from: ${filePath}`);
       
       // Remove fireEvent from import statement;
-      content = content.replace(/, fireEvent/g, '');
-      content = content.replace(/fireEvent, /g, '');
-      content = content.replace(/fireEvent/g, '');
-      
+      content = content.replace(/, fireEvent/g, );
+      content = content.replace(/fireEvent, /g, );
+      content = content.replace(/fireEvent/g, );
       fs.writeFileSync(filePath, content);
-      return true;
-    };
-    return false;
-  } catch (error) {}
     console.error(`Error processing file ${filePath}:`, error.message);
-    return false;
-  };
-};
 // Get all test files;
 const testDir = path.join(__dirname, '__tests__');
 const files = fs.readdirSync(testDir);
@@ -104,14 +67,9 @@ files.forEach(file => {})
     // Fix malformed files;
     if (fixTestFile(filePath)) {}
       fixedCount++;
-    };
     // Remove unused fireEvent;
     if (removeUnusedFireEvent(filePath)) {}
       fireEventCount++;
-    };
-  };
-}
-});
-
-console.log(`Fixed ${fixedCount} malformed test files`);
+`;
+console.log(`Fixed ${fixedCount} malformed test files`);`;
 console.log(`Removed unused fireEvent from ${fireEventCount} files`);

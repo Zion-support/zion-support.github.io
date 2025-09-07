@@ -1,13 +1,11 @@
 import Head from 'next/head';
-<<<<<<< HEAD
 
-=======
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Scale  } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function AILegalContractAnalyzerPage() {
   const service = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import {
   Phone
   Mail
@@ -196,7 +194,6 @@ if (return null) {
 
 export default function AILegalContractAnalyzerPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
-<<<<<<< HEAD
     s.link.endsWith('/ai-legal-contract-analyzer');
   );  if (!service) return null;
 
@@ -219,25 +216,22 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 export default function AILegalContractAnalyzerPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-legal-contract-analyzer'))
   if (!service) return null,
-=======
     s.link.endsWith('/ai-legal-contract-analyzer')
   );
   if (!service) return null;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Layout>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
-<<<<<<< HEAD
         <link rel="canonical" href="https://ziontechgroup.com/ai-legal-contract-analyzer" />
-=======
 <meta name='description' content={service.description} />
         <link
           rel='canonical'
           href='https://ziontechgroup.com/ai-legal-contract-analyzer'
         />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
@@ -251,7 +245,6 @@ export default function AILegalContractAnalyzerPage() {
               <p className="text-slate-300 mb-6">{service.description}</p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {service.features.slice(0, 12).map((feat, i) => (
-<<<<<<< HEAD
 
 
 
@@ -266,7 +259,6 @@ export default function AILegalContractAnalyzerPage() {
 
 
 
-=======
                   <li
                     key={i}
                     className='flex items-start space-x-3 text-slate-200 w-5 h-5 text-amber-400 mt-0.5'
@@ -335,4 +327,4 @@ export default function AILegalContractAnalyzerPage() {
       </main>
     </Layout>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

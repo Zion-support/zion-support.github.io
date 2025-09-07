@@ -1,16 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     setIsSubmitting(true),
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
-<<<<<<< HEAD
-<<<<<<< HEAD
+main
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { useState, useRef } from 'react'
@@ -18,7 +8,6 @@ import { Mail } from 'lucide-react'
 import { useToast } from "@/hooks/use-toast";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function EnhancedNewsletterForm() {
-=======
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useState, useRef } from 'react';
@@ -28,12 +17,9 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 
 export function EnhancedNewsletterForm() {
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [email, setEmail] = useState("");
-<<<<<<< HEAD
-=======
-=======
->>>>>>> pr-12243
+pr-12243
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useState, useRef } from 'react';
@@ -46,8 +32,22 @@ export function EnhancedNewsletterForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
-<<<<<<< HEAD
   const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { useState, useRef } from 'react';
+import { Mail } from 'lucide-react';
+import { useToast } from "@/hooks/use-toast";
+import { logErrorToProduction } from '@/utils/productionLogger';
+
+export function EnhancedNewsletterForm() {
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const { toast } = useToast();
+  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+pr-12325
   const lastSubmit = useRef(0);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -62,12 +62,20 @@ export function EnhancedNewsletterForm() {
         title: 'Invalid email',
         description: 'Please enter a valid email address.',
         variant: 'destructive'
+    
+    lastSubmit.current = now;
+
+    if (!email.trim()) {
+      toast({
+        title: "Email required",
+        description: "Please enter your email address.",
+        variant: "destructive",
+pr-12325
       });
       return;
     }
 
     setIsSubmitting(true);
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     try {
       const res = await fetch("/api/newsletter", {
         method: "POST",
@@ -123,16 +131,9 @@ export function EnhancedNewsletterForm() {
     }
   },
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   const EMAIL_REGEX = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> pr-12243
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243
   return (
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
       <div className="flex items-center mb-4">
@@ -223,7 +224,6 @@ export function EnhancedNewsletterForm() {
         <span>Join 10,000+ tech professionals who already subscribe</span>
       </div>
     </div>
-<<<<<<< HEAD
   )
 
 
@@ -407,6 +407,28 @@ export function EnhancedNewsletterForm() {
     } finally {
       setIsSubmitting(false);
     }
+    if (!EMAIL_REGEX.test(email)) {
+        title: "Invalid email",
+        description: "Please enter a valid email address.",
+
+    setIsSubmitting(true);
+
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      setIsSubmitted(true);
+        title: "Success!",
+        description: "You've been subscribed to our newsletter.",
+      
+      setEmail("");
+    } catch (error) {
+      logErrorToProduction('Newsletter subscription failed', error);
+        title: "Subscription failed",
+        description: "Something went wrong. Please try again.",
+    } finally {
+      setIsSubmitting(false);
+pr-12325
   };
 
   if (isSubmitted) {
@@ -480,14 +502,54 @@ export function EnhancedNewsletterForm() {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+main
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> pr-12243
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243
+      <div className="text-center p-6 bg-green-50 dark:bg-green-900/20 rounded-lg">
+        <div className="text-green-600 dark:text-green-400 mb-2">
+          <Mail className="h-8 w-8 mx-auto" />
+        </div>
+        <h3 className="text-lg font-semibold text-green-800 dark:text-green-200 mb-1">
+          Thank you for subscribing!
+        </h3>
+        <p className="text-green-600 dark:text-green-400">
+          You'll receive our latest updates and insights.
+        </p>
+    );
+
+    <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-6 text-white">
+      <div className="text-center mb-6">
+        <h3 className="text-2xl font-bold mb-2">Stay Updated</h3>
+        <p className="text-blue-100">
+          Get the latest insights, tips, and updates delivered to your inbox.
+
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="flex flex-col sm:flex-row gap-2">
+          <Input
+            type="email"
+            placeholder="Enter your email address"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="flex-1 text-gray-900"
+            disabled={isSubmitting}
+            required
+          />
+          <Button
+            type="submit"
+            className="bg-white text-blue-600 hover:bg-gray-100 disabled:opacity-50"
+          >
+            {isSubmitting ? (
+              <div className="flex items-center space-x-2">
+                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600"></div>
+                <span>Subscribing...</span>
+            ) : (
+                <Mail className="h-4 w-4" />
+                <span>Subscribe</span>
+            )}
+          
+        
+        <p className="text-xs text-blue-100 text-center">
+          We respect your privacy. Unsubscribe at any time.
+      </form>
+pr-12325

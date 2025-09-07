@@ -40,6 +40,22 @@ import { JobApplication, ApplicationStatus } from '@/types / jobs';
 import { toast } from './sonner';
 export const useJobApplications = (job_id?: string) =>: any {
   const { user } = use_auth ();
+
+
+import {useState, useEffect} from "react";""
+import {supabase} from "@/integrations/supabase/client";""
+import {useAuth} from "@/hooks/useAuth";""
+import {JobApplication, ApplicationStatus} from "@/types/jobs";""
+import {toast} from "sonner";"
+export const useJobApplications = (jobId?: string) => {;
+
+
+  const { user } = useAuth();
+  const [applications, setApplications] = useState<JobApplication[]>([]);
+
+  const [error, setError] = useState<string | null>(null);
+</string>
+pr-12325
   const [applications, set_applications] = useState < JobApplication[]>([]);
   const [is_loading, setIsLoading] = useState (true);
   const [error, set_error] = useState < string | null>(null);
@@ -108,6 +124,45 @@ if ( {) {
 if (throw fetch_error) {
   $2
 }
+    // Check condition;
+if ( {) {
+  $2;
+}
+      setIsLoading (false);
+      return;
+    try {
+  // TODO: Implement
+      setIsLoading (true);
+      let query = supabase;"
+        .from ("job_applications");"
+        .select (`;
+          *;)
+          job: jobs (*),
+          talent_profile:profiles ! talent_id (id, display_name, avatar_url, bio);`;
+        `);"
+        .order ("created_at", { ascending: false });"
+      // Filter by job if job_id is provided;
+      // Check condition;
+}"
+        query = query.eq ("job_id", job_id);"
+      // For talent users, only fetch their own applications;
+      // Check condition;
+        query = query.eq ("talent_id", user.id);"
+      // For client users, fetch applications for their jobs;
+      else // Check condition;
+        // Check condition;
+          // Fix: Convert the subquery to a proper array or string;
+          const { data: job_ids } = await supabase;"
+            .from ("jobs");""
+            .select ("id");""
+            .eq ("client_id", user.id);"
+          // Check condition;
+            const jobIdArray = job_ids.map (job => job.id);"
+            query = query.in ("job_id", jobIdArray);"
+      const { data, error: fetch_error } = await query;
+      // Check condition;
+if (throw fetch_error) {
+pr-12325
       // Transform the data to match our application types;
       const transformed_data = data.map ((app: any) => ({
 
@@ -119,6 +174,15 @@ if (throw fetch_error) {
         ...app;
           skills: []
         } : undefined
+
+        talent_profile: app && app.talent_profile ? {
+          ...app && app.talent_profile;
+          full_name: app && app.talent_profile.display_name;,
+  profile_picture_url: app && app.talent_profile.avatar_url,
+
+          skills: []
+        } : undefined;)
+pr-12325
       }));
       setApplications(transformedData as JobApplication[]);
       setError(null)
@@ -142,6 +206,23 @@ if (throw fetch_error) {
       setIsLoading (false);
     }
   }
+"
+      console && console.error("Error fetching applications:", err);""
+      setError("Failed to fetch applications: " + err && err.message),""
+      toast && toast.error("Failed to fetch applications")"
+          profile_picture_url: app.talent_profile.avatar_url,
+          skills: [];
+        } : undefined;
+      set_applications (transformed_data as JobApplication[]);
+      set_error (null);
+    } catch (err: any) {"
+      console.error ("Error fetching applications:", err);""
+      set_error ("Failed to fetch applications: " + err.message),""
+      toast.error ("Failed to fetch applications");"
+    } finally {
+  // TODO: Implement
+
+pr-12325
 
       
       const { data, error: fetchError } = await query,
@@ -336,3 +417,61 @@ if ( {) {
     updateApplicationStatus,
     markApplicationAsViewed;
 
+      // Transform the data to match our application types;
+      const transformedData = data.map((app: any) => ({
+        ...app,
+        talent_profile: app.talent_profile ? {
+
+          ...app.talent_profile,
+          full_name: app.talent_profile.display_name,
+      })),
+      
+      setApplications(transformedData as JobApplication[]),
+      console.error("Error fetching applications:", err),""
+      setError("Failed to fetch applications: " + err.message),""
+      toast.error("Failed to fetch applications")"
+  // TODO: Implement
+
+
+  },
+  
+  const applyToJob = async (jobId: string, coverLetter: string, resumeId?: string) => {
+    if (!user) {"
+      toast && toast.error("You must be logged in to apply for jobs");"
+      return false;
+  // TODO: Implement
+      const { data, error } = await supabase;"
+        .from("job_applications")"
+        .insert({
+
+
+          job_id: jobId,
+          talent_id: user.id,
+          resume_id: resumeId,
+          cover_letter: coverLetter,"
+          status: "new"")
+        })
+        .select()
+        .single(),
+      
+
+      if (error) {"
+        if (error.code === '23505') { // Unique violation;
+          toast.error("You have already applied to this job")"
+        } else {
+  // TODO: Implement
+          throw error;"
+import { useState, useEffect } from "react",;""
+import { supabase } from "@/integrations/supabase/client",;""
+import { useAuth } from "@/hooks/useAuth",;""
+import { JobApplication, ApplicationStatus } from "@/types/jobs",;""
+import { toast } from "sonner",;"
+  const { user } = useAuth(),;
+  const [applications, setApplications] = useState<JobApplication[]>([]),;
+
+  const [error, setError] = useState<string | null>(null),;
+const [applications, setApplications] = useState<JobApplication[]> ([]);
+
+const [error, setError] = useState<string | null> (null);
+</string>"`;
+pr-12325

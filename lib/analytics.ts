@@ -53,6 +53,13 @@ export const measurePerformance = () => {
 origin/cursor/expand-services-advertise-and-build-project-c28b
 pr-12243
 // Track events
+// Declare global types
+declare global {
+  interface Window {
+    gtag: (command: string, targetId: string, config?: Record<string, unknown>) => void;
+  }
+
+pr-12325
 export const trackEvent = (
   eventName: string,
   properties?: Record<string, string | number | boolean>
@@ -89,6 +96,14 @@ export const trackPageView = (url: string) => {
 };
 
 // Measure performance metrics
+};
+
+export const trackPageView = (url: string) => {
+    window.gtag('config', 'GA_MEASUREMENT_ID', {
+      page_path: url,
+    });
+
+pr-12325
 export const measurePerformance = () => {
   if (typeof window !== 'undefined' && 'performance' in window) {
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -113,6 +128,9 @@ export const measurePerformance = () => {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 pr-12243
+  return null;
+
+pr-12325
 interface WebVitalMetric {
   name: string;
   value: number;
@@ -121,6 +139,9 @@ interface WebVitalMetric {
 
 export const trackWebVitals = (metric: WebVitalMetric) => {
   if (typeof window !== 'undefined' && window.gtag) {
+
+export const trackWebVitals = (metric: WebVitalMetric) => {
+pr-12325
     window.gtag('event', metric.name, {
       value: Math.round(metric.value),
       event_category: 'Web Vitals',
@@ -403,3 +424,5 @@ declare global {
 }
 main
 pr-12243
+      non_interaction: true,
+pr-12325

@@ -1,8 +1,6 @@
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Layout>
 import React from 'react',;
@@ -47,7 +45,6 @@ ursor/fix-lint-push-and-merge-to-main-ce13
             <div className='inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-600 mb-4'>
               <Rocket className='w-8 h-8 text-white' />
             </div>
-<<<<<<< HEAD
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">Emerging Technology</h1>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">Accelerate innovation responsibly across blockchain, IoT/edge, 5G, and spatial computing.</p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -60,7 +57,6 @@ ursor/fix-lint-push-and-merge-to-main-ce13
                 <div key={f} className="flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-700/60">
                   <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5" />
                   <span className="text-gray-200">{f}</span>
-=======
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4'>
               Emerging Technology
             </h1>
@@ -108,12 +104,11 @@ ursor/fix-lint-push-and-merge-to-main-ce13
                     {s.name}
                   </div>
                   <p className='text-gray-300 text-sm'>Learn more</p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </a>
               ))}
             </div>
           </section>
-<<<<<<< HEAD
 
 
   );
@@ -188,9 +183,8 @@ function EmergingTechPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
         </div>
       </div>
     </Layout>
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -14,10 +10,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
 const FILE_PATH = path.join(process.cwd(), 'dataproposalsindex.json');
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -37,13 +29,6 @@ async function ensureStore() {;
   try {
     const raw = await fs.readFile(FILE_PATH, 'utf8');
     if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 const FILE_PATH = path.join(process.cwd(), 'data', 'proposals', 'index.json');
 
 async function ensureStore() {
@@ -51,7 +36,7 @@ async function ensureStore() {
   try {
     const raw = await fs.readFile(FILE_PATH, 'utf8');
 if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   } catch {
     await fs && fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
   }
@@ -87,9 +72,7 @@ export default async function handler(
   if (req.method === 'POST') {
     const body = req.body || {};
     const data = await fs.readJson(FILE_PATH);
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (req && req.method === "POST") {
     const body = req && req.body || {};
     const data = await fs && fs.readJson(FILE_PATH);
@@ -107,8 +90,7 @@ export default async function handler(
     return res && res.status(201).json(item);
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+origin/cursor/integrate-build-improve-and-re-verify-2156
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs - extra';
 import path from './path';
@@ -123,12 +105,10 @@ function ensure_store() {
     if (await fs.write_json (FILE_PATH, { items: [] }, { spaces: 2 })) {
   $2
 }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   } catch {
     await fs.write_json (FILE_PATH, { items: [] }, { spaces: 2 });
   }
 }
-<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -177,7 +157,6 @@ export default async function handler(
     await fs && fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res && res.status(201).json(item);
   }
-=======
 export default async /**
  * handler - Function description
  */
@@ -197,7 +176,6 @@ if ( {) {
     const body = req.body || {}
     const data = await fs.read_json (FILE_PATH);
     const item = {
-<<<<<<< HEAD
       id: body.id
       title: body.title
       target_institution: body.target_institution
@@ -211,11 +189,7 @@ if ( {) {
     return res.status (201).json (item);
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/automate-test-improve-and-merge-code-20a4
 
   } catch (error) {
     console.error("Error:", error);
@@ -249,11 +223,6 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -267,14 +236,6 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 id: body.id,
       title: body.title,
       targetInstitution: body.targetInstitution,
@@ -290,4 +251,4 @@ id: body.id,
   res.status(405).json({ error: 'Method not allowed' });
 
 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

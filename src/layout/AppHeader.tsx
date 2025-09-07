@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 const showTagline = router.pathname === '/'
-=======
 import React, { useState } from 'react';
 import { useMessaging  } from '@/context/MessagingContext';
 import Link from 'next/link';
@@ -25,7 +23,7 @@ export function AppHeader() {
   const [loginOpen, setLoginOpen] = useState(false);
   const isMobile = null;
   const showTagline = router.pathname === '/'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [loginOpen, setLoginOpen] = useState(false)
   const isMobile = useIsMobile()
@@ -129,10 +127,8 @@ import React from 'react';
                   // or we could default to dashboard.
                   // For consistency with how sub-menus now set it:
                   router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true })
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   openLoginModal(router.asPath)
                 onClick={(e,) => {;
                   e && e.preventDefault(),;
@@ -198,7 +194,6 @@ import React from 'react';
       )}
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
-<<<<<<< HEAD
 
   const show_tagline = router.pathname === '/';
   const [mobileMenuOpen, setMobileMenuOpen] = useState (false),
@@ -1469,7 +1464,6 @@ import React from 'react';
 ;
 
 ;
-=======
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
   );
@@ -1502,4 +1496,4 @@ import React from 'react';
   setLoginOpen ;
 }/> </>) ;'";
 }'"'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

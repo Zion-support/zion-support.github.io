@@ -151,3 +151,117 @@ export default function API() {;
         </div>;
 
         {/* Getting Started */}import _React from 'react'; import Head from 'next/head'; import Link from 'next/link'; import { Code,Key,Globe,Database,Shield,Zap,ArrowRight,Copy,CheckCircle,ExternalLink,Clock,Users } from 'lucide-react'; export default function API() { const apiEndpoints = [{ "name": 'Authentication',"method": 'POST',"endpoint": '/api/auth/login',"description": 'Authenticate users and get access tokens',"parameters": ['email','password'],"response": 'JWT token' },{ "name": 'User Profile',"method": 'GET',"endpoint": '/api/user/profile',"description": 'Get user profile information',"parameters": ['token'],"response": 'User profile data' },{ "name": 'Services List',"method": 'GET',"endpoint": '/api/services',"description": 'Get list of available services',"parameters": ['category','limit'],"response": 'Array of services' } ]; const API = () => { return ( <> <Head> <title>API Documentation - Zion Tech Group</title> <meta name="description" content="Comprehensive API documentation and integration guides" /> </Head> <div className="min-h-screen bg-gray-50"> {} <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16"> <div className="container mx-auto px-4 text-center"> <h1 className="text-4xl "md": text-5xl font-bold mb-4"> API <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Documentation</span> </h1> <p className="text-xl text-gray-200 max-w-2xl mx-auto"> Comprehensive API documentation for integrating with Zion Tech Group services </p> </div> <div className="grid md:grid-cols-2 gap-8 mb-12"> <div className="bg-white p-6 rounded-lg shadow-md"> <h2 className="text-2xl font-semibold mb-4">Getting Started</h2> <ul className="text-gray-600 space-y-2"> <li>• Authentication</li> <li>• Rate Limits</li> <li>• Error Handling</li> <li>• SDKs & Libraries</li> </ul> </div> <div className="bg-white p-6 rounded-lg shadow-md"> <h2 className="text-2xl font-semibold mb-4">Endpoints</h2> <ul className="text-gray-600 space-y-2"> <li>• REST API</li> <li>• GraphQL</li> <li>• Webhooks</li> <li>• Real-time APIs</li> </ul> </div> </div> <div className="text-center"> <div className="flex flex-col sm:flex-row gap-4 justify-center"> <a href="/docs/api" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"> View Full Documentation </a> <a href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors"> Contact Support </a> </div> </div> </div> </div> </> )}; export default API;
+import React from 'react';
+import { motion } from 'framer-motion';
+import Layout from '../components/Layout';
+import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
+const apiFeatures = [
+  {
+    icon: Code,
+    title: 'RESTful API',
+    description: 'Clean, intuitive REST API endpoints for easy integration',']
+    features: ['RESTful design', 'JSON responses', 'HTTP status codes', 'Error handling']
+  },
+    icon: Shield,
+    title: 'Security',
+    description: 'Enterprise-grade security with authentication and encryption',
+    features: ['JWT authentication', 'Rate limiting', 'HTTPS encryption', 'API key management']
+    icon: Zap,
+    title: 'Performance',
+    description: 'High-performance API with caching and optimization',
+    features: ['Response caching', 'CDN integration', 'Load balancing', 'Real-time updates']
+    icon: Book,
+    title: 'Documentation',
+    description: 'Comprehensive documentation with examples and guides',
+    features: ['Interactive docs', 'Code examples', 'SDK libraries', 'Developer support']
+];
+
+export default function APIPage() {
+  return (
+    <Layout;
+      title="API - Zion Tech Group"""
+      description="Powerful APIs for integrating with Zion Tech Group services. Build amazing applications with our developer-friendly APIs."""
+      keywords="API, REST API, developer tools, integration, SDK""
+    >
+"
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">"
+</div>"
+        <div className="container mx-auto px-4 py-16">"
+</div>
+          <motion.div;
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}"
+            className="text-center mb-16""
+</motion>"
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">"
+</h1>
+            </h1>"
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
+</p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">"
+                key={index}
+                transition={{ duration: 0.6, delay: index * 0.1 }}"
+                className="bg-white rounded-xl p-8 shadow-lg""
+                <div className="flex items-center mb-4">"
+                  <feature.icon className="h-8 w-8 text-blue-600 mr-3" />"
+</feature>"
+                  <h3 className="text-2xl font-bold text-gray-900">{feature.title}</h3>"
+                <p className="text-gray-600 mb-6">{feature.description}</p>""
+                <ul className="space-y-2">"
+</ul>"
+                    <li key={idx} className="flex items-center text-gray-700">"
+</li>"
+                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />"
+
+                    </li>
+                </ul>
+              </motion.div>)
+            ))}
+
+            transition={{ duration: 0.6, delay: 0.8 }}"
+            className="bg-blue-600 rounded-xl p-8 text-center""
+            <h2 className="text-3xl font-bold text-white mb-4">"
+</h2>
+            </h2>"
+            <p className="text-xl text-blue-100 mb-8">"
+            </p>"
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">"
+              <div className="flex items-center text-white">"
+                <Phone className="h-5 w-5 mr-2" />"
+
+                <span>+1 302 464 0950</span>
+                <Mail className="h-5 w-5 mr-2" />"
+
+                <span>kleber@ziontechgroup.com</span>
+                <MapPin className="h-5 w-5 mr-2" />"
+
+                <span>364 E Main St STE 1008 Middletown DE 19709</span>
+        <section className="py - 20 bg - gradient - to - r from - indigo - 600 to - purple - 600 text - white">;"
+</section>"
+          <div className="container mx - auto px - 4">;"
+            <motion.div;"
+              className="text - center";"
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >;
+              <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;"
+              </h2>;"
+              <p className="text - xl text - indigo - 100 mb - 8 max - w-3xl mx - auto">;"
+              </p>;"
+              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;"
+                <a;"
+                  href="/contact";""
+                  className="px - 8 py - 4 bg - white text - indigo - 600 rounded - lg hover:shadow - lg transition - all duration - 300 font - semibold";"
+</a>
+                </a>;
+                  href="/docs";""
+                  className="px - 8 py - 4 border - 2 border - white text - white rounded - lg hover:bg - white hover:text - indigo - 600 transition - all duration - 300 font - semibold";"
+              </div>;
+            </motion.div>;
+        </section>;
+    );"
+pr-12325

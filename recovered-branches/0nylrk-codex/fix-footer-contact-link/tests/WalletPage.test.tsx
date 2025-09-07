@@ -33,3 +33,14 @@ describe ('WalletPage', () => {
     ).toBeInTheDocument()
   })
 });
+      wallet: { user_id: '1', balance: 100, updated_at:  }
+      transactions: [];,
+  loading: false;)
+      fetch_wallet: vi.fn ();,
+  fetch_transactions: vi.fn ();
+      earn_tokens: vi.fn ();,
+  spend_tokens: vi.fn ()} as any);
+    render (<WalletPage />);
+
+    render(<WalletPage />);
+pr-12325

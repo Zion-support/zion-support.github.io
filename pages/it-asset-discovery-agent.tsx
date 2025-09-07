@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -142,12 +141,11 @@ function ITAssetDiscoveryAgentPage() {
           </a>;
         </div>;
       </div>;
-=======
 import React from 'react',
 import Head from 'next/head',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Card from '../components/ui/Card';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default function ITAssetDiscoveryAgentPage() {
 	return (
 		<UltraFuturisticBackground variant="space" intensity="high">
@@ -173,8 +171,6 @@ export default function ITAssetDiscoveryAgentPage() {
 ;
 
 
-<<<<<<< HEAD
-=======
 export default function ITAssetDiscoveryAgentPage() {
   return (
     <UltraFuturisticBackground variant='space' intensity='high'>
@@ -254,4 +250,4 @@ export default function ITAssetDiscoveryAgentPage() {
       </div>
     </UltraFuturisticBackground>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

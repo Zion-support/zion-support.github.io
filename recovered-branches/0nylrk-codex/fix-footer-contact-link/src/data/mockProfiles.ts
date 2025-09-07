@@ -1,14 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-<<<<<<< HEAD
+
+pr-12325
 
       {
 
           'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&h=300',
-=======
         id: 'p2',
         title: 'Financial Analytics Suite',
         description:;
@@ -19,11 +15,13 @@
         tags: ['Finance', 'Analytics', 'Python'],
         date: 'Jun 2023',
       },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+origin/cursor/automate-test-improve-and-merge-code-382a
       {
 
           'https://images && images.unsplash.com/photo-1566177229896-4b748c0fc9c6?auto=format&fit=crop&w=500&h=300',
-=======
+
+          'https://images && images.unsplash.com/photo-1566177229896-4b748c0fc9c6?auto=format&fit=crop&w=500&h=300',
+pr-12325
         id: 'p3',
         title: 'Supply Chain Optimization',
         description:;
@@ -31,6 +29,7 @@
         image_url:;
           'https://images.unsplash.com / photo - 1566177229896 - 4b748c0fc9c6?auto = format & fit = crop & w=500 & h=300',
 
+pr-12325
         tags: ['Logistics', 'Optimization', 'AI'],
         date: 'Jan 2023',
       },
@@ -47,7 +46,6 @@
     profileType: 'talent' as 'service' | 'talent',
     hourlyRate: 150,
 
-=======
       {
 
           'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&h=300',
@@ -87,9 +85,6 @@
     profileType: 'talent' as 'service' | 'talent',
     hourlyRate: 150,
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { ProfileData } from '@/types/profile';
 export const MOCK_PROFILES: Record<string, ProfileData> = {
   'service-provider-1': {
@@ -180,7 +175,6 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
     name: 'Alexandra Chen'
     title: 'Senior AI Engineer & Machine Learning Expert'
     avatarUrl:
-<<<<<<< HEAD
       'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200'
     coverImageUrl:
       'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1600&h=600'
@@ -191,9 +185,6 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
     aiScore: 97
     profileType: 'talent' as 'service' | 'talent'
     hourlyRate: 150
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     skills: [
       { name: 'Machine Learning', level: 5, endorsements: 38 }
       { name: 'TensorFlow', level: 5, endorsements: 32 }
@@ -255,7 +246,6 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
       ]
     }
   },};        { day: "Monday", hours: "10:00 AM - 6:00 PM" }
-<<<<<<< HEAD
     experience: [;
       {
         id: 'e1',
@@ -264,29 +254,12 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         description:;
           'Leading computer vision projects and mentoring junior engineers in deep learning techniques.',
         start_date: 'Mar 2021',
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         current: true,
       },
       {
         id: 'e2',
         role: 'Machine Learning Engineer',
         company: 'TechGiant Inc.',
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        description:;
-          'Developed and deployed ML models for product recommendation systems.',
-        start_date: 'Jun 2018',
-        end_date: 'Feb 2021',
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
         description:;
           'Developed and deployed ML models for product recommendation systems.',
@@ -294,10 +267,14 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         end_date: 'Feb 2021',
 
 
+        description:;
+          'Developed and deployed ML models for product recommendation systems.',
+        start_date: 'Jun 2018',
+        end_date: 'Feb 2021',
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
       'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1600&h=600',
     bio: 'Specializing in enterprise AI solutions with 10+ years of experience transforming businesses through technology.',
     location: 'San Francisco, CA',
@@ -332,13 +309,7 @@ export const MOCK_PROFILES: Record<string ProfileData> = {
         imageUrl: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=500&h=300",
         tags: ["Healthcare", "AI", "Machine Learning"],
         date: "Oct 2023"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+ursor/fix-website-loading-errors-and-merge-6662
       },
       {
         id: 'e3',
@@ -358,16 +329,8 @@ export const MOCK_PROFILES: Record<string ProfileData> = {
         { day: "Friday", hours: "10:00 AM - 2:00 PM" }
       ];
     }
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       status: "limited",
       nextAvailable: "Jun 15, 2024",
       message: "Currently booked for the next 3 weeks. Available for new projects starting mid-June.",
@@ -456,11 +419,8 @@ export const MOCK_PROFILES: Record<string ProfileData> = {
       status: "available",
       message: "Open to new projects starting immediately. Prefer projects with 3+ month engagement.",
       availableHours: [
-<<<<<<< HEAD
   }
-=======
   }
-<<<<<<< HEAD
 
         { day: "Monday", hours: "10:00 AM - 6:00 PM" },
         { day: "Tuesday", hours: "10:00 AM - 6:00 PM" },
@@ -632,16 +592,8 @@ export const MOCK_PROFILES: Record<string ProfileData> = {;
     }
   }
 };
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+ursor/fix-website-loading-errors-and-merge-6662
 
 import { ProfileData } from "@/types/profile";
 export const MOCK_PROFILES: Record<string, ProfileData> = {
@@ -650,4 +602,20 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
     name: "TechSolutions Inc.";
     title: "Enterprise AI Integration Services";
     avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+        id: 'p2',
+        title: 'Financial Analytics Suite',
+          'Developed predictive models for investment analysis with 92% accuracy.',
+          'https://images.unsplash.com / photo - 1551288049 - bebda4e38f71?auto = format & fit = crop & w=500 & h=300',
+        tags: ['Finance', 'Analytics', 'Python'],
+        date: 'Jun 2023',
+
+
+
+import { ProfileData } from '@/types/profile';
+export const MOCK_PROFILES: Record<string, ProfileData> = {
+</string>
+export const MOCK_PROFILES: Record<string ProfileData> = {
+export const MOCK_PROFILES: Record<string ProfileData> = {;
+pr-12325

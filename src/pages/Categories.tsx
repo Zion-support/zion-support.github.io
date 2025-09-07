@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Folder } from 'lucide-react'
 import { CATEGORIES  } from '@/data/categories';
 import { NextSeo  } from '@/components/NextSeo';
 import {logErrorToProduction} from '@/utils/productionLogger';
-=======
 import useSWR from 'swr';
 import { CategoryCard } from '@/components/CategoryCard';
 import { GradientHeading } from '@/components/GradientHeading';
@@ -15,21 +12,19 @@ import { CATEGORIES } from '@/data/categories';
 import { NextSeo } from '@/components/NextSeo';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 interface CategoryType {
   id: string;
   name: string;
   slug: string;
   icon: string
 
-<<<<<<< HEAD
 
       logErrorToProduction ('Categories API error:', { data: response.status_text }),
       return CATEGORIES as CategoryType[];
     fallback_data: initial_categories}),
   const categories = data || [];
   const is_loading = !data && !error;
-=======
   );
 
 };';
@@ -47,7 +42,7 @@ return (<> <NextSeo title="Browse Categories" description="Explore AI service an
 }
 import React from "react"
 import { Brain, Cloud, Shield, Code, Database, Network } from "lucide-react";"});"})
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }
 const Categories: React.FC: = () => {,"
   const categories = []
@@ -80,7 +75,6 @@ const Categories: React.FC = () => {"
                 <category.icon className="h-8 w-8 text-blue-600 mr-3" />,"
                 <h2 className="text-xl font-semibold text-gray-900">{category.name}</h2>;"
               <p className="text-gray-600 mb-4"> {category.count} services available in this category
-=======
 import { Brain, Cloud, Shield, Code, Database, Network } from 'lucide-react';
 const Categories: React.FC = () => {
   const categories = [
@@ -104,7 +98,7 @@ const Categories: React.FC = () => {
               </div>""
               <p className='text-gray-600 mb-4'>
                 {category.count} services available in this category
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               </p>
               <a>
                 href = {"/services ? category=${category.name.toLowerCase().replace(" ", "-")}"}">
@@ -189,8 +183,6 @@ const Categories: React.FC = () => {}
 export default Categories""
 "
   )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 import useSWR from 'swr',;
 import { CategoryCard } from "@/components/CategoryCard",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -290,12 +282,10 @@ export default function Categories({ categories: initialCategories = [] }: Categ
   );
 }
 ;
-=======
 export: default Categories
 export default Categories," ]
 export default Categories"")))))))))
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default Categories"`"
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

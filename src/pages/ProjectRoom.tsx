@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ;
 
 import React, { useState } from 'react',;
@@ -90,7 +89,6 @@ export default function ProjectRoom() {;
   },
   
 
-=======
 import React, { useState } from 'react';
 import { useRouter } from 'next/router', // Changed from useParams
 import { Header  } from '@/components/Header';
@@ -103,7 +101,7 @@ import { VideoCallRoom  } from '@/components/video/VideoCallRoom';
 import { toast } from 'sonner';
 export default function ProjectRoom() {
   const router = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>
       <SEO
@@ -118,7 +116,6 @@ export default function ProjectRoom() {
       </div>
     </>
   );
-<<<<<<< HEAD
 }
 }
 }
@@ -132,7 +129,6 @@ export default function ProjectRoom() {
 }
 }
   )
-=======
 
 };
 const endVideoCall = () => {;
@@ -154,5 +150,5 @@ return (<> End Call </Button>) ;
 }</CardContent> </Card> </TabsContent> <TabsContent value="calendar" className="space-y-4" > <Card> <CardHeader> <CardTitle>Project Calendar</CardTitle> <CardDescription>Schedule and manage events</CardDescription> </CardHeader> <CardContent className="h-[400px]" > <div className="flex items-center justify-center h-full" > <p className="text-muted-foreground" >Calendar will be implemented soon</p> </div> </CardContent> </Card> </TabsContent> <TabsContent value="team" className="space-y-4" > <Card> <CardHeader> <CardTitle>Team Members</CardTitle> <CardDescription>Manage project participants</CardDescription> </CardHeader> <CardContent className="h-[400px]" > <div className="flex items-center justify-center h-full" > <p className="text-muted-foreground" >Team management will be implemented soon</p> </div> </CardContent> </Card> </TabsContent> <TabsContent value="settings" className="space-y-4" > <Card> <CardHeader> <CardTitle>Project Settings</CardTitle> <CardDescription>Configure project parameters</CardDescription> </CardHeader> <CardContent className="h-[400px]" > <div className="flex items-center justify-center h-full" > <p className="text-muted-foreground" >Settings will be implemented soon</p> </div> </CardContent> </Card> </TabsContent> </Tabs> </main> </>) ;
 }'"
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }

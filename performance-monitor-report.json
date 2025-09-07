@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 {
-<<<<<<< HEAD
   "timestamp": "2025-09-05T23:46:02.066Z",
   "metrics": {},
   "performanceIssues": [
@@ -145,11 +141,8 @@
     "totalOptimizations": 1
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   "timestamp": "2025-09-03T17:02:57.562Z",
   "duration": "5148ms",
   "metrics": {
@@ -244,6 +237,4 @@
   },
   "recommendations": []
 }
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+origin/cursor/automate-test-fix-improve-and-merge-code-bfbd

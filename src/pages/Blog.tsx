@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Categories for filtering
 
 const CATEGORIES = [
@@ -800,7 +799,6 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
       </div>;
     </>;
   );
-=======
 import { useState, useEffect } from "react",
 import Link from "next/link",
 import { useRouter } from "next/router",
@@ -899,4 +897,4 @@ min-h-screen bg-zion-blue pt-12 pb-20 px-4"> <h1>Blog</h1> <div className=" cont
 
 }</div> </div> </>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

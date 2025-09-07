@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 
 
-=======
   Monitor,
   Brain,
   Cpu,
@@ -27,7 +25,7 @@
 
 const AIPoweredITAssetManagement = () => {
   const features = [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     {
       icon: Brain,
 title: 'AI-Powered Asset Discovery',
@@ -87,7 +85,6 @@ title: 'Cost Optimization',
       description: 'Better security compliance',
     },
     {
-<<<<<<< HEAD
       icon: TrendingUp
       title: "Efficiency Boost"
       value: "200%"
@@ -283,7 +280,6 @@ const AIPoweredITAssetManagement = () => {
 export default AIPoweredITAssetManagement;
   ],
 
-=======
       icon: TrendingUp,
       title: 'Efficiency Boost',
       value: '200%',
@@ -301,7 +297,7 @@ export default AIPoweredITAssetManagement;
     'Cost allocation and tracking',
     'Integration with existing IT tools',
   ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
   return (
     <>
@@ -329,7 +325,6 @@ export default AIPoweredITAssetManagement;
           content='https://ziontechgroup.com/ai-powered-it-asset-management'
         />
       </Head>
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -347,21 +342,19 @@ export default AIPoweredITAssetManagement;
         <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
-=======
 
       <div className='min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900'>
         {/* Hero Section */}
         <section className='relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8'>
           <div className='absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20'></div>
           <div className='relative max-w-7xl mx-auto text-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
                 Transform your IT operations with intelligent asset management that discovers
                 Transform your IT operations with intelligent asset management that discovers,
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
       description: "Reduction in IT asset costs";
     },
     {
@@ -420,7 +413,6 @@ export default AIPoweredITAssetManagement;
                 Transform your IT operations with intelligent asset management that discovers, 
                 Transform your IT operations with intelligent asset management that discovers,
                 monitors, and optimizes every piece of your technology infrastructure.
-=======
             >
 <div className='flex justify-center mb-6'>
                 <div className='p-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full'>
@@ -437,7 +429,7 @@ export default AIPoweredITAssetManagement;
                 Transform your IT operations with intelligent asset management
                 that discovers, monitors, and optimizes every piece of your
                 technology infrastructure.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <Link
@@ -458,7 +450,6 @@ export default AIPoweredITAssetManagement;
           </div>
         </section>
         {/* Features Section */}
-<<<<<<< HEAD
         {/* Features Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto">;
@@ -517,7 +508,6 @@ export default AIPoweredITAssetManagement;
   }
 }
               className="text-center mb-16"
-=======
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
@@ -526,7 +516,7 @@ export default AIPoweredITAssetManagement;
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
                 Revolutionary Features
@@ -557,7 +547,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
                   </h3>
                   <p className='text-gray-400'>{feature.description}</p>
                 </motion.div>
-<<<<<<< HEAD
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -643,7 +632,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
   }
 }
               className="text-center mb-16"
-=======
               ))}
             </div>
           </div>
@@ -657,7 +645,7 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
                 Comprehensive Asset Coverage
@@ -666,13 +654,11 @@ className='text-center mb-16'
                 Manage every type of IT asset across your entire infrastructure
               </p>
             </motion.div>
-<<<<<<< HEAD
-=======
 
 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
               {assetTypes.map((assetType, index) => (
                 <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   key={index}
                   initial={{ opacity: 0, coordinate_x: -20 }}
                   whileInView={{ opacity: 1, coordinate_x: 0 }}
@@ -683,7 +669,6 @@ className='flex items-center space-x-3'
                   <CheckCircle className='w-6 h-6 text-indigo-400 flex-shrink-0' />
                   <span className='text-gray-300'>{assetType}</span>
                 </motion.div>
-<<<<<<< HEAD
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -769,7 +754,6 @@ className='flex items-center space-x-3'
   }
 }
               className="text-center mb-16"
-=======
               ))}
             </div>
           </div>
@@ -783,7 +767,7 @@ className='flex items-center space-x-3'
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
                 Measurable Results
@@ -819,7 +803,6 @@ className='text-center'
                     </p>
                   </div>
                 </motion.div>
-<<<<<<< HEAD
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -905,7 +888,6 @@ className='text-center'
   }
 }
               className="text-center mb-16"
-=======
               ))}
             </div>
           </div>
@@ -919,7 +901,7 @@ className='text-center'
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
                 Advanced Capabilities
@@ -943,7 +925,6 @@ className='flex items-center space-x-3'
                   <CheckCircle className='w-6 h-6 text-indigo-400 flex-shrink-0' />
                   <span className='text-gray-300'>{capability}</span>
                 </motion.div>
-<<<<<<< HEAD
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -975,7 +956,6 @@ className='flex items-center space-x-3'
 }
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-=======
               ))}
             </div>
           </div>
@@ -983,7 +963,7 @@ className='flex items-center space-x-3'
         {/* CTA Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
@@ -1067,7 +1047,6 @@ className='flex items-center space-x-3'
 );
 };
 export default AIPoweredITAssetManagement;
-<<<<<<< HEAD
 
 
 export default AIPoweredITAssetManagement,;
@@ -1100,5 +1079,4 @@ export default AIPoweredITAssetManagement,
 
 },
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

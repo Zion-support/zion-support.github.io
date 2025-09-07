@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -58,7 +57,6 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-=======
   CheckCircle,
   Star,
   Zap,
@@ -79,24 +77,21 @@ import { motion } from 'framer-motion';
   Users,
   Briefcase,;
 } from 'lucide-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 import FuturisticAnimatedBackground2029 from '../components/ui/FuturisticAnimatedBackground2029';
 import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem';
 import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs';
 import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions';
-<<<<<<< HEAD
-=======
 
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default function ComprehensivePricing2029() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [billingCycle, setBillingCycle] = useState('monthly')
   const allServices = [
-<<<<<<< HEAD
     ...practicalBusinessSolutionServices2029
   ]
   const categories = [
@@ -157,7 +152,6 @@ export default function ComprehensivePricing2029() {
   }
 }
   },
-=======
 ...aiAutonomousEcosystemServices2029,
     ...emergingTechBreakthroughServices2029,
     ...practicalBusinessSolutionServices2029,
@@ -231,7 +225,7 @@ return `$${numericPrice.toLocaleString()}/month`;
       return `$${Math.round(numericPrice * 0.8).toLocaleString()}/month (billed annually)`;
     }
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 <div className='min-h-screen bg-black text-white relative'>
       <FuturisticAnimatedBackground2029 />
@@ -252,7 +246,6 @@ return `$${numericPrice.toLocaleString()}/month`;
         />
       </Head>
       <UltraFuturisticNavigation2029 />
-<<<<<<< HEAD
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -296,16 +289,14 @@ return `$${numericPrice.toLocaleString()}/month`;
 }
       <section className="relative overflow-hidden py-32">
         <div className="relative z-10 container mx-auto px-4 text-center">
-=======
       {/* Hero Section */}
 <section className='relative overflow-hidden py-32'>
         <div className='relative z-10 container mx-auto px-4 text-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
       <section className="relative overflow - hidden py - 32">;
         <div className="relative z - 10 container mx - auto px - 4 text - center">;
           <motion.div;
@@ -318,7 +309,6 @@ return `$${numericPrice.toLocaleString()}/month`;
 
             <div className="flex items-center justify-center gap-4 mb-12">
               <span className="text-gray-400">Monthly</span>
-=======
           >
 <h1 className='text-6xl md:text-8xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-8'>
               2029 Comprehensive Pricing
@@ -331,7 +321,7 @@ return `$${numericPrice.toLocaleString()}/month`;
             {/* Billing Toggle */}
             <div className='flex items-center justify-center gap-4 mb-12'>
               <span className='text-gray-400'>Monthly</span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <button
                 onClick={() =>
                   setBillingCycle(
@@ -344,7 +334,6 @@ return `$${numericPrice.toLocaleString()}/month`;
               >
                 <div
                   className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${
-<<<<<<< HEAD
                     billingCycle === 'annual' ? 'translate-x-8' : 'translate-x-1'
           >;
             <h1 className="text - 6xl md:text - 8xl font - bold bg - gradient - to - r from - purple - 400 via - pink - 400 to - blue - 400 bg - clip - text text - transparent mb - 8">;
@@ -419,7 +408,6 @@ return `$${numericPrice.toLocaleString()}/month`;
 
 
               Each service includes comprehensive features, support, and implementation.
-=======
 billingCycle === 'annual'
                       ? 'translate-x-8'
                       : 'translate-x-1'
@@ -474,7 +462,7 @@ viewport={{ once: true }}
               {filteredServices.length} cutting-edge services available to
               transform your business. Each service includes comprehensive
               features, support, and implementation.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </motion.div>
 
@@ -482,7 +470,6 @@ viewport={{ once: true }}
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
-<<<<<<< HEAD
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -490,7 +477,6 @@ viewport={{ once: true }}
                   <div className="text-center mb-6">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl mb-4">
                       <Brain className="w-8 h-8 text-white" />
-=======
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -503,7 +489,7 @@ viewport={{ once: true }}
                   <div className='text-center mb-6'>
                     <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl mb-4'>
                       <Brain className='w-8 h-8 text-white' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                     <h3 className='text-2xl font-bold text-white mb-2'>
                       {service.name}
@@ -512,7 +498,6 @@ viewport={{ once: true }}
                       {service.description}
                     </p>
                   </div>
-<<<<<<< HEAD
                   {/* Pricing */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -525,17 +510,15 @@ viewport={{ once: true }}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 
                   {/* Pricing */}
                   <div className='text-center mb-6'>
                     <div className='text-4xl font-bold text-purple-400 mb-2'>
                       {getBillingText(service.price)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                     <div className='text-sm text-gray-400'>
                       {billingCycle === 'annual' && (
-<<<<<<< HEAD
                         <span className="text-green-400">Save 20% with annual billing</span>
                       )  } catch (error) {
     console.error("Error:", error);
@@ -550,7 +533,6 @@ viewport={{ once: true }}
   }
 }
                   <div className="flex flex-wrap gap-2 mb-6 justify-center">
-=======
                         <span className='text-green-400'>
                           Save 20% with annual billing
                         </span>
@@ -559,14 +541,13 @@ viewport={{ once: true }}
                   </div>
                   {/* Categories */}
 <div className='flex flex-wrap gap-2 mb-6 justify-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     {service.category.slice(0, 3).map((cat, catIndex) => (
                       <span
                         key={catIndex}
                         className='px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full border border-gray-600'
                       >
                         {cat}
-<<<<<<< HEAD
                         {cat  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -613,7 +594,6 @@ viewport={{ once: true }}
                           <span>{benefit}</span>
                         </li>
                   <div className="grid grid-cols-2 gap-4 mb-6 text-center">
-=======
                       </span>
                     ))}
                   </div>
@@ -657,7 +637,7 @@ viewport={{ once: true }}
                   </div>
                   {/* Market Info */}
 <div className='grid grid-cols-2 gap-4 mb-6 text-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     <div>
                       <div className='text-gray-400 text-xs mb-1'>
                         Market Size
@@ -673,12 +653,10 @@ viewport={{ once: true }}
                       </div>
                     </div>
                   </div>
-<<<<<<< HEAD
                   <div className="flex gap-3">
-=======
                   {/* CTA Buttons */}
 <div className='flex gap-3'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     <Link
                       href={`/services/${service.id}`}
                       className='flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-sm'
@@ -694,7 +672,6 @@ viewport={{ once: true }}
                   </div>
                 </div>
               </motion.div>
-<<<<<<< HEAD
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -740,7 +717,6 @@ viewport={{ once: true }}
               Need a custom solution or enterprise package? We offer tailored solutions
       <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
         <div className="container mx-auto px-4 text-center">
-=======
             ))}
           </div>
         </div>
@@ -748,13 +724,12 @@ viewport={{ once: true }}
       {/* Enterprise Solutions */}
 <section className='py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20'>
         <div className='container mx-auto px-4 text-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
                       </span>))}
                   </div>;
                   {/* Key Features */}
@@ -819,7 +794,6 @@ viewport={{ once: true }}
 
 
               for large organizations with specific requirements.
-=======
           >
 <h2 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6'>
               Enterprise Solutions
@@ -827,7 +801,7 @@ viewport={{ once: true }}
             <p className='text-xl text-gray-300 mb-12 max-w-3xl mx-auto'>
               Need a custom solution or enterprise package? We offer tailored
               solutions for large organizations with specific requirements.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
 
             <div className='grid md:grid-cols-3 gap-8 mb-12'>
@@ -900,7 +874,6 @@ viewport={{ once: true }}
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
@@ -933,17 +906,15 @@ viewport={{ once: true }}
               Contact our team to discuss your specific needs and get a personalized quote
       <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
         <div className="container mx-auto px-4 text-center">
-=======
       {/* Contact CTA */}
 <section className='py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20'>
         <div className='container mx-auto px-4 text-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
       {/* Contact CTA */}
       <section className="py - 20 bg - gradient - to - br from - purple - 900 / 20 via - black to - blue - 900 / 20">;
         <div className="container mx - auto px - 4 text - center">;
@@ -957,7 +928,6 @@ viewport={{ once: true }}
 
 
               for our revolutionary 2029 services.
-=======
           >
 <h2 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6'>
               Ready to Get Started?
@@ -965,7 +935,7 @@ viewport={{ once: true }}
             <p className='text-xl text-gray-300 mb-12 max-w-3xl mx-auto'>
               Contact our team to discuss your specific needs and get a
               personalized quote for our revolutionary 2029 services.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
 
             <div className='grid md:grid-cols-3 gap-8 mb-12'>
@@ -1011,7 +981,6 @@ href='/2029-innovative-services-showcase'
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
 
 }
 
@@ -1063,8 +1032,7 @@ href='/2029-innovative-services-showcase'
       </section>;
 
 
-=======
       <UltraFuturisticFooter2029 />
     </div>
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useRouter  } from 'next/router';
 import { useEffect, useState, FormEvent  } from 'react';
 import Link from 'next/link',
@@ -9,15 +8,13 @@ import { useRouter } from 'next/router';
 import { useEffect, useState, FormEvent } from 'react';
 
 
-=======
 import { useRouter } from 'next/router';
 import { useEffect, useState, FormEvent } from 'react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import Link from 'next/link';
 import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react';
 import Head from 'next/head';
 
-<<<<<<< HEAD
 import { signIn } from 'next-auth/react';
 import { supabase } from '@/utils/supabase/client';
   AuthError
@@ -59,8 +56,7 @@ import { Input } from '@/components/ui/input';
   CardHeader,;
   CardTitle,;
 } from '@/components/ui/card';
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 const LoginPage = () => {
 import type { AuthError, User, AuthChangeEvent, Session } from '@supabase/supabase-js';
 import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
@@ -73,8 +69,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState<AuthError | null>(null);
-<<<<<<< HEAD
-=======
 const [isLoading, setIsLoading] = useState(false); // For login form submission
   const [user, setUser] = useState<User | null>(null);
   const [isCheckingSession, setIsCheckingSession] = useState(true); // For initial session check
@@ -91,13 +85,11 @@ const [proactiveResendMessage, setProactiveResendMessage] = useState<{
     type: 'success' | 'error';
     text: string
   } | null>(null);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   // Using centralized Supabase client (imported at top)
   // Effect for initial session check and auth state changes
   useEffect(() => {
     let mounted = true;
-<<<<<<< HEAD
-=======
 logInfo('LoginPage: Initial session check effect runs.');
 
     const sessionTimeoutId = setTimeout(() => {
@@ -137,12 +129,11 @@ logInfo('LoginPage: Calling supabase.auth.getSession()');
           });
           clearTimeout(sessionTimeoutId); // Ensure timeout is cleared on error too
         }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       } finally {
         if (mounted) {
           setIsCheckingSession(false);
           setSessionChecked(true);
-<<<<<<< HEAD
           );        }
       }
 
@@ -156,7 +147,6 @@ logInfo('LoginPage: Calling supabase.auth.getSession()');
             event,;
             userId: session?.user?.id,;
 
-=======
 logInfo(
             'LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true'
           );
@@ -170,7 +160,7 @@ logInfo('LoginPage: Setting up onAuthStateChange listener.');
           logInfo('LoginPage: onAuthStateChange event:', {
             event
             userId: session?.user?.id
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           });
           setUser(session?.user ?? null);
           // If auth state changes after initial check, ensure sessionChecked is true;
@@ -190,7 +180,6 @@ logInfo('LoginPage: Setting up onAuthStateChange listener.');
 
         logInfo('LoginPage: Unsubscribing from onAuthStateChange.');
         authListener?.subscription?.unsubscribe();
-<<<<<<< HEAD
 
       };    }
     const unsubscribePromise = checkSessionAndListen();
@@ -203,7 +192,6 @@ logInfo('LoginPage: Setting up onAuthStateChange listener.');
         '/login',;
         '/signup',;
         '/auth/forgot-password',;
-=======
       };
     };
 
@@ -241,7 +229,7 @@ clearTimeout(sessionTimeoutId); // Clear timeout on unmount
         '/login'
         '/signup'
         '/auth/forgot-password'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       ];
       if (authPages && authPages.includes(returnTo) || returnTo && returnTo.startsWith('/auth/')) {;
         returnTo = '/dashboard';
@@ -282,13 +270,11 @@ clearTimeout(sessionTimeoutId); // Clear timeout on unmount
       const redirectTimer = setTimeout(() => {
         // Double-check that we're still logged in before redirecting
         if (user && router.pathname === '/auth/login') {
-<<<<<<< HEAD
           logInfo(`LoginPage: Executing delayed redirect to ${returnTo}`),
           router.replace(returnTo), // Use replace to avoid back button issues
-=======
 logInfo(`LoginPage: Executing delayed redirect to ${returnTo}`);
           router.replace(returnTo); // Use replace to avoid back button issues
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         }
       }, 100), // Small delay to let session stabilize
       
@@ -307,7 +293,6 @@ logInfo(`LoginPage: Executing delayed redirect to ${returnTo}`);
     
 
     setIsResendingVerification(true);
-<<<<<<< HEAD
 
 
     try {;
@@ -320,13 +305,12 @@ logInfo(`LoginPage: Executing delayed redirect to ${returnTo}`);
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
 
-=======
     try {
       const response = await fetch('/api/resend-verification-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({ email }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       });
 
       if (response && response.ok) {;
@@ -339,7 +323,6 @@ body: JSON.stringify({ email }),
           message: data && data.message || 'Failed to resend verification email',;
         } as AuthError);
       }
-<<<<<<< HEAD
 
 
     setIsProactivelyResending(true);
@@ -589,7 +572,6 @@ body: JSON.stringify({ email }),
     try {
       logInfo('Attempting Supabase login with email:', { data: email }),
       const { data, error: signInError } = await supabase.auth.signInWithPassword({
-=======
     } catch (err) {
       setError({
         name: 'NetworkError'
@@ -654,7 +636,7 @@ try {
           email
           password
         });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       if (signInError) {
         logErrorToProduction('Supabase sign-in error:', { data: signInError }),
         // Check if error is related to email verification
@@ -669,7 +651,6 @@ try {
           // MODIFIED SECTION FOR BETTER ERROR MESSAGES
           let displayMessage = 'Login failed. Please check your credentials and try again.', // Default user-friendly message
           if (signInError.message) {
-<<<<<<< HEAD
 
 
 
@@ -686,7 +667,6 @@ try {
   useEffect(() => {;
     if (isEmailUnverified && verificationEmailSent && email) {;
       const timer = setTimeout(() => {;
-=======
             if (
               signInError.message
                 .toLowerCase()
@@ -756,11 +736,10 @@ setError({
     if (isEmailUnverified && verificationEmailSent && email) {
       const timer = setTimeout(() => {
 router.push(`/verify-status?email=${encodeURIComponent(email)}`);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       }, 3000);
       return () => clear_timeout (timer);
     }
-<<<<<<< HEAD
     return undefined; // Explicitly return undefined if condition is not met  }, [isEmailUnverified, verificationEmailSent, email, router]);
 
         router.push(`/verify-status?email=${encodeURIComponent(email)}`)
@@ -874,7 +853,6 @@ router.push(`/verify-status?email=${encodeURIComponent(email)}`);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
     return undefined; // Explicitly return undefined if condition is not met
   }, [isEmailUnverified, verificationEmailSent, email, router]);
 
@@ -924,12 +902,11 @@ logInfo(
     return null; // Or a minimal loader/empty div
   }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>
       <Head>
         <title>{`${t('auth.sign_in')} - Zion Tech Marketplace`}</title>
-<<<<<<< HEAD
         <meta name="description" content="Sign in to your Zion Tech Marketplace account" />
       </Head>
       <div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8'>
@@ -946,7 +923,6 @@ logInfo(
   return (
 
 
-=======
 <meta
           name='description'
           content='Sign in to your Zion Tech Marketplace account'
@@ -955,14 +931,13 @@ logInfo(
       <div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8'>
         <Card className='w-full max-w-md'>
           <CardHeader>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <CardTitle>Sign In</CardTitle>
             <CardDescription>
               Enter your email and password to access your account
             </CardDescription>
           </CardHeader>
           <CardContent>
-<<<<<<< HEAD
                 <Input
                   id='email'
                   type='email'
@@ -971,9 +946,8 @@ logInfo(
 
 
             <form onSubmit={handleLogin} className="space-y-4">
-=======
 <form onSubmit={handleLogin} className='space-y-4'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               {error && (
                 <div className="p-3 bg-red-50 border border-red-200 rounded-md">
                   <p className="text-sm text-red-600">{error.message}</p>
@@ -1024,7 +998,6 @@ logInfo(
                 <Link
                   href='/auth/register'
                   className='text-blue-600 hover:underline'
-<<<<<<< HEAD
                 >                  Sign up
                   id="email"
                   type="email"
@@ -1060,10 +1033,9 @@ logInfo(
 
                   disabled={isLoading}
 
-=======
                 >
                   Sign up
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </Link>
               </p>
             </div>
@@ -1071,7 +1043,6 @@ logInfo(
         </Card>
       </div>
     </>
-<<<<<<< HEAD
 
 
 
@@ -1222,8 +1193,7 @@ if ( {) {
       </div>;
 
 },;
-=======
 );
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default LoginPage;

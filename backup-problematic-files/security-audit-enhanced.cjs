@@ -2,11 +2,6 @@
 const fs = require('fs')
 const path = require('path')
     this.log('� Running Security Audit')
-        "name"
-        "pattern": /(password|secret|key|token)\s*=\s*['"][^'']
-        "severity"
-        "name"
-        "severity"
-        "name"
-        "severity"
-        "severity"
+        "name"""
+        "pattern": /(password|secret|key|token)\s*=\s*['"][^]
+        "severity"""

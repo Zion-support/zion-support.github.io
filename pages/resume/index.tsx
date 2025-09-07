@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
@@ -28,8 +27,7 @@ export default function ResumeIndex() { return null   } catch (error) {
 }
 
 
-=======
 import { GetServerSideProps } from 'next';
 export const getServerSideProps: GetServerSideProps;
 export default function ResumeIndex() { return null }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

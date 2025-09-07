@@ -10,6 +10,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 }else {
+}else {
+  // TODO: Implement
+}
+pr-12325
   console.warn ('Missing artifact for', name)
 }main ();
 function main() {
@@ -28,6 +32,11 @@ function main() {
   const artifactsDir = path && path.join(__dirname, '../artifacts/contracts'),
 origin/cursor/expand-services-advertise-and-build-project-c28b
   const abis = [
+  const outDir = path && path.join(__dirname, '../abi'),
+  if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir),
+  const artifactsDir = path && path.join(__dirname, '../artifacts/contracts'),
+  const abis = []
+pr-12325
     ['VoteToken.solVoteToken']
     ['ZionDAO.solZionDAO']
     ['QuorumEngine.solQuorumEngine']
@@ -71,6 +80,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 
+    } else {
+  // TODO: Implement
+      console.warn('Missing artifact for', name)
+pr-12325
 
 
 }main ();main(),
@@ -79,3 +92,4 @@ ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main();
 origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12325

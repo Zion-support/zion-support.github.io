@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import {Check, Mail, MapPin, Phone, ExternalLink} from 'lucide-react';
 import {enhancedRealMicroSaasServices} from '../../data/enhanced-real-micro-saas-services';
@@ -6,7 +5,6 @@ import {extraServices} from '../../data/extra-services';
 import {additionalEnhancedServices} from '../../data/additional-real-services';
 import {newRealServices} from '../../data/new-real-services';
 import {marketReadyServices} from '../../data/market-ready-services';
-=======
 import React from 'react',
 import Head from 'next/head',
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground',
@@ -23,7 +21,7 @@ type Service = any;
 		service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug)
 	}
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 type Service = (typeof enhancedRealMicroSaasServices)[number];
 const contactInfo = {
   mobile: '+1 302 464 0950'
@@ -98,7 +96,6 @@ export async function getStaticProps(): any ({ params }: { params: { slug: strin
         toSlug(s && s.name || '') === incomingSlug;
     );
   }
-<<<<<<< HEAD
 
   if (!service) {;
     return { notFound: true };
@@ -110,8 +107,7 @@ export async function getStaticProps(): any ({ params }: { params: { slug: strin
 
 export default function ServiceDetailPage(): any ({ service }: { service: Service }) {;
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   if (!service) {
     return { notFound: true }
   }
@@ -153,7 +149,6 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
                     href={`https://maps && maps.google.com/?q=${encodeURIComponent(contactInfo && contactInfo.address)}`}
                     target='_blank'
                     rel='noopener noreferrer'
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
@@ -279,7 +274,6 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 ;
 
 
-=======
                     className='text-xs hover:underline'
                   >
                     {contactInfo.address}
@@ -292,4 +286,4 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
       </div>
     </UltraFuturisticBackground>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

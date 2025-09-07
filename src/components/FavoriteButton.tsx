@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 return (
     <>;
       <TooltipProvider>;
         <Tooltip>;
-<<<<<<< HEAD
     e.stopPropagation();    if (!isAuthenticated) {
       setLoginOpen(true)
       return;
@@ -91,7 +89,6 @@ import {
   TooltipTrigger
 } from '@/components/ui/tooltip'
 
-=======
 import React from 'react';
 import { Heart } from 'lucide-react'
 import { cn  } from '@/lib/utils';
@@ -103,12 +100,11 @@ import { Tooltip;
   TooltipContent;
   TooltipProvider;
   TooltipTrigger } from '@/components/ui/tooltip';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 interface FavoriteButtonProps {
   itemId: string;
   className?: string
 export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
-<<<<<<< HEAD
     e.stopPropagation();    if (!isAuthenticated) {
       setLoginOpen(true)
       return;
@@ -183,7 +179,6 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
                     : 'text-zion-slate'
                 )}              />
 
-=======
   const { isWishlisted, toggle } = useWishlist();
   const { isAuthenticated } = useAuth();
   const [loginOpen, setLoginOpen] = React.useState(false);
@@ -193,19 +188,17 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
               />
             </button>
           </TooltipTrigger>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           {!isAuthenticated && <TooltipContent>Login required</TooltipContent>}
         </Tooltip>
       </TooltipProvider>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
-<<<<<<< HEAD
   )
 }
       // Add to favorites`
       // console.log(`Added ${itemType} ${itemId} to favorites`)}  }
   return ()
-=======
 
                 )}              />;
             </button>;
@@ -221,7 +214,6 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
       // console && console.log(`Added ${itemType} ${itemId} to favorites`)}  };
   return ();
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <button
       onClick = {handleToggleFavorite}`
       className={`absolute top-2 right-2 p-2 rounded-full transition-all duration-300 ${isFavorited'
@@ -229,12 +221,9 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
           : 'bg-zion-blue-dark/80 hover:bg-zion-cyan text-white'`
 } ${className}`}
       aria-label={isFavorited ? 'Remove from favorites' : 'Add to favorites'}
-<<<<<<< HEAD
-=======
 
      aria-label="Button">;
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <Heart`
         className={`w-4 h-4 transition-all duration-300 ${
           isFavorited ? 'fill-current' : ''`
@@ -248,7 +237,6 @@ className: {`w-4 h-4 transition-all duration-300 ${
     </button>;) }
 '`
 }
-<<<<<<< HEAD
 ;
     const wasWishlisted = isWishlisted(itemId),;
     toggle(itemId),;
@@ -287,7 +275,6 @@ className: {`w-4 h-4 transition-all duration-300 ${
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
   );
-=======
 
           <TooltipTrigger as_child>;
             <button;
@@ -311,7 +298,6 @@ className: {`w-4 h-4 transition-all duration-300 ${
       </TooltipProvider>;
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
     </>);
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
       // Add to favorites`;
       // console.log (`Added ${item_type} ${item_id} to favorites`)}  }
@@ -345,10 +331,6 @@ class_name: {`w - 4 h - 4 transition - all duration - 300 ${
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
-<<<<<<< HEAD
-=======
             <button
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

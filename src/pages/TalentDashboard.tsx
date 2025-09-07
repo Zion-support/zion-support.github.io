@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -36,8 +35,7 @@ function TalentDashboardContent() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("job-matches");
   const onboardingStatus = null;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 function TalentDashboardContent() {
   const { user } = useAuth();
@@ -59,10 +57,8 @@ import { TalentOnboardingSteps } from "@/components/onboarding/TalentOnboardingS
 import { AdvancedOnboardingSteps } from "@/components/onboarding/AdvancedOnboardingSteps",
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",
 import { MyApplications } from "@/components/jobs/MyApplications",
-<<<<<<< HEAD
 import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner",
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
-=======
 import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner";
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
 import { useState, useEffect } from 'react'
@@ -97,7 +93,7 @@ import { useOnboardingStatus } from '@/hooks/useOnboardingStatus'
 import { MyApplications } from '@/components/jobs/MyApplications'
 import { ProjectOfferBanner } from '@/components/projects/ProjectOfferBanner'
 import { UpcomingInterviewsCard } from '@/components/interviews/UpcomingInterviewsCard'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 function TalentDashboardContent() {
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState("job-matches"),
@@ -389,15 +385,13 @@ function TalentDashboardContent() {;
 
 export default function TalentDashboard() {;
   return (
-<<<<<<< HEAD
     <ProtectedRoute>;
       <TalentDashboardContent />;
     </ProtectedRoute>;
   );
 }
-=======
     <ProtectedRoute>
       <TalentDashboardContent />
     </ProtectedRoute>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

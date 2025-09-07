@@ -1,6 +1,10 @@
 
 import { useState  } from 'react';
 import { useAuth } from "@/hooks/useAuth";
+
+import { useState  } from 'react';
+import { useAuth } from "@/hooks/useAuth";""
+pr-12325
 import { supabase  } from '@/integrations/supabase/client';
 import { Interview, InterviewRequest, InterviewResponse  } from '@/types/interview';
 import { toast  } from '@/components/ui/use-toast';
@@ -108,6 +112,42 @@ if ( {) {
     }
   }
     try {
+
+  const [error, setError] = useState<string | null>(null),
+</string>
+
+  const [error, setError] = useState<string | null>(null);
+  const [interviews, setInterviews] = useState<Interview[]>([]),
+
+  const requestInterview = async (interviewRequest: InterviewRequest): Promise<Interview | null> => {
+
+  const [interviews, setInterviews] = useState<Interview[]>([]),;
+
+  const [error, setError] = useState<string | null>(null),;
+  const requestInterview = async (interviewRequest: InterviewRequest): Promise<Interview | null> => {;
+
+  const fetch_interviews = async (): Promise < Interview[]> => {
+    // Check condition;
+if ( {) {
+  $2;
+}
+      set_interviews ([]);
+      return [];
+
+
+
+
+
+    setIsLoading(true),
+    setError(null),
+
+    setIsLoading (true);
+    set_error (null);
+;
+      setIsLoading (false);
+    try {
+  // TODO: Implement
+pr-12325
       // Get interviews where the user is either the client or the talent;
       const { data, error: fetch_error } = await supabase;
         .from ('interviews');
@@ -315,8 +355,197 @@ if ( {) {
         ? interview.talent_id
         : interview.client_id,
   return {
+)`;
+        .or(`client_id.eq.${user.id},talent_id.eq.${user.id}`)
+
+        .order('scheduled_date', { ascending: true }),
+      if (fetchError) {
+        console && console.error("Error fetching interviews:", fetchError);"
+        setError(fetchError && fetchError.message);
+        return []
+      // Transform the data to match Interview type;
+          clients:client_id (id, display_name, avatar_url);
+          talents:talent_id (id, full_name, profile_picture_url);`;
+        `);`;
+        .or (`client_id.eq.${user.id}, talent_id.eq.${user.id}`);"
+        .order ('scheduled_date', { ascending: true });
+      // Check condition;
+        console.error ("Error fetching interviews:", fetch_error);"
+        set_error (fetch_error.message);
+      // Transform the data to match Interview type;
+      const formatted_interviews = data.map ((interview: any): Interview => ({,
+  id: interview.id;
+        client_id: interview.client_id;,
+  talent_id: interview.talent_id;
+        scheduled_date: interview.scheduled_date;,"
+  end_time: interview.end_time |;
+        duration_minutes: interview.duration_minutes;,
+  status: interview.status;
+        notes: interview.notes;,
+  meeting_link: interview.meeting_link;
+        meeting_platform: interview.meeting_platform;,
+  created_at: interview.created_at;
+        updated_at: interview.updated_at;,
+  title: interview.title;
+        interview_type: interview.interview_type;,
+  client_name: interview.clients?.display_name;
+        talent_name: interview.talents?.full_name;,
+  client_avatar: interview.clients?.avatar_url;)
+        talent_avatar: interview.talents?.profile_picture_url}));
+
+      const formattedInterviews = data && data.map((interview: any): Interview => ({,
+  id: interview && interview.id;
+        client_id: interview && interview.client_id;,
+  talent_id: interview && interview.talent_id;
+        scheduled_date: interview && interview.scheduled_date;,
+  end_time: interview && interview.end_time || ;
+        duration_minutes: interview && interview.duration_minutes;,
+  status: interview && interview.status;
+        notes: interview && interview.notes;,
+  meeting_link: interview && interview.meeting_link;
+        meeting_platform: interview && interview.meeting_platform;,
+  created_at: interview && interview.created_at;
+        updated_at: interview && interview.updated_at;,
+  title: interview && interview.title;
+        interview_type: interview && interview.interview_type;,
+  client_name: interview && interview.clients?.display_name;
+        talent_name: interview && interview.talents?.full_name;,
+  client_avatar: interview && interview.clients?.avatar_url,)
+        talent_avatar: interview && interview.talents?.profile_picture_url}));
+
+
+      setInterviews(formattedInterviews);
+      const formattedInterviews = data.map((interview: any): Interview => ({,
+  id: interview.id,
+        client_id: interview.client_id,
+        talent_id: interview.talent_id,
+        scheduled_date: interview.scheduled_date,
+        end_time: interview.end_time || ,
+        duration_minutes: interview.duration_minutes,
+        status: interview.status,
+        notes: interview.notes,
+        meeting_link: interview.meeting_link,
+        meeting_platform: interview.meeting_platform,
+        created_at: interview.created_at,
+        updated_at: interview.updated_at,
+        title: interview.title,
+        interview_type: interview.interview_type,
+        client_name: interview.clients?.display_name,
+        talent_name: interview.talents?.full_name,
+        client_avatar: interview.clients?.avatar_url,)
+        talent_avatar: interview.talents?.profile_picture_url})),
+
+      setInterviews(formattedInterviews),
+
+      return formattedInterviews;
+    } catch (err: any) {
+      console && console.error("Error in fetchInterviews:", err);"
+      setError(err && err.message);
+      set_interviews (formatted_interviews);
+      return formatted_interviews;
+    } catch (err: any) {"
+      console.error ("Error in fetch_interviews:", err);"
+      set_error (err.message);
+    } finally {
+  // TODO: Implement
+
+  // Respond to an interview request (as talent);
+
+  const respondToInterview = async (
+    interview_id: string;,)
+  response: InterviewResponse): Promise < boolean> => {
+    // Check condition;
+      toast ({"
+        title: "Authentication required";"
+  },
+
+
+
+)
+  // Respond to an interview request (as talent)
+    interviewId: string,
+    response: InterviewResponse;)
+  ): Promise<boolean> => {
+</boolean>
+  ): Promise<boolean> => {;
+  const cancelInterview = async (interviewId: string): Promise<boolean> => {
+  const cancelInterview = async (interviewId: string): Promise<boolean> => {;
+  const cancel_interview = async (interview_id: string): Promise < boolean> => {
+    // Check condition;
+if (return false) {
+    set_error (null),
+  // TODO: Implement
+      // Get the interview first to check permissions and get IDs for notifications;
+      const { data: interview, error: fetch_error } = await supabase;"
+        .select ('*');
+        .eq ('id', interview_id);
+        .single ();
+      // Check condition;
+        return false;
+      // Check if user is part of this interview;
+      // Check condition;
+        set_error ("You don't have permission to cancel this interview");"
+      // Update the interview status;
+      const { error: update_error } = await supabase;"
+        .update ({
+          status: 'cancelled',')
+          updated_at: new Date ().toISOString ();
+        });
+      // Check condition;
+        set_error (update_error.message);
+      // Determine who to notify;
+      const notifyUserId = interview.client_id === user.id;
+        ? interview.talent_id;
+        : interview.client_id;
+      // Create notification for the other party;
+      await createInterviewNotification (
+        notifyUserId;
+        'interview_cancelledInterview Cancelled';`;
+        `The scheduled interview for ${interview.scheduled_date} has been cancelled`;)
+        interview_id);
+      // Refresh the interviews list;
+      await fetch_interviews ();
+      return true;
+      console.error ("Error in cancel_interview:", err);"
+  // TODO: Implement
+
+
+  return {
+  // TODO: Implement
+pr-12325
     interviews;
     is_loading;
     error;
     request_interview;
     fetch_interviews;
+    fetch_interviews;
+  },;
+  return {;
+    interviews,;
+    isLoading,;
+    error,;
+    requestInterview,;
+
+    fetchInterviews;
+    respondToInterview;
+
+    cancel_interview}
+
+
+
+"
+import { useState } from 'react',;
+import { useAuth } from "@/hooks/useAuth",;""
+import { supabase } from '@/integrations/supabase/client',;
+import { Interview, InterviewRequest, InterviewResponse } from '@/types/interview',;
+import { toast } from '@/components/ui/use-toast',;
+export function useInterviews() {;
+
+  const requestInterview = async (interviewRequest:InterviewRequest):Promise<Interview | null> => {;
+
+  const fetchInterviews = async ():Promise<Interview[]> => {;
+
+  ):Promise<boolean> => {;
+  const cancelInterview = async (interviewId:string):Promise<boolean> => {;
+</boolean>`;
+pr-12325

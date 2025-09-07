@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import MainLayout from '../components/layout/MainLayout';
@@ -19,8 +15,6 @@ export default function CookiesPage() {
         </div>
       </div>
     </MainLayout>
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from 'react';
 import MainLayout from '../src / components / layout / MainLayout';
 import { motion } from 'framer-motion';
@@ -313,21 +307,19 @@ origin/automation-improvements-final
       </div>;
 
 
-=======
 import React from 'react',
 import SEO from '../components/SEO';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default function CookiesPage() {
   return (
     <UltraAdvancedFuturisticBackground>;
       <SEO
         title='Cookie Policy | Zion Tech Group'
         description='Information about cookies used by Zion Tech Group.'
-<<<<<<< HEAD
 export default function CookiesPage() {
   return (
     <UltraAdvancedFuturisticBackground>
@@ -342,7 +334,6 @@ export default function CookiesPage() {
             <li>Retention: session or short‑term</li>
             <li>Opt‑out: browser settings and extensions</li>
           </ul>
-=======
         canonical='https://ziontechgroup.com/cookies/'
       />
       <div className='container mx-auto px-4 py-24 text-white'>
@@ -365,13 +356,12 @@ export default function CookiesPage() {
             </a>
           </p>
         </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       </Layout>
     </>
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
   );
       </Layout>
     </>;
@@ -382,7 +372,6 @@ origin/automation-improvements-final
   );
 
  <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
-<<<<<<< HEAD
           <p className="text-gray-400 text-sm">Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
         </div>
       </div>
@@ -406,5 +395,4 @@ origin/automation-improvements-final
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -9,12 +9,20 @@ export const TALENT_PROFILES = [
 id: '1',
     slug: 'sample-talent',
 origin/cursor/automate-test-improve-and-merge-code-2533
+// Stub talent data - placeholder for missing functionality;
+export const TALENT_PROFILES = [
+  {
+    id: '1',
+    slug: 'sample - talent',
+pr-12325
     name: 'Sample Talent',
     title: 'Full Stack Developer',
     category: 'Development',
     location: 'Remote',
     timezone: 'UTC',
     region: 'Global',
+    region: 'Global',']
+pr-12325
     skills: ['React', 'Node && Node.js', 'TypeScript'],
     summary: 'Experienced developer with expertise in modern web technologies.',
     bio: 'Passionate about creating innovative solutions.',
@@ -79,3 +87,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
+;
+
+
+
+pr-12325

@@ -1,16 +1,20 @@
-<<<<<<< HEAD
 const imgRef = useRef<HTMLDivElement>(null);
 
 
 
 
 
-=======
 import React, { useState, useRef, useEffect } from 'react',
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 interface OptimizedImageProps {
   src: string;
+import React, { useRef, useEffect, useState, useCallback } from 'react';
+interface OptimizedImageProps {
+  // TODO: Implement
+}
+  src: string;,
+pr-12325
   alt: string;
   width?: number;
   height?: number;
@@ -36,7 +40,7 @@ export function OptimizedImage({
     img.src = src
   })
 } 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
  const observer = new IntersectionObserver ( ([entry]) => {
   if (entry && entry.isIntersecting) {
   return () => observer.disconnect ()
@@ -88,7 +92,6 @@ const observer = new IntersectionObserver ( ([entry]) => {
 if ( {) {
   $2
 }
-<<<<<<< HEAD
   return () => observer.disconnect ();
 }, [lazy, priority, isInView]);
 //Generate WebP - compatible src const getOptimizedSrc = (original_src: string) =>: any {
@@ -101,7 +104,6 @@ if ( {) {
 }`;
 }
   const img_ref = useRef < HTMLDivElement>(null);
-=======
 ;
 export function OptimizedImage({;
   src,;
@@ -124,7 +126,6 @@ export function OptimizedImage({;
   const [hasError, setHasError] = useState(false),;
   const [isInView, setIsInView] = useState(!lazy || priority),;
   const imgRef = useRef<HTMLDivElement>(null),;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Intersection Observer for lazy loading;
 
     return () => observer.disconnect ();
@@ -325,15 +326,12 @@ if (return blurDataURL) {
 
       )}
       {/* Error fallback */}
-<<<<<<< HEAD
       {hasError && (;
         <div className='absolute inset-0 bg-gray-100 dark:bg-gray-800 flex items-center justify-center'>;
           {fallbackSrc ? (;
-=======
       {hasError && (
         <div className="absolute inset-0 bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
           {fallbackSrc ? (
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <img
               src={fallbackSrc}
               alt={alt}
@@ -438,7 +436,6 @@ export function getImageDimensions(
   return new Promise((resolve, reject) => {
     const img = new window.Image()
     img.onload = () =>
-<<<<<<< HEAD
 
       resolve({ width: img.naturalWidth, height: img.naturalHeight })
     img.onerror = reject
@@ -449,9 +446,90 @@ export function getImageDimensions(
     img.src = src
   })
 }
-=======
+  lazy?: boolean;
+  quality?: number;
+  placeholder?: 'blur' | 'empty';
+  blurDataURL?: string;
+
+// Generate WebP-compatible src;
+const getOptimizedSrc = (originalSrc: string): string => {
+  // If it's already optimized or external, return as-is;
+  if (originalSrc.startsWith('http') || originalSrc.includes('/next/image')) {
+    return originalSrc;
+  
+  // For internal images, add optimization parameters;
+  const url = new URL(originalSrc, window.location.origin);
+  url.searchParams.set('format', 'webp');
+  url.searchParams.set('quality', '85');
+  return url.toString();
+};
+
+// Generate blur placeholder;
+const generateBlurDataURL = (width: number, height: number): string => {
+  const svg = `
+    <svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">"
+</svg>
+      <defs>
+</defs>"
+        <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">"
+</linearGradient>"
+          <stop offset="0%" style="stop-color:#f3f4f6;stop-opacity:1" />"
+</stop>"
+          <stop offset="100%" style="stop-color:#e5e7eb;stop-opacity:1" />"
+</stop>
+        </linearGradient>
+      <rect width="100%" height="100%" fill="url(#grad)" />"
+</rect>
+export const OptimizedImage: React.FC<OptimizedImageProps> = ({
+)
+  const imgRef = useRef<HTMLDivElement>(null);
+
+    <div;
+      ref={imgRef}`;
+      className={`relative overflow-hidden ${className}`}
+      style={{ width, height }}
+    >
+</div>
+        <div;"
+          className="absolute inset-0 bg-gray-200 animate-pulse""
+          style={{`;
+            backgroundImage: `url(${defaultBlurDataURL})`,"
+            backgroundSize: 'cover',
+            backgroundPosition: 'center
+          }}
+        />
+        <img;
+          src={optimizedSrc}
+          alt={alt}
+          width={width}
+          height={height}
+          loading={priority ? 'eager' : 'lazy'}
+          decoding="async""
+          onLoad={handleLoad}
+          onError={handleError}`;
+          className={`transition-opacity duration-300 ${"
+            isLoaded ? 'opacity-100' : 'opacity-0`;
+          } ${hasError ? 'opacity-50' : }`}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover
+</img>
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500">"
+          <span>Failed to load image</span>
+  const [images, setImages] = useState<Set<string>>(new Set());
+
+export const getImageDimensions = (src: string): Promise<{ width: number; height: number }> => {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => {
+pr-12325
       resolve({ width: img.naturalWidth, height: img.naturalHeight });
     img.onerror = reject;
     img.src = src;
   });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+export const compressImage = (file: File, quality: number = 0.8): Promise<File> => {
+"`;
+pr-12325

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',;
 import Head from 'next/head',;
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground',;
@@ -25,7 +24,6 @@ export default function AIEvalsPage() {
 		email: 'kleber@ziontechgroup.com'
 		address: '364 E Main St STE 1008 Middletown DE 19709'
 		website: 'https://ziontechgroup.com'
-=======
 import React from 'react',
 import Head from 'next/head',
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';
@@ -34,7 +32,7 @@ export default function AIEvalsPage() {
 	const contactInfo = null;
 	return (
 		<QuantumHolographicMatrixBackground intensity={1.5}>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 			<Head>
 				<title>AI Evaluations Platform | Zion Tech Group</title>
 				<meta name="description" content="Automated LLM evaluation with accuracy, faithfulness, latency, and cost metrics. Integrate with CI and guardrails." />
@@ -94,7 +92,6 @@ export default function AIEvalsPage() {
 			</div>
 		</QuantumHolographicMatrixBackground>
 	)
-<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -180,6 +177,5 @@ return (
   </QuantumHolographicMatrixBackground>);
 
 
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

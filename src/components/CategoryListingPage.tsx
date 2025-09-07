@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { useState, useEffect } from 'react';
 import { GradientHeading } from '@/components/GradientHeading';
 import { ListingScoreCard } from '@/components/ListingScoreCard';
@@ -15,9 +12,8 @@ import {
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react'
 import ListingGridSkeleton from "@/components/skeletons/ListingGridSkeleton";
 import { safeStorage } from "@/utils/safeStorage";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 // Example listing type
-=======
 import { useState, useEffect } from 'react';
 import { GradientHeading } from '@/components/GradientHeading';
 import { ListingScoreCard } from '@/components/ListingScoreCard';
@@ -33,14 +29,12 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react';
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton';
 import { safeStorage } from '@/utils/safeStorage';
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface Listing {
   id: string;
   title: string;
   description: string;
   price: number;
   category: string;
-<<<<<<< HEAD
 
   author_image?: string;
   ai_score?: number;
@@ -51,7 +45,6 @@ interface Listing {
   price?: number | null;
   createdAt: string
 interface CategoryListingPageProps {
-<<<<<<< HEAD
 
   title: string
   description: string;
@@ -477,7 +470,6 @@ export function CategoryListingPage({;
 
 
 
-=======
   title: string;
   description: string;
   listings: Listing[];
@@ -493,7 +485,7 @@ export function CategoryListingPage({
                     setSelectedFilter(filterOptions[0]?.value || 'all')
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   Clear all filters
                 </Button>
@@ -522,7 +514,6 @@ export function CategoryListingPage({
       </div>;
     </>;
   );
-=======
   rating: number;
   image: string;
   tags: string[];
@@ -652,7 +643,6 @@ export const CategoryListingPage: React.FC<CategoryListingPageProps> = ({
           </Select>
         </div>
       </div>
-<<<<<<< HEAD
 
       {/* Results */}
       <div className="mb-4">
@@ -697,8 +687,6 @@ export const CategoryListingPage: React.FC<CategoryListingPageProps> = ({
     </div>
   );
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
     </>
   );
 
@@ -784,4 +772,4 @@ case 'z-a': return (<> <div className="min-h-screen bg-zion-blue py-12 px-4"> <d
 }className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" ;
 }</div> </div> </div> </>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 }
 }
 }
-<<<<<<< HEAD
 export const withPerformanceOptimization = <P extends object>(; Component: React.ComponentType<P>, options: {, memo?: boolean; memoDeps?: (props: P) = > any[]; displayName?: string} = {}
 ) = > {const { memo: useMemo = true, memoDeps, displayName } = options; let OptimizedComponent = Component; if (useMemo) {OptimizedComponent = memo(Component, (prevProps, nextProps) = > {if (memoDeps) {; const prevDeps = memoDeps(prevProps); const nextDeps = memoDeps(nextProps); return prevDeps.every((dep, index) = > dep = = = nextDeps[index])}; return false, // Always re-render if no custom comparison})}; if (displayName) {OptimizedComponent.displayName = displayName}; return OptimizedComponent}
 // Hook for expensive calculations
@@ -16,7 +14,6 @@ export const useDebouncedSearch = (value: string, delay: number = 300) = > {cons
 // Performance metrics collection
 export const usePerformanceMetrics = () = > {const [metrics, setMetrics] = React.useState({renderCount: 0, lastRenderTime: 0, averageRenderTime: 0}); const recordRender = useCallback((renderTime: number) = > {, setMetrics(prev = > ({, renderCount: prev.renderCount + 1, lastRenderTime: renderTime, averageRenderTime: (prev.averageRenderTime * prev.renderCount + renderTime) / (prev.renderCount + 1)}))}, []); return { metrics, recordRender }} }
 }
-=======
 }
 }
 
@@ -50,7 +47,6 @@ export const usePerformanceMetrics = () => {
   }, []); return { metrics, recordRender }
 }
   return { metrics, recordRender }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
 import React from 'react';
@@ -210,10 +206,7 @@ export const: OptimizedImage: React.FC<{,;
         </div>)},;
     </div>,;
   );
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 }
 }
@@ -224,8 +217,6 @@ export const useDebouncedSearch = (value: string, delay: number = 300) => {
     const handler = setTimeout(() => {
       setDebouncedValue(value)
     }, delay)
-<<<<<<< HEAD
-=======
 // Debounced search hook;
 export const useDebouncedSearch = (value: string, delay: number = 300) =>: any {,
   const [debounced_value, setDebouncedValue] = React.useState (value);
@@ -233,15 +224,12 @@ export const useDebouncedSearch = (value: string, delay: number = 300) =>: any {
     const handler = set_timeout (() => {
       setDebouncedValue (value);
     }, delay);
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return () => {
       clear_timeout (handler);
 }
   }, [value, delay]);
   return debounced_value;
 }
-<<<<<<< HEAD
-=======
 
 
 import React, { memo, useMemo, useCallback } from 'react';
@@ -445,8 +433,6 @@ export const usePerformanceMetrics = () =>: any {
 }
 
 },
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 import React, { memo, useMemo, useCallback } from 'react';
 ;
 // Higher-order component for performance optimization;
@@ -523,4 +509,4 @@ export const usePerformanceMetrics = () => {;
 ;
   return { metrics, recordRender };
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

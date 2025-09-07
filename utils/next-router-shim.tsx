@@ -1,33 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
 module.exports = {},
 
-=======
 
 module.exports = {},;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
+ursor/fix-website-loading-errors-and-merge-6662
 module.exports = {},;
 
 module.exports = {},;
 module.exports = {}
 module.exports = {},;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from 'react';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
@@ -62,4 +46,11 @@ export const useHistory = () => ({ push: (url: string) => (window.location.href 
 export const useParams = () => ({})
 export const NavLink = Link;
 export default {} as Record<string, unknown>
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+module.exports = {},
+
+
+module.exports = {},;
+
+pr-12325

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React from 'react';
 import Layout from '../components/layout/Layout';
@@ -472,7 +471,6 @@ export default SpaceTechnologyPage,
 
 },
 
-=======
 import React from 'react',
 import Layout from '../components/layout/Layout',
 import SEO from '../components/SEO';
@@ -487,4 +485,4 @@ import { Rocket, Brain, Shield, Zap, Target, Atom, Cpu;
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Satellite
  } from 'lucide-react';
 const SpaceTechnologyPage: React.FC;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

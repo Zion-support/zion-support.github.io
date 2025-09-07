@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
@@ -11,12 +7,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return;
   }
 
-=======
->>>>>>> pr-12243
+pr-12243
 
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 function summarizeModules(
   modules: Record<string, boolean>
   bonus: Record<string, boolean>
@@ -27,11 +21,9 @@ function summarizeModules(
       .filter(([, v]) => v)
       .map(([k]) => `/${k}`)
   ];
-<<<<<<< HEAD
   return active && active.length ? active && active.sort().join(", ") : "None";
-=======
   return active.length ? active.sort().join(', ') : 'None';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 function missionParagraph(
@@ -50,18 +42,15 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
-=======
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
   try {
 
     const body = req && req.body || {};
 
     const {
-<<<<<<< HEAD
 
       instanceName
       defaultLanguage = "en"
@@ -72,7 +61,6 @@ export default async function handler(
       modules = {}
       bonusModules = {}
 
-=======
       instanceName,
 defaultLanguage = 'en',
       deploymentRegion,
@@ -81,7 +69,7 @@ defaultLanguage = 'en',
       branding = {},
       modules = {},
       bonusModules = {},
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     } = body;
 
 
@@ -200,7 +188,6 @@ if ( {) {
         instanceName,
         modules,
         bonusModules
-<<<<<<< HEAD
       )
     }
           pdf: "/book / manifesto.pdf"
@@ -230,22 +217,17 @@ if ( {) {
       )
     }
 ;
-=======
       ),
     };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     const access = {
       roles: ['Founder', 'Superadmin', 'DAO Multisig'],
       export: {
-<<<<<<< HEAD
-<<<<<<< HEAD
       operator,
       access,
-=======
       operator
       access
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     });
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -261,7 +243,6 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-=======
         type: 'application/json',
         href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`,
       },
@@ -288,7 +269,7 @@ version: 'Zion OS v1.0.0',
     return res.status(500).json({ error: err.message || 'Internal error' });
   } catch (err: any) {
     return res.status(500).json({ error: err.message |"Internal error" });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
   }

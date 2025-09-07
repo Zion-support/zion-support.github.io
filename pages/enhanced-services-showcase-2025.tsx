@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import {
   Search
@@ -92,7 +91,6 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
       if (typeof price === 'string') {;
         const match = price && price.replace(/[^0-9.]/g, '');
         const parsed = parseFloat(match || '0');
-=======
 import React, { useState } from 'react',
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -229,14 +227,13 @@ staggerChildren: 0.1,
     },
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
       opacity: 1
       y: 0
       transition: {
-<<<<<<< HEAD
         duration: 0.5
       }
     }
@@ -371,14 +368,13 @@ export default function EnhancedServicesShowcase2025(req, res) {
     hidden: { opacity: 0, y: 20 },;
     visible: {;
       opacity: 1,;
-=======
 duration: 0.5,
       },
     },
   };
 
   
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     >
       <div className="min-h-screen">
         <Head>
@@ -483,15 +479,13 @@ duration: 0.5,
 
 
             >
-<<<<<<< HEAD
               <div className="flex items-center justify-center mb-6">
                 <Sparkles className="w-12 h-12 text-cyan-400 mr-4" />
                 <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-=======
 <div className='flex items-center justify-center mb-6'>
                 <Sparkles className='w-12 h-12 text-cyan-400 mr-4' />
                 <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   2025 Innovation Showcase
                 </h1>
                 <Sparkles className="w-12 h-12 text-pink-400 ml-4" />
@@ -525,7 +519,6 @@ duration: 0.5,
                 <div className='text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl'>;
                   <div className='text-3xl font-bold text-pink-400'>;
                     {spaceCount + cybersecurityCount}
-<<<<<<< HEAD
 
 
                 </div>
@@ -540,17 +533,14 @@ duration: 0.5,
                 <div className="text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl">
                   <div className="text-3xl font-bold text-pink-400">{spaceCount + cybersecurityCount}</div>
                   <div className="text-gray-400">Specialized</div>
-=======
                   </div>
                   <div className='text-gray-400'>Specialized</div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </div>
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
         {/* Search and Filters */}
 <section className='relative z-10 py-8 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -559,24 +549,20 @@ duration: 0.5,
                 {/* Search */}
                 <div className='relative'>
                   <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <input
                     type="text"
                     placeholder="Search services..."
                     value={searchTerm}
-<<<<<<< HEAD
                     onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-=======
                     onChange={e => setSearchTerm(e.target.value)}
                     className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   />
                 </div>
                 {/* Category Filter */}
                 <select
                   value={selectedCategory}
-<<<<<<< HEAD
-=======
 onChange={e => setSelectedCategory(e.target.value)}
                   className='px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                 >
@@ -584,7 +570,7 @@ onChange={e => setSelectedCategory(e.target.value)}
                     <option key={category.id} value={category.id}>
                       {category.name} ({category.count})
                     </option>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   ))}
 
                 </select>;
@@ -696,10 +682,8 @@ onChange={e => setSelectedCategory(e.target.value)}
                 {/* Price Range Filter */}
                 <select;
                   value={selectedPriceRange}
-<<<<<<< HEAD
 
 
-=======
 onChange={e => setSelectedPriceRange(e.target.value)}
                   className='px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                 >
@@ -707,7 +691,7 @@ onChange={e => setSelectedPriceRange(e.target.value)}
                     <option key={range.id} value={range.id}>
                       {range.name}
                     </option>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   ))}
 
                 </select>;
@@ -716,10 +700,8 @@ onChange={e => setSelectedPriceRange(e.target.value)}
                 {/* Sort Options */}
                 <select
                   value={sortBy}
-<<<<<<< HEAD
 
 
-=======
 onChange={e => setSortBy(e.target.value)}
                   className='px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                 >
@@ -727,7 +709,7 @@ onChange={e => setSortBy(e.target.value)}
                     <option key={option.id} value={option.id}>
                       {option.name}
                     </option>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   ))}
                 </select>
               </div>
@@ -797,12 +779,10 @@ onChange={e => setSortBy(e.target.value)}
                     <div className="flex items-start justify-between mb-4">
                       <div className="text-3xl">{service.icon}</div>
                       {service.popular && (
-<<<<<<< HEAD
                         <div className="flex items-center space-x-1 text-yellow-400 text-sm">
                           <Star className="w-4 h-4 fill-current" />
                           <span>Popular</span>
                         </div>
-=======
                         <div className='flex items-center space-x-1 text-yellow-400 text-sm'>
                           <Star className='w-4 h-4 fill-current' />
                           <span>Popular</span>
@@ -812,7 +792,7 @@ onChange={e => setSortBy(e.target.value)}
                     {/* Service Title and Description */}
 <h3 className='text-xl font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors'>
                       {service.name}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     </h3>
                     <p className='text-gray-300 text-sm mb-4 line-clamp-2'>
                       {service.description}
@@ -835,7 +815,6 @@ onChange={e => setSortBy(e.target.value)}
                         <span>{service.customers}</span>
                       </div>
                     </div>
-<<<<<<< HEAD
                         ))}
 
                     <div className="mb-6 p-3 bg-gray-700/40 rounded-lg">
@@ -851,7 +830,6 @@ onChange={e => setSortBy(e.target.value)}
                       <div className="flex items-center space-x-1 text-green-400">
                         <TrendingUp className="w-4 h-4" />
 
-=======
                     {/* Key Features */}
 <div className='mb-6'>
                       <div className='text-sm text-gray-400 mb-2'>
@@ -882,7 +860,7 @@ onChange={e => setSortBy(e.target.value)}
 <div className='flex items-center justify-between mb-6 text-sm'>
                       <div className='flex items-center space-x-1 text-green-400'>
                         <TrendingUp className='w-4 h-4' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                         <span>Average ROI</span>
                       </div>
                       <div className='flex items-center space-x-1 text-blue-400'>
@@ -890,17 +868,15 @@ onChange={e => setSortBy(e.target.value)}
                         <span>{service.setupTime}</span>
                       </div>
                     </div>
-<<<<<<< HEAD
                     {/* Action Buttons */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                     <div className="flex gap-3">
-=======
                     {/* Action Buttons */}
 <div className='flex gap-3'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       <a
                         href={service && service.link}
                         target='_blank'
@@ -911,10 +887,8 @@ onChange={e => setSortBy(e.target.value)}
                       </a>;
                       <a
                         href='/contact'
-<<<<<<< HEAD
 
 
-=======
                         className='flex-1 bg-gray-700/60 text-white px-4 py-2 rounded-xl text-center text-sm font-medium hover:bg-gray-600/60 transition-all duration-300 border border-gray-600 hover:border-gray-500'
                       >
                         Contact Us
@@ -927,7 +901,7 @@ onChange={e => setSortBy(e.target.value)}
                       </div>
                       <div className='text-xs text-gray-300 space-y-1'>
                         <div>📱 {service.contactInfo.mobile}</div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                         <div>✉️ {service.contactInfo.email}</div>
                         <div>🌐 {service.contactInfo.website}</div>
                       </div>
@@ -936,7 +910,6 @@ onChange={e => setSortBy(e.target.value)}
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
                 initial={{ opacity: 0 }}
-<<<<<<< HEAD
                 animate={{ opacity: 1 }}
             {/* No Results Message */}
             {filtered_services.length === 0 && (
@@ -960,7 +933,6 @@ onChange={e => setSortBy(e.target.value)}
             >
 
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-=======
 animate={{ opacity: 1 }}
                 className='text-center py-16'
               >
@@ -984,7 +956,7 @@ animate={{ opacity: 1 }}
               transition={{ duration: 0.8 }}
             >
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -1008,7 +980,6 @@ animate={{ opacity: 1 }}
                   <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center">
                     <Lightbulb className="w-6 h-6 text-green-400" />
                   </div>
-<<<<<<< HEAD
               </div>
               {/* Action Buttons */}
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>
@@ -1018,7 +989,6 @@ animate={{ opacity: 1 }}
   }
 }
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
-=======
                   <span className='text-lg text-white'>
                     364 E Main St STE 1008 Middletown DE 19709
                   </span>
@@ -1026,7 +996,7 @@ animate={{ opacity: 1 }}
               </div>
               {/* Action Buttons */}
 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 <a
                   href='/contact'
                   className='inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-500 hover:via-blue-400 hover:to-blue-500 text-white shadow-lg hover:shadow-xl border border-blue-500/20 no-underline'>;
@@ -1034,19 +1004,17 @@ animate={{ opacity: 1 }}
                   <Rocket className='ml-2 w-6 h-6' />;
                 </a>;
                 <a
-<<<<<<< HEAD
                   href="/pricing" className="inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700 hover:from-gray-600 hover:via-gray-500 hover:to-gray-600 text-white shadow-lg hover:shadow-xl border border-gray-500/20 no-underline">
                   <span className="relative">View Pricing</span>
                   <DollarSign className="ml-2 w-6 h-6" />
                 </Link>
-=======
                   href='/pricing'
                   className='inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700 hover:from-gray-600 hover:via-gray-500 hover:to-gray-600 text-white shadow-lg hover:shadow-xl border border-gray-500/20 no-underline'
                 >
                   <span className='relative'>View Pricing</span>
                   <DollarSign className='ml-2 w-6 h-6' />
                 </a>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </motion.div>
           </div>
@@ -1054,7 +1022,6 @@ animate={{ opacity: 1 }}
       </div>
     </EnhancedFuturisticBackground>
 );
-<<<<<<< HEAD
   )
         <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
@@ -1188,5 +1155,4 @@ animate={{ opacity: 1 }}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

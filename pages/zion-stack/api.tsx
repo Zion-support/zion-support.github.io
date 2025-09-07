@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import dynamic from 'next/dynamic',;
 const ApiDocsPage = dynamic(() => import('../../components/docs/ApiDocsPage'), { ssr: false }),
 
@@ -15,10 +14,9 @@ export default function ZionStackApiRoute(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 import dynamic from 'next/dynamic';
 const ApiDocsPage = null;
 export default function ZionStackApiRoute() {
   return <ApiDocsPage />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }

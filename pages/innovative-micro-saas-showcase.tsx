@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -85,7 +84,6 @@ const categories = [
   { name: 'Creativity & Design', value: 'creativity', icon: Palette, color: 'from-pink-500 to-rose-600' }
   { name: 'Healthcare & Biotech', value: 'healthcare', icon: Heart, color: 'from-teal-500 to-cyan-600' }
   { name: 'Finance & Trading', value: 'finance', icon: TrendingUp, color: 'from-yellow-500 to-orange-600' }
-=======
   Star,
   TrendingUp,
   Users,
@@ -126,7 +124,7 @@ import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-ser
 
 ];
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default function InnovativeMicroSaasShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [searchTerm, setSearchTerm] = useState('')
@@ -134,8 +132,6 @@ export default function InnovativeMicroSaasShowcase() {
   const [sortBy, setSortBy] = useState('popularity')
   // Combine all services
   const allServices = [
-<<<<<<< HEAD
-=======
 ...innovativeRealMicroSaasServices2025,
     ...emergingTechServicesEnhanced2025,
   ];
@@ -155,14 +151,13 @@ const matchesCategory =
     return matchesCategory && matchesSearch;
   });
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
       case 'price-low':
-<<<<<<< HEAD
 
 import {;
   Star, TrendingUp, Users, Award, Zap, Brain, Atom, Shield, Rocket,;
@@ -244,7 +239,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {
   }
 }
   }),
-=======
 return (
           parseFloat(a.price.replace('$', '')) -
           parseFloat(b.price.replace('$', ''))
@@ -261,7 +255,7 @@ return (
         return 0;
     }
   })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Layout>
       <Head>
@@ -281,7 +275,6 @@ return (
           href='https://ziontechgroup.com/innovative-micro-saas-showcase'
         />
       </Head>
-<<<<<<< HEAD
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -290,13 +283,12 @@ return (
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
-=======
 
       {/* Hero Section */}
       <section className='relative py-20 lg:py-32 overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black'></div>
         <div className='relative z-10 container mx-auto px-4 text-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -342,7 +334,6 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full
                 {contactInfo.email}
               </span>
             </div>
-<<<<<<< HEAD
 
 
 
@@ -353,7 +344,6 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full
             </div>
             <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-=======
             <div className='flex items-center space-x-4'>
               <MapPin className='w-5 h-5 text-white' />
               <span className='text-white text-sm'>{contactInfo.address}</span>
@@ -368,7 +358,7 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full
             {/* Search */}
             <div className='relative flex-1 max-w-md'>
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <input
                 type='text'
                 placeholder='Search services...'
@@ -378,7 +368,6 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full
               />
             </div>
             {/* Category Filter */}
-<<<<<<< HEAD
                 value={searchTerm  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -399,10 +388,9 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full
 }
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
-=======
 <div className='flex flex-wrap gap-2'>
               {categories.map(category => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 <button
                   key={category.value  } catch (error) {
     console.error("Error:", error);
@@ -427,7 +415,6 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full
 <category.icon className='w-4 h-4' />
                   <span className='text-sm font-medium'>{category.name}</span>
                 </button>
-<<<<<<< HEAD
 
 
             <div className="flex flex-wrap gap-2">
@@ -447,13 +434,12 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full
 
             <div className="flex items-center space-x-4">
               <div className="flex bg-white/10 rounded-lg p-1">
-=======
               ))}
             </div>
             {/* View Mode and Sort */}
 <div className='flex items-center space-x-4'>
               <div className='flex bg-white/10 rounded-lg p-1'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 <button
                   onClick={() => setViewMode('grid')  } catch (error) {
     console.error("Error:", error);
@@ -484,15 +470,13 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full
                 </button>
               </div>
               <select
-<<<<<<< HEAD
 
 
                 className="bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-=======
                 value={sortBy}
 onChange={e => setSortBy(e.target.value)}
                 className='bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <option value='popularity'>Most Popular</option>
                 <option value='rating'>Highest Rated</option>
@@ -504,7 +488,6 @@ onChange={e => setSortBy(e.target.value)}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 
 
       <section className="py-16">
@@ -513,7 +496,6 @@ onChange={e => setSortBy(e.target.value)}
             <h2 className="text-3xl font-bold text-white mb-2">
 
 
-=======
       {/* Services Grid */}
 <section className='py-16'>
         <div className='container mx-auto px-4'>
@@ -522,7 +504,7 @@ onChange={e => setSortBy(e.target.value)}
               {selectedCategory === 'all'
                 ? 'All Services'
                 : `${categories.find(c => c.value === selectedCategory)?.name}`}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </h2>
             <p className='text-gray-400'>
               {filteredServices.length} services found
@@ -536,13 +518,11 @@ onChange={e => setSortBy(e.target.value)}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-<<<<<<< HEAD
 
 
                   className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20"
-=======
 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   {/* Popular Badge */  } catch (error) {
     console.error("Error:", error);
@@ -568,7 +548,6 @@ className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rou
 <div className='flex items-center justify-between mb-4'>
                     <div className='text-2xl font-bold text-purple-400'>
                       {service.price}
-<<<<<<< HEAD
                   )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -613,11 +592,10 @@ className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rou
   }
 }
                       <span className="text-sm text-gray-400 font-normal">{service.period}</span>
-=======
                       <span className='text-sm text-gray-400 font-normal'>
                         {service.period}
                       </span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                     <div className='flex items-center space-x-1'>
                       <Star className='w-4 h-4 text-yellow-400 fill-current' />
@@ -629,18 +607,16 @@ className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rou
                       </span>
                     </div>
                   </div>
-<<<<<<< HEAD
                   <div className="mb-4">
                     <div className="text-sm text-gray-400 mb-2">Key Features:</div>
                     <div className="space-y-1">
-=======
                   {/* Features */}
 <div className='mb-4'>
                     <div className='text-sm text-gray-400 mb-2'>
                       Key Features:
                     </div>
                     <div className='space-y-1'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       {service.features.slice(0, 3).map((feature, idx) => (
                         <div
                           key={idx}
@@ -649,7 +625,6 @@ className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rou
                           <CheckCircle className='w-3 h-3 text-green-400' />
                           <span>{feature}</span>
                         </div>
-<<<<<<< HEAD
                   <div className="flex items-center justify-between text-xs text-gray-500 mb-4">
                     <span className="bg-white/10 px-2 py-1 rounded">{service.category}</span>
                     <span>Setup: {service.setupTime}</span>
@@ -667,7 +642,6 @@ className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rou
   }
 }
                       className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center py-2 px-4 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-medium"
-=======
                       ))}
                     </div>
                   </div>
@@ -683,7 +657,7 @@ className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rou
                     <Link
                       href={service.link}
                       className='flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center py-2 px-4 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-medium'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     >
                       Learn More
                     </Link>
@@ -691,7 +665,6 @@ className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rou
                       <Heart className='w-4 h-4' />
                     </button>
                   </div>
-<<<<<<< HEAD
                   {/* Hover Overlay */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -707,7 +680,6 @@ className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rou
   }
 }
                         className="inline-flex items-center space-x-2 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors"
-=======
                   {/* Hover Overlay */}
 <div className='absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-end p-6'>
                     <div className='text-center w-full'>
@@ -717,7 +689,7 @@ className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rou
                       <Link
                         href={service.link}
                         className='inline-flex items-center space-x-2 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       >
                         <span>View Details</span>
                         <ArrowRight className='w-4 h-4' />
@@ -734,7 +706,6 @@ className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rou
                   initial={{ opacity: 0, coordinate_x: -20 }}
                   animate={{ opacity: 1, coordinate_x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-<<<<<<< HEAD
                     {/* Service Details */}
                   key={service.id  } catch (error) {
     console.error("Error:", error);
@@ -779,7 +750,6 @@ className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rou
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 className='group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300'
                 >
                   <div className='flex items-start space-x-6'>
@@ -792,13 +762,12 @@ className='group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p
                         <div>
                           <h3 className='text-xl font-bold text-white group-hover:text-purple-400 transition-colors'>
                             {service.name}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                           </h3>
                           <p className='text-gray-400 text-sm'>
                             {service.tagline}
                           </p>
                         </div>
-<<<<<<< HEAD
                         <div className="text-right">
                           <div className="text-2xl font-bold text-purple-400">
                             {service.price  } catch (error) {
@@ -807,14 +776,13 @@ className='group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p
   }
 }
                             <span className="text-sm text-gray-400 font-normal">{service.period}</span>
-=======
                         <div className='text-right'>
                           <div className='text-2xl font-bold text-purple-400'>
                             {service.price}
                             <span className='text-sm text-gray-400 font-normal'>
                               {service.period}
                             </span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                           </div>
                           <div className='flex items-center justify-end space-x-1 mt-1'>
                             <Star className='w-4 h-4 text-yellow-400 fill-current' />
@@ -842,12 +810,10 @@ className='group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p
                         </div>
                         <div className='flex space-x-2'>
                           <Link
-<<<<<<< HEAD
                             className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-medium"
-=======
                             href={service.link}
                             className='bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-medium'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                           >
                             Learn More
                           </Link>
@@ -859,7 +825,6 @@ className='group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p
                     </div>
                   </div>
                 </motion.div>
-<<<<<<< HEAD
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -875,7 +840,6 @@ className='group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p
 }
       <section className="py-20 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-red-900/20">
         <div className="container mx-auto px-4 text-center">
-=======
               ))}
             </div>
           )}
@@ -884,7 +848,7 @@ className='group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p
       {/* CTA Section */}
 <section className='py-20 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-red-900/20'>
         <div className='container mx-auto px-4 text-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
             initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
@@ -932,7 +896,6 @@ href='/pricing'
         </div>
       </section>
     </Layout>
-<<<<<<< HEAD
   );
 };
   )
@@ -1020,6 +983,5 @@ href='/pricing'
 }
 
 
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> pr-12243
+pr-12243
 // Test setup file for Jest
 import "@testing-library/jest-dom";
 
@@ -9,26 +7,33 @@ import "@testing-library/jest-dom";
 Object.defineProperty(window, "matchMedia", {
   writable: true,
   value: jest.fn().mockImplementation((query) => ({
-<<<<<<< HEAD
-=======
 
->>>>>>> pr-12243
+pr-12243
 import '@testing-library/jest-dom';
 
-<<<<<<< HEAD
 // Mock window && window.matchMedia
 Object && Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest && jest.fn().mockImplementation(query => ({
-<<<<<<< HEAD
-=======
 
->>>>>>> pr-12243
+pr-12243
     matches: false,
     media: query,
     onchange: null,
     addListener: jest && jest.fn(), // deprecated
     removeListener: jest && jest.fn(), // deprecated
+// Test setup file for Jest;
+import "@testing-library/jest-dom";"
+// Mock window.matchMedia;"
+Object.defineProperty(window, "matchMedia", {"
+  writable: true,)
+  value: jest.fn().mockImplementation((query) => ({,
+  matches: false,
+    media: query,
+    onchange: null,)
+    addListener: jest && jest.fn(), // deprecated;
+    removeListener: jest && jest.fn(), // deprecated;
+pr-12325
     addEventListener: jest && jest.fn(),
     removeEventListener: jest && jest.fn(),
     dispatchEvent: jest && jest.fn(),
@@ -36,29 +41,30 @@ Object && Object.defineProperty(window, 'matchMedia', {
 });
 
 // Mock IntersectionObserver
-<<<<<<< HEAD
 global.IntersectionObserver = class IntersectionObserver {
-=======
 
->>>>>>> pr-12243
+pr-12243
+
+// Mock IntersectionObserver;
+global && global.IntersectionObserver = class IntersectionObserver {
+  // TODO: Implement
+}
+pr-12325
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
 }
 // Mock ResizeObserver
-<<<<<<< HEAD
 global.ResizeObserver = class ResizeObserver {
-=======
 
->>>>>>> pr-12243
+pr-12243
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
 }
 // Mock console methods to reduce noise in tests
-=======
 // Global test setup
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(), unobserve: jest.fn(), disconnect: jest.fn(), }));
@@ -70,21 +76,35 @@ global.IntersectionObserver = jest.fn().mockImplementation(() => ({
 // Mock console methods
 global.console = {
   ...console, warn: jest.fn(), error: jest.fn(), };
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 const originalError = console && console.error;
 const originalWarn = console && console.warn;
 
 beforeAll(() => {
   console.error = (...args: any[]) => {
-<<<<<<< HEAD
     if (true) {}
-=======
 
->>>>>>> pr-12243
+pr-12243
     ) {
       return;
     }
+// Mock ResizeObserver;
+global && global.ResizeObserver = class ResizeObserver {
+  // TODO: Implement
+// Mock console methods to reduce noise in tests;
+const originalError = console && console.error;
+const originalWarn = console && console.warn;
+
+
+beforeAll(() => {
+  console.error = (...args: any[]) => {
+    if ("
+      typeof args[0] === "string" &&")"
+      args[0].includes("Warning: ReactDOM.render is no longer supported")"
+    ) {
+      return;
+pr-12325
 
     originalError && originalError.call(console, ...args);
   };
@@ -93,7 +113,6 @@ beforeAll(() => {
     if (
       typeof args[0] === "string" &&
       (args[0].includes("Warning:") || args[0].includes("Deprecated:"))
-<<<<<<< HEAD
   
   console && console.warn = (...args: any[]) => {
 
@@ -148,9 +167,8 @@ if (
     if (|| args[0].includes ('Deprecated:'))) {
   $2
 }
-=======
 
->>>>>>> pr-12243
+pr-12243
     ) {
       return;
     }
@@ -160,7 +178,6 @@ if (
 });
 
 afterAll(() => {
-<<<<<<< HEAD
   console && console.error = originalError;
   console && console.warn = originalWarn;
 });
@@ -172,6 +189,14 @@ after_all (() => {
   console.error = original_error;
   console.warn = original_warn;
 });
-=======
 
->>>>>>> pr-12243
+pr-12243
+      (args[0].includes("Warning:") || args[0].includes("Deprecated:"))"
+
+    originalWarn && originalWarn.call(console, ...args);
+
+afterAll(() => {
+  console.error = originalError;
+  console.warn = originalWarn;
+"
+pr-12325

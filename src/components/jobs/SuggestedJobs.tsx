@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 interface SuggestedJobsProps {
   talent_id?: string;
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 export /**
  * SuggestedJobs - Function description
@@ -59,8 +57,6 @@ import { Loader2 } from 'lucide-react'import { Badge } from "@/components/ui/bad
 import { useJobSuggestions } from "@/hooks/useJobSuggestions";
 import { JobMatchesCard } from "./JobMatchesCard";
 import { NoJobsCard } from "./NoJobsCard";
-<<<<<<< HEAD
-=======
     updateJobMatchStatus
 import { useAuth } from "@/hooks/useAuth"
 import { Loader2 } from 'lucide-react'import { Badge } from "@/components/ui/badge"
@@ -75,7 +71,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   const currentTalentId = null;
   if (isLoading) {
     return (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       <div className="flex items-center justify-center p-6">
         <Loader2 className="w-6 h-6 animate-spin text-primary" />
       </div>
@@ -165,18 +161,15 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
           </div>;
         </div>;
       )}
-<<<<<<< HEAD
-      
-;
-=======
-
-
-;
-
       
 ;
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+;
+
+      
+;
+
       {/* Previously Viewed Section */}
       {viewedMatches.length > 0 && (
         <div className="space-y-4">
@@ -216,18 +209,15 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
           </div>;
         </div>;
       )}
-<<<<<<< HEAD
-      
-;
-=======
-
-
-;
-
       
 ;
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+;
+
+      
+;
+
       {/* Applied Jobs Section */}
       {appliedMatches.length > 0 && (
         <div className="space-y-4">
@@ -240,8 +230,6 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
 
 
                 key = {match.id,}
-<<<<<<< HEAD
-=======
 
       {/* Applied Jobs Section */}
       {appliedMatches && appliedMatches.length > 0 && (;
@@ -254,7 +242,6 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
             {appliedMatches && appliedMatches.map(match => (;
               <JobMatchesCard
                 key = {match && match.id,}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 match = {match,}
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
@@ -268,7 +255,6 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
           </div>;
         </div>;
       )}
-<<<<<<< HEAD
 
     </div>;
   );
@@ -395,11 +381,7 @@ if ( {) {
 }</div>);
 }'"}
 }
-<<<<<<< HEAD
-=======
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
     </div>
   );
 
@@ -455,4 +437,4 @@ if (isLoading) {;
 }</div> </div>) ;
 }</div>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

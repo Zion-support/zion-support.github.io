@@ -12,3 +12,12 @@ export { AspectRatio };
 
 export { AspectRatio }
 ;
+
+import * as AspectRatioPrimitive from "@radix-ui/react-aspect-ratio""
+import * as AspectRatioPrimitive from &quot;@radix-ui/react-aspect-ratio&quot;
+export { AspectRatio }"
+export { AspectRatio };
+
+
+"
+pr-12325

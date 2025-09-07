@@ -1,19 +1,16 @@
-<<<<<<< HEAD
 function ReviewsModerationContent() {
   const [activeTab, setActiveTab] = useState("pending"),
   const [reviews, setReviews] = useState([]),
   const [isLoading, setIsLoading] = useState(true),
   
-=======
   const [activeTab, setActiveTab] = useState("pending");
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const fetchReviews = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const fetchReviews = async () => {
     setIsLoading(true),
     try {
-<<<<<<< HEAD
       // In a real application, you would fetch reviews from an API;
       // For now, let's simulate a delay and return empty data;
       await new Promise (resolve => set_timeout (resolve, 1000));
@@ -25,7 +22,6 @@ function ReviewsModerationContent() {
         { message: 'Error fetching reviews' }
       );
       toast ({
-=======
       // In a real application, you would fetch reviews from an API
       // For now, let's simulate a delay and return empty data
       await new Promise(resolve => setTimeout(resolve, 1000));
@@ -38,12 +34,11 @@ setIsLoading(false);
         { message: 'Error fetching reviews' }
       )
       toast({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         title: 'Error',
         description: 'Failed to load reviews. Please try again later.',
         variant: 'destructive',
       });
-<<<<<<< HEAD
       setIsLoading (false) }
   }
   useEffect (() => {
@@ -105,7 +100,6 @@ function ReviewsModerationContent() {;
     }
 
               <Star className="h-5 w-5" />
-=======
       setIsLoading(false);
     }
   };
@@ -136,7 +130,7 @@ fetchReviews();
           <CardHeader>
             <CardTitle className='flex items-center gap-2'>
               <Star className='h-5 w-5' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               Review Management
             </CardTitle>
             <CardDescription>
@@ -144,7 +138,6 @@ fetchReviews();
             </CardDescription>
           </CardHeader>
           <CardContent>
-<<<<<<< HEAD
 
             <Tabs defaultValue="pending" value={activeTab} onValueChange={setActiveTab}>
 
@@ -197,7 +190,6 @@ fetchReviews();
 
                 <ReviewsModerationTable
                 <ReviewsModerationTable 
-=======
 <Tabs
               defaultValue='pending'
               value={activeTab}
@@ -209,7 +201,7 @@ fetchReviews();
               </TabsList>
               <TabsContent value='pending' className='mt-0'>
                 <ReviewsModerationTable
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   reviews={reviews}
                   isLoading={isLoading}
                   onRefresh={handleRefresh}
@@ -228,7 +220,6 @@ fetchReviews();
                   onRefresh={handleRefresh}
                 />
               </TabsContent>
-<<<<<<< HEAD
               
 
               <TabsContent value="reported" className="mt-0">
@@ -242,7 +233,6 @@ fetchReviews();
 
 
 
-=======
 <TabsContent value='reported' className='mt-0'>
                 <div className='text-center py-12 border rounded-lg'>
                   <AlertTriangle className='h-10 w-10 text-amber-500 mx-auto mb-2' />
@@ -251,7 +241,7 @@ fetchReviews();
                     This section will show reviews that have been reported by
                     users.
                   </p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </TabsContent>
             </Tabs>
@@ -259,7 +249,6 @@ fetchReviews();
         </Card>
       </main>
     </>
-<<<<<<< HEAD
 
   );
 }
@@ -402,7 +391,6 @@ function ReviewsModeration() {
   return (<ProtectedRoute> <ReviewsModerationContent /> </ProtectedRoute> '"}
 }
 ;
-=======
   );
 }
 
@@ -423,4 +411,4 @@ return (<> <SEO title="Review Moderation | Zion AI Marketplace" description="Mod
 }/> </TabsContent> <TabsContent value="reported" className="mt-0" > <div className="text-center py-12 border rounded-lg" > <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2" /> <h3 className="text-lg font-medium mb-2" >Reported Reviews</h3> <p className="text-muted-foreground" > This section will show reviews that have been reported by users. </p> </div> </TabsContent> </Tabs> </CardContent> </Card> </main> </>) ;
 }export default function ReviewsModeration () {;
   return (<ProtectedRoute> <ReviewsModerationContent /> </ProtectedRoute> '"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { Button } from "@/components/ui/button",
 
 
@@ -14,15 +11,25 @@ import Link from 'next/link'
 import { useState, useEffect } from 'react'
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { X } from 'lucide-react'
 
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
   // TODO: Add dependencies if needed
-<<<<<<< HEAD
-=======
 import { Button } from '@/components / ui / button';
+import { Button } from "@/components/ui/button",""
+import { Button } from "@/components/ui/button";""
+import Link from "next/link";""
+import { useState, useEffect } from "react";""
+import { Button } from '@/components/ui/button
+import Link from 'next/link
+import { useState, useEffect } from 'react
+import { X } from 'lucide-react
+  const [isVisible, setIsVisible] = useState(false)
+  useEffect(() => {
+  // TODO: Add dependencies if needed;
+import { Button } from '@/components/ui/ button';
+pr-12325
 import Link from 'next / link';
 import { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
@@ -31,12 +38,11 @@ import { X } from 'lucide-react';
   // TODO: Add dependencies if needed;
   return () => {
     // Cleanup function;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+pr-12325
 }
 
 
 
-<<<<<<< HEAD
 };
 }, []); [])
     // Show CTA after 5 seconds
@@ -63,8 +69,6 @@ import { X } from 'lucide-react';
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { useState, useEffect } from "react"
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function FloatingCTA() {
 
 import { Button } from "@/components/ui/button",
@@ -72,31 +76,35 @@ import Link from "next/link",
 import { useState, useEffect } from "react",
 import { X } from 'lucide-react'
 
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false),
   const [isClosed, setIsClosed] = useState(false),
 
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY,
       const threshold = 600, // Show CTA after scrolling 600px
 
 
-<<<<<<< HEAD
 
       if (scrollPosition > threshold && !isClosed) {
         setIsVisible(true)
-=======
+export function FloatingCTA() {
+
+import Link from "next/link",""
+import { useState, useEffect } from "react",""
+  const [isVisible, setIsVisible] = useState(false),
+  const [isClosed, setIsClosed] = useState(false),
+
+
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY,
+      const threshold = 600, // Show CTA after scrolling 600px;
+pr-12325
       if (scrollPosition > threshold && !isClosed) {
         setIsVisible(true)
 }, []); []);
@@ -142,7 +150,6 @@ if ( {) {
   $2
 }
         setIsVisible (true);
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       } else {
         setIsVisible (false);
       }
@@ -150,8 +157,6 @@ if ( {) {
 import { X } from 'lucide-react';
 export function FloatingCTA() {;
 
-<<<<<<< HEAD
-=======
     },
 
 
@@ -166,7 +171,6 @@ export function FloatingCTA() {;
       if (scrollPosition > threshold && !isClosed) {;
         setIsVisible(true);
       } else {;
-=======
 
 export function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false);
@@ -179,12 +183,11 @@ export function FloatingCTA() {
       if (scrollPosition > threshold && !isClosed) {
         setIsVisible(true);
       } else {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         setIsVisible(false);
       }
     };
 
-<<<<<<< HEAD
     window && window.addEventListener('scroll', handleScroll);
     return () => {;
       window && window.removeEventListener('scroll', handleScroll);
@@ -213,8 +216,6 @@ export function FloatingCTA() {
 
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -229,7 +230,7 @@ setIsVisible(false);
   if (!isVisible) return null;
 
 return (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between">
@@ -246,15 +247,11 @@ return (
           >
             <Link href="/signup">Register Now</Link>
           </Button>
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <button 
             onClick={handleClose}
-<<<<<<< HEAD
             className="text-zion-slate hover: text-white p-1"
             aria-label="Close"
           >
@@ -262,17 +259,15 @@ return (
 
 
             <X className="w-5 h-5" />
-=======
             className='text-zion-slate hover:text-white p-1'
             aria-label='Close'
           >
             <X className='w-5 h-5' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           </button>
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   )
 
             aria-label='Close'           aria-label="Button">;
@@ -280,10 +275,7 @@ return (
             <X className="w-5 h-5" />;
 
 ;
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Button } from "@/components/ui/button",;
 import Link from "next/link",;
 import { useState, useEffect } from "react",;
@@ -332,20 +324,15 @@ export function FloatingCTA() {;
             className="text-zion-slate hover: text-white p-1";
             aria-label="Close";
           >;
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <X className="w-5 h-5" />;
           </button>;
         </div>;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
 }
 ;
-=======
 
   }, [is_closed]);
   const handle_close = () =>: any {
@@ -357,6 +344,75 @@ if (return null) {
   $2
 }
   return (
+  const quick_services = [";""
+    { name: "AI Solutions", icon: Brain, link: "/ai - services" }, ";""
+    { name: "Cybersecurity", icon: Shield, link: "/cybersecurity" }, ";""
+    { name: "Cloud Services", icon: Cloud, link: "/cloud - solutions" }, ";""
+    { name: "Digital Transformation", icon: Zap, link: "/digital - transformation" }"]
+  // Check condition;
+if (return null) {
+  $2;
+}"
+                    to="/services";""
+                    className="flex items - center gap - 3 p - 3 rounded - lg hover:bg - slate - 700 transition - colors duration - 200 text - white";"
+                    on_click={() => setIsExpanded (false)}"
+                  >";""
+                    <span className="text - xl">🚀</span>;""
+                    <div>";"
+</div>"
+                      <div className="font - semibold">Our Services</div>";""
+                      <div className="text - sm text - gray - 400">Explore solutions</div>;"
+                    </div>;
+                  ;"
+    <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">"
+      <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between">"
+        <div className="mr-4">"
+          <p className="text-white font-medium">Ready to explore Zion?</p>""
+          <p className="text-zion-slate-light text-sm">Register today to access all features!</p>"
+        <div className="flex items-center gap-2">"
+</div>
+          <Button;"
+            variant="default"""
+            size="sm"""
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap""
+            asChild;
+          >
+"
+            <Link href="/signup">Register Now"
+          
+
+
+
+          <button;
+            onClick={handleClose}"
+            className="text-zion-slate hover: text-white p-1"""
+            aria-label="Close""
+</button>
+
+
+            <X className="w-5 h-5" />"
+
+            <X className='w-5 h-5' />          </button>;
+
+            <X className="w-5 h-5" />;"
+    <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">;"
+      <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between">;"
+        <div className="mr-4">;"
+          <p className="text-white font-medium">Ready to explore Zion?</p>;""
+          <p className="text-zion-slate-light text-sm">Register today to access all features!</p>;"
+        </div>;"
+        <div className="flex items-center gap-2">;"
+            variant="default";""
+            size="sm";""
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap";"
+          >;
+            <Link href="/signup">Register Now;"
+          ;
+            className="text-zion-slate hover: text-white p-1";""
+            aria-label="Close";"
+
+          </button>;
+pr-12325
     <div className='fixed bottom - 6 left - 0 right - 0 mx - auto max - w-md px - 4 z - 50 animate - fade - in'>;
       <div className='bg - gradient - to - r from - zion - blue - dark to - zion - blue p - 4 rounded - lg border border - zion - purple shadow - lg flex items - center justify - between'>;
         <div className='mr - 4'>;
@@ -365,6 +421,9 @@ if (return null) {
             Register today to access all features!;
           </p>;
         </div>;
+</p>
+          </p>;
+pr-12325
         <div className='flex items - center gap - 2'>;
           <Button;
             variant='default';
@@ -375,6 +434,9 @@ if (return null) {
             <Link href='/signup'>Register Now</Link>;
           </Button>;
           <button;
+
+            <Link href='/signup'>Register Now;
+pr-12325
             on_click={handle_close}
             className='text - zion - slate hover:text - white p - 1';
             aria - label='Close'          >;
@@ -395,6 +457,15 @@ return (<div className="fixed bottom - 6 left - 0 right - 0 mx - auto max - w-md
           <motion.div";
             className="fixed inset - 0 bg - black / 20 z - 40";
 
+
+            <X className="w - 5 h - 5" />;"
+
+    </div>);"
+return (<div className="fixed bottom - 6 left - 0 right - 0 mx - auto max - w-md px - 4 z - 50 animate - fade - in" > <div className="bg - gradient - to - r from - zion - blue - dark to - zion - blue p - 4 rounded - lg border border - zion - purple shadow - lg flex items - center justify - between" > <div className="mr - 4" > <p className="text - white font - medium" >Ready to explore Zion?</p> <p className="text - zion - slate - light text - sm" >Register today to access all features!</p> </div> <div className="flex items - center gap - 2" > <Button variant="default" size="sm" className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple whitespace - nowrap" as_child > <Link href="/signup" >Register Now  <button aria - label="Close" w - 5 h - 5" /> </button> </div> </div> </div>);"
+      <AnimatePresence>;
+          <motion.div";""
+            className="fixed inset - 0 bg - black / 20 z - 40";"
+pr-12325
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -413,11 +484,15 @@ return (<div className="fixed bottom - 6 left - 0 right - 0 mx - auto max - w-md
 }
 }
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   );
 };
 }, [isClosed]);
 return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in" > <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between" > <div className="mr-4" > <p className="text-white font-medium" >Ready to explore Zion?</p> <p className="text-zion-slate-light text-sm" >Register today to access all features!</p> </div> <div className="flex items-center gap-2" > <Button variant="default" size="sm" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap" asChild > <Link href="/signup" >Register Now</Link> </Button> <button aria-label="Close" w-5 h-5" /> </button> </div> </div> </div>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+</motion>
+    </>)}
+          />) }
+    </>)}"
+";"
+pr-12325

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
               }
               setEquipment(equipmentData)
               setLoading(false)
@@ -16,16 +15,14 @@
 import { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
 import { NextSeo } from '@/components/NextSeo',
-=======
 import { useState, useEffect } from "react";
 import { useRouter  } from 'next/router';
 import { NextSeo  } from '@/components/NextSeo';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
-<<<<<<< HEAD
 import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react'
 import { toast } from "@/hooks/use-toast",
 import { useAuth } from "@/hooks/useAuth",
@@ -435,7 +432,6 @@ if ( {) {
           images: equipment.images.length > 0 && equipment.images[0] ? [{ url: equipment.images[0] }] : undefined;
 
 
-=======
 import {
   ShoppingCart
   Star
@@ -502,7 +498,7 @@ function convertProductListingToEquipmentDetails(
     subcategory: item.subcategory;
     images: item.images || ['https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto;
           images: equipment.images.length > 0 && equipment.images[0] ? [{ url: equipment.images[0] }] : undefined
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         }}
       />;
       <div className='min-h-screen bg-zion-blue py-8 px-4'>;
@@ -661,7 +657,6 @@ function convertProductListingToEquipmentDetails(
                     </div>
                   </div>
                 )}
-<<<<<<< HEAD
   equipment.returnPolicy 
 }</p> </div> </div>) 
 }</div> </motion.div> </div> </div> </div> </>) 
@@ -702,7 +697,6 @@ function convertProductListingToEquipmentDetails(
           </div>;
         </div>;
       </div>;
-=======
               </div>
             </motion.div>
           </div>
@@ -763,4 +757,4 @@ return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen
 }</p> </div> </div>) ;
 }</div> </motion.div> </div> </div> </div> </>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

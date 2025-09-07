@@ -5,16 +5,14 @@ import {useRouter} from 'next/router';
 import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-<<<<<<< HEAD
 import {useCurrentUser} from '../../utils/auth';
-=======
 import { useCurrentUser } from '../../utils/auth';
 const fetcher = null;
     mutate()
   }
 
 const fetcher = (url: string) => fetch(url).then(r => r.json());
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default function DisputeDetailPage() {
 
 
@@ -59,7 +57,6 @@ export default function DisputeDetailPage() {;
   const { data, mutate } = useSWR(id ? `/api/disputes/${id}` : null, fetcher);
   const user = useCurrentUser();
   const dispute = data?.dispute;
-<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';
@@ -83,7 +80,6 @@ export default function DisputeDetailPage(req, res) {
   async function sendMessage() {
     if (!message.trim() || !id) return;
     await fetch(`/api/disputes/${id}/message`, {
-=======
 const [activeTab, setActiveTab] = useState<
     'Overview' | 'Messages' | 'Attachments' | 'Admin Notes'
   >('Overview');
@@ -92,32 +88,29 @@ const [activeTab, setActiveTab] = useState<
   async function sendMessage() {
     if (!message.trim() || !id) return;
 await fetch(`/api/disputes/${id}/message`, {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ body: message }),
     });
     setMessage('');
-<<<<<<< HEAD
     mutate();  }
 
   async function resolve(status?: 'Resolved' | 'Under Review' | 'Open') {
     if (!id) return;
     await fetch(`/api/disputes/${id}/resolve`, {
-=======
     mutate();
   }
 
   async function resolve(status?: 'Resolved' | 'Under Review' | 'Open') {
     if (!id) return;
 await fetch(`/api/disputes/${id}/resolve`, {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ resolutionSummary, status }),
     });
     setResolutionSummary('');
-<<<<<<< HEAD
     mutate();  }
 
   const dispute = data?.dispute;
@@ -146,22 +139,19 @@ await fetch(`/api/disputes/${id}/resolve`, {
   }
 }
 
-=======
     mutate();
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
   return (
     <EnhancedLayout>
       {!dispute ? (
         <div>Loading...</div>
       ) : (
-<<<<<<< HEAD
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center justify-between mb-4">
             <h1 className="text-2xl font-semibold">Case {dispute.id}</h1>
             <span className={`px-2 py-1 rounded text-sm border ${dispute.status === 'Resolved' ? 'bg-green-100 text-green-800 border-green-300' : dispute.status === 'Under Review' ? 'bg-yellow-100 text-yellow-800 border-yellow-300' : 'bg-red-100 text-red-800 border-red-300'}`}>{dispute.status}</span>
-=======
 <div className='max-w-4xl mx-auto'>
           <div className='flex items-center justify-between mb-4'>
             <h1 className='text-2xl font-semibold'>Case {dispute.id}</h1>
@@ -170,7 +160,7 @@ await fetch(`/api/disputes/${id}/resolve`, {
             >
               {dispute.status}
             </span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
           <div className="mb-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
             <div className="p-3 border rounded">
@@ -186,14 +176,12 @@ await fetch(`/api/disputes/${id}/resolve`, {
               <div className="mt-1">{dispute.talentUserId}</div>
             </div>
           </div>
-<<<<<<< HEAD
           </div>
 
           {activeTab === 'Overview' && (
             <div className="space-y-6">
               <div className="p-4 border rounded">
                 <div className="font-medium mb-2">Reason</div>
-=======
           <div className='border-b mb-4 flex gap-4 text-sm'>
             {(
               ['Overview', 'Messages', 'Attachments', 'Admin Notes'] as const
@@ -216,7 +204,7 @@ await fetch(`/api/disputes/${id}/resolve`, {
                   {dispute.reason}
                   {dispute.reasonDetails ? ` — ${dispute.reasonDetails}` : ''}
                 </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
               <div className="p-4 border rounded">
                 <div className="font-medium mb-2">Description</div>
@@ -236,7 +224,6 @@ await fetch(`/api/disputes/${id}/resolve`, {
                       <time className="text-xs text-gray-500">{new Date(m.createdAt).toLocaleString()}</time>
                       <div className="text-sm">{m.authorRole} messaged</div>
                     </li>
-<<<<<<< HEAD
 
                     <li className="mb-6 ml-4">
                       <div className="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white" />
@@ -247,7 +234,6 @@ await fetch(`/api/disputes/${id}/resolve`, {
           {activeTab === 'Messages' && (
             <div className="space-y-4">
               <div className="max-h-72 overflow-auto border rounded p-3 bg-gray-50 dark:bg-gray-900">
-=======
                   ))}
                   {dispute.resolvedAt && (
                     <li className='mb-6 ml-4'>
@@ -265,26 +251,24 @@ await fetch(`/api/disputes/${id}/resolve`, {
           {activeTab === 'Messages' && (
 <div className='space-y-4'>
               <div className='max-h-72 overflow-auto border rounded p-3 bg-gray-50 dark:bg-gray-900'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 {dispute.messages.length === 0 ? (
                   <div className="text-sm text-gray-500">No messages yet</div>
                 ) : (
                   <ul className="space-y-3">
                     {dispute.messages.map((m: any) => (
-<<<<<<< HEAD
 
 
                       <li key={m.id} className="text-sm">
                         <div className="text-gray-500 text-xs">{m.authorRole} • {new Date(m.createdAt).toLocaleString()}</div>
                         <div className="whitespace-pre-wrap">{m.body}</div>
-=======
                       <li key={m.id} className='text-sm'>
                         <div className='text-gray-500 text-xs'>
                           {m.authorRole} •{' '}
                           {new Date(m.createdAt).toLocaleString()}
                         </div>
                         <div className='whitespace-pre-wrap'>{m.body}</div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       </li>
                     ))}
                   </ul>;
@@ -292,7 +276,6 @@ await fetch(`/api/disputes/${id}/resolve`, {
 
               </div>
               {user.role !== 'guest' && (
-<<<<<<< HEAD
                 <div className="flex gap-2">
                   <input value={message} onChange={e => setMessage(e.target.value)} placeholder="Write a message" className="flex-1 border rounded px-3 py-2 bg-white dark:bg-black" />
                   <button onClick={sendMessage} className="px-3 py-2 rounded bg-blue-600 text-white">Send</button>
@@ -310,7 +293,6 @@ await fetch(`/api/disputes/${id}/resolve`, {
                 <ul className='divide-y'>;
                   {dispute && dispute.attachments.map((a: any) => (;
 
-=======
 <div className='flex gap-2'>
                   <input
                     value={message}
@@ -335,7 +317,7 @@ await fetch(`/api/disputes/${id}/resolve`, {
               ) : (
                 <ul className='divide-y'>
                   {dispute.attachments.map((a: any) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     <li
                       key={a && a.id}
                       className='py-2 flex items-center justify-between'>;
@@ -347,7 +329,6 @@ await fetch(`/api/disputes/${id}/resolve`, {
                       </div>;
                       <a
                         className='text-blue-600 hover:underline'
-<<<<<<< HEAD
                         href={`/api/disputes/${encodeURIComponent(dispute && dispute.id)}/download?fileName=${encodeURIComponent(a && a.fileName)}`}>;
                         Download;
                       </a>                    </li>;
@@ -358,7 +339,6 @@ await fetch(`/api/disputes/${id}/resolve`, {
             <div className="space-y-3">
               {dispute.attachments.length === 0 ? (
                 <div className="text-sm text-gray-500">No attachments</div>
-=======
                         href={`/api/disputes/${encodeURIComponent(dispute.id)}/download?fileName=${encodeURIComponent(a.fileName)}`}
                       >
                         Download
@@ -375,7 +355,7 @@ await fetch(`/api/disputes/${id}/resolve`, {
                 <div className='text-sm text-gray-500'>
                   Admin access required
                 </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               ) : (
                 <ul className="divide-y">
                   {dispute.attachments.map((a: any) => (
@@ -412,7 +392,6 @@ await fetch(`/api/disputes/${id}/resolve`, {
                     </button>;
                     <button
                       onClick={() => resolve('Resolved')}
-<<<<<<< HEAD
                       className='px-3 py-2 rounded bg-green-600 text-white';
                     >;
                       Resolve;
@@ -451,12 +430,11 @@ await fetch(`/api/disputes/${id}/resolve`, {
                   <div className="flex gap-2">
                     <button onClick={() => resolve('Under Review')} className="px-3 py-2 rounded border">Mark Under Review</button>
                     <button onClick={() => resolve('Resolved')} className="px-3 py-2 rounded bg-green-600 text-white">Resolve</button>
-=======
                       className='px-3 py-2 rounded bg-green-600 text-white'
                     >
                       Resolve
                     </button>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </div>
 
@@ -474,13 +452,11 @@ await fetch(`/api/disputes/${id}/resolve`, {
           )}
         </div>;
       )}
-<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
     </EnhancedLayout>
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

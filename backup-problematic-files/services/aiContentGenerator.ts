@@ -16,48 +16,29 @@ export interface ContentGenerationResponse {;
   metadata:{;
     title:string,,
   description:string,;
+  metadata: {;,
+  title:string,;
+    description:string,;
+pr-12325
     tags:string[];
   },;}
-;
 export interface ContentTemplate {;
   id:string,;
   name:string,,
   description:string,;
+  name:string,;
+pr-12325
   type:string,;
   preview:string,;
   price:number;
-}
-;
 export class AIContentGeneratorService {;
   private apiKey:string,;
   private baseUrl:string,;
-;
   constructor(apiKey:string, baseUrl:string = 'https://api.ziontech.ai') {;
     this.apiKey = apiKey,;
     this.baseUrl = baseUrl;
-  }
-;
   async generateContent(request:ContentGenerationRequest):Promise<ContentGenerationResponse> {;
-    try {;
-      // In a real implementation, this would call OpenAI, Claude, or similar API;
-      const response = await fetch(`${this.baseUrl}/content/generate`, {;
-        method:'POST',;
-        headers:{;
-          'Authorization':`Bearer ${this.apiKey}`,;
-          'Content-Type':'application/json'},;
-        body:JSON.stringify(request)}),;
-;
-      if (!response.ok) {;
-        throw new Error(`Content generation failed:${response.statusText}`),;
-      }
-;
-      return await response.json(),;
-    } catch (error) {;
-      // Fallback to mock data for demo purposes;
-      return this.generateMockContent(request),;
-    }
-  }
-;
+
   async getTemplates():Promise<ContentTemplate[]> {;
     return [;
       {;
@@ -131,55 +112,11 @@ ${request.topic} represents a significant opportunity for organizations looking 
     seoScore:number,;
     readabilityScore:number,;
     suggestions:string[],;
+
+  async analyzeContent(content: string):Promise<{;,
+pr-12325
     keywordDensity:Record<string number>;
-  }> {;
-    // Mock content analysis;
-    return {;
-      seoScore:Math.floor(Math.random() * 30) + 70,;
-      readabilityScore:Math.floor(Math.random() * 30) + 70,;
-      suggestions:[;
-        'Add more headings for better structureInclude internal links to related content',;
-        'Optimize meta description';
-      ],;
-      keywordDensity:{;
-        'content':2.1,;
-        'seo':1.8,;
-        'marketing':1.5;
-      }
-    },;
-  }
+</string>
 },; async generateContent (request: ContentGenerationRequest) : Promise<ContentGenerationResponse> {
-  try {
-  // In a real implementation, this would call OpenAI, Claude, or similar API const response = await fetch (`$ {
-  this.baseUrl 
-}/content/generate`, {
-  method: 'POST', headers: {
-  'Authorization': `Bearer $ {
-  this.apiKey 
-}`;
-'Content-Type': 'application/json' 
-};
-body: JSON.stringify (request) 
-});
+
 }async getTemplates () : Promise<ContentTemplate[]> {
-  return [ {
-  
-}private generateMockContent (request: ContentGenerationRequest) : ContentGenerationResponse {
-  const mockContent = `# $ {
-  request.topic 
-}This is a $ {
-  request.length 
-}$ {
-  request.type 
-}about $ {
-  request.topic 
-}. The content is written in a $ {
-  request.tone 
-}tone to engage the target audience. ## Key Points - Point 1: $ {
-  request.topic 
-}is essential for modern businesses - Point 2: Implementing $ {
-  request.topic 
-}can improve efficiency - Point 3: Best practices for $ {
-  request.topic 
-}implementation ## Conclusion 
-}

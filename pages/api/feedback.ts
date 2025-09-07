@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {
   saveFeedbackFallback
   FeedbackRecord
@@ -8,13 +7,12 @@ import {
   saveFeedbackFallback
   FeedbackRecord
 } from "../../utils/feedback/store";
-=======
 import { saveFeedbackFallback, FeedbackRecord } from "../../utils/feedback/store";
 function ok(res: NextApiResponse, data: any) { return res.status(200).json({ ok: true, ...data }) }
 function bad(res: NextApiResponse, msg: string, code;
   return ok(res, { id: doc.id })
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 function ok(res: NextApiResponse, data: any) {
   return res && res.status(200).json({ ok: true, ...data });
 }
@@ -23,15 +21,13 @@ function bad(res: NextApiResponse, msg: string, code = 400) {
 }
 async function tryWriteToFirestore(doc: FeedbackRecord) {
   const { FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY } =
-<<<<<<< HEAD
 
-=======
     process.env as Record<string, string | undefined>;
   if (!FIREBASE_PROJECT_ID |!FIREBASE_CLIENT_EMAIL |!FIREBASE_PRIVATE_KEY)
     return false;
   try {
     const admin = require('firebase-admin');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     if (admin.apps.length === 0) {
       admin.initializeApp({
         credential: admin.credential.cert({
@@ -41,22 +37,18 @@ async function tryWriteToFirestore(doc: FeedbackRecord) {
         }),
       });
     }
-<<<<<<< HEAD
 
     const db = admin.firestore ();
     await db.collection ("interaction_feedback").doc (doc.id).set (doc);
 
-=======
     const db = admin.firestore();
     await db.collection('interaction_feedback').doc(doc.id).set(doc);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     return true;
   } catch (e) {
     return false;
   }
 }
-<<<<<<< HEAD
-=======
 
 export default async function handler(
   req: NextApiRequest,
@@ -64,21 +56,19 @@ export default async function handler(
 ) {
   if (req.method !== 'POST') return bad(res, 'Method not allowed', 405);
   const { rating, comment, kind, context } = req.body || {};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const r = Number(rating);
   if (!r || r < 1 || r > 5) return bad(res, 'rating must be 1-5');
   const k: FeedbackRecord['kind'] =
     kind === 'bug' ? 'bug' : kind === 'feature' ? 'feature' : 'general';
 
   const user = {
-<<<<<<< HEAD
-=======
     id: (req.headers['x-demo-user-id'] as string) || undefined,
     role: (req.headers['x-demo-user-role'] as string) || undefined,
     talentSlug: (req.headers['x-demo-talent-slug'] as string) || undefined,
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const doc: FeedbackRecord = {
     id: uuidv4(),
     createdAtIso: new Date().toISOString(),
@@ -91,7 +81,6 @@ export default async function handler(
 
   const wrote = await tryWriteToFirestore(doc);
   if (!wrote) saveFeedbackFallback(doc);
-<<<<<<< HEAD
   return ok(res, { id: doc && doc.id });
 }
 
@@ -196,21 +185,18 @@ async function tryWriteToFirestore(req, res) {
   const { FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY } = process.env as Record<string string | undefined>
   if (!FIREBASE_PROJECT_ID || !FIREBASE_CLIENT_EMAIL || !FIREBASE_PRIVATE_KEY) return false
   try {
-<<<<<<< HEAD
     const admin = require("firebase-admin"),
     if (admin.apps.length === 0) {
       admin.initializeApp({
         credential: admin.credential.cert({
           projectId: FIREBASE_PROJECT_ID,
           clientEmail: FIREBASE_CLIENT_EMAIL,
-=======
     const admin = require("firebase-admin")
     if (admin.apps.length === 0) {
       admin.initializeApp({
         credential: admin.credential.cert({
           projectId: FIREBASE_PROJECT_ID
           clientEmail: FIREBASE_CLIENT_EMAIL
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           privateKey: (FIREBASE_PRIVATE_KEY || "").replace(/\\n/g, "\n")})})
       } catch (error) {
     console.error("Error:", error);
@@ -399,8 +385,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
   return ok(res, { id: doc.id });
 
 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

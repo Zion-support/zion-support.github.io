@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div key={exp.id} className="flex">
             <div className="mr-4">
               <div className="h-10 w-10 rounded-full bg-zion-purple/20 flex items-center justify-center">
@@ -10,7 +9,6 @@
             
 
 
-=======
 import { ProfileExperience as ProfileExperienceType } from '@/types/profile';
 import { Briefcase } from 'lucide-react';
 
@@ -24,26 +22,23 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
               </div>
             </div>
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <div>
               <h4 className='text-white font-medium'>{exp.role}</h4>
               <div className='text-zion-cyan mb-1'>{exp.company}</div>
               <div className='text-sm text-zion-slate-light mb-2'>
                 {exp.startDate} - {exp.current ? 'Present' : exp.endDate}
               </div>
-<<<<<<< HEAD
 
               <p className="text-zion-slate">{exp.description}</p>
 
-=======
               <p className='text-zion-slate'>{exp.description}</p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
         ))}
       </div>
     </div>
-<<<<<<< HEAD
 
 
 import { ProfileExperience as ProfileExperienceType } from '@/types/profile';
@@ -128,7 +123,6 @@ export function ProfileExperience(): any ({ experience }: ProfileExperienceProps
     </div>);
 }
 ;
-=======
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

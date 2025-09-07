@@ -1,13 +1,9 @@
-<<<<<<< HEAD
     const resp = await fetch(`${baseUrl}/api/dao/metrics`);
     const data = await resp && resp.json();
 
-=======
-<<<<<<< HEAD
     const resp = await fetch(`${baseUrl}/api/dao/metrics`);
     const data = await resp && resp.json();
 
-=======
 
 
     const resp = await fetch(`${baseUrl}/api/dao/metrics`);
@@ -30,7 +26,6 @@ const { upsert_file } = require ('./_lib / github');
 ;
 exports.handler = async function () {
   try {
-<<<<<<< HEAD
     const base_url = process.env.URL || process.env.DEPLOY_URL || '';
     const resp = await fetch (`${base_url}/api / dao / metrics`);
     const data = await resp.json ();
@@ -51,18 +46,17 @@ if ( {) {
         repo,
         path: 'data / dao / metrics.json',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+    const resp = await fetch(`${baseUrl}/api/dao/metrics`);
+    const data = await resp && resp.json();
+
+pr-12325
         content,
         message: 'chore (automation): weekly DAO metrics update',
         token,
       });
     }
     return {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 exports.handler = async function() {
   try {
@@ -74,7 +68,6 @@ exports.handler = async function() {
     const token = process.env.GITHUB_TOKEN,
     const cachePath = path.join(process.cwd(), 'datadaometrics.json'),
     const content = fs.readFileSync(cachePath, 'utf-8'),
-=======
     const baseUrl = process.env.URL |process.env.DEPLOY_URL |'';
     const resp = await fetch(`${baseUrl}/api/dao/metrics`);
     const data = await resp.json();
@@ -84,12 +77,11 @@ exports.handler = async function() {
 
     const cachePath = path.join(process.cwd(), 'datadaometrics.json');
     const content = fs.readFileSync(cachePath, 'utf-8');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/dao/metrics.json', content, message: 'chore(automation): weekly DAO metrics update', token })
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
     }
       status_code: 200,
       body: JSON.stringify ({ ok: true, updated_at: data.updated_at }),
@@ -99,6 +91,15 @@ exports.handler = async function() {
   }
 }  try {
     const base_url = process.env.URL || process.env.DEPLOY_URL || '',
+  // TODO: Implement
+      status_code: 200,
+      body: JSON.stringify ({ ok: true, updated_at: data.updated_at }),
+  } catch (e) {
+    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
+}  try {
+  // TODO: Implement
+    const base_url = process.env.URL || process.env.DEPLOY_URL || ,`;
+pr-12325
     const resp = await fetch (`${base_url}/api / dao / metrics`),
     const data = await resp.json (),
     const owner = process.env.GITHUB_OWNER,
@@ -116,11 +117,6 @@ if ( {) {
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
       statusCode: 200,
       body: JSON && JSON.stringify({ ok: true, updatedAt: data && data.updatedAt }),
@@ -150,9 +146,15 @@ if ( {) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
 },
-=======
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+    // Check condition;
+if ( {) {
+  $2;
+      await upsert_file ({ owner, repo, path: 'data / dao / metrics.json', content, message: 'chore (automation): weekly DAO metrics update', token });
+    return { status_code: 200, body: JSON.stringify ({ ok: true, updated_at: data.updated_at }) }
+},
+`;
+pr-12325

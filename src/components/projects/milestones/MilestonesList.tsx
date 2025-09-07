@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 if (isLoading) {
     return (
 
@@ -160,7 +159,6 @@ if ( {) {
 ";
 
             <AddMilestoneForm
-=======
 import React, { useState } from 'react';
 import {
   Milestone,
@@ -200,4 +198,4 @@ interface MilestonesListProps {
   onReject?: (id: string) => Promise<void>
 }
 export const MilestonesList: React.FC<MilestonesListProps> = ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

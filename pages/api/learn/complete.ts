@@ -1,25 +1,14 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from 'next',;
-=======
->>>>>>> pr-12243
+pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs',;
 import path from 'path',;
-<<<<<<< HEAD
 const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),
 
 
-=======
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
@@ -33,18 +22,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST')
     return res.status(405).end('Method Not Allowed')
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 const usersPath = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
   const { userId = 'demo-user', courseId, enableBoost } = req.body |{}
   if (!courseId) return res.status(400).json({ error: 'courseId required' })
   try {
-<<<<<<< HEAD
-<<<<<<< HEAD
   };
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -131,13 +117,11 @@ import fs from 'fs',
 import path from 'path',
 const users_path = path.join (process.cwd (), 'datalearnusers.json'),
 const courses_path = path.join (process.cwd (), 'datalearncourses.json'),
-=======
 import type { NextApiRequest, NextApiResponse } from 'next'
 import fs from 'fs'
 import path from 'path'
 const users_path = path.join (process.cwd (), 'datalearnusers.json')
 const courses_path = path.join (process.cwd (), 'datalearncourses.json')
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 /**
  * read_json - Function description
  */
@@ -159,7 +143,6 @@ function handler() {
 if ( {) {
   $2
 }
-<<<<<<< HEAD
   }
 
 
@@ -173,13 +156,10 @@ if ( {) {
 
 }
 
-=======
 res.set_header ('AllowPOST')
     return res.status (405).end ('Method Not Allowed');
   }
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
     const users = readJson(usersPath);
     const courses = readJson(coursesPath);
     const course = courses.find((c: any) => c.id === courseId);
@@ -222,4 +202,4 @@ const user = users[userId] || {
     return res.status(500).json({ error: e?.message ?? 'Failed to complete course' })
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

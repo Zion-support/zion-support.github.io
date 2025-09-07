@@ -1,10 +1,8 @@
-<<<<<<< HEAD
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
   const { user } = useAuth();
   const { formatPrice } = useCurrency();
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 
   const router = useRouter();
@@ -30,7 +28,6 @@ import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData",
 import { toast } from "@/hooks/use-toast",
 import { PaymentButton } from "@/components/transactions/PaymentButton",
 import { ProfileContact } from "@/components/profile/ProfileContact",
-<<<<<<< HEAD
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { useCurrency } from '@/hooks/useCurrency',
 export default function ListingDetail() {
@@ -44,7 +41,6 @@ export default function ListingDetail() {
   const [isChatOpen, setIsChatOpen] = useState(false),
   const { user } = useAuth(),
   const { formatPrice } = useCurrency(),
-=======
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
@@ -77,14 +73,13 @@ export default function ListingDetail() {
   const { user } = useAuth();
   const { formatPrice } = useCurrency();
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
   // Find the listing from our shared data source - now also checking equipment listings
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id),
 
   if (!listing) {
     return (
-<<<<<<< HEAD
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
           <div className="text-center py-20">
@@ -114,7 +109,6 @@ export default function ListingDetail() {
     } else {;
       setIsContactDialogOpen(true);      setIsChatOpen(true);
     } else {;
-=======
       <div className='min-h-screen bg-zion-blue py-12 px-4'>
         <div className='container mx-auto'>
           <div className='text-center py-20'>
@@ -140,13 +134,11 @@ export default function ListingDetail() {
     if (user) {
 setIsChatOpen(true);
     } else {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       setIsContactDialogOpen(true);
     }
   }
   return (
-<<<<<<< HEAD
-=======
     <>
 <div className='min-h-screen bg-zion-blue py-12 px-4'>
         <div className='container mx-auto'>
@@ -164,7 +156,7 @@ setIsChatOpen(true);
                       alt={listing.title}
                       className='object-cover'
                       fallbackSrc='/placeholder.svg'                    />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   ) : (
                     <div className="w-full h-full flex items-center justify-center bg-zion-blue-light/20">
                       <span className="text-zion-slate-light">No image available</span>
@@ -187,9 +179,7 @@ setIsChatOpen(true);
                       <div
                         key = {index,}
                         onClick = {(,) => setSelectedImageIndex(index),}
-<<<<<<< HEAD
                           fallbackSrc="/placeholder.svg"
-=======
                         className = {cn(
                           "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2"
                           index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
@@ -200,14 +190,13 @@ setIsChatOpen(true);
                           alt={`${listing.title} - image ${index + 1}`}
 className='object-cover'
                           fallbackSrc='/placeholder.svg'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                         />
                       </div>
                     ))}
                   </div>
                 )}
               </div>
-<<<<<<< HEAD
               <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
                 <h2 className="text-2xl font-bold text-white mb-4">Description</h2>
                 <p className="text-zion-slate-light whitespace-pre-line">{listing.description}</p>
@@ -296,7 +285,6 @@ className='object-cover'
                       </div>
                       <div>
                         <h4 className="font-medium text-white">Enterprise Security</h4>
-=======
               {/* Description Section */}
 <div className='mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light'>
                 <h2 className='text-2xl font-bold text-white mb-4'>
@@ -333,12 +321,11 @@ className='object-cover'
                         <p className='text-sm text-zion-slate-light'>
                           Built-in data protection and encryption
                         </p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD
                 <div className="mt-8">;
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>;
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
@@ -383,7 +370,6 @@ className='object-cover'
               </div>;
             </div>;
                     <Badge className="ml-2 bg-zion-cyan/20 text-zion-cyan">
-=======
 {/* Tags */}
                 <div className='mt-8'>
                   <h3 className='text-xl font-bold text-white mb-4'>Tags</h3>
@@ -413,12 +399,11 @@ className='object-cover'
                   </Badge>
                   {listing.featured && (
                     <Badge className='ml-2 bg-zion-cyan/20 text-zion-cyan'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       Featured
                     </Badge>
                   )}
                 </div>
-<<<<<<< HEAD
                 
                 <h1 className="text-2xl font-bold text-white mb-4">{listing.title}</h1>
                 
@@ -428,20 +413,18 @@ className='object-cover'
 
 
 
-=======
 <h1 className='text-2xl font-bold text-white mb-4'>
                   {listing.title}
                 </h1>
                   <div className='flex items-center gap-2 mb-6'>
                     <div className='flex items-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
                           className={cn(
                             i < Math.floor(listing.rating!)
                               ? 'text-zion-cyan fill-zion-cyan'
-<<<<<<< HEAD
                               : 'text-zion-slate-light'                          )}
                         />;
                       ))}
@@ -460,10 +443,9 @@ className='object-cover'
                             "h-5 w-5"
                             i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
                           ),}
-=======
                               : 'text-zion-slate-light'
                           )}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                         />
                       ))}
                             "h-5 w-5",
@@ -472,23 +454,20 @@ className='object-cover'
                         />
                       ))}
                     </div>
-<<<<<<< HEAD
                     <span className="text-sm text-zion-slate-light">
                       {listing.rating.toFixed(1)} ({listing.reviewCount} reviews)
 
 
 
 
-=======
 <span className='text-sm text-zion-slate-light'>
                       {listing.rating.toFixed(1)} ({listing.reviewCount}{' '}
                       reviews)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     </span>
                   </div>
                 )}
                 {/* Price */}
-<<<<<<< HEAD
 
                     <div className="text-2xl font-bold text-white">
                       Custom Pricing
@@ -502,7 +481,6 @@ className='object-cover'
                 {/* Action Buttons */}
                 {/* Action Buttons */}
                 <div className="space-y-3 mb-8">
-=======
                 <div className='mb-6'>
                   {listing.price !== null ? (
                     <div className='text-3xl font-bold text-white'>
@@ -516,7 +494,7 @@ className='object-cover'
                 </div>
 {/* Action Buttons */}
                 <div className='space-y-3 mb-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   {listing.price !== null ? (
                     <PaymentButton
                       buttonText="Buy Now"
@@ -612,7 +590,6 @@ buttonText='Buy Now'
                         <ImageWithRetry
                           src={listing.author.avatarUrl}
                           alt={listing.author.name}
-<<<<<<< HEAD
 
 
 
@@ -625,33 +602,29 @@ buttonText='Buy Now'
                           className="object-cover"
                           onError={(e) => {
                             const target = e.target as HTMLImageElement,
-=======
                           className='object-cover'
                           onError={e => {
                             const target = e.target as HTMLImageElement;
                             target.src =
                               'https://ui-avatars.com/api/?name=' +
                               encodeURIComponent(listing.author.name);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                             target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
                           }}
                         />
                       </div>
                     ) : (
-<<<<<<< HEAD
                       <div className="h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center">
                         <span className="text-lg font-medium text-zion-purple">{listing.author.name.charAt(0)}</span>
-=======
 <div className='h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center'>
                         <span className='text-lg font-medium text-zion-purple'>
                           {listing.author.name.charAt(0)}
                         </span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>
                     )}
 
                     <div>
-<<<<<<< HEAD
 
 
                       <p className="font-medium text-white">{listing.author.name}</p>
@@ -670,7 +643,6 @@ buttonText='Buy Now'
                   <div className="flex justify-between mb-2">
                     <span className="text-zion-slate-light">ID</span>
                     <span className="text-white">{listing.id}</span>
-=======
                       <p className='font-medium text-white'>
                         {listing.author.name}
                       </p>
@@ -691,7 +663,7 @@ buttonText='Buy Now'
                   <div className='flex justify-between mb-2'>
                     <span className='text-zion-slate-light'>ID</span>
                     <span className='text-white'>{listing.id}</span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </div>
               </div>
@@ -819,7 +791,6 @@ buttonText='Buy Now'
         onClose = {() => setIsChatOpen(false),}
       />
       {/* Contact Dialog */}
-<<<<<<< HEAD
       <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>;
         <DialogContent className='bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md'>;
           <DialogHeader>;
@@ -841,7 +812,6 @@ buttonText='Buy Now'
         </DialogContent>
       </Dialog>
     </>
-=======
       <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
 <DialogContent className='bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md'>
           <DialogHeader>
@@ -870,4 +840,4 @@ buttonText='Buy Now'
 }onClose= {() => setIsChatOpen (false) ";
 }/> <DialogHeader> <DialogTitle className=" text-xl font-bold text-white" >Contact Publisher</DialogTitle> </DialogHeader> <ProfileContact /> </DialogContent> </Dialog> </>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

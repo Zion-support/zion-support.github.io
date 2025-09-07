@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -13,23 +12,20 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         delivering significant improvements in efficiency, quality, and cost reduction.</p>
         <h2>Background</h2>
         <p>Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes.
         High downtime, inefficient production scheduling, and quality control issues were impacting their bottom line
         and preventing them from meeting growing customer demands.</p>
-<<<<<<< HEAD
-=======
         <h2>Challenge</h2>
         <p>The company needed to modernize their manufacturing operations while maintaining high quality standards 
 and reducing operational costs. They required a solution that could adapt to changing production demands, 
         minimize human intervention, and provide real-time insights into their operations.</p>
         <h2>Solution</h2>
         <p>We implemented a comprehensive AI automation system that included:</p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         <ul>
           <li><strong>Predictive Maintenance:</strong> AI algorithms that predict equipment failures before they occur</li>
           <li><strong>Real-time Production Optimization:</strong> Dynamic scheduling and resource allocation</li>
@@ -63,7 +59,6 @@ and reducing operational costs. They required a solution that could adapt to cha
         <p>The AI automation implementation at Global Manufacturing Corp demonstrates the transformative potential
         of autonomous systems in traditional industries. The results exceeded expectations and positioned the company
         as a leader in smart manufacturing.</p>
-<<<<<<< HEAD
       `
     {
       id: 'cloud - infrastructure - optimization',
@@ -71,7 +66,6 @@ and reducing operational costs. They required a solution that could adapt to cha
       company: 'E - commerce Platform',
       industry: 'Technology',
       results: '50% reduction in cloud costs, 99.9% uptime achieved',
-=======
 `,
     },
     {
@@ -140,7 +134,7 @@ description:
       results: '50% reduction in cloud costs, 99.9% uptime achieved',
 description: 'Building self-healing, auto-scaling cloud infrastructure.',
       fullContent: `
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         <h2>Executive Summary</h2>
         <p>This case study demonstrates how intelligent cloud infrastructure optimization can dramatically
         reduce costs while improving performance and reliability for high-traffic applications.</p>
@@ -188,7 +182,6 @@ description: 'Building self-healing, auto-scaling cloud infrastructure.',
         <p>The cloud infrastructure optimization project transformed the platform's performance and cost structure.
         The self-healing, auto-scaling infrastructure now supports continued business growth while maintaining
         optimal performance and cost efficiency.</p>
-<<<<<<< HEAD
       `
     }
 import React from 'react';
@@ -378,14 +371,13 @@ export default function CaseStudyResourcePage(req, res) {
 }
   ],
   const caseStudy = caseStudies.find(study => study.id === id),
-=======
 `,
     },
   ];
 
   const caseStudy = caseStudies.find(study => study.id === id);
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   if (!caseStudy) {
     return (
       <>
@@ -401,18 +393,16 @@ export default function CaseStudyResourcePage(req, res) {
               <p className='text-xl text-white/80 mb-8'>
                 The case study resource you're looking for doesn't exist.
               </p>
-<<<<<<< HEAD
 
 
 
 
                 href="/resources"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
-=======
               <Link
                 href='/resources'
                 className='inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 ← Back to Resources
               </Link>
@@ -445,17 +435,15 @@ export default function CaseStudyResourcePage(req, res) {
                 ← Back to Resources
               </Link>
             </nav>
-<<<<<<< HEAD
             <header className="mb-12">
               <div className="mb-6">
                 <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
-=======
 
             <header className='mb-12'>
               <div className='mb-6'>
                 <span className='px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30'>
                   {caseStudy.industry}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </span>
               </div>
               <h1 className='text-4xl font-bold mb-4 text-white'>
@@ -490,17 +478,15 @@ export default function CaseStudyResourcePage(req, res) {
 
             <div className='text-center'>
               <Link
-<<<<<<< HEAD
 
 
 
 
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
-=======
                 href='/contact'
                 className='inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Get Started with Your Project
               </Link>
@@ -509,7 +495,6 @@ export default function CaseStudyResourcePage(req, res) {
         </main>
       </div>
     </>
-<<<<<<< HEAD
   )
   ];
   const caseStudy = caseStudies.find(study => study.id === id);
@@ -601,6 +586,5 @@ if ( {) {
         </main>;
 
 
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

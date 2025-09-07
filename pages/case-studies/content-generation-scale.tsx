@@ -1,9 +1,7 @@
 
-<<<<<<< HEAD
-=======
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>
       <Head>
@@ -17,7 +15,6 @@
           content='AI automation, content generation, marketing, case study, NLP, SEO automation'
         />
       </Head>
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900">
         <main className="pt-20 pb-16">
           <div className="max-w-4xl mx-auto px-6">
@@ -26,7 +23,6 @@
                 ← Back to Case Studies
               </Link>
             </nav>
-=======
 
       <div className='min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900'>
         <main className='pt-20 pb-16'>
@@ -45,7 +41,7 @@
               <div className='mb-4'>
                 <span className='px-4 py-2 bg-purple-400/20 text-purple-400 text-sm rounded-full border border-purple-400/30'>
                   {caseStudy.industry}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </span>
               </div>
               <h1 className='text-4xl font-bold text-white mb-4'>
@@ -59,7 +55,6 @@
                 <span>Team: {caseStudy.teamSize}</span>
               </div>
             </header>
-<<<<<<< HEAD
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-red-400">The Challenge</h2>
               <div className="bg-red-500/10 rounded-lg p-6 border border-red-500/20">
@@ -93,7 +88,6 @@
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-yellow-400">Results Achieved</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-=======
             {/* Challenge */}
 <section className='mb-12'>
               <h2 className='text-2xl font-semibold mb-6 text-red-400'>
@@ -134,7 +128,7 @@
                 Results Achieved
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 {caseStudy.results.map((result, index) => (
                   <div
                     key={index}
@@ -151,7 +145,6 @@
                       </span>
                     </div>
                   </div>
-<<<<<<< HEAD
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -170,7 +163,6 @@
                 <p className="text-white/80 mb-6 max-w-2xl mx-auto">
                   This case study demonstrates the real impact of AI automation in content generation.
                   Let's discuss how we can help you achieve similar results.
-=======
                 ))}
               </div>
             </section>
@@ -184,11 +176,10 @@
                   This case study demonstrates the real impact of AI automation
                   in content generation. Let's discuss how we can help you
                   achieve similar results.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                   <Link
-<<<<<<< HEAD
 
 
 
@@ -204,7 +195,6 @@
 
                     href="/case-studies"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-purple-400/50 transition-all duration-300"
-=======
                     href='/contact'
                     className='bg-gradient-to-r from-purple-400 to-cyan-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-500 hover:to-cyan-500 transition-all duration-300'
                   >
@@ -213,7 +203,7 @@
                   <Link
                     href='/case-studies'
                     className='px-8 py-4 border border-white/20 rounded-lg text-white hover:border-purple-400/50 transition-all duration-300'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   >
                     View More Case Studies
                   </Link>
@@ -224,7 +214,6 @@
         </main>
       </div>
     </>
-<<<<<<< HEAD
   )
             <section className="text-center">;
               <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-2xl p-8 border border-purple-500/20">;
@@ -251,6 +240,5 @@
         </main>;
 
 
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

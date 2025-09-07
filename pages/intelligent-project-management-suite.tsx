@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
 ;
 export async function getStaticProps() {
@@ -24,7 +23,6 @@ export default function IntelligentProjectManagementSuite(req, res) {
 }
 
 
-=======
 import ServicePage, {
   getStaticProps as getSlugStaticProps,;
 } from './services/[slug]';
@@ -36,4 +34,4 @@ export async function getStaticProps() {
 
 export default function IntelligentProjectManagementSuite(props: any) {
   return <ServicePage {...props} />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

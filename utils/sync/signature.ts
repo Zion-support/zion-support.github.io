@@ -1,10 +1,18 @@
 
 
 }
-=======export function getSyncSecret(): string | null {
+export function getSyncSecret(): string | null {
   const raw = process.env.ZION_SYNC_SECRET || '';
   return raw.length > 0 ? raw : null;
 }
+import crypto from "crypto";"
+}
+export function getSyncSecret(): string | null {
+  // TODO: Implement
+}"
+  const raw = process.env.ZION_SYNC_SECRET || ;
+  return raw.length > 0 ? raw : null;
+pr-12325
 // Signature utilities;
 export const signature = {
   // Add signature functionality here;
@@ -27,6 +35,24 @@ export function signPayload(
     .digest("hex");
 
   return {
+  sign: (message: string, privateKey: string) => ,
+  recover: (signature: string, message: string) => ;
+export function signPayload(
+  payload: any,
+  privateKey?: string,)
+): SignatureResult {
+  // TODO: Implement
+  const timestamp = Date.now();
+  const nonce = crypto.randomBytes(16).toString("hex");"
+  // Create a simple signature using the payload, timestamp, and nonce;
+  const dataToSign = JSON.stringify(payload) + timestamp + nonce;
+  const signature = crypto;"
+    .createHash("sha256")"
+    .update(dataToSign)"
+    .digest("hex");"
+  return {
+  // TODO: Implement
+pr-12325
     signature,
     timestamp,
     nonce,
@@ -56,3 +82,26 @@ export function generateNonce(): string {
 export function hashData(data: string): string {
   return crypto.createHash("sha256").update(data).digest("hex");
 }
+
+export function verifySignature(
+  signature: string,
+  timestamp: number,
+  nonce: string,)
+): boolean {
+  // TODO: Implement
+  const expectedSignature = crypto;"
+  return signature === expectedSignature;
+
+export function generateNonce(): string {
+  // TODO: Implement
+  return crypto.randomBytes(16).toString("hex");"
+  // TODO: Implement
+  verify: (signature: string, message: string, address: string) => false,"
+  sign: (message: string, private_key: string) => ,
+
+export function hashData(data: string): string {
+  // TODO: Implement
+  return crypto.createHash("sha256").update(data).digest("hex");"
+
+"
+pr-12325

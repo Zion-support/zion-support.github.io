@@ -66,6 +66,33 @@ import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { toast } from "@/hooks/use-toast",;
+
+  Card;
+  CardContent;
+  CardDescription;
+  CardFooter;
+  CardHeader;
+  CardTitle;
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+CardTitle,;
+} from "@/components/ui/card";""
+import { Sparkles } from "lucide-react";""
+import { Progress } from "@/components/ui/progress";"
+export function UsageStats() {
+  const handleSaveChanges = () => {
+    toast({
+"
+import React from "react",;""
+import { Slider } from "@/components/ui/slider",;""
+import { Badge } from "@/components/ui/badge",;""
+import { Button } from "@/components/ui/button",;""
+import { Input } from "@/components/ui/input",;""
+import { toast } from "@/hooks/use-toast",;"
+pr-12325
 import {;
   Card,;
   CardContent,;
@@ -180,3 +207,266 @@ export function UsageStats() {;
 }
 ;
 }
+      title: "Limits updated",""
+      description: "The new usage limits have been saved successfully.",;""
+import React from "react";""
+import { Slider } from "@/components/ui/slider";""
+import { Badge } from "@/components/ui/badge";""
+import { Button } from "@/components/ui/button";""
+import { Input } from "@/components/ui/input";""
+import { toast } from "@/hooks/use-toast";"
+import {
+  // TODO: Implement
+}
+
+import { Progress } from "@/components/ui/progress";")
+
+  CardTitle,;"
+export function UsageStats() {;
+  const handleSaveChanges = () => {;
+    toast({;"
+      title: "Limits updated",;""
+      description: "The new usage limits have been saved successfully.",;")
+    });
+
+  return (
+
+
+
+  CardTitle} from "@/components/ui/card",""
+import { Sparkles } from "lucide-react",""
+import { Progress } from "@/components/ui/progress",")
+    toast({"
+      title: "Limits updated",")"
+      description: "The new usage limits have been saved successfully."})"
+  },
+
+        </p>
+      </div>"
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">"
+</div>
+        <Card>
+
+          <CardHeader>
+
+            <CardTitle>Job Postings
+            <CardDescription>
+
+            
+          <CardContent className="space-y-4">"
+
+            <div>
+              <div className="flex items-center justify-between mb-2">"
+                <div className="text-sm font-medium">Monthly job posting limit</div>""
+                <Badge variant="outline">25 / 50"
+              <Progress value={50} className="h-2" />"
+
+            <div className="grid gap-4">"
+              <div className="grid grid-cols-3 items-center gap-4">"
+                <div className="text-sm">New limit:</div>""
+                <div className="col-span-2">"
+                  <Input type="number" min="1" defaultValue="50" />"
+
+          
+          <CardFooter>
+            <Button size="sm" onClick={handleSaveChanges}>Save Changes"
+          
+        
+        
+
+
+        
+
+
+            <CardTitle>Candidate Contacts
+
+            
+
+                <div className="text-sm font-medium">"
+                <div className="text-sm font-medium">Monthly contact credits</div>""
+                <Badge variant="outline">178 / 500"
+              <Progress value={35.6} className="h-2" />"
+
+                  <Input type="number" min="1" defaultValue="500" />"
+
+          
+            <Button size="sm" onClick={handleSaveChanges}>"
+
+            
+          
+        
+
+
+        
+
+          
+        
+        
+
+
+            <CardTitle>AI Features
+
+            
+
+                <div className="text-sm font-medium">AI matching credits</div>""
+                <Badge variant="outline">435 / 1000"
+              <Progress value={43.5} className="h-2" />"
+
+                  <Input type="number" min="1" defaultValue="1000" />"
+
+          
+
+            
+          
+        
+
+
+        
+
+          
+        
+        
+
+
+            <CardTitle>Budget Controls
+
+            
+
+                <div className="text-sm font-medium">Monthly budget</div>""
+                <Badge variant="outline">$1,250 / $5,000"
+              <Progress value={25} className="h-2" />"
+
+                <div className="text-sm">Monthly budget:</div>""
+                  <Input type="number" min="0" step="100" defaultValue="5000" />"
+
+                <div className="text-sm">Alert threshold:</div>""
+                  <select className="w-full flex h-10 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">"
+</select>"
+                    <option value="75">75% of limit</option>""
+                    <option value="80">80% of limit</option>""
+                    <option value="90">90% of limit</option>""
+                    <option value="95">95% of limit</option>"
+                  </select>
+          
+
+            
+          
+        
+
+
+      
+
+
+      
+
+
+          
+        
+      <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between">"
+        <div className="flex items-center gap-4">"
+          <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">"
+            <Sparkles className="h-5 w-5 text-primary" />"
+
+            <h3 className="font-medium">Need higher limits?</h3>""
+            <p className="text-sm text-muted-foreground">"
+        <Button>Contact Us
+    <div className="space-y-8">;"
+      <div>;
+        <h3 className="text-xl font-medium mb-4">Usage Limits & Settings</h3>;""
+        <p className="text-muted-foreground mb-6">;"
+        </p>;
+      </div>;"
+      <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 6">;"
+        <Card>;
+
+          <CardHeader>;
+
+            <CardTitle > Job Postings;
+            <CardDescription>;
+
+            ;
+          ;"
+          <CardContent className="space - y-4">;"
+
+              <div className="flex items - center justify - between mb - 2">;"
+                <div className="text - sm font - medium">;"
+                <Badge variant="outline">25 / 50;"
+              <Progress value={50} className="h - 2" />;"
+
+            <div className="grid gap - 4">;"
+              <div className="grid grid - cols - 3 items - center gap - 4">;"
+                <div className="text - sm">New limit:</div>;""
+                <div className="col - span - 2">;"
+                  <Input type="number" min="1" default_value="50" />;"
+
+                </div>;
+          <CardFooter>;
+
+            <Button size="sm" on_click={handleSaveChanges}>;"
+
+
+
+            <CardTitle > Candidate Contacts;
+
+
+                <Badge variant="outline">178 / 500;"
+              <Progress value={35.6} className="h - 2" />;"
+
+                  <Input type="number" min="1" default_value="500" />;"
+
+
+
+
+
+            <CardTitle > AI Features;
+
+
+                <div className="text - sm font - medium">AI matching credits</div>;""
+                <Badge variant="outline">435 / 1000;"
+              <Progress value={43.5} className="h - 2" />;"
+
+                  <Input type="number" min="1" default_value="1000" />;"
+
+
+
+
+
+            <CardTitle > Budget Controls;
+
+
+                <div className="text - sm font - medium">Monthly budget</div>;""
+                <Badge variant="outline">$1, 250 / $5, 000;"
+              <Progress value={25} className="h - 2" />;"
+
+                <div className="text - sm">Monthly budget:</div>;""
+                  <Input type="number" min="0" step="100" default_value="5000" />;"
+
+                <div className="text - sm">Alert threshold:</div>;""
+                  <select className="w - full flex h - 10 rounded - md border border - input bg - background px - 3 py - 2 text - sm ring - offset - background focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring">;"
+                    <option value="75">75% of limit</option>;""
+                    <option value="80">80% of limit</option>;""
+                    <option value="90">90% of limit</option>;""
+                    <option value="95">95% of limit</option>;"
+                  </select>;
+
+
+      <div className="bg - muted / 50 rounded - lg p - 6 flex items - center justify - between">;"
+        <div className="flex items - center gap - 4">;"
+          <div className="h - 10 w - 10 rounded - full bg - primary / 20 flex items - center justify - center">;"
+            <Sparkles className="h - 5 w - 5 text - primary" />;"
+
+            <h3 className="font - medium">Need higher limits?</h3>;""
+            <p className="text - sm text - muted - foreground">;"
+        <Button > Contact Us;
+    </div>);
+    </div>);"
+            <Button size="sm" onClick={handleSaveChanges}>Save Changes;"
+      <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between">;"
+        <div className="flex items-center gap-4">;"
+          <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">;"
+            <Sparkles className="h-5 w-5 text-primary" />;"
+
+            <h3 className="font-medium">Need higher limits?</h3>;""
+            <p className="text-sm text-muted-foreground">;"
+        <Button>Contact Us;
+pr-12325

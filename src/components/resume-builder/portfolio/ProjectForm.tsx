@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
       let success = false;
       // Check condition
@@ -6,7 +5,6 @@ if ( {) {
   $2
 }
         success = await update_project (project.id, project_data);
-=======
 import { useState  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -105,7 +103,7 @@ export function ProjectForm({
       let success = false
       if (isEditing && project?.id) {
         success = await updateProject(project.id, projectData)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       } else {
         const projectId = await addProject(projectData)
         success = !!projectId
@@ -135,7 +133,6 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {;
       setIsLoading(false)
     }
   }
-<<<<<<< HEAD
 
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
@@ -167,8 +164,7 @@ import {;
 
   },
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
         <FormField
@@ -454,7 +450,6 @@ import {;
 };
 };
     </Form>
-<<<<<<< HEAD
   )
 }
 }
@@ -477,6 +472,5 @@ import {;
     </Form>);
 }
 }
-=======
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

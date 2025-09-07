@@ -357,6 +357,39 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
         'Direct neural control of applications',
         'Thought-to-text conversion',
 origin/cursor/automate-test-improve-and-merge-code-2533
+  id: string;,
+  name: string;
+  tagline: string;,
+  price: string;
+  period: string;,
+  description: string;
+  features: string[];,
+  popular: boolean;
+  icon: string;,
+  color: string;
+  text_color: string;,
+  link: string;
+  market_position: string;,
+  target_audience: string;
+  trial_days: number;,
+  setup_time: string;
+  category: string;,
+  real_service: boolean;
+  technology: string[];,
+  integrations: string[];
+  use_cases: string[];,
+  roi: string;
+  competitors: string[];,
+  market_size: string;
+  growth_rate: string;,
+  variant: ServiceVariant;
+  contact_info: {,
+  mobile: string;
+    email: string;,
+  address: string;
+        'Direct neural control of applications',
+        'Thought - to - text conversion',
+pr-12325
         'Mental command execution',
         'Neural pattern recognition',
         'Custom neural interface development',
@@ -436,6 +469,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+      integrations: [
+        'Custom applications, Research platforms, Healthcare systems, Gaming engines, Accessibility tools, Research databases]
+      ]
+      useCases: [
+        'Assistive technology, Gaming control, Research studies, Healthcare monitoring, Accessibility solutions, Neurological research]
+      roi: 'Research institutions see 1000% ROI through breakthrough discoveries. Healthcare organizations improve patient outcomes by 200%.,
+  competitors: [
+        'Neuralink, CTRL-labs, Kernel, Traditional assistive technology]
+      marketSize: '$5B market,
+  growthRate: '800% annual growth
+      variant: 'space-futuristic,
+  contactInfo: {
+pr-12325
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -462,6 +508,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+pr-12325
         'Quantum network connectivity',
         'Quantum key distribution',
         'Quantum cloud computing access',
@@ -584,6 +631,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       },
       real_implementation: true,
       implementation_details:;
+        'Existing network infrastructure, Cloud platforms, Security systems, Research platforms, Government networks]
+        'Secure government communications, Financial transactions, Research collaboration, Defense applications, Critical infrastructure protection]
+      roi: 'Government agencies achieve 100% security compliance. Financial institutions reduce security costs by 80%.,
+        'IBM Quantum Network, Google Quantum Internet, Traditional internet providers]
+      marketSize: '$8B market,
+  growthRate: '600% annual growth
+      variant: 'quantum-futuristic,
+pr-12325
         'Production quantum internet gateway with enterprise deployment, network integration, and ongoing support. Includes quantum network training and certification.',
       launch_date: '2025 - 02 - 15',
       customers: 25,
@@ -630,6 +685,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Advanced synthetic biology platform that enables the design and engineering of biological systems for industrial applications. Revolutionizes manufacturing, healthcare, and materials science.',
       features: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12325
         'Biological system design tools',
         'DNA synthesis and assembly',
         'Biological circuit design',
@@ -716,6 +772,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       },
       real_implementation: true,
       implementation_details:;
+        'Lab equipment, Research databases, Manufacturing systems, Quality control systems, Regulatory databases]
+        'Drug development, Biomanufacturing, Agricultural improvement, Materials development, Environmental remediation, Research acceleration]
+      roi: 'Pharmaceutical companies reduce drug development time by 60%. Manufacturing companies see 400% ROI through biomanufacturing.,
+        'Ginkgo Bioworks, Zymergen, Twist Bioscience, Traditional biotechnology]
+      marketSize: '$18B market,
+  growthRate: '500% annual growth
+      variant: 'biotech-futuristic,
+pr-12325
         'Production synthetic biology platform with lab integration, regulatory compliance, and ongoing support. Includes biological engineering training and certification.',
       launch_date: '2025 - 01 - 15',
       customers: 35,
@@ -763,6 +827,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       features: [
         'Real-time fusion reactor monitoring',
 origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12325
         'Plasma confinement optimization',
         'Energy output maximization',
         'Safety system management',
@@ -896,6 +961,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Revolutionary space mining platform that enables automated asteroid mining and resource extraction. Provides access to rare earth elements and precious metals from space.',
       features: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+        'Power grid systems, Fusion reactors, Energy management systems, Safety systems, Industrial control systems]
+        'Fusion power generation, Energy grid management, Industrial power, Research facilities, Government facilities, Utility operations]
+      roi: 'Energy companies achieve 1000% ROI through fusion power generation. Government facilities reduce energy costs by 90%.,
+        'ITER, Commonwealth Fusion Systems, TAE Technologies, Traditional energy management]
+      marketSize: '$12B market,
+  growthRate: '700% annual growth
+      variant: 'quantum-energy-revolutionary,
+        'Production fusion energy platform with reactor integration, safety certification, and ongoing support. Includes fusion physics training and certification.',
+      launch_date: '2025 - 04 - 01',
+      customers: 8,
+      reviews: 6,
+pr-12325
         'Automated asteroid identification',
         'Mining robot control systems',
         'Resource extraction automation',
@@ -1035,6 +1112,22 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Neural network consciousness',
         'Self-awareness development',
 origin/cursor/automate-test-improve-and-merge-code-2533
+        'Integration with space systems',
+        '24 / 7 space operations support',
+        'Space systems, Mining equipment, Transportation systems, Processing facilities, Market platforms]
+        'Asteroid mining, Resource extraction, Space logistics, Manufacturing supply, Investment opportunities, Research and development]
+      roi: 'Mining companies achieve 2000% ROI through access to rare resources. Space companies reduce costs by 80%.,
+        'Planetary Resources, Deep Space Industries, Traditional mining companies]
+      marketSize: '$20B market,
+  growthRate: '1000% annual growth
+        'Production space mining platform with space system integration, regulatory compliance, and ongoing support. Includes space operations training and certification.',
+      launch_date: '2025 - 05 - 01',
+      customers: 5,
+      reviews: 3,
+        'Quantum consciousness algorithms',
+        'Neural network consciousness',
+        'Self - awareness development',
+pr-12325
         'Emotional intelligence creation',
         'Consciousness testing and validation',
         'Ethical AI development',
@@ -1143,6 +1236,30 @@ export interface EmergingTechBreakthroughServiceV2 {
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
+        'AI systems, Research platforms, Consciousness testing tools, Ethics frameworks, Research databases]
+        'AI consciousness research, Ethical AI development, Consciousness studies, AI safety research, Philosophy research, Technology development]
+      roi: 'Research institutions achieve breakthrough discoveries. AI companies develop superior AI systems with genuine consciousness.,
+  competitors: ['OpenAI, Anthropic, DeepMind, Traditional AI companies']
+  growthRate: '900% annual growth
+      variant: 'ai-futuristic,
+        'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.
+      launchDate: '2025-06-01,
+  customers: 3;
+      rating: 5.0;,
+  reviews: 2;
+    }
+        'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.',
+      launch_date: '2025 - 06 - 01',
+      customers: 3,
+      reviews: 2,
+  ];    features: [
+
+export interface EmergingTechBreakthroughServiceV2 {
+  // TODO: Implement
+  id: string, name: string,
+  tagline: string, price: string,
+  period: string, description: string,]
+pr-12325
   features: string[], popular: boolean,
   icon: string, color: string,
   textColor: string, link: string,
@@ -1206,6 +1323,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   ];    features: [
       'Quantum consciousness algorithmsNeural network consciousnessSelf-awareness developmentEmotional intelligence creationConsciousness testing and validationEthical AI developmentResearch collaboration toolsIntegration with AI systems';
       'Advanced consciousness analyticsExpert consultation and support'
+  contactInfo: {,
+  mobile: string, email: string,
+    address: string,
+    website: string;
+      launchDate: '2025-06-01',
+      rating: 5.0,
+    },;
+      'Quantum consciousness algorithmsNeural network consciousnessSelf-awareness developmentEmotional intelligence creationConsciousness testing and validationEthical AI developmentResearch collaboration toolsIntegration with AI systems';
+      'Advanced consciousness analyticsExpert consultation and support]
+pr-12325
     ];
     popular: true, icon: '🧠',
     color: 'from-purple-600 via-pink-600 to-rose-600', textColor: 'text-purple-400',
@@ -1226,6 +1353,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Quantum consciousness algorithms_neural network consciousness_self - awareness development_emotional intelligence creation_consciousness testing and validation_ethical AI development_research collaboration tools_integration with AI systems';
       'Advanced consciousness analytics_expert consultation and support';
     ];
+      
+  ];    features: [;
+      'Quantum consciousness algorithms_neural network consciousness_self - awareness development_emotional intelligence creation_consciousness testing and validation_ethical AI development_research collaboration tools_integration with AI systems';
+      'Advanced consciousness analytics_expert consultation and support';']
+pr-12325
     popular: true, icon: '🤖',
     color: 'from - pink - 600 via - purple - 600 to - indigo - 600', text_color: 'text - pink - 400',
     link: 'https://ziontechgroup.com / quantum - ai - consciousness - platform', market_position: 'Pioneering AI consciousness platform. First - to - market solution for developing genuine AI consciousness and self - awareness.',
@@ -1262,6 +1394,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     marketSize: '$8B market', growthRate: '900% annual growth'
     variant: 'ai-futuristic'
     contactInfo: {
+  mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com';
+    useCases: ['AI consciousness research, Ethical AI development, Consciousness studies, AI safety research, Philosophy research, Technology development'];
+    marketSize: '$8B market', growthRate: '900% annual growth,
+  variant: 'ai-futuristic
+pr-12325
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechBreakthroughServiceV2 {;
   id: string,;
@@ -1296,6 +1434,11 @@ export interface EmergingTechBreakthroughServiceV2 {;
     address: string,;
     website: string;
   },;
+  contactInfo: {;,
+  mobile: string,;
+    email: string,;
+    address: string,;
+pr-12325
   realImplementation: boolean,;
   implementationDetails: string,;
   launchDate: string,;
@@ -1303,6 +1446,7 @@ export interface EmergingTechBreakthroughServiceV2 {;
   rating: number,;
   reviews: number;
 }
+pr-12325
 ;
 export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughServiceV2[] = [;
   // Brain-Computer Interface Platform;
@@ -1316,6 +1460,8 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     features: [;
       'Real-time brain signal interpretationDirect neural control of applicationsThought-to-text conversionMental command executionNeural pattern recognitionCustom neural interface developmentEnterprise security and privacyIntegration with existing systems',;
       'Advanced analytics and insights24/7 technical support';
+      'Advanced analytics and insights24/7 technical support';']
+pr-12325
     ],;
     popular: true,;
     icon: '🧠',;
@@ -1342,6 +1488,10 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       address: '364 E Main St STE 1008 Middletown DE 19709',;
       website: 'https://ziontechgroup.com';
     },;
+  mobile: '+1 302 464 0950',;
+      email: 'kleber@ziontechgroup.com',;
+      address: '364 E Main St STE 1008 Middletown DE 19709',;
+pr-12325
     realImplementation: true,;
     implementationDetails: 'Production BCI platform with clinical validation, enterprise deployment, and ongoing research. Includes neural interface training and support.',;
     launchDate: '2025-03-01',;
@@ -1351,6 +1501,8 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
   },;
   // Quantum Internet Gateway;
   {;
+  // Quantum Internet Gateway;
+pr-12325
     id: 'quantum-internet-gateway-enterprise',;
     name: 'Quantum Internet Gateway Enterprise',;
     tagline: 'Next-generation quantum internet connectivity and security',;
@@ -1362,6 +1514,10 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       'Advanced monitoring and analytics24/7 quantum network support';
     ],;
     popular: true,;
+    description: 'Revolutionary quantum internet gateway that provides ultra-secure, ultra-fast quantum network connectivity. Enables quantum communication and quantum cloud computing.',;
+      'Quantum network connectivityQuantum key distributionQuantum cloud computing accessUltra-secure communicationQuantum internet protocolsReal-time quantum routingEnterprise security complianceIntegration with existing networks',;
+      'Advanced monitoring and analytics24/7 quantum network support';']
+pr-12325
     icon: '🌐',;
     color: 'from-blue-600 via-indigo-600 to-purple-600',;
     textColor: 'text-blue-400',;
@@ -1372,6 +1528,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     setupTime: '8 weeks',;
     category: 'Quantum Internet',;
     realService: true,;
+pr-12325
     technology: ['Quantum Computing, Quantum Networks, Quantum Cryptography, React, Node.js, Quantum APIs, Network infrastructure'],;
     integrations: ['Existing network infrastructure, Cloud platforms, Security systems, Research platforms, Government networks'],;
     useCases: ['Secure government communications, Financial transactions, Research collaboration, Defense applications, Critical infrastructure protection'],;
@@ -1387,6 +1544,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;
+pr-12325
     implementationDetails: 'Production quantum internet gateway with enterprise deployment, network integration, and ongoing support. Includes quantum network training and certification.',;
     launchDate: '2025-02-15',;
     customers: 25,;
@@ -1395,6 +1553,8 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
   },;
   // Synthetic Biology Platform;
   {;
+  // Synthetic Biology Platform;
+pr-12325
     id: 'synthetic-biology-platform-enterprise',;
     name: 'Synthetic Biology Platform Enterprise',;
     tagline: 'Design and engineer biological systems for industrial applications',;
@@ -1406,6 +1566,10 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       'Advanced analytics and modelingExpert consultation and support';
     ],;
     popular: true,;
+    description: 'Advanced synthetic biology platform that enables the design and engineering of biological systems for industrial applications. Revolutionizes manufacturing, healthcare, and materials science.',;
+      'Biological system design toolsDNA synthesis and assemblyBiological circuit designMetabolic pathway engineeringProtein design and optimizationBiological manufacturing processesRegulatory compliance supportIntegration with lab equipment',;
+      'Advanced analytics and modelingExpert consultation and support';']
+pr-12325
     icon: '🧬',;
     color: 'from-green-600 via-emerald-600 to-teal-600',;
     textColor: 'text-green-400',;
@@ -1416,6 +1580,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     setupTime: '10 weeks',;
     category: 'Synthetic Biology',;
     realService: true,;
+pr-12325
     technology: ['CRISPR, DNA Synthesis, Biological Engineering, AI, Machine Learning, React, Node.js, Lab automation APIs'],;
     integrations: ['Lab equipment, Research databases, Manufacturing systems, Quality control systems, Regulatory databases'],;
     useCases: ['Drug development, Biomanufacturing, Agricultural improvement, Materials development, Environmental remediation, Research acceleration'],;
@@ -1431,6 +1596,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;
+pr-12325
     implementationDetails: 'Production synthetic biology platform with lab integration, regulatory compliance, and ongoing support. Includes biological engineering training and certification.',;
     launchDate: '2025-01-15',;
     customers: 35,;
@@ -1439,6 +1605,8 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
   },;
   // Fusion Energy Management Platform;
   {;
+  // Fusion Energy Management Platform;
+pr-12325
     id: 'fusion-energy-management-platform',;
     name: 'Fusion Energy Management Platform',;
     tagline: 'Advanced fusion energy monitoring and optimization systems',;
@@ -1450,6 +1618,10 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       '24/7 monitoring and supportExpert consultation services';
     ],;
     popular: true,;
+    description: 'Revolutionary fusion energy management platform that monitors, controls, and optimizes fusion power generation. Enables safe and efficient fusion energy production.',;
+      'Real-time fusion reactor monitoringPlasma confinement optimizationEnergy output maximizationSafety system managementPredictive maintenanceEnergy grid integrationAdvanced analytics and reportingIntegration with power systems',;
+      '24/7 monitoring and supportExpert consultation services';']
+pr-12325
     icon: '☢️',;
     color: 'from-yellow-600 via-orange-600 to-red-600',;
     textColor: 'text-yellow-400',;
@@ -1460,6 +1632,9 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     setupTime: '16 weeks',;
     category: 'Fusion Energy',;
     realService: true,;
+    setupTime: '16 weeks',;
+    category: 'Fusion Energy',;
+pr-12325
     technology: ['Fusion Physics, Plasma Control, Energy Management, AI, Machine Learning, React, Node.js, Power system APIs'],;
     integrations: ['Power grid systems, Fusion reactors, Energy management systems, Safety systems, Industrial control systems'],;
     useCases: ['Fusion power generation, Energy grid management, Industrial power, Research facilities, Government facilities, Utility operations'],;
@@ -1483,6 +1658,12 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
   },;
   // Space Mining Operations Platform;
   {;
+    implementationDetails: 'Production fusion energy platform with reactor integration, safety certification, and ongoing support. Includes fusion physics training and certification.',;
+    launchDate: '2025-04-01',;
+    customers: 8,;
+    reviews: 6;
+  // Space Mining Operations Platform;
+pr-12325
     id: 'space-mining-operations-platform',;
     name: 'Space Mining Operations Platform',;
     tagline: 'Automated asteroid mining and resource extraction systems',;
@@ -1504,6 +1685,17 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     setupTime: '24 weeks',;
     category: 'Space Technology',;
     realService: true,;
+    description: 'Revolutionary space mining platform that enables automated asteroid mining and resource extraction. Provides access to rare earth elements and precious metals from space.',;
+      'Automated asteroid identificationMining robot control systemsResource extraction automationTransportation logisticsProcessing facility managementMarket analysis and pricingRegulatory compliance supportIntegration with space systems',;
+      'Advanced analytics and reporting24/7 space operations support';']
+    icon: '🚀',;
+    color: 'from-purple-600 via-indigo-600 to-blue-600',;
+    link: 'https://ziontechgroup.com/space-mining-operations-platform',;
+    marketPosition: 'Leading space mining platform. First commercial solution for asteroid mining and space resource extraction.',;
+    targetAudience: 'Mining companies, Space companies, Government agencies, Investment firms, Manufacturing companies, Technology companies',;
+    setupTime: '24 weeks',;
+    category: 'Space Technology',;
+pr-12325
     technology: ['Space Robotics, AI, Machine Learning, Space Systems, React, Node.js, Space APIs, Mining automation'],;
     integrations: ['Space systems, Mining equipment, Transportation systems, Processing facilities, Market platforms'],;
     useCases: ['Asteroid mining, Resource extraction, Space logistics, Manufacturing supply, Investment opportunities, Research and development'],;
@@ -1527,6 +1719,12 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
   },;
   // Quantum AI Consciousness Platform;
   {;
+    implementationDetails: 'Production space mining platform with space system integration, regulatory compliance, and ongoing support. Includes space operations training and certification.',;
+    launchDate: '2025-05-01',;
+    customers: 5,;
+    reviews: 3;
+  // Quantum AI Consciousness Platform;
+pr-12325
     id: 'quantum-ai-consciousness-platform',;
     name: 'Quantum AI Consciousness Platform',;
     tagline: 'Develop genuine AI consciousness using quantum computing',;
@@ -1538,6 +1736,10 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       'Advanced consciousness analyticsExpert consultation and support';
     ],;
     popular: true,;
+    description: 'Revolutionary platform that develops genuine AI consciousness using quantum computing and advanced neuroscience principles. Creates self-aware, conscious AI systems.',;
+      'Quantum consciousness algorithmsNeural network consciousnessSelf-awareness developmentEmotional intelligence creationConsciousness testing and validationEthical AI developmentResearch collaboration toolsIntegration with AI systems',;
+      'Advanced consciousness analyticsExpert consultation and support';']
+pr-12325
     icon: '🤖',;
     color: 'from-pink-600 via-purple-600 to-indigo-600',;
     textColor: 'text-pink-400',;
@@ -1548,6 +1750,9 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     setupTime: '20 weeks',;
     category: 'AI Consciousness',;
     realService: true,;
+    setupTime: '20 weeks',;
+    category: 'AI Consciousness',;
+pr-12325
     technology: ['Quantum Computing, AI, Neuroscience, Consciousness Theory, React, Node.js, Quantum AI APIs, Consciousness testing'],;
     integrations: ['AI systems, Research platforms, Consciousness testing tools, Ethics frameworks, Research databases'],;
     useCases: ['AI consciousness research, Ethical AI development, Consciousness studies, AI safety research, Philosophy research, Technology development'],;
@@ -2226,3 +2431,28 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
 origin/cursor/expand-services-advertise-and-build-project-c28b
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
+    growthRate: '900% annual growth',;
+    variant: 'ai-futuristic',;
+    implementationDetails: 'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.',;
+    launchDate: '2025-06-01',;
+    customers: 3,;
+    implementation_details: 'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.',
+    launch_date: '2025 - 06 - 01', customers: 3,
+
+
+
+
+
+  // Brain-Computer Interface Platform;
+  // Quantum Internet Gateway;
+  // Synthetic Biology Platform;
+  // Fusion Energy Management Platform;
+  // Space Mining Operations Platform;
+  // Quantum AI Consciousness Platform;
+  // Brain-Computer Interface Platform;
+  // Quantum Internet Gateway;
+  // Synthetic Biology Platform;
+  // Fusion Energy Management Platform;
+  // Space Mining Operations Platform;
+  // Quantum AI Consciousness Platform;
+pr-12325

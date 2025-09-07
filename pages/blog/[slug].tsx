@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',;
 import ReactMarkdown from 'react-markdown',;
 import { useRouter } from 'next/router',;
@@ -22,7 +21,6 @@ import { BLOG_POSTS } from '@/data/blog-posts';
 import { AuthorBio } from '@/components/blog/AuthorBio';
 import { SocialShareButtons } from '@/components/blog/SocialShareButtons';
 import { CommentsSection } from '@/components/blog/CommentsSection';
-=======
 import React from 'react',
 import ReactMarkdown from 'react-markdown';
 import { useRouter  } from 'next/router';
@@ -46,7 +44,7 @@ interface BlogPostPageProps {
    */
 initialPost: BlogPost | null;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
   const router = useRouter()
   const { slug } = router.query
@@ -54,30 +52,26 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
   const [error, setError] = React.useState<string | null>(null)
   React.useEffect(() => {
     if (initialPost && initialPost.slug === slug) {
-<<<<<<< HEAD
 
 
       setError(null), // Clear any previous error
-=======
       setPost(initialPost);
 setError(null); // Clear any previous error
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     } else if (slug) {
       // This case handles if the slug changes and initialPost is not for the current slug
       // Or if initialPost was null from getStaticProps (which shouldn't happen if notFound is true)
       // For now, we will rely on getStaticProps to provide the correct post or a 404.
       // If initialPost is null and getStaticProps didn't return notFound, that's an inconsistent state.
       // The previous logic tried a fallback here, but we aim to make getStaticProps authoritative.
-<<<<<<< HEAD
 
 
         setError(null)
-=======
 const directFallback = BLOG_POSTS.find(p => p.slug === slug) || null;
       if (directFallback) {
         setPost(directFallback);
         setError(null);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       } else {
         // If getStaticProps is working correctly, this path (slug exists, no initialPost, no fallback)
         // should ideally not be hit frequently, as getStaticProps would have returned notFound.
@@ -87,7 +81,6 @@ const directFallback = BLOG_POSTS.find(p => p.slug === slug) || null;
       }
     }
   }, [slug, initialPost])
-<<<<<<< HEAD
 function parseMarkdown(filePath: string): BlogPost | null {;
   if (!fs.existsSync(filePath)) {;
     return null;
@@ -126,13 +119,12 @@ if ( {) {
 if ( {) {
   $2
 }
-=======
   if (error) {
 return <div>{error}</div>;
   }
   if (!post) {
     return <div>Article not found</div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
   const articleLd = {
     author: post.author.name,
@@ -145,7 +137,6 @@ tags: post.tags || [],
       <AdvancedSEO;
         title={post.title}
         description={post.excerpt}
-<<<<<<< HEAD
         {post.excerpt && <p className="lead">{post.excerpt}</p>}
         <div className="flex items - center gap - 3 mb - 6">;
           <img;
@@ -166,7 +157,6 @@ tags: post.tags || [],
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
         image={post.featuredImage}
 type='article'
         article={articleLd}
@@ -191,13 +181,12 @@ type='article'
                 {post.author.title}
               </p>
             )}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
         {post.featuredImage && (
 <div className='aspect-[16/9] w-full relative overflow-hidden rounded-lg mb-6'>
             <img
-<<<<<<< HEAD
               src={post.featuredImage  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -287,7 +276,6 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({;
 }
 };
 
-=======
               src={post.featuredImage}
               alt={post.title}
               className='object-cover w-full h-full'
@@ -335,4 +323,4 @@ return { notFound: true };
   }
   return { props: { initialPost: post }, revalidate: 60 };
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

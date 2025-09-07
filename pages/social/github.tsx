@@ -3,12 +3,10 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 export default function GitHubRedirect() {
-<<<<<<< HEAD
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
       window.location.replace('https: //github.com/Zion-Holdings')
-=======
 	useEffect(() => {
 		if (typeof window !== 'undefined') {
 			window.location.replace('https: //github.com/Zion-Holdings')
@@ -30,7 +28,7 @@ export default function GitHubRedirect() {
 		</>
 	)
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
       window.location.replace('https: //github.com/Zion-Holdings'),
     };
@@ -56,7 +54,6 @@ export default function GitHubRedirect() {
       </div>
     </>
   );
-<<<<<<< HEAD
 
 }
 export default function GitHubRedirect(req, res) {
@@ -142,5 +139,4 @@ export default function GitHubRedirect() {
 
 
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

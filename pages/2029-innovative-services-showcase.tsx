@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -29,7 +28,6 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-=======
   Brain,
   Atom,
   Target,
@@ -40,13 +38,12 @@ import { motion } from 'framer-motion';
   Mail,
   MapPin,;
 } from 'lucide-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem';
 import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs';
 import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions';
-<<<<<<< HEAD
 export default function InnovativeServicesShowcase2029() {
   const allServices = [
     ...aiAutonomousEcosystemServices2029
@@ -109,7 +106,6 @@ function InnovativeServicesShowcase2029() {
 }
         <section className="py-32 bg-gradient-to-br from-black via-purple-900/20 to-black">
           <div className="container mx-auto px-4 text-center">
-=======
 
 };
 
@@ -165,7 +161,7 @@ services: practicalBusinessSolutionServices2029,
         {/* Hero Section */}
         <section className='py-32 bg-gradient-to-br from-black via-purple-900/20 to-black'>
           <div className='container mx-auto px-4 text-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
               initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
@@ -186,7 +182,6 @@ services: practicalBusinessSolutionServices2029,
 <h1 className='text-6xl md:text-8xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-8'>
                 2029 Innovative Services
               </h1>
-<<<<<<< HEAD
               <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
                 Experience the future of technology with our revolutionary AI autonomous ecosystems
 
@@ -218,7 +213,6 @@ services: practicalBusinessSolutionServices2029,
 
                 Experience the future of technology with our revolutionary AI autonomous ecosystems, 
                 Experience the future of technology with our revolutionary AI autonomous ecosystems,
-=======
               <p className='text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto'>
                 Experience the future of technology with our revolutionary AI
                 autonomous ecosystems, emerging tech breakthroughs, and
@@ -236,7 +230,7 @@ services: practicalBusinessSolutionServices2029,
                   href='/contact'
                   className='inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300'
                 >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 emerging tech breakthroughs, and practical business solutions that will transform your business.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
@@ -252,7 +246,6 @@ services: practicalBusinessSolutionServices2029,
           </div>
         </section>
         {/* Services Overview */}
-<<<<<<< HEAD
               transition={{ duration: 0.8 }}
         {/* Services Overview */  } catch (error) {
     console.error("Error:", error);
@@ -287,7 +280,6 @@ services: practicalBusinessSolutionServices2029,
 
 
                 revolutionize different aspects of business and technology.
-=======
 <section
           id='services'
           className='py-20 bg-gradient-to-b from-black to-gray-900'
@@ -307,7 +299,7 @@ viewport={{ once: true }}
                 Our 2029 services are organized into three cutting-edge
                 categories, each designed to revolutionize different aspects of
                 business and technology.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
             </motion.div>
 
@@ -330,7 +322,6 @@ viewport={{ once: true }}
                     >
                       <category.icon className='w-8 h-8 text-white' />
                     </div>
-<<<<<<< HEAD
                     <h3 className="text-2xl font-bold text-white mb-4">{category.title}</h3>
                     <p className="text-gray-300 mb-6">
 
@@ -338,7 +329,6 @@ viewport={{ once: true }}
 
 
                       and accelerate your success in the digital age.
-=======
                     <h3 className='text-2xl font-bold text-white mb-4'>
                       {category.title}
                     </h3>
@@ -346,7 +336,7 @@ viewport={{ once: true }}
                       {category.services.length} cutting-edge services designed
                       to transform your business and accelerate your success in
                       the digital age.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     </p>
                     <div className='text-sm text-gray-400'>
                       Starting from $
@@ -359,7 +349,6 @@ viewport={{ once: true }}
                     </div>
                   </div>
                 </motion.div>
-<<<<<<< HEAD
               transition={{ duration: 0.8 }}
               ))  } catch (error) {
     console.error("Error:", error);
@@ -402,7 +391,6 @@ viewport={{ once: true }}
 
 
                 and creating new possibilities for businesses worldwide.
-=======
               ))}
             </div>
           </div>
@@ -424,7 +412,7 @@ viewport={{ once: true }}
                 Explore our most innovative and transformative services that are
                 reshaping industries and creating new possibilities for
                 businesses worldwide.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
             </motion.div>
 
@@ -465,7 +453,6 @@ viewport={{ once: true }}
                   <div className='flex flex-wrap gap-2 mb-6'>
                     {service.category.slice(0, 3).map((cat, catIndex) => (
                       <span
-<<<<<<< HEAD
                         key={catIndex} className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full border border-gray-600">
 
 
@@ -473,7 +460,6 @@ viewport={{ once: true }}
 
 
                   <div className="flex gap-4">
-=======
                         key={catIndex}
                         className='px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full border border-gray-600'
                       >
@@ -483,7 +469,7 @@ viewport={{ once: true }}
                   </div>
 
 <div className='flex gap-4'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     <Link
                       href={`/services/${service.id}`}
                       className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300'
@@ -499,7 +485,6 @@ viewport={{ once: true }}
                     </Link>
                   </div>
                 </motion.div>
-<<<<<<< HEAD
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -523,7 +508,6 @@ viewport={{ once: true }}
   }
 }
               viewport={{ once: true }} className="text-center mt-16">
-=======
               ))}
             </div>
             <motion.div
@@ -533,7 +517,7 @@ viewport={{ once: true }}
 viewport={{ once: true }}
               className='text-center mt-16'
             >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <Link
                 href='/services'
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-lg'
@@ -544,7 +528,6 @@ viewport={{ once: true }}
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
         <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
           <div className="container mx-auto px-4 text-center">
             <motion.div
@@ -577,17 +560,15 @@ viewport={{ once: true }}
                 Join the future of technology with our innovative 2029 services.
         <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
           <div className="container mx-auto px-4 text-center">
-=======
         {/* Contact CTA */}
 <section className='py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20'>
           <div className='container mx-auto px-4 text-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
         {/* Contact CTA */}
         <section className="py - 20 bg - gradient - to - br from - purple - 900 / 20 via - black to - blue - 900 / 20">;
           <div className="container mx - auto px - 4 text - center">;
@@ -601,7 +582,6 @@ viewport={{ once: true }}
 
 
                 Contact us today to discover how we can revolutionize your business operations.
-=======
             >
 <h2 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6'>
                 Ready to Transform Your Business?
@@ -610,7 +590,7 @@ viewport={{ once: true }}
                 Join the future of technology with our innovative 2029 services.
                 Contact us today to discover how we can revolutionize your
                 business operations.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
 
               <div className='grid md:grid-cols-3 gap-8 mb-12'>
@@ -649,7 +629,6 @@ viewport={{ once: true }}
         <UltraFuturisticFooter2029 />
       </div>
     </>
-<<<<<<< HEAD
             >;
               <h2 className="text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - purple - 400 to - blue - 400 bg - clip - text text - transparent mb - 6">;
                 Ready to Transform Your Business?;
@@ -689,6 +668,5 @@ viewport={{ once: true }}
         <UltraFuturisticFooter2029 />;
 
 
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

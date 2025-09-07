@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 			implementationWeeks="Implementation: 1–2 weeks"
 			roiNote="Average ROI 3–6x within 60 days"
 			features={[
@@ -8,10 +7,9 @@
 				"RFP/RFI opportunity discovery and alerts"
 				"Export to Slides/Docs/Notion"
 
-=======
 import React from 'react';
 			title;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 				"Compliance-friendly data handling, audit logs"
 			]}
 			industries={["Consulting", "Healthcare", "Finance", "Public Sector"]}
@@ -45,7 +43,6 @@ import React from 'react';
 			canonical="https: //ziontechgroup.com/ai-autonomous-research-assistant"
 		/>
 	)
-<<<<<<< HEAD
 			canonical="https: //ziontechgroup.com/ai-autonomous-research-assistant";
 		/>;
 	);
@@ -53,6 +50,5 @@ import React from 'react';
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }

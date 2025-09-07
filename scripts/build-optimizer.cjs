@@ -4,6 +4,7 @@ const fs = require('fs')
 // console.log(' Build Optimizer Starting...')
     console.log('🧹 Cleaning previous builds...')
     if (fs.existsSync('.next')
+<<<<<<< HEAD
         execSync('rm -rf .next', { "stdio"})
         execSync('rm -rf out', { "stdio"})
     execSync('npm run build', { "stdio"})
@@ -100,3 +101,8 @@ if (require.main === module) {
 
 module.exports = BuildOptimizer;
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+        execSync('rm -rf .next', { "stdio"})""
+        execSync('rm -rf out', { "stdio"})""
+    execSync('npm run build', { "stdio"})""
+>>>>>>> pr-12325

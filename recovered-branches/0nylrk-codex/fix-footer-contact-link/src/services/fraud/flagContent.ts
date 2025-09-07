@@ -12,6 +12,16 @@ export const flagContent = async (
   contentId: string;
   contentExcerpt: string;
 
+
+import { supabase } from '@/integrations/supabase/client',
+import { FraudSeverity, FraudFlag } from '@/types/fraud',
+import { FlagResult } from './types',
+/**
+ * Flag content for review;
+ */
+
+pr-12325
+
 // Content flagging functionality;
 import {supabase} from '@/integrations / supabase / client';
 import {FraudSeverity, FraudFlag} from '@/types / fraud';
@@ -70,7 +80,7 @@ if (throw error) {
     return {
       success: false,
       error: error instanceof Error ? error.message : 'Unknown error';
-=======    }
+    }
   }
 }
 };
@@ -80,3 +90,31 @@ if (throw error) {
     }
   }
 };
+*/;
+export const flag_content = async (
+  user_id: string;,
+  user_email: string | undefined;
+  content_type: FraudFlag['content_type'];',
+  content_id: string;
+  content_excerpt: string;,
+  severity: FraudSeverity;
+export const flagContent = async (
+  userId: string;,
+  userEmail: string | undefined;
+  contentType: FraudFlag['content_type'];',
+  contentId: string;
+  contentExcerpt: string;,
+  reason: string;,
+  userId: string,
+  userEmail: string | undefined,
+  contentType: FraudFlag['content_type'],
+  contentId: string,
+  contentExcerpt: string,
+  severity: FraudSeverity,
+  reason: string,
+  ipAddress?: string;)
+): Promise<FlagResult> => {
+
+): Promise<FlagResult> => {;
+
+pr-12325

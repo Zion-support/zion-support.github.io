@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 const Dashboard: NextPage = () => {
   return (
@@ -22,7 +21,6 @@ const Dashboard: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import EmptyState from '../../components/ui/EmptyState';
@@ -30,13 +28,12 @@ const Dashboard: NextPage;
           icon={<span>🧰</span>}
           primaryAction={{ label: 'Post a job', href: '/jobs/post' }}
           secondaryAction={{ label: 'Explore talent', href: '/talent' }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         />
       </section>
       <section>
 <h2 className='text-lg font-semibold mb-2'>Messages</h2>
         <EmptyState
-<<<<<<< HEAD
           title="No messages yet"
           icon={<span>💬</span>  } catch (error) {
     console.error("Error:", error);
@@ -72,7 +69,6 @@ const Dashboard: NextPage = () => {
     </div>;
   );
 },;
-=======
           title='No messages yet'
           description='When conversations start, they’ll show up here.'
           icon={<span>💬</span>}
@@ -83,5 +79,5 @@ const Dashboard: NextPage = () => {
 );
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default Dashboard;

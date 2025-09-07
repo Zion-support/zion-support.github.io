@@ -5,8 +5,8 @@
  */
 const fs = require('fs')
 const path = require('path')
-      "status"
-        "performanceMonitor"
-        "codeQuality"
-        "testRunner"
-        "gitOperations"
+      "status"""
+        "performanceMonitor"""
+        "codeQuality"""
+        "testRunner"""
+        "gitOperations"""

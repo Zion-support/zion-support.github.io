@@ -1,0 +1,132 @@
+{
+  "timestamp": "2025-09-07T05:46:41.388Z",
+  "metrics": {
+    "typescriptErrors": 1364,
+    "typescriptWarnings": 0,
+    "totalComponents": 21,
+    "reactIssues": 2,
+    "performanceIssues": 5,
+    "accessibilityIssues": 8
+  },
+  "issues": [
+    {
+      "type": "typescript",
+      "severity": "error",
+      "count": 1364,
+      "message": "TypeScript compilation errors found"
+    },
+    {
+      "type": "react",
+      "severity": "warning",
+      "file": "src/components/ParallaxSection.tsx",
+      "message": "Potential useEffect dependency issue"
+    },
+    {
+      "type": "react",
+      "severity": "info",
+      "file": "src/pages/Contact.tsx",
+      "message": "Console.log found in production code"
+    },
+    {
+      "type": "performance",
+      "severity": "warning",
+      "file": "src/components/Carousel.tsx",
+      "message": "Timer usage detected - ensure cleanup"
+    },
+    {
+      "type": "performance",
+      "severity": "warning",
+      "file": "src/components/LiveChat.tsx",
+      "message": "Timer usage detected - ensure cleanup"
+    },
+    {
+      "type": "performance",
+      "severity": "warning",
+      "file": "src/components/PerformanceMonitor.tsx",
+      "message": "Timer usage detected - ensure cleanup"
+    },
+    {
+      "type": "performance",
+      "severity": "warning",
+      "file": "src/components/Tooltip.tsx",
+      "message": "Timer usage detected - ensure cleanup"
+    },
+    {
+      "type": "performance",
+      "severity": "warning",
+      "file": "src/components/TypingAnimation.tsx",
+      "message": "Timer usage detected - ensure cleanup"
+    },
+    {
+      "type": "accessibility",
+      "severity": "warning",
+      "file": "src/components/AdvancedModal.tsx",
+      "message": "Button missing accessible label"
+    },
+    {
+      "type": "accessibility",
+      "severity": "warning",
+      "file": "src/components/ErrorBoundary.tsx",
+      "message": "Button missing accessible label"
+    },
+    {
+      "type": "accessibility",
+      "severity": "warning",
+      "file": "src/components/Header.tsx",
+      "message": "Button missing accessible label"
+    },
+    {
+      "type": "accessibility",
+      "severity": "warning",
+      "file": "src/components/LiveChat.tsx",
+      "message": "Button missing accessible label"
+    },
+    {
+      "type": "accessibility",
+      "severity": "warning",
+      "file": "src/components/ThemeToggle.tsx",
+      "message": "Button missing accessible label"
+    },
+    {
+      "type": "accessibility",
+      "severity": "warning",
+      "file": "src/pages/Components.tsx",
+      "message": "Button missing accessible label"
+    },
+    {
+      "type": "accessibility",
+      "severity": "warning",
+      "file": "src/pages/Contact.tsx",
+      "message": "Button missing accessible label"
+    },
+    {
+      "type": "accessibility",
+      "severity": "warning",
+      "file": "src/pages/Pricing.tsx",
+      "message": "Button missing accessible label"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "high",
+      "category": "typescript",
+      "message": "Fix TypeScript compilation errors to improve type safety"
+    },
+    {
+      "priority": "high",
+      "category": "accessibility",
+      "message": "Address accessibility issues to improve user experience"
+    },
+    {
+      "priority": "medium",
+      "category": "performance",
+      "message": "Optimize performance patterns for better user experience"
+    },
+    {
+      "priority": "medium",
+      "category": "react",
+      "message": "Review React component patterns for best practices"
+    }
+  ],
+  "score": 0
+}

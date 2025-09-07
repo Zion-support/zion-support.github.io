@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
+main
 import { NextRequest, NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import { prisma } from "@/lib/prisma";
@@ -16,22 +11,30 @@ export async function POST(request: NextRequest) {
         message: "Onboarding completed successfully",
         user: {
 
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
 
 
       {
         message: 'Onboarding completed successfully'
         user: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
           id: updatedUser && updatedUser.id,
+import { NextRequest, NextResponse } from "next/server";""
+import { getServerSession } from "next-auth";""
+import { prisma } from "@/lib/prisma";"
+export async function POST(request: NextRequest) {
+  try {
+  // TODO: Implement
+}
+    const session = await getServerSession();
+
+
+      {"
+        message: "Onboarding completed successfully","
+        user: {,
+  id: updatedUser && updatedUser.id,
+pr-12325
           name: updatedUser && updatedUser.name,
           email: updatedUser && updatedUser.email,
           role: updatedUser && updatedUser.role,
@@ -41,21 +44,20 @@ export async function POST(request: NextRequest) {
       { status: 200 },
     );
   } catch (error) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
+main
     console.error("Onboarding completion error:", error);
     return NextResponse.json(
       { error: "Internal server error" },
       { status: 500 },
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
+      { status: 200 },
+    );
+  } catch (error) {"
+    console.error("Onboarding completion error:", error);"
+    return NextResponse.json("
+      { error: "Internal server error" },"
+      { status: 500 },)"
+pr-12325
     console && console.error('Onboarding completion error:', error);
     return NextResponse && NextResponse.json(
           id: updated_user.id,
@@ -67,6 +69,8 @@ export async function POST(request: NextRequest) {
       },
       { status: 200 }
     );
+      { status: 200 })
+pr-12325
   } catch (error) {
     console.error ('Onboarding completion error:', error);
     return NextResponse.json (
@@ -77,16 +81,14 @@ export async function POST(request: NextRequest) {
 
       { error: 'Internal server error' },
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
 import { NextRequest, NextResponse } from "next/server",;
 import { getServerSession } from "next-auth",;
 import { prisma } from "@/lib/prisma",;
+import { NextRequest, NextResponse } from "next/server",;""
+import { getServerSession } from "next-auth",;""
+import { prisma } from "@/lib/prisma",;")
+pr-12325
 export async function POST(request: NextRequest) {;
   try {;
     const session = await getServerSession(),;
@@ -106,6 +108,20 @@ export async function POST(request: NextRequest) {;
         message: "Onboarding completed successfully",;
         user: {;
           id: updatedUser.id,;
+      return NextResponse.json(;"
+        { error: "Unauthorized" },;"
+        { status: 401 })
+;"
+    // Update user's onboarding status;
+    const updatedUser = await prisma.user.update({;
+      where: { email: session.user.email },;)
+      data: { onboardingCompleted: true }}),;
+    return NextResponse.json(;
+      {;
+        message: "Onboarding completed successfully",;"
+        user: {;,
+  id: updatedUser.id,;
+pr-12325
           name: updatedUser.name,;
           email: updatedUser.email,;
           role: updatedUser.role,;
@@ -117,10 +133,6 @@ export async function POST(request: NextRequest) {;
     console.error("Onboarding completion error:", error);
     return NextResponse.json(;
       { error: "Internal server error" };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {
         message: 'Onboarding completed successfully'
         user: {
@@ -128,14 +140,9 @@ export async function POST(request: NextRequest) {;
       { status: 500 }
     );
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+ursor/fix-website-loading-errors-and-merge-6662
       { status: 500 }
     );
   }
@@ -145,6 +152,20 @@ export async function POST(request: NextRequest) { try {
     const body = await request.json();
     const { userId, preferences  } = body;
     // Mock user update - replace with actual database operation
+  } catch (error) {;"
+      { error: "Internal server error" };"
+        message: 'Onboarding completed successfully,
+  user: {
+      { status: 500 })
+      { status: 500 }
+
+
+export async function POST(request: NextRequest) { try {
+  // TODO: Implement
+    const body = await request.json();
+    const { userId, preferences  } = body;
+    // Mock user update - replace with actual database operation;
+pr-12325
     const updatedUser = {
       id: userId,
       name: 'John Doe',
@@ -167,14 +188,24 @@ export async function POST(request: NextRequest) { try {
     return NextResponse.json(
       { error: 'Failed to complete onboarding' },
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
       { status: 500 }
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
+main
     );
   }
 }
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+      preferences;
+    };
+    return NextResponse.json({
+  id: updatedUser.id,
+        name: updatedUser.name,
+        email: updatedUser.email,
+        role: updatedUser.role,
+        onboardingCompleted: updatedUser.onboardingCompleted;
+      })
+    });
+  } catch (_error) {
+      { error: 'Failed to complete onboarding' },
+pr-12325

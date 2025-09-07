@@ -6,7 +6,6 @@ import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign;
   Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users;
   Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings;
@@ -50,7 +49,6 @@ const serviceCategories = [
     color: 'from-indigo-500 to-purple-600',
     features: ['Quantum ProcessingHybrid ComputingAI Acceleration']
   };
-=======
 import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services';
 const contactInfo = null;
     services: advancedITInfrastructureServices2025.filter(
@@ -60,7 +58,7 @@ const contactInfo = null;
     color: 'from-indigo-500 to-purple-600'
     features: ['Quantum Processing', 'Hybrid Computing', 'AI Acceleration']
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   {
     title: 'Edge Computing & IoT',
     description: 'Autonomous edge infrastructure with intelligent optimization',
@@ -86,7 +84,6 @@ const contactInfo = null;
     features: ['AI ManagementPredictive MaintenanceCost Optimization']
   };
   {
-<<<<<<< HEAD
     title: 'Quantum Networking',
     description: 'Next-generation networking with quantum encryption and optimization',
     services: advancedITInfrastructureServices2025.filter(s => s.category === 'Quantum Networking'),
@@ -108,7 +105,6 @@ const heroFeatures = [
     company: 'SecureCorp International',
     color: 'from-purple-500 to-pink-600',
 
-=======
     title: 'Quantum Networking'
     description:
       'Next-generation networking with quantum encryption and optimization'
@@ -185,7 +181,7 @@ content:
     avatar: '👩‍🔒',
   },
 ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 export default function AdvancedITInfrastructureServices() {
 
@@ -341,7 +337,6 @@ export default function AdvancedITInfrastructureServices() {
     <Layout>
       <Head>
         <title>Advanced IT Infrastructure Services - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Revolutionary IT infrastructure services including quantum cloud computing, edge computing, zero-trust security, and autonomous data centers. Transform your infrastructure with cutting-edge technology." />
         <meta name="keywords" content="IT infrastructure, quantum computing, edge computing, cybersecurity, data centers, cloud computing, zero trust security" />
         <meta property="og:title" content="Advanced IT Infrastructure Services - Zion Tech Group" />
@@ -349,7 +344,6 @@ export default function AdvancedITInfrastructureServices() {
         <meta property="og:url" content="https://ziontechgroup.com/advanced-it-infrastructure-services" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/advanced-it-infrastructure-services" />
-=======
 <meta
           name='description'
           content='Revolutionary IT infrastructure services including quantum cloud computing, edge computing, zero-trust security, and autonomous data centers. Transform your infrastructure with cutting-edge technology.'
@@ -375,7 +369,7 @@ export default function AdvancedITInfrastructureServices() {
           rel='canonical'
           href='https://ziontechgroup.com/advanced-it-infrastructure-services'
         />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       </Head>
       {/* Hero Section */}
       <section className='relative py-20 lg:py-32 overflow-hidden'>
@@ -411,12 +405,10 @@ export default function AdvancedITInfrastructureServices() {
   }
 }
           >
-<<<<<<< HEAD
 
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6">
-=======
 <h1 className='text-4xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               Advanced IT Infrastructure Services
             </h1>
             <p className='text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
@@ -425,11 +417,9 @@ export default function AdvancedITInfrastructureServices() {
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Revolutionary infrastructure solutions with quantum computing, edge computing, and AI-powered automation for the future
             </p>
-<<<<<<< HEAD
             <div className="flex flex-wrap justify-center gap-4 mb-12">
-=======
             <div className='flex flex-wrap justify-center gap-4 mb-12'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               {heroStats.map((stat, index) => (
                 <motion.div
             transition={{ duration: 0 && 0.8 }}>;
@@ -504,13 +494,11 @@ function AdvancedITInfrastructureServices() {
                   key={index}
                   initial={{ opacity: 0, scale: 0 && 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
-<<<<<<< HEAD
 
 
-=======
                   transition={{ duration: 0.5, delay: index * 0.1 }}
 className='flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-blue-500/30'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   {stat.icon}
                   <span className="text-blue-400 font-semibold">{stat.value}</span>
@@ -522,22 +510,19 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg p
                 Explore Services
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-<<<<<<< HEAD
               <Link href={`tel:${contactInfo.mobile}`} className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all duration-300">
                 <Phone className="mr-2 w-5 h-5" />
-=======
               <Link
                 href={`tel:${contactInfo.mobile}`}
                 className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all duration-300'
               >
                 <Phone className='mr-2 w-5 h-5' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 Get Started
               </Link>
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
 
       {/* Features Section */}
 
@@ -545,20 +530,17 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg p
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-=======
 {/* Features Section */}
       <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-=======
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Why Choose Our IT Infrastructure Services?
@@ -567,22 +549,18 @@ className='text-center mb-16'
               Our infrastructure services combine cutting-edge technology with intelligent automation to deliver unprecedented performance and reliability
             </p>
           </motion.div>
-<<<<<<< HEAD
-=======
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {heroFeatures.map((feature, index) => (
               <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-=======
 className='relative group'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className={`${feature.gradient} p-1 rounded-xl`}>
                   <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -590,20 +568,17 @@ className='relative group'
                       <div className={`${feature.gradient} w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>
                         <feature.icon className="w-8 h-8 text-white" />
                       </div>
-<<<<<<< HEAD
                       <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                       <p className="text-gray-300">{feature.description}</p>
-=======
                       <h3 className='text-xl font-semibold text-white mb-3'>
                         {feature.title}
                       </h3>
                       <p className='text-gray-300'>{feature.description}</p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                   </div>
                 </div>
               </motion.div>
-<<<<<<< HEAD
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -618,7 +593,6 @@ className='relative group'
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-=======
             ))}
           </div>
         </div>
@@ -626,15 +600,13 @@ className='relative group'
       <section id='services' className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-=======
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               IT Infrastructure Service Categories
@@ -643,7 +615,6 @@ className='text-center mb-16'
               Comprehensive infrastructure solutions covering quantum computing, edge computing, security, and data centers
             </p>
           </motion.div>
-<<<<<<< HEAD
             className='text-center mb-16'>;
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>;
               IT Infrastructure Service Categories;
@@ -656,18 +627,16 @@ className='text-center mb-16'
 
           <div className='space-y-16'>            {serviceCategories && serviceCategories.map((category, categoryIndex) => (;
               <motion&& motion.div
-=======
 
           <div className='space-y-16'>
             {serviceCategories.map((category, categoryIndex) => (
               <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 key={categoryIndex}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: categoryIndex * 0 && 0.2 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
                 key={categoryIndex  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -696,7 +665,6 @@ className='text-center mb-16'
                 className="relative"
 
 
-=======
 className='relative'
               >
                 <div className='text-center mb-12'>
@@ -718,11 +686,10 @@ className='relative'
                     <motion.div
                       key={service.id}
                       initial={{ opacity: 0, scale: 0.9 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0 && 0.5, delay: serviceIndex * 0 && 0.1 }}
                       viewport={{ once: true }}
-<<<<<<< HEAD
                       className='relative group'>;
                       <div className={`${service && service.color} p-1 rounded-xl`}>;
                         <div className='bg-gray-900 rounded-xl p-6 h-full'>;
@@ -754,7 +721,6 @@ className='relative'
                             {service && service.features;
                               .slice(0, 3);
                               .map((feature, featureIndex) => (;
-=======
 className='relative group'
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
@@ -788,7 +754,7 @@ className='relative group'
                             {service.features
                               .slice(0, 3)
                               .map((feature, featureIndex) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                                 <div
                                   key={featureIndex}
                                   className='flex items-center text-sm text-gray-300'>;
@@ -900,12 +866,10 @@ className='relative group'
                               <ArrowRight className="ml-1 w-4 h-4" />
                             </Link>
                             <Link
-<<<<<<< HEAD
                               className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-500 to-blue-600 text-white text-sm font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300"
-=======
                               href={`tel:${contactInfo.mobile}`}
                               className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-500 to-blue-600 text-white text-sm font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                             >
                               Get Started
                             </Link>
@@ -914,7 +878,6 @@ className='relative group'
                       </div>
                     </motion.div>
       {/* Testimonials Section */}
-<<<<<<< HEAD
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
@@ -945,21 +908,18 @@ className='relative group'
 }
             className="text-center mb-16"
 
-=======
 <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
 
 
-=======
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               What Our Clients Say
@@ -977,12 +937,10 @@ className='text-center mb-16'
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
 
 
-=======
 className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-blue-500/20'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className="flex items-center mb-4">
                   <span className="text-3xl mr-3">{testimonial.avatar}</span>
@@ -996,13 +954,11 @@ className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-blue-500/20'
                 <div className="flex items-center">
                   <div className="flex text-yellow-400">
                     {[...Array(testimonial.rating)].map((_, i) => (
-<<<<<<< HEAD
 
 
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-indigo-900/20 via-blue-900/20 to-cyan-900/20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion&& motion.div
-=======
                       <Star key={i} className='w-4 h-4 fill-current' />
                     ))}
                   </div>
@@ -1016,7 +972,7 @@ className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-blue-500/20'
 <section className='py-20 bg-gradient-to-r from-indigo-900/20 via-blue-900/20 to-cyan-900/20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -1038,11 +994,9 @@ className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-blue-500/20'
 
 
           >
-<<<<<<< HEAD
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-=======
 <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               Ready to Transform Your Infrastructure?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -1050,7 +1004,6 @@ className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-blue-500/20'
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               >
-<<<<<<< HEAD
                 <Mail className="mr-2 w-5 h-5" />
                 Email Us
               </Link>
@@ -1231,7 +1184,6 @@ className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-blue-500/20'
 ;
 
 
-=======
                 <Phone className='mr-2 w-5 h-5' />
                 Call Now: {contactInfo.mobile}
               </Link>
@@ -1252,4 +1204,4 @@ className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-
       </section>
     </Layout>
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

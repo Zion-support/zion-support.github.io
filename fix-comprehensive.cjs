@@ -1,18 +1,16 @@
 const fs = require('fs');
 const path = require('path');
-
-// Function to fix comprehensive syntax errors
+// Function to fix comprehensive syntax errors;
 function fixComprehensiveSyntax(filePath) {
   try {
+  // TODO: Implement
+}
     let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Fix malformed return statements with (} instead of (
+    // Fix malformed return statements with (} instead of ()
     content = content.replace(/return \(\)/g, 'return (');
-    
-    // Fix malformed arrow functions in map functions
+    // Fix malformed arrow functions in map functions;
     content = content.replace(/\.map\([^)]*\) => \(\)/g, (match) => {
-      return match.replace(/\(\)/g, '');
-    }
+      return match.replace(/\(\)/g, );
 });
     
     // Fix malformed JSX elements with } instead of >
@@ -64,53 +62,10 @@ function fixComprehensiveSyntax(filePath) {
     content = content.replace(/<text\}/g, '<text');
     content = content.replace(/<tspan\}/g, '<tspan');
     content = content.replace(/<foreignObject\}/g, '<foreignObject');
-    
-    // Fix malformed template literals
+    // Fix malformed template literals;
     content = content.replace(/`([^`]*)\s*$/gm, (match, content) => {
-      if (content.includes('${') && !content.endsWith('`')) {
-        return match + '`';
-      }
-      return match;
-    }
-});
-    
-    // Fix malformed JSX expressions
-    content = content.replace(/\{([^}]*)\s*$/gm, (match, content) => {
-      if (content.includes('map') && !content.includes('}')) {
-        return match + '}';
-      }
-      return match;
-    }
-});
-    
-    // Fix missing closing braces in function components
-    if (content.includes('export default function') && !content.trim().endsWith('}')) {
-      content = content.trim() + '\n}';
-    }
-    
-    // Fix missing closing braces in arrow functions
-    if (content.includes('const') && content.includes('=>') && !content.trim().endsWith('}')) {
-      content = content.trim() + '\n}';
-    }
-    
-    // Fix malformed object syntax
-    content = content.replace(/"([^"]+)",\}/g, '"$1"');
-    content = content.replace(/([a-zA-Z_][a-zA-Z0-9_]*):\s*"([^"]+)",\}/g, '$1: "$2"');
-    content = content.replace(/([a-zA-Z_][a-zA-Z0-9_]*):\s*([^,}]+),\}/g, '$1: $2');
-    
-    // Fix malformed array syntax
-    content = content.replace(/\[\s*"([^"]+)",\}/g, '["$1"');
-    content = content.replace(/"([^"]+)",\}/g, '"$1"');
-    content = content.replace(/([a-zA-Z_][a-zA-Z0-9_]*),\}/g, '$1');
-    
-    // Fix malformed JSX attributes
-    content = content.replace(/className="([^"]+)",\}/g, 'className="$1"');
-    content = content.replace(/href="([^"]+)",\}/g, 'href="$1"');
-    content = content.replace(/title="([^"]+)",\}/g, 'title="$1"');
-    content = content.replace(/description="([^"]+)",\}/g, 'description="$1"');
-    
-    // Fix malformed closing tags
-    content = content.replace(/<\/MainLayout>,\}/g, '</MainLayout>');
+</motion>
+    content = content.replace(/<\/MainLayout>,\}/g, '');
     content = content.replace(/<\/motion\.div>,\}/g, '</motion.div>');
     content = content.replace(/<\/div>,\}/g, '</div>');
     content = content.replace(/<\/section>,\}/g, '</section>');
@@ -120,81 +75,4 @@ function fixComprehensiveSyntax(filePath) {
     content = content.replace(/<\/p>,\}/g, '</p>');
     content = content.replace(/<\/span>,\}/g, '</span>');
     content = content.replace(/<\/a>,\}/g, '</a>');
-    content = content.replace(/<\/Link>,\}/g, '</Link>');
-    
-    // Fix malformed function syntax
-    content = content.replace(/export default function ([A-Z][a-zA-Z0-9]*)\(\) \{\}/g, 'export default function $1() {');
-    content = content.replace(/return \(\}/g, 'return (');
-    
-    // Fix malformed template literals
-    content = content.replace(/\$\{([^}]+)\}\`/g, '${$1}');
-    
-    // Fix malformed conditional expressions
-    content = content.replace(/\?\s*'([^']+)'\s*:/g, '? "$1" :');
-    content = content.replace(/\?\s*"([^"]+)"\s*:/g, '? "$1" :');
-    
-    // Fix malformed template literals
-    content = content.replace(/toLowerCase\(\)\.replace\(/g, 'toLowerCase().replace(');
-    content = content.replace(/replace\(/g, 'replace(');
-    
-    // Fix malformed closing quotes in template literals
-    content = content.replace(/`([^`]*)\s*$/gm, (match, content) => {
-      if (content.includes('${') && !content.endsWith('`')) {
-        return match + '`';
-      }
-      return match;
-    }
-});
-    
-    // Fix malformed JSX expressions
-    content = content.replace(/\{([^}]*)\s*$/gm, (match, content) => {
-      if (content.includes('map') && !content.includes('}')) {
-        return match + '}';
-      }
-      return match;
-    }
-});
-    
-    // Write the fixed content back
-    fs.writeFileSync(filePath, content, 'utf8');
-    console.log(`Fixed comprehensive syntax in: ${filePath}`);
-    return true;
-  } catch (error) {
-    console.error(`Error fixing comprehensive syntax in ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Get all TypeScript/JavaScript files in pages directory
-function getAllPageFiles(dir) {
-  const files = [];
-  const items = fs.readdirSync(dir);
-  
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory()) {
-      files.push(...getAllPageFiles(fullPath));
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-      files.push(fullPath);
-    }
-  }
-  
-  return files;
-}
-
-// Main execution
-const pagesDir = '/workspace/pages';
-const pageFiles = getAllPageFiles(pagesDir);
-
-console.log(`Found ${pageFiles.length} page files to check for comprehensive syntax errors...`);
-
-let fixedCount = 0;
-for (const file of pageFiles) {
-  if (fixComprehensiveSyntax(file)) {
-    fixedCount++;
-  }
-}
-
-console.log(`Fixed comprehensive syntax in ${fixedCount} files out of ${pageFiles.length} total files.`);
+    content = content.replace(/<\/Link>,\}/g, '');`;

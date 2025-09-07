@@ -43,7 +43,6 @@ function track_event() {
 
   }
 }
-=======
 
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
@@ -64,3 +63,10 @@ function track_event() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+export interface TrackEventPayload {
+  // TODO: Implement
+}
+  event: string;
+  properties?: Record<string, any>;
+</string>
+pr-12325

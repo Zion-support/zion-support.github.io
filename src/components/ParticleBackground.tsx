@@ -26,7 +26,6 @@ const ParticleBackground: React.FC = () => {
       canvas.height = window.innerHeight;
     };
 
-<<<<<<< HEAD
     const createParticles = () => {
       const particles: Particle[] = [];
       const particleCount = Math.floor((canvas.width * canvas.height) / 10000);
@@ -44,7 +43,6 @@ const ParticleBackground: React.FC = () => {
 
       particlesRef.current = particles;
     };
-=======
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
@@ -68,12 +66,10 @@ const ParticleBackground: React.FC = () => {
         opacity: Math.random() * 0.5 + 0.1,
       });
     }
->>>>>>> d9a6993fd20f1270a4c530cf764d0ff2e4fc7414
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-<<<<<<< HEAD
       particlesRef.current.forEach((particle, index) => {
         particle.x += particle.vx;
         particle.y += particle.vy;
@@ -81,7 +77,6 @@ const ParticleBackground: React.FC = () => {
         if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
         if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
 
-=======
       particles.forEach((particle) => {
         particle.x += particle.vx;
         particle.y += particle.vy;
@@ -93,12 +88,10 @@ const ParticleBackground: React.FC = () => {
         if (particle.y > canvas.height) particle.y = 0;
 
         // Draw particle
->>>>>>> d9a6993fd20f1270a4c530cf764d0ff2e4fc7414
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(59, 130, 246, ${particle.opacity})`;
         ctx.fill();
-<<<<<<< HEAD
 
         // Draw connections
         particlesRef.current.forEach((otherParticle, otherIndex) => {
@@ -115,7 +108,6 @@ const ParticleBackground: React.FC = () => {
               ctx.lineWidth = 0.5;
               ctx.stroke();
             }
-=======
       });
 
       // Draw connections
@@ -132,12 +124,10 @@ const ParticleBackground: React.FC = () => {
             ctx.strokeStyle = `rgba(59, 130, 246, ${0.1 * (1 - distance / 100)})`;
             ctx.lineWidth = 1;
             ctx.stroke();
->>>>>>> d9a6993fd20f1270a4c530cf764d0ff2e4fc7414
           }
         });
       });
 
-<<<<<<< HEAD
       animationRef.current = requestAnimationFrame(animate);
     };
 
@@ -154,14 +144,12 @@ const ParticleBackground: React.FC = () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
-=======
       requestAnimationFrame(animate);
     };
 
     animate();
 
     return () => {
->>>>>>> d9a6993fd20f1270a4c530cf764d0ff2e4fc7414
       window.removeEventListener('resize', resizeCanvas);
     };
   }, []);

@@ -33,4 +33,5 @@
   .focus-visible:focus {
     @apply outline-none ring-2 ring-blue-500 ring-offset-2;
   }
+origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }

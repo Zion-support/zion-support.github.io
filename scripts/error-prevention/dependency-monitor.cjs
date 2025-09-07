@@ -17,43 +17,26 @@ class DependencyMonitor {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runDependencyCheck()}, this.interval);
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
     console.log('Dependency Monitor started successfully')};
   async runDependencyCheck() {}
     try {}
       console.log('Running dependency check...');
-      
       // Check for outdated packages;
       const child = spawn('npm', ['outdated'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
-        "cwd": process.cwd();
+        "cwd": process.cwd();"
       };);
-
+"
       let output = ;';';
       let errorOutput = ;';';
-
       child.stdout.on('data', (data) => {}
         output += data.toString()}
 });
 
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
-});
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
       child.on('close', (code) => {}
         if ( {})
           console.log('Dependency check passed ✓')) {}
@@ -61,7 +44,6 @@ class DependencyMonitor {}
           console.log('Dependency check passed ✓')}} else {}
           console.log('Dependency check found outdated packages ✗');
           console.log('"Output": ', output);
-          
           // Log outdated packages but don't auto-update;
           this.logOutdatedPackages(output)};
       })} catch (error) {}
@@ -72,92 +54,38 @@ class DependencyMonitor {}
     const outdatedPackages = lines.filter(line => )
       line.includes('→') && !line.includes('Package');
    ;);
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-    if ( {})
+
       console.log('Outdated packages "found": ')) {}
-     {}
       console.log('Outdated packages found:')};
       outdatedPackages.forEach(pkg => {})
         console.log(`  ${pkg}`)})};
-  };
   async checkPackageIntegrity() {}
-    try {}
       console.log('Checking package integrity...');
-      
       const child = spawn('npm', ['ls'], {})
-        "stdio": ['pipe', 'pipe', 'pipe'],
-        "cwd": process.cwd();
-      };);
 
-      let output = ;';';
-      let errorOutput = ;';';
 
-      child.stdout.on('data', (data) => {}
-        output += data.toString()}
-});
-
-      child.stderr.on('data', (data) => {}
-        errorOutput += data.toString()}
-});
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-      child.on('close', (code) => {}
-        if ( {})
           console.log('Package integrity check passed ✓')) {}
-     {}
           console.log('Package integrity check passed ✓')}} else {}
           console.log('Package integrity issues found ✗');
           console.log('"Errors": ', errorOutput)};
-      })} catch (error) {}
       console.error('Error checking package "integrity": ', error.message)};
-  };
   stop() {}
     console.log('Stopping Dependency Monitor...');
-    this.isRunning = false;
     
-    if ( {})
       clearInterval(this.intervalId)};
     console.log('Dependency Monitor stopped')) {}
-     {}
-      clearInterval(this.intervalId)};
     console.log('Dependency Monitor stopped')}};
-};
 // Start the monitor if run directly;
-if ( {})
   const monitor = new DependencyMonitor) {}
-     {}
   const monitor = new DependencyMonitor}(;);
   
   // Handle graceful shutdown;
   process.on('SIGINT', () => {}
     monitor.stop();
     process.exit(0)}
-});
   
   process.on('SIGTERM', () => {}
-    monitor.stop();
-    process.exit(0)}
-});
   
   monitor.start().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
-module.exports = DependencyMonitor;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = DependencyMonitor;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+`;

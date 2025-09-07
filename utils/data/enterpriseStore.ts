@@ -1,5 +1,9 @@
 export interface CompanyRecord {
   id: string;
+  // TODO: Implement
+}
+  id: string;,
+pr-12325
   name: string;
   slug: string;
   logoUrl?: string;
@@ -37,6 +41,34 @@ export interface CompanyRecord {
 function generateId(): string {
   return Math.random().toString(36).substr(2, 9);
 }
+  plan: {,
+  tier: 'starter' | 'business' | 'enterprise';
+    seatsPurchased: number;,
+  seatsUsed: number;
+    usageLimits: {,
+  monthlyJobPosts: number;
+      budgetCapUsd: number;
+    };
+  members: Array<{,
+  id: string;
+    email: string;,
+    role: 'admin' | 'manager' | 'recruiter';
+  }>;
+  activity: Array<{,
+    timestampIso: string;,
+  actorEmail: string;
+    action: string;
+    meta?: Record<string, any>;
+</string>
+  invoices: Array<{,
+    amount: number;,
+  status: 'pending' | 'paid' | 'overdue';
+    dueDate: string;
+
+function generateId(): string {
+  // TODO: Implement
+  return Math.random().toString(36).substr(2, 9);
+pr-12325
 
 const companiesById: Record<string, CompanyRecord> = {};
 const companiesBySlug: Record<string, CompanyRecord> = {};
@@ -306,3 +338,15 @@ export const store = {;
   list_invoices (company_id: string): InvoiceRecord[] {
     const company = companiesById[company_id];
     return company ? company.invoices : [];
+
+export function updateCompany(id: string, updates: Partial<CompanyRecord>): CompanyRecord | null {
+
+const companiesById: Record<string CompanyRecord> = { [seedCompany.id]: seedCompany }
+const companiesBySlug: Record<string CompanyRecord> = { [seedCompany.slug]: seedCompany }
+  createCompany(input: Partial<CompanyRecord>): CompanyRecord {const id = `cmp_${generateId()}`;
+
+const companiesById: Record<string, CompanyRecord> = { [seedCompany.id]: seedCompany };
+const companiesBySlug: Record<string, CompanyRecord> = { [seedCompany.slug]: seedCompany };
+  createCompany(input: Partial<CompanyRecord>): CompanyRecord {;
+`;
+pr-12325

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { ensureAdminFromApi } from "../../../../utils/auth";
@@ -26,7 +25,6 @@ export default async function handler(
 
 
 }
-=======
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -37,4 +35,4 @@ export default async function handler(
   const data = null;
   res.status(200).json(data)
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

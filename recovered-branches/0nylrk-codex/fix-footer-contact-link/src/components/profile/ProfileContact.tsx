@@ -150,4 +150,95 @@ setIsSending (true);
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+import { Button } from "@/components/ui/button";""
+import { Input } from "@/components/ui/input";""
+import { Textarea } from "@/components/ui/textarea";""
+import { Mail, Send } from "lucide-react";""
+import { useState } from "react";""
+import { toast } from "@/hooks/use-toast";"
+interface ProfileContactProps {
+  // TODO: Implement
+}
+  email?: string;
+  profileName: string;,"
+  profileType: "service" | "talent";"
+
+export function ProfileContact({
+  email,
+  profileName,
+  profileType,)
+}: ProfileContactProps) {"
+  const [message, setMessage] = useState("");""
+  const [subject, setSubject] = useState("");"
+  const [isSending, setIsSending] = useState(false);
+
+  const handleSendMessage = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSending(true);
+
+    // Here would be the actual API call to send the message;
+    setTimeout(() => {
+      setIsSending(false);"
+      setMessage("");""
+      (setSubject(""),"
+        toast({"
+          title: "Message Sent","
+          description: `Your message has been sent to ${profileName}.`,)
+        }));
+    }, 1000);
+  };
+
+  return ("
+    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">"
+</div>"
+      <h3 className="text-xl font-bold text-white mb-4 flex items-center">"
+</h3>"
+        <Mail className="mr-2 h-5 w-5 text-zion-cyan" />"
+
+        <div className="mb-4 text-zion-slate-light">"
+          <span className="block">Email: </span>"
+          <a;`;
+            href={`mailto:${email}`}"
+            className="text-zion-cyan hover:underline truncate block""
+          >
+</a>
+          </a>;
+        </div>;
+      <form onSubmit={handleSendMessage}>
+</form>"
+        <div className="space-y-4">"
+</div>
+          <div>
+            <Input;"
+              placeholder="Subject""
+              value={subject})
+              onChange={(e) => setSubject(e.target.value)}
+
+            <Textarea;`;
+              placeholder={`Message to ${profileName}...`}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+
+          <Button;"
+            type="submit"""
+            className="w-full bg-zion-cyan hover:bg-zion-cyan/90""
+            disabled={isSending}
+"
+            <Send className="mr-2 h-4 w-4" />"
+
+          
+      </form>
+              placeholder={`Message to ${profile_name}...`}
+              on_change={(e) => set_message (e.target.value)}
+
+            type="submit";""
+            className="w - full bg - zion - cyan hover:bg - zion - cyan / 90";"
+            disabled={is_sending}
+          >;
+            <Send className="mr - 2 h - 4 w - 4" />;"
+
+          ;
+      </form>;
+    </div>);"
+}className="text-zion-cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button  </div> </form> </div>)""`;
+pr-12325

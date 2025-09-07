@@ -1,13 +1,11 @@
 import { useRouter  } from 'next/router';
 import {useRouter} from 'next/router';
 import useSWR from 'swr';
-<<<<<<< HEAD
 
 import {useEffect, useState} from 'react';
-=======
 import { useEffect, useState } from 'react';
 const fetcher = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 export default function EditJobPage() {
 export default function EditJobPage() {;
@@ -38,7 +36,6 @@ export default function EditJobPage(req, res) {
   const [category, setCategory] = useState('');
   useEffect(() => {
     if (job) {
-<<<<<<< HEAD
       setTitle(job.title |'');
       setDescription(job.description |'');
       setCategory(job.category |'');    }
@@ -73,7 +70,6 @@ export default function EditJobPage(req, res) {
   return (
     <div className="max-w-2xl mx-auto space-y-4">
       <h1 className="text-2xl font-semibold">Edit Job</h1>
-=======
       setTitle(job.title || '');
       setDescription(job.description || '');
 setCategory(job.category || '');
@@ -92,7 +88,7 @@ body: JSON.stringify({ title, description, category }),
   return (
 <div className='max-w-2xl mx-auto space-y-4'>
       <h1 className='text-2xl font-semibold'>Edit Job</h1>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       <div>
         <label className="block text-sm font-medium">Title</label>
         <input className="mt-1 w-full border rounded p-2" value={title} onChange={(e) => setTitle(e.target.value)} />
@@ -109,7 +105,6 @@ body: JSON.stringify({ title, description, category }),
         <button className="px-4 py-2 rounded bg-black text-white" onClick={save}>Save</button>
       </div>
     </div>
-<<<<<<< HEAD
 
   )
   } catch (error) {
@@ -130,6 +125,5 @@ body: JSON.stringify({ title, description, category }),
 
 
 
-=======
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

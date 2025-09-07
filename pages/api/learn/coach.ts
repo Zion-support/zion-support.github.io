@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',
-=======
->>>>>>> pr-12243
+pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next'
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST')
@@ -21,7 +13,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   try {
     const apiKey = process.env.OPENAI_API_KEY
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -34,38 +25,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!prompt) return res.status(400).json({ error: 'prompt required' });
   try {
     const apiKey = process.env.OPENAI_API_KEY;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     if (apiKey) {
       const { OpenAI } = await import('openai');
       const openai = new OpenAI({ apiKey });
       const resp = await openai.chat.completions.create({
         model: 'gpt-4o-mini',
         messages: [
-<<<<<<< HEAD
           { role: 'system', content: 'You are ZionGPT Coach, a helpful and concise AI tutor for Zion Academy courses. Provide short, actionable guidance.' }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
           { role: 'system', content: 'You are ZionGPT Coach, a helpful and concise AI tutor for Zion Academy courses. Provide short, actionable guidance.' },
-=======
           { role: 'system', content: 'You are ZionGPT Coach, a helpful and concise AI tutor for Zion Academy courses. Provide short, actionable guidance.' }
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
+main
+pr-12243
           { role: 'user', content: String(prompt) }
         ]
       })
       const text = resp.choices?.[0]?.message?.content |'No response'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 {
             role: 'system',
             content:
@@ -86,19 +61,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: e?.message ?? 'Coach error' });
   }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> pr-12243
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243
       return res.status(200).json({ text })
     }
     // Fallback without API key
     return res.status(200).json({ text: 'Tip: Break complex topics into small steps. Revisit objectives and test your understanding with quick quizzes.' })
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
+pr-12243
   };
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -106,15 +75,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> pr-12243
+pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next'
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 export default async /**
  * handler - Function description
@@ -124,7 +87,6 @@ function handler() {
 if ( {) {
   $2
 }
-<<<<<<< HEAD
   try {
     const api_key = process.env.OPENAI_API_KEY,
     // Check condition
@@ -159,10 +121,8 @@ if ( {) {
 }
 
 
-=======
 
     res.set_header ('AllowPOST')
     return res.status (405).end ('Method Not Allowed');
   }
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

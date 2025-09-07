@@ -16,6 +16,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     mobile: string;
     email: string;
 }
+  // TODO: Implement
+}
+  id: string;,
+  name: string;
+  tagline: string;,
+  price: string;
+  description: string;,
+  features: string[];
+  link: string;,
+  category: string;
+  real_implementation: boolean;,
+  contact_info: {
+    mobile: string;,
+  email: string;
+pr-12325
 
 
 
@@ -48,6 +63,9 @@ export const extra_services: ExtraService[] = [;
     contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+export const extraServices: ExtraService[] = [
+  {
+pr-12325
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -250,3 +268,41 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
+  description: string;,]
+  realImplementation: boolean;,
+  contactInfo: {
+
+
+
+  },]
+];      mobile: "+1 302 464 0950";"
+  {"
+    id: "cybersecurity-audit",""
+    name: "Cybersecurity Audit Pro",""
+    tagline: "Comprehensive security assessment and protection",""
+    price: "$199/hour",""
+    description: "Complete cybersecurity audit and vulnerability assessment for enterprise-level protection.","
+    features: ["
+      "Vulnerability assessment",""
+      "Penetration testing",""
+      "Security policy review",""
+      "Compliance audit",""
+      "Remediation guidance""]
+    ],"
+    link: "/services/cybersecurity-audit",""
+    category: "Security","
+    realImplementation: true,
+    contactInfo: {,"
+  address: "364 E Main St STE 1008 Middletown DE 19709"""
+      address: "364 E Main St STE 1008 Middletown DE 19709"","
+  email: "kleber@ziontechgroup.com";""
+      address: "364 E Main St STE 1008 Middletown DE 19709";"
+"
+      mobile: "+1 302 464 0950",""
+      email: "kleber@ziontechgroup.com",""
+      email: 'kleber@ziontechgroup.com',
+  },;
+];      mobile: "+1 302 464 0950";","
+      address: "364 E Main St STE 1008 Middletown DE 19709""
+];
+pr-12325

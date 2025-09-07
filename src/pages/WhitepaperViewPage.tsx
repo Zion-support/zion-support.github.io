@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
 
 const WhitepaperViewPage: React.FC = () => {
@@ -222,7 +221,6 @@ if ( {) {
 export default WhitepaperViewPage,
 ;
 export default WhitepaperViewPage;
-=======
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router', // Changed from useParams
 import { supabase  } from '@/integrations/supabase/client';
@@ -234,4 +232,4 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 // Placeholder for user context/role checking
 // In a real app, this would come from an auth context
 '"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

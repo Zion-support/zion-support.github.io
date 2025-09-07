@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 			title="Fintech AI Solutions"
 			slug="fintech-solutions"
@@ -13,12 +12,11 @@
 				"Collections optimization and next-best-action"
 				"Realtime rules with feature store integration"
 
-=======
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function FintechSolutions() {
 			title;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 				"Integrations: Core banking, KYC, payments, CRMs"
 			]}
 			industries={["Fintech", "Banking", "Lending", "Payments"]}
@@ -78,7 +76,6 @@ return (
 			canonical="https: //ziontechgroup.com/fintech-solutions"
 		/>
 	)
-<<<<<<< HEAD
 			canonical="https: //ziontechgroup.com/fintech-solutions";
 		/>;
 	);
@@ -89,6 +86,5 @@ return (
 }
 
 
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

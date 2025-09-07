@@ -13,6 +13,7 @@ export function formatDate(date: Date | string | number): string {
     day: 'numeric',
   });
 }
+pr-12325
 
 export function formatCurrency(amount: number, currency = 'USD'): string {
   return new Intl.NumberFormat('en-US', {
@@ -20,6 +21,7 @@ export function formatCurrency(amount: number, currency = 'USD'): string {
     currency,
   }).format(amount);
 }
+pr-12325
 
 export function debounce<T extends (...args: any[]) => any>(
   func: T,
@@ -63,6 +65,22 @@ export function isValidPhone(phone: string): boolean {
   const phoneRegex = /^[+]?[1-9][\d]{0,15}$/;
   return phoneRegex.test(phone.replace(/\s/g, ''));
 }
+  return (...args: Parameters<T>) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func(...args), wait);
+  };
+
+export function throttle<T extends (...args: any[]) => any>(
+  limit: number
+  let inThrottle: boolean;
+    if (!inThrottle) {
+      func(...args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+
+export function sleep(ms: number): Promise<void> {
+  return new Promise(resolve => setTimeout(resolve, ms));
+pr-12325
 
 export function truncateText(text: string, maxLength: number): string {
   if (text.length <= maxLength) return text;
@@ -72,6 +90,10 @@ export function truncateText(text: string, maxLength: number): string {
 export function capitalizeFirst(str: string): string {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
+
+export function capitalizeFirst(str: string): string {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+pr-12325
 
 export function slugify(str: string): string {
   return str
@@ -119,3 +141,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d}
 }
 };
 pr-12243
+    .replace(/[^\w\s-]/g, )
+    .replace(/[\s_-]+/g, '-')
+    .replace(/^-+|-+$/g, );
+pr-12325

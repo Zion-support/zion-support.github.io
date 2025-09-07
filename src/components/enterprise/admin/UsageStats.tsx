@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {
 
 export function UsageStats() {
@@ -8,7 +6,6 @@ export function UsageStats() {
   const handleSaveChanges = () => {
     toast({
 
-=======
 import React from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -41,7 +38,7 @@ import { Sparkles } from 'lucide-react'
 import { Progress } from "@/components/ui/progress";
 export function UsageStats() {
   const handleSaveChanges = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-8">
       <div>
@@ -50,7 +47,6 @@ export function UsageStats() {
           Configure usage limits for your team to manage your subscription resources.
         </p>
       </div>
-=======
 return (
 
 
@@ -58,7 +54,6 @@ return (
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <Card>
           <CardHeader>
             <CardTitle>Job Postings</CardTitle>
@@ -93,12 +88,9 @@ return (
         </Card>
 
 
-<<<<<<< HEAD
-=======
         
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <Card>
           <CardHeader>
             <CardTitle>Candidate Contacts</CardTitle>
@@ -133,12 +125,9 @@ return (
         </Card>
 
 
-<<<<<<< HEAD
-=======
         
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <Card>
           <CardHeader>
             <CardTitle>AI Features</CardTitle>
@@ -171,12 +160,9 @@ return (
         </Card>
 
 
-<<<<<<< HEAD
-=======
         
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <Card>
           <CardHeader>
             <CardTitle>Budget Controls</CardTitle>
@@ -221,8 +207,6 @@ return (
       </div>
 
 
-<<<<<<< HEAD
-=======
       
       <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
@@ -230,7 +214,6 @@ return (
             <Sparkles className="h-5 w-5 text-primary" />
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </div>
           <div>
             <h3 className='font-medium'>Need higher limits?</h3>
@@ -440,12 +423,10 @@ export function UsageStats() {;
           </CardFooter>;
         </Card>;
       </div>;
-<<<<<<< HEAD
     </div>;
   );
 }
 ;
-=======
 
       <div className='bg - muted / 50 rounded - lg p - 6 flex items - center justify - between'>;
         <div className='flex items - center gap - 4'>;
@@ -470,11 +451,8 @@ export function UsageStats() {;
 }"}
 
     </div>
-<<<<<<< HEAD
   )
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   );
 
 }"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check  } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import ServiceAds from '../components/sections/ServiceAds';
@@ -149,19 +148,16 @@ export default function ApiMockContractTestingPage(req, res) {
   const tiers = [;
     },  ];
 ;
-=======
 import React from 'react',
 import Head from 'next/head';
   const contactInfo = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Layout>
       <Head>
         <title>API Mock & Contract Testing | Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="OpenAPI/GraphQL mock servers, contract tests in CI, and deployment gates with snapshot diffs and approvals." />
         <link rel="canonical" href="https://ziontechgroup.com/api-mock-contract-testing" />
-=======
 <meta
           name='description'
           content='OpenAPI/GraphQL mock servers, contract tests in CI, and deployment gates with snapshot diffs and approvals.'
@@ -170,7 +166,7 @@ import Head from 'next/head';
           rel='canonical'
           href='https://ziontechgroup.com/api-mock-contract-testing'
         />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       </Head>
       <div className='min-h-screen py-20 px-4 sm:px-6 lg:px-8'>
         <ServiceAds
@@ -191,11 +187,9 @@ import Head from 'next/head';
                   {t && t.items.map(i => (;
                     <li
                       key={i}
-<<<<<<< HEAD
                       className='flex items-start gap-2 w-4 h-4 mt-0 && 0.5 text-emerald-400'>;
                       <Check /> <span>{i}</span>;
                     </li>                  ))}
-=======
                       className='flex items-start gap-2 w-4 h-4 mt-0.5 text-emerald-400'
                     >
                       <Check /> <span>{i}</span>
@@ -204,7 +198,7 @@ import Head from 'next/head';
                 </ul>
               </div>
             ))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
 
 <div className='mt-8 max-w-3xl mx-auto bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30'>
@@ -232,8 +226,6 @@ import Head from 'next/head';
             <div className="text-center">
 
             </div>
-<<<<<<< HEAD
-=======
             <div className='text-center'>
               <a
                 href='/contact'
@@ -242,12 +234,11 @@ import Head from 'next/head';
                 Book a Demo
               </a>
             </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </div>
     </Layout>
-<<<<<<< HEAD
 
           </div>;
 
@@ -347,6 +338,5 @@ import Head from 'next/head';
 ;
 
 
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

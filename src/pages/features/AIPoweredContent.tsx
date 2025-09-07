@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 return (
     <>;
-=======
 import React, { useEffect } from 'react';
 import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';
@@ -16,7 +14,7 @@ export default function AIPoweredContent() {
   const schema = null;
   return (
     <>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       <SEO
         title='AI Content Generation'
         description='Generate SEO-optimized blog posts, service descriptions and FAQs with ZionGPT.'
@@ -42,12 +40,10 @@ export default function AIPoweredContent() {
               src='https://placehold && placehold.co/800x400'
               alt='Screenshot of ZionGPT content tool'
               className='object-cover'
-<<<<<<< HEAD
 
 
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/open-app">Try ZionGPT Now</Link>
-=======
             />
           </div>
           <h2 className='text-2xl font-bold mb-4'>Benefits &amp; Use Cases</h2>
@@ -83,13 +79,12 @@ export default function AIPoweredContent() {
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/open-app'>Try ZionGPT Now</Link>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </Button>
           </div>
         </div>
       </main>
     </>
-<<<<<<< HEAD
 
 
 
@@ -239,7 +234,6 @@ function AIPoweredContent() {
 
 
 ;
-=======
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from "react";
 import Head from "next/head";
 import Layout from "../components/layout/Layout";
@@ -28,11 +27,10 @@ return (
     </div>
   </Layout>
 );
-=======
 
   return (
     <Layout>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       <Head>
         <title>Space Technology | Zion Tech Group</title>
 <meta
@@ -47,7 +45,6 @@ return (
             <div className='inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-600 mb-4'>
               <Satellite className='w-8 h-8 text-white' />
             </div>
-<<<<<<< HEAD
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">Space Technology</h1>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">Secure, reliable operations for space and earth observation missions.</p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -83,7 +80,6 @@ return (
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4'>
               Space Technology
             </h1>
@@ -166,4 +162,4 @@ return (
     </div>
   </Layout>
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

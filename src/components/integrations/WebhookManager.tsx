@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function WebhookManager() {
   const { 
     webhooks,
     loading, 
-=======
 webhooks,
     loading,
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     error,
 
 
@@ -71,7 +67,6 @@ export function WebhookManager() {;
     if (newWebhook && newWebhook.eventTypes.includes(newWebhook && newWebhook.selectedEvent)) {;
       toast && toast.error('This event is already added');
       return;
-=======
 import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
@@ -139,7 +134,7 @@ export function WebhookManager() {
     if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
       toast.error('This event is already added')
       return
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
 
     setNewWebhook({;
@@ -226,14 +221,12 @@ export function WebhookManager() {
 
     // Reset form
     setNewWebhook({
-<<<<<<< HEAD
       name: "",
       url: "",
       selectedEvent: "" as WebhookEventType,
       eventTypes: [],
 
 
-=======
       name: ''
       url: ''
       selectedEvent: '' as WebhookEventType
@@ -247,7 +240,7 @@ export function WebhookManager() {
   ) => {
     await testWebhook(webhookId, eventType)
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-8">
       <Card>
@@ -440,7 +433,6 @@ export function WebhookManager() {;
                   {eventOptions.find(e => e.value === event)?.label || event}
                 </ClickableBadge>;
               ))}
-<<<<<<< HEAD
             </div>;
             <div className="flex space-x-2">;
               <Select;
@@ -449,10 +441,8 @@ export function WebhookManager() {;
               >
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select event" />
-=======
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 </SelectTrigger>
                 <SelectContent>
                   {eventOptions.map(option => (
@@ -922,8 +912,6 @@ export function WebhookManager() {;
               <div className='space-y-2'>
                 <div className='flex justify-between'>
                   <span className='font-medium'>Status:</span>
-<<<<<<< HEAD
-=======
 
         {testResult && (;
           <Card className='mt-4 border-blue-200'>;
@@ -934,7 +922,6 @@ export function WebhookManager() {;
               <div className='space-y-2'>;
                 <div className='flex justify-between'>;
                   <span className='font-medium'>Status:</span>;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   <span
                     className={
                       testResult && testResult.status>= 200 && testResult && testResult.status < 300;
@@ -944,15 +931,12 @@ export function WebhookManager() {;
 
 
 
-<<<<<<< HEAD
                   >                    {testResult.status} {testResult.statusText}
                   </span>
                 </div>
                 <div>
                   <span className='font-medium'>Response:</span>
                   <pre className='mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto'>
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
         {testResult && (;
           <Card className="mt-4 border-blue-200">;
@@ -980,7 +964,6 @@ export function WebhookManager() {;
             </CardContent>
           </Card>
         )}
-<<<<<<< HEAD
 
                   >                    {testResult && testResult.status} {testResult && testResult.statusText}
                   </span>;
@@ -997,15 +980,13 @@ export function WebhookManager() {;
         )}
       </div>;
     </div>;
-=======
       </div>
     </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   );
 
 }setNewWebhook ({;
   ...newWebhook;
-<<<<<<< HEAD
 eventTypes: [...newWebhook && newWebhook.eventTypes, newWebhook && newWebhook.selectedEvent];
 };
 }newWebhook && newWebhook.url;
@@ -1022,7 +1003,6 @@ newWebhook && newWebhook.secret || undefined);";
 }</div> <div className="flex space-x-2"> <Selectvalue= {
   newWebhook && newWebhook.selectedEvent 
 }onValueChange= {
-=======
 eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent];
 };
 }newWebhook.url;
@@ -1039,12 +1019,11 @@ newWebhook.secret || undefined);";
 }</div> <div className="flex space-x-2"> <Select value= {;
   newWebhook.selectedEvent ;
 }onValueChange= {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   (value) => setNewWebhook ({;
   ...newWebhook, selectedEvent: value as WebhookEventType ;
 }) ";
 }> <SelectTrigger className="w-full"> <SelectValue placeholder=" Select event"/> </SelectTrigger> <SelectContent> {;
-<<<<<<< HEAD
   eventOptions && eventOptions.map (option => (<SelectItemkey= {
   option && option.value 
 }value= {
@@ -1079,7 +1058,6 @@ newWebhook.secret || undefined);";
 }` : 'Never triggered' ";
 }</div> </div> </CardContent> <CardFooter className="flex justify-between pt-2"> <Button > <Trash className="h-4 w-4 mr-2"/> Delete </Button> <SelectonValueChange= {
   (value) => handleTestWebhook (webhook && webhook.id, value as WebhookEventType) ";
-=======
   eventOptions.map (option => (<SelectItem key= {;
   option.value ;
 }value= {;
@@ -1114,12 +1092,11 @@ newWebhook.secret || undefined);";
 }` : 'Never triggered' ";
 }</div> </div> </CardContent> <CardFooter className="flex justify-between pt-2"> <Button > <Trash className="h-4 w-4 mr-2"/> Delete </Button> <Select onValueChange= {;
   (value) => handleTestWebhook (webhook.id, value as WebhookEventType) ";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }> <SelectTrigger className="w-[180px]"> <SelectValue placeholder=" Test webhook"/> </SelectTrigger> <SelectContent> </SelectItem>) ) ;
 }</SelectContent> </Select> </CardFooter> </Card>) ) ;
 }</div>) ;
 }{";
-<<<<<<< HEAD
   testResult && (<Card className="mt-4 border-blue-200"> <CardHeader> <CardTitle className="text-lg">Webhook Test Result</CardTitle> </CardHeader> <CardContent> <div className="space-y-2"> <div className="flex justify-between"> <span className="font-medium">Status:</span> <spanclassName= {'
   testResult && testResult.status>= 200 && testResult && testResult.status < 300 ? 'text-green-600' : 'text-red-600' ;
 }> {;
@@ -1133,9 +1110,7 @@ newWebhook.secret || undefined);";
 }'"}
 
 }
-<<<<<<< HEAD
 ;
-=======
 
 }newWebhook.url
 newWebhook.eventTypes
@@ -1255,8 +1230,6 @@ event_types: [...new_webhook.event_types, new_webhook.selected_event];
 }
 
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   testResult && (<Card className="mt-4 border-blue-200"> <CardHeader> <CardTitle className="text-lg">Webhook Test Result</CardTitle> </CardHeader> <CardContent> <div className="space-y-2"> <div className="flex justify-between"> <span className="font-medium">Status:</span> <span className= {';
   testResult.status >= 200 && testResult.status < 300 ? 'text-green-600' : 'text-red-600' ;
 }> {;
@@ -1268,4 +1241,4 @@ event_types: [...new_webhook.event_types, new_webhook.selected_event];
 }</pre> </div> </div> </CardContent> </Card>) ;
 }</div> </div>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

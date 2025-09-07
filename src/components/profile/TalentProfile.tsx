@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Handshake, MessageSquare, Star } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { HireNowCTA } from "./HireNowCTA",
@@ -12,12 +11,26 @@ import { ProfileRatings } from "./ProfileRatings",
 import { TalentProfile as TalentProfileType } from "@/types/talent",
 
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import React from 'react';
 import { Handshake, MessageSquare, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
+import { Handshake, MessageSquare, Star } from 'lucide-react
+import { Button } from "@/components/ui/button",""
+import { HireNowCTA } from "./HireNowCTA",""
+import { ProfileHero } from "./ProfileHero",""
+import { ProfileSkills } from "./ProfileSkills",""
+import { ProfileExperience } from "./ProfileExperience",""
+import { ProfileProjects } from "./ProfileProjects",""
+import { ProfileAvailability } from "./ProfileAvailability",""
+import { ProfileContact } from "./ProfileContact",""
+import { ProfileRatings } from "./ProfileRatings",""
+import { TalentProfile as TalentProfileType } from "@/types/talent",""
+import React from 'react';
+import { Handshake, MessageSquare, Star } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+pr-12325
 import { HireNowCTA } from './HireNowCTA';
 import { ProfileHero } from './ProfileHero';
 import { ProfileSkills } from './ProfileSkills';
@@ -29,7 +42,6 @@ import { ProfileRatings } from './ProfileRatings';
 import { TalentProfile as TalentProfileType } from '@/types/talent';
 import { useAuth } from '@/hooks/useAuth';
 import { Availability } from '@/types/profile';
-<<<<<<< HEAD
 interface TalentProfileProps {;
   profile: TalentProfileType;
   onRequestHire: () => void;
@@ -40,12 +52,24 @@ export function TalentProfile(): any ({;
   profile,;
   onRequestHire,;
   onMessageTalent,;
+interface TalentProfileProps {;
+  profile: TalentProfileType;,
+  onRequestHire: () => void;
+  onMessageTalent?: () => void;
+export function TalentProfile(): any ({;
+  profile,;
+  onRequestHire,;
+  onMessageTalent,;)
+pr-12325
 }: TalentProfileProps) {;
   const { isAuthenticated } = useAuth();
 
   // Create proper availability object from talent profile;
   const availability: Availability = {;
     status:;
+  const availability: Availability = {;,
+  status:;
+pr-12325
       profile && profile.availability_type === 'full_time';
         ? 'available';
         : profile && profile.availability_type === 'part_time';
@@ -59,6 +83,8 @@ export function TalentProfile(): any ({;
     profile && profile.skills?.map(skill => ({;
       name: skill,;
       level: 3, // Default level since we don't have this data;
+      level: 3, // Default level since we don't have this data;')
+pr-12325
     })) || [];
 
   // Create proper projects array for ProfileProjects component;
@@ -70,7 +96,6 @@ export function TalentProfile(): any ({;
       date: new Date().toISOString(), // Default date since we don't have this data;
     })) || [];
 
-=======
 
 interface TalentProfileProps {
   profile: TalentProfileType;
@@ -86,7 +111,7 @@ export function TalentProfile({
   const { isAuthenticated } = useAuth();
   // Create proper availability object from talent profile
   const availability: Availability;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className='container mx-auto px-4 py-8'>
       {/* Profile Header */}
@@ -143,7 +168,6 @@ function TalentProfile() {
   const { is_authenticated } = use_auth ();
   // Create proper availability object from talent profile;
   const availability: Availability = {
-<<<<<<< HEAD
     status:;
       profile.availability_type === 'full_time';
         ? 'available';
@@ -168,7 +192,6 @@ function TalentProfile() {
     })) || [];
   return (
     <div className='container mx - auto px - 4 py - 8'>;
-=======
     status: profile.availability_type === 'full_time' ? 'available' : 
             profile.availability_type === 'part_time' ? 'limited' : 'unavailable',
     message: `${profile.professional_title} with ${profile.years_experience} years of experience`
@@ -236,23 +259,19 @@ export function TalentProfile({;
   })) || [];
   return (;
     <div className="container mx-auto px-4 py-8">;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Profile Header */}
       <ProfileHero;
         name={profile.full_name}
         title={profile.professional_title}
-<<<<<<< HEAD
         avatar_url={profile.profile_picture_url}
         profile_type='talent';
         rating={profile.average_rating}
         review_count={profile.rating_count}      />;
-=======
         avatarUrl={profile.profile_picture_url}
         profileType="talent"
         rating={profile.average_rating}
         reviewCount={profile.rating_count}
       />;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Main content area */}
       <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mt - 8'>;
         {/* Left Column - Skills & Info */}
@@ -458,7 +477,6 @@ export function TalentProfile({
               </div>
             </div>
           )}
-<<<<<<< HEAD
 
 
 
@@ -496,9 +514,166 @@ export function TalentProfile({
     </div>);
 }
 ;
-=======
         </div>
       </div>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+    profile && profile.key_projects?.map((proj, i) => ({;`;
+      id: `project-${i}`,;
+      title: proj && proj.title,;
+      description: proj && proj.description,;)
+      date: new Date().toISOString(), // Default date since we don't have this data;
+
+  return (
+    <div className='container mx-auto px-4 py-8'>
+</div>
+      <ProfileHero;
+        name={profile.full_name}
+        title={profile.professional_title}
+        avatarUrl={profile.profile_picture_url}
+        profileType='talent
+        rating={profile && profile.average_rating}
+        reviewCount={profile && profile.rating_count}      />;
+
+      <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8'>;
+        <div className='space-y-8'>;
+          <ProfileSkills skills={skillsArray} />;
+
+          <ProfileAvailability availability={availability} />;
+
+          <ProfileContact;
+            email={profile && profile.user_id}
+            profileName={profile && profile.full_name}
+            profileType='talent'          />;
+
+        </div>;
+        <div className='lg:col-span-2 space-y-8'>;
+    <div className="container mx-auto px-4 py-8">"
+</div>"
+    <div className="container mx-auto px-4 py-8">;"
+        avatarUrl={profile.profile_picture_url}"
+        profileType="talent""
+        rating={profile.average_rating}
+        reviewCount={profile.rating_count}
+      />;
+"
+      <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mt - 8'>;
+        <div className='space - y-8'>;
+          <ProfileSkills skills={skills_array} />;
+
+
+            email={profile.user_id}
+            profile_name={profile.full_name}
+            profile_type='talent'          />;
+
+        <div className='lg:col - span - 2 space - y-8'>;
+          <div className='bg - zion - purple / 10 border border - zion - purple / 30 rounded - lg p - 6'>;
+            <h2 className='text - xl font - bold text - white mb - 4'>;
+</h2>
+            </h2>;
+            <div className='prose prose - invert max - w-none'>;
+              <p className='text - zion - slate whitespace - pre - wrap'>;
+</p>
+          <div className='bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6'>;
+            <h2 className='text-xl font-bold text-white mb-4'>;
+            <div className='prose prose-invert max-w-none'>;
+              <p className='text-zion-slate whitespace-pre-wrap'>;
+              </p>;
+          <ProfileProjects projects={projectsArray} />;
+
+          <div className='bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6'>
+            <h2 className='text-xl font-bold text-white mb-4 flex items-center'>
+              <Star className='mr-2 h-5 w-5 text-yellow-400' />
+
+            <ProfileRatings;
+
+
+          <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">"
+            <h2 className="text-xl font-bold text-white mb-4 flex items-center">"
+</h2>"
+              <Star className="mr-2 h-5 w-5 text-yellow-400" />"
+
+              userId={profile.id}
+              averageRating={profile.average_rating}
+              ratingCount={profile.rating_count}
+
+          </div>;"
+            <div className='bg - zion - purple / 10 border border - zion - purple / 30 rounded - lg p - 6 mb - 8'>;
+              <div className='flex flex - col items - center text - center'>;
+                <h3 className='text - xl font - bold text - white mb - 2'>;
+</h3>
+                </h3>;
+                <p className='text - zion - slate mb - 6 max - w-md'>;
+            <div className='bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6 mb-8'>;
+              <div className='flex flex-col items-center text-center'>;
+                <h3 className='text-xl font-bold text-white mb-2'>;
+                <p className='text-zion-slate mb-6 max-w-md'>;
+                <div className='flex flex-wrap gap-4 justify-center'>;
+                  <Button;
+                    size='lg
+                    className='bg-zion-purple text-white hover:bg-zion-purple-dark
+                    onClick={onRequestHire}>;
+
+                    <Handshake className='mr-2 h-5 w-5' />;
+
+                  ;
+                      variant='outline
+                      className='border-zion-purple text-zion-purple hover:bg-zion-purple/10
+                      onClick={onMessageTalent}>;
+
+                      <MessageSquare className='mr-2 h-5 w-5' />;
+
+        <div className="space-y-8">"
+          <ProfileSkills skills={skillsArray} />
+
+          <ProfileAvailability availability={availability} />
+
+
+            profileName={profile.full_name}"
+          />
+
+        <div className="lg:col-span-2 space-y-8">"
+            <h2 className="text-xl font-bold text-white mb-4">About {profile.full_name}</h2>""
+            <div className="prose prose-invert max-w-none">"
+              <p className="text-zion-slate whitespace-pre-wrap">{profile.bio}</p>"
+
+
+            <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6 mb-8">"
+              <div className="flex flex-col items-center text-center">"
+                <h3 className="text-xl font-bold text-white mb-2">Ready to collaborate?</h3>""
+                <p className="text-zion-slate mb-6 max-w-md">"
+
+                <div className="flex flex-wrap gap-4 justify-center">"
+                  <Button;"
+                    size="lg"""
+                    className="bg-zion-purple text-white hover:bg-zion-purple-dark""
+                    onClick={onRequestHire}
+                  >
+                    <Handshake className="mr-2 h-5 w-5" />"
+
+                  
+                      variant="outline"""
+                      className="border-zion-purple text-zion-purple hover:bg-zion-purple/10""
+                      onClick={onMessageTalent}
+                      <MessageSquare className="mr-2 h-5 w-5" />"
+
+                    
+                </p>;"
+                <div className='flex flex - wrap gap - 4 justify - center'>;
+                    size='lg';
+                    className='bg - zion - purple text - white hover:bg - zion - purple - dark';
+                    on_click={onRequestHire}                  >;
+
+                    <Handshake className='mr - 2 h - 5 w - 5' />;
+
+                      variant='outline';
+                      className='border - zion - purple text - zion - purple hover:bg - zion - purple / 10';
+                      on_click={onMessageTalent}                    >;
+
+                      <MessageSquare className='mr - 2 h - 5 w - 5' />;
+)
+                    )}
+            </div>)}
+    </div>);`;
+pr-12325

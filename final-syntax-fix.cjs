@@ -1,149 +1,61 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-function fixAllSyntaxErrors(content) {}
-	let next = content;
-	next = next.replace(/\)\s*;\s*\)/g, '))');
-	next = next.replace(/\[\s*;\s*/g, '[');]
-	next = next.replace(/;\s*\]/g, ']');
-	next = next.replace(/;\s*\}/g, '}');
-	next = next.replace(/,\s*;/g, ',');
-	next = next.replace(/;\s*,/g, ',');
-	next = next.replace(/\.([a-zA-Z_][a-zA-Z0-9_]*)\s*;\s*/g, '.$1');
-	return next;
-};
-function processFile(filePath) {}
-	try {}
-		const content = fs.readFileSync(filePath, 'utf8');
-		const fixedContent = fixAllSyntaxErrors(content);
-		if (fixedContent !== content) {}
-			fs.writeFileSync(filePath, fixedContent, 'utf8');
-			console.log(`Fixed syntax errors "in": ${filePath}`);
-			return true;
-		};
-		return false;
-	} catch (error) {}
-		console.error(`Error processing ${filePath}:`, error.message);
-		return false;
-	};
-};
-function findFiles(dir, extensions) {}
-	const files = [];
-	function traverse(currentDir) {}
-		const items = fs.readdirSync(currentDir);
-		for (const item of items) {}
-			const fullPath = path.join(currentDir, item);
-			const stat = fs.statSync(fullPath);
-			if (stat.isDirectory()) {}
-				if (item === 'node_modules' || item.startsWith('.')) continue;
-				traverse(fullPath);
-			} else if (extensions.some(ext => fullPath.endsWith(ext))) {}
-				files.push(fullPath);
-			};
-		};
-	};
-	traverse(dir);
-	return files;
-};
-const extensions = ['.js', '.ts', '.cjs', '.mjs'];
-const files = findFiles('.', extensions);
-let fixedCount = 0;
-for (const file of files) {}
-	if (processFile(file)) fixedCount++
-};
-console.log(`Fixed syntax errors in ${fixedCount} files.`);
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-const fs = require('fs');
-const path = require('path');
 
+
+const fs = require('fs');
+const path = require('path');
 function finalSyntaxFix(filePath) {
   try {
+  // TODO: Implement
+}
     let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Fix common remaining syntax errors
-    content = content
-      // Fix export statements with trailing commas
+    // Fix common remaining syntax errors;
+    content = content;
+      // Fix export statements with trailing commas;
       .replace(/export\s+default\s+(\w+),(\s*$)/g, 'export default $1;')
       .replace(/export\s+(\w+),(\s*$)/g, 'export $1;')
-      
-      // Fix import statements with trailing commas
+      // Fix import statements with trailing commas;
       .replace(/import\s+([^,]+),(\s*$)/g, 'import $1;')
-      
-      // Fix function declarations with trailing commas
+      // Fix function declarations with trailing commas;
       .replace(/function\s+(\w+)\([^)]*\),(\s*$)/g, 'function $1() {')
-      
-      // Fix variable declarations with trailing commas
+      // Fix variable declarations with trailing commas;
       .replace(/const\s+(\w+)\s*=\s*([^,;]+),(\s*$)/g, 'const $1 = $2;')
       .replace(/let\s+(\w+)\s*=\s*([^,;]+),(\s*$)/g, 'let $1 = $2;')
       .replace(/var\s+(\w+)\s*=\s*([^,;]+),(\s*$)/g, 'var $1 = $2;')
-      
-      // Fix object properties with semicolons
+      // Fix object properties with semicolons;
       .replace(/(\w+):\s*([^,}]+);(\s*\n\s*})/g, '$1: $2$3')
       .replace(/(\w+):\s*([^,}]+);(\s*\n\s*\w+:)/g, '$1: $2,$3')
-      
-      // Fix interface properties
+      // Fix interface properties;
       .replace(/(\w+):\s*([^;,\n]+);(\s*\n\s*})/g, '$1: $2$3')
       .replace(/(\w+):\s*([^;,\n]+);(\s*\n\s*\w+:)/g, '$1: $2,$3')
-      
-      // Fix trailing commas in objects
+      // Fix trailing commas in objects;
       .replace(/,(\s*\n\s*})/g, '$1')
-      
-      // Fix trailing semicolons in objects
+      // Fix trailing semicolons in objects;
       .replace(/(\w+);(\s*\n\s*})/g, '$1$2')
-      
-      // Fix function parameters
+      // Fix function parameters;
       .replace(/(\w+):\s*([^,)]+);(\s*\))/g, '$1: $2$3')
-      
-      // Fix array elements
+      // Fix array elements;
       .replace(/([^,\[\]]+);(\s*\n\s*])/g, '$1$2')
-      
-      // Fix JSX attributes
+      // Fix JSX attributes;
       .replace(/(\w+)="([^"]+)";(\s*\/>)/g, '$1="$2"$3')
       .replace(/(\w+)="([^"]+)";(\s*\n\s*[^=])/g, '$1="$2"$3')
-      
       // Fix unused expressions (add void operator)
       .replace(/([^=!<>])\s*\(\s*\)\s*;(\s*$)/g, 'void $1();')
-      
-      // Fix missing semicolons
+      // Fix missing semicolons;
       .replace(/(\w+)\s*$(\s*\n\s*[^\/\*])/g, '$1;$2')
-      
-      // Fix missing commas in function calls
+      // Fix missing commas in function calls;
       .replace(/(\w+)\(([^)]+)\s+([^)]+)\)/g, '$1($2, $3)')
-      
-      // Fix missing commas in arrays
+      // Fix missing commas in arrays;
       .replace(/([^,\[\]]+)\s+([^,\[\]]+)(\s*\n\s*\])/g, '$1, $2$3')
-      
-      // Fix missing commas in objects
+      // Fix missing commas in objects;
       .replace(/(\w+):\s*([^,}]+)\s+(\w+):/g, '$1: $2,\n  $3:');
-    
     fs.writeFileSync(filePath, content);
     console.log(`Final syntax fix applied to: ${filePath}`);
-  } catch (error) {
+  } catch (error) {`;
     console.error(`Error fixing ${filePath}:`, error.message);
-  }
-}
 
 function walkDir(dir) {
   const files = fs.readdirSync(dir);
   
-  files.forEach(file => {
+  files.forEach(file => {)
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     
@@ -151,25 +63,10 @@ function walkDir(dir) {
       walkDir(filePath);
     } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
       finalSyntaxFix(filePath);
-    }
   });
-}
 
-// Start fixing from the components directory
+// Start fixing from the components directory;
 walkDir('/workspace/components');
 walkDir('/workspace/pages');
 walkDir('/workspace/src');
-
-console.log('Final syntax fix completed!');
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
-=======
-console.log(`Fixed syntax errors in ${fixedCount} files.`);
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-console.log(`Fixed syntax errors in ${fixedCount} files.`);
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+console.log('Final syntax fix completed!');`;

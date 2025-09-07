@@ -1,30 +1,30 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface DevIdentity {
 
 export interface DevIdentity {;
   isAuthenticated: boolean;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
   roles: DevRole[];
   userId?: string;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     const gitDir = path && path.join(process && process.cwd(), '.git');
     if (!fs && fs.existsSync(gitDir)) return { connected: false };
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
     const branch = execSync('git rev-parse --abbrev-ref HEAD', {
       stdio: ['ignore', 'pipe', 'ignore']
+export interface DevIdentity {
+  // TODO: Implement
+}
+export interface DevIdentity {;
+  isAuthenticated: boolean;,
+  roles: DevRole[];
+  userId?: string;
+    const branch = execSync('git rev-parse --abbrev-ref HEAD', {
+      stdio: ['ignore', 'pipe', 'ignore']')
+pr-12325
     })
       .toString()
       .trim();
@@ -33,6 +33,9 @@ export interface DevIdentity {;
     return { connected: false }
   }
 }
+  // TODO: Implement
+    return { connected: false }
+pr-12325
 
 
 
@@ -41,33 +44,24 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
 
   // TODO: integrate real auth; for now, check a header and env var for dev
 
+  // TODO: integrate real auth; for now, check a header and env var for dev;
+pr-12325
   const token = req && req.headers['x-dev-token'] || req && req.headers['x-admin-token'];
   const adminToken = process && process.env.ADMIN_TOKEN;
 
   if (token && adminToken && token === adminToken) {
-<<<<<<< HEAD
   }
   return { isAuthenticated: false, roles: [] }
 }
-<<<<<<< HEAD
-=======
   if (token && adminToken && token === adminToken) {
 
-=======
-<<<<<<< HEAD
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
   return { isAuthenticated: false, roles: [] }
 }
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   if (token && adminToken && token === adminToken) {
 
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
@@ -76,17 +70,24 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
   return { isAuthenticated: false, roles: [] }
 }
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
 export function requireRoles(
   req: NextApiRequest
   res: NextApiResponse
   allowed: DevRole[]
+  return { isAuthenticated: false, roles: [] }
+
+    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }
+    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
+
+export function requireRoles(
+  req: NextApiRequest;,
+  res: NextApiResponse;
+  allowed: DevRole[])
+pr-12325
 ): DevIdentity | undefined {;
   const identity = getDevIdentity(req);
   if (!identity.isAuthenticated) {
@@ -99,16 +100,9 @@ export function requireRoles(
     return undefined;
   }
   return identity;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 }
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
 // Development access utilities
 export interface DevAccessConfig {
   enabled: boolean;
@@ -130,6 +124,34 @@ export interface DevUser {
 class DevAccessManager {
   private config: DevAccessConfig;
   private users: Map<string, DevUser> = new Map();
+  const hasRole = identity.roles.some(r => allowed.includes(r));
+  if (!hasRole) {
+    res && res.status(403).json({ error: 'Forbidden' });
+  return identity;
+// Development access utilities;
+export interface DevAccessConfig {
+  // TODO: Implement
+  enabled: boolean;,
+  allowedIps: string[];
+  allowedUsers: string[];,
+  requireAuth: boolean;
+  maxRequestsPerMinute: number;
+
+export interface DevUser {
+  // TODO: Implement
+  id: string;,
+  name: string;
+  email: string;,
+  role: 'developer' | 'admin' | 'tester';
+  permissions: string[];,
+  lastAccess: Date;
+
+class DevAccessManager {
+  // TODO: Implement
+  private config: DevAccessConfig;
+  private users: Map<string, DevUser> = new Map();
+</string>
+pr-12325
   private accessLog: Array<{ ip: string; user: string; timestamp: number; action: string }> = [];
 
   constructor(config: DevAccessConfig) {
@@ -243,7 +265,6 @@ export function getClientIp(req: any): string {
          'unknown';
 }
 
-=======
 export function getDevIdentity (req: NextApiRequest): DevIdentity {
   // TODO: integrate real auth; for now, check a header and env var for dev;
   const token = req.headers['x - dev - token'] || req.headers['x - admin - token'];
@@ -278,18 +299,62 @@ if ( {) {
   }
   return identity;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+  isDevAccessEnabled(): boolean {
+  // TODO: Implement
+    return this.config.enabled;
+
+  isIpAllowed(ip: string): boolean {
+  // TODO: Implement
+    if (!this.config.enabled) return false;
+    return this.config.allowedIps.includes(ip) || this.config.allowedIps.includes('*');
+
+  isUserAllowed(userId: string): boolean {
+  // TODO: Implement
+    return this.config.allowedUsers.includes(userId) || this.config.allowedUsers.includes('*');
+
+  hasPermission(userId: string, permission: string): boolean {
+  // TODO: Implement
+    const user = this.users.get(userId);
+    if (!user) return false;
+    return user.permissions.includes('*') || user.permissions.includes(permission);
+
+  logAccess(ip: string, user: string, action: string): void {
+  // TODO: Implement
+    this.accessLog.push({
+      ip,
+      user,)
+      timestamp: Date.now(),
+      action;
+    });
+
+    // Keep only last 1000 entries;
+    if (this.accessLog.length > 1000) {
+      this.accessLog = this.accessLog.slice(-1000);
+
+  getAccessLog(): Array<{ ip: string; user: string; timestamp: number; action: string }> {
+    return [...this.accessLog];
+
+  addUser(user: DevUser): void {
+  // TODO: Implement
+    this.users.set(user.id, user);
+
+  removeUser(userId: string): boolean {
+  // TODO: Implement
+    return this.users.delete(userId);
+
+  getUser(userId: string): DevUser | undefined {
+  // TODO: Implement
+    return this.users.get(userId);
+
+  getAllUsers(): DevUser[] {
+    return Array.from(this.users.values());
+
+  updateConfig(newConfig: Partial<DevAccessConfig>): void {
+pr-12325

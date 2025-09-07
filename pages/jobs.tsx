@@ -1,4 +1,3 @@
-<<<<<<< HEAD
       name: 'Zion Tech Solutions',
       same_as: 'https://ziontechgroup.netlify.app',
       logo: 'https://ziontechgroup.netlify.app / logo.png'},
@@ -56,7 +55,6 @@
     </div>;
   );
 },;
-=======
 import type { NextPage } from 'next';
 import Seo from '../components/seo/Seo';
 import { JobPostingJsonLd } from 'next-seo';
@@ -80,5 +78,5 @@ const Jobs: NextPage;
 );
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default Jobs;

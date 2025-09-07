@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
 import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
 const apiFeatures = [
   {
     icon: Code,
@@ -33,7 +29,6 @@ const apiFeatures = [
     features: ['Interactive docs', 'Code examples', 'SDK libraries', 'Developer support']
   }
 ];
-=======
 export default function API() {
   const apiEndpoints = [
     {
@@ -141,11 +136,10 @@ console.log(deployment.url);`, description: 'Deploy your application to the clou
       requests: 'Unlimited', burst: '1,000/minute', features: ['Unlimited access', 'Dedicated support', 'Custom limits']
     }
   ];
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 export default function APIPage() {
   return (
-<<<<<<< HEAD
     <Layout
       title="API - Zion Tech Group"
       description="Powerful APIs for integrating with Zion Tech Group services. Build amazing applications with our developer-friendly APIs."
@@ -167,7 +161,6 @@ export default function APIPage() {
               Build amazing applications with our developer-friendly APIs.
             </p>
           </motion.div>
-=======
     <>
       <Head>
         <title>API Reference - Zion Tech Group</title>
@@ -202,7 +195,7 @@ export default function APIPage() {
             </div>
           </div>
         </section>
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {apiFeatures.map((feature, index) => (
@@ -232,7 +225,6 @@ export default function APIPage() {
             ))}
           </div>
 
-<<<<<<< HEAD
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -240,7 +232,6 @@ export default function APIPage() {
             className="bg-blue-600 rounded-xl p-8 text-center"
           >
             <h2 className="text-3xl font-bold text-white mb-4">
-=======
         {/* API Endpoints */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -422,7 +413,7 @@ export default function APIPage() {
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               Ready to Get Started?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -444,8 +435,6 @@ export default function APIPage() {
             </div>
           </motion.div>
         </div>
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Code,
   Check,
   Globe,
@@ -725,8 +714,6 @@ export default function APIPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
       </div>
     </Layout>
         {/* CTA Section */}
@@ -766,9 +753,8 @@ export default function APIPage() {
       </div>;
     </MainLayout>);
 }
-=======
       </main>
 </>
   );
 }
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

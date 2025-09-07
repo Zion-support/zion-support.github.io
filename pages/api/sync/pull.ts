@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, filterEventsByScope  } from '../../../utils / sync / storage';
 ;
@@ -24,17 +21,11 @@ function handler() {
     events
     scope: requested_scope});
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
     instanceId: state.config.instanceId
     lastSyncedAt: state.lastSyncedAt
     events
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+ursor/fix-website-loading-errors-and-merge-6662
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -71,19 +62,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
-<<<<<<< HEAD
     instanceId: state.config.instanceId,
     lastSyncedAt: state.lastSyncedAt,
     events,
-=======
     instanceId: state.config.instanceId
     lastSyncedAt: state.lastSyncedAt
     events
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   if (req.method !== "POST" && req.method !== "GET") return res.status(405).json({ error: "Method not allowed" });
   const state = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     scope: requestedScope})
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
@@ -113,7 +100,6 @@ export default function handler(req, res) {
     scope: requestedScope
   });
 }
-=======
 
 
 import type { NextApiRequest, NextApiResponse } from './next';
@@ -143,7 +129,3 @@ function handler() {
     lastSyncedAt: state.lastSyncedAt
     events
 
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

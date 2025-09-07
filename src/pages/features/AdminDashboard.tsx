@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -58,9 +57,8 @@ export default function AdminDashboard() {
 
   };
 
-=======
   const schema = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>;
 
@@ -68,7 +66,6 @@ export default function AdminDashboard() {
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
-<<<<<<< HEAD
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON && JSON.stringify(schema) }}></script>;
       <Header />;
@@ -87,7 +84,6 @@ export default function AdminDashboard() {
 
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
-=======
         type='application/ld+json'
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
@@ -110,12 +106,11 @@ export default function AdminDashboard() {
           </div>
           <h2 className='text-2xl font-bold mb-4'>Benefits &amp; Use Cases</h2>
           <ul className='list-disc list-inside space-y-2 mb-8 text-zion-slate-light'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <li>Track sales and service metrics in real time.</li>
             <li>Approve or remove listings with a few clicks.</li>
             <li>Assign roles and permissions to your team.</li>
           </ul>
-<<<<<<< HEAD
 
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
           <div className="space-y-4 mb-12">
@@ -134,7 +129,6 @@ export default function AdminDashboard() {
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/admin">View Dashboard</Link>
-=======
 <h2 className='text-2xl font-bold mb-4'>
             Frequently Asked Questions
           </h2>
@@ -155,13 +149,12 @@ export default function AdminDashboard() {
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/admin'>View Dashboard</Link>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </Button>
           </div>
         </div>
       </main>
     </>
-<<<<<<< HEAD
 
 
             />;
@@ -271,7 +264,6 @@ export default function AdminDashboard() {
 }
 
   )
-=======
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

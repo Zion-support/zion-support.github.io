@@ -1,10 +1,13 @@
 import { useState } from 'react';
-<<<<<<< HEAD
 
 import { Copy, Send } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
 import type { Prompt } from '@/types/prompts';
 
+import { Copy, Send } from 'lucide-react
+import { Button  } from '@/components/ui/button';
+import type { Prompt } from '@/types/prompts';
+pr-12325
 interface PromptCardProps {;
   prompt: Prompt;
 
@@ -25,7 +28,6 @@ export function PromptCard(): any ({ prompt }: PromptCardProps) {;
     const encoded = encodeURIComponent(prompt && prompt.text);
     window && window.open(`/zion-gpt?prompt=${encoded}`, '_blank');
 
-=======
 import { Copy, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import type { Prompt } from '@/types/prompts';
@@ -46,7 +48,7 @@ setTimeout(() => setCopied(false), 2000);
     const encoded = encodeURIComponent(prompt.text);
 window.open(`/zion-gpt?prompt=${encoded}`, '_blank');
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
   return (
     <div className='p-4 border rounded-md bg-background flex flex-col justify-between'>
@@ -59,15 +61,11 @@ window.open(`/zion-gpt?prompt=${encoded}`, '_blank');
           aria-label='Copy prompt'
         >
           {copied ? 'Copied' : <Copy className='w-4 h-4' />}
-<<<<<<< HEAD
 
 
 }
   );
-<<<<<<< HEAD
-=======
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
 import { useState } from 'react';
@@ -99,6 +97,27 @@ function PromptCard() {
       <p className='mb - 4 text - sm'>{prompt.text}</p>;
       <div className='flex gap - 2 mt - auto'>;
         <Button;
+  };
+
+    const encoded = encodeURIComponent(prompt && prompt.text);`;
+  return (
+    <div className='p-4 border rounded-md bg-background flex flex-col justify-between'>
+</div>
+      <p className='mb-4 text-sm'>{prompt.text}</p>
+      <div className='flex gap-2 mt-auto'>
+        <Button;
+          variant='outline
+          size='sm
+          onClick={handleCopy}
+          aria-label='Copy prompt
+        >
+
+          {copied ? 'Copied' : <Copy className='w-4 h-4' />}
+
+    <div className='p - 4 border rounded - md bg - background flex flex - col justify - between'>;
+      <p className='mb - 4 text - sm'>{prompt.text}</p>;
+      <div className='flex gap - 2 mt - auto'>;
+pr-12325
           variant='outline';
           size='sm';
           on_click={handle_copy}
@@ -123,7 +142,6 @@ function PromptCard() {
 }
 
 ;
-=======
         </Button>
         <Button
           variant='secondary'
@@ -137,4 +155,23 @@ function PromptCard() {
     </div>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+          {copied ? 'Copied' : <Copy className='w - 4 h - 4' />}
+
+        ;
+          variant='secondary';
+          on_click={handle_send}
+          aria - label='Send to ZionGPT';
+
+          <Send className='w - 4 h - 4' />        ;
+
+      </div>;)
+    </div>);
+}        <Button variant="secondary" size="sm" on_click={handle_send} aria - label="Send to ZionGPT">;"
+"
+          <Send className="w - 4 h - 4" />;"
+
+      </div>;
+    </div>);"`;
+pr-12325

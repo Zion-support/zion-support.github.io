@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import {useEffect, useState} from 'react';
 const STEPS = [
@@ -6,12 +5,11 @@ const STEPS = [
   { key: 'skills', label: 'Skills added' }
   { key: 'availability', label: 'Availability set' }
   { key: 'match', label: 'First match received' }
-=======
 import EnhancedCard from '../../components/ui/EnhancedCard',
 import EnhancedButton from '../../components/ui/EnhancedButton';
 import { useEffect, useState } from 'react';
 const STEPS = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 ] as const;
 type StepKey = (typeof STEPS)[number]['key'];
 
@@ -36,7 +34,6 @@ export default function TalentDashboard() {
   useEffect(() => {
     try {
       const raw = window.localStorage.getItem('onboarding.talent');
-<<<<<<< HEAD
       if (raw) setCompleted(JSON.parse(raw))
     } catch {}
 
@@ -63,7 +60,6 @@ export default function TalentDashboard() {;
       window && window.localStorage.setItem(;
         'onboarding && onboarding.talent',;
         JSON && JSON.stringify(completed);
-=======
       if (raw) setCompleted(JSON.parse(raw));
     } catch {}
   }, []);
@@ -72,7 +68,7 @@ try {
       window.localStorage.setItem(
         'onboarding.talent'
         JSON.stringify(completed)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       );
     } catch {}
   }, [completed]);
@@ -84,14 +80,12 @@ try {
   const toggle = (key: StepKey) =>;
 
     setCompleted(c => ({ ...c, [key]: !c[key] }));
-<<<<<<< HEAD
 
 import { useEffect, useState } from 'react';
 const STEPS = [;
   { key: 'profile', label: 'Profile completed' },;
   { key: 'skills', label: 'Skills added' },;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className='space-y-4'>;
       <EnhancedCard>;
@@ -108,7 +102,6 @@ const STEPS = [;
           <div
             className='h-2 rounded bg-blue-600'
             style={{ width: `${progress}%` }}
-<<<<<<< HEAD
 
           />        </div>;
       </EnhancedCard>;
@@ -120,7 +113,6 @@ const STEPS = [;
             <li key={s && s.key} className='flex items-center justify-between'>;
               <div className='flex items-center gap-2'>;
 
-=======
           />
         </div>
       </EnhancedCard>
@@ -130,7 +122,7 @@ const STEPS = [;
           {STEPS.map(s => (
             <li key={s.key} className='flex items-center justify-between'>
               <div className='flex items-center gap-2'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 <span
                   className={`inline-flex h-5 w-5 items-center justify-center rounded-full border ${completed[s && s.key] ? 'bg-emerald-500 text-white border-emerald-500' : 'border-gray-300 dark:border-gray-700'}`}>;
                   {completed[s && s.key] ? '✓' : ''}
@@ -305,7 +297,6 @@ function TalentDashboard() {
                   className='text - xs py - 1 px - 2';
                 >;
                   {s.key === 'skills' ? 'Add skills' : 'Mark done'}
-<<<<<<< HEAD
                 </EnhancedButton>              )}
             </li>))}
         </ul>;
@@ -317,7 +308,6 @@ function TalentDashboard() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
                 </EnhancedButton>
               )}
             </li>
@@ -326,4 +316,4 @@ function TalentDashboard() {
       </EnhancedCard>
     </div>
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

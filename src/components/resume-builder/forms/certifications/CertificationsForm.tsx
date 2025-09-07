@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 return (
 
     <div className='space-y-6'>;
@@ -14,7 +13,6 @@ return (
 
       {certifications && certifications.length > 0 && (;
 
-=======
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
@@ -76,7 +74,7 @@ interface CertificationsFormProps {
         </p>
       </div>
       {certifications.length > 0 && (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         <CertificationsList
           certifications={certifications}
           onEdit={handleEdit}
@@ -115,7 +113,6 @@ interface CertificationsFormProps {
                     setEditingId(null),
 
                     form.reset({
-<<<<<<< HEAD
                       name: '',
                       issuing_organization: '',
                       issue_date: '',
@@ -131,7 +128,6 @@ interface CertificationsFormProps {
                       expiration_date: '',
                       credential_id: '',
                       credential_url: ''})
-=======
                       name: ''
                       issuing_organization: ''
                       issue_date: ''
@@ -139,7 +135,7 @@ interface CertificationsFormProps {
                       credential_id: ''
                       credential_url: ''
                     })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   } else {
                     onBack()
 
@@ -200,7 +196,6 @@ interface CertificationsFormProps {
         </Form>
       </div>
     </div>
-<<<<<<< HEAD
   )
 
               </Button>;
@@ -222,14 +217,12 @@ interface CertificationsFormProps {
         </Form>;
       </div>;
     </div>;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   );
 
 }> {;
   editingId ? 'Cancel' : 'Back' ;
 }</Button> Next </Button> </div> </div> </form> </Form> </div> </div>) ;
-<<<<<<< HEAD
 }'"}
 
       // Check condition
@@ -345,6 +338,5 @@ if ( {) {
 
 }
 ;
-=======
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

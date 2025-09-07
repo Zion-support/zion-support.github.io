@@ -1,35 +1,38 @@
-<<<<<<< HEAD
 import { cn } from '@/lib / utils';
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { StarIcon } from 'lucide-react';
-<<<<<<< HEAD
-=======
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { StarIcon } from 'lucide-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import useStateimport Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import useState
 import { Star } from 'lucide-react'
-=======
+import { cn } from '@/lib / utils';
+import { Badge } from '@/components/ui/ badge';
+import { Button } from '@/components/ui/ button';
+import { StarIcon } from 'lucide-react';
+pr-12325
 import Image from 'next / image'; // Import next / image;
 import React, { useState } from 'react'; // Import useStateimport Image from 'next / image'; // Import next / image;
 import React, { useState } from 'react'; // Import useState;
 import { Star } from 'lucide-react';
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ListingScoreCardProps {
   title: string;
+interface ListingScoreCardProps {
+  // TODO: Implement
+}
+  title: string;,
+pr-12325
   description: string;
   image?: string;
   category: string;
   tags?: string[];
   author?: string;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 interface ListingScoreCardProps {
   title: string,
   description: string,
@@ -41,26 +44,27 @@ interface ListingScoreCardProps {
   aiScore?: number,
   rating?: number,
   reviewCount?: number,
-=======
   authorImage?: string;
   aiScore?: number;
   rating?: number;
   reviewCount?: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   className?: string
 }
 
 export function ListingScoreCard({ 
-<<<<<<< HEAD
   title, 
   description, 
   image, 
   category, 
-=======
 export function ListingScoreCard(): any ({;
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+export function ListingScoreCard(): any ({;
+
+
+pr-12325
   tags,
   author,
   authorImage,
@@ -69,7 +73,6 @@ export function ListingScoreCard(): any ({;
   reviewCount = 0,
   className
 }: ListingScoreCardProps) {
-<<<<<<< HEAD
   const [mainImageError, setMainImageError] = useState(false),
   const [authorImageError, setAuthorImageError] = useState(false),
 
@@ -81,7 +84,6 @@ export function ListingScoreCard(): any ({;
       {image && !mainImageError && (
         <div className="h-48 w-full overflow-hidden relative"> {/* Added relative for Image layout fill */}
           <Image
-=======
 
 
       {image && !mainImageError && (
@@ -89,7 +91,6 @@ export function ListingScoreCard(): any ({;
           <Image
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             src={image} 
             alt={title} 
             className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -98,11 +99,8 @@ export function ListingScoreCard(): any ({;
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // General sizes
           />
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </div>
       )}
       {(!image || mainImageError) && ( // Fallback if no image or error
@@ -128,10 +126,7 @@ export function ListingScoreCard(): any ({;
           )}
         </div>
 
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
         <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>
         
@@ -150,6 +145,47 @@ import { cn } from "@/lib/utils",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
 import { StarIcon } from 'lucide-react';
+  className;)
+}: ListingScoreCardProps) {
+
+
+      {image && !mainImageError && (
+        <div className="h-48 w-full overflow-hidden relative"> {/* Added relative for Image layout fill */}"
+</div>
+          <Image;
+            src={image} 
+            alt={title} "
+            className="object-cover transition-transform duration-300 group-hover:scale-105"")
+            onError={() => setMainImageError(true)}
+
+        </div>"
+        <div className="h-48 w-full overflow-hidden bg-zion-blue-light/10 flex items-center justify-center">"
+          <span className="text-zion-slate-light text-sm">No Image</span>"
+      <div className="flex flex-col p-4 flex-grow">"
+        <div className="mb-2 flex items-center justify-between">"
+          <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">"
+
+          "
+            <div className="text-xs italic text-zion-slate-light">Beta – simulated results</div>""
+              <div className="flex items-center px-2 py-1 bg-zion-cyan/10 rounded text-zion-cyan text-xs">"
+                <span className="font-medium mr-1">AI Match:</span>"
+                <span>{aiScore}%</span>
+
+        <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>""
+        <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>""
+          <div className="flex items-center gap-1 mb-4">"
+            <div className="flex">"
+                <StarIcon;
+                  key={star}
+                  className={cn("
+                    "h-4 w-4",")
+                    star <= Math.round(rating) "
+                      ? "text-zion-cyan fill-zion-cyan"""
+                      : "text-zion-slate-light"""
+import { cn } from "@/lib/utils",;""
+import { Badge } from "@/components/ui/badge",;""
+import { Button } from "@/components/ui/button",;""
+pr-12325
 import Image from 'next/image', // Import next/image;
 import React, { useState } from 'react', // Import useState;
 interface ListingScoreCardProps {;
@@ -167,10 +203,10 @@ interface ListingScoreCardProps {;
 }
 ;
 export function ListingScoreCard({;
-<<<<<<< HEAD
 export function ListingScoreCard(): any ({;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+;
+export function ListingScoreCard({;
+pr-12325
   title,;
   description,;
   image,;
@@ -181,9 +217,9 @@ export function ListingScoreCard(): any ({;
   aiScore,;
   rating = 0,;
   reviewCount = 0,;
-<<<<<<< HEAD
-=======
   className,;
+  className,;)
+pr-12325
 }: ListingScoreCardProps) {;
   const [mainImageError, setMainImageError] = useState(false);
   const [authorImageError, setAuthorImageError] = useState(false);
@@ -192,7 +228,6 @@ export function ListingScoreCard(): any ({;
     >;
       {image && !mainImageError && (;
         <div className='h-48 w-full overflow-hidden relative'>;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   author_image?: string;
   ai_score?: number;
   rating?: number;
@@ -291,8 +326,6 @@ function ListingScoreCard() {
 
         </p>;
 
-<<<<<<< HEAD
-=======
   title;
   description;
   image;
@@ -307,7 +340,7 @@ function ListingScoreCard() {
                       : "text-zion-slate-light"
                   )}
                 />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               ))}
             </div>
             <span className="text-sm text-zion-slate-light ml-1">
@@ -333,7 +366,6 @@ function ListingScoreCard() {
             {tags.map((tag, i) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
                 {tag}
-=======
         {rating > 0 && (;
           <div className='flex items-center gap-1 mb-4'>;
             <div className='flex'>;
@@ -352,6 +384,64 @@ function ListingScoreCard() {
                     star <= Math.round(rating);
                       ? "text-zion-cyan fill-zion-cyan";
                       : "text-zion-slate-light";
+
+        <div className='h-48 w-full overflow-hidden relative'>;
+        <div className='h - 48 w - full overflow - hidden relative'>;
+            alt={title}
+            className='object - cover transition - transform duration - 300 group - hover:scale - 105';
+            on_error={() => setMainImageError (true)}
+
+        <div className='h-48 w-full overflow-hidden bg-zion-blue-light/10 flex items-center justify-center'>;
+          <span className='text-zion-slate-light text-sm'>No Image</span>;
+        </div>;
+      <div className='flex flex-col p-4 flex-grow'>;
+        <div className='mb-2 flex items-center justify-between'>;
+          <Badge;
+            variant='secondary
+            className='bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30'>;
+
+            <div className='text-xs italic text-zion-slate-light'>;
+              <div className='flex items-center px-2 py-1 bg-zion-cyan/10 rounded text-zion-cyan text-xs'>;
+                <span className='font-medium mr-1'>AI Match:</span>;
+                <span>{aiScore}%</span>;
+        <h3 className='text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors'>;
+</h3>
+        </h3>;
+        <p className='text-zion-slate mb-4 flex-grow line-clamp-2'>;
+</p>
+        </div>)}
+        <div className='h - 48 w - full overflow - hidden bg - zion - blue - light / 10 flex items - center justify - center'>;
+          <span className='text - zion - slate - light text - sm'>No Image</span>;
+      <div className='flex flex - col p - 4 flex - grow'>;
+        <div className='mb - 2 flex items - center justify - between'>;
+            variant='secondary';
+            className='bg - zion - purple / 20 text - zion - cyan hover:bg - zion - purple / 30';
+
+            <div className='text - xs italic text - zion - slate - light'>;
+            </div>) : (
+              <div className='flex items - center px - 2 py - 1 bg - zion - cyan / 10 rounded text - zion - cyan text - xs'>;
+                <span className='font - medium mr - 1'>AI Match:</span>;
+                <span>{ai_score}%</span>;)
+              </div>))}
+        <h3 className='text - xl font - bold mb - 2 text - white group - hover:text - zion - purple transition - colors'>;
+        <p className='text - zion - slate mb - 4 flex - grow line - clamp - 2'>;
+        </p>;
+          <div className='flex items - center gap - 1 mb - 4'>;
+            <div className='flex'>;
+
+
+          <div className='flex items-center gap-1 mb-4'>;
+                  className={cn(
+                    'h-4 w-4',')
+                    star <= Math && Math.round(rating)
+                      ? 'text-zion-cyan fill-zion-cyan
+                      : 'text-zion-slate-light
+                  )}                />;
+
+                    star <= Math.round(rating);
+                      ? "text-zion-cyan fill-zion-cyan";""
+                      : "text-zion-slate-light";"
+pr-12325
                   )}
                 />;
 
@@ -373,23 +463,19 @@ function ListingScoreCard() {
                 key={i}
                 variant='outline'
                 className='border-zion-slate-dark text-zion-slate-light'>                {tag}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               </Badge>;
             ))}
           </div>;
         )}
-<<<<<<< HEAD
         
         <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
           Request Quote
         </Button>
         
-=======
 
 
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         {author && (
           <div className='flex items-center mt-4 pt-4 border-t border-zion-blue-light'>
             {authorImage && !authorImageError ? (
@@ -467,28 +553,59 @@ function ListingScoreCard() {
             )}
 
 
-<<<<<<< HEAD
                 {author.charAt(0)}
               </div>
             )}
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <span className="text-sm text-zion-slate-light">{author}</span>
           </div>
         )}
-<<<<<<< HEAD
       </div>;
     </div>;
-<<<<<<< HEAD
 ;
-=======
   );
 
 }
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
       </div>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+            </div>;"
+            <span className='text-sm text-zion-slate-light ml-1'>;
+</span>
+            </span>;
+          <div className='flex flex-wrap gap-2 mb-4'>;
+                key={i}
+                variant='outline
+                className='border-zion-slate-dark text-zion-slate-light'>                {tag}
+
+          <div className='flex items-center mt-4 pt-4 border-t border-zion-blue-light'>
+              <div className='relative h-8 w-8 rounded-full mr-2 overflow-hidden'>
+        <Button className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'>;
+
+          <div className='flex items-center mt-4 pt-4 border-t border-zion-blue-light'>;
+              <div className='relative h-8 w-8 rounded-full mr-2 overflow-hidden'>;
+                    star <= Math.round (rating);
+                      ? 'text - zion - cyan fill - zion - cyan';
+                      : 'text - zion - slate - light')}                />))}
+            <span className='text - sm text - zion - slate - light ml - 1'>;
+          <div className='flex flex - wrap gap - 2 mb - 4'>;
+                variant='outline';
+                className='border - zion - slate - dark text - zion - slate - light';
+              >                {tag}
+
+        <Button className='w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white'>;
+
+          <div className='flex items - center mt - 4 pt - 4 border - t border - zion - blue - light'>;
+              <div className='relative h - 8 w - 8 rounded - full mr - 2 overflow - hidden'>;
+                  src={author_image}
+                  alt={author}
+
+
+              <div className='h - 8 w - 8 rounded - full bg - zion - purple / 20 mr - 2 flex items - center justify - center text - zion - purple'>;
+</div>)
+            <span className='text - sm text - zion - slate - light'>{author}</span>;
+    </div>);
+              <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2 flex items-center justify-center text-zion-purple">"
+            <span className="text-sm text-zion-slate-light">{author}</span>"
+pr-12325

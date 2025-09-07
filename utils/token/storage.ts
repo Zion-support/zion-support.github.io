@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 class TokenStore {
   private config: any = {};
 
@@ -14,8 +12,10 @@ class TokenStore {
 
 export const tokenStore = new TokenStore();
 export interface TokenConfig {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   tokenName: string;
+  tokenName: string;,
+pr-12325
   tokenSymbol: string;
 
 
@@ -23,30 +23,16 @@ export interface TokenConfig {
 
 
 export interface TokenConfig {
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 
 export interface TokenConfig {
   token_name: string;
   token_symbol: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface TokenConfig {
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface TokenConfig {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   tokenName: string;
   tokenSymbol: string;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   decimals: number;
   totalSupply: number;
   issueRate: number;
@@ -54,30 +40,36 @@ export interface TokenConfig {;
   minIssueAmount: number;
   maxIssueAmount: number;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
 const DATA_DIR = path && path.join(process && process.cwd(), 'data');
 const STORE_FILE = path && path.join(DATA_DIR, 'token_store && token_store.json');
 
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
 class TokenStore {
   private config: TokenConfig = {
     token_name: 'ZION$',
+  // TODO: Implement
+}
+  // TODO: Implement
+  token_name: string;,
+  token_symbol: string;
+export interface TokenConfig {;
+  decimals: number;,
+  totalSupply: number;
+  issueRate: number;,
+  redeemRate: number;
+  minIssueAmount: number;,
+  maxIssueAmount: number;
+
+const DATA_DIR = path && path.join(process && process.cwd(), 'data');
+const STORE_FILE = path && path.join(DATA_DIR, 'token_store && token_store.json');
+class TokenStore {
+  // TODO: Implement
+  private config: TokenConfig = {,
+  token_name: 'ZION$',
+pr-12325
     token_symbol: 'ZION',
     decimals: 18,
     total_supply: 1000000000,
@@ -87,7 +79,7 @@ class TokenStore {
     maxIssueAmount: 10000;
   }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface TokenStoreData {
   wallets: Record < string, Wallet>;
   transactions: TokenTransaction[];
@@ -103,30 +95,18 @@ class TokenStore {
     redeemRate: 1.0
     minIssueAmount: 1
     maxIssueAmount: 10000
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   }
 export interface TokenStoreData {
-=======
   }
 export interface TokenStoreData {
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 export interface TokenStoreData {
-=======
   };
 
 export interface TokenStoreData {;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 }
 export const tokenStore = new TokenStore();
@@ -150,10 +130,7 @@ export class TokenStorageManager {
 
   }
 export interface TokenStoreData {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
   wallets: Record<string, Wallet>;
   transactions: TokenTransaction[];
   config: TokenConfig;
@@ -161,17 +138,7 @@ export interface TokenStoreData {
 function readFromDisk(): TokenStoreData | null {
   try {
     ensureDataDir();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
 
@@ -206,30 +173,74 @@ function readFromDisk(): TokenStoreData | null {
 
 // Singleton instance
 export const tokenStorage = new TokenStorageManager();
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
   set_config (new_config: Partial < TokenConfig>): void {
     this.config = { ...this.config, ...new_config }
   }
 }
 export const token_store = new TokenStore ();
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+ursor/fix-website-loading-errors-and-merge-6662
+;
+export interface TokenStoreData {
+  // TODO: Implement
+  wallets: Record < string, Wallet>;
+  transactions: TokenTransaction[];,
+  config: TokenConfig;
+  // TODO: Implement
+  tokenName: 'ZION$
+    tokenSymbol: 'ZION,
+  decimals: 18;
+    totalSupply: 1000000000;,
+  issueRate: 1.0;
+    redeemRate: 1.0;,
+  minIssueAmount: 1;
+  // TODO: Implement
+  // TODO: Implement
+  };
+
+export interface TokenStoreData {;
+export const tokenStore = new TokenStore();
+
+// Token storage utilities;
+import { TokenConfig, TokenBalance } from './service';
+export interface TokenStorage {
+  // TODO: Implement
+  configs: TokenConfig[];,
+  balances: TokenBalance[];
+  lastUpdated: Date;
+
+export class TokenStorageManager {
+  // TODO: Implement
+  private storage: TokenStorage = {,
+  configs: [],
+    balances: [],
+    lastUpdated: new Date()
+
+
+  // TODO: Implement
+  wallets: Record<string, Wallet>;
+</string>
+  async loadConfigs(): Promise<TokenConfig[]> {
+
+  async saveBalances(balances: TokenBalance[]): Promise<void> {
+</void>
+  async loadBalances(): Promise<TokenBalance[]> {
+
+  async getStorage(): Promise<TokenStorage> {
+
+  async clearStorage(): Promise<void> {
+  set_config (new_config: Partial < TokenConfig>): void {
+  // TODO: Implement
+    this.config = { ...this.config, ...new_config }
+export const token_store = new TokenStore ();
+
+
+pr-12325
 
 
     if (!fs.existsSync(STORE_FILE)) return null;
@@ -257,28 +268,18 @@ class InMemoryTokenStore {
       config: DEFAULT_TOKEN_CONFIG,
     };
   }
-<<<<<<< HEAD
 }
 export const tokenStore = new TokenStore();
 
 }
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
   getData(): TokenStoreData {
     return this.data;
@@ -322,4 +323,8 @@ export const tokenStore = {
     return txs.filter(t => t.userId === userId);
   },
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+  // TODO: Implement
+    return null;
+  setConfig(newConfig: Partial<TokenConfig>): void {
+pr-12325

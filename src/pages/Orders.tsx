@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-=======
   TableRow,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
 
 import Link from 'next / link'; // Changed from react-router-dom;
@@ -15,19 +13,15 @@ import {
   TableCell
   TableHead
   TableHeader
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {
   Table,
   TableBody,
   TableCell,
 } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
-=======
 
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export default function OrdersPage() {;
 
@@ -35,7 +29,6 @@ export default function OrdersPage() {;
   const { data: orders, isLoading } = useGetOrdersQuery(user?.id);
 
   const formatDate = (date: string) => new Date(date).toLocaleDateString();
-<<<<<<< HEAD
         return (
           <Badge variant='warning' className='flex items-center gap-1'>;
             <Clock className='h-3 w-3' /> In Escrow;
@@ -63,16 +56,24 @@ import {
   TableBody,
   TableCell,
 
-=======
 TableRow;
 } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
 import Link from 'next/link', // Changed from react-router-dom
 import { useAuth  } from '@/hooks/useAuth';
 import { useGetOrdersQuery } from '@/hooks/useOrders';
 import { Table;
+import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
+import Link from 'next / link'; // Changed from react-router-dom;
+import { use_auth } from '@/hooks/ use_auth';
+import { useGetOrdersQuery } from '@/hooks/ use_orders';
+import {
+  // TODO: Implement
+}
+  Table;
+pr-12325
   TableBody;
   TableCell;
   TableHead;
@@ -84,7 +85,6 @@ import { EmptyState } from '@/components/ui/empty-state';
 export default function OrdersPage() {;
   const { user } = useAuth();
   const { data: orders, isLoading } = useGetOrdersQuery(user?.id);
-<<<<<<< HEAD
 
   const formatDate = (date: string) => new Date(date).toLocaleDateString();
   const getStatusBadge = (status: string,) => {
@@ -97,14 +97,18 @@ import { EmptyState } from '@/components/ui/empty-state',
 export default function OrdersPage() {
   const { user } = useAuth(),
   const { data: orders, isLoading } = useGetOrdersQuery(user?.id),
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+export default function OrdersPage() {;
+
+  const { user } = useAuth();
+  const { data: orders, isLoading } = useGetOrdersQuery(user?.id);
+
+  const formatDate = (date: string) => new Date(date).toLocaleDateString();
+pr-12325
 
   const getStatusBadge = (status: string,) => {;
     switch (status) {;
       case 'in_escrow':;
 
-<<<<<<< HEAD
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'in_escrow':
@@ -130,9 +134,8 @@ export default function OrdersPage() {
         return status
     }
 
-=======
   const formatDate = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="container max-w-4xl py-10">
       <h1 className="text-3xl font-bold mb-6">Order History</h1>
@@ -192,10 +195,8 @@ export default function OrdersPage() {
       )}
     </div>;
   );
-<<<<<<< HEAD
 }
 ;
-=======
         return (
           <Badge variant='warning' className='flex items-center gap-1'>;
             <Clock className='h-3 w-3' /> In Escrow;
@@ -221,9 +222,20 @@ export default function OrdersPage() {
       default:;
         return status;
     }
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+        return (
+          <Badge variant='warning' className='flex items-center gap-1'>;
+
+            <Clock className='h-3 w-3' /> In Escrow;
+
+          ;
+          <Badge variant='success' className='flex items-center gap-1'>;
+
+            <CheckCircle2 className='h-3 w-3' /> Released;
+</CheckCircle2>
+          <Badge variant='destructive' className='flex items-center gap-1'>;
+
+            <ShieldAlert className='h-3 w-3' /> Disputed;
+
+          ;)
+pr-12325

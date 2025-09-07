@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   )
   );
 };
@@ -30,7 +29,6 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
   const items: any[] = (data?.items || []).slice(0, 60);
   return (
     <EnhancedLayout>
@@ -52,5 +50,5 @@
       </div>
     </EnhancedLayout>
   )
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }

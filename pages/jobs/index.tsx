@@ -19,7 +19,6 @@ import { useEffect, useState  } from 'react';
 import InteractiveSearch from '../../components/ui/InteractiveSearch';
 export default function JobsListPage() {
   const [loading, setLoading] = useState(true);
-<<<<<<< HEAD
 
   useEffect(() => {
     const t = setTimeout(() => setLoading(false), 500);
@@ -42,9 +41,8 @@ export default function JobsListPage() {
     },
   ];
 ;
-=======
   useEffect(() => { const t = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
 import EnhancedLoading from '../../components/ui/EnhancedLoading',
@@ -80,7 +78,6 @@ export default function JobsListPage() {
                   title={j.title}
                   subtitle={j.subtitle}
                   description={j.description}
-<<<<<<< HEAD
                   footer={<span className='text - blue - 600'>View Job →</span>}
                 />              </a>;
             </Link>))}
@@ -109,7 +106,6 @@ export default function JobsListPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
                   footer={<span className='text-blue-600'>View Job →</span>}
                 />
               </a>
@@ -119,4 +115,4 @@ export default function JobsListPage() {
       )}
     </div>
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

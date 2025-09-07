@@ -3,6 +3,13 @@ import {useState, useCallback} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Notification, FilterType, NotificationContextType} from './types';
 
+
+
+
+import {useState, useCallback} from 'react';
+import {supabase} from '@/integrations / supabase / client';
+import {Notification, FilterType, NotificationContextType} from './types';
+pr-12325
 export const useNotificationOperations = (user_id?: string): NotificationContextType => {
   const [notifications, set_notifications] = useState < Notification[]>([]);
   const [loading, set_loading] = useState (false);
@@ -15,6 +22,14 @@ if (return) {
 }
     set_loading (true);
     try {
+    // Check condition;
+if (return) {
+  $2;
+}
+    set_loading (true);
+    try {
+  // TODO: Implement
+pr-12325
       const { data, error } = await supabase;
         .from ('notifications');
         .select ('*');
@@ -37,6 +52,83 @@ if (throw error) {
     filter;
     markAsRead;
     markAllAsRead;import { useState, useCallback } from 'react',;
+      // Check condition;
+if (throw error) {
+      set_notifications (data || []);
+    } catch (err) {
+      console.error ('Error fetching notifications:', err);
+    } finally {
+  // TODO: Implement
+      set_loading (false);
+
+
+  const filteredNotifications = notifications && notifications.filter(notification => {
+
+  // TODO: Implement
+})
+    switch (filter) {
+      case 'unread':
+        return !notification && notification.read;
+      case 'messages':
+        return notification && notification.type === 'message';
+      case 'onboarding':
+        return notification && notification.type === 'onboarding';
+      case 'system':
+        return notification && notification.type === 'system';
+      default: return true;
+  });
+
+
+  const unreadCount = notifications && notifications.filter(n => !n && n.read).length;
+
+
+  }, [user_id]);
+  const markAsRead = useCallback (async (id: string) => {
+    // Check condition;
+if (return, ) {
+  // TODO: Implement
+      const { error } = await supabase;
+        .update ({ read: true });
+        .eq ('id', id);
+      // Check condition;
+      await fetch_notifications ();
+      console.error ('Error marking notification as read:', err);
+  }, [user_id, fetch_notifications]);
+  const markAllAsRead = useCallback (async () => {
+    // Check condition;
+  // TODO: Implement
+        .eq ('read', false);
+      // Check condition;
+      console.error ('Error marking all notifications as read:', err);
+  const dismiss_notification = useCallback (async (id: string) => {
+    // Check condition;
+  // TODO: Implement
+        .delete ();
+      // Check condition;
+      console.error ('Error dismissing notification:', err);
+  const filtered_notifications = notifications.filter (notification => {)
+      case 'unread':;
+        return !notification.read;
+      case 'messages':;
+        return notification.type === 'message';
+      case 'onboarding':;
+        return notification.type === 'onboarding';
+      case 'system':;
+        return notification.type === 'system';
+  const unread_count = notifications.filter (number => !n.read).length;
+  return {
+  // TODO: Implement
+    notifications;
+    filtered_notifications;
+    unread_count;
+    loading;
+    filter;
+    markAsRead;
+    markAllAsRead;
+
+    dismissNotification;
+import { useState, useCallback } from 'react',;
+pr-12325
 import { supabase } from '@/integrations/supabase/client',;
 import { Notification, FilterType, NotificationContextType } from './types',;
 export const useNotificationOperations = (userId?: string): NotificationContextType => {;
@@ -129,3 +221,8 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
     fetch_notifications}
 }
 ;
+
+  const [filter, setFilter] = useState<FilterType>('all'),;
+
+
+pr-12325

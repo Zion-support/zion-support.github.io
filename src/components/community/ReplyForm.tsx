@@ -1,35 +1,24 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 interface ReplyFormProps {;
   onSubmit: (content: string) => Promise<void>;
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from 'react'
 import { useForm, ControllerRenderProps } from 'react-hook-form'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
-<<<<<<< HEAD
-=======
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 import { useState } from 'react';
 import { useForm, ControllerRenderProps } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
   FormMessage,;
 } from '@/components/ui/form';
 import { Card, CardContent } from '@/components/ui/card';
@@ -46,14 +35,12 @@ import {
   FormMessage
 } from "@/components/ui/form",
 import { Card, CardContent } from "@/components/ui/card";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>;
   parentId?: string
 interface ReplyFormValues {
   content: string
-<<<<<<< HEAD
-=======
 
 
 
@@ -61,26 +48,20 @@ interface ReplyFormValues {
 interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>;
   parentId?: string
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
       content: '',;
     },;
   });
   const handleSubmit = async (values: ReplyFormValues) => {;
 
-<<<<<<< HEAD
 interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>;
   parentId?: string
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     setIsSubmitting(true);    try {
       await onSubmit(values.content)
       form.reset()
     } finally {
       setIsSubmitting(false)
-<<<<<<< HEAD
-=======
   parentId?: string;
 interface ReplyFormValues {;
   content: string;
@@ -145,6 +126,49 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
 
               render={({
                 field
+interface ReplyFormProps {;
+  onSubmit: (content: string) => Promise<void>;
+</void>
+  const form = useForm<ReplyFormValues>({;
+)
+  on_submit: (content: string) => Promise < void>;
+  parent_id?: string;
+interface ReplyFormValues {
+  // TODO: Implement
+}
+  content: string;
+export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
+  // TODO: Implement
+  const [is_submitting, setIsSubmitting] = useState (false);
+  const form = use_form < ReplyFormValues>({
+    default_values: {,
+  content: ,
+    },)
+  });
+  const handle_submit = async (values: ReplyFormValues) => {
+    setIsSubmitting (true);    try {
+  // TODO: Implement
+      await on_submit (values.content);
+      form.reset ();
+    } finally {
+  // TODO: Implement
+      setIsSubmitting (false);
+
+  return (
+    <Card>;
+
+
+      <CardContent className='pt - 6'>;
+
+        <Form {...form}>;
+          <form on_submit={form.handle_submit (handle_submit)}>;
+</form>
+            <FormField;
+              control={form.control}
+              name='content';
+              render={({
+                field;
+pr-12325
               }: {
 
                 field: ControllerRenderProps<ReplyFormValues, 'content'>;
@@ -155,17 +179,13 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
 
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <Card>
       <CardContent className="pt-6">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(handleSubmit)}>
             <FormField
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               control={form.control}
               name="content"
               render={({ field }: { field: ControllerRenderProps<ReplyFormValues "content"> }) => (
@@ -224,7 +244,6 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
         </Form>;
       </CardContent>;
     </Card>);
-<<<<<<< HEAD
               )}
             />
             <div className="mt-4 flex justify-end">
@@ -240,12 +259,60 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
 }
 }
 export default ReplyForm;
-=======
 }
 export default ReplyForm;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   );
 };
 export default ReplyForm;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+    <Card>
+
+      <CardContent className="pt-6">"
+
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(handleSubmit)}>
+              control={form.control}"
+              name="content"""
+              render={({ field }: { field: ControllerRenderProps<ReplyFormValues "content"> }) => ("
+
+                <FormItem>
+
+                  <FormControl>
+
+                    <Textarea;"
+                      className="min-h-[100px] resize-y""
+  },;
+  return (;
+"
+      <CardContent className="pt-6">;"
+
+          <form onSubmit={form.handleSubmit(handleSubmit)}>;
+              name="content";""
+              render={({ field }: { field: ControllerRenderProps<ReplyFormValues "content"> }) => (;"
+
+                <FormItem>;
+
+                  <FormControl>;
+                    <Textarea className='min-h-[100px] resize-y' {...field} />;
+
+                  ;
+                  <FormMessage />;
+
+            <div className='mt-4 flex justify-end'>;
+</div>
+              <Button type='submit' disabled={isSubmitting}>;
+
+            </div>;
+          </form>;
+                field: ControllerRenderProps < ReplyFormValues, 'content'>;')
+
+
+                    <Textarea className='min - h-[100px] resize - y' {...field} />;
+
+                )}
+            <div className='mt - 4 flex justify - end'>;
+              <Button type='submit' disabled={is_submitting}>;
+
+    );
+pr-12325

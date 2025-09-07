@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Get region flag based on country name (for demo purposes)
 
   const getRegionEmoji = (countryName: string | undefined): string => {
@@ -43,7 +42,6 @@
     }
   },
   
-=======
 
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -74,7 +72,7 @@ export function CountryServiceCard({
 }: CountryServiceCardProps) {
   // Get region flag based on country name (for demo purposes)
   const getRegionEmoji = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
       isPopular 
@@ -86,7 +84,6 @@ export function CountryServiceCard({
           <div className="flex items-center space-x-2">
             <span className="text-2xl" aria-hidden="true">{getRegionEmoji(country.country)}</span>
             <h3 className="text-lg font-semibold text-white truncate">{country.country || 'Unknown Country'}</h3>
-<<<<<<< HEAD
 
     if (!countryName) return "🌐",
     
@@ -139,8 +136,7 @@ export function CountryServiceCard({
           <div className="flex items-center space-x-2">
             <span className="text-2xl" aria-hidden="true">{getRegionEmoji(country.country)}</span>
             <h3 className="text-lg font-semibold text-white truncate">{country.country || 'Unknown Country'}</h3>
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
           {isPopular && (
             <Badge className='bg-zion-purple text-white border-none'>
@@ -305,8 +301,6 @@ import { Globe, Server, Clock, MapPin, Check } from 'lucide-react';
 
       </CardFooter>
     </Card>
-<<<<<<< HEAD
   )
-=======
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

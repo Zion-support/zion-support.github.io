@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 interface UserBadgesProps {
   badges: Badge[]
 }
-=======
 ;
 
 interface UserBadgesProps {
@@ -27,8 +24,6 @@ if (return null) {
 }
 const iconMap = {
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from 'lucide-react';
 import { Badge } from '@/types/community';
 import {
@@ -39,25 +34,21 @@ import {
 } from '@/components/ui/tooltip';
 
 const iconMap = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   Trophy,
   Award,
   BadgeCheck,
   Star,
-<<<<<<< HEAD
   MessageSquare
 },
 
 export const UserBadges = ({ badges }: UserBadgesProps) => {
   if (!badges?.length) return null,
 
-<<<<<<< HEAD
   return (
     <div className="flex flex-wrap gap-2">
       {badges.map((badge) => {
         // Get the correct icon component based on the badge's icon name
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   return (
 
@@ -68,16 +59,12 @@ export default UserBadges;
 }
 }
 
-<<<<<<< HEAD
   return (
     <div className="flex flex-wrap gap-2">
       {badges.map((badge) => {
         // Get the correct icon component based on the badge's icon name
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,
         
-=======
   MessageSquare,
 };
 export const UserBadges = ({;
@@ -92,12 +79,11 @@ export const UserBadges = ({;
         const IconComponent =
           iconMap[badge.icon as keyof typeof iconMap] || Trophy;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         return (
           <TooltipProvider key={badge.id}>
             <Tooltip>
               <TooltipTrigger asChild>
-<<<<<<< HEAD
                 <div 
                   style={{ backgroundColor: badge.color + '20' }}
                   className="w-8 h-8 rounded-full flex items-center justify-center cursor-pointer"
@@ -105,7 +91,6 @@ export const UserBadges = ({;
                   <IconComponent 
                     style={{ color: badge.color }} 
                     className="w-4 h-4" 
-=======
                 <div
                   style={{ backgroundColor: badge.color + '20' }}
                   className='w-8 h-8 rounded-full flex items-center justify-center cursor-pointer'
@@ -113,27 +98,24 @@ export const UserBadges = ({;
                   <IconComponent
                     style={{ color: badge.color }}
                     className='w-4 h-4'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   />
                 </div>
               </TooltipTrigger>
               <TooltipContent>
-<<<<<<< HEAD
                 <div className="text-center">
                   <div className="font-medium">{badge.name}</div>
                   <div className="text-xs text-gray-500">{badge.description}</div>
-=======
                 <div className='text-center'>
                   <div className='font-medium'>{badge.name}</div>
                   <div className='text-xs text-gray-500'>
                     {badge.description}
                   </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
-<<<<<<< HEAD
         )
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from 'lucide-react';
 import { Badge } from "@/types/community",;
@@ -149,7 +131,6 @@ const iconMap = {;
   BadgeCheck;
   Star;
   MessageSquare;
-<<<<<<< HEAD
 export const UserBadges = ({ badges }: UserBadgesProps) => {;
   if (!badges?.length) return null,;
   return (;
@@ -185,7 +166,6 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
   );
 };
 export default UserBadges;
-=======
 };
 
 export const UserBadges = ({ badges }: UserBadgesProps) => {;
@@ -201,8 +181,6 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
         // Get the correct icon component based on the badge's icon name;
         const IconComponent = icon_map[badge.icon as keyof typeof icon_map] || Trophy;
 export default UserBadges;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
         );
       })}
     </div>
@@ -210,4 +188,4 @@ export default UserBadges;
 };
 export default UserBadges;
 '"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

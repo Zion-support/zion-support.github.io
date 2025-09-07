@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
   if (req.method === 'GET') {
@@ -37,16 +33,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth',;
 import { getFlagById } from '../../../../../utils/moderationDb',;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = parseUserFromRequest(req),
   try { ensureAdmin(user) } catch (e: any) { return res.status(e.statusCode || 403).json({ error: 'Forbidden' }) }
-=======
->>>>>>> pr-12243
+pr-12243
 
 
 
@@ -64,8 +57,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.setHeader('AllowGET')
   return res.status(405).end('Method Not Allowed');
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   const user = parseUserFromRequest(req);
   try { ensureAdmin(user) } catch (e: any) { return res.status(e.statusCode || 403).json({ error: 'Forbidden' }); }
 
@@ -81,4 +72,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.setHeader('Allow', 'GET');
   return res.status(405).end('Method Not Allowed');
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

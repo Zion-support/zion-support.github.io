@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 export default function AdminWeb3Page() {
-=======
 import React, { useEffect, useState } from 'react',
 import Head from 'next/head';
 export default function AdminWeb3Page() {
@@ -21,16 +19,14 @@ export default function AdminWeb3Page() {
       window.localStorage.setItem('zion-web3-users', JSON.stringify(list));
     setUsers(list);
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
   const metrics = {
     total: users.length,
     evm: users.filter(u => u.chain === 'evm').length,
     sol: users.filter(u => u.chain === 'sol').length,
     enabled: users.filter(u => u.enabled).length,
-<<<<<<< HEAD
     disabled: users.filter(u => !u.enabled).length},
-=======
 disabled: users.filter(u => !u.enabled).length,
   };
 
@@ -86,7 +82,7 @@ disabled: users.filter(u => !u.enabled).length,
   return (
     <>
       <Head><title>Admin — Web3</title></Head>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       <div className="max-w-3xl mx-auto space-y-6">
         <h1 className="text-xl font-semibold">Web3 Admin</h1>
         <div className="rounded-md border p-4">
@@ -107,7 +103,6 @@ disabled: users.filter(u => !u.enabled).length,
                   }} />
                 </label>
               </li>
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 export default function AdminWeb3Page(req, res) {
@@ -193,7 +188,6 @@ function AdminWeb3Page() {
       </div>;
 
 
-=======
             ))}
           </ul>
         </div>
@@ -201,4 +195,4 @@ function AdminWeb3Page() {
     </>
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

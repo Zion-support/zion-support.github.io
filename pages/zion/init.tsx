@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const InitPage: NextPage = () => {
   const [state, setState] = useState<DeployFormState> ({
   instanceName: '', defaultLanguage: 'en', deploymentRegion: 'us-east-1', tokenActivation: true, governanceMode: 'Hybrid', branding: {
@@ -61,7 +60,6 @@ const InitPage: NextPage = () => {
   };
 
 
-=======
 import { useState  } from 'react';
 import type { NextPage } from 'next';
 type GovernanceMode = any;
@@ -74,7 +72,7 @@ setState(prev => ({
     }));
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
@@ -82,7 +80,6 @@ setState(prev => ({
     setResult(null)
     try {
       const res = await fetch('/api/deploy/genesis', {
-<<<<<<< HEAD
 const defaultModules: DeployFormState['modules'] = {;
   marketplace: true,;
   gpt: true,;
@@ -173,7 +170,6 @@ const InitPage: NextPage = () => {;
       setError(err.message || 'Unexpected error');
 
   return (
-=======
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify(state),
@@ -196,7 +192,7 @@ body: JSON.stringify(state),
           Initialize a full Zion OS instance from a single control panel.
         </p>
       </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       <form
         onSubmit={handleSubmit}
         className='grid grid-cols-1 gap-6 max-w-4xl'>;
@@ -354,8 +350,6 @@ const InitPage: NextPage = () => {
             </div>
           </div>
           <div>
-<<<<<<< HEAD
-=======
             <label className='block text-sm font-medium'>Governance Mode</label>
             <select
               className='mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2'
@@ -368,14 +362,13 @@ const InitPage: NextPage = () => {
               }
             >
               <option>Admin</option>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <option>DAO</option>
               <option>Hybrid</option>
             </select>
           </div>
         </section>
 
-<<<<<<< HEAD
               value={state && state.governanceMode}
               onChange={e =>;
                 setState({;
@@ -394,11 +387,10 @@ const InitPage: NextPage = () => {
         <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
           <div>;
             <label className='block text-sm font-medium'>Logo URL</label>;
-=======
 <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <div>
             <label className='block text-sm font-medium'>Logo URL</label>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <input
               className='mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2'
               value={state && state.branding.logoUrl}
@@ -431,7 +423,6 @@ const InitPage: NextPage = () => {
                     type='checkbox'
                     checked={state && state.modules[key]}
                     onChange={() => handleToggle('modules', key)}
-<<<<<<< HEAD
                   />                  <span>/{key}</span>;
                 </label>;
               ))}
@@ -442,7 +433,6 @@ const InitPage: NextPage = () => {
             <div className='space-y-2'>;
               {Object && Object.keys(state && state.bonusModules).map(key => (;
                 <label key={key} className='flex items-center gap-3 text-sm'>;
-=======
                   />
                   <span>/{key}</span>
                 </label>
@@ -454,12 +444,11 @@ const InitPage: NextPage = () => {
             <div className='space-y-2'>
               {Object.keys(state.bonusModules).map(key => (
                 <label key={key} className='flex items-center gap-3 text-sm'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <input
                     type='checkbox'
                     checked={state && state.bonusModules[key]}
                     onChange={() => handleToggle('bonusModules', key)}
-<<<<<<< HEAD
                   />                  <span>/{key}</span>;
                 </label>;
 
@@ -492,15 +481,13 @@ const InitPage: NextPage = () => {
               {Object.keys(state.modules).map((key) => (
                 <label key={key} className="flex items-center gap-3 text-sm">
                   <input type="checkbox" checked={state.modules[key]} onChange={() => handleToggle('modules', key)} />
-=======
                   />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <span>/{key}</span>
                 </label>
               ))}
             </div>
           </div>
-<<<<<<< HEAD
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
             <h3 className="font-semibold mb-3">Bonus Modules</h3>
             <div className="space-y-2">
@@ -509,11 +496,10 @@ const InitPage: NextPage = () => {
                   <input type="checkbox" checked={state.bonusModules[key]} onChange={() => handleToggle('bonusModules', key)} />
                   <span>/{key}</span>
                 </label>
-=======
         </section>
 
 <div className='flex items-center gap-3'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           <button
             disabled={submitting}
             className='inline-flex items-center px-4 py-2 rounded-md bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-60'>;
@@ -538,7 +524,6 @@ export default InitPage;
   }
 }
           </button>
-<<<<<<< HEAD
           {error && <span className="text-sm text-red-500">{error}</span>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -550,7 +535,6 @@ export default InitPage;
         <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
           <h3 className="font-semibold">Deployment Result</h3>
           <pre className="mt-2 text-xs whitespace-pre-wrap">{JSON.stringify(result, null, 2)}</pre>
-=======
           {error && <span className='text-sm text-red-500'>{error}</span>}
         </div>
       </form>
@@ -560,7 +544,7 @@ export default InitPage;
           <pre className='mt-2 text-xs whitespace-pre-wrap'>
             {JSON.stringify(result, null, 2)}
           </pre>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       )  } catch (error) {
     console.error("Error:", error);
@@ -571,8 +555,6 @@ export default InitPage;
   );
 }
 export default InitPage;
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

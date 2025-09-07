@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 import { 
@@ -46,7 +45,6 @@ export default function AdvancedServicesShowcase2025() {
       const price = parseFloat(service.price.replace('$', '').replace(, '')),
       const matchesPrice = price >= priceRange[0] && price <= priceRange[1],
       return matchesSearch && matchesCategory && matchesPrice
-=======
 import {
   ArrowRight,
   Brain,
@@ -104,34 +102,30 @@ const matchesSearch =
       const price = parseFloat(service.price.replace('$', '').replace(',', ''));
       const matchesPrice = price >= priceRange[0] && price <= priceRange[1];
       return matchesSearch && matchesCategory && matchesPrice;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     })
     .sort((a, b) => {
       switch (sortBy) {
         case 'popularity':
           return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
         case 'price':
-<<<<<<< HEAD
           return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
-=======
 return (
             parseFloat(a.price.replace('$', '').replace(',', '')) -
             parseFloat(b.price.replace('$', '').replace(',', ''))
           );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         case 'rating':
           return b.rating - a.rating,
         case 'newest':
-<<<<<<< HEAD
           return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
         default: return 0
-=======
           return (
             new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
           );
         default:
           return 0;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       }
     }),
 
@@ -140,7 +134,6 @@ return (
     visible: {
       opacity: 1,
       transition: {
-<<<<<<< HEAD
         staggerChildren: 0.1
       }
     }
@@ -170,20 +163,18 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
         stagger_children: 0.1;
       }
     }
-=======
 staggerChildren: 0.1,
       },
     },
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
       opacity: 1
       y: 0
       transition: {
-<<<<<<< HEAD
 
         duration: 0.5;
       }
@@ -193,7 +184,6 @@ staggerChildren: 0.1,
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData?.icon || '🚀'
   },
-=======
 duration: 0.5,
       },
     },
@@ -204,7 +194,7 @@ duration: 0.5,
 return categoryData?.icon || '🚀';
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden'>
       <Head>
@@ -231,7 +221,6 @@ return categoryData?.icon || '🚀';
         />
       </Head>
       <EnhancedNavigation />
-<<<<<<< HEAD
       <section className="relative py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
@@ -257,16 +246,14 @@ return categoryData?.icon || '🚀';
             <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
       <section className="relative py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
-=======
       {/* Hero Section */}
 <section className='relative py-20 px-6'>
         <div className='max-w-7xl mx-auto text-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
       <section className="relative py - 20 px - 6">;
         <div className="max - w-7xl mx - auto text - center">;
           <motion.div;
@@ -277,7 +264,6 @@ return categoryData?.icon || '🚀';
 
 
               quantum technologies, and revolutionary IT services that are transforming industries worldwide.
-=======
           >
 <h1 className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent'>
               2025 Advanced Services Showcase
@@ -287,11 +273,10 @@ return categoryData?.icon || '🚀';
               services, advanced AI solutions, quantum technologies, and
               revolutionary IT services that are transforming industries
               worldwide.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
 
             {/* Stats */}
-<<<<<<< HEAD
               Discover our comprehensive collection of cutting-edge micro SAAS services, advanced AI solutions,
               quantum technologies, and revolutionary IT services that are transforming industries worldwide.
             </p>
@@ -304,14 +289,13 @@ return categoryData?.icon || '🚀';
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyan-400 mb-2">{allServices.length}+</div>
                 <div className="text-white/70">Advanced Services</div>
-=======
             <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>
               <div className='text-center'>
                 <div className='text-3xl font-bold text-cyan-400 mb-2'>
                   {allServices.length}+
                 </div>
                 <div className='text-white/70'>Advanced Services</div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
               <div className='text-center'>
                 <div className='text-3xl font-bold text-purple-400 mb-2'>
@@ -335,7 +319,6 @@ return categoryData?.icon || '🚀';
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
             <div className="mb-6">
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/50 w-5 h-5" />
@@ -366,7 +349,6 @@ return categoryData?.icon || '🚀';
   }
 }
                   className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300"
-=======
       {/* Search and Filters */}
 <section className='px-6 pb-12'>
         <div className='max-w-7xl mx-auto'>
@@ -400,13 +382,12 @@ className='bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10'
                   value={selectedCategory}
                   onChange={e => setSelectedCategory(e.target.value)}
                   className='w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   {categories.map(category => (
                     <option key={category.id} value={category.id}>
                       {category.name} ({category.count})
                     </option>
-<<<<<<< HEAD
                   ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -433,7 +414,6 @@ className='bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10'
   }
 }
                   className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300"
-=======
                   ))}
                 </select>
               </div>
@@ -446,7 +426,7 @@ className='bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10'
                   value={sortBy}
                   onChange={e => setSortBy(e.target.value as any)}
                   className='w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   <option value='popularity'>Popularity</option>
                   <option value='price'>Price (Low to High)</option>
@@ -454,7 +434,6 @@ className='bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10'
                   <option value='newest'>Newest</option>
                 </select>
               </div>
-<<<<<<< HEAD
               <div className="flex-1">
                 <label className="block text-sm font-medium text-white/70 mb-3">Price Range</label>
                 <div className="flex gap-2">
@@ -500,7 +479,6 @@ className='bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10'
               </div>
               <div className="flex items-end">
                 <div className="flex bg-white/10 rounded-xl p-1">
-=======
               {/* Price Range */}
 <div className='flex-1'>
                 <label className='block text-sm font-medium text-white/70 mb-3'>
@@ -536,7 +514,7 @@ className='bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10'
               {/* View Mode Toggle */}
 <div className='flex items-end'>
                 <div className='flex bg-white/10 rounded-xl p-1'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <button
                     onClick={() => setViewMode('grid')}
                     className={`p-2 rounded-lg transition-all duration-300 ${
@@ -548,8 +526,6 @@ className='bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10'
                     <Grid className='w-5 h-5' />
                   </button>
                   <button
-<<<<<<< HEAD
-=======
                     onClick={() => setViewMode('list')}
                     className={`p-2 rounded-lg transition-all duration-300 ${
 viewMode === 'list'
@@ -568,7 +544,7 @@ viewMode === 'list'
       {/* Services Grid/List */}
 <section className='px-6 pb-20'>
         <div className='max-w-7xl mx-auto'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Results Count */}
           <motion.div;
             initial={{ opacity: 0 }}
@@ -580,7 +556,6 @@ className='mb-8'
               Showing {filteredServices.length} of {allServices.length} services
             </p>
           </motion.div>
-<<<<<<< HEAD
             initial="hidden"
             animate="visible"
             className={viewMode === 'grid' 
@@ -603,7 +578,6 @@ className='mb-8'
             className={viewMode === 'grid'
               ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               : "space-y-6"
-=======
           {/* Services Display */}
           <motion.div
             variants={containerVariants}
@@ -614,12 +588,11 @@ initial='hidden'
                 ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
                 : 'space-y-6'
             }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <AnimatePresence mode='wait'>
               {filteredServices.map((service, index) => (
                 <motion.div
-<<<<<<< HEAD
                   key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -653,7 +626,6 @@ initial='hidden'
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
                   key={service.id}
                   variants={itemVariants}
 className={
@@ -670,7 +642,7 @@ className={
                           className={`text-3xl ${service.color.includes('from-') ? '' : 'bg-gradient-to-r ' + service.color}`}
                         >
                           {service.icon}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>
                         <div>
                           <h3 className='text-xl font-bold text-white mb-1'>
@@ -693,7 +665,6 @@ className={
                     </p>
 
                     {/* Price and Details */}
-<<<<<<< HEAD
                       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -717,7 +688,6 @@ className={
                           <DollarSign className="w-4 h-4 text-green-400" />
                           <span className="text-2xl font-bold text-green-400">{service.price}</span>
                           <span className="text-white/60">{service.period}</span>
-=======
                     <div className='flex items-center justify-between mb-4'>
                       <div className='flex items-center gap-4'>
                         <div className='flex items-center gap-2'>
@@ -728,7 +698,7 @@ className={
                           <span className='text-white/60'>
                             {service.period}
                           </span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>
                         <div className='flex items-center gap-2'>
                           <UsersIcon className='w-4 h-4 text-blue-400' />
@@ -747,7 +717,6 @@ className={
                         </span>
                       </div>
                     </div>
-<<<<<<< HEAD
                     {/* Features */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -756,14 +725,13 @@ className={
                     <div className="mb-6">
                       <h4 className="text-white font-semibold mb-3">Key Features:</h4>
                       <div className="grid grid-cols-1 gap-2">
-=======
                     {/* Features */}
 <div className='mb-6'>
                       <h4 className='text-white font-semibold mb-3'>
                         Key Features:
                       </h4>
                       <div className='grid grid-cols-1 gap-2'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                         {service.features.slice(0, 3).map((feature, idx) => (
                           <div key={idx} className='flex items-center gap-2'>
                             <CheckCircle className='w-4 h-4 text-green-400 flex-shrink-0' />
@@ -771,7 +739,6 @@ className={
                               {feature}
                             </span>
                           </div>
-<<<<<<< HEAD
                         )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -823,7 +790,6 @@ className={
                         <h4 className="text-cyan-400 font-semibold mb-2">ROI & Benefits</h4>
                         <p className="text-white/80 text-sm mb-3">{service.roi}</p>
                         <div className="flex flex-wrap gap-2">
-=======
                         ))}
                         {service.features.length > 3 && (
                           <div className='text-white/60 text-sm'>
@@ -854,14 +820,13 @@ className={
                           {service.roi}
                         </p>
                         <div className='flex flex-wrap gap-2'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                           {service.benefits.slice(0, 2).map((benefit, idx) => (
                             <span
                               key={idx}
                               className='text-xs bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded-full'
                             >
                               {benefit}
-<<<<<<< HEAD
                               {benefit  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -891,7 +856,6 @@ className={
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-=======
                             </span>
                           ))}
                         </div>
@@ -904,18 +868,16 @@ className={
                         target='_blank'
                         rel='noopener noreferrer'
                         className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       >
                         <ExternalLink className='w-4 h-4' />
                         Learn More
                       </a>
                       <a
-<<<<<<< HEAD
                         className="bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center gap-2"
-=======
                         href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`}
 className='bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center gap-2'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       >
                         <ZapIcon className='w-4 h-4' />
                         Contact
@@ -925,19 +887,17 @@ className='bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 roun
   }
 }
           {/* No Results */}
-<<<<<<< HEAD
           {filtered_services.length === 0 && (
             <motion.div;
 
 
               className="text-center py-20"
-=======
           {filteredServices.length === 0 && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
 className='text-center py-20'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <div className='text-6xl mb-4'>🔍</div>
               <h3 className='text-2xl font-bold text-white mb-2'>
@@ -948,9 +908,7 @@ className='text-center py-20'
               </p>
               <button
                 onClick={() => {
-<<<<<<< HEAD
 
-=======
                   setSearchTerm('');
                   setSelectedCategory('all');
 setPriceRange([0, 10000]);
@@ -958,13 +916,12 @@ setPriceRange([0, 10000]);
                 className='bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300'
                   setPriceRange([0, 10000])
                 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300"
               >
                 Clear Filters
               </button>
             </motion.div>
-<<<<<<< HEAD
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -974,14 +931,13 @@ setPriceRange([0, 10000]);
 
       <section className="px-6 py-20">
         <div className="max-w-4xl mx-auto text-center">
-=======
           )}
         </div>
       </section>
       {/* CTA Section */}
 <section className='px-6 py-20'>
         <div className='max-w-4xl mx-auto text-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
@@ -1032,7 +988,6 @@ setPriceRange([0, 10000]);
       </section>
       <EnhancedFooter />
     </div>
-<<<<<<< HEAD
           >;
             <h2 className="text - 4xl md: text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - cyan - 100 bg - clip - text text - transparent">;
               Ready to Transform Your Business?;
@@ -1068,6 +1023,5 @@ setPriceRange([0, 10000]);
 }
 
 
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

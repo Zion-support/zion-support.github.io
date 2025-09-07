@@ -6,7 +6,6 @@ import Pagination from '../../components / ui / Pagination';
 import {TrustBadge, MicroTestimonial} from '../../components / ui / Badges';
 
 interface Talent {
-<<<<<<< HEAD
 import {TrustBadge, MicroTestimonial} from '../../components/ui/Badges';
 
 interface Talent {;
@@ -28,7 +27,6 @@ const mock_talent: Talent[] = Array.from ({ length: 47 }).map ((_, i) => ({
   testimonial:;
     i % 5 === 0;
 
-=======
   testimonial?: { quote: string, author: string }
 }
 
@@ -43,7 +41,7 @@ badges: (i % 3 === 0
       : ['Top Rated']) as Talent['badges']
   testimonial:
     i % 5 === 0
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       ? { quote: 'Delivered beyond expectations!', author: 'Happy Client' }
       : undefined
 }));
@@ -78,7 +76,6 @@ const TalentDirectory: NextPage = () => {
   const pageSize = 10,
   const total = mockTalent.length,
   const pageItems = useMemo(() => {
-<<<<<<< HEAD
     const start = (page - 1) * pageSize,
     return mockTalent.slice(start, start + pageSize)
   }, [page]),
@@ -104,7 +101,6 @@ const TalentDirectory: NextPage = () => {
             </div>
             <div className="text-sm opacity-80">{t.title}</div>
             {t.testimonial && (
-=======
     const start = (page - 1) * pageSize;
 return mockTalent.slice(start, start + pageSize);
   }, [page]);
@@ -144,7 +140,7 @@ return mockTalent.slice(start, start + pageSize);
         total={total}
         onChange={setPage}
       />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
   )
 

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export function ApiDocsHub() {
   const sections = [
     {
@@ -121,7 +120,6 @@ export function ApiDocsHub() {;
         <p className='text-zinc-400 text-lg mb-12'>;
 import React from 'react';
 import Link from 'next / link';
-=======
 
 import React from "react",
 import Link from "next/link";
@@ -131,7 +129,7 @@ export function ApiDocsHub() {
   const sections = null;
 import React from 'react'
 import Link from 'next/link'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import {
   ArrowRight
   BookOpen
@@ -266,7 +264,6 @@ export function ApiDocsHub() {
           </Link>
         </div>
       </div>
-<<<<<<< HEAD
         </div>;
 
 import React from "react",;
@@ -336,9 +333,8 @@ export function ApiDocsHub() {;
       </div>;
     </ApiDocsLayout>;
   );
-=======
     </ApiDocsLayout>
   );
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default ApiDocsHub;

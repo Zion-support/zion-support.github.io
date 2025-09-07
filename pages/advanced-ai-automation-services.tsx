@@ -2,7 +2,6 @@ import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign;
   Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users;
   Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings;
@@ -36,7 +35,6 @@ const contactInfo = {
   website: 'https://ziontechgroup.com'
 }
 const heroStats = [
-=======
 import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
 const contactInfo = null;
       s => s.category === 'AI Development Tools'
@@ -94,12 +92,11 @@ const contactInfo = null;
     ],
   },
 ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 const heroFeatures = [
   {
     title: 'AI-Powered Automation',
-<<<<<<< HEAD
     description: 'Advanced AI algorithms that automate complex development, testing, and operations tasks.',
     icon: Brain,
 
@@ -112,7 +109,6 @@ const contactInfo = {;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',;
 };
-=======
 description:
       'Advanced AI algorithms that automate complex development, testing, and operations tasks.',
     icon: Brain,
@@ -139,7 +135,7 @@ description:
     icon: BarChart3,
     gradient: 'bg-gradient-to-r from-orange-500 to-red-600',
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 ];
 
 const testimonials = [
@@ -161,7 +157,6 @@ const contactInfo = {
 ;
 const hero_stats = [;
   {
-<<<<<<< HEAD
     label: 'AI Services Delivered',
     value: '200+',
     icon: <Brain className='w - 5 h - 5' />,
@@ -236,7 +231,6 @@ const service_categories = [;
     rating: 5,
     avatar: '👨‍💻'
   };
-=======
     name: 'Dr. Michael Chen',
     role: 'CTO, TechFlow Solutions',
     company: 'TechFlow Solutions',
@@ -245,12 +239,11 @@ content:
     rating: 5,
     avatar: '👨‍💻',
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   {
     name: 'Sarah Rodriguez',
     role: 'DevOps Director, CloudScale Inc.',
     company: 'CloudScale Inc.',
-<<<<<<< HEAD
 
     content:;
       'The autonomous DevOps platform has transformed our infrastructure management. We now have 99.9% uptime with 60% lower operational costs.',
@@ -258,18 +251,16 @@ content:
     rating: 5,
     avatar: '👩‍💼'
   };
-=======
 content:
       'The autonomous DevOps platform has transformed our infrastructure management. We now have 99.9% uptime with 60% lower operational costs.',
     rating: 5,
     avatar: '👩‍💼',
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   {
     name: 'David Kim',
     role: 'Security Manager, SecureNet Corp.',
     company: 'SecureNet Corp.',
-<<<<<<< HEAD
     features: ['Pipeline ManagementQuality AssuranceGovernance Automation']
 import React from 'react';
 import Head from 'next/head';
@@ -409,14 +400,13 @@ const testimonials = [;
 ],
     color: 'from-cyan-500 to-blue-600',
 
-=======
 content:
       'Their AI security platform provides proactive threat detection that has prevented multiple security incidents. The ROI has been incredible.',
     rating: 5,
     avatar: '👨‍🔒',
   },
 ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 export default function AdvancedAIAutomationServices() {
 
@@ -428,7 +418,6 @@ export default function AdvancedAIAutomationServices() {
     <Layout>
       <Head>
         <title>Advanced AI Automation Services - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Revolutionary AI automation services for development, testing, DevOps, security, and data management. Transform your operations with intelligent automation." />
         <meta name="keywords" content="AI automation, development automation, testing automation, DevOps automation, security automation, data automation" />
         <meta property="og:title" content="Advanced AI Automation Services - Zion Tech Group" />
@@ -436,7 +425,6 @@ export default function AdvancedAIAutomationServices() {
         <meta property="og:url" content="https://ziontechgroup.com/advanced-ai-automation-services" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/advanced-ai-automation-services" />
-=======
 <meta
           name='description'
           content='Revolutionary AI automation services for development, testing, DevOps, security, and data management. Transform your operations with intelligent automation.'
@@ -462,7 +450,7 @@ export default function AdvancedAIAutomationServices() {
           rel='canonical'
           href='https://ziontechgroup.com/advanced-ai-automation-services'
         />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       </Head>
       {/* Hero Section */}
       <section className='relative py-20 lg:py-32 overflow-hidden'>
@@ -499,17 +487,14 @@ export default function AdvancedAIAutomationServices() {
   }
 }
           >
-<<<<<<< HEAD
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
-=======
 <h1 className='text-4xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               Advanced AI Automation Services
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Transform your development, testing, DevOps, and security operations with revolutionary AI automation that works 24/7
             </p>
-<<<<<<< HEAD
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {heroStats.map((stat, index) => (
                 <motion.div
@@ -537,7 +522,6 @@ export default function AdvancedAIAutomationServices() {
                   className="flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-cyan-500/30"
 
 
-=======
             <div className='flex flex-wrap justify-center gap-4 mb-12'>
               {heroStats.map((stat, index) => (
                 <motion.div
@@ -546,14 +530,12 @@ export default function AdvancedAIAutomationServices() {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
 className='flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-cyan-500/30'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   {stat.icon}
                   <span className="text-cyan-400 font-semibold">{stat.value}</span>
                   <span className="text-gray-300 text-sm">{stat.label}</span>
                 </motion.div>
-<<<<<<< HEAD
-=======
               ))}
             </div>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -570,12 +552,11 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg p
               >
                 <Phone className='mr-2 w-5 h-5' />
                 Get Started
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </Link>
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
 
       {/* Features Section */}
 
@@ -583,20 +564,17 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg p
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-=======
 {/* Features Section */}
       <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-=======
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Why Choose Our AI Automation Services?
@@ -605,7 +583,6 @@ className='text-center mb-16'
               Our AI automation services provide unprecedented efficiency, accuracy, and cost savings across all aspects of technology operations
             </p>
           </motion.div>
-<<<<<<< HEAD
             className='text-center mb-16'>;
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>;
               Why Choose Our AI Automation Services?;
@@ -619,18 +596,16 @@ className='text-center mb-16'
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures && heroFeatures.map((feature, index) => (;
               <motion&& motion.div
-=======
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {heroFeatures.map((feature, index) => (
               <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
                 key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -657,9 +632,8 @@ className='text-center mb-16'
   }
 }
                 className="relative group"
-=======
 className='relative group'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className={`${feature.gradient} p-1 rounded-xl`}>
                   <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -667,15 +641,13 @@ className='relative group'
                       <div className={`${feature.gradient} w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>
                         <feature.icon className="w-8 h-8 text-white" />
                       </div>
-<<<<<<< HEAD
                       <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                       <p className="text-gray-300">{feature.description}</p>
-=======
                       <h3 className='text-xl font-semibold text-white mb-3'>
                         {feature.title}
                       </h3>
                       <p className='text-gray-300'>{feature.description}</p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                   </div>
                 </div>
@@ -683,26 +655,22 @@ className='relative group'
             ))}
           </div>
         </div>
-<<<<<<< HEAD
 
       <section id="services" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-=======
 {/* Services Section */}
       <section id='services' className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-=======
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               AI Automation Service Categories
@@ -711,19 +679,16 @@ className='text-center mb-16'
               Comprehensive AI automation solutions covering every aspect of modern technology operations
             </p>
           </motion.div>
-<<<<<<< HEAD
-=======
 
           <div className='space-y-16'>
             {serviceCategories.map((category, categoryIndex) => (
               <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 key={categoryIndex}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: categoryIndex * 0 && 0.2 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
               <motion.div
                 key={categoryIndex  } catch (error) {
     console.error("Error:", error);
@@ -753,9 +718,8 @@ className='text-center mb-16'
                 className="relative"
 
 
-=======
 className='relative'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className="text-center mb-12">
                   <div className={`inline-flex items-center justify-center w-20 h-20 ${category.color} rounded-2xl mb-6`}>
@@ -764,7 +728,6 @@ className='relative'
                   <h3 className="text-3xl font-bold text-white mb-4">{category.title}</h3>
                   <p className="text-xl text-gray-300 max-w-2xl mx-auto">{category.description}</p>
                 </div>
-<<<<<<< HEAD
                     <motion.div
 
                       key={service.id  } catch (error) {
@@ -795,7 +758,6 @@ className='relative'
                       className="relative group"
 
 
-=======
 
                 <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>
                   {category.services.map((service, serviceIndex) => (
@@ -806,18 +768,16 @@ className='relative'
                       transition={{ duration: 0.5, delay: serviceIndex * 0.1 }}
                       viewport={{ once: true }}
 className='relative group'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
                         <div className="bg-gray-900 rounded-xl p-6 h-full">
                           <div className="flex items-center justify-between mb-4">
                             <span className="text-3xl">{service.icon}</span>
                             {service.popular && (
-<<<<<<< HEAD
                               <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
-=======
                               <span className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                                 Popular
                               </span>
                             )  } catch (error) {
@@ -826,13 +786,11 @@ className='relative group'
   }
 }
                           </div>
-<<<<<<< HEAD
                           <h4 className="text-xl font-semibold text-white mb-2">{service.name}</h4>
                           <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>
                           <div className="flex items-center justify-between mb-4">
                             <span className="text-2xl font-bold text-white">{service.price}</span>
                             <span className="text-gray-400">{service.period}</span>
-=======
 <h4 className='text-xl font-semibold text-white mb-2'>
                             {service.name}
                           </h4>
@@ -846,7 +804,7 @@ className='relative group'
                             <span className='text-gray-400'>
                               {service.period}
                             </span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                           </div>
                           <p className="text-gray-300 text-sm mb-4">{service.description}</p>
                           <div className="space-y-2 mb-6">
@@ -873,12 +831,10 @@ className='relative group'
                               <ArrowRight className="ml-1 w-4 h-4" />
                             </Link>
                             <Link
-<<<<<<< HEAD
                               className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-=======
                               href={`tel:${contactInfo.mobile}`}
                               className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                             >
                               Get Started
                             </Link>
@@ -887,7 +843,6 @@ className='relative group'
                       </div>
                     </motion.div>
       {/* Testimonials Section */}
-<<<<<<< HEAD
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
@@ -918,21 +873,18 @@ className='relative group'
 }
             className="text-center mb-16"
 
-=======
 <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
 
 
-=======
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               What Our Clients Say
@@ -950,12 +902,10 @@ className='text-center mb-16'
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
 
 
-=======
 className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-cyan-500/20'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className="flex items-center mb-4">
                   <span className="text-3xl mr-3">{testimonial.avatar}</span>
@@ -969,13 +919,11 @@ className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-cyan-500/20'
                 <div className="flex items-center">
                   <div className="flex text-yellow-400">
                     {[...Array(testimonial.rating)].map((_, i) => (
-<<<<<<< HEAD
 
 
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion&& motion.div
-=======
                       <Star key={i} className='w-4 h-4 fill-current' />
                     ))}
                   </div>
@@ -989,7 +937,7 @@ className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-cyan-500/20'
 <section className='py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -1011,11 +959,9 @@ className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-cyan-500/20'
 
 
           >
-<<<<<<< HEAD
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-=======
 <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               Ready to Transform Your Operations with AI Automation?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -1023,7 +969,6 @@ className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-cyan-500/20'
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               >
-<<<<<<< HEAD
                 <Mail className="mr-2 w-5 h-5" />
                 Email Us
               </Link>
@@ -1204,7 +1149,6 @@ className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-cyan-500/20'
 ;
 
 
-=======
                 <Phone className='mr-2 w-5 h-5' />
                 Call Now: {contactInfo.mobile}
               </Link>
@@ -1225,4 +1169,4 @@ className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-
       </section>
     </Layout>
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

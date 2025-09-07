@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',
-=======
->>>>>>> pr-12243
+pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next'
 ;
 export default async /**
@@ -37,17 +30,13 @@ function escape_html() {
     .replace (/>/g, '&gt, ');
 }
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
   // Placeholder export: return a data URL (clients will open it, allowing print->PDF)
   const html = `<!doctype html><html><head><meta charset="utf-8"><title>${tokenName} Whitepaper</title></head><body><pre style="white-space: pre-wrap,font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace,">${escapeHtml(markdown)}</pre></body></html>`
   const base64 = Buffer.from(html, 'utf-8').toString('base64')
   const url = `data: text/html,base64,${base64}`
-<<<<<<< HEAD
 
-=======
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -56,42 +45,27 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!markdown || !tokenName) return res.status(400).json({ error: 'Missing markdown or tokenName' });
   // Placeholder export: return a data URL (clients will open it, allowing print->PDF)
   const html = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   res.status(200).json({ url })
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 function escapeHtml(str: string) {
   return String(str)
     .replace(/&/g, '&amp,')
     .replace(/</g, '&lt,')
     .replace(/>/g, '&gt,')
-<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
-<<<<<<< HEAD
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 export default async function handler(req, res) {
   try {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
   const { markdown, tokenName } = req.body || {},
   if (!markdown || !tokenName) return res.status(400).json({ error: 'Missing markdown or tokenName' }),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> pr-12243
+pr-12243
 
 }
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
+pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next',
 ;
 export default async /**
@@ -121,15 +95,8 @@ function escape_html() {
     .replace (/>/g, '&gt, ');
 }
 ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
+origin/cursor/automate-test-improve-and-merge-code-20a4
+pr-12243
 
 
   // Placeholder export: return a data URL (clients will open it, allowing print->PDF)
@@ -137,9 +104,6 @@ function escape_html() {
   const base64 = Buffer.from(html, 'utf-8').toString('base64'),
   const url = `data: text/html,base64,${base64}`,
   res.status(200).json({ url })
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -188,10 +152,6 @@ function escapeHtml(str: string) {;
 }
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 function escapeHtml(str: string) {
   return String(str)
@@ -199,10 +159,7 @@ function escapeHtml(str: string) {
     .replace(/</g, '&lt,')
     .replace(/>/g, '&gt,')
 };
-=======
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+main
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> pr-12243
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243

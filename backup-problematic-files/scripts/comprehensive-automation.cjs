@@ -4,23 +4,10 @@ const fs = require('fs')
 const path = require('path')
 // console.log(' Comprehensive Automation Suite - Zion Tech Group')
 console.log('==')
-    "name"
-    "command"
-    "name"
-    "command"
-    "name"
-    "command"
-    "name"
-    "command"
-    "name"
-    "command"
-    "name"
-    "command"
-      "stdio"
-      "status"
-      "status"
-    "successful"
-    "failed"
-  "status"
-console.log('\n� Detailed "Results")
-console.log('\n� Detailed "Results")
+    "name"""
+    "command"""
+      "stdio"""
+      "status"""
+    "successful"""
+    "failed"""
+console.log('\n� Detailed "Results")""');

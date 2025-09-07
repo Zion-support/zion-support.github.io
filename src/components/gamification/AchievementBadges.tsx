@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface Achievement {
 
   id: string
@@ -26,6 +25,26 @@ export interface Achievement {
   achieved: boolean;
 interface AchievementBadgesProps {
   achievements: Achievement[];
+export interface Achievement {
+  // TODO: Implement
+}
+  id: string;,
+  title: string;
+  description: string;,
+  achieved: boolean;
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card","
+  // TODO: Implement
+  id: string,
+  title: string,
+  description: string,
+  achieved: boolean;"
+import { BadgeCheck } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/ card';
+  // TODO: Implement
+interface AchievementBadgesProps {
+  // TODO: Implement
+  achievements: Achievement[];,
+pr-12325
   achievements: Achievement[];
 
 
@@ -35,7 +54,6 @@ export interface Achievement {
   id: string
   title: string
   description: string
-=======
 import { BadgeCheck } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -44,7 +62,7 @@ export interface Achievement {
 
 interface AchievementBadgesProps {
   achievements: Achievement[];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
   achieved: boolean
 }
@@ -87,7 +105,6 @@ interface AchievementBadgesProps {;
 
 export function AchievementBadges(): any ({ achievements }: AchievementBadgesProps) {;
   return (
-<<<<<<< HEAD
 
 
               <p className="font-medium">{a.title}</p>
@@ -95,8 +112,6 @@ export function AchievementBadges(): any ({ achievements }: AchievementBadgesPro
             </div>
           </div>
         ))}
-<<<<<<< HEAD
-=======
 
 
 
@@ -144,8 +159,6 @@ function AchievementBadges() {
     </Card>);
 }
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
     <Card>
       <CardHeader>
         <CardTitle>Achievements</CardTitle>
@@ -165,4 +178,54 @@ function AchievementBadges() {
     </Card>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+  // TODO: Implement
+  // TODO: Implement
+  achievements: Achievement[]
+export function AchievementBadges({ achievements }: AchievementBadgesProps) {
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+export interface Achievement {;
+
+interface AchievementBadgesProps {;
+
+import { BadgeCheck } from 'lucide-react
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";"
+  // TODO: Implement
+
+
+  id: string,;
+  title: string,;
+  description: string,;
+
+
+export function AchievementBadges(): any ({ achievements }: AchievementBadgesProps) {;
+  return (
+
+"
+              <p className="font-medium">{a.title}</p>""
+              <p className="text-sm text-muted-foreground">{a.description}</p>"
+            </div>
+      ;
+    <Card>;
+
+      <CardHeader>;
+
+        <CardTitle > Achievements;
+      ;"
+      <CardContent className='space - y-3'>;
+
+          <div key={a.id} className='flex items - start gap - 3'>;
+            <div>;
+              <p className='font - medium'>{a.title}</p>;
+              <p className='text - sm text - muted - foreground'>{a.description}</p>            </div>;
+              <p className="font - medium">{a.title}</p>;""
+              <p className="text - sm text - muted - foreground">{a.description}</p>;"
+            <BadgeCheck;"
+              className={`h - 5 w - 5 mt - 1 ${a.achieved ? "text - green - 600" : "text - muted - foreground"}`}"
+            />;
+
+</div>"
+            </div>;)
+          </div>))}
+    );"`;
+pr-12325

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
   isLoading: boolean,
   updateStatus: (id: string, status: QuoteStatus) => void,
   toggleArchive: (id: string, isArchived: boolean) => void,
@@ -9,14 +7,12 @@
 
 }
 export const QuotesTable: React.FC<QuotesTableProps> = ({
-=======
 }
 export const QuotesTable: React.FC<QuotesTableProps> = ({
 
 
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   quotes
   isArchived = false
   isLoading
@@ -30,12 +26,9 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
   isLoading,
   updateStatus,
   toggleArchive,
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   deleteQuote,
   onViewDetails
 },) => {
@@ -70,23 +63,18 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
             </TableRow>
           ) : (
             quotes.map(quote => (
-<<<<<<< HEAD
-=======
 
 
               <TableRow 
                 key={quote.id}
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 className="border-zion-blue-light hover:bg-zion-blue"
               >
                 <TableCell className="text-white">
                   {quote.talent_name |'Unknown Talent'}
                 </TableCell>
                 <TableCell className="text-white">
-<<<<<<< HEAD
-=======
   quotes;
   is_archived = false;
 import React from './react';
@@ -115,6 +103,44 @@ interface QuotesTableProps {
   delete_quote: (id: string, ) => void,
   onViewDetails: (quote: QuoteRequest, ) => void;
 }
+}
+export const QuotesTable: React.FC<QuotesTableProps> = ({
+
+    <div className="overflow-x-auto">"
+</div>
+      <Table>
+
+        <TableHeader>
+"
+          <TableRow className="border-zion-blue-light hover:bg-zion-blue">"
+            <TableHead className="text-zion-slate-light">Talent""
+            <TableHead className="text-zion-slate-light">Requester""
+            <TableHead className="text-zion-slate-light">Project""
+            <TableHead className="text-zion-slate-light">Budget""
+            <TableHead className="text-zion-slate-light">Date""
+            <TableHead className="text-zion-slate-light">Status""
+            <TableHead className="text-zion-slate-light">Actions"
+          
+        
+        <TableBody>
+
+            <TableRow>
+              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">"
+
+              
+            
+
+              
+            
+              <TableRow;
+                key={quote.id}
+
+                className="border-zion-blue-light hover:bg-zion-blue""
+              >
+                <TableCell className="text-white">"
+
+
+pr-12325
 export const QuotesTable: React.FC < QuotesTableProps> = ({
   quotes;
   is_archived = false;
@@ -175,19 +201,15 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                       onClick={() => onViewDetails(quote)}
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     >
                       <Eye className="h-4 w-4" />
                       <span className="sr-only">View Details</span>
                     </Button>
 
 
-<<<<<<< HEAD
-=======
                     
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     {isArchived ? (
                       <>
                         <Button
@@ -200,13 +222,62 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                         </Button>
                         <Button
                           variant="ghost"
-<<<<<<< HEAD
-=======
 
 
   quotes;
   isArchived = false;
 import React from "react";
+  onViewDetails;)
+}, ) => {
+  return ("
+    <div className="overflow - x-auto">;"
+      <Table>;
+
+        <TableHeader>;
+          <TableRow className="border - zion - blue - light hover:bg - zion - blue">;"
+            <TableHead className="text - zion - slate - light">Talent;""
+            <TableHead className="text - zion - slate - light">Requester;""
+            <TableHead className="text - zion - slate - light">Project;""
+            <TableHead className="text - zion - slate - light">Budget;""
+            <TableHead className="text - zion - slate - light">Date;""
+            <TableHead className="text - zion - slate - light">Status;""
+            <TableHead className="text - zion - slate - light">Actions;"
+          ;
+        <TableBody>;
+
+            <TableRow>;
+              <TableCell col_span={7} className="text - center py - 10 text - zion - slate - light">;"
+
+              ;)
+            ) : quotes.length === 0 ? (
+
+            ) : (
+                key = {quote.id, }"
+                className="border - zion - blue - light hover:bg - zion - blue";"
+              >;
+                <TableCell className="text - white">;"
+
+                ;"
+
+                  <div className="font - medium">{quote.project_name}</div>;""
+                  <div className="text - sm text - zion - slate - light truncate max - w-[200px]">;"
+                    <Button;"
+                      variant="ghost"""
+                      size="icon"")
+                      onClick={() => onViewDetails(quote)}
+                      <Eye className="h-4 w-4" />"
+                      <span className="sr-only">View Details</span>"
+                    
+                      <>
+                          size="icon""
+                          onClick = {(,) => toggleArchive(quote.id, false),}
+                          <Archive className="h-4 w-4" />"
+                          <span className="sr-only">Unarchive</span>"
+                        
+                          variant="ghost""
+  isArchived = false;"
+import React from "react";""
+pr-12325
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'import { ;
   Table;
   TableBody, ;
@@ -223,7 +294,6 @@ import { ;
 } from "@/components/ui/dropdown-menu";import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 import {formatDate} from "@/utils/dateUtils";
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                           size="icon"
                           className="text-red-500"
                           onClick={() => {
@@ -264,18 +334,12 @@ import {formatDate} from "@/utils/dateUtils";
                             <Archive className="h-4 w-4 mr-2" />
                             Archive
                           </DropdownMenuItem>
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                           <DropdownMenuItem 
                             onClick={() => {
                               if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
                                 deleteQuote(quote.id)
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                             className="text-red-500"
                           >
                             <Trash2 className="h-4 w-4 mr-2" />
@@ -283,10 +347,7 @@ import {formatDate} from "@/utils/dateUtils";
                           </DropdownMenuItem>
                         </DropdownMenuContent>
                       </DropdownMenu>
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",;
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react';
 import {;
@@ -396,8 +457,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                       <Eye className="h-4 w-4" />;
                       <span className="sr-only">View Details</span>;
                     </Button>;
-<<<<<<< HEAD
-=======
 
                     {isArchived ? (;
                       <>;
@@ -405,13 +464,10 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                           variant="ghost" 
                           size="icon"
                           onClick = {(,) => toggleArchive(quote && quote.id, false),}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                         >;
                           <Archive className="h-4 w-4" />;
                           <span className="sr-only">Unarchive</span>;
                         </Button>;
-<<<<<<< HEAD
-=======
                         <Button
                           variant="ghost" 
                           size="icon"
@@ -468,7 +524,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                         </DropdownMenuContent>;
                       </DropdownMenu>;
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     )}
                   </div>;
                 </TableCell>;
@@ -591,11 +646,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
       </Table>;
     </div>);
 }
-<<<<<<< HEAD
-=======
 '";
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
 import React from "react";
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'
@@ -654,4 +705,164 @@ interface QuotesTableProps {
   onViewDetails: (quote: QuoteRequest,) => void
 }
 export const QuotesTable: React.FC<QuotesTableProps> = ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+  TableRow ;, Button } from 'lucide-react';"
+import { ;
+  DropdownMenu;
+  DropdownMenuContent, ;
+  DropdownMenuItem, ;"
+  DropdownMenuTrigger ;, QuoteStatusBadge } from 'lucide-react';""
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes";""
+import {formatDate} from "@/utils/dateUtils";""
+                          size="icon"""
+                          className="text-red-500""
+                          onClick={() => {
+                          <Trash2 className="h-4 w-4" />"
+</Trash2>"
+                          <span className="sr-only">Delete</span>"
+                        
+                      </>
+                      <DropdownMenu>
+
+                        <DropdownMenuTrigger asChild>
+                          <Button variant="ghost" size="icon" aria-label="More actions">"
+                            <MoreHorizontal className="h-4 w-4" />"
+                            <span className="sr-only">Actions</span>"
+                          
+                        <DropdownMenuContent align="end">"
+)"
+                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'new')}>
+
+                          
+                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'in_review')}>
+
+                          
+                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'responded')}>
+
+                          
+                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'accepted')}>
+
+                          
+                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'closed')}>
+
+                          
+                          <DropdownMenuItem onClick={() => toggleArchive(quote.id, true)}>
+
+                            <Archive className="h-4 w-4 mr-2" />"
+
+                          
+
+                          <DropdownMenuItem;
+                            <Trash2 className="h-4 w-4 mr-2" />"
+</Trash2>
+                          
+                        
+                      
+export const QuotesTable: React.FC<QuotesTableProps> = ({;
+    <div className="overflow-x-auto">;"
+
+          <TableRow className="border-zion-blue-light hover:bg-zion-blue">;"
+            <TableHead className="text-zion-slate-light">Talent;""
+            <TableHead className="text-zion-slate-light">Requester;""
+            <TableHead className="text-zion-slate-light">Project;""
+            <TableHead className="text-zion-slate-light">Budget;""
+            <TableHead className="text-zion-slate-light">Date;""
+            <TableHead className="text-zion-slate-light">Status;""
+            <TableHead className="text-zion-slate-light">Actions;"
+
+              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">;"
+
+
+                key = {quote && quote.id,}"
+                className="border-zion-blue-light hover:bg-zion-blue">;"
+                <TableCell className="text-white">;"
+
+
+                  <div className="font-medium">{quote && quote.project_name}</div>;""
+                  <div className="text-sm text-zion-slate-light truncate max-w-[200px]">;"
+                  </div>;
+
+
+                <TableCell>;
+
+                  <QuoteStatusBadge status={quote && quote.status} />;
+
+                  <div className="flex items-center gap-2">;"
+                      onClick = {() => onViewDetails(quote),}
+                      <Eye className="h-4 w-4" />;"
+                      <span className="sr-only">View Details</span>;"
+                      <>;
+                          onClick = {(,) => toggleArchive(quote && quote.id, false),}
+                          <Archive className="h-4 w-4" />;"
+                          <span className="sr-only">Unarchive</span>;"
+                          onClick = {() => {;
+                          <Trash2 className="h-4 w-4" />;"
+                          <span className="sr-only">Delete</span>;"
+                      </>;
+                    ) : (;
+                      <DropdownMenu>;
+
+                        <DropdownMenuTrigger asChild>;
+                          <Button variant="ghost" size="icon" aria-label="More actions">;"
+                            <MoreHorizontal className="h-4 w-4" />;"
+                            <span className="sr-only">Actions</span>;"
+                        <DropdownMenuContent align="end">;"
+                          <DropdownMenuItem onClick={(,) => updateStatus(quote && quote.id, 'new')}>;
+
+                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'in_review')}>;
+
+                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'responded')}>;
+
+                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'accepted')}>;
+
+                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'closed')}>;
+
+                          <DropdownMenuItem onClick={() => toggleArchive(quote && quote.id, true)}>;
+
+                            <Archive className="h-4 w-4 mr-2" />;"
+
+                            <Trash2 className="h-4 w-4 mr-2" />;"
+
+
+
+                  <QuoteStatusBadge status={quote.status} />;
+
+                  <div className="flex items - center gap - 2">;"
+                      variant="ghost";""
+                      size="icon";"
+                      on_click = {() => onViewDetails (quote), }
+                      <Eye className="h - 4 w - 4" />;"
+                      <span className="sr - only">View Details</span>;"
+                          on_click = {(, ) => toggle_archive (quote.id, false), }
+                          <Archive className="h - 4 w - 4" />;"
+                          <span className="sr - only">Unarchive</span>;"
+                          size="icon";""
+                          className="text - red - 500";"
+                          on_click = {() => {
+                          <Trash2 className="h - 4 w - 4" />;"
+                          <span className="sr - only">Delete</span>;"
+                      </>) : (
+
+                        <DropdownMenuTrigger as_child>;
+                          <Button variant="ghost" size="icon" aria - label="More actions">;"
+                            <MoreHorizontal className="h - 4 w - 4" />;"
+                            <span className="sr - only">Actions</span>;"
+                          <DropdownMenuItem on_click={(, ) => update_status (quote.id, 'new')}>;
+
+                          <DropdownMenuItem on_click={() => update_status (quote.id, 'in_review')}>;
+
+                          <DropdownMenuItem on_click={() => update_status (quote.id, 'responded')}>;
+
+                          <DropdownMenuItem on_click={() => update_status (quote.id, 'accepted')}>;
+
+                          <DropdownMenuItem on_click={() => update_status (quote.id, 'closed')}>;
+
+                          <DropdownMenuItem on_click={() => toggle_archive (quote.id, true)}>;
+
+                            <Archive className="h - 4 w - 4 mr - 2" />;"
+
+                            <Trash2 className="h - 4 w - 4 mr - 2" />;"
+                      )}
+              )))}
+    </div>);"
+pr-12325

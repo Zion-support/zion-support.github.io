@@ -1,5 +1,4 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-<<<<<<< HEAD
 // @ts-ignore
 import data from '../../data/github-agent-repos.json';
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
@@ -12,9 +11,8 @@ export default function GithubAgentReposPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 50)
 
-=======
   const items: any[] = (data?.items || []).slice(0, 50);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -27,7 +25,6 @@ export default function GithubAgentReposPage() {
           ))}
         </ul>
       </div>
-<<<<<<< HEAD
               <p className="mt-2 text-sm text-gray-700 dark:text-gray-200">{it.description}</p>
             </li>
           ))  } catch (error) {
@@ -43,8 +40,7 @@ export default function GithubAgentReposPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
     </EnhancedLayout>
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

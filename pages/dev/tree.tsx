@@ -1,16 +1,13 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
 import Tree, { TreeNode } from "../../components/ui/Tree";
-=======
   nodes: TreeNode[];
   status: { gitConnected: boolean, gitBranch?: string }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
   nodes: TreeNode[]
 status: {
   gitConnected: boolean, gitBranch?: string
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import Tree, { TreeNode } from '../../components/ui/Tree';
 
@@ -28,14 +25,12 @@ interface ApiResponse {
   status: { gitConnected: boolean, gitBranch?: string }
 }
 
-=======
 export default function DevTreePage() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [nodes, setNodes] = useState<TreeNode[] | null>(null);
   const [error, setError] = useState<string | null>(null);
 const [git, setGit] = useState<ApiResponse['status'] | null>(null);
   const [adminToken, setAdminToken] = useState<string>('');
-<<<<<<< HEAD
 
 import React, { useEffect, useState } from "react",
 import Tree, { TreeNode } from "../../components/ui/Tree",
@@ -57,7 +52,6 @@ export default function DevTreePage() {
   const [git, setGit] = useState<ApiResponse["status"] | null>(null),
   const [adminToken, setAdminToken] = useState<string>(""),
   const fetchTree = async (token?: string) => {
-=======
       setError(e.message || 'Failed to load');
     }
   };
@@ -73,7 +67,7 @@ const stored = localStorage.getItem('ADMIN_TOKEN') || '';
   };
 
   const onDeploy = async (p: string) => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     try {
 const resp = await fetch('/api/dev/source-map', {
         method: 'POST',
@@ -89,7 +83,6 @@ const resp = await fetch('/api/dev/source-map', {
       }
       await fetchTree(adminToken);
     } catch (e: any) {
-<<<<<<< HEAD
 
       {error && <div className="mb-3 text-sm text-red-600">{error}</div>  } catch (error) {
     console.error("Error:", error);
@@ -142,7 +135,6 @@ const resp = await fetch('/api/dev/source-map', {
 
       {nodes ? (
         <div className="rounded border p-3 bg-white">
-=======
       setError(e.message || 'Deploy failed');
     }
   };
@@ -181,7 +173,7 @@ const resp = await fetch('/api/dev/source-map', {
 
       {nodes ? (
         <div className='rounded border p-3 bg-white'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           <Tree nodes={nodes} onDeploy={onDeploy} />
         </div>
       ) : (
@@ -318,7 +310,6 @@ export default function DevTreePage(req, res) {
       ) : (;
         <div>Loading...</div>;
       )}
-<<<<<<< HEAD
     </div>;
   );
 
@@ -395,7 +386,6 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
     </div>
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

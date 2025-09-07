@@ -1,17 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 return (
       <Link href="/" className="flex items - center">;
         <img src={logoToUse} alt={`${brand_name} Logo`} className="h - 8" width={32} height={32} />;
       </Link>);
   }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
-=======
   const logoToUse = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   if (logoToUse) {
     return (
       <Link href="/" className="flex items-center">
@@ -82,7 +77,6 @@ if ( {) {
         className='h-8'
         width={32}
         height={32}
-<<<<<<< HEAD
 
       />;
     </Link>;
@@ -103,13 +97,9 @@ if ( {) {
       />;
     </Link>);
 }
-<<<<<<< HEAD
-=======
 
 }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
       />
     </Link>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

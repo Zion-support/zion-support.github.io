@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 
 type Holder = { address: string, amount: string }
@@ -55,9 +54,8 @@ export default function DaoMetrics(req, res) {
   }, []),
   if (loading) return <div>Loading...</div>,
   if (!data) return <div>Error loading data</div>,
-=======
 type Holder = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-6">
       <div className="flex items-end justify-between">
@@ -120,16 +118,14 @@ type Holder = any;
               ))}
             </ul>
           ) : (
-<<<<<<< HEAD
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 <div className='text-sm text-gray-600'>No active proposals.</div>
           )}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
 
         <div className='border rounded p-4'>
@@ -151,7 +147,6 @@ type Holder = any;
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   )
   } catch (error) {
     console.error("Error:", error);
@@ -265,6 +260,5 @@ if (return <div > Error loading data</div>, ) {
 }
 
 
-=======
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

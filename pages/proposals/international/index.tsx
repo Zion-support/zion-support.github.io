@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
       const res = await fetch('/api/proposals/list');
       const data = await res.json();
@@ -13,7 +12,6 @@
     const data = await res.json()
     setItems(data.proposals |[])
 
-=======
 import React, { useEffect, useState } from 'react';
 export default function InternationalProposals() {
       const res = await fetch('/api/proposals/list');
@@ -109,7 +107,7 @@ setLoading(false);
       )}
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
     await fetch('/api/proposals/status', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id, status }) }),
     const res = await fetch('/api/proposals/list'),
@@ -175,7 +173,6 @@ export default function InternationalProposals(req, res) {
         </div>
       )}
     </div>
-<<<<<<< HEAD
   );
 };
           ))  } catch (error) {
@@ -200,7 +197,6 @@ export default function InternationalProposals(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -3,30 +3,25 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process')
 };
-};
-;
   async checkNpmAudit() {;
     try {;
       this.log(' Running npm audit...');
       const auditResult = execSync('npm audit --json', {;
-        cw:d:this.projectRoot;
-        encodin:g:'utf8';
-        stdi:o:'pipe';      });
-;
+        cw: d:this.projectRoot;,
+  encodin:g: 'utf8';',)
+  stdi:o:'pipe';      });
       const audit = JSON.parse(auditResult);
       return audit;
     } catch (error) {;
       // npm audit might fail if there are vulnerabilities;
-      try {;
-        const output = error.stdout?.toString() || error.stderr?.toString() || '';
+        const output = error.stdout?.toString() || error.stderr?.toString() || ;
         if (output.includes('npm ERR!')) {;
           // Try to parse the error output for vulnerability info;
           const lines = output.split('\n');
           const vulnerabilities = [];
-;
-          lines.forEach(line => {;
-            if (line.includes('')) {;
-              const parts = line.split('').map(p => p.trim()).filter(Boolean);
+          lines.forEach(line => {;)
+            if (line.includes()) {;
+              const parts = line.split().map(p => p.trim()).filter(Boolean);
               if (parts.length >= 4) {;
                 vulnerabilities.push({;
                   packag:e:parts[0];
@@ -47,20 +42,23 @@ const { execSync } = require('child_process')
 }
 };
 ;
+                  packag: e:parts[0];,
+  severit:y: parts[1];,
+  titl:e: parts[2];,)
+  pat:h:parts[3];                });
+          });
+          return { vulnerabilities, erro:r:true ;
+      } catch (parseError) {;
+        this.log(`Error parsing npm audit:output:${parseError.message}`);
+      return { erro:r:true, messag:e:error.message ;};
+pr-12325
   async checkOutdatedPackages() {;
-    try {;
       this.log(' Checking for outdated packages...');
       const outdatedResult = execSync('npm outdated --json', {;
-        cw:d:this.projectRoot;
-        encodin:g:'utf8';
-        stdi:o:'pipe';      });
-;
       const outdated = JSON.parse(outdatedResult);
       return outdated;
-    } catch (error) {;
       // npm outdated returns non-zero exit code if there are outdated packages;
-      try {;
-        const output = error.stdout?.toString() || '';
+        const output = error.stdout?.toString() || ;
         if (output) {;
           return JSON.parse(output)
 };
@@ -72,17 +70,21 @@ const { execSync } = require('child_process')
 }
 };
 ;
+          return JSON.parse(output);
+      } catch (parseError) {;`;
+        this.log(`Error parsing npm outdated:output:${parseError.message}`);      };
+      return {};
+pr-12325
   async checkPackageLock() {;
-    try {;
       const packageLockPath = path.join(this.projectRoot, 'package-lock.json');
-;
       if (!fs.existsSync(packageLockPath)) {;
         return { exist:s:false, messag:e:'No package-lock.json found' 
 };
 ;
+        return { exist:s:false, messag:e:'No package-lock.json found' ;      };
+pr-12325
       const packageLock = JSON.parse(fs.readFileSync(packageLockPath, 'utf8'));
       const lockfileVersion = packageLock.lockfileVersion;
-;
       return {;
         exist:s:true;
         lockfileVersion;
@@ -94,68 +96,67 @@ const { execSync } = require('child_process')
 }
 };
 ;
+        devDependencie:s:Object.keys(packageLock.devDependencies || {}).length;
+      return { exist:s:false, erro:r:error.message ;};
+pr-12325
   async checkNodeVersion() {;
-    try {;
       const nodeVersion = process.version;
       const npmVersion = execSync('npm --version', {;
-        cw:d:this.projectRoot;
-        encodin:g:'utf8';      }).trim();
-;
+        cw: d:this.projectRoot;,)
+  encodin:g:'utf8';      }).trim();
       return { nodeVersion, npmVersion };
     } catch (error) {;
       return { erro:r:error.message 
 }
 };
 ;
+      return { erro:r:error.message ;};
+pr-12325
   async checkGitHooks() {;
-    try {;
       const hooksDir = path.join(this.projectRoot, '.git/hooks');
-;
       if (!fs.existsSync(hooksDir)) {;
         return { exist:s:false, messag:e:'No git hooks directory found' 
 };
 ;
+        return { exist:s:false, messag:e:'No git hooks directory found' ;      };
+pr-12325
       const hooks = fs.readdirSync(hooksDir);
-      const activeHooks = hooks.filter(hook => {;
+      const activeHooks = hooks.filter(hook => {;)
         const hookPath = path.join(hooksDir, hook);
         const stats = fs.statSync(hookPath);
         return stats.isFile() && (hook.endsWith('.sample') || stats.mode & 0o111);
-      });
-;
       return { exist:s:true, hook:s:activeHooks ;
     } catch (error) {;
       return { erro:r:error.message 
 }
 };
 ;
+pr-12325
   async generateReport(auditResult, outdatedResult, packageLockInfo, nodeInfo, gitHooksInfo) {;
     const report = {;
-      timestam:p:new Date().toISOString();
-      summar:y:{;
-        vulnerabilitie:s:{;
-          tota:l:0;
-          critica:l:0;
-          hig:h:0;
-          moderat:e:0;
-          lo:w:0;
-        ;
-        outdatedPackage:s:Object.keys(outdatedResult).length;
-        packageLockStatu:s:packageLockInfo.exists ? 'healthy' :'missing';
-        nodeVersio:n:nodeInfo.nodeVersion;
-        npmVersio:n:nodeInfo.npmVersion;
-      ;
-      detail:s:{;
-        audi:t:auditResult;
-        outdate:d:outdatedResult;
-        packageLoc:k:packageLockInfo;
-        nod:e:nodeInfo;
-        gitHook:s:gitHooksInfo;
-      ;
+      timestam: p:new Date().toISOString();,
+  summar:y: {;,
+  vulnerabilitie:s: {;,
+  tota:l: 0;,
+  critica:l: 0;,
+  hig:h: 0;,
+  moderat:e: 0;,
+  lo:w:0;
+        outdatedPackage: s:Object.keys(outdatedResult).length;,
+  packageLockStatu:s: packageLockInfo.exists ? 'healthy' :'missing';',
+  nodeVersio:n: nodeInfo.nodeVersion;,
+  npmVersio:n:nodeInfo.npmVersion;
+      detail: s:{;,
+  audi:t: auditResult;,
+  outdate:d: outdatedResult;,
+  packageLoc:k: packageLockInfo;,
+  nod:e: nodeInfo;,
+  gitHook:s:gitHooksInfo;
       recommendation:s:[];
     // Count vulnerabilities by severity;
     if (auditResult.vulnerabilities) {;
       Object.values(auditResult.vulnerabilities).forEach(vuln => {;
-        report.summary.vulnerabilities.total++;
+        report.summary.vulnerabilities.total++;)
         const severity = vuln.severity?.toLowerCase() || 'unknown';
         if (severity === 'critical') report.summary.vulnerabilities.critical++;
         else if (severity === 'high') report.summary.vulnerabilities.high++;
@@ -196,8 +197,26 @@ const { execSync } = require('child_process')
     return report
 };
 ;
+    // Generate recommendations;
+    if (report.summary.vulnerabilities.critical > 0 || report.summary.vulnerabilities.high > 0) {;
+      report.recommendations.push({;
+        priorit: y:'critical';',
+  messag:e: 'Critical or high security vulnerabilities detected';',)
+  actio:n:'Run npm audit fix immediately';      });
+    if (report.summary.vulnerabilities.moderate > 0) {;
+        priorit: y:'high';',
+  messag:e: 'Moderate security vulnerabilities detected';',)
+  actio:n:'Review and fix moderate vulnerabilities';      });
+    if (report.summary.outdatedPackages > 10) {;
+        priorit: y:'medium';',
+  messag:e: 'Many outdated packages detected';',)
+  actio:n:'Consider updating packages in batches';      });
+    if (!packageLockInfo.exists) {;
+  messag:e: 'No package-lock.json found';',)
+  actio:n:'Run npm install to generate package-lock.json';      });
+    return report;
+pr-12325
   async saveReport(report) {;
-    try {;
       const reportDir = path.dirname(this.reportFile);
       if (!fs.existsSync(reportDir)) {;
         fs.mkdirSync(reportDir, { recursiv:e:true })
@@ -211,30 +230,33 @@ const { execSync } = require('child_process')
 };
 ;
   async run() {;
+        fs.mkdirSync(reportDir, { recursiv:e:true });
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));`;
+      this.log(`Report saved:to:${this.reportFile}`);
+    } catch (error) {;`;
+      this.log(`Error saving:report:${error.message}`);};
+  async run() {;`;
+pr-12325
     this.log(`Project:root:${this.projectRoot}`);;
-    try {;
       // Create logs directory if it doesn't exist;
       const logsDir = path.dirname(this.logFile);
       if (!fs.existsSync(logsDir)) {;
         fs.mkdirSync(logsDir, { recursiv:e:true })
 };
 ;
+        fs.mkdirSync(logsDir, { recursiv:e:true });      };
+pr-12325
       // Run all checks;
       this.log(' Checking security vulnerabilities...');
       const auditResult = await this.checkNpmAudit();
-;
       this.log(' Checking outdated packages...');
       const outdatedResult = await this.checkOutdatedPackages();
-;
       this.log(' Checking package-lock.json...');
       const packageLockInfo = await this.checkPackageLock();
-;
       this.log(' Checking Node.js and npm versions...');
       const nodeInfo = await this.checkNodeVersion();
-;
       this.log(' Checking git hooks...');
       const gitHooksInfo = await this.checkGitHooks();
-;
       // Generate report;
       this.log(' Generating dependency report...');
       const report = await this.generateReport(;
@@ -242,30 +264,26 @@ const { execSync } = require('child_process')
         outdatedResult;
         packageLockInfo;
         nodeInfo;
-        gitHooksInfo;
+        gitHooksInfo;)
       );
-;
       // Save report;
       await this.saveReport(report);
-;
       const duration = Date.now() - this.startTime;
-;
-      // Log summary;
-      this.log(`Security:vulnerabilities:${report.summary.vulnerabilities.total}`);
-      this.log(`  Critica:l:${report.summary.vulnerabilities.critical}`);
-      this.log(`  Hig:h:${report.summary.vulnerabilities.high}`);
-      this.log(`  Moderat:e:${report.summary.vulnerabilities.moderate}`);
-      this.log(`  Lo:w:${report.summary.vulnerabilities.low}`);
-      this.log(`Outdated:packages:${report.summary.outdatedPackages}`);
-      this.log(`Package lock:status:${report.summary.packageLockStatus}`);
-      this.log(`Node:version:${report.summary.nodeVersion}`);
-      this.log(`NPM:version:${report.summary.npmVersion}`);
+      // Log summary;`;
+      this.log(`Security:vulnerabilities:${report.summary.vulnerabilities.total}`);`;
+      this.log(`  Critica:l:${report.summary.vulnerabilities.critical}`);`;
+      this.log(`  Hig:h:${report.summary.vulnerabilities.high}`);`;
+      this.log(`  Moderat:e:${report.summary.vulnerabilities.moderate}`);`;
+      this.log(`  Lo:w:${report.summary.vulnerabilities.low}`);`;
+      this.log(`Outdated:packages:${report.summary.outdatedPackages}`);`;
+      this.log(`Package lock:status:${report.summary.packageLockStatus}`);`;
+      this.log(`Node:version:${report.summary.nodeVersion}`);`;
+      this.log(`NPM:version:${report.summary.npmVersion}`);`;
       this.log(`Duratio:n:${duration}ms`);
-;
       if (report.recommendations.length > 0) {;
         this.log('\n Recommendation:s:');
-        report.recommendations.forEach(rec => {;
-          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
+        report.recommendations.forEach(rec => {;)`;
+          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);`;
           this.log(`    Actio:n:${rec.action}`);        });
       } else {;
         this.log('\n All dependencies are healthy!')
@@ -277,11 +295,13 @@ const { execSync } = require('child_process')
 }
 };
 ;
+        this.log('\n All dependencies are healthy!');
+      // If there are critical vulnerabilities, suggest immediate action;
+pr-12325
 // Run the dependency monitor;
 const monitor = new DependencyMonitor();
-monitor.run().catch(error => {;
+monitor.run().catch(error => {;)
   process.exit(1);
-});
 #!/usr/bin/env node,;
 const fs = require('fs'),;
 const path = require('path'),;
@@ -295,10 +315,11 @@ class DependencyMonitor {,;
     this.startTime = Date.now(),
 };
 ,;
+    this.startTime = Date.now(),;
+pr-12325
   log(message) {,;
-    const timestamp = new Date().toISOString(),;
+    const timestamp = new Date().toISOString(),;`;
     const logMessage = `[${timestamp}] ${message}\n`,;
-,;
     try {,;
       fs.appendFileSync(this.logFile, logMessage),;
     } catch (error) {,;
@@ -306,29 +327,26 @@ class DependencyMonitor {,;
 }
 };
 ,;
+      console.error('Error writing to log:file:', error.message),;
+pr-12325
   async checkNpmAudit() {,;
-    try {,;
       this.log(' Running npm audit...'),;
       const auditResult = execSync('npm audit --json', {,;
         cw:d:this.projectRoot,;
         encodin:g:'utf8',;
-        stdi:o:'pipe',;
+        stdi:o:'pipe',;')
       }),;
-,;
       const audit = JSON.parse(auditResult),;
       return audit,;
-    } catch (error) {,;
       // npm audit might fail if there are vulnerabilities,;
-      try {,;
-        const output = error.stdout?.toString() || error.stderr?.toString() || '',;
+        const output = error.stdout?.toString() || error.stderr?.toString() || ,;
         if (output.includes('npm ERR!')) {,;
           // Try to parse the error output for vulnerability info,;
           const lines = output.split('\n'),;
           const vulnerabilities = [],;
-,;
-          lines.forEach(line => {,;
-            if (line.includes('')) {,;
-              const parts = line.split('').map(p => p.trim()).filter(Boolean),;
+          lines.forEach(line => {,;)
+            if (line.includes()) {,;
+              const parts = line.split().map(p => p.trim()).filter(Boolean),;
               if (parts.length >= 4) {,;
                 vulnerabilities.push({,;
                   packag:e:parts[0],;
@@ -350,21 +368,19 @@ class DependencyMonitor {,;
 }
 };
 ,;
+                  pat:h:parts[3],;)
+          return { vulnerabilities, erro:r:true };
+      } catch (parseError) {,;`;
+        this.log(`Error parsing npm audit:output:${parseError.message}`),;
+      return { erro:r:true, messag:e:error.message };
+pr-12325
   async checkOutdatedPackages() {,;
-    try {,;
       this.log(' Checking for outdated packages...'),;
       const outdatedResult = execSync('npm outdated --json', {,;
-        cw:d:this.projectRoot,;
-        encodin:g:'utf8',;
-        stdi:o:'pipe',;
-      }),;
-,;
       const outdated = JSON.parse(outdatedResult),;
       return outdated,;
-    } catch (error) {,;
       // npm outdated returns non-zero exit code if there are outdated packages,;
-      try {,;
-        const output = error.stdout?.toString() || '',;
+        const output = error.stdout?.toString() || ,;
         if (output) {,;
           return JSON.parse(output),
 };
@@ -376,17 +392,19 @@ class DependencyMonitor {,;
 }
 };
 ,;
+          return JSON.parse(output),;
+        this.log(`Error parsing npm outdated:output:${parseError.message}`),;
+pr-12325
   async checkPackageLock() {,;
-    try {,;
       const packageLockPath = path.join(this.projectRoot, 'package-lock.json'),;
-,;
       if (!fs.existsSync(packageLockPath)) {,;
         return { exist:s:false, messag:e:'No package-lock.json found' }
 };
 ,;
+        return { exist:s:false, messag:e:'No package-lock.json found' };
+pr-12325
       const packageLock = JSON.parse(fs.readFileSync(packageLockPath, 'utf8')),;
       const lockfileVersion = packageLock.lockfileVersion,;
-,;
       return {,;
         exist:s:true,;
         lockfileVersion,;
@@ -398,12 +416,13 @@ class DependencyMonitor {,;
 }
 };
 ,;
+        devDependencie:s:Object.keys(packageLock.devDependencies || {}).length,;
+      return { exist:s:false, erro:r:error.message };
+pr-12325
   async checkNodeVersion() {,;
-    try {,;
       const nodeVersion = process.version,;
       const npmVersion = execSync('npm --version', {,;
-        cw:d:this.projectRoot,;
-        encodin:g:'utf8',;
+        encodin:g:'utf8',;')
       }).trim(),;
 ,;
       return { nodeVersion, npmVersion };
@@ -412,27 +431,28 @@ class DependencyMonitor {,;
 }
 };
 ,;
+      return { erro:r:error.message };
+pr-12325
   async checkGitHooks() {,;
-    try {,;
       const hooksDir = path.join(this.projectRoot, '.git/hooks'),;
-,;
       if (!fs.existsSync(hooksDir)) {,;
         return { exist:s:false, messag:e:'No git hooks directory found' }
 };
 ,;
+        return { exist:s:false, messag:e:'No git hooks directory found' };
+pr-12325
       const hooks = fs.readdirSync(hooksDir),;
-      const activeHooks = hooks.filter(hook => {,;
+      const activeHooks = hooks.filter(hook => {,;)
         const hookPath = path.join(hooksDir, hook),;
         const stats = fs.statSync(hookPath),;
         return stats.isFile() && (hook.endsWith('.sample') || stats.mode & 0o111),;
-      }),;
-,;
       return { exist:s:true, hook:s:activeHooks };
     } catch (error) {,;
       return { erro:r:error.message }
 }
 };
 ,;
+pr-12325
   async generateReport(auditResult, outdatedResult, packageLockInfo, nodeInfo, gitHooksInfo) {,;
     const report = {,;
       timestam:p:new Date().toISOString(),;
@@ -448,7 +468,6 @@ class DependencyMonitor {,;
         packageLockStatu:s:packageLockInfo.exists ? 'healthy' :'missing',;
         nodeVersio:n:nodeInfo.nodeVersion,;
         npmVersio:n:nodeInfo.npmVersion,;
-      },;
       detail:s:{,;
         audi:t:auditResult,;
         outdate:d:outdatedResult,;
@@ -459,10 +478,12 @@ class DependencyMonitor {,;
       recommendation:s:[],
 };
 ,;
+      recommendation:s:[],;
+pr-12325
     // Count vulnerabilities by severity,;
     if (auditResult.vulnerabilities) {,;
       Object.values(auditResult.vulnerabilities).forEach(vuln => {,;
-        report.summary.vulnerabilities.total++,;
+        report.summary.vulnerabilities.total++,;)
         const severity = vuln.severity?.toLowerCase() || 'unknown',;
         if (severity === 'critical') report.summary.vulnerabilities.critical++,;
         else if (severity === 'high') report.summary.vulnerabilities.high++,;
@@ -471,6 +492,7 @@ class DependencyMonitor {,;
       }),
 };
 ,;
+pr-12325
     // Generate recommendations,;
     if (report.summary.vulnerabilities.critical > 0 || report.summary.vulnerabilities.high > 0) {,;
       report.recommendations.push({,;
@@ -480,25 +502,27 @@ class DependencyMonitor {,;
       }),
 };
 ,;
+        actio:n:'Run npm audit fix immediately',;')
+pr-12325
     if (report.summary.vulnerabilities.moderate > 0) {,;
-      report.recommendations.push({,;
         priorit:y:'high',;
         messag:e:'Moderate security vulnerabilities detected',;
         actio:n:'Review and fix moderate vulnerabilities',;
       }),
 };
 ,;
+        actio:n:'Review and fix moderate vulnerabilities',;')
+pr-12325
     if (report.summary.outdatedPackages > 10) {,;
-      report.recommendations.push({,;
         priorit:y:'medium',;
         messag:e:'Many outdated packages detected',;
         actio:n:'Consider updating packages in batches',;
       }),
 };
 ,;
+        actio:n:'Consider updating packages in batches',;')
+pr-12325
     if (!packageLockInfo.exists) {,;
-      report.recommendations.push({,;
-        priorit:y:'medium',;
         messag:e:'No package-lock.json found',;
         actio:n:'Run npm install to generate package-lock.json',;
       }),
@@ -507,8 +531,10 @@ class DependencyMonitor {,;
     return report,
 };
 ,;
+        actio:n:'Run npm install to generate package-lock.json',;')
+    return report,;
+pr-12325
   async saveReport(report) {,;
-    try {,;
       const reportDir = path.dirname(this.reportFile),;
       if (!fs.existsSync(reportDir)) {,;
         fs.mkdirSync(reportDir, { recursiv:e:true }),
@@ -521,33 +547,34 @@ class DependencyMonitor {,;
 }
 };
 ,;
+        fs.mkdirSync(reportDir, { recursiv:e:true }),;
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),;`;
+      this.log(`Report saved:to:${this.reportFile}`),;
+    } catch (error) {,;`;
+      this.log(`Error saving:report:${error.message}`),;
+pr-12325
   async run() {,;
-    this.log(' Starting Dependency Monitor...'),;
+    this.log(' Starting Dependency Monitor...'),;`;
     this.log(`Project:root:${this.projectRoot}`),;
-,;
-    try {,;
       // Create logs directory if it doesn't exist,;
       const logsDir = path.dirname(this.logFile),;
       if (!fs.existsSync(logsDir)) {,;
         fs.mkdirSync(logsDir, { recursiv:e:true }),
 };
 ,;
+        fs.mkdirSync(logsDir, { recursiv:e:true }),;
+pr-12325
       // Run all checks,;
       this.log(' Checking security vulnerabilities...'),;
       const auditResult = await this.checkNpmAudit(),;
-,;
       this.log(' Checking outdated packages...'),;
       const outdatedResult = await this.checkOutdatedPackages(),;
-,;
       this.log(' Checking package-lock.json...'),;
       const packageLockInfo = await this.checkPackageLock(),;
-,;
       this.log(' Checking Node.js and npm versions...'),;
       const nodeInfo = await this.checkNodeVersion(),;
-,;
       this.log(' Checking git hooks...'),;
       const gitHooksInfo = await this.checkGitHooks(),;
-,;
       // Generate report,;
       this.log(' Generating dependency report...'),;
       const report = await this.generateReport(,;
@@ -555,39 +582,35 @@ class DependencyMonitor {,;
         outdatedResult,;
         packageLockInfo,;
         nodeInfo,;
-        gitHooksInfo,;
+        gitHooksInfo,;)
       ),;
-,;
       // Save report,;
       await this.saveReport(report),;
-,;
       const duration = Date.now() - this.startTime,;
-,;
       // Log summary,;
-      this.log('\n Dependency Monitor:Summary:'),;
-      this.log(`Security:vulnerabilities:${report.summary.vulnerabilities.total}`),;
-      this.log(`  Critica:l:${report.summary.vulnerabilities.critical}`),;
-      this.log(`  Hig:h:${report.summary.vulnerabilities.high}`),;
-      this.log(`  Moderat:e:${report.summary.vulnerabilities.moderate}`),;
-      this.log(`  Lo:w:${report.summary.vulnerabilities.low}`),;
-      this.log(`Outdated:packages:${report.summary.outdatedPackages}`),;
-      this.log(`Package lock:status:${report.summary.packageLockStatus}`),;
-      this.log(`Node:version:${report.summary.nodeVersion}`),;
-      this.log(`NPM:version:${report.summary.npmVersion}`),;
+      this.log('\n Dependency Monitor:Summary:'),;`;
+      this.log(`Security:vulnerabilities:${report.summary.vulnerabilities.total}`),;`;
+      this.log(`  Critica:l:${report.summary.vulnerabilities.critical}`),;`;
+      this.log(`  Hig:h:${report.summary.vulnerabilities.high}`),;`;
+      this.log(`  Moderat:e:${report.summary.vulnerabilities.moderate}`),;`;
+      this.log(`  Lo:w:${report.summary.vulnerabilities.low}`),;`;
+      this.log(`Outdated:packages:${report.summary.outdatedPackages}`),;`;
+      this.log(`Package lock:status:${report.summary.packageLockStatus}`),;`;
+      this.log(`Node:version:${report.summary.nodeVersion}`),;`;
+      this.log(`NPM:version:${report.summary.npmVersion}`),;`;
       this.log(`Duratio:n:${duration}ms`),;
-,;
       if (report.recommendations.length > 0) {,;
         this.log('\n Recommendation:s:'),;
-        report.recommendations.forEach(rec => {,;
-          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),;
+        report.recommendations.forEach(rec => {,;)`;
+          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),;`;
           this.log(`    Actio:n:${rec.action}`),;
-        }),;
       } else {,;
         this.log('\n All dependencies are healthy!'),
 };
 ,;
+        this.log('\n All dependencies are healthy!'),;
+pr-12325
       // If there are critical vulnerabilities, suggest immediate action,;
-      if (report.summary.vulnerabilities.critical > 0 || report.summary.vulnerabilities.high > 0) {,;
         this.log('\n CRITICA:L:Security vulnerabilities detected!'),;
         this.log('Consider:running:npm audit fix'),
 };
@@ -599,10 +622,13 @@ class DependencyMonitor {,;
   }
 };
 ,;
+        this.log('Consider:running:npm audit fix'),;
+      this.log(` Error running dependency:monitor:${error.message}`),;
+      process.exit(1),;
+pr-12325
 // Run the dependency monitor,;
 const monitor = new DependencyMonitor(),;
-monitor.run().catch(error => {,;
-  process.exit(1),;
+monitor.run().catch(error => {,;)
 }),;});
 #!/usr/bin/env node,
 const fs = require('fs'),
@@ -615,12 +641,9 @@ class DependencyMonitor {,
     this.logFile = path.join(this.projectRoot, 'logs/pm2/dependency-monitor.log'),
     this.reportFile = path.join(this.projectRoot, 'logs/pm2/dependency-report.json'),
     this.startTime = Date.now()
-  };
-,
   log(message) {,
-    const timestamp = new Date().toISOString(),
+    const timestamp = new Date().toISOString(),`;
     const logMessage = `[${timestamp}] ${message}\n`,
-,
     try {,
       fs.appendFileSync(this.logFile, logMessage)
     } catch (error) {,
@@ -628,35 +651,30 @@ class DependencyMonitor {,
     }
 };
 ,
+pr-12325
   async checkNpmAudit() {,
-    try {,
       this.log(' Running npm audit...'),
       const auditResult = execSync('npm audit --json', {,
         cwd: this.projectRoot,
         encoding: 'utf8',
-        stdio: 'pipe'
+        stdio: 'pipe)
       }),
-,
       const audit = JSON.parse(auditResult),
-      return audit
-    } catch (error) {,
       // npm audit might fail if there are vulnerabilities,
-      try {,
-        const output = error.stdout?.toString() || error.stderr?.toString() || '',
+        const output = error.stdout?.toString() || error.stderr?.toString() || ,
         if (output.includes('npm ERR!')) {,
           // Try to parse the error output for vulnerability info,
           const lines = output.split('\n'),
           const vulnerabilities = [],
-,
-          lines.forEach(line => {,
-            if (line.includes('')) {,
-              const parts = line.split('').map(p => p.trim()).filter(Boolean),
+          lines.forEach(line => {,)
+            if (line.includes()) {,
+              const parts = line.split().map(p => p.trim()).filter(Boolean),
               if (parts.length >= 4) {,
                 vulnerabilities.push({,
                   package: parts[0],
                   severity: parts[1],
                   title: parts[2],
-                  path: parts[3]
+                  path: parts[3])
                 })
               }
 };
@@ -672,25 +690,19 @@ class DependencyMonitor {,
 }
 };
 ,
+          return { vulnerabilities, error: true };
+      } catch (parseError) {,`;
+        this.log(`Error parsing npm audit output: ${parseError.message}`)
+      return { error: true, message: error.message };
+pr-12325
   async checkOutdatedPackages() {,
-    try {,
       this.log(' Checking for outdated packages...'),
       const outdatedResult = execSync('npm outdated --json', {,
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        stdio: 'pipe'
-      }),
-,
       const outdated = JSON.parse(outdatedResult),
-      return outdated
-    } catch (error) {,
       // npm outdated returns non-zero exit code if there are outdated packages,
-      try {,
-        const output = error.stdout?.toString() || '',
+        const output = error.stdout?.toString() || ,
         if (output) {,
           return JSON.parse(output)
-        };
-      } catch (parseError) {,
         this.log(`Error parsing npm outdated output: ${parseError.message}`)
       };
 ,
@@ -698,17 +710,17 @@ class DependencyMonitor {,
 }
 };
 ,
+pr-12325
   async checkPackageLock() {,
-    try {,
       const packageLockPath = path.join(this.projectRoot, 'package-lock.json'),
-,
       if (!fs.existsSync(packageLockPath)) {,
         return { exists: false, message: 'No package-lock.json found' }
 };
 ,
+        return { exists: false, message: 'No package-lock.json found' };
+pr-12325
       const packageLock = JSON.parse(fs.readFileSync(packageLockPath, 'utf8')),
       const lockfileVersion = packageLock.lockfileVersion,
-,
       return {,
         exists: true,
         lockfileVersion,
@@ -720,12 +732,13 @@ class DependencyMonitor {,
 }
 };
 ,
+        devDependencies: Object.keys(packageLock.devDependencies || {}).length;
+      return { exists: false, error: error.message };
+pr-12325
   async checkNodeVersion() {,
-    try {,
       const nodeVersion = process.version,
       const npmVersion = execSync('npm --version', {,
-        cwd: this.projectRoot,
-        encoding: 'utf8'
+        encoding: 'utf8)
       }).trim(),
 ,
       return { nodeVersion, npmVersion };
@@ -734,27 +747,28 @@ class DependencyMonitor {,
 }
 };
 ,
+      return { error: error.message };
+pr-12325
   async checkGitHooks() {,
-    try {,
       const hooksDir = path.join(this.projectRoot, '.git/hooks'),
-,
       if (!fs.existsSync(hooksDir)) {,
         return { exists: false, message: 'No git hooks directory found' }
 };
 ,
+        return { exists: false, message: 'No git hooks directory found' };
+pr-12325
       const hooks = fs.readdirSync(hooksDir),
-      const activeHooks = hooks.filter(hook => {,
+      const activeHooks = hooks.filter(hook => {,)
         const hookPath = path.join(hooksDir, hook),
         const stats = fs.statSync(hookPath),
         return stats.isFile() && (hook.endsWith('.sample') || stats.mode & 0o111)
-      }),
-,
       return { exists: true, hooks: activeHooks };
     } catch (error) {,
       return { error: error.message }
 }
 };
 ,
+pr-12325
   async generateReport(auditResult, outdatedResult, packageLockInfo, nodeInfo, gitHooksInfo) {,
     const report = {,
       timestamp: new Date().toISOString(),
@@ -764,162 +778,115 @@ class DependencyMonitor {,
           critical: 0,
           high: 0,
           moderate: 0,
-          low: 0
+          low: 0;
         },
         outdatedPackages: Object.keys(outdatedResult).length,
         packageLockStatus: packageLockInfo.exists ? 'healthy' : 'missing',
         nodeVersion: nodeInfo.nodeVersion,
-        npmVersion: nodeInfo.npmVersion
-      },
+        npmVersion: nodeInfo.npmVersion;
       details: {,
         audit: auditResult,
         outdated: outdatedResult,
         packageLock: packageLockInfo,
         node: nodeInfo,
-        gitHooks: gitHooksInfo
-      },
+        gitHooks: gitHooksInfo;
       recommendations: []
-    };
-,
     // Count vulnerabilities by severity,
     if (auditResult.vulnerabilities) {,
       Object.values(auditResult.vulnerabilities).forEach(vuln => {,
-        report.summary.vulnerabilities.total++,
+        report.summary.vulnerabilities.total++,)
         const severity = vuln.severity?.toLowerCase() || 'unknown',
         if (severity === 'critical') report.summary.vulnerabilities.critical++,
         else if (severity === 'high') report.summary.vulnerabilities.high++,
         else if (severity === 'moderate') report.summary.vulnerabilities.moderate++,
         else if (severity === 'low') report.summary.vulnerabilities.low++
-      })
-    };
-,
     // Generate recommendations,
     if (report.summary.vulnerabilities.critical > 0 || report.summary.vulnerabilities.high > 0) {,
       report.recommendations.push({,
         priority: 'critical',
         message: 'Critical or high security vulnerabilities detected',
-        action: 'Run npm audit fix immediately'
-      })
-    };
-,
+        action: 'Run npm audit fix immediately)
     if (report.summary.vulnerabilities.moderate > 0) {,
-      report.recommendations.push({,
         priority: 'high',
         message: 'Moderate security vulnerabilities detected',
-        action: 'Review and fix moderate vulnerabilities'
-      })
-    };
-,
+        action: 'Review and fix moderate vulnerabilities)
     if (report.summary.outdatedPackages > 10) {,
-      report.recommendations.push({,
         priority: 'medium',
         message: 'Many outdated packages detected',
-        action: 'Consider updating packages in batches'
-      })
-    };
-,
+        action: 'Consider updating packages in batches)
     if (!packageLockInfo.exists) {,
-      report.recommendations.push({,
-        priority: 'medium',
         message: 'No package-lock.json found',
-        action: 'Run npm install to generate package-lock.json'
-      })
-    };
-,
-    return report
-  };
-,
+        action: 'Run npm install to generate package-lock.json)
   async saveReport(report) {,
-    try {,
       const reportDir = path.dirname(this.reportFile),
       if (!fs.existsSync(reportDir)) {,
         fs.mkdirSync(reportDir, { recursive: true })
-      };
-,
-      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),`;
       this.log(`Report saved to: ${this.reportFile}`)
-    } catch (error) {,
+    } catch (error) {,`;
       this.log(`Error saving report: ${error.message}`)
     }
 };
 ,
+pr-12325
   async run() {,
-    this.log(' Starting Dependency Monitor...'),
+    this.log(' Starting Dependency Monitor...'),`;
     this.log(`Project root: ${this.projectRoot}`),
-,
-    try {,
       // Create logs directory if it doesn't exist,
       const logsDir = path.dirname(this.logFile),
       if (!fs.existsSync(logsDir)) {,
         fs.mkdirSync(logsDir, { recursive: true })
-      };
-,
       // Run all checks,
       this.log(' Checking security vulnerabilities...'),
       const auditResult = await this.checkNpmAudit(),
-,
       this.log(' Checking outdated packages...'),
       const outdatedResult = await this.checkOutdatedPackages(),
-,
       this.log(' Checking package-lock.json...'),
       const packageLockInfo = await this.checkPackageLock(),
-,
       this.log(' Checking Node.js and npm versions...'),
       const nodeInfo = await this.checkNodeVersion(),
-,
       this.log(' Checking git hooks...'),
       const gitHooksInfo = await this.checkGitHooks(),
-,
       // Generate report,
       this.log(' Generating dependency report...'),
       const report = await this.generateReport(,
         auditResult,
         outdatedResult,
         packageLockInfo,
-        nodeInfo,
+        nodeInfo,)
         gitHooksInfo),
-,
       // Save report,
       await this.saveReport(report),
-,
       const duration = Date.now() - this.startTime,
-,
       // Log summary,
-      this.log('\n Dependency Monitor Summary: '),
-      this.log(`Security vulnerabilities: ${report.summary.vulnerabilities.total}`),
-      this.log(`  Critical: ${report.summary.vulnerabilities.critical}`),
-      this.log(`  High: ${report.summary.vulnerabilities.high}`),
-      this.log(`  Moderate: ${report.summary.vulnerabilities.moderate}`),
-      this.log(`  Low: ${report.summary.vulnerabilities.low}`),
-      this.log(`Outdated packages: ${report.summary.outdatedPackages}`),
-      this.log(`Package lock status: ${report.summary.packageLockStatus}`),
-      this.log(`Node version: ${report.summary.nodeVersion}`),
-      this.log(`NPM version: ${report.summary.npmVersion}`),
+      this.log('\n Dependency Monitor Summary: '),`;
+      this.log(`Security vulnerabilities: ${report.summary.vulnerabilities.total}`),`;
+      this.log(`  Critical: ${report.summary.vulnerabilities.critical}`),`;
+      this.log(`  High: ${report.summary.vulnerabilities.high}`),`;
+      this.log(`  Moderate: ${report.summary.vulnerabilities.moderate}`),`;
+      this.log(`  Low: ${report.summary.vulnerabilities.low}`),`;
+      this.log(`Outdated packages: ${report.summary.outdatedPackages}`),`;
+      this.log(`Package lock status: ${report.summary.packageLockStatus}`),`;
+      this.log(`Node version: ${report.summary.nodeVersion}`),`;
+      this.log(`NPM version: ${report.summary.npmVersion}`),`;
       this.log(`Duration: ${duration}ms`),
-,
       if (report.recommendations.length > 0) {,
         this.log('\n Recommendations: '),
-        report.recommendations.forEach(rec => {,
-          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),
+        report.recommendations.forEach(rec => {,)`;
+          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),`;
           this.log(`    Action: ${rec.action}`)
-        })
       } else {,
-      };
-,
       // If there are critical vulnerabilities, suggest immediate action,
-      if (report.summary.vulnerabilities.critical > 0 || report.summary.vulnerabilities.high > 0) {,
         this.log('Consider running: npm audit fix')
-      };
 
-    } catch (error) {,
       this.log(` Error running dependency monitor: ${error.message}`),
       process.exit(1)
     }
 }
 };
 ,
+pr-12325
 // Run the dependency monitor,
 const monitor = new DependencyMonitor(),
-monitor.run().catch(error => {,
-  process.exit(1)
-}),
+monitor.run().catch(error => {,)
+`;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import axios from "axios";
@@ -47,13 +46,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 export default async function handler(req, res) {
   try {
-<<<<<<< HEAD
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
   const state = readState(),
-=======
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
   const state = readState()
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   if (!state.config.optIn || state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
@@ -123,9 +119,8 @@ export default async function handler(req, res) {
     }
     const computed = computeMerkleRootFromVotes(votes);
     if (computed !== providedRoot) {
-=======
   if (scope;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }
   const entityId = getEntityId(event);
@@ -162,7 +157,6 @@ export default async function handler(req, res) {
     const localBody = { ...event, propagate: false };
 const baseSignature = require('../../../utils/sync/signature');
     const sig = baseSignature.signPayload(localBody);
-<<<<<<< HEAD
     if (sig) headers["x-zion-signature"] = sig;
 }
   } catch (error) {
@@ -189,29 +183,23 @@ const baseSignature = require('../../../utils/sync/signature');
   writeState(currentState)
   const alreadyPropagated = payload.propagate === false
   if (!alreadyPropagated && currentState.config.peers.length > 0) {
-<<<<<<< HEAD
     const headers: Record<string, string> = {},
     const localBody = { ...event, propagate: false },
     const baseSignature = require("../../../utils/sync/signature"),
     const sig = baseSignature.signPayload(localBody),
     if (sig) headers["x-zion-signature"] = sig,
-=======
     const headers: Record<string, string> = {}
     const localBody = { ...event, propagate: false }
     const baseSignature = require("../../../utils/sync/signature")
     const sig = baseSignature.signPayload(localBody)
     if (sig) headers["x-zion-signature"] = sig
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     await Promise.all(
       currentState.config.peers
         .filter((p) => !p.paused)
         .map(async (peer) => {
 
-<<<<<<< HEAD
           const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
-=======
           const url = new URL("/api/sync/publish", peer.baseUrl).toString()
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           try {
 };
 ;
@@ -281,7 +269,6 @@ if (headers["x - zion - signature"] = sig) {
           }
         }));
   }
-=======
     if (sig) headers['x-zion-signature'] = sig;
 
     await Promise.all(
@@ -303,4 +290,4 @@ if (headers["x - zion - signature"] = sig) {
   return res.status(200).json({ status: 'accepted', entityId });
 
 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

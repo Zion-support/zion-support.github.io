@@ -119,3 +119,26 @@ export async function updateMilestoneStatus(projectId: string, milestoneId: stri
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+  // TODO: Implement
+}
+  id: string;,
+  title: string;
+  description: string;,
+  status: 'pending' | 'in-progress' | 'completed';
+  dueDate: string;,
+  projectId: string;
+
+export interface CreateMilestonePayload {
+  // TODO: Implement
+  title: string;,
+  description: string;
+  dueDate: string;
+
+export interface UpdateMilestoneStatusPayload {
+  // TODO: Implement
+  status: Milestone['status'];
+
+export async function createMilestone(projectId: string, payload: CreateMilestonePayload): Promise<Milestone> {
+
+): Promise<Milestone> {
+pr-12325

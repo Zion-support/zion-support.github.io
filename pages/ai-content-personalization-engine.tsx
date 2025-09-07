@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 			implementationWeeks="Implementation: 2–4 weeks"
 			roiNote="Average ROI 3–6x within 90 days"
 			features={[
@@ -8,10 +7,9 @@
 				"Journey orchestration across channels"
 				"Privacy-safe profiling and consent management"
 
-=======
 import React from 'react';
 			title;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 				"Integrations: CDP, ESP, CMS, Web SDK"
 			]}
 			industries={["E‑commerce", "Media", "SaaS", "Education"]}
@@ -45,7 +43,6 @@ import React from 'react';
 			canonical="https: //ziontechgroup.com/ai-content-personalization-engine"
 		/>
 	)
-<<<<<<< HEAD
 			canonical="https: //ziontechgroup.com/ai-content-personalization-engine";
 		/>;
 	);
@@ -53,6 +50,5 @@ import React from 'react';
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   // Using router.asPath instead of useLocation
 
         const { data, error } = await supabase;
@@ -191,7 +190,6 @@ if ( {) {
   
         if (talentData) {
 
-=======
 import { useState, useEffect } from 'react';
 import { SEO } from '@/components/SEO';
 import { TalentCard } from '@/components/talent/TalentCard';
@@ -210,7 +208,7 @@ export default function SavedTalentsPage() {
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
   const [isLoading, setIsLoading] = useState(true);
   const router = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>
       <SEO
@@ -240,18 +238,16 @@ export default function SavedTalentsPage() {
         )}
       </div>
     </>
-<<<<<<< HEAD
   )
 }, [user, router])
 }const {
   data, error;
-=======
   );
 
 }, [user, router]);
 }const {;
   data, error ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }= await supabase .from ("saved talents") user id;
 full name;
 professional title;
@@ -263,7 +259,6 @@ key projects;
 skills;
 location;
 availability;
-<<<<<<< HEAD
 is verified) `);
 }finally {
   setIsLoading (false);
@@ -288,7 +283,6 @@ is verified) `);
             ))}
           </div>
         )}
-=======
 is verified) `) ;
 }finally {;
   setIsLoading (false) ;
@@ -338,4 +332,4 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
 }</div>) ;
 }</div> </>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

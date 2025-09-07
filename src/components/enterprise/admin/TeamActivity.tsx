@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {
 
   Table
@@ -19,16 +17,14 @@ import { CalendarIcon, Search } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import React from "react",
-=======
 import React from 'react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-<<<<<<< HEAD
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
 import { CalendarIcon, Search } from 'lucide-react'
@@ -93,9 +89,7 @@ export function TeamActivity() {
   const getCategoryBadge = (category: string) => {
     const categoryStyles: Record<string { variant: "default" | "outline" | "secondary" | "destructive" }> = {
       jobs: { variant: "default" },
-=======
 jobs: { variant: "default" },
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       candidates: { variant: "outline" },
       team: { variant: "secondary" },
       billing: { variant: "destructive" }},
@@ -106,7 +100,6 @@ jobs: { variant: "default" },
 
 import React from "react";
 import {;
-=======
   TableRow,;
 } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
@@ -116,13 +109,12 @@ import { Input } from '@/components/ui/input';
 
 import React from "react";
 import {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   Table;
   TableBody;
   TableCell;
   TableHead;
   TableHeader;
-<<<<<<< HEAD
   TableRow} from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from 'lucide-react';
@@ -219,7 +211,6 @@ export function TeamActivity() {;
 
 
 
-=======
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
 import { CalendarIcon, Search } from 'lucide-react'
@@ -228,7 +219,7 @@ import { Input } from "@/components/ui/input";
 export function TeamActivity() {
   // Mock activity data
   const activities = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
     <div className="space - y-6">;
@@ -437,12 +428,7 @@ const getCategoryBadge = (category: string) =>: any {
         <Button variant="outline" size="sm">
           Next
         </Button>
-<<<<<<< HEAD
-=======
       </div>
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
     </div>
   );
 
@@ -455,4 +441,4 @@ const getCategoryBadge = (category: string) => {;
 }> </TableCell> </TableRow>) ) ";
 }</TableBody> </Table> </div> <div className="flex items-center justify-between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text-sm text-muted-foreground" > Page 1 of 10 </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>) ;
 }"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

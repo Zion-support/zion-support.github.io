@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {useEffect, useState} from 'react'
 import {ProductListingCard} from '@/components/ProductListingCard'
 import {useAuth} from '@/hooks/useAuth'
@@ -12,7 +11,6 @@ import {
 } from '@/components/ui/dialog'
 import { Button } from '@/components/ui/button'
 
-=======
 import { useEffect, useState  } from 'react';
 import { ProductListingCard  } from '@/components/ProductListingCard';
 import { useAuth  } from '@/hooks/useAuth';
@@ -20,34 +18,30 @@ import { fetchRecommendations  } from '@/api/recommendations';
 import type { ProductListing } from '@/types/listings';
 import { Dialog, DialogContent, DialogHeader, DialogTitle  } from '@/components/ui/dialog';
 import { Button  } from '@/components/ui/button';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import { Loader2 } from 'lucide-react'
 import Link from 'next/link';
 import { ErrorState } from '@/components/jobs/applications';
 export default function EquipmentRecommendations() {
-<<<<<<< HEAD
 
   const { isAuthenticated, user } = useAuth()
   const [listings, setListings] = useState<ProductListing[]>([])
   const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState<boolean>(false)
-=======
   const { isAuthenticated, user } = useAuth();
   const [listings, setListings] = useState<ProductListing[]>([]),
   const [loading, setLoading] = useState<boolean>(false),
   const [error, setError] = useState<boolean>(false),
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   useEffect(() => {
 export default function EquipmentRecommendations() {
   const { isAuthenticated, user } = useAuth()
   const [listings, setListings] = useState<ProductListing[]>([])
   const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState<boolean>(false)
-<<<<<<< HEAD
       <Dialog open>
         <DialogContent className="bg-zion-blue border-zion-blue-light text-white">
-=======
   useEffect((,) => {
     if (isAuthenticated && user?.id) {
       setLoading(true);
@@ -61,12 +55,11 @@ export default function EquipmentRecommendations() {
     return (
       <Dialog open>
 <DialogContent className='bg-zion-blue border-zion-blue-light text-white'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           <DialogHeader>
             <DialogTitle>Authentication required</DialogTitle>
           </DialogHeader>
           <p>Please sign in to get personalized AI picks.</p>
-<<<<<<< HEAD
 
 
             <Link href="/auth/login?returnTo=/equipment/recommendations">Sign In</Link>
@@ -92,7 +85,6 @@ export default function EquipmentRecommendations() {
       </div>;
     </div>;
   );
-=======
 <Button
             asChild
             className='mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white'
@@ -125,4 +117,4 @@ export default function EquipmentRecommendations() {
     </div>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

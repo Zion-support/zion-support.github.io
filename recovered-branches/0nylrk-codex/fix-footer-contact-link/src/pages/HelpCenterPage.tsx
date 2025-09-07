@@ -49,7 +49,7 @@ export default function HelpCenterPage() {;
       <HelpCenter />;
     </>;  );
 }
-=======import React from './react';
+import React from './react';
 import HelpCenter from "@/components / support / HelpCenter";
 import { SEO } from '@/components / SEO';
 export default /**
@@ -67,3 +67,56 @@ function HelpCenterPage() {
 
     </>;
   );
+import React from "react";""
+import HelpCenter from "@/components/support/HelpCenter";""
+import { SEO } from "@/components/SEO";"
+export default function HelpCenterPage() {
+  return (
+    <>
+      <SEO;"
+        title="Help Center | Zion AI Marketplace"""
+        description="Find answers to common questions about using the Zion AI Marketplace platform. Browse help articles or contact our support team."""
+        keywords="help center, support, FAQ, tutorial, guide, Zion AI Marketplace""
+      />
+
+      <HelpCenter />
+
+    </>)
+  );
+}
+
+
+
+
+
+"
+import React from './react';
+import HelpCenter from "@/components / support / HelpCenter";""
+import { SEO } from '@/components / SEO';
+export default /**
+ * HelpCenterPage - Function description;
+ */
+function HelpCenterPage() {
+    <>;
+      <SEO;
+        title="Help Center | Zion AI Marketplace";""
+        description="Find answers to common questions about using the Zion AI Marketplace platform. Browse help articles or contact our support team.";""
+        keywords="help center, support, FAQ, tutorial, guide, Zion AI Marketplace";"
+      />;
+
+      <HelpCenter />;
+
+
+    </>;)
+
+
+;
+
+
+    </>;
+  ),;
+}  () {"
+  return (<> <SEO title="Help Center | Zion AI Marketplace" description="Find answers to common questions about using the Zion AI Marketplace platform. Browse help articles or contact our support team." keywords="help center, support, FAQ, tutorial, guide, Zion AI Marketplace" /> <HelpCenter /> </>)"
+
+    </>);
+pr-12325

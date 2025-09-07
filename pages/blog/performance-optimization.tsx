@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 
 
 import React from 'react',
-=======
 import React from 'react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default function PerformanceOptimization() {
   return (
     <>
@@ -32,7 +30,6 @@ export default function PerformanceOptimization() {
             <nav className='mb-8'>
               <Link
                 href='/blog'
-<<<<<<< HEAD
 }
 import Head from 'next/head';
 import Link from 'next/link';
@@ -229,7 +226,6 @@ function PerformanceOptimization() {
           </div>;
         </main>;
       </div>;
-=======
                 className='text-cyan-400 hover:text-cyan-300 transition-colors'
               >
                 ← Back to Blog
@@ -467,4 +463,4 @@ function PerformanceOptimization() {
     </>
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

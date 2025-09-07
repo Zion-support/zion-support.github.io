@@ -1,11 +1,13 @@
-import React from 'react';
-
+import React from 'react';'
 const LinkHealthChecker = ({ className }) => {
-  return (
-    <div className={className || ''}>
+  return ('
+    <div className={className || ''}>'
+</div>
       <h1>LinkHealthChecker</h1>
       <p>This component is under development.</p>
     </div>
   )
 };
 
+    </div>)'
+pr-12325

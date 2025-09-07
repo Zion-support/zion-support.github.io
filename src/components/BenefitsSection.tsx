@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 import React from 'react';
 import { CheckCircle, Shield, Zap, Users, Clock, Award, Bot, Globe, TrendingDown } from 'lucide-react';
 
@@ -47,25 +38,47 @@ const BenefitsSection: React.FC = () => {
       title: 'Cost Reduction',
       description: 'Save up to 40% on your projects through direct connections and competitive pricing.',
       icon: <TrendingDown className="w-8 h-8 text-red-500" />,
+import React from 'react';
+
+const BenefitsSection = () => {
+  const benefits = [
+    {
+      icon: '🚀',
+      title: 'Faster Implementation',
+      description: 'Get your solutions up and running quickly with our streamlined processes.',
+pr-12325
     },
+      icon: '💰',
+      title: 'Cost Effective',
+      description: 'Reduce operational costs while improving efficiency and productivity.',
+      icon: '🔒',
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime guarantee for all services.',
+      icon: '📈',
+      title: 'Scalable Solutions',
+      description: 'Grow your business with solutions that scale with your needs.',
+      icon: '🎯',
+      title: 'Customized Approach',
+      description: 'Tailored solutions designed specifically for your business requirements.',
+      icon: '🛠️',
+      title: 'Expert Support',
+      description: '24/7 technical support from our team of experienced professionals.',
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Why Choose Zion Tech?
+    <section className="py-16 bg-gray-50 dark:bg-gray-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+            Why Choose Zion Tech Group?
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            We combine cutting-edge technology with exceptional service to deliver 
-            solutions that drive real business value.
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            We deliver cutting-edge technology solutions that drive business growth and innovation.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {benefits.map((benefit, index) => (
-<<<<<<< HEAD
             <div key={index} className="text-center p-6">
               <div className="text-4xl mb-4">{benefit.icon}</div>
               <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
@@ -79,15 +92,8 @@ const BenefitsSection: React.FC = () => {
 };
 
 export default BenefitsSection;
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
->>>>>>> main
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
->>>>>>> pr-12243
+main
+pr-12243
 const getBenefits = (t: any) => [
 
 
@@ -108,7 +114,6 @@ const getBenefits = (t: any) => [
     title: t('benefits.cost_reduction'),
     description: t('benefits.cost_reduction_desc'),
 
-=======
 }
 
 const getBenefits = null;
@@ -116,22 +121,20 @@ const getBenefits = null;
     <section className={cn("py-20 bg-zion-blue-light", className)} style={style}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           <GradientHeading>{t('home.benefits_title')}</GradientHeading>
           <p className='text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>
             {t('home.benefits_subtitle')}
           </p>
         </div>
 
-<<<<<<< HEAD
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>          {benefits.map((benefit, index) => (        
 
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-=======
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           {benefits.map((benefit, index) => (
 
 class ErrorBoundary extends React.Component {
@@ -257,63 +260,38 @@ function BenefitsSection() {
           {benefits.map((benefit, index) => (;
             <FeatureCard;
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
               key={index}
-<<<<<<< HEAD
-<<<<<<< HEAD
               className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
-=======
             <div
               key={index}
               className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+            <div
+              key={index}
+              className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+pr-12325
             >
-              <div className="text-blue-600 mb-4 flex justify-center">
-                {benefit.icon}
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">
+              <div className="text-4xl mb-4">{benefit.icon}</div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                 {benefit.title}
               </h3>
-              <p className="text-gray-600 text-center">
+              <p className="text-gray-600 dark:text-gray-300">
                 {benefit.description}
               </p>
             </div>
-=======
               title={benefit.title}
               description={benefit.description}
               icon={benefit.icon}
 className='bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300'
             />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12325
           ))}
-        </div>
-
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
-            <p className="text-xl mb-6 opacity-90">
-              Join hundreds of companies that trust Zion Tech for their technology needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Start Your Project
-              </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                Schedule a Demo
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
   );
-<<<<<<< HEAD
 };
 
 export default BenefitsSection;
-<<<<<<< HEAD
-=======
 
               title={benefit.title}
               description={benefit.description}
@@ -383,21 +361,10 @@ function Page() {
       "Transparent cost structure" ];
 }
 ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
->>>>>>> pr-12243
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243
+export default BenefitsSection;
+pr-12325

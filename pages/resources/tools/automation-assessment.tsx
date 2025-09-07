@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -7,11 +6,10 @@ export default function ToolPage() {
   const [answers, setAnswers] = useState<{ [key: string]: number }>({}),
   const [showResults, setShowResults] = useState(false),
 
-=======
   const [answers, setAnswers] = useState<{ [key: string]: number }>({});
   const [showResults, setShowResults] = useState(false);
   const questions = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -32,7 +30,6 @@ export default function ToolPage() {
       id: 'team-expertise',
       question: "How would you rate your team's AI/automation expertise?",
       options: [
-<<<<<<< HEAD
         'No expertise - team needs trainingBeginner - some basic knowledgeIntermediate - can implement basic solutionsAdvanced - can build complex systemsExpert - can innovate and lead'
       ]
       options: [
@@ -101,7 +98,6 @@ function ToolPage() {
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-=======
         'No expertise - team needs training',
         'Beginner - some basic knowledge',
         'Intermediate - can implement basic solutions',
@@ -190,7 +186,7 @@ setCurrentQuestion(currentQuestion + 1);
     } else {
       setShowResults(true);
     }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
   ],;
@@ -222,19 +218,17 @@ setCurrentQuestion(currentQuestion + 1);
 }
   },
   const resetAssessment = () => {
-<<<<<<< HEAD
     setCurrentQuestion(0)
     setAnswers({})
     setShowResults(false)
   }
   },
-=======
     setCurrentQuestion(0);
     setAnswers({});
 setShowResults(false);
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   if (showResults) {
     const result = calculateScore()
     return (
@@ -248,7 +242,6 @@ setShowResults(false);
             content='View your automation readiness assessment results and get personalized recommendations.'
           />
         </Head>
-<<<<<<< HEAD
         <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
           <main className="container mx-auto px-6 py-12">
             <div className="max-w-4xl mx-auto">
@@ -257,7 +250,6 @@ setShowResults(false);
               <div className="text-center mb-12">
                 <h1 className="text-4xl font-bold text-white mb-4">Assessment Results</h1>
                 <p className="text-white/80 text-lg">Your automation readiness evaluation is complete</p>
-=======
 
         <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
           <main className='container mx-auto px-6 py-12'>
@@ -278,7 +270,7 @@ setShowResults(false);
                 <p className='text-white/80 text-lg'>
                   Your automation readiness evaluation is complete
                 </p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
 
               <div className='bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20 mb-8'>
@@ -291,7 +283,6 @@ setShowResults(false);
 
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-8'>
                   {questions.map((q, index) => (
-<<<<<<< HEAD
                     <div key={q.id} className="bg-white/10 rounded-lg p-4 border border-white/20">
                       <h3 className="font-semibold text-cyan-400 mb-2">{q.question}</h3>
                   <button
@@ -303,7 +294,6 @@ setShowResults(false);
 }
 
                       <p className="text-white/80 text-sm">Score: {answers[q.id] || 0}/5</p>
-=======
                     <div
                       key={q.id}
                       className='bg-white/10 rounded-lg p-4 border border-white/20'
@@ -314,36 +304,32 @@ setShowResults(false);
                       <p className='text-white/80 text-sm'>
                         Score: {answers[q.id] || 0}/5
                       </p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                   ))}
                 </div>
 
-<<<<<<< HEAD
                 <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <button 
 
-=======
 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                   <button
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     onClick={resetAssessment}
                     className='bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'
                   >
                     Retake Assessment
                   </button>
-<<<<<<< HEAD
 
 
 
 
                     href="/contact"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
-=======
                   <Link
                     href='/contact'
                     className='px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   >
                     Get Personalized Recommendations
                   </Link>
@@ -353,7 +339,6 @@ setShowResults(false);
           </main>
         </div>
       </>
-<<<<<<< HEAD
     )
               </div>
             </div>
@@ -362,7 +347,6 @@ setShowResults(false);
             <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
               <h2 className="text-2xl font-bold mb-6 text-white">{currentQ.question}</h2>
               <div className="space-y-4 mb-8">
-=======
 );
   }
   const currentQ = questions[currentQuestion]
@@ -406,14 +390,13 @@ setShowResults(false);
               </h2>
 
               <div className='space-y-4 mb-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 {currentQ.options.map((option, index) => (
                   <label
                     key={index}
                     className='flex items-center p-4 bg-white/10 rounded-lg border border-white/20 hover:border-cyan-400/50 transition-all duration-300 cursor-pointer'
                   >
                     <input
-<<<<<<< HEAD
                       type="radio"
   },;
   const resetAssessment = () => {;
@@ -540,30 +523,26 @@ setShowResults(false);
   }
 }
                       className="mr-3 text-cyan-400 focus:ring-cyan-400"
-=======
                       type='radio'
                       name={currentQ.id}
                       value={index + 1}
                       checked={answers[currentQ.id] === index + 1}
                       onChange={() => handleAnswer(currentQ.id, index + 1)}
 className='mr-3 text-cyan-400 focus:ring-cyan-400'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     />
                     <span className='text-white/90'>{option}</span>
                   </label>
                 ))}
               </div>
 
-<<<<<<< HEAD
-=======
 <div className='flex justify-between'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 <button
                   onClick={() =>
                     setCurrentQuestion(Math.max(0, currentQuestion - 1))
                   }
                   disabled={currentQuestion === 0}
-<<<<<<< HEAD
                   onClick={() => setCurrentQuestion(Math.max(0, currentQuestion - 1))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -583,14 +562,13 @@ className='mr-3 text-cyan-400 focus:ring-cyan-400'
                   Previous
                 </button>
                 <button 
-=======
                   className='px-6 py-3 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed'
                 >
                   Previous
                 </button>
 
                 <button
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   onClick={nextQuestion}
                   disabled={!answers[currentQ.id]}
                   className='bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed'
@@ -605,7 +583,6 @@ className='mr-3 text-cyan-400 focus:ring-cyan-400'
         </main>
       </div>
     </>
-<<<<<<< HEAD
   );
 };
                 <button
@@ -699,6 +676,5 @@ if ( {) {
 }
 
 
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

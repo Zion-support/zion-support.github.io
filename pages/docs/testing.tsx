@@ -1,4 +1,3 @@
-<<<<<<< HEAD
     <>;
       <Head>;
         <meta http_equiv="refresh" content="0, url=/TESTING.md" />;
@@ -10,7 +9,6 @@
 
 
 
-=======
 import Head from 'next/head';
 
       </Head>
@@ -19,4 +17,4 @@ import Head from 'next/head';
       </main>
     </>
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

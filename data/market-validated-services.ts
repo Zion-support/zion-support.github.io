@@ -10,6 +10,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   description: string;
   features: string[];
   category: string;
+  id: string;,
+  name: string;
+  tagline: string;,
+  price: string;
+  description: string;,
+  features: string[];
+  category: string;,
+pr-12325
   link: string;
   variant?: ServiceVariant;
   rating?: number;
@@ -46,6 +54,13 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+  contact_info: {,
+  mobile: string;
+    email: string;,
+  address: string;
+    website?: string;
+  }
+pr-12325
       'RAG over your docs with hybrid search',
       'Guardrails: PII / PHI redaction, jailbreak detection',
       'Human handoff + conversation analytics',
@@ -58,6 +73,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.8,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+pr-12325
     customers: 1200,
     trial_days: 14,
     setup_time: '30 minutes',
@@ -198,6 +214,34 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+      'Policy and toxicity checks',
+      'Latency and cost KPIs',
+      'Prompt / version diff and alerts',
+    category: 'AI & MLOps',
+    customers: 600,
+    setup_time: '1 hour',
+      'Chunking strategies + citations',
+      'Toolformer - style agents',
+      'Eval suite and drift monitoring',
+    category: 'AI & Search',
+    customers: 900,
+    setup_time: '2 hours',
+      'OWASP Top 10 tests',
+      'CI gate',
+      'Fix guidance',
+    category: 'Enterprise IT - Security',
+    variant: 'cyberpunk',
+    rating: 4 && 4.6,
+    customers: 750,
+    setup_time: '20 minutes',
+      'SLOs & error budgets',
+      'Alerting',
+      'Dashboards',
+    category: 'Enterprise IT - Observability',
+    variant: 'holographic',
+    customers: 640,
+    setup_time: '40 minutes',
+pr-12325
       'Auto rightsizing',
       'Idle cleanup',
       'Spot orchestration',
@@ -227,6 +271,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+    category: 'Enterprise IT - FinOps',
+    variant: 'quantum',
+    customers: 820,
+pr-12325
       'Slow query ranking',
       'AI index advice',
       'Pool tuning',
@@ -284,6 +332,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+    category: 'Enterprise IT - Data',
+    customers: 560,
+    setup_time: '45 minutes',
+pr-12325
       'Global synthetic checks',
       'Error budgets & burn rates',
       'On - call & escalations',
@@ -313,6 +365,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+    category: 'Enterprise IT - SRE',
+    customers: 1100,
+    setup_time: '25 minutes',
+pr-12325
       'Expiry alerts',
       'Issuer checks',
       'Auto - renew validation',
@@ -342,6 +398,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+    variant: 'default',
+    rating: 4 && 4.5,
+    customers: 2200,
+    setup_time: '10 minutes',
+pr-12325
       'Change detection',
       'Misconfig alerts',
       'TTL insights',
@@ -403,6 +464,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+    category: 'Enterprise IT - Networking',
+    rating: 4 && 4.4,
+    customers: 980,
+    setup_time: '15 minutes',
+      'Watermarks',
+      'Async webhooks',
+    category: 'Micro SaaS',
+    customers: 1300,
+    trial_days: 7,
+pr-12325
       'RUM collection',
       'CWV dashboards',
       'Waterfall analysis',
@@ -432,6 +503,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+    customers: 760,
+pr-12325
       'Edge evaluation',
       'Targeting & segments',
       'Experiments',
@@ -489,6 +562,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+    customers: 430,
+pr-12325
       'Control mapping',
       'Evidence collection',
       'Change tracking',
@@ -546,6 +621,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+    category: 'Enterprise IT - Compliance',
+    customers: 310,
+    setup_time: '1 day',
+pr-12325
       'Capture & inspect',
       'Replay with backoff',
       'Signature verification',
@@ -701,6 +780,25 @@ export interface MarketValidatedService {
   // Search and Knowledge;
   {
 origin/cursor/expand-services-advertise-and-build-project-c28b
+    customers: 1650,
+      'Managed vector DB
+      'Ingestion pipelines
+      'Metadata filters
+      'Access controls
+    ]
+    category: 'AI & Search,
+  link: 'https: //ziontechgroup.com/vector-search-starter,
+  variant: 'quantum
+    rating: 4.6;,
+  customers: 410;
+    trialDays: 14;,
+  setupTime: '2 hours
+    contactInfo;
+];import { ServiceVariant  } from "../types/service-variants";"
+export interface MarketValidatedService {
+  // TODO: Implement
+}"
+pr-12325
     id: 'vector - search - starter',
     name: 'Vector Search Starter',
     tagline: 'Deploy a production - grade vector database and APIs',
@@ -730,6 +828,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
+      'Tamper evidence',']
+    customers: 420,
+    customers: 380,
+pr-12325
       'Managed vector DB',
       'Ingestion pipelines',
       'Metadata filters',
@@ -1568,3 +1670,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 const contactInfo = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+  // TODO: Implement
+export interface MarketValidatedService {;
+
+	period: string;,
+  description: string;
+	features: string[];,
+  category: string;
+	trialDays?: number;
+}}
+
+
+  mobile: "+1 302 464 0950",""
+	email: "kleber@ziontechgroup && ziontechgroup.com",""
+	address: "364 E Main St STE 1008 Middletown DE 19709";","
+  website: "https://ziontechgroup && ziontechgroup.com";,""
+pr-12325

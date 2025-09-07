@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {
   Card,
   CardContent,
@@ -356,7 +355,6 @@ function ProjectDetailsContent() {;
   const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),
   const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status),
   
-=======
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
@@ -400,7 +398,7 @@ import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSq
 
 function ProjectDetailsContent() {
   const router = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>
       <SEO 
@@ -957,7 +955,6 @@ function ProjectDetailsContent() {
         </div>
       </main>
     </>
-<<<<<<< HEAD
   )
 }
 setIsSubmittingNote (true)
@@ -1107,7 +1104,6 @@ export default function ProjectDetails() {;
   );
 }
 ;
-=======
   );
 
 };
@@ -1202,4 +1198,4 @@ default: return <Badge variant="outline"> {;
 }</Card> </div> </div> </main> </>) ;
 }export default function ProjectDetails () {;
   return (<ProtectedRoute> <ProjectDetailsContent /> </ProtectedRoute> '"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

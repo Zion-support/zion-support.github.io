@@ -1,7 +1,6 @@
 import React from 'react',;
 import SEO from '../components/SEO',;
 import React from 'react';
-<<<<<<< HEAD
 import SEO from '../components/SEO';
 
 
@@ -51,7 +50,6 @@ return (
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
 import Head from 'next/head';
 
 export default function AccessibilityScannerPage() {
@@ -89,4 +87,4 @@ export default function AccessibilityScannerPage() {
       </section>
     </>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

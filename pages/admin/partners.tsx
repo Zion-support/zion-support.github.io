@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-=======
 import { useEffect, useState  } from 'react';
 export default function AdminPartners() {
   const [partners, setPartners] = useState<any[]>([]),
@@ -11,7 +9,7 @@ export default function AdminPartners() {
       try {
         const res = null;
     setFlags(json.flags || [])
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import React, { useState, useEffect } from 'react';
 
 import Head from 'next / head';
@@ -51,7 +49,6 @@ export default function AdminPartners(req, res) {
     setTimeout(() => {;
       setPartners(mockPartners);
       setLoading(false);
-<<<<<<< HEAD
     }, 1000);  }, []);
 
   async function updatePartner(): any (code: string, updates: any) {;
@@ -59,7 +56,6 @@ export default function AdminPartners(req, res) {
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
       body: JSON && JSON.stringify({ code, ...updates }),;
-=======
     }, 1000);
   }, []);
 
@@ -68,16 +64,14 @@ export default function AdminPartners(req, res) {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({ code, ...updates }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     });
     const res = await fetch('/api/admin/partners/list');
     const json = await res.json();
     setPartners(json.partners || []);
-<<<<<<< HEAD
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-=======
   }
 
   async function viewFlags(code: string) {
@@ -87,7 +81,7 @@ const res = await fetch(
     );
     const json = await res.json();
     setFlags(json.flags |[]);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 ;
@@ -225,14 +219,12 @@ onBlur={e =>
 
                   />
                 </td>
-<<<<<<< HEAD
                 <td className="py-2 pr-4 space-x-2">
                   <button className="px-2 py-1 rounded border" onClick={() => updatePartner(p.code, { status: 'approved' })}>Approve</button>
                   <button className="px-2 py-1 rounded border" onClick={() => updatePartner(p.code, { status: 'rejected' })}>Reject</button>
                   <button className="px-2 py-1 rounded border" onClick={() => viewFlags(p.code)}>Fraud Flags</button>
                 </td>
               </tr>
-=======
                 <td className='py-2 pr-4 space-x-2'>
                   <button
                     className='px-2 py-1 rounded border'
@@ -296,7 +288,7 @@ onBlur={e =>
             <p className="text-2xl font-bold text-blue-600">${totalEarnings.toLocaleString()}</p>
           </div>
         </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Filters */}
         <div className="bg-white rounded-lg shadow p-6 mb-6">;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
@@ -410,7 +402,6 @@ onBlur={e =>
       </main>
     </>
   );
-<<<<<<< HEAD
 
 
 }
@@ -429,5 +420,4 @@ onBlur={e =>
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

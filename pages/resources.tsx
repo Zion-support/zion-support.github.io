@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
@@ -17,21 +13,17 @@ export default function ResourcesPage() {
     </MainLayout>
   );
 }
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import React from 'react';
 import SEO from '../components/SEO';
 
-=======
 import React from 'react',
 import SEO from '../components/SEO',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Link from 'next/link';
 export default function ResourcesPage() {
   return (
-<<<<<<< HEAD
 
     <UltraFuturisticBackground intensity="high" variant="quantum">
       <SEO title="Resources | Zion Tech Group" description="Guides, case studies, support, training, and market pricing links." canonical="https://ziontechgroup.com/resources/" />
@@ -427,9 +419,8 @@ export default function ResourcesPage() {
               Can't find what you're looking for? Our team is here to help with custom research,
               Can't find what you're looking for? Our team is here to help with custom research, 
               Can't find what you're looking for? Our team is here to help with custom research,
-=======
     <UltraFuturisticBackground intensity;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               personalized consultations, and tailored solutions for your specific needs.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
@@ -452,7 +443,6 @@ export default function ResourcesPage() {
       <EnhancedFooter />
     </>
   )
-<<<<<<< HEAD
           >;
             <h2 className="text-4xl font-bold text-white mb-6">Need More Resources?</h2>;
             <p className="text-xl text-blue-100 mb-8">;
@@ -475,10 +465,5 @@ export default function ResourcesPage() {
         </div>;
       </section>;
       <EnhancedFooter />;
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

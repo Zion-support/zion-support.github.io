@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -11,11 +12,16 @@
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+
+
+>>>>>>> pr-12325
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
   console.log('🧪 Starting Comprehensive Testing Automation...')
+<<<<<<< HEAD
     "overallStatus"
           "encoding"
           "stdio"
@@ -323,3 +329,26 @@ if (require.main === module) {
 
 module.exports = ComprehensiveTestingAutomation;
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+    "overallStatus"""
+          "encoding"""
+          "stdio"""
+          "status"""
+          "message"""
+        execSync('npx tsc --noEmit', { "stdio"})""
+        return { "status": 'success', "message"}""
+        const result = execSync('npm run lint', { "encoding": 'utf8', "stdio"})""
+        execSync('npm run build', { "stdio"})""
+          "output"""
+        return { "status"}""
+        const result = execSync('npm audit --json', { "encoding": 'utf8', "stdio"})""
+    console.error(' Comprehensive testing "failed")""
+          issues.push({ file, "type": 'eval_usage', "severity"})""
+          issues.push({ file, "type": 'innerHTML_usage', "severity"})""
+          issues.push({ file, "type": 'document_write', "severity"})""
+      { "endpoint": '/api/health', "status": 'tested', "response"}""
+      { "endpoint": '/api/contact', "status": 'tested', "response"}""
+      { "component": 'ContactForm', "status"}""
+      { "component": 'ErrorBoundary', "status"}""
+      { "component": 'PerformanceMonitor', "status"}""
+>>>>>>> pr-12325

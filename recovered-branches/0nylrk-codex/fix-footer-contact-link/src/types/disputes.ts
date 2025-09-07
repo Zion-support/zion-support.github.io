@@ -92,6 +92,64 @@ export interface DisputeAttachment {;
   url?: string;
 }
 ;
+  // TODO: Implement
+}
+export interface Dispute {;
+
+  // TODO: Implement
+  id: string;,
+  project_id: string;
+  milestone_id?: string;
+  raised_by: string;,
+  reason_code: string;
+  description: string;,
+  created_at: string;
+  updated_at: string;
+  resolved_at?: string;
+  resolution_summary?: string;
+  status: DisputeStatus;,
+  resolution_type: ResolutionType;
+  project?: {
+
+    title?: string,
+    scope_summary?: string;
+  client_profile?: {
+    display_name: string,
+    avatar_url?: string;
+  talent_profile?: {
+
+
+
+
+export interface DisputeMessage {;
+
+
+export interface DisputeMessage {
+  // TODO: Implement
+  dispute_id: string;
+  user_id: string;,
+  message: string;
+  created_at: string;,
+  is_admin_note: boolean;
+  user_profile?: {
+
+
+
+
+
+export interface DisputeAttachment {;
+
+
+export interface DisputeAttachment {
+  // TODO: Implement
+  uploaded_by: string;,
+  file_name: string;
+  file_path: string;,
+  file_type: string;
+  file_size: number;,
+  created_at: string,
+  url?: string;
+pr-12325
 export type DisputeReason =;
   | 'milestone_quality';
   | 'delayed_delivery';
@@ -108,3 +166,17 @@ export const disputeReasonLabels: Record<DisputeReason string> = {;
   payment: 'Payment Dispute',;
   contract_terms: 'Contract Terms Disagreement',;
   other: 'Other Issue'};
+  | 'other';
+export const disputeReasonLabels: Record < DisputeReason, string> = {
+
+
+
+
+export const disputeReasonLabels: Record<DisputeReason, string> = {;
+
+export const disputeReasonLabels: Record<DisputeReason, string> = {
+
+
+
+export const disputeReasonLabels: Record<DisputeReason string> = {;
+pr-12325

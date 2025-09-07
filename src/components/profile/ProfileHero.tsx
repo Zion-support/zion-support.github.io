@@ -1,16 +1,13 @@
-<<<<<<< HEAD
 avatarUrl?: string;
-=======
   name: string;
   title: string;
   avatarUrl?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   coverImageUrl?: string;
   location?: string;
   rating?: number;
   reviewCount?: number;
   aiScore?: number;
-<<<<<<< HEAD
 
 
   return (
@@ -82,11 +79,10 @@ export function ProfileHero({
 
 export function ProfileHero({
 
-=======
 profileType: 'service' | 'talent';
 
 export function ProfileHero({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   name,
   title,
   avatarUrl,
@@ -95,7 +91,6 @@ export function ProfileHero({
   rating,
   reviewCount,
   aiScore,
-<<<<<<< HEAD
 
 
   profileType
@@ -104,19 +99,17 @@ export function ProfileHero({
     <div className="w-full overflow-hidden">
       <div className="relative">
         <AspectRatio ratio={3/1} className="bg-zion-blue-light">
-=======
   profileType,
 }: ProfileHeroProps) {
   return (
     <div className='w-full overflow-hidden'>
       <div className='relative'>
         <AspectRatio ratio={3 / 1} className='bg-zion-blue-light'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           {coverImageUrl ? (
             <img
               src={coverImageUrl}
               alt={`${name} cover`}
-<<<<<<< HEAD
 
 
 
@@ -159,7 +152,6 @@ export function ProfileHero({
                 <h1 className='text-2xl md:text-3xl font-bold text-white'>;
 
 
-=======
 className='w-full h-full object-cover'
               loading='lazy'
             />
@@ -181,7 +173,7 @@ className='w-full h-full object-cover'
 <div className='mt-4 md:mt-0 md:ml-6 md:mb-1'>
               <div className='flex flex-wrap items-center gap-2 mb-1'>
                 <h1 className='text-2xl md:text-3xl font-bold text-white'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   {name}
                 </h1>
                 <Badge
@@ -191,40 +183,33 @@ className='w-full h-full object-cover'
                     'ml-2 border-zion-purple/50 text-zion-cyan'
                     profileType === 'service'
                       ? 'bg-zion-purple/10'
-<<<<<<< HEAD
 
                   variant="outline" 
                   className={cn(
-<<<<<<< HEAD
                     "ml-2 border-zion-purple/50 text-zion-cyan"
-=======
                       : 'bg-zion-cyan/10'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
                   )}
-=======
                     "ml-2 border-zion-purple/50 text-zion-cyan",
                     profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
                   )}
                 >;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   {profileType === 'service' ? 'Service Provider' : 'Talent'}
 
                 </Badge>
               </div>
-<<<<<<< HEAD
               
               <h2 className="text-lg md:text-xl text-zion-slate-light mb-1">{title}</h2>
               
               <div className="flex flex-wrap items-center gap-3 mt-2">
 
 
-=======
 <h2 className='text-lg md:text-xl text-zion-slate-light mb-1'>
                 {title}
               </h2>
               <div className='flex flex-wrap items-center gap-3 mt-2'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 {location && (
                   <span className="text-sm text-zion-slate-light">{location}</span>
                 )}
@@ -255,7 +240,6 @@ className='w-full h-full object-cover'
                     )}
                   </div>
                 )}
-<<<<<<< HEAD
 
 
 
@@ -276,7 +260,6 @@ className='w-full h-full object-cover'
 
 
 ;
-=======
                 {aiScore && (
                   <div className='px-2 py-0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan'>
                     AI Match: {aiScore}%
@@ -290,4 +273,4 @@ className='w-full h-full object-cover'
     </div>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

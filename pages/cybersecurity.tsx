@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from 'react',;
 import Head from 'next/head',;
@@ -11,7 +9,6 @@ import React from 'react',
 import Head from 'next/head',
 import Layout from '../components/layout/Layout',
 import { Shield, CheckCircle, Lock, Activity } from 'lucide-react',
-=======
 export default function Cybersecurity() {
   const contact = {
     phone: '+1 302 464 0950',
@@ -57,7 +54,7 @@ export default function Cybersecurity() {
       features: ['Data encryption', 'Backup solutions', 'Data loss prevention', 'Privacy compliance']
     }
   ];
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
+origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
 
 
 export default function CybersecurityPage() {
@@ -68,8 +65,7 @@ export default function CybersecurityPage() {
     { name: 'Domain & TLS Monitoring', href: '/domain-dns-monitor' },
     { name: 'Email Security (DMARC)', href: '/email-dmarc-analyzer' },
     { name: 'Vendor Risk Automation', href: '/vendor-risk-automation' }],
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Layout>
       <Head>
@@ -86,12 +82,10 @@ export default function CybersecurityPage() {
             <div className='inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-600 mb-4'>
               <Shield className='w-8 h-8 text-white' />
             </div>
-<<<<<<< HEAD
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">Cybersecurity</h1>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">From strategy to operations: identity, data, networks, and workloads secured by design.</p>
             <div className="mt-2 text-sm text-gray-400">New: VAPT and MDM offerings below.</div>
             <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
-=======
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4'>
               Cybersecurity
             </h1>
@@ -109,7 +103,7 @@ export default function CybersecurityPage() {
               <a href='/market-pricing' className='px-8 py-4'>
                 See Market Pricing
               </a>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </header>
           <section>
@@ -125,7 +119,6 @@ export default function CybersecurityPage() {
                   <CheckCircle className='w-5 h-5 text-emerald-400 mt-0.5' />
                   <span className='text-gray-200'>{f}</span>
                 </div>
-<<<<<<< HEAD
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -134,7 +127,6 @@ export default function CybersecurityPage() {
               <a href="/vulnerability-assessment-penetration-testing" className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover: border-cyan-500/40 transition-colors">
                 <div className="text-gray-200 font-semibold mb-2">Vulnerability Assessment & Pentest (VAPT)</div>
                 <p className="text-gray-300 text-sm">Learn more</p>
-=======
               ))}
             </div>
           </section>
@@ -163,7 +155,7 @@ export default function CybersecurityPage() {
                   Vulnerability Assessment & Pentest (VAPT)
                 </div>
                 <p className='text-gray-300 text-sm'>Learn more</p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </a>
               <a
                 href='/mobile-device-management'
@@ -179,7 +171,6 @@ export default function CybersecurityPage() {
         </div>
       </div>
     </Layout>
-<<<<<<< HEAD
   )
 import React from 'react';
 import Head from 'next/head';
@@ -258,6 +249,5 @@ function CybersecurityPage() {
         </div>;
 
 
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

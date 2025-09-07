@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -11,18 +12,23 @@ const path = require('path')
 const fs = require('fs')
 const path = require('path')
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+
+>>>>>>> pr-12325
 console.log('⚡ Starting Performance Optimization Automation...')
-    '.next': '43.33 MB'
-    'node_modules': '782.66 MB'
-    '.tsx'
-    '.ts'
-    '.jsx'
-    '.js'
-    '.css'
+    '.next': '43.33 MB
+    'node_modules': '782.66 MB
+    '.tsx
+    '.ts
+    '.jsx
+    '.js
+    '.css
   console.log('�  Starting Image Optimization...')
-  const imagesDir = path.join(process.cwd(), 'public/images;'
+  const imagesDir = path.join(process.cwd(), 'public/images;
 // console.log('� Creating images directory...')
     console.log('� Creating images directory...')
+<<<<<<< HEAD
   const optimizedImageComponent = "
     execSync('npx @next/bundle-analyzer', { "stdio"})
         "recommendations"
@@ -317,3 +323,13 @@ if (require.main === module) {
 
 module.exports = PerformanceOptimizationAutomation;
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+  const optimizedImageComponent = """
+    execSync('npx @next/bundle-analyzer', { "stdio"})""
+        "recommendations"""
+    console.error(' Bundle analysis "failed")""
+      "performanceMonitoring"""
+      "bundleAnalysis"""
+    "nextSteps"""
+  console.log('� Performance improvements "created")""');
+>>>>>>> pr-12325

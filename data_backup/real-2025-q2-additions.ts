@@ -1,10 +1,12 @@
 export interface Real2025Q2Addition {
-  "id": string;
-  name: string;
+  // TODO: Implement
+}
+  "id": string;"
+  name: string;,
   tagline: string;
-  price: string;
-features: string[];export const real2025Q2Additions: Real2025Q2Addition[] = [{
-    id:,
+  price: string;,
+  features: string[];export const real2025Q2Additions: Real2025Q2Addition[] = [{,
+  id:,"
   ai-meeting-notes',
     "name": 'AI Meeting Notes & Action Items,
     tagline:,
@@ -14,7 +16,7 @@ features: string[];export const real2025Q2Additions: Real2025Q2Addition[] = [{
   Auto-transcription with speaker labels',
   'Decision and action item extraction',
   'Email and Slack follow‑ups',
-  'Workspace search'
+  'Workspace search]
     ]
   },
   {
@@ -26,6 +28,5 @@ features: string[];export const real2025Q2Additions: Real2025Q2Addition[] = [{
     features['Global checks and alerting',
   'SLA calculations per customer',
   'Incident timelines and labels',
-  'Hosted status pages'
-    ]
+  'Hosted status pages]
 ]}}

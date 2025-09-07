@@ -2,13 +2,11 @@ import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/context/auth/AuthProvider';
-<<<<<<< HEAD
-=======
 import { Search, Filter, Grid, List } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import ProductCard from '@/components/ProductCard';
 import { TalentCard  } from '@/components/talent/TalentCard';
 import { CategoryCard  } from '@/components/CategoryCard';
@@ -25,13 +23,11 @@ interface BaseSearchResult {
   description?: string;
   slug: string;
   image?: string;
-<<<<<<< HEAD
     avatar?: string;
   }
   tags?: string[];
   category?: string;
   date?: string;
-=======
   author?: {
     name: string;
     avatar?: string
@@ -41,12 +37,11 @@ interface BaseSearchResult {
   date?: string
 }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 interface ProductSearchResult extends BaseSearchResult {
   type: 'product' | 'equipment';
   price?: number;
   rating?: number;
-<<<<<<< HEAD
   type: 'talent';
   rating?: number;
 
@@ -84,7 +79,6 @@ import { TALENT_PROFILES } from '@/data/talentData';
 import { BLOG_POSTS } from '@/data/blog-posts';
 import { useDebounce } from '@/hooks/useDebounce';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-=======
 
 interface TalentSearchResult extends BaseSearchResult {
   type: 'talent';
@@ -120,7 +114,7 @@ const hasRating = (
   result.type === 'talent';
 
 interface SearchResultsPageProps {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   initialResults: SearchResult[];
   query: string;
   slug: string;
@@ -132,7 +126,6 @@ interface OfflineFilters {
   category?: string;
   minPrice?: number;
   maxPrice?: number;
-<<<<<<< HEAD
           return aPrice - bPrice;        });
         break;
       case 'price_desc':;
@@ -309,7 +302,6 @@ function offlineSearch(;
         all.sort((a, b) => {;
           const aRating = (a.type === 'product' || a.type === 'talent') ? (a.rating ?? 0) : 0;
           const bRating = (b.type === 'product' || b.type === 'talent') ? (b.rating ?? 0) : 0;
-=======
 minRating?: number;
 
 function offlineSearch(
@@ -430,14 +422,13 @@ const aRating =
             a.type === 'product' || a.type === 'talent' ? (a.rating ?? 0) : 0;
           const bRating =
             b.type === 'product' |b.type === 'talent' ? (b.rating ?? 0) : 0;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           return bRating - aRating;
         });
         break;
       default:;
         break;
     }
-<<<<<<< HEAD
   } else {;
   return { results: paginated, totalCount: all.length }
 export default function SearchResultsPage({
@@ -489,7 +480,6 @@ export default function SearchResultsPage(): any ({;
 ;
 export default function SearchResultsPage(req, res) {
   try {
-=======
   } else {
     all.sort((a, b) => a.title.localeCompare(b.title));
   }
@@ -503,7 +493,7 @@ export default function SearchResultsPage({
   slug,
   totalCount,
 }: SearchResultsPageProps) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const router = useRouter();
   const { isAuthenticated } = useAuth();
   const [results, setResults] = useState<SearchResult[]>(initialResults);
@@ -518,8 +508,6 @@ export default function SearchResultsPage({
   const [maxPrice, setMaxPrice] = useState('');
   const [minRating, setMinRating] = useState('');
   const [totalResults, setTotalResults] = useState(totalCount);
-<<<<<<< HEAD
-=======
   // Fetch search results
   const fetchResults = async (searchTerm: string, page = 1) => {
     try {
@@ -532,12 +520,11 @@ logInfo(`Fetching search results for: ${searchTerm}, page: ${page}`);
 sort: sortBy,
       });
       if (categoryFilter !== 'all') params.append('category', categoryFilter);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       if (minPrice) params.append('minPrice', minPrice);
       if (maxPrice) params.append('maxPrice', maxPrice);
       if (minRating) params.append('minRating', minRating);
       const response = await fetch(`/api/search?${params.toString()}`);
-<<<<<<< HEAD
   // Handle search input change;
   const handleSearch = (newQuery: string) => {;
     setSearchQuery(newQuery),;
@@ -552,7 +539,6 @@ sort: sortBy,
     if (debouncedQuery.trim()) {;
       fetchResults(debouncedQuery, 1);
     } else {;
-=======
       if (!response.ok) {
 throw new Error(`Search API error: ${response.status}`);
       }
@@ -601,13 +587,11 @@ shallow: true,
     if (debouncedQuery.trim()) {
 fetchResults(debouncedQuery, 1);
     } else {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       setResults([]);
       setTotalResults(0);
     }
   }, [debouncedQuery]);
-<<<<<<< HEAD
-=======
   // Load more results
   const loadMore = () => {
     const nextPage = currentPage + 1;
@@ -615,22 +599,18 @@ fetchResults(debouncedQuery, 1);
 fetchResults(searchQuery, nextPage);
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const categories = Array.from(
     new Set(results.map((r) => r.category).filter(Boolean));
   );
-<<<<<<< HEAD
-=======
 
   const filteredResults = results.filter(r => {
     if (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       categoryFilter !== 'all' &&
       categoryFilter &&
       r.category !== categoryFilter
     ) {
-<<<<<<< HEAD
-=======
 return false;
     }
     if (minPrice && r.type === 'product') {
@@ -651,13 +631,12 @@ return false;
     return true;
   });
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   // Group results by type for better display
   const groupedResults = filteredResults.reduce(
     (acc, result) => {
       if (!acc[result.type]) acc[result.type] = [];
       acc[result.type]!.push(result);
-<<<<<<< HEAD
       return false;
       } catch (error) {
     console.error("Error:", error);
@@ -733,13 +712,12 @@ return false;
       acc[result.type]!.push(result);
 
       return acc
-=======
 return acc;
     },
     {} as Record<string, SearchResult[]>
   );
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const renderResultCard = (result: SearchResult) => {
     switch (result.type) {
       case 'product':
@@ -759,7 +737,6 @@ return acc;
       case 'product':;
       case 'equipment':;
         return (
-<<<<<<< HEAD
           <div key={result && result.id} data-testid='result-card'>            <ProductCard
               product={{
                 id: result.id
@@ -777,11 +754,10 @@ return acc;
                 updated_at: new Date().toISOString()
                 stock: (result as any).stock
                 in_stock: ((result as any).stock |0) > 0,              }}
-=======
 <div key={result.id} data-testid='result-card'>
             <ProductCard
               product={{
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 id: result.id,
                 name: result.title,
                 title: result.title,
@@ -789,7 +765,6 @@ return acc;
                 price: result.price || 0,
                 images: result.image ? [result.image] : [],
                 rating: result.rating || 0,
-<<<<<<< HEAD
                 review_count: 0,
                 tags: result.tags || [],
                 category: result.category || '',
@@ -797,7 +772,6 @@ return acc;
                 created_at: new Date ().toISOString (),
                 updated_at: new Date ().toISOString (),
                 stock: (result as any).stock,
-=======
                 reviewCount: 0,
                 tags: result.tags || [],
                 category: result.category || '',
@@ -815,7 +789,7 @@ in_stock: ((result as any).stock || 0) > 0,
 <div key={result.id} data-testid='result-card'>
             <TalentCard
               talent={{
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 id: result.id,
                 user_id: result.id,
                 full_name: result.title,
@@ -827,7 +801,6 @@ in_stock: ((result as any).stock || 0) > 0,
                 bio: result.description,
                 summary: result.description,
                 is_verified: false,
-<<<<<<< HEAD
                 availability_type: 'available'}  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -852,7 +825,6 @@ in_stock: ((result as any).stock || 0) > 0,
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 availability_type: 'available',
               }}
               onViewProfile={(id: string) => {
@@ -862,7 +834,7 @@ availability_type: 'available',
                 router.push(`/talent/${talent.id}?action=hire`);
               }}
               isAuthenticated={isAuthenticated}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             />
           </div>
         ),
@@ -883,7 +855,6 @@ availability_type: 'available',
               {result.description}
             </p>
           </div>
-<<<<<<< HEAD
         );    }
   }
   };
@@ -921,12 +892,11 @@ availability_type: 'available',
 
 }
   },
-=======
         );
     }
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>;
       <SEO
@@ -951,17 +921,15 @@ availability_type: 'available',
   }
 }
       />
-<<<<<<< HEAD
       <div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
 
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
 
 
-=======
 
 <div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         <div
           className="container mx-auto px-4 py-8"
           data-testid="search-results"
@@ -973,7 +941,6 @@ availability_type: 'available',
                   Search Results
                 </h1>
                 <p
-<<<<<<< HEAD
                   className="text-gray-600 dark:text-gray-200"
                   data-testid="results-count"
                 >
@@ -996,7 +963,6 @@ availability_type: 'available',
                 />
               </div>
             </div>
-=======
                   className='text-gray-600 dark:text-gray-200'
                   data-testid='results-count'
                 >
@@ -1020,14 +986,13 @@ availability_type: 'available',
             {/* Controls */}
 <div className='flex flex-wrap items-center justify-between gap-4 mt-6'>
               <div className='flex items-center gap-2 flex-wrap'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 <Button
                   variant="outline"
                   size="sm"
                   className="flex items-center gap-2"
                   data-testid="filter-button"
                 >
-<<<<<<< HEAD
                 </Button>
                 <select
 
@@ -1130,7 +1095,6 @@ availability_type: 'available',
                   <option value='rating'>Highest Rated</option>                </select>;
 
 
-=======
                   <Filter className='h-4 w-4' />
                   Filters
                 </Button>
@@ -1161,7 +1125,7 @@ onChange={e => setCategoryFilter(e.target.value)}
                 </select>
 
 <div className='flex items-center gap-1'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <input
                     type="number"
                     placeholder="Min $"
@@ -1182,28 +1146,24 @@ onChange={e => setCategoryFilter(e.target.value)}
                     type="number"
                     placeholder="Max $"
                     value={maxPrice}
-<<<<<<< HEAD
                     onChange={(e) => setMaxPrice(e.target.value)}
                     className="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm"
-=======
                     onChange={e => setMaxPrice(e.target.value)}
                     className='w-20 px-2 py-1 border border-gray-300 rounded-md text-sm'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   />
                 </div>
                 <select
                   value={minRating}
-<<<<<<< HEAD
 
                     onChange={e => setMaxPrice(e && e.target.value)}
                     className='w-20 px-2 py-1 border border-gray-300 rounded-md text-sm'                  />;
                 </div>;
                   onChange={(e) => setMinRating(e.target.value)}
                   className="px-3 py-1 border border-gray-300 rounded-md text-sm"
-=======
 onChange={e => setMinRating(e.target.value)}
                   className='px-3 py-1 border border-gray-300 rounded-md text-sm'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   <option value="">All Ratings</option>
                   <option value="4">4★ & up</option>
@@ -1233,7 +1193,6 @@ onChange={e => setMinRating(e.target.value)}
                   <Grid className="h-4 w-4" />
                 </Button>
                 <Button
-<<<<<<< HEAD
                 >;
                   <List className='h-4 w-4' />                </Button>;
               </div>;
@@ -1256,7 +1215,6 @@ onChange={e => setMinRating(e.target.value)}
                   <h2 className='text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize'>                    {type}s ({typeResults && typeResults.length});
                   </h2>;
 
-=======
                   variant={viewMode === 'list' ? 'default' : 'outline'}
                   size='sm'
                   onClick={() => setViewMode('list')}
@@ -1288,7 +1246,7 @@ onChange={e => setMinRating(e.target.value)}
                   <h2 className='text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize'>
                     {type}s ({typeResults.length})
                   </h2>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <div
                     className={
                       viewMode === 'grid'
@@ -1300,8 +1258,6 @@ onChange={e => setMinRating(e.target.value)}
                 </div>;
               ))}
               {/* Load More Button */}
-<<<<<<< HEAD
-=======
               {results.length < totalResults && (
 <div className='flex justify-center py-8'>
                   <Button
@@ -1316,20 +1272,18 @@ onChange={e => setMinRating(e.target.value)}
                       </>
                     ) : (
                       'Load More Results'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     )}
                   </Button>;
                 </div>;
               )}
             </div>;
           )}
-<<<<<<< HEAD
       process.env.NEXT_PUBLIC_API_URL || 'http: //localhost:3000',
     logInfo(`Fetching search results for slug: ${slug}, query: ${query}`),
     const response = await fetch(
       `${apiBaseUrl}/api/search?query=${encodeURIComponent(query)}&limit=12`;
     );
-=======
         </div>
       </div>
     </>
@@ -1352,7 +1306,7 @@ process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
       `${apiBaseUrl}/api/search?query=${encodeURIComponent(query)}&limit=12`
     );
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     let results = [];
     let totalCount = 0;
       const data = await response.json();
@@ -1364,7 +1318,6 @@ logInfo(`Server-side fetch successful: ${results.length} results`);
         `Search API error: ${response.status} ${response.status_text}`);
       const offline = offline_search (query, 1, 12, { sort_by: 'relevance' });
       results = offline.results;
-<<<<<<< HEAD
       results = data.results || [];
       totalCount = data.totalCount || results.length;
       logInfo(`Server-side fetch successful: ${results.length} results`)
@@ -1373,15 +1326,13 @@ logInfo(`Server-side fetch successful: ${results.length} results`);
       const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' }),
       results = offline.results;
       totalCount = offline.totalCount
-=======
       totalCount = offline.totalCount;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
 
     return {
       props: {
         initialResults: results,
-<<<<<<< HEAD
         query;
         slug;
         totalCount}}
@@ -1406,13 +1357,12 @@ logInfo(`Server-side fetch successful: ${results.length} results`);
         total_count,
       },
     }
-=======
 query,
         slug,
         totalCount,
       },
     };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (error) {
     logErrorToProduction ('Error fetching search results:', { data: error });
     const offline = offline_search (query, 1, 12, { sort_by: 'relevance' });
@@ -1572,7 +1522,6 @@ export const getServerSideProps: GetServerSideProps<;
   } catch (error) {
     logErrorToProduction('Error fetching search results:', { data: error });
     const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' });
-<<<<<<< HEAD
     return {;
       props: {;
         initialResults: offline.results,;
@@ -1591,7 +1540,6 @@ export const getServerSideProps: GetServerSideProps<;
 };
 
 
-=======
     return {
       props: {
         initialResults: offline.results,
@@ -1602,4 +1550,4 @@ export const getServerSideProps: GetServerSideProps<;
     };
   }
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

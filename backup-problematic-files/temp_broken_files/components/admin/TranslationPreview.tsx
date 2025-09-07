@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import { useAutoTranslate } from '../../hooks/useAutoTranslate';
 :backup-problematic-files/temp_broken_files/components/admin/TranslationPreview.tsx
 
+pr-12325
 const defaultTargets = ['enptesar']
 const defaultTargets = null;
 origin/cursor/automate-test-improve-and-merge-code-2533:components/admin/TranslationPreview.tsx
 export default function TranslationPreview() {
-  const [text, setText] = useState('')
+  const [text, setText] = useState()
   const [targets, setTargets] = useState<string[]>(defaultTargets)
   const { translations, loading, error } = useAutoTranslate(text, targets)
 :backup-problematic-files/temp_broken_files/components/admin/TranslationPreview.tsx
@@ -44,3 +45,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/admin/Transla
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533:components/admin/TranslationPreview.tsx
+</string>
+    <div className="space-y-4">"
+</div>"
+      <h2 className="text-lg font-semibold">Translation Preview</h2>"
+      <textarea;"
+        className="w-full border rounded p-2 h-32"""
+        placeholder="Enter text to translate...""
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+</textarea>"
+      <div className="text-sm text-gray-500">{loading ? 'Translating' : error ? `Error: ${error}` : 'Ready'}</div>
+      <div className="grid md:grid-cols-2 gap-4">"
+</div>
+"`;
+pr-12325

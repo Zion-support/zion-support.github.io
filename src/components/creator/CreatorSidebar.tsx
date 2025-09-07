@@ -1,17 +1,14 @@
-<<<<<<< HEAD
 } from 'lucide-react'; import {
-<<<<<<< HEAD
   Sidebar
   SidebarContent
   SidebarGroup
   SidebarMenuItem
 
-=======
   Sidebar;
   SidebarContent;
   SidebarGroup;
   SidebarMenuItem;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   // SidebarMenu, // Removed
   // SidebarMenuButton, // Removed
   // SidebarGroupLabel, // Not needed
@@ -28,25 +25,19 @@
   // SidebarGroupLabel, // Not needed
   // SidebarGroupContent, // Not needed
 } from "@/components/ui/sidebar"
-=======
 
 } from "@/components/ui/sidebar";
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
         <SidebarGroup title="Dashboard">
           <SidebarMenuItem href="/creator-dashboard" icon={<Home size={16} />}>
             <span>Home</span>
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </SidebarMenuItem>
           <SidebarMenuItem href="/messaging" icon={<Mail size={16} />}>
             <span>Messages</span>
@@ -68,7 +59,6 @@ export function AppSidebar() {
             <span>Profile</span>
           </SidebarMenuItem>
           <SidebarMenuItem href="/settings" icon={<Settings size={16} />}>
-=======
 <SidebarGroup title='Dashboard'>
           <SidebarMenuItem href='/creator-dashboard' icon={<Home size={16} />}>
             <span>Home</span>
@@ -93,12 +83,11 @@ export function AppSidebar() {
             <span>Profile</span>
           </SidebarMenuItem>
           <SidebarMenuItem href='/settings' icon={<Settings size={16} />}>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <span>Settings</span>
           </SidebarMenuItem>
         </SidebarGroup>
       </SidebarContent>
-<<<<<<< HEAD
 
 
 import {;
@@ -274,12 +263,124 @@ function AppSidebar() {
         </SidebarGroup>;
       </SidebarContent>;
     </Sidebar>);
-<<<<<<< HEAD
-=======
 }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
     </Sidebar>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+} from 'lucide-react'; import {
+  // TODO: Implement
+}
+} from "@/components/ui/sidebar";"
+export function AppSidebar() {
+  return (
+    <Sidebar>
+
+      <SidebarContent>
+
+"
+        <SidebarGroup title="Dashboard">"
+          <SidebarMenuItem href="/creator-dashboard" icon={<Home size={16} />}>"
+
+            <span>Home</span>
+
+          <SidebarMenuItem href="/messaging" icon={<Mail size={16} />}>"
+
+            <span>Messages</span>
+          <SidebarMenuItem href="/notifications" icon={<Bell size={16} />}>"
+
+            <span>Notifications</span>
+          
+        <SidebarGroup title="Content">"
+          <SidebarMenuItem href="/publish" icon={<FileText size={16} />}>"
+
+            <span>My Content</span>
+          <SidebarMenuItem href="/analytics" icon={<Search size={16} />}>"
+
+            <span>Analytics</span>
+          
+        <SidebarGroup title="Settings">"
+          <SidebarMenuItem href="/profile" icon={<Users size={16} />}>"
+
+            <span>Profile</span>
+          <SidebarMenuItem href="/settings" icon={<Settings size={16} />}>"
+
+            <span>Settings</span>
+          
+        
+      
+    <Sidebar>;
+
+      <SidebarContent>;
+        <SidebarGroup title='Dashboard'>;
+
+          <SidebarMenuItem href='/creator-dashboard' icon={<Home size={16} />}>;
+
+            <span>Home</span>;
+          ;
+          <SidebarMenuItem href='/messaging' icon={<Mail size={16} />}>;
+
+            <span>Messages</span>;
+          <SidebarMenuItem href='/notifications' icon={<Bell size={16} />}>;
+
+            <span>Notifications</span>;
+        <SidebarGroup title='Content'>;
+
+          <SidebarMenuItem href='/publish' icon={<FileText size={16} />}>;
+
+            <span>My Content</span>;
+          <SidebarMenuItem href='/analytics' icon={<Search size={16} />}>;
+
+            <span>Analytics</span>;
+        <SidebarGroup title='Settings'>;
+
+          <SidebarMenuItem href='/profile' icon={<Users size={16} />}>;
+
+            <span>Profile</span>;
+          <SidebarMenuItem href='/settings' icon={<Settings size={16} />}>            <span>Settings</span>            <span>Home</span>;
+
+          <SidebarMenuItem href="/messaging" icon={<Mail size={16} />}>;"
+
+          ;"
+          <SidebarMenuItem href="/notifications" icon={<Bell size={16} />}>;"
+
+        <SidebarGroup title="Content">;"
+          <SidebarMenuItem href="/publish" icon={<FileText size={16} />}>;"
+
+          <SidebarMenuItem href="/analytics" icon={<Search size={16} />}>;"
+
+        <SidebarGroup title="Settings">;"
+          <SidebarMenuItem href="/profile" icon={<Users size={16} />}>;"
+
+          <SidebarMenuItem href="/settings" icon={<Settings size={16} />}>;"
+
+            <span>Settings</span>;
+
+
+          <SidebarMenuItem href='/creator - dashboard' icon={<Home size={16} />}>;
+
+            <span > Home</span>;
+
+            <span > Messages</span>;
+
+            <span > Notifications</span>;
+
+
+            <span > My Content</span>;
+
+            <span > Analytics</span>;
+
+
+            <span > Profile</span>;
+          <SidebarMenuItem href='/settings' icon={<Settings size={16} />}>            <span > Settings</span>            <span > Home</span>;
+
+
+
+
+
+
+
+            <span > Settings</span>;
+      ;)
+    );"
+pr-12325

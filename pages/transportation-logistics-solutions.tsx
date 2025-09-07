@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
 import React from 'react'
 import Head from 'next/head'
@@ -8,9 +7,8 @@ import Head from 'next/head',;
 import React from 'react'
 import Head from 'next/head'
 export default function TransportationLogisticsSolutions() {
-=======
 export default function Page() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>
       <Head>
@@ -36,7 +34,6 @@ export default function Page() {
         </section>
       </div>
     </>
-<<<<<<< HEAD
   )
 import React from 'react',
 import Head from 'next / head',
@@ -59,6 +56,5 @@ function TransportationLogisticsSolutions() {
       </div>;
     </>);
 }
-=======
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
 import { 
@@ -17,8 +14,6 @@ import {
   ArrowRight 
 } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
 const solutions = [
   {
     title: 'Enterprise Solutions',
@@ -39,7 +34,6 @@ const solutions = [
     features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
   }
 ];
-=======
 import Head from 'next/head';
 import Link from 'next/link';
 import {
@@ -161,11 +155,10 @@ export default function Solutions() {
     'Professional Services',
     'Non-Profit Organizations',
   ];
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 export default function SolutionsPage() {
   return (
-<<<<<<< HEAD
     <Layout
       title="Solutions - Zion Tech Group"
       description="Comprehensive technology solutions for businesses of all sizes"
@@ -189,7 +182,6 @@ export default function SolutionsPage() {
               </h1>
               <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto">
                 Comprehensive technology solutions designed to meet your business needs and drive growth.
-=======
     <>
       <Head>
         <title>Solutions - Zion Tech Group</title>
@@ -217,13 +209,12 @@ export default function SolutionsPage() {
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 From startups to enterprises, we provide tailored technology
                 solutions that drive growth, efficiency, and innovation.
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               </p>
             </motion.div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Solutions Grid */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4">
@@ -244,7 +235,6 @@ export default function SolutionsPage() {
                   </div>
                   <p className="text-gray-600 mb-4">{solution.description}</p>
                   <ul className="space-y-2">
-=======
         {/* Solutions Overview */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
@@ -276,7 +266,7 @@ export default function SolutionsPage() {
                   <p className="text-gray-600 mb-6">{solution.description}</p>
 
                   <ul className="space-y-2 mb-6">
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                     {solution.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
@@ -284,9 +274,7 @@ export default function SolutionsPage() {
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
                 </motion.div>
-=======
 
                   <Link
                     href={solution.href}
@@ -296,13 +284,12 @@ export default function SolutionsPage() {
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </div>
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="container mx-auto px-4 text-center">
@@ -330,9 +317,7 @@ export default function SolutionsPage() {
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
                 >
                   View All Services
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
@@ -581,7 +566,6 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
                 </a>
               </div>
             </motion.div>
-=======
         {/* Benefits Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
@@ -694,7 +678,7 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
                 View Our Services
               </Link>
             </div>
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
           </div>
         </section>
         {/* Solution Capabilities */}
@@ -897,19 +881,15 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
                   className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Consultation
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
                 </a>
               </div>
             </motion.div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
     </Layout>
   );
 }
-<<<<<<< HEAD
-=======
     </UltraAdvancedFuturisticBackground>
   )
 
@@ -948,11 +928,6 @@ export default Solutions,
 
 },
 
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 import React from 'react',
 import Layout from '../components/layout/Layout',
 import SEO from '../components/SEO';
@@ -970,6 +945,5 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
 const Solutions: NextPage;
 export default Solutions;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

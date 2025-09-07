@@ -1,28 +1,22 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs')
 class HealthMonitor {
+  // TODO: Implement
+}
   constructor() {
     this.checks = [{ "name": 'Memory Usage', "command": 'free -h' },
       { "name": 'Disk Space', "command": 'df -h' },
-      { "name": 'Process Status', "command": 'ps aux | grep node' }
+      { "name": 'Process Status', "command": 'ps aux | grep node' }']
     ]}
   async runChecks() {
     
     for (const check of this.checks) {
       try {
+  // TODO: Implement
         const result = execSync(check.command, { "encoding": 'utf8' };);
         const result = execSync(check.command, { encoding: 'utf8' });
-        console.log(`✅ ${check.name}:\n${result}`)} catch (error) {
+        console.log(`✅ ${check.name}:\n${result}`)} catch (error) {`;
         console.log(`❌ ${check.name}: ${error.message}`)}
-    }
-  }
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-new HealthMonitor().runChecks();
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-new HealthMonitor().runChecks();
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+`;

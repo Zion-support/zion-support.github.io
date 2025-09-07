@@ -8,6 +8,18 @@ export type NotificationType =
 
 export interface Notification extends BaseNotification {;
 
+import { Notification, as, BaseNotification } from "@/types/notifications";"
+export type NotificationType ="
+  | "message"""
+  | "quote_request"""
+  | "booking_confirmation"""
+  | "hire_request"""
+  | "onboarding"""
+  | "system";"
+export interface Notification extends BaseNotification {;
+
+
+pr-12325
   type: NotificationType;
   action_url?: string;
   action_text?: string;
@@ -37,3 +49,24 @@ export interface NotificationContextType {;
   setFilter: (filter: FilterType) => void;
   fetchNotifications: () => Promise<void>;
 }
+export type FilterType ="
+  | "all"""
+  | "unread"""
+  | "messages"""
+  | "system";""
+import {Notification, as, BaseNotification} from '@/types / notifications';
+export interface NotificationContextType {;
+
+export interface NotificationContextType {
+  // TODO: Implement
+  notifications: Notification[];,
+  filtered_notifications: Notification[];
+  unread_count: number;,
+  loading: boolean;
+  filter: FilterType;,
+  markAsRead: (id: string) => Promise<void>;
+</void>
+  markAllAsRead: () => Promise<void>;
+  dismissNotification: (id: string) => Promise<void>;
+  fetchNotifications: () => Promise<void>;
+pr-12325

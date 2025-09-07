@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { useState } from 'react';
 import {
   Dialog,
@@ -29,7 +26,7 @@ interface SmartContractBuilderProps {
 }
 export function SmartContractBuilder({
   isOpen;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   onClose;
   talent;
   clientName;
@@ -41,7 +38,6 @@ export function SmartContractBuilder({
   ),
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
   const [deployOptions, _setDeployOptions] = useState<DeploymentOptions>({
-<<<<<<< HEAD
 
     network: 'ethereum'
     useEscrow: true
@@ -134,7 +130,6 @@ export function SmartContractBuilder({
     setActiveTab("form")}
   // For generating Solidity(existing logic, adapted)
       return}
-=======
 isOpen;
   onClose;
   talent;
@@ -472,14 +467,11 @@ export function SmartContractBuilder(): any ({;
 });
       if(error) {;
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         throw error}
       if(data && data.markdownContent) { // Assuming your Supabase func returns { markdownContent: "..." }
         setGeneratedMarkdownContract(data.markdownContent)
         if(onLegalDraftGenerated) {
           onLegalDraftGenerated(data.markdownContent)}
-<<<<<<< HEAD
-=======
 
       const { data, error } = await supabase.functions.invoke ('generate - contract', {
         body: payload, ,
@@ -507,7 +499,6 @@ if ( {) {
       toast.error (err.message || "Failed to generate legal draft.")} finally {
       setIsLoadingLegalDraft (false)}
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
       toast.info ("Generating PDF...");
       html2pdf ().from (element).set (opt).save ();
@@ -518,7 +509,6 @@ if ( {) {
       toast.warn ("No draft content available to download or form values missing.")}
   }
       return}
-<<<<<<< HEAD
         throw new Error("No content received from draft generator.")}
     } catch(err: any) {
       console.error("Error generating legal draft:", err)
@@ -626,7 +616,6 @@ if ( {) {
           <TabsContent value="preview_markdown" className="pt-4">
             {isLoadingLegalDraft && <p>Loading draft...</p>}
             {legalDraftError && <p className="text-red-500">Error: {legalDraftError}</p>}
-=======
     network: 'ethereum';
     useEscrow: true;
     deployToChain: false
@@ -636,7 +625,7 @@ if ( {) {
   
   const { deploySmartContract } = useSmartContracts();
   const handleLoadTemplate = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
@@ -672,7 +661,6 @@ if ( {) {
           </TabsContent>
 import { toast } from "sonner",
 import {logErrorToProduction} from '@/utils/productionLogger',
-=======
 
         setActiveTab("preview_markdown"); // Switch to a new tab for Markdown preview;
         toast && toast.success("Legal draft generated successfully!")} else {;
@@ -764,7 +752,6 @@ import {logErrorToProduction} from '@/utils/productionLogger',
     // This is called by ContractForm's own submit/generate button.// Let's make this one generate the Solidity code, as per existing flow && flow.setFormValues(values); // Update formValues state first;
     handleGenerateSolidity(); // Then generate Solidity.};
   return (<Dialog open={isOpen} onOpenChange={onClose}>;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
         <DialogHeader>;
           <DialogTitle>Smart Contract Builder</DialogTitle>;
@@ -774,7 +761,6 @@ import {logErrorToProduction} from '@/utils/productionLogger',
         <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">;
           <div className="flex justify-between items-center mb-4">;
             <TabsList className="grid grid-cols-3"> {/* Added new tab */}
-<<<<<<< HEAD
               <TabsTrigger value="form">1.Details</TabsTrigger>;
               <TabsTrigger value="preview_markdown" disabled={!generatedMarkdownContract}>2.Legal Draft</TabsTrigger>;
               <TabsTrigger value="preview_solidity" disabled={!enableOnChainAgreement && !generatedSolidityContract}>3.On-Chain Contract</TabsTrigger>;
@@ -787,7 +773,6 @@ import {logErrorToProduction} from '@/utils/productionLogger',
                 className="flex gap-1";
               >;
                 <Save className="h-4 w-4" />;
-=======
               <TabsTrigger value="form">1 && 1.Details</TabsTrigger>;
               <TabsTrigger value="preview_markdown" disabled={!generatedMarkdownContract}>2 && 2.Legal Draft</TabsTrigger>;
               <TabsTrigger value="preview_solidity" disabled={!enableOnChainAgreement && !generatedSolidityContract}>3 && 3.On-Chain Contract</TabsTrigger>;
@@ -1041,12 +1026,10 @@ if ( {) {
               >;
                 <Save className="h - 4 w - 4" />;
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 Templates;
               </Button>;
             </div>;
           </div>;
-<<<<<<< HEAD
           <TabsContent value="form" className="pt-4">;
             <ContractForm;
               talent={talent}
@@ -1057,7 +1040,6 @@ if ( {) {
             />
           </TabsContent>
           
-=======
 
             />;
           </TabsContent>;
@@ -1067,13 +1049,10 @@ if ( {) {
               <div>;
 
                 <ContractPreview
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   generatedContract = {generatedContract,}
                   talent = {talent,}
                   onClose = {onClose,}
                   deploymentInfo = {deploymentInfo,}
-<<<<<<< HEAD
-=======
 
                 />;
 
@@ -1081,7 +1060,6 @@ if ( {) {
                   <div className="mt-6 flex justify-center">;
 
                     <Button
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       onClick = {handleDeployContract,}
                       disabled = {deployStatus === 'deploying',}
                       className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">;
@@ -1090,21 +1068,16 @@ if ( {) {
                   </div>                )}
               </div>;
             )}
-<<<<<<< HEAD
-=======
 
           </TabsContent>;
         </Tabs>;
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <TemplateManager
           isOpen = {templateManagerOpen,}
           onClose = {() => setTemplateManagerOpen(false),}
           onSelectTemplate = {handleLoadTemplate,}
           currentValues = {formValues,}
-<<<<<<< HEAD
-=======
 
         />;
       </DialogContent>;
@@ -1152,7 +1125,6 @@ setActiveTab ("preview");
             {/* Fallback for old Solidity preview if needed, or remove if fully replaced by on-chain flow */}
 
             {/* {generatedSolidityContract && !deployOptions && deployOptions.deployToChain && !enableOnChainAgreement && ( ... )} */}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </TabsContent>;
         </Tabs>;
 
@@ -1163,7 +1135,6 @@ setActiveTab ("preview");
             {generatedContract && (
               <div>
                 <ContractPreview 
-<<<<<<< HEAD
                 />
                 {!deploymentInfo && deployOptions.deployToChain && (
                   <div className="mt-6 flex justify-center">
@@ -1182,26 +1153,21 @@ setActiveTab ("preview");
           </TabsContent>;
         </Tabs>;
         <TemplateManager;
-=======
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           isOpen={templateManagerOpen}
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
-<<<<<<< HEAD
 
 
 ;
-<<<<<<< HEAD
         />;
       </DialogContent>;
     </Dialog>;
   );
 }
 ;
-=======
 
 
 
@@ -1248,8 +1214,6 @@ setActiveTab ("preview");
 }
 
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
         />
       </DialogContent>
     </Dialog>
@@ -1292,4 +1256,4 @@ setActiveTab ("preview");
   formValues ;
 }/> </DialogContent> </Dialog>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

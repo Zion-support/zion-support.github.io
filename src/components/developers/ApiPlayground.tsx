@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 const options: RequestInit = {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       method
       headers: {
 
@@ -53,16 +49,13 @@ if ( {) {
       } else {
 
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import CodeBlock from './CodeBlock';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   name: string
 type: string
 required?: boolean
@@ -151,7 +144,6 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
         options.body = JSON.stringify(JSON.parse(body))
       } catch {
         options.body = body
-=======
 interface Param {;
   name: string;
 type: string;
@@ -263,7 +255,6 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
 
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className='space-y-4'>;
       <Input
@@ -283,12 +274,9 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
 
 
           onChange={e => handleParamChange(p.name, e.target.value)}        />
-<<<<<<< HEAD
-=======
           key={p && p.name}
           value={paramValues[p && p.name] || ''}
           onChange={e => handleParamChange(p && p.name, e && e.target.value)}        />;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       ))}
       {method !== 'GET' && method !== 'DELETE' && (;
         <Textarea
@@ -425,10 +413,6 @@ if (contentType?.includes ('application/json') ) {;
   )
 }
 ;
-<<<<<<< HEAD
-=======
 export default ApiPlayground;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 interface Param {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

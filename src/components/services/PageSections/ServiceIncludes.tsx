@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 </div>
-=======
 import { Check } from 'lucide-react';
 
 export function ServiceIncludes() {
@@ -15,7 +13,7 @@ export function ServiceIncludes() {
             <div className='mt-1 mr-4'>
               <Check className='h-5 w-5 text-zion-cyan' />
             </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <div>
               <h3 className='text-white font-medium'>Transportation to Site</h3>
               <p className='text-zion-slate-light'>
@@ -84,7 +82,6 @@ export function ServiceIncludes() {
               </p>
             </div>
           </div>
-<<<<<<< HEAD
 
 import { Check } from 'lucide-react'
 
@@ -156,7 +153,6 @@ export function ServiceIncludes() {
 
               <h3 className="text-white font-medium">Service Documentation</h3>
               <p className="text-zion-slate-light">Detailed report of work performed and recommendations.</p>
-=======
           <div className='flex items-start'>
             <div className='mt-1 mr-4'>
               <Check className='h-5 w-5 text-zion-cyan' />
@@ -166,14 +162,13 @@ export function ServiceIncludes() {
               <p className='text-zion-slate-light'>
                 Detailed report of work performed and recommendations.
               </p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
         </div>
       </div>
 
     </div>
-<<<<<<< HEAD
 
 import { Check } from 'lucide-react';
 export function ServiceIncludes() {;
@@ -392,7 +387,6 @@ function ServiceIncludes() {
 
     </div>);
 }
-=======
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

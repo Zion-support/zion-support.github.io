@@ -8,7 +8,6 @@ import {GetStaticPaths, GetStaticProps} from 'next';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
-<<<<<<< HEAD
 
 import {Check, Mail, MapPin, Phone, ExternalLink} from 'lucide-react';
 import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
@@ -41,7 +40,6 @@ const service = useMemo(() => {
         augmentedServicesBatch3 as any
         real2025Q3Additions as any
         realQ4Services2025 as any,        require('../data/real-2025-q4-additions-batch2').real2025Q4AdditionsBatch2 as any
-=======
         enhancedRealMicroSaasServices as any,
         extraServices as any,
         additionalEnhancedServices as any,
@@ -67,7 +65,7 @@ const service = useMemo(() => {
         real2025Q3Additions as any,
         realQ4Services2025 as any,
         require('../data/real-2025-q4-additions-batch2').real2025Q4AdditionsBatch2 as any
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       );
     const byLink = all.find(s => {
       try {
@@ -168,7 +166,6 @@ export async function getStaticProps() {
 	return {props: { service }
 	}
 
-<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -386,12 +383,11 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 	return (
 
 
-=======
 ;
 export default function RootServiceDetailPage({ service }: { service: Service }) {;
 	const canonical = `https://ziontechgroup.com/${toSlug(service.id || service.name || '')}`,
 	return (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 		<UltraFuturisticBackground variant="quantum" intensity="high">
 			<Head>
 				<title>{service.name} | Zion Tech Group</title>
@@ -411,14 +407,12 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 					dangerouslySetInnerHTML={{
 						__html: JSON && JSON.stringify(
 							{
-<<<<<<< HEAD
 								},
 								offers: {
 									"@type": "Offer",
 									price: (service.price || '').replace(/[^0-9.]/g, ''),
 									priceCurrency: "USD",
 									availability: "https://schema.org/InStock"
-=======
 "@context": "https://schema.org",
 								"@type": "Service",
 								name: service.name,
@@ -428,7 +422,7 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 "@type": "Organization",
 									name: "Zion Tech Group",
 									url: "https://ziontechgroup.com"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 								}
 								offers: {
 									"@type": "Offer",
@@ -440,9 +434,7 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 							null;
 2;
 							);}
-<<<<<<< HEAD
 				/>;			</Head>
-=======
 				/>;
 			</Head>
 
@@ -461,7 +453,7 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 							<p className="text-gray-300 leading-relaxed">{service.description}</p>
 						</Card>
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Service Details */}
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <Card className="p-8">
@@ -596,7 +588,6 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 							<div className="mt-4 space-y-3">
 								<a href="/contact" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 									<Phone className="w-4 h-4" /> +1 302 464 0950
-<<<<<<< HEAD
 
 								</a>
 
@@ -604,12 +595,11 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 								<a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 									<Mail className="w-4 h-4" /> kleber@ziontechgroup.com
 								</a>
-=======
 </Link>
 								<a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 									<Mail className="w-4 h-4" /> kleber@ziontechgroup.com
 								</Link>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 								<div className="flex items-start gap-2 text-gray-300">
 									<MapPin className="w-4 h-4 mt-1" /> 364 E Main St STE 1008 Middletown DE 19709
 								</div>
@@ -618,13 +608,11 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 								<Button href="/contact" className="w-full">Talk to Sales</Button>
 							</div>
 						</Card>
-<<<<<<< HEAD
-=======
 
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-3">Learn More</h3>
 							<a href={service.link |canonical} className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 								Open canonical page <ExternalLink className="w-4 h-4" />
 							</a>
 						</Card>
@@ -632,7 +620,6 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 				</div>
 			</div>
 		</UltraFuturisticBackground>
-<<<<<<< HEAD
 ;
 function getAllServices (): Service[] {
   return enhancedRealMicroSaasServices;
@@ -720,7 +707,6 @@ if ( {) {
 }
   return { not_found: true }
   }
-=======
 	);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
@@ -22,8 +18,6 @@ const Page = () => {
 };
 
 export default Page;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { 
   Newspaper;
   Calendar, 
@@ -238,7 +232,6 @@ export default function NewsPage() {
             <motion.h1 
               className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
               initial={{ opacity: 0, y: 30 }}
-=======
 import React from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -258,7 +251,7 @@ import { Newspaper;
  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 const NewsPage: React.FC;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
         {/* Hero Section */  } catch (error) {
@@ -285,7 +278,6 @@ const NewsPage: React.FC;
 }
               className="text-center"
             >
-<<<<<<< HEAD
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent mb-6">
                 Latest News & Updates
               </div>
@@ -1145,7 +1137,6 @@ const NewsPage: React.FC = () => {;
                   <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                     <div className="flex items-center gap-2">
                       <Calendar className="w-4 h-4" />
-=======
 <h1 className="text-4xl md:text-6xl font-bold mb-6">News & Updates</h1>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Stay informed about our latest developments, product launches, and industry insights.
@@ -1253,11 +1244,10 @@ const NewsPage: React.FC = () => {;
                         Read More
                         <ArrowRight className="ml-1 w-4 h-4" />
                       </Link>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                   </div>
                 </motion.article>
-<<<<<<< HEAD
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1355,7 +1345,6 @@ const NewsPage: React.FC = () => {;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 20 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
-=======
               ))}
             </div>
           </div>
@@ -1367,7 +1356,7 @@ const NewsPage: React.FC = () => {;
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -1376,7 +1365,6 @@ const NewsPage: React.FC = () => {;
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
                 Subscribe to our newsletter to get the latest news and updates delivered to your inbox.
               </p>
-<<<<<<< HEAD
             </motion.div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               {newsCategories.map((category, index) => (
@@ -1543,7 +1531,6 @@ const NewsPage: React.FC = () => {;
 
                 For press inquiries, media interviews, or additional information, 
                 For press inquiries, media interviews, or additional information,
-=======
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
                   href="/contact"
@@ -1558,7 +1545,7 @@ const NewsPage: React.FC = () => {;
                 >
                   Learn More
                 </Link>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 please contact our communications team.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1579,7 +1566,6 @@ const NewsPage: React.FC = () => {;
           </div>
         </section>
       </div>
-<<<<<<< HEAD
       {/* CTA Section */}
       {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
@@ -2020,11 +2006,6 @@ const NewsPage: React.FC = () => {;
 }
 
 ;
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 </>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

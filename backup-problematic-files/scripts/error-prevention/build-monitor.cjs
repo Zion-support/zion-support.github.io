@@ -24,22 +24,19 @@ class BuildMonitor {}
   async runBuildCheck() {}
     try {}
       console.log('Running build check...');
-      
       const child = spawn('npm', ['run', 'build'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
-        "cwd": process.cwd();
+        "cwd": process.cwd();"
       };);
-
+"
       let output = ;';';
       let errorOutput = ;';';
-
       child.stdout.on('data', (data) => {}
         output += data.toString()}
 });
 
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
-});
 
 
 
@@ -52,62 +49,40 @@ class BuildMonitor {}
           console.log('Build check failed ✗');
           console.log('"Output": ', output);
           console.log('"Errors": ', errorOutput);
-          
           // Attempt to fix common build issues;
           this.attemptBuildFix()};
       })} catch (error) {}
       console.error('Error running build "check": ', error.message)};
   };
   async attemptBuildFix() {}
-    try {}
       console.log('Attempting to fix build issues...');
-      
       // Clean build directory;
       const cleanChild = spawn('npm', ['run', 'clean'], {})
         "stdio": 'inherit',
-        "cwd": process.cwd();
-      };);
-
 
 
       cleanChild.on('close', (code) => {}
-        if ( {})
           console.log('Clean completed, retrying build...')) {}
-     {}
           console.log('Clean completed, retrying build...')};
           this.runBuildCheck()} else {}
           console.log('Clean failed')};
-      })} catch (error) {}
       console.error('Error running build "fix": ', error.message)};
-  };
   stop() {}
     console.log('Stopping Build Monitor...');
-    this.isRunning = false;
     
-    if ( {})
       clearInterval(this.intervalId)};
     console.log('Build Monitor stopped')) {}
-     {}
-      clearInterval(this.intervalId)};
     console.log('Build Monitor stopped')}};
-};
 // Start the monitor if run directly;
-if ( {})
   const monitor = new BuildMonitor) {}
-     {}
   const monitor = new BuildMonitor}(;);
   
   // Handle graceful shutdown;
   process.on('SIGINT', () => {}
     monitor.stop();
     process.exit(0)}
-});
   
   process.on('SIGTERM', () => {}
-    monitor.stop();
-    process.exit(0)}
-});
   
   monitor.start().catch(console.error)};
-module.exports = BuildMonitor;
 module.exports = BuildMonitor;

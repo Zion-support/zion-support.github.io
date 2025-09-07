@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -20,9 +19,8 @@ import { useRouter } from 'next/router';
       results: ['40% increase in production efficiency60% reduction in downtime25% improvement in quality control'],
       duration: '6 months',
       description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.',
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       fullContent: `
         <h2>Background</h2>
         <p>Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes.
@@ -46,8 +44,6 @@ import { useRouter } from 'next/router';
           <li><strong>60% reduction in downtime</strong> - Predictive maintenance prevented equipment failures</li>
           <li><strong>25% improvement in quality control</strong> - AI-powered inspection systems caught defects early</li>
         </ul>
-<<<<<<< HEAD
-=======
         <h2>Implementation Timeline</h2>
         <p>The project was completed in 6 months with minimal disruption to ongoing operations.
         The system was deployed in phases, allowing for gradual adoption and optimization.</p>
@@ -115,7 +111,7 @@ challenge:
       duration: '8 months',
       description: 'Building self-healing, auto-scaling cloud infrastructure.',
       fullContent: `
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         <h2>Background</h2>
         <p>A growing e-commerce platform was experiencing skyrocketing cloud costs and frequent outages.
         Their infrastructure was not scaling efficiently with their business growth.</p>
@@ -123,13 +119,11 @@ challenge:
         <p>The platform needed to optimize their cloud infrastructure for cost, performance, and reliability.
         They required a solution that could automatically adapt to traffic patterns and prevent outages.</p>
         <h2>Solution</h2>
-<<<<<<< HEAD
         <p>We designed and implemented a comprehensive cloud optimization system: </p>
 
 
-=======
 <p>We designed and implemented a comprehensive cloud optimization system:</p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         <ul>
           <li>Auto-scaling infrastructure with intelligent resource allocation</li>
           <li>Self-healing systems with automatic failure recovery</li>
@@ -145,7 +139,6 @@ challenge:
         </ul>
         <p>The project was completed in 8 months with careful planning to avoid service disruption.
         The new infrastructure was deployed alongside the existing system and gradually migrated traffic.</p>
-<<<<<<< HEAD
       `
     }
 import React from 'react';
@@ -277,14 +270,13 @@ export default function CaseStudyPage(req, res) {
 }
   ],
   const caseStudy = caseStudies.find(study => study.id === id),
-=======
 `,
     },
   ];
 
   const caseStudy = caseStudies.find(study => study.id === id);
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   if (!caseStudy) {
     return (
       <>
@@ -300,18 +292,16 @@ export default function CaseStudyPage(req, res) {
               <p className='text-xl text-white/80 mb-8'>
                 The case study you're looking for doesn't exist.
               </p>
-<<<<<<< HEAD
 
 
 
 
                 href="/case-studies"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
-=======
               <Link
                 href='/case-studies'
                 className='inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 ← Back to Case Studies
               </Link>
@@ -332,7 +322,6 @@ export default function CaseStudyPage(req, res) {
         />
         <meta property='og:description' content={caseStudy.description} />
       </Head>
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <div className="max-w-4xl mx-auto">
@@ -348,7 +337,6 @@ export default function CaseStudyPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
         <main className='container mx-auto px-6 py-12'>
@@ -366,7 +354,7 @@ export default function CaseStudyPage(req, res) {
               <div className='mb-6'>
                 <span className='px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30'>
                   {caseStudy.industry}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </span>
               </div>
               <h1 className='text-4xl font-bold mb-4 text-white'>
@@ -407,7 +395,6 @@ export default function CaseStudyPage(req, res) {
                   </h3>
                   <ul className='space-y-3'>
                     {caseStudy.results.map((result, index) => (
-<<<<<<< HEAD
                       <li key={index} className="text-white/80 flex items-center gap-3">
                         <div className="w-2 h-2 bg-green-400 rounded-full"></div>
   ];
@@ -513,7 +500,6 @@ export default function CaseStudyPage(req, res) {
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                   <h3 className="font-semibold text-blue-400 text-lg mb-4">Project Details</h3>
                   <div className="space-y-3">
-=======
                       <li
                         key={index}
                         className='text-white/80 flex items-center gap-3'
@@ -529,7 +515,7 @@ export default function CaseStudyPage(req, res) {
                     Project Details
                   </h3>
                   <div className='space-y-3'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     <div>
                       <span className='text-white/60 text-sm'>Duration:</span>
                       <p className='text-white font-medium'>
@@ -546,32 +532,28 @@ export default function CaseStudyPage(req, res) {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
               <div
                 className="prose prose-invert max-w-none"
 
-=======
 <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12'>
               <div
                 className='prose prose-invert max-w-none'
                 dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               />
             </div>
 
             <div className='text-center'>
               <Link
-<<<<<<< HEAD
 
 
 
 
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
-=======
                 href='/contact'
                 className='inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Get Started with Your Project
               </Link>
@@ -580,7 +562,6 @@ export default function CaseStudyPage(req, res) {
         </main>
       </div>
     </>
-<<<<<<< HEAD
   )
                   </ul>;
                 </div>;
@@ -726,6 +707,5 @@ if ( {) {
         </main>;
 
 
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

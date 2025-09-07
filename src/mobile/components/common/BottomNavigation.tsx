@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Home, ShoppingBag, Users, User } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -27,7 +26,6 @@ export function BottomNavigation() {;
                   'h-5 w-5',;
                   isActive ? 'stroke-primary' : 'stroke-muted-foreground';
                 ),;
-=======
   const router = null;
               })}
             </div>
@@ -43,19 +41,16 @@ export function BottomNavigation() {;
             <div className="h-5 w-5">
               {React.cloneElement(item.icon as React.ReactElement, {
                 className: cn("h-5 w-5", isActive ? "stroke-primary" : "stroke-muted-foreground")
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               })}
             </div>
             <span className="text-xs mt-1">{item.label}</span>
           </Link>
         )
-<<<<<<< HEAD
-<<<<<<< HEAD
       })}
     </div>
   )
 }
-<<<<<<< HEAD
 
 
               {React.cloneElement(item.icon as React.ReactElement, { 
@@ -80,7 +75,4 @@ export function BottomNavigation() {;
 }
 
 ;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

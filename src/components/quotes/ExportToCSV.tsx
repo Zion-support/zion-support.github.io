@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { Download } from 'lucide-react';
 import type { QuoteRequest } from "@/types/quotes";
@@ -28,18 +27,16 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       quote.project_name
       quote.project_summary
       quote.budget_display |
-=======
   quotes: QuoteRequest[];
   filename?: string
 }
 
 export const ExportToCSV = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         (quote.budget_min && quote.budget_max
           ? `$${quote.budget_min} - $${quote.budget_max}`
           : quote.budget_min
             ? `$${quote.budget_min}`
-<<<<<<< HEAD
             : 'Not specified')
       quote.timeline
       quote.status
@@ -48,7 +45,6 @@ export const ExportToCSV = null;
     // Create CSV content
     const csvContent = [
       headers.join()
-<<<<<<< HEAD
       ...rows.map(row =>
         row.map(cell =>
 
@@ -376,9 +372,6 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     </Button>;
   );
 }
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
             : 'Not specified'),
       quote.timeline,
       quote.status,
@@ -425,4 +418,4 @@ URL.revokeObjectURL(url);
 );
 };
 '"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

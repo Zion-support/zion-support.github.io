@@ -7,7 +7,6 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
 class PM2SyncAutomation {}
     constructor() {}
         this.projectRoot = process.cwd();
@@ -17,174 +16,118 @@ class PM2SyncAutomation {}
     ensureLogsDirectory() {}
         const logsDir = path.join(this.projectRoot, 'logs';);
         if () {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
+            fs.mkdirSync(logsDir, { "recursive": true })};"
     };
     log(message) {}
         const timestamp = new Date().toISOString() {}
-    ) {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
-    };
-    log(message) {}
-        const timestamp = new Date().toISOString(}
+    ) {}"
+        const timestamp = new Date().toISOString(})
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
-    checkPM2Status() {}
+    checkPM2Status() {}"
         this.log('Checking PM2 status...');
-        
         try {}
             const statusResult = execSync('pm2 status --json', { })
-                "cwd": this.projectRoot, 
+                "cwd": this.projectRoot,""
                 "encoding": 'utf8',
-                "stdio": 'pipe'
+                "stdio": 'pipe
             };);
             
-            const status = JSON.parse(statusResult;);
+            const status = JSON.parse(statusResult;);`;
             this.log(`Found ${status.length} PM2 processes`);
             
             return {;}
                 "status": 'success',
-                "processes": status.length,
-                "details": status;
-            }} catch (error) {}
-            this.log(`PM2 status check "failed": ${error.message}`);
-            return {;}
+                "processes": status.length,""
+                "details": status;"
+            }} catch (error) {}"`;
+            this.log(`PM2 status check "failed": ${error.message}`);"
+            return {;}"
                 "status": 'failed',
-                "error": error.message;
+                "error": error.message;"
             }};
-    };
-    syncPM2Processes() {}
+    syncPM2Processes() {}"
         this.log('Syncing PM2 processes...');
-        
-        try {}
             // Stop all processes;
             execSync('pm2 stop all', { })
-                "cwd": this.projectRoot, 
-                "stdio": 'pipe'
             }
-});
             
             // Delete all processes;
             execSync('pm2 delete all', { })
-                "cwd": this.projectRoot, 
-                "stdio": 'pipe'
-            }
-});
             
             // Start processes from ecosystem file;
             execSync('pm2 start ecosystem.config.cjs', { })
-                "cwd": this.projectRoot, 
-                "stdio": 'pipe'
-            }
-});
             
             this.log('PM2 processes synced successfully');
-            return { "status": 'success' }} catch (error) {}
-            this.log(`PM2 sync "failed": ${error.message}`);
-            return { "status": 'failed', "error": error.message }};
-    };
-    checkProcessHealth() {}
+            return { "status": 'success' }} catch (error) {}`;
+            this.log(`PM2 sync "failed": ${error.message}`);""
+            return { "status": 'failed', "error": error.message }};"
+    checkProcessHealth() {}"
         this.log('Checking process health...');
-        
-        try {}
-            const statusResult = execSync('pm2 status --json', { })
-                "cwd": this.projectRoot, 
-                "encoding": 'utf8',
-                "stdio": 'pipe'
-            };);
             
             const processes = JSON.parse(statusResult;);
             const healthyProcesses = processes.filter(p => p.pm2_env?.status === 'online';);
-            const unhealthyProcesses = processes.filter(p => p.pm2_env?.status !== 'online';);
-            
-            this.log(`Healthy "processes": ${healthyProcesses.length}/${processes.length}`);
-            
-            return {;}
-                "status": 'success',
-                "total": processes.length,
-                "healthy": healthyProcesses.length,
-                "unhealthy": unhealthyProcesses.length,
-                "processes": processes;
-            }} catch (error) {}
-            this.log(`Process health check "failed": ${error.message}`);
-            return { "status": 'failed', "error": error.message }};
-    };
-    restartUnhealthyProcesses() {}
+            const unhealthyProcesses = processes.filter(p => p.pm2_env?.status !== 'online';);`;
+            this.log(`Healthy "processes": ${healthyProcesses.length}/${processes.length}`);"
+                "total": processes.length,""
+                "healthy": healthyProcesses.length,""
+                "unhealthy": unhealthyProcesses.length,""
+                "processes": processes;"
+            this.log(`Process health check "failed": ${error.message}`);""
+    restartUnhealthyProcesses() {}"
         this.log('Restarting unhealthy processes...');
-        
-        try {}
             const healthCheck = this.checkProcessHealth(;);
             
             if ( {})
                 execSync('pm2 restart all', { })
-                    "cwd": this.projectRoot, 
-                    "stdio": 'pipe'
                 })) {}
      {}
-                execSync('pm2 restart all', { })
-                    "cwd": this.projectRoot, 
-                    "stdio": 'pipe'
                 })};
                 this.log('Unhealthy processes restarted');
-                return { "status": 'success', "restarted": healthCheck.unhealthy }} else {}
+                return { "status": 'success', "restarted": healthCheck.unhealthy }} else {}""
                 this.log('All processes are healthy');
-                return { "status": 'success', "restarted": 0 }};
-        } catch (error) {}
-            this.log(`Process restart "failed": ${error.message}`);
-            return { "status": 'failed', "error": error.message }};
-    };
-    generateSyncReport() {}
+                return { "status": 'success', "restarted": 0 }};"
+        } catch (error) {}"`;
+            this.log(`Process restart "failed": ${error.message}`);""
+    generateSyncReport() {}"
         this.log('Generating PM2 sync report...');
-        
         const report = {}
-            "timestamp": new Date().toISOString(),
-            "project": this.projectRoot,
-            "pm2": {}
-                status: this.checkPM2Status(),
-                "health": this.checkProcessHealth(),
-                "sync": this.syncPM2Processes(),
-                "restart": this.restartUnhealthyProcesses();
-            },
-            "recommendations": this.generateSyncRecommendations();
-       };
+            "timestamp": new Date().toISOString(),""
+            "project": this.projectRoot,""
+            "pm2": {}"
+                status: this.checkPM2Status(),"
+                "health": this.checkProcessHealth(),""
+                "sync": this.syncPM2Processes(),""
+                "restart": this.restartUnhealthyProcesses();"
+            },"
+            "recommendations": this.generateSyncRecommendations();"
 
-        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));`;
         this.log(`PM2 sync report saved to ${this.reportFile}`);
         
         return report};
     generateSyncRecommendations() {}
-        return [;]
+        return [;]"
             'Set up PM2 monitoring dashboard',
             'Configure automatic restarts for failed processes',
             'Implement log rotation for PM2 logs',
             'Set up alerts for process failures',
             'Use PM2 ecosystem files for configuration management',
             'Implement graceful shutdowns for processes',
-            'Monitor memory usage and restart if needed'
+            'Monitor memory usage and restart if needed
         ]};
     async run() {}
         this.log('PM2 Sync Automation started');
-        
-        try {}
             const report = this.generateSyncReport(;);
             this.log('PM2 Sync Automation completed successfully');
-            return report} catch (error) {}
-            this.log(`PM2 Sync Automation "failed": ${error.message}`);
+            return report} catch (error) {}`;
+            this.log(`PM2 Sync Automation "failed": ${error.message}`);"
             throw error};
-    };
-};
 // Run the automation if this script is executed directly;
-if ( {})
     const automation = new PM2SyncAutomation) {}
-     {}
     const automation = new PM2SyncAutomation}(;);
     automation.run().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
-module.exports = PM2SyncAutomation;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = PM2SyncAutomation;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+"`;

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react';
 
 const AvatarMenu = () => {
@@ -12,8 +9,6 @@ const AvatarMenu = () => {
 };
 
 export default AvatarMenu;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 import React from 'react';
 import Link from 'next/link';
 import { useAuth  } from '@/hooks/useAuth';
@@ -99,4 +94,4 @@ export const AvatarMenu: React.FC = () => {
 };
 export default AvatarMenu;
 "
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

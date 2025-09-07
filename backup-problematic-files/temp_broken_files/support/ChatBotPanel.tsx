@@ -1,41 +1,33 @@
 
-import React, { useState, useRef, useEffect } from "react",;
+import React, { useState, useRef, useEffect } from "react",;""
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { ScrollArea } from "@/components/ui/scroll-area",;
-import { Separator } from "@/components/ui/separator",;
-import { toast } from "@/components/ui/use-toast",;
-import { cn } from "@/lib/utils",;
-import { ChatMessage } from "./ChatMessage",;
-import { QuickReplyButton } from "./QuickReplyButton",;
+import { Button } from "@/components/ui/button",;""
+import { Input } from "@/components/ui/input",;""
+import { ScrollArea } from "@/components/ui/scroll-area",;""
+import { Separator } from "@/components/ui/separator",;""
+import { toast } from "@/components/ui/use-toast",;""
+import { cn } from "@/lib/utils",;""
+import { ChatMessage } from "./ChatMessage",;""
+import { QuickReplyButton } from "./QuickReplyButton",;""
 import { Send, Loader2 } from 'lucide-react';
-import { useTheme } from "@/hooks/useTheme",;
+import { useTheme } from "@/hooks/useTheme",;"
 ;
 // Define suggested quick replies;
-const QUICK_REPLIES = [;
-  { id:"hire", text:"How do I hire?" },;
-  { id:"match", text:"How do I get matched?" },;
-  { id:"billing", text:"Billing help" }],;
-;
+const QUICK_REPLIES = [;"
+  { id:"hire", text:"How do I hire?" },;""
+  { id:"match", text:"How do I get matched?" },;"]"
+  { id:"billing", text:"Billing help" }],;"
 type Message = {;
   id:string,;
-  content:string,;
-  sender:"user" | "bot",;
+  content:string,;"
+  sender:"user" | "bot",;"
   timestamp:Date;
 },;
-;
 export function ChatBotPanel() {;
   const [messages, setMessages] = useState<Message[]>([;
-    {;
-      id:"welcome",;
-      content:"Hi! How can I help you?",;
-      sender:"bot",;
-      timestamp:new Date()}]),;
-  const [inputValue, setInputValue] = useState(""),;
-  const [isLoading, setIsLoading] = useState(false),;
-  const [failedAttempts, setFailedAttempts] = useState(0),;
+)
   const scrollAreaRef = useRef<HTMLDivElement>(null),;
+
   const inputRef = useRef<HTMLInputElement>(null),;
   const { theme } = useTheme(),;
 ;
@@ -218,100 +210,68 @@ export function ChatBotPanel() {;
       <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>;
         <div className="flex flex-col gap-4">;
           {messages.map((message) => (;
+"
+    <div className="flex flex-col h-full">;"
+</div>"
+      <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>;"
+        <div className="flex flex-col gap-4">;"
+</div>
+pr-12325
             <ChatMessage;
               key={message.id}              message={message.content}
               isUser={message.sender === &quot;user&quot}
               timestamp={message.timestamp}
             />;
-          ))}
-          ;
-          {isLoading && (;
-            <div className="flex items-center justify-center py-2">;
-              <Loader2 className="h-5 w-5 animate-spin text-zion-purple" />;
+            <div className="flex items-center justify-center py-2">;"
+              <Loader2 className="h-5 w-5 animate-spin text-zion-purple" />;"
+</Loader2>
             </div>;
-          )}
-        </div>;
-      </ScrollArea>;
-      ;
-      {messages.length === 1 && (;
-        <div className="px-4 py-3">;
-          <p className={cn("text-sm mb-2", theme === "dark" ? "text-gray-300" :"text-gray-600")}>;
-            Suggested questions:;
-          </p>;
-          <div className="flex flex-wrap gap-2">;
-            {QUICK_REPLIES.map((reply) => (;
+      ;"
+        <div className="px-4 py-3">;"
+          <p className={cn("text-sm mb-2", theme === "dark" ? "text-gray-300" :"text-gray-600")}>;"
+</p>
+          </p>;"
+          <div className="flex flex-wrap gap-2">;"
               <QuickReplyButton;
                 key={reply.id}
                 text={reply.text}
                 onClick={() => handleQuickReply(reply.text)}
-              />;            ))}
-          </div>;
-        </div>;
-      )}
-      ;
-      {failedAttempts >= 3 && (;
-        <div className="px-4 py-3 border-t border-zion-purple/10">;
-          <p className={cn("text-sm mb-2 font-medium", theme === "dark" ? "text-gray-300" :"text-gray-600")}>;
-            Need more help?;
-          </p>;
-          <div className="flex gap-2">;
+
+        </div>;"
+        <div className="px-4 py-3 border-t border-zion-purple/10">;"
+          <p className={cn("text-sm mb-2 font-medium", theme === "dark" ? "text-gray-300" :"text-gray-600")}>;"
+          <div className="flex gap-2">;"
             <Button ;
-              onClick={handleEscalateToLiveAgent}
-              size="sm";
-              className="bg-zion-purple hover:bg-zion-purple-light text-white";
+              onClick={handleEscalateToLiveAgent}"
+              size="sm";""
+              className="bg-zion-purple hover:bg-zion-purple-light text-white";"
             >;
-              Chat with Live Agent;
-            </Button>;
-            <Button ;
-              onClick={handleEmailSupport}
-              size="sm";
-              variant="outline";
-            >;
-              Email Support;
-            </Button>;
-          </div>;
-        </div>;
-      )}
-      ;
-      <div className={cn(;
-        "p-4 border-t", ;
-        theme === "dark" ? "border-zion-blue-light" :"border-gray-200";
+
+              onClick={handleEmailSupport}"
+              variant="outline";"
+
+      <div className={cn(;"
+        "p-4 border-t", ;""
+        theme === "dark" ? "border-zion-blue-light" :"border-gray-200";")
       )}>;
         <form ;
           onSubmit={(e) => {;
-            e.preventDefault(),;
-            handleSendMessage(),;
-          }}
-          className="flex items-center gap-2";
-        >;
+</form>
           <Input;
             ref={inputRef}
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
-            placeholder="Type your question...";
-            className={cn(;
-              "flex-1",;
-              theme === "dark" ;
-                ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple" ;
-                :"bg-white border-gray-200";
-            )}
-          />;
-          <Button;
-            type="submit";
-            size="icon";
-            disabled={isLoading || !inputValue.trim()}
-            className="bg-zion-cyan hover:bg-zion-cyan/80 text-white";
-            aria-label="Send message";
-          >;
-            <Send className="h-4 w-4" />;
-          </Button>;
+
+          <Button;"
+            type="submit";""
+            size="icon";"
+            disabled={isLoading || !inputValue.trim()}"
+            className="bg-zion-cyan hover:bg-zion-cyan/80 text-white";""
+            aria-label="Send message";"
+            <Send className="h-4 w-4" />;"
+
         </form>;
-      </div>;
-    </div>;
-  ); type Message = {;
-  id: string;
-content: string;
-export function ChatBotPanel () {;
+    </div>;]
   const [messages, setMessages] = useState<Message[]> ([ {;
   //Auto-scroll to bottom when messages change useEffect ( () => {;
   if (scrollAreaRef.current) {;
@@ -401,11 +361,7 @@ timestamp: new Date ()
 timestamp: new Date () ;
 }]) 
 };
+pr-12325
 </div>) ;
-}</div> </ScrollArea> key= {;
-  reply.id ;
-}text= {;
-  reply.text ;
-}onClick={;
-  () => handleQuickReply (reply.text) ;
-}/>) ) ;"}</div> </div>) ";"}Need more help? </p> <div className="flex gap-2" > <Button > Chat with Live Agent </Button> <Button > Email Support </Button> </div> </div>) ";"}aria-label="Send message" h-4 w-4" /> </Button> </form> </div> </div>) ;"}'"
+}</div>  key= {;"
+}/>) ) ;"}</div> </div>) ";"}Need more help? </p> <div className="flex gap-2" > <Button > Chat with Live Agent  <Button > Email Support  </div> </div>) ";"}aria-label="Send message" h-4 w-4" />  </form> </div> </div>) ;"}'""]"

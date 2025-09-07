@@ -22,8 +22,6 @@ import { useTranslation } from "react-i18next",
 import { useLanguage } from "@/context/LanguageContext",
 import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone } from 'lucide-react'
 
-<<<<<<< HEAD
-=======
 import { Header } from '@/components/Header';
 import { TrustedBySection } from '@/components/TrustedBySection';
 import { TestimonialCarousel } from '@/components/TestimonialCarousel';
@@ -53,7 +51,7 @@ import {
   BarChart3
   Smartphone
 } from 'lucide-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default function LandingPage() {
   const { t } = useTranslation(),
   const { isRTL } = useLanguage(),
@@ -62,7 +60,6 @@ export default function LandingPage() {
 
 
   // Tools and features showcase
-<<<<<<< HEAD
 
   const toolsFeatures = [
     {
@@ -114,9 +111,8 @@ function LandingPage() {
     },
   ];
 
-=======
   const toolsFeatures = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
           <div
             className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>;
@@ -139,7 +135,6 @@ function LandingPage() {
                   <span>{t('general && general.explore')}</span>;
                   <ArrowRight
                     className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`}
-<<<<<<< HEAD
                   />                </div>                <h3 className="text-xl font-bold text-white mb-2">{feature && feature.title}</h3>;
                 <p className="text-zion-slate-light mb-4">{feature && feature.description}</p>;
                 <div className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : ''}`}>;
@@ -253,7 +248,6 @@ export default function LandingPage() { const { t  } = useTranslation(),
                   <span>{t("general.explore")}</span>
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />
       <CategoriesSection />
-=======
                   />
                 </div>
               </Link>
@@ -262,7 +256,7 @@ export default function LandingPage() { const { t  } = useTranslation(),
         </div>
       </section>
 <CategoriesSection />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       <BenefitsSection />
 
       {/* Add the comprehensive features guide section */}
@@ -272,7 +266,6 @@ export default function LandingPage() { const { t  } = useTranslation(),
       <TestimonialCarousel />
       <TrustedBySection />
       <BlogSection />
-<<<<<<< HEAD
 
       <CategoriesSection />;
       <BenefitsSection />;
@@ -344,7 +337,6 @@ export default function LandingPage() { const { t  } = useTranslation(),
   );
 }
 ;
-=======
 {/* Add social share section to encourage users to spread the word */}
       <SocialShareSection />
       <WaitlistSection />
@@ -352,4 +344,4 @@ export default function LandingPage() { const { t  } = useTranslation(),
     </div>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

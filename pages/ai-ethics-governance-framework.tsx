@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 			implementationWeeks="Implementation: 3–6 weeks"
 			roiNote="Reduce compliance risk and accelerate approvals"
 			features={[
@@ -8,10 +7,9 @@
 				"Prompt governance and access controls"
 				"Regulatory mapping (EU AI Act, NIST AI RMF)"
 
-=======
 import React from 'react';
 			title;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 				"Training and incident response runbooks"
 			]}
 			industries={["Finance", "Healthcare", "Public Sector", "SaaS"]}
@@ -45,7 +43,6 @@ import React from 'react';
 			canonical="https: //ziontechgroup.com/ai-ethics-governance-framework"
 		/>
 	)
-<<<<<<< HEAD
 			canonical="https: //ziontechgroup.com/ai-ethics-governance-framework";
 		/>;
 	);
@@ -53,6 +50,5 @@ import React from 'react';
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }

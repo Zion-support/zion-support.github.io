@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   { key: 'private_portal', label: 'Private hiring portal' },
   { key: 'dedicated_talent_pool', label: 'Dedicated talent pool' },
   { key: 'custom_sla', label: 'Custom SLA' },
@@ -23,10 +22,9 @@
     name: 'Enterprise',
     price: 'Custom',
     blurb: 'Unlimited users, custom contracts and SLAs',
-=======
 import Link from 'next/link';
 const features = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default function EnterprisePlans() {
   return (
     <main style={{ padding: '3rem', maxWidth: 1100, margin: '0 auto' }}>
@@ -125,9 +123,7 @@ export default function EnterprisePlans() {
                     {f.label}
                   </td>
                   {tiers.map(t => (
-<<<<<<< HEAD
                     <td key={t.id + f.key} style={{ textAlign: 'center', padding: 8, borderBottom: '1px solid #f3f4f6' }}>
-=======
                     <td
                       key={t.id + f.key}
                       style={{
@@ -137,7 +133,7 @@ export default function EnterprisePlans() {
                       }}
                     >
                       {t.includes[f.key as keyof typeof t.includes] ? '✓' : '—'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     </td>
                   ))}
                 </tr>
@@ -288,7 +284,6 @@ export default function EnterprisePlans(req, res) {
           </span>
         </div>
         <div style={{ marginLeft: 'auto' }}>
-<<<<<<< HEAD
           <Link href="/enterprise/admin">Admin Dashboard</Link>
   )
   } catch (error) {
@@ -365,10 +360,9 @@ function EnterprisePlans() {
 }
 
 
-=======
           <Link href='/enterprise/admin'>Admin Dashboard</Link>
         </div>
       </section>
     </main>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

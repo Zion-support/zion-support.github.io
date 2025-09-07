@@ -1,5 +1,5 @@
 import React from 'react';
-
 interface Getting-startedProps {
-  className?: string;
+  // TODO: Implement
 }
+  className?: string;

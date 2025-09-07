@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 }; ];
 ; const socialLinks = [']; { name: 'LinkedIn', href: 'https: //linkedin.com/company/zion-tech-group', icon: 'LinkedIn' },''; { name: 'Twitter', href: 'https: //twitter.com/ziontechgroup', icon: 'Twitter' },''; { name: 'GitHub', href: 'https: //github.com/zion-tech-group', icon: 'GitHub' }']; ];
 ; return ('); <footer className = "bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">";
@@ -133,14 +129,13 @@
                         className="flex items-center text-slate-400 hover: text-cyan-400 transition-colors duration-200 group"", >,
 </Link>";
                         <div className="w-1 h-1 bg-slate-600 rounded-full mr-3 group-hover: bg-cyan-400 transition-colors duration-200"></div>"", <ArrowRight className="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 </ArrowRight>;
                       </Link>;
                     </li>;
                 </ul>;
               </div>;
           </div>";
-<<<<<<< HEAD
 
           <div className="pt - 8 border - t border - slate - 800 / 50">";
 </div>";
@@ -166,7 +161,6 @@
 </Award>;
                 </span> </div>;
 
-=======
           <div className="pt-8 border-t border-slate-800/50">";
 </div>";
             <div className="flex flex-col md: flex-row justify-between items-center space-y-4 md:space-y-0">", </div>",
@@ -191,12 +185,11 @@
 </Award>;
                 </span>;
               </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
 
 
     };
@@ -532,7 +525,5 @@ export default function FuturisticFooter() {
         </div>,;
       </div>,;
     </footer>",;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
     </footer>";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

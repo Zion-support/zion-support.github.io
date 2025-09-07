@@ -1,4 +1,4 @@
-// Auto-generated module
+// Auto-generated module;
 export {};
 origin/main
 import React, { useState } from 'react';

@@ -1,23 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import fs from 'fs',;
 import path from 'path',;
 const LOG_DIR = path.join(process.cwd(), 'dataanalytics')
 const LOG_FILE = path.join(LOG_DIR, 'events.log.jsonl')
 
-<<<<<<< HEAD
 import { ensureAdmin } from '../../../utils/auth';
 
-=======
 function ensureLogFile() {
   if (!fs.existsSync(LOG_DIR)) fs.mkdirSync(LOG_DIR, { recursive: true })
   if (!fs.existsSync(LOG_FILE)) fs.writeFileSync(LOG_FILE, '')
 }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
@@ -51,7 +44,6 @@ function ensureLogFile() {
 
 
     fs.appendFileSync(LOG_FILE, JSON.stringify(event) + '\n')
-<<<<<<< HEAD
 
 
 res.status(200).json({ ok: true });
@@ -64,21 +56,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     ensureLogFile (),
     fs.appendFileSync (LOG_FILE, JSON.stringify (event) + '\n');
 
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   } catch (e) {
     // ignore file errors in serverless;
   }
 
   res.status(200).json({ ok: true })
-<<<<<<< HEAD
 }
 
 
-=======
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
 const LOG_DIR = path.join(process.cwd(), 'logs');
 const LOG_FILE = path.join(LOG_DIR, 'events.log');
@@ -119,4 +105,4 @@ at: at && typeof at === 'string' ? at : nowIso,
 
   res.status(200).json({ ok: true });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

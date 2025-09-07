@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -954,7 +953,6 @@ export default Innovative2025ServicesShowcase,
 
 },
 
-=======
 import { Brain, Shield, Rocket, Globe, Cpu, Database;
   TrendingUp, Users, Star, Zap, Lock, Target;
   ArrowRight, Phone, Mail, MapPin, ExternalLink
@@ -965,4 +963,4 @@ import { innovativeITServicesExpansion2025V3  } from '../data/2025-innovative-it
 import { innovativeAIServicesExpansion2025V3 } from '../data/2025-innovative-ai-services-expansion-v3';
 const Innovative2025ServicesShowcase: React.FC;
 export default Innovative2025ServicesShowcase;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

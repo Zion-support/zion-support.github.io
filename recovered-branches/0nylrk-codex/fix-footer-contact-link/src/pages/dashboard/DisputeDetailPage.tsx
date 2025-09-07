@@ -32,6 +32,32 @@ import { ProtectedRoute } from '@/components/ProtectedRoute',function DisputeDet
         <SEO
           title="Dispute Details | Zion AI Marketplace"
           description="View and manage dispute details"
+import React from "react";""
+import { SEO } from "@/components/SEO";""
+import { AppHeader } from "@/layout/AppHeader";""
+import { Footer } from "@/components/Footer";""
+import { DisputeDetail } from "@/components/disputes";""
+import { ProtectedRoute } from "@/components/ProtectedRoute";"
+function DisputeDetailPage() {
+  return (
+    <ProtectedRoute>
+
+      <>
+        <SEO;"
+          title="Dispute Details | Zion AI Marketplace"""
+          description="View and manage dispute details""
+        />
+
+        <AppHeader />
+
+        <DisputeDetail />
+
+        <Footer />
+
+      </>
+    
+          description="View and manage dispute details"""
+pr-12325
 import React from 'react';
 import {SEO} from '@/components / SEO';
 import {AppHeader} from '@/layout / AppHeader';
@@ -55,3 +81,36 @@ export default DisputeDetailPage;
 
 ;
 export default DisputeDetailPage;
+ * DisputeDetailPage - Function description;
+ */)
+    <ProtectedRoute>;
+
+      <>;
+        <SEO;
+          title="Dispute Details | Zion AI Marketplace";""
+          description="View and manage dispute details";"
+        />;
+
+        <AppHeader />;
+
+        <DisputeDetail />;
+
+        <Footer />;
+
+      </>;
+
+
+
+;
+
+
+export default DisputeDetailPage;
+
+    ;"
+export default DisputeDetailPage,; <ProtectedRoute> <> <SEO title="Dispute Details | Zion AI Marketplace" description="View and manage dispute details" /> <AppHeader /> <DisputeDetail /> <Footer /> </>  export default DisputeDetailPage;"
+
+
+
+    )
+    );"
+pr-12325

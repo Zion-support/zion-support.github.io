@@ -1,13 +1,9 @@
-<<<<<<< HEAD
 
 
 import React from "react";
 import Layout from "../components/Layout";
 
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -196,17 +192,14 @@ export default function AboutPage() {
         </div>
       </div>
     </MainLayout>
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import Layout from '../components/Layout';
 import Layout from '../components/Layout';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
   Brain,
-=======
 Brain,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   Shield,
   Users,
   Zap,
@@ -227,7 +220,6 @@ Brain,
   Lock,
   TrendingUp;
 } from 'lucide-react';
-<<<<<<< HEAD
 
 
 
@@ -509,7 +501,6 @@ export default function About() {;
         </section>
       </div>
     </>
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
   );
       name: 'Kleber',
       role: 'Founder & CEO',
@@ -663,7 +654,6 @@ function About() {
       </div>;
     </Layout>);
 }
-=======
   ];
 
   const team = [
@@ -833,4 +823,4 @@ name: "John Smith",
 };
 
 export default AboutPage;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 return (
     <>;
-=======
 import React, { useEffect } from 'react';
 import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';
@@ -13,7 +11,7 @@ export default function IntegrationsFeature() {
   const schema = null;
   return (
     <>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       <SEO
         title='API & Integrations'
         description='Extend Zion by embedding widgets or using our REST API for custom workflows.'
@@ -39,12 +37,10 @@ export default function IntegrationsFeature() {
               src='https://placehold && placehold.co/800x400'
               alt='Screenshot showing integrations'
               className='object-cover'
-<<<<<<< HEAD
 
 
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/developers">Learn More</Link>
-=======
             />
           </div>
           <h2 className='text-2xl font-bold mb-4'>Benefits &amp; Use Cases</h2>
@@ -77,13 +73,12 @@ export default function IntegrationsFeature() {
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/developers'>Learn More</Link>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </Button>
           </div>
         </div>
       </main>
     </>
-<<<<<<< HEAD
 
 
 
@@ -227,7 +222,6 @@ function IntegrationsFeature() {
 
 
 ;
-=======
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

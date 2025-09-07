@@ -1,22 +1,12 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from 'next',;
-=======
->>>>>>> pr-12243
+pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs',;
 import path from 'path',;
 async function fetchFromGitHub(): Promise<any[]> {
   try {
-<<<<<<< HEAD
 
 
-=======
     const repoUrl = require('../../../package.json').repository?.url || ''
     const match = repoUrl.match(/github.com\/(.+?)\/(.+?)\.git$/i)
     const owner = process.env.GITHUB_OWNER || (match ? match[1] : '')
@@ -36,7 +26,6 @@ async function fetchFromGitHub(): Promise<any[]> {
         if (!r.ok) continue
         const j = await r.json()
         results.push({ id: j.id || f.name, file: f.name, generatedAt: j.generatedAt, insights: j.insights })
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       } catch {
         // ignore;
       }
@@ -49,7 +38,6 @@ async function fetchFromGitHub(): Promise<any[]> {
   }
 const remote = await fetchFromGitHub()
 
-<<<<<<< HEAD
 const remote = await fetchFromGitHub(),
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
@@ -156,7 +144,6 @@ const remote = await fetchFromGitHub (),
 
 };
 
-=======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const dir = path.join(process.cwd(), 'automation_logs')
   try {
@@ -180,13 +167,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   const remote = await fetchFromGitHub()
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
+main
     const repoUrl = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> pr-12243
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243
   return res.status(200).json({ logs: remote })
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

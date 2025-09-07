@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-<<<<<<< HEAD
 
 import React, { useEffect, useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout'
@@ -19,20 +18,17 @@ type ProposalListItem = {
   status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted'
   createdAt: string
 },
-=======
 type ProposalListItem = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default function InternationalProposalsPage() {
   const [items, setItems] = useState<ProposalListItem[]>([]),
   const [filter, setFilter] = useState('All'),
 
   useEffect__(() => {
     fetch('/api/proposals')
-<<<<<<< HEAD
       .then((r) => r.json())
       .then((d) => setItems(d.items |[]))
       .catch(() => setItems([]))
-=======
 .then(r => r.json())
       .then(d => setItems(d.items || []))
       .catch(() => setItems([]));
@@ -53,7 +49,7 @@ export default function InternationalProposalsPage() {
             value={filter}
             onChange={e => setFilter(e.target.value)}
           >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <EnhancedLayout>
       <div className="space-y-4">
@@ -84,10 +80,8 @@ export default function InternationalProposalsPage() {
                   Created {new Date(i.createdAt).toLocaleString()}
                 </div>
               </div>
-<<<<<<< HEAD
               <div className="flex items-center gap-4 text-sm">
                 <span className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800">{i.status}</span>
-=======
               <div className='flex items-center gap-4 text-sm'>
                 <span className='px-2 py-1 rounded bg-gray-100 dark:bg-gray-800'>
                   {i.status}
@@ -126,11 +120,10 @@ export default function InternationalProposalsPage() {
         <div className='text-sm text-gray-600'>
           Community commentary per region coming next. For now, proposals expose
           a comments API endpoint.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
   )
   } catch (error) {
     console.error("Error:", error);
@@ -189,6 +182,5 @@ function InternationalProposalsPage() {
     </EnhancedLayout>);
 
 
-=======
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

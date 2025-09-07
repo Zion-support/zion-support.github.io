@@ -157,3 +157,10 @@ origin/cursor/integrate-build-improve-and-re-verify-242d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 export type { ApiResponse, RequestOptions }
+
+export interface ApiResponse<T = any> {
+
+  headers?: Record<string, string>;
+</string>
+  async request<T = any>(endpoint: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
+pr-12325

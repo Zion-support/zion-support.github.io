@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { useState } from "react",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { useForm } from "react-hook-form",
@@ -30,19 +27,16 @@ const profileSchema = z.object({
   bio: z.string().min(10, "Bio must be at least 10 characters").max(500, "Bio must be less than 500 characters")
   headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")})
 type ProfileFormValues = z.infer<typeof profileSchema>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 interface ProfileSetupProps {
   onComplete: (data: ProfileFormValues) => void,
   userType: string
-=======
 userType: string
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
   const form = useForm<ProfileFormValues>({
     resolver: zodResolver(profileSchema)
     defaultValues: {
-<<<<<<< HEAD
       case "serviceProvider": return "Service Provider"
       case "talent":
         return "Talent"
@@ -52,7 +46,6 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
         return "User"
     }
   }
-<<<<<<< HEAD
       case "serviceProvider": return "Service Provider",
       case "talent":
         return "Talent",
@@ -62,17 +55,14 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
         return "User"
     }
   },
-=======
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
 
 
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-6">
       <div className="text-center mb-6">
@@ -82,11 +72,8 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
         </p>
       </div>
 
-<<<<<<< HEAD
-=======
       
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onComplete)} className="space-y-6">
           <FormField
@@ -107,8 +94,6 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
                 </FormControl>
                 <FormMessage className="text-red-400" />
               </FormItem>
-<<<<<<< HEAD
-=======
 
 import { useState } from "react",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -215,7 +200,6 @@ function ProfileSetup() {
                 <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel>;
                 <FormControl>;
                   <div className="relative">;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           />;
           <FormField;
             control={form.control}
@@ -231,9 +215,7 @@ function ProfileSetup() {
                         userType === "serviceProvider" ? "Professional Videographer with 5+ years experience" :
                         userType === "talent" ? "Senior Motion Designer specialized in 3D Animation" :
                         "Creative Director at XYZ Studios"
-<<<<<<< HEAD
                       }`}
-=======
 
     <div className="space - y-6">;
       <div className="text - center mb - 6">;
@@ -335,7 +317,6 @@ function ProfileSetup() {
             render={({ field }: { field: any }) => (
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <FormItem>
                 <FormLabel className="text-zion-slate-light">Bio</FormLabel>
                 <FormControl>
@@ -353,33 +334,23 @@ function ProfileSetup() {
               </FormItem>
             )}
           />
-<<<<<<< HEAD
-=======
 
           
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <Button
             type="submit"
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white"
           >
             Complete Profile
           </Button>
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </form>
       </Form>
     </div>
-<<<<<<< HEAD
   )
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           />;
           <Button;
             type="submit";
@@ -391,20 +362,15 @@ function ProfileSetup() {
       </Form>;
     </div>;
   );
-<<<<<<< HEAD
-=======
-=======
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 case "talent": return "Talent";";
 case "client": return "Client";
 default: ;
 
 };
 getTypeLabel () ";
-<<<<<<< HEAD
 }Profile</h3> <p className="text-zion-slate-light mt-2"> Help others get to know you better </p> </div> <FormItem> <FormLabel className="text-zion-slate-light">Full Name</FormLabel> <FormControl> <div className="relative" > <Inputplaceholder="Your full name" className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   ...field "
 }/> <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
 }/> <FormField <FormItem> <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel> <FormControl> <div className="relative" > <InputclassName="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {
@@ -443,14 +409,10 @@ getTypeLabel () ";
   ...field ";
 }/> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>);
 }/> <Button > Complete Profile </Button> </form> </Form> </div>);
-<<<<<<< HEAD
 }"}
 }
 ;
-=======
 }"}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 }Profile</h3> <p className="text-zion-slate-light mt-2"> Help others get to know you better </p> </div> <FormItem> <FormLabel className="text-zion-slate-light">Full Name</FormLabel> <FormControl> <div className="relative" > <Input placeholder="Your full name" className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {;
   ...field ";
 }/> <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
@@ -462,4 +424,4 @@ getTypeLabel () ";
 }/> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ;
 }/> <Button > Complete Profile </Button> </form> </Form> </div>) ;
 }"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

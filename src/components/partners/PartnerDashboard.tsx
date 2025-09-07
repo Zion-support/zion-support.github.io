@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {;
   Card,;
   CardContent,;
@@ -24,7 +23,6 @@ import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Star } from 'lucide-react';
 
-<<<<<<< HEAD
   const stats = {
     totalReferrals: 42
     pendingReferrals: 8
@@ -36,13 +34,11 @@ import { Star } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react'
-=======
 
 
 
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
@@ -51,16 +47,12 @@ export function PartnerDashboard() {
     pendingReferrals: 8,
     completedReferrals: 34,
     conversionRate: 18.5,
-<<<<<<< HEAD
-=======
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     totalRevenue: 850.00,
     pendingRevenue: 200.00
   },
   
-=======
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -70,7 +62,7 @@ import { Star } from 'lucide-react'
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
   const stats = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-6">
       {/* Stats Overview */}
@@ -98,11 +90,7 @@ export function PartnerDashboard() {
             <Users className="h-4 w-4 text-zion-cyan" />
           </CardHeader>
           <CardContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
             <div className="text-2xl font-bold">{stats.totalReferrals}</div>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
             <div className="text-2xl font-bold">{stats.totalReferrals}</div>
@@ -114,12 +102,9 @@ export function PartnerDashboard() {
         </Card>
 
 
-<<<<<<< HEAD
-=======
         
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">Conversion Rate</CardTitle>
@@ -128,7 +113,6 @@ export function PartnerDashboard() {
           <CardContent>
             <div className="text-2xl font-bold">{stats.conversionRate}%</div>
             <p className="text-xs text-zion-slate-light">
-=======
             <div className='text-2xl font-bold'>{stats.totalReferrals}</div>
             <p className='text-xs text-zion-slate-light'>
               {stats.completedReferrals} completed, {stats.pendingReferrals}{' '}
@@ -146,16 +130,12 @@ export function PartnerDashboard() {
           <CardContent>
             <div className='text-2xl font-bold'>{stats.conversionRate}%</div>
             <p className='text-xs text-zion-slate-light'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               Of clicks that convert to sign-ups
             </p>
           </CardContent>
         </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         
 
 
@@ -172,16 +152,12 @@ export function PartnerDashboard() {
             <div className="text-2xl font-bold">${stats.totalRevenue}</div>
             <p className="text-xs text-zion-slate-light">
 
-<<<<<<< HEAD
 
 
-=======
               ${stats.pendingRevenue} pending payout
 
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 <Card className='bg-zion-blue-dark border-zion-blue-light'>
           <CardHeader className='flex flex-row items-center justify-between pb-2'>
             <CardTitle className='text-sm font-medium'>
@@ -193,23 +169,19 @@ export function PartnerDashboard() {
             <div className='text-2xl font-bold'>${stats.totalRevenue}</div>
             <p className='text-xs text-zion-slate-light'>
               ${stats.pendingRevenue} pending payout
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </CardContent>
         </Card>
       </div>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
-=======
+
       
       {/* Performance Chart */}
 
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
           <CardTitle>Performance Overview</CardTitle>
@@ -220,13 +192,10 @@ export function PartnerDashboard() {
             <LineChart className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />
             <p className="text-zion-slate-light">Detailed analytics will be available soon</p>
           </div>
-<<<<<<< HEAD
-=======
 
 
       
       {/* Recent Referrals */}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader className="flex flex-row items-center justify-between">
           <div>
@@ -236,7 +205,6 @@ export function PartnerDashboard() {
           <Button variant="outline" size="sm">View All</Button>
 
 
-=======
 {/* Performance Chart */}
       <Card className='bg-zion-blue-dark border-zion-blue-light'>
         <CardHeader>
@@ -244,7 +212,7 @@ export function PartnerDashboard() {
           <CardDescription>
             Track your referral performance over time
           </CardDescription>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         </CardHeader>
         <CardContent>
           <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">
@@ -256,28 +224,21 @@ export function PartnerDashboard() {
           </div>
         </CardContent>
       </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </CardContent>
       </Card>
       {/* Recent Referrals */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader className="flex flex-row items-center justify-between">
-=======
       {/* Recent Referrals */}
       <Card className='bg-zion-blue-dark border-zion-blue-light'>
         <CardHeader className='flex flex-row items-center justify-between'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           <div>
             <CardTitle>Recent Referrals</CardTitle>
             <CardDescription>Your latest partner referrals</CardDescription>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader className="flex flex-row items-center justify-between">;
           <div>;
@@ -291,7 +252,6 @@ export function PartnerDashboard() {
   );
 }
 ;
-=======
 
           <Button variant="outline" size="sm">View All</Button>
         </CardHeader>
@@ -305,8 +265,6 @@ export function PartnerDashboard() {
             </p>
           </div>
         </CardContent>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 <Button variant='outline' size='sm'>
             View All
           </Button>
@@ -324,4 +282,4 @@ export function PartnerDashboard() {
     </div>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

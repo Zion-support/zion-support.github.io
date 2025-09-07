@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -16,7 +15,6 @@ import OpenAI from 'openai';
 export type GenerateServiceDescriptionRequest = {
   title: string;
 
-=======
 export type GenerateServiceDescriptionRequest = {
   title: string;
   keyFeatures: string[];
@@ -27,15 +25,13 @@ export type GenerateServiceDescriptionRequest = {
 export type GenerateServiceDescriptionResponse = {
   description: string;
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse<GenerateServiceDescriptionResponse | { error: string }>
 ) {
-<<<<<<< HEAD
-=======
   if (req.method !== 'POST') {
 return res.status(405).json({ error: 'Method not allowed' });
   }
@@ -59,23 +55,18 @@ return res.status(405).json({ error: 'Method not allowed' });
       ? `Write in a ${tone} tone.`
       : 'Write in a professional, clear tone.';
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     const prompt = `You are a marketing copy expert. Given the following service inputs, write a polished, compelling, and detailed service description suitable for a website service page.
 Service Title: ${title}
 Target Audience: ${targetAudience}
 Key Features:
-<<<<<<< HEAD
     });
     let description = "";
 
-<<<<<<< HEAD
       model: 'gpt-4o-mini', input: prompt,
-=======
       model: 'gpt-4o-mini', input: prompt
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       temperature: 0.7
       });
-=======
 - ${keyFeatures.join("\n- ")}
 ${additionalNotes ? `Additional Notes: ${additionalNotes}` : ""}
 ${toneInstruction}
@@ -90,28 +81,25 @@ model: 'gpt-4o-mini',
       input: prompt,
       temperature: 0.7,
     });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
     let description = '';
     const output = response.output?.[0];
     if (output && output.type === 'message') {
       // Aggregate all text parts from the first message
       description = output.content
-<<<<<<< HEAD
         .filter((c) => c.type === 'output_text')
         .map((c: any) => c.text)
         .join('\n')
 
-=======
 .filter(c => c.type === 'output_text')
         .map((c: any) => c.text)
         .join('\n');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
     if (!description) {
       // Fallback to top-level text if available
       // @ts-ignore
-<<<<<<< HEAD
 
   tone?: 'professional' | 'friendly' | 'persuasive' | 'technical';
 };
@@ -195,7 +183,6 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 description =
         (response as any).content?.[0]?.text ||
         'Unable to generate description at this time.';
@@ -207,4 +194,4 @@ description =
   }
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

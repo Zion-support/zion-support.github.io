@@ -35,6 +35,35 @@ export default function CookiesPage() {;
                 Zion Tech Group uses cookies and similar technologies for several purposes:;
               </p>;
               <ul className="text - white / 70 space - y-2 mb-4">;
+    <div className="min-h-screen py-20">;"
+</div>"
+    <div className="min - h-screen py - 20">;"
+      <section className="relative mb - 20">;"
+</section>"
+        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;"
+          <div className="text - center">;"
+            <h1 className="text - 4xl md:text - 6xl font - bold text - white mb - 6">;"
+</h1>"
+              Cookie <span className="bg - gradient - to - r from - purple - 400 to - cyan - 400 bg - clip - text text - transparent">Policy</span>;"
+            </h1>;"
+            <p className="text - xl text - white / 80 max - w-4xl mx - auto">;"
+</p>
+            </p>;
+          </div>;
+      </section>;"
+      <section className="mb - 20">;"
+        <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8">;"
+          <div className="space - y-8">;"
+            <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border - white / 10">;"
+              <h2 className="text - 2xl font - bold text - white mb - 4">What Are Cookies?</h2>;""
+              <p className="text - white / 80 mb - 4">;"
+              </p>;"
+              <p className="text - white / 80">;"
+            </div>;"
+              <h2 className="text - 2xl font - bold text - white mb - 4">How We Use Cookies</h2>;""
+              <ul className="text - white / 70 space - y-2 mb - 4">;"
+</ul>
+pr-12325
                 <li>• To remember your preferences and settings</li>;
                 <li>• To analyze website traffic and usage patterns</li>;
                 <li>• To provide personalized content and advertisements</li>;
@@ -90,6 +119,18 @@ export default function CookiesPage() {;
                 Some cookies on our website are set by third - party services that we use to enhance your experience:;
               </p>;
               <ul className="text - white / 70 space - y-2 mb-4">;
+              <h2 className="text - 2xl font - bold text - white mb - 4">Types of Cookies We Use</h2>;""
+              <div className="space - y-6">;"
+</div>
+                <div>;
+                  <h3 className="text - lg font - semibold text - white mb - 2">Essential Cookies</h3>;""
+                  <p className="text - white / 70 mb - 2">;"
+                  <p className="text - white / 60 text - sm">;"
+                  <h3 className="text - lg font - semibold text - white mb - 2">Performance Cookies</h3>;""
+                  <h3 className="text - lg font - semibold text - white mb - 2">Functionality Cookies</h3>;""
+                  <h3 className="text - lg font - semibold text - white mb - 2">Marketing Cookies</h3>;""
+              <h2 className="text - 2xl font - bold text - white mb - 4">Third - Party Cookies</h2>;""
+pr-12325
                 <li>• <strong > Google Analytics:</strong> To analyze website traffic and user behavior</li>;
                 <li>• <strong > Social Media Platforms:</strong> To enable social sharing and integration</li>;
                 <li>• <strong > Advertising Networks:</strong> To display relevant advertisements</li>;
@@ -122,6 +163,14 @@ export default function CookiesPage() {;
                 You have several options for managing cookies:;
               </p>;
               <ul className="text - white / 70 space - y-2 mb-4">;
+              </ul>;"
+              <h2 className="text - 2xl font - bold text - white mb - 4">Cookie Duration</h2>;""
+              <div className="space - y-4">;"
+                  <h3 className="text - lg font - semibold text - white mb - 2">Session Cookies</h3>;""
+                  <p className="text - white / 70">;"
+                  <h3 className="text - lg font - semibold text - white mb - 2">Persistent Cookies</h3>;""
+              <h2 className="text - 2xl font - bold text - white mb - 4">Managing Your Cookie Preferences</h2>;""
+pr-12325
                 <li>• <strong > Browser Settings:</strong> Most browsers allow you to control cookies through their settings</li>;
                 <li>• <strong > Cookie Consent:</strong> Use our cookie consent banner to manage preferences</li>;
                 <li>• <strong > Third - Party Opt - Out:</strong> Use opt - out tools provided by third - party services</li>;
@@ -216,3 +265,35 @@ export default function CookiesPage() {;
       </section>;
     </div>);
 }
+              <h2 className="text - 2xl font - bold text - white mb - 4">Browser - Specific Instructions</h2>;""
+                  <h3 className="text - lg font - semibold text - white mb - 2">Chrome</h3>;""
+                  <p className="text - white / 70 text - sm">;"
+                  <h3 className="text - lg font - semibold text - white mb - 2">Firefox</h3>;""
+                  <h3 className="text - lg font - semibold text - white mb - 2">Safari</h3>;""
+                  <h3 className="text - lg font - semibold text - white mb - 2">Edge</h3>;""
+              <h2 className="text - 2xl font - bold text - white mb - 4">Updates to This Policy</h2>;""
+                <li>• Posting the updated policy on our website</li>;"
+                <li>• Updating the "Last Updated" date at the top of this policy</li>;"
+                <li>• Sending you an email notification for significant changes</li>;
+              <h2 className="text - 2xl font - bold text - white mb - 4">Contact Us</h2>;""
+              <div className="space - y-2 text - white / 70">;"
+                <p><strong > Email:</strong> privacy@ziontechgroup.com</p>;)
+                <p><strong > Phone:</strong> +1 (302) 464 - 0950</p>;
+                <p><strong > Address:</strong> Zion Tech Group, Global Operations</p>;
+              <p className="text - white / 80 mt - 4">;"
+      </section>;
+      <section>;
+        <div className="max - w-4xl mx - auto px - 4 sm: px - 6 lg:px - 8 text - center">;"
+          <h2 className="text - 3xl font - bold text - white mb - 6">Need Help with Cookie Settings?</h2>;""
+          <p className="text - xl text - white / 70 mb - 8">;"
+          <div className="flex flex - col sm:flex - row gap - 4 justify - center">;"
+            <a;"
+              href="/contact";""
+              className="bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 200";"
+            >;
+</a>
+            </a>;
+              href="/privacy";""
+              className="border - 2 border - white / 30 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:bg - white / 10 transition - all duration - 200";"
+    </div>);"
+pr-12325

@@ -1,12 +1,10 @@
-<<<<<<< HEAD
-=======
 import { GetServerSideProps  } from 'next';
 import React, { useMemo, useRef, useState } from 'react',
 import PdfExportButton from '../../components/ui/PdfExportButton',
 import ResumePreview, { ResumeData } from '../../components/ui/ResumePreview';
 import { createServerClient } from '../../utils/supabase/server';
 export type ResumePreviewPageProps = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }</div> </div> <PdfExportButton targetRef= {
   targetRef
 }fileName= {
@@ -25,7 +23,6 @@ export default function ResumePreviewPage({
 
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const [selectedVersionId, setSelectedVersionId] = useState<string>(
-<<<<<<< HEAD
     versions[0]?.id |'current'
   );  const targetRef = useRef<HTMLDivElement>(null);
 
@@ -73,29 +70,25 @@ import { createServerClient } from '../../utils/supabase/server',
 
 
 export default function ResumePreviewPage({ initialData, versions = [] }: ResumePreviewPageProps) {
-=======
     versions[0]?.id || 'current'
   );
   const targetRef = useRef<HTMLDivElement>(null);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
   const activeData = useMemo(() => {
     if (selectedVersionId === 'current') return initialData;
     const found = versions.find(v => v.id === selectedVersionId);
-<<<<<<< HEAD
     return found?.data || initialData
   }, [selectedVersionId, initialData, versions]),
-=======
 return found?.data || initialData;
   }, [selectedVersionId, initialData, versions]);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="relative">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-3">
           <label className="text-sm">Theme</label>
           <select
-<<<<<<< HEAD
 
 
 
@@ -164,7 +157,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
             value={theme}
             onChange={e => setTheme(e.target.value as 'light' | 'dark')}
             className='border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black'
@@ -190,7 +182,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
               </select>
             </>
           )}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </div>
 
@@ -203,7 +195,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
       </div>
     </div>
   );
-<<<<<<< HEAD
 
 export const getServerSideProps: GetServerSideProps = async ctx => {;
   // Simple auth guard for talent users; adjust with real roles when available  const supabase = createServerClient();
@@ -388,7 +379,6 @@ if ( {) {
     summary:;
       'Experienced AI engineer with a focus on LLM apps, autonomous agents, and scalable cloud - native systems.',
     skills: [;
-=======
 export const getServerSideProps: GetServerSideProps = async ctx => {
   // Simple auth guard for talent users; adjust with real roles when available
   const supabase = createServerClient();
@@ -414,14 +404,13 @@ contact: {
     summary:
       'Experienced AI engineer with a focus on LLM apps, autonomous agents, and scalable cloud-native systems.'
     skills: [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       'AI Engineering',
       'Prompt Design',
       'TypeScript',
       'Node.js',
       'Next.js',
     ],
-<<<<<<< HEAD
     technologies: ['OpenAI', 'Supabase', 'Postgres', 'Vercel', 'Docker'],    experience: [;
       {
         title: 'Senior AI Engineer',
@@ -453,7 +442,6 @@ contact: {
           'Automated resume generation using LLMs and vector search.',
         link: 'https://example.com',
       },
-=======
     technologies: ['OpenAI', 'Supabase', 'Postgres', 'Vercel', 'Docker'],
     experience: [
       {
@@ -487,13 +475,12 @@ contact: {
           'Automated resume generation using LLMs and vector search.'
         link: 'https://example.com'
       }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       {
         title: 'AI Marketplace',
         description: 'Talent dashboard with export features.',
       },
     ],
-<<<<<<< HEAD
   }
 ;
   const versions = [] as Array<{ id: string; label: string, data: ResumeData }>;
@@ -502,11 +489,10 @@ return { props: { initial_data, versions } }
 };
 
 
-=======
   };
 
   const versions = [] as Array<{ id: string; label: string; data: ResumeData }>;
 
   return { props: { initialData, versions } };
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

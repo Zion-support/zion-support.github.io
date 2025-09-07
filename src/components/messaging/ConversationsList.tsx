@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useMemo } from 'react',;
 import { User } from 'lucide-react';
 import { Conversation } from '@/types/messaging',;
@@ -42,7 +40,6 @@ export function ConversationsList({;
     )
   },
 
-=======
 import React, { useMemo } from 'react';
 import { User } from 'lucide-react';
 import { Conversation } from '@/types/messaging';
@@ -66,7 +63,7 @@ export function ConversationsList({
   markAsRead
 }: ConversationsListProps) {
   const itemSize = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className='w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto'>;
       <div className='p-3 border-b border-zion-purple/20'>;
@@ -93,7 +90,6 @@ export function ConversationsList({
         </List>
       )}
     </div>
-<<<<<<< HEAD
   )
 }
 
@@ -135,7 +131,6 @@ export function ConversationsList({
   );
 }
 ;
-=======
 import React, { useMemo } from 'react';
 import { User } from 'lucide-react';
 import { Conversation } from '@/types/messaging';
@@ -214,7 +209,5 @@ export const ConversationsList: React.FC<ConversationsListProps> = ({
     </div>
   );
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

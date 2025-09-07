@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
   const handleViewOffer = (project_id: string, ) =>: any {
     router.push (`/project/${project_id}`);
@@ -8,24 +7,21 @@
 
 import { useEffect, useState } from "react",
 import { useRouter } from 'next/router',
-=======
 import { useEffect, useState } from "react";
 import { useRouter  } from 'next/router';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import { Bell, Calendar, X } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
 import { useProjects } from "@/hooks/useProjects",
 import { Project } from "@/types/projects",
 export function ProjectOfferBanner() {
-<<<<<<< HEAD
   const router = useRouter(),
   const { projects, isLoading } = useProjects(),
   const [pendingOffers, setPendingOffers] = useState<Project[]>([]),
   const [dismissed, setDismissed] = useState<Set<string>>(new Set()),
   
   useEffect(() => {
-=======
   const router = null;
   if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {
 import { useEffect, useState } from "react"
@@ -40,7 +36,7 @@ export function ProjectOfferBanner() {
   const [pendingOffers, setPendingOffers] = useState<Project[]>([])
   const [dismissed, setDismissed] = useState<Set<string>>(new Set())
   useEffect((,) => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     if (projects && !isLoading) {
       const offers = projects.filter(p => p.status === 'offer_sent'),
       setPendingOffers(offers)
@@ -61,7 +57,6 @@ export function ProjectOfferBanner() {;
       const offers = projects.filter(p => p.status === 'offer_sent'),;
       setPendingOffers(offers);
     }
-<<<<<<< HEAD
   }, [projects, isLoading]),;
   const handleDismiss = (projectId: string, e: React.MouseEvent) => {;
     e.stopPropagation(),;
@@ -79,7 +74,6 @@ export function ProjectOfferBanner() {;
 
 
 
-=======
   }, [projects, isLoading])
   const handleDismiss = (projectId: string, e: React.MouseEvent) => {
     e.stopPropagation();    setDismissed(prev => {
@@ -93,7 +87,7 @@ export function ProjectOfferBanner() {;
   }
   if (isLoading |pendingOffers.length === 0 |pendingOffers.every(p => dismissed.has(p.id))) {
     return null
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
   
   return (
@@ -208,7 +202,6 @@ export function ProjectOfferBanner() {;
             </CardContent>;
           </Card>;
         ))}
-<<<<<<< HEAD
 
   if ()) {) {
   $2
@@ -274,7 +267,6 @@ const handleDismiss = (projectId: string, e: React && React.MouseEvent) => {;
 setDismissed (prev => {;
   const updated = new Set (prev);
 updated && updated.add (projectId);
-=======
     </div>
   );
 
@@ -284,12 +276,11 @@ const handleDismiss = (projectId: string, e: React.MouseEvent) => {;
 setDismissed (prev => {;
   const updated = new Set (prev);
 updated.add (projectId);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 return updated;
 }) ;
 };
 const handleViewOffer = (projectId: string) => {;
-<<<<<<< HEAD
   router && router.push (`/project/$ {;
   projectId ;
 }`) ;
@@ -319,7 +310,6 @@ if () ) {) {
   );
 }
 ;
-=======
   router.push (`/project/$ {;
   projectId ;
 }`) ;
@@ -331,4 +321,4 @@ if (isLoading || pendingOffers.length === 0 || pendingOffers.every (p => dismiss
 }> <CardContent className="p-4 flex items-center justify-between" > <div className="flex items-center gap-2" > <div className="bg-primary/10 rounded-full p-2" > <Bell className="h-4 w-4 text-primary" /> </div> <div> </p> </div> </div> <div className="flex items-center gap-2" > <Button size="sm" className="whitespace-nowrap" > View Offer </Button> <Button > <X className="h-4 w-4" /> </Button> </div> </CardContent> </Card>) ) ;
 }</div>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

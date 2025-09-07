@@ -30,6 +30,30 @@ import { MessageSquare } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
 import { ChatAssistant } from "@/components/ChatAssistant",;
 
+
+
+import { useState } from "react",""
+import { MessageSquare } from "lucide-react",""
+import { Button } from "@/components/ui/button";""
+import { ChatAssistant } from "@/components/ChatAssistant";"
+export function ChatAssistantTrigger() {
+  const [isOpen, setIsOpen] = useState(false);"
+import { Button } from "@/components/ui/button",""
+import { ChatAssistant } from "@/components/ChatAssistant","
+  const [isOpen, setIsOpen] = useState(false),
+
+
+
+  // Handle sending messages to the AI chat assistant;
+  const handleSendMessage = async (message: string): Promise<void> => {
+</void>
+    <>
+      <Button;"
+import { useState } from "react",;""
+import { MessageSquare } from "lucide-react",;""
+import { Button } from "@/components/ui/button",;""
+import { ChatAssistant } from "@/components/ChatAssistant",;"
+pr-12325
 export function ChatAssistantTrigger() {;
   const [isOpen, setIsOpen] = useState(false);
 
@@ -58,6 +82,27 @@ export function ChatAssistantTrigger() {;
     <>;
       <Button
         onClick={() => setIsOpen(true)}        onClick={() => setIsOpen(true)}
+
+    <>;
+
+      <Button;
+
+
+        onClick={() => setIsOpen(true)}
+
+
+"
+        <MessageSquare className="h-5 w-5" />;"
+
+      ;
+        <ChatAssistant;
+          isOpen={isOpen}
+          onClose={() => setIsOpen(false)}
+
+    </>;
+  );
+}"
+pr-12325
 import { useState } from './react';
 import { MessageSquare } from './lucide-react';
 import { Button } from '@/components / ui / button';
@@ -68,3 +113,11 @@ export /**
 function ChatAssistantTrigger() {
   const [is_open, setIsOpen] = useState (false);
 ;
+ * ChatAssistantTrigger - Function description;
+ */
+function ChatAssistantTrigger() {
+  const [is_open, setIsOpen] = useState (false);
+
+
+
+pr-12325

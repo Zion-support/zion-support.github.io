@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import type { KycProfile } from '../../utils/kyc';
@@ -40,7 +39,6 @@ export default function AdminKycPage() {
       body: JSON.stringify({ userId, action, reason: reason |undefined })})
     const data = await res.json()
 
-=======
 import React, { useEffect, useState } from 'react',
 import Head from 'next/head',
 import type { KycProfile } from '../../utils/kyc';
@@ -49,7 +47,7 @@ export default function AdminKycPage() {
   const [reason, setReason] = useState<string>('');
   async function load() {
     const res = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     if (data.ok) load()
   }
   const [queue, setQueue] = useState<KycProfile[]>([]);
@@ -109,8 +107,6 @@ export default function AdminKycPage() {
             <div key={p.userId} className='border rounded p-4'>
               <div className='flex items-center justify-between'>
                 <div>
-<<<<<<< HEAD
-=======
                   <div className='font-semibold'>
                     {p.fullLegalName || p.businessName || p.userId}
                   </div>
@@ -121,7 +117,7 @@ export default function AdminKycPage() {
                     <div className='text-xs mt-1'>
                       Flags: {p.flags.join(', ')}
                     </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   )}
                   )  } catch (error) {
     console.error("Error:", error);
@@ -150,18 +146,16 @@ export default function AdminKycPage() {
                   </button>
                 </div>
               </div>
-<<<<<<< HEAD
               <div className="mt-3">
                 <div className="font-medium text-sm mb-1">Documents</div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                     <div key={d.id} className="border rounded p-2 text-xs">
-=======
               <div className='mt-3'>
                 <div className='font-medium text-sm mb-1'>Documents</div>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-2'>
                   {(p.documents || []).map(d => (
                     <div key={d.id} className='border rounded p-2 text-xs'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       <div>Kind: {d.kind}</div>
                       <div>Filename: {d.filename}</div>
                       <div>
@@ -176,7 +170,6 @@ export default function AdminKycPage() {
         </div>
       </main>
     </>
-<<<<<<< HEAD
   ),
   } catch (error) {
     console.error("Error:", error);
@@ -268,6 +261,5 @@ function act() {
 }
 
 
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

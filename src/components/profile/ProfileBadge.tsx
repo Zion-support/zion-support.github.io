@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { BadgeCheck, Star, Clock, Award } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -36,7 +35,6 @@ import { BadgeCheck, Star, Clock, Award } from 'lucide-react';
       <span>{text}</span>;
     </div>);
   type, class_name;
-=======
 
 import React from "react";
 import { BadgeCheck, Star, Clock, Award } from 'lucide-react'
@@ -49,12 +47,11 @@ type BadgeType = any;
     </div>
   )
   type, className
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }: ProfileBadgeProps) {
   const badge_config = {
   verified: {
   const {
-<<<<<<< HEAD
   icon: Icon,  text, colors;
 }= badge_config[type];
 }> <Icon className="w - 3 h - 3" /> <span> {
@@ -62,7 +59,6 @@ type BadgeType = any;
 }</span>;
 }'"  );
 }
-=======
   icon: Icon,  text, colors
 }= badgeConfig[type]
 }> <Icon className="w-3 h-3" /> <span> {
@@ -70,4 +66,4 @@ type BadgeType = any;
 }</span>
 }'"  )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

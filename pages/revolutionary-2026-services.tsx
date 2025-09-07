@@ -15,7 +15,6 @@ export default function Revolutionary2026ServicesPage() {
     <>
       <Head>
         <title>Revolutionary 2026 Services - Zion Tech Group</title>
-<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -48,9 +47,8 @@ import Revolutionary2026UltimateServicesShowcase from '../components / sections 
 import {Phone, Mail} from 'lucide-react';
 
         <meta
-=======
         <meta name;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           name='description'
           content='Experience the future with our cutting-edge AI, quantum computing, and emerging technology services. Transform your business with autonomous intelligence and quantum-powered solutions.'
         />;
@@ -199,8 +197,6 @@ function Revolutionary2026ServicesPage() {
                 addressCountry: 'US'
               }
               contactPoint: {
-<<<<<<< HEAD
-=======
                 '@type': 'ContactPoint',
                 telephone: '+1-302-464-0950',
                 contactType: 'customer service',
@@ -213,7 +209,7 @@ function Revolutionary2026ServicesPage() {
       </Head>
 
 <main className='min-h-screen bg-gray-900'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Navigation */}
         <Revolutionary2026UltimateNavigation />
         
@@ -259,13 +255,11 @@ function Revolutionary2026ServicesPage() {
                   Why Choose Zion Tech Group?
                 </span>
               </h2>
-<<<<<<< HEAD
                 {
                   icon: '🧠',
                   title: 'AI Consciousness',
                   description: 'First-to-market AI consciousness orchestration and autonomous intelligence systems.',
                   color: 'from-purple-500 to-pink-500'
-=======
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 We're not just another technology company. We're pioneers in the
                 future of AI, quantum computing, and emerging technologies,
@@ -282,7 +276,7 @@ description:
                     'First-to-market AI consciousness orchestration and autonomous intelligence systems.',
                   color: 'from-purple-500 to-pink-500',
                 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 {
                   icon: '⚛️',
                   title: 'Quantum Technology',
@@ -301,24 +295,21 @@ description:
                   description: 'Next-generation autonomous business intelligence and quantum blockchain solutions.',
                   color: 'from-yellow-500 to-orange-500'
                 {
-<<<<<<< HEAD
                   icon: '🌐',
                   title: 'Global Impact',
                   description: 'Serving 2,500+ customers worldwide with transformative technology solutions.',
-=======
                   icon: '🌐'
                   title: 'Global Impact'
                   description:
                     'Serving 2,500+ customers worldwide with transformative technology solutions.'
                   color: 'from-indigo-500 to-purple-500'
                 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               ].map((feature, index) => (
                 <div key={index} className="group">
                   <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-500 hover:transform hover:scale-105">
                     <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform`}>
                     </div>
-<<<<<<< HEAD
                     <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                     <p className="text-gray-400 leading-relaxed">{feature.description}</p>
                   </div>
@@ -339,7 +330,6 @@ description:
                 <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">
 
 
-=======
                     <h3 className='text-xl font-bold text-white mb-4'>
                       {feature.title}
                     </h3>
@@ -354,7 +344,7 @@ description:
 <div className='text-center'>
               <div className='bg-gradient-to-r from-purple-900/20 to-cyan-900/20 rounded-3xl p-12 border border-purple-500/20'>
                 <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   Ready to Experience the Future?
                 </h3>
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -371,11 +361,9 @@ description:
                     href="mailto:kleber@ziontechgroup.com"
                     className="border border-purple-500/50 text-purple-400 hover:bg-purple-500/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                   >
-<<<<<<< HEAD
                     <Mail className="w-5 h-5" />
-=======
                     <Mail className='w-5 h-5' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     Email Us
                   </a>
                 </div>
@@ -384,7 +372,6 @@ description:
           </div>
         </section>
       </main>
-<<<<<<< HEAD
     </>;
   );
 
@@ -541,7 +528,6 @@ description:
 
 
 
-=======
     </>
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

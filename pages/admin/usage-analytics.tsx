@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useCallback, useEffect, useMemo, useState } from 'react',;
 import Head from 'next/head',;
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
@@ -64,7 +63,6 @@ function Funnel({ data }: { data: Datum[] }) {
     <div className="flex flex-col gap-2">
       {data.map((d, i) => (
         <div key={d.label} className="bg-purple-500 text-white text-sm px-3 py-2 rounded" style={{ width: `${100 - i * 12}%` }}>
-=======
 import React, { useCallback, useEffect, useMemo, useState } from 'react',
 import Head from 'next/head',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -72,12 +70,11 @@ import { GetServerSideProps  } from 'next';
 import { requireAdminRole  } from '../../utils/auth';
 import DatePicker from 'react-datepicker';
 export const getServerSideProps: GetServerSideProps;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           {d.label}: {d.value}
         </div>
       ))}
     </div>
-<<<<<<< HEAD
   )
     return <path key={d.label} d={path} fill={colors[i % colors.length]} />
   })
@@ -118,7 +115,6 @@ function PieChart() {
     const path = `M ${center} ${center} L ${x1} ${y1} A ${radius} ${radius} 0 ${large_arc} 1 ${x2} ${y2} Z`,
     return <path key={d.label} d={path} fill={colors[i % colors.length]} />;
   }),
-=======
 );
 
 export default function UsageAnalytics() {
@@ -223,7 +219,7 @@ setFunnel(json.funnel || []);
                     <span>{d.label}</span>
                     <span className='text-gray-500'>{d.value}</span>
                   </li>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <svg width={size} height={size} view_box={`0 0 ${size} ${size}`}>{slices}</svg>);
 }
@@ -292,14 +288,12 @@ export default function UsageAnalytics(req, res) {
             </div>
           </div>
 
-<<<<<<< HEAD
 
           <div className="border rounded p-4 bg-white/70 dark:bg-gray-900 lg:col-span-2">
             <div className="font-medium mb-2">Events Over Time</div>
-=======
 <div className='border rounded p-4 bg-white/70 dark:bg-gray-900 lg:col-span-2'>
             <div className='font-medium mb-2'>Events Over Time</div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <LineChart data={line} />
             <div className='mt-3 grid grid-cols-2 gap-2 text-sm'>
               {events.slice(0, 8).map(e => (
@@ -326,7 +320,6 @@ export default function UsageAnalytics(req, res) {
         </div>
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
   )
   } catch (error) {
     console.error("Error:", error);
@@ -403,6 +396,5 @@ export default function UsageAnalytics(req, res) {
 }
 
 
-=======
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

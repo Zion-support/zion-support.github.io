@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
   Dialog,
-=======
 Dialog,
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
-<<<<<<< HEAD
-=======
   Table;
   TableBody;
   TableCell;
@@ -23,7 +17,7 @@ import {
   DialogDescription;
   DialogFooter;
   DialogHeader;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   DialogTitle} from "@/components/ui/dialog",
 import {
   DropdownMenu,
@@ -49,9 +43,7 @@ export function ReviewsModerationTable({
     mutationFn: async ({
       reviewId,
       status}: {
-<<<<<<< HEAD
       reviewId: string,
-=======
       reviewId: string;
   Table
   TableBody
@@ -116,7 +108,7 @@ export function ReviewsModerationTable({
       status
     }: {
       reviewId: string
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       status: ReviewStatus
     }) => {
       const { error } = await supabase
@@ -126,35 +118,30 @@ export function ReviewsModerationTable({
 
       if (error) throw error,
       return { reviewId, status }
-<<<<<<< HEAD
     },
     onSuccess: (data) => {
       toast({
         title: "Review updated",
         description: `Review has been ${data.status}.`}),
       onRefresh(),
-=======
     };
     onSuccess: (data) => {
       toast({
         title: "Review updated";
         description: `Review has been ${data.status}.`});
       onRefresh();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       setViewDetailsOpen(false)
     }
     onError: (error: Error,) => {
       toast({
-<<<<<<< HEAD
         title: "Error",
-=======
         title: "Error";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         description: `Failed to update review: ${error.message}`,
         variant: "destructive"})
     }}),
 
-<<<<<<< HEAD
 
   const getInitials = (name: string) => {
     return name
@@ -175,7 +162,6 @@ export function ReviewsModerationTable({
     )
   }
   if (reviews.length === 0) {
-=======
 
 
 
@@ -387,7 +373,6 @@ export function ReviewsModerationTable(): any ({;
         <TableHeader>;
           <TableRow>;
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return (
       <div className="py-10 text-center">
         <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3>
@@ -396,7 +381,6 @@ export function ReviewsModerationTable(): any ({;
         </p>
       </div>
     )
-<<<<<<< HEAD
     updateReviewStatus({ reviewId, status: 'approved' })
   }
   const handleReject = (reviewId: string) => {
@@ -430,11 +414,9 @@ export function ReviewsModerationTable(): any ({;
     setViewDetailsOpen(true)
   },
 
-=======
 
 
 
-=======
   const getInitials = null;
   return (
     <>
@@ -458,7 +440,7 @@ export function ReviewsModerationTable(): any ({;
                       <AvatarImage
                         src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name |''}                      />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     ) : (
                       <AvatarFallback>
                         {review.reviewer_profile?.display_name ? (
@@ -491,15 +473,12 @@ export function ReviewsModerationTable(): any ({;
                       <span className='text-sm font-medium'>;
                         {review && review.reviewer_profile?.display_name || 'User'}
                       </span>;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     )}
                   </div>;
                 </div>;
               </TableCell>;
-<<<<<<< HEAD
     updateReviewStatus({ reviewId, status: "approved" })
   },
-=======
               <TableCell>{renderStars(review && review.rating)}</TableCell>;
               <TableCell>;
                 {format(new Date(review && review.created_at), 'MMM d, yyyy')}
@@ -516,7 +495,6 @@ export function ReviewsModerationTable(): any ({;
                 ) : (;
                   'None';
                 )}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
                           onClick={() =>;
                             updateReviewStatus({;
@@ -551,7 +529,6 @@ export function ReviewsModerationTable(): any ({;
           </TableRow>;
         </TableHeader>;
         <TableBody>;
-<<<<<<< HEAD
           {reviews.map((review) => (;
             <TableRow key={review.id}>;
               <TableCell>;
@@ -601,7 +578,6 @@ export function ReviewsModerationTable(): any ({;
                 ) : (
                   "None"
                 )}
-=======
           {reviews.map (review => (            <TableRow key={review.id}>;
               <TableCell>;
                 <div className='flex items - center gap - 2'>;
@@ -699,15 +675,12 @@ export function ReviewsModerationTable(): any ({;
                 </div>;
               </TableCell>;
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               </TableCell>
               <TableCell className="text-right">
                 <div className="flex justify-end gap-2">
                   {review.status === "pending" && (
                     <>
                       <Button
-<<<<<<< HEAD
-=======
 
                         size="sm"
                         variant="outline"
@@ -727,7 +700,6 @@ export function ReviewsModerationTable(): any ({;
                         <X className="h-4 w-4 text-red-500" />
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       </Button>
                     </>
                   )}
@@ -745,10 +717,7 @@ export function ReviewsModerationTable(): any ({;
                       <DropdownMenuItem onClick={() => handleViewDetails(review)}>
                         View details
                       </DropdownMenuItem>
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       {review.status === "approved" && (
                         <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: "rejected" })}>
                           Mark as rejected
@@ -767,11 +736,8 @@ export function ReviewsModerationTable(): any ({;
             </TableRow>
           ))}
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
@@ -781,14 +747,11 @@ export function ReviewsModerationTable(): any ({;
                     {selectedReview.reviewer_profile?.avatar_url ? (
                       <AvatarImage
                         src={selectedReview.reviewer_profile.avatar_url}
-<<<<<<< HEAD
-=======
 
 
                         alt={selectedReview.reviewer_profile.display_name || ''}                      />
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     ) : (
                       <AvatarFallback>
                         {selectedReview.reviewer_profile?.display_name ? (
@@ -797,8 +760,6 @@ export function ReviewsModerationTable(): any ({;
                           )
                         ) : (
                           <User className='h-4 w-4' />
-<<<<<<< HEAD
-=======
         </TableBody>;
       </Table>;
 
@@ -831,25 +792,21 @@ export function ReviewsModerationTable(): any ({;
                           <User className='h-4 w-4' />;
                         )}
                       </AvatarFallback>;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
 
                     )}
-<<<<<<< HEAD
                   </Avatar>
                   <div>
                     <div className="font-medium">
                       {selectedReview.is_anonymous
-=======
 
 
                         ? "Anonymous"
                         : selectedReview.reviewer_profile?.display_name || "User"}
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     </div>
                     <Badge variant='outline'>{selectedReview.status}</Badge>
                   </div>
@@ -858,8 +815,6 @@ export function ReviewsModerationTable(): any ({;
               </div>
 
 
-<<<<<<< HEAD
-=======
 
               <div className="border rounded-md p-3 bg-muted/20">
                 <p className="whitespace-pre-wrap">{selectedReview.review_text}</p>
@@ -870,12 +825,10 @@ export function ReviewsModerationTable(): any ({;
                 <div className="flex flex-wrap gap-2">
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   {selectedReview.communication_rating && (
                     <Badge variant='outline'>
                       Communication: {selectedReview.communication_rating}/5
                     </Badge>
-<<<<<<< HEAD
                     </Badge>
                   )}
                   {selectedReview.timeliness_rating && (
@@ -902,7 +855,6 @@ export function ReviewsModerationTable(): any ({;
               {selectedReview.status === "pending" && (
                 <>
                   <Button
-=======
                   </Avatar>;
                   <div>;
                     <div className='font-medium'>;
@@ -1005,7 +957,6 @@ export function ReviewsModerationTable(): any ({;
 
                   }
                   disabled={isPending}                >;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   Mark as Rejected;
                 </Button>;
               )}
@@ -1024,17 +975,12 @@ export function ReviewsModerationTable(): any ({;
                 </Button>;
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               )}
             </DialogFooter>;
           </DialogContent>;
         </Dialog>;
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 })
   return (<div className="space-y-4"> <div className="h-12 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> </div> if (reviews.length === 0) {"
@@ -1042,11 +988,8 @@ export function ReviewsModerationTable(): any ({;
 }
   return (<div className="flex"> {
   [1, 2, 3,  4, 5].map ( (star) => (<Star key= {
-=======
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
     </>
   );
 
@@ -1057,13 +1000,11 @@ export function ReviewsModerationTable(): any ({;
   return (<div className="py-10 text-center"> <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3> <p className="text-muted-foreground" > All reviews have been processed. Check back later for new submissions. </p> </div> ;
 };
   return (<div className="flex"> {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   [1, 2, 3,  4, 5].map ( (star) => (<Star key= {;
   star ;
 }/>) ) ;
 }</div>) ;
-<<<<<<< HEAD
-<<<<<<< HEAD
               )}
             </DialogFooter>
           </DialogContent>
@@ -1071,7 +1012,6 @@ export function ReviewsModerationTable(): any ({;
       )}
 };"
 return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <TableHead>Rating</TableHead> <TableHead>Date</TableHead> <TableHead>Status</TableHead> <TableHead>Reports</TableHead> <TableHead className="text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
-=======
 
 
 };"
@@ -1218,12 +1158,10 @@ if ( {") {
 }</div>);
 }";
 return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <TableHead > Rating</TableHead> <TableHead > Date</TableHead> <TableHead > Status</TableHead> <TableHead > Reports</TableHead> <TableHead className="text - right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   reviews.map ( (review) => (<TableRow key= {
   review.id ";
 }> <TableCell> <div className="flex items - center gap - 2"> <Avatar className="h - 8 w - 8"> {
   review.reviewer profile?.avatar url ? (<AvatarImage src= {
-<<<<<<< HEAD
   review.reviewer profile.avatar url
 }alt= {"
   review.reviewer profile.display name |""
@@ -1252,7 +1190,6 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
   selectedReview.reviewer profile.display name |""
 }/>) : (<AvatarFallback> {"
   selectedReview.reviewer profile?.display name ? getInitials (selectedReview.reviewer profile.display name) : <User className="h-4 w-4"/>
-=======
 
   review.reviewer profile.avatar url;
 }alt= {";
@@ -1272,7 +1209,6 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
 }</AvatarFallback>) 
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }</Avatar> <div> </Badge> </div> </div> <div> {
   renderStars (selectedReview.rating) "
 }</div> </div> <div className="border rounded-md p-3 bg-muted/20"> <p className="whitespace-pre-wrap"> {
@@ -1302,8 +1238,6 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
 }</DialogFooter> </DialogContent> </Dialog>)
 }</>)
 }"}
-<<<<<<< HEAD
-=======
     </>;
   );
 
@@ -1356,8 +1290,6 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
 }</>);
 }"}
 }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 };";
 return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <TableHead>Rating</TableHead> <TableHead>Date</TableHead> <TableHead>Status</TableHead> <TableHead>Reports</TableHead> <TableHead className="text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {;
   reviews.map ( (review) => (<TableRow key= {;
@@ -1422,4 +1354,4 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
 }</DialogFooter> </DialogContent> </Dialog>) ;
 }</>) ;
 }"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

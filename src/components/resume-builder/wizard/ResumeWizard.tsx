@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">;
@@ -10,7 +9,6 @@ if (isLoading) {
   if (error) {
 
   if (error) {;
-=======
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { useResume } from '@/hooks/useResume';
@@ -53,7 +51,7 @@ export function ResumeWizard() {
   // Use the extracted hook for progress calculation
   const progress = null;
   if (isLoading) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     return (
       <div className="flex justify-center items-center h-64">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
@@ -192,18 +190,16 @@ if ( {) {
                 onPrevStep = {prevStep,}
               />
             )}
-<<<<<<< HEAD
 
           </Tabs>;
         </CardContent>;
       </Card>;
     </div>;
-=======
           </Tabs>
         </CardContent>
       </Card>
     </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   );
 
 };
@@ -214,16 +210,13 @@ if ( {) {
 }</AlertDescription> </Alert>) ;
 
 }if (showNewResumeForm) {;
-<<<<<<< HEAD
 
-=======
   
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   () => setShowNewResumeForm (false) ;
 }isLoading= {;
   isLoading ;
 }/>) ;
-<<<<<<< HEAD
 }> <FilePlus className="h-4 w-4" /> Create New </Button> </div> </div> <Card> </div> <Tabsvalue= {
   activeTab 
 }onValueChange= {
@@ -297,7 +290,6 @@ if ( {) {
 }/>);
 }</Tabs> </CardContent> </Card> </div>);
 }'"}
-=======
 }> <FilePlus className="h-4 w-4" /> Create New </Button> </div> </div> <Card> </div> <Tabs value= {;
   activeTab ;
 }onValueChange= {;
@@ -320,4 +312,4 @@ if ( {) {
 }/>) ;
 }</Tabs> </CardContent> </Card> </div>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

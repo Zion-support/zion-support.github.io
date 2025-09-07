@@ -1,5 +1,4 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-<<<<<<< HEAD
 // @ts-ignore
 import data from '../../data/npm-trends.json';
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
@@ -17,9 +16,8 @@ export default function NpmTrendsPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 50)
 
-=======
   const items: any[] = (data?.items || []).slice(0, 50);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -36,7 +34,6 @@ export default function NpmTrendsPage() {
         </ul>
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
   );
 };
 
@@ -62,7 +59,6 @@ export default function NpmTrendsPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

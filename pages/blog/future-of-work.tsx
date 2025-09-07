@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 import React from 'react',
@@ -210,7 +209,6 @@ function FutureOfWork() {
           </div>;
         </main>;
       </div>;
-=======
 import React from 'react';
 export default function FutureOfWork() {
   return (
@@ -412,4 +410,4 @@ export default function FutureOfWork() {
     </>
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

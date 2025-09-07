@@ -61,3 +61,9 @@ export const mockNextRouter = () => ({;
 export const createMockProps = (overrides = {}) => ({;
 
 });
+    <ThemeProvider attribute="class" default_theme="light">;"
+
+    ;"
+  options?: Omit<RenderOptions, 'wrapper'>;
+)
+pr-12325

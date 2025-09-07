@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface ApplyFormProps {
   job: Job,
   onClose: () => void,
@@ -10,7 +8,6 @@ interface ApplyFormProps {
   onClose: () => void
   onApplySuccess?: (jobId: string,) => Promise<void>
 
-=======
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Loader2 } from 'lucide-react';
@@ -40,25 +37,22 @@ interface ApplyFormProps {
   job: Job;
   onClose: () => void;
   onApplySuccess?: (jobId: string) => Promise<void>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }
 export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const [message, setMessage] = useState(
     `Hi, I'm interested in your job "${job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`
-<<<<<<< HEAD
   ),
   const [proposalLink, setProposalLink] = useState(''),
   const [isSubmitting, setIsSubmitting] = useState(false),
-=======
   );
   const [proposalLink, setProposalLink] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [activeTab, setActiveTab] = useState<string>("message"),
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),
   const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null),
   
-<<<<<<< HEAD
   const handleResumeSelected = (resume: ResumeOption) => {
     setSelectedResume(resume),
     setSelectedResumeId(resume.id)
@@ -106,8 +100,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
           type: selectedResume.type
         } : null
       let full_message = message;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Loader2 } from 'lucide-react';
@@ -121,7 +113,6 @@ import { ResumeTab } from './ResumeTab';
 import { Job } from './types';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
-<<<<<<< HEAD
       let fullMessage = message;
 
 import React, { useState } from 'react';
@@ -139,11 +130,9 @@ interface ApplyFormProps {;
   job: Job,;
   onClose: () => void,;
   onApplySuccess?: (jobId: string,) => Promise<void>;
-=======
 interface ApplyFormProps {
   job: Job;
   onClose: () => void;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
 export const ApplyForm: React.FC<ApplyFormProps> = ({ job, onClose }) => {
@@ -165,10 +154,8 @@ export const ApplyForm: React.FC<ApplyFormProps> = ({ job, onClose }) => {
       return;
     }
 
-<<<<<<< HEAD
-=======
   const handleResumeSelected = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
@@ -222,7 +209,6 @@ export const ApplyForm: React.FC<ApplyFormProps> = ({ job, onClose }) => {
 
 
           <MessageTab;
-=======
     setIsSubmitting(true);
     try {
       await applyToJob(job.id, {
@@ -272,7 +258,6 @@ export const ApplyForm: React.FC<ApplyFormProps> = ({ job, onClose }) => {
 
         <TabsContent value="message" className="space-y-4">
           <MessageTab
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             message={message}
             onMessageChange={setMessage}
             job={job}
@@ -286,7 +271,6 @@ export const ApplyForm: React.FC<ApplyFormProps> = ({ job, onClose }) => {
           />
         </TabsContent>
       </Tabs>
-<<<<<<< HEAD
       <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4">
         <Button
           type="button"
@@ -298,7 +282,6 @@ export const ApplyForm: React.FC<ApplyFormProps> = ({ job, onClose }) => {
         </Button>
         <Button
           className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-=======
 
       <div className="flex justify-end space-x-2">
         <Button variant="outline" onClick={onClose}>
@@ -307,7 +290,6 @@ export const ApplyForm: React.FC<ApplyFormProps> = ({ job, onClose }) => {
         <Button
           onClick={handleSubmit}
           disabled={isSubmitting || !selectedResume}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         >
           {isSubmitting ? (
             <>
@@ -317,8 +299,6 @@ export const ApplyForm: React.FC<ApplyFormProps> = ({ job, onClose }) => {
           ) : (
             'Submit Application'
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 if (!applicationSuccess) {
 }//Format message with proposal link if provided let fullMessage = message
 if (proposalLink) {'
@@ -377,14 +357,11 @@ return (<> <Tabs value= {
   );
 }
 ;
-=======
         </Button>
       </div>
     </div>
   );
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
         </Button>
       </div>
     </>
@@ -448,4 +425,4 @@ return (<> <Tabs value= {;
   isSubmitting ? (<> <Loader2 className=" h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ('Submit Application') ;
 }</Button> </div> </>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

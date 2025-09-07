@@ -6,6 +6,9 @@ import { useAIContentEnhancer, AIEnhancementOptions  } from '@/hooks/useAIConten
 import { toast } from '@/hooks/use-toast';
 interface AIEnhancementButtonProps {
 
+  // TODO: Implement
+}
+pr-12325
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Sparkles, Loader2, RefreshCw, Check, X} from '@/components/icons';
@@ -26,6 +29,23 @@ import {toast} from '@/hooks/use-toast';
   variant = "ghost";
   size = "sm";
   contentLength = 10;
+  options: AIEnhancementOptions;,
+  onEnhanced: (enhancedContent: string) => void;
+  buttonText?: string;
+  className?: string;
+  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";""
+  size?: "default" | "sm" | "lg" | "icon";""
+export function AIEnhancementButton(): any ({;
+
+  options;
+  onEnhanced;
+
+  buttonText = "Enhance with AI";"
+  className;"
+  variant = "ghost";""
+  size = "sm";"
+  contentLength = 10;)
+pr-12325
 }: AIEnhancementButtonProps) {;
   const { enhanceContent, isEnhancing } = useAIContentEnhancer();
   const [showActions, setShowActions] = useState(false);
@@ -80,6 +100,61 @@ export function AIEnhancementButton({
 
   
 
+</string>
+  const [generatedContent, setGeneratedContent] = useState<string | null>(null),
+    if ((!options.content |options.content.trim().length < contentLength) &&
+        (!options.context |options.context.trim().length < contentLength)) {
+      toast({"
+        title: "Not enough content"",
+  description: `Please enter at least ${contentLength} characters before enhancing.`"
+        variant: "destructive""
+  };
+)
+      }),
+      return;"
+import { useState } from 'react',;
+import { Button } from '@/components/ui/button',;
+import { Sparkles, Loader2, RefreshCw, Check, X } from '@/components/icons',;
+import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;
+import { toast } from '@/hooks/use-toast',;
+interface AIEnhancementButtonProps {;
+  options: AIEnhancementOptions,;
+  onEnhanced: (enhancedContent: string) => void,;
+  buttonText?: string,;
+  className?: string,;
+  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link",;""
+  size?: "default" | "sm" | "lg" | "icon",;"
+  contentLength?: number;
+;
+export function AIEnhancementButton({;
+  options,;
+  onEnhanced,;"
+  buttonText = "Enhance with AI",;"
+  className,;"
+  variant = "ghost",;""
+  size = "sm",;"
+  const { enhanceContent, isEnhancing } = useAIContentEnhancer(),;
+  const [showActions, setShowActions] = useState(false),;
+  const [generatedContent, setGeneratedContent] = useState<string | null>(null),;
+    if ((!options && options.content || options && options.content.trim().length < contentLength) && ;
+        (!options && options.context || options && options.context.trim().length < contentLength)) {;
+      toast({;"
+        title: "Not enough content",;"`;
+        description: `Please enter at least ${contentLength} characters before enhancing.`,;"
+        variant: "destructive";")
+      });
+      return;
+      setGeneratedContent(enhancedContent);
+      setShowActions(true);
+
+  },
+
+
+
+  
+
+
+pr-12325
   
   const handleAccept = () => {
     if (generatedContent) {
@@ -200,3 +275,136 @@ export function AIEnhancementButton({
 ;
       variant={variant}
       size={size}
+  
+      onEnhanced(generatedContent),
+      setShowActions(false),
+      setGeneratedContent(null),
+        title: "Content applied"",)"
+  description: "AI-enhanced content has been applied."})"
+
+
+  
+  const handleRegenerate = async () => {
+    await handleEnhance()
+  
+
+
+  const handleCancel = () => {
+    setGeneratedContent(null)
+
+
+
+  
+
+  if (showActions) {
+    return ("
+      <div className="flex gap-2 items-center">"
+</div>
+        <Button;"
+          type="button"""
+          variant="ghost"""
+          size="sm""
+          onClick={handleAccept}"
+          className="text-green-500 hover:text-green-700 hover:bg-green-100/20""
+        >
+"
+          <Check className="h-4 w-4 mr-1" />"
+
+        
+          onClick={handleRegenerate}"
+          className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20""
+          disabled={isEnhancing}
+            <Loader2 className="h-4 w-4 mr-1 animate-spin" />"
+</Loader2>"
+            <RefreshCw className="h-4 w-4 mr-1" />"
+
+        
+          onClick={handleCancel}"
+          className="text-gray-500 hover: text-gray-700 hover:bg-gray-100/20""
+          <X className="h-4 w-4 mr-1" />"
+
+        
+      type="button""
+  },;
+  const handleAccept = () => {;
+      <div className="flex gap-2 items-center">;"
+          className="text-green-500 hover:text-green-700 hover:bg-green-100/20">;"
+          <Check className="h-4 w-4 mr-1" />;"
+
+          disabled={isEnhancing}>;
+            <Loader2 className="h-4 w-4 mr-1 animate-spin" />;"
+</Loader2>
+    if ((!options.content || options.content.trim().length < contentLength) && ;
+        (!options.context || options.context.trim().length < contentLength)) {;
+        title:"Not enough content",;"`;
+        description:`Please enter at least ${contentLength} characters before enhancing.`,;"
+        variant:"destructive";")
+      }),;
+      return,;
+    const enhancedContent = await enhanceContent(options),;
+    if (enhancedContent) {;
+      setGeneratedContent(enhancedContent),;
+      setShowActions(true),;
+    if (generatedContent) {;
+      onEnhanced(generatedContent),;
+      setShowActions(false),;
+      setGeneratedContent(null),;
+        title:"Content applied",;")"
+        description:"AI-enhanced content has been applied."}),;"
+  const handleRegenerate = async () => {;
+    await handleEnhance(),;
+  const handleCancel = () => {;
+  if (showActions) {;
+    return (;"
+          type="button";""
+          variant="ghost";""
+          size="sm";"
+          className="text-green-500 hover:text-green-700 hover:bg-green-100/20";"
+        >;
+
+          className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20";"
+            <RefreshCw className="h-4 w-4 mr-1" />;"
+
+          className="text-gray-500 hover: text-gray-700 hover:bg-gray-100/20">;"
+
+          className="text-gray-500 hover:text-gray-700 hover:bg-gray-100/20";"
+          <X className="h-4 w-4 mr-1" />;"
+
+      </div>;"
+
+      type="button";"
+      variant={variant}
+      size={size}
+      <span className="text-xs">{buttonText}</span>;"
+
+    ;"
+        <Loader2 className="h-4 w-4 animate-spin" />"
+        <Sparkles className="h-4 w-4" />"
+      <span className="text-xs">{buttonText}</span>"
+    )"
+        <Loader2 className="h - 4 w - 4 animate - spin" />) : ("
+</Loader2>)"
+        <Sparkles className="h - 4 w - 4" />)}"
+      <span className="text - xs">{button_text}</span>;"
+    );
+      type="button";      variant={variant}"
+      size={size}`;
+      className={`gap-1 ${className}`}
+      onClick={handleEnhance}
+        <Loader2 className="h-4 w-4 animate-spin" />;"
+        <Sparkles className="h-4 w-4" />;"
+const [generatedContent, setGeneratedContent] = useState<string | null> (null);
+if ( (!options.content || options.content.trim () .length < contentLength) && (!options.context || options.context.trim () .length < contentLength) ) {
+  toast ({"
+  variant: "destructive"")
+
+
+};"
+<Button type="button" variant="ghost" size="sm" onClick= {"
+  handleAccept;"
+}className="text-green-500 hover:text-green-700 hover:bg-green-100/20" > <Check className="h-4 w-4 mr-1" /> Apply  <Button) : (<RefreshCw className="h-4 w-4 mr-1" />)""
+}Regenerate  <Button h-4 w-4 mr-1"/> Cancel  </div>)""
+}return (<Button) : (<Sparkles className=" h-4 w-4" />)"
+
+}) "`;
+pr-12325

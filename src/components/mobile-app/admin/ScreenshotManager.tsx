@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
     const maxScreenshots = platform === "ios" ? 10 : 8,
     const availableSlots = maxScreenshots - screenshots.length,
     
@@ -62,16 +60,12 @@
   },
   
   return (
-=======
 return (
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
         <CardTitle className="text-lg">App Screenshots</CardTitle>
       </CardHeader>
       <CardContent>
-<<<<<<< HEAD
-=======
 
 type Screenshot = {;
   id: string,;
@@ -160,7 +154,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       </CardHeader>;
       <CardContent>;
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <div
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${
             isDragging
@@ -176,7 +169,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
               ? "border-zion-cyan bg-zion-cyan/10" 
               : "border-zion-purple/30"
           }`}
-<<<<<<< HEAD
         >
           <Upload className="mx-auto h-8 w-8 text-gray-300 mb-2" />
           <p className="text-sm mb-2">Drag & drop screenshots here</p>
@@ -219,7 +211,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     </Card>;
   );
 };
-=======
           onDragOver={handleDragOver}
           onDragLeave={handleDragLeave}
           onDrop={handleDrop}
@@ -227,8 +218,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
           <Upload className="mx-auto h-8 w-8 text-gray-300 mb-2" />
           <p className="text-sm mb-2">Drag & drop screenshots here</p>
           <input
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 import React, { useState, useRef } from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -258,4 +247,4 @@ return filtered;
 }</div> </CardContent> </Card>) ;
 };
 "
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

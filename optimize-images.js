@@ -1,6 +1,6 @@
-const imagemin = require ('imagemin'
-const imagemin_mozjpeg = require ('imagemin - mozjpeg'
-const imagemin_pngquant = require ('imagemin - pngquant'
-const imagemin_webp = require ('imagemin - webp'
+const imagemin = require ('imagemin
+const imagemin_mozjpeg = require ('imagemin - mozjpeg
+const imagemin_pngquant = require ('imagemin - pngquant
+const imagemin_webp = require ('imagemin - webp
 const fs = require ('fs';
-const path = require ('path'
+const path = require ('path)

@@ -1,45 +1,30 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
+pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { v4 as uuidv4 } from 'uuid',;
 import { readJsonFile, writeJsonFile } from '../../utils/db',;
 import type { Application } from '../../utils/types',;
 import { rateLimit } from '../../utils/rateLimit',;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 const FILE = 'applications.json',
-=======
 import { readJsonFile, writeJsonFile } from '../../utils/fileUtils';
 import type { Application } from '../../utils/types';
 import { rateLimit } from '../../utils/rateLimit';
 
 const FILE = 'data/applications.json';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!rateLimit(req, res)) return,
 
-<<<<<<< HEAD
   if (req.method === 'GET') {
     const { jobId, talentSlug } = req.query,
     let apps = readJsonFile<Application[]>(FILE, []),
     if (jobId) apps = apps.filter((a) => a.jobId === String(jobId)),
     if (talentSlug) apps = apps.filter((a) => a.talentSlug === String(talentSlug)),
     res.status(200).json({ applications: apps }),
-=======
->>>>>>> pr-12243
+pr-12243
 const FILE = 'applications.json'
 
-=======
   try {
     const application: Application = {
       id: uuidv4(),
@@ -56,19 +41,17 @@ const FILE = 'applications.json'
     res.status(500).json({ error: 'Failed to create application' });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!rateLimit(req, res)) return
 
   if (req.method === 'GET') {
-<<<<<<< HEAD
     const { jobId, talentSlug } = req.query
     let apps = readJsonFile<Application[]>(FILE, [])
     if (jobId) apps = apps.filter((a) => a.jobId === String(jobId))
     if (talentSlug) apps = apps.filter((a) => a.talentSlug === String(talentSlug))
     res.status(200).json({ applications: apps })
     return
-=======
     const { jobId, talentSlug } = req.query;
     let apps = readJsonFile<Application[]>(FILE, []);
 if (jobId) apps = apps.filter(a => a.jobId === String(jobId));
@@ -76,14 +59,10 @@ if (jobId) apps = apps.filter(a => a.jobId === String(jobId));
       apps = apps.filter(a => a.talentSlug === String(talentSlug));
     res.status(200).json({ applications: apps });
     return;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
 
   if (req.method === 'POST') {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
     const { jobId, talentSlug, action } = req.body || {},
     if (!jobId || !talentSlug || !['applyskip'].includes(action)) {
       res.status(400).json({ error: 'Invalid request' }),
@@ -98,8 +77,7 @@ if (jobId) apps = apps.filter(a => a.jobId === String(jobId));
       existing.status = action === 'apply' ? 'applied' : 'skipped',
       writeJsonFile<Application[]>(FILE, apps),
       res.status(200).json({ application: existing }),
-=======
->>>>>>> pr-12243
+pr-12243
     const { jobId, talentSlug, action } = req.body || {}
     if (!jobId || !talentSlug || !['applyskip'].includes(action)) {
       res.status(400).json({ error: 'Invalid request' })
@@ -114,21 +92,12 @@ if (jobId) apps = apps.filter(a => a.jobId === String(jobId));
       existing.status = action === 'apply' ? 'applied' : 'skipped'
       writeJsonFile<Application[]>(FILE, apps)
       res.status(200).json({ application: existing })
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
+main
+pr-12243
       return
     }
 
     const app: Application = {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     const { jobId, talentSlug, action } = req.body || {};
 if (!jobId || !talentSlug || !['apply', 'skip'].includes(action)) {
       res.status(400).json({ error: 'Invalid request' });
@@ -149,18 +118,16 @@ return;
     }
 
     const app: Application = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       id: uuidv4(),
       jobId: String(jobId),
       talentSlug: String(talentSlug),
       status: action === 'apply' ? 'applied' : 'skipped',
-<<<<<<< HEAD
       createdAtIso: now},
     apps.push(app),
     writeJsonFile<Application[]>(FILE, apps),
     res.status(201).json({ application: app }),
-=======
->>>>>>> pr-12243
+pr-12243
       id: uuidv4()
       jobId: String(jobId)
       talentSlug: String(talentSlug)
@@ -173,16 +140,12 @@ return;
   }
   res.setHeader('AllowGET, POST')
   res.status(405).end('Method Not Allowed')
-<<<<<<< HEAD
 }
 
 
 
 
-=======
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
       createdAtIso: now,
     };
     apps.push(app);
@@ -195,4 +158,4 @@ return;
   res.status(405).end('Method Not Allowed');
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

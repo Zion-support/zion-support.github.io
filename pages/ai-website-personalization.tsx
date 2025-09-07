@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-website-personalization'));
   if (!service) return null;
@@ -17,7 +16,6 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 export default function AiWebsitePersonalizationPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-website-personalization'))
   if (!service) return null,
-=======
 import {
   Phone,
   Mail,
@@ -37,7 +35,7 @@ export default function AiWebsitePersonalizationPage() {
   );
   if (!service) return null;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Layout>
       <Head>
@@ -65,9 +63,7 @@ export default function AiWebsitePersonalizationPage() {
               <p className='text-slate-300 mb-6'>{service.description}</p>
               <ul className='grid grid-cols-1 md:grid-cols-2 gap-3'>
                 {service.features.slice(0, 12).map((feat, i) => (
-<<<<<<< HEAD
                   <li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-violet-400 mt-0.5"><Check /><span>{feat}</span></li>
-=======
                   <li
                     key={i}
                     className='flex items-start space-x-3 text-slate-200 w-5 h-5 text-violet-400 mt-0.5'
@@ -76,7 +72,7 @@ export default function AiWebsitePersonalizationPage() {
                     <span>{feat}</span>
                   </li>
                 ))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </ul>
             </div>
             <div className='bg-black/30 rounded-2xl border border-violet-500/30 p-6 h-fit'>
@@ -96,8 +92,6 @@ export default function AiWebsitePersonalizationPage() {
                   {service.rating.toFixed(1)}
                 </div>
               </div>
-<<<<<<< HEAD
-=======
               <a
                 href='/contact'
                 className='w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2'
@@ -130,14 +124,13 @@ export default function AiWebsitePersonalizationPage() {
                     {service.contactInfo.address}
                   </a>
                 </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
           </div>
         </div>
       </div>
     </Layout>
-<<<<<<< HEAD
   )
   } catch (error) {
     console.error("Error:", error);
@@ -148,6 +141,5 @@ export default function AiWebsitePersonalizationPage() {
 ;
 ;
 
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

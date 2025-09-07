@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { TUTORIALS } from '@/data/tutorials';
@@ -9,7 +7,7 @@ import { ArrowLeft } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import type { Tutorial as TutorialType } from '@/types/tutorial';
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 interface TutorialPageProps {
   tutorial?: TutorialType
 export default function Tutorial({
@@ -21,7 +19,6 @@ export default function Tutorial({
   tutorial?: TutorialType
 }
 export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProps) {
-<<<<<<< HEAD
 
   const router = useRouter()
   const slug = router.query.slug as string | undefined
@@ -47,10 +44,9 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
   if (!tutorial) {;
     return (;
       <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">;
-=======
   const router = null;
   if (!tutorial) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     return (
       <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
         Tutorial not found.
@@ -58,8 +54,6 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
     )
   }
   return (
-<<<<<<< HEAD
-=======
     <>
       <SEO title={tutorial.title} description={tutorial.excerpt} />
       <div className='min-h-screen bg-zion-blue pt-12 pb-20 px-4'>
@@ -92,4 +86,4 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
       </div>
     </>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

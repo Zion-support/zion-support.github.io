@@ -34,7 +34,6 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import Button from '../components/ui/Button';
 import { Atom, CheckCircle, Shield, Sparkles } from 'lucide-react';
 export default function QuantumServicesPage() {
-<<<<<<< HEAD
 
   const features = [
     'Quantum-inspired optimization & annealing strategies'
@@ -50,9 +49,8 @@ function QuantumServicesPage() {
     'Hybrid quantum - classical pipelines (QAOA, VQE) where applicable',
     'Quantum - safe cryptography assessments and roadmaps',
     'R & D ideation for quantum - ready workloads',
-=======
   const features = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   ];
 ;
   const solutions = [;
@@ -67,7 +65,6 @@ function QuantumServicesPage() {
     },
   ];
   return (
-<<<<<<< HEAD
           <section>;
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6 text-center'>;
               Focus Areas;
@@ -113,7 +110,6 @@ function QuantumServicesPage() {
 
 
 
-=======
     <UltraAdvancedFuturisticBackground colorScheme='quantum' intensity='high'>
       <Head>
         <title>Quantum Services | Zion Tech Group</title>
@@ -196,12 +192,11 @@ function QuantumServicesPage() {
                 Post-quantum readiness assessments and migration planning
               </span>
             </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           </section>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-<<<<<<< HEAD
 
   )
 }
@@ -304,6 +299,5 @@ function QuantumServicesPage() {
 
 
 
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

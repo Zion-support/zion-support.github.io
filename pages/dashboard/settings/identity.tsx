@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react',;
 import Head from 'next/head',;
 import type { KycProfile } from '../../../utils/kyc',;
@@ -73,7 +72,6 @@ export default function IdentitySettingsPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
 import React, { useEffect, useState } from 'react',
 import Head from 'next/head';
 import type { KycProfile } from '../../../utils/kyc';
@@ -122,4 +120,4 @@ import { ProfileBadges } from '../../../components/ui/ProfileBadges';
       </main>
     </>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -39,6 +39,17 @@ export function SidebarGroupContent({ className, children, ...props }: SidebarGr
 import React from './react';
 import { cn  } from '@/lib / utils';
 interface SidebarGroupContentProps;
+import React from "react";""
+import { cn } from "@/lib/utils";"
+interface SidebarGroupContentProps;
+  extends React.HTMLAttributes<HTMLDivElement> {
+"
+    <div className={cn("space-y-1", className)} {...props}>"
+</div>
+    </div>"
+    <div className={cn("space-y-1", className)} {...props}>;"
+    </div>;"
+pr-12325
   extends React.HTMLAttributes < HTMLDivElement> {
   class_name?: string;
   children?: React.ReactNode;
@@ -53,4 +64,10 @@ function SidebarGroupContent() {
     </div>);
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+ * SidebarGroupContent - Function description;
+ */
+function SidebarGroupContent() {
+  return ()"
+    <div className={cn ("space - y-1", class_name)} {...props}>;"
+    </div>);"
+pr-12325

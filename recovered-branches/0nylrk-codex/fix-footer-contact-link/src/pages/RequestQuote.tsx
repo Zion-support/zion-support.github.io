@@ -31,6 +31,24 @@ export default function RequestQuote() {;
       <Footer />;
     </>;  );
 }
+import { Header } from "@/components/Header";""
+import { Footer } from "@/components/Footer";""
+import { QuoteRequestForm } from "@/components/QuoteRequestForm";"
+export default function RequestQuote() {
+  return (
+    <>
+      <Header />
+"
+      <div className="min-h-screen bg-zion-blue">"
+</div>
+        <QuoteRequestForm />
+
+      <Footer />
+
+    </>)
+  );
+}"
+pr-12325
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
 import { QuoteRequestForm } from '@/components / QuoteRequestForm';
@@ -47,4 +65,26 @@ function RequestQuote() {
       <Footer />;
     </>);
 }
-<<<<<<< HEAD
+ * RequestQuote - Function description;
+ */
+function RequestQuote() {
+    <>;
+      <Header />;
+
+      <div className="min - h-screen bg - zion - blue">;"
+        <QuoteRequestForm />;
+
+      </div>;
+      <Footer />;
+)
+    </>);
+}
+
+;
+
+
+  ),;
+}  () {"
+  return (min-h-screen bg-zion-blue" > <QuoteRequestForm /> </div> <Footer /> </>"
+)"
+pr-12325

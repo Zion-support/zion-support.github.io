@@ -2,7 +2,6 @@ import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { Satellite, ArrowRight, CheckCircle, Star, TrendingUp;
   Globe, Zap, Shield, Users, Rocket;
   Phone, Mail, MapPin, Brain, Sparkles
@@ -51,7 +50,6 @@ import React from 'react';
     'Lockheed Martin',
     'Boeing',
     'Northrop Grumman',
-=======
   const contactInfo = null;
   return (
     <UltraAdvancedFuturisticBackground 
@@ -73,7 +71,7 @@ import React from 'react';
     'Mission planning tools'
     'API access'
     'Expert consultation'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   ];
 
     'Maxar ($5000-50000/month)Planet Labs ($1000-10000/month)Airbus Defence ($10000-100000/month)Lockheed MartinBoeingNorthrop Grumman'
@@ -138,7 +136,6 @@ import React from 'react';
     'Microsoft Teams',;
     'Custom applications',;
   ];
-<<<<<<< HEAD
 
   const competitors = [;
     'Maxar ($5000-50000/month)',;
@@ -193,8 +190,7 @@ import React from 'react';
               animate={{ opacity: 1, y: 0 }}
 
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     >
       <div className="min-h-screen">
         <Head>
@@ -235,7 +231,6 @@ import React from 'react';
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
               className='text-center mb-16'
           <meta name="description" content="Revolutionary AI platform that combines space technology with artificial intelligence to enable autonomous space exploration, satellite operations, and space data analysis." />
           <meta name="keywords" content="space technology, AI space exploration, satellite operations, space data analytics, autonomous space systems" />
@@ -260,9 +255,8 @@ import React from 'react';
 
 
 
-=======
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-full border border-blue-500/30 mb-6">
                 <Sparkles className="w-4 h-4 text-blue-400" />
@@ -308,32 +302,26 @@ className='text-center mb-16'
                   <Shield className="w-5 h-5 text-blue-400" />
                   <span>Enterprise security</span>
                 </div>
-<<<<<<< HEAD
-=======
                 <div className='flex items-center space-x-2'>
                   <Users className='w-5 h-5 text-blue-400' />
                   <span>120+ customers</span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </div>
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
         {/* Features Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-=======
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
@@ -344,12 +332,10 @@ className='text-center mb-16'
                 Experience the future of space technology with AI-powered operations and autonomous exploration
               </p>
             </motion.div>
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               {features.map((feature, index) => (
                 <motion.div
 
@@ -415,35 +401,30 @@ function SpaceTechnologyAIPlatform() {
                   whileInView={{ opacity: 1, scale: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
 
 
-=======
 className='group relative'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                   <div className="relative bg-black/40 backdrop-blur-xl border border-blue-500/20 rounded-2xl p-6 hover:border-blue-500/40 transition-all duration-300">
                     <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mb-4">
                       <Satellite className="w-6 h-6 text-white" />
                     </div>
-<<<<<<< HEAD
                     <h3 className="text-xl font-bold text-white mb-3">{feature}</h3>
                     <p className="text-gray-400">
                       Advanced AI-powered {feature.toLowerCase()} for enhanced space operations and exploration.
-=======
                     <h3 className='text-xl font-bold text-white mb-3'>
                       {feature}
                     </h3>
                     <p className='text-gray-400'>
                       Advanced AI-powered {feature.toLowerCase()} for enhanced
                       space operations and exploration.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     </p>
                   </div>
                 </motion.div>
         {/* Market Position Section */}
-<<<<<<< HEAD
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>;
           <div className='max-w-7xl mx-auto'>            <motion&& motion.div
 
@@ -453,21 +434,18 @@ className='group relative'
           <div className="max-w-7xl mx-auto">
             <motion.div
 
-=======
 <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
 
 
-=======
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
@@ -478,8 +456,6 @@ className='text-center mb-16'
                 Competitive pricing with superior features and AI-powered capabilities
               </p>
             </motion.div>
-<<<<<<< HEAD
-=======
 
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>
               <motion.div
@@ -488,7 +464,7 @@ className='text-center mb-16'
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
 className='space-y-6'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Competitive Analysis</h3>
                 <div className="space-y-4">
@@ -497,8 +473,6 @@ className='space-y-6'
                       <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                       <span className="text-gray-300">{competitor}</span>
                     </div>
-<<<<<<< HEAD
-=======
                   ))}
                 </div>
                 <div className='p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-xl border border-green-500/30'>
@@ -509,7 +483,7 @@ className='space-y-6'
                       affordable pricing
                     </span>
                   </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </motion.div>
               <motion.div
@@ -522,7 +496,6 @@ className='space-y-6'
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0 && 0.6 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
                 initial={{ opacity: 0, x: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -544,9 +517,8 @@ className='space-y-6'
   }
 }
                 className="space-y-6"
-=======
 className='space-y-6'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Market Statistics</h3>
                 <div className="grid grid-cols-2 gap-4">
@@ -562,41 +534,35 @@ className='space-y-6'
                     <div className="text-3xl font-bold text-green-400 mb-2">800%</div>
                     <div className="text-green-300 text-sm">Average ROI</div>
                   </div>
-<<<<<<< HEAD
                   <div className="p-6 bg-gradient-to-r from-yellow-600/20 to-orange-600/20 rounded-xl border border-yellow-500/30 text-center">
                     <div className="text-3xl font-bold text-yellow-400 mb-2">24</div>
                     <div className="text-yellow-300 text-sm">Months to ROI</div>
                   </div>
 
 
-=======
                   <div className='p-6 bg-gradient-to-r from-yellow-600/20 to-orange-600/20 rounded-xl border border-yellow-500/30 text-center'>
                     <div className='text-3xl font-bold text-yellow-400 mb-2'>
                       24
                     </div>
                     <div className='text-yellow-300 text-sm'>Months to ROI</div>
                   </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </motion.div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
         {/* Use Cases Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-=======
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -607,7 +573,6 @@ className='text-center mb-16'
                 Transform every aspect of space operations with AI-powered intelligence
               </p>
             </motion.div>
-<<<<<<< HEAD
                   key={useCase  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -634,7 +599,6 @@ className='text-center mb-16'
   }
 }
                   className="group relative"
-=======
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {useCases.map((useCase, index) => (
@@ -645,25 +609,23 @@ className='text-center mb-16'
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
 className='group relative'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/10 to-blue-600/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                   <div className="relative bg-black/40 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300">
                     <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-4">
                       <Globe className="w-6 h-6 text-white" />
                     </div>
-<<<<<<< HEAD
                     <h3 className="text-xl font-bold text-white mb-3">{useCase}</h3>
                     <p className="text-gray-400">
                       Leverage AI-powered space technology to optimize {useCase.toLowerCase()} and drive innovation.
-=======
                     <h3 className='text-xl font-bold text-white mb-3'>
                       {useCase}
                     </h3>
                     <p className='text-gray-400'>
                       Leverage AI-powered space technology to optimize{' '}
                       {useCase.toLowerCase()} and drive innovation.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     </p>
                   </div>
                 </motion.div>
@@ -675,7 +637,6 @@ className='group relative'
 
             </div>;
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
 
@@ -708,7 +669,6 @@ className='group relative'
 
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
-=======
 <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-4xl mx-auto text-center'>
             <motion.div
@@ -719,7 +679,7 @@ className='group relative'
             >
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   Ready to Explore the Cosmos?
                 </span>
               </h2>
@@ -741,14 +701,12 @@ className='flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 
                   href={`mailto:${contactInfo.email}`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD
 
                   className="flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-200"
                 >
                   <Mail className="w-5 h-5" />
                   <span>Email Us</span>
                 </motion.a>
-=======
 className='flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-200'
                 >
                   <Mail className='w-5 h-5' />
@@ -758,7 +716,7 @@ className='flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 tex
 
 <div className='p-6 bg-gradient-to-r from-blue-900/20 via-indigo-900/20 to-purple-900/20 rounded-2xl border border-blue-500/20'>
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <div>
                     <Phone className="w-6 h-6 text-blue-400 mx-auto mb-2" />
                     <p className="text-white font-medium">{contactInfo.mobile}</p>
@@ -768,14 +726,12 @@ className='flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 tex
                     <p className="text-white font-medium">{contactInfo.email}</p>
                   </div>
                   <div>
-<<<<<<< HEAD
-=======
                     <MapPin className='w-6 h-6 text-purple-400 mx-auto mb-2' />
                     <p className='text-white font-medium'>
                       {contactInfo.address}
                     </p>
                   </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </div>
             </motion.div>
@@ -783,7 +739,6 @@ className='flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 tex
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-<<<<<<< HEAD
 
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}>;
@@ -1018,6 +973,5 @@ className='flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 tex
 ;
 
 
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

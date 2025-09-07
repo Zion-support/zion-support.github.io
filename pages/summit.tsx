@@ -1,12 +1,10 @@
-<<<<<<< HEAD
 const partners: Partner[] = [ {
   name: 'Gov Partner'
 }
-=======
 import Head from 'next/head';
 import React from 'react';
 type Speaker = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 {
   name: 'Venture Partner'
 }
@@ -48,7 +46,6 @@ export default function SummitPage() {;
     ok?: boolean;
     error?: string;
   } | null>(null);
-<<<<<<< HEAD
   ];
 
   const partners: Partner[] = [;
@@ -106,14 +103,12 @@ export default function SummitPage() {
   const [embedId, setEmbedId] = React.useState<string>('dQw4w9WgXcQ');
   const { isPast, days, hours, minutes, seconds } = useCountdown(EVENT_START_ISO);
   const [form, setForm] = React.useState({ name: '', email: '', role: '', country: '' }),
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const speakers: Speaker[] = [
     {
       name: 'Featured Speaker: Your Name',
       title: 'Founder, Zion',
-<<<<<<< HEAD
     avatarUrl: '/favicon.svg',
       bio: 'Visionary behind Zion Protocol — building AI-native digital nations.',
   'Content - Type': 'application / json';
@@ -159,7 +154,6 @@ function SummitPage() {
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ ...form, source: 'summit-page' }),;
-=======
 avatarUrl: '/favicon.svg',
       bio: 'Visionary behind Zion Protocol — building AI-native digital nations.',
       twitter: 'https://twitter.com',
@@ -194,13 +188,12 @@ twitter: 'https://twitter.com',
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({ ...form, source: 'summit-page' }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       });
       const data = await res && res.json();
       if (!res && res.ok) throw new Error(data?.error || 'Failed');
       setResult({ ok: true });
       setForm({ name: '', email: '', role: '', country: '' });
-<<<<<<< HEAD
     } catch (err: any) {;
       setResult({ error: err?.message || 'Unexpected error' });
     } finally {;
@@ -213,7 +206,6 @@ body: JSON.stringify({ ...form, source: 'summit-page' }),
       return (
         <iframe
           className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gray-800"
-=======
     } catch (err: any) {
       setResult({ error: err?.message |'Unexpected error' });
     } finally {
@@ -242,7 +234,7 @@ body: JSON.stringify({ ...form, source: 'summit-page' }),
           name='description'
           content='Zion Global Summit: AI, Talent, Trust — Globalized'
         />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       </Head>
       <section className='relative overflow-hidden rounded-xl bg-gradient-to-br from-cyber-dark to-cyber-blue text-white p-8 md:p-12 shadow-neon-blue'>
         <div className='max-w-4xl'>
@@ -264,8 +256,6 @@ body: JSON.stringify({ ...form, source: 'summit-page' }),
             </a>;
             <a
               href='#agenda'
-<<<<<<< HEAD
-=======
               className='inline-flex items-center px-4 py-2 rounded-md border border-white/40 hover:bg-white/10'
             >
               Agenda
@@ -282,14 +272,13 @@ body: JSON.stringify({ ...form, source: 'summit-page' }),
           <h2 className='text-2xl font-bold mb-4'>Agenda</h2>
           <ol className='space-y-3 list-decimal list-inside'>
             <li>Opening Keynote — Launching Zion Protocol</li>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <li>Panel 1 — The Future of Digital Nations</li>
             <li>Panel 2 — ZionDAO in Action</li>
             <li>Demo — ZionGPT Live</li>
             <li>Featured Speaker — Founder</li>
           </ol>
         </section>
-<<<<<<< HEAD
           <h2 className="text-2xl font-bold mb-4">Event Info</h2>
           <ul className="space-y-2">
             <li><span className="font-medium">Date:</span> Nov 12, 2025</li>
@@ -298,7 +287,6 @@ body: JSON.stringify({ ...form, source: 'summit-page' }),
             <li><span className="font-medium">Tagline:</span> AI, Talent, Trust — Globalized</li>
           </ul>
 
-=======
 <section className='p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>
           <h2 className='text-2xl font-bold mb-4'>Event Info</h2>
           <ul className='space-y-2'>
@@ -317,7 +305,7 @@ body: JSON.stringify({ ...form, source: 'summit-page' }),
               Globalized
             </li>
           </ul>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         </section>
       </div>
 
@@ -340,10 +328,8 @@ body: JSON.stringify({ ...form, source: 'summit-page' }),
                   <div className="text-sm opacity-70">{s.title}</div>
                 </div>
               </div>
-<<<<<<< HEAD
               <p className="mt-3 text-sm">{s.bio}</p>
       <section
-=======
               <p className='mt-3 text-sm'>{s.bio}</p>
               <div className='mt-3 flex gap-3 text-sm'>
                 {s.twitter && (
@@ -373,7 +359,7 @@ body: JSON.stringify({ ...form, source: 'summit-page' }),
       </section>
 
 <section
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         id='partners'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;
         <div className='flex items-center justify-between'>;
@@ -452,7 +438,6 @@ body: JSON.stringify({ ...form, source: 'summit-page' }),
           {partners.map (p => (
             <div;
               key={p.name}
-<<<<<<< HEAD
               className='h - 16 rounded - md border border - dashed border - gray - 300 dark:border - gray - 700 flex items - center justify - center text - sm opacity - 70';
             >;
               {p.logo_url ? (
@@ -470,7 +455,6 @@ body: JSON.stringify({ ...form, source: 'summit-page' }),
             <select;
               aria - label='Platform';
               className='px - 3 py - 2 rounded border border - gray - 300 dark:border - gray - 700 bg - transparent';
-=======
               className='h-16 rounded-md border border-dashed border-gray-300 dark:border-gray-700 flex items-center justify-center text-sm opacity-70'
             >
               {p.logoUrl ? (
@@ -493,7 +477,7 @@ body: JSON.stringify({ ...form, source: 'summit-page' }),
             <select
               aria-label='Platform'
               className='px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               value={platform}
               on_change={e => set_platform (e.target.value as any)}
             >;
@@ -644,10 +628,8 @@ body: JSON.stringify({ ...form, source: 'summit-page' }),
             >
               {submitting ? 'Submitting...' : 'Submit Registration'}
             </button>
-<<<<<<< HEAD
             {result?.ok && <span className="text-green-600">Thank you! You are registered.</span>}
             {result?.error && <span className="text-red-600">{result.error}</span>}
-=======
             {result?.ok && (
               <span className='text-green-600'>
                 Thank you! You are registered.
@@ -656,12 +638,11 @@ body: JSON.stringify({ ...form, source: 'summit-page' }),
             {result?.error && (
               <span className='text-red-600'>{result.error}</span>
             )}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </form>
       </section>
 
-<<<<<<< HEAD
 }
 }
 }
@@ -753,7 +734,6 @@ body: JSON.stringify({ ...form, source: 'summit-page' }),
           Auto - generated summaries and ZionGPT moderation prompts coming soon.;
         </p>;
       </section>;
-=======
 <section className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>
         <h2 className='text-xl font-semibold'>
           AI Session Summaries (Optional)
@@ -764,4 +744,4 @@ body: JSON.stringify({ ...form, source: 'summit-page' }),
       </section>
     </>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

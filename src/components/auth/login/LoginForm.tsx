@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { useForm, ControllerRenderProps } from 'react-hook-form';
@@ -23,19 +21,25 @@ import Link from 'next/link';
 
 import { useState } from "react";
 import { useRouter  } from 'next/router';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import { useForm, ControllerRenderProps } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod";
 import { LogIn, User, Eye, EyeOff } from 'lucide-react'
 import { fireEvent  } from '@/lib/analytics';
 import { useAuth } from "@/context/auth/AuthProvider",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 import { useState } from 'react';
 import { use_router } from 'next / router';
+import { useForm, ControllerRenderProps } from "react-hook-form",""
+import { zodResolver } from "@hookform/resolvers/zod",""
+import { z } from "zod";""
+import { LogIn, User, Eye, EyeOff } from 'lucide-react
+import { fireEvent  } from '@/lib/analytics';
+import { useAuth } from "@/context/auth/AuthProvider",""
+import { useState } from 'react';
+import { use_router } from 'next/router';
+pr-12325
 import { use_form, ControllerRenderProps } from 'react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
 import { z } from 'zod';
@@ -44,6 +48,9 @@ import { fire_event } from '@/lib / analytics';
 import { use_auth } from '@/context / auth / AuthProvider';
 import { Button } from '@/components / ui / button';
 import { Input } from '@/components / ui / input';
+import { Button } from '@/components/ui/ button';
+import { Input } from '@/components/ui/ input';
+pr-12325
 import { useState  } from './react';
 import { use_form, ControllerRenderProps  } from './react - hook - form';
 import { zod_resolver  } from '@hookform / resolvers / zod';
@@ -51,8 +58,13 @@ import { z  } from './zod';
 import { use_auth  } from '@/context / auth / AuthProvider';
 import { Button  } from '@/components / ui / button';
 import { Input  } from '@/components / ui / input';
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {
+import { Button  } from '@/components/ui/ button';
+import { Input  } from '@/components/ui/ input';
+import {
+  // TODO: Implement
+}
+pr-12325
   Form,
   FormControl,
   FormField,
@@ -65,6 +77,13 @@ import Link from 'next / link';
 import { Checkbox } from '@/components / ui / checkbox';// Form validation schema;
 const login_schema = z.object ({
   email: z;
+} from '@/components/ui/ form';
+import { Alert, AlertDescription } from '@/components/ui/ alert';
+import Link from 'next / link';
+import { Checkbox } from '@/components/ui/ checkbox';// Form validation schema;
+const login_schema = z.object ({
+  email: z;)
+pr-12325
     .string ();
     .email ('Please enter a valid email');
     .min (1, 'Email is required'),
@@ -74,6 +93,8 @@ const login_schema = z.object ({
 type LoginFormValues = z.infer < typeof login_schema>;
 export /**
  * LoginForm - Function description
+ * LoginForm - Function description;
+pr-12325
  */
 function LoginForm() {
   const { is_loading, login } = use_auth ();
@@ -111,6 +132,30 @@ if ( {) {
           if (.includes ('email not confirmed')) {
   $2
 }
+  const [verification_message, setVerificationMessage] = useState ();
+  const router = use_router ();
+  const form = use_form < LoginFormValues>({)
+    resolver: zod_resolver (login_schema) as any,
+    default_values: {,
+  email: ,
+      password: ,
+      remember_me: false,
+    },
+  const on_submit = async (data: LoginFormValues) => {
+    // Check condition;
+if (return) {
+  $2;
+    try {
+  // TODO: Implement
+      setIsSubmitting (true),
+      // Pass email and password to the login function;
+      const result = await login (data.email, data.password, data.remember_me);
+      // Check condition;
+if ( {) {
+        let error_message = 'Login failed. Please try again.'; // Default generic error;
+        // Check condition;
+          if (.includes ('email not confirmed')) {
+pr-12325
 
           ) {
             error_message =;
@@ -135,7 +180,6 @@ import {
   FormItem,
   FormLabel,
   const form = useForm<LoginFormValues>({
-<<<<<<< HEAD
     resolver: zodResolver(loginSchema) as any
     defaultValues: {
       email: ''
@@ -150,7 +194,6 @@ import {
       // Pass email and password to the login function
       const result = await login(data.email, data.password, data.rememberMe)
       if (result?.error) {
-=======
     resolver: zodResolver(loginSchema) as any,
     defaultValues: {
       email: '',
@@ -165,7 +208,6 @@ import {
       // Pass email and password to the login function
       const result = await login(data.email, data.password, data.rememberMe);
       if (result?.error) {;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         let errorMessage = 'Login failed. Please try again.'; // Default generic error
         if (result?.error && result?.error?.message) {
           if (
@@ -173,7 +215,6 @@ import {
           ) {
             errorMessage =
               'Your email is not confirmed. Please check your inbox for a confirmation link.'
-<<<<<<< HEAD
 } from '@/components/ui/form'
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import Link from 'next/link';
@@ -194,9 +235,7 @@ export function LoginForm() {
   const [isResending, setIsResending] = useState(false)
   const [verificationMessage, setVerificationMessage] = useState('')
   const router = useRouter()
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   FormMessage} from "@/components/ui/form",
 import { Alert, AlertDescription } from "@/components/ui/alert",
 import Link from "next/link",
@@ -221,10 +260,7 @@ export function LoginForm() {
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema) as any
     defaultValues: {
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       email: "",
       password: "",
       rememberMe: false}}),
@@ -236,7 +272,6 @@ export function LoginForm() {
     try {
       setIsSubmitting(true)
       // Pass email and password to the login function
-<<<<<<< HEAD
       if (result?.error) {
         let errorMessage = "Login failed. Please try again.", // Default generic error
         if (result?.error && result?.error?.message) {
@@ -245,11 +280,9 @@ export function LoginForm() {
         if (result?.error && result?.error?.message) {
           if (result.error.message.toLowerCase().includes("email not confirmed")) {
             errorMessage = "Your email is not confirmed. Please check your inbox for a confirmation link."
-=======
 
       const result = await login(data.email, data.password, data.rememberMe),
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           } else {
             error_message = result.error.message;
           }
@@ -289,8 +322,6 @@ if ( {) {
     }
     router.push (`/verify - status?email=${encodeURIComponent (email)}`);
   }
-<<<<<<< HEAD
-=======
 
         form.setError("root", { message: errorMessage })
       } else {
@@ -305,15 +336,12 @@ import { fireEvent } from '@/lib/analytics',;
 import { useAuth } from "@/context/auth/AuthProvider",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {;
   Form,;
   FormControl,;
   FormField,;
   FormItem,;
   FormLabel,;
-<<<<<<< HEAD
-=======
   FormMessage,;
 } from '@/components/ui/form';
 import { Alert, AlertDescription } from '@/components/ui/alert';
@@ -367,15 +395,12 @@ export function LoginForm() {;
           }
         }
         form && form.setError('root', { message: errorMessage });
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       } else {;
         fireEvent('login', { method: 'email' });
       }
     } finally {;
       setIsSubmitting(false);
     }
-<<<<<<< HEAD
-=======
   };
 
   const handleResendEmail = async () => {;
@@ -386,13 +411,10 @@ export function LoginForm() {;
     }
     setIsResending(true);
     setVerificationMessage('');
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     try {;
       const response = await fetch('/api/auth/resend-verification-email', {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
-<<<<<<< HEAD
-=======
         body: JSON && JSON.stringify({ email }),;
       });
       const data = await response && response.json();
@@ -404,15 +426,12 @@ export function LoginForm() {;
         setVerificationMessage(;
           data && data.message || 'Failed to resend verification email.';
         );
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     } catch (err) {;
       setVerificationMessage('Failed to resend verification email.');
     } finally {;
       setIsResending(false);
     }
-<<<<<<< HEAD
-=======
   };
 
   const handleCheckStatus = () => {;
@@ -458,11 +477,41 @@ if ( {) {
           name='email';
           render={({
             field
+import { Button } from "@/components/ui/button",""
+import { Input } from "@/components/ui/input","
+  // TODO: Implement
+"
+  // TODO: Implement
+  const form = useForm<LoginFormValues>({
+
+type LoginFormValues = z.infer<typeof loginSchema>,
+</typeof>
+
+type LoginFormValues = z && z.infer<typeof loginSchema>;
+  const form = useForm<LoginFormValues>({;
+
+        <FormField;
+          control={form && form.control}"
+          name='email
+      {form.form_state.errors.root && (
+        <Alert variant='destructive' className='mb - 4'>;
+
+          <AlertDescription>;
+
+          ;)
+        )}
+      <form;
+        on_submit={form.handle_submit (on_submit, errors => {
+</form>
+          control={form.control}
+          name='email';
+          render={({
+            field;
+pr-12325
           }: {
 
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <Form {...form}>
       {form.formState.errors.root && (
@@ -470,10 +519,7 @@ if ( {) {
           <AlertDescription>{form.formState.errors.root.message}</AlertDescription>
         </Alert>
       )}
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <form;
         onSubmit={form.handleSubmit(onSubmit, (errors) => {;
           const firstError = Object.keys(errors)[0] as keyof LoginFormValues;
@@ -482,7 +528,6 @@ if ( {) {
           }
         })}
         className="space-y-6"
-=======
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -501,7 +546,7 @@ const loginSchema = null;
             form.setFocus(firstError)
           }        })}
         className='space-y-6'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       >
         <FormField
           control={form.control}
@@ -511,10 +556,8 @@ const loginSchema = null;
               <FormLabel className="text-zion-slate-light">Email address</FormLabel>
 
               <FormControl>
-<<<<<<< HEAD
                 <div className="relative">
                   <Input
-=======
                 <div className='relative'>
             field: ControllerRenderProps<LoginFormValues, 'email'>;
           }) => (            <FormItem>;
@@ -527,6 +570,39 @@ const loginSchema = null;
               <FormControl>;
                 <div className='relative'>;
 
+  return (
+    <Form {...form}>
+
+        <Alert variant="destructive" className="mb-4">"
+
+          <AlertDescription>{form.formState.errors.root.message}
+        
+      <form;)
+        onSubmit={form.handleSubmit(onSubmit, (errors) => {;
+          control={form.control}"
+          name="email"""
+          render={({ field }: { field: ControllerRenderProps<LoginFormValues "email"> }) => ("
+
+            <FormItem>
+              <FormLabel className="text-zion-slate-light">Email address"
+              <FormControl>
+                <div className='relative'>
+</div>
+            field: ControllerRenderProps<LoginFormValues, 'email'>;
+)
+          }) => (            <FormItem>;
+
+              <FormLabel className='text-zion-slate-light'>;
+
+            field: ControllerRenderProps < LoginFormValues, 'email'>;')
+
+              <FormLabel className='text - zion - slate - light'>;
+
+              ;
+              <FormControl>;
+
+                <div className='relative'>;
+pr-12325
                   <Input;
                     placeholder='you@example.com';
                     aria - label='Email address';
@@ -573,7 +649,6 @@ const loginSchema = null;
                     aria-invalid={!!form.formState.errors.email}
                     className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple"
                     {...field}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
                   />
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
@@ -581,10 +656,7 @@ const loginSchema = null;
               </FormControl>
               <FormMessage className="text-red-400" />
             </FormItem>
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         className="space-y-6";
       >;
         <FormField;
@@ -600,6 +672,49 @@ const loginSchema = null;
                     aria-label="Email address";
                     aria-invalid={!!form.formState.errors.email}
                     className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple";
+
+                  <User className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4' />;
+
+                </div>;
+              <FormMessage className='text - red - 400' />;
+          name='password';
+
+            field: ControllerRenderProps<LoginFormValues, 'password'>;
+
+              <FormLabel className='text-zion-slate-light'>Password;
+
+                    type={showPassword ? 'text' : 'password'}
+                    placeholder='Enter password
+                    aria-label='Password
+                    aria-invalid={!!form && form.formState.errors && errors.password}
+                    className='bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple'                    {...field}
+
+                  <LogIn className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4' />;
+
+                  <Button;
+                    type='button
+                    variant='ghost
+                    size='sm
+                    className='absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan)
+                    onClick={() => setShowPassword(!showPassword)}                  >;
+
+                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />"
+
+              <FormMessage className="text-red-400" />"
+
+            
+          name="email";""
+          render={({ field }: { field: ControllerRenderProps<LoginFormValues "email"> }) => (;"
+
+            <FormItem>;
+              <FormLabel className="text-zion-slate-light">Email address;"
+                <div className="relative">;"
+                  <Input;"
+                    placeholder="you@example.com";""
+                    aria-label="Email address";"
+                    aria-invalid={!!form.formState.errors.email}"
+                    className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple";"
+pr-12325
                     {...field}
                   />
                   <User className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4' />
@@ -608,10 +723,7 @@ const loginSchema = null;
               </FormControl>
               <FormMessage className='text-red-400' />
             </FormItem>
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           )}
         />;
         <FormField;
@@ -686,6 +798,55 @@ const loginSchema = null;
               <FormControl>;
                 <div className='relative'>;
                   <Input;
+              
+              <FormMessage className='text-red-400' />
+
+            
+          name="password"")"
+          render={({ field }: { field: ControllerRenderProps<LoginFormValues "password"> }) => ("
+
+              <FormLabel className="text-zion-slate-light">Password"
+                <div className="relative">"
+                    type={showPassword ? "text" : "password"}""
+                    placeholder="Enter password"""
+                    aria-label="Password""
+                    aria-invalid={!!form.formState.errors.password}"
+                    className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple""
+                  <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />"
+
+                  <Button;"
+                    type="button"""
+                    variant="ghost"""
+                    size="sm"""
+                    className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan"")
+                    onClick={() => setShowPassword(!showPassword)}
+                      <EyeOff className="h-4 w-4" />"
+                      <Eye className="h-4 w-4" />"
+                    <span className="sr-only">"
+</span>
+                  
+
+          render={({ field }: { field: ControllerRenderProps<LoginFormValues "password"> }) => (;"
+
+              <FormLabel className="text-zion-slate-light">Password;"
+                    placeholder="Enter password";""
+                    aria-label="Password";"
+                  <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;"
+
+                    type="button";""
+                    variant="ghost";""
+                    size="sm";""
+                    className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan";")
+                      <EyeOff className='h-4 w-4' />;
+
+                      <Eye className='h-4 w-4' />;
+
+                    <span className='sr-only'>;
+            field: ControllerRenderProps < LoginFormValues, 'password'>;
+
+              <FormLabel className='text - zion - slate - light'>Password;
+
+pr-12325
                     type={show_password ? 'text' : 'password'}
                     placeholder='Enter password';
                     aria - label='Password';
@@ -708,8 +869,6 @@ const loginSchema = null;
                   </Button>;
                 </div>;
               </FormControl>;
-<<<<<<< HEAD
-=======
 
               <FormMessage className='text - red - 400' />;
             </FormItem>)}
@@ -717,18 +876,15 @@ const loginSchema = null;
         <FormField;
           control={form.control}
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <FormControl>
             field: ControllerRenderProps<LoginFormValues, 'rememberMe'>;
           }) => (;
             <FormItem className='flex flex-row items-start space-x-3 space-y-0'>;
               <FormControl>;
-<<<<<<< HEAD
               <FormControl>
                 <Checkbox
                   checked={field.value}
                   onCheckedChange={field.onChange}
-=======
                 <Checkbox
 
                   checked={field.value}
@@ -739,20 +895,17 @@ const loginSchema = null;
                 />
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               </FormControl>
               <div className="space-y-1 leading-none">
                 <FormLabel className="text-zion-slate-light">Remember me</FormLabel>
               </div>
             </FormItem>
           )}
-<<<<<<< HEAD
         />
         <div className="flex items-center justify-between">
           <div className="text-sm">
             {/* "Remember me" checkbox is now above, this div can be used for "Forgot Password" if it's still needed */}
             {/* If "Remember me" was previously here, it's moved. */}
-=======
         />;
         <div className='flex items-center justify-between'>;
           <div className='text-sm'>;
@@ -782,6 +935,57 @@ const loginSchema = null;
             {/* If "Remember me" was previously here, it's moved. */}
           </div>;
           <div className='text - sm'>;
+
+                  <LogIn className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4' />;
+
+                    type='button';
+                    variant='ghost';
+                    size='sm';
+                    className='absolute right - 1 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 8 hover:text - zion - cyan';')
+                    on_click={() => setShowPassword (!show_password)}                  >;
+
+                      <EyeOff className='h - 4 w - 4' />) : (
+                      <Eye className='h - 4 w - 4' />)}
+
+                    <span className='sr - only'>;
+                    </span>;
+
+
+
+            field: ControllerRenderProps<LoginFormValues, 'rememberMe'>;
+
+            <FormItem className='flex flex-row items-start space-x-3 space-y-0'>;
+
+
+                <Checkbox;
+                  checked={field.value}
+                  onCheckedChange={field.onChange}
+
+                  className="border-zion-blue-light data-[state=checked]:bg-zion-purple data-[state=checked]:text-white"""
+                  aria-label="Remember me""
+
+
+
+              <div className="space-y-1 leading-none">"
+</div>"
+                <FormLabel className="text-zion-slate-light">Remember me"
+        <div className='flex items-center justify-between'>;
+          <div className='text-sm'>;
+            field: ControllerRenderProps < LoginFormValues, 'remember_me'>;
+          }) => (
+            <FormItem className='flex flex - row items - start space - x-3 space - y-0'>;
+
+
+                  onCheckedChange={field.on_change}
+                  className='border - zion - blue - light data-[state = checked]:bg - zion - purple data-[state = checked]:text - white';
+                  aria - label='Remember me'                />;
+
+              <div className='space - y-1 leading - none'>;
+
+              </div>;)
+        <div className='flex items - center justify - between'>;
+          <div className='text - sm'>;
+pr-12325
             <Link;
               href='/forgot - password';
               className='font - medium text - zion - cyan hover:text - zion - cyan - light';
@@ -822,7 +1026,6 @@ const loginSchema = null;
           <Link
             href='/signup'
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </div>
           <div className="text-sm">
             <Link href="/forgot-password" className="font-medium text-zion-cyan hover:text-zion-cyan-light">
@@ -831,7 +1034,6 @@ const loginSchema = null;
           </div>
         </div>
         <Button
-<<<<<<< HEAD
           <Button
             type='button'
             variant='secondary'
@@ -841,7 +1043,6 @@ const loginSchema = null;
             type='button'
             variant='outline'
             className='w-1/2 ml-2'
-=======
 
           type="submit"
           className="w-full inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zion-purple-light visible"
@@ -909,7 +1110,6 @@ const loginSchema = null;
           >
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             Check status
           </Button>
         </div>
@@ -920,16 +1120,12 @@ const loginSchema = null;
         </p>
       </form>
     </Form>
-<<<<<<< HEAD
   )
-<<<<<<< HEAD
-=======
 
 
 return;
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }setIsResending (true);'
 setVerificationMessage ('')
 try {'
@@ -958,14 +1154,11 @@ if (!email) {'
   form.setError ('root', {'
   message: 'Please enter your email address.'
 })
-<<<<<<< HEAD
-=======
 
 
 return;
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }router.push (`/verify-status?email=$ {
   encodeURIComponent (email)
 }`)
@@ -986,16 +1179,11 @@ return;
   isResending ? 'Sending...': 'Resend / Verify e-mail'
 }</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>)
 }'"}
-<<<<<<< HEAD
-=======
             className='font-medium text-zion-cyan hover:text-zion-cyan-light'>;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             Create account;
           </Link>;
         </p>;
       </form>;
-<<<<<<< HEAD
-=======
     </Form>;
   );
 
@@ -1013,6 +1201,92 @@ return;
         <div className='flex justify - between mt - 4'>;
           <Button;
             type='button';
+          <p className='text-sm text-center text-zion-slate-light mt-2'>;
+</p>
+          </p>;
+        <div className='flex justify-between mt-4'>;
+            variant='secondary
+            className='w-1/2 mr-2
+            onClick={handleResendEmail}
+            disabled={isResending}>;
+
+            variant='outline
+            className='w-1/2 ml-2
+            onClick={handleCheckStatus}>;
+
+        <p className='text-sm text-center mt-4'>;
+            href='/signup
+
+          <div className="text-sm">"
+            <Link href="/forgot-password" className="font-medium text-zion-cyan hover:text-zion-cyan-light">"
+
+            
+          type="submit"""
+          className="w-full inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zion-purple-light visible""
+          disabled={isLoading || isSubmitting}
+        >
+
+          <p className="text-sm text-center text-zion-slate-light mt-2">"
+</p>"
+          render={({ field }: { field: ControllerRenderProps<LoginFormValues "rememberMe"> }) => (;"
+            <FormItem className="flex flex-row items-start space-x-3 space-y-0">;"
+
+
+                  onCheckedChange={field.onChange}"
+                  className="border-zion-blue-light data-[state=checked]:bg-zion-purple data-[state=checked]:text-white";""
+                  aria-label="Remember me";"
+
+              ;"
+              <div className="space-y-1 leading-none">;"
+                <FormLabel className="text-zion-slate-light">Remember me;"
+        <div className='flex items-center justify-between'>
+          <div className='text-sm'>
+          <div className="text-sm">;"
+            <Link href="/forgot-password" className="font-medium text-zion-cyan hover:text-zion-cyan-light">;"
+
+          type="submit";""
+          className="w-full inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zion-purple-light visible";"
+
+          <p className="text-sm text-center text-zion-slate-light mt-2">;"
+        <div className="flex justify-between mt-4">"
+            variant="secondary"""
+            className="w-1/2 mr-2""
+            disabled={isResending}
+
+          
+            variant="outline"""
+            className="w-1/2 ml-2""
+            onClick={handleCheckStatus}
+
+          
+        <p className="text-sm text-center mt-4">"
+          <Link href="/signup" className="font-medium text-zion-cyan hover: text-zion-cyan-light">"
+
+          
+  form.formState.errors.root && (<Alert variant="destructive" className="mb-4" > form.formState.errors.root.message;"
+} )
+}<form;"
+}) """
+}className="space-y-6" > <FormField text-zion-slate-light">Email address <FormControl> <div className=" relative"> <Input /> <User className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/> </div>  <FormMessage className=" text-red-400"/> ) ""
+</form>"
+}/> <FormField <FormItem> <FormLabel className=" text-zion-slate-light">Password relative" > <Input /> <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Button) : (<Eye className="h-4 w-4" />) ""
+}</span>  </div>  <FormMessage className="text-red-400" /> ) ""
+}/> <FormField <FormItem className="flex flex-row items-start space-x-3 space-y-0"> space-y-1 leading-none"> <FormLabel className=" text-zion-slate-light">Remember me </div> ) ""
+}/> </div> <div className=" text-sm"> <Link href=" /forgot-password"className=" font-medium text-zion-cyan hover:text-zion-cyan-light"> Forgot password?  </div> </div> <Button {"
+  // TODO: Implement
+  verificationMessage;"
+}</p>) """
+}<div className=" flex justify-between mt-4" > <Button > {
+} <Button > Check status  </div> Create account  </p> </form> )
+      </form>;
+          type='submit';
+          className='w - full inline - flex items - center justify - center px - 4 py - 2 border border - transparent rounded - md shadow - sm text - base font - medium text - white bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - zion - purple - light visible';
+          disabled={is_loading || is_submitting}        >;
+
+          <p className='text - sm text - center text - zion - slate - light mt - 2'>;
+          </p>)}
+        <div className='flex justify - between mt - 4'>;
+pr-12325
             variant='secondary';
             className='w - 1/2 mr - 2';
             on_click={handleResendEmail}
@@ -1111,8 +1385,6 @@ return;
 }'"}
 }
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   );
 
 
@@ -1184,4 +1456,27 @@ return ;
   isResending ? 'Sending...': 'Resend / Verify e-mail' ;
 }</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+            variant='outline';
+            className='w - 1/2 ml - 2';
+            on_click={handleCheckStatus}          >;
+
+        <p className='text - sm text - center mt - 4'>;
+            href='/signup';
+
+    );
+  form.form_state.errors.root && (<Alert variant="destructive" className="mb - 4" > form.form_state.errors.root.message;"
+} );
+}) ";""
+}className="space - y-6" > <FormField text - zion - slate - light">Email address <FormControl> <div className=" relative"> <Input /> <User className=" absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4"/> </div>  <FormMessage className=" text - red - 400"/> ) ";"
+}/> <FormField <FormItem> <FormLabel className=" text - zion - slate - light">Password relative" > <Input /> <LogIn className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" /> <Button) : (<Eye className="h - 4 w - 4" />) ";"
+}</span>  </div>  <FormMessage className="text - red - 400" /> ) ";"
+}/> <FormField <FormItem className="flex flex - row items - start space - x-3 space - y-0"> space - y-1 leading - none"> <FormLabel className=" text - zion - slate - light">Remember me </div> ) ";"
+}/> </div> <div className=" text - sm"> <Link href=" /forgot - password"className=" font - medium text - zion - cyan hover:text - zion - cyan - light"> Forgot password?  </div> </div> <Button {"
+  // TODO: Implement
+  verification_message;"
+}</p>) ";""
+}<div className=" flex justify - between mt - 4" > <Button > {';
+} <Button > Check status  </div> Create account  </p> </form> );
+pr-12325

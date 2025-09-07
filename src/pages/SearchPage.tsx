@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { SearchSuggestion } from "@/types/search";
 import {logErrorToProduction} from '@/utils/productionLogger';
 import {;
@@ -257,7 +256,6 @@ export default function SearchPage() {;
 
 
 
-=======
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady';
@@ -280,7 +278,7 @@ function highlight(text: string, term: string) {
               router.push(`/search?q=${encodeURIComponent(searchTerm)}`)
             }}
             searchSuggestions = {suggestions,}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             placeholder="Search talent, jobs, and projects..."
         </form>
         {loading && (
@@ -335,7 +333,6 @@ function highlight(text: string, term: string) {
                     </p>;
                   </div>;
                 ))}
-<<<<<<< HEAD
 }setLoading (true)
 try {
   const res = await fetch (`/api/search?query=$ {
@@ -423,7 +420,6 @@ if (data && data.results && Array.isArray (data.results) ) {
   );
 }
 ;
-=======
             </TabsContent>
           </Tabs>
         )}
@@ -497,4 +493,4 @@ router.push (`/search?q=$ {;
 }</TabsContent> </Tabs>) ;
 }</main> </div>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

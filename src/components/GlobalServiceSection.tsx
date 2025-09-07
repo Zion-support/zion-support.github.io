@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
   Truck,;
 } from 'lucide-react';
 import { Button } from './ui/button';
 
 import { GradientHeading } from "./GradientHeading",
-=======
 
 import { GradientHeading } from "./GradientHeading";
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from 'lucide-react'
@@ -21,7 +18,7 @@ import {
   Truck
 } from 'lucide-react'
 import { Button } from './ui/button'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 const services = [
   {
     title: "Servers",
@@ -44,7 +41,6 @@ const services = [
     description: "Sustainable disposal and recycling of IT equipment following eco-friendly practices",
     icon: <Recycle className="h-10 w-10" />},
   {
-<<<<<<< HEAD
     title: "Equipment Rentals",
     description: "Flexible rental options for temporary projects and scaling requirements",
     icon: <Truck className="h-10 w-10" />}],
@@ -81,9 +77,7 @@ const services = [
     title: "Equipment Rentals",
     description: "Flexible rental options for temporary projects and scaling requirements",
     icon: <Truck className="h-10 w-10" />}],
-=======
 export function GlobalServiceSection() {;
-=======
     title: 'Equipment Rentals'
     description:
       'Flexible rental options for temporary projects and scaling requirements'
@@ -91,7 +85,7 @@ export function GlobalServiceSection() {;
   }
 ]
 export function GlobalServiceSection() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
     <section className='py-20 bg-zion-blue' id='global-services'>;
@@ -109,7 +103,6 @@ export function GlobalServiceSection() {
 
             <div
               key={index}
-<<<<<<< HEAD
               className='bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300'>;
               <div className='text-zion-cyan mb-4'>{service && service.icon}</div>;
               <h3 className='text-xl font-bold text-white mb-2'>;
@@ -119,7 +112,6 @@ export function GlobalServiceSection() {
                 {service && service.description}
               </p>            </div>;
 
-=======
               className='bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300'
             >
               <div className='text-zion-cyan mb-4'>{service.icon}</div>
@@ -130,9 +122,8 @@ export function GlobalServiceSection() {
                 {service.description}
               </p>
             </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export function GlobalServiceSection() {
   return (
@@ -143,12 +134,9 @@ export function GlobalServiceSection() {
           <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">
             Our 24x7x365 global IT service offering provides enterprise-grade solutions for businesses of all sizes
           </p>
-<<<<<<< HEAD
         </div>
 
-<<<<<<< HEAD
 
-=======
 
         </div>
 
@@ -156,7 +144,6 @@ export function GlobalServiceSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           {services.map((service, index) => (
             <div key={index} className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300">
               <div className="text-zion-cyan mb-4">
@@ -164,12 +151,9 @@ export function GlobalServiceSection() {
               </div>
               <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
               <p className="text-zion-slate-light mb-4">{service.description}</p>
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </div>
           ))}
         </div>
@@ -179,23 +163,18 @@ export function GlobalServiceSection() {
 
 
           <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">
-=======
 <div className='flex justify-center mt-12'>
           <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             Get Your Free Commercial Proposal
           </Button>
         </div>
-<<<<<<< HEAD
-=======
 
 
 
       </div>
     </section>
-<<<<<<< HEAD
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </div>;
 
         <div className='flex justify-center mt-12'>;
@@ -223,7 +202,6 @@ import {
   Truck,
 } from 'lucide-react';
 import { Button } from './ui / button';
-<<<<<<< HEAD
 import { GradientHeading } from "./GradientHeading",;
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from 'lucide-react';
 import { Button } from "./ui/button",;
@@ -270,7 +248,6 @@ export function GlobalServiceSection() {;
               </div>
               <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
               <p className="text-zion-slate-light mb-4">{service.description}</p>
-=======
 const services = [;
   {
     title: 'Servers',
@@ -350,25 +327,20 @@ function GlobalServiceSection() {
         <div className='flex justify - center mt - 12'>;
           <Button className='bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white text - lg py - 6 px - 8'>        <div className="flex justify - center mt - 12">;
           <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white text - lg py - 6 px - 8">;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
             Get Your Free Commercial Proposal;
           </Button>;
         </div>;
       </div>;
 
-<<<<<<< HEAD
     </section>);
 }
 ;
-=======
   );
 }
 
     </section>);
 }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,6 +1,5 @@
 const fs = require('fs');
-
-// Create a clean next.config.js
+// Create a clean next.config.js;
 const cleanNextConfig = `const nextConfig = {
   reactStrictMod: e: true,
   swcMinif: y: true,
@@ -10,15 +9,14 @@ const cleanNextConfig = `const nextConfig = {
   typescrip: t: { ignoreBuildError: s: true },
   outpu: t: 'export',
   trailingSlas: h: true,
-  image: s: {
-    unoptimize: d: true
+  image: s: {,
+  unoptimize: d: true;
   }
 };
 
-module.exports = nextConfig;
+module.exports = nextConfig;`;
 `;
 
-// Write the clean next.config.js
+// Write the clean next.config.js;
 fs.writeFileSync('next.config.js', cleanNextConfig);
-
-console.log('Clean next.config.js created!');
+console.log('Clean next.config.js created!');`;

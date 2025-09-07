@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-=======
   {
     slug: 'ai-automation-trends-2025',
     title: 'AI Automation Trends 2025',
@@ -74,7 +72,7 @@ export default function BlogIndexPage() {
               >
                 Read →
               </Link>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default function BlogIndexPage() {
   return (
     <UltraFuturisticBackground  intensity="medium">
@@ -95,7 +93,6 @@ export default function BlogIndexPage() {
             <div key={p.slug} className="p-6 bg-black/40 border border-gray-700/50 hover:border-cyan-500/40 transition-colors p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm">
               <h2 className="text-white text-xl font-semibold mb-2">{p.title}</h2>
               <p className="text-gray-400 mb-4">{p.excerpt}</p>
-<<<<<<< HEAD
           ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -115,7 +112,6 @@ export default function BlogIndexPage() {
 ;
 ;
 
-=======
               <Link href={`/blog/${p.slug}`} className="text-cyan-400 hover:text-white font-medium">Read →</Link>
             </div>
           ))}
@@ -123,4 +119,4 @@ export default function BlogIndexPage() {
       </div>
     </UltraFuturisticBackground>
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

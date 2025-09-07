@@ -1,6 +1,5 @@
 import React from 'react';
 import SEO from '../components/SEO';
-<<<<<<< HEAD
 export default function ImageOptimizerCDNPage(req, res) {
   try {
 	return (;
@@ -23,7 +22,6 @@ export default function ImageOptimizerCDNPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 export default function ImageOptimizerCDNPage() {
   return (
     <>
@@ -59,4 +57,4 @@ export default function ImageOptimizerCDNPage() {
       </section>
     </>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

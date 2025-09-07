@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 
 interface AccessibilityEnhancerProps {
@@ -34,7 +32,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
         document.body.classList.add('keyboard-navigation');
-=======
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -150,11 +147,10 @@ export function AccessibilityEnhancer({
         if (mainContent) {
           (mainContent as HTMLElement).focus();
         }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
+origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
       }
     };
 
-<<<<<<< HEAD
     const handleMouseDown = () => {
       document.body.classList.remove('keyboard-navigation')
 };
@@ -167,7 +163,6 @@ export function AccessibilityEnhancer({
       document.removeEventListener('mousedown', handleMouseDown)
 };
   }, [fontSize]);
-=======
       // Skip to navigation
       if (e.key === 'Tab' && e.shiftKey && e.altKey) {
         e.preventDefault();
@@ -261,7 +256,7 @@ export function AccessibilityEnhancer({
       }
     }
   }, []);
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
+origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
 
   const toggleHighContrast = () => {
     setIsHighContrast(!isHighContrast);
@@ -287,7 +282,6 @@ export function AccessibilityEnhancer({
 
   return (
     <>
-<<<<<<< HEAD
       <div className="accessibility-controls fixed bottom-4 right-4 z-50 bg-white shadow-lg rounded-lg p-4 border">
         <h3 className="text-sm font-semibold mb-2">Accessibility</h3>
         <div className="space-y-2">
@@ -339,7 +333,6 @@ export function AccessibilityEnhancer({
 };
 
 export default AccessibilityEnhancer;
-=======
       {/* Accessibility Controls Button */}
       {showControls && (
         <motion.button
@@ -531,9 +524,8 @@ export default AccessibilityEnhancer;
     </>
   );
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
-=======
+origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
 import React, { useState, useEffect } from 'react' interface AccessibilityEnhancerProps {""
   children: React.ReactNode} const AccessibilityEnhancer: React.FC < AccessibilityEnhancerProps> = ({ children }) => { const [accessibilitySettings, setAccessibilitySettings] = useState ({ highContrast: false, largeText: false, reducedMotion: false, focusVisible: true })  useEffect ( () => {'';""
 }}
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

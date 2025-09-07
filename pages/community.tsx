@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MessageCircle, Calendar, Users, Award } from 'lucide-react';
@@ -140,8 +137,6 @@ export default function CommunityPage() {
     </Layout>
   );
 }
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
       <Head>;
@@ -185,7 +180,6 @@ export default function CommunityPage() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
 
 }
 import React from 'react',
@@ -325,11 +319,6 @@ export default function CommunityPage() {
 ;
 
 
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

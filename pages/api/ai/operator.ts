@@ -1,21 +1,12 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
 
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
+pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai',;
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
@@ -34,7 +25,6 @@ function isRateLimited(ip: string): boolean {
   }
   ipToRequests[ip] = bucket
   return limited
-<<<<<<< HEAD
   ipToRequests[ip] = bucket;
   return limited;
   if (!limited) {
@@ -42,28 +32,16 @@ function isRateLimited(ip: string): boolean {
   }
 
 
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-<<<<<<< HEAD
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+ursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
+pr-12243
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 // In-memory simple rate limiter (per IP)
@@ -74,14 +52,7 @@ function isRateLimited(ip: string): boolean {
   const now = Date.now()
   const bucket = ipToRequests[ip] |{ timestamps: [] }
   // Drop old timestamps
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
+pr-12243
   if (!limited) {
     bucket.timestamps.push(now)
   }
@@ -93,19 +64,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
   // Auth via Bearer token
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   const authHeader = req.headers.authorization || '',
   const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : undefined,
-=======
->>>>>>> pr-12243
+pr-12243
   const authHeader = req.headers.authorization || ''
   const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : undefined
   if (!token || token !== process.env.OPERATOR_API_TOKEN) {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return res.status(401).json({ error: 'Unauthorized' })
   }
   // Rate limit
@@ -134,12 +98,9 @@ const sys = system |'You are a professional writing assistant. Write clear, conc
 
     const sys = system || 'You are a professional writing assistant. Write clear, concise, and helpful content. Format output as markdown.'
 
-<<<<<<< HEAD
 
     const sys = system || 'You are a professional writing assistant. Write clear, concise, and helpful content. Format output as markdown.',
 
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',
 import OpenAI from 'openai',
 const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY }),
@@ -212,16 +173,10 @@ const sys = system || 'You are a professional writing assistant. Write clear, co
     return res.status (500).json ({ error: 'Internal Server Error' });
   }
 }
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
     const sys = system || 'You are a professional writing assistant. Write clear, concise, and helpful content. Format output as markdown.',
 
-<<<<<<< HEAD
 
     console.error('Operator error', err),
     return res.status(500).json({ error: 'Internal Server Error' })
@@ -264,18 +219,14 @@ export default async function handler(req, res) {
 }
 ;
     const sys = system || 'You are a professional writing assistant. Write clear, concise, and helpful content. Format output as markdown.';
-=======
-=======
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
+main
+pr-12243
     const completion = await openai.chat.completions.create({
       model: 'gpt-4o-mini'
       temperature: typeof temperature === 'number' ? temperature : 0.7
       messages: [
         { role: 'system', content: sys }
         { role: 'user', content: prompt }
-<<<<<<< HEAD
       ];
     });
     const text = completion.choices?.[0]?.message?.content ?? '';
@@ -283,7 +234,6 @@ export default async function handler(req, res) {
   
 }
   
-=======
       ]
     })
 
@@ -294,8 +244,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'Internal Server Error' })
   }
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
     return res.status(405).json({ error: 'Method not allowed' });
   }
   try {
@@ -316,4 +264,4 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'Internal Server Error' });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

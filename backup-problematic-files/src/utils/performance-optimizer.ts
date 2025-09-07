@@ -1,4 +1,4 @@
-// Performance optimizer utilities
+// Performance optimizer utilities;
 export const optimizeImages = () => {
   console.log('Optimizing images...')
 };

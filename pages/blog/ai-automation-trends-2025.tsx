@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Head from 'next/head',
 import Link from 'next/link';
 
@@ -145,7 +144,6 @@ import React from 'react',
   }
 }
 ;
-=======
 import React from 'react';
 export default function AIAutomationTrends2025() {
   return (
@@ -380,4 +378,4 @@ export default function AIAutomationTrends2025() {
     </>
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

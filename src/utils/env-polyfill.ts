@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Export a safe environment accessor
 export const safeEnv = {
   NODE_ENV:
@@ -194,7 +193,6 @@ console.log ('✅ Environment polyfill loaded successfully');
 export default safe_env;
 export default safe_env;
 export default safe_env;
-=======
 /**
  * Environment Polyfill for Browser
  *
@@ -211,4 +209,4 @@ export default safe_env;
 console.log('✅ Environment polyfill loaded successfully');
 
 export default safeEnv;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

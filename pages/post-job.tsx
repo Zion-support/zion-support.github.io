@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default function PostJobPage() {
   const router = useRouter()
   const [title, setTitle] = useState('')
@@ -13,9 +12,8 @@ export default function PostJobPage() {
   const [error, setError] = useState<string | null>(null)
   async function handleSubmit(e: React.FormEvent) {
       return
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
     try {
       setIsSubmitting(true)
@@ -23,8 +21,6 @@ export default function PostJobPage() {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-<<<<<<< HEAD
-=======
 title,
           description,
           category,
@@ -47,7 +43,7 @@ router.push(`/client/dashboard`);
       setError(err.message || 'Something went wrong');
     } finally {
       setIsSubmitting(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       router.push(`/client/dashboard`)
     } catch (err: any) {
       setError(err.message |'Something went wrong')
@@ -78,7 +74,6 @@ export default function PostJobPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
   return (
-<<<<<<< HEAD
     <div className="max-w-2xl mx-auto">
       <h1 className="text-2xl font-semibold mb-4">Post a Job</h1>
       {error && <p className="text-red-600 mb-3">{error}</p>}
@@ -88,12 +83,11 @@ export default function PostJobPage(req, res) {
   }
 }
       <form onSubmit={handleSubmit} className="space-y-4">
-=======
 <div className='max-w-2xl mx-auto'>
       <h1 className='text-2xl font-semibold mb-4'>Post a Job</h1>
       {error && <p className='text-red-600 mb-3'>{error}</p>}
       <form onSubmit={handleSubmit} className='space-y-4'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         <div>
           <label className='block text-sm font-medium'>Project Title *</label>
           <input
@@ -176,7 +170,6 @@ export default function PostJobPage(req, res) {
             placeholder='you@example.com'
           />
         </div>
-<<<<<<< HEAD
         <div className="pt-2">
           <button type="submit" className="px-4 py-2 rounded bg-black text-white disabled:opacity-50" disabled={isSubmitting}>
 
@@ -300,7 +293,6 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
         <div className='pt-2'>
           <button
             type='submit'
@@ -313,4 +305,4 @@ if ( {) {
       </form>
     </div>
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

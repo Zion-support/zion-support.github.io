@@ -1,6 +1,12 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { 
+import Head from 'next/head
+import Link from 'next/link
+import {
+  // TODO: Implement
+}
+pr-12325
   CheckCircle,
   X,
   ArrowRight,
@@ -11,6 +17,9 @@ import {
   BarChart3
 } from 'lucide-react'
 
+  BarChart3;
+} from 'lucide-react
+pr-12325
 const plans = [
   {
     name: 'Starter',
@@ -36,6 +45,17 @@ const plans = [
     period: 'per month',
     description: 'Ideal for growing businesses',
     features: [
+      'Basic analytics]
+    ],
+    limitations: [
+      'Limited customization',
+      'No priority support]
+    popular: false;
+  },
+    name: 'Professional',
+    price: '$299',
+    description: 'Ideal for growing businesses',
+pr-12325
       'Advanced AI capabilities',
       'Custom integrations',
       'Priority support',
@@ -48,11 +68,16 @@ const plans = [
     popular: true
   },
   {
+      'Custom branding]
+    limitations: [],
+    popular: true;
+pr-12325
     name: 'Enterprise',
     price: 'Custom',
     period: 'contact us',
     description: 'For large organizations with complex needs',
     features: [
+pr-12325
       'Full AI suite',
       'Custom development',
       '24/7 dedicated support',
@@ -87,6 +112,23 @@ const addOns = [
     description: 'Custom API integrations with third-party services'
   }
 ]
+      'Dedicated account manager]
+]
+
+const addOns = [
+    name: 'Additional Storage',
+    price: '$10',
+    period: 'per 100GB/month',
+    description: 'Extra cloud storage for your data
+    name: 'Premium Support',
+    price: '$50',
+    description: '24/7 priority support and faster response times
+    name: 'Custom Integrations',
+    price: '$200',
+    period: 'per integration',
+    description: 'Custom API integrations with third-party services
+  }]
+pr-12325
 
 export default function Pricing() {
   return (
@@ -113,6 +155,25 @@ import Head from 'next/head';
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {plans.map((plan, index) => (
               <motion.div
+
+        <title>Pricing - Zion Tech Group</title>
+        <meta name="description" content="Transparent pricing for our technology solutions and services." />"
+</meta>
+      
+"
+      <div className="min-h-screen bg-gray-50">"
+</div>"
+        <div className="max-w-6xl mx-auto px-4 py-8">"
+          <div className="text-center mb-12">"
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h1>""
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
+</p>
+            </h1>"
+            <p className="text-xl text-blue-100 mb-8">"
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">"
+              <motion.div;
+pr-12325
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -260,3 +321,91 @@ import Head from 'next/head';
         </div>
       </section>
     </div>
+                className={`relative bg-white rounded-lg shadow-md p-8 ${"
+                  plan.popular ? 'ring-2 ring-blue-500 transform scale-105' : `;
+                }`}
+              >
+</motion>
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
+                    <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium flex items-center">"
+</span>"
+                      <Star size={16} className="mr-1" />"
+
+                    </span>
+                <div className="text-center mb-6">"
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>""
+                  <p className="text-gray-600 mb-4">{plan.description}</p>""
+                  <div className="mb-4">"
+                    <span className="text-4xl font-bold text-gray-900">{plan.price}</span>""
+                    <span className="text-gray-600 ml-2">{plan.period}</span>"
+                <ul className="space-y-3 mb-8">"
+</ul>"
+                    <li key={featureIndex} className="flex items-center">"
+</li>"
+                      <CheckCircle size={20} className="text-green-500 mr-3 flex-shrink-0" />"
+                      <span className="text-gray-700">{feature}</span>"
+                    <li key={limitationIndex} className="flex items-center">"
+                      <X size={20} className="text-red-500 mr-3 flex-shrink-0" />"
+                      <span className="text-gray-500 line-through">{limitation}</span>"
+                    </li>
+                </ul>
+
+                <Link;"
+                  href="/contact""`;
+                  className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg transition-colors ${
+                    plan.popular;"
+                      ? 'bg-blue-600 text-white hover:bg-blue-700
+                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200`;
+
+                  <ArrowRight size={20} className="ml-2" />"
+
+                
+              </motion.div>)
+            ))}
+          <div className="mb-16">"
+            <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Add-On Services</h2>""
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">"
+                  transition={{ delay: index * 0.1 }}"
+                  className="bg-white rounded-lg shadow-md p-6""
+</motion>"
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{addOn.name}</h3>""
+                  <p className="text-gray-600 mb-4">{addOn.description}</p>""
+                  <div className="text-2xl font-bold text-blue-600">"
+                    <span className="text-sm text-gray-600 ml-1">{addOn.period}</span>"
+                </motion.div>
+          <div className="bg-blue-600 rounded-lg p-8 text-white text-center">"
+            <h2 className="text-2xl font-bold mb-4">Need a Custom Solution?</h2>""
+            <p className="text-lg mb-6">Contact us for a personalized quote tailored to your specific needs</p>""
+            <Link href="/contact" className="inline-flex items-center px-6 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors">"
+
+            
+      </section>"
+      <section className="py-16 bg-gray-50">"
+        <div className="container mx-auto px-4">"
+          <div className="max-w-4xl mx-auto">"
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">"
+</h2>
+              </h2>"
+              <p className="text-xl text-gray-600">"
+            <div className="space-y-6">"
+                <div key={index} className="bg-white rounded-lg p-6 shadow-sm">"
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">"
+</h3>
+                  </h3>"
+                  <p className="text-gray-600">"
+      <section className="py-16 bg-blue-900 text-white">"
+          <div className="max-w-4xl mx-auto text-center">"
+            <h2 className="text-3xl font-bold mb-4">"
+            </p>"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+                href="/contact"""
+                className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center""
+                <ArrowRight className="w-5 h-5 ml-2" />"
+
+              
+                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors inline-flex items-center justify-center""
+
+              
+      </section>
+"`;
+pr-12325

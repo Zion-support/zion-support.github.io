@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -9,15 +8,13 @@ const whitepapers = {
     id: 'autonomous-systems-guide',
     title: 'The Complete Guide to Autonomous Systems',
     description: 'A comprehensive overview of autonomous technology, implementation strategies, and best practices.',
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     category: 'Technology',
     pages: '45',
     author: 'Zion Tech Group Research Team',
     publishDate: 'January 2025',
     content: {
-<<<<<<< HEAD
       executiveSummary: 'This comprehensive guide explores the fundamentals of autonomous systems, from basic concepts to advanced implementation strategies. Learn how organizations can leverage autonomous technology to drive innovation and competitive advantage.',
       keyTopics: [
         'Understanding Autonomous SystemsImplementation StrategiesBest Practices & Case StudiesFuture Trends & Predictions'
@@ -59,7 +56,6 @@ import { useRouter } from 'next/router';
     category: 'Ethics',
     pages: '32',
     author: 'Zion Tech Group Ethics Committee',
-=======
 executiveSummary:
         'This comprehensive guide explores the fundamentals of autonomous systems, from basic concepts to advanced implementation strategies. Learn how organizations can leverage autonomous technology to drive innovation and competitive advantage.',
       keyTopics: [
@@ -84,7 +80,7 @@ executiveSummary:
     content: {
 executiveSummary:
         'This framework provides organizations with a structured approach to implementing AI systems ethically and responsibly. Learn how to balance innovation with ethical considerations.',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       keyTopics: [
         'Ethical AI Principles',
         'Implementation Guidelines',
@@ -96,7 +92,6 @@ executiveSummary:
     },
   },
   'automation-roi-calculator': {
-<<<<<<< HEAD
     title: 'Automation ROI Calculator Guide',
     description: 'How to calculate and maximize return on investment for automation initiatives.',
     category: 'Business',
@@ -108,7 +103,6 @@ executiveSummary:
       targetAudience: 'Business analysts, project managers, and executives evaluating automation investments.'
     }
   }
-=======
     id: 'automation-roi-calculator',
     title: 'Automation ROI Calculator Guide',
     description:
@@ -131,13 +125,12 @@ executiveSummary:
     },
   },
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 export default function WhitepaperPage() {
   const router = useRouter();
   const { id } = router.query;
 
-<<<<<<< HEAD
   if (!whitepaper) {
 
       executive_summary: 'This practical guide helps organizations calculate and maximize ROI for automation initiatives. Learn how to measure success and justify automation investments.',
@@ -182,7 +175,6 @@ function WhitepaperPage() {
 
           <nav className="mb-8">
             <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-=======
   const whitepaper = whitepapers[id as keyof typeof whitepapers];
 
   if (!whitepaper) {
@@ -230,16 +222,14 @@ function WhitepaperPage() {
               href='/resources'
               className='text-cyan-400 hover:text-cyan-300 transition-colors'
             >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               ← Back to Resources
             </Link>
           </nav>
           {/* Header */}
-<<<<<<< HEAD
           <header className="text-center mb-16">
             <div className="mb-6">
               <span className="px-4 py-2 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full border border-fuchsia-400/30">
-=======
 <header className='text-center mb-16'>
             <div className='mb-6'>
               <span className='px-4 py-2 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full border border-fuchsia-400/30'>
@@ -251,7 +241,7 @@ function WhitepaperPage() {
             </h1>
             <p className='text-xl text-white/80 max-w-3xl mx-auto mb-6'>
               {whitepaper.description}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
             <div className='flex flex-wrap justify-center gap-6 text-sm text-white/60'>
               <span>By {whitepaper.author}</span>
@@ -261,12 +251,10 @@ function WhitepaperPage() {
               <span>{whitepaper.publishDate}</span>
             </div>
           </header>
-<<<<<<< HEAD
           <div className="max-w-4xl mx-auto">
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-cyan-400">Executive Summary</h2>
               <p className="text-lg text-white/80">{whitepaper.content.executiveSummary}</p>
-=======
           {/* Whitepaper Content */}
 <div className='max-w-4xl mx-auto'>
             <section className='mb-12'>
@@ -276,7 +264,7 @@ function WhitepaperPage() {
               <p className='text-lg text-white/80'>
                 {whitepaper.content.executiveSummary}
               </p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </section>
 
             <section className='mb-12'>
@@ -294,7 +282,6 @@ function WhitepaperPage() {
                       <span className='text-white/90'>{topic}</span>
                     </div>
                   </div>
-<<<<<<< HEAD
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -304,7 +291,6 @@ function WhitepaperPage() {
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Download?</h2>
                 <p className="text-white/80 mb-6">
                   Get instant access to this comprehensive whitepaper and start implementing autonomous systems today.
-=======
                 ))}
               </div>
             </section>
@@ -327,7 +313,7 @@ function WhitepaperPage() {
                 <p className='text-white/80 mb-6'>
                   Get instant access to this comprehensive whitepaper and start
                   implementing autonomous systems today.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>
                 <button className='px-8 py-4 bg-gradient-to-r from-fuchsia-400 to-purple-400 text-white rounded-lg font-semibold hover:from-fuchsia-500 hover:to-purple-500 transition-all duration-300 text-lg'>
                   Download {whitepaper.title}
@@ -343,7 +329,6 @@ function WhitepaperPage() {
               </div>
             </section>
             {/* Related Whitepapers */}
-<<<<<<< HEAD
             {/* Related Whitepapers */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -356,7 +341,6 @@ function WhitepaperPage() {
                   .filter(w => w.id !== whitepaper.id)
                   .slice(0, 2)
                   .map((relatedPaper) => (
-=======
 <section className='mb-12'>
               <h2 className='text-2xl font-bold mb-6 text-white'>
                 Explore More Whitepapers
@@ -367,7 +351,7 @@ function WhitepaperPage() {
                   .slice(0, 2)
                   .map(relatedPaper => (
                     <Link
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       key={relatedPaper.id}
                       href={`/resources/whitepapers/${relatedPaper.id}`}
                       className='group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300'
@@ -386,7 +370,6 @@ function WhitepaperPage() {
               </div>
             </section>
             {/* CTA */}
-<<<<<<< HEAD
                     <Link
                       key={relatedPaper.id  } catch (error) {
     console.error("Error:", error);
@@ -608,7 +591,6 @@ export default function WhitepaperPage(req, res) {
                 <h2 className="text-2xl font-bold mb-4 text-white">Need Custom Research?</h2>
                 <p className="text-white/80 mb-6">
                   Our research team can conduct custom studies and create whitepapers tailored to your specific industry and needs.
-=======
 <section className='text-center'>
               <div className='bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20'>
                 <h2 className='text-2xl font-bold mb-4 text-white'>
@@ -617,7 +599,7 @@ export default function WhitepaperPage(req, res) {
                 <p className='text-white/80 mb-6'>
                   Our research team can conduct custom studies and create
                   whitepapers tailored to your specific industry and needs.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                   <Link
@@ -639,7 +621,6 @@ export default function WhitepaperPage(req, res) {
         </main>
       </div>
     </>
-<<<<<<< HEAD
   )
             <section className="text-center">;
               <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">;
@@ -699,6 +680,5 @@ export default function WhitepaperPage(req, res) {
       </div>;
 
 
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

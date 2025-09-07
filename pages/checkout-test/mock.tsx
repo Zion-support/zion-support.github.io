@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { useRouter  } from 'next/router';
 import Link from 'next/link';
@@ -11,7 +9,7 @@ export default function MockCheckoutPage() {
     return <div>Redirecting...</div>
 import { CheckCircle, ArrowRight } from 'lucide-react';
 export default function MockCheckoutPage() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const router = useRouter();
 
   const { mock } = router && router.query;
@@ -25,14 +23,12 @@ export default function MockCheckoutPage() {
   return (
   if (!mock) {;
     router.push('/checkout');
-<<<<<<< HEAD
     return <div>Redirecting...</div>;
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-=======
 return <div>Redirecting...</div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
     router.push('/checkout');
     return <div>Redirecting...</div>;
@@ -61,7 +57,6 @@ return <div>Redirecting...</div>;
               What happened:
             </h3>
             <ul className='text-zion-slate-light space-y-1 text-sm'>
-<<<<<<< HEAD
 }
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue to-zion-blue-dark py-8 px-4">
@@ -72,25 +67,22 @@ return <div>Redirecting...</div>;
               In production, users would be redirected to the actual Stripe checkout flow.
             </p>
           </div>
-=======
               <li>• Checkout request received successfully</li>
               <li>
                 • Mock session ID generated: cs_test_mock_session_id_
                 {Date.now()}
               </li>
               <li>• Cart items would be processed</li>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <li>• Payment would be handled by Stripe</li>
               <li>• Order confirmation would be sent</li>
             </ul>
           </div>
 
-<<<<<<< HEAD
 
-=======
 <div className='space-y-4'>
             <div className='text-zion-slate-light text-sm'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <p>To test with real Stripe: </p>
               <ol className='list-decimal list-inside space-y-1 mt-2'>
                 <li>
@@ -101,7 +93,6 @@ return <div>Redirecting...</div>;
               </ol>
             </div>
 
-<<<<<<< HEAD
 
           <div className="space-y-4">
             <div className="text-zion-slate-light text-sm">
@@ -117,7 +108,6 @@ return <div>Redirecting...</div>;
                 <Link href="/cart">
                   ← Back to Cart
                 </Link>
-=======
 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Button
                 asChild
@@ -125,17 +115,15 @@ return <div>Redirecting...</div>;
                 className='border-zion-cyan/30 text-zion-slate-light hover:bg-zion-cyan/10'
               >
                 <Link href='/cart'>← Back to Cart</Link>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </Button>
 
 
 
                   Continue Shopping
-<<<<<<< HEAD
                   <ArrowRight className="h-4 w-4 ml-2" />
-=======
                   <ArrowRight className='h-4 w-4 ml-2' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </Link>
               </Button>
             </div>
@@ -143,7 +131,6 @@ return <div>Redirecting...</div>;
         </div>
       </div>
     </div>
-<<<<<<< HEAD
 
     <div className='min-h-screen bg-gradient-to-br from-zion-blue to-zion-blue-dark py-8 px-4'>;
       <div className='container mx-auto max-w-2xl'>;
@@ -190,6 +177,5 @@ return <div>Redirecting...</div>;
           </div>;
         </div>;
       </div>;
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

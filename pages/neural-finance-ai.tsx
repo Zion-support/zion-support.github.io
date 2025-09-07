@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {motion} from 'framer-motion';
 import {Brain, DollarSign, TrendingUp, Shield, Zap, CheckCircle, ArrowRight, Star, Users, Award, Clock, Globe, BarChart3, Target, Microscope, Phone, Mail, MapPin, ArrowUpRight, Play, BarChart, PieChart, LineChart, Activity,} from 'lucide-react';
 import Layout from '../components/layout/Layout';
@@ -52,13 +51,12 @@ const features = [
     color: 'from-cyan-500 to-blue-600',
   },];
 
-=======
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 const contactInfo = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 const pricingPlans = [
   {
     name: 'Starter',
@@ -66,11 +64,9 @@ const pricingPlans = [
     period: 'month',
     description: 'Perfect for individual traders and small investment firms',
     features: [
-<<<<<<< HEAD
       'Basic market analysis and insights',
-=======
 'Basic market analysis and insights',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       'Portfolio tracking and monitoring',
       'Risk assessment and management',
       'Email support',
@@ -78,7 +74,6 @@ const pricingPlans = [
       'Basic reporting and analytics',
     ],
     popular: false,
-<<<<<<< HEAD
     color: 'from-gray-500 to-gray-600'
   };
   {
@@ -94,7 +89,6 @@ const pricingPlans = [
   }, ];
 ;
 const integrations = [;
-=======
     color: 'from-gray-500 to-gray-600',
   },
   {
@@ -179,13 +173,12 @@ description:
 ];
 
 const integrations = [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   { name: 'Bloomberg Terminal', logo: '🔵', category: 'Market Data' },
   { name: 'Reuters Eikon', logo: '🔴', category: 'Market Data' },
   { name: 'TradingView', logo: '📊', category: 'Charting' },
   { name: 'MetaTrader', logo: '📈', category: 'Trading Platform' },
   { name: 'Interactive Brokers', logo: '🏦', category: 'Broker' },
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import {;
   Brain, DollarSign, TrendingUp, Shield, Zap,;
@@ -200,16 +193,14 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
-=======
 { name: 'TD Ameritrade', logo: '💼', category: 'Broker' },
 ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 const NeuralFinanceAI: React.FC = () => {
   return (
     <Layout>
       <Head>
-<<<<<<< HEAD
 
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
@@ -376,7 +367,6 @@ const NeuralFinanceAI: React.FC = () => {;
                 <span className="bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
 
 
-=======
 <title>
           Neural Finance AI - Advanced AI-Powered Financial Analysis Platform |
           Zion Tech Group
@@ -411,7 +401,7 @@ const NeuralFinanceAI: React.FC = () => {;
               </div>
               <h1 className='text-4xl md:text-6xl font-bold text-white mb-6 leading-tight'>
                 <span className='bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   Neural Finance AI
                 </span>
                 <br />
@@ -455,13 +445,11 @@ const NeuralFinanceAI: React.FC = () => {;
                   <CheckCircle className="w-4 h-4 text-green-400" />
                   <span>Real-time Risk Assessment</span>
                 </div>
-<<<<<<< HEAD
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-=======
                 <div className='flex items-center space-x-2'>
                   <CheckCircle className='w-4 h-4 text-green-400' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <span>Multi-Asset Support</span>
                 </div>
               </div>
@@ -471,12 +459,10 @@ const NeuralFinanceAI: React.FC = () => {;
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-<<<<<<< HEAD
 
               className="relative"
-=======
 className='relative'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <div className="relative bg-gradient-to-br from-violet-500/20 to-purple-500/20 border border-violet-500/30 rounded-3xl p-8 backdrop-blur-sm">
                 <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 to-purple-500/10 rounded-3xl"></div>
@@ -506,15 +492,13 @@ className='relative'
                       <span className="text-gray-300">Trading Automation</span>
                       <span className="text-pink-400 font-semibold">Enabled</span>
                     </div>
-<<<<<<< HEAD
-=======
                     <div className='flex items-center justify-between p-3 bg-gray-800/50 rounded-lg border border-gray-700/50'>
                       <span className='text-gray-300'>Trading Automation</span>
                       <span className='text-pink-400 font-semibold'>
                         Enabled
                       </span>
                     </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </div>
               </div>
@@ -522,21 +506,17 @@ className='relative'
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
       {/* Features Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto'>
           <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-=======
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">
@@ -547,27 +527,22 @@ className='text-center mb-16'
               Leverage cutting-edge AI and neural network technology to gain unprecedented insights into financial markets.
             </p>
           </motion.div>
-<<<<<<< HEAD
-=======
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index) => (
               <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-=======
 className='group bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-violet-500/50 transition-all duration-300 hover:transform hover:scale-105'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-<<<<<<< HEAD
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-violet-400 transition-colors duration-300">
       {/* Use Cases Section */}
       <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30'>;
@@ -579,7 +554,6 @@ className='group bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 round
         <div className="max-w-7xl mx-auto">
           <motion.div
 
-=======
                 <h3 className='text-xl font-bold text-white mb-3 group-hover:text-violet-400 transition-colors duration-300'>
                   {feature.title}
                 </h3>
@@ -595,17 +569,15 @@ className='group bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 round
 <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30'>
         <div className='max-w-7xl mx-auto'>
           <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
 
 
-=======
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -616,22 +588,18 @@ className='text-center mb-16'
               Discover how Neural Finance AI transforms various aspects of financial trading and investment management.
             </p>
           </motion.div>
-<<<<<<< HEAD
-=======
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {useCases.map((useCase, index) => (
               <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-=======
 className='bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className="flex items-start space-x-4">
                   <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-600 rounded-2xl flex items-center justify-center flex-shrink-0">
@@ -642,16 +610,14 @@ className='bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl
                     </p>
                     <div className="space-y-2">
                       {useCase.benefits.map((benefit, benefitIndex) => (
-<<<<<<< HEAD
                         <div key={benefitIndex} className="flex items-center space-x-2 text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-violet-400 flex-shrink-0" />
-=======
                         <div
                           key={benefitIndex}
                           className='flex items-center space-x-2 text-sm text-gray-300'
                         >
                           <CheckCircle className='w-4 h-4 text-violet-400 flex-shrink-0' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                           <span>{benefit}</span>
                         </div>
                       ))  } catch (error) {
@@ -665,9 +631,7 @@ className='bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl
                 </div>;
               </motion && motion.div>;
             ))}
-<<<<<<< HEAD
 
-=======
           </div>
         </div>
       </section>
@@ -675,17 +639,15 @@ className='bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl
 <section id='pricing' className='py-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto'>
           <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
 
 
-=======
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -696,20 +658,17 @@ className='text-center mb-16'
               Choose the perfect plan for your trading needs. All plans include our core AI-powered features.
             </p>
           </motion.div>
-<<<<<<< HEAD
-=======
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricingPlans.map((plan, index) => (
               <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-gray-900/50 backdrop-blur-sm border rounded-2xl p-8 ${
-<<<<<<< HEAD
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -729,7 +688,6 @@ className='text-center mb-16'
 
 
 
-=======
 plan.popular
                     ? 'border-violet-500/50 bg-gradient-to-br from-violet-500/10 to-purple-500/10'
                     : 'border-gray-700/50'
@@ -757,7 +715,7 @@ plan.popular
                   </div>
                 </div>
                 <ul className='space-y-4 mb-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-3 text-gray-300">
                       <CheckCircle className="w-5 h-5 text-violet-400 flex-shrink-0" />
@@ -767,11 +725,9 @@ plan.popular
                 </ul>
                 
                 <Link
-<<<<<<< HEAD
                   href="/contact"
-=======
                   href='/contact'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-200 transform hover:scale-105 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-violet-500 to-purple-600 text-white hover:from-violet-600 hover:to-purple-700'
@@ -796,7 +752,6 @@ plan.popular
       </section>;
 
       {/* Integrations Section */}
-<<<<<<< HEAD
       <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
 
@@ -806,21 +761,18 @@ plan.popular
         <div className="max-w-7xl mx-auto">
           <motion.div
 
-=======
 <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30'>
         <div className='max-w-7xl mx-auto'>
           <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
 
 
-=======
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
@@ -831,20 +783,16 @@ className='text-center mb-16'
               Connect with your existing trading platforms and tools for a unified trading experience.
             </p>
           </motion.div>
-<<<<<<< HEAD
-=======
 
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6'>
             {integrations.map((integration, index) => (
               <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-=======
 className='bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 text-center hover:border-green-500/50 transition-all duration-300 hover:transform hover:scale-105'
               >
                 <div className='text-4xl mb-3'>{integration.logo}</div>
@@ -853,7 +801,7 @@ className='bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl 
                 </h3>
                 <p className='text-xs text-gray-400'>{integration.category}</p>
               </motion.div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
           </div>
         </div>
@@ -922,7 +870,6 @@ className='bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl 
 
               <Link
                 href='/contact'
-<<<<<<< HEAD
                 className='bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105'>;
                 Start Free Trial;
               </Link>;
@@ -939,29 +886,24 @@ className='bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl 
               <Link
                 href="/contact"
                 className="bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
-=======
                 className='bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Start Free Trial
               </Link>
               <Link
-<<<<<<< HEAD
                 href="/contact"
                 className="border border-gray-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-200"
-=======
 href='/contact'
                 className='border border-gray-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-200'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Schedule Demo
               </Link>
             </div>
-<<<<<<< HEAD
             <div className="text-sm text-gray-400">
               <p>✓ 30-Day Free Trial • ✓ No Credit Card Required • ✓ Instant Setup</p>
               <p className="mt-2">✓ 24/7 Support • ✓ 99.9% Uptime SLA • ✓ Global Infrastructure</p>
-=======
 <div className='text-sm text-gray-400'>
               <p>
                 ✓ 30-Day Free Trial • ✓ No Credit Card Required • ✓ Instant
@@ -970,7 +912,7 @@ href='/contact'
               <p className='mt-2'>
                 ✓ 24/7 Support • ✓ 99.9% Uptime SLA • ✓ Global Infrastructure
               </p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
         </div>
@@ -980,7 +922,6 @@ href='/contact'
 };
 
 export default NeuralFinanceAI;
-<<<<<<< HEAD
 
 },
 export default NeuralFinanceAI,
@@ -1066,5 +1007,4 @@ export default NeuralFinanceAI,
 
 
 export default NeuralFinanceAI;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

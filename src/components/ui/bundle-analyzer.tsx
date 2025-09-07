@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
   const { user } = useAuth()
   const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
   const isAllowed = process.env.NODE_ENV !== 'production' |isAdmin
@@ -13,10 +11,13 @@
   const [shouldShow, setShouldShow] = useState(false)
   useEffect((,) => {
     // Only show in development or when explicitly enabled
-=======
 totalSize: number;
   gzippedSize: number;
   chunkCount: number;
+totalSize: number;,
+  gzippedSize: number;
+  chunkCount: number;,
+pr-12325
   loadTime: number;
 
 
@@ -24,8 +25,9 @@ totalSize: number;
       process.env.NODE_ENV === 'development' ||
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       localStorage.getItem('bundle-analyzer') === 'true'
+      localStorage.getItem('bundle-analyzer') === 'true
+pr-12325
     setShouldShow(show)
     if (!show) return;
     setIsVisible(true)
@@ -52,6 +54,30 @@ interface ChunkInfo {
   cached: boolean;
 export /**
  * BundleAnalyzer - Function description
+import { use_auth } from '@/hooks/ use_auth';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/ card';
+import { Badge } from '@/components/ui/ badge';
+import { Button } from '@/components/ui/ button';
+import { Progress } from '@/components/ui/ progress';
+import { AlertTriangle, Package, Zap } from 'lucide-react';
+import { logErrorToProduction } from '@/utils/ production_logger';
+interface BundleInfo {
+  // TODO: Implement
+}
+  total_size: number;,
+  gzipped_size: number;
+  chunk_count: number;,
+  load_time: number;
+  cacheHitRate: number;
+interface ChunkInfo {
+  // TODO: Implement
+  name: string;,
+  size: number;
+  load_time: number;,
+  cached: boolean;
+export /**
+ * BundleAnalyzer - Function description;
+pr-12325
  */
 function BundleAnalyzer() {
   const { user } = use_auth ();
@@ -63,6 +89,11 @@ if ( {) {
 }
     return null;
   }
+  // Check condition;
+if ( {) {
+  $2;
+    return null;
+pr-12325
   const [bundle_info, setBundleInfo] = useState < BundleInfo | null>(null);
   const [chunks, set_chunks] = useState < ChunkInfo[]>([]);
   const [is_visible, setIsVisible] = useState (false);
@@ -78,7 +109,6 @@ if ( {) {
 if (return) {
   $2
 }
-<<<<<<< HEAD
     setIsCollecting (true);
     try {
       // Get performance entries for script resources
@@ -95,7 +125,6 @@ if (return) {
       let totalLoadTime = 0
       const chunkData: ChunkInfo[] = []
       const chunkData: ChunkInfo[] = []
-=======
 import React, { useState, useEffect } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
@@ -120,7 +149,7 @@ export function BundleAnalyzer() {
       let totalLoadTime = 0;
       const chunkData: ChunkInfo[] = [];
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       scriptEntries.forEach(entry => {
         const size = entry.transferSize || entry.encodedBodySize || 0;
         const loadTime = entry.responseEnd - entry.requestStart;
@@ -140,7 +169,9 @@ totalSize += size;
       const cacheHitRate = null;
         chunkData.filter(chunk => chunk.cached).length / chunkData.length
       setBundleInfo({
-=======
+    // Check condition;
+if (return) {
+pr-12325
     setIsVisible (true);
     collectBundleInfo ();
   }, []);
@@ -150,18 +181,16 @@ totalSize += size;
     try {
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  // TODO: Implement
+pr-12325
         totalSize,
         gzippedSize,
         chunkCount: chunkData.length,;
         loadTime: totalLoadTime / chunkData.length,;
         cacheHitRate: cacheHitRate * 100;
       });
-<<<<<<< HEAD
-=======
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
       logErrorToProduction('Failed to collect bundle info:', { data: error })
       // Get performance entries for script resources;
@@ -169,6 +198,16 @@ totalSize += size;
         'resource') as PerformanceResourceTiming[];
       const script_entries = resource_entries.filter (
         entry =>;
+
+
+      setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
+      logErrorToProduction('Failed to collect bundle info:', { data: error })
+      // Get performance entries for script resources;
+      const resource_entries = performance.getEntriesByType ()
+        'resource') as PerformanceResourceTiming[];
+      const script_entries = resource_entries.filter (
+        entry =>;)
+pr-12325
           entry.name.includes ('/_next / static/') &&;
           (entry.name.ends_with ('.js') || entry.name.ends_with ('.css')));
       // Calculate bundle information;
@@ -182,12 +221,15 @@ totalSize += size;
         const cached = entry.transfer_size === 0;
         totalLoadTime += load_time;
         chunk_data.push ({
+        chunk_data.push ({)
+pr-12325
           name: entry.name.split ('/').pop ()?.split ('?')[0] || 'unknown',
           size,
           load_time,
           cached,
         });
       });
+pr-12325
       // Estimate gzipped size (roughly 70% of original);
       const gzipped_size = total_size * 0.7;
       const cacheHitRate =;
@@ -225,14 +267,36 @@ totalSize += size;
       collectBundleInfo()
     }
   }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+        cacheHitRate: cacheHitRate * 100,)
+      set_chunks (chunk_data.sort ((a, b) => b.size - a.size).slice (0, 5)); // Top 5 largest chunks    } catch (error) {
+      logErrorToProduction ('Failed to collect bundle info:', { data: error });
+    } finally {
+  // TODO: Implement
+      setIsCollecting(false)
+  const formatSize = (bytes: number): string => {
+    if (bytes === 0) return '0 B
+    const k = 1024;
+    const sizes = ['B', 'KB', 'MB', 'GB']
+    const i = Math.floor(Math.log(bytes) / Math.log(k))
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i]
+  const getSizeColor = (size: number) => {
+    if (size < 100000) return 'bg-green-500'; // < 100KB;
+    if (size < 500000) return 'bg-yellow-500'; // < 500KB;
+    return 'bg-red-500'; // > 500KB;
+  const toggleAnalyzer = () => {
+    const current = localStorage.getItem('bundle-analyzer') === 'true
+    localStorage.setItem('bundle-analyzer', (!current).toString())
+    setIsVisible(!current)
+    if (!current) {
+
+
+
+
+pr-12325
 import React, { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -240,6 +304,7 @@ import { Badge } from '@/components/ui/badge',;
 import { Button } from '@/components/ui/button',;
 import { Progress } from '@/components/ui/progress',;
 import { AlertTriangle, Package, Zap } from 'lucide-react';
+pr-12325
 import {logErrorToProduction} from '@/utils/productionLogger',;
 interface BundleInfo {;
   totalSize: number,;
@@ -249,6 +314,7 @@ interface BundleInfo {;
 
   cacheHitRate: number;
 }
+pr-12325
 ;
 interface ChunkInfo {;
   name: string,;
@@ -257,16 +323,16 @@ interface ChunkInfo {;
   cached: boolean;
 }
 ;
+pr-12325
 export function BundleAnalyzer() {;
   const { user } = useAuth(),;
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin',;
   const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin,;
   if (!isAllowed) {;
     return null;
-=======
   if (!shouldShow) {
     return null
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ;
   const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null),;
@@ -334,6 +400,11 @@ export function BundleAnalyzer() {;
     return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
   },;
   const getSizeColor = (size: number) => {;
+  const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null),;
+
+  const [chunks, setChunks] = useState<ChunkInfo[]>([]),;
+
+pr-12325
     if (size < 100000) return 'bg-green-500', // < 100KB;
     if (size < 500000) return 'bg-yellow-500', // < 500KB;
     return 'bg-red-500', // > 500KB;
@@ -350,21 +421,19 @@ export function BundleAnalyzer() {;
     return null;
   }
 
-<<<<<<< HEAD
-=======
+  };
+  if (!shouldShow) {;
+pr-12325
 
 
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   if (!isVisible) {
     return (
       <div className="fixed bottom-20 right-4 z-50">
         <Button
 
 
-<<<<<<< HEAD
-=======
           variant="outline"
           size="sm"
           onClick={toggleAnalyzer}
@@ -373,12 +442,10 @@ export function BundleAnalyzer() {;
           <Package className="w-4 h-4 mr-2" />
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           Bundle Analyzer
         </Button>
       </div>
     )
-<<<<<<< HEAD
                 onClick={collectBundleInfo}
                 disabled={isCollecting}
                 className='h-6 w-6 p-0'>;
@@ -388,7 +455,6 @@ export function BundleAnalyzer() {;
                 variant='ghost'
                 size='sm'
                 onClick={toggleAnalyzer}
-=======
           className='bg-background/80 backdrop-blur-sm'>;
           <Package className='w-4 h-4 mr-2' />;
           Bundle Analyzer;
@@ -423,7 +489,6 @@ export function BundleAnalyzer() {;
                 onClick={toggleAnalyzer}
                 className="h-6 w-6 p-0"
               >
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
                 ✕
@@ -466,8 +531,6 @@ export function BundleAnalyzer() {;
                 <Progress value={bundleInfo.cacheHitRate} className="h-2" />
               </div>
               <div>
-<<<<<<< HEAD
-=======
 
                 className='h-6 w-6 p-0'>;
   // Check condition
@@ -481,6 +544,66 @@ if ( {) {
   $2
 }
     return (
+
+  if (!isVisible) {
+    return (
+      <div className="fixed bottom-20 right-4 z-50">"
+</div>
+        <Button;"
+          variant="outline"""
+          size="sm""
+          onClick={toggleAnalyzer}"
+          className="bg-background/80 backdrop-blur-sm""
+        >
+"
+          <Package className="w-4 h-4 mr-2" />"
+
+        
+      </div>"
+          <Package className='w-4 h-4 mr-2' />;
+
+      </div>;
+    <div className="fixed bottom-20 right-4 z-50 w-96">"
+      <Card className="bg-background/95 backdrop-blur-sm border shadow-lg">"
+        <CardHeader className="pb-2">"
+          <div className="flex items-center justify-between">"
+            <CardTitle className="text-sm flex items-center">"
+
+            <div className="flex gap-2">"
+                variant="ghost"""
+                onClick={collectBundleInfo}
+                disabled={isCollecting}"
+                className="h-6 w-6 p-0""
+                <Zap className="w-3 h-3" />"
+
+              
+
+              
+        <CardContent className="pt-0 space-y-3">"
+
+            <>"
+              <div className="grid grid-cols-2 gap-2 text-xs">"
+                <div className="flex justify-between">"
+                  <span>Total Size:</span>)
+                  <Badge className={getSizeColor(bundleInfo.totalSize)}>
+
+                  
+                  <span>Gzipped:</span>"
+                  <Badge variant="outline">"
+
+                  
+                  <span>Chunks:</span>"
+                  <Badge variant="outline">{bundleInfo.chunkCount}"
+                  <span>Avg Load:</span>"
+
+                  
+              <div>
+                <div className="flex justify-between items-center text-xs mb-1">"
+                  <span>Cache Hit Rate</span>
+                  <span>{bundleInfo.cacheHitRate.toFixed(1)}%</span>
+                <Progress value={bundleInfo.cacheHitRate} className="h-2" />"
+
+pr-12325
       <div className='fixed bottom - 20 right - 4 z - 50'>;
         <Button;
           variant='outline';
@@ -517,13 +640,10 @@ if ( {) {
                 className='h - 6 w - 6 p - 0'              >;
 
                 ✕;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               </Button>;
             </div>;
           </div>;
         </CardHeader>;
-<<<<<<< HEAD
-=======
 
 
                 <div className="text-xs font-medium mb-2">Largest Chunks:</div>
@@ -536,7 +656,6 @@ if ( {) {
                           {chunk.name}
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                         </span>
                         {chunk.cached && (
                           <Badge variant="outline" className="text-xs px-1 py-0">
@@ -544,15 +663,12 @@ if ( {) {
                           </Badge>
                         )}
                       </div>
-<<<<<<< HEAD
                       <Badge
                         className={getSizeColor(chunk.size)}
                         variant='outline'
                       >
-=======
 
                       <Badge className={getSizeColor(chunk.size)} variant="outline">
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
                         {formatSize(chunk.size)}
                       </Badge>
@@ -576,17 +692,13 @@ if ( {) {
 } 
 
 }
-<<<<<<< HEAD
             <div className="text-xs text-muted-foreground">
               {isCollecting ? 'Analyzing bundle...' : 'Click refresh to analyze'}
             </div>;
           )}
-<<<<<<< HEAD
-=======
 
 
 }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </CardContent>;
       </Card>;
     </div>;
@@ -625,6 +737,69 @@ if ( {) {
                   </Badge>;
                 </div>;
               </div>;
+
+          <Package className='w - 4 h - 4 mr - 2' />;
+
+      </div>);
+    <div className='fixed bottom - 20 right - 4 z - 50 w - 96'>;
+      <Card className='bg - background / 95 backdrop - blur - sm border shadow - lg'>;
+
+        <CardHeader className='pb - 2'>;
+
+          <div className='flex items - center justify - between'>;
+            <CardTitle className='text - sm flex items - center'>;
+
+
+            <div className='flex gap - 2'>;
+                variant='ghost';
+                on_click={collectBundleInfo}
+                disabled={is_collecting}
+                className='h - 6 w - 6 p - 0'              >;
+
+                <Zap className='w - 3 h - 3' />;
+
+
+                <div className="text-xs font-medium mb-2">Largest Chunks:</div>""
+                <div className="space-y-1">"
+                    <div key={chunk.name} className="flex justify-between items-center text-xs">"
+                      <div className="flex items-center gap-2 flex-1 min-w-0">"
+                        <span className="w-4 text-muted-foreground">{index + 1}.</span>""
+                        <span className="truncate" title={chunk.name}>"
+</span>
+                        </span>"
+                          <Badge variant="outline" className="text-xs px-1 py-0">"
+
+                          
+                      <Badge className={getSizeColor(chunk.size)} variant="outline">"
+
+                      
+              </div>;"
+                <div className='flex items-center gap-2 p-2 bg-yellow-50 dark:bg-yellow-900/20 rounded text-xs'>;
+                  <AlertTriangle className='w-3 h-3 text-yellow-600' />;
+
+                  <span>Bundle size is large. Consider code splitting.</span>;
+            </>
+          ) : (
+
+
+
+
+        <CardContent className='pt - 0 space - y-3'>;
+
+            <>;
+              <div className='grid grid - cols - 2 gap - 2 text - xs'>;
+                <div className='flex justify - between'>;
+                  <span > Total Size:</span>;)
+                  <Badge className={getSizeColor (bundle_info.total_size)}>;
+
+                  <span > Gzipped:</span>;
+                  <Badge variant='outline'>;
+
+                  <span > Chunks:</span>;
+                  <Badge variant='outline'>{bundle_info.chunk_count};
+                  <span > Avg Load:</span>;
+
+pr-12325
               <div>;
                 <div className='flex justify - between items - center text - xs mb - 1'>;
                   <span > Cache Hit Rate</span>;
@@ -636,6 +811,11 @@ if ( {) {
                 <div className='text - xs font - medium mb - 2'>Largest Chunks:</div>;
                 <div className='space - y-1'>;
                   {chunks.map ((chunk, index) => (
+                <Progress value={bundle_info.cacheHitRate} className='h - 2' />;
+
+                <div className='text - xs font - medium mb - 2'>Largest Chunks:</div>;
+                <div className='space - y-1'>;
+pr-12325
                     <div;
                       key={chunk.name}
                       className='flex justify - between items - center text - xs';
@@ -666,6 +846,19 @@ if ( {) {
               {bundle_info.total_size > 1000000 && (
                 <div className='flex items - center gap - 2 p - 2 bg - yellow - 50 dark:bg - yellow - 900 / 20 rounded text - xs'>;
                   <AlertTriangle className='w - 3 h - 3 text - yellow - 600' />;
+                        </span>;
+                        <span className='truncate' title={chunk.name}>                          {chunk.name}
+                          <Badge;
+                            className='text - xs px - 1 py - 0';
+
+                          )}
+                        className={getSizeColor (chunk.size)}
+
+                    </div>))}
+                <div className='flex items - center gap - 2 p - 2 bg - yellow - 50 dark:bg - yellow - 900 / 20 rounded text - xs'>;
+                  <AlertTriangle className='w - 3 h - 3 text - yellow - 600' />;
+
+pr-12325
                   <span > Bundle size is large. Consider code splitting.</span>;
                 </div>)}
             </>) : (
@@ -677,13 +870,11 @@ if ( {) {
         </CardContent>;
       </Card>;
     </div>);
-<<<<<<< HEAD
-=======
 }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
         </CardContent>
       </Card>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+</div>)
+pr-12325

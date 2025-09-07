@@ -49,3 +49,4 @@ export function usePerformanceMetrics() {
   }, []);
   return { metrics, isSupported }
 }
+pr-12325

@@ -1,18 +1,15 @@
-<<<<<<< HEAD
 
   const [isAdmin, setIsAdmin] = useState(true);
   const [notes, setNotes] = useState<Note[]>([]);
   const [loading, setLoading] = useState(false);
 
 
-=======
 type Note = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   useEffect(() => {
     async function load() {
       setLoading(true)
       try {
-<<<<<<< HEAD
   id: string,
   target_type: string,
   target_id: string,
@@ -79,7 +76,6 @@ export default function AdminNotesConsole(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 const res = await fetch('/api/admin/notes-all', {
           headers: { 'X-Admin': isAdmin ? 'true' : 'false' },
         });
@@ -103,7 +99,7 @@ const res = await fetch('/api/admin/notes-all', {
             checked={isAdmin}
             onChange={e => setIsAdmin(e.target.checked)}
           />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -118,7 +114,6 @@ const res = await fetch('/api/admin/notes-all', {
       ) : notes.length === 0 ? (
 <div className='opacity-70'>No notes found.</div>
       ) : (
-<<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {notes.map((n) => (
             <div key={n.id} className="rounded border p-3 text-sm">
@@ -160,7 +155,6 @@ const res = await fetch('/api/admin/notes-all', {
 }
 
 
-=======
         <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
           {notes.map(n => (
             <div key={n.id} className='rounded border p-3 text-sm'>
@@ -277,4 +271,4 @@ const res = await fetch('/api/admin/notes-all', {
       </main>
     </>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Set up form
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema)
@@ -91,6 +90,44 @@ interface WorkExperienceItemFormProps {
   on_cancel: () => void;
 export /**
  * WorkExperienceItemForm - Function description
+// Set up form;
+  const form = useForm<FormValues>({
+
+    <>
+      <Form {...form}>
+)
+        <form onSubmit={form.handleSubmit(handleFormSubmit)} className="space-y-6">"
+</form>"
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"
+</div>
+            <FormField;
+              control={form.control}
+"
+              name="company_name""
+              render={({ field }: { field: any }) => (
+
+                <FormItem>
+
+
+
+                  <FormLabel>Company Name
+                  <FormControl>
+                    <Input placeholder="e.g. Acme Corporation" {...field} />"
+
+                  
+                  <FormMessage />
+
+                
+type FormValues = z.infer < typeof form_schema>;
+interface WorkExperienceItemFormProps {
+  // TODO: Implement
+}
+  initial_data?: WorkExperience;)
+  on_submit: (data: WorkExperience) => Promise < void>;,
+  on_cancel: () => void;
+export /**
+ * WorkExperienceItemForm - Function description;
+pr-12325
  */
 function WorkExperienceItemForm() {
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState (false);
@@ -100,6 +137,12 @@ function WorkExperienceItemForm() {
     default_values: {
       company_name: initial_data?.company_name || '',
       role_title: initial_data?.role_title || '',
+  const form = use_form < FormValues>({)
+    resolver: zod_resolver (form_schema),
+    default_values: {,"
+  company_name: initial_data?.company_name || ,
+      role_title: initial_data?.role_title || ,
+pr-12325
       start_date: initial_data?.start_date;
         ? new Date (initial_data.start_date);
         : new Date (),
@@ -109,6 +152,9 @@ function WorkExperienceItemForm() {
       is_current: initial_data?.is_current || false,
       description: initial_data?.description || '',
       location: initial_data?.location || '',
+      description: initial_data?.description || ,
+      location: initial_data?.location || ,
+pr-12325
     },
   });
   const { is_submitting } = form.form_state;
@@ -119,6 +165,9 @@ function WorkExperienceItemForm() {
     // Create a properly typed WorkExperience object with all required fields;
     const work_experience: WorkExperience = {
       id: initial_data?.id,
+    const work_experience: WorkExperience = {,
+  id: initial_data?.id,
+pr-12325
       company_name: values.company_name, // Required;
       role_title: values.role_title, // Required;
       start_date: values.start_date, // Required;
@@ -133,6 +182,11 @@ function WorkExperienceItemForm() {
     form.setValue('description', content, { shouldDirty: true })
     setIsEnhancementDialogOpen(false)
   }
+    await onSubmit(workExperience)
+  const handleAIEnhancement = (content: string) => {
+    form.setValue('description', content, { shouldDirty: true })
+    setIsEnhancementDialogOpen(false)
+pr-12325
 
 
 import { useState } from 'react';
@@ -152,6 +206,7 @@ import {;
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import {;
+pr-12325
   Popover,;
   PopoverContent,;
   PopoverTrigger,;
@@ -161,7 +216,6 @@ import { cn } from '@/lib/utils';
 import { Switch } from '@/components/ui/switch';
 import { format } from 'date-fns';
 import { CalendarIcon, Loader2 } from 'lucide-react';
-<<<<<<< HEAD
 import { AIEnhancementButton } from '@/components/ai-enhancement/AIEnhancementButton';
 import { AIEnhancementDialog } from '@/components/ai-enhancement/AIEnhancementDialog';
 // Define form schema;
@@ -190,7 +244,6 @@ export function WorkExperienceItemForm(): any ({;
 }: WorkExperienceItemFormProps) {;
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false);
 
-=======
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",;
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",;
 // Define form schema;
@@ -199,6 +252,15 @@ const formSchema = z.object({;
   role_title: z.string().min(1, "Role title is required"),;
   start_date: z.date({;
     required_error: "Start date is required"}),;
+import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",;""
+import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",;"
+// Define form schema;
+const formSchema = z.object({;)"
+  company_name: z.string().min(1, "Company name is required"),;""
+  role_title: z.string().min(1, "Role title is required"),;"
+  start_date: z.date({;,)"
+  required_error: "Start date is required"}),;"
+pr-12325
   end_date: z.date().optional(),;
   is_current: z.boolean().default(false),;
   description: z.string().optional(),;
@@ -215,12 +277,10 @@ export function WorkExperienceItemForm({;
   onSubmit,;
   onCancel}: WorkExperienceItemFormProps) {;
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false),;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Set up form;
   const form = useForm<FormValues>({;
     resolver: zodResolver(formSchema),;
     defaultValues: {;
-<<<<<<< HEAD
       company_name: initialData?.company_name || '',;
       role_title: initialData?.role_title || '',;
       start_date: initialData?.start_date;
@@ -258,7 +318,6 @@ export function WorkExperienceItemForm({;
 
   const handleAIEnhancement = (content: string) => {;
     form && form.setValue('description', content, { shouldDirty: true });
-=======
       company_name: initialData?.company_name || "",;
       role_title: initialData?.role_title || "",;
       start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),;
@@ -286,13 +345,11 @@ export function WorkExperienceItemForm({;
   },;
   const handleAIEnhancement = (content: string) => {;
     form.setValue("description", content, { shouldDirty: true }),;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     setIsEnhancementDialogOpen(false);
   };
   return (
     <>;
       <Form {...form}>;
-<<<<<<< HEAD
         <form
           onSubmit={form && form.handleSubmit(handleFormSubmit)}
           className='space-y-6'>;
@@ -304,7 +361,6 @@ export function WorkExperienceItemForm({;
                   <FormLabel>Company Name</FormLabel>;
                   <FormControl>;
                     <Input placeholder='e && e.g. Acme Corporation' {...field} />;
-=======
         <form onSubmit={form.handleSubmit(handleFormSubmit)} className="space-y-6">;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
             <FormField;
@@ -315,7 +371,6 @@ export function WorkExperienceItemForm({;
                   <FormLabel>Company Name</FormLabel>;
                   <FormControl>;
                     <Input placeholder="e.g. Acme Corporation" {...field} />;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   </FormControl>;
                   <FormMessage />;
                 </FormItem>;
@@ -488,6 +543,140 @@ export function WorkExperienceItemForm({;
                             !field.value && 'text - muted - foreground')}                        >;
                           {field.value ? (
                             format (field.value, 'MMM yyyy')) : (
+</typeof>
+  onSubmit: (data: WorkExperience) => Promise<void>,;
+</void>
+  const form = useForm<FormValues>({;
+
+    <>;
+      <Form {...form}>;
+)"
+        <form onSubmit={form.handleSubmit(handleFormSubmit)} className="space-y-6">;"
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;"
+              control={form.control}"
+              name="company_name";"
+              render={({ field }: { field: any }) => (;
+
+                <FormItem>;
+
+                  <FormLabel>Company Name;
+                  <FormControl>;
+                    <Input placeholder="e.g. Acme Corporation" {...field} />;"
+
+                  ;
+                  <FormMessage />;
+
+              control={form && form.control}"
+              name='role_title)
+              render={({ field }: { field: any }) => (                <FormItem>;
+
+                  <FormLabel>Role Title;
+
+                    <Input placeholder='e && e.g. Senior Developer' {...field} />;
+
+
+          </div>;
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
+              control={form && form.control}
+              name='location)
+
+                  <FormLabel>Location;
+
+                    <Input;)
+                      placeholder='e && e.g. New York, NY (Remote)
+  return (
+
+
+        <form;)
+          on_submit={form.handle_submit (handleFormSubmit)}
+          className='space - y-6';
+        >;
+</form>
+          <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
+              name='company_name';
+
+                  <FormLabel > Company Name;
+
+                    <Input placeholder='e.g. Acme Corporation' {...field} />;
+
+                )}
+
+            />;
+
+
+
+
+                  <FormLabel>Role Title
+
+                    <Input placeholder="e.g. Senior Developer" {...field} />"
+
+                  
+
+                
+
+
+
+
+
+
+                  <FormLabel>Location
+                    <Input placeholder="e.g. New York, NY (Remote)" {...field} />"
+
+                  
+
+                
+              name="is_current""
+                <FormItem className="flex flex-col">"
+
+                  <FormLabel>Current Position"
+                  <div className="flex items-center gap-2 h-10">"
+                    <Switch;"
+                      aria-label="Current position""
+                      checked={field.value}
+
+                      onCheckedChange={field.onChange}"
+                      id="current-position""
+                    />
+                    <label htmlFor="current-position" className="text-sm text-muted-foreground">"
+</label>
+
+                
+          </div>;"
+              name="start_date"")
+
+                  <FormLabel>Start Date
+
+
+                  <Popover>
+
+                    <PopoverTrigger asChild>
+
+
+                        <Button;"
+                          variant={"outline"}"
+                          className={cn("
+                            "w-full pl-3 text-left font-normal",""
+                            !field.value && "text-muted-foreground"")
+                        >
+
+                            <span>Select date</span>
+                            <span>Select date</span>;
+              name='start_date';
+
+                <FormItem className='flex flex - col'>                  <FormLabel > Start Date;
+
+                  <Popover>;
+
+                    <PopoverTrigger as_child>;
+
+
+                        <Button;
+                          variant={'outline'}
+                          className={cn (
+                            'w - full pl - 3 text - left font - normal',')
+                            !field.value && 'text - muted - foreground')}                        >;
+
+pr-12325
                             <span > Select date</span>)}
                           <CalendarIcon;
                             className='ml - auto h - 4 w - 4 opacity - 50';
@@ -533,7 +722,6 @@ export function WorkExperienceItemForm({;
                       <PopoverTrigger asChild>;
                         <FormControl>;
                           <Button
-<<<<<<< HEAD
                             variant={'outline'}
                             className={cn(
 
@@ -838,7 +1026,6 @@ export function WorkExperienceItemForm({;
         }}
         initialContent={form.getValues('description') |''}      />
 
-=======
 import { useState  } from 'react';
 import { zodResolver } from "@hookform/resolvers/zod",
 import { useForm } from "react-hook-form",
@@ -878,7 +1065,7 @@ const formSchema = null;
           context: `${watchRoleTitle} at ${watchCompanyName}`}}
         initialContent={form.getValues("description") || ""}
       />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     </>
   )
 is current: z.boolean () .default (false)
@@ -960,7 +1147,6 @@ setIsEnhancementDialogOpen (false);
 }<CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" aria - hidden="true" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w - auto p - 0" align="start" > <Calendar /> </PopoverContent> </Popover> <FormMessage /> </FormItem>);
 }/> {
   !watchIsCurrent && (<FormField control= {
-<<<<<<< HEAD
   form.control;
 }<FormLabel > End Date</FormLabel> <Popover> <PopoverTrigger as_child> <FormControl> <Button) : (<span > Select date</span>) ";
 }<CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" aria - hidden="true" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w - auto p - 0" align="start" > <Calendar /> </PopoverContent> </Popover> <FormMessage /> </FormItem>);
@@ -989,9 +1175,6 @@ setIsEnhancementDialogOpen (false);
   )
 }
 ;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   form.control
 }<FormLabel>End Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Select date</span>) "
 }<CalendarIcon className="ml-auto h-4 w-4 opacity-50" aria-hidden="true" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar /> </PopoverContent> </Popover> <FormMessage /> </FormItem>)
@@ -1002,4 +1185,31 @@ setIsEnhancementDialogOpen (false);
 }/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (<>Save</>)
 }</Button> </div> </form> </Form> <AIEnhancementDialog /> </>)
 }"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+                          <CalendarIcon className="ml-auto h-4 w-4 opacity-50" aria-hidden="true" />"
+
+                        
+                      
+                    <PopoverContent className="w-auto p-0" align="start">"
+
+                      <Calendar;"
+                        mode="single""
+                        selected={field.value}
+                        onSelect={field.onChange}
+                        initialFocus;"
+                        captionLayout="dropdown-buttons""
+                        fromYear={1990}
+                        toYear={new Date().getFullYear()}
+
+
+
+                name='end_date
+
+                  <FormItem className='flex flex-col'>                    <FormLabel>End Date;
+
+
+                      <PopoverTrigger asChild>;
+
+
+                          <Button;)
+pr-12325

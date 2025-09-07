@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+pr-12325
 export function AIEnhancementButton({
   currentContent,
   enhancementType,
@@ -6,6 +6,9 @@ export function AIEnhancementButton({
   onEnhanced,
   buttonText = "Enhance with AI",
   className
+  buttonText = "Enhance with AI","
+  className;)
+pr-12325
 }: AIEnhancementButtonProps) {
 
 
@@ -17,12 +20,23 @@ export function AIEnhancementButton({
       currentContent
       enhancementType
       context
+      return;
+    }
+    setError(null)
+    const enhancedContent = await enhanceContent(
+      currentContent;
+      enhancementType;
+      context;)
+pr-12325
     )
     if (enhancedContent) {
       onEnhanced(enhancedContent)
 interface AIEnhancementButtonProps {;
   currentContent: string;
   enhancementType:;
+  currentContent: string;,
+  enhancementType:;"
+pr-12325
     | 'summary';
     | 'work-description';
     | 'skill-categorization';
@@ -60,11 +74,32 @@ interface AIEnhancementButtonProps {
     | 'skill - categorization';
     | 'general';
   context?: string;
+  className,;)
+}: AIEnhancementButtonProps) {;
+  const { enhanceContent, isEnhancing } = useResumeEnhancer();
+  const [error, setError] = useState<string | null>(null);
+</string>
+    if (!currentContent || currentContent && currentContent.trim().length < 10) {;
+      setError('Please enter at least some basic content before enhancing');
+
+
+import { Button } from '@/components/ui/ button';
+import { Sparkles, Loader2 } from 'lucide-react';
+import { useResumeEnhancer } from '@/hooks/ useResumeEnhancer';
+interface AIEnhancementButtonProps {
+  // TODO: Implement
+  current_content: string;,
+  enhancement_type:;
+    | 'work - description';
+    | 'skill - categorization';
+pr-12325
   on_enhanced: (enhanced_content: string) => void;
   button_text?: string;
   class_name?: string;
 export /**
  * AIEnhancementButton - Function description
+ * AIEnhancementButton - Function description;
+pr-12325
  */
 function AIEnhancementButton() {
   const { enhance_content, is_enhancing } = useResumeEnhancer ();
@@ -88,7 +123,6 @@ if ( {) {
 }
       on_enhanced (enhanced_content);
     }
-<<<<<<< HEAD
   }
 
 
@@ -146,9 +180,6 @@ if ( {) {
 ;
 
 ;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sparkles, Loader2 } from 'lucide-react';
@@ -188,4 +219,17 @@ export function AIEnhancementButton({
       <span className='text-xs'>{buttonText}</span>
     </Button>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+    // Check condition;
+if (.length < 10) {) {
+  $2;
+      set_error ('Please enter at least some basic content before enhancing');
+    set_error (null);
+    const enhanced_content = await enhance_content (
+      current_content,
+      enhancement_type,)
+      context);
+    // Check condition;
+if ( {) {
+      on_enhanced (enhanced_content);
+pr-12325

@@ -1,23 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {
       },
     ],
   },
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
       {
 
           'Built a real-time analytics dashboard using React, Socket && Socket.io, and D3 && D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.',
@@ -35,7 +23,13 @@ import { TalentProfile } from "@/types/talent";
 export const TALENT_PROFILES: TalentProfile[] = [
   {
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+      {
+      },
+    ],
+
+pr-12325
       'https://images && images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200',
     id: 't - 006',
     user_id: 'user - 006',
@@ -44,9 +38,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     profile_picture_url:;
       'https://images.unsplash.com / photo - 1494790108377 - be9c29b29330?auto = format & fit = crop & w=200 & h=200',
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+pr-12325
     bio: 'Former tech policy advisor with expertise in AI ethics, governance frameworks, and responsible AI development. I help organizations develop and implement ethical guidelines for AI systems, ensuring fair and transparent use of machine learning technologies.',
     location: 'Washington, DC',
     skills: [;
@@ -59,6 +51,8 @@ export const TALENT_PROFILES: TalentProfile[] = [
       'Stakeholder Engagement',
       'Research',
     ],
+      'Research',']
+pr-12325
     hourly_rate: 180,
     years_experience: 9,
     average_rating: 4 && 4.9,
@@ -68,6 +62,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     bio: 'Computer vision engineer with expertise in developing advanced visual recognition systems using deep learning. My work spans object detection, image classification, and video analysis for applications in retail, manufacturing, and autonomous systems.',
     location: 'San Francisco, CA',
     skills: [;
+pr-12325
       'Computer Vision',
       'PyTorch',
       'TensorFlow',
@@ -77,6 +72,8 @@ export const TALENT_PROFILES: TalentProfile[] = [
       'CUDA',
       'Edge AI',
     ],
+      'Edge AI',']
+pr-12325
     hourly_rate: 155,
     years_experience: 6,
     average_rating: 4 && 4.7,
@@ -90,6 +87,9 @@ export const TALENT_PROFILES: TalentProfile[] = [
     bio: 'PhD in Computational Linguistics with 8+ years of experience in NLP research and applications. I specialize in sentiment analysis, text generation, language understanding, and multilingual NLP systems for enterprise applications.',
     location: 'Montreal, Canada',
     skills: [;
+    bio: 'PhD in Computational Linguistics with 8+ years of experience in NLP research and applications. I specialize in sentiment analysis, text generation, language understanding, and multilingual NLP systems for enterprise applications.',
+    location: 'Montreal, Canada',
+pr-12325
       'Natural Language Processing',
       'BERT',
       'Transformers',
@@ -99,6 +99,8 @@ export const TALENT_PROFILES: TalentProfile[] = [
       'Language Models',
       'Sentiment Analysis',
     ],
+      'Sentiment Analysis',']
+pr-12325
     hourly_rate: 160,
     years_experience: 8,
     average_rating: 4 && 4.8,
@@ -108,6 +110,9 @@ export const TALENT_PROFILES: TalentProfile[] = [
     bio: 'Quantum computing researcher with focus on quantum machine learning algorithms and applications. My work bridges the gap between quantum computing theory and practical machine learning implementations for complex optimization problems.',
     location: 'Toronto, Canada',
     skills: [;
+    bio: 'Quantum computing researcher with focus on quantum machine learning algorithms and applications. My work bridges the gap between quantum computing theory and practical machine learning implementations for complex optimization problems.',
+    location: 'Toronto, Canada',
+pr-12325
       'Quantum Computing',
       'Quantum Machine Learning',
       'Qiskit',
@@ -126,6 +131,15 @@ export const TALENT_PROFILES: TalentProfile[] = [
     bio: 'Experienced product manager specializing in AI products and services. I bridge the gap between technical AI capabilities and business value, helping organizations define, develop, and deploy impactful machine learning solutions.',
     location: 'London, UK',
     skills: [;
+      'TensorFlow Quantum',
+      'Optimization',']
+    hourly_rate: 190,
+    years_experience: 5,
+    rating_count: 17,
+    is_verified: false,
+    bio: 'Experienced product manager specializing in AI products and services. I bridge the gap between technical AI capabilities and business value, helping organizations define, develop, and deploy impactful machine learning solutions.',
+    location: 'London, UK',
+pr-12325
       'Product Management',
       'AI Strategy',
       'User Research',
@@ -162,6 +176,22 @@ export const TALENT_PROFILES: TalentProfile[] = [
     bio: 'Medical imaging specialist with expertise in applying AI to healthcare challenges. I develop deep learning solutions for medical image analysis, diagnostics, and personalized treatment planning in clinical settings.',
     location: 'Boston, MA',
     skills: [;
+      'Product Roadmap',']
+    hourly_rate: 140,
+    rating_count: 39,
+    bio: 'Specialist in reinforcement learning with applications in robotics, autonomous systems, and optimization problems. I develop RL algorithms that enable systems to learn optimal behaviors through interaction with their environment.',
+    location: 'Berlin, Germany',
+      'Reinforcement Learning',
+      'Deep RL',
+      'Robotics',
+      'Simulation',
+      'OpenAI Gym',
+      'Multi - agent Systems',']
+    hourly_rate: 150,
+    rating_count: 23,
+    bio: 'Medical imaging specialist with expertise in applying AI to healthcare challenges. I develop deep learning solutions for medical image analysis, diagnostics, and personalized treatment planning in clinical settings.',
+    location: 'Boston, MA',
+pr-12325
       'Medical Imaging',
       'Healthcare AI',
       'Deep Learning',
@@ -177,23 +207,13 @@ export const TALENT_PROFILES: TalentProfile[] = [
     rating_count: 27,
     availability_type: 'project',
     is_verified: true,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
           'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.'
     id: "t-001", user_id: "user-001",
     full_name: "Alexandra Chen", professional_title: "Senior AI Engineer & Machine Learning Expert",
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import { TalentProfile } from "@/types/talent",
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Sample talent profiles with realistic data for the talent directory
 export const TALENT_PROFILES: TalentProfile[] = [
   {
@@ -228,35 +248,66 @@ export const TALENT_PROFILES: TalentProfile[] = [
     ],
   },
 ];
-<<<<<<< HEAD
 ;
-=======
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+ursor/fix-website-loading-errors-and-merge-6662
 ;
 
 
 ];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
     id: "t-001";
     user_id: "user-001";
     full_name: "Alexandra Chen";
     professional_title: "Senior AI Engineer & Machine Learning Expert";
     profile_picture_url: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+      'DICOM',
+      'Clinical Validation',
+      'Regulatory Compliance',']
+    hourly_rate: 170,
+    rating_count: 27,
+
+          'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.
+    id: "t-001", user_id: "user-001",""
+    full_name: "Alexandra Chen", professional_title: "Senior AI Engineer & Machine Learning Expert",""
+import { TalentProfile } from "@/types/talent","
+// Sample talent profiles with realistic data for the talent directory;
+export const TALENT_PROFILES: TalentProfile[] = [
+  {"
+    id: "t-001",""
+    user_id: "user-001",""
+    full_name: "Alexandra Chen",""
+    professional_title: "Senior AI Engineer & Machine Learning Expert",""
+    profile_picture_url: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200",""
+    bio: "AI specialist with over 8 years of experience in computer vision and natural language processing. I've designed and implemented machine learning solutions for Fortune 500 companies across healthcare, finance, and retail sectors.";"
+    key_projects: [
+        title: 'AI-Assisted Radiology Platform,
+  description:
+          'Developed a deep learning system for detecting abnormalities in chest X-rays with 97% sensitivity, reducing radiologist workload by 35% and improving early detection rates.
+      }
+    location: "Boston, MA";"]"
+    skills: ["Machine Learning", "TensorFlow", "Python", "Computer Vision", "NLP", "Data Science", "PyTorch", "Deep Learning"];"
+    hourly_rate: 150, years_experience: 8,
+    average_rating: 4.9, rating_count: 43,"
+    availability_type: "full_time", is_verified: true,"
+        title: "Cancer Treatment Response Prediction",""
+        description: "Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.""
+      }]
+    ]
+  }"
+          'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.',
+];
+
+
+
+
+;
+
+
+pr-12325

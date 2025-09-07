@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -28,7 +27,6 @@ const Onboarding: NextPage = () => {
   return (
 
     <div className="space-y-6">
-=======
 const steps = ['Account', 'Profile', 'Preferences', 'Preview'];
 
 const Onboarding: NextPage = () => {
@@ -39,18 +37,16 @@ const next = () => setStep(s => Math.min(s + 1, steps.length - 1));
 
   return (
     <div className='space-y-6'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       <Head>
         <title>Onboarding - Zion</title>
       </Head>
 
-<<<<<<< HEAD
       <h1 className="text-2xl font-semibold">Get Started</h1>
 
       <div className="flex items-center gap-2 text-sm flex-wrap">
         {steps.map((label, i) => (
 
-=======
 <h1 className='text-2xl font-semibold'>Get Started</h1>
 
       <div className='flex items-center gap-2 text-sm flex-wrap'>
@@ -71,7 +67,7 @@ const next = () => setStep(s => Math.min(s + 1, steps.length - 1));
         {step === 3 && (
           <div>Preview your profile/listing before going live.</div>
         )}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
 
       <div className="flex gap-2">
@@ -125,12 +121,10 @@ const next = () => setStep(s => Math.min(s + 1, steps.length - 1));
 }
 ;
 export default Onboarding;
-<<<<<<< HEAD
 
   )
 },
 export default Onboarding,
 
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

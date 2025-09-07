@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
 
   return (
@@ -38,7 +37,6 @@
               onCancel={() => {
                 setShowAddProject(false)
                 setEditingProject(null) }}
-=======
 import { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -50,19 +48,17 @@ import { usePortfolio } from '@/hooks/usePortfolio';
 
 export function PortfolioBuilder() {
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <ProjectForm
               project={editingProject || undefined}
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
               onCancel={() => {
-<<<<<<< HEAD
                 setShowAddProject(false)
                 setEditingProject(null);                setEditingProject(null)
 
-=======
                 setShowAddProject(false);
 setEditingProject(null);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 setEditingProject(null)
           className='gap-2';
           disabled={showAddProject || !!editingProject}        >;
@@ -180,7 +176,6 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
               }}
 
       )}
-<<<<<<< HEAD
 
       {/* Projects List */}
       {projects.length > 0 ? (
@@ -204,7 +199,6 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
                 <Button 
                   onClick={() => setShowAddProject(true)} 
                   className="mt-2"
-=======
 {/* Projects List */}
       {projects.length > 0 ? (
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
@@ -241,7 +235,7 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
                 <Button
                   onClick={() => setShowAddProject(true)}
                   className='mt-2'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   Add Your First Project
                 </Button>
@@ -250,7 +244,6 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
           </Card>
         )
       )}
-<<<<<<< HEAD
 
                   className='mt-2'                >            <CardContent>;
               <div className="flex flex-col items-center gap-4">;
@@ -325,8 +318,7 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
   );
 }
 ;
-=======
     </div>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

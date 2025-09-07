@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 
@@ -110,7 +109,6 @@ export default function ZionTechGroupPage() {
         <title>;
           About Zion Tech Group | Revolutionary Quantum AI & Autonomous Systems;
         </title>;
-=======
 import React from 'react',
 import Head from 'next/head';
 import Link from 'next/link';
@@ -149,7 +147,7 @@ export default function ZionTechGroupPage() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Navigation */}
         <nav className='bg-black/20 backdrop-blur-md border-b border-white/10'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -197,14 +195,12 @@ export default function ZionTechGroupPage() {
                   <Link href="/zion-tech-group" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium">
                     About
                   </Link>
-<<<<<<< HEAD
                   <Link href="/contact" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-=======
                   <Link
                     href='/contact'
                     className='text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
                   >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     Contact
                   </Link>
                 </div>
@@ -212,7 +208,6 @@ export default function ZionTechGroupPage() {
             </div>
           </div>
         </nav>
-<<<<<<< HEAD
         {/* Breadcrumb */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -227,7 +222,6 @@ export default function ZionTechGroupPage() {
                     <Link href="/" className="text-gray-300 hover:text-white">
                       <Home className="h-4 w-4" />
                       <span className="sr-only">Home</span>
-=======
         {/* Breadcrumb */}
 <div className='bg-black/20 border-b border-white/10'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4'>
@@ -238,26 +232,23 @@ export default function ZionTechGroupPage() {
                     <Link href='/' className='text-gray-300 hover:text-white'>
                       <Home className='h-4 w-4' />
                       <span className='sr-only'>Home</span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     </Link>
                   </div>
                 </li>
                 <li>
-<<<<<<< HEAD
-=======
 <div className='flex items-center'>
                     <ChevronRight className='h-4 w-4 text-gray-400' />
                     <span className='ml-4 text-sm font-medium text-white'>
                       About Zion Tech Group
                     </span>
                   </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </li>
               </ol>
             </nav>
           </div>
         </div>
-<<<<<<< HEAD
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -275,7 +266,6 @@ export default function ZionTechGroupPage() {
               </h1>
               <p className="mt-3 max-w-md mx-auto text-base text-gray-300 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
                 We are the architects of tomorrow, building revolutionary quantum AI solutions and autonomous systems that will define the next decade of innovation.
-=======
         {/* Hero Section */}
 <div className='relative overflow-hidden py-24'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -347,7 +337,7 @@ export default function ZionTechGroupPage() {
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 These principles guide everything we do and shape the culture of
                 our organization.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
             </div>
           </div>
@@ -459,7 +449,6 @@ export default function ZionTechGroupPage() {
                 <h3 className='text-xl font-semibold text-white mb-2'>
                   Future-Focused
                 </h3>
-<<<<<<< HEAD
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Rocket className="h-8 w-8 text-white" />
@@ -467,22 +456,19 @@ export default function ZionTechGroupPage() {
                 <h3 className="text-xl font-semibold text-white mb-2">Future-Focused</h3>
                 <p className="text-gray-300">
                   We don't just adapt to change, we anticipate it and create the technologies that will define tomorrow.
-=======
                 <p className='text-gray-300'>
                   We don't just adapt to change; we anticipate it and create the
                   technologies that will define tomorrow.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>
               </div>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
                 <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Brain className="h-6 w-6 text-white" />
-=======
         {/* Technology Stack Section */}
 <div className='py-16 bg-black/20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -499,7 +485,7 @@ export default function ZionTechGroupPage() {
               <div className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center'>
                 <div className='w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4'>
                   <Brain className='h-6 w-6 text-white' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Quantum Computing</h3>
                 <p className="text-gray-300 text-sm">
@@ -528,24 +514,21 @@ export default function ZionTechGroupPage() {
 
 
                 </div>
-<<<<<<< HEAD
                 <h3 className="text-lg font-semibold text-white mb-2">Cybersecurity</h3>
                 <p className="text-gray-300 text-sm">
                   Quantum-resistant encryption and AI-powered threat detection systems.
-=======
                 <h3 className='text-lg font-semibold text-white mb-2'>
                   Cybersecurity
                 </h3>
                 <p className='text-gray-300 text-sm'>
                   Quantum-resistant encryption and AI-powered threat detection
                   systems.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>
               </div>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
 
 
 
@@ -577,7 +560,6 @@ export default function ZionTechGroupPage() {
               <h2 className="text-3xl font-bold text-white mb-4">Our Leadership Team</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Meet the visionaries and experts who are driving innovation at Zion Tech Group.
-=======
         {/* Company Stats Section */}
 <div className='py-16'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -588,7 +570,7 @@ export default function ZionTechGroupPage() {
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Our impact in numbers - showcasing the scale and reach of our
                 technology solutions.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
             </div>
 
@@ -597,12 +579,10 @@ export default function ZionTechGroupPage() {
                 <div className="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <User className="h-10 w-10 text-white" />
                 </div>
-<<<<<<< HEAD
                 <h3 className="text-xl font-semibold text-white mb-2">Kleber</h3>
                 <p className="text-purple-400 mb-2">CEO & Founder</p>
                 <p className="text-gray-300 text-sm">
                   Visionary leader with over a decade of experience in quantum computing and AI innovation.
-=======
                 <div className='text-gray-300'>Global Clients</div>
               </div>
               <div className='text-center'>
@@ -650,7 +630,7 @@ export default function ZionTechGroupPage() {
                 <p className='text-gray-300 text-sm'>
                   Visionary leader with over a decade of experience in quantum
                   computing and AI innovation.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>
               </div>
                 </div>
@@ -661,12 +641,10 @@ export default function ZionTechGroupPage() {
                 </p>
               </div>
                 </div>
-<<<<<<< HEAD
                 <h3 className="text-xl font-semibold text-white mb-2">Marcus Rodriguez</h3>
                 <p className="text-purple-400 mb-2">Chief Security Officer</p>
                 <p className="text-gray-300 text-sm">
                   Cybersecurity specialist with expertise in quantum-resistant encryption and threat detection.
-=======
                 <h3 className='text-xl font-semibold text-white mb-2'>
                   Marcus Rodriguez
                 </h3>
@@ -674,20 +652,18 @@ export default function ZionTechGroupPage() {
                 <p className='text-gray-300 text-sm'>
                   Cybersecurity specialist with expertise in quantum-resistant
                   encryption and threat detection.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>
               </div>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-=======
         {/* CTA Section */}
 <div className='bg-purple-600'>
           <div className='max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8'>
             <h2 className='text-3xl font-extrabold text-white sm:text-4xl'>
               <span className='block'>Ready to Join the Future?</span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </h2>
             <p className="mt-4 text-lg leading-6 text-purple-100">
               Discover how Zion Tech Group can transform your business with revolutionary technology solutions.
@@ -697,25 +673,21 @@ export default function ZionTechGroupPage() {
                 Get Started Today
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
-<<<<<<< HEAD
               <Link href="/contact" className="inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-purple-700">
-=======
               <Link
                 href='/contact'
                 className='inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-purple-700'
               >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 Schedule Consultation
               </Link>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
               </Link>;
             </div>;
           </div>;
         </div>;
-=======
         {/* Footer */}
 <footer className='bg-black/40'>
           <div className='max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8'>
@@ -727,7 +699,7 @@ export default function ZionTechGroupPage() {
                 <p className='text-gray-300 text-base'>
                   Leading the future with revolutionary quantum AI solutions and
                   autonomous systems.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>
               </div>
               <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
@@ -736,50 +708,42 @@ export default function ZionTechGroupPage() {
                     <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Solutions</h3>
                     <ul className="mt-4 space-y-4">
                       <li>
-<<<<<<< HEAD
                         <Link href="/zion-tech-group" className="text-base text-gray-300 hover:text-white">
-=======
                         <Link
                           href='/zion-tech-group'
                           className='text-base text-gray-300 hover:text-white'
                         >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                           Quantum AI
                         </Link>
                       </li>
                       <li>
-<<<<<<< HEAD
                         <Link href="/zion-tech-group" className="text-base text-gray-300 hover:text-white">
-=======
 <Link
                           href='/zion-tech-group'
                           className='text-base text-gray-300 hover:text-white'
                         >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                           Autonomous Systems
                         </Link>
                       </li>
                       <li>
-<<<<<<< HEAD
                         <Link href="/zion-tech-group" className="text-base text-gray-300 hover:text-white">
-=======
 <Link
                           href='/zion-tech-group'
                           className='text-base text-gray-300 hover:text-white'
                         >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                           Technology Platforms
                         </Link>
                       </li>
                     </ul>
                   </div>
-<<<<<<< HEAD
                   <div className="mt-12 md:mt-0">
                     <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Company</h3>
                     <ul className="mt-4 space-y-4">
                       <li>
                         <Link href="/zion-tech-group" className="text-base text-gray-300 hover:text-white">
-=======
 <div className='mt-12 md:mt-0'>
                     <h3 className='text-sm font-semibold text-gray-400 tracking-wider uppercase'>
                       Company
@@ -790,19 +754,17 @@ export default function ZionTechGroupPage() {
                           href='/zion-tech-group'
                           className='text-base text-gray-300 hover:text-white'
                         >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                           About
                         </Link>
                       </li>
                       <li>
-<<<<<<< HEAD
                         <Link href="/contact" className="text-base text-gray-300 hover:text-white">
-=======
 <Link
                           href='/contact'
                           className='text-base text-gray-300 hover:text-white'
                         >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                           Contact
                         </Link>
                       </li>
@@ -811,19 +773,16 @@ export default function ZionTechGroupPage() {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-=======
 <div className='mt-12 border-t border-gray-700 pt-8'>
               <p className='text-base text-gray-400 xl:text-center'>
                 &copy; 2025 Zion Tech Group. All rights reserved.
               </p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
         </footer>
       </div>
     </>
-<<<<<<< HEAD
 
                           className='text-base text-gray-300 hover:text-white'>                          Contact;
                   <div className='mt - 12 md:mt - 0'>;
@@ -1257,6 +1216,5 @@ export default function ZionTechGroupPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

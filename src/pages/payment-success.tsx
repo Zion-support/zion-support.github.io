@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useRouter } from 'next/router', // Changed from useNavigate
 import { CheckCircle2 } from 'lucide-react'
 import { useTranslation } from 'react-i18next',
@@ -65,7 +64,6 @@ export default function PaymentSuccess() {
             variant="outline"
             onClick={() => router.push('/')} // Changed to router.push
             className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
-=======
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/router'; // Changed from useNavigate
@@ -97,14 +95,13 @@ return (
             variant='outline'
             onClick={() => router.push('/')} // Changed to router.push
             className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             {t('errors.return_home')}
           </Button>
         </div>
       </div>
     </div>
-<<<<<<< HEAD
 
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">;
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">;
@@ -140,7 +137,6 @@ return (
         </div>;
       </div>;
     </div>;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -41,8 +40,7 @@ const RegisterPage = () => {;
 
 
       router.push ('/auth / login?registration_success = true');
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
     }
 
@@ -67,16 +65,14 @@ const RegisterPage = () => {;
               alt='Zion Tech'
               width={48}
               height={48}
-<<<<<<< HEAD
               on_error={(e) => {
                 const target = e.current_target as HTMLImageElement,
                 target.style.display = 'none';
 
-=======
               onError={e => {
                 const target = e.currentTarget as HTMLImageElement;
                 target.style.display = 'none';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               }}
               width={48  } catch (error) {
     console.error("Error:", error);
@@ -100,17 +96,15 @@ const RegisterPage = () => {;
             <h2 className='mt-6 text-center text-3xl font-extrabold text-gray-900'>
               Create your account
             </h2>
-<<<<<<< HEAD
             <p className="mt-2 text-center text-sm text-gray-600">
               Or{' '  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
             <p className='mt-2 text-center text-sm text-gray-600'>
               Or{' '}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <Link
                 href='/auth/login'
                 className='font-medium text-blue-600 hover:text-blue-500 underline'
@@ -120,18 +114,16 @@ const RegisterPage = () => {;
             </p>
           </div>
           <SignupForm onSuccess={handleSuccess} />
-<<<<<<< HEAD
           <div className="mt-6">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
                 <div className="w-full border-t border-gray-300" />
-=======
           {/* Social signup options */}
 <div className='mt-6'>
             <div className='relative'>
               <div className='absolute inset-0 flex items-center'>
                 <div className='w-full border-t border-gray-300' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
               <div className='relative flex justify-center text-sm'>
                 <span className='px-2 bg-gray-50 text-gray-500'>
@@ -145,7 +137,6 @@ const RegisterPage = () => {;
           <div className='text-center mt-4'>
             <p className='text-xs text-gray-500'>
               By creating an account, you agree to our{' '}
-<<<<<<< HEAD
               <Link href="/legal / terms" className="text - blue - 600 hover:text - blue - 500">;
                 Terms of Service;
               </Link>{' '}
@@ -168,7 +159,6 @@ const RegisterPage = () => {;
   }
 }
               <Link href="/legal/privacy" className="text-blue-600 hover: text-blue-500">
-=======
               <Link
                 href='/legal/terms'
                 className='text-blue-600 hover:text-blue-500'
@@ -180,7 +170,7 @@ const RegisterPage = () => {;
                 href='/legal/privacy'
                 className='text-blue-600 hover:text-blue-500'
               >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 Privacy Policy
               </Link>
             </p>
@@ -188,7 +178,6 @@ const RegisterPage = () => {;
         </div>
       </div>
     </>
-<<<<<<< HEAD
   )
 
 export default RegisterPage,;
@@ -263,8 +252,7 @@ export default RegisterPage,
 
 },
 
-=======
 );
 };
 export default RegisterPage;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

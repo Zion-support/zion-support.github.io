@@ -1,5 +1,4 @@
 import { Globe, MapPin } from 'lucide-react'
-<<<<<<< HEAD
 
 import {
   Tooltip
@@ -8,9 +7,8 @@ import {
   TooltipTrigger
 } from '@/components/ui/tooltip'
 
-=======
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 interface Instance {
   id: number;
   name: string;
@@ -18,7 +16,6 @@ interface Instance {
   lng: number;
   talent: number;
   governance: 'admin' | 'hybrid' | 'vote';
-<<<<<<< HEAD
   const [feed, setFeed] = useState<FeedItem[]>([])
   useEffect((,) => {
     const interval = setInterval((,) => {
@@ -150,7 +147,6 @@ export default function GlobalMapPage() {;
             {INSTANCES.map((i) => {
               const { x, y } = project(i.lat, i.lng),
               const color = i.governance === 'admin' ? 'bg-red-500' : i.governance === 'hybrid' ? 'bg-yellow-500' : 'bg-green-500',
-=======
   votesPassed: number;
   votesPending: number;
   region: string
@@ -194,7 +190,7 @@ export default function GlobalMapPage() {
 
   useEffect(() => {
     const interval = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               return (
                 <TooltipProvider key={i.id}>
                     <TooltipTrigger asChild>
@@ -232,7 +228,6 @@ export default function GlobalMapPage() {
               </ul>
             </section>
             <section>
-<<<<<<< HEAD
 
 ;
 }
@@ -248,7 +243,6 @@ export default function GlobalMapPage() {
         </div>;
       </main>;
 ;
-=======
               <h2 className='text-xl font-semibold mb-2'>Live Feed</h2>
               <ul className='space-y-1'>
                 {feed.map(f => (
@@ -262,4 +256,4 @@ export default function GlobalMapPage() {
       </main>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

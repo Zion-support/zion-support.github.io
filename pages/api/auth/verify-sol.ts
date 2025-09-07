@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
-=======
->>>>>>> pr-12243
+pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nacl from 'tweetnacl',;
 import bs58 from 'bs58',;
@@ -103,12 +96,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: e?.message || 'Verify failed' })
   };
 };
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
+pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nacl from 'tweetnacl';
 import bs58 from 'bs58';
@@ -139,15 +127,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const token = jwt.sign({ sub: publicKey, chain: 'sol' }, JWT_SECRET, { expiresIn: '7d' })
     res.setHeader('Set-Cookie', `web3-session=${token}, HttpOnly, Path=/, SameSite=Lax, Max-Age=${7 * 24 * 3600}`)
-=======
 const JWT_SECRET = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(200).json({ ok: true })
   } catch (e: any) {
     return res.status(500).json({ error: e?.message || 'Verify failed' })
   }
-<<<<<<< HEAD
 }
-=======
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Phone, ShieldCheck, Clock } from 'lucide-react'
 export default function ITSupportPage() {
   const benefits = [
@@ -123,9 +122,8 @@ import { Phone, ShieldCheck, Clock } from 'lucide-react';
 import React from "react";
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
 
-=======
   const benefits = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <ServiceLandingTemplate
       subtitle="Reliable assistance to keep your business technology operating smoothly."
@@ -141,7 +139,6 @@ import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemp
       ctaLink="/request-quote"
     />
   )
-<<<<<<< HEAD
 import React from "react",;
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",;
 import { Phone, ShieldCheck, Clock } from 'lucide-react';
@@ -162,6 +159,5 @@ export default function ITSupportPage() {;
   );
 }
 ;
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

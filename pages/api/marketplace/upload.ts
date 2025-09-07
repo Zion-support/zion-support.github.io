@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next",
-=======
->>>>>>> pr-12243
+pr-12243
 import type { NextApiRequest, NextApiResponse } from "next"
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import type { NextApiRequest, NextApiResponse } from "next",;
 ;
@@ -20,27 +12,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from "next"
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
   if (req.method !== "POST") return res.status(405).json({ ok: false, error: "Method not allowed" })
-=======
-<<<<<<< HEAD
   if (req.method !== "POST") return res.status(405).json({ ok: false, error: "Method not allowed" }),
-<<<<<<< HEAD
-=======
   if (req.method !== "POST") return res.status(405).json({ ok: false, error: "Method not allowed" });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const { name, url } = req.body || {},
   if (!name) return res.status(400).json({ ok: false, error: "Missing name" }),
   // Echo back URL, real impl would upload to storage (Supabase, S3, etc.)
   return res.status(201).json({ ok: true, file: { name, url: url || null } })
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 export default function handler(req, res) {
   try {
   if (req.method !== "POST") return res.status( ok: false, error: "Method not allowed" ).json({$2});
   const { name, url } = req.body || {};
   if (!name) return res.status(400).json({ ok: false, error: "Missing name" });
-<<<<<<< HEAD
   // Echo back URL, real impl would upload to storage (Supabase, S3, etc.);
   return res.status(201).json({ ok: true, file: { name, url: url || null } });
   } catch (error) {
@@ -61,15 +46,11 @@ export default function handler(req, res) {
 }
 
 
-=======
 };
-=======
   if (req.method !== "POST") return res.status(405).json({ ok: false, error: "Method not allowed" })
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+main
   // Echo back URL, real impl would upload to storage (Supabase, S3, etc.)
   return res.status(201).json({ ok: true, file: { name, url: url |null } })
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> pr-12243
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243

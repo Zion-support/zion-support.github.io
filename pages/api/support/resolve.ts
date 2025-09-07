@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { readJson, writeJson } from '../../../utils/fsDb',
 ;
@@ -15,8 +8,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const requests = readJson<any[]>('support/requests.json', []),
   const idx = requests.findIndex((r) => r.id === id),
-=======
->>>>>>> pr-12243
+pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJson, writeJson } from '../../../utils/fsDb'
 ;
@@ -30,7 +22,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (idx >= 0) {
     requests[idx].status = 'resolved'
     requests[idx].resolvedAt = Date.now()
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJson, writeJson } from '[^']*';
 
@@ -39,11 +30,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { id } = req.body as { id: string },
   if (!id) return res.status(400).json({ error: 'id required' });
   const requests = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     writeJson('support/requests.json', requests)
   }
   return res.status(200).json({ ok: true })
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -115,6 +105,4 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

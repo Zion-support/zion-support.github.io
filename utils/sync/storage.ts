@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
 let state: SyncState = { ...defaultState }
 export function readState(): SyncState {
@@ -7,9 +6,6 @@ export function readState(): SyncState {
 export function updateState(updates: Partial<SyncState>): void {
   state = { ...state, ...updates }
 };
-=======
-<<<<<<< HEAD
-=======
 
 
     );
@@ -18,12 +14,9 @@ export function updateState(updates: Partial<SyncState>): void {
   return events;export function resetState(): void {
   state = { ...defaultState }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
 }
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
-<<<<<<< HEAD
 
 export function readState(): SyncState {;
   return { ...state };
@@ -151,10 +144,7 @@ export interface SyncConnection {
   createdAt: string;
   updatedAt: string;
 }
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export interface SyncMapping {
   id: string;
@@ -183,8 +173,28 @@ export interface SyncLog {
   timestamp: string;
 }
 
-<<<<<<< HEAD
 class SyncStorage {
+}
+
+
+export function readState(): SyncState {;
+  return { ...state };
+
+export function updateState(updates: Partial<SyncState>): void {;
+
+    filters?: Record<string, any>;
+</string>
+    mappings?: Record<string, string>;
+  metadata?: Record<string, any>;
+    credentials?: Record<string, string>;
+    options?: Record<string, any>;
+  fieldMappings: Record<string, string>;
+  transformations?: Array<{
+    field: string;,
+  type: 'format' | 'convert' | 'calculate' | 'filter';
+    config: Record<string, any>;
+  details?: Record<string, any>;
+pr-12325
   private jobs: Map<string, SyncJob> = new Map();
   private connections: Map<string, SyncConnection> = new Map();
   private mappings: Map<string, SyncMapping> = new Map();
@@ -244,7 +254,6 @@ class SyncStorage {
       new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
     );
   }
-<<<<<<< HEAD
 }
 // Singleton instance
 export const syncStorage = new SyncStorage();
@@ -384,13 +393,8 @@ export function formatDuration(startTime: string, endTime?: string): string {
     return `${seconds}s`;
   }
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
 const default_state: SyncState = {
   config: {
     instance_id: 'default - instance',
@@ -400,22 +404,15 @@ const default_state: SyncState = {
     paused: false;
   },
   lastSyncedAt: new Date ().toISOString ();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return events;export function resetState(): void {;
   state = { ...defaultState };
 }
 
-=======
 }
 
 }
 }
 }
-<<<<<<< HEAD
-=======
   const entity_id = getEntityId (event);
   const current_version = state.latestVersionByEntityId[entity_id] || 0;
   const is_newer = event.version > current_version;
@@ -423,7 +420,7 @@ const default_state: SyncState = {
   // Check condition
 if ( {) {
   $2
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
 }
     state.proposalMerkleById[entity_id] = event.merkle_root;
   }
@@ -462,8 +459,6 @@ export function filterEventsByScope (
 if (return events) {
   $2
 }
-<<<<<<< HEAD
-=======
   // Check condition
 if ( {) {
   $2
@@ -484,10 +479,54 @@ if ( {) {
   return events;export function reset_state (): void {
   state = { ...default_state }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+origin/cursor/expand-services-advertise-and-build-project-c28b
   return events;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+  async createJob(job: Omit<SyncJob, 'id' | 'createdAt' | 'updatedAt' | 'progress'>): Promise<SyncJob> {
+
+  async getJob(id: string): Promise<SyncJob | null> {
+
+  async updateJob(id: string, updates: Partial<SyncJob>): Promise<SyncJob | null> {
+
+  async deleteJob(id: string): Promise<boolean> {
+</boolean>
+  async getJobsByStatus(status: SyncJob['status']): Promise<SyncJob[]> {
+
+  async getJobsByType(type: SyncJob['type']): Promise<SyncJob[]> {
+
+  async getAllJobs(): Promise<SyncJob[]> {
+
+export async function createJob(job: Omit<SyncJob, 'id' | 'createdAt' | 'updatedAt' | 'progress'>): Promise<SyncJob> {
+
+export async function getJob(id: string): Promise<SyncJob | null> {
+
+export async function updateJob(id: string, updates: Partial<SyncJob>): Promise<SyncJob | null> {
+
+export async function startJob(id: string): Promise<boolean> {
+export async function completeJob(id: string, error?: string): Promise<boolean> {
+export async function updateJobProgress(id: string, progress: Partial<SyncJob['progress']>): Promise<boolean> {
+
+export async function createConnection(connection: Omit<SyncConnection, 'id' | 'createdAt' | 'updatedAt'>): Promise<SyncConnection> {
+
+export async function getConnection(id: string): Promise<SyncConnection | null> {
+
+export async function updateConnection(id: string, updates: Partial<SyncConnection>): Promise<SyncConnection | null> {
+
+export async function createMapping(mapping: Omit<SyncMapping, 'id' | 'createdAt' | 'updatedAt'>): Promise<SyncMapping> {
+
+export async function getMapping(id: string): Promise<SyncMapping | null> {
+
+export async function updateMapping(id: string, updates: Partial<SyncMapping>): Promise<SyncMapping | null> {
+
+export async function createLog(log: Omit<SyncLog, 'id' | 'timestamp'>): Promise<SyncLog> {
+
+export async function getLogsByJob(jobId: string, limit?: number): Promise<SyncLog[]> {
+
+): Omit<SyncJob, 'id' | 'createdAt' | 'updatedAt' | 'progress'> {
+
+): Omit<SyncConnection, 'id' | 'createdAt' | 'updatedAt'> {
+
+  fieldMappings: Record<string, string>
+): Omit<SyncMapping, 'id' | 'createdAt' | 'updatedAt'> {
+pr-12325

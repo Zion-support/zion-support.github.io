@@ -1,14 +1,12 @@
 import type { GetServerSideProps } from 'next';
 import ModerationModal from '../../components/admin/ModerationModal';
-<<<<<<< HEAD
 
 const fetcher = (url: string) => fetch(url).then(r => r.json())
-=======
 const fetcher = null;
     mutate()
   }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   const cookies = (req.headers.cookie |'').split(';').reduce(
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
@@ -43,7 +41,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
 import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -73,7 +70,6 @@ export default function ContentReviewPage(req, res) {
   try {
   const [filters, setFilters] = useState<{ status?: string, reason?: string, userEmail?: string, contentType?: string }>({ status: 'pending' }),;
   const query = useMemo(() => {;
-=======
 export default function ContentReviewPage() {
   const [filters, setFilters] = useState<{
     status?: string;
@@ -82,7 +78,7 @@ export default function ContentReviewPage() {
     contentType?: string;
   }>({ status: 'pending' });
   const query = useMemo(() => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     const p = new URLSearchParams();
     if (filters.status) p.set('status', filters.status);
     if (filters.reason) p.set('reason', filters.reason);
@@ -112,7 +108,6 @@ async function handleAction(
       }
     );
     setSelected(null);
-<<<<<<< HEAD
     mutate();  }
 
   }, [filters]),;
@@ -138,14 +133,13 @@ import React, { useMemo, useState } from 'react';
     );
     set_selected (null);
     mutate ();  }
-=======
     mutate();
   }
 
   return (
     <EnhancedLayout>
 <div className='max-w-7xl mx-auto'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <EnhancedLayout>;
 
@@ -202,7 +196,6 @@ import React, { useMemo, useState } from 'react';
           />;
           <button
             onClick={() => setFilters({ status: 'pending' })}
-<<<<<<< HEAD
             className='border rounded px-2 py-1';
           <input;
             placeholder='Reason contains...';
@@ -230,7 +223,6 @@ import React, { useMemo, useState } from 'react';
             Reset;
           </button>;
         </div>;
-=======
             className='border rounded px-2 py-1'
           >
             Reset
@@ -248,12 +240,11 @@ import React, { useMemo, useState } from 'react';
                 <th className='text-left px-3 py-2'>Created</th>
                 <th className='text-left px-3 py-2'>Status</th>
                 <th className='text-left px-3 py-2'>Actions</th>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </tr>
             </thead>
             <tbody>
               {flags.map((f: any) => (
-<<<<<<< HEAD
                   <td className="px-3 py-2 font-mono text-xs">{f.id}</td>
                   <td className="px-3 py-2">{f.contentType}</td>
                   <td className="px-3 py-2">{f.userEmail}</td>
@@ -281,7 +272,6 @@ import React, { useMemo, useState } from 'react';
       </div>;
 
       {selected && (;
-=======
 <tr key={f.id} className='border-t hover:bg-gray-50/50'>
                   <td className='px-3 py-2 font-mono text-xs'>{f.id}</td>
                   <td className='px-3 py-2'>{f.contentType}</td>
@@ -323,14 +313,13 @@ import React, { useMemo, useState } from 'react';
         </div>
       </div>
       {selected && (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         <ModerationModal
           flag={selected}
           onClose={() => setSelected(null)}
           onAction={handleAction}
         />;
       )}
-<<<<<<< HEAD
 
 
         <div className='overflow - auto border rounded'>;
@@ -398,7 +387,6 @@ import React, { useMemo, useState } from 'react';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
     </EnhancedLayout>
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

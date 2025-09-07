@@ -8,16 +8,15 @@ const { execSync } = require('child_process')
         if (&& !content.match(/}\s*export default')
             if (&& !prevLine.endsWith(')
     && !prevLine.endsWith('}')
-              lines[exportLineIndex - 1] = prevLine + '}'
+              lines[exportLineIndex - 1] = prevLine + '}
               content = lines.join('\n')
               fixes.push('Added missing closing brace before export')
-        content = content.replace(/<(\w+)([^>]*?)\s*>\s*<\/\1>/g, '<$1$2></$1>'
+        content = content.replace(/<(\w+)([^>]*?)\s*>\s*<\/\1>/g, '<$1$2></$1>
           if (.endsWith(')
-    .endsWith('}') && !value.trim().endsWith('}') && !value.trim().endsWith(')'
+    .endsWith('}') && !value.trim().endsWith('}') && !value.trim().endsWith(')
           if (.endsWith('}')
     .endsWith('}')
           if (&& !body.trim().endsWith(')
     && !body.trim().endsWith('}') && !body.trim().endsWith('}')
-    const reportPath = 'enhanced-syntax-fix-report.json;'
-    console.error(' Enhanced syntax fixer "failed")
-    console.error(' Enhanced syntax fixer "failed")
+    const reportPath = 'enhanced-syntax-fix-report.json;
+    console.error(' Enhanced syntax fixer "failed")""

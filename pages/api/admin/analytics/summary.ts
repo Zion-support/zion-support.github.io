@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
@@ -33,29 +27,22 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
         const t = new Date(obj.at),
         if (start && t < start) continue,
         if (end && t > end) continue,
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
+pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import { ensureAdminFromApi } from '../../../../utils/auth';
-<<<<<<< HEAD
-=======
   name: string;
   page?: string;
   userType?: string;
   properties?: Record<string, any>;
   at: string;
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 type EventRow = {
 
-<<<<<<< HEAD
-=======
 type EventRow = {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   name: string
   page?: string
   userType?: string
@@ -82,7 +69,6 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
         if (end && t > end) continue
         rows.push(obj)
       } catch {}
-=======
 function parseLines(startIso?: string, endIso?: string): EventRow[] {
   try {
     if (!fs.existsSync(LOG_FILE)) return [];
@@ -91,28 +77,16 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
     const start = startIso ? new Date(startIso) : null;
     const end = endIso ? new Date(endIso) : null;
     const rows: EventRow[] = [];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
-<<<<<<< HEAD
     return rows;
 
 
-=======
     return rows
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   } catch {
     return []
   }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   await ensureAdminFromApi(req, res);
@@ -139,44 +113,30 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   
   res.status(200).json({ pagesMostUsed, events: eventCounts, line: events.length, funnel });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> pr-12243
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243
   const pagesMostUsed = Object.entries(byFeature)
     .map(([label, value]) => ({ label, value }))
     .sort((a, b) => b.value - a.value)
 
   const events = Object.entries(byEvent)
     .map(([label, value]) => ({ label, value }))
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     .sort((a, b) => b.value - a.value),
 
   const days = Object.keys(byDay).sort(),
   const line = days.map((d) => ({ date: d, value: byDay[d] })),
 
-<<<<<<< HEAD
-=======
   const funnelStages = ['VisitAI Prompt UsedPost CreatedMessage Sent'],
   const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] || 0 })),
-=======
->>>>>>> pr-12243
+pr-12243
     .sort((a, b) => b.value - a.value)
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   const days = Object.keys(byDay).sort()
   const line = days.map((d) => ({ date: d, value: byDay[d] }))
 
   const funnelStages = ['VisitAI Prompt UsedPost CreatedMessage Sent']
   const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] || 0 }))
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
+main
     .sort((a, b) => b.value - a.value);
 
   const days = Object.keys(byDay).sort();
@@ -192,11 +152,10 @@ const line = days.map(d => ({ date: d, value: byDay[d] }));
     label: stage,
     value: byEvent[stage] || 0,
   }));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> pr-12243
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243
 
   res.status(200).json({ pagesMostUsed, events, line, funnel });
-<<<<<<< HEAD
 
 
 function featureFromPath (page?: string): string {
@@ -204,7 +163,6 @@ function featureFromPath (page?: string): string {
 if (return 'other', ) {
   $2
 }
-<<<<<<< HEAD
   const p = page.toLowerCase (),
   if (|| p.includes ('ai')) return 'AI services', ) {
   $2
@@ -269,8 +227,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

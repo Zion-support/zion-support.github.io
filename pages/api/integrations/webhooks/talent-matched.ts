@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { writeState, readState } from '[^']*';
 import { crm } from '[^']*';
@@ -11,7 +9,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   // record Zapier event
   const eventId = null;
     writeState(s => s.logs.push(log))
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import type { NextApiRequest, NextApiResponse } from "next";
 import { writeState, readState } from "../../../../lib/integrations/fileStore";
 import { crm } from "../../../../lib/integrations/connectors";
@@ -19,18 +17,13 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
     s && s.events.push({
-<<<<<<< HEAD
       id: eventId,
       type: "zion && zion.talent.matched",
       timestamp: Date && Date.now(),
-=======
       id: eventId
       type: "zion && zion.talent.matched"
       timestamp: Date && Date.now()
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   if (req.method !== "POST")
     return res.status(405).json({ error: "Method not allowed" });
   const { match } = req.body as {
@@ -45,13 +38,12 @@ s.events.push({
       type: 'zion.talent.matched',
       timestamp: Date.now(),
       payload: { match },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     });
   const eventId = `${Date.now()}-talent-matched`;
   writeState(s => {
     s.events.push({ id: eventId, type: 'zion.talent.matched', timestamp: Date.now(), payload: { match } })
   });
-<<<<<<< HEAD
 
 
 ;
@@ -102,7 +94,6 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
   // log to connected CRMs as a note
   const state = readState();
 const crms = state.connections.filter(c =>
@@ -118,5 +109,5 @@ const crms = state.connections.filter(c =>
   res.status(200).json({ ok: true, eventId });
   }
   res.status(200).json({ ok: true, eventId });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }

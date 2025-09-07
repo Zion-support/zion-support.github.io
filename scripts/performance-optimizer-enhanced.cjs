@@ -8,48 +8,11 @@ const { execSync } = require('child_process')
     this.log('� Optimizing bundle size')
       execSync('npx depcheck --json')
       execSync('npm run analyze')
-        "type"
-        "action"
-        "status"
-        "type"
-        "action"
-        "status"
-              "type"
-              "action"
-              "status"
-          "type"
-          "action"
-          "status"
-          "type"
-          "action"
-          "status"
-            /import \* as (\w+) from ['"]([^'')]
-              "type"
-              "action"
-              "status"
-          "type"
-          "action"
-          "status"
-          "type"
-          "action"
-          "status"
-        "event_category"
-          "event_category"
-        "type"
-        "file"
-        "action"
-        "status"
-        "type"
-        "file"
-        "action"
-        "status"
-        "successful"
-        "failed"
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "warnings"
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-        "warnings"
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+        "type"""
+        "action"""
+        "status"""
+            /import \* as (\w+) from ['"]([^)]
+        "event_category"""
+        "file"""
+        "successful"""
+        "failed"""

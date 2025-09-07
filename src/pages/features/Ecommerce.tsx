@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -58,9 +57,8 @@ export default function Ecommerce() {
 
   };
 
-=======
   const schema = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>;
 
@@ -94,7 +92,6 @@ export default function Ecommerce() {
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
-<<<<<<< HEAD
         type="application/ld+json"
 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
@@ -136,7 +133,6 @@ export default function Ecommerce() {
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/marketplace">Start Shopping</Link>
-=======
         type='application/ld+json'
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
@@ -191,13 +187,12 @@ export default function Ecommerce() {
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/marketplace'>Start Shopping</Link>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </Button>
           </div>
         </div>
       </main>
     </>
-<<<<<<< HEAD
   )
 
 ;
@@ -251,7 +246,6 @@ export default function Ecommerce() {;
 
 
 ;
-=======
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

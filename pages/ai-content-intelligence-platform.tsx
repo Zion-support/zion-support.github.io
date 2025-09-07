@@ -1,10 +1,8 @@
-<<<<<<< HEAD
   },  {
     name: 'Professional'
     price: '$5,000'
     period: '/month'
     description: 'Ideal for growing businesses and marketing teams'
-=======
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
@@ -32,7 +30,7 @@ const pricingPlans = [
     price: '$5,000',
     period: '/month',
     description: 'Ideal for growing businesses and marketing teams',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     features: [
 'Everything in Starter',
       'Predictive performance modeling',
@@ -67,7 +65,6 @@ const pricingPlans = [
 
 const useCases = [
   {
-<<<<<<< HEAD
     title: 'Content Marketing Optimization'
     description:
       'Optimize your content strategy based on real-time performance data and AI insights'
@@ -285,7 +282,6 @@ const integrations = [
 
   'WordPressShopifyHubSpotMailchimpGoogle AnalyticsFacebook AdsGoogle AdsLinkedIn', 'TwitterInstagramYouTubeTikTokSlackZapierAPI Access'
 ],
-=======
     title: 'Content Marketing Optimization',
 description:
       'Optimize your content strategy based on real-time performance data and AI insights',
@@ -333,7 +329,7 @@ const integrations = [
   'API Access',
 ];
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default function AIContentIntelligencePlatform() {
   return (
 
@@ -350,7 +346,6 @@ export default function AIContentIntelligencePlatform() {
     <Layout>
       <Head>
         <title>AI Content Intelligence Platform | Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Transform your content creation with AI-powered intelligence and analytics. Get real-time insights, optimization suggestions, and predictive performance modeling." />
         <meta name="keywords" content="AI content intelligence, content optimization, content analytics, AI content marketing, content performance, SEO optimization" />
         <meta property="og:title" content="AI Content Intelligence Platform | Zion Tech Group" />
@@ -364,7 +359,6 @@ export default function AIContentIntelligencePlatform() {
             >
               <div className="flex items-center space-x-2 mb-6">
                 <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
-=======
 <meta
           name='description'
           content='Transform your content creation with AI-powered intelligence and analytics. Get real-time insights, optimization suggestions, and predictive performance modeling.'
@@ -410,7 +404,7 @@ export default function AIContentIntelligencePlatform() {
             >
 <div className='flex items-center space-x-2 mb-6'>
                 <span className='bg-gradient-to-r from-purple-500 to-pink-600 text-white text-sm font-semibold px-3 py-1 rounded-full'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   NEW SERVICE
                 </span>
                 <span className="text-gray-400 text-sm">Launch Date: January 15, 2025</span>
@@ -423,8 +417,6 @@ export default function AIContentIntelligencePlatform() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-<<<<<<< HEAD
-=======
                   href='/contact'
                   className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105'
                 >
@@ -451,26 +443,23 @@ className='relative'
                 <div className='space-y-3'>
                   <div className='flex items-center text-green-400'>
                     <CheckCircle className='w-5 h-5 mr-3' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     <span>300%+ ROI improvement</span>
                   </div>
                   <div className="flex items-center text-green-400">
                     <CheckCircle className="w-5 h-5 mr-3" />
                     <span>80% faster content optimization</span>
                   </div>
-<<<<<<< HEAD
-=======
                   <div className='flex items-center text-green-400'>
                     <CheckCircle className='w-5 h-5 mr-3' />
                     <span>Real-time performance insights</span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </div>
               </div>
             </motion.div>
           </div>
         </div>
-<<<<<<< HEAD
 
       {/* Features Section */}
 
@@ -478,20 +467,17 @@ className='relative'
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-=======
 {/* Features Section */}
       <section className='py-20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-=======
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Powerful Features for Content Success
@@ -500,11 +486,9 @@ className='text-center mb-16'
               Our AI Content Intelligence Platform provides everything you need to create, optimize, and scale your content strategy.
             </p>
           </motion.div>
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
-=======
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index) => (
               <motion.div
@@ -514,21 +498,19 @@ className='text-center mb-16'
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
 className='group relative'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300">
                   <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
-<<<<<<< HEAD
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-400">{feature.description}</p>
-=======
                   <h3 className='text-xl font-bold text-white mb-3'>
                     {feature.title}
                   </h3>
                   <p className='text-gray-400'>{feature.description}</p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </motion.div>
             ))  } catch (error) {
@@ -538,7 +520,6 @@ className='group relative'
 }
 
       {/* Use Cases Section */}
-<<<<<<< HEAD
       <section className='py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
@@ -548,21 +529,18 @@ className='group relative'
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-=======
 <section className='py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
 
 
-=======
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Perfect For Every Content Need
@@ -571,11 +549,9 @@ className='text-center mb-16'
               Whether you're a content creator, marketing team, or enterprise organization, our platform adapts to your specific requirements.
             </p>
           </motion.div>
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
-=======
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {useCases.map((useCase, index) => (
               <motion.div
@@ -585,21 +561,19 @@ className='text-center mb-16'
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 viewport={{ once: true }}
 className='group'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300">
                   <div className={`w-16 h-16 bg-gradient-to-r ${useCase.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <useCase.icon className="w-8 h-8 text-white" />
                   </div>
-<<<<<<< HEAD
                   <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
                   <p className="text-gray-400 text-lg">{useCase.description}</p>
-=======
                   <h3 className='text-2xl font-bold text-white mb-4'>
                     {useCase.title}
                   </h3>
                   <p className='text-gray-400 text-lg'>{useCase.description}</p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </motion.div>
             ))  } catch (error) {
@@ -609,7 +583,6 @@ className='group'
 }
 
       {/* Pricing Section */}
-<<<<<<< HEAD
       <section className='py-20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
@@ -619,21 +592,18 @@ className='group'
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-=======
 <section className='py-20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
 
 
-=======
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Flexible Pricing Plans
@@ -642,16 +612,13 @@ className='text-center mb-16'
               Choose the plan that best fits your content needs and scale as you grow.
             </p>
           </motion.div>
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-=======
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             {pricingPlans.map((plan, index) => (
               <motion.div
               >
                 {plan.popular && (
-<<<<<<< HEAD
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-sm font-bold px-4 py-2 rounded-full">
                       MOST POPULAR
@@ -661,7 +628,6 @@ className='text-center mb-16'
                     <div className="text-4xl font-bold text-blue-400 mb-2">{plan.price}</div>
                     <div className="text-gray-400 mb-4">{plan.period}</div>
                     <p className="text-gray-300">{plan.description}</p>
-=======
 <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
                     <span className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-sm font-bold px-4 py-2 rounded-full'>
                       MOST POPULAR
@@ -680,11 +646,10 @@ className='text-center mb-16'
                     </div>
                     <div className='text-gray-400 mb-4'>{plan.period}</div>
                     <p className='text-gray-300'>{plan.description}</p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         {feature  } catch (error) {
@@ -709,7 +674,6 @@ className='text-center mb-16'
                   >
                     Get Started
                     <ArrowRight className="w-4 h-4 ml-2" />
-=======
                       <li
                         key={featureIndex}
                         className='flex items-center text-gray-300'
@@ -725,7 +689,7 @@ href='/contact'
                   >
                     Get Started
                     <ArrowRight className='w-4 h-4 ml-2' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   </Link>
                 </div>
               </motion.div>
@@ -739,24 +703,20 @@ href='/contact'
           </div>;
 
       {/* Integrations Section */}
-<<<<<<< HEAD
 
 
-=======
 <section className='py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
 
 
-=======
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Seamless Integrations
@@ -765,11 +725,9 @@ className='text-center mb-16'
               Connect with your existing tools and platforms for a unified content management experience.
             </p>
           </motion.div>
-<<<<<<< HEAD
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-=======
           <div className='grid grid-cols-2 md:grid-cols-5 gap-6'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             {integrations.map((integration, index) => (
               <motion.div
                 key={index}
@@ -1020,11 +978,9 @@ className='bg-white/10 backdrop-blur-sm border border-gray-600 rounded-lg p-4 te
               <Link
                 href='/2025-innovative-new-services-showcase'
           >
-<<<<<<< HEAD
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-=======
 <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               Ready to Transform Your Content Strategy?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -1067,13 +1023,11 @@ className='bg-white/10 backdrop-blur-sm border border-gray-600 rounded-lg p-4 te
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
-<<<<<<< HEAD
                 href="/2025-innovative-new-services-showcase"
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200"
-=======
                 href='/2025-innovative-new-services-showcase'
                 className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 View All Services
               </Link>
@@ -1086,7 +1040,6 @@ className='bg-white/10 backdrop-blur-sm border border-gray-600 rounded-lg p-4 te
 
 }
     </Layout>
-<<<<<<< HEAD
 
 
                 className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200'>;
@@ -1171,6 +1124,5 @@ className='bg-white/10 backdrop-blur-sm border border-gray-600 rounded-lg p-4 te
         </div>;
 
 
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

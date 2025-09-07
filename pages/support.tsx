@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
@@ -22,8 +18,6 @@ const Page = () => {
 };
 
 export default Page;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -38,7 +32,6 @@ export default function Support() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const supportCategories = [
     {
-<<<<<<< HEAD
       id: 'ai-services'
       name: 'AI Services'
       icon: <Brain className="w-8 h-8 text-cyan-400" />
@@ -361,7 +354,6 @@ export default function Support() {
                   </div>
                 </div>
               </motion.div>
-=======
 import { HelpCircle, MessageCircle, Phone, Mail, Clock;
   BookOpen, Video, FileText, Search, Filter;
   CheckCircle, ArrowRight, Brain, Atom, Rocket;
@@ -373,24 +365,21 @@ export default function Support() {
   const supportCategories = null;
           </div>
         </section>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Support Channels */}
 <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
-<<<<<<< HEAD
               className="text-center mb-16"
-=======
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Get Support</h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Choose the support channel that works best for you.
-=======
       title: 'Help Center', description: 'Browse our comprehensive knowledge base and FAQ',
       icon: BookOpen, features: ['Searchable articles', 'Step-by-step guides', 'Video tutorials', 'Troubleshooting'], link: '/help'
     },
@@ -512,13 +501,12 @@ export default function Support() {
               </h1>
               <p className="text-xl sm:text-2xl text-blue-100 max-w-4xl mx-auto mb-8">
                 We&apos;re here to help you succeed. Get the support you need, when you need it.''
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {supportChannels.map((channel, index) => (
                 <motion.div
-<<<<<<< HEAD
                   key={channel.title}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -552,7 +540,6 @@ export default function Support() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -561,7 +548,7 @@ export default function Support() {
                 >
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <channel.icon className="w-6 h-6 text-blue-600" />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                   <h3 className="text-xl font-semibold mb-2">{channel.title}</h3>
                   <p className="text-gray-600 mb-4">{channel.description}</p>
@@ -573,7 +560,6 @@ export default function Support() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Search and Filter */}
         <section className="py - 12 px - 4">;
           <div className="max - w-6xl mx - auto">;
@@ -605,13 +591,11 @@ export default function Support() {
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                   <input
                     type="text"
-<<<<<<< HEAD
                     placeholder="Search for help topics, questions, or solutions..."
                     className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-=======
                     placeholder="Search for help..."
                     className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 placeholder-gray-500 focus: outline-none focus:ring-2 focus:ring-blue-500"
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                   />
                 </div>
               </div>
@@ -651,7 +635,6 @@ export default function Support() {
                 answer: "We provide dedicated enterprise support including 24/7 technical assistance, custom training programs, and dedicated account managers for large-scale deployments."
               }
 
-<<<<<<< HEAD
                     <span className="text - sm text - gray - 400">({category.count})</span>;
                   </button>))}
 
@@ -695,7 +678,6 @@ export default function Support() {
   }
 }
                     <span className="text-sm text-gray-400">({category.count})</span>
-=======
         {/* Support Options */}
         <section className="py-20 sm:py-32">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -813,7 +795,7 @@ export default function Support() {
                       : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                   }`}>
                     {tier.price === 'Free' ? 'Get Started' : 'Contact Sales'}
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                   </button>
                 ))  } catch (error) {
     console.error("Error:", error);
@@ -919,7 +901,6 @@ export default function Support() {
   }
 }
               className="text-center mb-16"
-=======
 
 {/* Contact Info */}
         <section className="py-16 bg-white">
@@ -929,7 +910,7 @@ export default function Support() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-8">Contact Information</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -950,7 +931,6 @@ export default function Support() {
                 </div>
               </div>
             </motion.div>
-<<<<<<< HEAD
               className="text - center mb - 16";
             >;
               <h2 className="text - 4xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent">;
@@ -1080,7 +1060,6 @@ export default function Support() {
                 </motion.div>
               ))}
             </div>
-<<<<<<< HEAD
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -1133,7 +1112,6 @@ export default function Support() {
                           {article.helpful} helpful
                         </span>
                       </div>
-=======
           </div>
         </section>
 
@@ -1159,7 +1137,7 @@ export default function Support() {
                       <a href={`mailto: ${method.email}`} className="text-blue-600 hover:text-blue-700">
                         {method.email}
                       </a>
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                     </div>
                     <div className="flex items-center gap-2 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">
                       <span className="text-sm font-medium">Read</span>
@@ -1187,24 +1165,21 @@ export default function Support() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Need Immediate Help?
               </h2>
-<<<<<<< HEAD
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
 
 
@@ -1335,7 +1310,6 @@ export default function Support() {
                 className="inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300"
               >
                 Browse Resources
-=======
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
@@ -1355,7 +1329,7 @@ export default function Support() {
                 <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
                   Email Us
                 </button>
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               </a>
             </div>
           </motion.div>
@@ -1401,30 +1375,27 @@ export default Support,
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-=======
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
                 Contact us now for urgent support needs.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   href="/contact"
                   className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
                 >
-<<<<<<< HEAD
                   Contact Support
                   <ArrowRight className="w-5 h-5 ml-2" />
                 <a
                   href="tel:+13024640950"
                   className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center"
-=======
                   Contact Us
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
                 <Link
                   href="/help"
                   className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   Help Center
                 </Link>
@@ -1432,9 +1403,7 @@ export default Support,
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
       </main>
-<<<<<<< HEAD
     </Layout>
   )
 }
@@ -1594,15 +1563,9 @@ export default Support,;
 };
 export default SupportPage;
 
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 </div>
     </>
-=======
 </>
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

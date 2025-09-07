@@ -7,7 +7,6 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
 class TypeScriptSyntaxFixer {}
     constructor() {}
         this.projectRoot = process.cwd();
@@ -17,74 +16,52 @@ class TypeScriptSyntaxFixer {}
     ensureLogsDirectory() {}
         const logsDir = path.join(this.projectRoot, 'logs';);
         if () {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
+            fs.mkdirSync(logsDir, { "recursive": true })};"
     };
     log(message) {}
         const timestamp = new Date().toISOString() {}
-    ) {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
-    };
-    log(message) {}
-        const timestamp = new Date().toISOString(}
+    ) {}"
+        const timestamp = new Date().toISOString(})
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
-    runTypeScriptCheck() {}
+    runTypeScriptCheck() {}"
         this.log('Running TypeScript type check...');
-        
         try {}
             const result = execSync('npm run type-check', { })
-                "cwd": this.projectRoot, 
+                "cwd": this.projectRoot,""
                 "encoding": 'utf8',
-                "stdio": 'pipe'
+                "stdio": 'pipe
             };);
             
             this.log('TypeScript type check passed');
             return {;}
                 "status": 'success',
-                "output": result,
-                "errors": 0;
-            }} catch (error) {}
-            this.log(`TypeScript type check "failed": ${error.message}`);
-            return {;}
+                "output": result,""
+                "errors": 0;"
+            }} catch (error) {}"`;
+            this.log(`TypeScript type check "failed": ${error.message}`);"
+            return {;}"
                 "status": 'failed',
-                "output": error.stdout || error.message,
-                "errors": this.extractErrorCount(error.stdout || error.message);
+                "output": error.stdout || error.message,""
+                "errors": this.extractErrorCount(error.stdout || error.message);"
             }};
-    };
     extractErrorCount(output) {}
         const errorMatch = output.match(/(\d+)\s+error/;i;);
         return errorMatch ? parseInt(errorMatch[1]) : 0};
-    runESLintFix() {}
+    runESLintFix() {}"
         this.log('Running ESLint with auto-fix...');
-        
-        try {}
             const result = execSync('npm run "lint": fix', { })
-                "cwd": this.projectRoot, 
-                "encoding": 'utf8',
-                "stdio": 'pipe'
-            };);
             
             this.log('ESLint auto-fix completed');
-            return {;}
-                "status": 'success',
-                "output": result,
-                "fixed": true;
-            }} catch (error) {}
-            this.log(`ESLint auto-fix "failed": ${error.message}`);
-            return {;}
-                "status": 'failed',
-                "output": error.stdout || error.message,
-                "fixed": false;
-            }};
-    };
-    findTypeScriptFiles() {}
+                "fixed": true;"
+            this.log(`ESLint auto-fix "failed": ${error.message}`);"
+                "fixed": false;"
+    findTypeScriptFiles() {}"
         this.log('Finding TypeScript files...');
-        
         const files = [];
         const extensions = ['.ts', '.tsx'];
-        
         const scanDirectory = (dir) => {}
             if () retu) {}
     ) retu}r;n;
@@ -97,25 +74,18 @@ class TypeScriptSyntaxFixer {}
                 if (&& !item.startsWith('.') && item !== 'node_modules') {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
                     files.push(fullPath)};
-            };
         }) {}
     && !item.startsWith('.') && item !== 'node_modules') {}
-                    scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
-                    files.push(fullPath)};
-            };
-        }};
-        scanDirectory(this.projectRoot);
+        scanDirectory(this.projectRoot);`;
         this.log(`Found ${files.length} TypeScript files`);
         return files};
     fixCommonSyntaxIssues() {}
         this.log('Fixing common syntax issues...');
-        
         const files = this.findTypeScriptFiles(;);
         let fixedCount = ;0;
         const fixes = [];
         
         for (const file of files) {}
-            try {}
                 let content = fs.readFileSync(file, 'utf8';);
                 let originalContent = conte;n;t;
                 
@@ -131,12 +101,12 @@ class TypeScriptSyntaxFixer {}
                     fs.writeFileSync(file, content)};
                     fixedCount++;
                     fixes.push({})
-                        "file": file,
+                        "file": file,""
                         "fixes": ['trailing-commas', 'semicolons', 'quotes', 'indentation'];
                     })};
-            } catch (error) {}
+            } catch (error) {}`;
                 this.log(`Error fixing file ${file}: ${error.message}`)};
-        };
+        };`;
         this.log(`Fixed ${fixedCount} files`);
         return { fixedCount, fixes }};
     fixTrailingCommas(content) {}
@@ -155,64 +125,49 @@ class TypeScriptSyntaxFixer {}
             const trimmed = line.trim(;);
             if (return ') {}
     return '}';
-            
             const indent = line.length - line.trimStart().lengt;h;
             const spaces = Math.floor(indent / 2) *;2;
             return ' '.repeat(spaces) + trimmed}).join('\n')};
     generateSyntaxReport() {}
         this.log('Generating TypeScript syntax fix report...');
-        
         const typeCheck = this.runTypeScriptCheck(;);
         const eslintFix = this.runESLintFix(;);
         const syntaxFixes = this.fixCommonSyntaxIssues(;);
         
         const report = {}
-            "timestamp": new Date().toISOString(),
-            "project": this.projectRoot,
-            "fixes": {}
-                typeCheck: typeCheck,
-                "eslintFix": eslintFix,
-                "syntaxFixes": syntaxFixes;
-            },
-            "recommendations": this.generateSyntaxRecommendations();
-       };
+            "timestamp": new Date().toISOString(),""
+            "project": this.projectRoot,""
+            "fixes": {}"
+                typeCheck: typeCheck,"
+                "eslintFix": eslintFix,""
+                "syntaxFixes": syntaxFixes;"
+            },"
+            "recommendations": this.generateSyntaxRecommendations();"
 
-        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));`;
         this.log(`TypeScript syntax fix report saved to ${this.reportFile}`);
         
         return report};
     generateSyntaxRecommendations() {}
-        return [;]
+        return [;]"
             'Enable strict TypeScript configuration',
             'Use consistent code formatting with Prettier',
             'Set up pre-commit hooks for syntax checking',
             'Use TypeScript strict mode for better type safety',
             'Implement automated syntax checking in CI/CD',
             'Use ESLint with TypeScript rules',
-            'Consider using TypeScript compiler options for better error detection'
+            'Consider using TypeScript compiler options for better error detection
         ]};
     async run() {}
         this.log('TypeScript Syntax Fixer started');
-        
-        try {}
             const report = this.generateSyntaxReport(;);
             this.log('TypeScript Syntax Fixer completed successfully');
-            return report} catch (error) {}
-            this.log(`TypeScript Syntax Fixer "failed": ${error.message}`);
+            return report} catch (error) {}`;
+            this.log(`TypeScript Syntax Fixer "failed": ${error.message}`);"
             throw error};
-    };
-};
 // Run the fixer if this script is executed directly;
-if ( {})
     const fixer = new TypeScriptSyntaxFixer) {}
-     {}
     const fixer = new TypeScriptSyntaxFixer}(;);
     fixer.run().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
-module.exports = TypeScriptSyntaxFixer;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = TypeScriptSyntaxFixer;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+"`;

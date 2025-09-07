@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 export default function FrontLanding() {
   return (
-<<<<<<< HEAD
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
 
 
@@ -31,7 +30,6 @@ export default function FrontLanding() {
             <Link href="/automation"><a className="text-white/80 hover:text-white">Automations</Link></Link>
             <Link href="/newsroom"><a className="text-white/80 hover:text-white">Newsroom</Link></Link>
             <Link href="/contact"><a className="text-white/80 hover:text-white">Contact</Link></Link>
-=======
           <div className='twinkle-field absolute inset-0' />
         </div>
       </div>
@@ -44,7 +42,7 @@ export default function FrontLanding() {
                 Zion
               </a>
             </Link>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
           <div className='hidden gap-6 md:flex'>
             <Link href='/'>
@@ -62,7 +60,6 @@ export default function FrontLanding() {
           </div>
         </nav>
       </header>
-<<<<<<< HEAD
       {/* Hero */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -88,7 +85,6 @@ export default function FrontLanding() {
   }
 }
               className="mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md"
-=======
       {/* Hero */}
 <main className='relative z-10'>
         <section className='mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24'>
@@ -129,47 +125,41 @@ className='mx-auto mt-5 max-w-3xl text-lg text-white/80'
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.6 }}
 className='mt-8 flex flex-wrap justify-center gap-3'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
               Autonomous agents running continuous improvements
             </motion.div>
-<<<<<<< HEAD
                 ['24/7', 'Autonomous']
                 ['Main', 'Direct Sync']
                 ['0 Ops', 'Cloud‑Native']
                 ['Safety', 'Guardrails']
 
-=======
             {/* Quick stats */}
             <div className='mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4'>
               {[
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 ['24/7', 'Autonomous'],
                 ['Main', 'Direct Sync'],
                 ['0 Ops', 'Cloud‑Native'],
                 ['Safety', 'Guardrails'],
-<<<<<<< HEAD
               ].map(([k, v]) => (                <motion.div
-=======
               ].map(([k, v]) => (
                 <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   key={k}
                   initial={{ opacity: 0, y: 6 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
 
 
-=======
                   transition={{ duration: 0.5 }}
 className='glow-card rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-left'
                 >
                   <div className='text-lg font-bold text-white'>{k}</div>
                   <div className='text-xs text-white/70'>{v}</div>
                 </motion.div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               ))}
 
                   className='glow - card rounded - xl border border - white / 10 bg - white / 5 px - 4 py - 3 text - left';
@@ -180,7 +170,6 @@ className='glow-card rounded-xl border border-white/10 bg-white/5 px-4 py-3 text
           </div>;
         </section>;
         {/* Features */}
-<<<<<<< HEAD
         <section className='mx - auto max - w-7xl px - 6 pb - 14'>;
           <h2 className='text - center text - 2xl font - bold tracking - wide text - white / 90'>;
             Features;
@@ -188,14 +177,13 @@ className='glow-card rounded-xl border border-white/10 bg-white/5 px-4 py-3 text
           <div className='mt - 6 grid grid - cols - 1 gap - 5 md:grid - cols - 2 lg:grid - cols - 3'>;
             {[;
 
-=======
 <section className='mx-auto max-w-7xl px-6 pb-14'>
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Features
           </h2>
           <div className='mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3'>
             {[
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               {
 
         <section className="mx-auto max-w-7xl px-6 pb-14">
@@ -222,7 +210,6 @@ className='glow-card rounded-xl border border-white/10 bg-white/5 px-4 py-3 text
                 desc: 'Generates domain‑specific factories on demand.'
               }
               {
-<<<<<<< HEAD
                 title: 'Observability'
                 desc: 'Dashboards, reports, and GitHub Actions artifacts.'
               }
@@ -230,14 +217,13 @@ className='glow-card rounded-xl border border-white/10 bg-white/5 px-4 py-3 text
                 desc: 'Agents continuously analyze, invent, and evolve automations.',
               },
               {
-=======
                 title: 'Observability',
                 desc: 'Dashboards, reports, and GitHub Actions artifacts.',
               },
             ].map(f => (
               <motion.article
                 key={f.title}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 initial={{ opacity: 0, y: 8 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 title: 'Observability',
@@ -273,11 +259,9 @@ className='glow-card rounded-xl border border-white/10 bg-white/5 px-4 py-3 text
                 initial={{ opacity: 0, coordinate_y: 8 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
                 title: 'Code Quality & Refactors',
                 desc: 'Lints, fixes, and proposes refactors with type‑safety improvements.',
               },
-=======
                 transition={{ duration: 0.6 }}
 className='group glow-card relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-md hover:border-cyan-400/30'
               >
@@ -295,13 +279,12 @@ className='group glow-card relative overflow-hidden rounded-2xl border border-wh
           </h2>
           <div className='mt-6 grid grid-cols-1 gap-5 md:grid-cols-3'>
             {[
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               {
                 title: 'Performance & A11y',
                 desc: 'Optimizes bundles, assets, and accessibility with continuous checks.',
               },
               {
-<<<<<<< HEAD
                 title: 'Content & SEO',
                 desc: 'Curates content, updates promotions, and tunes metadata for reach.',
               },
@@ -315,22 +298,19 @@ className='group glow-card relative overflow-hidden rounded-2xl border border-wh
                 title: 'Performance & A11y',
                 desc: 'Optimizes bundles, assets, and accessibility with continuous checks.',
               },
-=======
                 title: 'Performance & A11y'
                 desc: 'Optimizes bundles, assets, and accessibility with continuous checks.'
               }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               {
                 title: 'Content & SEO',
                 desc: 'Curates content, updates promotions, and tunes metadata for reach.',
               },
-<<<<<<< HEAD
             ].map(c => (              <motion.article
 
-=======
             ].map(c => (
               <motion.article
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 key={c.title}
                 initial={{ opacity: 0, y: 8 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -356,12 +336,10 @@ className='relative overflow-hidden rounded-2xl border border-white/10 bg-gradie
               'Rapid feedback loop with safe, incremental edits',
               'Continuous delivery directly to main branch',
               'Fewer regressions via layered checks and reports',
-<<<<<<< HEAD
             ].map(b => (              <motion.div
-=======
             ].map(b => (
               <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 key={b}
                 initial={{ opacity: 0, y: 6 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -382,7 +360,6 @@ className='flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD
             className='animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl'
             <motion.h1
               initial={{ opacity: 0, y: 8 }  } catch (error) {
@@ -725,7 +702,6 @@ export default function FrontLanding(req, res) {
             <div className="mt-6 flex flex-wrap justify-center gap-3">
               <Link href="/services"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Get Started</a></Link>
               <Link href="/automation"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">View Automations</a></Link>
-=======
 className='animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl'
           >
             <h3 className='text-2xl font-bold'>
@@ -746,7 +722,7 @@ className='animated-border relative overflow-hidden rounded-3xl border border-wh
                   View Automations
                 </a>
               </Link>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </motion.div>
         </section>
@@ -831,7 +807,6 @@ className='animated-border relative overflow-hidden rounded-3xl border border-wh
         </section>
       </main>
     </div>
-<<<<<<< HEAD
         <section className="mx-auto max-w-7xl px-6 pb-16">;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Explore more</h2>;
           <div className="mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 md:grid-cols-3 lg:grid-cols-4">;
@@ -853,6 +828,5 @@ className='animated-border relative overflow-hidden rounded-3xl border border-wh
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

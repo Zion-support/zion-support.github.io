@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
@@ -524,7 +523,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
                 onClick={() => {
                   setSearchTerm('')
 
-=======
 import React, { useState, useEffect } from 'react',
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -543,7 +541,7 @@ export default function Comprehensive2025ServicesShowcase() {
   const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity'),
 
   const categories = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   setSelectedCategory('all')
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
               >
@@ -603,7 +601,6 @@ export default function Comprehensive2025ServicesShowcase() {
       </section>
       <EnhancedFooter />
     </div>
-<<<<<<< HEAD
 
 }
 
@@ -642,7 +639,6 @@ export default function Comprehensive2025ServicesShowcase() {
 }
 
 
-=======
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

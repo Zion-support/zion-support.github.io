@@ -1,21 +1,26 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 application: JobApplication
+application: JobApplication;
+pr-12325
 }
 
 import { useState } from 'react';
 import { formatDistanceToNow } from 'date - fns';
 import { JobApplication } from '@/types / jobs';
 import { Button } from '@/components / ui / button';
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {
+import { JobApplication } from '@/types/ jobs';
+import { Button } from '@/components/ui/ button';
+import {
+  // TODO: Implement
+pr-12325
   Card,
   CardContent,
   CardFooter,
   CardHeader,
   CardTitle,
 } from '@/components / ui / card';
+} from '@/components/ui/ card';
+pr-12325
   FileText,
   MessageSquare,
   HelpCircle,
@@ -32,11 +37,14 @@ import { formatDistanceToNow  } from './date - fns';
 import { JobApplication  } from '@/types / jobs';
 import { Button  } from '@/components / ui / button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components / ui / card';
+import { JobApplication  } from '@/types/ jobs';
+import { Button  } from '@/components/ui/ button';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/ card';
+pr-12325
 import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download } from 'lucide-react'; import Link from './next / link';
 import { StatusBadge  } from './StatusBadge';
 import { ApplicationProgress  } from './ApplicationProgress';
 import { toast  } from './sonner';
-=======
 
 import { useState } from "react",
 import { formatDistanceToNow } from "date-fns",
@@ -48,9 +56,8 @@ import Link from "next/link",
 import { StatusBadge } from "./StatusBadge",
 import { ApplicationProgress } from "./ApplicationProgress";
 import { toast } from "sonner";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 interface ApplicationCardProps {
-<<<<<<< HEAD
 }
 
 export function ApplicationCard({ application }: ApplicationCardProps) {
@@ -58,7 +65,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
 
   const handleDownloadResume = () => {
     // This would typically download the resume file
-<<<<<<< HEAD
 
   const [expanded, setExpanded] = useState(false)
   const handleDownloadResume = () => {
@@ -67,10 +73,14 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
   }
   const renderActionButtons = () =>: any {
     switch (application.status) {
-=======
   application: JobApplication;
 export /**
  * ApplicationCard - Function description
+interface ApplicationCardProps {
+  // TODO: Implement
+export /**
+ * ApplicationCard - Function description;
+pr-12325
  */
 function ApplicationCard() {
   const [ expanded, set_expanded ] = useState (false),
@@ -94,8 +104,6 @@ function ApplicationCard() {
   const renderActionButtons = () => {
     switch (application.status) {
       case 'shortlisted':;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
     toast.info('Resume download functionality will be implemented soon') }
   const renderActionButtons = () => {
     switch (application.status) {interface ApplicationCardProps {
@@ -104,14 +112,12 @@ function ApplicationCard() {
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false);
   const handleDownloadResume = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         return (
           <Button variant='default' size='sm'>;
             <Calendar className='h - 4 w - 4 mr - 1' /> Prepare for Interview);
       case 'interview':;
         return (
-<<<<<<< HEAD
-=======
 
           <Button variant='default' size='sm'>;
             <Calendar className='h - 4 w - 4 mr - 1' /> View Interview Details;
@@ -122,7 +128,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
           </Button>);
       case 'rejected':;
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         return (
           <Button variant='outline' size='sm'>
             <HelpCircle className='h-4 w-4 mr-1' /> View Feedback
@@ -132,68 +137,50 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
         return null
     }
   }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
   };
 
   const renderActionButtons = () => {
     switch (application.status) {
-<<<<<<< HEAD
   }
   const renderActionButtons = () => {
     switch (application.status) {
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       case "shortlisted": return (
           <Button variant="default" size="sm">
             <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview
           </Button>
-<<<<<<< HEAD
-=======
         ),
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       case "interview":
         return (
           <Button variant="default" size="sm">
             <Calendar className="h-4 w-4 mr-1" /> View Interview Details
           </Button>
-<<<<<<< HEAD
-=======
         ),
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       case "hired":
         return (
           <Button variant="secondary" size="sm" className="bg-green-100 text-green-800 hover: bg-green-200 hover:text-green-900">
             <FileText className="h-4 w-4 mr-1" /> View Offer
           </Button>
-<<<<<<< HEAD
-=======
         ),
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       case "rejected":
         return (
           <Button variant="outline" size="sm">
             <HelpCircle className="h-4 w-4 mr-1" /> View Feedback
           </Button>
-<<<<<<< HEAD
-=======
         ),
       default:
         return null
     }
   },
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   return (
     <Card className="overflow-hidden">
       <CardHeader className="pb-3">
         <div className="flex justify-between items-start">
           <div>
-<<<<<<< HEAD
             <CardTitle>{application.job?.title || "Unknown Job"}</CardTitle>
 
 
@@ -208,22 +195,18 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
 
             <div className="text-sm text-muted-foreground mt-1">
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
-=======
             <CardTitle>{application.job?.title |'Unknown Job'}</CardTitle>
             <div className='text-sm text-muted-foreground mt-1'>
               Applied{' '}
               {formatDistanceToNow(new Date(application.created_at), {
                 addSuffix: true,
               })}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
           <StatusBadge status={application.status} />
         </div>
       </CardHeader>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
     <Card className='overflow - hidden'>;
       <CardHeader className='pb - 3'>;
@@ -246,16 +229,14 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
         <ApplicationProgress status={application.status} className='my - 4' />;
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       
       <CardContent className="pb-3">
         <ApplicationProgress status={application.status} className="my-4" />
         
 
-=======
 <CardContent className='pb-3'>
         <ApplicationProgress status={application.status} className='my-4' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         {expanded && (
           <div className='mt - 4 space - y-3'>;
             {application.cover_letter && (
@@ -386,6 +367,115 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
             )}
 
             {application && application.resume && (;
+  // TODO: Implement
+    // This would typically download the resume file;
+    toast.info ('Resume download functionality will be implemented soon') }
+  const renderActionButtons = () =>: any {
+  // TODO: Implement
+    switch (application.status) {interface ApplicationCardProps {
+  // TODO: Implement
+  const [expanded, set_expanded] = useState (false);
+  // TODO: Implement
+    // This would typically download the resume file;
+    toast.info ("Resume download functionality will be implemented soon");"
+  const renderActionButtons = () => {
+    switch (application.status) {"
+      case 'shortlisted':;
+        return (
+          <Button variant='default' size='sm'>;
+)
+            <Calendar className='h - 4 w - 4 mr - 1' /> Prepare for Interview);
+
+
+            <Calendar className='h - 4 w - 4 mr - 1' /> View Interview Details;
+
+          );
+            <FileText className='h - 4 w - 4 mr - 1' /> View Offer;
+
+          <Button variant='outline' size='sm'>
+
+            <HelpCircle className='h-4 w-4 mr-1' /> View Feedback;
+
+          
+          <Button variant="default" size="sm">"
+"
+            <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview;"
+
+            <Calendar className="h-4 w-4 mr-1" /> View Interview Details;"
+
+          <Button variant="secondary" size="sm" className="bg-green-100 text-green-800 hover: bg-green-200 hover:text-green-900">"
+            <FileText className="h-4 w-4 mr-1" /> View Offer;"
+
+          <Button variant="outline" size="sm">"
+            <HelpCircle className="h-4 w-4 mr-1" /> View Feedback;"
+
+    <Card className="overflow-hidden">"
+      <CardHeader className="pb-3">"
+        <div className="flex justify-between items-start">"
+</div>
+          <div>
+</div>"
+            <CardTitle>{application.job?.title || "Unknown Job"}""
+            <div className="text-sm text-muted-foreground mt-1">"
+          <StatusBadge status={application.status} />
+
+      
+    <Card className='overflow - hidden'>;
+
+      <CardHeader className='pb - 3'>;
+
+        <div className='flex justify - between items - start'>;
+          <div>;
+            <CardTitle>{application.job?.title || 'Unknown Job'};
+            <div className='text - sm text - muted - foreground mt - 1'>;
+              })}            </div>            <CardTitle>{application.job?.title || "Unknown Job"};""
+            <div className="text - sm text - muted - foreground mt - 1">;"
+            </div>;
+          <StatusBadge status={application.status} />;
+
+      ;"
+      <CardContent className='pb - 3'>;
+
+        <ApplicationProgress status={application.status} className='my - 4' />;
+
+      <CardContent className="pb-3">"
+        <ApplicationProgress status={application.status} className="my-4" />"
+          <div className='mt - 4 space - y-3'>;
+                <h4 className='text - sm font - medium mb - 1'>Your Cover Letter</h4>;
+                <p className='text - sm text - muted - foreground'>;
+</p>
+
+            <Calendar className='h-4 w-4 mr-1' /> Prepare for Interview;
+
+
+            <Calendar className='h-4 w-4 mr-1' /> View Interview Details;
+
+          ;
+            <FileText className='h-4 w-4 mr-1' /> View Offer;
+
+          <Button variant='outline' size='sm'>;
+
+
+    <Card className='overflow-hidden'>;
+
+      <CardHeader className='pb-3'>;
+
+        <div className='flex justify-between items-start'>;
+            <CardTitle>{application && application.job?.title || 'Unknown Job'};
+            <div className='text-sm text-muted-foreground mt-1'>;
+              })}            </div>            <CardTitle>{application && application.job?.title || "Unknown Job"};""
+            <div className="text-sm text-muted-foreground mt-1">;"
+          <StatusBadge status={application && application.status} />;
+
+      <CardContent className='pb-3'>;
+
+        <ApplicationProgress status={application && application.status} className='my-4' />;
+
+          <div className='mt-4 space-y-3'>;
+                <h4 className='text-sm font-medium mb-1'>Your Cover Letter</h4>;
+                <p className='text-sm text-muted-foreground'>;
+                </p>;
+pr-12325
               <div className='border rounded-md p-3 bg-muted/20'>;
                 <div className='flex justify-between items-center'>;
                   <div className='flex items-center'>;
@@ -399,12 +489,10 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
                     size='sm'
                     onClick={handleDownloadResume}
                   >
-<<<<<<< HEAD
                     <Download className='h-3 w-3 mr-1' /> Download                  </Button>
                 </div>
               </div>
             )}
-<<<<<<< HEAD
         {expanded && (
           <div className="mt-4 space-y-3">
             {application.cover_letter && (
@@ -428,7 +516,6 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
                     <FileText className="h-4 w-4 mr-2 text-blue-500" />
                     <span className="text-sm font-medium">{application.resume.title || "Resume"}</span>
                   </div>
-=======
 
       
       <CardContent className="pb-3">
@@ -438,6 +525,21 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
                 </p>;
               </div>)}
             {application.resume && (
+
+                    <span className='text-sm font-medium'>;
+</span>
+                    </span>;
+                  <Button;
+                    variant='ghost
+                    size='sm
+                    onClick={handleDownloadResume}
+                  >
+
+                    <Download className='h-3 w-3 mr-1' /> Download                  
+
+
+              </div>)}"
+pr-12325
               <div className='border rounded - md p - 3 bg - muted / 20'>;
                 <div className='flex justify - between items - center'>;
                   <div className='flex items - center'>;
@@ -447,6 +549,9 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
                     </span>;
                   </div>;
                   <Button;
+
+                    <span className='text - sm font - medium'>;
+pr-12325
                     variant='ghost';
                     size='sm';
                     on_click={handleDownloadResume}
@@ -461,17 +566,14 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
 
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   <Button variant="ghost" size="sm" onClick={handleDownloadResume}>
                     <Download className="h-3 w-3 mr-1" /> Download
-=======
                     <Download className='h-3 w-3 mr-1' /> Download
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   </Button>
                 </div>
               </div>
             )}
-<<<<<<< HEAD
 
               <div>;
                 <h4 className="text - sm font - medium mb - 1">Your Cover Letter</h4>;
@@ -494,10 +596,8 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
 
 
             {application.match_score && (
-<<<<<<< HEAD
-=======
 {application.match_score && (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <div>
                 <h4 className='text-sm font-medium mb-1'>Match Score</h4>
                 <div className='flex items-center'>
@@ -506,12 +606,10 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
                   </div>
                   <span className='ml-2 text-xs text-muted-foreground'>
                     Relevance to job requirements
-<<<<<<< HEAD
                   </span>                </div>            {application.match_score && (
               <div>
             
             {application.match_score && (
-=======
               <div>;
                 <h4 className='text - sm font - medium mb - 1'>Match Score</h4>;
                 <div className='flex items - center'>;
@@ -525,7 +623,6 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
             
             {application.match_score && (
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <div>
 
 
@@ -537,13 +634,10 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
                     {application.match_score}%
                   </div>
                   <span className="ml-2 text-xs text-muted-foreground">Relevance to job requirements</span>
-=======
                   </span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </div>
-<<<<<<< HEAD
-=======
 
 
 import { useState } from "react",;
@@ -611,7 +705,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
       <CardContent className="pb-3">;
         <ApplicationProgress status={application.status} className="my-4" />;
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         {expanded && (;
           <div className="mt-4 space-y-3">;
             {application.cover_letter && (;
@@ -621,10 +714,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
               </div>;
             )}
 
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             )}
 ;
             {application.match_score && (;
@@ -640,16 +730,12 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
             )}
           </div>;
         )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
-=======
       </CardContent>
 <CardFooter className='flex flex-col gap-3 pt-0'>
         <div className='flex justify-between items-center w-full'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           <Button
             variant='ghost'
             size='sm'
@@ -659,7 +745,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
           </Button>;
           <div className='flex gap-2'>;
             {renderActionButtons()}
-<<<<<<< HEAD
 
           </div>
         )}
@@ -673,7 +758,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
 
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </Button>
           <div className="flex gap-2">
             {renderActionButtons()}
@@ -682,36 +766,98 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
               size="sm"
               asChild
             >
+
+                    <Download className='h - 3 w - 3 mr - 1' /> Download                  ;
+
+              </div>)}
+          <div className="mt-4 space-y-3">"
+                  <Button variant="ghost" size="sm" onClick={handleDownloadResume}>"
+                    <Download className="h-3 w-3 mr-1" /> Download;"
+
+                  
+                <h4 className="text - sm font - medium mb - 1">Your Cover Letter</h4>;""
+                <p className="text - sm text - muted - foreground">{application.cover_letter}</p>;"
+              <div className="border rounded - md p - 3 bg - muted / 20">;"
+                <div className="flex justify - between items - center">;"
+                  <div className="flex items - center">;"
+                    <FileText className="h - 4 w - 4 mr - 2 text - blue - 500" />;"
+                    <span className="text - sm font - medium">{application.resume.title || "Resume"}</span>;"
+                  </div>;"
+                  <Button variant="ghost" size="sm" on_click={handleDownloadResume}>;"
+                    <Download className="h - 3 w - 3 mr - 1" /> Download;"
+
+                <h4 className='text - sm font - medium mb - 1'>Match Score</h4>;
+                  <div className='h - 6 w - 6 rounded - full bg - blue - 100 text - blue - 800 flex items - center justify - center text - xs font - medium'>;
+                  <span className='ml - 2 text - xs text - muted - foreground'>;
+                  </span>                </div>            {application.match_score && (
+
+
+
+
+                <h4 className="text-sm font-medium mb-1">Match Score</h4>""
+                <div className="flex items-center">"
+                  <div className="h-6 w-6 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center text-xs font-medium">"
+                  <span className="ml-2 text-xs text-muted-foreground">Relevance to job requirements</span>"
+          <Button variant="default" size="sm">;"
+
+
+          <Button variant="secondary" size="sm" className="bg-green-100 text-green-800 hover: bg-green-200 hover:text-green-900">;"
+
+          <Button variant="outline" size="sm">;"
+
+    <Card className="overflow-hidden">;"
+      <CardHeader className="pb-3">;"
+        <div className="flex justify-between items-start">;"
+            <CardTitle>{application.job?.title || "Unknown Job"};""
+
+      <CardContent className="pb-3">;"
+        <ApplicationProgress status={application.status} className="my-4" />;"
+          <div className="mt-4 space-y-3">;"
+                <h4 className="text-sm font-medium mb-1">Your Cover Letter</h4>;""
+                <p className="text-sm text-muted-foreground">{application.cover_letter}</p>;"
+                <h4 className="text-sm font-medium mb-1">Match Score</h4>;""
+                <div className="flex items-center">;"
+                  <div className="h-6 w-6 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center text-xs font-medium">;"
+                  <span className="ml-2 text-xs text-muted-foreground">Relevance to job requirements</span>;"
+          <Button;"
+            size='sm)
+            onClick={() => setExpanded(!expanded)}
+
+          <div className='flex gap-2'>;
+      
+      
+      <CardFooter className="flex flex-col gap-3 pt-0">"
+        <div className="flex justify-between items-center w-full">"
+          <Button variant="ghost" size="sm" onClick={() => setExpanded(!expanded)}>"
+
+          <div className="flex gap-2">"
+              variant="outline"""
+              size="sm""
+              asChild;
+
+pr-12325
               <Link href={`/jobs/${application.job_id}`}>
 
 
 
 
                 <ExternalLink className="h-4 w-4 mr-1" /> View Job
-=======
             <Button variant='outline' size='sm' asChild>
               <Link href={`/jobs/${application.job_id}`}>
                 <ExternalLink className='h-4 w-4 mr-1' /> View Job
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </Link>
             </Button>
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         
 
         
             <MessageSquare className='h-4 w-4 mr-1' /> Message Client        
         
-<<<<<<< HEAD
-=======
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <Button 
           variant="secondary" 
           size="sm"
@@ -722,12 +868,9 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
             <MessageSquare className="h-4 w-4 mr-1" /> Message Client
 
 
-<<<<<<< HEAD
-=======
           </Link>
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </Button>
       </CardFooter>
     </Card>
@@ -837,12 +980,8 @@ default: return (<Card className="overflow - hidden" > <CardHeader className="pb
 }</div>) ";
 }</CardContent> <Button variant="outline" size="sm" as_child > </Link> </Button> </div> </div> <Button variant="secondary" size="sm" className="w - full" as_child > </Link> </Button> </CardFooter> </Card>);
 }";
-<<<<<<< HEAD
 }
-=======
 }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 <Button variant='secondary' size='sm' className='w-full' asChild>
           <Link href={`/messages?jobId=${application.job_id}`}>
             <MessageSquare className='h-4 w-4 mr-1' /> Message Client
@@ -865,4 +1004,87 @@ default: return (<Card className="overflow-hidden" > <CardHeader className="pb-3
 }</div>) ";
 }</CardContent> <Button variant="outline" size="sm" asChild > </Link> </Button> </div> </div> <Button variant="secondary" size="sm" className="w-full" asChild > </Link> </Button> </CardFooter> </Card>) ;
 }"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+                <ExternalLink className="h-4 w-4 mr-1" /> View Job;"
+
+              
+            
+
+        
+
+            <MessageSquare className='h-4 w-4 mr-1' /> Message Client;
+
+          variant="secondary"""
+          size="sm"""
+          className="w-full""
+`;
+          <Link href={`/messages?jobId=${application.job_id}`}>
+            <MessageSquare className="h-4 w-4 mr-1" /> Message Client;"
+
+          
+
+
+        
+      
+            <Button variant='outline' size='sm' asChild>;
+              <Link href={`/jobs/${application && application.job_id}`}>;
+
+                <ExternalLink className='h-4 w-4 mr-1' /> View Job              ;
+
+        <Button variant='secondary' size='sm' className='w-full' asChild>;
+          <Link href={`/messages?jobId=${application && application.job_id}`}>;
+
+            <MessageSquare className='h-4 w-4 mr-1' /> Message Client                    ;
+
+          <div className="flex gap-2">;"
+              asChild>;
+
+                <h4 className="text - sm font - medium mb - 1">Match Score</h4>;""
+                  <div className="h - 6 w - 6 rounded - full bg - blue - 100 text - blue - 800 flex items - center justify - center text - xs font - medium">;"
+                  <span className="ml - 2 text - xs text - muted - foreground">Relevance to job requirements</span>;"
+      <CardFooter className='flex flex - col gap - 3 pt - 0'>;
+
+        <div className='flex justify - between items - center w - full'>;
+            on_click={() => set_expanded (!expanded)}
+
+          <div className='flex gap - 2'>;
+            <Button variant='outline' size='sm' as_child>;
+              <Link href={`/jobs/${application.job_id}`}>;
+
+                <ExternalLink className='h - 4 w - 4 mr - 1' /> View Job              ;
+
+        <Button variant='secondary' size='sm' className='w - full' as_child>;
+          <Link href={`/messages?job_id=${application.job_id}`}>;
+
+            <MessageSquare className='h - 4 w - 4 mr - 1' /> Message Client                    ;
+
+          <div className="flex gap - 2">;"
+              variant="outline";""
+              size="sm";"
+              as_child;
+                <ExternalLink className="h - 4 w - 4 mr - 1" /> View Job;"
+
+          
+        
+      
+
+            <MessageSquare className='h - 4 w - 4 mr - 1' /> Message Client;
+
+          variant="secondary";""
+          size="sm";""
+          className="w - full";"
+            <MessageSquare className="h - 4 w - 4 mr - 1" /> Message Client;"
+
+    );"
+default: return (<Card className="overflow - hidden" > <CardHeader className="pb - 3" > <div className="flex justify - between items - start" > <div> </div> </div> <StatusBadge status= {"
+}/> </div>  {";""
+  application.cover letter && (<div> <h4 className="text - sm font - medium mb - 1" >Your Cover Letter</h4> <p className="text - sm text - muted - foreground" > {"
+</div>)
+}</p> </div>);
+} </div> </div>);"
+  application.match score && (<div> <h4 className="text - sm font - medium mb - 1" >Match Score</h4> <div className="flex items - center" > <div className="h - 6 w - 6 rounded - full bg - blue - 100 text - blue - 800 flex items - center justify - center text - xs font - medium" > {"
+</div>)"
+}% </div> <span className="ml - 2 text - xs text - muted - foreground" >Relevance to job requirements</span> </div> </div>);""
+}</div>) ";""
+} <Button variant="outline" size="sm" as_child >   </div> </div> <Button variant="secondary" size="sm" className="w - full" as_child >    );""`;
+pr-12325

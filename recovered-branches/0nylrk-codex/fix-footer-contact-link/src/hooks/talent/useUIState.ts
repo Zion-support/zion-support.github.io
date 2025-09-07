@@ -1,4 +1,6 @@
 
+
+pr-12325
 import {useState} from 'react';
 import {TalentProfile} from '@/types/talent';
 export function useUIState() {;
@@ -55,3 +57,10 @@ export function useUIState() {;
     toggle_section;
     closeMobileFilter}
 }
+
+  const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
+  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
+  const [selectedTalent, setSelectedTalent] = useState<TalentProfile | null>(null),
+
+  const [selectedTalent, setSelectedTalent] = useState<TalentProfile | null>(null),;
+pr-12325

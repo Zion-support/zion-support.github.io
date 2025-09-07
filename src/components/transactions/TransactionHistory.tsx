@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export /**
  * TransactionHistory - Function description
  */
@@ -32,7 +31,6 @@ if (return []) {
 
   );
 }
-=======
 import React, { useState, useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { supabase } from '@/integrations/supabase/client';
@@ -129,4 +127,4 @@ default: return (<Badge variant="outline" className="bg-gray-500/20 text-gray-50
 }'"
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

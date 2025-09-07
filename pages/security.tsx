@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
@@ -22,8 +18,6 @@ const Page = () => {
 };
 
 export default Page;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 origin/automation-improvements-final
 
 
@@ -40,7 +34,6 @@ const securityStats = [
 export default function SecurityPage() {
 
 
-=======
 import { motion } from 'framer-motion';
 import {
   Shield,
@@ -134,7 +127,7 @@ export default function Security() {
         {/* Hero Section */}
         <section className='pt-32 pb-20 px-6'>
           <div className='max-w-4xl mx-auto text-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Layout
       title="Security - Zion Tech Group"
@@ -348,7 +341,6 @@ className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'
             </motion.p>
           </div>
         </section>
-<<<<<<< HEAD
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
@@ -717,7 +709,6 @@ function SecurityPage() {
   }
 }
                   className="bg-slate-800/50 rounded-2xl p-8 border border-white/10 hover:border-cyan-500/30 transition-colors duration-300"
-=======
 
         {/* Security Overview */}
 <section className='py-20 px-6'>
@@ -745,7 +736,7 @@ className='text-center mb-16'
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
 className='bg-slate-800/50 rounded-2xl p-8 border border-white/10 hover:border-cyan-500/30 transition-colors duration-300'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                     {stat.number}
@@ -1318,7 +1309,6 @@ origin/automation-improvements-final
         </section>
     </Layout>
       </div>
-<<<<<<< HEAD
     </Layout>
   );
 }  )
@@ -1362,11 +1352,6 @@ origin/main
   )
 }
 ursor/fix-lint-push-and-merge-to-main-ae4e
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
     </>
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

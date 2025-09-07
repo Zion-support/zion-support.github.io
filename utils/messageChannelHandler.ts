@@ -1,21 +1,15 @@
 export const messageChannelHandler = {
-<<<<<<< HEAD
-<<<<<<< HEAD
   sendMessage: (message: string) => {},
   receiveMessage: (callback: (message: string) => void) => {},
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
   sendMessage: (message: any) => {},
   receiveMessage: (callback: any) => {},
 };
-<<<<<<< HEAD
 export const messageChannelHandler: MessageHandler = {
   sendMessage: (_message) => {
     // No-op: placeholder for message channel integration
   },
   receiveMessage: (_callback) => {
     // No-op: placeholder for message listener registration
-=======
   sendMessage: (message: string) => {
     // Implementation for sending messages
     // eslint-disable-next-line no-console
@@ -24,7 +18,7 @@ export const messageChannelHandler: MessageHandler = {
     // Implementation for receiving messages
     // eslint-disable-next-line no-console
     console.log('Setting up message receiver');
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   }
 };
 };
@@ -86,5 +80,3 @@ export default MessageChannelHandler;
 },;
 ,;
 ;
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793

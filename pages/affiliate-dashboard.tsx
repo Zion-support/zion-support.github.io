@@ -1,15 +1,11 @@
-<<<<<<< HEAD
 
 
-=======
   if (typeof window;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   useEffect(() => {
     if (!code) return
     (async () => {
       try {
-<<<<<<< HEAD
-=======
 const res = await fetch(
           `/api/partners/metrics?code=${encodeURIComponent(code)}`
         );
@@ -19,14 +15,12 @@ const res = await fetch(
     })();
   }, [code]);
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   async function requestPayout() {
     setMsg('')
     try {
       const res = await fetch('/api/partners/request-payout', {
-<<<<<<< HEAD
       setMsg('Payout requested')
-=======
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({
@@ -37,7 +31,7 @@ body: JSON.stringify({
       const json = await res.json();
       if (!res.ok) throw new Error(json.error || 'Failed');
       setMsg('Payout requested');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     } catch (e: any) {
       setMsg(e?.message || 'Error');
     }
@@ -60,7 +54,6 @@ body: JSON.stringify({
       </div>
     );
   }
-<<<<<<< HEAD
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code])
 
 import { useEffect, useMemo, useState } from 'react';
@@ -125,7 +118,6 @@ export default function AffiliateDashboard(req, res) {
   }
 }
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code]),
-=======
 
   return (
     <div className='space-y-6'>
@@ -182,7 +174,7 @@ function Stat({ label, value }: { label: string; value: number | string }) {
       <div className='text-2xl font-semibold'>{value}</div>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   if (!code) {
     return (
       <div className="space-y-4">
@@ -219,7 +211,6 @@ function Stat({ label, value }: { label: string, value: number | string }) {
       <div className="text-2xl font-semibold">{value}</div>
     </div>
   )
-<<<<<<< HEAD
 ;
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code]);
   if (!code) {;
@@ -320,6 +311,5 @@ function Stat() {
 }
 
 
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

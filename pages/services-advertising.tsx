@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 export default function ServicesAdvertisingPage() {
 	return (
@@ -367,9 +366,8 @@ export default function ServicesAdvertisingPage() {
                 { name: 'Domain & DNS Monitor', price: '$89/mo', href: '/domain-dns-monitor' },
                 { name: 'Uptime & SLO Monitor', price: '$99/mo', href: '/uptime-slo-monitor' },
                 { name: 'PDF Render API', price: '$49/mo', href: '/pdf-render-api' },
-=======
 const ext = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 { name: 'Database Performance Monitor', price: '$299/mo', href: '/database-performance-monitor' }
                 { name: 'Database Performance Monitor', price: '$299/mo', href: '/database-performance-monitor'   } catch (error) {
     console.error("Error:", error);
@@ -381,7 +379,6 @@ const ext = null;
                   <div className="text-sm text-gray-400 mb-1">From</div>
                   <div className="text-2xl font-bold text-white">{o.price}</div>
                   <div className="text-gray-200 mt-2">{o.name}</div>
-<<<<<<< HEAD
 }
 };
                 </Link>
@@ -786,7 +783,6 @@ return (
 
 ;
 
-=======
                 </a>
               ))}
             </div>
@@ -796,4 +792,4 @@ return (
     </UltraAdvancedFuturisticBackground>
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

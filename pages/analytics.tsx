@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next / head';
 import {
@@ -123,7 +122,6 @@ export default function AnalyticsPage() {
   }
 }
   ],
-=======
 import React from 'react',
 import Head from 'next/head';
 import { BarChart3, TrendingUp, PieChart, Activity, ArrowRight, Check, Eye } from 'lucide-react';
@@ -153,7 +151,7 @@ export default function AnalyticsPage() {
               </div>
             </div>
             <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               Analytics Platform
             </h1>
             <p className='text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed'>
@@ -188,31 +186,27 @@ export default function AnalyticsPage() {
               Comprehensive analytics platform with real-time insights, predictive analytics, and custom reporting capabilities.
             </p>
               <a
-<<<<<<< HEAD
                 href="/contact" className="shadow-2xl shadow-blue-500/25">
                 Start Analyzing
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
               <a
                 href="/contact" className="border-white/20 hover:border-white/40">
-=======
                 href='/contact'
                 className='border-white/20 hover:border-white/40'
               >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 View Demo
               </a>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 
 
 
                 Analytics Features
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-=======
         {/* Features Section */}
 <section className='py-24'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -221,12 +215,11 @@ export default function AnalyticsPage() {
                 Analytics Features
               </h2>
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 Powerful tools to understand your data and make better decisions
               </p>
             </div>
 
-<<<<<<< HEAD
 
 
               {features.map((feature, index) => (
@@ -271,7 +264,6 @@ export default function AnalyticsPage() {
         <section className="py-24 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-=======
 <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
               {features.map((feature, index) => (
                 <div
@@ -296,7 +288,7 @@ export default function AnalyticsPage() {
 <section className='py-24 bg-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <div>
                 <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
                   Transform Data into Action
@@ -307,7 +299,6 @@ export default function AnalyticsPage() {
                       <div className="w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center mr-4 mt-1">
                         <Check className="w-4 h-4 text-blue-500" />
                       </div>
-<<<<<<< HEAD
                       <span className="text-gray-300 text-lg">{benefit}</span>
                     </div>
               <div className="relative">
@@ -315,7 +306,6 @@ export default function AnalyticsPage() {
                   <div className="text-center">
                     <Eye className="w-24 h-24 mx-auto mb-6 text-blue-400" />
                     <h3 className="text-2xl font-bold text-white mb-4">
-=======
                       <span className='text-gray-300 text-lg'>{benefit}</span>
                     </div>
                   ))}
@@ -326,18 +316,16 @@ export default function AnalyticsPage() {
                   <div className='text-center'>
                     <Eye className='w-24 h-24 mx-auto mb-6 text-blue-400' />
                     <h3 className='text-2xl font-bold text-white mb-4'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       Visual Insights
                     </h3>
                     <p className="text-gray-300 mb-6">
                       Beautiful charts and graphs that make complex data easy to understand
                     </p>
-<<<<<<< HEAD
-=======
                     <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-400 text-sm'>
                       <TrendingUp className='w-4 h-4 mr-2' />
                       Interactive dashboards
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                   </div>
                 </div>
@@ -345,7 +333,6 @@ export default function AnalyticsPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -356,12 +343,11 @@ export default function AnalyticsPage() {
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
 
 
-=======
         {/* CTA Section */}
 <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               Ready to Unlock Your Data?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -373,23 +359,20 @@ export default function AnalyticsPage() {
                 Start Free Trial
               </Link>
               <a
-<<<<<<< HEAD
                 href="/contact" className="border-white text-white hover:bg-white hover:text-blue-600">
                 Schedule Demo
               </Link>
-=======
                 href='/contact'
                 className='border-white text-white hover:bg-white hover:text-blue-600'
               >
                 Schedule Demo
               </a>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
         </section>
       </div>
     </>
-<<<<<<< HEAD
 
 
 }
@@ -559,6 +542,5 @@ export default function AnalyticsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

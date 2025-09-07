@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -58,9 +57,8 @@ export default function InstantMessaging() {
 
   };
 
-=======
   const schema = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>;
 
@@ -105,7 +103,6 @@ export default function InstantMessaging() {
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
-<<<<<<< HEAD
         type="application/ld+json"
 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
@@ -147,7 +144,6 @@ export default function InstantMessaging() {
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/open-app">Start Chatting</Link>
-=======
         type='application/ld+json'
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
@@ -199,13 +195,12 @@ export default function InstantMessaging() {
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/open-app'>Start Chatting</Link>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </Button>
           </div>
         </div>
       </main>
     </>
-<<<<<<< HEAD
   )
 
 ;
@@ -258,7 +253,6 @@ export default function InstantMessaging() {;
 
 
 ;
-=======
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

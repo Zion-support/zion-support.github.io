@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
   const shareLinks = [
     {
       name: "Twitter",
@@ -26,7 +24,6 @@
       onClick: copyLinkToClipboard
     }],
 
-=======
 import { Button } from './ui/button';
 import { Twitter, Facebook, Linkedin, Link } from 'lucide-react';
 import { toast } from './ui/use-toast';
@@ -35,11 +32,9 @@ export function SocialShareSection() {
   const { t } = useTranslation();
   // Current URL is not available during SSR, guard with typeof check
   const shareUrl = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
-=======
 return (
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <section className="py-12 bg-zion-blue">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
@@ -47,10 +42,7 @@ return (
             <h3 className="text-xl font-bold text-white mb-2">Share Zion with Your Network</h3>
             <p className="text-zion-slate-light">Help others discover the future of AI & tech marketplace</p>
           </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 };
 }</div> </div> </div> </section>) ;
 }'";
@@ -128,9 +120,7 @@ export function SocialShareSection() {;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">;
           <div>;
-<<<<<<< HEAD
             <h3 className='text-xl font-bold text-white mb-2'>;
-=======
             <h3 className="text-xl font-bold text-white mb-2">Share Zion with Your Network</h3>;
             <p className="text-zion-slate-light">Help others discover the future of AI & tech marketplace</p>;
           </div>;
@@ -203,14 +193,12 @@ export function SocialShareSection() {;
         <div className='max - w-4xl mx - auto flex flex - col md:flex - row items - center justify - between gap - 6 bg - zion - blue - light border border - zion - purple / 20 rounded - lg p - 6'>;
           <div>;
             <h3 className='text - xl font - bold text - white mb - 2'>;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               Share Zion with Your Network;
             </h3>;
             <p className='text - zion - slate - light'>;
               Help others discover the future of AI & tech marketplace;
             </p>;
           </div>;
-<<<<<<< HEAD
           <div className='flex flex-wrap gap-3'>;
             {shareLinks && shareLinks.map((link, index) => (              <Button
                 key = {index,}
@@ -224,7 +212,6 @@ export function SocialShareSection() {;
                 <span aria-hidden='true'>{link && link.name}</span>;
               </Button>;
             ))}
-=======
           <div className='flex flex - wrap gap - 3'>;
             {share_links.map ((link, index) => (              <Button;
                 key = {index, }
@@ -248,13 +235,10 @@ export function SocialShareSection() {;
   title: t ('errors.failed to copy');
 });
 }
-<<<<<<< HEAD
 }</div> </div> </div> </section>);
 }'";
 }
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 }</div> </div> </div> </section>)
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

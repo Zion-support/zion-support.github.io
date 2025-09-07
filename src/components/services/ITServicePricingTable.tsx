@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useMemo } from 'react';
 import {;
   onsiteServicePricing,;
@@ -18,7 +17,6 @@ import { Button } from '@/components/ui/button';
 export function ITServicePricingTable() {;
   const [searchQuery, setSearchQuery] = useState('');
   const [sortConfig, setSortConfig] = useState<{;
-=======
 
 import { useState, useMemo } from "react",
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
@@ -29,7 +27,7 @@ import { Button } from "@/components/ui/button";
 export function ITServicePricingTable() {
   const [searchQuery, setSearchQuery] = useState("");
   const [sortConfig, setSortConfig] = useState<{
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     key: keyof CountryPricing;
     direction: 'ascending' | 'descending';
   }>({;
@@ -37,7 +35,6 @@ export function ITServicePricingTable() {
     direction: 'ascending',;
   });
 
-<<<<<<< HEAD
   const sortedData = useMemo(() => {;
     let filteredData = [...onsiteServicePricing];
     // Filter by search query;
@@ -45,7 +42,6 @@ export function ITServicePricingTable() {
       filteredData = filteredData && filteredData.filter(item =>;
         item && item.country.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
       );
-=======
   const sortedData = null;
 import { useState, useMemo } from 'react'
 import {
@@ -78,7 +74,7 @@ export function ITServicePricingTable() {
       filteredData = filteredData.filter(item =>
         item.country.toLowerCase().includes(searchQuery.toLowerCase())
       )
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
 
     // Sort data;
@@ -89,7 +85,6 @@ export function ITServicePricingTable() {
 
   const handleSort = (key: keyof CountryPricing) => {
     setSortConfig({
-<<<<<<< HEAD
       key,
       direction: 
         sortConfig.key === key && sortConfig.direction === "ascending" 
@@ -107,7 +102,6 @@ export function ITServicePricingTable() {
     });
   };
 
-=======
       key
       direction:
         sortConfig.key === key && sortConfig.direction === 'ascending'
@@ -115,7 +109,7 @@ export function ITServicePricingTable() {
           : 'ascending'
     })
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
         return sortConfig.direction === "ascending" ? -1 : 1
@@ -183,9 +177,7 @@ export function ITServicePricingTable() {
                   <span>Country</span>
                   <ArrowUpDown className="h-4 w-4" />
                 </Button>
-<<<<<<< HEAD
               </TableHead>
-=======
               </TableHead>
               <TableHead className='text-right text-zion-cyan font-medium'>
                 <Button
@@ -228,4 +220,4 @@ export function ITServicePricingTable() {
       </div>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

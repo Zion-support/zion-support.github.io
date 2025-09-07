@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Wallet, Database, Save } from 'lucide-react'
 
 import {
@@ -226,7 +224,6 @@ export default function AccountSettings() {;
       toast.error(error.message || 'Failed to connect wallet');
     }
   },
-=======
 import { useState } from "react";
 import { useLocalStorage } from "@/hooks";
 import { Header } from "@/components/Header";
@@ -324,14 +321,12 @@ export default function AccountSettings() {
 
   return (
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
 
 
 
-=======
 import { useState } from 'react';
 import { useLocalStorage } from '@/hooks';
 import { Header } from '@/components/Header';
@@ -375,19 +370,16 @@ export default function AccountSettings() {
   const [enableBackup, setEnableBackup] = useLocalStorage('enable_backup', false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const handleSave = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>
       <SEO title="Account Settings" description="Manage your account" />
       <Header />
-<<<<<<< HEAD
 
-=======
       <main className="container mx-auto py-8 px-4">
         <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>
 
         <div className="grid gap-6 md:grid-cols-2">
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <Card>
             <CardHeader>
               <CardTitle>Profile Settings</CardTitle>
@@ -395,7 +387,6 @@ export default function AccountSettings() {
                 Manage your personal information and privacy
               </CardDescription>
             </CardHeader>
-<<<<<<< HEAD
               <CardDescription>;
                 Manage your personal information and privacy;
               </CardDescription>;
@@ -410,12 +401,10 @@ export default function AccountSettings() {
                     variant='outline'
                     onClick={handleConnectWallet}
                     type='button'
-=======
             <CardContent className="space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="email">Email Address</Label>
                 <Input
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   id="email"
                   value={user?.email || ""}
                   disabled
@@ -439,15 +428,12 @@ export default function AccountSettings() {
                     className="flex items-center gap-1"
                   >
                     <Wallet className="h-4 w-4" />
-<<<<<<< HEAD
 
 
             <CardContent className="space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="email">Email Address</Label>
                 <Input
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     Connect
                   </Button>
                 </div>
@@ -455,7 +441,6 @@ export default function AccountSettings() {
                   Link your decentralized identity to display on your profile
                 </p>
               </div>
-<<<<<<< HEAD
                 </div>
                 <Switch
                   id='displayWeb3'
@@ -463,7 +448,6 @@ export default function AccountSettings() {
                   onCheckedChange={setDisplayWeb3}                />
               </div>
               <Separator />
-=======
 
               <div className="flex items-center justify-between">
                 <div className="space-y-0.5">
@@ -485,7 +469,6 @@ export default function AccountSettings() {
                 <div className="space-y-0.5">
                   <Label htmlFor="backup" className="flex items-center gap-1">
                     <Database className="h-4 w-4" />
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
               <div className="flex items-center justify-between">
@@ -499,8 +482,6 @@ export default function AccountSettings() {
                   </p>
                 </div>
                 <Switch
-<<<<<<< HEAD
-=======
                   id="backup"
                   checked={enableBackup}
                   onCheckedChange={setEnableBackup}
@@ -512,30 +493,23 @@ export default function AccountSettings() {
                   Data will be backed up to decentralized storage. This feature
                   is in beta.
                 </div>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               )}
               <Button
                 onClick={handleSave}
                 disabled={isSubmitting}
-<<<<<<< HEAD
                 className='w-full'>;
 
                 {isSubmitting ? 'Saving...' : 'Save Settings'}
-=======
                 className="w-full"
               >
                 {isSubmitting ? "Saving..." : "Save Settings"}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 {!isSubmitting && <Save className="ml-2 h-4 w-4" />}
               </Button>
             </CardContent>
           </Card>
 
           <Card>
-<<<<<<< HEAD
-=======
             <CardHeader>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <CardTitle>Web3 Features</CardTitle>
               <CardDescription>
                 Manage your Web3 connections and features
@@ -636,7 +610,6 @@ export default function AccountSettings() {
       </main>
     </>
   );
-<<<<<<< HEAD
 };
 
 
@@ -651,7 +624,6 @@ export default function AccountSettings() {
                 <p className='text - xs text - gray - 500 mt - 1'>;
                   {enable_backup;
                     ? 'Restore your profile data from decentralized storage';
-<<<<<<< HEAD
                     </p>
                   </div>
                 </div>
@@ -669,8 +641,6 @@ export default function AccountSettings() {
                 <p className="text-xs text-gray-500 mt-1">
                   {enableBackup 
                     ? 'Restore your profile data from decentralized storage' 
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     : 'Enable backup first to use this feature'}
                 </p>;
               </div>;
@@ -678,16 +648,12 @@ export default function AccountSettings() {
           </Card>;
         </div>;
       </main>;
-<<<<<<< HEAD
 }
 ;
-=======
 
 
 
     </>);
 }
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

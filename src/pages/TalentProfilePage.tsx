@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { TalentProfile } from "@/components/profile/TalentProfile",
 import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState",
 import { ProfileErrorState } from "@/components/profile/ProfileErrorState",
@@ -77,7 +76,6 @@ export default function TalentProfilePage() {
     userType: null, // Default empty string since userDetails doesn't have this property
     profileComplete: false, // Default value since userDetails doesn't have this property
 
-=======
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { TalentProfile } from '@/components/profile/TalentProfile';
@@ -100,13 +98,12 @@ export default function TalentProfilePage() {
         name: '',
         points: 0,
       };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
   // Handle loading error gracefully
   useEffect((,) => {
     if (error) {
       toast({
-<<<<<<< HEAD
         description:
           'There was a problem loading this talent profile. Please try again.'
         variant: 'destructive'
@@ -168,13 +165,12 @@ if ( {) {
       }) }        title: "Error loading profile",
         description: "There was a problem loading this talent profile. Please try again.",
         variant: "destructive"});
-=======
 title: 'Error loading profile',
         description:
           'There was a problem loading this talent profile. Please try again.',
         variant: 'destructive',
       });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }, [error])
   if (isLoading) {
@@ -314,7 +310,6 @@ export default function TalentProfilePage() {;
   const handleRequestHire = () => {
     if (!isAuthenticated) {
       toast({
-<<<<<<< HEAD
         title: "Authentication required",
         description: "Please sign in to hire this talent.",
         variant: "default"});
@@ -322,7 +317,6 @@ export default function TalentProfilePage() {;
       return
     }
     setIsHireModalOpen(true)
-=======
 title: 'Authentication required',
         description: 'Please sign in to hire this talent.',
         variant: 'default',
@@ -331,13 +325,12 @@ title: 'Authentication required',
       return;
     }
     setIsHireModalOpen(true);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   };
 
   const handleMessageTalent = () => {
     if (!isAuthenticated) {
       toast({
-<<<<<<< HEAD
         title: "Authentication required",
         description: "Please sign in to message this talent.",
         variant: "default"});
@@ -360,7 +353,6 @@ if ( {) {
 
   return (
     <>;
-=======
 title: 'Authentication required',
         description: 'Please sign in to message this talent.',
         variant: 'default',
@@ -378,7 +370,7 @@ title: 'Authentication required',
         ogImage = {profile.profile_picture_url,}
       />
 <div className='min-h-screen bg-zion-blue pb-12'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         <TalentProfile
           profile={profile}
           onRequestHire={handleRequestHire}
@@ -397,7 +389,6 @@ title: 'Authentication required',
               size='sm'
               variant='outline'
               className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
-<<<<<<< HEAD
         title={profile.full_name}
         description={profile.bio || 'Talent profile'}
         ogImage={profile.profile_picture_url}
@@ -647,7 +638,6 @@ export default function TalentProfilePage() {;
     </>;
   );
 }
-=======
               onClick={handleMessageTalent}
             >
               <MessageSquare className='mr-2 h-4 w-4' />
@@ -716,4 +706,4 @@ return (<> <SEO title= {;
   () => setIsMessageModalOpen (false) ;
 }/> </div> </>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

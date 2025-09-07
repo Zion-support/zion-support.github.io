@@ -24,4 +24,20 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+import React from 'react';
+import MainLayout from '../components/layout/MainLayout';
+const Page = () => {
+  return (
+    <MainLayout;
+      title="Guides - Zion Tech Group"""
+      description="Helpful guides and tutorials from Zion Tech Group""
+    >
+"
+      <div className="min-h-screen bg-gray-50">"
+</div>"
+        <div className="container mx-auto px-4 py-16">"
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Guides</h1>""
+          <p className="text-xl text-gray-600">Coming soon...</p>"
+        </div>
+    )"
+pr-12325

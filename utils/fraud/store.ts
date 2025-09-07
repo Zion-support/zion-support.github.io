@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
   private records: Map < string, FraudRecord> = new Map ();
 ;
   create_record (record: Omit < FraudRecord, 'id' | 'timestamp'>): FraudRecord {
     const id = Date.now ().to_string ();
     const new_record: FraudRecord = {
-=======
 export interface FraudRecord {
   id: string;
   type: string;
@@ -25,7 +22,6 @@ class FraudStore {
   createRecord(record: Omit<FraudRecord, "id" | "timestamp">): FraudRecord {
     const id = Date.now().toString();
     const newRecord: FraudRecord = {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       ...record,
       id,
       timestamp: new Date().toISOString(),
@@ -70,15 +66,11 @@ class FraudStore {
     };
   }
 }
-<<<<<<< HEAD
 export const fraud_store = new FraudStore ();
 export const getFraudStore = () =>: any fraud_store;
-=======
 
 export const fraudStore = new FraudStore();
 export const getFraudStore = () => fraudStore;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 import fs from 'fs-extra';
 import path from 'path';
 import { createClient } from '@supabase/supabase-js';
@@ -411,4 +403,4 @@ export function newEvent(
     ipAddress: partial.ipAddress ?? null,
     createdAt: partial.createdAt ?? new Date().toISOString(),
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

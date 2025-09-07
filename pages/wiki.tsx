@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useMemo, useState } from 'react',;
 import {
   generateZionWiki,
@@ -17,7 +16,6 @@ function CopyButton({ text, label }: { text: string, label: string }) {
         setCopied(true)
         setTimeout(() => setCopied(false), 1500)
 }
-=======
 import React, { useMemo, useState } from 'react';
 import { generateZionWiki;
   buildMarkdownFromWiki;
@@ -29,12 +27,11 @@ function CopyButton({ text, label }: { text: string, label: string }) {
   return (
     <button
       onClick;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default function WikiPage() {
   const wiki = useMemo(() => generateZionWiki(), [])
   const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki])
   const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki])
-<<<<<<< HEAD
 
 import React, { useMemo, useState } from 'react';
 import {;
@@ -78,8 +75,7 @@ export default function WikiPage() {
   const wiki = useMemo(() => generateZionWiki(), []),
   const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki]),
   const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki]),
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 <div className='grid grid-cols-1 lg:grid-cols-[260px,1fr] gap-8'>
       <aside className='sticky top-20 self-start hidden lg:block'>
@@ -101,24 +97,20 @@ export default function WikiPage() {
             </li>
           ))}
           <li>
-<<<<<<< HEAD
             <a href="#references" className="opacity-80 hover:opacity-100">References</a>
             <a href="#references" className="opacity-80 hover:opacity-100">References</Link>
-=======
 <a href='#references' className='opacity-80 hover:opacity-100'>
               References
             </a>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           </li>
         </ul>
       </aside>
 
-<<<<<<< HEAD
 
       <article className="prose dark:prose-invert max-w-none">
-=======
 <article className='prose dark:prose-invert max-w-none'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         <h1>{wiki.title}</h1>
         <div className='not-prose border rounded p-4 bg-white/60 dark:bg-black/20 mb-4'>
           <div className='grid grid-cols-2 gap-x-6 gap-y-1 text-sm'>
@@ -139,7 +131,6 @@ export default function WikiPage() {
             <h2>{s.title}</h2>
             {s.paragraphs.map((p, i) => (
               <p key={i}>{p}</p>
-<<<<<<< HEAD
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -152,13 +143,12 @@ export default function WikiPage() {
   }
 }
         <h2 id="references">References</h2>
-=======
             ))}
           </section>
         ))}
 
 <h2 id='references'>References</h2>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         <ol>
           {wiki.references.map((r, i) => (
             <li key={i}>{r}</li>
@@ -173,7 +163,6 @@ export default function WikiPage() {
               <CopyButton text={wikitext} label='Copy Wikitext' />
             </div>
           </div>
-<<<<<<< HEAD
           <pre className="overflow-auto text-xs whitespace-pre-wrap">
           </pre>
         </div>
@@ -186,7 +175,6 @@ export default function WikiPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
           <pre className='overflow-auto text-xs whitespace-pre-wrap'>{md}</pre>
         </div>
 
@@ -199,4 +187,4 @@ export default function WikiPage() {
       </article>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

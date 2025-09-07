@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 const stockStatus =;
     product && product.stock === undefined;
       : 'In stock';
@@ -15,12 +12,10 @@ const stockStatus =;
   const isMobile = useMediaQuery('(max-width: 768px)'),;
   const isTablet = useMediaQuery('(max-width: 1200px)'),;
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
 
   );
 }
-<<<<<<< HEAD
     product.stock === undefined;
       ? 'success';
       : product.stock <= 0;
@@ -200,7 +195,6 @@ const stockStatus =;
   );
 }
 ;
-=======
 
   );
 }
@@ -220,8 +214,6 @@ const stockStatus =;
   );
 }
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 import Link from 'next/link';
 import { Heart } from 'lucide-react'
 import { useWishlist  } from '@/hooks/useWishlist';
@@ -292,4 +284,4 @@ onBuy () > {'";
 }
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

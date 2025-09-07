@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import React from "react";
 import { 
@@ -38,7 +36,7 @@ import { Separator } from "@/components/ui/separator"
 import { QuoteStatusBadge } from "./QuoteStatusBadge"
 import type { QuoteRequest } from "@/types/quotes"
 import {format} from "date-fns"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 interface QuoteDetailsProps {
   quote: QuoteRequest | null
   isOpen: boolean
@@ -46,6 +44,15 @@ interface QuoteDetailsProps {
 
 };
 import React from "react";
+interface QuoteDetailsProps {
+  // TODO: Implement
+}
+  quote: QuoteRequest | null;,
+  isOpen: boolean;
+  onClose: () => void;
+};
+import React from "react";"
+pr-12325
 import { ;
   Dialog;
   DialogContent, ;
@@ -118,6 +125,74 @@ interface QuoteDetailsProps {;
             {quote.project_description && (
               <>
                 <h4 className="font-medium mt-4">Additional Details</h4>
+  DialogDescription ;"
+} from "@/components/ui/dialog";""
+import { Button } from "@/components/ui/button";""
+import { Calendar, User, Mail, Clock, DollarSign } from 'lucide-react'import { Card, CardContent } from "@/components/ui/card";""
+import { Separator } from "@/components/ui/separator";""
+import { QuoteStatusBadge } from "./QuoteStatusBadge";""
+import type { QuoteRequest } from "@/types/quotes";""
+import {format} from "date-fns";"
+interface QuoteDetailsProps {;
+  quote: QuoteRequest | null,;
+  isOpen: boolean,;
+;
+export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
+  if (!quote) return null,;
+  const formatDate = (dateString?: string) => {;"
+    if (!dateString) return 'Not specified',;
+    try {;
+      return format(new Date(dateString), 'PPP');
+    } catch (e) {;
+      return dateString;
+
+
+  return (
+
+
+        
+        <Separator className="my-4" />"
+"
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
+</div>
+          <Card>
+            <CardContent className="pt-6">"
+              <h3 className="text-lg font-medium mb-3">Requester Information</h3>""
+              <div className="space-y-2">"
+</div>"
+                <div className="flex items-center gap-2">"
+                  <User className="h-4 w-4 text-gray-500" />"
+
+                  <span>{quote.requester_name}</span>
+                  <Mail className="h-4 w-4 text-gray-500" />"
+
+                  <span>{quote.requester_email}</span>
+            
+          
+
+
+          
+
+
+              <h3 className="text-lg font-medium mb-3">Project Timeline</h3>""
+                  <Calendar className="h-4 w-4 text-gray-500" />"
+)
+                  <span>Start date: {formatDate(quote.start_date)}</span>
+                  <Clock className="h-4 w-4 text-gray-500" />"
+
+                  <span>Timeline: {quote.timeline}</span>
+            
+          
+
+
+        
+
+        <Card className="mt-6">"
+            <h3 className="text-lg font-medium mb-3">Project Details</h3>""
+            <p className="mb-4">{quote.project_summary}</p>"
+              <>"
+                <h4 className="font-medium mt-4">Additional Details</h4>"
+pr-12325
                 <p>{quote.project_description}</p>
               </>
             )}
@@ -232,6 +307,77 @@ interface QuoteDetailsProps {;
 }</DialogDescription> </DialogHeader> <Separator className="my-4" /> <div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <Card> </div> </div> </CardContent> </Card> <Card> </div> </div> </CardContent> </Card> </div> {";
   quote && quote.project description && (<> <h4 className="font-medium mt-4" >Additional Details</h4> <p> {;
   quote && quote.project description ;
+
+            
+
+            <div className="mt-6 flex items-center gap-2">"
+              <DollarSign className="h-4 w-4 text-gray-500" />"
+              <span className="font-medium">Budget: </span>"
+          
+        
+
+
+        
+
+        <div className="mt-6 flex justify-end">"
+          <Button onClick={onClose}>Close
+      
+    
+    <Dialog open={isOpen} onOpenChange={(open,) => !open && onClose()}>;
+      <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">;"
+
+        <DialogHeader>;
+          <DialogTitle className="text-2xl flex items-center justify-between">;"
+
+            <span>{quote && quote.project_name}</span>;
+            <QuoteStatusBadge status={quote && quote.status} />;
+
+          <DialogDescription>;
+
+        ;"
+        <Separator className="my-4" />;"
+        <div className="grid grid-cols-1 md: grid-cols-2 gap-6">;"
+          <Card>;
+            <CardContent className="pt-6">;"
+              <h3 className="text-lg font-medium mb-3">Requester Information</h3>;""
+              <div className="space-y-2">;"
+                <div className="flex items-center gap-2">;"
+                  <User className="h-4 w-4 text-gray-500" />;"
+
+                  <span>{quote && quote.requester_name}</span>;
+                </div>;"
+                  <Mail className="h-4 w-4 text-gray-500" />;"
+
+                  <span>{quote && quote.requester_email}</span>;
+                </div>;
+              <h3 className="text-lg font-medium mb-3">Project Timeline</h3>;""
+                  <Calendar className="h-4 w-4 text-gray-500" />;"
+
+                  <span>Start date: {formatDate(quote && quote.start_date)}</span>;
+                  <Clock className="h-4 w-4 text-gray-500" />;"
+
+                  <span>Timeline: {quote && quote.timeline}</span>;
+        <Card className="mt-6">;"
+            <h3 className="text-lg font-medium mb-3">Project Details</h3>;""
+            <p className="mb-4">{quote && quote.project_summary}</p>;"
+              <>;"
+                <h4 className="font-medium mt-4">Additional Details</h4>;"
+                <p>{quote && quote.project_description}</p>;
+              </>;
+            <div className="mt-6 flex items-center gap-2">;"
+              <DollarSign className="h-4 w-4 text-gray-500" />;"
+              <span className="font-medium">Budget: </span>;"
+        <div className="mt-6 flex justify-end">;"
+          <Button onClick={onClose}>Close;
+}> <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto" > <DialogHeader> <DialogTitle className="text-2xl flex items-center justify-between" > <span> {;"
+
+}</span> <QuoteStatusBadgestatus= {
+  quote && quote.status;"
+}/> formatDate (quote && quote.created at) ";"
+}  <Separator className="my-4" /> <div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <Card> </div> </div>   <Card> </div> </div>   </div> {";"
+  quote && quote.project description && (<> <h4 className="font-medium mt-4" >Additional Details</h4> <p> {;"
+  quote && quote.project description ;)
+pr-12325
 }</p> </>) ;
 }(quote && quote.budget min && quote && quote.budget max ? `$$ {;
   quote && quote.budget min ;
@@ -368,8 +514,70 @@ if (return 'Not specified') {
 }` : 'Not specified');
 }</div> </CardContent> </Card> </div> </DialogContent> </Dialog>);
 }
-<<<<<<< HEAD
 '";
-=======
 '"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+  quote && quote.budget max ;`;
+}` : quote && quote.budget min ? `$$ {;"
+  quote && quote.budget min ';')`;
+}` : 'Not specified') ;
+}</div>   </div>  ) ;
+    <Dialog open={is_open} onOpenChange={(open, ) => !open && on_close ()}>;
+
+      <DialogContent className="max - w-3xl max - h-[90vh] overflow - y-auto">;"
+
+          <DialogTitle className="text - 2xl flex items - center justify - between">;"
+
+            <span>{quote.project_name}</span>;
+            <QuoteStatusBadge status={quote.status} />;
+
+
+        <Separator className="my - 4" />;"
+        <div className="grid grid - cols - 1 md: grid - cols - 2 gap - 6">;"
+            <CardContent className="pt - 6">;"
+              <h3 className="text - lg font - medium mb - 3">Requester Information</h3>;""
+              <div className="space - y-2">;"
+                <div className="flex items - center gap - 2">;"
+                  <User className="h - 4 w - 4 text - gray - 500" />;"
+
+                  <span>{quote.requester_name}</span>;
+                  <Mail className="h - 4 w - 4 text - gray - 500" />;"
+
+                  <span>{quote.requester_email}</span>;
+              <h3 className="text - lg font - medium mb - 3">Project Timeline</h3>;""
+                  <Calendar className="h - 4 w - 4 text - gray - 500" />;"
+
+                  <span > Start date: {format_date (quote.start_date)}</span>;
+                  <Clock className="h - 4 w - 4 text - gray - 500" />;"
+
+                  <span > Timeline: {quote.timeline}</span>;
+        <Card className="mt - 6">;"
+            <h3 className="text - lg font - medium mb - 3">Project Details</h3>;""
+            <p className="mb - 4">{quote.project_summary}</p>;"
+                <h4 className="font - medium mt - 4">Additional Details</h4>;"
+                <p>{quote.project_description}</p>;
+              </>)}"
+            <div className="mt - 6 flex items - center gap - 2">;"
+              <DollarSign className="h - 4 w - 4 text - gray - 500" />;"
+              <span className="font - medium">Budget: </span>;"
+        <div className="mt - 6 flex justify - end">;"
+          <Button on_click={on_close}>Close;
+    );"
+}> <DialogContent className="max - w-3xl max - h-[90vh] overflow - y-auto" > <DialogHeader> <DialogTitle className="text - 2xl flex items - center justify - between" > <span> {"
+
+}</span> <QuoteStatusBadge status= {
+  quote.status;"
+}/> format_date (quote.created at) ";"
+}  <Separator className="my - 4" /> <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6" > <Card> </div> </div>   <Card> </div> </div>   </div> {";"
+  quote.project description && (<> <h4 className="font - medium mt - 4" >Additional Details</h4> <p> {"
+  quote.project description;)
+}</p> </>);`;
+}(quote.budget min && quote.budget max ? `$$ {
+  quote.budget min;
+}- $$ {
+  quote.budget max;`;
+}` : quote.budget min ? `$$ {"
+  quote.budget min ';')`;
+}` : 'Not specified');
+}</div>   </div>  );`;
+pr-12325

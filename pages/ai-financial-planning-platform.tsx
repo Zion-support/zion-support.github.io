@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 			pricePerMonthUSD={349}
 			implementationWeeks="1-2 weeks"
 			roiNote="Finance teams report 3–6x ROI via faster cycles and improved accuracy"
@@ -11,10 +10,9 @@
 				"Integrations: NetSuite, QuickBooks, Stripe, Snowflake"
 				"Executive dashboards and board-ready reports"
 
-=======
 import React from 'react';
 			title;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 				"Headcount planning and hiring plans"
 			]}
 			industries={["SaaS", "Ecommerce", "Fintech", "Professional Services"]}
@@ -53,7 +51,6 @@ import React from 'react';
 			canonical="https: //ziontechgroup.com/ai-financial-planning-platform"
 		/>
 	)
-<<<<<<< HEAD
 			canonical="https: //ziontechgroup.com/ai-financial-planning-platform";
 		/>;
 	);
@@ -61,6 +58,5 @@ import React from 'react';
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }

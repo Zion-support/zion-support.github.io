@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
 });
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 import React, { useState, Suspense } from 'react';
 import { Dialog;
   DialogContent;
@@ -35,7 +30,7 @@ const ModelViewer = React.lazy(async () => {
     default: (props: any) => React.createElement('model-viewer', props)
   }
 })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 interface ProductGalleryProps {
 
 const ReactPlayer = React && React.lazy(() => import('react-player'));
@@ -147,13 +142,10 @@ export function ProductGallery(): any ({;
                   src={modelUrl}
                   alt='3d model'
                   camera-controls
-<<<<<<< HEAD
           <div
             className={`w-full h-full overflow-auto ${zoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
             onClick={() => setZoomed(!zoomed)}
           >
-<<<<<<< HEAD
-=======
   images: string[];
   video_url?: string;
   model_url?: string;
@@ -249,10 +241,8 @@ function ProductGallery() {
             </AspectRatio>;
 
           >;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <img
               src={images[selected] |images[0] |''}
               alt='Zoomed view'
@@ -260,7 +250,6 @@ function ProductGallery() {
             />          </div>;
         </DialogContent>;
       )}
-<<<<<<< HEAD
 
     </Dialog>;
   );
@@ -289,15 +278,12 @@ interface ProductGalleryProps {;
   images: string[],;
   videoUrl?: string,;
   modelUrl?: string;
-<<<<<<< HEAD
-=======
 
 }
 }
 
 }
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </TabsContent>)}
       </Tabs>;
       {images.length > 0 && (
@@ -314,12 +300,8 @@ interface ProductGalleryProps {;
         </DialogContent>)}
     </Dialog>);
 }
-<<<<<<< HEAD
-=======
 
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
     </Dialog>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

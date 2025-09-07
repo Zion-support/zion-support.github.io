@@ -1,4 +1,3 @@
-<<<<<<< HEAD
           <nav className="mb-8">
             <Link href="/" className="text-white/60 hover:text-white transition-colors">
               Home
@@ -42,7 +41,6 @@
 
 
                   The company faced challenges with high cloud costs, performance issues, and manual scaling requirements.
-=======
 import React from 'react',
 import Head from 'next/head';
 import Link from 'next/link';
@@ -64,7 +62,7 @@ import Link from 'next/link';
                   A growing e-commerce platform serving thousands of customers
                   daily. The company faced challenges with high cloud costs,
                   performance issues, and manual scaling requirements.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mt-6'>
                   <div className='text-center'>
@@ -84,7 +82,6 @@ import Link from 'next/link';
                 </div>
               </div>
             </section>
-<<<<<<< HEAD
             {/* Challenge */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -98,7 +95,6 @@ import Link from 'next/link';
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0"></div>
                     <span>High cloud costs consuming 40% of operational budget</span>
-=======
             {/* Challenge */}
 <section className='mb-16'>
               <h2 className='text-3xl font-bold text-white mb-6'>
@@ -114,7 +110,7 @@ import Link from 'next/link';
                     <span>
                       High cloud costs consuming 40% of operational budget
                     </span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   </li>
                   <li className='flex items-start gap-3'>
                     <div className='w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0'></div>
@@ -133,7 +129,6 @@ import Link from 'next/link';
                 </ul>
               </div>
             </section>
-<<<<<<< HEAD
             {/* Solution */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -148,7 +143,6 @@ import Link from 'next/link';
 
                   We built a comprehensive cloud infrastructure solution that automatically scales, 
 
-=======
             {/* Solution */}
 <section className='mb-16'>
               <h2 className='text-3xl font-bold text-white mb-6'>
@@ -204,7 +198,7 @@ import Link from 'next/link';
                     <p className='text-white/80'>
                       AI-powered cost optimization algorithms automatically
                       identify and implement cost-saving opportunities.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   monitors, and heals itself while optimizing costs and performance.
                   We built a comprehensive cloud infrastructure solution that automatically scales,
                   monitors, and heals itself while optimizing costs and window.window.window.performance.
@@ -246,7 +240,6 @@ import Link from 'next/link';
                 </div>
               </div>
             </section>
-<<<<<<< HEAD
             {/* Results */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -256,7 +249,6 @@ import Link from 'next/link';
               <h2 className="text-3xl font-bold text-white mb-6">Results & Impact</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-=======
             {/* Results */}
 <section className='mb-16'>
               <h2 className='text-3xl font-bold text-white mb-6'>
@@ -264,7 +256,7 @@ import Link from 'next/link';
               </h2>
               <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20'>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <div>
                     <h3 className='text-2xl font-semibold text-green-400 mb-6'>
                       Quantifiable Results
@@ -327,7 +319,6 @@ import Link from 'next/link';
                 </div>
               </div>
             </section>
-<<<<<<< HEAD
             {/* Technologies */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -582,7 +573,6 @@ export default function CaseStudyPage(req, res) {
                 <div className="space-y-6">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center text-white font-bold">1</div>
-=======
             {/* Technologies */}
 <section className='mb-16'>
               <h2 className='text-3xl font-bold text-white mb-6'>
@@ -619,7 +609,7 @@ export default function CaseStudyPage(req, res) {
                     <div className='w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center text-white font-bold'>
                       1
                     </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     <div>
                       <h4 className='text-lg font-semibold text-white'>
                         Infrastructure Analysis (Months 1-2)
@@ -663,7 +653,6 @@ export default function CaseStudyPage(req, res) {
                 </div>
               </div>
             </section>
-<<<<<<< HEAD
             {/* Call to Action */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -676,7 +665,6 @@ export default function CaseStudyPage(req, res) {
                   This case study demonstrates the real impact of infrastructure automation.
                   Let&apos,s discuss how we can help you achieve similar results.
                   Let's discuss how we can help you achieve similar results.
-=======
             {/* Call to Action */}
 <section className='text-center'>
               <div className='bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-2xl p-8 border border-blue-500/20'>
@@ -687,11 +675,10 @@ export default function CaseStudyPage(req, res) {
                   This case study demonstrates the real impact of infrastructure
                   automation. Let&apos;s discuss how we can help you achieve
                   similar results.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                   <Link
-<<<<<<< HEAD
 
 
 
@@ -707,7 +694,6 @@ export default function CaseStudyPage(req, res) {
 
                     href="/case-studies"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-blue-400/50 transition-all duration-300"
-=======
                     href='/contact'
                     className='bg-gradient-to-r from-blue-400 to-cyan-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-500 hover:to-cyan-500 transition-all duration-300'
                   >
@@ -716,7 +702,7 @@ export default function CaseStudyPage(req, res) {
                   <Link
                     href='/case-studies'
                     className='px-8 py-4 border border-white/20 rounded-lg text-white hover:border-blue-400/50 transition-all duration-300'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   >
                     View All Case Studies
                   </Link>
@@ -727,7 +713,6 @@ export default function CaseStudyPage(req, res) {
         </main>
       </div>
     </>
-<<<<<<< HEAD
   )
                     </div>;
                   </div>;
@@ -821,6 +806,5 @@ export default function CaseStudyPage(req, res) {
           </div>;
         </main>;
       </div>;
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

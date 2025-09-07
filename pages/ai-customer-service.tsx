@@ -1,4 +1,3 @@
-<<<<<<< HEAD
     <>;
       <Head>;
         <title > AI Customer Service | Zion Tech Group</title>;
@@ -19,7 +18,6 @@
 
 
 
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -49,4 +47,4 @@ const AICustomerService: React.FC = () => {
       </main>
     </Layout>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

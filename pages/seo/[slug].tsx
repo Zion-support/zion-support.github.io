@@ -1,25 +1,21 @@
-<<<<<<< HEAD
 
-=======
 import React from 'react';
 import { useRouter  } from 'next/router';
 import TalentGrid from '../../components/seo/TalentGrid';
 import FAQ from '../../components/seo/FAQ';
 export type LandingPayload = any;
 export type LandingPayload = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   title: string;
   h1: string;
   body_html: string;
   region?: string;
-<<<<<<< HEAD
   faq: Array<{ q: string; a: string }>;}
-=======
   service?: string;
   faq: Array<{ q: string; a: string }>;
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default function SEOLandingPage() {
   const router = useRouter();
   const { slug } = router.query as { slug?: string }
@@ -45,7 +41,6 @@ return;
   }, [router.isReady, slug]);
 
   if (!payload) return null;
-<<<<<<< HEAD
 
   faq: Array<{ q: string; a: string }>;};
 
@@ -84,7 +79,6 @@ export default function SEOLandingPage(req, res) {
 }
     // Fallback: render a basic placeholder until a generated page is deployed
     setPayload({ title: String(slug).replace(/-/g, ' '), h1: String(slug).replace(/-/g, ' '), bodyHtml: '<p>Localized marketplace landing page.</p>', region: undefined, service: undefined, faq: [] })
-=======
   return (
 <div className='max-w-4xl mx-auto'>
       <head>
@@ -95,7 +89,7 @@ export default function SEOLandingPage(req, res) {
         />
       </head>
       <h1 className='text-2xl font-semibold mb-4'>{payload.h1}</h1>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       <div
         className='prose dark:prose-invert max-w-none'
         dangerouslySetInnerHTML={{ __html: payload.bodyHtml }}
@@ -106,7 +100,6 @@ export default function SEOLandingPage(req, res) {
       </div>
       <FAQ items={payload.faq} />
     </div>
-<<<<<<< HEAD
 
 }
       <h1 className="text-2xl font-semibold mb-4">{payload.h1}</h1>
@@ -210,6 +203,5 @@ if (return null) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

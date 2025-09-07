@@ -3,7 +3,6 @@
   query: string,
 ): Promise<SearchFilters> {
   const filters: SearchFilters = {};
-=======
   if (!query || query.trim().length === 0) {
     return filters;
   }
@@ -120,3 +119,7 @@ export const suggestDidYouMean = (query: string) =>: any {
   // Add did you mean functionality here;
   return null;
 }
+export async function parseQueryToFilters(
+  query: string,)
+): Promise<SearchFilters> {
+pr-12325

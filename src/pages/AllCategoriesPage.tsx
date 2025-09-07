@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
 // Reusing the categories array from CategoriesSection.tsx
 // Ideally, this would come from a shared data source or API
@@ -43,7 +42,6 @@ const categories = [;
 ];
 
 export default function AllCategoriesPage() {;
-=======
 import { CategoryCard } from '@/components/CategoryCard';
 import { GradientHeading } from '@/components/GradientHeading';
 import ErrorBoundary from '@/components/GlobalErrorBoundary'; // Import ErrorBoundary
@@ -79,14 +77,13 @@ title: 'Services',
   }
 ]
 export default function AllCategoriesPage() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className='min-h-screen bg-zion-blue'>;
       <div className='container mx-auto px-4 py-12'>;
         <div className='text-center mb-12'>;
           <GradientHeading
             level='h1'
-<<<<<<< HEAD
               <CategoryCard
                 key={category && category.id}
                 title={category && category.title}
@@ -154,7 +151,6 @@ export default function AllCategoriesPage() {;
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">;
             {categories.map((category) => (;
               <CategoryCard;
-=======
             className='text-4xl md:text-5xl font-bold mb-4'
           >
             All Categories
@@ -169,7 +165,7 @@ export default function AllCategoriesPage() {;
 <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
             {categories.map(category => (
               <CategoryCard
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 key={category.title}
                 title={category.title}
                 description={category.description}
@@ -180,12 +176,10 @@ export default function AllCategoriesPage() {;
                 // The 'link' in the categories array above is used by CategoryCard's internal Link;
               />;
             ))}
-<<<<<<< HEAD
-=======
           </div>
         </ErrorBoundary>
       </div>
     </div>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

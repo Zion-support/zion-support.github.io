@@ -1,13 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import * as React from 'react'
-=======
 import * as React from 'react';
 import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import * as React from 'react'
 import {
   RefreshCw
@@ -21,10 +18,8 @@ import {
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export interface EmptyStateProps {
   type: 'products' | 'categories' | 'talent' | 'equipment' | 'search' | 'error' | 'network' | 'loading';
   title?: string;
@@ -34,8 +29,7 @@ export interface EmptyStateProps {
     onClick: () => void
   }
   icon?: React.ReactNode
-<<<<<<< HEAD
-=======
+pr-12325
 import React from 'react';
 import * as React from 'react';
 import {;
@@ -53,6 +47,10 @@ import { useTranslation } from 'react-i18next';
 export interface EmptyStateProps {;
 import * as React from 'react';
 import {
+import {
+  // TODO: Implement
+}
+pr-12325
   RefreshCw,
   Wifi,
   Server,
@@ -65,6 +63,12 @@ import { Button } from '@/components / ui / button';
 import Link from 'next / link';
 import { use_translation } from 'react - i18next';
 export interface EmptyStateProps {
+import { Button } from '@/components/ui/ button';
+import Link from 'next / link';
+import { use_translation } from 'react - i18next';
+export interface EmptyStateProps {
+  // TODO: Implement
+pr-12325
   type:;
     | 'products';
     | 'categories';
@@ -76,30 +80,31 @@ export interface EmptyStateProps {
     | 'loading';
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+pr-12325
 import * as React from 'react',;
 import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
 import Link from 'next/link',;
 import { useTranslation } from 'react-i18next',;
 export interface EmptyStateProps {;
+pr-12325
   type: 'products' | 'categories' | 'talent' | 'equipment' | 'search' | 'error' | 'network' | 'loading',;
   title?: string,;
   description?: string,;
   action?: {;
     label: string,;
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     onClick: () => void;
   },;
   icon?: React.ReactNode;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+    onClick: () => void;
+  },;
+  icon?: React.ReactNode;
+
+pr-12325
 
 
 
@@ -138,10 +143,8 @@ const defaultContent = {
     title: 'Loading...',
 
 
-<<<<<<< HEAD
       
       <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-=======
   const { t } = useTranslation();
   const content = defaultContent[type];
   const displayTitle = title || content.title;
@@ -152,7 +155,7 @@ return (
     <div className='flex flex-col items-center justify-center py-12 px-6 text-center'>
       <div className='mb-4'>{displayIcon}</div>
       <h3 className='text-xl font-semibold text-gray-900 dark:text-white mb-2'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         {displayTitle}
       </h3>
       
@@ -169,14 +172,12 @@ return (
           {action.label}
         </Button>
       )}
-=======
           {action.label}
         </Button>
       )}
 
       
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
       
       {type === 'error' && (
@@ -184,8 +185,6 @@ return (
           <p>If this issue continues, please contact our support team.</p>
         </div>
       )}
-<<<<<<< HEAD
-=======
 
 
       
@@ -271,6 +270,46 @@ function EmptyState() {
         {display_description}
       </p>;
       {action && (
+  products: {,
+  icon: <ShoppingCart className="w-16 h-16 text-gray-400" />,"
+"
+    icon: <Lightbulb className="w-16 h-16 text-gray-400" />,"
+    icon: <Users className="w-16 h-16 text-gray-400" />,"
+    icon: <Wrench className="w-16 h-16 text-gray-400" />,"
+    icon: <Server className="w-16 h-16 text-red-400" />,"
+    icon: <Wifi className="w-16 h-16 text-orange-400" />,"
+    icon: <RefreshCw className="w-16 h-16 text-blue-400 animate-spin" />,"
+
+        <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">"
+</div>
+          <p>If this issue continues, please contact our support team.</p>
+        </div>"
+          <p>
+</p>"
+    icon: <ShoppingCart className='w - 16 h - 16 text - gray - 400' />,
+
+    icon: <Lightbulb className='w - 16 h - 16 text - gray - 400' />,
+
+    icon: <Users className='w - 16 h - 16 text - gray - 400' />,
+
+    icon: <Wrench className='w - 16 h - 16 text - gray - 400' />,
+
+
+    icon: <Server className='w - 16 h - 16 text - red - 400' />,
+
+    icon: <Wifi className='w - 16 h - 16 text - orange - 400' />,
+
+    icon: <RefreshCw className='w - 16 h - 16 text - blue - 400 animate - spin' />,
+
+    <div className='flex flex - col items - center justify - center py - 12 px - 6 text - center'>;
+      <div className='mb - 4'>{display_icon}</div>;
+      <h3 className='text - xl font - semibold text - gray - 900 dark:text - white mb - 2'>;
+</h3>
+      </h3>;
+      <p className='text - gray - 600 dark:text - gray - 400 max - w-md mb - 6'>;
+</p>
+      </p>;
+pr-12325
         <Button;
           on_click={action.on_click}
           variant='outline';
@@ -299,14 +338,12 @@ export function ProductsEmptyState ({
   onAddProduct,
   is_authenticated = false,
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }: {
   onRetry?: () => void
   onAddProduct?: () => void
   isAuthenticated?: boolean }) {
   const action = onAddProduct
     ? {
-<<<<<<< HEAD
 
 
       {type === 'error' && (;
@@ -322,7 +359,6 @@ export function ProductsEmptyState ({
             <Link href='https://status && status.zion.ai' className='underline'>;
               {t('general && general.status_page')}
 
-=======
         label: isAuthenticated ? 'Add Product' : 'Login to Add Product'
         onClick: onAddProduct
       }
@@ -333,7 +369,7 @@ export function ProductsEmptyState ({
     ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!"
     : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!"
       />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   )
 export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
       />
@@ -351,7 +387,6 @@ export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
       />
   )
 export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
-<<<<<<< HEAD
       />
   )
 } 
@@ -392,8 +427,6 @@ export function ProductsEmptyState({;
   const action = onAddProduct;
     ? {;
         label: isAuthenticated ? 'Add Product' : 'Login to Add Product',;
-<<<<<<< HEAD
-=======
         onClick: onAddProduct,;
       }
     : onRetry;
@@ -401,7 +434,6 @@ export function ProductsEmptyState({;
 
       : undefined;
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <EmptyState
       type="categories"
@@ -410,7 +442,6 @@ export function ProductsEmptyState({;
   );
 }
 
-<<<<<<< HEAD
   const customDescription = isAuthenticated;
     ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!";
     : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
@@ -419,7 +450,6 @@ export function ProductsEmptyState({;
       type="products";
       action={action}
       description={customDescription}
-=======
 
   const customDescription = isAuthenticated;
     ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!";
@@ -434,13 +464,10 @@ export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
     <EmptyState
       type="talent"
       action={onRetry ? { label: 'Reset Filters', onClick: onRetry } : undefined}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     />;
   );
 }
 
-<<<<<<< HEAD
-=======
 export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {
   return (
     <EmptyState
@@ -476,7 +503,6 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
     />;
   );
 } ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -504,12 +530,48 @@ export function NetworkErrorState ({ on_retry }: { on_retry?: () => void }) {
 export function ServerErrorState ({ on_retry }: { on_retry?: () => void }) {
       />);
 }
-<<<<<<< HEAD
-=======
 }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   
     />
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+          <RefreshCw className='w - 4 h - 4' />;
+
+        )}
+        <div className='mt - 4 text - sm text - gray - 500 dark:text - gray - 400'>;
+          <p > If this issue continues, please contact our support team.</p>;
+        </div>)}
+          <p>;
+            <Link href='https://status.zion.ai' className='underline'>;
+
+            ;
+    </div>);
+        <div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>;
+          <p>If this issue continues, please contact our support team.</p>;
+        </div>;
+            <Link href='https://status && status.zion.ai' className='underline'>;
+
+            <Link href="https://status.zion.ai" className="underline">"
+
+    <EmptyState;"
+      type="categories"""
+      action={onRetry ? { label: 'Refresh Categories', onClick: onRetry } : undefined}
+    />;
+
+    <EmptyState;
+      type="talent"""
+      action={onRetry ? { label: 'Reset Filters', onClick: onRetry } : undefined}
+
+      type="equipment"""
+      action={onRetry ? { label: 'Refresh Listings', onClick: onRetry } : undefined}
+
+      type="search"""
+      action={onRetry ? { label: 'Clear Search', onClick: onRetry } : undefined}
+
+      type="network"""
+      action={onRetry ? { label: 'Try Again', onClick: onRetry } : undefined}
+
+      type="error"""
+      action={onRetry ? { label: 'Retry', onClick: onRetry } : undefined}
+pr-12325

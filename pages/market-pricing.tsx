@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-=======
 import React from 'react',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 export default function MarketPricingPage() {
@@ -89,7 +87,6 @@ export default function MarketPricingPage() {
       </div>
     </Layout>
   )
-<<<<<<< HEAD
     <Layout>;
       <Head>;
         <title > Market Pricing & Competitor References | Zion Tech Group</title>;
@@ -211,6 +208,5 @@ export default function MarketPricingPage() {
 
 
 
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

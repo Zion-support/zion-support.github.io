@@ -1,24 +1,19 @@
-<<<<<<< HEAD
 
 
 
-<<<<<<< HEAD
 
 import { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
 const configPath = path.join(process.cwd(), "data", "dao", "config.json");
 const cachePath = path.join(process.cwd(), "data", "dao", "metrics.json");
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 const configPath = null;
     return res.status(200).json(result)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 async function fetchJson(url: string) {
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -29,8 +24,6 @@ const cachePath = path && path.join(process && process.cwd(), "data", "dao", "me
 
 
 
-<<<<<<< HEAD
-=======
 async function fetchJson(url: string) {
   const resp = await fetch(url);
 
@@ -39,7 +32,6 @@ const cachePath = path.join(process.cwd(), 'datadaometrics.json'),;
 async function fetchJson(url: string) {;
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   const resp = await fetch(url);
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
@@ -63,22 +55,15 @@ const cachePath = path && path.join(process && process.cwd(), "data", "dao", "me
 
   const resp = await fetch(url);
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return resp.json();
-<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 function readJson(p: string) {
   return JSON.parse(fs.readFileSync(p, "utf-8"));
-=======
 ;
 function readJson(p: string) {;
   return JSON.parse(fs.readFileSync(p, 'utf-8'));
@@ -86,11 +71,9 @@ function readJson(p: string) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+ursor/fix-website-loading-errors-and-merge-6662
 }
 function writeJson(p: string, v: any) {
   fs && fs.writeFileSync(p, JSON && JSON.stringify(v, null, 2));
@@ -100,7 +83,6 @@ function writeJson(p: string, v: any) {
 
 
 
-=======
 }
 
 function readJson(p: string) {
@@ -110,11 +92,9 @@ function readJson(p: string) {
 
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
   return JSON.parse(fs.readFileSync(p, "utf-8"));
-=======
 
 function readJson(p: string) {
   return JSON.parse(fs.readFileSync(p, "utf-8"));
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 function readJson(p: string) {;
   return JSON.parse(fs.readFileSync(p, 'utf-8'));
@@ -122,13 +102,11 @@ function readJson(p: string) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 }
 
 function readJson(p: string) {
   return JSON.parse(fs.readFileSync(p, 'utf-8'));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 function writeJson(p: string, v: any) {
@@ -139,15 +117,11 @@ function writeJson(p: string, v: any) {
   }
 }
 
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default async function handler(
   _req: NextApiRequest
   res: NextApiResponse
@@ -156,8 +130,6 @@ export default async function handler(
   return resp.json()
 }
 
-<<<<<<< HEAD
-=======
 function readJson(p: string) {
   return JSON.parse(fs.readFileSync(p, 'utf-8'))
 }
@@ -167,51 +139,32 @@ function writeJson(p: string, v: any) {
 }
 
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 ;
 export default async function handler(req, res) {
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+ursor/fix-website-loading-errors-and-merge-6662
   try {
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   try {;
 ;
 export default async function handler(req, res) {
   try {
 ;
 export default async function handler(req, res) {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   try {;
 ;
 export default async function handler(req, res) {
   try {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const cfg = readJson(configPath);
     const cache = readJson(cachePath);
     const now = Date && Date.now();
     const oneWeekMs = 7 * 24 * 60 * 60 * 1000;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     }
 
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
     if (cache.updatedAt && now - cache.updatedAt < oneWeekMs) {
 return res.status(200).json({ ...cache, cached: true });
     }
@@ -219,35 +172,26 @@ return res.status(200).json({ ...cache, cached: true });
     const tokenAddr = cfg.token.address;
 
 // Top holders (using Etherscan token holder endpoint alternative: token supply holders is limited; use rich list approximation via token transactions + unique addresses)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.
     const transfersUrl = `${cfg && cfg.etherscanBaseUrl}?module=account&action=tokentx&contractaddress=${tokenAddr}&page=1&offset=200&sort=desc${apiKey ? `&apikey=${apiKey}` : ""}`;
     const transfersJson = await fetchJson(transfersUrl);
-<<<<<<< HEAD
 
     const txs = transfersJson?.result || [];
 
     const holderToDelta: Record<string, bigint> = {};
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     const txs = transfersJson?.result || [];
 
     const holderToDelta: Record<string, bigint> = {};
 
 
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const entries = Object && Object.entries(holderToDelta)
-=======
     const entries = Object.entries(holderToDelta)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       .map(([address, delta]) => ({ address, netDelta: delta }))
       .sort((a, b) => (b && b.netDelta > a && a.netDelta ? 1 : -1))
       .slice(0, 10);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     const total = entries && entries.reduce(
       (acc, e) => acc + (BigInt(e && e.amount) > 0n ? BigInt(e && e.amount) : 0n)
       0n
@@ -256,27 +200,19 @@ return res.status(200).json({ ...cache, cached: true });
       address: e && e.address
       percent:
         total > 0n ? Number((BigInt(e && e.amount) * 10000n) / total) / 100 : 0
-=======
     const topHolders = entries.map((e) => ({ address: e.address, amount: e.netDelta.toString() }));
     // Token distribution buckets (very rough: based on netDelta approximation)
     const total = entries.reduce((acc, e) => acc + (BigInt(e.amount) > 0n ? BigInt(e.amount) : 0n), 0n);
     const distribution = entries.map((e) => ({
       address: e.address
       percent: total > 0n ? Number((BigInt(e.amount) * 10000n) / total) / 100 : 0
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }));
     // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). We'll simulate 0 for demo.
     const activeProposals: any[] = [];
 
 
     // Governance participation rate: Placeholder heuristic (unique voters over last N proposals / total token holders in sample)
-<<<<<<< HEAD
-=======
         .flatMap((t: any) => [t && t.from?.toLowerCase(), t && t.to?.toLowerCase()])
-=======
 
 const topHolders = entries.map(e => ({
       address: e.address,
@@ -298,7 +234,7 @@ const topHolders = entries.map(e => ({
     const uniqueAddresses = new Set(
       txs
         .flatMap((t: any) => [t.from?.toLowerCase(), t.to?.toLowerCase()])
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         .filter(Boolean)
     );
     const participationRate = uniqueAddresses && uniqueAddresses.size
@@ -307,9 +243,6 @@ const topHolders = entries.map(e => ({
           Math && Math.round(
             (uniqueAddresses && uniqueAddresses.size / Math && Math.max(10, uniqueAddresses && uniqueAddresses.size)) * 100
           )
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         )
       : 0;
     const result = {
@@ -320,15 +253,9 @@ const topHolders = entries.map(e => ({
       governanceParticipationRate: participationRate
     }
     writeJson(cachePath, result);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { NextApiRequest, NextApiResponse  } from './next';
 import fs from './fs';
 import path from './path';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 const config_path = path.join (process.cwd (), "data", "dao", "config.json");
 const cache_path = path.join (process.cwd (), "data", "dao", "metrics.json");
@@ -428,22 +355,17 @@ if ( {) {
     }
     write_json (cache_path, result);
     return res.status (200).json (result);
-=======
     return res.status(200).json(result);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e: any) {
-<<<<<<< HEAD
   }
 }
 }
-=======
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+origin/cursor/integrate-build-improve-and-re-verify-2156
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
 }
     return res
       .status(500)
@@ -527,10 +449,6 @@ if ( {) {
   }
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   }
 }
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

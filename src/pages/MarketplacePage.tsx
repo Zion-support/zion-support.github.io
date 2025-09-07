@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { useRouter  } from 'next/router';
 import { useState, useEffect, useCallback, useMemo  } from 'react';
 import { useTranslation  } from 'react-i18next';
@@ -9,7 +7,7 @@ import { useRouter } from 'next/router'
 import { useState, useEffect, useCallback, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion, AnimatePresence } from 'framer-motion'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star, ShoppingCart, AlertTriangle, RefreshCw } from 'lucide-react'
 import { NextSeo  } from '@/components/NextSeo';
 import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
@@ -25,7 +23,6 @@ import { useCurrency  } from '@/hooks/useCurrency';
 import {logErrorToProduction} from '@/utils/productionLogger';
 
 // Market insights component
-<<<<<<< HEAD
 const MarketplaceInsights = ({ stats }: { stats: any },) => (
 const MarketplaceInsights = ({ stats }: { stats: any }) => (
   <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
@@ -416,10 +413,9 @@ if ( {) {
                       // ignore storage errors;
                     }
                   }
-=======
 const MarketplaceInsights = null;
                       onClick: () => router.push('/cart')}})
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 }}
               />
             </motion.div>
@@ -454,7 +450,6 @@ const MarketplaceInsights = null;
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
-<<<<<<< HEAD
 }
                   dispatch (add_item ({ id: item.id, title: item.title, price: item.price ?? 0 })),
                   toast ({
@@ -519,7 +514,6 @@ function MarketplacePage() {
   return <MarketplacePageContent />;
 };
 }
-=======
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
@@ -706,4 +700,4 @@ return (<> <NextSeo /> <div className="container py-8"> <motion.div initial= {;
 }> <ArrowUp className="h-5 w-5 text-primary-foreground" /> </motion.button>) ;
 }</AnimatePresence> </div> </>) ;
 }// Main export '"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

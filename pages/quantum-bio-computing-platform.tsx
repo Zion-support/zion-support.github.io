@@ -36,7 +36,6 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
         />;
         <link
           rel='canonical'
-<<<<<<< HEAD
 
           href='https: //ziontechgroup && ziontechgroup.com/quantum-bio-computing-platform'
         />;
@@ -154,7 +153,6 @@ function QuantumBioComputingPlatformPage() {
 ;
 
 
-=======
           href='https: //ziontechgroup.com/quantum-bio-computing-platform'
         />
       </Head>
@@ -177,4 +175,4 @@ function QuantumBioComputingPlatformPage() {
       </div>
     </UltraFuturisticBackground>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

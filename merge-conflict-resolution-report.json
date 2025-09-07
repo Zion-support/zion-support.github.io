@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "timestamp": "2025-09-06T09:14:38.759Z",
   "fixedFiles": [
     "next.config.js",
@@ -925,7 +924,6 @@
   "totalFixed": 918,
   "totalErrors": 0
 }
-=======
   "timestamp": "2025-09-06T08:36:47.152Z",
   "totalFilesProcessed": 2367,
   "fixedFiles": 2367,
@@ -3301,4 +3299,221 @@
   ],
   "errorList": []
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+  "timestamp": "2025-09-07T05:59:02.167Z",
+  "duration": "1s",
+  "summary": {
+    "totalFiles": 39,
+    "totalConflicts": 89,
+    "errors": 0,
+    "strategies": {
+      "ours": 34,
+      "theirs": 4,
+      "smart": 1
+    }
+  },
+  "resolvedFiles": [
+    {
+      "file": "App.tsx",
+      "conflicts": 2,
+      "strategy": "smart"
+    },
+    {
+      "file": "automation/ai-intelligent-code-analyzer.cjs",
+      "conflicts": 1,
+      "strategy": "ours"
+    },
+    {
+      "file": "automation/automated-test-runner.cjs",
+      "conflicts": 1,
+      "strategy": "ours"
+    },
+    {
+      "file": "automation/comprehensive-health-check.cjs",
+      "conflicts": 1,
+      "strategy": "ours"
+    },
+    {
+      "file": "automation/comprehensive-improvements.cjs",
+      "conflicts": 1,
+      "strategy": "ours"
+    },
+    {
+      "file": "automation/intelligent-code-analyzer.cjs",
+      "conflicts": 1,
+      "strategy": "ours"
+    },
+    {
+      "file": "automation/intelligent-git-workflow.cjs",
+      "conflicts": 1,
+      "strategy": "ours"
+    },
+    {
+      "file": "automation/master-automation-clean.cjs",
+      "conflicts": 1,
+      "strategy": "ours"
+    },
+    {
+      "file": "automation/mega-pr-merger.cjs",
+      "conflicts": 1,
+      "strategy": "ours"
+    },
+    {
+      "file": "automation/pr-management.cjs",
+      "conflicts": 1,
+      "strategy": "ours"
+    },
+    {
+      "file": "automation/security-auditor.cjs",
+      "conflicts": 3,
+      "strategy": "ours"
+    },
+    {
+      "file": "automation/smart-merge-resolver.cjs",
+      "conflicts": 1,
+      "strategy": "ours"
+    },
+    {
+      "file": "automation/ultimate-improvements.cjs",
+      "conflicts": 1,
+      "strategy": "ours"
+    },
+    {
+      "file": "automation/ultimate-pr-merger.cjs",
+      "conflicts": 1,
+      "strategy": "ours"
+    },
+    {
+      "file": "browserstack.config.ts",
+      "conflicts": 2,
+      "strategy": "theirs"
+    },
+    {
+      "file": "comprehensive-conflict-resolver.js",
+      "conflicts": 1,
+      "strategy": "ours"
+    },
+    {
+      "file": "deployment-automation.cjs",
+      "conflicts": 1,
+      "strategy": "ours"
+    },
+    {
+      "file": "eslint.config.cjs",
+      "conflicts": 1,
+      "strategy": "theirs"
+    },
+    {
+      "file": "execute-all.cjs",
+      "conflicts": 2,
+      "strategy": "ours"
+    },
+    {
+      "file": "final-automation-suite.cjs",
+      "conflicts": 26,
+      "strategy": "ours"
+    },
+    {
+      "file": "fix-all-conflicts.cjs",
+      "conflicts": 1,
+      "strategy": "ours"
+    },
+    {
+      "file": "fix-all-remaining.js",
+      "conflicts": 1,
+      "strategy": "ours"
+    },
+    {
+      "file": "fix-merge-conflicts.mjs",
+      "conflicts": 1,
+      "strategy": "ours"
+    },
+    {
+      "file": "fix-remaining-issues.js",
+      "conflicts": 1,
+      "strategy": "ours"
+    },
+    {
+      "file": "jest.config.smoke.cjs",
+      "conflicts": 3,
+      "strategy": "theirs"
+    },
+    {
+      "file": "jest.setup.js",
+      "conflicts": 4,
+      "strategy": "theirs"
+    },
+    {
+      "file": "quick-conflict-resolver.js",
+      "conflicts": 2,
+      "strategy": "ours"
+    },
+    {
+      "file": "scripts/automation/component-error-fixer.cjs",
+      "conflicts": 1,
+      "strategy": "ours"
+    },
+    {
+      "file": "scripts/automation/dependency-fixer.cjs",
+      "conflicts": 1,
+      "strategy": "ours"
+    },
+    {
+      "file": "scripts/automation/file-extension-fixer.cjs",
+      "conflicts": 1,
+      "strategy": "ours"
+    },
+    {
+      "file": "scripts/optimize-file-sizes.cjs",
+      "conflicts": 1,
+      "strategy": "ours"
+    },
+    {
+      "file": "scripts/performance-optimizer.cjs",
+      "conflicts": 5,
+      "strategy": "ours"
+    },
+    {
+      "file": "scripts/security-enhancer.cjs",
+      "conflicts": 4,
+      "strategy": "ours"
+    },
+    {
+      "file": "syntax-fixer.js",
+      "conflicts": 1,
+      "strategy": "ours"
+    },
+    {
+      "file": "system-monitor.cjs",
+      "conflicts": 5,
+      "strategy": "ours"
+    },
+    {
+      "file": "targeted-conflict-resolver.js",
+      "conflicts": 2,
+      "strategy": "ours"
+    },
+    {
+      "file": "ultimate-merge-resolver.js",
+      "conflicts": 1,
+      "strategy": "ours"
+    },
+    {
+      "file": "utils/performance.ts",
+      "conflicts": 2,
+      "strategy": "ours"
+    },
+    {
+      "file": "utils/supabase/client.ts",
+      "conflicts": 2,
+      "strategy": "ours"
+    }
+  ],
+  "errors": [],
+  "recommendations": [
+    "Review resolved files for any manual adjustments needed",
+    "Run tests to ensure functionality is preserved",
+    "Consider setting up automated conflict resolution for future merges"
+  ]
+}
+pr-12325

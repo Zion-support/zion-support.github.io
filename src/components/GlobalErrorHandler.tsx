@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 reportError: (error: Error, context?: any) => void;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
 import { toast  } from '@/hooks/use-toast';
 import { Button  } from '@/components/ui/button';
@@ -21,15 +16,13 @@ import * as Sentry from '@sentry/nextjs';
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface ErrorContextType {
   reportError: (error: Error, context?: any) => void;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   showRetryableError: (error: Error, retryAction?: () => void) => void;
   showNetworkError: (retryAction?: () => void) => void;
   showAuthError: (loginAction?: () => void) => void;
   clearAllErrors: () => void
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
   }, [])
   const showRetryableError = useCallback(
     (error: Error, retryAction?: () => void) => {
@@ -83,7 +76,12 @@ interface ErrorContextType {
             label: 'Log In'
             onClick: loginAction
           }
-=======
+reportError: (error: Error, context?: any) => void;
+  showRetryableError: (error: Error, retryAction?: () => void) => void;
+  showNetworkError: (retryAction?: () => void) => void;,
+  showAuthError: (loginAction?: () => void) => void;
+  clearAllErrors: () => void;
+pr-12325
   create_context,
   useContext,
   useState,
@@ -104,6 +102,22 @@ interface ErrorContextType {
 }, []);
 export /**
  * GlobalErrorHandler - Function description
+import { toast } from '@/hooks/ use - toast';
+import { Button } from '@/components/ui/ button';
+import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react';
+import * as Sentry from '@sentry / nextjs';
+import { logErrorToProduction } from '@/utils/ production_logger';
+interface ErrorContextType {
+  // TODO: Implement
+}
+  report_error: (error: Error, context?: any) => void;
+  showRetryableError: (error: Error, retry_action?: () => void) => void;
+  showNetworkError: (retry_action?: () => void) => void;,
+  showAuthError: (login_action?: () => void) => void;
+}, []);
+export /**
+ * GlobalErrorHandler - Function description;
+pr-12325
  */
 function GlobalErrorHandler() {
   const [retry_count, setRetryCount] = useState < Record < string, number>>({});
@@ -134,6 +148,20 @@ if ( {) {
 
   }, []);
   const showRetryableError = useCallback (
+    // Check condition;
+if ( {) {
+  $2;
+      logErrorToProduction ('Global Error Handler:', error, context);
+    // Report to Sentry for production;
+    // Check condition;
+      Sentry.with_scope (scope => {        // Check condition;)
+          scope.set_context ('error_context', context);
+        scope.set_level ('error');
+        Sentry.capture_exception (error);
+      });
+
+  const showRetryableError = useCallback ()
+pr-12325
     (error: Error, retry_action?: () => void) => {
       const error_key = error.message;
       const currentRetryCount = retry_count[error_key] || 0;
@@ -141,6 +169,8 @@ if ( {) {
       // Show user - friendly error message with retry option;
       toast ({
         title: 'Something went wrong',
+        title: 'Something went wrong',')
+pr-12325
         description: getErrorMessage (error),
         variant: 'destructive',
         action: retry_action;
@@ -161,6 +191,15 @@ if ( {) {
   const showNetworkError = useCallback ((retry_action?: () => void) => {
     const is_online = typeof navigator !== 'undefined' ? navigator.on_line : true;
     toast ({
+                  [error_key]: currentRetryCount + 1,)
+                }));
+                retry_action ();
+              },
+          : undefined,
+    [retry_count, report_error]);
+  const showNetworkError = useCallback ((retry_action?: () => void) => {
+    const is_online = typeof navigator !== 'undefined' ? navigator.on_line : true;
+pr-12325
       title: is_online ? 'Connection Issue' : 'No Internet Connection',
       description: is_online;
         ? 'Unable to connect to our servers. Please check your connection and try again.';
@@ -190,6 +229,18 @@ if ( {) {
   const clearAllErrors = useCallback (() => {
     setRetryCount ({});    // Clear any active toasts would go here if the toast system supports it;
   }, []);
+            label: 'Retry',
+            on_click: retry_action,
+        : undefined,)
+  const showAuthError = useCallback ((login_action?: (, ) => void) => {
+      title: 'Authentication Required',
+      description: 'Please log in to continue with this action.',
+      action: login_action;
+            label: 'Log In',
+            on_click: login_action,
+  const clearAllErrors = useCallback (() => {
+    setRetryCount ({});    // Clear any active toasts would go here if the toast system supports it;
+pr-12325
   const context_value: ErrorContextType = {
     report_error,
     showRetryableError,
@@ -375,6 +426,63 @@ if ( {) {
     [showRetryableError, showNetworkError, showAuthError]);
   const handleAsyncOperation = useCallback (
     async <T, >(
+export function GlobalErrorHandler(): any ({ children }: GlobalErrorHandlerProps) {;
+  const [retryCount, setRetryCount] = useState<Record<string, number>>({});
+
+    <ErrorContext.Provider value={context_value}>;
+
+    </ErrorContext.Provider>);
+export function useGlobalErrorHandler (): ErrorContextType {
+  // TODO: Implement
+  const context = useContext (ErrorContext);
+  // Check condition;
+    throw new Error ()
+      'useGlobalErrorHandler must be used within a GlobalErrorHandler');
+  return context;
+// Helper function to convert technical errors to user - friendly messages;
+function getErrorMessage (error: Error): string {
+  // TODO: Implement
+  const message = error.message.toLowerCase (),
+  // Check condition;
+if (||) {
+    message.includes ('network') ||;
+    message.includes ('connection')) {
+    return 'Unable to connect to our servers. Please check your internet connection.';
+  // Check condition;
+    message.includes ('unauthorized') ||;
+    message.includes ('401')) {
+    return 'Your session has expired. Please log in again.';
+  if (|| message.includes ('403')) {) {
+    return "You don't have permission to perform this action.";"
+  }"
+  if (|| message.includes ('404')) {) {
+    return 'The requested information could not be found.';
+  if () {) {
+    return 'Request timed out. Please try again.';
+  if (|| message.includes ('invalid')) {) {
+    return 'Please check your input and try again.';
+  if (|| message.includes ('500')) {) {
+    return 'Our servers are experiencing issues. Please try again in a moment.';
+  // Fallback for unknown errors;
+  return 'An unexpected error occurred. Please try again.';
+// Utility hook for common error scenarios;
+ * useErrorHandler - Function description;
+function useErrorHandler() {
+  const { report_error, showRetryableError, showNetworkError, showAuthError } =;
+    useGlobalErrorHandler ();
+  const handleApiError = useCallback ()
+    (error: any, retry_action?: () => void) => {
+      // Check condition;
+        showAuthError ();
+      } else // Check condition;
+        showNetworkError (retry_action) } else {
+  // TODO: Implement
+        showRetryableError (error, retry_action);
+    [showRetryableError, showNetworkError, showAuthError]);
+  const handleAsyncOperation = useCallback (
+    async <T, >(
+)
+pr-12325
       operation: () => Promise < T>,
 
       options?: {
@@ -395,6 +503,14 @@ if ( {) {
             description: options.success_message,
           });
         }
+    ): Promise < T | null> => {
+      try {
+  // TODO: Implement
+        const result = await operation ();
+        // Check condition;
+            title: 'Success',
+            description: options.success_message,)
+pr-12325
         return result;
 
       } catch (error: any) {
@@ -406,6 +522,11 @@ if ( {) {
           options.on_error (error);
         } else {
 
+        // Check condition;
+          options.on_error (error);
+        } else {
+  // TODO: Implement
+pr-12325
     </ErrorContext && ErrorContext.Provider>;
   );
 
@@ -417,12 +538,16 @@ export function useGlobalErrorHandler(): any (): ErrorContextType {;
     );
   }
   return context;
+      'useGlobalErrorHandler must be used within a GlobalErrorHandler';')
+pr-12325
 
 // Helper function to convert technical errors to user-friendly messages;
 function getErrorMessage(): any (error: Error): string {;
   const message = error && error.message.toLowerCase(),;
 
   if (;
+  if (;)
+pr-12325
     message && message.includes('fetch') ||;
     message && message.includes('network') ||;
     message && message.includes('connection');
@@ -461,12 +586,31 @@ function getErrorMessage(): any (error: Error): string {;
   // Fallback for unknown errors;
   return 'An unexpected error occurred. Please try again.';
 
+
+    message && message.includes('auth') ||;
+    message && message.includes('unauthorized') ||;
+    message && message.includes('401');
+
+  if (message && message.includes('forbidden') || message && message.includes('403')) {;
+"
+  if (message && message.includes('not found') || message && message.includes('404')) {;
+
+  if (message && message.includes('timeout')) {;
+
+  if (message && message.includes('validation') || message && message.includes('invalid')) {;
+
+  if (message && message.includes('server') || message && message.includes('500')) {;
+
+  // Fallback for unknown errors;
+pr-12325
 // Utility hook for common error scenarios;
 export function useErrorHandler() {;
   const { reportError, showRetryableError, showNetworkError, showAuthError } =;
     useGlobalErrorHandler();
 
   const handleApiError = useCallback(;
+  const handleApiError = useCallback(;)
+pr-12325
     (error: any, retryAction?: () => void) => {;
       if (error && error.response?.status === 401 || error && error.response?.status === 403) {;
         showAuthError();
@@ -477,6 +621,9 @@ export function useErrorHandler() {;
     },;
     [showRetryableError, showNetworkError, showAuthError];
   );
+    },;
+    [showRetryableError, showNetworkError, showAuthError];
+pr-12325
 
   const handleAsyncOperation = useCallback(;
     async <T,>(;
@@ -545,7 +692,6 @@ export function useErrorHandler() {;
     setRetryCount({});    // Clear any active toasts would go here if the toast system supports it
   }, [])
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { toast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
 import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react';
@@ -645,17 +791,13 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {;
     showRetryableError,
     showNetworkError,
     showAuthError,
-<<<<<<< HEAD
     clearAllErrors},
 
 
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 // Helper function to convert technical errors to user-friendly messages
 function getErrorMessage(error: Error): string {
-<<<<<<< HEAD
   const message = error.message.toLowerCase(),
 
   if (message.includes('fetch') || message.includes('network') || message.includes('connection')) {
@@ -746,14 +888,18 @@ export function useErrorHandler() {;
     handleApiError;
     handleAsyncOperation}
 } ;
-=======
   const message = error.message.toLowerCase(),
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
     reportError,
     handleApiError,
     handleAsyncOperation,
   };
     handleAsyncOperation}
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+    ): Promise<T | null> => {;
+
+const ErrorContext = createContext<ErrorContextType | null>(null),;
+
+  const [retryCount, setRetryCount] = useState<Record<string number>>({}),;
+pr-12325

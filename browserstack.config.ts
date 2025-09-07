@@ -4,6 +4,7 @@ import { defineConfig, devices } from '@playwright/test';
 
 import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({testDir:'tests/e2e';
+pr-12325
 import { defineConfig, devices } from '@playwright/test',;
 ;
 export default defineConfig({;
@@ -101,6 +102,25 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
       use:{;
         browserName:'chromium';
   ]
+  use: {;,
+  baseURL:process.env.PLAYWRIGHT_BASE_URL |'http: //localhost:3000';',
+  trace:'on-first-retry'}
+  baseURL:process && process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',;
+    trace:'on-first-retry'},;
+  projects:[;
+    {name: 'Desktop Chrome';',
+  use:{;
+        browserName: 'chromium';',
+  channel:'chrome'}
+    }
+    {name: 'Desktop Firefox';',
+        browserName:'firefox'}
+    {name: 'Desktop Safari';',
+        browserName:'webkit'}
+
+    {name: 'Mobile Chrome';',
+        browserName:'chromium';']
+pr-12325
   ]
         browserName: "webkit",
         ...devices["iPhone 12"]}}],
@@ -171,6 +191,39 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   testDir: 'tests/e2e',;
   use: {;
     baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',;
+      name: 'Desktop Firefox';',
+  use: {
+        browserName: 'firefox'}
+      name: 'Desktop Safari';',
+        browserName: 'webkit'}
+      name: 'Mobile Chrome';',
+  trace: 'on-first-retry
+  projects: [
+import { define_config, devices } from '@playwright / test';
+export default define_config ({
+  test_dir:'tests / e2e',
+  use:{
+    baseURL:process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000';
+    trace:'on - first - retry'};
+      name:'Desktop Chrome',
+      use: {,
+  browser_name:'chromium',
+    },
+      name:'Desktop Firefox',
+  browser_name:'firefox'}
+      name:'Desktop Safari',
+  browser_name:'webkit'}
+      name:'Mobile Chrome',
+  browser_name:'chromium',']
+        ...devices['Pixel 5']}
+      name:'Mobile Safari',
+  browser_name:'webkit',
+        ...devices['i_phone 12']}
+  ],
+  reporter:[;]
+  testDir: 'tests/e2e',;
+  baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',;
+pr-12325
     trace: 'on-first-retry'},;
   projects: [;
     {;
@@ -345,6 +398,53 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       }
 
     }
+  browserName: 'chromium',;')
+        channel: 'chrome'  } catch (error) {
+    console.error("Error:", error);""
+    return res.status(500).json({ error: "Internal server error" });"
+    },;
+    {;"
+      name: 'Desktop Firefox',;
+  browserName: 'firefox'  } catch (error) {
+      name: 'Desktop Safari',;
+  browserName: 'webkit'  } catch (error) {
+      name: 'Mobile Chrome',;
+  browserName: 'chromium',;']
+        ...devices['Pixel 5']  } catch (error) {
+      name: 'Mobile Safari',;
+  browserName: 'webkit',;
+        ...devices['iPhone 12']  } catch (error) {
+      } catch (error) {"
+  ],;
+  reporter: [;]"
+    ['list'];
+      name: "Desktop Chrome"",
+"
+        browser_name: 'chromium',
+        channel: 'chrome';
+    ['html', { outputFolder:'playwright-logs/html-report', open:'never' }]];
+});import { defineConfig, devices } from "@playwright/test";""
+import { defineConfig, devices } from '@playwright/test';
+    baseURL: process.env.PLAYWRIGHT_BASE_URL |'http://localhost:3000,
+  use: {"
+        browserName: 'chromium,
+  channel: 'chrome
+      name: "Desktop Firefox"",
+        browser_name: 'firefox';',
+  browser_name: 'firefox';
+
+      name: "Desktop Safari"",
+        browser_name: 'webkit';',
+  browser_name: 'webkit';
+
+      name: "Mobile Chrome"",
+        browser_name: 'chromium',']
+        ...devices['Pixel 5'];
+      name: "Mobile Safari"",
+        browser_name: 'webkit',
+        ...devices['i_phone 12'];
+
+pr-12325
 
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
 });
@@ -403,3 +503,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]
 ]
 origin/cursor/automate-test-improve-and-merge-code-2533
+
+
+  reporter: [;]
+    ['html', { output_folder: 'playwright - logs / html - report', open: 'never' }];
+];
+        browserName: 'webkit
+        ...devices['iPhone 12']
+
+    ['list']
+    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]
+
+ursor/fix-lint-push-and-merge-to-main-ae4e;
+pr-12325

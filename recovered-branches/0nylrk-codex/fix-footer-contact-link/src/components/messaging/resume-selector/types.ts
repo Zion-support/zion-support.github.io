@@ -33,3 +33,35 @@ export interface ResumeSelectorProps {;
   onResumeSelected: (resumeOption: ResumeOption) => void;
   onResumeSelected: (resume_option: ResumeOption) => void;
 }
+
+
+import { Resume  } from '@/types / resume';
+export interface ResumeOption {
+  // TODO: Implement
+}
+  id: string;,
+  title: string;
+  type: 'ai_resume' | 'custom_upload';
+  resume?: Resume;
+  file?: File;
+export interface ResumeSelectorProps {
+  // TODO: Implement
+import { Resume } from "@/types/resume","
+  // TODO: Implement
+  id: string,
+  title: string,"
+  type: 'ai_resume' | 'custom_upload',
+  resume?: Resume,
+import { Resume } from "@/types/resume",;"
+export interface ResumeOption {;
+  id: string,;
+  title: string,;"
+;
+
+export interface ResumeSelectorProps {;
+
+
+  onResumeSelected: (resumeOption: ResumeOption) => void;,
+  onResumeSelected: (resume_option: ResumeOption) => void;,
+  onResumeSelected: (resume_option: ResumeOption) => void;
+pr-12325

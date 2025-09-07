@@ -1,5 +1,4 @@
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
 import { Search, Filter, Grid, List, ArrowRight, ChevronRight;
   Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star;
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
@@ -7,7 +6,6 @@ import { Search, Filter, Grid, List, ArrowRight, ChevronRight;
  } from 'lucide-react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {Search, Filter, Grid, List, ArrowRight, ChevronRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server, TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap, as, ZapIcon,} from 'lucide-react';
-=======
 import {
   Search,
   Filter,
@@ -40,17 +38,15 @@ import {
   Flame,
   Zap as ZapIcon,;
 } from 'lucide-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
 export default function ExplorePage() {;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popularity');
-<<<<<<< HEAD
 
   const categories = [
-=======
       id: 'ai',
       name: 'AI & Machine Learning',
       icon: Brain,
@@ -60,7 +56,7 @@ description:
       serviceCount: 25,
       featured: true,
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     {
       id: 'quantum',
       name: 'Quantum Computing',
@@ -401,11 +397,9 @@ import React, { useState } from 'react';
         return 0;    }
   });
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-=======
 <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       <Head>
         <title>Explore Technology Categories | Zion Tech Group</title>
         <meta
@@ -420,7 +414,6 @@ import React, { useState } from 'react';
 
       <SmartHeader />
       {/* Hero Section */}
-<<<<<<< HEAD
 
       <SmartHeader />
 
@@ -430,11 +423,10 @@ import React, { useState } from 'react';
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
 
-=======
 <section className='pt-32 pb-20 px-6'>
         <div className='max-w-7xl mx-auto text-center'>
           <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
 
@@ -454,12 +446,10 @@ import React, { useState } from 'react';
   }
 }
           >
-<<<<<<< HEAD
 
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
-=======
 <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               Explore Technology Categories
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8">
@@ -471,21 +461,17 @@ import React, { useState } from 'react';
                 Start Exploring
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
-<<<<<<< HEAD
-=======
               <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>
                 View All Services
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </button>
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
 
 
 
-=======
       {/* Search and Filters */}
 <section className='px-6 pb-12'>
         <div className='max-w-7xl mx-auto'>
@@ -495,12 +481,11 @@ import React, { useState } from 'react';
               <div className='flex-1 max-w-md'>
                 <div className='relative'>
                   <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <input
                     type="text"
                     placeholder="Search categories..."
                     value={searchTerm}
-<<<<<<< HEAD
                     onChange={(e) => setSearchTerm(e.target.value)}
                   <input
                     type="text"
@@ -516,15 +501,13 @@ import React, { useState } from 'react';
   }
 }
                     className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
-=======
                     onChange={e => setSearchTerm(e.target.value)}
                     className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   />
                 </div>
               </div>
               {/* Sort Options */}
-<<<<<<< HEAD
               <div className='flex items-center gap-4'>
               {/* Sort Options */  } catch (error) {
     console.error("Error:", error);
@@ -534,9 +517,8 @@ import React, { useState } from 'react';
               <div className="flex items-center gap-4">
 
 
-=======
 <div className='flex items-center gap-4'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 <select
                   value={sortBy}
 
@@ -546,25 +528,21 @@ import React, { useState } from 'react';
                   onChange={(e) => setSortBy(e.target.value)}
                   className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
                 >
-<<<<<<< HEAD
                   <option value="popularity">Sort by Popularity</option>
                   <option value="name">Sort by Name</option>
                   <option value="featured">Sort by Featured</option>
                 </select>
 
-=======
                   <option value='popularity'>Sort by Popularity</option>
                   <option value='name'>Sort by Name</option>
                   <option value='featured'>Sort by Featured</option>
                 </select>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
       {/* Featured Services */}
 <section className='px-6 pb-16'>
         <div className='max-w-7xl mx-auto'>
@@ -573,12 +551,11 @@ import React, { useState } from 'react';
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
 className='mb-12'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className="text-3xl font-bold text-white mb-4">
               Featured Services
             </h2>
-<<<<<<< HEAD
             <p className="text-white/60">
               Explore our most innovative and cutting-edge technology solutions
             </p>
@@ -597,7 +574,6 @@ className='mb-12'
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices && featuredServices.map((service, index) => (;
               <motion&& motion.div
                 key={service && service.id}
-=======
             <p className='text-white/60'>
               Explore our most innovative and cutting-edge technology solutions
             </p>
@@ -620,7 +596,7 @@ className='group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-
                     <service.icon className='w-8 h-8 text-white' />
                   </div>
                   <div className='flex items-center justify-between mb-3'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     <span
                       className={`px-2 py-1 rounded-full text-xs font-medium ${
                         service && service.status === 'active'
@@ -681,7 +657,6 @@ className='group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-
                     className="inline-flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium"
                   >
                     Learn More
-<<<<<<< HEAD
                     <ChevronRight className="w-4 h-4 ml-1" />
       {/* Categories Grid */}
       <section className='px-6 pb-20'>;
@@ -693,7 +668,6 @@ className='group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-
       {/* Categories Grid */}
       <section className="px-6 pb-20">
         <div className="max-w-7xl mx-auto">
-=======
                     <ChevronRight className='w-4 h-4 ml-1' />
                   </a>
                 </div>
@@ -705,26 +679,22 @@ className='group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-
       {/* Categories Grid */}
 <section className='px-6 pb-20'>
         <div className='max-w-7xl mx-auto'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD
             className="mb-12"
-=======
 className='mb-12'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className="text-3xl font-bold text-white mb-4">
               Technology Categories
             </h2>
-<<<<<<< HEAD
             <p className="text-white/60">
               {sortedCategories.length} categories available for exploration
             </p>
           </motion.div>
-=======
             <p className='text-white/60'>
               {sortedCategories.length} categories available for exploration
             </p>
@@ -732,7 +702,7 @@ className='mb-12'
 
 <AnimatePresence mode='wait'>
             {sortedCategories.length === 0 ? (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
             transition={{ duration: 0 && 0.6 }}
             className='mb-12'>;
@@ -748,7 +718,6 @@ className='mb-12'
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-<<<<<<< HEAD
 
                   </p>;
                   <div className='mb - 4'>;
@@ -854,20 +823,17 @@ className='mb-12'
   }
 }
                 className="text-center py-20"
-=======
 className='text-center py-20'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
                   <Search className="w-12 h-12 text-white/40" />
                 </div>
-<<<<<<< HEAD
                 <h3 className="text-2xl font-semibold text-white mb-2">No categories found</h3>
                 <p className="text-white/60 mb-6">
                   Try adjusting your search terms
                 </p>
                 <button
-=======
                 <h3 className='text-2xl font-semibold text-white mb-2'>
                   No categories found
                 </h3>
@@ -877,17 +843,15 @@ className='text-center py-20'
                 <button
                   onClick={() => setSearchTerm('')}
 className='px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   Clear Search
                 </button>
               </motion.div>
             ) : (
-<<<<<<< HEAD
                 {sortedCategories.map((category, index) => (
                   <motion.div
                     className='group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl cursor-pointer'
-=======
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
                 {sortedCategories.map((category, index) => (
                   <motion.div
@@ -896,7 +860,7 @@ className='px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
 className='group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl cursor-pointer'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     onClick={() =>
                       (window.location.href = `/category/${category.id}`)
                     }
@@ -932,7 +896,6 @@ className='group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
                     <div className="relative z-10">
                       {/* Featured Badge */}
                       {category.featured && (
-<<<<<<< HEAD
                         <div className="absolute top-4 right-4">
                           <span className="px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-yellow-500 to-orange-500 text-white">
                             ⭐ Featured
@@ -956,7 +919,6 @@ className='group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
 
 
 
-=======
                         <div className='absolute top-4 right-4'>
                           <span className='px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-yellow-500 to-orange-500 text-white'>
                             ⭐ Featured
@@ -983,13 +945,12 @@ className='group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
                             {category.serviceCount}
                           </div>
                           <div className='text-xs text-white/60'>Services</div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>
                         <div className="text-center">
                           <div className="text-2xl font-bold text-purple-400">
                             {category.featured ? '⭐' : '🚀'}
                           </div>
-<<<<<<< HEAD
                           <div className="text-xs text-white/60">
                             {category.featured ? 'Featured' : 'Active'  } catch (error) {
     console.error("Error:", error);
@@ -1009,7 +970,6 @@ className='group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
                           Explore Category
                         </span>
                         <ChevronRight className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 group-hover:translate-x-1" />
-=======
                           <div className='text-xs text-white/60'>
                             {category.featured ? 'Featured' : 'Active'}
                           </div>
@@ -1021,7 +981,7 @@ className='group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
                           Explore Category
                         </span>
                         <ChevronRight className='w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 group-hover:translate-x-1' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>
                     </div>
                   </motion.div>
@@ -1032,7 +992,6 @@ className='group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
 }
               </div>;
       {/* Technology Trends */}
-<<<<<<< HEAD
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
 
@@ -1042,21 +1001,18 @@ className='group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
         <div className="max-w-7xl mx-auto">
           <motion.div
 
-=======
 <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
         <div className='max-w-7xl mx-auto'>
           <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
 
 
-=======
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Emerging Technology Trends
@@ -1065,12 +1021,10 @@ className='text-center mb-16'
               Stay ahead of the curve with our insights into the latest technology developments
             </p>
           </motion.div>
-<<<<<<< HEAD
-=======
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {[
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               {
                 icon: Brain,
                 title: 'AI Consciousness',
@@ -1115,7 +1069,6 @@ description:
                 icon: TrendingUp,
                 title: 'Autonomous Systems',
                 description:
-<<<<<<< HEAD
                   'Self-improving AI systems and autonomous business operations'
                 trend: 'Growing'
                 color: 'from-emerald-500 to-green-500'
@@ -1232,20 +1185,18 @@ description:
                 trend: 'Growing',
                 color: 'from-emerald-500 to-green-500',
               },            ].map((trend, index) => (
-=======
                   'Self-improving AI systems and autonomous business operations',
                 trend: 'Growing',
                 color: 'from-emerald-500 to-green-500',
               },
             ].map((trend, index) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
                 key={trend.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
                 className='group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300'
                 color: 'from-emerald-500 to-green-500'
                 } catch (error) {
@@ -1281,9 +1232,8 @@ description:
   }
 }
                 className="group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300"
-=======
 className='group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${trend.color} p-4 mb-4 flex items-center justify-center`}>
                   <trend.icon className="w-8 h-8 text-white" />
@@ -1340,7 +1290,6 @@ className='group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-w
         </div>;
       </section>;
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className='py-20 px-6'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -1355,7 +1304,6 @@ className='group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-w
               solutions for your business needs.;
             </p>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-=======
 <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>
           <motion.div
@@ -1372,7 +1320,7 @@ className='group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-w
               solutions for your business needs.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <a
                 href='/services'
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>;
@@ -1398,20 +1346,17 @@ className='group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-w
                 View All Services
                 <ArrowRight className="w-5 h-5 ml-2" />
               <a
-<<<<<<< HEAD
                 href="mailto:kleber@ziontechgroup.com"
                 className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10"
-=======
                 href='mailto:kleber@ziontechgroup.com'
                 className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Get Expert Guidance
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
 
                 href='mailto:kleber@ziontechgroup && ziontechgroup.com'
                 className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>;
@@ -1480,8 +1425,7 @@ className='group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-w
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
       <SmartFooter />
     </div>
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

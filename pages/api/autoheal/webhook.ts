@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 const GITHUB_TOKEN = null;
   }
   try {
@@ -37,14 +32,13 @@ workflow_id: 'autoheal.yml',
         ref: 'dev',
         inputs: { issue_number: String(issue.data.number) },
       } as any);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     } catch (e) {
       // ignore if missing
     }
 
 return res.status(200).json({ ok: true, issue: issue.data.number });
   } catch (e) {
-<<<<<<< HEAD
     console.error(e)
 
     return res.status(500).json({ error: 'Failed to process webhook' })
@@ -58,11 +52,8 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
-=======
->>>>>>> pr-12243
+pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { Octokit } from '@octokit/rest',;
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || ''
@@ -72,7 +63,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST')
     return res.status(405).json({ error: 'Method not allowed' })
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 
   try {
@@ -98,7 +88,6 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'}
     // trigger workflow dispatch
     try {
       await octokit.actions.createWorkflowDispatch({
-<<<<<<< HEAD
         owner,
         repo,
         workflow_id: 'autoheal.yml',
@@ -159,18 +148,15 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } ca
     } catch (error) {
 
 
-=======
         owner
         repo
         workflow_id: 'autoheal.yml'
         ref: 'dev'
         inputs: { issue_number: String(issue.data.number) }} as any)
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (e) {
       // ignore if missing;
     }
 
-<<<<<<< HEAD
 
 
 
@@ -188,17 +174,14 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } ca
   try {
 
 
-=======
     return res.status(200).json({ ok: true, issue: issue.data.number })
   } catch (e) {
     console.error(e)
-=======
     console.error(e);
     return res.status(500).json({ error: 'Failed to process webhook' });
   }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: 'Failed to process webhook' })
   }
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

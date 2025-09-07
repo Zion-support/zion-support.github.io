@@ -1,23 +1,18 @@
-<<<<<<< HEAD
 import { Calendar, Clock, Check } from 'lucide-react'
 import { Calendar } from 'lucide-react'
 interface ProfileAvailabilityProps {
   availability: Availability
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 
 
 export function ProfileAvailability({
   availability
-=======
 }
 
 export function ProfileAvailability({ availability }: ProfileAvailabilityProps) {
   const getStatusColor = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }: ProfileAvailabilityProps) {
   const getStatusColor = (status: 'available' | 'limited' | 'unavailable') => {
 import { Availability } from '@/types / profile';
@@ -32,7 +27,6 @@ export /**
 function ProfileAvailability() {
   const getStatusColor = (status: 'available' | 'limited' | 'unavailable') =>: any {
     switch (status) {
-<<<<<<< HEAD
       case 'available':;
         return 'bg - emerald - 500 / 20 text - emerald - 400 border - emerald - 500 / 30';
       case 'limited':;
@@ -58,7 +52,6 @@ function ProfileAvailability() {
 
 
 
-=======
       case 'available':
         return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30';
       case 'limited':
@@ -102,7 +95,7 @@ function ProfileAvailability() {
         )}
       </div>
 {availability.message && (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
 
@@ -266,7 +259,6 @@ export function ProfileAvailability(): any ({;
             <Calendar className='h-4 w-4' />            <span>Next available: {availability && availability.nextAvailable}</span>;
           </div>;
         )}
-<<<<<<< HEAD
       </div>;
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">;
       <h3 className="text-xl font-bold text-white mb-4">Availability</h3>;
@@ -418,9 +410,6 @@ export function ProfileAvailability(): any ({;
 }
 
 ;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

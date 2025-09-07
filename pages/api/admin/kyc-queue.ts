@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { KycProfile } from '../../../utils/kyc';
 import fs from 'fs';
@@ -13,8 +9,6 @@ function load(): Record<string, KycProfile> {
   try {
 
 
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import type { KycProfile } from '../../../utils/kyc',;
 import fs from 'fs',;
@@ -25,8 +19,7 @@ const FILE = path.join(DATA_DIR, 'profiles.json'),
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8'),
-=======
->>>>>>> pr-12243
+pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { KycProfile } from '../../../utils/kyc',;
 import fs from 'fs',;
@@ -38,8 +31,6 @@ function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8')
     return JSON.parse(raw)
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 const DATA_DIR = path.join(process.cwd(), 'datakyc');
 const FILE = path.join(DATA_DIR, 'profiles.json');
 
@@ -47,15 +38,11 @@ function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8');
     return JSON.parse(raw);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   } catch {
     return {};
   }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
   const db = load()
@@ -81,12 +68,6 @@ function load(): Record<string, KycProfile> {
 
   }
   return res.status(405).json({ error: 'Method not allowed' });
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 function save(db: Record<string, KycProfile>) {
   fs.mkdirSync(DATA_DIR, { recursive: true }),
@@ -120,7 +101,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   return res.status(405).json({ error: 'Method not allowed' });
 };
-<<<<<<< HEAD
   try {
     if (req.method === 'GET') {
       const profiles = load();
@@ -145,11 +125,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 
-=======
-=======
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+main
 function save(db: Record<string, KycProfile>) {
   fs.mkdirSync(DATA_DIR, { recursive: true });
   fs.writeFileSync(FILE, JSON.stringify(db, null, 2))
@@ -195,5 +171,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   return res.status(405).json({ error: 'Method not allowed' });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> pr-12243
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243

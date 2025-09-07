@@ -6,15 +6,16 @@ const path = require('path')
     console.log(' Enhancing code quality...')
     const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx')]
         const content = fs.readFileSync(file, 'utf8')
-s*(w+)/g, '
-  $1'
+s*(w+)/g, 
+  $1
     enhanced = enhanced.replace(/}s*elses*{/g, '} else {'})
     enhanced = enhanced.replace(/functions+(w+)s*([^)]*)s*{/g, 'const $1 = ($2) => {'}
-/g, '
-'
+/g, 
+
       improvements.push('Code formatting improved')
       improvements.push('Arrow functions optimized')
       improvements.push('Semicolons added')
+<<<<<<< HEAD
         if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules'
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -634,3 +635,6 @@ if (require.main === module) {
 
 module.exports = CodeQualityEnhancer;
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+=======
+        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules
+>>>>>>> pr-12325

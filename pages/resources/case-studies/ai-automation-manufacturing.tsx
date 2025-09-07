@@ -1,9 +1,7 @@
-<<<<<<< HEAD
-=======
 
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>
       <Head>
@@ -14,7 +12,6 @@
           content='AI automation, manufacturing, resource, case study, predictive maintenance'
         />
       </Head>
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <div className="max-w-4xl mx-auto">
@@ -25,7 +22,6 @@
                 ← Back to Resources
               </Link>
             </nav>
-=======
 
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
         <main className='container mx-auto px-6 py-12'>
@@ -44,7 +40,7 @@
               <div className='mb-4'>
                 <span className='px-4 py-2 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30'>
                   {caseStudy.industry}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </span>
               </div>
               <h1 className='text-4xl font-bold text-white mb-4'>
@@ -57,7 +53,6 @@
                 {caseStudy.description}
               </p>
             </header>
-<<<<<<< HEAD
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-green-400">Key Results</h2>
               <div className="bg-green-500/10 rounded-lg p-6 border border-green-500/20">
@@ -84,7 +79,6 @@
                     Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance,
                     quality control, and production optimization. Each system was designed to work independently while
 
-=======
 
             {/* Key Results */}
             <section className='mb-12'>
@@ -136,7 +130,7 @@
                     increase in production efficiency and 60% reduction in
                     unplanned downtime. These improvements directly translated
                     to increased profitability and customer satisfaction.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     sharing data for comprehensive insights.
                   </p>
                 </div>
@@ -154,7 +148,6 @@
                 </div>
               </div>
             </section>
-<<<<<<< HEAD
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-fuchsia-400">Related Resources</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -174,7 +167,6 @@
 
                   href="/case-studies/ai-automation-manufacturing"
                   className="bg-fuchsia-500/10 rounded-lg p-6 border border-fuchsia-500/20 hover:border-fuchsia-400/50 transition-all duration-300"
-=======
             {/* Related Resources */}
 <section className='mb-12'>
               <h2 className='text-2xl font-semibold mb-6 text-fuchsia-400'>
@@ -184,7 +176,7 @@
                 <Link
                   href='/case-studies/ai-automation-manufacturing'
                   className='bg-fuchsia-500/10 rounded-lg p-6 border border-fuchsia-500/20 hover:border-fuchsia-400/50 transition-all duration-300'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   <h3 className='text-lg font-semibold text-fuchsia-400 mb-2'>
                     Full Case Study
@@ -195,17 +187,15 @@
                   </p>
                 </Link>
 
-<<<<<<< HEAD
 
 
 
                   href="/resources/whitepapers/autonomous-systems-guide.pdf"
                   className="bg-cyan-500/10 rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/50 transition-all duration-300"
-=======
                 <Link
                   href='/resources/whitepapers/autonomous-systems-guide.pdf'
                   className='bg-cyan-500/10 rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/50 transition-all duration-300'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   <h3 className='text-lg font-semibold text-cyan-400 mb-2'>
                     Autonomous Systems Guide
@@ -216,14 +206,12 @@
                 </Link>
               </div>
             </section>
-<<<<<<< HEAD
             <section className="text-center">
               <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Implement Similar Solutions?</h2>
                 <p className="text-white/80 mb-6 max-w-2xl mx-auto">
                   This resource demonstrates the real impact of AI automation in manufacturing.
                   Let's discuss how we can help you achieve similar results.
-=======
             {/* Call to Action */}
 <section className='text-center'>
               <div className='bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20'>
@@ -234,11 +222,10 @@
                   This resource demonstrates the real impact of AI automation in
                   manufacturing. Let's discuss how we can help you achieve
                   similar results.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                   <Link
-<<<<<<< HEAD
 
 
 
@@ -254,7 +241,6 @@
 
                     href="/resources"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
-=======
                     href='/contact'
                     className='bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'
                   >
@@ -263,7 +249,7 @@
                   <Link
                     href='/resources'
                     className='px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   >
                     Explore More Resources
                   </Link>
@@ -274,7 +260,6 @@
         </main>
       </div>
     </>
-<<<<<<< HEAD
   )
 import React from 'react';
 import Head from 'next/head';
@@ -378,6 +363,5 @@ function ResourceCaseStudyPage() {
         </main>;
 
 
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

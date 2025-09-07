@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
 const dataPath = path.join(process.cwd(), 'datalearncourses.json'),
-<<<<<<< HEAD
 
 
 
@@ -32,7 +24,6 @@ export default function handler(req, res) {
     const courses = JSON.parse(raw);
     const { id } = req.query;
     const course = courses.find((c: any) => c.id === id);
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -40,7 +31,7 @@ const dataPath = null;
     res.status(200).json({ course })
   } catch (e: any) {
     res.status(500).json({ error: e?.message ?? 'Failed to load course' })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
   }
@@ -49,9 +40,7 @@ const dataPath = null;
 ;
 
 
-=======
-=======
->>>>>>> pr-12243
+pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs',;
 import path from 'path',;
@@ -82,9 +71,5 @@ function handler() {
     res.status (500).json ({ error: e?.message ?? 'Failed to load course' });
   }
 };
-<<<<<<< HEAD
-=======
-=======
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
+main
+pr-12243

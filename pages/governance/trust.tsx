@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default function GovernanceTrustPage() {
   return (
     <>
@@ -7,17 +6,14 @@ export default function GovernanceTrustPage() {
 
 
 
-=======
 import Head from 'next/head';
 import Link from 'next/link';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
               </div>
             ))}
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
 <section className='space-y-4'>
           <h2 className='text-2xl font-semibold'>Governance</h2>
@@ -26,7 +22,7 @@ import Link from 'next/link';
               <div className='font-medium mb-1'>Core Stewards</div>
               <div className='text-sm text-gray-600 dark:text-gray-400'>
                 Appointed via DAO ratification, accountable to publish roadmaps
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 risk registers, and post-mortems.
               </div>
         <section className="space-y-4">
@@ -63,7 +59,6 @@ import Link from 'next/link';
             </div>
           </div>
         </section>
-<<<<<<< HEAD
               </div>;
             ))}
           </div>;
@@ -164,7 +159,6 @@ import Link from 'next / link';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 
 <section className='space-y-2'>
           <h2 className='text-2xl font-semibold'>Operator Prompt</h2>
@@ -180,4 +174,4 @@ import Link from 'next / link';
       </div>
     </>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

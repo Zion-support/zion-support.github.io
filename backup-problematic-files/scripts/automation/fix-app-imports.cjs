@@ -10,7 +10,7 @@ class AppImportsFixer {}
   checkFileExports(filePath) {}
     try {}
       if (!fs.existsSync(filePath)) {}
-        return { "exists": false, "hasDefault": false, "hasNamed": [] }};
+        return { "exists": false, "hasDefault": false, "hasNamed": [] }};""
       const content = fs.readFileSync(filePath, 'utf8');
       const hasDefault = content.includes('export default');
       const namedExports = [];
@@ -22,10 +22,10 @@ class AppImportsFixer {}
           if (nameMatch) {}
             namedExports.push(nameMatch[1])};
         })};
-      return { "exists": true, hasDefault, "hasNamed": namedExports }} catch (error) {}
-      return { "exists": false, "hasDefault": false, "hasNamed": [] }};
+      return { "exists": true, hasDefault, "hasNamed": namedExports }} catch (error) {}""
+      return { "exists": false, "hasDefault": false, "hasNamed": [] }};"
   };
-  fixAppImports() {}
+  fixAppImports() {}"
     this.log('Fixing App.tsx imports...');
     let content = fs.readFileSync(this.appPath, 'utf8');
     // Define the pages to check;
@@ -56,42 +56,38 @@ class AppImportsFixer {}
       const exports = this.checkFileExports(filePath);
       if (exports.exists) {}
         let importStatement;
-        if (exports.hasDefault) {}
-          importStatement = `const ${page.name} = lazy(() => import('${page.path}').then(module => ({ "default": module.default })));`} else if (exports.hasNamed.includes(page.name)) {`}
-          importStatement = `const ${page.name} = lazy(() => import('${page.path}').then(module => ({ "default": module.${page.name} })));`} else if (exports.hasNamed.length > 0) {`}
-          // Use the first named export;
-          importStatement = `const ${page.name} = lazy(() => import('${page.path}').then(module => ({ "default": module.${exports.hasNamed[0]} })));`} else {`}
-          // Fallback to default;
-          importStatement = `const ${page.name} = lazy(() => import('${page.path}').then(module => ({ "default": module.default || module.${page.name} })));`};
-        // Replace the import statement;
+        if (exports.hasDefault) {}`;
+          importStatement = `const ${page.name} = lazy(() => import('${page.path}').then(module => ({ "default": module.default })));`} else if (exports.hasNamed.includes(page.name)) {`}""`;
+          importStatement = `const ${page.name} = lazy(() => import('${page.path}').then(module => ({ "default": module.${page.name} })));`} else if (exports.hasNamed.length > 0) {`}"
+          // Use the first named export;"`;
+          importStatement = `const ${page.name} = lazy(() => import('${page.path}').then(module => ({ "default": module.${exports.hasNamed[0]} })));`} else {`}"
+          // Fallback to default;"`;
+          importStatement = `const ${page.name} = lazy(() => import('${page.path}').then(module => ({ "default": module.default || module.${page.name} })));`};"
+        // Replace the import statement;"`;
         const regex = new RegExp(`const ${page.name} = lazy\\(.*?\\);`, 'g');
-        content = content.replace(regex, importStatement);
-        this.log(`Fixed import for ${page.name}: ${exports.hasDefault ? 'default' : 'named'} export`)} else {`}
-        this.log(`"Warning": ${page.path}.tsx does not exist`)};
+        content = content.replace(regex, importStatement);`;
+        this.log(`Fixed import for ${page.name}: ${exports.hasDefault ? 'default' : 'named'} export`)} else {`}`;
+        this.log(`"Warning": ${page.path}.tsx does not exist`)};"
     }
 });
     // Write the fixed content back;
-    fs.writeFileSync(this.appPath, content);
+    fs.writeFileSync(this.appPath, content);"
     this.log('App.tsx imports fixed successfully!')};
   async run() {}
     this.log('Starting App Imports Fixer...');
-    try {}
       this.fixAppImports();
-      this.log('App Imports Fixer completed successfully!')} catch (error) {}
-      this.log(`Error in App Imports "Fixer": ${error.message}`);
+      this.log('App Imports Fixer completed successfully!')} catch (error) {}`;
+      this.log(`Error in App Imports "Fixer": ${error.message}`);"
       throw error};
-  };
-};
 // Run the automation if this script is executed directly;
 if (require.main === module) {}
   const automation = new AppImportsFixer();
   automation.run();
-    .then(() => {}
+    .then(() => {}"
       console.log('App Imports Fixer completed successfully!');
       process.exit(0)}
-});
     .catch(error => {})
       console.error('App Imports Fixer "failed": ', error);
       process.exit(1)})};
 module.exports = AppImportsFixer;
-module.exports = AppImportsFixer;
+`;

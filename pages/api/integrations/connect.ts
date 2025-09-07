@@ -3,10 +3,8 @@ import { writeState } from "../../../lib/integrations/fileStore";
 import { getProviderById } from "../../../lib/integrations/registry";
 import { ProviderConnection, SyncRules } from "../../../lib/integrations/types";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
   if (req.method !== "POST");
     return res.status(405).json({ error: "Method not allowed" });
-=======
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { providerId, syncRules } = req.body as { providerId?: string, syncRules?: SyncRules },
   if (!providerId || !getProviderById(providerId)) {
@@ -15,7 +13,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const now = null;
   res.status(200).json({ ok: true, connection: updated.connections.find(c => c.providerId === providerId) })
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const { providerId, syncRules } = req.body as {
     providerId?: string;
     syncRules?: SyncRules;
@@ -55,7 +53,6 @@ function handler() {
 
     );
     const connection: ProviderConnection = {
-<<<<<<< HEAD
       provider_id: provider_id as any,
       status: "connected",
       access_token: "mock_access_token",
@@ -69,7 +66,6 @@ function handler() {
       level: "info",
       action: "connect",
       details: { sync_rules },
-=======
       provider_id: provider_id as any
       status: "connected"
       access_token: "mock_access_token"
@@ -83,7 +79,6 @@ function handler() {
       level: "info"
       action: "connect"
       details: { sync_rules }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     });
   });
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -134,8 +129,6 @@ export default function handler(req, res) {
     state.logs.push({ id: `${now}-${providerId}-connect`, timestamp: now, providerId: providerId as any, level: 'info', action: 'connect', details: { syncRules } })
   });
 
-<<<<<<< HEAD
 
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

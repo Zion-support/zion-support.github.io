@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import * as React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -20,7 +17,6 @@ import {
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
-<<<<<<< HEAD
 const pressReleases = [
   {
     title: "Zion Tech Group Launches Revolutionary AI-Powered Drug Discovery Platform",
@@ -74,9 +70,6 @@ const contactInfo = {
   address: "364 E Main St STE 1008 Middletown DE 19709"
 };
 
-=======
-<<<<<<< HEAD
-=======
 export default function Press() {
   const pressReleases = [
     {
@@ -147,15 +140,11 @@ export default function Press() {
       image: '/api/placeholder/100/100'
     }
   ];
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 }
 
-<<<<<<< HEAD
-=======
-=======
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from 'react',
 import SEO from '../components / SEO',
 export default /**
@@ -171,19 +160,13 @@ return (
   </div>;
   </>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
 
-=======
 
 
 import React from 'react';
 import SEO from '../components/SEO';
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 export default function PressPage() {
-<<<<<<< HEAD
 	return (
 		<>
 			<SEO title="Press | Zion Tech Group" description="News, media resources, and press inquiries." canonical="/press" />
@@ -194,31 +177,16 @@ export default function PressPage() {
 		</>
 	)
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+ursor/fix-website-loading-errors-and-merge-6662
   return (
     <>
-<<<<<<< HEAD
       <SEO
         title='Press | Zion Tech Group'
         description='News, media resources, and press inquiries.'
@@ -231,7 +199,6 @@ export default function PressPage() {
         </p>
       </div>
     </>
-=======
       <Head>
         <title>Press - Zion Tech Group</title>
         <meta name="description" content="Latest news, press releases, and media coverage about Zion Tech Group. Stay updated on our innovations and achievements." />
@@ -441,6 +408,6 @@ export default function PressPage() {
         </section>
       </main>
 </>
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

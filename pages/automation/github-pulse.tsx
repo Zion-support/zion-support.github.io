@@ -1,5 +1,4 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-<<<<<<< HEAD
 // @ts-ignore
 import data from '../../data/github-pulse.json';
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
@@ -18,9 +17,8 @@ export default function GithubPulsePage() {
   const repo = data?.repo |{}
   const last24h = data?.last24h |{}
 
-=======
   const repo = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -42,7 +40,6 @@ function Metric({ label, value }: { label: string, value: any }) {
     <div className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
       <div className="text-xs text-gray-500 dark:text-gray-400">{label}</div>
   )
-<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -88,6 +85,5 @@ function Metric() {
 }
 
 
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

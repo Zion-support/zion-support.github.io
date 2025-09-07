@@ -13,7 +13,6 @@ export default function RequestQuote() {
   return (
     <main style={{ padding: '3rem', maxWidth: 800, margin: '0 auto' }}>
       <h1>Request a Quote</h1>
-<<<<<<< HEAD
       <p>Tell us about your team size, hiring needs, and timelines. Our team will reach out within 1 business day.</p>;
       <form action=&quot;mailto:sales@zion.ai&quot; method=&quot;post&quot; encType=&quot;text/plain&quot; style={{ display: 'grid', gap: 12, marginTop: 12 }}>
         <input name=&quot;company&quot; placeholder=&quot;Company name&quot; required />
@@ -36,7 +35,6 @@ export default function RequestQuote() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 <p>
         Tell us about your team size, hiring needs, and timelines. Our team will
         reach out within 1 business day.
@@ -57,4 +55,4 @@ export default function RequestQuote() {
       </form>
     </main>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

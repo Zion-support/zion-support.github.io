@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 
-=======
 import { Cloud, Cpu, Database, Zap, Shield, Rocket;
   ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
  } from 'lucide-react';
@@ -10,7 +8,7 @@ import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
 export default function CloudServicesPage() {
   const services = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import {
   Cloud
   Cpu
@@ -120,7 +118,6 @@ function CloudServicesPage() {
     { number: '24/7', label: 'Support Available', icon: Clock }
     { number: '100+', label: 'Cloud Projects', icon: CheckCircle }
   ];
-<<<<<<< HEAD
 
   Cloud,
   Cpu,
@@ -192,7 +189,6 @@ export default function CloudServicesPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
       <Head>
@@ -221,7 +217,7 @@ export default function CloudServicesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 className='mb-8'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-400 bg-clip-text text-transparent mb-6">
               Cloud Infrastructure
@@ -251,7 +247,6 @@ className='mb-12'
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
             transition={{ duration: 0 && 0.8 }}
             className='mb-8'>;
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-400 bg-clip-text text-transparent mb-6'>;
@@ -262,7 +257,6 @@ className='mb-12'
               digital transformation            </p>;
           </motion && motion.div>;
           <motion&& motion.div
-=======
       {/* Stats Section */}
 <section className='py-16 px-6'>
         <div className='max-w-7xl mx-auto'>
@@ -292,11 +286,10 @@ className='text-center'
 <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>
           <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
             </p>
           </motion.div>
           <motion.div
@@ -374,7 +367,6 @@ className='text-center'
               Comprehensive cloud solutions designed to modernize your infrastructure and drive innovation
             </p>
           </motion.div>
-=======
             viewport={{ once: true }}
 className='text-center mb-16'
           >
@@ -389,7 +381,7 @@ className='text-center mb-16'
 
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {services.map((service, index) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
 
 
@@ -412,17 +404,14 @@ className='text-center mb-16'
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
 
 
-=======
 className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-emerald-500/30 transition-all duration-300'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-<<<<<<< HEAD
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-white/70 mb-6">{service.description}</p>
                 <ul className="space-y-3 mb-6">
@@ -446,7 +435,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl 
                 <div className="flex items-center justify-between">
                   <span className="text-2xl font-bold text-teal-400">{service.price}</span>
                   <button className="px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
-=======
                 <h3 className='text-2xl font-bold text-white mb-4'>
                   {service.title}
                 </h3>
@@ -467,7 +455,7 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl 
                     {service.price}
                   </span>
                   <button className='px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     Get Started
                   </button>
                 </div>
@@ -480,7 +468,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl 
 
           </div>;
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className='py-20 px-6'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
 
@@ -512,7 +499,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl 
           >
 
             <h2 className="text-4xl font-bold text-white mb-6">
-=======
 <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>
           <motion.div
@@ -522,27 +508,24 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl 
             viewport={{ once: true }}
           >
 <h2 className='text-4xl font-bold text-white mb-6'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               Ready to Transform Your Infrastructure?
             </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
               Let's discuss how our cloud infrastructure solutions can modernize your business and drive digital transformation.
             </p>
-<<<<<<< HEAD
-=======
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <button className='px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105'>
                 Infrastructure Assessment
               </button>
               <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>
                 View Case Studies
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </button>
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
 
 
 ),
@@ -550,13 +533,12 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl 
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Cloud Infrastructure Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive cloud solutions designed to modernize your infrastructure and drive innovation </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
 
 
-=======
       <EnhancedFooter />
     </div>
 );
 
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Cloud Infrastructure Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive cloud solutions designed to modernize your infrastructure and drive innovation </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }</div> </div> </section> <motion.div initial= {
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;
@@ -591,7 +573,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl 
   opacity: 1, y: 0
 }transition= {
   {
-<<<<<<< HEAD
 
 }
 }
@@ -718,11 +699,10 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl 
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
   duration: 0.8
 }viewport= {
   {
   once: true 
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Infrastructure? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our cloud infrastructure solutions can modernize your business and drive digital transformation. </p> Infrastructure Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Case Studies </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

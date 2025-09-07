@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 
 export default function GetStarted() {
   const [selectedPath, setSelectedPath] = useState<string>(''),
   const [currentStep, setCurrentStep] = useState(1);
 
   const onboardingSteps = [
-=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Rocket, CheckCircle, ArrowRight, Brain, Atom;
@@ -20,7 +18,7 @@ export default function GetStarted() {
       description: 'Select the technology area that best fits your needs',
 icon: <Target className='w-8 h-8 text-cyan-400' />,
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     {
       step: 2,
       title: 'Define Requirements',
@@ -171,7 +169,6 @@ setCurrentStep(currentStep + 1);
 
   const handlePreviousStep = () => {
     if (currentStep > 1) {
-<<<<<<< HEAD
       setCurrentStep(currentStep - 1);    }
   }
 import {
@@ -551,7 +548,6 @@ export default function GetStarted() {;
   }
 }
             className="text-center max-w-4xl mx-auto"
-=======
 setCurrentStep(currentStep - 1);
     }
   };
@@ -567,7 +563,7 @@ setCurrentStep(currentStep - 1);
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 className='text-center max-w-4xl mx-auto'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
               Get Started Today
@@ -576,7 +572,6 @@ className='text-center max-w-4xl mx-auto'
               Begin your journey into the future of AI consciousness, quantum
               computing, and autonomous systems. Our expert team will guide you
               every step of the way.
-<<<<<<< HEAD
   const handlePreviousStep = () => {;
     if (currentStep > 1) {;
 
@@ -589,7 +584,6 @@ className='text-center max-w-4xl mx-auto'
   return (
 
 
-=======
             </p>
             <div className='flex flex-wrap justify-center gap-6'>
               <div className='flex items-center gap-2 text-cyan-400'>
@@ -603,19 +597,17 @@ className='text-center max-w-4xl mx-auto'
               <div className='flex items-center gap-2 text-green-400'>
                 <CheckCircle className='w-6 h-6' />
                 <span>Proven Results</span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
           </motion.div>
         </div>
       </section>
       {/* Onboarding Steps */}
-<<<<<<< HEAD
       <section className='py-20'>;
         <div className='container mx-auto px-4'>          <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-=======
 <section className='py-20'>
         <div className='container mx-auto px-4'>
           <motion.div
@@ -623,19 +615,17 @@ className='text-center max-w-4xl mx-auto'
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Simple 4-Step Process
             </h2>
             <p className="text-xl text-gray-400">From initial consultation to full implementation</p>
           </motion.div>
-<<<<<<< HEAD
-=======
 
           <div className='grid md:grid-cols-4 gap-8'>
             {onboardingSteps.map((step, index) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
 
 
@@ -662,11 +652,9 @@ className='text-center mb-16'
 
 
               >
-<<<<<<< HEAD
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
-=======
 <div className='w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   {step.step}
                 </div>
                 <div className='flex justify-center mb-4'>{step.icon}</div>
@@ -692,11 +680,9 @@ className='text-center mb-16'
       </section>;
 
       {currentStep === 1 && (
-<<<<<<< HEAD
         <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black">
           <div className="container mx-auto px-4">
             <motion.div
-=======
 <section className='py-20 bg-gradient-to-r from-gray-900/50 to-black'>
           <div className='container mx-auto px-4'>
             <motion.div
@@ -704,14 +690,13 @@ className='text-center mb-16'
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Choose Your Technology Path
               </h2>
               <p className="text-xl text-gray-400">Select the area that best aligns with your business goals</p>
             </motion.div>
-<<<<<<< HEAD
                 <motion.div
 
               transition={{ duration: 0 && 0.8 }}
@@ -728,7 +713,6 @@ className='text-center mb-16'
                 <motion&& motion.div
                   key={path && path.id}
 
-=======
 
             <div className='grid lg:grid-cols-2 gap-8'>
               {technologyPaths.map((path, index) => (
@@ -739,7 +723,7 @@ className='text-center mb-16'
                   transition={{ duration: 0.8, delay: index * 0.1 }}
 className='group cursor-pointer'
                   onClick={() => handlePathSelection(path.id)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   <div className="p-8 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
                     <div className="flex items-start gap-4 mb-6">
@@ -753,7 +737,6 @@ className='group cursor-pointer'
 
 
                       <div>
-<<<<<<< HEAD
                         <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3">Key Features</h4>
                         <ul className="space-y-2">
                           {path.features.map((feature) => (
@@ -824,7 +807,6 @@ className='group cursor-pointer'
   }
 }
 
-=======
                         <h4 className='text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3'>
                           Key Features
                         </h4>
@@ -861,22 +843,20 @@ className='group cursor-pointer'
                         <span className='flex items-center gap-1'>
                           <Clock className='w-4 h-4' />
                           {path.timeline}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                         </span>
                         <span className="flex items-center gap-1">
                           <Target className="w-4 h-4" />
                           {path.complexity}
                         </span>
                       </div>
-<<<<<<< HEAD
                       <div className="flex items-center gap-2 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">
                         <span className="font-medium">Select Path</span>
                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-=======
                       <div className='flex items-center gap-2 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300'>
                         <span className='font-medium'>Select Path</span>
                         <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform duration-300' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>
                     </div>
                   </div>
@@ -901,22 +881,18 @@ className='group cursor-pointer'
   }
 }
       {currentStep === 2 && (
-<<<<<<< HEAD
         <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black">
           <div className="container mx-auto px-4">
-=======
 <section className='py-20 bg-gradient-to-r from-gray-900/50 to-black'>
           <div className='container mx-auto px-4'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
               className="text-center mb-16"
-=======
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Define Your Requirements
@@ -938,37 +914,32 @@ className='text-center mb-16'
                   </p>
                 </div>
                     <div>
-<<<<<<< HEAD
                       <label className="block text-sm font-medium text-gray-300 mb-2">Project Timeline</label>
                       <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300">
-=======
                       <label className='block text-sm font-medium text-gray-300 mb-2'>
                         Project Timeline
                       </label>
                       <select className='w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                         <option>Immediate (1-2 weeks)</option>
                         <option>1-3 months</option>
                         <option>3-6 months</option>
                         <option>6+ months</option>
                       </select>
                     </div>
-<<<<<<< HEAD
-=======
 <div>
                       <label className='block text-sm font-medium text-gray-300 mb-2'>
                         Budget Range
                       </label>
                       <select className='w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300'>
                         <option>Under $50K</option>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                         <option>$50K - $100K</option>
                         <option>$100K - $500K</option>
                         <option>$500K+</option>
                       </select>
                     </div>
                   </div>
-<<<<<<< HEAD
                         <option>$50K - $100K</option>;
                         <option>$100K - $500K</option>;
                         <option>$500K+</option>;
@@ -1025,7 +996,6 @@ className='text-center mb-16'
   }
 }
                       className="px-6 py-3 border border-gray-600 text-gray-300 rounded-xl hover:border-gray-500 hover:text-white transition-all duration-300"
-=======
 <div>
                     <label className='block text-sm font-medium text-gray-300 mb-2'>
                       Project Description
@@ -1040,16 +1010,14 @@ className='text-center mb-16'
                     <button
                       onClick={handlePreviousStep}
                       className='px-6 py-3 border border-gray-600 text-gray-300 rounded-xl hover:border-gray-500 hover:text-white transition-all duration-300'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     >
                       Previous
                     </button>
                     <button
-<<<<<<< HEAD
-=======
                       onClick={handleNextStep}
 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     >
                       Next Step
                     </button>
@@ -1059,7 +1027,6 @@ className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white round
             </div>
           </div>
         </section>
-<<<<<<< HEAD
       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1071,7 +1038,6 @@ className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white round
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
       )}
       {/* Quick Start Options */}
 <section className='py-20'>
@@ -1081,19 +1047,17 @@ className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white round
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Quick Start Options
             </h2>
             <p className="text-xl text-gray-400">Get started immediately with these quick options</p>
           </motion.div>
-<<<<<<< HEAD
-=======
 
           <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {quickStartOptions.map((option, index) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
 
         </section>)}
@@ -1119,8 +1083,6 @@ className='text-center mb-16'
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
-=======
 className='group cursor-pointer'
               >
                 <div className='p-6 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300'>
@@ -1128,7 +1090,7 @@ className='group cursor-pointer'
                     {option.icon}
                   </div>
                   <h3 className='text-xl font-bold text-white mb-3 text-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     {option.title}
                   </h3>;
                   <p className='text - gray - 300 mb - 4 text - center leading - relaxed'>;
@@ -1151,13 +1113,11 @@ className='group cursor-pointer'
                       {option.duration}
                     </span>
                   </div>
-<<<<<<< HEAD
-=======
                   <button
                     className={`w-full py-3 px-4 bg-gradient-to-r ${option.color} text-white rounded-xl font-semibold hover:shadow-2xl transition-all duration-300`}
                   >
                     {option.action}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   </button>
                 </div>
               </motion.div>
@@ -1166,11 +1126,9 @@ className='group cursor-pointer'
         </div>
       </section>
       {/* Contact CTA */}
-<<<<<<< HEAD
 
           >
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-=======
 <section className='py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20'>
         <div className='container mx-auto px-4 text-center'>
           <motion.div
@@ -1179,7 +1137,7 @@ className='group cursor-pointer'
             transition={{ duration: 0.8 }}
           >
 <h2 className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               Ready to Begin Your Journey?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -1193,13 +1151,11 @@ className='group cursor-pointer'
                 Contact Our Team
                 <ArrowRight className="w-5 h-5" />
               <a
-<<<<<<< HEAD
                 href="/quote"
                 className="inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300"
-=======
                 href='/quote'
                 className='inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Get a Quote
             </div>
@@ -1207,15 +1163,13 @@ className='group cursor-pointer'
         </div>
       </section>
     </div>
-<<<<<<< HEAD
 
 
 ),
 
 
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 }whileInView= {
   {
@@ -1245,7 +1199,6 @@ className='group cursor-pointer'
   opacity: 1, y: 0
 }transition= {
   {
-<<<<<<< HEAD
           >;
             <h2 className='text - 4xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent'>;
               Ready to Begin Your Journey?;
@@ -1280,8 +1233,7 @@ className='group cursor-pointer'
   }
 }
 ;
-=======
   duration: 0.8 
 
 }> <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Ready to Begin Your Journey? </h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Our team of experts is ready to help you navigate the future of technology. Let's discuss your project and create a roadmap to success. </p> <a href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300" > Contact Our Team <ArrowRight className="w-5 h-5" /> </Link> <a href="/quote" className="inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300" > Get a Quote </Link> </div> </motion.div> </div> </section> </div>)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

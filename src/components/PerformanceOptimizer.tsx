@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-=======
 import React, { useEffect, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -178,8 +175,7 @@ export function PerformanceOptimizer() {
 
   return null; // This component doesn't render anything
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
-=======
+origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
 import { useEffect } from 'react'';interface PerformanceOptimizerProps {'
    children: React.ReactNode}export const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({ children }) => {
   useEffect ( () => {
@@ -209,4 +205,4 @@ target.style.backgroundImage = `url (${target.dataset.src}) `              targe
   return <>{children}</>,
 }
 "`"
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 type RoadmapInputs = {
 
@@ -83,13 +82,12 @@ function generate_stages ({ milestones, keywords, priorities }: RoadmapInputs): 
     return { id, name, theme, objective, highlights, metrics }
   });
 }
-=======
 import Head from 'next/head';
 import React, { useMemo, useState } from 'react';
 type RoadmapInputs = any;
 function defaultOperatorPrompt(): string {
   return `You are Zion's Product Operator.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 Inputs you will receive:
 - milestones (string list)
 - keywords (string list)
@@ -101,7 +99,6 @@ Goals:
 4) Include explicit risks and validation signals per stage
 5) Output concise, skimmable, exec-ready text
 Format:
-<<<<<<< HEAD
 type RoadmapInputs = {
   milestones: string;
   keywords: string;
@@ -174,7 +171,7 @@ Goals:;
 4) Include explicit risks and validation signals per stage;
 5) Output concise, skimmable, exec - ready text;
 Format:;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+origin/cursor/automate-test-improve-and-merge-code-20a4
 Zion v{n} — {theme}
 Objective: ...;
 Highlights:;
@@ -190,7 +187,6 @@ Validation:;
 
     () => generateStages({ milestones, keywords, priorities });
 
-=======
 Zion v{n} — {theme}
 Objective: ...
 Highlights:
@@ -217,13 +213,12 @@ export default function RoadmapPage(): JSX.Element {
 
   const stages = useMemo(
     () => generateStages({ milestones, keywords, priorities }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     [milestones, keywords, priorities]
   )
   const operatorPrompt = useMemo(() => defaultOperatorPrompt(), [])
   const copyPrompt = async () => {
     try {
-<<<<<<< HEAD
 
       await navigator.clipboard.writeText(operatorPrompt);
       setCopied(true);
@@ -278,7 +273,6 @@ export default function RoadmapPage(): JSX.Element {
 }
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., MVP live, 100 design partners, 1k weekly active contributors"
-=======
       await navigator.clipboard.writeText(operatorPrompt);
       setCopied(true);
 setTimeout(() => setCopied(false), 1500);
@@ -325,7 +319,7 @@ setTimeout(() => setCopied(false), 1500);
                   rows={3}
                   className='mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none'
                   placeholder='e.g., MVP live; 100 design partners; 1k weekly active contributors'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 />
               </div>
               <div>
@@ -334,7 +328,6 @@ setTimeout(() => setCopied(false), 1500);
                 </label>
                 <input
                   value={keywords}
-<<<<<<< HEAD
                   onChange={(e) => setKeywords(e.target.value)}
                   value={keywords  } catch (error) {
     console.error("Error:", error);
@@ -348,11 +341,10 @@ setTimeout(() => setCopied(false), 1500);
 }
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., AI-native, trustless, talent-first, sovereign tools"
-=======
                   onChange={e => setKeywords(e.target.value)}
                   className='mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none'
                   placeholder='e.g., AI-native, trustless, talent-first, sovereign tools'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 />
               </div>
               <div>
@@ -360,7 +352,6 @@ setTimeout(() => setCopied(false), 1500);
                   Upcoming priorities
                 </label>
                 <input
-<<<<<<< HEAD
                   value={priorities  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -373,12 +364,11 @@ setTimeout(() => setCopied(false), 1500);
 }
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., governance, scale, regional expansion"
-=======
                   value={priorities}
                   onChange={e => setPriorities(e.target.value)}
                   className='mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none'
                   placeholder='e.g., governance, scale, regional expansion'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 />
               </div>
             </div>
@@ -388,16 +378,14 @@ setTimeout(() => setCopied(false), 1500);
             <div className='mb-3 flex items-center justify-between gap-3'>
               <h2 className='text-xl font-semibold'>Operator Prompt</h2>
               <button
-<<<<<<< HEAD
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                 className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-900"
-=======
                 onClick={copyPrompt}
                 className='rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-900'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 {copied ? 'Copied' : 'Copy'}
               </button>
@@ -459,7 +447,6 @@ setTimeout(() => setCopied(false), 1500);
                     </ul>
                   </div>
                 </article>
-<<<<<<< HEAD
   };
   return (;
     <>;
@@ -543,7 +530,6 @@ setTimeout(() => setCopied(false), 1500);
       </main>;
 
 
-=======
               ))}
             </div>
           </section>
@@ -551,4 +537,4 @@ setTimeout(() => setCopied(false), 1500);
       </main>
     </>
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

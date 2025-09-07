@@ -1,17 +1,14 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
   const [slugs, setSlugs] = React.useState<string[]>([]);
   React.useEffect(() => {
     // In a real app, list from API or build-time, here we rely on directory hint not available at runtime.
     setSlugs([])
   }, []);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div>;
       <h1 className="text - 2xl font - semibold mb - 4">SEO Landing Pages</h1>;
       {slugs.length === 0 ? (
-<<<<<<< HEAD
 
 }
         <div className="text - sm text - gray - 500">Generated pages will appear once deployed.</div>) : (
@@ -42,7 +39,6 @@ import React from 'react';
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
         <div className="text-sm text-gray-500">Generated pages will appear once deployed.</div>
       ) : (
         <ul className="list-disc ml-5">
@@ -53,4 +49,4 @@ import React from 'react';
       )}
     </div>
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

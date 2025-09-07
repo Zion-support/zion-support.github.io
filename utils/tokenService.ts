@@ -2,7 +2,6 @@
   getAllTransactions,
   getUserBalance,
 } from "./tokenStore";
-=======
   const actualAmount = Math && Math.min(amount, currentBalance);
   
 
@@ -12,6 +11,22 @@
     description: reason
   });
 }
+import {
+  // TODO: Implement
+}
+  addTransaction,
+  getAllTransactions,
+  getUserBalance,
+} from "./tokenStore";"
+  const actualAmount = Math && Math.min(amount, currentBalance);
+  
+
+    userId;"
+    type: 'earn
+    amount;
+    description: reason;
+  });
+pr-12325
 export function revokeTokens(userId: string, amount: number, reason: string) {
     userId,
     type: 'earn',
@@ -19,6 +34,7 @@ export function revokeTokens(userId: string, amount: number, reason: string) {
     description: reason;
   });
 }
+pr-12325
 
 export function revokeTokens(userId: string, amount: number, reason: string) {;
   const currentBalance = getUserBalance(userId);
@@ -42,3 +58,16 @@ export function revokeTokens(userId: string, amount: number, reason: string) {
     description: reason,
   });
 }
+
+  
+
+  return addTransaction({
+    type: "earn","
+    description: reason,)
+
+
+    userId,"
+    type: "spend","
+    amount: actualAmount,
+}"
+pr-12325

@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import CharterGenerator from '../components/foundation/CharterGenerator';
-<<<<<<< HEAD
 import Head from 'next/head',
 import Link from 'next/link',
 import CharterGenerator from '../components/foundation/CharterGenerator',
@@ -36,14 +35,12 @@ export default function FoundationPage() {
           <CharterGenerator />
         </section>
 
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             ))}
           </div>
         </section>
-<<<<<<< HEAD
 import Head from 'next / head';
 import Link from 'next / link';
 import CharterGenerator from '../components / foundation / CharterGenerator';
@@ -84,7 +81,6 @@ import CharterGenerator from '../components / foundation / CharterGenerator';
           <ul className="list-disc list-inside space-y-2 text-sm">
             <li>Seed safety tooling and evals R&D — Milestone 1 (Pending)</li>
             <li>Open dataset creation for multilingual benchmarks — Milestone 0 (Planned)</li>
-=======
 
 <section className='space-y-4' id='grants'>
           <h2 className='text-2xl font-semibold'>Grants Issued</h2>
@@ -98,16 +94,14 @@ import CharterGenerator from '../components / foundation / CharterGenerator';
               Open dataset creation for multilingual benchmarks — Milestone 0
               (Planned)
             </li>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <li>Agent interoperability standards and sandbox — RFP (Open)</li>
           </ul>
         </section>
 
-<<<<<<< HEAD
         <section className='space-y-4' id='mou'>
-=======
 <section className='space-y-4' id='mou'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           <h2 className='text-2xl font-semibold'>Partnership MOU Archive</h2>
           <p className='text-gray-600 dark: text-gray-300'>
             Public archive of Memoranda of Understanding (MOUs). Redactions may
@@ -120,7 +114,6 @@ import CharterGenerator from '../components / foundation / CharterGenerator';
       </div>
     </>
   );
-<<<<<<< HEAD
         <section className="space-y-4" id="mou">
           <h2 className="text-2xl font-semibold">Partnership MOU Archive</h2>
           <p className="text-gray-600 dark: text-gray-300">Public archive of Memoranda of Understanding (MOUs). Redactions may apply where legally required.</p>
@@ -152,5 +145,4 @@ import CharterGenerator from '../components / foundation / CharterGenerator';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
 import type { BlogPost as BlogPostType } from "@/types/blog",
 import { Separator } from "@/components/ui/separator";
@@ -11,17 +10,14 @@ export default function BlogPost() {;
 import { BLOG_POSTS } from "@/data/blog-posts"
 import { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
-=======
 import { useState, useEffect } from "react";
 import { useRouter  } from 'next/router';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import Link from 'next/link',
 import { SEO } from "@/components/SEO",
 import JsonLd from "@/components/JsonLd",
 import { Button } from "@/components/ui/button",
 import ImageWithRetry from '@/components/ui/ImageWithRetry',
-<<<<<<< HEAD
-=======
 import {
   ArrowLeft
   Calendar
@@ -54,14 +50,13 @@ export default function BlogPost() {
 import { SEO } from "@/components/SEO"
 import JsonLd from "@/components/JsonLd"
 import { Button } from "@/components/ui/button"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
 import type { BlogPost as BlogPostType } from "@/types/blog",
 import { Separator } from "@/components/ui/separator",
 import ReactMarkdown from 'react-markdown',
 import {logErrorToProduction} from '@/utils/productionLogger',
 // Importing the sample blog posts - in a real app, you would fetch this from an API
-<<<<<<< HEAD
 import { BLOG_POSTS } from "@/data/blog-posts",
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout',
 import { fetchWithRetry } from '@/utils/fetchWithRetry',
@@ -203,7 +198,6 @@ export default function BlogPost() {;
     switch (platform) {
       case 'facebook':        return `https://www.facebook.com / sharer / sharer.php?u=${url}`;
     switch (platform) {
-=======
 import { BLOG_POSTS } from "@/data/blog-posts";
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
@@ -225,13 +219,12 @@ default:
     description: post.excerpt
     image: post.featuredImage
     datePublished: post.publishedDate
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     author: {
       '@type': 'Person'
       name: post.author.name
     }
   }
-<<<<<<< HEAD
   const router = useRouter(),;
   const { slug } = router && router.query as { slug: string },;
   const [post, setPost] = useState<BlogPostType | null>(null),;
@@ -335,8 +328,7 @@ default:
       "@type": "Person",
       name: post.author.name}},
   
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>
       <SEO
@@ -601,7 +593,6 @@ default:
         </div>
       </div>
     </>
-<<<<<<< HEAD
   )
                 <Link href="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.;
               </p>;
@@ -626,7 +617,6 @@ default:
   );
 }
 ;
-=======
   );
 
 };
@@ -644,4 +634,4 @@ outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-b
 }</div> </div>) ";
 }<Button asChild > <Link href=" /blog"> <ChevronLeft className=" mr-2 h-4 w-4" /> All Articles </Link> </Button> </div> </div> </div> </div> </>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 import Link from "next/link";
 
@@ -43,27 +42,44 @@ class ErrorBoundary extends React.Component {
   
   render() {
     if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from "react";
-import Link from "next/link";
-
+import React from "react""
 interface ButtonProps {
-  children: React.ReactNode;
-  href?: string;
-  onClick?: () => void;
-  type?: "button" | "submit" | "reset";
-  variant?: "primary" | "secondary" | "outline";
-  size?: "sm" | "md" | "lg";
-  className?: string;
-  disabled?: boolean;
-  style?: React && React.CSSProperties;
+  // TODO: Implement
 }
+  className?: string;"
+  size?: "sm" | "md" | "lg";""
+  variant?: "default" | "outline" | "ghost";"
+  children: React.ReactNode;
+  onClick?: () => void;"
+  type?: "button" | "submit" | "reset";"
+  disabled?: boolean;
 
+export function Button({ "
+  className = "",""
+  size = "md",""
+  variant = "default","
+  children, 
+  ...props;)
+}: ButtonProps) {"
+  const baseClasses = "inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50""
+  const sizeClasses = {"
+    sm: "h-9 px-3 text-sm",""
+    md: "h-10 px-4 py-2",""
+    lg: "h-11 px-8 text-lg""
+  
+  const variantClasses = {"
+    default: "bg-blue-600 text-white hover:bg-blue-700",""
+    outline: "border border-gray-300 bg-white hover:bg-gray-50",""
+    ghost: "hover:bg-gray-100""
+  
+  return (
+    <button;
+      className={`${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${className}`}
+      {...props}
+    >
+</button>
+pr-12325
+      return <div>Something went wrong.</div>;
 const Button: React.FC<ButtonProps> = ({
   children,
   href,
@@ -105,6 +121,19 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <button
+
+  const content = <>{children}</>;
+)
+  if (href) {;
+
+      <Link href={href} className={classes} style={style}>;
+
+      ;
+  // Check condition;)
+if ( {) {
+  $2;
+      );
+pr-12325
       type={type}
       className={classes}
       onClick={onClick}
@@ -120,7 +149,6 @@ const Button: React.FC<ButtonProps> = ({
 
 export { Button };
 export default Button;
-=======
 import React from 'react';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -163,4 +191,6 @@ export function Button({
     </button>
   );
 }
->>>>>>> pr-12243
+pr-12243
+    </button>"`;
+pr-12325

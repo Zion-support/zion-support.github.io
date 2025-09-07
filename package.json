@@ -2,9 +2,11 @@
   "name": "ziontechgroup-site",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
+pr-12325
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node --max-old-space-size=8192 ./node_modules/.bin/next build",
     "start": "next start",
     "build:netlify": "node scripts/build-with-error-handling.js",
     "prebuild": "echo \"Starting build...\"",
@@ -15,6 +17,11 @@
     "lint:fix": "eslint . --fix",
     "lint:check": "eslint . --max-warnings 0",
     "type-check": "tsc --noEmit",
+    "export": "next export",
+    "lint": "node --max-old-space-size=4096 ./node_modules/.bin/eslint . --max-warnings 1000",
+    "lint:fix": "node --max-old-space-size=4096 ./node_modules/.bin/eslint . --fix --max-warnings 1000",
+    "type-check": "node --max-old-space-size=8192 ./node_modules/.bin/tsc --noEmit --skipLibCheck --project tsconfig.minimal.json",
+pr-12325
     "test": "jest --config jest.config.cjs",
     "test:smoke": "jest --config jest.config.smoke.cjs --passWithNoTests",
     "test:watch": "jest --watch --config jest.config.ts",
@@ -26,6 +33,16 @@
     "prepare": "echo 'Husky prepare script disabled'"
   },
   "dependencies": {
+    "prepare": "echo 'Husky prepare script disabled'",
+    "analyze": "ANALYZE=true npm run build",
+    "lighthouse": "lighthouse http://localhost:3000 --output html --output-path ./lighthouse-report.html",
+    "perf:audit": "npm run build && npm run lighthouse",
+    "perf:analyze": "npm run analyze",
+    "perf:test": "npm run build && npm run test:smoke && npm run lighthouse"
+  },
+  "dependencies": {
+    "@babel/core": "^7.28.4",
+pr-12325
     "@fastify/cors": "^11.1.0",
     "@fastify/rate-limit": "^10.3.0",
     "@google-analytics/data": "^5.2.0",
@@ -60,7 +77,6 @@
     "@radix-ui/react-toggle": "^1.0.3",
     "@radix-ui/react-tooltip": "^1.0.7",
     "@reduxjs/toolkit": "^2.9.0",
-    "@sendgrid/mail": "^8.1.5",
     "@stripe/stripe-js": "^7.9.0",
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.57.0",
@@ -70,6 +86,7 @@
     "@tanstack/react-query": "^5.85.5",
     "@types/node": "^22.10.2",
     "@types/react": "^18.3.17",
+pr-12325
     "@types/react-datepicker": "^6.2.0",
     "@types/react-dom": "^18.3.5",
     "autoprefixer": "^10.4.21",
@@ -93,12 +110,33 @@
     "fastify": "^5.6.0",
     "framer-motion": "^10.18.0",
     "lucide-react": "^0.536.0",
+    "mongodb": "^6.19.0",
+    "next": "^15.5.2",
+    "node-cron": "^4.2.1",
+    "openai": "^5.11.0",
+    "path": "^0.12.7",
+    "postcss-preset-env": "^10.3.1",
+    "prettier": "^3.0.3",
+pr-12325
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.8.2",
     "tailwindcss": "^3.4.17"
   },
   "devDependencies": {
+    "@axe-core/cli": "^4.10.2",
+    "@axe-core/react": "^4.10.2",
+    "@babel/plugin-transform-class-properties": "^7.27.1",
+    "@babel/preset-env": "^7.28.3",
+    "@babel/preset-react": "^7.27.1",
+    "@babel/preset-typescript": "^7.27.1",
+    "@esbuild/linux-x64": "^0.25.9",
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.35.0",
+    "@netlify/plugin-nextjs": "^5.12.1",
+    "@next/bundle-analyzer": "^13.5.6",
+    "@next/eslint-plugin-next": "^15.5.2",
+pr-12325
     "@rollup/rollup-linux-x64-gnu": "^4.50.0",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.8.0",
@@ -109,6 +147,11 @@
     "@typescript-eslint/parser": "^8.18.1",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.21",
+    "@types/jest": "^29.5.8",
+    "@typescript-eslint/eslint-plugin": "^8.42.0",
+    "@typescript-eslint/parser": "^8.42.0",
+    "@vitejs/plugin-react": "^5.0.2",
+pr-12325
     "axe-core": "^4.10.3",
     "eslint": "^9.17.0",
     "eslint-config-next": "^14.2.32",
@@ -131,6 +174,8 @@
     "typescript": "^5.9.2",
     "vite": "^7.1.4",
     "web-vitals": "^5.1.0"
+    "vite": "^7.1.4"
+pr-12325
   },
   "engines": {
     "node": ">=18.0.0",
@@ -158,3 +203,5 @@
   "author": "Zion Tech Group",
   "license": "MIT"
 }
+}
+pr-12325

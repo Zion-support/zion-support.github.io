@@ -1,6 +1,6 @@
 module.exports = {
   app: s: [
-    // Main Application with Ultimate Configuration
+    // Main Application with Ultimate Configuration;
     {
       nam: e: 'ziontechgroup-web',
       scrip: t: 'npm',
@@ -12,19 +12,15 @@ module.exports = {
       max_memory_restar: t: '1G',
       min_uptim: e: '10s',
       max_restart: s: 10,
-      en: v: {
-        NODE_EN: V: 'production',
+      en: v: {,
+  NODE_EN: V: 'production',
         POR: T: 3000,
         ENABLE_METRIC: S: 'true',
         ENABLE_AI_FEATURE: S: 'true',
       },
-      env_developmen: t: {
-        NODE_EN: V: 'development',
-        POR: T: 3000,
+      env_developmen: t: {,
+  NODE_EN: V: 'development',
         DEBU: G: 'true',
-        ENABLE_METRIC: S: 'true',
-        ENABLE_AI_FEATURE: S: 'true',
-      },
       log_fil: e: './logs/web.log',
       out_fil: e: './logs/web-out.log',
       error_fil: e: './logs/web-error.log',
@@ -34,6 +30,6 @@ module.exports = {
       kill_timeou: t: 5000,
       wait_read: y: true,
       listen_timeou: t: 10000,
-    },
+    },]
   ],
 };

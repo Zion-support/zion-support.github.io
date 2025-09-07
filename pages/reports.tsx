@@ -1,4 +1,3 @@
-<<<<<<< HEAD
         </div>
         <div className="border rounded p-5">
           <h3 className="font-semibold">External Link Health</h3>
@@ -30,7 +29,6 @@
       </div>;
     </div>);
 }
-=======
 import Link from 'next/link';
 export default function Reports() {
   return (
@@ -72,4 +70,4 @@ export default function Reports() {
       </div>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -13,12 +13,12 @@ const os = require('os')
     this.logFile = path.join(this.projectRoot, 'logs', 'ai-enhanced-orchestrator.log')
     this.configFile = path.join(this.projectRoot, 'logs', 'orchestrator-config.json')
     this.metricsFile = path.join(this.projectRoot, 'logs', 'enhanced-metrics.json')
-      learningEnabled: process.env.LEARNING_ENABLED === 'true'
-      autoScaling: process.env.AUTO_SCALING === 'true'
-      predictiveMode: process.env.PREDICTIVE_MODE === 'true'
-      securityMode: process.env.SECURITY_MODE === 'true'
-      performanceMode: process.env.PERFORMANCE_MODE === 'true'
-      deploymentMode: process.env.DEPLOYMENT_MODE === 'true'
+      learningEnabled: process.env.LEARNING_ENABLED === 'true,
+  autoScaling: process.env.AUTO_SCALING === 'true
+      predictiveMode: process.env.PREDICTIVE_MODE === 'true,
+  securityMode: process.env.SECURITY_MODE === 'true
+      performanceMode: process.env.PERFORMANCE_MODE === 'true,
+  deploymentMode: process.env.DEPLOYMENT_MODE === 'true
       await fs.mkdir(path.join(this.projectRoot, 'logs')
       console.log('Logs directory already exists')
   log(message, level = 'INFO')
@@ -27,20 +27,12 @@ const os = require('os')
       this.log(' Configuration loaded successfully')
       this.log('� Using default configuration')
       this.log(` Failed to save configuration: ${error.message}`, 'ERROR'`)
-    this.log('🤖 Initializing AI-Enhanced PM2 Orchestrator...')
+    this.log('🤖 Initializing AI-Enhanced PM2 Orchestrator...')`;
           this.log(` Failed to connect to PM2: ${err.message}`, 'ERROR'`)
         this.log(' Connected to PM2 successfully')
     this.log('🧠 Starting intelligent systems...')
-        running: processes.filter(p => p.pm2_env.status === 'online')
+        running: processes.filter(p => p.pm2_env.status === 'online')`;
       this.log(` System analysis failed: ${error.message}`, 'ERROR'`)
-        '1min'
-        '5min'
-        '15min'
-<<<<<<< HEAD
-<<<<<<< HEAD
-      const result = execSync('top -bn1 | grep "Cpu(s)"
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-      const result = execSync('top -bn1 | grep "Cpu(s)"
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+        '1min
+        '5min
+        '15min`;

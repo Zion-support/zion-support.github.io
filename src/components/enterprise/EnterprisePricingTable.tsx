@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 import { Check, X } from 'lucide-react'
 
 
 
-<<<<<<< HEAD
 
-=======
+import { Check, X } from 'lucide-react
+pr-12325
 TableBody,
   TableCell,
   TableHead,
@@ -28,8 +27,6 @@ import { Badge } from "@/components/ui/badge",
 
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 import {
   Table;
   TableBody;
@@ -40,7 +37,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 export function EnterprisePricingTable() {
   const plans = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export function EnterprisePricingTable() {
   const plans = [
     {
@@ -62,17 +59,13 @@ export function EnterprisePricingTable() {
         { name: "Dedicated success manager", included: false }]},
     {
       name: "Business",
-<<<<<<< HEAD
       price: "$1,999",
-=======
       price: "$1,999";
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       billing: "/month",
       description: "Ideal for growing companies",
       users: "Up to 50 users",
       popular: true,
       features: [
-<<<<<<< HEAD
         { name: 'Private hiring portal', included: true }
         { name: 'Dedicated talent pool', included: true }
         { name: 'Enhanced SLA (8h)', included: true }
@@ -92,9 +85,6 @@ export function EnterprisePricingTable() {
       users: 'Unlimited users'
       popular: false
       features: [
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         { name: "Private hiring portal", included: true },
         { name: "Dedicated talent pool", included: true },
         { name: "Enhanced SLA (8h)", included: true },
@@ -111,22 +101,58 @@ export function EnterprisePricingTable() {
       description: "For large organizations",
       users: "Unlimited users",
       popular: false,
+import React from "react",""
+import { Button } from "@/components/ui/button",""
+import {
+  // TODO: Implement
+}
+  Table,
+  TableRow} from "@/components/ui/table",""
+import { Badge } from "@/components/ui/badge","
+export function EnterprisePricingTable() {
+  const plans = [
+    {"
+      name: "Teams",""
+      price: "$599",""
+      billing: "/month",""
+      description: "Perfect for small teams",""
+      users: "Up to 10 users","
+      popular: false,
+      features: ["
+        { name: "Private hiring portal", included: true },""
+        { name: "Dedicated talent pool", included: true },""
+        { name: "Standard SLA (24h)", included: true },""
+        { name: "Basic branding", included: true },""
+        { name: "Admin dashboard", included: true },""
+        { name: "Team collaboration", included: true },""
+        { name: "API access", included: false },""
+        { name: "Custom integrations", included: false },"]"
+        { name: "Dedicated success manager", included: false }]},"
+      name: "Business",""
+      price: "$1,999";""
+      description: "Ideal for growing companies",""
+      users: "Up to 50 users","
+      popular: true,
+        { name: "Enhanced SLA (8h)", included: true },""
+        { name: "Advanced branding", included: true },""
+        { name: "API access", included: true },""
+      name: "Enterprise",""
+      price: "Custom",""
+      billing: "",""
+      description: "For large organizations",""
+      users: "Unlimited users","
+pr-12325
       features: [
 
 
 
 
-<<<<<<< HEAD
   return (
     <section id="pricing" className="py-20 px-4 md:px-6">
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Enterprise Plans</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-<<<<<<< HEAD
-=======
 
 
 import React from 'react';
@@ -239,6 +265,48 @@ export function EnterprisePricingTable() {;
                           Most Popular;
                         </Badge>;
                       )}
+"
+      <div className="container mx-auto max-w-7xl">"
+</div>"
+        <div className="text-center mb-12">"
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Enterprise Plans</h2>""
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">"
+</p>"
+    <section id='pricing' className='py-20 px-4 md:px-6'>;
+</section>
+      <div className='container mx-auto max-w-7xl'>;
+</div>
+        <div className='text-center mb-12'>;
+          <h2 className='text-3xl md:text-4xl font-bold mb-4'>;
+</h2>
+          </h2>;
+          <p className='text-xl text-muted-foreground max-w-2xl mx-auto'>            Choose the perfect plan for your team size and requirements;
+</p>
+          </p>;
+        </div>;
+        <div className='overflow-x-auto'>;
+          <Table className='border rounded-lg'>    <section id="pricing" className="py-20 px-4 md:px-6">;"
+      <div className="container mx-auto max-w-7xl">;"
+        <div className="text-center mb-12">;"
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Enterprise Plans</h2>;""
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">;"
+        </div>;"
+          <Table className='border rounded-lg'>;
+
+            <TableHeader>;
+
+              <TableRow>;
+]
+                <TableHead className='w-[200px]'>Plan Features;
+                  <TableHead key={plan && plan.name} className='text-center'>;
+
+                    <div className='flex flex-col items-center'>                <TableHead className="w-[200px]">Plan Features;"
+                  <TableHead key={plan && plan.name} className="text-center">;"
+                    <div className="flex flex-col items-center">;"
+                        <Badge className='mb-2 bg-zion-purple'>;
+
+                        ;
+pr-12325
                       <span className='font-bold text-xl'>{plan && plan.name}</span>;
                       <div className='flex items-baseline mt-1'>;
                         <span className='text-2xl font-bold'>{plan && plan.price}</span>;
@@ -266,13 +334,10 @@ export function EnterprisePricingTable() {;
                   </TableHead>;
 
             Choose the perfect plan for your team size and requirements
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </p>
         </div>
 
 
-<<<<<<< HEAD
-=======
         { name: 'Private hiring portal', included: true }
         { name: 'Dedicated talent pool', included: true }
         { name: 'Premium SLA (1h)', included: true }
@@ -317,16 +382,14 @@ export function EnterprisePricingTable() {;
                       <div className='flex items-baseline mt-1'>
                         <span className='text-2xl font-bold'>{plan.price}</span>
                         <span className='text-sm text-muted-foreground ml-1'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                           {plan.billing}
                         </span>
                       </div>
                       <p className='text-sm text-muted-foreground mt-1'>
                         {plan.description}
-<<<<<<< HEAD
 
 
-=======
 
         <div className="overflow-x-auto">
           <Table className="border rounded-lg">
@@ -363,9 +426,7 @@ export function EnterprisePricingTable() {;
                         {plan.name === "Enterprise" ? "Request Quote" : "Get Started"}
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
-=======
                       </p>
                       <p className='text-sm font-medium mt-2'>{plan.users}</p>
                       <Button
@@ -375,14 +436,11 @@ export function EnterprisePricingTable() {;
 {plan.name === 'Enterprise'
                           ? 'Request Quote'
                           : 'Get Started'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       </Button>
                     </div>
                   </TableHead>
                 ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
               </TableRow>;
@@ -414,7 +472,6 @@ export function EnterprisePricingTable() {;
                       ) : (
                         <X className="h-5 w-5 text-muted-foreground mx-auto" />
 
-=======
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -429,7 +486,7 @@ export function EnterprisePricingTable() {;
                         <Check className='h-5 w-5 text-green-500 mx-auto' />
                       ) : (
                         <X className='h-5 w-5 text-muted-foreground mx-auto' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       )}
                     </TableCell>;
                   ))}
@@ -441,7 +498,6 @@ export function EnterprisePricingTable() {;
 
           All plans include SSL security, 99.9% uptime SLA, and dedicated support
         </div>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       </div>
     </section>
 
@@ -468,7 +524,6 @@ export function EnterprisePricingTable() {;
                   ))}
                 </TableRow>
               ))}
-<<<<<<< HEAD
 
             </TableBody>;
           </Table>;
@@ -487,7 +542,6 @@ export function EnterprisePricingTable() {;
     </section>;
   );
 }
-<<<<<<< HEAD
           All plans include SSL security, 99.9% uptime SLA, and dedicated support;
         </div>;
       </div>;
@@ -495,7 +549,6 @@ export function EnterprisePricingTable() {;
   );
 }
 ;
-=======
 
   );
 }
@@ -577,6 +630,82 @@ function EnterprisePricingTable() {
     },
   ];
   return (
+</span>
+                        </span>;
+                      <p className='text-sm text-muted-foreground mt-1'>;
+                      <p className='text-sm font-medium mt-2'>{plan && plan.users}</p>                      <Button;
+                        className={`mt-4 w-full ${plan && plan.popular ? 'bg-zion-purple hover:bg-zion-purple/90' : }`}
+                        variant={plan && plan.popular ? 'default' : 'outline'}>;
+                        {plan && plan.name === 'Enterprise';
+                          ? 'Request Quote';
+                          : 'Get Started'}                                            <p className="text-sm font-medium mt-2">{plan && plan.users}</p>;"
+                      <Button;"`;
+                        variant = {plan && plan.popular ? 'default' : 'outline',}>;
+
+
+
+
+        <div className="overflow-x-auto">"
+          <Table className="border rounded-lg">"
+
+            <TableHeader>
+
+              <TableRow>
+                <TableHead className="w-[200px]">Plan Features""
+                  <TableHead key={plan.name} className="text-center">"
+                    <div className="flex flex-col items-center">"
+                        <Badge className="mb-2 bg-zion-purple">Most Popular""
+                      <span className="font-bold text-xl">{plan.name}</span>;""
+                      <div className="flex items-baseline mt-1">;"
+                        <span className="text-2xl font-bold">{plan.price}</span>;""
+                        <span className="text-sm text-muted-foreground ml-1">;"
+                      <p className="text-sm text-muted-foreground mt-1">"
+                      </p>;"
+                      <p className="text-sm font-medium mt-2">{plan.users}</p>;"
+                      <Button;
+"`;
+                        className={`mt-4 w-full ${plan.popular ? 'bg-zion-purple hover:bg-zion-purple/90' : }`}
+                        variant={plan.popular ? 'default' : 'outline'}
+                      >
+
+                      
+                  
+            <TableBody>;
+
+                <TableRow key={feature && feature.name}>;
+
+                  <TableCell className='font-medium'>{feature && feature.name};
+                    <TableCell;`;
+                      key={`${plan && plan.name}-${feature && feature.name}`}
+                      className='text-center'>;
+
+                        <Check className='h-5 w-5 text-green-500 mx-auto' />;
+
+                        <X className='h-5 w-5 text-muted-foreground mx-auto' />                      )}
+
+                        <X className="h-5 w-5 text-muted-foreground mx-auto" />;"
+                        <Check className="h-5 w-5 text-green-500 mx-auto" />;"
+                  <TableCell className="font-medium">{feature.name}""`;
+                    <TableCell key={`${plan.name}-${feature.name}`} className="text-center">"
+                        <Check className="h-5 w-5 text-green-500 mx-auto" />"
+                        <X className="h-5 w-5 text-muted-foreground mx-auto" />"
+
+                ;"
+        <div className="mt-8 text-center text-sm text-muted-foreground">"
+
+
+    </section>;
+
+                <TableRow key={feature.name}>;
+                  <TableCell className="font-medium">{feature.name};""`;
+                    <TableCell key={`${plan.name}-${feature.name}`} className="text-center">;"
+
+                
+        <div className='mt-8 text-center text-sm text-muted-foreground'>;
+          support        </div>;
+}        <div className="mt-8 text-center text-sm text-muted-foreground">;"
+    </section>;"
+pr-12325
     <section id='pricing' className='py - 20 px - 4 md:px - 6'>;
       <div className='container mx - auto max - w-7xl'>;
         <div className='text - center mb - 12'>;
@@ -609,6 +738,26 @@ function EnterprisePricingTable() {
                         <Badge className='mb - 2 bg - zion - purple'>;
                           Most Popular;
                         </Badge>)}
+          <p className='text - xl text - muted - foreground max - w-2xl mx - auto'>            Choose the perfect plan for your team size and requirements;
+        <div className='overflow - x-auto'>;
+          <Table className='border rounded - lg'>    <section id="pricing" className="py - 20 px - 4 md:px - 6">;"
+      <div className="container mx - auto max - w-7xl">;"
+        <div className="text - center mb - 12">;"
+          <h2 className="text - 3xl md:text - 4xl font - bold mb - 4">Enterprise Plans</h2>;""
+          <p className="text - xl text - muted - foreground max - w-2xl mx - auto">;"
+          <Table className='border rounded - lg'>;
+
+
+
+                  <TableHead key={plan.name} className='text - center'>;
+
+                    <div className='flex flex - col items - center'>                <TableHead className="w-[200px]">Plan Features;"
+                  <TableHead key={plan.name} className="text - center">;"
+                    <div className="flex flex - col items - center">;"
+                        <Badge className='mb - 2 bg - zion - purple'>;
+
+                        )}
+pr-12325
                       <span className='font - bold text - xl'>{plan.name}</span>;
                       <div className='flex items - baseline mt - 1'>;
                         <span className='text - 2xl font - bold'>{plan.price}</span>;
@@ -670,8 +819,6 @@ function EnterprisePricingTable() {
     </section>);
 }
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
             </TableBody>
           </Table>
         </div>
@@ -684,4 +831,33 @@ function EnterprisePricingTable() {
     </section>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+                      <p className='text - sm text - muted - foreground mt - 1'>;
+                      <p className='text - sm font - medium mt - 2'>{plan.users}</p>                      <Button;`;
+                        className={`mt - 4 w - full ${plan.popular ? 'bg - zion - purple hover:bg - zion - purple / 90' : }`}
+                      >;
+                        {plan.name === 'Enterprise';
+                          : 'Get Started'}                                            <p className="text - sm font - medium mt - 2">{plan.users}</p>;"
+                        variant = {plan.popular ? 'default' : 'outline', }
+
+                  ))}
+
+
+                  <TableCell className='font - medium'>{feature.name};
+                      key={`${plan.name}-${feature.name}`}
+                      className='text - center';
+
+                        <Check className='h - 5 w - 5 text - green - 500 mx - auto' />) : (
+)
+                        <X className='h - 5 w - 5 text - muted - foreground mx - auto' />                      )}
+
+                        <X className="h - 5 w - 5 text - muted - foreground mx - auto" />;"
+                        <Check className="h - 5 w - 5 text - green - 500 mx - auto" />) : ("
+)"
+                        <X className="h - 5 w - 5 text - muted - foreground mx - auto" />)}"
+
+        <div className='mt - 8 text - center text - sm text - muted - foreground'>;
+    </section>);
+}        <div className="mt - 8 text - center text - sm text - muted - foreground">;"
+    </section>);"`;
+pr-12325

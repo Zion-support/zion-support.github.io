@@ -7,29 +7,16 @@ const { execSync } = require('child_process')
     fs.appendFileSync(this.logFile, logMessage + '\n')
       this.log(' Starting build test...')
       const result = execSync('npm run build')
-        "encoding"
-        "stdio"
-        "encoding"
-        "stdio"
-        "output"
-        "encoding"
-        "stdio"
-        "output"
-      this.log(' Build Test "Summary")
-      this.log(`   Type "Check"`)
-      this.log(`   Lint "Check"`)
-      this.log(`   "Overall"`)
-        "priority"
-        "issue"
-        "action"
-        "impact"
-        "priority"
-        "issue"
-        "action"
-        "impact"
-        "priority"
-        "issue"
-        "action"
-        "impact"
-  console.error('Fatal "error")
-  console.error('Fatal "error")
+        "encoding"""
+        "stdio"""
+        "output"""
+      this.log(' Build Test "Summary")""
+      this.log(`   Type "Check"`)""`;
+      this.log(`   Lint "Check"`)""`;
+      this.log(`   "Overall"`)""
+        "priority"""
+        "issue"""
+        "action"""
+        "impact"""
+  console.error('Fatal "error")""
+  console.error('Fatal "error")""`;

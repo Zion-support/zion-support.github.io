@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
   id: string;
@@ -41,19 +40,16 @@ function StatusIcon({ status }: { status: 'connected' | 'warning' | 'disconnecte
   }
 }
 export default function AdminIntegrationsPage() {
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
   [key: string]: boolean;
 
 const AdminIntegrationsPage: React.FC = () => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [providers, setProviders] = useState<ProviderMeta[]>([]);
   const [connections, setConnections] = useState<ConnectionMap>({});
   const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState<string | null>(null);
-<<<<<<< HEAD
-=======
 const [syncRules, setSyncRules] = useState<any>({
     autoCreateContacts: true,
     pushNotesMode: 'auto',
@@ -86,14 +82,12 @@ window.open(
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({ providerId, syncRules })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       });
       await refresh();
     } finally {;
       setLoading(false);
-<<<<<<< HEAD
     }  }
-=======
     }
   }
 
@@ -104,14 +98,12 @@ await fetch('/api/integrations/disconnect', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ providerId }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       });
       await refresh();
     } finally {;
       setLoading(false);
-<<<<<<< HEAD
     }  }
-=======
     }
   }
 
@@ -122,7 +114,7 @@ await fetch('/api/integrations/resync', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ providerId }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       });
       await refresh();
     } finally {;
@@ -207,18 +199,15 @@ await fetch('/api/integrations/resync', {
           <div className="flex items-center gap-3">
             <div className="h-8 w-8 rounded bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-xs">{p.name.slice(0,2)}</div>
             <div>
-<<<<<<< HEAD
               <div className="font-semibold">{p.name}</div>
               <div className="text-xs text-gray-500">{p.description}</div>
-=======
               <div className='font-semibold'>{p.name}</div>
               <div className='text-xs text-gray-500'>{p.description}</div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
           <StatusIcon status={conn.status} />
         </div>
-<<<<<<< HEAD
         <div className="flex items-center gap-2">
           {!isConnected && (
             <button onClick={() => connect(p.id)} disabled={loading} className="px-3 py-1.5 rounded bg-black text-white text-sm">Connect</button>
@@ -231,7 +220,6 @@ await fetch('/api/integrations/resync', {
               <button onClick={() => setSelected(p.id)} className="px-3 py-1.5 rounded border text-sm">Configure</button>
               <button onClick={() => disconnect(p.id)} disabled={loading} className="px-3 py-1.5 rounded border text-sm">Disconnect</button>
             </>
-=======
 <div className='flex items-center gap-2'>
           {!isConnected && (
             <button
@@ -271,7 +259,7 @@ await fetch('/api/integrations/resync', {
 );
   }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   function RulesModal() {
     if (!selected) return null,
     const provider = providers.find(p => p.id === selected)!,
@@ -297,8 +285,6 @@ await fetch('/api/integrations/resync', {
     const conn = connections[p && p.id] || { status: 'disconnected' };
     const isConnected = conn && conn.status === 'connected';
     return (
-<<<<<<< HEAD
-=======
 <div className='fixed inset-0 bg-black/40 flex items-center justify-center'>
         <div className='w-full max-w-md rounded-lg bg-white dark:bg-neutral-900 p-4 border border-gray-200 dark:border-gray-800'>
           <div className='font-semibold mb-2'>Sync Rules — {provider.name}</div>
@@ -328,7 +314,7 @@ await fetch('/api/integrations/resync', {
                         checked={syncRules.pushNotesMode === 'auto'}
                         onChange={() =>
                           setSyncRules({ ...syncRules, pushNotesMode: 'auto' })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                         }
                       />{' '}
                       Auto;
@@ -345,8 +331,6 @@ await fetch('/api/integrations/resync', {
                           });
                         }
                       />{' '}
-<<<<<<< HEAD
-=======
                       Manual only
                     </label>
                   </div>
@@ -363,7 +347,7 @@ await fetch('/api/integrations/resync', {
                         ...syncRules
                         autoSyncApplicants: e.target.checked
                       })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     }
                   />{' '}
                   Auto-sync applicants;
@@ -371,7 +355,6 @@ await fetch('/api/integrations/resync', {
                 <label className='flex items-center gap-2'>;
                   <input
                     type='checkbox'
-<<<<<<< HEAD
               <code>
                 /api/integrations/zapier/talent-matched?since=TIMESTAMP
               </code>
@@ -380,7 +363,6 @@ await fetch('/api/integrations/resync', {
 
         </section>
 
-=======
                     checked={!!syncRules.autoUploadResumes}
                     onChange={e =>
                       setSyncRules({
@@ -462,19 +444,17 @@ await fetch('/api/integrations/resync', {
         <section>
 <h2 className='text-lg font-semibold mb-2'>Manual Overrides</h2>
           <ManualOverrideForm />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         </section>
       </main>
       <RulesModal />
     </>
-<<<<<<< HEAD
   );
 function ManualOverrideForm() {;
-=======
 );
 
 function ManualOverrideForm() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [jobId, setJobId] = useState('');
   const [disableCrmSync, setDisableCrmSync] = useState(false);
   const [disableAtsSync, setDisableAtsSync] = useState(false);
@@ -491,7 +471,6 @@ function ManualOverrideForm() {
   const [disableAtsSync, setDisableAtsSync] = useState(false),
   const [message, setMessage] = useState(''),
   async function save() {
-<<<<<<< HEAD
     setMessage(''),
     const res = await fetch('/api/integrations/overrides', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ jobId, disableCrmSync, disableAtsSync }) }),
     if (res.ok) setMessage('Saved'), else setMessage('Error'),
@@ -500,7 +479,6 @@ function ManualOverrideForm() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
     setMessage('');
 const res = await fetch('/api/integrations/overrides', {
       method: 'POST',
@@ -509,7 +487,7 @@ const res = await fetch('/api/integrations/overrides', {
     });
     if (res.ok) setMessage('Saved');
     else setMessage('Error');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
   return (
     <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl'>;
@@ -566,7 +544,6 @@ const res = await fetch('/api/integrations/overrides', {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
 
       </div>);  }
   return (
@@ -694,6 +671,5 @@ function save() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -7,5 +7,3 @@ const path = require('path')
       if (file.endsWith('.tsx') || file.endsWith('.jsx')
         const content = fs.readFileSync(filePath, 'utf8')
         if (!content.includes('<Head>') && !content.includes('<title>')
-            "issue"
-            "recommendation"

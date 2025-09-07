@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from './react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
@@ -17,6 +16,26 @@ interface InterviewCardProps {
 }
 export /**
  * InterviewCard - Function description
+import React, { useState } from './react';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/ card';
+import { Button  } from '@/components/ui/ button';
+import { Badge  } from '@/components/ui/ badge';
+import { Interview  } from '@/types/ interview';
+import { use_auth  } from '@/hooks/ use_auth';
+import { use_interviews  } from '@/hooks/ use_interviews';
+import { format, formatDistanceToNow, is_past, parseISO  } from './date - fns';
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger  } from '@/components/ui/ alert - dialog';
+import { Dialog, DialogContent, DialogHeader, DialogTitle  } from '@/components/ui/ dialog';
+import { Clock, ExternalLink, MessageSquare, Video, X } from 'lucide-react'import { toast  } from '@/components/ui/ use - toast';
+import { InterviewResponseForm  } from './InterviewResponseForm';
+interface InterviewCardProps {
+  // TODO: Implement
+}
+  interview: Interview,
+  on_refresh: () => Promise < void>;
+export /**
+ * InterviewCard - Function description;
+pr-12325
  */
 function InterviewCard() {
   const { user } = use_auth ();
@@ -34,11 +53,7 @@ function InterviewCard() {
         return <Badge>{interview.status}</Badge>;
 }
   );
-<<<<<<< HEAD
-=======
 }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 import React, { useState } from 'react';
 import {
   Card,
@@ -121,4 +136,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
 }'"
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+        return <Badge variant="outline" className="border - destructive text - destructive">Cancelled;"
+        return <Badge>{interview.status};"
+pr-12325

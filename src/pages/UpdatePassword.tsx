@@ -1,15 +1,13 @@
-<<<<<<< HEAD
   FormControl;
   FormField;
   FormItem;
   FormLabel;
 import { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
-=======
 
 import { useState, useEffect } from "react";
 import { useRouter  } from 'next/router';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import { zodResolver } from "@hookform/resolvers/zod",
 import { useForm, ControllerRenderProps } from "react-hook-form",
 import { z } from "zod",
@@ -399,7 +397,6 @@ export default function UpdatePassword() {;
                   </form>
                 </Form>
               )}
-<<<<<<< HEAD
             </div>;
           </div>;
         </div>;
@@ -420,7 +417,6 @@ export default function UpdatePassword() {;
   );
 }
 ;
-=======
             </div>
           </div>
         </div>
@@ -503,4 +499,4 @@ error && (<div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounde
 }'"
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

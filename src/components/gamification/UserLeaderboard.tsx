@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 import { Trophy } from 'lucide-react'
-<<<<<<< HEAD
-=======
+import { Trophy } from 'lucide-react
+pr-12325
   Card,
   CardContent,
   CardDescription,
@@ -9,13 +8,11 @@ import { Trophy } from 'lucide-react'
   CardTitle,
 } from '@/components / ui / card';
 import { Trophy } from 'lucide-react';
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface LeaderboardEntry {
 
   name: string,
   points: number;
 
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Trophy } from 'lucide-react'
 export interface LeaderboardEntry {
@@ -28,11 +25,23 @@ interface UserLeaderboardProps {
 export interface LeaderboardEntry {
   name: string;
   points: number
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }
 interface UserLeaderboardProps {
   entries: LeaderboardEntry[];
 }
+} from '@/components/ui/ card';
+import { Trophy } from 'lucide-react';
+export interface LeaderboardEntry {
+  // TODO: Implement
+}
+  name: string,
+  points: number;
+
+interface UserLeaderboardProps {
+  // TODO: Implement
+  entries: LeaderboardEntry[];
+pr-12325
 
 
 
@@ -62,34 +71,36 @@ export interface LeaderboardEntry {;
 interface UserLeaderboardProps {;
   entries: LeaderboardEntry[];
 }
+export interface LeaderboardEntry {;
+  name: string;,
+
+interface UserLeaderboardProps {;
+  entries: LeaderboardEntry[];,
+
+  name: string,;
+
+pr-12325
 
 export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
   return (
 
 
-<<<<<<< HEAD
     <Card>
       <CardHeader>
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <Trophy className="h-5 w-5" /> Leaderboard
-=======
 <CardTitle className='flex items-center gap-2'>
           <Trophy className='h-5 w-5' /> Leaderboard
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         </CardTitle>
         <CardDescription>Top users by points</CardDescription>
       </CardHeader>
       <CardContent>
-<<<<<<< HEAD
 
 
 
         <div className="space-y-2">
-=======
 <div className='space-y-2'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           {entries.map((e, idx) => (
             <div
               key={e.name}
@@ -101,9 +112,6 @@ export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
               <span className="font-medium">
                 {idx + 1}. {e.name}
               </span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 
@@ -153,8 +161,6 @@ function UserLeaderboard() {
     </Card>);
 }
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
               <span className='text-sm'>{e.points} pts</span>
             </div>
           ))}
@@ -163,4 +169,54 @@ function UserLeaderboard() {
     </Card>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+          <Trophy className="h-5 w-5" /> Leaderboard;"
+
+        
+        <CardDescription>Top users by points
+      
+      <CardContent>
+
+
+
+"
+        <div className="space-y-2">"
+</div>
+            <div;
+              key={e.name}
+
+
+              className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50""
+            >
+</div>"
+              <span className="font-medium">"
+</span>
+
+
+              <span className="text-sm">{e.points} pts</span>"
+        </div>;
+      ;
+    <Card>;
+
+      <CardHeader>;
+        <CardTitle className='flex items - center gap - 2'>;
+
+          <Trophy className='h - 5 w - 5' /> Leaderboard        ;
+
+        <CardDescription > Top users by points;
+      <CardContent>;
+
+        <div className='space - y-2'>        <CardTitle className="flex items - center gap - 2">;"
+          <Trophy className="h - 5 w - 5" /> Leaderboard;"
+
+        <div className='space - y-2'>;
+              className='flex justify - between items - center p - 2 rounded - md hover:bg - muted / 50'            <div;
+              key = {e.name, }
+              className="flex justify - between items - center p - 2 rounded - md hover:bg - muted / 50";"
+            >;
+              <span className='font - medium'>;
+              </span>;
+              <span className='text - sm'>{e.points} pts</span>            </div>              <span className="text - sm">{e.points} pts</span>;")
+            </div>))}
+    );"
+pr-12325

@@ -1,12 +1,12 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 let totalImprovements = 0;
 let filesProcessed = 0;
-// Common type replacements
+// Common type replacements;
 const typeReplacements = {
-  // React types
+  // React types;
   'any[]': 'React.ReactNode[]',
   "any": 'unknown',
   'any)': 'unknown)',
@@ -19,30 +19,18 @@ const typeReplacements = {
   'any<': 'unknown<',
   'any}': 'unknown}',
   'any{': 'unknown{',
-  // Specific React component types
+  // Specific React component types;
   'React.ComponentType<any>': 'React.ComponentType<Record<string, unknown>>',
+</any>
   'React.FC<any>': 'React.FC<Record<string, unknown>>',
   'React.Component<any>': 'React.Component<Record<string, unknown>>',
-  // Event types
   'React.ChangeEvent<any>': 'React.ChangeEvent<HTMLInputElement>',
   'React.MouseEvent<any>': 'React.MouseEvent<HTMLButtonElement>',
   'React.FormEvent<any>': 'React.FormEvent<HTMLFormElement>',
-  // Function types
-  '() => any': '() => void',
-  '("value": any)': '(value: unknown)',
-  '("item": any)': '(item: unknown)',
-  '("data": any)': '(data: unknown)',
   '("props": any)': '(props: Record<string, unknown>)',
-  '("event": any)': '(event: React.SyntheticEvent)',
-  // Array types
-  'any[]': 'unknown[]',
+</string>
   'Array<any>': 'Array<unknown>',
-  // Object types
   'Record<string, any>': 'Record<string, unknown>',
-  '{ ["key": string]: any }': '{ ["key": string]: unknown }'};
-// Interface definitions for common patterns
-const commonInterfaces = "
-// Common interfaces for better type safety
 interface ApiResponse<T = unknown> {
   "data": T;
   status: number;
@@ -114,91 +102,10 @@ function improveTypeScriptFile(content, filePath) {
       return match.replace(": any", ': unknown')});
     changes += destructuringMatches.length}
   // Add proper typing for useState
+
+pr-12325
   const useStateRegex = /useState\s*<\s*any\s*>/g;
   const useStateMatches = improved.match(useStateRegex);
   if (useStateMatches) {
     improved = improved.replace(useStateRegex, 'useState<unknown>');
-    changes += useStateMatches.length}
-  // Add proper typing for useEffect
-  const useEffectRegex =
-    /useEffect\s*\(\s*\(\s*\)\s*=>\s*{[^}]*},\s*\[\s*\]\s*\)/g;
-  const useEffectMatches = improved.match(useEffectRegex);
-  if (useEffectMatches) {
-    console.log(`  Found useEffect with empty dependencies in ${filePath}`)}
-  // Add proper typing for event handlers
-  const eventHandlerRegex =
-    /const\s+(\w+)\s*=\s*\(\s*event\s*:\s*any\s*\)\s*=>/g;
-  const eventHandlerMatches = improved.match(eventHandlerRegex);
-  if (eventHandlerMatches) {
-    improved = improved.replace(eventHandlerRegex, (match, handlerName) => {
-      return match.replace('"event": any', '"event": React.SyntheticEvent')});
-    changes += eventHandlerMatches.length}
-  // Add proper typing for API calls
-  const apiCallRegex =
-    /fetch\s*\(\s*['"][^'"]+['"]\s*\)\s*\.then\s*\(\s*\(\s*response\s*:\s*any\s*\)/g;
-  const apiCallMatches = improved.match(apiCallRegex);
-  if (apiCallMatches) {
-    improved = improved.replace(apiCallRegex, match => {
-      return match.replace('"response": any', '"response": Response')});
-    changes += apiCallMatches.length}
-  return { "content": improved, changes }}
-// Process individual file
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const result = improveTypeScriptFile(content, filePath);
-    if (result.changes > 0) {
-      fs.writeFileSync(filePath, result.content, 'utf8');
-      totalImprovements += result.changes;
-      console.log(
-        ` Improved ${filePath} (${result.changes} type improvements)`
-      )}
-    filesProcessed++} catch (error) {
-// Generate TypeScript improvement report
-function generateTypeScriptReport() {
-  const report = {
-    "timestamp": new Date().toISOString(),
-    "improvements": {
-      totalFilesProcessed: filesProcessed,
-      "totalTypeImprovements": totalImprovements,
-      "recommendations": ['Consider using strict TypeScript configuration',
-        'Add proper error handling with typed error objects',
-        'Use discriminated unions for better type safety',
-        'Implement proper API response typing',
-        'Add JSDoc comments for complex functions',
-        'Use const assertions for immutable data',
-        'Consider using branded types for IDs',
-      ]}};
-  fs.writeFileSync(
-    'typescript-improvement-report.json',
-    JSON.stringify(report, null, 2)
-  );
-  console.log(
-    ' TypeScript improvement report "generated": typescript-improvement-report.json'
-  )}
-// Main improvement function
-async function main() {
-  console.log(' Starting TypeScript improvements...\n');
-  const patterns = ['src/**/*.{ts,tsx}',
-    'pages/**/*.{ts,tsx}',
-    'components/**/*.{ts,tsx}',
-  ];
-  const excludeDirs = ['node_modules',
-    '.next',
-      'build'
-    'dist',
-      'scripts'
-    'automation',
-      'automation_backup'
-    'src.disabled',
-    'pages.disabled',
-    'components.disabled',
-  ];
-  }
-  generateTypeScriptReport();
-  console.log("\n TypeScript Improvement "Summary": ");
-  console.log(`   Files processed: ${filesProcessed}`);
-  console.log(`   Total type "improvements": ${totalImprovements}`);
-  console.log("\n TypeScript improvements completed!")}
-// Run the script
-main().catch(console.error);
+</unknown>

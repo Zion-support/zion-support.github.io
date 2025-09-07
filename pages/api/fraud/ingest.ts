@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { evaluateHeuristics } from "../../../utils/fraud/heuristics";
@@ -103,7 +102,6 @@ if ( {) {
       content
       metadata
       ip_address: ip
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { evaluateHeuristics } from '[^']*';
 import { classifyWithGPT } from '[^']*';
@@ -135,13 +133,12 @@ const event = newEvent({
       content,
       metadata,
       ipAddress: ip,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     });
 ;
     const heuristic = await evaluate_heuristics (event, {
       countEventsByIp: (ip, s, m) => store.countEventsByIp (ip, s, m)
     });
-<<<<<<< HEAD
     // Privacy opt - out check for content analysis;
     let gpt: GptClassification | undefined = undefined;
 
@@ -156,7 +153,6 @@ if ( {) {
 }
         gpt = await classifyWithGPT (content, source);
 
-=======
 
     // Privacy opt-out check for content analysis
     let gpt: GptClassification | undefined = undefined;
@@ -164,7 +160,7 @@ if ( {) {
       const privacy = await store.getPrivacySettings(userId);
       if (!privacy.monitoringContentAnalysisOptOut) {
 gpt = await classifyWithGPT(content, source);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       }
     } else // Check condition
 if ( {) {
@@ -178,7 +174,6 @@ if ( {) {
 
     if (gpt?.label === "DANGEROUS") combinedLabel = "DANGEROUS";
     const autoHide =
-<<<<<<< HEAD
       process && process.env.FRAUD_AUTOHIDE === "true" &&
       combinedLabel !== "SAFE" &&
       source === "message";
@@ -191,7 +186,6 @@ if ( {) {
       autoHidden: !!autoHide
 
 
-=======
       process.env.FRAUD_AUTOHIDE === 'true' &&
       combinedLabel !== 'SAFE' &&
       source === 'message';
@@ -207,7 +201,7 @@ status: 'PENDING',
     const saved = await store.saveEvent(stored);
     if (process.env.FRAUD_EMAIL_WARNINGS === "true" && userId) {
       const prior = await store.countFlaggedForUser(userId);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       if (prior <= 1 && combinedLabel !== "SAFE") {
         await sendWarningEmail({
 toUserId: userId,
@@ -216,7 +210,6 @@ toUserId: userId,
         });
       }
     }
-<<<<<<< HEAD
 
 
     res && res.status(200).json({
@@ -267,7 +260,6 @@ if ( {) {
       }
     }
     res.status (200).json ({
-<<<<<<< HEAD
       id: saved.id,
       flagged: combined_label !== "SAFE",
       label: combined_label,
@@ -275,7 +267,6 @@ if ( {) {
       gpt,
       auto_hidden: saved.auto_hidden,
       created_at: saved.created_at,
-=======
       id: saved.id
       flagged: combined_label !== "SAFE"
       label: combined_label
@@ -283,10 +274,8 @@ if ( {) {
       gpt
       auto_hidden: saved.auto_hidden
       created_at: saved.created_at
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     });
 
-=======
     res.status(200).json({
 id: saved.id,
       flagged: combinedLabel !== 'SAFE',
@@ -296,7 +285,7 @@ id: saved.id,
       autoHidden: saved.autoHidden,
       createdAt: saved.createdAt,
     });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e: any) {
       .json({ error: "Internal error", details: e?.message |String(e) });
       .json({ error: "Internal error", details: e?.message || String(e) });
@@ -353,7 +342,6 @@ export default async function handler(req, res) {
   } catch (e: any) {
     res.status(500).json({ error: 'Internal error', details: e?.message || String(e) })
   }
-<<<<<<< HEAD
 }
   }
 }
@@ -366,7 +354,6 @@ export default async function handler(req, res) {
 
   }
 }
-=======
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

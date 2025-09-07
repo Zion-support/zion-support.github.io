@@ -4,46 +4,12 @@ import { supabase } from '../integrations/supabase/client',;
 import { toast } from '../components/ui/use-toast',;
 ;
 export type SupportedLanguage = 'en' | 'es' | 'pt' | 'ar',;
-;
 export type LanguageContextType = {;
   currentLanguage:SupportedLanguage,;
   changeLanguage:(lang:SupportedLanguage) => Promise<void>,;
-  isRTL:boolean,;
-  supportedLanguages:{ code:SupportedLanguage, name:string, flag:string }[],;
-},;
-;
-const supportedLanguages = [;
-  { code:'en' as SupportedLanguage, name:'English', flag:'' },;
-  { code:'es' as SupportedLanguage, name:'Espaol', flag:'' },;
-  { code:'pt' as SupportedLanguage, name:'Portugus', flag:'' },;
-  { code:'ar' as SupportedLanguage, name:'', flag:'' }
-],;
-;
-const defaultLanguageContext:LanguageContextType = {;
-  currentLanguage:'en',;
-  changeLanguage:async () => {},;
-  isRTL:false,;
-  supportedLanguages;
-},;
-;
-const LanguageContext = createContext(defaultLanguageContext),;
-;
-export const useLanguage = ():LanguageContextType => useContext(LanguageContext),;
-;
-interface LanguageProviderProps {;
-  children:ReactNode,;
-  authState?:{ ;
-    isAuthenticated:boolean,;
-    user:{ id?:string } | null,;
-  },;
-}
-;
+</void>
 export const LanguageProvider:React.FC<LanguageProviderProps> = ({ ;
-  children, ;
-  authState = { isAuthenticated:false, user:null } ;
-}) => {;
-  const { i18n, t } = useTranslation(),;
-  const { isAuthenticated, user } = authState,;
+
   const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(;
     (i18n.language?.substring(0, 2) as SupportedLanguage) || 'en';
   ),;
@@ -125,6 +91,8 @@ export const LanguageProvider:React.FC<LanguageProviderProps> = ({ ;
   },;
   ;
   return (;
+
+pr-12325
     <LanguageContext.Provider ;
       value={{ ;
         currentLanguage, ;
@@ -133,37 +101,19 @@ export const LanguageProvider:React.FC<LanguageProviderProps> = ({ ;
         supportedLanguages;
       }}
     >;
-      {children}
-    </LanguageContext.Provider>;
+
+    </LanguageContext.Provider>;)
   ),;},
- const defaultLanguageContext: LanguageContextType = {
+ const defaultLanguageContext: LanguageContextType = {,
   currentLanguage: 'en', changeLanguage: async () => {
-  
 };
 isRTL: false;
-supportedLanguages 
-};
 const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage> ( (i18n.language?.substring (0, 2) as SupportedLanguage) || 'en');
-const [isRTL, setIsRTL] = useState (i18n.dir () === 'rtl');
-// Sync language preference with user profile when authenticated useEffect ( () => {
-  const syncLanguageWithProfile = async () => {
-  if (isAuthenticated && user?.id) {
-  try {
-  const {
-  error 
-}= await supabase .from ('profiles') 
-}
-};
-syncLanguageWithProfile () 
-}, [currentLanguage, isAuthenticated, user]);
-// If user is authenticated, update their profile if (isAuthenticated && user?.id) {
-  const {
-  error 
+
 }= await supabase .from ('profiles') return (<LanguageContext.Provider value= {
   {
-  currentLanguage, changeLanguage, isRTL, supportedLanguages 
+  currentLanguage, changeLanguage, isRTL, supportedLanguages;
 }
 }> {
-  children 
+)
 }</LanguageContext.Provider>) 
-};

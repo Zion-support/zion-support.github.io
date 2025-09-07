@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 const [isOpen, setIsOpen] = useState(false)
   const { theme } = useTheme()
   const router = useRouter()
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> pr-12243
+main
+pr-12243
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { Button } from "@/components/ui/button";
@@ -18,12 +10,20 @@ import { ChatBotPanel } from "./ChatBotPanel";
 import { MessageSquare, Info, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useTheme } from "@/hooks/useTheme";
+import React, { useState } from "react";""
+import { useRouter } from "next/router";""
+import { Button } from "@/components/ui/button";""
+import { ChatBotPanel } from "./ChatBotPanel";""
+import { MessageSquare, Info, X } from "lucide-react";""
+import { cn } from "@/lib/utils";""
+import { useTheme } from "@/hooks/useTheme";"
+pr-12325
 export function SupportWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const { theme } = useTheme();
   const router = useRouter();
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+pr-12325
   return (
     <>;
       {/* Fixed button in the bottom right */}
@@ -79,7 +79,6 @@ const [isOpen, setIsOpen] = useState(false)
               ? 'bg-zion-blue-dark border border-zion-blue-light'
               : 'bg-white border border-gray-200'
 
-=======
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import { Button } from '@/components/ui/button';
@@ -95,7 +94,7 @@ export function SupportWidget() {
             theme === "dark" 
               ? "bg-zion-blue-dark border border-zion-blue-light" 
               : "bg-white border border-gray-200"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           )}
           style={{ height: '600px', maxHeight: '80vh' }}        >
           <div className='flex items-center justify-between p-4 border-b border-zion-purple/20'>
@@ -166,16 +165,9 @@ export function SupportWidget() {;
               </h3>
             </div>
             <div className="flex items-center gap-2">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
               <Button
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> pr-12243
+main
+pr-12243
               <Button
                 variant="ghost"
                 size="icon"
@@ -202,15 +194,73 @@ export function SupportWidget() {;
       )}
     </>
   );
-<<<<<<< HEAD
 }
 ;
               <Button
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> pr-12243
+main
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243
+        <Button;)
+          onClick={() => setIsOpen(true)}
+"
+          <MessageSquare className="h-6 w-6" />"
+
+        
+        <div;
+          className={cn("
+            "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col",""
+            theme === "dark"""
+              ? "bg-zion-blue-dark border border-zion-blue-light"""
+              : "bg-white border border-gray-200",")
+          )}"
+          style={{ height: "600px", maxHeight: "80vh" }}"
+        >
+</div>"
+          <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">"
+            <div className="flex items-center">"
+              <MessageSquare className="h-5 w-5 text-zion-cyan mr-2" />"
+
+              <h3;
+                  "font-semibold",""
+                  theme === "dark" ? "text-white" : "text-gray-800",")
+                )}
+</h3>
+    <>"
+import React, { useState } from "react",;""
+import { useRouter } from "next/router",;""
+import { Button } from "@/components/ui/button",;""
+import { ChatBotPanel } from "./ChatBotPanel",;""
+import { MessageSquare, Info, X } from 'lucide-react';
+import { cn } from "@/lib/utils",;""
+import { useTheme } from "@/hooks/useTheme",;"
+export function SupportWidget() {;
+  const [isOpen, setIsOpen] = useState(false),;
+  const { theme } = useTheme(),;
+  return (;
+
+        
+              : "bg-white border border-gray-200"")
+              <h3 className={cn("font-semibold", theme === "dark" ? "text-white" : "text-gray-800")}>"
+            <div className="flex items-center gap-2">"
+</div>
+              <Button;"
+                variant="ghost"""
+                size="icon"""
+                className="h-8 w-8 rounded-full"""
+                onClick={() => router.push("/help")}"
+                <Info className="h-5 w-5" />"
+
+              
+                className="h-8 w-8 rounded-full""
+                onClick={() => setIsOpen(false)}
+                <X className="h-5 w-5" />"
+
+              
+
+          <ChatBotPanel />
+
+    </>
+  );
+}
+;
+pr-12325

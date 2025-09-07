@@ -1,14 +1,12 @@
 import React from 'react',
 import Head from 'next/head';
-<<<<<<< HEAD
 
 
-=======
 import Button from '../components/ui/Button';
 export default function AIEvaluationOrchestratorPage() {
 import Layout from '../components/layout/Layout';
 const AIEvaluationOrchestrator: React.FC = () => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Layout>;
       <Head>;
@@ -52,7 +50,6 @@ const AIEvaluationOrchestrator: React.FC = () => {
       </main>
     </Layout>
   );
-<<<<<<< HEAD
 
 
 }
@@ -88,5 +85,4 @@ export default function AIEvaluationOrchestratorPage() {
 
 
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

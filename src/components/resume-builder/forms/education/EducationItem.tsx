@@ -1,21 +1,18 @@
-<<<<<<< HEAD
 import { Edit, Trash2 } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import { EducationItemProps } from './types'
-=======
 import { Button  } from '@/components/ui/button';
 import { Card, CardContent  } from '@/components/ui/card';
 import { Education  } from '@/types/resume';
 import { EducationItemProps } from './types';
 export function EducationItem({ education, onEdit, onDelete }: EducationItemProps) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export function EducationItem({
   education
   onEdit
   onDelete
 }: EducationItemProps) {
-<<<<<<< HEAD
 
 
 import { format } from 'date-fns';
@@ -27,10 +24,8 @@ import { Education } from '@/types/resume';
 import { EducationItemProps } from './types';
 
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
-<<<<<<< HEAD
     <Card className='bg-muted/40'>;
       <CardContent className='pt-6'>;
         <div className='flex justify-between'>;
@@ -74,20 +69,17 @@ import { EducationItemProps } from './types';
             <Button
               variant='ghost'
               size='icon'
-<<<<<<< HEAD
 
 
-=======
               onClick={() => onDelete(education.id!)}
               aria-label='Delete education'
             >
               <Trash2 className='h-4 w-4' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </Button>
           </div>
         </div>
         {education.description && (
-<<<<<<< HEAD
 
 
               onClick={() => onDelete(education && education.id!)}
@@ -120,15 +112,13 @@ import { EducationItemProps } from './types';
 }
 
           <p className="text-sm mt-3 line-clamp-2">{education.description}</p>
-=======
 <p className='text-sm mt-3 line-clamp-2'>{education.description}</p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         )}
       </CardContent>
     </Card>
   );
 }
-<<<<<<< HEAD
 import { format } from 'date - fns';
 import { Edit, Trash2 } from 'lucide-react'; import { Button } from '@/components / ui / button';
 import { Card, CardContent } from '@/components / ui / card';
@@ -203,7 +193,4 @@ function EducationItem() {
 }
 }
 ;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

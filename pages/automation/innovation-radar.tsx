@@ -1,6 +1,4 @@
-<<<<<<< HEAD
                 {it.source} · {it.author || 'unknown'} · {new Date(it.created_at).toLocaleString()}
-=======
   const items: any[] = (data?.items || []).slice(0, 50);
   return (
     <EnhancedLayout>
@@ -15,7 +13,7 @@
               </a>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
                 {it.source} · {it.author |'unknown'} · {new Date(it.created_at).toLocaleString()}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Query: {it.query}</div>
             </li>
@@ -23,7 +21,6 @@
         </ul>
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
   );
 };
   );
@@ -44,7 +41,6 @@
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

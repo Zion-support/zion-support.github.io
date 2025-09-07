@@ -1,8 +1,8 @@
 import React from 'react';
-
 interface Login.testProps {
-  className?: string;
+  // TODO: Implement
 }
+  className?: string;
 
 const Login.test: React.FC<Login.testProps> = ({ className }) => {
   return (
@@ -12,4 +12,9 @@ const Login.test: React.FC<Login.testProps> = ({ className }) => {
     </div>
   )
 };
+pr-12325
 
+    <div className={className || }>
+</div>
+      <h1>Login.test</h1>
+      <p>This component is under development.</p>

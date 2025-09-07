@@ -3,10 +3,8 @@
 
 
 interface FraudItem {
-<<<<<<< HEAD
 
 
-=======
 id: string;
   userId: string | null;
   source: string;
@@ -17,14 +15,13 @@ id: string;
 
   status: string
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default function FraudAdminPage() {
   const [items, setItems] = useState<FraudItem[]>([])
   const [adminToken, setAdminToken] = useState<string>('')
   const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState<string | null>(null)
   useEffect(() => {
-<<<<<<< HEAD
 
     const saved = localStorage.getItem('admin-token') || '';
     setAdminToken(saved)
@@ -34,21 +31,18 @@ export default function FraudAdminPage() {
     const saved = localStorage.getItem('admin-token') |''
     setAdminToken(saved)
   }, [])
-=======
     const saved = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const fetchItems = async () => {
     setLoading(true)
     setError(null)
     try {
-<<<<<<< HEAD
     } finally {
 
       set_loading (false);
 
     }
     fetchItems()
-=======
 const res = await fetch('/api/fraud/admin/list', {
         headers: adminToken ? { 'x-admin-token': adminToken } : {},
       });
@@ -63,7 +57,7 @@ const res = await fetch('/api/fraud/admin/list', {
   }
   useEffect(() => {
     fetchItems();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [adminToken]);
 
@@ -79,8 +73,6 @@ fetchItems();
     const res = await fetch('/api/fraud/admin/action', {
       method: 'POST',
       headers: {
-<<<<<<< HEAD
-=======
         'Content-Type': 'application/json',
         ...(adminToken ? { 'x-admin-token': adminToken } : {}),
       },
@@ -176,7 +168,7 @@ const FraudPage: React.FC = () => {
                     >
                       Ignore
                     </button>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="p-6 max-w-7xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Fraud Monitoring - Admin Review</h1>
@@ -245,13 +237,11 @@ const FraudPage: React.FC = () => {
         </table>
       </div>
     </div>
-<<<<<<< HEAD
   );
 };
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

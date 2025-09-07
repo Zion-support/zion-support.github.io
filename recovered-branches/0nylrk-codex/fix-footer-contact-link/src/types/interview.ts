@@ -46,12 +46,43 @@ export interface Interview {
   talent_id: string;
   scheduled_date: string;
   end_time: string;
+export type InterviewStatus =
+  | "requested"""
+  | "confirmed"""
+  | "declined"""
+  | "rescheduled"""
+  | "completed"""
+  | "cancelled";""
+export type InterviewType = "video" | "phone" | "in-person";"
+export type MeetingPlatform ="
+  | "zoom"""
+  | "google-meet"""
+  | "teams"""
+  | "other"""
+  | "in-app";"
+export interface Interview {;
+"
+  | 'cancelled';
+export type InterviewType = 'video' | 'phone' | 'in-person';
+export type MeetingPlatform = 'zoom' | 'google-meet' | 'teams' | 'other' | 'in-app';
+export interface Interview {
+  // TODO: Implement
+}
+  // TODO: Implement
+  id: string;,
+  client_id: string;
+  talent_id: string;,
+  scheduled_date: string;
+  end_time: string;,
+pr-12325
   duration_minutes: number;
   status: InterviewStatus;
   notes?: string;
   meeting_link?: string;
   meeting_platform?: MeetingPlatform;
   created_at: string;
+  created_at: string;,
+pr-12325
   updated_at: string;
   title?: string;
   interview_type: InterviewType;
@@ -98,3 +129,19 @@ export interface InterviewResponse {
   interview_id: string;
   status: InterviewStatus;
 }
+
+
+export interface InterviewRequest {;
+
+export interface InterviewRequest {
+  // TODO: Implement
+  // TODO: Implement
+  scheduled_date: string;,
+
+
+export interface InterviewResponse {;
+
+  interview_id: string;,
+  alternative_date?: string;
+  message?: string;
+pr-12325

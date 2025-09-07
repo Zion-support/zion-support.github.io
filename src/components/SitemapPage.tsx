@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Map sitemap paths to their actual routes in the application
 // Note: This pathMap might need to be updated based on Next.js page structure
 const pathMap: Record<string, string> = {
@@ -27,7 +26,6 @@ import { SEO } from './SEO',
 const pathMap: Record<string string> = {
   '/about': '/content/about/blog': '/blog/careers': '/careers/green-it': '/content/green-it/sitemap-page': '/content/sitemap-page/talent-onboarding': '/talent-onboarding/forgot-password': '/forgot-password/signup/talent': '/auth/signup/talent/signup/client': '/auth/signup/client/talent-dashboard': '/talent-dashboard/client-dashboard': '/client-dashboard/hiring-tracker': '/dashboard/hiring-tracker/messages': '/dashboard/messages/notifications': '/dashboard/notifications/project/:projectId/room': '/dashboard/project/:projectId/room/post-job': '/marketplace/post-job'},
 
-<<<<<<< HEAD
 const resolvePath = (path: string): string => pathMap[path] ?? path,
 
 export const SitemapPage: React.FC = () => {
@@ -57,7 +55,6 @@ export const SitemapPage: React.FC = () => {
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
-=======
 
 const resolvePath = (path: string): string => pathMap[path] ?? path,
 
@@ -122,20 +119,16 @@ export const SitemapPage: React.FC = () => {;
                     >;
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       {route.label}
                     </Link>;
                   </li>));
               }
 
 
-<<<<<<< HEAD
-=======
             </ul>;
           </div>;
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           {/* Talent Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Talent Pages</h2>
@@ -153,11 +146,8 @@ export const SitemapPage: React.FC = () => {;
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
-<<<<<<< HEAD
-=======
             </ul>;
           </div>;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           {/* Talent Routes */}
           <div className="bg - zion - blue - dark p - 6 rounded - lg">;
             <h2 className="text - xl font - bold mb - 4 text - zion - cyan">Talent Pages</h2>;
@@ -178,15 +168,12 @@ export const SitemapPage: React.FC = () => {;
                     </Link>;
                   </li>));
               }
-<<<<<<< HEAD
-=======
 
 
             </ul>;
           </div>;
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           {/* Client Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Client Pages</h2>
@@ -204,11 +191,8 @@ export const SitemapPage: React.FC = () => {;
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
-<<<<<<< HEAD
-=======
             </ul>;
           </div>;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           {/* Client Routes */}
           <div className="bg - zion - blue - dark p - 6 rounded - lg">;
             <h2 className="text - xl font - bold mb - 4 text - zion - cyan">Client Pages</h2>;
@@ -229,15 +213,12 @@ export const SitemapPage: React.FC = () => {;
                     </Link>;
                   </li>));
               }
-<<<<<<< HEAD
-=======
 
 
             </ul>;
           </div>;
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           {/* Shared Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Authenticated User Pages</h2>
@@ -255,11 +236,8 @@ export const SitemapPage: React.FC = () => {;
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
-<<<<<<< HEAD
-=======
             </ul>;
           </div>;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           {/* Shared Routes */}
           <div className="bg - zion - blue - dark p - 6 rounded - lg">;
             <h2 className="text - xl font - bold mb - 4 text - zion - cyan">Authenticated User Pages</h2>;
@@ -277,12 +255,10 @@ export const SitemapPage: React.FC = () => {;
                     >;
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
                       {route.label}
-<<<<<<< HEAD
                     </Link>
                   </li>
                 ))
               }
-=======
                     </Link>;
                   </li>));
               }
@@ -292,7 +268,6 @@ export const SitemapPage: React.FC = () => {;
           </div>;
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           {/* Admin Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Admin Pages</h2>
@@ -309,7 +284,6 @@ export const SitemapPage: React.FC = () => {;
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
-<<<<<<< HEAD
 }
     {
       title: 'Services'
@@ -328,7 +302,6 @@ export const SitemapPage: React.FC = () => {;
         { name: 'Manufacturing', url: '/solutions / manufacturing' }
       ]
 }
-=======
             </ul>;
           </div>;
           {/* Admin Routes */}
@@ -412,7 +385,6 @@ export const SitemapPage: React.FC = () => {;
       ];
 },
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       title: 'Resources'
       links: [{ name: 'Case Studies', url: '/case - studies' }
@@ -420,8 +392,6 @@ export const SitemapPage: React.FC = () => {;
         { name: 'Documentation', url: '/docs' }
         { name: 'API Reference', url: '/api' }
       ]}
-<<<<<<< HEAD
-=======
 
         { name: 'Case Studies', url: '/case - studies' }, ';
         { name: 'White Papers', url: '/white - papers' }, ';
@@ -457,18 +427,14 @@ export const SitemapPage: React.FC = () => {;
                       {link.name}
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           {/* Dynamic Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Dynamic Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Pages with dynamic parameters</p>
             <ul className="space-y-2">
-<<<<<<< HEAD
-=======
 
               {Object.entries(dynamicPaths).map(([key, path]) => (
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <li key={key}>
                   <div className="flex items-center text-zion-slate">
                     <ChevronRight className="h-4 w-4 mr-2" />
@@ -476,11 +442,8 @@ export const SitemapPage: React.FC = () => {;
                   </div>
                 </li>
               ))}
-<<<<<<< HEAD
-=======
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </ul>;
           </div>;
         </div>;
@@ -513,11 +476,7 @@ export const SitemapPage: React.FC = () => {;
     </div>) }
 '";
 
-<<<<<<< HEAD
-=======
 }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 import React from 'react';
 import { completeSitemap, dynamicPaths } from '@/config/sitemap';
 import Link from 'next/link';
@@ -532,4 +491,4 @@ import { SEO  } from './SEO';
 // Map sitemap paths to their actual routes in the application
 // Note: This pathMap might need to be updated based on Next.js page structure
 const pathMap: Record<string, string> = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

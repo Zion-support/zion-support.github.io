@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { KycProfile } from '../../../utils/kyc';
 import fs from 'fs';
@@ -22,9 +21,8 @@ import path from 'path';
   if (profile.status !== 'approved') return res.status(200).json({ allowed: false, reason: 'KYC not approved' });
   if (profile.amlStatus === 'match' || (profile.flags || []).includes('aml_alert')) return res.status(200).json({ allowed: false, reason: 'AML alert' });
 
-=======
 const DATA_DIR = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return res.status(200).json({ allowed: true, reason: 'KYC approved and AML clear' })
 }
 

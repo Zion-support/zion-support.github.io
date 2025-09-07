@@ -1,4 +1,7 @@
 import {
+  // TODO: Implement
+}
+pr-12325
   Select,
   SelectContent,
   SelectItem,
@@ -104,3 +107,48 @@ function SortFilter() {
 
 }
 ;
+} from "@/components/ui/select";""
+import { SortFilterProps } from "@/types/filters";"
+export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
+  return ("
+    <div className="mb-6">"
+</div>"
+      <label className="text-sm font-medium text-zion-slate-light mb-2 block">"
+</label>
+      <Select value={sortOption} onValueChange={setSortOption}>
+"
+        <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">"
+          <SelectValue placeholder="Sort by" />"
+
+        <SelectContent className="bg-zion-blue border-zion-blue-light text-white">"
+          <SelectItem value="relevance">Relevance""
+          <SelectItem value="rating">Highest Rating""
+          <SelectItem value="experience">Most Experienced""
+          <SelectItem value="price-low">Price: Low to High""
+          <SelectItem value="price-high">Price: High to Low"
+        
+      
+    <div className="mb - 6">;"
+      <label className="text - sm font - medium text - zion - slate - light mb - 2 block">;"
+      </label>;
+      <Select value={sort_option} onValueChange={setSortOption}>;
+        <SelectTrigger className="bg - zion - blue border - zion - blue - light text - white">;"
+          <SelectValue placeholder="Sort by" />;"
+
+        ;"
+        <SelectContent className="bg - zion - blue border - zion - blue - light text - white">;"
+          <SelectItem value="relevance">Relevance;""
+          <SelectItem value="rating">Highest Rating;""
+          <SelectItem value="experience">Most Experienced;""
+          <SelectItem value="price - low">Price: Low to High;""
+          <SelectItem value="price - high">Price: High to Low;"
+        ;
+      ;)
+    </div>);"
+          <SelectItem value="price-low">Price:Low to High;""
+          <SelectItem value="price-high">Price:High to Low;"
+    </div>;"
+  return (<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light mb-2 block" > Sort by </label> <Select value= {"
+</div>)"
+}> <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white" > <SelectValue placeholder="Sort by" /> bg-zion-blue border-zion-blue-light text-white"> <SelectItem value=" relevance">Relevance <SelectItem value=" rating">Highest Rating <SelectItem value=" experience">Most Experienced <SelectItem value=" price-low">Price: Low to High <SelectItem value=" price-high" >Price: High to Low   </div>)"
+pr-12325

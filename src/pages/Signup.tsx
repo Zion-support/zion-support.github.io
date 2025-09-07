@@ -1,11 +1,9 @@
-<<<<<<< HEAD
-=======
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router'; // Changed from react-router-dom
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import Link from 'next/link';
 import { Input  } from '@/components/ui/input';
 import { Button  } from '@/components/ui/button';
@@ -14,7 +12,6 @@ import { Alert, AlertDescription  } from '@/components/ui/alert';
 import { PasswordStrengthMeter  } from '@/components/PasswordStrengthMeter';
 import { AuthButtons  } from '@/components/AuthButtons';
 import { AlertCircle, CheckCircle, Mail } from 'lucide-react'
-<<<<<<< HEAD
 
 import { toast } from '@/hooks/use-toast'
 import { AuthLayout } from '@/layout'
@@ -217,7 +214,6 @@ const SignupSchema = Yup.object({;
             </div>;
           )}
 ;
-=======
 import { toast  } from '@/hooks/use-toast';
 import { AuthLayout  } from '@/layout';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
@@ -230,21 +226,19 @@ const SignupSchema = null;
             </div>
           )}
           
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Additional help text when service issues are detected */}
           {healthCheckError && (
             <div className="text-center text-xs text-muted-foreground mt-4 p-3 bg-muted rounded">
               <p>⚠️ We detected some authentication service issues.</p>
               <p>If signup fails, please try again in a few minutes or contact support.</p>
-<<<<<<< HEAD
-=======
             </div>
           )}
           </form>
           {!emailVerificationRequired && (
             <div className='mt-6'>
               <AuthButtons providers={['google', 'github']} />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           )}
 
@@ -295,7 +289,6 @@ request: err && err.request ? 'Request made but no response': 'No request';
 }</div> <div> <label htmlFor="email" className="block text-sm font-medium" > Email address </label> <Input) "
 }</div> <div> <label htmlFor="password" className="block text-sm font-medium" > Password </label> <Input) "
 }</div> <div> <label htmlFor="confirm" className="block text-sm font-medium" > Confirm Password </label> <Input) "
-<<<<<<< HEAD
       displayName: ",
       email: ",
       password: ",
@@ -492,7 +485,6 @@ if ( {) {
   );
 }
 ;
-=======
 }</div> <div className="flex items-center space-x-2" > <input)
 }{"
   !emailVerificationRequired ? (<Button type="submit" disabled= {
@@ -507,4 +499,4 @@ if ( {) {
 }</form> </div>)
 }</div> </div> </AuthLayout>)
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

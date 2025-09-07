@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
-=======
->>>>>>> pr-12243
+pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../../utils/supabase/server',;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -17,7 +12,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (usingPlaceholder) {
       return res.status(200).json({ flags: [
         { type: 'suspicious_ip', severity: 'low', note: 'Multiple visits from same IP' }]})
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../../utils/supabase/server';
   try {
@@ -25,7 +19,7 @@ import { getServerSupabase } from '../../../../utils/supabase/server';
     const supabase = getServerSupabase();
     const { data: flags } = await supabase.from('fraud_flags').select().eq('partner_code', code);
     return res.status(200).json({ flags });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
 
     const supabase = getServerSupabase()
@@ -33,11 +27,6 @@ import { getServerSupabase } from '../../../../utils/supabase/server';
       .from('referral_events')
       .select('ip_address, created_at')
       .eq('partner_code', code)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 .gte(
         'created_at',
         new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString()
@@ -48,22 +37,18 @@ import { getServerSupabase } from '../../../../utils/supabase/server';
     for (const row of data || []) {
       const key = (row as any).ip_address || 'unknown';
 counts.set(key, (counts.get(key) || 0) + 1);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
-=======
-<<<<<<< HEAD
       .gte('created_at', new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString()),
     if (error) return res.status(500).json({ error: error.message }),
 
 
     const flags: any[] = [],
-=======
->>>>>>> pr-12243
+pr-12243
       .gte('created_at', new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString())
     if (error) return res.status(500).json({ error: error.message })
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const flags: any[] = []
     counts.forEach((count, ip) => {
       if (count > 30 && ip !== 'unknown') {
@@ -75,10 +60,8 @@ flags.push({
           note: 'High number of events from a single IP in 7 days',
         });
       }
-<<<<<<< HEAD
     })
 
-<<<<<<< HEAD
     return res.status(500).json({ error: e?.message })
   };
 };
@@ -88,14 +71,11 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
   }
 }
-=======
     return res.status(200).json({ flags })
   } catch (e: any) {
     return res.status(500).json({ error: e?.message })
   }
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
     });
   } catch (error) {
     return res.status(500).json({ error: 'Internal server error' });
@@ -105,4 +85,4 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     return res.status(500).json({ error: e?.message });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

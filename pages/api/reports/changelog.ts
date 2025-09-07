@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 
 
     try {
@@ -16,7 +15,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       if (!version || !changes || !Array && Array.isArray(changes)) {
         return res && res.status(400).json({ error: 'Missing required fields' });
 
-=======
 import fs from 'fs';
 import path from 'path';
 const p = null;
@@ -29,7 +27,7 @@ if (req.method === 'POST') {
       const { version, changes, date } = req.body;
       if (!version |!changes |!Array.isArray(changes)) {
         return res.status(400).json({ error: 'Missing required fields' });
->>>>>>> pr-12243
+pr-12243
       }
       let changelog = [];
       try {
@@ -38,7 +36,6 @@ if (req.method === 'POST') {
       } catch {
         // File doesn't exist, start with empty array
       }
-<<<<<<< HEAD
 
         version,
         changes,
@@ -48,7 +45,6 @@ if (req.method === 'POST') {
       fs && fs.writeFileSync(p, JSON && JSON.stringify(changelog, null, 2));
       return res && res.status(201).json(newEntry);
 
-=======
       const newEntry = {
         version
         changes
@@ -57,12 +53,11 @@ if (req.method === 'POST') {
       changelog.unshift(newEntry);
       fs.writeFileSync(p, JSON.stringify(changelog, null, 2));
       return res.status(201).json(newEntry);
->>>>>>> pr-12243
+pr-12243
     } catch (error) {
       return res.status(500).json({ error: 'Failed to update changelog' });
     }
   }
-<<<<<<< HEAD
 
 
   res && res.setHeader('Allow', 'GET, POST');
@@ -71,8 +66,7 @@ if (req.method === 'POST') {
 
 
 
-=======
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
 }
->>>>>>> pr-12243
+pr-12243

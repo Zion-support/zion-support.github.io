@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 
 import React from 'react',;
 import Head from 'next/head',;
@@ -24,8 +23,7 @@ export default function MDMPage() {
     { name: 'Microsoft Intune pricing', url: 'https://www.microsoft.com/en-us/security/business/microsoft-intune/pricing' },
     { name: 'Jamf pricing', url: 'https://www.jamf.com/pricing/' },
     { name: 'VMware Workspace ONE pricing', url: 'https://www.vmware.com/products/workspace-one/pricing.html' }],
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Layout>
       <Head>
@@ -45,11 +43,9 @@ export default function MDMPage() {
             <div className='inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-600 mb-4'>
               <Smartphone className='w-8 h-8 text-white' />
             </div>
-<<<<<<< HEAD
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">Mobile Device Management (MDM)</h1>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">Secure, compliant device fleets across iOS, Android, macOS, and Windows.</p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-=======
             <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4'>
               Mobile Device Management (MDM)
             </h1>
@@ -64,7 +60,7 @@ export default function MDMPage() {
               <a href='/market-pricing' className='px-8 py-4'>
                 Market Pricing
               </a>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </header>
           <section>
@@ -83,7 +79,6 @@ export default function MDMPage() {
               ))}
             </div>
           </section>
-<<<<<<< HEAD
             </div>
           </section>
 
@@ -92,7 +87,6 @@ export default function MDMPage() {
             <div className="inline-flex items-center justify-center gap-3 text-gray-300">
               <Shield className="w-5 h-5 text-purple-400" />
               <span>SAML/SCIM, device attestation, and compliance-ready audit logs</span>
-=======
           <section>
 <h2 className='text-3xl md:text-4xl font-bold text-white mb-6 text-center'>
               Typical Pricing Ranges
@@ -141,13 +135,12 @@ export default function MDMPage() {
               <span>
                 SAML/SCIM, device attestation, and compliance-ready audit logs
               </span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </section>
         </div>
       </div>
     </Layout>
-<<<<<<< HEAD
   )
   } catch (error) {
     console.error("Error:", error);
@@ -240,6 +233,5 @@ function MDMPage() {
 }
 
 
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -41,7 +40,6 @@ import { useRouter } from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useCurrentUser } from '../../utils/auth';
-=======
 import { useRouter  } from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -50,17 +48,15 @@ const REASONS = null;
     reader.readAsDataURL(file)
   })
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 const REASONS = [
   'Scope DisagreementQuality IssuesDelivery DelayPayment IssueCommunication BreakdownOther'] as const;
   const router = useRouter();
-<<<<<<< HEAD
 
   const { projectId: qProjectId, entityType, entityId, talentId, clientId } = router.query as Record<string, string>;
   const user = useCurrentUser();
 
 
-=======
   const {
     projectId: qProjectId,
     entityType,
@@ -70,13 +66,12 @@ const REASONS = [
   } = router.query as Record<string, string>;
   const user = useCurrentUser();
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [projectId, setProjectId] = useState(qProjectId || '');
   const [reason, setReason] = useState<ReasonType>('Scope Disagreement');
   const [reasonDetails, setReasonDetails] = useState('');
   const [description, setDescription] = useState('');
   const [files, setFiles] = useState<File[]>([]);
-<<<<<<< HEAD
     try {;
       const res = await fetch('/api/disputes', {;
         method: 'POST',;
@@ -103,7 +98,6 @@ const REASONS = [
         } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-=======
   const [talentUserId, setTalentUserId] = useState(talentId || '');
 const [clientUserId, setClientUserId] = useState(
     clientId || (user.role === 'client' ? user.id : '')
@@ -155,7 +149,7 @@ body: JSON.stringify({ files: filePayload }),
     } finally {
       setSubmitting(false);
     }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 ;
@@ -165,15 +159,13 @@ body: JSON.stringify({ files: filePayload }),
     } finally {;
   return (
     <EnhancedLayout>
-<<<<<<< HEAD
       <div className="max-w-2xl mx-auto">
         <h1 className="text-2xl font-semibold mb-4">Raise a Dispute</h1>
         <form onSubmit={handleSubmit} className="space-y-4">
-=======
 <div className='max-w-2xl mx-auto'>
         <h1 className='text-2xl font-semibold mb-4'>Raise a Dispute</h1>
         <form onSubmit={handleSubmit} className='space-y-4'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           <div>
             <label className="block text-sm font-medium">Project ID</label>
             <input value={projectId} onChange={e => setProjectId(e.target.value)} required className="mt-1 w-full border rounded px-3 py-2 bg-white dark:bg-black" />
@@ -220,8 +212,6 @@ body: JSON.stringify({ files: filePayload }),
           <div className="pt-2">
             <button disabled={submitting} className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50">{submitting ? 'Submitting...' : 'Submit Dispute'}</button>
           </div>
-<<<<<<< HEAD
-=======
           <div className='pt-2'>
             <button
               disabled={submitting}
@@ -230,7 +220,7 @@ body: JSON.stringify({ files: filePayload }),
               {submitting ? 'Submitting...' : 'Submit Dispute'}
             </button>
           </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         </form>
       </div>
     </EnhancedLayout>
@@ -499,7 +489,6 @@ const reader = new FileReader ();
     reader.onerror = reject;
 reader.readAsDataURL(file);
   });
-<<<<<<< HEAD
 
 }
 }
@@ -508,5 +497,4 @@ reader.readAsDataURL(file);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

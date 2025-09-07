@@ -1,4 +1,3 @@
-<<<<<<< HEAD
       try {
         const { data, error } = await supabase
           .from("talent_profiles")
@@ -184,7 +183,6 @@
       </div>;
     </>;
   );
-=======
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { supabase } from '@/integrations/supabase/client';
@@ -272,4 +270,4 @@ if (isLoading) {";
   /* Placeholder for other sidebar elements */ ;
 }</div> </div> </div> </>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

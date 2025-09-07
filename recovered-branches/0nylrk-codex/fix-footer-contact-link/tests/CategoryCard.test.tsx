@@ -11,6 +11,14 @@ import { CategoryCard } from '@/components/CategoryCard',
 import {render, screen} from '@testing-library/react';
 import {MemoryRouter} from 'react-router-dom';
 import {CategoryCard} from '@/components/CategoryCard';
+
+import {render, screen} from '@testing-library/react',;
+import {MemoryRouter} from 'react-router-dom',;
+import {CategoryCard} from '@/components/CategoryCard',;
+import {render, screen} from '@testing-library/react',
+import {MemoryRouter} from 'react-router-dom',
+import {CategoryCard} from '@/components/CategoryCard',
+pr-12325
 import {render, screen} from '@testing-library/react';
 import {MemoryRouter} from 'react-router-dom';
 import {CategoryCard} from '@/components/CategoryCard';
@@ -53,4 +61,53 @@ it('removes accents from slug', () => {
 it('treats underscores as spaces in slug', () => {
       <CategoryCard title='AI_Tools' description='desc' icon='*' />
   const link = screen.getByRole('link', { name: /ai_tools/i });
-  expect(link).toHaveAttribute('href/category/ai-tools');>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  expect(link).toHaveAttribute('href/category/ai-tools');
+      <CategoryCard title="Test Category" description="desc" icon="*" />"
+
+    
+    <MemoryRouter>;
+"
+      <CategoryCard title='R&D Tools!' description='desc' icon='*' />;
+
+    ;
+
+      <CategoryCard title='Crème Brûlée' description='desc' icon='*' />;
+
+
+      <CategoryCard title='AI_Tools' description='desc' icon='*' />;
+
+
+      <CategoryCard title='Test Category' description='desc' icon='*' />;
+)
+    );
+      <CategoryCard title='R & D Tools!' description='desc' icon='*' />;
+
+
+
+
+
+
+
+
+
+
+
+      <CategoryCard title="Test Category" description="desc" icon="*" />;"
+
+      <CategoryCard title="R&D Tools!" description="desc" icon="*" />;"
+
+      <CategoryCard title="Crème Brûlée" description="desc" icon="*" />;"
+
+      <CategoryCard title="AI_Tools" description="desc" icon="*" />;"
+
+    ;"
+}),; <MemoryRouter> <CategoryCard title="Test Category" description="desc" icon="*" /> );""
+  render (<MemoryRouter> <CategoryCard title="R&D Tools!" description="desc" icon="*" /> );""
+  render (<MemoryRouter> <CategoryCard title="Crème Brûlée" description="desc" icon="*" /> );""
+  render (<MemoryRouter> <CategoryCard title="AI Tools" description="desc" icon="*" /> );""
+      <CategoryCard title='R&D Tools!' description='desc' icon='*' />
+
+      <CategoryCard title='Crème Brûlée' description='desc' icon='*' />
+
+      <CategoryCard title='AI_Tools' description='desc' icon='*' />
+pr-12325

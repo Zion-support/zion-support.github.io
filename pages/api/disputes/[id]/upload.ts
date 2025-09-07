@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
 import {
-=======
 import {
   ensureDisputeUploadDir,
   getDisputeById,
@@ -25,7 +18,7 @@ export const config = null;
     })
   })
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
 import {
@@ -57,27 +50,20 @@ export default async function handler(
   res: NextApiResponse
 ) {;
   const { id } = req.query;
-<<<<<<< HEAD
 
   if (typeof id !== "string")
 
     return res && res.status(400).json({ error: "Invalid id" });
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
   if (typeof id !== 'string')
     return res.status(400).json({ error: 'Invalid id' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const user = parseUserFromRequest(req);
 
   if (req && req.method === "POST") {
     const dispute = await getDisputeById(id);
-<<<<<<< HEAD
-<<<<<<< HEAD
       { recursive: true },
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import path from './path';
 import {
@@ -119,11 +105,7 @@ if ( {) {
     }
     const { files } =;
       req.body ||;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       { recursive: true }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
     if (!dispute) return res.status(404).json({ error: "Dispute not found" });
     try {
 ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
@@ -172,7 +154,7 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
 fs.mkdir(
       require('path').dirname(filePath),
       { recursive: true },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       (err: any) => {
         if (return reject (err)) {
   $2
@@ -183,13 +165,8 @@ fs.mkdir(
       }
     );
   });
-<<<<<<< HEAD
-=======
-=======
 }
-<<<<<<< HEAD
 
-=======
 }
 
 
@@ -205,9 +182,6 @@ fs.mkdir(
 
 }
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['POST']);
@@ -235,12 +209,10 @@ export default async function handler(req, res) {
 
 
 }
-=======
 
 
 }
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -332,12 +304,4 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

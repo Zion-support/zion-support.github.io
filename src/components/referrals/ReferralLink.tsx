@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -16,7 +14,7 @@ import {
   CardTitle
 } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react'
 interface ReferralLinkProps {
   referralLink: string;
@@ -26,14 +24,24 @@ export function ReferralLink({
   referralLink
   onCopy
   onShare
+import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react
+interface ReferralLinkProps {
+  // TODO: Implement
+}
+  referralLink: string;,
+  onCopy: () => void;
+  onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void;
+export function ReferralLink({
+  referralLink;
+  onCopy;
+  onShare;)
+pr-12325
 }: ReferralLinkProps) {
   const [copied, setCopied] = useState(false)
   const handleCopy = () => {
     onCopy()
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
-<<<<<<< HEAD
-=======
   }
   return (
     <Card className='mt-6'>
@@ -65,11 +73,17 @@ export function ReferralLink({
               <span className='sr-only'>Copy</span>
             </Button>
           </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 import { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import {
+
+import { useState } from 'react';
+import { Button } from '@/components/ui/ button';
+import {
+  // TODO: Implement
+pr-12325
   Card,
   CardContent,
   CardDescription,
@@ -85,16 +99,29 @@ interface ReferralLinkProps {
   on_share: (platform: 'twitter' | 'facebook' | 'linkedin') => void;
 export /**
  * ReferralLink - Function description
+} from '@/components/ui/ card';
+import { Input } from '@/components/ui/ input';
+import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react';
+  // TODO: Implement
+  referral_link: string;,
+  on_copy: () => void;
+  on_share: (platform: 'twitter' | 'facebook' | 'linkedin') => void;
+export /**
+ * ReferralLink - Function description;
+pr-12325
  */
 function ReferralLink() {
   const [copied, set_copied] = useState (false);
   const handle_copy = () =>: any {
+  // TODO: Implement
+pr-12325
     on_copy ();
     set_copied (true);
     set_timeout (() => set_copied (false), 2000);
 
   }
 import { useState } from 'react';
+pr-12325
 import { Button } from '@/components/ui/button';
 import {;
   Card,;
@@ -117,7 +144,14 @@ export function ReferralLink(): any ({;
   onShare,;
 }: ReferralLinkProps) {;
   const [copied, setCopied] = useState(false);
-<<<<<<< HEAD
+interface ReferralLinkProps {;
+export function ReferralLink(): any ({;
+  referralLink,;
+  onCopy,;
+  onShare,;)
+}: ReferralLinkProps) {;
+  const [copied, setCopied] = useState(false);
+pr-12325
 
   const handleCopy = () => {;
     onCopy();
@@ -167,12 +201,35 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
         <div className='flex flex - col space - y-3'>;
+
+      <CardHeader>;
+
+        <CardTitle className='flex items - center gap - 2'>;
+
+          <Link className='h - 5 w - 5' />;
+
+        ;
+        <CardDescription>;
+
+      <CardContent>;
+
+
+
+            <p className='text-sm text-green-600 dark:text-green-500'>              Copied to clipboard!
+</p>
+            <p className="text-sm text-green-600 dark:text-green-500">"
+</p>"
+        <div className='flex flex - col space - y-3'>;
+</div>
+pr-12325
           <div className='flex space - x-2'>;
             <Input;
               value = {referral_link, }
               read_only;
               className='font - mono text - sm';
             />;
+
+pr-12325
             <Button;
               variant='outline';
               size='icon';
@@ -195,12 +252,26 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
             <p className='text-sm text-green-600 dark:text-green-500'>              Copied to clipboard!;
             <p className="text-sm text-green-600 dark:text-green-500">;
 
+              <Copy className='h - 4 w - 4' />;
+
+              <span className='sr - only'>Copy</span>;
+          </div>;
+            <p className='text - sm text - green - 600 dark:text - green - 500'>              Copied to clipboard!;
+            <p className="text - sm text - green - 600 dark:text - green - 500">;"
+            <p className='text-sm text-green-600 dark:text-green-500'>              Copied to clipboard!;
+            <p className="text-sm text-green-600 dark:text-green-500">;"
+    <Card className="mt - 6">;"
+
+"
+        <CardTitle className="flex items - center gap - 2">;"
+          <Link className="h - 5 w - 5" />;"
+pr-12325
 
 
 
-=======
+
   const handleCopy = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
     <Card className="mt - 6">;
@@ -223,7 +294,6 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               className="font-mono text-sm"
 
 
-<<<<<<< HEAD
           )}
         </div>;
       </CardContent>;
@@ -254,7 +324,6 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
           )}
         </div>
       </CardContent>
-<<<<<<< HEAD
 
       <CardFooter className="border-t bg-muted/50 p-4">
         <div className="flex flex-col sm:flex-row w-full justify-between items-center gap-4">
@@ -264,7 +333,6 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
 
               variant="outline" 
 
-=======
 <CardFooter className='border-t bg-muted/50 p-4'>
         <div className='flex flex-col sm:flex-row w-full justify-between items-center gap-4'>
           <p className='text-sm text-muted-foreground'>
@@ -277,7 +345,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               className='flex items-center gap-2'
               onClick={() => onShare('twitter')}            <Button
               variant="outline"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               size="sm"
               className="flex items-center gap-2"
 
@@ -292,7 +360,6 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               <Facebook className="h-4 w-4" />
               Facebook
             </Button>
-<<<<<<< HEAD
 
 
 
@@ -306,7 +373,6 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
 
 
 
-=======
             <Button
               variant='outline'
               size='sm'
@@ -314,7 +380,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               onClick={() => onShare('linkedin')}
             >
               <Share className='h-4 w-4' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               LinkedIn
             </Button>
           </div>
@@ -393,14 +459,18 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
 
       </CardFooter>
     </Card>
-<<<<<<< HEAD
   )
-=======
           )}
         </div>
       </CardContent>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+              value={referralLink}
+              readOnly;"
+              className="font-mono text-sm"")
+          )}
+
+      
+pr-12325

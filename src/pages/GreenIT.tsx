@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default function GreenIT() {
 
   const greenITSolutions = [
@@ -79,7 +78,6 @@ export default function GreenIT() {;
       icon: Leaf}
   ]
 
-=======
 import { SEO } from '@/components/SEO';
 import { GradientHeading } from '@/components/GradientHeading';
 import { Button } from '@/components/ui/button';
@@ -93,7 +91,7 @@ import { Leaf, Server, Cloud } from 'lucide-react'
 import Link from "next/link";
 export default function GreenIT() {
                     <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>;
       <SEO
@@ -106,7 +104,6 @@ export default function GreenIT() {
                     </Button>
                   </div>
                 </div>
-<<<<<<< HEAD
         canonical="https://app && app.ziontechgroup.com/marketplace/category/green-it"
       />;
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">;
@@ -184,7 +181,6 @@ export default function GreenIT() {
                     src="https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600&q=80"
                     alt="Green IT sustainability"
                     className="object-cover"
-=======
 <div className='rounded-lg overflow-hidden relative w-full h-full'>
                   <img
                     src='https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600&q=80'
@@ -673,7 +669,7 @@ export default function GreenIT(...args: unknown[]): unknown {
 }
   ]
 export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [expandedSection, setExpandedSection] = useState<string | null>(null);'
   const [selectedCategory, setSelectedCategory] = useState('all')}
   return()
@@ -702,7 +698,6 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
 '
 ''
 '''
-<<<<<<< HEAD
                   />
                 </div>
               </div>
@@ -749,7 +744,6 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
                     <li> Enhanced brand reputation and stakeholder relations</li>
                     <li> Compliance with emerging environmental regulations</li>
                     <li> Improved operational efficiency and performance</li>
-=======
                           solution.category === 'energy'''''
                             ? 'bg-green-500/20 text-green-400'''''
                             : solution.category === 'hardware'''''
@@ -813,13 +807,12 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
                       • Compliance with emerging environmental regulations
                     </li>
                     <li>• Improved operational efficiency and performance</li>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   </ul>
                 </div>
               </div>
             </div>
           </div>
-<<<<<<< HEAD
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Ready to implement Green IT solutions?</h2>
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
@@ -830,7 +823,6 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
 
             </Button>
 
-=======
 <div className='bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center'>
             <h2 className='text-3xl font-bold text-white mb-6'>
               Ready to implement Green IT solutions?
@@ -845,12 +837,11 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
             >
               <Link href='/contact'>Contact Our Team</Link>
             </Button>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </main>
     </>
-<<<<<<< HEAD
 export { GreenIT, GreenIT };
 };
 import { SEO } from "@/components/SEO",;
@@ -998,7 +989,6 @@ export default function GreenIT() {;
   );
 }
 ;
-=======
   );
 "
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

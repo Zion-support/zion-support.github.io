@@ -1,17 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import Link from "next/link";
 import { TalentProfile } from "@/types/talent";
 import Image from 'next/image', // Import next/image
 import React, { useState } from 'react', // Import React and useState
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export interface TalentCardProps {
   talent: TalentProfile;
   onViewProfile: (id: string) => void;
   onRequestHire: (talent: TalentProfile) => void;
-<<<<<<< HEAD
   is_saved: boolean;
   onToggleSave: (id: string, is_saved: boolean) => void;
   is_authenticated: boolean;
@@ -19,7 +15,6 @@ export interface TalentCardProps {
 
       onViewProfile(talent.id)
 
-=======
   isSaved: boolean;
   onToggleSave: (id: string, isSaved: boolean) => void;
   isAuthenticated: boolean;
@@ -55,7 +50,7 @@ export function TalentCard({
         <div className="flex items-start">
           <div className="relative mr-4">
             <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light relative"> {/* Added relative for Image */}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }
   const handleRequestHire = (e: React.MouseEvent) => {
@@ -74,7 +69,6 @@ onRequestHire(talent);
     if (onToggleSave) {
       onToggleSave(talent.id, !isSaved)
     if (onToggleSave) {
-<<<<<<< HEAD
 
 
 import { Button } from '@/components/ui/button';
@@ -115,9 +109,8 @@ export function TalentCard(): any ({;
     if (onViewProfile) {;
       onViewProfile(talent && talent.id);    }      onViewProfile(talent && talent.id);
       onToggleSave(talent.id, !isSaved)
-=======
 onToggleSave(talent.id, !isSaved);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
   };
 
@@ -152,7 +145,6 @@ onToggleSave(talent.id, !isSaved);
             <div className='w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light relative'>;
               {' '}
               {/* Added relative for Image */}
-<<<<<<< HEAD
               {talent && talent.profile_picture_url && !avatarError ? (;
                 <Image
                   src={talent && talent.profile_picture_url}
@@ -187,8 +179,6 @@ import React, { useState } from 'react', // Import React and useState
 
 
 
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface TalentCardProps {
   talent: TalentProfile
   onViewProfile: (id: string) => void
@@ -196,7 +186,6 @@ export interface TalentCardProps {
   isSaved: boolean
   onToggleSave: (id: string, isSaved: boolean) => void
   isAuthenticated: boolean
-<<<<<<< HEAD
 
   talent: TalentProfile,
   onViewProfile: (id: string,) => void,
@@ -213,7 +202,6 @@ export interface TalentCardProps {
                   onError={() => setAvatarError(true)}
                   priority={false}
 
-=======
               {talent.profile_picture_url && !avatarError ? (
                 <Image
                   src={talent.profile_picture_url}
@@ -249,7 +237,7 @@ export interface TalentCardProps {
                 size="sm"
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
                 onClick = {handleToggleSave,}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />
                 <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>
@@ -262,16 +250,14 @@ export interface TalentCardProps {
             
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
               {talent.location && (
-<<<<<<< HEAD
                 <div className="flex items-center text-zion-slate-light">
 
 
 
                   <MapPin className="h-4 w-4 mr-1" />
-=======
                 <div className='flex items-center text-zion-slate-light'>
                   <MapPin className='h-4 w-4 mr-1' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <span>{talent.location}</span>
                 </div>
                 />;
@@ -290,7 +276,6 @@ export interface TalentCardProps {
 
 
               )}
-<<<<<<< HEAD
               {talent && talent.availability_type && (;
                 <div className='flex items-center text-zion-slate-light'>;
                   <Clock className='h-4 w-4 mr-1' />                  <span>{talent && talent.availability_type}</span>                <div className="flex items-center text-zion-slate-light">;
@@ -331,7 +316,6 @@ export interface TalentCardProps {
                   key={index}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light";
                 >;
-=======
               {talent.availability_type && (
 <div className='flex items-center text-zion-slate-light'>
                   <Clock className='h-4 w-4 mr-1' />
@@ -349,29 +333,25 @@ export interface TalentCardProps {
                   key={index}
                   className='px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light'
                 >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   {skill}
                 </span>;
               ))}
-<<<<<<< HEAD
               {(talent.skills?.length || 0) > 5 && (;
                 <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;
                   +{(talent.skills?.length || 0) - 5} more;
                 </span>;
-=======
               {(talent.skills?.length || 0) > 5 && (
 <span className='px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan'>
                   +{(talent.skills?.length || 0) - 5} more
                 </span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               )}
             </div>;
           </div>;
         )}
-<<<<<<< HEAD
 
 
-=======
 <div className='mt-5 flex items-center justify-between'>
           <div>
             {talent.hourly_rate ? (
@@ -385,12 +365,11 @@ export interface TalentCardProps {
           </div>
           <div className='flex items-center gap-2'>
             {isAuthenticated && (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <Button
                 size='sm'
                 variant='secondary'
                 onClick={handleRequestHire}
-<<<<<<< HEAD
                 className='bg-zion-purple hover:bg-zion-purple-light text-white'>                className="bg-zion-purple hover:bg-zion-purple-light text-white";
 ;
         <div className="mt-5 flex items-center justify-between">;
@@ -443,9 +422,6 @@ export interface TalentCardProps {
 
 
 ;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
                 className='bg-zion-purple hover:bg-zion-purple-light text-white'
               >
                 Hire
@@ -465,4 +441,4 @@ size='sm'
     </Card>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

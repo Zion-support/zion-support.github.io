@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -7,6 +6,18 @@ import { X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 interface SearchFilters {
+class ErrorBoundary extends React.Component {
+  // TODO: Implement
+}
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+import { X } from 'lucide-react
+import { Button } from '@/components/ui/button
+import { Badge } from '@/components/ui/badge
+interface SearchFilters {
+  // TODO: Implement
+pr-12325
   types: string[],
   category: string,
   minPrice: number,
@@ -14,6 +25,8 @@ interface SearchFilters {
   minRating: number,
   sort: string
 
+  sort: string;
+pr-12325
 import React from 'react',;
 import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
@@ -29,6 +42,10 @@ interface SearchFilters {;
 
 
 }
+
+
+
+pr-12325
 ;
 interface ActiveFiltersBarProps {;
   filters: SearchFilters,;
@@ -43,6 +60,9 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
   onClearAll,;
   className = '';
 }) => {;
+export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
+
+pr-12325
   const activeFilters: Array<{ key: string, label: string, value: string }> = [],;
   // Add type filters;
   filters.types.forEach(type => {;
@@ -112,6 +132,10 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
   className = '';
 },) => {;
   const activeFilters: Array<{ key: string, label: string, value: string }> = [],;
+</string>
+      return <div>Something went wrong.</div>;
+
+pr-12325
 
   // Add type filters;
   filters && filters.types.forEach(type => {;
@@ -139,6 +163,8 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
   }
 
   // Add price filter;
+</string>)
+pr-12325
   if (filters && filters.minPrice > 0 || filters && filters.maxPrice < 10000) {;
     activeFilters && activeFilters.push({;
       key: 'price',;
@@ -155,6 +181,15 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
       value: `${filters && filters.minRating}+ stars`;
     });
   }
+      value: `$${filters && filters.minPrice} - $${filters && filters.maxPrice}`;)
+    });
+
+  // Add rating filter;
+  if (filters && filters.minRating > 0) {;
+      key: 'rating',;
+      label: 'Rating',;`;
+      value: `${filters && filters.minRating}+ stars`;)
+pr-12325
 
   // Add sort filter (only if not default);
   if (filters && filters.sort !== 'relevance') {;
@@ -194,11 +229,15 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
 
 
         <Badge 
+        <Badge;
+pr-12325
           key = {filter.key,}
 
       
       {activeFilters.map(filter => (
         <Badge 
+
+pr-12325
           key={filter.key} 
 
 
@@ -274,6 +313,42 @@ export const ActiveFiltersBar: React.FC < ActiveFiltersBarProps> = ({
   onFiltersChange,
   onClearAll,
   class_name = '';
+          variant="secondary"""
+          className="flex items-center gap-1 pl-2 pr-1""
+        >
+"
+          <span className="text-xs">"
+</span>
+          </span>`;
+    <div className={`flex items-center gap-2 flex-wrap ${className}`}>;
+</div>"
+      <span className="text-sm font-medium text-muted-foreground">Active filters:</span>;"
+          key = {filter && filter.key,}"
+          className="flex items-center gap-1 pl-2 pr-1">;"
+          <span className="text-xs">;"
+          </span>;
+          <Button;"
+            variant="ghost"""
+            size="sm"""
+            className="h-4 w-4 p-0 hover:bg-transparent"")
+            onClick={() => removeFilter(filter.key)}
+            <X className="h-3 w-3" />"
+
+          
+        
+        size="sm""
+        onClick={onClearAll}
+
+        className="text-xs h-6 px-2""
+
+      
+    </div>
+export const ActiveFiltersBar: React.FC < ActiveFiltersBarProps> = ({
+  filters,
+  onFiltersChange,
+  onClearAll,"
+  class_name = ;')
+pr-12325
 }, ) => {
   const active_filters: Array<{ key: string, label: string, value: string }> = [],
   // Add type filters;
@@ -329,6 +404,32 @@ if ( {) {
 if ( {) {
   $2
 }
+    active_filters.push ({`;
+      key: `type-${type}`,
+      label: 'Type',
+      value: labels[type] || type;)
+  }),
+  // Add category filter;
+  // Check condition;
+if ( {) {
+  $2;
+    active_filters.push ({
+      key: 'category',
+      label: 'Category',
+      value: filters.category;)
+  // Add price filter;
+  // Check condition;
+      key: 'price',
+      label: 'Price',`;
+      value: `$${filters.min_price} - $${filters.max_price}`;)
+  // Add rating filter;
+  // Check condition;
+      key: 'rating',
+      label: 'Rating',`;
+      value: `${filters.min_rating}+ stars`;)
+  // Add sort filter (only if not default);
+  // Check condition;
+pr-12325
     const sort_labels: Record < string, string> = {
       price_asc: 'Price: Low to High',
       price_desc: 'Price: High to Low',
@@ -434,7 +535,6 @@ interface ActiveFiltersBarProps extends React && React.PropsWithChildren<{}> {;
         className="text-sm text-zion-slate-light hover: text-zion-cyan transition-colors underline"
       >
         Clear all
-<<<<<<< HEAD
       </button>
     </div>
   )}
@@ -449,9 +549,6 @@ interface ActiveFiltersBarProps extends React && React.PropsWithChildren<{}> {;
       </button>;
     </div>)}
 '";
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 import React from 'react';
 
 export default ActiveFiltersBar; import React from 'react'
@@ -473,4 +570,49 @@ interface ActiveFiltersBarProps {
   className?: string
 }
 export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+      key: 'sort',
+      label: 'Sort',
+      value: sort_labels[filters.sort] || filters.sort;)
+  const remove_filter = (filter_key: string, ) =>: any {
+  // TODO: Implement
+    if () {) {
+      const typeToRemove = filter_key.replace ('type-', ),
+      const new_types = filters.types.filter (t => t !== typeToRemove),
+      onFiltersChange ({ ...filters, types: new_types });
+    } else // Check condition;
+      onFiltersChange ({ ...filters, category:  });
+      onFiltersChange ({ ...filters, min_price: 0, max_price: 10000 });
+      onFiltersChange ({ ...filters, min_rating: 0 });
+      onFiltersChange ({ ...filters, sort: 'relevance' });
+  // Check condition;
+    return null;
+  return (`;
+    <div className={`flex items - center gap - 2 flex - wrap ${class_name}`}>;
+      <span className="text - sm font - medium text - muted - foreground">Active filters:</span>;"
+          key = {filter.key, }"
+          variant="secondary";""
+          className="flex items - center gap - 1 pl - 2 pr - 1";"
+        >;
+          <span className="text - xs">;"
+            variant="ghost";""
+            size="sm";""
+            className="h - 4 w - 4 p - 0 hover:bg - transparent";")
+            on_click = {(, ) => remove_filter (filter.key), }
+            <X className="h - 3 w - 3" />;"
+
+        ))}
+        size="sm";"
+        on_click = {onClearAll, }"
+        className="text - xs h - 6 px - 2";"
+
+    </div>);
+    </div>;
+interface ActiveFiltersBarProps extends React && React.PropsWithChildren<{}> {;
+
+  filters: Filter[];,
+  onRemoveFilter: key: string void;,
+  onClearAll: : unknown void}"
+        className="text-sm text-zion-slate-light hover: text-zion-cyan transition-colors underline""
+        Clear all;"`;
+pr-12325

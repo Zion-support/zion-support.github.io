@@ -6,7 +6,6 @@ const path = require('path')
     fs.appendFileSync(this.logFile, logMessage + '\n')
     this.log(' Starting Component Error Fixer...')
       this.log(' Component error fixing logic to be implemented')
-        "successRate"
-        "version"
-  console.error('Fatal "error")
-  console.error('Fatal "error")
+        "successRate"""
+        "version"""
+  console.error('Fatal "error")""

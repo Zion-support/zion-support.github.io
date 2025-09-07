@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   const [user, setUser] = useState<{;
     address: string;
     chain: 'evm' | 'sol';
@@ -7,7 +6,6 @@
 export default function AccountSettingsPage(req, res) {
   try {
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),;
-=======
 import React, { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 export default function AccountSettingsPage() {
@@ -15,7 +13,7 @@ export default function AccountSettingsPage() {
     address: string;
     chain: 'evm' | 'sol';
   } | null>(null);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
   const [ens, setEns] = useState('');
   const [lens, setLens] = useState('');
@@ -24,20 +22,17 @@ export default function AccountSettingsPage() {
   const [linking, setLinking] = useState(false);
   const [backupCid, setBackupCid] = useState('');
   const [restoreCid, setRestoreCid] = useState('');
-<<<<<<< HEAD
 
-=======
 const saved =
       typeof window !== 'undefined'
         ? window.localStorage.getItem('zion-web3-user')
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         : null;
     if (saved) setUser(JSON && JSON.parse(saved));
     const pref =;
       typeof window !== 'undefined';
         ? window && window.localStorage.getItem('zion-web3-display');
         : null;
-<<<<<<< HEAD
     setDisplayWeb3(pref === 'true');  }, []);
   const saveDisplayPref = (val: boolean) => {;
     setDisplayWeb3(val),;
@@ -45,7 +40,6 @@ const saved =
       window && window.localStorage.setItem('zion-web3-display', String(val));  };
 
   const linkDID = async () => {;
-=======
     setDisplayWeb3(pref === 'true');
   }, []);
 
@@ -56,13 +50,12 @@ if (typeof window !== 'undefined')
   };
 
   const linkDID = async () => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     if (!user) return;
     setLinking(true);
     setStatus(null);
     try {;
       const nonceRes = await fetch('/api/auth/nonce');
-<<<<<<< HEAD
       // Sign message with connected wallet if possible (best effort);
 import Head from 'next / head';
 export default /**
@@ -114,10 +107,9 @@ if (return) {
       const nonce_res = await fetch ('/api / auth / nonce');
       const { nonce } = await nonce_res.json ();
       const payload = {
-=======
       const { nonce } = await nonceRes.json();
 const payload = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         ens,
         lens,
         ceramic,
@@ -125,17 +117,15 @@ const payload = {
         address: user.address,
         chain: user.chain,
         nonce,
-<<<<<<< HEAD
         ts: Date.now (),
       }
       const msg = `Link Web3 identities to Zion account\n${JSON.stringify (payload)}`;
       // Sign message with connected wallet if possible (best effort);
-=======
         ts: Date.now(),
       };
       const msg = `Link Web3 identities to Zion account\n${JSON.stringify(payload)}`;
       // Sign message with connected wallet if possible (best effort)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       let signature: string | null = null;
       try {;
         if (user && user.chain === 'evm' && (window as any).ethereum) {;
@@ -149,10 +139,8 @@ const payload = {
           const enc = new TextEncoder().encode(msg);
           );
           const bs58 = (await import('bs58')).default;
-<<<<<<< HEAD
           signature = bs58 && bs58.encode(sig);        }
       } catch {}
-=======
           signature = bs58.encode(sig);
         }
       } catch {}
@@ -203,12 +191,11 @@ const res = await fetch(
       );
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error || 'Restore failed');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       const { user: u, preferences, did } = data;
       if (u) setUser(u);
       if (preferences) saveDisplayPref(!!preferences.displayWeb3);
       if (did) {
-<<<<<<< HEAD
       }
       const res = await fetch ('/api / backup / upload', {
         method: 'POST',
@@ -462,7 +449,6 @@ const res = await fetch(
   }
 }
   },
-=======
         setEns(did.ens || '');
         setLens(did.lens || '');
         setCeramic(did.ceramic || '');
@@ -474,19 +460,17 @@ setFarcaster(did.farcaster || '');
     }
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>
       <Head>
         <title>Account Settings — Zion</title>
       </Head>
-<<<<<<< HEAD
       <div className="max-w-3xl mx-auto space-y-8">
         <section className="rounded-xl border p-5">
           <h1 className="text-xl font-semibold mb-2">Account</h1>
           <p className="text-sm text-gray-500">Manage your Web3 identity and backups. Email is optional when using wallets.</p>
           <div className="mt-4 flex items-center justify-between">
-=======
 <div className='max-w-3xl mx-auto space-y-8'>
         <section className='rounded-xl border p-5'>
           <h1 className='text-xl font-semibold mb-2'>Account</h1>
@@ -495,17 +479,15 @@ setFarcaster(did.farcaster || '');
             wallets.
           </p>
           <div className='mt-4 flex items-center justify-between'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <div>
               <div className="text-sm font-medium">Display Web3 identity</div>
               <div className="text-xs text-gray-500">Show ENS/Lens name instead of email</div>
             </div>
-<<<<<<< HEAD
             <label className="inline-flex items-center cursor-pointer">
               <input type="checkbox" checked={displayWeb3} onChange={(e) => saveDisplayPref(e.target.checked)} className="sr-only" />
               <span className="relative inline-block w-10 h-6 bg-gray-300 rounded-full shadow-inner">
                 <span className={`absolute left-0 top-0 w-6 h-6 bg-white rounded-full transition-transform ${displayWeb3 ? 'translate-x-4' : ''}`}></span>
-=======
             <label className='inline-flex items-center cursor-pointer'>
               <input
                 type='checkbox'
@@ -517,12 +499,11 @@ setFarcaster(did.farcaster || '');
                 <span
                   className={`absolute left-0 top-0 w-6 h-6 bg-white rounded-full transition-transform ${displayWeb3 ? 'translate-x-4' : ''}`}
                 ></span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </span>
             </label>
           </div>
         </section>
-<<<<<<< HEAD
           <h2 className="font-semibold mb-2">Link Web3 identities</h2>
           <div className="grid grid-cols-1 gap-3">
             <input value={ens} onChange={(e) => setEns(e.target.value)} placeholder="ENS (e.g. vitalik.eth)" className="w-full rounded-md border px-3 py-2" />
@@ -530,7 +511,6 @@ setFarcaster(did.farcaster || '');
             <input value={ceramic} onChange={(e) => setCeramic(e.target.value)} placeholder="Ceramic DID (did:3:...)" className="w-full rounded-md border px-3 py-2" />
             <input value={farcaster} onChange={(e) => setFarcaster(e.target.value)} placeholder="Farcaster handle (e.g. @alice)" className="w-full rounded-md border px-3 py-2" />
             <button onClick={linkDID} disabled={linking} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-4 py-2">{linking ? 'Linking…' : 'Link & Verify'}</button>
-=======
 
 <section className='rounded-xl border p-5'>
           <h2 className='font-semibold mb-2'>Link Web3 identities</h2>
@@ -566,7 +546,7 @@ setFarcaster(did.farcaster || '');
             >
               {linking ? 'Linking…' : 'Link & Verify'}
             </button>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </section>
 
@@ -598,7 +578,6 @@ setFarcaster(did.farcaster || '');
 }
       </div>
     </>
-<<<<<<< HEAD
   )
   } catch (error) {
     console.error("Error:", error);
@@ -607,6 +586,5 @@ setFarcaster(did.farcaster || '');
 }
 
 
-=======
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

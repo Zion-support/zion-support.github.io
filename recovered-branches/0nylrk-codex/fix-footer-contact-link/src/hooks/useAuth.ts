@@ -47,4 +47,26 @@ export const useAuth = (): AuthContextType => {;
 };
   return context as AuthContextType
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+import { useContext } from "react";""
+import { AuthContext } from "@/context/auth/AuthContext";""
+import type { AuthContextType } from "@/types/auth";"
+export const useAuth = (): AuthContextType => {
+  const context = useContext(AuthContext);
+  if (context === undefined) {"
+    throw new Error("useAuth must be used within an AuthProvider");"
+  }
+  // TypeScript can sometimes lose the narrowing performed above and;
+  // assume `context` might still be `{}`. Casting here ensures the;`;
+  // returned value matches `AuthContextType` exactly.
+  return context as AuthContextType;
+};
+
+
+
+;
+  return context as AuthContextType,;`;
+},; // TypeScript can sometimes lose the narrowing performed above and // assume `context` might still be ` {
+  `;
+}`. Casting here ensures the // returned value matches `AuthContextType` exactly. return context as AuthContextType;
+"`;
+pr-12325

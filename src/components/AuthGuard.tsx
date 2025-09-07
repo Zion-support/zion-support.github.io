@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       const redirectTo = options?.redirectTo |'/login'
-=======
 const redirectTo = options?.redirectTo |'/login'
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       const returnUrl = options?.returnUrl |router.asPath
           if (!requireAuth({ showToast: false })) return false
     const userRoles = user?.role ? [user.role] : []
@@ -14,8 +10,6 @@ const redirectTo = options?.redirectTo |'/login'
     isAuthenticated
     user
 
-<<<<<<< HEAD
-=======
 
 
       const redirectTo = options?.redirectTo || '/login';
@@ -26,7 +20,6 @@ const redirectTo = options?.redirectTo |'/login'
     // Don't redirect while auth is still loading
     if (isLoading) return,
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const userRoles = user?.role ? [user && user.role] : [];
 
     requireAuth;
@@ -36,8 +29,6 @@ const redirectTo = options?.redirectTo |'/login'
     user;
     isLoading}
 }
-<<<<<<< HEAD
-=======
 
 
 
@@ -55,8 +46,6 @@ const redirectTo = options?.redirectTo |'/login'
     is_loading}
 }
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 import React, { useEffect } from 'react';
 import { useRouter  } from 'next/router';
 import { useAuth  } from '@/hooks/useAuth';
@@ -296,4 +285,4 @@ return false;
 }'"
     isLoading}
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

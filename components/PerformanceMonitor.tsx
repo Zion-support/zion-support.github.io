@@ -1,7 +1,19 @@
+use client';
+
+import React, { useEffect, useState } from 'react';
+
+interface PerformanceData {
+  domContentLoaded: number;
+  loadComplete: number;
+  totalLoadTime: number;
+  firstPaint: number;
+  firstContentfulPaint: number;
+  resourceCount: number;
+pr-12325
   memory: {
-    used: number
-    total: number
-    limit: number
+    used: number;
+    total: number;
+    limit: number;
   } | null;
 }
 import React, { useEffect } from 'react';
@@ -38,9 +50,17 @@ import React, { useEffect, useState } from 'react' from 'react'';interface Perfo
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
 
-interface PerformanceMonitorProps {;
-  onPerformanceData?: (data: PerformanceData) => void,;
-}
+interface PerformanceMonitorProps {
+  onPerformanceData?: (data: PerformanceData) => void;
+
+// Extend the Window interface to include performance
+declare global {
+  interface Window {
+    performance: Performance;
+pr-12325
+
+export default function PerformanceMonitor({ onPerformanceData }: PerformanceMonitorProps) {
+  const [performanceData, setPerformanceData] = useState<PerformanceData | null>(null);
 
 // Extend the Window interface to include performance;
 declare global {;
@@ -328,39 +348,38 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
       ] })
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     }
+  useEffect(() => {
+    const collectPerformanceData = () => {
+      if (typeof window === 'undefined' || !window.performance) {
+        return;
+pr-12325
 
-    const measurePerformance = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint');
-      
-      const performanceData = {
-        // Navigation timing
+      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paintEntries = window.performance.getEntriesByType('paint');
+      const resources = window.performance.getEntriesByType('resource');
+
+      const firstPaint = paintEntries.find(entry => entry.name.includes('first-paint'))?.startTime || 0;
+      const firstContentfulPaint = paintEntries.find(entry => entry.name.includes('first-contentful-paint'))?.startTime || 0;
+
+      const data: PerformanceData = {
         domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
         loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
         totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
-        
-        // Paint timing
-        firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
-        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-        
-        // Resource timing
-        resourceCount: performance.getEntriesByType('resource').length,
-        
-        // Memory usage (if available)
-        memory: (performance as any).memory ? {
-          used: (performance as any).memory.usedJSHeapSize,
-          total: (performance as any).memory.totalJSHeapSize,
-          limit: (performance as any).memory.jsHeapSizeLimit
+        firstPaint,
+        firstContentfulPaint,
+        resourceCount: resources.length,
+        memory: (window.performance as any).memory ? {
+          used: (window.performance as any).memory.usedJSHeapSize,
+          total: (window.performance as any).memory.totalJSHeapSize,
+          limit: (window.performance as any).memory.jsHeapSizeLimit
         } : null
       };
 pr-12243
 import React, { useEffect, useState } from 'react';
+pr-12325
 
-interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-}
+      setPerformanceData(data);
+      onPerformanceData?.(data);
 
 interface PerformanceMetrics {
   lcp?: number;
@@ -437,11 +456,12 @@ origin/cursor/analyze-improve-and-deploy-application-347d
     };
 
     // Measure performance after page load
+    // Collect data when component mounts
+pr-12325
     if (document.readyState === 'complete') {
-      measurePerformance();
+      collectPerformanceData();
     } else {
-      window.addEventListener('load', measurePerformance);
-    }
+      window.addEventListener('load', collectPerformanceData);
 
     return () => {
       observer.disconnect ();
@@ -716,14 +736,23 @@ pr-12243
 origin/cursor/analyze-improve-and-deploy-application-347d
     }
   }, []);
+      window.removeEventListener('load', collectPerformanceData);
+  }, [onPerformanceData]);
+pr-12325
 
-  if (!metrics) return null;
+  if (!performanceData) {
+    return null;
 
   return (
-    <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs">
-      <div>Load: {metrics.loadTime.toFixed(2)}ms</div>
-      <div>Render: {metrics.renderTime.toFixed(2)}ms</div>
-      <div>Memory: {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</div>
+    <div className="performance-monitor fixed bottom-4 left-4 z-50 bg-black bg-opacity-75 text-white text-xs p-2 rounded font-mono">
+      <div>DOM Load: {performanceData.domContentLoaded.toFixed(2)}ms</div>
+      <div>Total Load: {performanceData.totalLoadTime.toFixed(2)}ms</div>
+      <div>First Paint: {performanceData.firstPaint.toFixed(2)}ms</div>
+      <div>FCP: {performanceData.firstContentfulPaint.toFixed(2)}ms</div>
+      <div>Resources: {performanceData.resourceCount}</div>
+      {performanceData.memory && (
+        <div>Memory: {(performanceData.memory.used / 1024 / 1024).toFixed(1)}MB</div>
+      )}
     </div>
   );
 };
@@ -734,3 +763,5 @@ export default PerformanceMonitor;
 
 export default PerformanceMonitor;
 origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
+  );
+pr-12325

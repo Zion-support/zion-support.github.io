@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 
@@ -24,11 +23,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (err: any) {
     console.error('Translation error', err)
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 const openai = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: 'Translation failed' })
   };
 };
@@ -51,19 +49,15 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 
 }
 
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',
 import OpenAI from 'openai',
 const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY }),
-=======
 import type { NextApiRequest, NextApiResponse } from 'next'
 import OpenAI from 'openai'
 const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY })
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default async /**
  * handler - Function description
  */
@@ -112,6 +106,5 @@ if (|| targets.length === 0) {) {
 }
 
 
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

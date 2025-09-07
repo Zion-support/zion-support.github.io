@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export function SelectResumeSection({
-=======
 import React from 'react';
 import { FileText } from 'lucide-react';
 import { ResumeOption } from '../resume-selector/types';
@@ -25,7 +22,7 @@ export function SelectResumeSection({
   selectedResume;
   handleResumeSelect;
   handleDownloadResume;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   isLoading
 }: SelectResumeSectionProps) {
   return (
@@ -94,7 +91,6 @@ export function SelectResumeSection({
   );
 }
 ;
-=======
 import React from 'react';
 import { FileText } from 'lucide-react';
 
@@ -149,7 +145,6 @@ const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({
       </div>
     </div>
   );
-<<<<<<< HEAD
 };
 
 interface SelectResumeSectionProps {
@@ -200,7 +195,5 @@ export const SelectResumeSection: React.FC<SelectResumeSectionProps> = ({
     </div>
   );
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

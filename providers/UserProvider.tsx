@@ -1,25 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
-<<<<<<< HEAD
-=======
 import React, {;
   createContext,;
   useContext,;
   useEffect,;
   useMemo,;
   useState,;} from 'react';} from 'react';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
 import React, {
   createContext,
   useContext,
@@ -28,50 +17,39 @@ import React, {
 useState,;
 } from 'react';
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
+origin/cursor/automate-test-improve-and-merge-code-2533
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+pr-12325
 export type UserRole = 'client' | 'talent';
-
 export type User = {
 id: string;
+  id: string;,
+pr-12325
   name: string;
-  email: string;
+  email: string;,
   role: UserRole;
   avatar?: string;
-  createdAt: string;
+  createdAt: string;,
   updatedAt: string;
 };
 
 export interface UserContextType {
-  user: User | null;
+  // TODO: Implement
+}
+  user: User | null;,
   loading: boolean;
   login: (email: string, password: string) => Promise<void>;
   logout: () => void;
-<<<<<<< HEAD
+</void>
+pr-12325
   updateUser: (userData: Partial<User>) => Promise<void>;
-}
 
 const UserContext = createContext<UserContextType | undefined>(undefined);
-
-export const useUser = () => {
-  const context = useContext(UserContext);
-  if (context === undefined) {
-    throw new Error('useUser must be used within a UserProvider');
-  }
-  return context;
-};
-
-interface UserProviderProps {
-  children: React.ReactNode;
-}
 
 export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
-=======
   completeOnboarding: () => void;
 };
 
@@ -85,26 +63,14 @@ id: 'u_001',
 
 export function UserProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12325
 
-  useEffect(() => {
-    // Check for existing user session
-    const storedUser = localStorage.getItem('user');
-    if (storedUser) {
-      try {
-        setUser(JSON.parse(storedUser));
-      } catch (error) {
-        console.error('Error parsing stored user:', error);
-        localStorage.removeItem('user');
-      }
-    }
-    setLoading(false);
-  }, []);
+  const [user, setUser] = useState<User | null>(null);
 
   const login = async (email: string, password: string): Promise<void> => {
     setLoading(true);
     try {
-<<<<<<< HEAD
       // Mock login logic - replace with actual authentication
       const mockUser: User = {
         id: '1',
@@ -130,39 +96,15 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
     localStorage.removeItem('user');
   };
 
+pr-12325
   const updateUser = async (userData: Partial<User>): Promise<void> => {
-    if (!user) return;
-    
-    const updatedUser = {
-      ...user,
-      ...userData,
-      updatedAt: new Date().toISOString(),
-    };
-    
-    setUser(updatedUser);
-    localStorage.setItem('user', JSON.stringify(updatedUser));
-  };
-
-  const contextValue = useMemo(
-    () => ({
-      user,
-      loading,
-      login,
-      logout,
-      updateUser,
-    }),
-    [user, loading]
-  );
 
   return <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>;
 };
 
 export default UserProvider;
 export default UserProvider;
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
 if (user) localStorage.setItem('zion.user', JSON.stringify(user));
       else localStorage.removeItem('zion.user');
     } catch {}
@@ -185,6 +127,5 @@ export function useUser() {
   const ctx = useContext(UserContext);
   if (!ctx) throw new Error('useUser must be used within UserProvider');
   return ctx;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12325

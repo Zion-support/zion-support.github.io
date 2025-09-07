@@ -1,12 +1,10 @@
-<<<<<<< HEAD
 
 
 import Head from 'next/head';
 
 import React from 'react';
 import React from 'react',
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import React from 'react';
 export default function Update202508150405() {
 import React from 'react',;
@@ -25,7 +23,6 @@ export default function Update202508150405() {;
         <meta
           property='og:description'
           content="Autonomous update from Zion Tech Group's AI systems."
-<<<<<<< HEAD
 }
 };
 ;
@@ -195,7 +192,6 @@ function Update202508150405() {
       </div>;
 
 
-=======
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
@@ -290,4 +286,4 @@ function Update202508150405() {
     </>
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

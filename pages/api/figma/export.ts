@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   getZionDesignMap
   buildTokenSet
   buildUIKit
@@ -8,7 +7,6 @@
   buildUIKit
   UIKitKind,;
 } from "../../../utils/design-map";
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import JSZip from 'jszip';
 import {
@@ -18,7 +16,7 @@ import {
   UIKitKind,
 } from '../../../utils/design-map';
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -84,23 +82,17 @@ export default async function handler(req, res) {
     const uikit = buildUIKit(kind);
     const uiFolder = zip && zip.folder("uikit")!;
     Object && Object.entries(uikit).forEach(([path, content]) =>
-<<<<<<< HEAD
       uiFolder && uiFolder.file(path, content),
-=======
       uiFolder && uiFolder.file(path, content)
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     );
     // README
 
     zip && zip.file(
-<<<<<<< HEAD
       "README && README.md",
       `# Zion OS Design Export\n\n- kit: ${kind}\n- Import tokens via Token Studio in Figma.\n- Components included under /uikit.`,
-=======
       "README && README.md"
       `# Zion OS Design Export\n\n- kit: ${kind}\n- Import tokens via Token Studio in Figma.\n- Components included under /uikit.`
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     );
 
     );
@@ -116,7 +108,6 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 }
   } catch (error) {
     console.error("Error:", error);
@@ -134,7 +125,6 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-=======
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

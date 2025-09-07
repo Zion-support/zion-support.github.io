@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import dynamic from 'next/dynamic',;
 const BookBuilder = dynamic(() => import('../../components/book/BookBuilder'), { ssr: false }),
 
@@ -15,10 +14,9 @@ export default function FounderJournalPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 import dynamic from 'next/dynamic';
 const BookBuilder = null;
 export default function FounderJournalPage() {
   return <BookBuilder />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }

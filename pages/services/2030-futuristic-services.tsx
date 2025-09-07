@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',;
 import Head from 'next/head',;
 import { motion } from 'framer-motion',;
@@ -32,7 +31,6 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Clock, Users, Zap, Shield, Brain, Rocket, Atom, Globe, Target, Microscope, Phone, Mail, MapPin } from 'lucide-react';
-=======
 import {
   ArrowRight,
   Star,
@@ -51,7 +49,7 @@ import {
   Mail,
   MapPin,;
 } from 'lucide-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import UltraFuturisticBackground2031 from '../../components/ui/UltraFuturisticBackground2031';
 import UltraFuturisticNavigation2031 from '../../components/layout/UltraFuturisticNavigation2031';
 import UltraFuturisticFooter2030 from '../../components/layout/UltraFuturisticFooter2030';
@@ -61,7 +59,6 @@ import { enterpriseITSolutions2030 } from '../../data/2030-enterprise-it-solutio
 import { spaceMetaverseTechServices2030 } from '../../data/2030-space-metaverse-tech';
 import { innovativeMicroSaasServices2030 } from '../../data/2030-innovative-micro-saas';
 import { researchDevelopmentServices2030 } from '../../data/2030-research-development';
-<<<<<<< HEAD
     {
       title: '⚛️ Quantum & Emerging Tech 2030',
       icon: Atom,
@@ -166,7 +163,6 @@ export default function FuturisticServices2030Page(req, res) {
         <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image-2030.jpg" />
 
 
-=======
 
   ];
 
@@ -275,12 +271,11 @@ description: 'Breakthrough research and development solutions',
         />
 
         {/* Structured Data */}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-<<<<<<< HEAD
               "url": "https://ziontechgroup.com/services/2030-futuristic-services"
               "contactPoint": {
                 "@type": "ContactPoint"
@@ -289,7 +284,6 @@ description: 'Breakthrough research and development solutions',
                 "email": "kleber@ziontechgroup.com"
               }
             })
-=======
               '@context': 'https://schema.org',
               '@type': 'Service',
               name: '2030 Futuristic Technology Services',
@@ -308,7 +302,7 @@ description: 'Breakthrough research and development solutions',
                 email: 'kleber@ziontechgroup.com',
               },
             }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           }}
         />
       </Head>
@@ -316,7 +310,6 @@ description: 'Breakthrough research and development solutions',
         {/* Ultra Advanced Navigation */}
         <UltraFuturisticNavigation2031 />
         {/* Hero Section */}
-<<<<<<< HEAD
                 } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -365,7 +358,6 @@ description: 'Breakthrough research and development solutions',
               transition={{ duration: 0.8 }} className="text-center mb-16">
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-8">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-=======
 <section className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
           <div className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/20 to-cyan-900/20'></div>
 
@@ -378,7 +370,7 @@ description: 'Breakthrough research and development solutions',
             >
               <h1 className='text-5xl md:text-7xl font-bold text-white mb-8'>
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   2030 Futuristic
                 </span>
                 <br />
@@ -386,7 +378,6 @@ description: 'Breakthrough research and development solutions',
                   Technology Services
                 </span>
               </h1>
-<<<<<<< HEAD
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
                 Experience the future with our revolutionary 2030 technology services. 
                 From AI consciousness to space mining, quantum computing to metaverse development - 
@@ -397,18 +388,16 @@ description: 'Breakthrough research and development solutions',
 
 
                 we're building tomorrow's solutions today.
-=======
               <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8'>
                 Experience the future with our revolutionary 2030 technology
                 services. From AI consciousness to space mining, quantum
                 computing to metaverse development - we're building tomorrow's
                 solutions today.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
               <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
-<<<<<<< HEAD
                   whileHover={{ scale: 1.05 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -417,16 +406,14 @@ description: 'Breakthrough research and development solutions',
 
 
                   whileTap={{ scale: 0.95 }} className="px-8 py-4 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:via-purple-600 hover:to-pink-600 transition-all duration-200">
-=======
                   whileTap={{ scale: 0.95 }}
                   className='px-8 py-4 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:via-purple-600 hover:to-pink-600 transition-all duration-200'
                 >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   Get Started Today
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
-<<<<<<< HEAD
                   whileHover={{ scale: 1.05 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -435,16 +422,14 @@ description: 'Breakthrough research and development solutions',
 
 
                   whileTap={{ scale: 0.95 }} className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200">
-=======
 whileTap={{ scale: 0.95 }}
                   className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200'
                 >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   View Pricing
                 </motion.button>
               </div>
             </motion.div>
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
               {[
                 { icon: Users, label: 'Active Customers', value: '2,847+', color: 'text-cyan-400' }
@@ -461,7 +446,6 @@ whileTap={{ scale: 0.95 }}
                 { icon: Users, label: 'Active Customers', value: '2,847+', color: 'text-cyan-400' },
                 { icon: TrendingUp, label: 'Success Rate', value: '99.8%', color: 'text-emerald-400' },
                 { icon: Zap, label: 'Innovation Level', value: 'Revolutionary', color: 'text-purple-400' },
-=======
             {/* Stats */}
 <div className='grid grid-cols-1 md:grid-cols-4 gap-8 mb-16'>
               {[
@@ -489,7 +473,7 @@ whileTap={{ scale: 0.95 }}
                   value: 'Quantum-Safe',
                   color: 'text-pink-400',
                 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 { icon: Shield, label: 'Security Rating', value: 'Quantum-Safe', color: 'text-pink-400' }
               ].map((stat, index) => (
                 <motion.div
@@ -497,7 +481,6 @@ whileTap={{ scale: 0.95 }}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
             {/* Stats */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -593,11 +576,10 @@ whileTap={{ scale: 0.95 }}
 
 
                   viewport={{ once: true }} className="text-center">
-=======
 viewport={{ once: true }}
                   className='text-center'
                 >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className={`text-4xl mb-2 ${stat.color}`}>
                     <stat.icon className='w-12 h-12 mx-auto mb-4' />
                   </div>
@@ -615,11 +597,9 @@ viewport={{ once: true }}
 
             <div className='max-w-7xl mx-auto relative z-10'>
               <motion.div
-<<<<<<< HEAD
                 viewport={{ once: true }} className="text-center mb-16">
                 <div className={`w-20 h-20 bg-gradient-to-r ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
                   <category.icon className="w-10 h-10 text-white" />
-=======
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
@@ -630,28 +610,26 @@ viewport={{ once: true }}
                   className={`w-20 h-20 bg-gradient-to-r ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}
                 >
                   <category.icon className='w-10 h-10 text-white' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
                 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                   <span className='bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>
                     {category.title}
                   </span>
                 </h2>
-<<<<<<< HEAD
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 </p>
               </motion.div>
 
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
                 <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                   {category.description}
                 </p>
               </motion.div>
 
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 {category.services.map((service, serviceIndex) => (
                   <motion.div
                     key={service.id}
@@ -659,7 +637,6 @@ viewport={{ once: true }}
                     whileInView={{ opacity: 1, coordinate_y: 0 }}
                     transition={{ duration: 0.6, delay: service_index * 0.1 }}
                     viewport={{ once: true }}
-<<<<<<< HEAD
                     whileHover={{ y: -5 }} className="group cursor-pointer">
                     <div className="p-6 rounded-2xl bg-gradient-to-br from-gray-900/60 to-gray-800/60 border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 backdrop-blur-sm">
                       <div className="text-4xl mb-4">{service.icon}</div>
@@ -669,7 +646,6 @@ viewport={{ once: true }}
                         <div className="flex items-center justify-between">
                           <span className="text-cyan-400 font-semibold">{service.price}{service.period}</span>
                           <span className="text-xs text-purple-400 bg-purple-400/10 px-2 py-1 rounded-full">
-=======
 whileHover={{ y: -5 }}
                     className='group cursor-pointer'
                   >
@@ -690,7 +666,7 @@ whileHover={{ y: -5 }}
                           </span>
                           <span className='text-xs text-purple-400 bg-purple-400/10 px-2 py-1 rounded-full'>
                             {service.innovationLevel}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                           </span>
                         </div>
 
@@ -718,10 +694,8 @@ whileHover={{ y: -5 }}
                       </div>
                     </div>
                   </motion.div>
-<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-=======
                 ))}
               </div>
             </div>
@@ -730,7 +704,7 @@ whileHover={{ y: -5 }}
         {/* Contact CTA Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
               initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
@@ -760,7 +734,6 @@ whileHover={{ y: -5 }}
                   Future of Technology?
                 </span>
               </h2>
-<<<<<<< HEAD
               <p className="text-xl text-gray-300 mb-8">
                 Contact our team of technology experts to discuss how our revolutionary 2030 services 
                 Contact our team of technology experts to discuss how our revolutionary 2030 services
@@ -820,23 +793,20 @@ whileHover={{ y: -5 }}
 
 
                 can transform your business and propel you into the future.
-=======
               <p className='text-xl text-gray-300 mb-8'>
                 Contact our team of technology experts to discuss how our
                 revolutionary 2030 services can transform your business and
                 propel you into the future.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
 
               <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>
                 <motion.button
-<<<<<<< HEAD
                   whileTap={{ scale: 0.95 }} className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200">
                   Schedule Consultation
                 </motion.button>
                 <motion.button
                   whileTap={{ scale: 0.95 }} className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200">
-=======
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200'
@@ -848,7 +818,7 @@ whileHover={{ y: -5 }}
 whileTap={{ scale: 0.95 }}
                   className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200'
                 >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   View Pricing
                 </motion.button>
               </div>
@@ -922,13 +892,11 @@ whileTap={{ scale: 0.95 }}
           </div>;
         </section>;
         {/* Footer */}
-<<<<<<< HEAD
         <UltraFuturisticFooter2030 />;
       </UltraFuturisticBackground2031>;
 
-=======
         <UltraFuturisticFooter2030 />
       </UltraFuturisticBackground2031>
     </>
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

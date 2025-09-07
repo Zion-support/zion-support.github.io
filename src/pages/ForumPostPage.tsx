@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Mock data for a forum post
 const mockPost: ForumPost = {
   id: "1",
@@ -353,7 +352,6 @@ if (return) {
   const formatted_date = format (new Date (post.created_at), "MMMM d, yyyy 'at' h: mm a"),
 }
   );
-=======
 import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -499,5 +497,5 @@ downvotes: 0 ;
 }</div> </div> </div> </>) ;
 }'"
   )
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }

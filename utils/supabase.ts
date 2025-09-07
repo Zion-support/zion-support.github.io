@@ -78,3 +78,9 @@ export const supabase = createSupabaseClient(supabaseConfig);
   })
 };
 
+  auth: {,
+  getUser: () => Promise<any>;
+</any>
+    signIn: (credentials: any) => Promise<any>;
+    signOut: () => Promise<any>;
+pr-12325

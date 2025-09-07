@@ -1,4 +1,10 @@
 #!/bin/bash
+<<<<<<< HEAD
+=======
+
+# Deployment script for production
+set -e
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 echo "🚀 Starting deployment process..."
 

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import useSWR from 'swr',
 import EnhancedLayout from '../../components / layout / EnhancedLayout',
 import Link from 'next / link',
@@ -13,7 +12,6 @@ function DisputesIndexPage() {
           <Link href="/disputes/new"><a className="text-sm text-blue-700 hover:underline">Raise Dispute</Link></Link>
 
 
-=======
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 export default function DisputesIndexPage() {
   const { data } = useSWR('/api/disputes', fetcher)
@@ -28,7 +26,7 @@ export default function DisputesIndexPage() {
               Raise Dispute
             </a>
           </Link>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
         <div className='overflow-auto border rounded'>
           <table className='min-w-full text-sm'>
@@ -42,7 +40,6 @@ export default function DisputesIndexPage() {
             </thead>
             <tbody>
               {disputes.map((d: any) => (
-<<<<<<< HEAD
                 <tr key={d.id} className="border-t">
 
 
@@ -55,7 +52,6 @@ export default function DisputesIndexPage() {
                 </tr>
               ))}
               {disputes.length === 0 && (
-=======
 <tr key={d.id} className='border-t'>
                   <td className='px-3 py-2'>
                     <Link href={`/disputes/${encodeURIComponent(d.id)}`}>
@@ -78,14 +74,13 @@ export default function DisputesIndexPage() {
                     No disputes yet
                   </td>
                 </tr>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               )}
             </tbody>
           </table>
         </div>
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
   );
 };
               )  } catch (error) {
@@ -133,6 +128,5 @@ export default function DisputesIndexPage() {
 }
 
 
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

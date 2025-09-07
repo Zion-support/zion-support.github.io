@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {useState} from "react"
 import {logDebug, logErrorToProduction} from '@/utils/productionLogger'
 import {useToast} from "@/hooks/use-toast"
@@ -22,7 +18,6 @@ import {Sparkles, Loader2} from 'lucide-react'
 import {z} from "zod"
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary"
 const serviceStepSchema = z.object({
-<<<<<<< HEAD
 export function QuoteRequestForm() {
   const router = useRouter()
   const { toast } = useToast()
@@ -39,14 +34,34 @@ export function QuoteRequestForm() {
   const [autoFillLoading, setAutoFillLoading] = useState(false),
   const [autoFillOpen, setAutoFillOpen] = useState(false),
   
-=======
 
 
+import {useState} from "react"""
+import {logDebug, logErrorToProduction} from '@/utils/productionLogger
+import {useToast} from "@/hooks/use-toast"""
+import {useRouter} from 'next/router
+import {Button} from "@/components/ui/button"""
+import {Card, CardContent} from "@/components/ui/card"""
+import {GradientHeading} from "@/components/GradientHeading"""
+import {StepProgress} from "@/components/QuoteRequestForm/StepProgress"""
+import {ServiceTypeStep} from "@/components/QuoteRequestForm/ServiceTypeStep"""
+import {ProjectDetailsStep} from "@/components/QuoteRequestForm/ProjectDetailsStep"""
+import {TimelineStep} from "@/components/QuoteRequestForm/TimelineStep"""
+import {BudgetStep} from "@/components/QuoteRequestForm/BudgetStep"""
+import {SummaryStep} from "@/components/QuoteRequestForm/SummaryStep"""
+import {AutoFillModal} from "@/components/QuoteRequestForm/AutoFillModal"""
+import {QuoteFormData} from "@/types/quotes"""
+import {Sparkles, Loader2} from 'lucide-react
+import {z} from "zod"""
+export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary""
+const serviceStepSchema = z.object({
+
+)
+pr-12325
   serviceType: z.string().min(1),
   specificItem: z.object({ id: z.string() })}),
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const [formData, setFormData] = useState<QuoteFormData>({
     serviceType: ""
     serviceCategory: ""
@@ -61,20 +76,15 @@ export function QuoteRequestForm() {
       type: "fixed"
 
 
-<<<<<<< HEAD
-=======
     },
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     contactInfo: {
       name: ""
       email: ""
       phone: ""
       company: ""
     }
-<<<<<<< HEAD
-=======
 
 
 import {useState} from "react";
@@ -135,7 +145,6 @@ export function QuoteRequestForm() {;
   );
 }
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   )
 }
@@ -199,12 +208,8 @@ function QuoteRequestForm() {
 }
   );
 }
-<<<<<<< HEAD
-=======
 
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 import { useState } from "react";
 import { logDebug, logErrorToProduction  } from '@/utils/productionLogger';
 import { useToast } from "@/hooks/use-toast";
@@ -364,4 +369,43 @@ const renderStepContent = () => {;
 }'"
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+  const [formData, setFormData] = useState<QuoteFormData>({
+)"
+  const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service");"
+
+  const [formData, setFormData] = useState<QuoteFormData>({;
+  const updateFormData = (data: Partial<QuoteFormData>,) => {;
+"
+  const [current_step, setCurrentStep] = useState < QuoteRequestSteps>("service");"
+  const [is_submitting, setIsSubmitting] = useState (false);
+  const [autoFillLoading, setAutoFillLoading] = useState (false);
+  const [autoFillOpen, setAutoFillOpen] = useState (false);
+  const [form_data, setFormData] = useState < QuoteFormData>({"
+    service_type: "",""
+    service_category: "","
+    specific_item: null,"
+    project_name: "",""
+    project_description: "","
+    start_date: undefined,
+    end_date: undefined,"
+    timeline: "flexible","
+    budget: {,
+  amount: 0,"
+      type: "fixed";"
+    }
+    contact_info: {,"
+  name: "",""
+      email: "",""
+      phone: "",""
+      company: "";"
+    })
+  });
+  const updateFormData = (data: Partial < QuoteFormData>, ) =>: any {
+  // TODO: Implement
+    setFormData (prev => ({
+      ...prev;
+  );
+
+;"
+pr-12325

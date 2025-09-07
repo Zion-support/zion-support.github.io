@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import MainLayout from '../components/layout/MainLayout';
 
 const Page = () => {
@@ -19,13 +17,9 @@ const Page = () => {
   );
 };
 
-<<<<<<< HEAD
-=======
 export default Page;
-=======
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
   ArrowRight
@@ -130,7 +124,6 @@ const stats = [
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
 
-=======
 import React from 'react',
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -150,7 +143,7 @@ export default function CaseStudiesPage() {
           </div>
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -489,7 +482,6 @@ import Head from 'next/head';
 
 import Head from 'next/head';
 
-<<<<<<< HEAD
 
 
 
@@ -501,7 +493,6 @@ import Head from 'next/head';
         <meta
           name='description'
           content='Proven outcomes across AI, IT, and micro SaaS deployments.'
-=======
 export default function CaseStudies() {
   const caseStudies = [
     {
@@ -626,10 +617,9 @@ export default function CaseStudies() {
             </div>
           </div>
         </section>
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 
-<<<<<<< HEAD
 
 import Head from 'next/head';
 
@@ -642,7 +632,6 @@ import Head from 'next/head';
   );
 
  </Head> </section> </Layout>
-<<<<<<< HEAD
 export default function CaseStudiesPage() {
 import Layout from '../components/layout/Layout';
 export default function CaseStudiesPage() {
@@ -738,13 +727,7 @@ import Layout from '../components / Layout';
 ;
 
 
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
+origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Case Studies */}
         <section id="case-studies" className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
@@ -889,4 +872,4 @@ import Layout from '../components / Layout';
 </>
   );
 }
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

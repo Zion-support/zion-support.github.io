@@ -1,63 +1,40 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
 console.log('🔧 Fixing syntax errors in the codebase...');
-
-// Function to fix common syntax errors
+// Function to fix common syntax errors;
 function fixSyntaxErrors(filePath) {
   try {
+  // TODO: Implement
+}
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-<<<<<<< HEAD
 
-    // Fix common syntax errors
-    const fixes = [
-      // Fix files that start with just a closing brace
-      {
-        pattern: /^[\s\n]*\}\s*$/,
-        replacement: `import type { NextApiRequest, NextApiResponse } from 'next';\n\nexport default async function handler(req: NextApiRequest, res: NextApiResponse) {\n  res.status(200).json({ message: 'API endpoint' });\n}`
+        replacement: 
       },
-      // Fix merge conflict markers
-      {
-        pattern: /<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g,
-        replacement: ''
-      },
-      // Fix malformed function declarations
+      // Fix malformed function declarations;
       {
         pattern: /^[\s\n]*\}[\w\s]*\([\s\S]*?\)\s*\{[\s\S]*?\}[\s\S]*$/,
         replacement: `import type { NextApiRequest, NextApiResponse } from 'next';\n\nexport default async function handler(req: NextApiRequest, res: NextApiResponse) {\n  res.status(200).json({ message: 'API endpoint' });\n}`
-      },
-      // Fix files with just return statements
-      {
-        pattern: /^[\s\n]*return[\s\S]*$/,
-        replacement: `import type { NextApiRequest, NextApiResponse } from 'next';\n\nexport default async function handler(req: NextApiRequest, res: NextApiResponse) {\n  res.status(200).json({ message: 'API endpoint' });\n}`
-      },
-      // Fix malformed object literals
-      {
-        pattern: /^[\s\n]*\{[\s\S]*\}\s*$/,
-        replacement: `import type { NextApiRequest, NextApiResponse } from 'next';\n\nexport default async function handler(req: NextApiRequest, res: NextApiResponse) {\n  res.status(200).json({ message: 'API endpoint' });\n}`
-      }
+      // Fix files with just return statements;
+        pattern: /^[\s\n]*return[\s\S]*$/,`;
+      // Fix malformed object literals;
+        pattern: /^[\s\n]*\{[\s\S]*\}\s*$/,`;
     ];
 
     for (const fix of fixes) {
       if (fix.pattern.test(content)) {
         content = content.replace(fix.pattern, fix.replacement);
         modified = true;
-        break; // Only apply one fix per file
-      }
-    }
+        break; // Only apply one fix per file;
 
     if (modified) {
-      fs.writeFileSync(filePath, content);
+      fs.writeFileSync(filePath, content);`;
       console.log(`Fixed: ${filePath}`);
       return true;
-    }
-  } catch (error) {
+  } catch (error) {`;
     console.error(`Error fixing ${filePath}:`, error.message);
-  }
   return false;
-}
 
 function findAndFixApiFiles(dir) {
   const files = fs.readdirSync(dir);
@@ -72,84 +49,9 @@ function findAndFixApiFiles(dir) {
     } else if (file.endsWith('.ts') && !file.endsWith('.d.ts')) {
       if (fixSyntaxErrors(filePath)) {
         fixedCount++;
-=======
 
-    // Fix merge conflict markers
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-      console.log(`  🔄 Fixing merge conflicts in ${filePath}`);
-      content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-      modified = true;
-    }
 
-    // Fix unterminated string literals
-    const lines = content.split('\n');
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-      // Fix unterminated strings
-      if (line.includes('"') && !line.match(/".*"/)) {
-        if (line.includes('"') && !line.includes('\\"')) {
-          lines[i] = line.replace(/"([^"]*)$/, '"$1"');
-          modified = true;
-        }
-      }
-      
-      // Fix unterminated template literals
-      if (line.includes('`') && !line.match(/`.*`/)) {
-        lines[i] = line.replace(/`([^`]*)$/, '`$1`');
-        modified = true;
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
-      }
-    }
-
-    if (modified) {
       fs.writeFileSync(filePath, lines.join('\n'));
-      return true;
-    }
-  } catch (error) {
     console.log(`  ❌ Error fixing ${filePath}: ${error.message}`);
-  }
-<<<<<<< HEAD
 
-  return fixedCount;
-}
-
-console.log('Starting syntax error fixes...');
-const apiDir = '/workspace/pages/api';
-const fixedCount = findAndFixApiFiles(apiDir);
-console.log(`Fixed ${fixedCount} files`);
-=======
-  return false;
-}
-
-// Function to fix specific file types
-function fixFile(filePath) {
-  const ext = path.extname(filePath);
-  if (['.ts', '.tsx', '.js', '.jsx'].includes(ext)) {
-    return fixSyntaxErrors(filePath);
-  }
-  return false;
-}
-
-// Get all files with syntax errors
-const files = execSync('find src -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx"', { encoding: 'utf8' })
-  .trim()
-  .split('\n')
-  .filter(file => file.length > 0);
-
-let fixedCount = 0;
-let totalFiles = files.length;
-
-console.log(`Found ${totalFiles} files to check`);
-
-for (const file of files) {
-  if (fs.existsSync(file)) {
-    if (fixFile(file)) {
-      fixedCount++;
-    }
-  }
-}
-
-console.log(`\n✅ Fixed ${fixedCount} files out of ${totalFiles}`);
-console.log('🎯 Syntax error fixing complete!');
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+`;

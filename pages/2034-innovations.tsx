@@ -2,7 +2,6 @@ import Head from 'next/head';
 import { motion  } from 'framer-motion';
 import UltraFuturisticNavigation2032 from '../components/layout/UltraFuturisticNavigation2032';
 import UltraFuturisticFooter2034 from '../components/layout/UltraFuturisticFooter2034';
-<<<<<<< HEAD
 
 }
 import React from 'react',
@@ -42,12 +41,11 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
-=======
 const contactInfo = null;
                   color: 'from-indigo-500 to-purple-600'
                 }
               ].map((feature, index) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default function Innovations2034Page() {
 export default function Innovations2034Page() {;
   return (
@@ -236,7 +234,6 @@ export default function Innovations2034Page() {;
                     left: `${Math.random() * 100}%`,
 
             >
-<<<<<<< HEAD
               <motion.h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-8 leading-tight"
                 initial={{ opacity: 0, scale: 0.8 }}
                     left: `${Math.random () * 100}%`,
@@ -262,16 +259,14 @@ export default function Innovations2034Page() {;
             >;
               <motion.h1;
                 className='text - 6xl md:text - 8xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent mb - 8 leading - tight'                initial={{ opacity: 0, scale: 0.8 }}
-=======
 <motion.h1
                 className='text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-8 leading-tight'
                 initial={{ opacity: 0, scale: 0.8 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 animate={{ opacity: 1, scale: 1 }}
 
                 <span className="text-5xl md:text-7xl">Cutting-Edge</span>
                 <br />
-<<<<<<< HEAD
                 <span className="text-6xl md:text-8xl">Innovations</span>
               </motion.h1>
               <motion.p className="text-xl md:text-3xl text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12"
@@ -306,7 +301,6 @@ export default function Innovations2034Page() {;
   }
 }
                 transition={{ duration: 1, delay: 0.6 }} className="flex flex-col sm:flex-row items-center justify-center gap-6">
-=======
 <span className='text-5xl md:text-7xl'>Cutting-Edge</span>
                 <br />
                 <span className='text-6xl md:text-8xl'>Innovations</span>
@@ -329,7 +323,7 @@ Experience the future with our revolutionary micro SAAS
 transition={{ duration: 1, delay: 0.6 }}
                 className='flex flex-col sm:flex-row items-center justify-center gap-6'
               >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -341,7 +335,6 @@ transition={{ duration: 1, delay: 0.6 }}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className='border-2 border-cyan-500/50 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 text-lg'
-<<<<<<< HEAD
                 >                  Contact Us
                 <motion.button
                   whileHover={{ scale: 1.05 }  } catch (error) {
@@ -354,9 +347,8 @@ transition={{ duration: 1, delay: 0.6 }}
                 </motion.button>
                 <motion.button
                   whileTap={{ scale: 0.95 }} className="border-2 border-cyan-500/50 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 text-lg">
-=======
                 >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   Contact Us
                 </motion.button>
               </motion.div>
@@ -406,35 +398,29 @@ transition={{ duration: 1, delay: 0.6 }}
           <motion.div;
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-<<<<<<< HEAD
 
 
-=======
 transition={{ duration: 1, delay: 1 }}
             className='absolute bottom-8 left-1/2 transform -translate-x-1/2'
           >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
               transition={{ duration: 2, repeat: Infinity }} className="w-6 h-10 border-2 border-cyan-400/50 rounded-full flex justify-center">
               <motion.div
-<<<<<<< HEAD
                 animate={{ y: [0, 12, 0] }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                 transition={{ duration: 2, repeat: Infinity }} className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
-=======
                 animate={{ y: [0, 12, 0] }}
                 transition={{ duration: 2, repeat: Infinity }}
                 className='w-1 h-3 bg-cyan-400 rounded-full mt-2'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               />
             </motion.div>
           </motion.div>
         </section>
-<<<<<<< HEAD
-=======
         {/* Innovation Categories Overview */}
 <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
           <div className='container mx-auto px-4'>
@@ -446,7 +432,7 @@ viewport={{ once: true }}
               className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 Innovation Categories
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -454,12 +440,10 @@ viewport={{ once: true }}
                 each designed to revolutionize industries and accelerate human progress.
               </p>
             </motion.div>
-<<<<<<< HEAD
-=======
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
               {[
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 {
                   icon: '🧠',
                   title: 'AI Consciousness',
@@ -731,9 +715,7 @@ viewport={{ once: true }}
                     <p className="text-gray-400 text-sm mb-4">
                       {category.description}
                     </p>
-<<<<<<< HEAD
               viewport={{ once: true }}
-=======
                     <div className='text-cyan-400 font-semibold text-sm'>
                       {category.count}
                     </div>
@@ -753,7 +735,7 @@ viewport={{ once: true }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 viewport={{ once: true }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -920,12 +902,10 @@ viewport={{ once: true }}
                 one breakthrough innovation at a time.
               </p>
             </motion.div>
-<<<<<<< HEAD
-=======
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {[
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 {
                   icon: '🚀',
                   title: 'First-to-Market',
@@ -965,17 +945,15 @@ description:
                   icon: '💎',
                   title: 'Premium Support',
                   description:
-<<<<<<< HEAD
                     '24/7 expert support from our team of technology pioneers and industry experts.'
                   color: 'from-indigo-500 to-purple-600'
                 },              ].map((feature, index) => (
 
-=======
                     '24/7 expert support from our team of technology pioneers and industry experts.',
                   color: 'from-indigo-500 to-purple-600',
                 },
               ].map((feature, index) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 <motion.div
                   key={feature.title}
               className='text-center mb-16'>;
@@ -1035,7 +1013,6 @@ description:
                   key={feature && feature.title}
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
@@ -1108,7 +1085,6 @@ description:
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 viewport={{ once: true }}
                   className='group'
@@ -1118,12 +1094,11 @@ viewport={{ once: true }}
                       className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300`}
                     >
                       {feature.icon}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                       {feature.title}
                     </h3>
-<<<<<<< HEAD
         {/* Contact CTA */}
         <section className='py-20 bg-gradient-to-r from-cyan-900/20 to-purple-900/20'>;
           <div className='container mx-auto px-4 text-center'>            <motion&& motion.div
@@ -1131,7 +1106,6 @@ viewport={{ once: true }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
-=======
                     <p className='text-gray-400'>{feature.description}</p>
                   </div>
                 </motion.div>
@@ -1150,7 +1124,7 @@ viewport={{ once: true }}
               className='max-w-4xl mx-auto'
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 Ready to Build the Future?
               </h2>
               <p className='text-xl text-gray-300 mb-8'>
@@ -1187,27 +1161,23 @@ viewport={{ once: true }}
                   <span className="text-purple-400">✉️</span>
                   <span>{contactInfo.email}</span>
                 </div>
-<<<<<<< HEAD
-=======
                 <div className='flex items-center justify-center space-x-3 text-gray-300'>
                   <span className='text-pink-400'>📍</span>
                   <span>{contactInfo.address}</span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </div>
               <motion.button
                 whileHover={{ scale: 1.05 }}
-<<<<<<< HEAD
 
                 whileTap={{ scale: 0.95 }} className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-500/25 text-lg">
                 Start Your Innovation Journey
 
-=======
 whileTap={{ scale: 0.95 }}
                 className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-500/25 text-lg'
               >
                 Start Your Innovation Journey
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </motion.button>
             </motion.div>
           </div>
@@ -1216,7 +1186,6 @@ whileTap={{ scale: 0.95 }}
     </>;
 );
     </>
-<<<<<<< HEAD
   )
 }
               whileInView={{ opacity: 1, y: 0 }  } catch (error) {
@@ -1298,6 +1267,5 @@ whileTap={{ scale: 0.95 }}
       </div>;
 
 
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

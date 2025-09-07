@@ -3,12 +3,10 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 export default function InstagramRedirect() {
-<<<<<<< HEAD
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
       window.location.replace('https: //instagram.com/ziontechgroup')
-=======
 	useEffect(() => {
 		if (typeof window !== 'undefined') {
 			window.location.replace('https: //instagram.com/ziontechgroup')
@@ -30,7 +28,7 @@ export default function InstagramRedirect() {
 		</>
 	)
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
       window.location.replace('https: //instagram.com/ziontechgroup'),
     };
@@ -56,7 +54,6 @@ export default function InstagramRedirect() {
       </div>
     </>
   );
-<<<<<<< HEAD
 
 }
 export default function InstagramRedirect(req, res) {
@@ -142,5 +139,4 @@ export default function InstagramRedirect() {
 
 
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

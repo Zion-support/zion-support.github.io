@@ -2,22 +2,18 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 
+pr-12325
 interface SEOProps {
-  title: string;
-  description: string;
+  // TODO: Implement
+}
+  title?: string;
+  description?: string;
   keywords?: string;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   image?: string;
   url?: string;
-<<<<<<< HEAD
   type?: string;
 }
 
-<<<<<<< HEAD
 export const SEO = ({
   title,
   description,
@@ -57,13 +53,8 @@ export const SEO = ({
       <meta name="author" content="Zion Tech Group" />
       <meta name="theme-color" content="#000000" />
     </Head>
-=======
-<<<<<<< HEAD
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
->>>>>>> main
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
->>>>>>> pr-12243
+main
+pr-12243
   url?: string;
   image?: string;
   type?: string;
@@ -80,7 +71,6 @@ const SEO: React.FC<SEOProps> = ({
   const siteName = 'Zion Tech Group';
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
   const fullUrl = url ? `https://ziontechgroup.com${url}` : 'https://ziontechgroup.com';
-=======
   type?: 'website' | 'article' | 'product' | 'service';
   author?: string;
   publishedTime?: string;
@@ -145,7 +135,6 @@ export function SEO({
       "Quantum Computing",
       "Machine Learning"
     ]
-=======
 export const SEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Leading technology solutions provider offering AI services, IT services, and micro SaaS solutions. Enterprise-grade infrastructure and development services.',
   keywords = 'technology solutions, AI services, IT services, micro SaaS, enterprise software, cloud services, cybersecurity', image = 'https: //ziontechgroup.com/og-image.jpg',
@@ -161,7 +150,7 @@ export const SEO: React.FC<SEOProps> = ({
       '@type': 'ContactPoint',
       'telephone': '+1-555-ZION-TECH', 'contactType': 'customer service'
     }
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   };
 
   // Service-specific structured data
@@ -280,7 +269,7 @@ export const SEO: React.FC<SEOProps> = ({
     }
     return null;
   };
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
+origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
 
   // Combine all structured data
   const combinedStructuredData = [
@@ -331,26 +320,29 @@ export const SEO: React.FC<SEOProps> = ({
       document.head.appendChild(link);
     });
   }, [image]);
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
 
-  return (
+const SEO: React.FC<SEOProps> = ({
+pr-12325
+
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-<<<<<<< HEAD
       <link rel="canonical" href={fullUrl} />
 
       {/* Open Graph / Facebook */}
-<<<<<<< HEAD
       <meta property="og:type" content={type} />
       <meta property="og:url" content={fullUrl} />
       <meta property="og:title" content={fullTitle} />
-=======
       <meta property="og: type" content={type} />
       <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
       <meta property="og:site_name" content={siteName} />
@@ -405,10 +397,8 @@ export const SEO: React.FC<SEOProps> = ({
     </Helmet>
   );
 };
-<<<<<<< HEAD
 
 export default SEO;
-=======
       <meta name="author" content={author} />
       <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
       
@@ -419,7 +409,6 @@ export default SEO;
       <meta property="og:type" content={type} />
       <meta property="og:url" content={currentUrl} />
       <meta property="og:title" content={fullTitle} />
-=======
   title = 'Zion Tech Group - Advanced AI Solutions', description = 'Leading provider of AI-powered solutions, cloud infrastructure, and digital transformation services.',
   keywords = 'AI, artificial intelligence, cloud computing, digital transformation, automation', image = '/og-image.jpg',
   url = 'https: //ziontechgroup.com', type = 'website'
@@ -433,7 +422,7 @@ export default SEO;
       
       {/* Open Graph */}
       <meta property="og: title" content={title} />
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
       <meta property="og:image:width" content="1200" />
@@ -526,4 +515,26 @@ export default SEO;
     </Helmet>
   );
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
+origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
+
+      <title>{title}</title>
+      <meta name="description" content={description} />"
+</meta>"
+      <meta name="keywords" content={keywords} />"
+      <link rel="canonical" href={canonical} />"
+</link>"
+      <meta property="og:title" content={title} />"
+      <meta property="og:description" content={description} />"
+      <meta property="og:image" content={ogImage} />"
+      <meta property="og:type" content={ogType} />"
+      <meta property="og:url" content={canonical} />"
+      <meta name="twitter:card" content={twitterCard} />"
+      <meta name="twitter:title" content={title} />"
+      <meta name="twitter:description" content={description} />"
+      <meta name="twitter:image" content={ogImage} />"
+      <meta name="robots" content="index,follow" />"
+      <meta name="author" content="Zion Tech Group" />"
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />"
+</meta>
+    )"
+pr-12325

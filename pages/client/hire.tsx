@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {useState} from 'react';
 
 
@@ -52,11 +51,10 @@ import {useState} from 'react';
         ? { type: "fixed", fixedAmountUsd }
 import { useState } from "react",
 import FeedbackModal from "../../components/ui/FeedbackModal",
-=======
 import { useState } from 'react';
 import FeedbackModal from '../../components/ui/FeedbackModal';
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default function ClientHirePage() {
   const [talentSlug, setTalentSlug] = useState('ava-chen');
   const [startDateIso, setStartDateIso] = useState<string>(
@@ -75,7 +73,6 @@ export default function ClientHirePage() {
   async function sendOffer() {
     setLoading(true);
     setResult(null);
-<<<<<<< HEAD
 
   const [scopeSummary, setScopeSummary] = useState("Build AI-enabled reporting module"),
   const [termsType, setTermsType] = useState("hourly"),
@@ -104,7 +101,6 @@ export default function ClientHirePage() {
         : { type: "milestone", milestones: [] },
     const res = await fetch("/api/marketplace/offers", {
       method: "POST",
-=======
     const paymentTerms = null;
       setShowFeedback(true)
     }
@@ -114,7 +110,7 @@ export default function ClientHirePage() {
           : { type: 'milestone', milestones: [] }
     const res = await fetch('/api/marketplace/offers', {
       method: 'POST'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       headers: {
        "Content-Type": "application/json", "x-demo-user-role": "client", "x-demo-user-id": "client-1" 
     },
@@ -125,28 +121,24 @@ export default function ClientHirePage() {
       alert(json.error || "Failed to send offer")
     } else {
       setResult(json.offer);
-<<<<<<< HEAD
       setShowFeedback(true)
     }
   }
 
-=======
       setShowFeedback(true);
     }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
   return (
 <div className='max-w-3xl mx-auto p-6 space-y-6'>
       <h1 className='text-xl font-semibold'>Hire Talent</h1>
       <div className='space-y-4 border rounded p-4'>
-<<<<<<< HEAD
     <div className="max-w-3xl mx-auto p-6 space-y-6">
       <h1 className="text-xl font-semibold">Hire Talent</h1>
 
       <div className="space-y-4 border rounded p-4">
 
 
-=======
         <div>
           <label className='block text-sm font-medium'>Talent</label>
           <input
@@ -210,7 +202,7 @@ export default function ClientHirePage() {
             />
           </div>
         )}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
         <div>
 <label className='block text-sm font-medium'>
@@ -223,7 +215,6 @@ export default function ClientHirePage() {
             className='w-full border rounded px-3 py-2'
           />
         </div>
-<<<<<<< HEAD
         </div>
 
         <div>
@@ -255,7 +246,6 @@ export default function ClientHirePage() {
         <div>
           <label className="block text-sm font-medium">Agreement URL (optional)</label>
           <input value={agreementUrl} onChange={(e) => setAgreementUrl(e.target.value)} placeholder="https://..." className="w-full border rounded px-3 py-2" />
-=======
         <div className='flex justify-end'>
           <button
             onClick={sendOffer}
@@ -270,18 +260,16 @@ export default function ClientHirePage() {
 <div className='border rounded p-4 bg-emerald-50'>
           <div className='font-medium'>Offer sent</div>
           <div className='text-sm'>Offer ID: {result.id}</div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       )}
       <FeedbackModal
         isOpen={showFeedback}
         onClose={() => setShowFeedback(false)}
-<<<<<<< HEAD
-=======
 defaultContext={{
           actionType: 'listing_publish',
           metadata: { talentSlug },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         }}
         userHeaders={{;
           'x-demo-user-role': 'client',;
@@ -291,7 +279,6 @@ defaultContext={{
         userHeaders={{ 'x-demo-user-role': 'clientx-demo-user-id': 'client-1' }}
       />
     </div>
-<<<<<<< HEAD
         <div className='border rounded p - 4 bg - emerald - 50'>;
           <div className='font - medium'>Offer sent</div>;
           <div className='text - sm'>Offer ID: {result.id}</div>        </div>)}
@@ -448,6 +435,5 @@ defaultContext={{
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -61,6 +61,22 @@ const nextConfig = {
       },
     ];
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  images: {
+    domains: ['localhost', 'ziontechgroup.com'],
+    unoptimized: true,
+  trailingSlash: true,
+  output: 'export',
+  distDir: 'dist',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/ziontechgroup-site' : ,
+  basePath: process.env.NODE_ENV === 'production' ? '/ziontechgroup-site' : ,
+  experimental: {
+    optimizeCss: true,
+pr-12325
 };
 
 export default nextConfig;

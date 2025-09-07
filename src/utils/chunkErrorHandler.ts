@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 private readonly RETRY_DELAY = 1000; // 1 second
   private readonly CACHE_CLEAR_THRESHOLD = 2
   constructor() {
@@ -276,7 +275,6 @@ if ( {) {
 
 
 
-=======
 /**
  * Chunk Error Handler - Comprehensive solution for ChunkLoadError recovery
  * Handles automatic retry, cache clearing, and graceful degradation
@@ -308,7 +306,7 @@ background: #666;
           border-radius: 0.5rem;
           font-size: 1rem;
           cursor: pointer;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         ">
           Go Home
         </button>
@@ -450,7 +448,6 @@ background: #666;
 // Create and export singleton instance
 export const chunkErrorHandler = new ChunkErrorHandler()
 // Export for manual usage
-<<<<<<< HEAD
 
 export default chunkErrorHandler
 export default chunkErrorHandler
@@ -485,7 +482,6 @@ export default chunkErrorHandler
           margin - right: 1rem;        ">;
           Try Again;
         </button>;
-<<<<<<< HEAD
         <button onclick="window.location.href='/'" style=";
           background: #666;
           color: white;
@@ -539,14 +535,10 @@ export default chunkErrorHandler;
         </button>;
         <button onclick="window.location.href='/'" style=";
 export default chunkErrorHandler;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <button onclick="window.location.href='/'" style=";
 export default chunkErrorHandler;
 }
 }
-<<<<<<< HEAD
-=======
 ;
   // Public method to manually trigger recovery;
   public triggerRecovery(): void {;
@@ -583,7 +575,6 @@ export default chunkErrorHandler;
 export default chunkErrorHandler;
 }
 }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 ;
   // Public method to manually trigger recovery;
@@ -611,6 +602,5 @@ export default chunkErrorHandler;
 export const chunkErrorHandler = new ChunkErrorHandler();
 // Export for manual usage;
 export default chunkErrorHandler;
-=======
 export default chunkErrorHandler;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

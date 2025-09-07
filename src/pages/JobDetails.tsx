@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   Clock,
   DollarSign,
   Tag,;
@@ -8,7 +7,6 @@
 import { toast } from 'sonner';
 import { useAuth } from '@/hooks/useAuth';
 
-=======
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router', // Changed from useParams, useNavigate
 import { Header  } from '@/components/Header';
@@ -19,7 +17,7 @@ import { Calendar, Clock, DollarSign, Tag, Users, Briefcase } from 'lucide-react
 import { formatDistanceToNow  } from 'date-fns';
 import { toast  } from 'sonner';
 import { useAuth  } from '@/hooks/useAuth';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import useJobDetails from '@/hooks/useJobDetails';
 import { ApplyToJobModal  } from '@/components/messaging/job-application';
 import { SEO  } from '@/components/SEO';
@@ -30,18 +28,15 @@ interface Job {
   title: string;
   description: string;
   company_name?: string;
-<<<<<<< HEAD
 
   budget: { min: number; max: number }
 
-=======
   budget: { min: number, max: number },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   client_id: string;
   skills?: string[];
   created_at: string;
   category: string;
-<<<<<<< HEAD
 
 export default function JobDetails() {;
   const router = useRouter(); // Init router;
@@ -320,14 +315,13 @@ export default function JobDetails() {
           job={{
           }}
 
-=======
   deadline?: string
 }
 
 export default function JobDetails() {
   const router = null;
             client_id: job.client_id}}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           isOpen={isApplyModalOpen}
           onClose={() => setIsApplyModalOpen(false)}        />;
       )}
@@ -361,7 +355,6 @@ const isOwnJob = user?.id === job.client id;
   {;
   />) ;
 }</>) ;
-<<<<<<< HEAD
 }'";
 }
 }
@@ -374,6 +367,5 @@ const isOwnJob = user?.id === job.client id;
   );
 }
 ;
-=======
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,7 +1,6 @@
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
 export default function ApiPerformanceTestingPage() {
-<<<<<<< HEAD
   const features = [
     'k6/Gatling-compatible test runner',
     'SLO-aware latency reports',
@@ -108,9 +107,8 @@ export default function ApiPerformanceTestingPage() {
 							{ title: 'Protocol Coverage', desc: 'HTTP/REST, GraphQL, gRPC, WebSocket, and streaming APIs.' },
 							{ title: 'Regression Gates', desc: 'Fail builds when latency regresses beyond thresholds or budgets are exhausted.' },
 							{ title: 'Realistic Traffic', desc: 'Custom scenarios, auth flows, test data seeding, and user think time.' },
-=======
 	const features = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 							{ title: 'Reports & Export', desc: 'Beautiful HTML/CSV exports, signed artifacts, and webhook notifications.' }].map((f) => (
 							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
 								<h3 className="text-lg font-semibold text-white">{f.title}</h3>
@@ -241,8 +239,6 @@ export default function ApiPerformanceTestingPage(req, res) {
 ;
 
 
-<<<<<<< HEAD
-=======
   const features = [
     'k6/Gatling-compatible test runner'
     'SLO-aware latency reports'
@@ -384,4 +380,4 @@ export default function ApiPerformanceTestingPage(req, res) {
       </section>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { readJson, writeJson } from '../../../utils/fsDb',
 ;
@@ -24,8 +17,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const reqs = readJson<any[]>('support/requests.json', []),
     const srid = `sr_${Math.random().toString(36).slice(2)}_${Date.now()}`,
     reqs.push({ id: srid, sessionId: account, reason: 'Premium support redemption', tag: 'premium_support', status: 'open', createdAt: Date.now() }),
-=======
->>>>>>> pr-12243
+pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJson, writeJson } from '../../../utils/fsDb'
 ;
@@ -45,9 +37,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const reqs = readJson<any[]>('support/requests.json', [])
     const srid = `sr_${Math.random().toString(36).slice(2)}_${Date.now()}`
     reqs.push({ id: srid, sessionId: account, reason: 'Premium support redemption', tag: 'premium_support', status: 'open', createdAt: Date.now() })
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
     writeJson('support/requests.json', reqs)
   }
@@ -69,7 +58,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const srid = `sr_${Math.random().toString(36).slice(2)}_${Date.now()}`
     reqs.push({ id: srid, sessionId: account, reason: 'Premium support redemption', tag: 'premium_support', status: 'open', createdAt: Date.now() })
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJson, writeJson } from '[^']*';
 
@@ -78,7 +66,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { account, amount, type, serviceId } = req.body as { account?: string, amount?: number, type?: string, serviceId?: string },
   if (!account || !amount || amount <= 0 || !type) return res.status(400).json({ error: 'Invalid input' });
   const redemptions = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     writeJson('support/requests.json', reqs)
   }
   return res.status(200).json({ ok: true, id })
@@ -149,11 +137,9 @@ if ( {) {
 ;
 
 
-=======
->>>>>>> main
->>>>>>> pr-12243
+main
+pr-12243
     writeJson('support/requests.json', reqs)
   }
   return res.status(200).json({ ok: true, id })
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { randomUUID } from 'crypto',;
 type Note = {
   id: string
@@ -13,14 +9,12 @@ type Note = {
   authorId: string
   createdAt: number
 }
-<<<<<<< HEAD
 const notesStore: Note[] = []
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { randomUUID } from 'crypto';
 type Note = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   id: string;
   targetType: string;
   targetId: string;
@@ -29,7 +23,6 @@ type Note = {
   createdAt: number;
 };
 
-<<<<<<< HEAD
 const notesStore: Note[] = [];
 
 
@@ -103,7 +96,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
 
-=======
 
 
 
@@ -132,8 +124,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export function getAllNotes(): Note[] {
   return [...notesStore].sort((a, b) => b.createdAt - a.createdAt)
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const isAdmin = req.headers['x-admin'] === 'true';
   if (!isAdmin) return res.status(403).json({ error: 'Admin only' });
@@ -169,4 +159,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export function getAllNotes(): Note[] {
   return [...notesStore].sort((a, b) => b.createdAt - a.createdAt);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

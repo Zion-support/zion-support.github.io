@@ -1,5 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Button from '../components/Button';
+import Card from '../components/Card';
+import ServiceCard from '../components/ServiceCard';
+const Home: React.FC = () => {
+  const services = [
+    {
+      title: 'AI Solutions',
+      description: 'Cutting-edge artificial intelligence solutions for your business needs.',
+      icon: '🤖',']
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision']
+    },
+      title: 'IT Services',
+      description: 'Comprehensive IT services and infrastructure management.',
+      icon: '💻',
+      features: ['Cloud Migration', 'System Administration', 'Network Security']
+      title: 'Cloud Solutions',
+      description: 'Scalable cloud infrastructure and migration services.',
+      icon: '☁️',
+      features: ['AWS', 'Azure', 'Google Cloud']
+    }
+  ];
 
 const Home: React.FC = () => {
   return (
@@ -95,3 +116,49 @@ function ServiceCard({ title, href, description, bullets = [], icon }: {
 }
 
 export default Home;
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">"
+</div>"
+      <section className="pt-20 pb-16 px-4">"
+</section>"
+        <div className="container mx-auto text-center">"
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 animate-fade-in">"
+</h1>
+          </h1>"
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto animate-slide-up">"
+</p>
+          </p>"
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">"
+            <Button variant="primary" size="large">"
+
+            "
+            <Button variant="outline" size="large">"
+
+            
+          </div>
+      <section className="py-16 px-4">"
+        <div className="container mx-auto">"
+          <h2 className="text-4xl font-bold text-center mb-12">Our Services</h2>""
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
+              <ServiceCard;
+                key={index}
+                title={service.title}
+                description={service.description}
+                icon={service.icon}
+                features={service.features}
+              />
+
+      <section className="py-16 px-4 bg-slate-800">"
+          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>""
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">"
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+            <Link to="/contact">"
+
+              
+            <Link to="/services">"
+
+              
+            
+      </section>
+    </div>)"
+pr-12325

@@ -1,6 +1,5 @@
 
 export default function LinkedInRedirect() {
-<<<<<<< HEAD
 
 
 
@@ -48,13 +47,12 @@ export default function LinkedInRedirect(req, res) {
 
 }
 	}, []),
-=======
 	useEffect(() => {
 		if (typeof window !== 'undefined') {
 			window.location.replace('https: //www.linkedin.com/company/zion-tech-group')
 		}
 	}, []);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 	return (
 		<>
 			<Head>
@@ -71,7 +69,6 @@ export default function LinkedInRedirect(req, res) {
 		</>
 	)
 }
-<<<<<<< HEAD
 import Head from 'next / head';
 ;
 export default /**
@@ -114,7 +111,6 @@ if ( {) {
 ;
 
 
-=======
   useEffect(() => {
     if (typeof window !== 'undefined') {
       window.location.replace(
@@ -147,4 +143,4 @@ if ( {) {
       </div>
     </>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

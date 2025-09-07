@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import MainLayout from '../components/layout/MainLayout';
-=======
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -14,7 +11,6 @@ import AnalyticsTracker from '../components/AnalyticsTracker';
 import ErrorBoundary from '../components/ErrorBoundary';
 import { motion } from 'framer-motion';
 origin/automation-improvements-final
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 
 
 
@@ -43,12 +39,7 @@ class ErrorBoundary extends React.Component {
 }
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+ursor/fix-website-loading-errors-and-merge-6662
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -62,9 +53,6 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import { motion } from 'framer-motion';
 origin/automation-improvements-final
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -77,17 +65,12 @@ import { motion } from "framer-motion";
   Phone,
   MapPin,
   Users,;
-<<<<<<< HEAD
 
 import { 
   Shield, Lock, Eye, Database, Globe, 
   User, Settings, AlertTriangle, CheckCircle, Mail
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+ursor/fix-website-loading-errors-and-merge-6662
 } from "lucide-react";
 import MainLayout from "../components/layout/MainLayout";
 import React from 'react';
@@ -100,10 +83,6 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 import { 
   Shield, Lock, Eye, Database, Globe, 
   User, Settings, AlertTriangle, CheckCircle, Mail
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from 'lucide-react';
 
 
@@ -137,27 +116,17 @@ import {
         'Industry-standard encryption for data in transit and at restRegular security audits and vulnerability assessmentsAccess controls and authentication measuresEmployee training on data protectionIncident response and breach notification procedures'
       ]
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ];
 
   const rights = [
     {
       title: 'Access',
       description: 'Request access to your personal information',
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
       icon: <Eye className='w-6 h-6' />,
     },
@@ -186,8 +155,6 @@ import {
       description: 'Request restriction of processing activities',
       icon: <Settings className='w-6 h-6' />,
     },
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       icon: <Eye className="w-6 h-6" />
     };
     {
@@ -215,19 +182,13 @@ import {
       description: 'Request restriction of processing activities',
       icon: <Settings className="w-6 h-6" />
     }
-<<<<<<< HEAD
   ];
-<<<<<<< HEAD
 
 
 
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import React from "react";
 import Head from "next/head";
@@ -244,24 +205,15 @@ import {
   Users
 } from "lucide-react";
 import MainLayout from "../components/layout/MainLayout";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/automation-improvements-final
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+ursor/fix-website-loading-errors-and-merge-6662
+origin/automation-improvements-final
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 
 origin/automation-improvements-final
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function PrivacyPage() {
 export default function PrivacyPage() {;
   return (
-<<<<<<< HEAD
     <MainLayout title="Privacy Policy - Zion Tech Group">
       <div className="container mx-auto px-4 py-16">
         <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>
@@ -270,26 +222,18 @@ export default function PrivacyPage() {;
         </p>
       </div>
     </MainLayout>
-=======
-
-<<<<<<< HEAD
-
-=======
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+
+
+ursor/fix-website-loading-errors-and-merge-6662
 
 
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   return (
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <MainLayout
       title="Privacy Policy - Zion Tech Group"
       description="Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information."
@@ -302,10 +246,7 @@ origin/automation-improvements-final
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Privacy Policy
               </h1>
@@ -334,10 +275,7 @@ import AnalyticsTracker from '../components/AnalyticsTracker';
 import ErrorBoundary from '../components/ErrorBoundary';
 import { motion } from 'framer-motion';
 return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               transition={{ duration: 0 && 0.8 }}
               className="text-center">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
@@ -350,29 +288,17 @@ return (
             </motion && motion.div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-
-=======
-
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
 
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+ursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+
         {/* Content Section */}
         <section className="py-16 px-4">;
           <div className="max-w-4xl mx-auto">;
@@ -466,7 +392,6 @@ const PrivacyPage: React.FC = () => {
 }
   ],
   return (
-=======
 import {
   Shield,
   Lock,
@@ -569,12 +494,11 @@ icon: <Eye className='w-6 h-6' />,
   ];
 
   return (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     <ErrorBoundary>
       <SEOOptimizer />
       <AnalyticsTracker />
       <Layout>
-<<<<<<< HEAD
         <main className="relative z-10 pt-8">
           {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -608,7 +532,6 @@ icon: <Eye className='w-6 h-6' />,
                 </p>
                 <div className="flex items-center justify-center gap-4 text-gray-400">
                   <Shield className="w-6 h-6" />
-=======
 <main className='relative z-10 pt-8'>
           {/* Hero Section */}
           <section className='py-20 px-4'>
@@ -627,13 +550,12 @@ icon: <Eye className='w-6 h-6' />,
                 </p>
                 <div className='flex items-center justify-center gap-4 text-gray-400'>
                   <Shield className='w-6 h-6' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <span>Last updated: {lastUpdated}</span>
                 </div>
               </motion.div>
             </div>
           </section>
-<<<<<<< HEAD
           {/* Overview */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -709,7 +631,6 @@ icon: <Eye className='w-6 h-6' />,
                         <div className="text-center">
                           <div className="text-2xl font-bold text-purple-400">99.9%</div>
                           <div className="text-gray-400">Uptime</div>
-=======
 
           {/* Overview */}
 <section className='py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50'>
@@ -772,7 +693,7 @@ className='relative'
                             99.9%
                           </div>
                           <div className='text-gray-400'>Uptime</div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>
                       </div>
                     </div>
@@ -781,7 +702,6 @@ className='relative'
               </div>
             </div>
           </section>
-<<<<<<< HEAD
           {/* Privacy Principles */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1104,16 +1024,9 @@ className='relative'
               >
                 <h2 className="text-4xl font-bold mb-6 text-white">
                   Questions About Privacy?
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+ursor/fix-website-loading-errors-and-merge-6662
 
           {/* Privacy Principles */}
 <section className='py-20 px-4'>
@@ -1126,48 +1039,32 @@ className='text-center mb-16'
               >
                 <h2 className='text-4xl font-bold mb-4 text-white'>
                   Our Privacy Principles
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </h2>
                 <p className="mb-6">
                   We collect information you provide directly to us, such as
                   when you create an account, use our services, or contact us
                   for support.
                 </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
-=======
+
 
 
 
                 <h3 className="text-xl font-semibold mb-4">
                   Personal Information
                 </h3>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <h2 className="text-2xl font-bold mb-6">Information We Collect</h2>
                 <p className="mb-6">
                   We collect information you provide directly to us, such as when you create an account, 
                   use our services, or contact us for support.
                 </p>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                 
                 <h3 className="text-xl font-semibold mb-4">Personal Information</h3>
-<<<<<<< HEAD
 
 
 
-=======
 
 
                 <h3 className="text-xl font-semibold mb-4">
@@ -1175,17 +1072,13 @@ className='text-center mb-16'
                 </h3>
 
                 <h3 className="text-xl font-semibold mb-4">Usage Information</h3>
->>>>>>> origin/automation-improvements-final
-=======
+origin/automation-improvements-final
 
 
 origin/automation-improvements-final
                 <h3 className="text-xl font-semibold mb-4">
                   Usage Information
                 </h3>
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <ul className="list-disc pl-6 mb-6">
                   <li>Name and contact information</li>
                   <li>Email address</li>
@@ -1198,17 +1091,10 @@ origin/automation-improvements-final
                   Usage Information
                 </h3>
                 <h3 className="text-xl font-semibold mb-4">Usage Information</h3>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 origin/automation-improvements-final
                 <h3 className="text-xl font-semibold mb-4">
                   Usage Information
                 </h3>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <ul className="list-disc pl-6 mb-6">
                   <li>How you use our services</li>
                   <li>Device information</li>
@@ -1220,23 +1106,11 @@ origin/automation-improvements-final
 
 
 
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+ursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <h2 className="text-2xl font-bold mb-6 mt-12">
                   How We Use Your Information
-=======
               </motion.div>
 
               <div className='grid md:grid-cols-2 gap-8'>
@@ -1281,13 +1155,12 @@ className='text-center mb-16'
               >
                 <h2 className='text-4xl font-bold mb-4 text-white'>
                   Your Privacy Rights
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </h2>
                 <p className="mb-6">
                   We use the information we collect to provide, maintain, and
                   improve our services.
                 </p>
-<<<<<<< HEAD
 
 
 
@@ -1295,20 +1168,9 @@ className='text-center mb-16'
                 <p className="mb-6">
                   We use the information we collect to provide, maintain, and improve our services.
                 </p>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
                 
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 origin/automation-improvements-final
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <ul className="list-disc pl-6 mb-6">
                   <li>Provide and maintain our services</li>
                   <li>Process transactions</li>
@@ -1321,20 +1183,9 @@ origin/automation-improvements-final
 
 
 
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+ursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <h2 className="text-2xl font-bold mb-6 mt-12">
                   Information Sharing
                 </h2>
@@ -1342,27 +1193,13 @@ origin/automation-improvements-final
                   We do not sell, trade, or otherwise transfer your personal
                   information to third parties without your consent, except as
                   described in this policy.
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                 <h2 className="text-2xl font-bold mb-6 mt-12">Information Sharing</h2>
                 <p className="mb-6">
                   We do not sell, trade, or otherwise transfer your personal information to third parties 
                   without your consent, except as described in this policy.
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
@@ -1381,7 +1218,6 @@ origin/automation-improvements-final
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Contact Us</h2>
                 <p className="mb-6">
-=======
 origin/automation-improvements-final
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
@@ -1407,26 +1243,12 @@ origin/automation-improvements-final
                   If you have any questions about this Privacy Policy, please
                   contact us at:
                 </p>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
                   If you have any questions about this Privacy Policy, please contact us at:
                 </p>
                 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 origin/automation-improvements-final
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
                 <p className="mb-6">
@@ -1445,9 +1267,6 @@ origin/automation-improvements-final
                   If you have any questions about this Privacy Policy, please
                   contact us at:
                 </p>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
 
@@ -1470,10 +1289,6 @@ origin/automation-improvements-final
                 <p className="mb-6">
                   If you have any questions about this Privacy Policy, please contact us at:
                 </p>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <div className="bg-gray-50 rounded-lg p-6">
                   <div className="flex items-center mb-4">
                     <Mail className="w-5 h-5 text-blue-600 mr-3" />
@@ -1485,7 +1300,6 @@ origin/automation-improvements-final
                   </div>
                   <div className="flex items-start">
                     <Users className="w-5 h-5 text-blue-600 mr-3 mt-1" />
-=======
               </motion.div>
 
               <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
@@ -1525,7 +1339,7 @@ className='space-y-12'
                   </h2>
 
                   <div className='space-y-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     <div>
                       <h3 className='text-2xl font-bold text-white mb-4'>
                         Information Collection
@@ -1682,31 +1496,15 @@ className='space-y-12'
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+ursor/fix-website-loading-errors-and-merge-6662
 <p className="text-sm text-gray-600 mt-8">
-=======
                 <p className="text-sm text-gray-600 mt-8">
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/automation-improvements-final
+main
                   Last updated: January 2024
                 </p>
               </div>
@@ -1714,15 +1512,10 @@ className='space-y-12'
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
     </MainLayout>;
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
   );
 }
-<<<<<<< HEAD
 
 const PrivacyPage: React.FC = () => {
   const lastUpdated = 'January 17, 2025';
@@ -1838,10 +1631,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
             </div>
           </section>
     </MainLayout>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               transition={{ duration: 0 && 0.8 }}
               className="bg-white rounded-2xl shadow-lg p-8 md:p-12">;
               <div className="prose prose-lg max-w-none">;
@@ -1869,9 +1659,6 @@ export default /**
  */
 function PrivacyPage() {
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     <MainLayout;
       title="Privacy Policy - Zion Tech Group";
       description="Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information.";
@@ -1912,24 +1699,12 @@ function PrivacyPage() {
                   Information We Collect;
                 </h2>;
                 <p className="mb - 6">;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   We collect information you provide directly to us, such as;
                   when you create an account, use our services, or contact us;
                   for support.;
                 </p>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <h3 className="text - xl font - semibold mb - 4">;
                   Personal Information;
                 </h3>;
@@ -1969,24 +1744,12 @@ function PrivacyPage() {
                   Information Sharing;
                 </h2>;
                 <p className="mb - 6">;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   We do not sell, trade, or otherwise transfer your personal;
                   information to third parties without your consent, except as;
                   described in this policy.;
                 </p>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Data Security</h2>;
                 <p className="mb - 6">;
                   We implement appropriate security measures to protect your;
@@ -1995,23 +1758,12 @@ function PrivacyPage() {
                 </p>;
                 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Your Rights</h2>;
                 <p className="mb - 6">;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   You have the right to access, update, or delete your personal;
                   information. You may also opt out of certain communications;
                   from us.;
                 </p>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
     <ErrorBoundary>
       <SEOOptimizer />
       <AnalyticsTracker />
@@ -2629,7 +2381,6 @@ className="space-y-12"
                   If you have any questions about this Privacy Policy or our
                   data practices, please don't hesitate to contact us.
                 </p>
-=======
               </motion.div>
             </div>
           </section>
@@ -2649,7 +2400,7 @@ className="space-y-12"
                   If you have any questions about this Privacy Policy or our
                   data practices, please don't hesitate to contact us.
                 </p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                   <a
                     href='mailto:kleber@ziontechgroup.com'
@@ -2662,12 +2413,8 @@ className="space-y-12"
                     href='/contact'
                     className='border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2'
                   >
-<<<<<<< HEAD
                     <User className='w-5 h-5' />                    Contact Form
                   </a>
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     </MainLayout>;
   );
 }
@@ -2687,9 +2434,6 @@ className="space-y-12"
                     <User className="w-5 h-5" />
                     Contact Form
                   </Link>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                   <a
                     href=&quot;/contact&quot;
                     className=&quot;border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2&quot;
@@ -2697,16 +2441,11 @@ className="space-y-12"
                     <User className=&quot;w-5 h-5&quot; />
                     Contact Form
                   </Link>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
                     <User className='w-5 h-5' />
                     Contact Form
                   </a>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </motion.div>
             </div>
@@ -2714,22 +2453,12 @@ className="space-y-12"
         </main>
       </Layout>
     </ErrorBoundary>
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 };
 export default PrivacyPage;
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   )
 };
 
@@ -2740,13 +2469,7 @@ export default PrivacyPage;
 
 
                 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Contact Us</h2>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Contact Us</h2>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <p className="mb - 6">;
                   If you have any questions about this Privacy Policy, please;
                   contact us at:;
@@ -2772,10 +2495,6 @@ export default PrivacyPage;
 <p className="text - sm text - gray - 600 mt - 8">;
                   Last updated: January 2024;
                 </p>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
               </div>;
             </motion.div>;
           </div>;
@@ -2783,9 +2502,7 @@ export default PrivacyPage;
       </div>;
     </MainLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
                 <div className="flex flex-col sm: flex-row gap-4 justify-center">;
                   <a;
                     href="mailto:kleber@ziontechgroup.com";
@@ -2811,15 +2528,8 @@ export default PrivacyPage;
   );
 },;
 export default PrivacyPage;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+main
 );
 };
 export default PrivacyPage;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

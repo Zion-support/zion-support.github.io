@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextPage } from 'next',;
 import Head from 'next/head',;
 import type { NextPage } from 'next';
@@ -6,9 +5,8 @@ import Head from 'next/head';
 
 
 const AutomationStatus: NextPage = () => {
-=======
 const AutomationStatus: NextPage;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div>
       <Head>
@@ -21,7 +19,6 @@ const AutomationStatus: NextPage;
         <p>This page is under construction.</p>
       </main>
     </div>
-<<<<<<< HEAD
 
 export default AutomationStatus,;
 
@@ -36,9 +33,8 @@ export default AutomationStatus,;
 export default AutomationStatus;
 
 
-=======
   );
 };
 
 export default AutomationStatus;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

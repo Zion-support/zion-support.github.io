@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextPage } from 'next',;
 import Head from 'next/head',;
 import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground',;
@@ -145,7 +144,6 @@ interface Service {;
 ;
 // Define a unified service interface;
 interface Service {;
-=======
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground',
@@ -185,7 +183,7 @@ interface Service {
 }
 // Define a unified service interface
 interface Service {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   id: string;
   name: string;
   tagline: string;
@@ -193,7 +191,6 @@ interface Service {
   price: string;
   category: string;
   features: string[];
-<<<<<<< HEAD
   popular?: boolean,;
   icon?: string,;
   link?: string;
@@ -628,7 +625,6 @@ const sampleServices: Service[] = [;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
   popular?: boolean;
   icon?: string;
   link?: string
@@ -713,7 +709,7 @@ export default function ServicesIndexPage() {
                         {category === 'Transportation' && '🚗'}
                       </span>
                       {category}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       <span className="text-sm text-gray-400 bg-gray-800 px-3 py-1 rounded-full">
                         {categoryServices.length} services
                       </span>
@@ -954,7 +950,6 @@ export default function ServicesIndexPage() {
       />
     </div>
   )
-<<<<<<< HEAD
 
 }
 
@@ -1037,6 +1032,5 @@ export default function ServicesIndexPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }

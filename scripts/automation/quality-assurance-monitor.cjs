@@ -2,7 +2,6 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
 class QualityAssuranceMonitor {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -15,75 +14,57 @@ class QualityAssuranceMonitor {}
   async runCommand(command, options = {}) {}
     try {}
       const result = execSync(command, {})
-        "cwd": this.projectRoot,
+        "cwd": this.projectRoot,""
         "encoding": 'utf8',
         "stdio": options.silent ? 'pipe' : 'inherit',
         ...options;
       }
 });
-      return { "success": true, "output": result }} catch (error) {}
-      return { "success": false, "output": error.stdout || error.stderr || error.message }};
+      return { "success": true, "output": result }} catch (error) {}""
+      return { "success": false, "output": error.stdout || error.stderr || error.message }};"
   };
-  async checkCodeQuality() {}
+  async checkCodeQuality() {}"
     this.log('Running quality assurance checks...');
-    
     // Check TypeScript errors;
-    const tsResult = await this.runCommand('npx tsc --noEmit', { "silent": true }
-});
+    const tsResult = await this.runCommand('npx tsc --noEmit', { "silent": true }")
     if (!tsResult.success) {}
-      this.issuesFound.push({})
+      this.issuesFound.push({})"
         "type": 'typescript',
         "severity": 'high',
         "description": 'TypeScript compilation errors found',
-        "details": tsResult.output.substring(0, 500);
+        "details": tsResult.output.substring(0, 500);"
       })};
-    // Check ESLint errors;
-    const eslintResult = await this.runCommand('npx eslint src/**/*.{js,jsx,ts,tsx}', { "silent": true }
-});
+    // Check ESLint errors;"
+    const eslintResult = await this.runCommand('npx eslint src/**/*.{js,jsx,ts,tsx}', { "silent": true }")
     if (!eslintResult.success) {}
-      this.issuesFound.push({})
         "type": 'eslint',
         "severity": 'medium',
         "description": 'ESLint errors found',
-        "details": eslintResult.output.substring(0, 500);
-      })};
-    // Check for security vulnerabilities;
-    const auditResult = await this.runCommand('npm audit --audit-level=high', { "silent": true }
-});
+        "details": eslintResult.output.substring(0, 500);"
+    // Check for security vulnerabilities;"
+    const auditResult = await this.runCommand('npm audit --audit-level=high', { "silent": true }")
     if (!auditResult.success) {}
-      this.issuesFound.push({})
         "type": 'security',
-        "severity": 'high',
         "description": 'Security vulnerabilities found',
-        "details": auditResult.output.substring(0, 500);
-      })};
+        "details": auditResult.output.substring(0, 500);"
+      })};`;
     this.log(`Quality assurance check completed. Found ${this.issuesFound.length} issues.`);
     return this.issuesFound};
-  async run() {}
+  async run() {}"
     this.log('Starting Quality Assurance Monitor...');
-    
-    try {}
       const issues = await this.checkCodeQuality();
       
-      if (issues.length > 0) {}
+      if (issues.length > 0) {}`;
         this.log(`Found ${issues.length} quality issues that need attention`, 'warn');
-        for (const issue of issues) {}
+        for (const issue of issues) {}`;
           this.log(`${issue.type.toUpperCase()}: ${issue.description}`, 'warn')};
       } else {}
         this.log('No quality issues found', 'info')};
-      return { "success": true, "issuesFound": issues.length }} catch (error) {}
+      return { "success": true, "issuesFound": issues.length }} catch (error) {}""`;
       this.log(`Error during quality "check": ${error.message}`, 'error');
-      return { "success": false, "error": error.message }};
-  };
-};
+      return { "success": false, "error": error.message }};"
 if (require.main === module) {}
   const monitor = new QualityAssuranceMonitor();
   monitor.run().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
-module.exports = QualityAssuranceMonitor;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = QualityAssuranceMonitor;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+"`;

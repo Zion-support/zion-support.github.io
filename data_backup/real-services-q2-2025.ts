@@ -1,34 +1,32 @@
 export interface RealServiceQ22025 {
-  "id": string;
-  name: string;
+  // TODO: Implement
+}
+  "id": string;"
+  name: string;,
   tagline: string;
-  price: string;
+  price: string;,
   features: string[];
-  category?: string}
-export const "realServicesQ22025": RealServiceQ22025[] = [{
-    id:,
+  category?: string}"
+export const "realServicesQ22025": RealServiceQ22025[] = [{"
+    id:,"
   q2-service-1',
     "name": 'Q2 Service 1,
     tagline:,
   Second quarter service offering',
     "price": '$299,
-    "features": [,
+    "features": [,""
   Core features',
-  'Standard performance',
+  'Standard performance',']
   'Basic integration'],
-    "category": 'Q2 Services
+    "category": 'Q2 Services;
   },
   {
     id:,
   q2-service-2',
     "name": 'Q2 Service 2,
-    tagline:,
   Advanced Q2 solutions',
     "price": '$499,
-    "features": [,
   Advanced features',
-  'Enhanced performance',
+  'Enhanced performance',']
   'Full integration'],
-    "category": 'Q2 Services
-}
 ];

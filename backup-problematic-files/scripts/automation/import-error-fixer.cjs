@@ -8,9 +8,8 @@ const glob = require('glob')
     this.log('Fixing import errors...')
     const files = glob.sync('src/**/*.{js,jsx,ts,tsx}')
       const content = fs.readFileSync(filePath, 'utf8')
-      const importRegex = /import\s+.*\s+from\s+['"]([^'')]
-        newContent = "
-      const importLines = newContent.match(/import\s+.*\s+from\s+['"][^'')]
-        this.log(`Remaining "errors"`)
-      this.log(`Error during import fixing "process"`)
-      this.log(`Error during import fixing "process"`)
+      const importRegex = /import\s+.*\s+from\s+['"]([^)]
+        newContent = """
+      const importLines = newContent.match(/import\s+.*\s+from\s+['"][^)]
+        this.log(`Remaining "errors"`)""`;
+      this.log(`Error during import fixing "process"`)""`;

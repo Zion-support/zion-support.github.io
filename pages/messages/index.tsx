@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 const Messages: NextPage = () => {
   return (
@@ -44,7 +43,6 @@ export default Messages,;
     </div>;
   );
 },;
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import EmptyState from '../../components/ui/EmptyState';
@@ -57,5 +55,5 @@ const Messages: NextPage;
 );
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default Messages;

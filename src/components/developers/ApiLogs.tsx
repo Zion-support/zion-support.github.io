@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { useState, useEffect  } from './react';
 import { format  } from './date - fns';
 import { List, RefreshCw } from 'lucide-react'import { useApiKeys  } from '@/hooks / useApiKeys';
@@ -11,6 +8,17 @@ import { Badge  } from '@/components / ui / badge';
 import { ApiLogsChart  } from './ApiLogsChart';
 export /**
  * ApiLogs - Function description
+import { useState, useEffect  } from './react';
+import { format  } from './date - fns';
+import { List, RefreshCw } from 'lucide-react'import { useApiKeys  } from '@/hooks/ useApiKeys';
+import { Button  } from '@/components/ui/ button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/ card';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/ select';
+import { Badge  } from '@/components/ui/ badge';
+import { ApiLogsChart  } from './ApiLogsChart';
+export /**
+ * ApiLogs - Function description;
+pr-12325
  */
 function ApiLogs() {
   const { logs, total_logs, loading, fetchApiLogs } = useApiKeys ();
@@ -21,8 +29,6 @@ function ApiLogs() {
 }
   );
 }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 import { useState, useEffect } from 'react';
 import { format } from 'date-fns';
 import { List, RefreshCw } from 'lucide-react';
@@ -210,4 +216,6 @@ bg-zinc-900 border-zinc-800 text-white"> <CardHeader> </CardTitle> <CardDescript
 }</tbody> </table> </div> </div> <div className=" flex space-x-2" > <Button > Previous </Button> <Button > Next </Button> </div> </div>) ;
 }</CardContent> </Card>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+  );
+pr-12325

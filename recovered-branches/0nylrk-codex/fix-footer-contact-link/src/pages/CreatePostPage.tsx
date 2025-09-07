@@ -15,6 +15,22 @@ interface PostFormValues {
   categoryId: ForumCategory
 
   tags: string}
+import { useState, useEffect } from "react";""
+import { Link, useNavigate, useSearchParams } from "react-router-dom";""
+import { AppLayout } from "@/layout/AppLayout";""
+import { SEO } from "@/components/SEO";""
+import { Button } from "@/components/ui/button";""
+import PostForm from "@/components/community/PostForm";""
+import { useToast } from "@/hooks/use-toast";""
+import { ForumCategory } from "@/types/community";"
+interface PostFormValues {
+  // TODO: Implement
+}
+  title: string;,
+  content: string;
+  categoryId: ForumCategory;,
+  tags: string;
+pr-12325
 
 export default function CreatePostPage() {;
   const navigate = useNavigate();
@@ -145,4 +161,92 @@ function CreatePostPage() {
       </div>;
     </AppLayout>);
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+ursor/fix-website-loading-errors-and-merge-6662
+
+  // Get category from URL query params if available;"
+  const initialCategory = searchParams.get("category") as ForumCategory | null;"
+  const initialValues: Partial<PostFormValues> = {
+
+    <AppLayout>
+
+      <SEO;"
+        title="Create New Post | Community Forum | Zion AI Marketplace"""
+        description="Create a new discussion post in the Zion AI Marketplace community forum."""
+        keywords="community, forum, discussion, create post, new thread""
+      />
+
+"
+      <div className="container py-8">"
+</div>"
+        <div className="flex items-center gap-3 mb-6">"
+</div>
+          <Link;"
+            to="/community"""
+            className="text-sm text-muted-foreground hover:text-foreground""
+          >
+
+          <span className="text-muted-foreground">/</span>""
+          <span className="text-sm font-medium">Create Post</span>"
+        <h1 className="text-3xl font-bold mb-8">Create New Post</h1>"
+        <PostForm initialValues={initialValues} onSubmit={handleSubmit} />
+
+    
+  const initialValues: Partial<PostFormValues> = {;
+
+    <AppLayout>;
+
+        title="Create New Post | Community Forum | Zion AI Marketplace";""
+        description="Create a new discussion post in the Zion AI Marketplace community forum.";""
+        keywords="community, forum, discussion, create post, new thread";"
+      />;
+
+      <div className="container py-8">;"
+        <div className="flex items-center gap-3 mb-6">;"
+          <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;"
+
+          ;"
+          <span className="text-muted-foreground">/</span>;""
+          <span className="text-sm font-medium">Create Post</span>;"
+        </div>;"
+        <h1 className="text-3xl font-bold mb-8">Create New Post</h1>;"
+        <PostForm initialValues={initialValues} onSubmit={handleSubmit} />;
+
+      </div>;
+    ;
+  const initial_values: Partial < PostFormValues> = {,"
+  category_id: initial_category || "project - help";"
+  const handle_submit = async (values: PostFormValues) => {
+    try {
+  // TODO: Implement
+      // Here we would normally save to the database;"
+      // For now, we'll just simulate a successful post creation;
+      // Parse tags into an array;
+      const tags_array = values.tags.split (", ").map (tag => tag.trim ());"
+      toast ({"
+        title: "Post created",""
+        description: "Your post has been published successfully";")
+      });
+      // Redirect to the forum category;
+      navigate (`/community / category/${values.category_id}`);
+    } catch (error) {
+        title: "Error",""
+        description: "There was a problem creating your post",""
+        variant: "destructive";")
+  return (
+
+      <div className="container py - 8">;"
+        <div className="flex items - center gap - 3 mb - 6">;"
+          <Link to="/community" className="text - sm text - muted - foreground hover:text - foreground">;"
+
+          <span className="text - muted - foreground">/</span>;""
+          <span className="text - sm font - medium">Create Post</span>;"
+        <h1 className="text - 3xl font - bold mb - 8">Create New Post</h1>;"
+        <PostForm initial_values={initial_values} on_submit={handle_submit} />;
+
+      </div>;)
+    );"
+
+return (<AppLayout> <SEO title="Create New Post | Community Forum | Zion AI Marketplace" description="Create a new discussion post in the Zion AI Marketplace community forum." keywords="community, forum, discussion, create post, new thread" /> <div className="container py-8" > <div className="flex items-center gap-3 mb-6" > <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground" > Forum  <span className="text-muted-foreground" >/</span> <span className="text-sm font-medium" >Create Post</span> </div> <h1 className="text-3xl font-bold mb-8" >Create New Post</h1> <PostForm initialValues= {"
+)
+}/> </div> ) "`;
+pr-12325

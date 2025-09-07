@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useState } from 'react',;
 ;
 export default function AdminLearn() {
@@ -26,7 +25,6 @@ export default function AdminLearn() {
     if (data.ok) setMessage('Saved')
     else setMessage('Error: ' + (data.error |'unknown'))
 
-=======
 import { useEffect, useState  } from 'react';
 export default function AdminLearn() {
   const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' });
@@ -64,7 +62,7 @@ body: JSON.stringify(form),
           value={form.category}
           onChange={e => setForm({ ...form, category: e.target.value })}
         >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
       body: JSON.stringify(form)
 
@@ -139,7 +137,6 @@ export default function AdminLearn(req, res) {
           Free
         </label>
       </div>
-<<<<<<< HEAD
       <button onClick={saveCourse} className="px-4 py-2 bg-blue-600 text-white rounded">Save Course</button>
 
     </div>
@@ -157,7 +154,6 @@ export default function AdminLearn(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
       <button
         onClick={saveCourse}
         className='px-4 py-2 bg-blue-600 text-white rounded'
@@ -167,4 +163,4 @@ export default function AdminLearn(req, res) {
       {message && <div className='text-sm'>{message}</div>}
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

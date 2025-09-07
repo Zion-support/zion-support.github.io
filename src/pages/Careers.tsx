@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
   // Benefits list
   const benefits = [
     {
@@ -85,7 +83,6 @@
 
 
 
-=======
 import { SEO } from '@/components/SEO';
 import { GradientHeading } from '@/components/GradientHeading';
 import { Button } from '@/components/ui/button';
@@ -96,7 +93,7 @@ import { CAREER_JOBS } from '@/data/careersJobs';
 
 export default function Careers() {
   const applyEmail = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>
       <SEO
@@ -256,7 +253,6 @@ export default function Careers() {;
         </div>
       </main>
     </>
-<<<<<<< HEAD
   )
 }
 
@@ -302,7 +298,6 @@ export default Careers
 import React from 'react';
 import { SEO } from '../components / SEO';
 const Careers: React.FC = () => {
-<<<<<<< HEAD
   return (<>;
       <SEO title="Careers - Zion Tech Group" />;
       <div className="min - h-screen bg - white py - 20">;
@@ -313,7 +308,6 @@ const Careers: React.FC = () => {
       </div>;
     </>);
 }
-=======
 import React from 'react';
 import Card from '../components/Card';
 
@@ -341,14 +335,13 @@ const Careers: React.FC = () => {
           >
             Apply Now
           </a>
-=======
   return (<>""
       <SEO title='Careers - Zion Tech Group' /" >"
       <div className='min-h-screen bg-white py-20'>""
         <div className='max-w-4xl mx-auto px-4'>""
           <h1 className='text-4xl font-bold text-gray-900 mb-8'>Careers</h1>""
           <p className='text-lg text-gray-600'>Content coming soon...</p>
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
         </div>
       </div>
     </div>
@@ -356,7 +349,5 @@ const Careers: React.FC = () => {
 };
 
 export default Careers;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

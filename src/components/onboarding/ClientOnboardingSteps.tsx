@@ -1,15 +1,20 @@
-<<<<<<< HEAD
 import React from 'react';
 import { useOnboardingStatus } from '@/hooks / useOnboardingStatus';
 import { PlusCircle, SendIcon, InboxIcon } from 'lucide-react';
 import { OnboardingTracker, OnboardingStep } from './OnboardingTracker';
 export /**
  * ClientOnboardingSteps - Function description
+import React from 'react';
+import { useOnboardingStatus } from '@/hooks/ useOnboardingStatus';
+import { PlusCircle, SendIcon, InboxIcon } from 'lucide-react';
+import { OnboardingTracker, OnboardingStep } from './OnboardingTracker';
+export /**
+ * ClientOnboardingSteps - Function description;
+pr-12325
  */
 function ClientOnboardingSteps() {
   const onboarding_status = useOnboardingStatus ();
   const steps: OnboardingStep[] = [;
-<<<<<<< HEAD
 
 import React from "react",
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
@@ -27,7 +32,7 @@ import { PlusCircle, SendIcon, InboxIcon } from 'lucide-react'
       completed: onboardingStatus.inviteSent,
       link: "/talent",
       action: "Find Talent"},
-=======
+pr-12325
     {
       id: 'post - job',
       label: 'Post your first job',
@@ -36,14 +41,15 @@ import { PlusCircle, SendIcon, InboxIcon } from 'lucide-react'
       action: 'Post Job',
     },
     {
+pr-12325
       id: 'invite',
       label: 'Send invitation to talent',
       completed: onboarding_status.invite_sent,
       link: '/talent',
       action: 'Find Talent',
     },
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
+pr-12325
       id: 'response',
       label: 'Receive your first application',
       completed: onboarding_status.response_received,
@@ -53,12 +59,9 @@ import { PlusCircle, SendIcon, InboxIcon } from 'lucide-react'
   ];
   return <OnboardingTracker steps={steps} title='Get Started With Hiring' />;      link: "/client - dashboard",
       action: "Check Dashboard"}],
-<<<<<<< HEAD
-=======
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />
 }
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       link: "/client-dashboard",
       action: "Check Dashboard"}],
   
@@ -90,11 +93,8 @@ export function ClientOnboardingSteps() {;
       action: "Check Dashboard"}];
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const steps: OnboardingStep[] = [
     {
       id: "post-job",
@@ -111,12 +111,15 @@ export function ClientOnboardingSteps() {;
     {
       id: "response",
       label: "Receive your first application",
-<<<<<<< HEAD
-=======
       completed: onboardingStatus.responseReceived,
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   const onboardingStatus = null;
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+    },]
+  ];
+  return <OnboardingTracker steps={steps} title='Get Started With Hiring' />;      link: "/client - dashboard","
+"
+  return <OnboardingTracker steps={steps} title="Get Started With Hiring" />"
+  return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;"
+pr-12325

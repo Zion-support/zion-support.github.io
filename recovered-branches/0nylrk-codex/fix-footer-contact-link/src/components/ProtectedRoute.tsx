@@ -3,6 +3,10 @@
 import {Navigate} from 'react-router-dom';
 
 export interface ProtectedRouteProps {
+export interface ProtectedRouteProps {
+  // TODO: Implement
+}
+pr-12325
   children: React.ReactNode,;
 import React from 'react';
   adminOnly?: boolean;
@@ -88,11 +92,32 @@ export interface ProtectedRouteProps {
   tenantAdminAllowed?: boolean;
   requiredUserType?: "creator" | "job_seeker" | "employer" | "buyer" | "admin";
 }
+  requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin";"
+
+
+export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
+
+
+
+
+export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ 
+"
+    return <div className="flex h-screen w-full items-center justify-center">"
+</div>"
+      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>"
+    return <Navigate to="/login" />"
+      return <Navigate to="/unauthorized" />"
+
+export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({;
+
+pr-12325
 export const ProtectedRoute: React.FC < ProtectedRouteProps> = ({
   children;
   admin_only = false;
   tenantAdminAllowed = false,
   requiredUserType;
+  requiredUserType;)
+pr-12325
 }) => {
   const { user, is_loading } = use_auth ();
   const { tenant } = use_whitelabel ();
@@ -141,3 +166,32 @@ if ( {) {
 ;
 export default ProtectedRoute;
 ;
+  // Check condition;
+if ( {) {
+  $2;
+}"
+    return <div className="flex h - screen w - full items - center justify - center">;"
+      <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border - zion - cyan"></div>;"
+    </div>;"
+    return <Navigate to="/login" />;"
+      return <Navigate to="/unauthorized" />;"
+
+  return <>{children}</>;
+export default ProtectedRoute;
+import React from 'react',;
+import { Navigate } from 'react-router-dom',;
+import { useAuth } from '@/hooks/useAuth',;
+import { useTenantAdminStatus } from '@/hooks/useWhitelabelTenant',;
+import { useWhitelabel } from '@/context/WhitelabelContext',;
+export interface ProtectedRouteProps {;
+  children:React.ReactNode,;
+  adminOnly?:boolean,;
+  tenantAdminAllowed?:boolean,;
+  requiredUserType?:"creator" | "jobSeeker" | "employer" | "buyer" | "admin";"
+export const ProtectedRoute:React.FC<ProtectedRouteProps> = ({ ;
+    return <div className="flex h-screen w-full items-center justify-center">;"
+      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>;"
+
+};
+)"
+pr-12325

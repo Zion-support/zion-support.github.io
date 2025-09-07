@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -98,7 +97,6 @@ const TalentProfile: NextPage = () => {
   },
   return (
     <div className="space-y-6 pb-20">
-=======
 const [responseLog, setResponseLog] = useState<
     Array<{ action: 'Accept' | 'Decline' | 'Negotiate'; at: string }>
   >([]);
@@ -109,16 +107,14 @@ const [responseLog, setResponseLog] = useState<
 
   return (
     <div className='space-y-6 pb-20'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       <Head>
         <title>{slug} - Talent - Zion</title>
       </Head>
 
-<<<<<<< HEAD
       <header className="flex items-start justify-between gap-4">
-=======
 <header className='flex items-start justify-between gap-4'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         <div>
           <h1 className='text-2xl font-semibold'>{slug}</h1>
           <div className='text-sm opacity-80'>Full-Stack Developer</div>
@@ -127,7 +123,6 @@ const [responseLog, setResponseLog] = useState<
             <TrustBadge type='Top Rated' />
           </div>
         </div>
-<<<<<<< HEAD
         <div className="flex gap-2">
           <EnhancedButton onClick={() => handleRespond('Accept')}>Accept</EnhancedButton>
           <EnhancedButton variant="secondary" onClick={() => handleRespond('Decline')}>Decline</EnhancedButton>
@@ -140,7 +135,6 @@ const [responseLog, setResponseLog] = useState<
           <div className="border rounded-md p-4">
             <h2 className="font-semibold mb-2">About</h2>
             <p className="text-sm opacity-90">
-=======
         <div className='flex gap-2'>
           <EnhancedButton onClick={() => handleRespond('Accept')}>
             Accept
@@ -165,7 +159,7 @@ const [responseLog, setResponseLog] = useState<
           <div className='border rounded-md p-4'>
             <h2 className='font-semibold mb-2'>About</h2>
             <p className='text-sm opacity-90'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               Experienced developer specializing in React, Next.js, and Node.js.
             </p>
           </div>
@@ -178,7 +172,6 @@ const [responseLog, setResponseLog] = useState<
             />
           </div>
         </div>
-<<<<<<< HEAD
         <aside className="space-y-4">
           <div className="border rounded-md p-4">
             <h3 className="font-semibold mb-2">Response Log</h3>
@@ -198,7 +191,6 @@ const [responseLog, setResponseLog] = useState<
           </div>;
         </aside>;
       </section>;
-=======
 
         <aside className='space-y-4'>
           <div className='border rounded-md p-4'>
@@ -222,6 +214,6 @@ const [responseLog, setResponseLog] = useState<
     </div>
 );
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 export default TalentProfile;

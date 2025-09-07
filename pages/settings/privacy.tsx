@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 export default function PrivacySettingsPage() {
-<<<<<<< HEAD
 
   const [userId, setUserId] = useState('')
   const [optOut, setOptOut] = useState(false)
@@ -25,7 +24,6 @@ export default function PrivacySettingsPage() {
     if (res.ok) setOptOut(!!json.monitoringContentAnalysisOptOut);
     else setMessage(json.error || 'Failed to load');
     setLoading(false)
-=======
     if (!userId) return;
     setLoading(true);
     setMessage('');
@@ -38,13 +36,12 @@ const res = await fetch(
     setLoading(false);
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const save = async () => {
     if (!userId) return
     setLoading(true)
     setMessage('')
     const res = await fetch('/api/fraud/settings/opt-out', {
-<<<<<<< HEAD
 
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -60,7 +57,6 @@ const res = await fetch(
   }
 
   },
-=======
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({ userId, optOut }),
@@ -125,7 +121,7 @@ load();
           >
             Reload
           </button>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="p-6 max-w-2xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Privacy Settings</h1>
@@ -147,7 +143,6 @@ load();
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   )
           <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
           <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
@@ -236,6 +231,5 @@ if (return, ) {
           <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
           <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
 
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

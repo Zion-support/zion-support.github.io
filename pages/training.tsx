@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 
 
 import React from 'react';
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import MainLayout from '../components/layout/MainLayout';
 
 const Page = () => {
@@ -18,9 +15,7 @@ const Page = () => {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
           <p className="text-xl text-gray-600">Coming soon...</p>
         </div>
-=======
 import Layout from '../components/Layout';
-=======
 import Head from 'next/head';
 import Link from 'next/link';
 import {
@@ -37,7 +32,7 @@ import {
   Target,
   Lightbulb,
 } from 'lucide-react';
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 export default function Training() {
 
@@ -46,7 +41,6 @@ export default function Training() {
 import React from 'react';
 
 export default function Training() {
-=======
 import {
   GraduationCap,
   Users,
@@ -94,7 +88,6 @@ export default function TrainingPage() {
 
   const featuredPrograms = [
     {
-<<<<<<< HEAD
       id: 1,
       title: 'AI Consciousness Developer Certification',
 description:
@@ -156,7 +149,6 @@ rating: 4.9,
         'ROI measurement and optimization',
         'Industry best practices and case studies',
       ],
-=======
       title: 'AI & Machine Learning Fundamentals',
       description:
         'Learn the basics of AI and machine learning with hands-on projects',
@@ -197,14 +189,13 @@ rating: 4.9,
       ],
       instructor: 'Michael Chen',
       category: 'Cloud & DevOps',
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     },
   ];
 
   const allPrograms = [
     // AI Consciousness Programs
     {
-<<<<<<< HEAD
       id: 4,
       title: 'AI Consciousness Fundamentals',
 description:
@@ -401,7 +392,7 @@ rating: 4.8,
     setExpandedProgram(expandedProgram === id ? null : id);
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Layout>
 <SEO
@@ -464,7 +455,6 @@ rating: 4.8,
               ))}
             </div>
           </div>
-<<<<<<< HEAD
         </div>
 export default function Training() {
 
@@ -542,7 +532,6 @@ export default function TrainingPage() {
         'Business process automation designAI-powered decision making systemsChange management strategiesROI measurement and optimizationIndustry best practices and case studies'
       ]
     }
-=======
       title: 'Cybersecurity Essentials',
       description:
         'Comprehensive cybersecurity training for modern threats and defenses',
@@ -583,13 +572,12 @@ export default function TrainingPage() {
       instructor: 'Emily Davis',
       category: 'Development',
     },
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   ];
 
   const allPrograms = [
     // AI Consciousness Programs
     {
-<<<<<<< HEAD
       id: 4,
       title: 'AI Consciousness Fundamentals',
       description: 'Introduction to artificial consciousness concepts and basic implementation.',
@@ -637,7 +625,6 @@ export default function TrainingPage() {
       students: '789',
       icon: <Code className="w-8 h-8" />
     };
-=======
       title: 'Zion Tech AI Specialist',
       description: 'Certify your expertise in AI and machine learning',
       duration: '3 months',
@@ -679,11 +666,10 @@ export default function TrainingPage() {
       ],
     },
   ];
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
     // Quantum Computing Programs
     {
-<<<<<<< HEAD
       id: 8,
       title: 'Quantum Computing Basics',
       description: 'Foundation course covering quantum mechanics and computing principles.',
@@ -719,7 +705,6 @@ export default function TrainingPage() {
       students: '678',
       icon: <Shield className="w-8 h-8" />
     };
-=======
       title: 'Self-Paced Online',
       description:
         'Learn at your own pace with pre-recorded videos and materials',
@@ -765,11 +750,10 @@ export default function TrainingPage() {
       ],
     },
   ];
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
     // Autonomous Operations Programs
     {
-<<<<<<< HEAD
       id: 11,
       title: 'Business Process Automation',
       description: 'Learn to automate complex business processes with AI and robotics.',
@@ -876,7 +860,6 @@ export default function TrainingPage() {
                 Master the future of technology with our comprehensive training
                 programs in AI consciousness, quantum computing, and autonomous
                 operations.
-=======
       quote:
         'The AI training program completely transformed my career. I went from a traditional developer to an AI specialist in just 3 months.',
       author: 'Jennifer Liu',
@@ -924,7 +907,7 @@ export default function TrainingPage() {
               <p className="text-xl sm:text-2xl text-blue-100 max-w-4xl mx-auto mb-8">
                 Advance your career with professional training programs in
                 cutting-edge technologies.
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               </p>
               <div className='flex flex-wrap justify-center gap-4 text-gray-400'>
                 <div className='flex items-center gap-2'>
@@ -943,7 +926,6 @@ export default function TrainingPage() {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Category Filters */}
         <section className='py-10'>
           <div className='container mx-auto px-4'>
@@ -959,7 +941,6 @@ export default function TrainingPage() {
                 >
                   {category.name} ({category.count})
                 </button>
-=======
         {/* Learning Formats */}
         <section className="py-20 sm:py-32">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -997,68 +978,58 @@ export default function TrainingPage() {
                     ))}
                   </ul>
                 </div>
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Featured Programs */}
         <section className='py-20'>
           <div className='container mx-auto px-4'>            <motion.div
-=======
         </section>
 
         {/* Featured Programs */}
 <section className='py-20'>
           <div className='container mx-auto px-4'>
             <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
               className='text-center mb-16'
-=======
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <h2 className='text-4xl font-bold text-white mb-4'>
                 Featured Programs
-=======
         {/* Training Programs */}
         <section id="programs" className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
                 Training Programs
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               </h2>
               <p className='text-xl text-gray-400'>
                 Our most popular and comprehensive training programs
               </p>
-<<<<<<< HEAD
             </motion.div>
 
-<<<<<<< HEAD
             <div className='grid lg:grid-cols-3 gap-8 mb-16'>              {featuredPrograms.map((program, index) => (
-=======
             <div className='grid lg:grid-cols-3 gap-8 mb-16'>
               {featuredPrograms.map((program, index) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 <motion.div
                   key={program.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
                   className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden'
-=======
 className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   <div className='h-48 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 flex items-center justify-center'>
                     {program.icon}
@@ -1114,7 +1085,6 @@ className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border 
                             <span>{highlight}</span>
                           </div>
                         ))}
-=======
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -1172,7 +1142,7 @@ className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border 
                       <div className="text-sm text-gray-500">
                         {program.format}
                       </div>
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                     </div>
 
                     <a
@@ -1180,16 +1150,12 @@ className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border 
                       className='w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold py-3 px-6 rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105'
                     >
                       Enroll Now
-<<<<<<< HEAD
                       <ArrowRight className='w-4 h-4' />                    </a>
-=======
                       <ArrowRight className='w-4 h-4' />
                     </a>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
-<<<<<<< HEAD
                 </motion.div>
-=======
 
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-gray-900 mb-3">
@@ -1223,67 +1189,56 @@ className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border 
                     </Link>
                   </div>
                 </div>
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* All Programs */}
-<<<<<<< HEAD
         <section className='py-20 bg-black/50'>
           <div className='container mx-auto px-4'>            <motion.div
-=======
 <section className='py-20 bg-black/50'>
           <div className='container mx-auto px-4'>
             <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
               className='text-center mb-16'
-=======
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <h2 className='text-4xl font-bold text-white mb-4'>
                 All Training Programs
-=======
         {/* Certification Paths */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
                 Certification Paths
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               </h2>
               <p className='text-xl text-gray-400'>
                 Comprehensive collection of training programs across all
                 technology domains
               </p>
-<<<<<<< HEAD
             </motion.div>
 
-<<<<<<< HEAD
             <div className='space-y-4'>              {filteredPrograms.map((program, index) => (
-=======
             <div className='space-y-4'>
               {filteredPrograms.map((program, index) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 <motion.div
                   key={program.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
                   className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden'
-=======
 className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   <div className='p-6'>
                     <div className='flex items-start gap-4'>
@@ -1320,7 +1275,6 @@ className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border 
                             <span>{program.students} students</span>
                           </div>
                           <div className='flex items-center gap-1'>
-<<<<<<< HEAD
                             <Star className='w-3 h-3 text-yellow-400 fill-current' />                            <span>{program.rating}</span>
                           </div>
                         </div>
@@ -1332,7 +1286,6 @@ className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border 
                         <button
                           onClick={() => toggleProgram(program.id)}
                           className='text-gray-400 hover:text-white transition-colors duration-300'
-=======
                             <Star className='w-3 h-3 text-yellow-400 fill-current' />
                             <span>{program.rating}</span>
                           </div>
@@ -1345,35 +1298,31 @@ className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border 
                         <button
                           onClick={() => toggleProgram(program.id)}
 className='text-gray-400 hover:text-white transition-colors duration-300'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                         >
                           {expandedProgram === program.id ? (
                             <ChevronUp className='w-5 h-5' />
                           ) : (
-<<<<<<< HEAD
                             <ChevronDown className='w-5 h-5' />                          )}
                         </button>
                       </div>
                     </div>
-=======
                             <ChevronDown className='w-5 h-5' />
                           )}
                         </button>
                       </div>
                     </div>
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     {expandedProgram === program.id && (
                       <motion.div
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.3 }}
-<<<<<<< HEAD
                         className='mt-4 pt-4 border-t border-gray-700'
-=======
 className='mt-4 pt-4 border-t border-gray-700'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       >
                         <div className='grid md:grid-cols-2 gap-6'>
                           <div>
@@ -1394,21 +1343,19 @@ className='mt-4 pt-4 border-t border-gray-700'
                                 <span>Real-world project implementation</span>
                               </li>
                               <li className='flex items-center gap-2'>
-<<<<<<< HEAD
                                 <CheckCircle className='w-4 h-4 text-green-400' />                                <span>Industry best practices</span>
                               </li>
                             </ul>
                           </div>
 
                           <div>
-=======
                                 <CheckCircle className='w-4 h-4 text-green-400' />
                                 <span>Industry best practices</span>
                               </li>
                             </ul>
                           </div>
 <div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                             <h4 className='text-white font-semibold mb-3'>
                               Program Details
                             </h4>
@@ -1435,21 +1382,19 @@ className='mt-4 pt-4 border-t border-gray-700'
                                 <span>Support:</span>
                                 <span className='text-white'>
                                   24/7 Community + Mentors
-<<<<<<< HEAD
                                 </span>                              </div>
                             </div>
                           </div>
                         </div>
 
                         <div className='mt-6 flex gap-3'>
-=======
                                 </span>
                               </div>
                             </div>
                           </div>
                         </div>
 <div className='mt-6 flex gap-3'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                           <a
                             href='#'
                             className='flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold py-3 px-6 rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300'
@@ -1459,12 +1404,10 @@ className='mt-4 pt-4 border-t border-gray-700'
                           </a>
                           <a
                             href='#'
-<<<<<<< HEAD
                             className='inline-flex items-center justify-center gap-2 border-2 border-cyan-500 text-cyan-400 font-bold py-3 px-6 rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300'                          >
-=======
                             className='inline-flex items-center justify-center gap-2 border-2 border-cyan-500 text-cyan-400 font-bold py-3 px-6 rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300'
                           >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                             Learn More
                           </a>
                         </div>
@@ -1472,7 +1415,6 @@ className='mt-4 pt-4 border-t border-gray-700'
                     )}
                   </div>
                 </motion.div>
-=======
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -1533,48 +1475,41 @@ className='mt-4 pt-4 border-t border-gray-700'
                     </button>
                   </Link>
                 </div>
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Learning Paths */}
-<<<<<<< HEAD
         <section className='py-20'>
           <div className='container mx-auto px-4'>            <motion.div
-=======
 <section className='py-20'>
           <div className='container mx-auto px-4'>
             <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
               className='text-center mb-16'
-=======
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <h2 className='text-4xl font-bold text-white mb-4'>
                 Learning Paths
-=======
         {/* Testimonials */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
                 Student Success Stories
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               </h2>
               <p className='text-xl text-gray-400'>
                 Structured learning journeys to master complete technology
                 domains
               </p>
-<<<<<<< HEAD
             </motion.div>
 
             <div className='grid lg:grid-cols-3 gap-8'>
@@ -1633,23 +1568,19 @@ className='text-center mb-16'
                     'Change Management',
                     'Performance Optimization',
                   ],
-<<<<<<< HEAD
                 },              ].map((path, index) => (
-=======
                 },
               ].map((path, index) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 <motion.div
                   key={path.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
                   className='p-8 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300'
-=======
 className='p-8 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   <div className='text-center mb-6'>
                     <div
@@ -1667,21 +1598,19 @@ className='p-8 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl bor
                         <span>{path.duration}</span>
                       </div>
                       <div className='flex items-center gap-1'>
-<<<<<<< HEAD
                         <BookOpen className='w-4 h-4' />                        <span>{path.courses} courses</span>
                       </div>
                     </div>
                   </div>
 
                   <div className='space-y-3 mb-6'>
-=======
                         <BookOpen className='w-4 h-4' />
                         <span>{path.courses} courses</span>
                       </div>
                     </div>
                   </div>
 <div className='space-y-3 mb-6'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     {path.path.map((step, stepIndex) => (
                       <div
                         key={stepIndex}
@@ -1700,14 +1629,11 @@ className='p-8 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl bor
                     className={`w-full inline-flex items-center justify-center gap-2 bg-${path.color}-500/20 text-${path.color}-400 font-bold py-3 px-6 rounded-xl border border-${path.color}-500/30 hover:bg-${path.color}-500 hover:text-white transition-all duration-300`}
                   >
                     Start Learning Path
-<<<<<<< HEAD
                     <ArrowRight className='w-4 h-4' />                  </a>
-=======
                     <ArrowRight className='w-4 h-4' />
                   </a>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </motion.div>
-=======
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -1739,32 +1665,27 @@ className='p-8 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl bor
                     </div>
                   </div>
                 </div>
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='py-20 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10'>
           <div className='container mx-auto px-4 text-center'>            <motion.div
-=======
 <section className='py-20 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10'>
           <div className='container mx-auto px-4 text-center'>
             <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-<<<<<<< HEAD
               <h2 className='text-4xl font-bold text-white mb-6'>
-=======
 <h2 className='text-4xl font-bold text-white mb-6'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 Ready to Transform Your Career?
               </h2>
               <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
@@ -1775,14 +1696,12 @@ className='p-8 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl bor
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <a
                   href='/contact'
-<<<<<<< HEAD
                   className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105'                >
                   Get Personalized Guidance
                 </a>
                 <a
                   href='/resources'
                   className='px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300'                >
-=======
                   className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105'
                 >
                   Get Personalized Guidance
@@ -1791,12 +1710,11 @@ className='p-8 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl bor
 href='/resources'
                   className='px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300'
                 >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   Explore Free Resources
                 </a>
               </div>
             </motion.div>
-=======
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
@@ -1819,26 +1737,21 @@ href='/resources'
                 </button>
               </Link>
             </div>
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
           </div>
         </section>
-<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
       </div>
     </Layout>
   ),
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
       </div>
     </MainLayout>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 };
 
 export default Page;
-=======
 }
 };
 }
@@ -1935,11 +1848,6 @@ export default Training,
 }
 ;
 export default Training;
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
       </div>
     </Layout>
 );
@@ -1996,7 +1904,6 @@ export default Training;
 };
 export default Training;
 };export default Training;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
+origin/cursor/automate-test-improve-and-merge-code-2533
 }
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

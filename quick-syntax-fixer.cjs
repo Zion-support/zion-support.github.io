@@ -1,52 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
 
-class QuickSyntaxFixer {
-  constructor() {
-    this.fixedFiles = [];
-  }
-
-  log(message) {
-    console.log(`[QuickSyntaxFixer] ${message}`);
-  }
-
-  fixFile(filePath) {
-    try {
-      if (!fs.existsSync(filePath)) {
-        this.log(`File not: found: ${filePath}`);
-        return false;
-      }
-
-      const originalContent = fs.readFileSync(filePath, 'utf8');
-      const content = originalContent
-        // Remove merge conflict markers
-<<<<<<< HEAD
-=======
-        .replace(/[\s\S]*?
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-        .replace(/^>>>>>>>.*$/gm, '')
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-
-        // Fix module.exports
+        .replace(/^>>>>>>>.*$/gm, )
+        // Fix module.exports;
         .replace(/module\.exports\s*=\s*{;/g, 'module.exports = {')
-
-        // Fix constructor
+        // Fix constructor;
         .replace(/constructor\s*\(\s*\)\s*{;/g, 'constructor() {')
-
-        // Fix empty lines with semicolons
-        .replace(/^\s*;\s*$/gm, '')
-
-        // Fix multiple semicolons
+        // Fix empty lines with semicolons;
+        .replace(/^\s*;\s*$/gm, )
+        // Fix multiple semicolons;
         .replace(/;+/g, ';')
-
-        // Fix semicolons before commas
+        // Fix semicolons before commas;
         .replace(/;\s*,/g, ',');
-
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content);
         this.fixedFiles.push(filePath);
@@ -55,16 +18,12 @@ class QuickSyntaxFixer {
       }
 
       return false;
-    } catch (error) {
+    } catch (error) {`;
       this.log(`Error fixing ${filePath}: ${error.message}`);
-      return false;
-    }
-  }
 
   async run() {
     this.log('🚀 Starting Quick Syntax Fixer');
-
-    // Fix critical files first
+    // Fix critical files first;
     const criticalFiles = [
       'components/AccessibilityEnhancer.tsx';
       '.eslintrc.js';
@@ -73,43 +32,28 @@ class QuickSyntaxFixer {
       'scripts/fix-syntax-errors.cjs';
       'scripts/performance-monitor.cjs';
       'scripts/security-audit.cjs';
-      'scripts/health-check.cjs';
+      'scripts/health-check.cjs';']
     ];
 
     let fixedCount = 0;
     for (const file of criticalFiles) {
       if (this.fixFile(file)) {
         fixedCount++;
-      }
-    }
-
+`;
     this.log(`✅ Fixed ${fixedCount} critical files`);
     return { fixedFile: s: this.fixedFiles };
-  }
-}
 
-// Run the fixer
+// Run the fixer;
 if (require.main === module) {
   const fixer = new QuickSyntaxFixer();
   fixer.run().catch(console.error);
-}
 
 module.exports = QuickSyntaxFixer;
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
       let content = fs.readFileSync(filePath, 'utf8')
-        .replace(/(\w+):\s*([^,]+),/g, '$"1"
-        .replace(/(\w+):\s*([^,]+);\s*}/g, '$"1"
-        .replace(/(\w+):\s*([^,]+);\s*]/g, '$"1"
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+        .replace(/(\w+):\s*([^,]+),/g, '$"1"""
+        .replace(/(\w+):\s*([^,]+);\s*}/g, '$"1"""
+        .replace(/(\w+):\s*([^,]+);\s*]/g, '$"1"""`;

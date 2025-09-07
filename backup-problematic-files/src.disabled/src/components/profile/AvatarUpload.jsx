@@ -1,5 +1,7 @@
 
 class ErrorBoundary extends React.Component {
+  // TODO: Implement
+}
   constructor(props) {
     super(props);
     this.state = { hasError: false };
@@ -10,7 +12,7 @@ class ErrorBoundary extends React.Component {
   }
   
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary:', error, errorInfo);'
   }
   
   render() {
@@ -25,3 +27,11 @@ import React,{ useState } from \'react\'; import { useState } from \'react\'; ex
 const React,{ useState } from "react"; import { useState } from "react"; export default function Page() { return
 }; return null} )} {}; <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}> Upload Avatar; ></div> ) : ("; <p className="text-sm text-gray-500"> Image upload feature is currently unavailable.></div> )} ></div> );} """""
 import _React,{ useState } from 'react'; import { useState } from 'react'; export default function Page() {}; return null} )} {}; <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}> Upload Avatar; ></div> ) : ("; <p className="text-sm text-gray-500"> Image upload feature is currently unavailable.></div> )} ></div> );} '"
+      return <div>Something went wrong.</div>;'
+import React,{ useState } from \'react\'; import { useState } from \'react\'; export default function Page() {}; return null} )} {}; <CldUploadButton uploadPreset=\"avatar_preset\" onUpload={handleUpload}> Upload Avatar; ></div> ) : (\"; <p className=\"text-sm text-gray-500\"> Image upload feature is currently unavailable.></div> )} ></div> );} \'""
+</CldUploadButton>"
+const React,{ useState } from "react"; import { useState } from "react"; export default function Page() { return; }; return null} )} {}; <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}> Upload Avatar; ></div> ) : ("; <p className="text-sm text-gray-500"> Image upload feature is currently unavailable.></div> )} ></div> );} """"""
+</CldUploadButton>"
+import _React,{ useState } from 'react'; import { useState } from 'react'; export default function Page() {}; return null} )} {}; <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}> Upload Avatar; ></div> ) : ("; <p className="text-sm text-gray-500"> Image upload feature is currently unavailable.></div> )} ></div> );} '""
+</CldUploadButton>"
+pr-12325

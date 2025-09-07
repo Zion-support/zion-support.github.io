@@ -1,10 +1,18 @@
-<<<<<<< HEAD
 interface BrowseItem {;
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
 import { Badge } from '@/components / ui / badge';
 import {
+interface BrowseItem {;
+import React, { useState } from 'react';
+import { Card, CardContent } from '@/components/ui/ card';
+import { Button } from '@/components/ui/ button';
+import { Badge } from '@/components/ui/ badge';
+import {
+  // TODO: Implement
+}
+pr-12325
   Bookmark,
   BookmarkCheck,
   ChevronRight,
@@ -13,7 +21,6 @@ import {
   DollarSign,
 } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
-=======
 
 import React, { useState } from "react",
 import { Card, CardContent } from "@/components/ui/card",
@@ -34,11 +41,18 @@ import {
   DollarSign
 } from 'lucide-react'
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 interface BrowseItem {
   id: string;
   title: string;
   subtitle: string;
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/ avatar';
+interface BrowseItem {
+  // TODO: Implement
+  id: string;,
+  title: string;
+  subtitle: string;,
+pr-12325
   description: string;
   location?: string;
   badges: string[];
@@ -50,6 +64,8 @@ interface BrowseItem {
 
 interface BrowseCardsProps {;
   items: BrowseItem[];
+  items: BrowseItem[];,
+pr-12325
   type: 'jobs' | 'talents';
   onViewDetails: (id: string) => void;
 
@@ -169,7 +185,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   {type === "talents" ? (
                     <Avatar className="h-12 w-12">
                       <AvatarImage src={item.image} alt={item.title} />
-<<<<<<< HEAD
                       <AvatarFallback>{item.title.charAt(0).toUpperCase()}</AvatarFallback>
                     </Avatar>
                   ) : (
@@ -259,7 +274,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     className="text-xs font-normal";
                   >;
 
-=======
                       <AvatarFallback>
                         {item.title.charAt(0).toUpperCase()}
                       </AvatarFallback>
@@ -293,12 +307,11 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     variant='outline'
                     className='text-xs font-normal'
                   >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     {badge}
                   </Badge>
                 ))}
               </div>
-<<<<<<< HEAD
 
                 {item.location && (
                   <div className="flex items-center gap-1">
@@ -322,7 +335,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                 )}
 
                   <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">
-=======
 <p className='mt-3 text-sm line-clamp-2'>{item.description}</p>
 
               <div className='mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground'>
@@ -346,13 +358,12 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                 )}
                 {item.match && (
                   <div className='ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     {item.match}% match
                   </div>
                 )}
               </div>
             </div>
-<<<<<<< HEAD
 
               </div>;
 
@@ -434,13 +445,12 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
 
                 onClick={() => onViewDetails(item.id)}
                 className="gap-1"
-=======
 <div className='border-t border-border p-3 flex justify-end'>
               <Button
                 size='sm'
                 onClick={() => onViewDetails(item.id)}
                 className='gap-1'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 View Details <ChevronRight className='h-4 w-4' />
               </Button>
@@ -593,7 +603,6 @@ function BrowseCards() {
 }
 
       ))}
-<<<<<<< HEAD
 
     </div>;
   );
@@ -601,8 +610,248 @@ function BrowseCards() {
 }
 
 ;
-=======
     </div>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+</string>
+    <div className='space-y-4 pb-24'>;
+</div>
+        <Card key={item && item.id} className='overflow-hidden'>;
+
+          <CardContent className='p-0'>;
+
+            <div className='p-4'>;
+              <div className='flex justify-between'>;
+                <div className='flex items-center gap-3'>;
+                    <Avatar className='h-12 w-12'>        <Card key={item && item.id} className="overflow-hidden">;"
+"
+          <CardContent className="p-0">;"
+            <div className="p-4">;"
+</div>"
+              <div className="flex justify-between">;"
+                <div className="flex items-center gap-3">;"
+                    <Avatar className="h-12 w-12">;"
+
+                      <AvatarImage src={item && item.image} alt={item && item.title} />;
+
+                      <AvatarFallback>;
+
+                      ;
+                    ;"
+                    <div className='h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center'>;
+                      <span className='text-primary font-semibold'>JOB</span>;
+                    </div>;
+                  <div>;
+                    <h3 className='font-medium'>{item && item.title}</h3>;
+                    <p className='text-sm text-muted-foreground'>;
+</p>
+                    </p>;
+                <button;
+                  className='h-8 w-8 flex items-center justify-center
+                  onClick={() => toggleSaved(item && item.id)}                >;
+</button>
+                    <BookmarkCheck className='h-5 w-5 text-primary' />;
+
+                    <Bookmark className='h-5 w-5 text-muted-foreground' />;
+
+                </button>;
+              <div className='mt-3 flex flex-wrap gap-1'>;
+                  <Badge;
+                    key={index}
+                    variant='outline
+                    className='text-xs font-normal'>                      <AvatarImage src={item && item.image} alt={item && item.title} />;
+
+                      <AvatarFallback>{item && item.title.charAt(0).toUpperCase()};
+                    <div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center">;"
+                      <span className="text-primary font-semibold">JOB</span>;"
+  const [savedItems, setSavedItems] = useState<string[]>([]),
+</string>"
+    <div className="space-y-4 pb-24">"
+        <Card key={item.id} className="overflow-hidden">"
+          <CardContent className="p-0">"
+            <div className="p-4">"
+              <div className="flex justify-between">"
+                <div className="flex items-center gap-3">"
+                    <Avatar className="h-12 w-12">"
+
+                      <AvatarImage src={item.image} alt={item.title} />
+
+                      <AvatarFallback>{item.title.charAt(0).toUpperCase()}
+                    <div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center">"
+                      <span className="text-primary font-semibold">JOB</span>"
+                    <h3 className="font-medium">{item && item.title}</h3>;""
+                    <p className="text-sm text-muted-foreground">{item && item.subtitle}</p>;"
+                <button;"
+                  className="h-8 w-8 flex items-center justify-center""
+                  onClick={() => toggleSaved(item.id)}
+</button>"
+                    <BookmarkCheck className="h-5 w-5 text-primary" />"
+                    <Bookmark className="h-5 w-5 text-muted-foreground" />"
+
+              </div>;"
+              <div className="mt-3 flex flex-wrap gap-1">;"
+                    key = {index,}"
+                    variant="outline"""
+                    className="text-xs font-normal""
+                  {savedItems.includes(item.id) ? ("
+
+                  <div>
+                    <h3 className="font-medium">{item.title}</h3>""
+                    <p className="text-sm text-muted-foreground">{item.subtitle}</p>"
+                  className="h-8 w-8 flex items-center justify-center"")
+
+
+              <div className="mt-3 flex flex-wrap gap-1">"
+                    key={index} "
+                  )}
+
+                    key={index} ;"
+                    variant="outline";""
+                    className="text-xs font-normal";"
+                  >;
+
+                  
+                  <div className="flex items-center gap-1">"
+                    <MapPin className="h-3 w-3" />"
+
+                    <span>{item.location}</span>
+                    <DollarSign className="h-3 w-3" />"
+
+                    <span>{item.price}</span>
+                    <Clock className="h-3 w-3" />"
+
+                    <span>{item.timePosted}</span>
+                  <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">"
+
+
+              <p className='mt-3 text-sm line-clamp-2'>{item && item.description}</p>;
+              <div className='mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground'>;
+                  <div className='flex items-center gap-1'>;
+                    <MapPin className='h-3 w-3' />;
+
+                    <span>{item && item.location}</span>;
+                    <DollarSign className='h-3 w-3' />;
+
+                    <span>{item && item.price}</span>;
+                    <Clock className='h-3 w-3' />;
+
+                    <span>{item && item.timePosted}</span>;
+                  <div className='ml-auto bg-primary/10 text-primary rounded-full px-2 py-0 && 0.5'>                    {item && item.match}% match                {item && item.location && (;
+                  <div className="flex items-center gap-1">;"
+                    <MapPin className="h-3 w-3" />;"
+
+                    <DollarSign className="h-3 w-3" />;"
+
+                    <Clock className="h-3 w-3" />;"
+
+                  <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0 && 0.5">;"
+            <div className='border-t border-border p-3 flex justify-end'>;
+              <Button;
+                size='sm)
+                onClick={() => onViewDetails(item && item.id)}
+
+                View Details <ChevronRight className='h-4 w-4' />              ;
+
+                View Details <ChevronRight className="h-4 w-4" />;"
+
+            <div className="border-t border-border p-3 flex justify-end">"
+              <Button;"
+                size="sm""
+                onClick={() => onViewDetails(item.id)}
+                View Details <ChevronRight className="h-4 w-4" />"
+
+              
+          
+        
+  const [saved_items, setSavedItems] = useState < string[]>([]);
+  const toggle_saved = (id: string) =>: any {
+  // TODO: Implement
+    setSavedItems (prev =>;)
+      prev.includes (id) ? prev.filter (item_id => item_id !== id) : [...prev, id]);
+  return ("
+    <div className='space - y-4 pb - 24'>;
+        <Card key={item.id} className='overflow - hidden'>;
+
+          <CardContent className='p - 0'>;
+
+            <div className='p - 4'>;
+              <div className='flex justify - between'>;
+                <div className='flex items - center gap - 3'>;
+                    <Avatar className='h - 12 w - 12'>        <Card key={item.id} className="overflow - hidden">;"
+          <CardContent className="p - 0">;"
+            <div className="p - 4">;"
+              <div className="flex justify - between">;"
+                <div className="flex items - center gap - 3">;"
+                    <Avatar className="h - 12 w - 12">;"
+
+                      <AvatarImage src={item.image} alt={item.title} />;
+
+
+                      ;)
+                    ) : ("
+                    <div className='h - 12 w - 12 rounded - md bg - primary / 10 flex items - center justify - center'>;
+                      <span className='text - primary font - semibold'>JOB</span>;')
+                    </div>)}
+                    <h3 className='font - medium'>{item.title}</h3>;
+                    <p className='text - sm text - muted - foreground'>;
+                  className='h - 8 w - 8 flex items - center justify - center';
+                  on_click={() => toggle_saved (item.id)}                >;
+                    <BookmarkCheck className='h - 5 w - 5 text - primary' />) : (
+)
+                    <Bookmark className='h - 5 w - 5 text - muted - foreground' />)}
+
+              <div className='mt - 3 flex flex - wrap gap - 1'>;
+                    variant='outline';
+                    className='text - xs font - normal'                  >                      <AvatarImage src={item.image} alt={item.title} />;
+
+                      <AvatarFallback>{item.title.char_at (0).toUpperCase ()};
+                    ) : (
+                    <div className="h - 12 w - 12 rounded - md bg - primary / 10 flex items - center justify - center">;"
+                      <span className="text - primary font - semibold">JOB</span>;")
+                    <h3 className="font - medium">{item.title}</h3>;""
+                    <p className="text - sm text - muted - foreground">{item.subtitle}</p>;"
+                  className="h - 8 w - 8 flex items - center justify - center";"
+                  on_click={() => toggle_saved (item.id)}
+                    <BookmarkCheck className="h - 5 w - 5 text - primary" />) : ("
+)"
+                    <Bookmark className="h - 5 w - 5 text - muted - foreground" />)}"
+
+              <div className="mt - 3 flex flex - wrap gap - 1">;"
+                    key = {index, }"
+                    className="text - xs font - normal";"
+                    {badge}
+                  ))}
+              <p className='mt - 3 text - sm line - clamp - 2'>{item.description}</p>;
+              <div className='mt - 3 flex flex - wrap gap - 3 text - xs text - muted - foreground'>;
+                  <div className='flex items - center gap - 1'>;
+                    <MapPin className='h - 3 w - 3' />;
+
+                    <span>{item.location}</span>;
+                    <DollarSign className='h - 3 w - 3' />;
+
+                    <span>{item.price}</span>;
+                    <Clock className='h - 3 w - 3' />;
+
+                    <span>{item.time_posted}</span>;
+                  <div className='ml - auto bg - primary / 10 text - primary rounded - full px - 2 py - 0.5'>                    {item.match}% match                {item.location && (
+                  <div className="flex items - center gap - 1">;"
+                    <MapPin className="h - 3 w - 3" />;"
+
+                    <span>{item.location}</span>;)
+                  </div>)}"
+                    <DollarSign className="h - 3 w - 3" />;"
+
+                    <Clock className="h - 3 w - 3" />;"
+
+                  <div className="ml - auto bg - primary / 10 text - primary rounded - full px - 2 py - 0.5">;"
+            <div className='border - t border - border p - 3 flex justify - end'>;
+                size='sm';
+                on_click={() => onViewDetails (item.id)}
+
+                View Details <ChevronRight className='h - 4 w - 4' />              ;
+
+                View Details <ChevronRight className="h - 4 w - 4" />;"
+
+    </div>);
+pr-12325

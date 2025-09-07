@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import type { NextPage } from 'next',
 import Head from 'next/head',
@@ -9,11 +8,10 @@ const EmergingTechnologyTrends: NextPage = () => {
         <title>EmergingTechnologyTrends - Zion Tech Solutions</title>
         <meta name="description" content="EmergingTechnologyTrends page" />
       </Head>
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 const EmergingTechnologyTrends: NextPage;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       <main>
         <h1>EmergingTechnologyTrends</h1>
         <p>This page is under construction.</p>
@@ -23,7 +21,6 @@ const EmergingTechnologyTrends: NextPage;
 };
 
 export default EmergingTechnologyTrends;
-<<<<<<< HEAD
 
 },
 export default EmergingTechnologyTrends,
@@ -51,5 +48,4 @@ export default EmergingTechnologyTrends;
 ;
 
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

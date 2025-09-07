@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default function ProfileDetail() {;
   // useParams is typed as `any` in this environment due to missing type;
   // definitions, so avoid passing a type argument to prevent TS2347.;
@@ -263,7 +262,6 @@ export default function ProfileDetail() {;
           <div className="col-span-4 lg:col-span-1">;
             <HireNowCTA
               talentProfile={{
-=======
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { supabase } from '@/integrations/supabase/client';
@@ -299,7 +297,7 @@ export default function ProfileDetail() {
   // definitions, so avoid passing a type argument to prevent TS2347.
   const router = null;
                 hourly_rate: profileData?.hourly_rate || 0
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               }}
             />;
             {/* Contact Information */}
@@ -337,12 +335,10 @@ export default function ProfileDetail() {
 }, [profileId]);
 <p>Error: {error ;
 }</p> </div>) ;
-<<<<<<< HEAD
 
     </>);
 ;
 }
-=======
 }return (<> <SEO) : (<AvatarFallback> {profileData.full name?.charAt (0) ;
 }</AvatarFallback>) ;
 }</Avatar> <div> </div> </div> </CardHeader> <CardContent> $ {profileData.hourly rate ";
@@ -363,4 +359,4 @@ export default function ProfileDetail() {
 }target="blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan" aria-label="LinkedIn" title="LinkedIn" > <Linkedin className="h-4 w-4" /> LinkedIn </Link>) ;
 }</div> </div> </div> </div> </div> </>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

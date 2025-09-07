@@ -1,14 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Download } from 'lucide-react';
-<<<<<<< HEAD
 
 interface Resume {
   id: string;
@@ -19,9 +14,8 @@ interface Resume {
   url: string;
   status?: 'draft' | 'published' | 'archived';
 }
-=======
 import { Resume } from '@/types/resume';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 interface ResumePreviewCardProps {
   resume: Resume;
@@ -49,7 +43,6 @@ export const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({
     }
   };
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <Card
       className={`cursor-pointer transition-all duration-200 hover:shadow-md ${
@@ -60,7 +53,6 @@ export const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({
       onClick={() => onSelect(resume)}
     >
       <CardContent className="p-4">
-<<<<<<< HEAD
         <div className="flex justify-between items-start mb-2">
           <div>
             <h4 className="font-medium text-white">{resume.basic_info.title}</h4>
@@ -82,7 +74,6 @@ export const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({
               <Badge
                 key={index}
                 variant='outline'
-<<<<<<< HEAD
                 className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs'              >          <div className="flex flex-wrap gap-1 mt-2">
         
         {resume.skills && resume.skills.length > 0 && (
@@ -92,24 +83,21 @@ export const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({
                 key={index} 
                 variant="outline"
                 className="bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs"
-=======
                 className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs'
               >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 {skill.name}
               </Badge>
             ))}
             {resume.skills.length > 5 && (
-<<<<<<< HEAD
                 className='bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'              >              <Badge 
               <Badge 
                 variant="outline"
                 className="bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs"
-=======
 <Badge
                 variant='outline'
                 className='bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 +{resume.skills.length - 5} more
               </Badge>
@@ -121,7 +109,6 @@ export const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({
   );
 };
 }
-=======
         <div className="flex items-start justify-between mb-3">
           <div className="flex-1">
             <h3 className="font-semibold text-gray-900 mb-1">
@@ -171,9 +158,6 @@ export const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({
       </CardContent>
     </Card>
   );
-<<<<<<< HEAD
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

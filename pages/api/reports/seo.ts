@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 
 ;
       const report = {
@@ -32,12 +31,11 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   try {
     if (!fs.existsSync(p)) return res.status(200).json({});
     res.status(200).json(JSON.parse(fs.readFileSync(p, 'utf-8')));
-=======
 import fs from 'fs';
 import path from 'path';
 const p = null;
     res.status(200).json(JSON.parse(fs.readFileSync(p, 'utf-8')))
->>>>>>> pr-12243
+pr-12243
   } catch (e: any) {
     res.status(500).json({ error: e?.message || 'Failed to read SEO report' })
   }
@@ -57,7 +55,6 @@ if (req.method === 'POST') {
       return res.status(500).json({ error: 'Failed to update SEO report' });
     }
   }
-<<<<<<< HEAD
 
 
 
@@ -91,8 +88,7 @@ export default function handler(req, res) {
 
 
 
-=======
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
 }
->>>>>>> pr-12243
+pr-12243

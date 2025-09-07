@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
 export default function AiHrAnalyticsPlatform() {
 	return (
@@ -20,9 +19,8 @@ export default function AiHrAnalyticsPlatform() {
 				"Headcount planning and skills inventory",
 				"Integrations: Workday, BambooHR, Greenhouse, Lever",
 				"Compensation benchmarking and ranges",
-=======
 			title;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 				"Engagement drivers and action suggestions"
 			]  } catch (error) {
     console.error("Error:", error);
@@ -38,7 +36,6 @@ export default function AiHrAnalyticsPlatform() {
 			canonical="https: //ziontechgroup.com/ai-hr-analytics-platform"
 		/>
 	)
-<<<<<<< HEAD
 			canonical="https: //ziontechgroup.com/ai-hr-analytics-platform";
 		/>;
 	);
@@ -46,6 +43,5 @@ export default function AiHrAnalyticsPlatform() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }

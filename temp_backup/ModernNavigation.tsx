@@ -10,3 +10,14 @@ export default function ModernNavigation({ }: ModernNavigationProps) {
     </div>
   );
 }}
+  // TODO: Implement
+}
+  // Add props here as needed;
+export default function ModernNavigation({ }: ModernNavigationProps) {
+  return (
+    <div>
+</div>
+      <h1>ModernNavigation</h1>
+      <p>This component is currently under development.</p>
+    </div>)
+pr-12325

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
       // Check condition
 if ( {) {
@@ -16,7 +15,6 @@ if ( {) {
   const handleEdit = (work: WorkExperience) => {;
 
 
-=======
 import { useState  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -59,7 +57,7 @@ import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhance
   };
 
   const handleEdit = (work: WorkExperience) => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     setEditingId(work.id!);    form.reset({
       ...work
   const handleEdit = (work: WorkExperience) => {
@@ -348,13 +346,10 @@ export function WorkExperienceForm(): any ({;
                     {work.location && (
                       <p className="text-xs text-muted-foreground">{work.location}</p>
                     )}
-<<<<<<< HEAD
                   </div>;
                   <div className='flex gap-2'>;
-=======
                   </div>
                   <div className="flex gap-2">
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     <Button
                     setEditingId(null),
                     setEditingId(null),
@@ -379,7 +374,6 @@ export function WorkExperienceForm(): any ({;
               <Button
                 type='button'
                 variant='outline'
-<<<<<<< HEAD
                 onClick={() => {;
                   if (editingId) {;
                     setEditingId(null);
@@ -393,7 +387,6 @@ export function WorkExperienceForm(): any ({;
                     });
                   } else {;
                     onBack();
-=======
                 onClick={() => {
                   if (editingId) {
                     setEditingId(null)
@@ -407,7 +400,7 @@ export function WorkExperienceForm(): any ({;
                     })
                   } else {
                     onBack()
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   }
                 }}
               >
@@ -428,7 +421,6 @@ export function WorkExperienceForm(): any ({;
                     Next
                   </Button>
                 )}
-<<<<<<< HEAD
 
               </Button>;
 
@@ -513,7 +505,6 @@ if ( {) {
 }'"  );
 }
 ;
-=======
               </div>
             </div>
           </form>
@@ -527,4 +518,4 @@ if ( {) {
 }</Button> Next </Button>) ;
 }</div> </div> </form> </Form> </div> </div>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

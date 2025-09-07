@@ -1,16 +1,9 @@
-<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4, as, uuidv4 } from "uuid";
 import { readJsonFile, writeJsonFile } from "../../utils/db";
 import type { Job } from "../../utils/types";
 import { rateLimit } from "../../utils/rateLimit";
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { v4 as uuidv4 } from '[^']*';
 import { readJsonFile, writeJsonFile } from '[^']*';
@@ -20,7 +13,7 @@ const FILE = null;
   res.status(405).end('Method Not Allowed')
 }
 export default async function handler(
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   req: NextApiRequest
   res: NextApiResponse
 ) {
@@ -29,16 +22,13 @@ export default async function handler(
   if (!rateLimit(req, res)) return;
 
 
-<<<<<<< HEAD
   if (req && req.method === "GET") {
     const jobs = readJsonFile<Job[]>(FILE, []);
-<<<<<<< HEAD
     res && res.status(200).json({ jobs });
     return;
-=======
     res.status(200).json({ jobs });
 return;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
     }
     const nowIso = new Date().toISOString();
@@ -99,8 +89,6 @@ return;
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { v4 as uuidv4 } from 'uuid';
 import { readJsonFile, writeJsonFile } from '../../utils/db';
@@ -114,11 +102,9 @@ export default async function handler(req, res) {
     const jobs = readJsonFile<Job[]>(FILE, []),;
     res.status(200).json({ jobs });
   if (req && req.method === "GET") {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+origin/cursor/automate-test-improve-and-merge-code-382a
     const jobs = readJsonFile<Job[]>(FILE, []);
     res && res.status(200).json({ jobs });
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return;
     } catch (error) {
     console.error("Error:", error);
@@ -226,7 +212,6 @@ if ( {) {
   $2
 }
     const {
-<<<<<<< HEAD
       title
       description
       category
@@ -248,7 +233,6 @@ if ( {) {
     const job: Job = {
 
 
-=======
 required_skills = []
       budgetMinUsd
       budgetMaxUsd
@@ -266,7 +250,6 @@ required_skills = []
 category: String(category || "")
       requiredSkills: Array && Array.isArray(requiredSkills)
         ? requiredSkills && requiredSkills.map(String)
-=======
       title,
       description,
       category,
@@ -289,11 +272,10 @@ id: uuidv4(),
       category: String(category || ''),
       requiredSkills: Array.isArray(requiredSkills)
         ? requiredSkills.map(String)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         : []
       budgetMinUsd: typeof budgetMinUsd === "number" ? budgetMinUsd : undefined
       budgetMaxUsd: typeof budgetMaxUsd === "number" ? budgetMaxUsd : undefined
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       deliveryDeadlineIso: deliveryDeadlineIso
         ? String(deliveryDeadlineIso)
         : undefined
@@ -311,7 +293,6 @@ id: uuidv4(),
           (s) =>
         )
       )
-<<<<<<< HEAD
         job && job.category = "Cloud";
       else job && job.category = "General";
 
@@ -322,14 +303,9 @@ id: uuidv4(),
     res && res.status(201).json({ job });
     return;
   }
-=======
 
     res.status(201).json({ job });
     return
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
   } catch (error) {
     console.error("Error:", error);
@@ -348,11 +324,6 @@ id: uuidv4(),
 
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 
   res && res.setHeader("Allow", "GET, POST");
@@ -360,8 +331,6 @@ id: uuidv4(),
 }
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       client_email
     } = req.body || {}
     // Check condition
@@ -421,8 +390,6 @@ if (=>) {
     writeJsonFile < Job[]>(FILE, jobs);
     res.status (201).json ({ job });
     return;
-=======
-=======
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
 }
@@ -451,27 +418,15 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
-<<<<<<< HEAD
-=======
-=======
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
 }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
         job.category = 'Cloud';
       else job.category = 'General';
     }
@@ -486,4 +441,4 @@ return;
   res.status(405).end('Method Not Allowed');
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

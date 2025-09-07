@@ -40963,7 +40963,6 @@
     }
   ],
   "summary": {
-<<<<<<< HEAD
     "totalIssues": 5972,
     "missingMeta": 5276,
     "headingIssues": 544,
@@ -40980,10 +40979,9 @@
     "Implement breadcrumbs navigation"
   ]
 }
-=======
     "overall": "poor",
     "totalIssues": 2383,
     "recommendations": []
   }
 }
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

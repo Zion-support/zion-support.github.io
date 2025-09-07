@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { useEffect, useState } from 'react';
 import { QuoteFormData, ListingItem, ServiceType } from '@/types/quotes';
 import { Input } from '@/components/ui/input';
@@ -14,12 +11,11 @@ import { useIsMounted } from '@/hooks/useIsMounted';
 import { z } from 'zod';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 const listingSchema = z.object({
   id: z.string(),
   title: z.string(),
   category: z.string(),
-<<<<<<< HEAD
   image: z.string().optional()}),
 
 const listingsSchema = z.array(listingSchema),
@@ -37,7 +33,6 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
   const [loading, setLoading] = useState(false),
   const [error, setError] = useState<string | null>(null),
   const isMounted = useIsMounted(),
-=======
   image: z.string().optional(),
 });
 
@@ -57,12 +52,11 @@ export function ServiceTypeStep({
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const isMounted = useIsMounted();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
   // Fetch services when the service type or query changes
   useEffect(() => {
     if (!formData.serviceType) {
-<<<<<<< HEAD
       setListings([]),
       return
 import { useEffect, useState } from "react",;
@@ -169,7 +163,6 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
     return item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
            item.category.toLowerCase().includes(searchQuery.toLowerCase())
   }),
-=======
       setListings([]);
       return;
     }
@@ -247,7 +240,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
       item.category.toLowerCase().includes(searchQuery.toLowerCase())
     );
   });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
   return (
     <div className="space-y-6">
@@ -285,7 +278,6 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
                 : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
             }`}
             onClick={() => handleTypeSelect("equipment")}
-=======
 }
 
 
@@ -378,7 +370,6 @@ const listing_schema = z.object ({
               placeholder={`Search ${formData.serviceType}...`}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-<<<<<<< HEAD
               className="pl-10 bg-zion-blue border border-zion-blue-light focus:border-zion-purple";
             />;
           </div>;
@@ -425,8 +416,6 @@ const listing_schema = z.object ({
   );
 }
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
               className="pl-10 bg-zion-blue border border-zion-blue-light focus:border-zion-purple"
             />
           </div>
@@ -464,4 +453,4 @@ return (<div className="space-y-6"> <div> <h3 className="text-xl font-semibold t
 }"
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

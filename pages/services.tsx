@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import MainLayout from '../components/layout/MainLayout';
 
 const Page = () => {
@@ -22,7 +18,6 @@ const Page = () => {
 };
 
 export default Page;
-=======
 import Head from 'next/head';
 
 export default function Services() {
@@ -83,7 +78,6 @@ export default function Services() {
     </>
   );
 }
-=======
 
 
 
@@ -661,7 +655,6 @@ export default function Services() {
     address: '364 E Main St STE 1008 Middletown DE 19709'
     site: 'https://ziontechgroup.com'
   }
-=======
 import Link from 'next/link',
 import Head from 'next/head';
 import { useState, useEffect  } from 'react';
@@ -677,7 +670,7 @@ export default function Services() {
                       key={category.title}
                       className={`p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-${category.color}-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                       style={{ transitionDelay: `${index * 200}ms` }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
         </section>
@@ -755,7 +748,6 @@ import Link from 'next/link';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
       services: [
-<<<<<<< HEAD
         'AI-Powered Video Clip MakerSmart Contract AnalyzerCybersecurity Threat IntelligenceMulti-Language Website TranslatorPredictive Inventory OptimizerReal-Time Analytics DashboardAutomated Customer SupportBlockchain Transaction Monitor'
       ];
 
@@ -797,7 +789,6 @@ import Footer from '../components/Footer';
   const getColorClasses = (color: string) => {
     const colors = {
       blue: {
-=======
         'AI-Powered Video Clip Maker',
         'Smart Contract Analyzer',
         'Cybersecurity Threat Intelligence',
@@ -863,12 +854,11 @@ import Footer from '../components/Footer';
 ring: 'focus:ring-purple-500',
       },
       green: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         bg: 'bg-green-600',
         hover: 'hover:bg-green-700',
         text: 'text-green-400',
         border: 'border-green-500/40',
-<<<<<<< HEAD
 
       id: 'micro-saas',
       title: 'Micro SaaS Development',
@@ -939,19 +929,17 @@ ring: 'focus:ring-purple-500',
 }
   ];
   const categories = ['All', 'AI Services', 'IT Solutions', 'Micro SaaS', 'Security', 'Analytics', 'Blockchain'];
-=======
 ring: 'focus:ring-green-500',
       },
     };
     return colors[color as keyof typeof colors] || colors.blue;
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>
       <Head>
         <title>Our Services - Zion Tech Group</title>
-<<<<<<< HEAD
       <div className="min-h-screen bg-slate-950 text-white flex flex-col items-center justify-center py-12">
         <main className="text-center max-w-4xl px-4">
           <h1 className="text-5xl font-bold mb-6 gradient-text">Our Advanced Services</h1>
@@ -1051,9 +1039,8 @@ export default function Services() {;
       <Head>;
         <title>Our Services - Zion Tech Group</title>;
         <meta
-=======
 <meta
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           name='description'
           content='Explore our comprehensive range of micro SaaS products, AI services, and IT solutions. 350+ innovative services to transform your business.'
         />;
@@ -1089,8 +1076,6 @@ export default function Services() {;
               >
                 350+ Innovative Solutions for Modern Businesses
               </p>
-<<<<<<< HEAD
-=======
               <p
                 className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >
@@ -1098,7 +1083,7 @@ export default function Services() {;
                 specialized micro SaaS products, we provide everything your
                 business needs to thrive in the digital age.
               </p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
             <div className="card">
               <h3 className="text-2xl font-semibold mb-3">Cloud Solutions</h3>
@@ -1117,7 +1102,6 @@ export default function Services() {;
               <div className='grid lg:grid-cols-3 gap-8'>
                 {serviceCategories.map((category, index) => {
                   const colors = getColorClasses(category.color);
-<<<<<<< HEAD
 
 
                     >
@@ -1341,16 +1325,14 @@ function Services() {
 ;
                     >;
                       <div className='flex items - center justify - between mb - 6'>                        <h3 className={`text - 2xl font - bold ${colors.text}`}>;
-=======
                     >
                       <div className='flex items-center justify-between mb-6'>
                         <h3 className={`text-2xl font-bold ${colors.text}`}>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                           {category.title}
                         </h3>;
                         <span className={`text - 3xl font - bold ${colors.text}`}>;
                           {category.count}
-<<<<<<< HEAD
                     >;
                       <div className='flex items-center justify-between mb-6'>                        <h3 className={`text-2xl font-bold ${colors && colors.text}`}>;
                           {category && category.title}
@@ -1378,7 +1360,6 @@ function Services() {
                       >;
                         View All {category && category.title}
                         <svg
-=======
                         </span>
                       </div>
 <p className='text-slate-300 mb-6'>
@@ -1398,7 +1379,7 @@ function Services() {
                       >
                         View All {category.title}
 <svg
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                           className='ml-2 w-4 h-4'
                           fill='none'
                           stroke='currentColor'
@@ -1453,13 +1434,11 @@ function Services() {
                         strokeLinecap='round'
                         strokeLinejoin='round'
                         strokeWidth={2}
-<<<<<<< HEAD
                 Contact our experts today to discuss your project requirements;
                 and discover how our innovative solutions can transform your;
                 business.;
               </p>;
 
-=======
                         d='M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 100 19.5 9.75 9.75 0 000-19.5z'
                       />
                     </svg>
@@ -1467,7 +1446,6 @@ function Services() {
                   <h3 className='text-xl font-bold mb-2'>24/7 Support</h3>
                   <p className='text-slate-400'>
                     Round-the-clock technical support and maintenance
-=======
 import Link from 'next/link';
 import Layout from '../components/Layout';
 import {
@@ -3311,12 +3289,11 @@ export default function Services() {
                   </h4>
                   <p className="text-sm text-gray-600">
                     Average 300% ROI within first year
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                   </p>
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
           </section>
 
           {/* CTA Section */}
@@ -3331,15 +3308,13 @@ export default function Services() {
                 business.
               </p>
               <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 <Link
                   href='/contact'
                   className='px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors'>;
                   Get a Quote;
                 </Link>;
                 <a
-<<<<<<< HEAD
-=======
                   href={`tel:${contact.phone.replace(/[^\d+]/g, '')}`}
                   className='px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors'
                 >
@@ -3353,7 +3328,7 @@ export default function Services() {
                 </a>
               </div>
 </motion.div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </section>
         {/* Services Grid */  } catch (error) {
@@ -3461,7 +3436,6 @@ export default function Services() {
       <Footer />
     </>
   );
-<<<<<<< HEAD
 }
 }
                       
@@ -3646,14 +3620,8 @@ className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold 
     </>);
 );
 }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
+ursor/fix-netlify-build-and-merge-to-main-9571
+origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </section>
 
@@ -3698,4 +3666,4 @@ className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold 
     </Layout>
   );
 }
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

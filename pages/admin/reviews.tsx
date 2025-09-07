@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import type { NextPage } from 'next';
 import type { Review } from '../../types/reviews';
@@ -17,9 +16,8 @@ const AdminReviewsPage: NextPage = () => {
     }
   }
   useEffect(() => { refresh() }, [])
-=======
 const ADMIN_KEY = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   async function moderate(action: 'approve' | 'remove', reviewId: string) {
     const res = await fetch('/api/reviews/moderate', {
       method: 'POST'
@@ -31,7 +29,6 @@ const ADMIN_KEY = null;
     });
     if (res.ok) refresh();
   }
-<<<<<<< HEAD
 const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') || 'dev-admin-key');
 const AdminReviewsPage: NextPage = () => {;
   const [pending, setPending] = useState<Review[]>([]);
@@ -70,9 +67,8 @@ const AdminReviewsPage: NextPage = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <main className='max-w-5xl mx-auto p-6 space-y-6'>
       <h1 className='text-2xl font-semibold'>Review Moderation</h1>
@@ -123,7 +119,6 @@ const AdminReviewsPage: NextPage = () => {;
         </pre>
       </section>
     </main>
-<<<<<<< HEAD
   )
 
 },
@@ -140,9 +135,8 @@ export default AdminReviewsPage,
 export default AdminReviewsPage,;
 export default AdminReviewsPage,
 
-=======
   );
 };
 
 export default AdminReviewsPage;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

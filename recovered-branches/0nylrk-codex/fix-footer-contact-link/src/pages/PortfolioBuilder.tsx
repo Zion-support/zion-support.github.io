@@ -70,6 +70,67 @@ function PortfolioBuilderContent() {
   );
 }
 
+import { useState } from "react";""
+import { AppHeader } from "@/layout/AppHeader";""
+import { Footer } from "@/components/Footer";""
+import { SEO } from "@/components/SEO";""
+import { ProtectedRoute } from "@/components/ProtectedRoute";""
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";""
+import { ResumeWizard } from "@/components/resume-builder/ResumeWizard";"
+import {
+  // TODO: Implement
+}
+  PortfolioBuilder,
+  as,
+  PortfolioSection,"
+} from "@/components/resume-builder/portfolio/PortfolioBuilder";"
+function PortfolioBuilderContent() {"
+  const [activeTab, setActiveTab] = useState("resume");"
+  return (
+    <>
+      <SEO;"
+        title="Portfolio Builder | Zion AI Marketplace"""
+        description="Create and customize your resume and portfolio to showcase your skills and experience.""
+      />
+
+      <AppHeader />
+"
+      <main className="container mx-auto px-4 py-8">"
+</main>"
+        <h1 className="text-3xl font-bold mb-8">Resume & Portfolio Builder</h1>"
+        <Tabs;
+          value={activeTab}
+          onValueChange={setActiveTab}"
+          className="space-y-6""
+        >
+          <TabsList className="bg-muted/60 p-0">"
+
+            <TabsTrigger;"
+              value="resume"""
+              className="data-[state=active]:bg-background""
+
+            
+              value="portfolio"""
+
+            
+          
+          <TabsContent value="resume" className="space-y-6">"
+
+            <ResumeWizard />
+
+          
+          <TabsContent value="portfolio" className="space-y-6">"
+
+            <PortfolioSection />
+
+          
+        
+      </main>
+      <Footer />
+
+    </>)
+  );
+pr-12325
 import {useState} from 'react';
 import {AppHeader} from '@/layout/AppHeader';
 import {Footer} from '@/components/Footer';
@@ -135,3 +196,49 @@ function PortfolioBuilder() {
       <PortfolioBuilderContent />;
     </ProtectedRoute>);
 }
+    <ProtectedRoute>
+
+      <PortfolioBuilderContent />
+
+    
+    <ProtectedRoute>;
+
+      <PortfolioBuilderContent />;
+
+    ;
+    <>;
+      <SEO;
+        title="Portfolio Builder | Zion AI Marketplace";""
+        description="Create and customize your resume and portfolio to showcase your skills and experience.";"
+      />;
+
+      <AppHeader />;
+      <main className="container mx - auto px - 4 py - 8">;"
+        <h1 className="text - 3xl font - bold mb - 8">Resume & Portfolio Builder</h1>;""
+        <Tabs value={active_tab} onValueChange={setActiveTab} className="space - y-6">;"
+          <TabsList className="bg - muted / 60 p - 0">;"
+            <TabsTrigger value="resume" className="data-[state = active]:bg - background">Resume;""
+            <TabsTrigger value="portfolio" className="data-[state = active]:bg - background">Portfolio;"
+          ;"
+          <TabsContent value="resume" className="space - y-6">;"
+
+            <ResumeWizard />;
+
+          <TabsContent value="portfolio" className="space - y-6">;"
+
+            <PortfolioSection />;
+
+      </main>;
+      <Footer />;
+)
+    </>);
+export default /**
+ * PortfolioBuilder - Function description;
+ */
+function PortfolioBuilder() {
+
+
+
+    
+
+pr-12325

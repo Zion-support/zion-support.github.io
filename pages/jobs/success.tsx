@@ -1,4 +1,3 @@
-<<<<<<< HEAD
         <Link href="/dashboard"><a className="px-4 py-2 rounded-md bg-blue-600 text-white">Go to Dashboard</Link></Link>
         <Link href="/talent"><a className="px-4 py-2 rounded-md border">Browse Talent</Link></Link>
       </div>
@@ -26,7 +25,6 @@ export default function JobSuccessPage(req, res) {
       </div>;
     </div>);
 }
-=======
 import Link from 'next/link';
 export default function JobSuccessPage() {
   return (
@@ -51,4 +49,4 @@ export default function JobSuccessPage() {
       </div>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

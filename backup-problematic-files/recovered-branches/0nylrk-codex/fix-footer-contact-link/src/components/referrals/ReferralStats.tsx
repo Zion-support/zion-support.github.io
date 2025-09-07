@@ -1,13 +1,12 @@
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
-import { ReferralStats as ReferralStatsType } from "@/types/referrals",;
-import { Award, Share, Star, TrendingUp } from "lucide-react",;
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;""
+import { ReferralStats as ReferralStatsType } from "@/types/referrals",;""
+import { Award, Share, Star, TrendingUp } from "lucide-react",;"
 ;
 interface ReferralStatsProps {;
   stats:ReferralStatsType,;
   isLoading:boolean;
 }
-;
 export function ReferralStats({ stats, isLoading } ReferralStatsProps) {;
   const statCards = [;
     {;
@@ -34,18 +33,25 @@ export function ReferralStats({ stats, isLoading } ReferralStatsProps) {;
   return (;
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">;
       {statCards.map((card, i) => (;
+    {;"
+      title:"Total Referrals",;"
+      value:stats.totalReferrals,;"
+      icon:<Share className="h-5 w-5 text-muted-foreground" />,;"
+"
+      icon:<Star className="h-5 w-5 text-muted-foreground" />,;"
+      icon:<TrendingUp className="h-5 w-5 text-muted-foreground" />,;"
+      icon:<Award className="h-5 w-5 text-muted-foreground" />,;"
+    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">;"
+</div>
+pr-12325
         <Card key={i}>;
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">;
-            <CardTitle className="text-sm font-medium">{card.title}</CardTitle>;
-            {card.icon}
-          </CardHeader>;
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">;"
+            <CardTitle className="text-sm font-medium">{card.title};"
           <CardContent>;
-            {isLoading ? (;
-              <div className="h-6 w-20 bg-muted animate-pulse rounded" />;
-            ) :(;
-              <>;
-                <div className="text-2xl font-bold">{card.value}</div>;
-                <p className="text-xs text-muted-foreground">{card.description}</p>;
+              <div className="h-6 w-20 bg-muted animate-pulse rounded" />;"
+              <>;"
+                <div className="text-2xl font-bold">{card.value}</div>;""
+                <p className="text-xs text-muted-foreground">{card.description}</p>;"
               </>;            )}
           </CardContent>;
         </Card>;
@@ -61,3 +67,7 @@ isLoading: boolean
   icon: <Award className="h-5 w-5 text-muted-foreground" />,
   description: "Credits earned from referrals" 
 }];
+    </div>;"
+  icon: <Award className="h-5 w-5 text-muted-foreground" />;"
+]"
+pr-12325

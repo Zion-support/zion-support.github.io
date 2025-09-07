@@ -5,6 +5,14 @@ export const useResumeProgress = (resume: Resume | null) => {;  const [progress,
 
   useEffect(() => {
     // Calculate progress based on completed sections
+import { useState, useEffect } from "react";""
+import { Resume } from "@/types/resume";"
+export const useResumeProgress = (resume: Resume | null) => {
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    // Calculate progress based on completed sections;
+pr-12325
     if (!resume) {
       setProgress(0);
       return;
@@ -48,6 +56,24 @@ if ( {) {
       completed += 1;
     }
 
+    let completed = 0;
+
+    // Basic info is always considered (1 point)
+    completed += 1;
+
+    // Work experience (1 point if at least one entry)
+    if (resume.work_experience && resume.work_experience.length > 0) {
+
+    // Education (1 point if at least one entry)
+    if (resume.education && resume.education.length > 0) {
+
+    // Skills (1 point if at least one entry)
+    if (resume.skills && resume.skills.length > 0) {
+
+    // Certifications (1 point if at least one entry)
+    if (resume.certifications && resume.certifications.length > 0) {
+pr-12325
+
     const progressPercentage = (completed / 5) * 100;
     setProgress(progressPercentage);
   }, [resume]);
@@ -68,12 +94,17 @@ if ( {) {
       completed += 1
     }};
 
+  return progress;
+};
+"
+pr-12325
 import { useState, useEffect } from 'react',;
 import { Resume } from '@/types/resume',;
 ;
 export const useResumeProgress = (resume:Resume | null) => {;
   const [progress, setProgress] = useState(0),;
   ;
+pr-12325
   useEffect(() => {;
     // Calculate progress based on completed sections;
     if (!resume) {;
@@ -110,6 +141,21 @@ export const useResumeProgress = (resume:Resume | null) => {;
     setProgress(progressPercentage),;
   }, [resume]),;
 ;
+    let completed = 0,;
+    // Basic info is always considered (1 point);
+    completed += 1,;
+    // Work experience (1 point if at least one entry);
+    if (resume.work_experience && resume.work_experience.length > 0) {;
+    // Education (1 point if at least one entry);
+    if (resume.education && resume.education.length > 0) {;
+    // Skills (1 point if at least one entry);
+    if (resume.skills && resume.skills.length > 0) {;
+    // Certifications (1 point if at least one entry);
+    if (resume.certifications && resume.certifications.length > 0) {;
+    const progressPercentage = (completed / 5) * 100,;
+    setProgress(progressPercentage),;
+  }, [resume]),;
+pr-12325
   return progress,;
 },; useEffect ( () => {
   // Calculate progress based on completed sections if (!resume) {
@@ -120,4 +166,7 @@ export const useResumeProgress = (resume:Resume | null) => {;
 };
 
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+// Work experience (1 point if at least one entry) return progress;
+
+
+pr-12325

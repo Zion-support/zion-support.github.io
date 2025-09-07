@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
@@ -19,7 +18,6 @@ const Page = () => {
 };
 
 export default Page;
-=======
 
 
 
@@ -50,7 +48,6 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 import React, { useState, useEffect } from 'react',
 import Head from 'next/head';
-<<<<<<< HEAD
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -627,7 +624,6 @@ export default function SearchPage(req, res) {
   }
 }
   }, [filters, sortBy]),
-=======
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Filter, Grid, List, ArrowRight, ExternalLink;
   Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star;
@@ -897,7 +893,6 @@ features: [
 return;
     }
 
-<<<<<<< HEAD
     setIsSearching(true);
 
     // Simulate search delay
@@ -979,7 +974,6 @@ setIsSearching(false);
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
 performSearch();
-=======
   const performSearch = async (query: string) => {
     if (!query.trim()) return;
 
@@ -1017,7 +1011,7 @@ performSearch();
       console.error('Search error: ', error);
     } finally {
       setIsLoading(false);
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     }
   };
 
@@ -1028,38 +1022,33 @@ performSearch();
     }
   }, [filters, sortBy]);
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   // Clear all filters
   const clearFilters = () => {
     setFilters({
       category: 'all',
       status: 'all',
       priceRange: 'all',
-<<<<<<< HEAD
       technology: 'all'
     }),
     setSortBy('relevance')
   },
-=======
 technology: 'all',
     });
     setSortBy('relevance');
-=======
   const getIconForType = (type: string) => {
     switch (type) {
       case 'service': return <Zap className="w-5 h-5 text-blue-600" />;
       case 'page': return <FileText className="w-5 h-5 text-green-600" />;
       default: return <Globe className="w-5 h-5 text-gray-600" />;
     }
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
       <Head>
-<<<<<<< HEAD
         <title>Search | Zion Tech Group</title>
         <meta
           name='description'
@@ -1073,7 +1062,6 @@ technology: 'all',
         <link rel='canonical' href='https://ziontechgroup.com/search' />
       </Head>
 
-<<<<<<< HEAD
       <div className="min-h-screen bg-gray-50">
     return matchesQuery && matchesCategory && matchesFilter;
   });
@@ -1127,7 +1115,6 @@ technology: 'all',
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8">
               Find the perfect AI and technology solutions for your business needs.
               Search across our comprehensive service catalog with advanced filtering options.
-=======
       <SmartHeader />
 
       {/* Hero Section */}
@@ -1145,12 +1132,11 @@ technology: 'all',
               Find the perfect AI and technology solutions for your business
               needs. Search across our comprehensive service catalog with
               advanced filtering options.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Search Interface */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1388,7 +1374,6 @@ function SearchPage() {
   }
 }
               <div className="flex items-center gap-2">
-=======
 
       {/* Search Interface */}
 <section className='px-6 pb-12'>
@@ -1418,7 +1403,6 @@ function SearchPage() {
 
               {/* View Mode Toggle */}
 <div className='flex items-center gap-2'>
-=======
         <title>Search - Zion Tech Group</title>
         <meta
           name="description"
@@ -1442,7 +1426,7 @@ function SearchPage() {
                   className="w-full px-6 py-4 pl-14 text-lg border border-gray-300 rounded-lg focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
                 <Search className="absolute left-5 top-4 h-6 w-6 text-gray-400" />
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-all duration-300 ${
@@ -1469,12 +1453,11 @@ viewMode === 'list'
             {/* Filters and Sort */}
 <div className='flex flex-col lg:flex-row gap-4 items-center justify-between'>
               <div className='flex items-center gap-4'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 <button
                   onClick={() => setShowFilters(!showFilters)}
                   className='flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-white transition-colors'
                 >
-<<<<<<< HEAD
                   <Grid className="w-5 h-5" />
                 </button>
                 <button
@@ -1511,9 +1494,8 @@ viewMode === 'list'
                   className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-white transition-colors"
                 >
                   <Sliders className="w-4 h-4" />
-=======
                   <Sliders className='w-4 h-4' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   Filters
                   {Object.values(filters).some(f => f !== 'all') && (
                     <span className='w-2 h-2 bg-cyan-400 rounded-full'></span>
@@ -1685,7 +1667,6 @@ className='mt-6 pt-6 border-t border-white/20'
             </p>
           </div>
 
-<<<<<<< HEAD
           {/* Loading State */}
           {isSearching && (
 <div className='text-center py-20'>
@@ -1738,11 +1719,9 @@ viewMode === 'grid'
                         ? 'p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
                         : 'p-6 rounded-xl border border-white/10 bg-white/5 hover:border-cyan-400/30 transition-all duration-300'
                     }`}
-<<<<<<< HEAD
 
 
 
-=======
                   >
 <div className='absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />
                     <div className='relative z-10'>
@@ -1853,13 +1832,12 @@ viewMode === 'grid'
 performSearch();
                     }}
                     className='px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full text-sm text-white/70 hover:text-white transition-colors'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   >
                     {term}
                   </button>
                 ))}
               </div>
-<<<<<<< HEAD
 
 
               <div className="text-sm text-gray-600">
@@ -2525,7 +2503,6 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
         </section>;
       </div>;
 
-=======
       <SmartFooter />
     </div>
 );
@@ -2556,7 +2533,7 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
         </section>
       </div>
     </Layout>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   );
 
             </AnimatePresence>
@@ -2586,7 +2563,6 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
                     {term}
                   </button>
                 ))}
-=======
           {/* Search Results */}
           {router.query.q && (
             <div className="mb-6">
@@ -2694,12 +2670,11 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
                     Blog, help, and documentation
                   </p>
                 </div>
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               </div>
             </div>
           )}
         </div>
-<<<<<<< HEAD
       </section>
   } catch (error) {
     console.error("Error:", error);
@@ -2715,20 +2690,13 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 )
 }
-<<<<<<< HEAD
 origin/main
 origin/automation-improvements-final
 )
 }
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
+origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
 </>
   );
 }
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

@@ -1,33 +1,31 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+pr-12325
 export type ProjectParticipants = {
 
 export type ProjectParticipants = {;
 
 
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
   clientUserId: string;
   talentUserId: string;
-<<<<<<< HEAD
 }
 export type Project = {  id: string;
-<<<<<<< HEAD
   title: string;
   description?: string;
-=======
-<<<<<<< HEAD
   title: string;
   description?: string;
-=======
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
   title: string;
   description?: string;
   due_date: string;
+  clientUserId: string;,
+  talentUserId: string;
+}
+export type Project = {  id: string;,
+  title: string;
+  description?: string;
+  due_date: string;,
+pr-12325
   amount_usd: number;
   status: 'pending' | 'completed' | 'cancelled';
   attachments?: MilestoneAttachment[];
@@ -40,96 +38,100 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
 
   );export interface MilestoneAttachment {
 
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+  updatedAt: string;
+export function isMilestoneStatus(value: string): value is MilestoneStatus {
+  // TODO: Implement
+  return (
+)
+  );export interface MilestoneAttachment {
+  // TODO: Implement
+pr-12325
     value === 'Pending' ||
     value === 'In Progress' ||
     value === 'Submitted' ||
     value === 'Approved' ||;
     value === 'Paid';
   );export interface MilestoneAttachment {;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
   name: string;
   url: string;
   type: string;
   size: number;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
   uploaded_at: string,
 
 }
-<<<<<<< HEAD
 export interface CreateMilestoneRequest {
-=======
   uploadedAt: string
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 export interface CreateMilestoneRequest {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+ursor/fix-website-loading-errors-and-merge-6662
   title: string;
   description?: string;
 }
 export interface UpdateMilestoneRequest {
-=======
 
 
 export interface UpdateMilestoneRequest {;
 
-<<<<<<< HEAD
 export interface UpdateMilestoneRequest {
-=======
-<<<<<<< HEAD
 export interface UpdateMilestoneRequest {
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
   title?: string;
   description?: string;
   due_date?: string;
   amount_usd?: number;
   status?: 'pending' | 'completed' | 'cancelled';
   attachments?: MilestoneAttachment[];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-=======
 
 
 
 
-=======
+
 
 export function isOverdue(milestone: Milestone): boolean {
   if (!milestone.dueDate || milestone.status === 'COMPLETED' || milestone.status === 'PAID') {
     return false;
   }
   return new Date(milestone.dueDate) < new Date();
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 
 
 export function getDaysUntilDue(milestone: Milestone): number | null {
+  id: string;,
+  name: string;
+  url: string;,
+  type: string;
+  size: number;
+export interface CreateMilestoneRequest {
+  // TODO: Implement
+export interface CreateMilestoneRequest {;
+
+export interface UpdateMilestoneRequest {
+  // TODO: Implement
+export interface UpdateMilestoneRequest {;
+
+  // TODO: Implement
+  title?: string;
+  due_date?: string;
+  amount_usd?: number;
+  status?: 'pending' | 'completed' | 'cancelled';
+
+
+export function getDaysUntilDue(milestone: Milestone): number | null {
+  // TODO: Implement
+pr-12325
   if (!milestone.dueDate) return null;
   const dueDate = new Date(milestone.dueDate);
   const now = new Date();
@@ -138,19 +140,11 @@ export function getDaysUntilDue(milestone: Milestone): number | null {
 }
 
 }
-<<<<<<< HEAD
 }
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+origin/cursor/integrate-build-improve-and-re-verify-2156
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+origin/cursor/expand-services-advertise-and-build-project-c28b
 };
 
 export type Project = {
@@ -170,4 +164,6 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
     value === 'Approved' ||
     value === 'Paid'
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+pr-12325

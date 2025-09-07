@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 
-=======
 import { Atom, Cpu, Shield, Rocket, Zap, Database;
   ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
  } from 'lucide-react';
@@ -10,7 +8,7 @@ import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
 export default function QuantumServicesPage() {
   const services = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import {
   Atom
   Cpu
@@ -119,7 +117,6 @@ function QuantumServicesPage() {
     { number: '10x', label: 'Performance Boost', icon: TrendingUp }
     { number: '24/7', label: 'Quantum Support', icon: Clock }
   ];
-<<<<<<< HEAD
 
   Atom,
   Cpu,
@@ -191,7 +188,6 @@ export default function QuantumServicesPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
       <Head>
@@ -223,7 +219,7 @@ export default function QuantumServicesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 className='mb-8'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
               Quantum Computing
@@ -253,7 +249,6 @@ className='mb-12'
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
             transition={{ duration: 0 && 0.8 }}
             className='mb-8'>;
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6'>;
@@ -264,7 +259,6 @@ className='mb-12'
               computational power            </p>;
           </motion && motion.div>;
           <motion&& motion.div
-=======
       {/* Stats Section */}
 <section className='py-16 px-6'>
         <div className='max-w-7xl mx-auto'>
@@ -294,11 +288,10 @@ className='text-center'
 <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>
           <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
             </p>
           </motion.div>
           <motion.div
@@ -376,7 +369,6 @@ className='text-center'
               Cutting-edge quantum solutions designed to solve complex problems and secure the future
             </p>
           </motion.div>
-=======
             viewport={{ once: true }}
 className='text-center mb-16'
           >
@@ -391,7 +383,7 @@ className='text-center mb-16'
 
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {services.map((service, index) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
 
 
@@ -414,17 +406,14 @@ className='text-center mb-16'
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
 
 
-=======
 className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-blue-500/30 transition-all duration-300'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-<<<<<<< HEAD
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-white/70 mb-6">{service.description}</p>
                 <ul className="space-y-3 mb-6">
@@ -448,7 +437,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl 
                 <div className="flex items-center justify-between">
                   <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
                   <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
-=======
                 <h3 className='text-2xl font-bold text-white mb-4'>
                   {service.title}
                 </h3>
@@ -469,7 +457,7 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl 
                     {service.price}
                   </span>
                   <button className='px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     Get Started
                   </button>
                 </div>
@@ -482,7 +470,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl 
 
           </div>;
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className='py-20 px-6'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
 
@@ -514,7 +501,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl 
           >
 
             <h2 className="text-4xl font-bold text-white mb-6">
-=======
 <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>
           <motion.div
@@ -524,27 +510,24 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl 
             viewport={{ once: true }}
           >
 <h2 className='text-4xl font-bold text-white mb-6'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               Ready to Experience Quantum Computing?
             </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
               Let's explore how quantum computing can revolutionize your business operations and solve previously impossible problems.
             </p>
-<<<<<<< HEAD
-=======
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <button className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105'>
                 Schedule Quantum Demo
               </button>
               <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>
                 Learn More
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </button>
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
 
 
 ),
@@ -552,13 +535,12 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl 
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Quantum Computing Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Cutting-edge quantum solutions designed to solve complex problems and secure the future </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
 
 
-=======
       <EnhancedFooter />
     </div>
 );
 
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Quantum Computing Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Cutting-edge quantum solutions designed to solve complex problems and secure the future </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }</div> </div> </section> <motion.div initial= {
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;
@@ -593,7 +575,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl 
   opacity: 1, y: 0
 }transition= {
   {
-<<<<<<< HEAD
 
 }
 }
@@ -720,11 +701,10 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl 
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
   duration: 0.8
 }viewport= {
   {
   once: true 
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Experience Quantum Computing? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's explore how quantum computing can revolutionize your business operations and solve previously impossible problems. </p> Schedule Quantum Demo </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Learn More </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

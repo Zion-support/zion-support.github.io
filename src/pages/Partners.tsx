@@ -12,7 +12,6 @@ import { PartnerResources } from '@/components/partners/PartnerResources';
 import { useAuth } from '@/hooks/useAuth';
 import { useRouter } from 'next/router';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-<<<<<<< HEAD
 
 
 
@@ -22,7 +21,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { CheckCircle, FileDown, FileText, PieChart, Users } from 'lucide-react'
 import { useState, useEffect } from "react",
 import { useTranslation } from 'react-i18next',
-=======
 
   useEffect(() => {
     async function checkHealth() {
@@ -32,23 +30,21 @@ setAuthServiceAvailable(res.ok);
       } catch (err) {
 import { useState, useEffect } from "react";
 import { useTranslation  } from 'react-i18next';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import Link from 'next/link',
 import { PartnerRegistrationForm } from "@/components/partners/PartnerRegistrationForm",
 import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks",
 import { PartnerDashboard } from "@/components/partners/PartnerDashboard",
 import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard",
 import { PartnerResources } from "@/components/partners/PartnerResources",
-<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth",
 import { useRouter } from 'next/router',
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
-=======
 import { useAuth } from "@/hooks/useAuth";
 import { useRouter  } from 'next/router';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 export default function Partners() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
@@ -60,7 +56,6 @@ xport default function Partners() {;
   const [activeTab, setActiveTab] = useState('overview');
   const { t } = useTranslation();
   const { user, isAuthenticated } = useAuth();
-<<<<<<< HEAD
   const router = useRouter();
   const [authServiceAvailable, setAuthServiceAvailable] = useState(true);
 import { Button } from "@/components/ui/button";
@@ -84,7 +79,6 @@ import { PartnerDashboard } from "@/components/partners/PartnerDashboard",
 import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard",
 import { PartnerResources } from "@/components/partners/PartnerResources",
 
-=======
   const router = null;
         logErrorToProduction('Partner login auth health check failed', {
           data: err
@@ -94,12 +88,11 @@ import { PartnerResources } from "@/components/partners/PartnerResources",
     }
     checkHealth();
   }, []);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   // If not authenticated, display partner program info and signup CTA
   if (!isAuthenticated) {
     logInfo('PartnersPage rendering Unauthenticated View'),
     return (
-<<<<<<< HEAD
             <CardHeader>
               <CardTitle className="text-white">{t('partner.influencers.title')}</CardTitle>
               <CardDescription>{t('partner.influencers.desc')}</CardDescription>
@@ -124,7 +117,6 @@ import { PartnerResources } from "@/components/partners/PartnerResources",
                 <div>
                   <p className="font-medium text-white">{t('partner.influencers.points.resources')}</p>
                   <p className="text-sm text-zion-slate-light">{t('partner.influencers.points.resources_desc')}</p>
-=======
 <div className='container max-w-6xl py-10'>
         <div className='text-center mb-8'>
           <h1 className='text-4xl font-bold tracking-tight text-white mb-2'>
@@ -174,12 +166,11 @@ import { PartnerResources } from "@/components/partners/PartnerResources",
                   <p className='text-sm text-zion-slate-light'>
                     {t('partner.influencers.points.resources_desc')}
                   </p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </div>
             </CardContent>
           </Card>
-<<<<<<< HEAD
             <CardHeader>
               <CardTitle className="text-white">{t('partner.organizations.title')}</CardTitle>
               <CardDescription>{t('partner.organizations.desc')}</CardDescription>
@@ -204,7 +195,6 @@ import { PartnerResources } from "@/components/partners/PartnerResources",
                 <div>
                   <p className="font-medium text-white">{t('partner.organizations.points.tracking')}</p>
                   <p className="text-sm text-zion-slate-light">{t('partner.organizations.points.tracking_desc')}</p>
-=======
 
 <Card className='bg-zion-blue-dark border-zion-blue-light'>
             <CardHeader>
@@ -247,14 +237,12 @@ import { PartnerResources } from "@/components/partners/PartnerResources",
                   <p className='text-sm text-zion-slate-light'>
                     {t('partner.organizations.points.tracking_desc')}
                   </p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </div>
             </CardContent>
           </Card>
         </div>
-<<<<<<< HEAD
-=======
 
 <div className='text-center mb-12'>
           <h2 className='text-2xl font-bold text-white mb-4'>
@@ -265,7 +253,7 @@ import { PartnerResources } from "@/components/partners/PartnerResources",
               <CardHeader className='text-center pb-2'>
                 <div className='mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4'>
                   <Users className='h-6 w-6 text-zion-cyan' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
                 <CardTitle className="text-lg text-white">{t('partner.steps.join_title')}</CardTitle>
               </CardHeader>
@@ -283,16 +271,13 @@ import { PartnerResources } from "@/components/partners/PartnerResources",
                 </div>
                 <CardTitle className="text-lg text-white">{t('partner.steps.earn_title')}</CardTitle>
               </CardHeader>
-<<<<<<< HEAD
-=======
               <CardContent className='text-center text-sm text-zion-slate-light'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 <p>{t('partner.steps.earn_desc')}</p>
               </CardContent>
             </Card>
           </div>
         </div>
-<<<<<<< HEAD
           <Button
             size="lg"
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
@@ -457,7 +442,6 @@ export default function Partners() {;
             size="lg";
             variant="outline";
             className="text-zion-cyan border-zion-cyan";
-=======
 
 <div className='flex justify-center gap-4'>
           <Button
@@ -473,20 +457,18 @@ export default function Partners() {;
             size='lg'
             variant='outline'
             className='text-zion-cyan border-zion-cyan'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             disabled={!authServiceAvailable}
             onClick={() => router.push('/login')}
           >;
             {t('partner.login')}
           </Button>
           {!authServiceAvailable && (
-<<<<<<< HEAD
             <p className="text-red-500 text-sm mt-2">{t('partner.login_unavailable')}</p>
-=======
 <p className='text-red-500 text-sm mt-2'>
               {t('partner.login_unavailable')}
             </p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           )}
         </div>;
       </div>;
@@ -494,7 +476,6 @@ export default function Partners() {;
   }
 
   // Authenticated user view - Partner Dashboard
-<<<<<<< HEAD
   logInfo('PartnersPage rendering Authenticated View. User:', { data: user }),
   return (
       <h1>DEBUG: Partners Page - Authenticated View</h1>
@@ -506,7 +487,6 @@ export default function Partners() {;
         <div className="flex gap-2">
           <Button variant="outline" className="flex items-center gap-2" onClick={() => window.print()}>
             <FileDown className="h-4 w-4" />
-=======
   logInfo('PartnersPage rendering Authenticated View. User:', { data: user });
   return (
 <div className='container max-w-7xl py-10'>
@@ -525,14 +505,12 @@ export default function Partners() {;
             onClick={() => window.print()}
           >
             <FileDown className='h-4 w-4' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             {t('partner.export_csv')}
           </Button>
         </div>
       </div>
-<<<<<<< HEAD
         <TabsContent value="earnings" className="space-y-4">
-=======
 
 <Tabs
         value={activeTab}
@@ -566,7 +544,7 @@ export default function Partners() {;
         </TabsContent>
 
         <TabsContent value='earnings' className='space-y-4'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           <Card>
             <CardHeader>
               <CardTitle>{t('partner.earnings_title')}</CardTitle>
@@ -574,13 +552,11 @@ export default function Partners() {;
             </CardHeader>
             <CardContent>
               {/* This will be implemented later */}
-<<<<<<< HEAD
               <p className="text-zion-slate-light">{t('partner.earnings_placeholder')}</p>
             </CardContent>
           </Card>
         </TabsContent>
         <TabsContent value="resources" className="space-y-4">
-=======
 <p className='text-zion-slate-light'>
                 {t('partner.earnings_placeholder')}
               </p>
@@ -593,20 +569,18 @@ export default function Partners() {;
         </TabsContent>
 
         <TabsContent value='resources' className='space-y-4'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           <PartnerResources />
         </TabsContent>
       </Tabs>
     </div>
-<<<<<<< HEAD
-=======
   );
 async function checkHealth () {;
   try {;
   ;
 
 }checkHealth () ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }, []);
 //If not authenticated, display partner program info and signup CTA </div> <div className="grid md:grid-cols-2 gap-8 mb-12" > <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardHeader> <CardContent className="space-y-4" > <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardHeader> <CardContent className="space-y-4" > <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> </CardContent> </Card> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader className="text-center pb-2" > <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4" > <FileText className="h-6 w-6 text-zion-cyan" /> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader className="text-center pb-2" > <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4" > <PieChart className="h-6 w-6 text-zion-cyan" /> </div> </CardContent> </Card> </div> </div> <div className="flex justify-center gap-4" > <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-dark text-white" asChild > > {t ('partner.login') ;
 }</Button>) ;
@@ -616,12 +590,10 @@ async function checkHealth () {;
 }</CardTitle> <CardDescription> {';
   t ('partner.earnings desc') ";
 }</CardDescription> </CardHeader> <CardContent> </CardContent> </Card> </TabsContent> <TabsContent value="leaderboard" className="space-y-4" > <PartnerLeaderboard /> </TabsContent> <TabsContent value="resources" className="space-y-4" > <PartnerResources /> </TabsContent> </Tabs> </div>) ;
-<<<<<<< HEAD
 }'"}
 }
   )
 }
 ;
-=======
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import MainLayout from '../components/layout/MainLayout';
 
-<<<<<<< HEAD
 const Page = () => {
   return (
     <MainLayout
@@ -23,8 +19,6 @@ const Page = () => {
 };
 
 export default Page;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Users,
   MapPin,
   Clock,
@@ -178,7 +172,6 @@ class ErrorBoundary extends React.Component {
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
-=======
 export default function Careers() {
   const openPositions = [
     {
@@ -262,7 +255,7 @@ export default function Careers() {
       title: 'Continuous Learning',
       description: 'We invest in our team\'s growth and development.', '
       icon: Award
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     }
     
     return this.props.children;
@@ -295,7 +288,6 @@ import {;
       keywords="careers, jobs, employment, technology careers, AI jobs, software development">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         {/* Hero Section */}
-<<<<<<< HEAD
 import Head from 'next/head';
 import Layout from '../components/Layout';
 
@@ -312,7 +304,6 @@ export default function CareersPage() {
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
           </div>;
-=======
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20 sm:py-32">
             <div className="text-center">
@@ -390,7 +381,7 @@ export default function CareersPage() {
             </div>
           </div>
         </section>
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
@@ -633,7 +624,6 @@ function CareersPage() {
           </div>;
         </section>;
         {/* Open Positions */}
-<<<<<<< HEAD
         <section id="open - positions" className="py - 20 bg - white">;
           <div className="container mx - auto px - 4">;
             <motion.div;
@@ -692,7 +682,6 @@ function CareersPage() {
         </section>;
       </div>;
     </MainLayout>;
-=======
         <section id="positions" className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -791,7 +780,7 @@ function CareersPage() {
         </section>
       </main>
 </>
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   );
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white">;
@@ -812,7 +801,3 @@ origin/automation-improvements-final
     </MainLayout>;
   );
 }
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -84,4 +84,27 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {;
 }
 
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+import { supabase } from "@/integrations/supabase/client";""
+import { cleanupAuthState } from "@/utils/authUtils";""
+import type { UserProfile } from "@/types/auth";"
+export const useLogout = (setUser: (user: UserProfile | null) => void) => {
+  const logout = async () => {
+    try {
+  // TODO: Implement
+}
+      // Clean up existing auth state;
+      (cleanupAuthState(),
+        // Sign out;"
+        await supabase.auth.signOut({ scope: "global" }));"
+      // Update state;
+      setUser(null);
+    } catch (error) {"
+      console.error("Error during logout:", error);"
+  };
+
+  return { logout };
+
+  return { logout }
+
+"
+pr-12325

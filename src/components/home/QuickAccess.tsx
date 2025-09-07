@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
   const quickLinks = [
     {
       title: t('home.tool_ai_matcher'),
@@ -60,7 +58,6 @@
         </div>
           {quickLinks.map((link, index) => (
             <Link
-=======
 {quickLinks.map((link, index) => (
             <Link
 import React from 'react';
@@ -138,7 +135,6 @@ function QuickAccess() {
         <div className='grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 6 gap - 4 max - w-6xl mx - auto'>;
           {quick_links.map ((link, index) => (
             <Link;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               key={index}
               href={link.link}
 
@@ -569,10 +565,7 @@ export default function Page() {;";
 
 export default QuickAccess;
 ;
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               className="group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20"
             >
               <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110">
@@ -633,11 +626,7 @@ export default QuickAccess;
       </div>;
     </section>);
 export default QuickAccess }
-<<<<<<< HEAD
-=======
 export default QuickAccess;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
 import React from "react",
 import Link from "next/link",
@@ -665,4 +654,4 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
   );
 
 export default QuickAccess;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

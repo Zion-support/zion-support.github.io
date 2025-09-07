@@ -2,14 +2,12 @@
 const AIAssistant: React.FC = () => {
 import React from 'react',
 import Head from 'next/head';
-<<<<<<< HEAD
 
-=======
 import Button from '../components/ui/Button';
 export default function AIAssistantPage() {
 import Layout from '../components/layout/Layout';
 const AIAssistant: React.FC = () => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Layout>;
       <Head>;
@@ -150,7 +148,6 @@ export default function AIAssistantPage() {
             <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Request a Demo</Button>
           </div>
         </div>
-<<<<<<< HEAD
       </div>
     </>
   )
@@ -159,7 +156,6 @@ export default function AIAssistantPage() {
 
 
 
-=======
         <div className="bg-blue-50 rounded-lg p-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Ready to Get Started?</h2>
           <p className="text-lg text-gray-700 mb-6">
@@ -177,4 +173,4 @@ export default function AIAssistantPage() {
       </main>
     </Layout>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
