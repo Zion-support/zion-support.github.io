@@ -1,15 +1,5 @@
 import React from 'react';
-import Header from './src/components/Header';
-import Footer from './src/components/Footer';
 import ServiceCard from './src/components/ServiceCard';
-import TestimonialCarousel from './src/components/TestimonialCarousel';
-import ContactSection from './src/components/ContactSection';
-import BenefitsSection from './src/components/BenefitsSection';
-import HowItWorksSection from './src/components/HowItWorksSection';
-import FaqSection from './src/components/FaqSection';
-import ChatAssistant from './src/components/ChatAssistant';
-import ScrollToTop from './src/components/ScrollToTop';
-import ParticleBackground from './src/components/ParticleBackground';
 
 export default function App() {
   const services = [
@@ -89,15 +79,12 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-      <ParticleBackground />
-      <Header />
-
       <main className="relative">
         {/* Hero Section */}
         <section className="relative py-20 px-4 text-center">
           <div className="container mx-auto max-w-6xl">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Welcome to Zion Tech
+              Zion Tech Group
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Your trusted partner for AI and IT solutions. We help businesses transform through
@@ -133,31 +120,7 @@ export default function App() {
             </div>
           </div>
         </section>
-
-        {/* Benefits Section */}
-        <BenefitsSection />
-
-        {/* How It Works Section */}
-        <HowItWorksSection />
-
-        {/* Testimonials Section */}
-        <section className="py-16 px-4 bg-gray-50">
-          <div className="container mx-auto max-w-6xl">
-            <h2 className="text-4xl font-bold text-center mb-12">What Our Clients Say</h2>
-            <TestimonialCarousel />
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <FaqSection />
-
-        {/* Contact Section */}
-        <ContactSection />
       </main>
-
-      <Footer />
-      <ChatAssistant />
-      <ScrollToTop />
     </div>
   );
 }
