@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-
-export const metadata = {
-  title: "AI Code Reviewer | Zion Tech Group",
-  description:
-    "Automated code review and quality analysis powered by AI. Improve code quality, catch bugs early, and maintain coding standards.",
-=======
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
-<<<<<<< HEAD
 // eslint-disable-next-line react-refresh/only-export-components
 export const metadata = {
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 };
 
 export default function ServicePage() {
@@ -23,11 +14,7 @@ export default function ServicePage() {
           AI Code Reviewer
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-<<<<<<< HEAD
-          Automated code review and quality analysis powered by advanced AI.
-=======
 Automated code review and quality analysis powered by advanced AI.
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           Improve code quality, catch bugs early, and maintain consistent coding
           standards across your team.
         </p>
@@ -35,79 +22,6 @@ Automated code review and quality analysis powered by advanced AI.
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
         <div>
-<<<<<<< HEAD
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">
-            Key Features
-          </h2>
-          <div className="space-y-4">
-            <FeatureItem
-              title="Intelligent Code Analysis"
-              description="AI-powered analysis of code quality, complexity, and maintainability with detailed recommendations."
-            />
-            <FeatureItem
-              title="Security Vulnerability Detection"
-              description="Automated scanning for security vulnerabilities, OWASP compliance, and best practices enforcement."
-            />
-            <FeatureItem
-              title="Performance Optimization"
-              description="Identify performance bottlenecks, memory leaks, and optimization opportunities with specific suggestions."
-            />
-            <FeatureItem
-              title="Code Style & Standards"
-              description="Enforce coding standards, detect anti-patterns, and suggest improvements for better code quality."
-            />
-            <FeatureItem
-              title="Multi-Language Support"
-              description="Support for 20+ programming languages including Python, JavaScript, Java, C++, Go, and more."
-            />
-            <FeatureItem
-              title="Integration Ready"
-              description="Seamless integration with GitHub, GitLab, Bitbucket, and popular CI/CD pipelines."
-            />
-          </div>
-        </div>
-
-        <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Pricing & Plans</h2>
-          <div className="space-y-4">
-            <PricingCard
-              plan="Starter"
-              price="$29/month"
-              description="Perfect for small teams and individual developers"
-              features={[
-                "Up to 5 repositories",
-                "Basic code analysis",
-                "Standard bug detection",
-                "Email support",
-                "GitHub/GitLab integration",
-              ]}
-            />
-            <PricingCard
-              plan="Professional"
-              price="$99/month"
-              description="Ideal for growing development teams"
-              features={[
-                "Up to 25 repositories",
-                "Advanced AI analysis",
-                "Custom rules engine",
-                "Priority support",
-                "All integrations",
-                "Team analytics dashboard",
-              ]}
-            />
-            <PricingCard
-              plan="Enterprise"
-              price="$299/month"
-              description="For large organizations with complex needs"
-              features={[
-                "Unlimited repositories",
-                "Advanced security scanning",
-                "Custom AI model training",
-                "Dedicated support",
-                "On-premise deployment",
-                "Custom integrations",
-              ]}
-=======
 <h2 className="text-2xl font-bold text-gray-900 mb-6">
             Key Features
           </h2>
@@ -126,7 +40,6 @@ Automated code review and quality analysis powered by advanced AI.
               icon="📏"
               title="Code Quality Metrics"
               description="Comprehensive quality metrics including complexity, maintainability, test coverage, and technical debt analysis."
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             />
             <FeatureItem
               icon="🎯"
@@ -195,24 +108,6 @@ Automated code review and quality analysis powered by advanced AI.
           </div>
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-      <div className="bg-gray-50 rounded-xl p-8 mb-16">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-          How It Works
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="text-center p-6 bg-white rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Reduce Review Time by 80%</h3>
-            <p className="text-gray-600">Automated analysis catches issues before human review, significantly reducing code review time.</p>
-          </div>
-          <div className="text-center p-6 bg-white rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Improve Code Quality</h3>
-            <p className="text-gray-600">Consistent analysis and suggestions help maintain high code quality across all projects.</p>
-          </div>
-          <div className="text-center p-6 bg-white rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Enhanced Security</h3>
-            <p className="text-gray-600">Proactive security scanning prevents vulnerabilities from reaching production environments.</p>
-=======
         <div>
 <h2 className="text-2xl font-bold text-gray-900 mb-6">Pricing</h2>
           <div className="space-y-6">
@@ -260,15 +155,10 @@ Automated code review and quality analysis powered by advanced AI.
               ]}
               popular={false}
             />
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
-      <div className="text-center">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">
-=======
 <div className="bg-gray-50 rounded-xl p-8 mb-16">
         <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
           How It Works
@@ -294,7 +184,6 @@ Automated code review and quality analysis powered by advanced AI.
 
       <div className="text-center">
 <h2 className="text-2xl font-bold text-gray-900 mb-6">
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
           Ready to Improve Your Code Quality?
         </h2>
         <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
@@ -317,11 +206,6 @@ Automated code review and quality analysis powered by advanced AI.
         </div>
         <div className="mt-4 text-sm text-gray-500">
           <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-<<<<<<< HEAD
-          <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
 
 <<<<<<< HEAD
             <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
@@ -367,7 +251,6 @@ Automated code review and quality analysis powered by advanced AI.
 >>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 =======
 >>>>>>> 96a1f382319a97880a21e7ceb65ec0821c9ac17f
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
         </div>
       </div>
     </div>
@@ -383,16 +266,7 @@ Automated code review and quality analysis powered by advanced AI.
 }
 
 function FeatureItem({
-<<<<<<< HEAD
-  icon,
-=======
 icon,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
-
-function FeatureItem({
-  icon,
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ea63
   title,
   description,
 }: {
@@ -402,7 +276,7 @@ function FeatureItem({
 }) {
   return (
     <div className="flex items-start space-x-4">
-      <div className="text-2xl">{icon}</div>
+<div className="text-2xl">{icon}</div>
       <div>
         <h3 className="font-semibold text-gray-900 mb-2">{title}</h3>
         <p className="text-gray-600">{description}</p>
@@ -411,15 +285,10 @@ function FeatureItem({
   );
 }
 
-<<<<<<< HEAD
 function PricingCard({
   plan,
   price,
-<<<<<<< HEAD
-  period,
-=======
 period,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   description,
   features,
   popular,
@@ -431,116 +300,52 @@ period,
   features: string[];
   popular: boolean;
 }) {
-=======
-export default function ServicePage() {
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ea63
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            AI Code Reviewer
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Automated code review and quality analysis powered by advanced AI.
-            Improve code quality, catch bugs early, and maintain consistent coding
-            standards across your team.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-            <Link 
-              href="/contact" 
-              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
-            >
-              Get Started
-              <ArrowRightIcon className="h-5 w-5 ml-2" />
-            </Link>
-            <Link 
-              href="/services" 
-              className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors"
-            >
-              View All Services
-            </Link>
-          </div>
+    <div
+      className={`border rounded-xl p-6 ${popular ? "border-blue-500 bg-blue-50" : "border-gray-200"}`}
+    >
+      {popular && (
+        <div className="bg-blue-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
+          Most Popular
         </div>
+      )}
+      <h3 className="text-xl font-bold text-gray-900 mb-2">{plan}</h3>
+      <div className="mb-4">
+        <span className="text-3xl font-bold text-gray-900">{price}</span>
+        <span className="text-gray-600 ml-1">{period}</span>
+      </div>
+      <p className="text-gray-600 mb-6">{description}</p>
+      <ul className="space-y-2">
+        {features.map((feature) => (
+          <li key={feature} className="flex items-center">
+            <span className="text-green-500 mr-2">✓</span>
+            <span className="text-gray-600">{feature}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Key Features
-            </h2>
-            <div className="space-y-4">
-              <FeatureItem
-                icon="🔍"
-                title="Intelligent Code Analysis"
-                description="AI-powered analysis that understands context, patterns, and best practices to provide meaningful feedback."
-              />
-              <FeatureItem
-                icon="🐛"
-                title="Bug Detection"
-                description="Automatically identify potential bugs, security vulnerabilities, and performance issues before they reach production."
-              />
-              <FeatureItem
-                icon="📏"
-                title="Code Quality Metrics"
-                description="Comprehensive quality metrics including complexity, maintainability, test coverage, and technical debt analysis."
-              />
-              <FeatureItem
-                icon="🎯"
-                title="Custom Rules Engine"
-                description="Define custom coding standards and rules specific to your team's requirements and project needs."
-              />
-            </div>
-          </div>
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Benefits
-            </h2>
-            <div className="space-y-4">
-              <FeatureItem
-                icon="⚡"
-                title="Real-time Feedback"
-                description="Get instant feedback as you code with IDE integrations and continuous analysis during development."
-              />
-              <FeatureItem
-                icon="📊"
-                title="Team Analytics"
-                description="Track code quality trends, team performance metrics, and improvement areas across your organization."
-              />
-              <FeatureItem
-                icon="🛡️"
-                title="Security Focus"
-                description="Advanced security analysis to identify vulnerabilities and ensure compliance with security best practices."
-              />
-              <FeatureItem
-                icon="🚀"
-                title="Faster Development"
-                description="Reduce code review time and accelerate development cycles with automated quality checks."
-              />
-            </div>
-          </div>
-        </div>
-
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
-            Ready to Improve Your Code Quality?
-          </h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our AI Code Reviewer can help your team write better code faster.
-          </p>
-          <Link
-            href="/contact"
-            className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
-          >
-            Contact Us Today
-            <ArrowRightIcon className="h-5 w-5 ml-2" />
-          </Link>
+function StepCard({
+  step,
+  title,
+  description,
+}: {
+  step: string;
+  title: string;
+  description: string;
+}) {
+  return (
+    <div className="text-center">
+<div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+        {step}
+      </div>
+      <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
+      <p className="text-gray-600">{description}</p>
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
 >>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
-=======
-}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ea63

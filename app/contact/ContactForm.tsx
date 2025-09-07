@@ -165,7 +165,7 @@ export default function ContactForm() {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="form-input"
                     placeholder="Your full name"
                   />
                 </div>
@@ -181,7 +181,7 @@ export default function ContactForm() {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="form-input"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -197,7 +197,7 @@ export default function ContactForm() {
                   name="company"
                   value={formData.company}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  className="form-input"
                   placeholder="Your company name"
                 />
               </div>
@@ -211,7 +211,7 @@ export default function ContactForm() {
                   name="service"
                   value={formData.service}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  className="form-input"
                 >
                   <option value="">Select a service</option>
                   <option value="ai-ml">AI & Machine Learning</option>
@@ -234,7 +234,7 @@ export default function ContactForm() {
                   name="budget"
                   value={formData.budget}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  className="form-input"
                 >
                   <option value="">Select budget range</option>
                   <option value="under-10k">Under $10,000</option>
@@ -257,7 +257,7 @@ export default function ContactForm() {
                   onChange={handleInputChange}
                   required
                   rows={5}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  className="form-input"
                   placeholder="Tell us about your project, goals, and any specific requirements..."
                 />
               </div>
@@ -268,10 +268,17 @@ export default function ContactForm() {
                 className={`w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white ${
                   isSubmitting
                     ? 'bg-gray-400 cursor-not-allowed'
-                    : 'bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'
+                    : 'btn btn-primary'
                 } transition-colors`}
               >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
+                {isSubmitting ? (
+                  <div className="flex items-center">
+                    <div className="spinner w-4 h-4 mr-2"></div>
+                    Sending...
+                  </div>
+                ) : (
+                  'Send Message'
+                )}
               </button>
             </form>
           </div>
