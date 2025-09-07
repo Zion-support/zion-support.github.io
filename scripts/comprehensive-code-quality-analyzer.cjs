@@ -1,11 +1,11 @@
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 // console.log(' Comprehensive Code Quality Analyzer v2.0')
-console.log()
-    const content = fs.readFileSync(filePath, 'utf8')
-    const lines = content.split('\n')
+console.log('')
+const content = fs.readFileSync(filePath, 'utf8');
+const lines = content.split('\n');
     const codeLines = lines.filter(line => line.trim() && !line.trim().startsWith('//')
     const commentLines = lines.filter(line => line.trim().startsWith('//')
     log('warn')

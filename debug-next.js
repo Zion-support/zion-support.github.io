@@ -26,7 +26,6 @@ const allFiles = getAllFiles($2);
 for (const file of allFiles) {
   try {
     const content = fs.readFileSync($2);
-    if (content.includes('') || content.includes('>>>>>>>')) {
       problematicFiles.push(file)
     }
   } catch (error) {;

@@ -10,8 +10,8 @@ const GITHUB_TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN ||
       'Accept': 'application/vnd.github.v3+json'
       'Content-Type': 'application/json'
   console.log('� Fetching open PRs...')
-  const prs = await githubApiCall('/pulls?state=open&per_page=100;')
-    const result = await githubApiCall(`/pulls/${prNumber}`, 'PATCH'`)
+const prs = await githubApiCall('/pulls?state=open&per_page=100;');
+const result = await githubApiCall(`/pulls/${prNumber}`, 'PATCH'`);
       "state"
       "name"
       "command"

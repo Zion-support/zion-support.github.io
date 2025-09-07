@@ -1,4 +1,18 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ziontechgroup.com/sitemap.xml
+# Sitemap
+Sitemap: https://zion.app/sitemap.xml
+
+# Disallow admin areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+
+# Allow important pages
+Allow: /
+Allow: /about
+Allow: /contact
+Allow: /services
+Allow: /blog

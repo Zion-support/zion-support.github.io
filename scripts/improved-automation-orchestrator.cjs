@@ -22,7 +22,7 @@ const { execSync } = require('child_process')
         return { "status": 'skipped', "reason"}
         "status"
         "message"
-        const auditResult = execSync('npm audit --json', { "encoding"})
+const auditResult = execSync('npm audit --json', { "encoding"});
           "status"
         return { "status"}
       return { "status": 'completed', "message"}

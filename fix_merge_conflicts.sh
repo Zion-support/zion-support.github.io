@@ -1,5 +1,6 @@
 #!/bin/bash
 
+  if grep -q "" "$file"; then
 # Find all files with merge conflicts and fix them by keeping HEAD version
 find app/services -name "*.tsx" -exec grep -l "<<<<<<< HEAD" {} \; | while read file; do
     echo "Fixing merge conflicts in: $file"

@@ -97,13 +97,12 @@ console.log($2);
     for (const file of files) {
       try {
         const content = fs.readFileSync($2);
-        if (content.includes('') || content.includes('>>>>>>>')) {
           if (fixMergeConflicts(file)) {
-            fixedCount++
+            fixedCount++;
           }
         }
-      } catch (error) {;
-        // Skip files that can't be read;
+      } catch (error) {
+        // Skip files that can't be read
       }
     }
     if (fixedCount > 0) {

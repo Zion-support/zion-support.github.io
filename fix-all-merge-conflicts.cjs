@@ -29,7 +29,6 @@ class MergeConflictResolver {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
       return content.includes('') || 
-             content.includes('>>>>>>>');
     } catch (error) {
       return false;
     }

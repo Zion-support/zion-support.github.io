@@ -23,7 +23,6 @@ console.log('🔧 Starting comprehensive merge conflict resolution...');
         keepLines = true;
         continue;
       }
-      if (line.startsWith('>>>>>>>')) {
         inConflict = false;
         keepLines = false;
         continue;
@@ -85,7 +84,6 @@ console.log('Starting comprehensive merge conflict resolution...');
         } else if (stat.isFile() && (item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.jsx') || item.endsWith('.json') || item.endsWith('.cjs'))) {
           try {
             const content = fs.readFileSync(fullPath, 'utf8');
-            if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
               files.push(fullPath);
             }
           } catch (error) {
@@ -111,7 +109,6 @@ console.log('Starting comprehensive merge conflict resolution...');
         // Check if file has merge conflict markers,
   try {
           const content = fs.readFileSync(filePath, 'utf8');
-          if (content.includes('') || content.includes('>>>>>>>')) {
             conflictedFiles.push(filePath);
           }
         } catch (error) {
@@ -121,7 +118,7 @@ console.log('Starting comprehensive merge conflict resolution...');
     }
   }
   scanDirectory(dir);
-  return files;
+  return conflictedFiles;
   return conflictedFiles;
 }
 // Main execution,

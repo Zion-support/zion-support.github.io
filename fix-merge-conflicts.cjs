@@ -1,58 +1,6 @@
 #!/usr/bin/env node,
   const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
-function fixMergeConflicts(filePath) {
-  try {}
-}
-function findAndFixFiles(dir) {
-  const files = fs.readdirSync(dir);
-  let fixedCount = 0;
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      fixedCount += findAndFixFiles(filePath);
-    } else if (file.match(/\.(ts|tsx|js|jsx)$/)) {
-      if (fixMergeConflicts(filePath)) {
-        fixedCount++;
-      }
-    }
-  }
-  return fixedCount;
-}
-console.log('Starting merge conflict fix...');
-const fixedCount = findAndFixFiles('.');
-console.log(`Fixed ${fixedCount} files with merge conflicts.`);
-class MergeConflictFixer {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.fixedFiles = [];
-    this.errors = [];
-  }
-  log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
-  async findFilesWithConflicts() {
-    try {
-      const result = execSync(
-        'find . -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" | xargs grep -l ")
-      let fixedContent = content;
-      // Remove all merge conflict markers and keep the last version,
-  const lines = content.split('\n');
-      const fixedLines = [];
-      let inConflict = false;
-      let conflictBuffer = [];
-      let lastValidContent = [];
-      for (let i = 0; i < lines.length; i++) {
-        const line = lines[i];
-        if (line.includes('')) {
-          // Store the content before  as potential valid content,
-  lastValidContent = [...conflictBuffer];
-          conflictBuffer = [];
-          continue;
-        }
-        if (line.includes('>>>>>>>')) {
           inConflict = false;
           // Use the last valid content (after )
           fixedLines.push(...lastValidContent);

@@ -1,5 +1,3 @@
-
-
 #!/usr/bin/env node;
 import { execSync, spawn } from;
   'child_process'
@@ -14,6 +12,5 @@ import { execSync, spawn } from;
   'UNMET DEPENDENCY') || line.includes('';"missing")
   'npm outdated --json', { "stdio"}
         "type": ';outdated, '}))    } "catch"
-
-            "type": ';outdated, '}))} "catch"
-
+            "type": ';outdated, '}))} "catch"            "type": ';outdated, '}))} "catch"
+            "type": ';outdated, '}))} "catch"            "type": ';outdated, '}))} "catch"

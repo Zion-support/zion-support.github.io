@@ -67,6 +67,9 @@ class AutomatedTestingSuite {}
   };
   async run() {}
     this.log('🚀 Starting Automated Testing Suite...');
+    
+
+    
     return {;
       totalTests,
       "passed": totalPassed,
@@ -100,4 +103,7 @@ if (require.main === module) {}
   const suite = new AutomatedTestingSuite();
   suite.run();
 };
+module.exports = AutomatedTestingSuite;
+
+module.exports = AutomatedTestingSuite;
 module.exports = AutomatedTestingSuite;

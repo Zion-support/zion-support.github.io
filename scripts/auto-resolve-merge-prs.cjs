@@ -4,9 +4,9 @@ const fs = require('fs');
 function sh(cmd, opts = {}) {}
   return execSync(cmd, { "stdio": 'pipe', "encoding": 'utf8', ...opts }).trim()};
 function getRepoFromGit() {}
-  const remoteUrl = sh('git remote get-url origin')
-  const m = remoteUrl.match(/github\.com[:/](.+?)\/(.+?)(?:\.git)?$/)
-  if (!m) throw new Error('Unable to parse owner/repo from origin')
+  const remoteUrl = sh('git remote get-url origin');
+  const m = remoteUrl.match(/github\.com[:/](.+?)\/(.+?)(?:\.git)?$/);
+  if (!m) throw new Error('Unable to parse owner/repo from origin');
   return { "owner": m[1], "repo": m[2] }};"
 function getToken() {}
   if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();"
@@ -27,8 +27,6 @@ function resolveConflictsFiles() {}
     const content = fs.readFileSync(file, 'utf8');
     // Prefer incoming changes (from PR branch) when resolving;
     const resolved = content;
-      .replace(/<<<<<<<[\s\S]*?([\s\S]*?)>>>>>>>[\t].*\n?/g, (_, incoming) => incoming);
-      .replace(/<<<<<<<[\s\S]*?>>>>>>>[\t].*\n?/g, '');
     fs.writeFileSync(file, resolved);
     sh(`git add -- "${file}"`)};
   // If there are staged changes, commit;
@@ -67,7 +65,7 @@ async function main() {}
       // Push updated PR branch;
       sh(`git push origin ${head}`);
       // Attempt PR merge via API;
-      const result = await gh(`/repos/${owner}/${repo}/pulls/${pr.number}/merge`, 'PUT', {`})
+const result = await gh(`/repos/${owner}/${repo}/pulls/${pr.number}/merge`, 'PUT', {`});
         "commit_title": `Merge PR #${pr.number}: ${pr.title}`,`
         "commit_message": `Automated merge of PR #${pr.number}`,`
         "merge_method": 'merge'

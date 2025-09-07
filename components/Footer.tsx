@@ -90,6 +90,28 @@ const Footer = () => {
               ))}
             </ul>
           </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <div className="space-y-2 text-gray-300">
+              <div className="flex items-center">
+                <MapPin className="h-4 w-4 mr-2" />
+                <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+              </div>
+              <div className="flex items-center">
+                <Phone className="h-4 w-4 mr-2" />
+                <span>+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center">
+                <Mail className="h-4 w-4 mr-2" />
+                <span>kleber@ziontechgroup.com</span>
+              <li><a href="/about" className="text-gray-300 hover:text-white">About</a></li>
+              <li><a href="/services" className="text-gray-300 hover:text-white">Services</a></li>
+              <li><a href="/solutions" className="text-gray-300 hover:text-white">Solutions</a></li>
+              <li><a href="/research" className="text-gray-300 hover:text-white">Research</a></li>
+            </ul>
+          </div>
+
 
           {/* Company */}
           <div>
@@ -104,7 +126,8 @@ const Footer = () => {
                     {link.name}
                   </Link>
                 </li>
-              ))}
+              )
+}
             </ul>
           </div>
 

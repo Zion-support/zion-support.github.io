@@ -1,3 +1,5 @@
+
+#!/usr/bin/env node
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -20,7 +22,6 @@ class QuickSyntaxFixer {;
       const originalContent = fs.readFileSync(filePath, 'utf8');
       const content = originalContent
         // Remove merge conflict markers
-        .replace(/[\s\S]*?        .replace(/^>>>>>>>.*$/gm, '')
         // Fix module.exports
         .replace(/module\.exports\s*=\s*{;/g, 'module.exports = {')
         // Fix constructor

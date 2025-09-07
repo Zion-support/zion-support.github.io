@@ -107,16 +107,21 @@ A modern, responsive website built with React, TypeScript, and Vite, showcasing 
 
 ## 📦 Installation
 
+
+
 1. Clone the repository:
 ```bash
 git clone https://github.com/Zion-Holdings/zion.app.git
 cd zion.app
 ```
 
+- Node.js 18+
+- npm or yarn
 2. Install dependencies:
 ```bash
 npm install
 ```
+
 
 - Node.js 18+
 - npm or yarn
@@ -162,6 +167,8 @@ npm run dev
 npm run build
 npm start
 ```
+
+
 
 ## 📁 Project Structure
 
@@ -572,6 +579,7 @@ npm start
 
 ## 📜 Available Scripts
 ### Available Scripts
+### Available Scripts
 
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
@@ -772,6 +780,8 @@ The project is configured for deployment on:
 - **Sitemap** - Automatic sitemap generation
 - **Robots.txt** - Search engine directives
 
+
+
 - `npm run lint:fix` - Fix ESLint errors
 
 The project uses a consistent design system with:
@@ -903,6 +913,7 @@ Zion Tech Group is a cutting-edge technology company specializing in AI-powered 
 - **Frontend**: React, Next.js, TypeScript, Tailwind CSS
 - **Backend**: Node.js, Express, Fastify
 - **Database**: MongoDB, PostgreSQL
+
 ## 📞 Contact
 
 - **Website**: [Zion Tech Group](https://zion.app)

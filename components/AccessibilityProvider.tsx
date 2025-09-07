@@ -3,7 +3,8 @@ const AccessibilityContext = createContext<
   AccessibilityContextType | undefined
 >(undefined);
 interface AccessibilityProviderProps {
-  children: ReactNode;
+  }
+  "children": ReactNode;
 }
   return (
     <AccessibilityContext.Provider value={{ announceToScreenReader, setFocus }}>
