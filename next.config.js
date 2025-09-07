@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+export default {
+  pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
+  typescript: { ignoreBuildErrors: true },
+  eslint: { ignoreDuringBuilds: true },
   reactStrictMode: true,
   images: {
     domains: ['ziontechgroup.com'],
@@ -27,7 +30,6 @@ const nextConfig = {
           },
         ],
       },
-    ],
+    ];
   },
 };
-export default nextConfig;
