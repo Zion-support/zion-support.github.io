@@ -374,7 +374,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                 <Link to="/sitemap" className="hover:text-white transition-colors">Sitemap</Link>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </footer>
