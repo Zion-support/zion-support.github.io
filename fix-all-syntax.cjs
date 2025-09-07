@@ -15,7 +15,7 @@ function fixFile(filePath) {
       },
       // Fix merge conflict markers
       {
-        pattern: /[\s\S]*?[\s\S]*?
+        pattern: /
         replacement: ''
       },
       // Fix malformed function calls and syntax

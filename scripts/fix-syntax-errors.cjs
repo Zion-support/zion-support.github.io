@@ -8,12 +8,6 @@ const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
 
-
-
-
-
-
-
   }
 
   log(message) {
@@ -115,12 +109,8 @@ class SyntaxErrorFixer {
     content = content.replace(/([^;}])\n/g, '$1;\n');
     
     // Fix merge conflict markers
-    content = content.replace(/[\s\S]*?[\s\S]*?
+    content = content.replace(/
 
-
-
-
-    
     // Fix common JSX issues
     content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*\/>/g, '<$1 />');
     
@@ -203,4 +193,42 @@ if (require.main === module) {
 }
 
 module.exports = SyntaxErrorFixer;
+
+  log(message, level = 'INFO')
+    this.log(' Starting syntax error fixing...')
+      this.log('Running ESLint auto-fix...')
+      execSync('npm run "lint": fix', { "stdio"})
+      execSync('npm run type-check', { "stdio"})
+      execSync('npm run format', { "stdio"})
+      this.log(` Syntax fixing "failed"`)
+      this.log(`� Syntax error fixing "failed"`)
+=======
+  async fixESLintErrors() {
+    this.log('🔍 Running ESLint with auto-fix...');
+    
+    try {
+      const result = execSync('npx eslint . --fix --ext .js,.jsx,.ts,.tsx', {
+        encoding: 'utf8',
+        stdio: 'pipe',
+        cwd: process.cwd()
+      });
+      this.log('✅ ESLint auto-fix completed', 'success');
+      this.fixes.push({
+        type: 'eslint',
+        message: 'Auto-fix applied',
+        timestamp: new Date().toISOString()
+      });
+      return true;
+    } catch (error) {
+      this.log('⚠️ ESLint found issues that could not be auto-fixed', 'warning');
+      const output = error.stdout || error.stderr || '';
+      this.fixes.push({
+        type: 'eslint',
+        message: 'Issues found that require manual review',
+        output: output,
+        timestamp: new Date().toISOString()
+      });
+      return false;
+    }
+  }
 

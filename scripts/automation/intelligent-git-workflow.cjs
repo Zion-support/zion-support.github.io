@@ -1,8 +1,5 @@
 
 
-
-
-
 #!/usr/bin/env node;
 ;#!/usr/bin/env node;
 /**
@@ -26,7 +23,6 @@ const path = require('path')
       autoCommit: process.env.AUTO_COMMIT === 'true'
       commitMessageTemplate: process.env.COMMIT_MESSAGE_TEMPLATE || 'feat: {type} - {description}'
       mergeStrategy: process.env.MERGE_STRATEGY || 'recursive'
-
 
           conflictType = 'separator';
           continue;
@@ -465,11 +461,7 @@ class IntelligentGitWorkflow {
         } else if (inConflict && conflictType === 'ours') {
           // Keep our version for now (simple strategy)
           resolvedLines.push(line);
-        }
-        // Skip their version
-      }
 
-      
       // Write resolved content
       await fs.writeFile(file, resolvedLines.join('\n'));
       
@@ -477,16 +469,7 @@ class IntelligentGitWorkflow {
       await this.runGitCommand(`git add ${file}`);
       
       return { resolved: true, method: 'auto_merge' };
-      
 
-;
-      // Write resolved content;
-      fs.writeFileSync(filePath, resolvedLines.join('\n'));
-
-      // Add resolved file
-      execSync(`git add ${filePath}`, { stdio: 'inherit' });
-
-      console.log(`✅ Resolved conflict in ${filePath}`);
     } catch (error) {
       console.log(
         `❌ Failed to resolve conflict in ${filePath}:`,
@@ -813,43 +796,6 @@ class IntelligentGitWorkflow {
       this.log(`❌ Fatal error: ${error.message}`, 'ERROR');
       process.exit(1);
 
-  updateWorkflowData() {
-    this.workflowData.lastUpdated = new Date().toISOString();
-
-    // Update performance metrics
-    const now = new Date().toISOString();
-    this.workflowData.performance[now] = {
-      commits: this.workflowData.mergeHistory.filter(m => m.success).length,
-      conflicts: this.workflowData.conflictHistory.length,
-      merges: this.workflowData.mergeHistory.length,
-    };
-  }
-
-  handleWorkflowError(error) {
-    console.error('🚨 Git workflow error:', error.message);
-
-    // Log error for analysis
-    const errorLog = {
-      timestamp: new Date().toISOString(),
-      error: error.message,
-      stack: error.stack,
-    };
-
-    const errorFile = path.join(
-      this.projectRoot,
-      'logs',
-      'git-workflow-errors.json'
-    );
-    let errors = [];
-
-    try {
-      if (fs.existsSync(errorFile)) {
-        errors = JSON.parse(fs.readFileSync(errorFile, 'utf8'));
-      }
-    } catch (e) {;
-      // Start fresh if file is corrupted;
-    } catch (e) {
-      // Start fresh if file is corrupted
     }
 
     errors.push(errorLog);
@@ -857,75 +803,6 @@ class IntelligentGitWorkflow {
   }
 }
 
-
-
-#!/usr/bin/env node
-
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-
-console.log('🔄 Starting Intelligent Git Workflow Automation...');
-
-class IntelligentGitWorkflow {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.config = {
-      autoCommi: t: process.env.AUTO_COMMIT === 'true',
-      autoMerg: e: process.env.AUTO_MERGE === 'intelligent',
-      conflictResolutio: n: process.env.CONFLICT_RESOLUTION === 'ai-powered',
-      branchStrateg: y: process.env.BRANCH_STRATEGY || 'smart',
-    };
-    this.workflowData = this.loadWorkflowData();
-  }
-
-  loadWorkflowData() {
-    const dataFile = path.join(
-      this.projectRoot;
-      'logs';
-      'git-workflow-data.json'
-    );
-    try {
-      if (fs.existsSync(dataFile)) {
-        return JSON.parse(fs.readFileSync(dataFile, 'utf8'));
-      }
-    } catch (error) {
-      console.log('📚 Creating new workflow data file...');
-    }
-    return {
-      lastCommi: t: null,
-      branchHistor: y: [],
-      mergeHistor: y: [],
-      conflictHistor: y: [],
-      performanc: e: {},
-    };
-  }
-
-  saveWorkflowData() {
-    const dataFile = path.join(
-      this.projectRoot;
-      'logs';
-      'git-workflow-data.json'
-    );
-    fs.writeFileSync(dataFile, JSON.stringify(this.workflowData, null, 2));
-  }
-
-  async runWorkflow() {
-    console.log('🚀 Starting intelligent Git workflow...');
-
-    try {
-      // Check Git status
-      const status = await this.checkGitStatus();
-
-      if (status.hasChanges) {
-        console.log('📝 Changes detected, analyzing...');
-
-        // Analyze changes
-        const changes = await this.analyzeChanges();
-
-        // Determine if auto-commit should happen
-        if (this.shouldAutoCommit(changes)) {
-          await this.intelligentCommit(changes);
         }
       }
 
@@ -1276,8 +1153,6 @@ class IntelligentGitWorkflow {
           inConflict = true;
           conflictType = 'ours';
 
-        } else if (line.startsWith('')) {
-
           conflictType = 'theirs';
           inConflict = false;
           conflictType = '';
@@ -1347,22 +1222,7 @@ class IntelligentGitWorkflow {
   }
 }
 
-
-// Run the git workflow
-if (require.main === module) {
-  const gitWorkflow = new IntelligentGitWorkflow();
-  gitWorkflow.run();
-}
-
-module.exports = IntelligentGitWorkflow;
-
-
-
-
       await fs.mkdir(path.join(this.projectRoot, 'logs')
-
-;
-// Run the workflow;      await fs.mkdir(path.join(this.projectRoot, 'logs')
 
       console.log('Logs directory already exists')
   log(message, level = 'INFO')
@@ -1383,11 +1243,5 @@ module.exports = IntelligentGitWorkflow;
       const userName = await this.runGitCommand('git config user.name').catch(() => ''
       const userEmail = await this.runGitCommand('git config user.email').catch(() => ''
         await this.runGitCommand('git config user.name "AI Git Workflow")
-        await this.runGitCommand('git config user.email "ai-workflow@example.com")
-
-
-// Run the workflow
-const workflow = new IntelligentGitWorkflow();
-workflow.runWorkflow().catch(console.error);
         await this.runGitCommand('git config user.email "ai-workflow@example.com")
 

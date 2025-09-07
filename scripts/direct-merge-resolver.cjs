@@ -16,9 +16,6 @@ if (require.main === module) {;
 ;
 module.exports = { resolveMergeConflict, findConflictedFiles }
 
-
-
-
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")

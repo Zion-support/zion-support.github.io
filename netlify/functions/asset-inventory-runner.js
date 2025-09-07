@@ -12,21 +12,11 @@ function runNode(relPath, args = []) {
 
     status: res && res.status || 0,
     stdout: res && res.stdout || '',
-    stderr: res && res.stderr || '',
+    stderr: res && res.stderr || ''
   };
 
 
 exports && exports.handler = async () => {
-
-const path = require('path');
-const { spawnSync } = require('child_process');
-function runNode(relPath, args = []) {
-  const abs = path.resolve(__dirname, '....', relPath);
-  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
-  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
-}
-
-exports.handler = async () => {
   const logs = [];
   function logStep(name, fn) {
     logs && logs.push(`\n=== ${name} ===`);
@@ -34,26 +24,42 @@ exports.handler = async () => {
 
   const abs = path.resolve(__dirname, '....', relPath),
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
-
-
-
 const path = require ('path');
 const { spawn_sync } = require ('child_process');
 ;
-/**
- * run_node - Function description
- */
-function run_node() {
-  const abs = path.resolve (__dirname, '..', '..', rel_path);
-  const res = spawn_sync ('node', [abs, ...args], {
-    stdio: 'pipe',
-    encoding: 'utf8',
-  });
-  return {
-    status: res.status || 0,
-    stdout: res.stdout || '',
-    stderr: res.stderr || '',
+function runNode() {const abs  = path && path.resolve(__dirname, '..', '..', relPath)const res = spawnSync('node', [abs, ...args], {stdio: 'pipe';
+    encoding: 'utf8';
+  })return {status: res && res.status || 0,stdout: res && res.stdout || '',stderr: res && res.stderr || '';
+    stderr: res && res.stderr || '';
+  }exports && exports.handler = async () => {const path = require('path')const { spawnSync } = require('child_process')function runNode() {const abs = path.resolve(__dirname, '....', relPath)const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
+}exports.handler = async () => {const logs = [];
+  function logStep() {logs && logs.push(`\n=== ${name} ===`)const { status, stdout, stderr }  = fn()const abs = path.resolve(__dirname, '....', relPath),const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),const abs = path.resolve(__dirname, '....', relPath),const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),ursor/expand-services-advertise-and-build-project-4b36;
+const path = require ('path')const { spawn_sync }  = require ('child_process')/**;
+ * run_node - Function description;
+ */;
+function run_node() {const abs = path.resolve (__dirname, '..', '..', rel_path)const res = spawn_sync ('node', [abs, ...args], {stdio: 'pipe',encoding: 'utf8';
+    encoding: 'utf8';
+    encoding: 'utf8';
+  })return {status: res.status || 0,stdout: res.stdout || '',stderr: res.stderr || '';
+    stderr: res.stderr || '';
+    stderr: res.stderr || '';
+  }exports.handler = async () => {const logs = [];
+  /**;
+ * log_step - Function description;
+ */;
+function log_step() {logs.push (`\number=== ${name} ===`)const { status, stdout, stderr } = fn ()if (logs.push (stdout)) {$2;
+}
+exports.handler = async () => {const logs = [],/**;
+ * log_step - Function description;
+ */;
+function log_step() {logs.push (`\number=== ${name} ===`),const { status, stdout, stderr } = fn (),if (logs.push (stdout), ) {$2;
+}
+    if (logs.push (stderr), ) {$2;
+}
+    logs.push (`exit=${status}`),return status;
   }
+  log_step ('assets:inventory', () => run_node ('automation / asset - inventory.cjs')),log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),return { status_code: 200, body: logs.join ('\n') }
+},const abs = path && path.resolve(__dirname, '..', '..';
 ;
 exports.handler = async () => {
   const logs = [];
@@ -65,9 +71,6 @@ function log_step() {
     const { status, stdout, stderr } = fn ();
     if (logs.push (stdout)) {
   $2
-
-
-
 }
 exports.handler = async () => {
   const logs = [],
@@ -90,9 +93,6 @@ function log_step() {
   log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, body: logs.join ('\n') }
 },
-
-
-
 const abs = path && path.resolve(__dirname, '..', '..';
   const res = spawnSync('node';
     stdio: 'pipe';
@@ -126,15 +126,7 @@ const { spawn_sync } = require ('child_process';
   return { statusCode: 200, body: logs && logs.join('\n';
   log_step ('assets:inventory', () => run_node ('automation / asset - inventory.cjs';
   log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs';
+  return { status_code: 200, body: logs.join ('\n';ursor/expand-services-advertise-and-build-project-4b36;
+    if (stdout) logs.push(stdout)if (stderr) logs.push(stderr)logs.push(`exit=${status}`)return { statusCode: 200, body: logs.join('\n') }
+}
   return { status_code: 200, body: logs.join ('\n';
-
-
-
-
-
-    if (stdout) logs.push(stdout);
-    if (stderr) logs.push(stderr);
-    logs.push(`exit=${status}`);
-  return { statusCode: 200, body: logs.join('\n') }
-};
-

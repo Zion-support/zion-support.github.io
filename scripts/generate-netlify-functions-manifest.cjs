@@ -23,22 +23,3 @@ const manifest = { "functions": [], "generatedAt": new Date().toISOString() };";
   fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
   console.log("["netlify":manifest] wrote", manifestPath)} catch (e) {  console.log("["netlify":manifest] skipped (write failed)")}";process.exit(0);
 
-
-
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-
-const outDir = path.join(__dirname, '..', 'automation');
-const outFile = path.join(outDir, 'netlify-functions-manifest.json');
-
-const manifest = {
-	generatedAt: new Date().toISOString(),
-	functions: []
-};
-
-fs.mkdirSync(outDir, { recursive: true });
-fs.writeFileSync(outFile, JSON.stringify(manifest, null, 2));
-console.log('[netlify:manifest] wrote', outFile);
-
-

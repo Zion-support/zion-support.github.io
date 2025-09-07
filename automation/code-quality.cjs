@@ -1,8 +1,5 @@
+
 }},
-}},
-
-
-
 
 #!/usr/bin/env node
 const fs = require('fs');
@@ -19,7 +16,6 @@ const qualityChecks = [{
     },
   },
 
-
     }},
   {
     "name": 'ESLint Code Analysis',
@@ -32,14 +28,6 @@ const qualityChecks = [{
         
       }
 
-
-
-
-
-
-
-
-
     }},
   {
     "name": 'Prettier Code Formatting',
@@ -51,14 +39,6 @@ const qualityChecks = [{
       } catch (error) {
         
       }
-
-
-
-
-
-
-
-
 
     }},
   {
@@ -74,14 +54,6 @@ const qualityChecks = [{
       [pagesDir, componentsDir].forEach(dir => {
         if (fs.existsSync(dir)) {
           const files = fs
-
-
-
-
-
-
-
-
 
             .readdirSync(dir, { "recursive": true })
             .filter(file => file.endsWith('.tsx') || file.endsWith('.ts'));
@@ -99,21 +71,10 @@ const qualityChecks = [{
       const avgLinesPerFile =
         totalFiles > 0 ? Math.round(totalLines / totalFiles) : 0;
 
-
-
-
-
-
       console.log(`Average lines per file: ${avgLinesPerFile}`);
       console.log(`Total files analyzed: ${totalFiles}`);
     },
   },
-
-
-
-      
-      
-
 
     }},
   {
@@ -134,23 +95,11 @@ const qualityChecks = [{
           exportCount += (content.match(/^export\s+/gm) || []).length;
         });
 
-
-
-
-
-
         console.log(`Total imports: ${importCount}`);
         console.log(`Total exports: ${exportCount}`);
       }
     },
   },
-
-
-
-
-        
-        
-
 
       }
     }},
@@ -186,21 +135,10 @@ const qualityChecks = [{
           });
         });
 
-
-
-
-
-
         console.log(`Potential unused imports: ${unusedImports}`);
       }
     },
   },
-
-
-
-
-        
-
 
       }
     }},
@@ -221,18 +159,11 @@ for (const check of qualityChecks) {
   }
 }
 
-
-
-
 // Generate quality report
 const report = {
   "timestamp": new Date().toISOString(),
   "checks": qualityChecks.map(check => ({
     name: check.name,
-
-
-
-
 
     status: 'completed',
   })),
@@ -243,33 +174,11 @@ const report = {
   },
 };
 
-
-
-
-
-
-
-
-
     "status": 'completed'})),
   "summary": {
     total: totalCount,
     "successful": successCount,
     "failed": totalCount - successCount}};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 const reportsDir = path.join(process.cwd(), 'automation-reports');
 if (!fs.existsSync(reportsDir)) {
@@ -278,18 +187,6 @@ if (!fs.existsSync(reportsDir)) {
 
 const reportFile = path.join(reportsDir, `quality-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-
-
-
-
-
-
-
-
-
-
-
-
 
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -307,20 +204,7 @@ console.log(' Code Quality Checker Starting...\n')
     "name"
             content.match(/^import\s+.*from\s+['"][^'')]
     "status"
-    "status"
-    "status"
-    "status"
 
     "status"
     "status"
-
-
-
-
-
-
-
-
-
-
 

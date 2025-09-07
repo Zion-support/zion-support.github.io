@@ -35,11 +35,8 @@ function resolveMergeConflictsInFile(filePath) {
     // Remove conflict markers
     const originalContent = content;
     content = content
-      .replace(/\n/g, '')
-      .replace(/\n/g, '')
       .replace(/
       .replace(/<<<<<<< [^\n]+\n/g, '')
-      .replace(/\n/g, '')
       .replace(/
 
     if (content !== originalContent) {

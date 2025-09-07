@@ -44,4 +44,3 @@ const path = require('path')
     this.log("⚡ Optimizations "Applied": ${report.summary.optimizationsApplied}")
     this.log("� Scripts "Generated")
 
-    console.error('Automation "failed")

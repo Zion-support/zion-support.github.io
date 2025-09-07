@@ -1,8 +1,5 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-
       modified = true;
     }
 
@@ -139,7 +136,6 @@ for (const file of files) {
 console.log(`\n✅ Fixed ${fixedCount} files out of ${totalFiles}`);
 console.log('🎯 Comprehensive syntax fixing complete!');
 
-
 class ComprehensiveSyntaxFixer {
   constructor() {
     this.projectRoot = process.cwd();
@@ -241,175 +237,116 @@ function findFilesWithErrors(dir) {;
         }
       }
     }
-
-    return files;
   }
-
-  fixFile(filePath) {
-    try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      let originalContent = content;
-      let fixed = false;
-
-      // Fix common syntax issues
-
-      // 1. Fix missing semicolons after imports
-      content = content.replace(/import\s+[^;]+$/gm, match => {
-        if (!match.endsWith(';')) {
-          fixed = true;
-          return match + ';';
-        }
-        return match;
-      });
-
-      // 2. Fix malformed import statements
-      content = content.replace(
-        /import\s+{[^}]*}\s+from\s+['"][^'"]*['"]\s*$/gm,
-        match => {
-          if (!match.endsWith(';')) {
-            fixed = true;
-            return match + ';';
-          }
-          return match;
-        }
-      );
-
-      // 3. Fix unterminated string literals
-      content = content.replace(/['"][^'"]*$/gm, match => {
-        if (match.length > 1 && !match.endsWith('"') && !match.endsWith("'")) {
-          fixed = true;
-          return match + '"';
-        }
-        return match;
-      });
-
-      // 4. Fix missing commas in arrays and objects
-      content = content.replace(/([^,}])\s*\n\s*([}\]])/g, '$1,\n$2');
-
-      // 5. Fix missing semicolons after variable declarations
-      content = content.replace(/const\s+\w+\s*=\s*[^;]+$/gm, match => {
-        if (
-          !match.endsWith(';') &&
-          !match.includes('{') &&
-          !match.includes('(')
-        ) {
-          fixed = true;
-          return match + ';';
-        }
-        return match;
-      });
-
-      // 6. Fix export statements
-      content = content.replace(
-        /export\s+default\s+function\s+\w+\(\)\s*{$/gm,
-        match => {
-          if (!match.endsWith('{')) {
-            fixed = true;
-            return match + ' {';
-          }
-          return match;
-        }
-      );
-
-      // 7. Fix malformed JSX/TSX
-      content = content.replace(
-        /<(\w+)\s*([^>]*)\s*>/g,
-        (match, tag, attrs) => {
-          if (
-            attrs &&
-            attrs.trim() &&
-            !attrs.endsWith('"') &&
-            !attrs.endsWith("'")
-          ) {
-            fixed = true;
-            return `<${tag} ${attrs.trim()}" >`;
-          }
-          return match;
-        }
-      );
-
-      // 8. Fix missing closing braces
-      const openBraces = (content.match(/\{/g) || []).length;
-      const closeBraces = (content.match(/\}/g) || []).length;
-      if (openBraces > closeBraces) {
-        const missingBraces = openBraces - closeBraces;
-        content += '\n' + '}'.repeat(missingBraces);
-        fixed = true;
-      }
-
-      // 9. Fix malformed template literals
-      content = content.replace(/`[^`]*$/gm, match => {
-        if (!match.endsWith('`')) {
-          fixed = true;
-          return match + '`';
-        }
-        return match;
-      });
-
-      // 10. Fix missing semicolons after return statements
-      content = content.replace(/return\s+[^;]+$/gm, match => {
-        if (
-          !match.endsWith(';') &&
-          !match.includes('{') &&
-          !match.includes('(')
-        ) {
-          fixed = true;
-          return match + ';';
-        }
-        return match;
-      });
-
-      if (fixed && content !== originalContent) {
-        fs.writeFileSync(filePath, content, 'utf8');
-        this.fixedFiles.push(filePath);
-        this.log(`Fixed: ${filePath}`);
-        return true;
-      }
-
-      return false;
-    } catch (error) {
-      this.errors.push({ file: filePath, error: error.message });
-      this.log(`Error fixing ${filePath}: ${error.message}`);
-      return false;
-    }
-  }
-
-  async run() {
-    this.log('🔧 Starting comprehensive syntax fixing...');
-
-    // Get all TypeScript and JavaScript files
-    const files = this.getAllFiles(path.join(this.projectRoot, 'src'));
-
-    this.log(`Found ${files.length} files to check`);
-
-    let fixedCount = 0;
-    for (const file of files) {
-      if (this.fixFile(file)) {
-        fixedCount++;
-      }
-    }
-
-    this.log(`✅ Fixed ${fixedCount} files`);
-
-    if (this.errors.length > 0) {
-      this.log(`❌ ${this.errors.length} errors encountered`);
-      this.errors.forEach(err => {
-        this.log(`  - ${err.file}: ${err.error}`);
-      });
-    }
-
-    // Try to run linting to see if we fixed the issues
-    try {
-      this.log('🔍 Running linting to check fixes...');
-      execSync('npm run lint', { cwd: this.projectRoot, stdio: 'pipe' });
-      this.log('✅ Linting passed!');
-    } catch (error) {
-      this.log('⚠️  Linting still has issues, but some files were fixed');
-    }
-
-    this.log('🎉 Comprehensive syntax fixing completed!');
+  ;
+  traverse(dir);
+  return files;
+}
+;
+// Main execution;
+console.log('🔍 Scanning for files with syntax errors...');
+const files = findFilesWithErrors(process.cwd());
+;
+console.log(`Found ${files.length} files to check`);
+;
+let fixedCount = 0;
+for (const file of files) {;
+  if (fixSyntaxErrors(file)) {;
+    fixedCount++;
   }
 }
 
+// Run the fixer
+const fixer = new ComprehensiveSyntaxFixer();
+fixer.fixAllSyntaxErrors().catch(console.error);
+}
 
+
+    this.log(`🎉 Fixed syntax in ${this.fixedFiles} files`);
+    if (this.errors.length > 0) {;
+  this.log(`⚠️  ${this.errors.length} errors occurred:`);
+      this.errors.forEach(error => {;
+  this.log(`   - ${error.file}: ${error.error}`);,
+});,
+}
+
+    return {;
+  totalFiles: allFiles.length,
+      fixedFiles: this.fixedFiles.length,
+      errors: this.errors.length,
+      fixedFileList: this.fixedFiles,
+      errorList: this.errors;,
+}
+  }
+
+  generateReport(results) {;
+  const report = {;
+  timestamp: new Date().toISOString(),
+      summary: results,
+      fixedFiles: this.fixedFiles,
+      errors: this.errors;,
+}
+      fixed: this.fixedFiles,
+      errors: this.errors,
+      totalFiles: problematicFiles.length;,
+}
+  }
+
+  async createCleanESLintConfig() {;
+  this.log("🔧 Creating clean ESLint configuration...");
+    const eslintConfig = `module.exports = {;
+  extends: [ "next/core-web-vitals",
+    "eslint: recommended",
+    "@typescript-eslint/recommended" ],
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
+  rules: {;
+  "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "react-hooks/exhaustive-deps": "warn";,
+},
+  ignorePatterns: ["node_modules/", ".next/", "out/"];,
+};`;
+    try {;
+  fs.writeFileSync(".eslintrc.js", eslintConfig);
+      this.log("✅ Created clean ESLint configuration");,
+} catch (error) {;
+  this.log(`❌ Error creating ESLint config: ${error.message}`);,
+}
+  }
+
+  async run() {;
+  try {;
+  // Fix syntax issues;
+      const fixResult = await this.fixAllFiles();
+      // Create clean ESLint config;
+      await this.createCleanESLintConfig();
+      this.log("🎉 Comprehensive syntax fixing completed successfully");
+      return fixResult;,
+} catch (error) {;
+  this.log(`💥 Syntax fixing failed: ${error.message}`);
+      throw error;,
+}
+  }
+}
+
+// Run the syntax fixer if this file is executed directly;
+if (require.main === module) {;
+  const fixer = new ComprehensiveSyntaxFixer();
+  fixer.run();
+    .then((result) => {;
+  console.log("✅ Syntax fixing completed");
+      console.log(`📊 Fixed ${result.fixed} files`);
+      if (result.errors.length > 0) {;
+  console.log(`⚠️  ${result.errors.length} errors occurred`);,
+}
+      process.exit(0);,
+});
+    .catch((error) => {;
+  console.error("❌ Syntax fixing failed: ", error.message);
+      process.exit(1);,
+});,
+}
+
+module.exports = ComprehensiveSyntaxFixer}}}}}}}}}}}}}))))))))))))
 

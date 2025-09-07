@@ -1,12 +1,5 @@
 
 
-
-
-
-
-
-
-
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
@@ -22,14 +15,6 @@ class ErrorMonitor {}
   };
   log(message) {}
     const timestamp = new Date().toISOString();
-
-
-
-
-
-
-
-
 
     const logMessage = `[${timestamp}] ${message}\n`;`
     console.log(logMessage.trim());
@@ -187,20 +172,7 @@ if (require.main === module) {}
 });
 };
 module.exports = ErrorMonitor;
-module.exports = ErrorMonitor;
-module.exports = ErrorMonitor;
-module.exports = ErrorMonitor;
 
 module.exports = ErrorMonitor;
 module.exports = ErrorMonitor;
-
-
-
-
-
-
-
-
-
-
 

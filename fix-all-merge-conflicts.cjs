@@ -3,24 +3,25 @@ const path = require('path');
 
 function fixMergeConflicts(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    
+
     // Check if file has merge conflict markers
     if (
-
-      content.includes('
-      content.includes('') ||
-      content.includes('>>>>>>>')
 
     ) {
       console.log(`Fixing merge conflicts: in: ${filePath}`);
 
+      const lines = content.split('\n');
+      const fixedLines = [];
+      let inConflict = false;
+      let keepContent = false;
+
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
 
           inConflict = true;
           keepContent = false;
           continue;
         }
-
 
           inConflict = false;
           keepContent = false;

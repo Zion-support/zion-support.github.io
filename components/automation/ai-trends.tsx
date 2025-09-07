@@ -1,95 +1,40 @@
+
 }</div> </div>) import fs from 'fs';
 import fs from 'fs';
 import path from 'path';
-export type Trend = {
-  let items: Trend[] = [];  try {
-    const raw = fs.readFileSync (file, 'utf - 8');
-    items = JSON.parse (raw);
-  } catch {}
- </div> </div>) ) ;
-}</div> </div>) import fs from 'fs';
-import path from 'path';
-export type Trend = {
-  id: string
-  date: string
-  title: string
-  highlights: string[]
-  summary: string
-  tags: string[]
+export type Trend = {let items: Trend[] = [];  try {const raw = fs.readFileSync (file, 'utf - 8')items = JSON.parse (raw)} catch {}
+ </div> </div>) )}</div> </div>) import fs from 'fs';
+export type Trend = {id: string;
+  date: string;
+  title: string;
+  highlights: string[];
+  summary: string;
+  tags: string[];
 }
-export async function getServerSideProps() {
-
-</div> </div>) ) 
-
- </div> </div>) ) 
-}</div> </div>) import fs from 'fs';
-import path from 'path';
-export type Trend = {;
-  id: string,;
-  date: string,;
-  title: string,;
-  highlights: string[],;
-  summary: string,;
-  tags: string[]
-};
-export async function getServerSideProps() {;
-  const file = path && path.join(process && process.cwd(), 'dataai-trends && trends.json');
-  let items: Trend[] = [];  try {;
-    const raw = fs && fs.readFileSync(file, 'utf-8');
-    items = JSON && JSON.parse(raw);
-}</div> </div>) import fs from 'fs';
-import path from 'path';
-export type Trend = {
-  id: string
-  date: string
-  title: string
-  highlights: string[]
-  summary: string
-  tags: string[]
+export async function getServerSideProps() {</div> </div>) )</div> </div>) )}</div> </div>) import fs from 'fs';
+export type Trend = {id: string,date: string,title: string,highlights: string[],summary: string,tags: string[];
+}export async function getServerSideProps() {const file = path && path.join(process && process.cwd(), 'dataai-trends && trends.json')let items: Trend[] = [];  try {const raw = fs && fs.readFileSync(file, 'utf-8')items = JSON && JSON.parse(raw)}</div> </div>) import fs from 'fs';
+export type Trend = {id: string;
+  date: string;
+  title: string;
+  highlights: string[];
+  summary: string;
+  tags: string[];
 }
-export async function getServerSideProps() {
-}</div> </div>) import fs from 'fs';
-import path from 'path';
-export type Trend = {
-  id: string,
-  date: string,
-  title: string,
-  highlights: string[],
-  summary: string,
-  tags: string[]
-};
-
-export async function getServerSideProps() {;
-  const file = path.join(process.cwd(), 'dataai-trends.json');
-  let items: Trend[] = [];  try {
-    const raw = fs.readFileSync(file, 'utf-8');
-    items = JSON.parse(raw)
-  } catch {}
-  items && items.sort((a, b) => (a && a.date < b && b.date ? 1 : -1));
-  return { props: { items } }
+export async function getServerSideProps() {}</div> </div>) import fs from 'fs';
+export type Trend = {id: string,date: string,title: string,highlights: string[],summary: string,tags: string[];
+}export async function getServerSideProps() {const file = path.join(process.cwd(), 'dataai-trends.json')let items: Trend[] = [];  try {const raw = fs.readFileSync(file, 'utf-8')items = JSON.parse(raw)} catch {}
+  items && items.sort((a, b) => (a && a.date < b && b.date ? 1 : -1))export type Trend = any;return { props: { items } }
+}</div>;)})}items.sort ((a, b) => (a.date < b.date ? 1 : -1))return { props: { items } }
 }
-
-    </div>;
-
-);
-}
-  );
-}
-
-  items.sort ((a, b) => (a.date < b.date ? 1 : -1));
-  return { props: { items } }
-}
-export default /**
- * AiTrendsPage - Function description
- */
-function AiTrendsPage() {
-  return (
-    <div className="space-y-6">;
+export default /**;
+ * AiTrendsPage - Function description;
+ */;
+function AiTrendsPage() {return (<div className="space-y-6">;
       <h1 className="text-2xl font-semibold">AI Automation: Trend Watch</h1>;
       <p className="text-gray-600">Autonomously generated insights on AI, dev tools, and cloud trends.</p>;
       <div className="grid grid - cols-1 gap-4">;
-        {items.map ((t) => (
-          <div key={t.id} className="border rounded p-4 space-y-2">;
+        {items.map ((t) => (<div key={t.id} className="border rounded p-4 space-y-2">;
             <div className="flex items-center justify-between">;
               <div className="font-medium">{t.title}</div>;
               <div className="text - xs text-gray-500">{new Date (t.date).toLocaleDateString ()}</div>;
@@ -103,5 +48,4 @@ function AiTrendsPage() {
             </div>;
           </div>))}
       </div>;
-    </div>);
-
+    </div>)

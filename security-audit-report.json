@@ -138,7 +138,23 @@
 }
   ],
   "recommendations": [
+    {}
     {
+      "type": "file_permissions",
+      "message": "package.json is world-readable",
+      "severity": "medium"
+    },
+    {
+      "type": "file_permissions",
+      "message": "package-lock.json is world-readable",
+      "severity": "medium"
+    }
+  ],
+  "summary": {
+    "totalVulnerabilities": 0,
+    "totalRecommendations": 2,
+    "securityScore": 90,
+    "status": "good"
   }
 }
   ],
@@ -271,6 +287,8 @@
     {
 
 
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       "priority": "high",
       "category": "dependencies",
       "message": "Update dependencies with known vulnerabilities",
@@ -322,8 +340,7 @@
 
 
 
-
-
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   "auditReportVersion": 2,
   "vulnerabilities": {},
   "metadata": {
@@ -345,6 +362,4 @@
     }
   }
 }
-
-
-
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

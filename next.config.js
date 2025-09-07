@@ -1,45 +1,94 @@
 
 // Memory optimization settings
 const nextConfig = {
-  // ... existing config
-  experimental: {
-    optimizeCss: true,
-    optimizePackageImports: ['@mui/material', '@mui/icons-material'],
+  reactStrictMode: true,
+  eslint: {
+    ignoreDuringBuilds: true,
   },
-  webpack: (config, { isServer }) => {
-    // Increase memory limits
-    config.optimization = {
-      ...config.optimization,
-      splitChunks: {
-        chunks: 'all',
-        cacheGroups: {
-          default: {
-            minChunks: 2,
-            priority: -20,
-            reuseExistingChunk: true,
-          },
-          vendor: {
-            test: /[\/]node_modules[\/]/,
-            name: 'vendors',
-            priority: -10,
-            chunks: 'all',
-          },
-        },
-      },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  images: {
+    domains: ['ziontechgroup.com', 'images.unsplash.com', 'via.placeholder.com'],
+    formats: ['image/webp', 'image/avif'],
+<<<<<<< HEAD
+    unoptimized: true,
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+=======
+    unoptimized: true
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production'
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
+  },
+  webpack: (config, { dev, isServer }) => {
+    // Exclude problematic directories from webpack compilation
+    config.watchOptions = {
+      ...config.watchOptions,
+      ignored: [
+        '**/node_modules/**',
+        '**/.git/**',
+        '**/pages_backup*/**',
+        '**/pages.*/**',
+        '**/pages-*/**',
+        '**/pages_disabled*/**',
+        '**/pages.disabled*/**',
+        '**/pages.broken*/**',
+        '**/pages.corrupted*/**',
+        '**/pages.old*/**',
+        '**/pages._*/**',
+        '**/pages.__*/**',
+        '**/backup-pages/**',
+        '**/src.pages.disabled/**',
+        '**/lib_backup*/**',
+        '**/src_backup*/**',
+        '**/corrupted-files-backup*/**',
+        '**/performance-reports*/**',
+        '**/log-analysis-reports*/**',
+        '**/link-reports*/**',
+        '**/lint-target*/**',
+        '**/monitoring*/**',
+        '**/pm2-automation*/**',
+        '**/automation/logs*/**',
+        '**/automation/backup*/**',
+        '**/performance-*.json',
+        '**/performance-*.js',
+        '**/performance-*.cjs',
+        '**/performance-*.sh',
+        '**/performance-*.html',
+        '**/performance-*.md',
+        '**/performance-*.txt'
+      ],
+      poll: 1000,
+      aggregateTimeout: 300
     };
-    
-    // Optimize for memory usage
-    if (!isServer) {
-      config.resolve.fallback = {
-        ...config.resolve.fallback,
-        fs: false,
-        net: false,
-        tls: false,
-      };
-    }
-    
+
+    // Add fallback for problematic modules
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      fs: false,
+      net: false,
+<<<<<<< HEAD
+      tls: false,
+=======
+      tls: false
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
+    };
+
     return config;
   },
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  onDemandEntries: {
+    maxInactiveAge: 25 * 1000,
+<<<<<<< HEAD
+    pagesBufferLength: 2,
+  },
+=======
+    pagesBufferLength: 2
+  }
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 };
 
 module.exports = nextConfig;

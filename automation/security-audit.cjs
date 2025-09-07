@@ -1,8 +1,5 @@
+
 }},
-}},
-
-
-
 
 #!/usr/bin/env node
 const fs = require('fs');
@@ -19,7 +16,6 @@ const securityChecks = [{
     },
   },
 
-
     }},
   {
     "name": 'Environment Variables Check',
@@ -34,22 +30,6 @@ const securityChecks = [{
           
         }
       });
-
-      
-
-
-      
-
-      
-
-
-
-      
-
-
-
-
-
 
     }},
   {
@@ -68,24 +48,11 @@ const securityChecks = [{
           if (
             content.includes('process.env') &&
 
-
-
-
-
-
-
-
-
             !content.includes('// "Security": ')
           ) {
             securityIssues++;
           }
         });
-
-
-
-
-
 
         console.log(
           `Found ${apiFiles.length} API files, ${securityIssues} potential security issues`
@@ -93,12 +60,6 @@ const securityChecks = [{
       }
     },
   },
-
-
-
-
-        
-
 
       }
     }},
@@ -123,21 +84,10 @@ const securityChecks = [{
           }
         });
 
-
-
-
-
-
         console.log(`Found CSP in ${cspFound}/${pages.length} pages`);
       }
     },
   },
-
-
-
-
-        
-
 
       }
     }},
@@ -157,14 +107,6 @@ const securityChecks = [{
         
       }
 
-
-
-
-
-
-
-
-
     }},
 ];
 
@@ -183,18 +125,11 @@ for (const check of securityChecks) {
   }
 }
 
-
-
-
 // Generate security report
 const report = {
   "timestamp": new Date().toISOString(),
   "checks": securityChecks.map(check => ({
     name: check.name,
-
-
-
-
 
     status: 'completed',
   })),
@@ -205,33 +140,11 @@ const report = {
   },
 };
 
-
-
-
-
-
-
-
-
     "status": 'completed'})),
   "summary": {
     total: totalCount,
     "successful": successCount,
     "failed": totalCount - successCount}};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 const reportsDir = path.join(process.cwd(), 'automation-reports');
 if (!fs.existsSync(reportsDir)) {
@@ -240,18 +153,6 @@ if (!fs.existsSync(reportsDir)) {
 
 const reportFile = path.join(reportsDir, `security-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-
-
-
-
-
-
-
-
-
-
-
-
 
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -266,20 +167,7 @@ console.log('� Security Audit Starting...\n')
     "name"
     "name"
     "status"
-    "status"
-    "status"
-    "status"
 
     "status"
     "status"
-
-
-
-
-
-
-
-
-
-
 

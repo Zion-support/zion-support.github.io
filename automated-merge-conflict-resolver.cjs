@@ -4,8 +4,6 @@ const { execSync } = require('child_process');
 
 console.log('🔧 Automated Merge Conflict Resolver');
 
-console.log('==');
-
 // Strategy for resolving conflicts
 const conflictResolutionStrategy = {
   // For pages, prefer the newer version (HEAD)

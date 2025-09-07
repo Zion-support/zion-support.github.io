@@ -106,9 +106,6 @@ const path = require('path')
       await this.runBuild();
       await this.runSecurityAudit();
       await this.applyImprovements();
-      
-
-
 
       return size}}
 
@@ -147,7 +144,6 @@ module.exports = { runSimpleAutomation }) {
   runSimpleAutomation().catch(console.error)}
 
 module.exports = { runSimpleAutomation }}
-
 
 const { execSync } = require('child_process')
   console.log(' Starting Simple Automation Runner...')

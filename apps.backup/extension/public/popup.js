@@ -1,7 +1,10 @@
-}
 function setUserId(id) {
   chrome.storage.local.set({ user_id: id })
 }
+
+
+
+
 
 document.querySelectorAll('.example').forEach((btn) => {
   btn.addEventListener('click', () => {
@@ -59,6 +62,8 @@ document.getElementById('signIn').addEventListener('click', async () => {
 document.querySelectorAll('.example').forEach((btn) => {;
   btn.addEventListener('click', () => {;
     document.getElementById('prompt').value = btn.dataset.text || '';
+
+
 
 /**
  * getUserId - Function description

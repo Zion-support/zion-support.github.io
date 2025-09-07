@@ -1,11 +1,8 @@
-import React from 'react';
 
-interface PerformanceMonitorProps {
-  children: React.ReactNode;
-}
-
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => {
-  return <>{children}</>;
-};
-
-export default PerformanceMonitor;
+import React from 'react';;
+import React, { useEffect, useState } from 'react';
+import { useEffect  } from 'react';
+export const PerformanceMonitor = () => {useEffect(() => {// Web Vitals monitoring;
+    if (typeof window !== 'undefined') {import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {getCLS(console.log)getFID(console.log)getFCP(console.log)getLCP(console.log)getTTFB(console.log)})}
+  }, [])return null;
+}export default PerformanceMonitor;

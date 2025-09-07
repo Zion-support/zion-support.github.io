@@ -1,9 +1,25 @@
+<<<<<<< HEAD
+
+
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+// console.log(' Starting Master Automation Orchestrator...')
+console.log('=====')
+    "status"
+      "encoding"
+      "stdio"
+const metricsResult = runCommand('Metrics Generation', 'echo "Generating final metrics...")
+  console.log('\n "Recommendations")
+=======
 #!/usr/bin/env node
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+<
 
+<<<<<<< HEAD
+=======
 class MasterAutomationOrchestrator {
   constructor() {
     this.projectRoot = process.cwd();
@@ -532,3 +548,4 @@ if (require.main === module) {
 }
 
 module.exports = MasterAutomationOrchestrator;
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8

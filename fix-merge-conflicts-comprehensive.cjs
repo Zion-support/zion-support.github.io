@@ -13,7 +13,7 @@ function fixMergeConflicts(filePath) {
     let modified = false;
 
     // Remove merge conflict markers and keep the HEAD version (first part)
-    const conflictRegex = /\n([\s\S]*?)\n\n([\s\S]*?)\n
+    const conflictRegex = /
     
     content = content.replace(conflictRegex, (match, headContent, originContent) => {
       modified = true;
@@ -29,8 +29,6 @@ function fixMergeConflicts(filePath) {
     });
 
     // Remove any remaining conflict markers
-    content = content.replace(/\n?/g, '');
-    content = content.replace(/\n?/g, '');
     content = content.replace(/
 
     // Clean up HTML entities
@@ -130,6 +128,4 @@ try {
   console.log('⚠️  Build still has issues, but merge conflicts should be resolved');
   console.log('Build error:', error.message);
 }
-
-console.log('\n✨ Merge conflict resolution script completed!');
 

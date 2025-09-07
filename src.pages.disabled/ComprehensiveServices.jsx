@@ -1,33 +1,23 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+    }return this.props.children;
   }
 }
 import React from 'react';
+interface ComprehensiveServicesProps  {// Add props here as needed;
+}export default function ComprehensiveServices() {return (<div>;
+      <h1>ComprehensiveServices</h1>;
+      <p>This component is currently under development.</p>;
+    </div>;
+  )}
+:src.pages.disabled/ComprehensiveServices.jsx;
 interface ComprehensiveServicesProps {
   // Add props here as needed
 
+
 }
 
-export default function ComprehensiveServices({ }: ComprehensiveServicesProps) {
+export default function ComprehensiveServices({}: ComprehensiveServicesProps) {
   return (
     <div>
       <h1>ComprehensiveServices</h1>
@@ -35,11 +25,29 @@ export default function ComprehensiveServices({ }: ComprehensiveServicesProps) {
     </div>
   );
 
+
+
 }
+
 :src.pages.disabled/ComprehensiveServices.jsx
 }
 }
 }
 }
 }
+}:src.pages.disabled/ComprehensiveServices.jsx;
 :temp_exclude/src.pages.disabled/ComprehensiveServices.jsx
+}
+
+
+
+
+
+
+:src.pages.disabled/ComprehensiveServices.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/ComprehensiveServices.jsx;

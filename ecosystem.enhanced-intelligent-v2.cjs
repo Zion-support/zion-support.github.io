@@ -40,19 +40,6 @@ module.exports = {}
       "restart_delay": 10000,
       "env": {}
 
-    // AI-Powered Code Analysis & Auto-Fixing
-    {
-      name: 'ai-code-analyzer',
-      script: 'node',
-      args: 'scripts/automation/ai-code-analyzer.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '0 */2 * * *', // Every 2 hours
-      max_memory_restart: '512M',
-      restart_delay: 10000,
-      env: {
         NODE_ENV: 'production',
         AI_ANALYSIS_MODE: 'comprehensive',
         AUTO_FIX: 'true'
@@ -78,19 +65,6 @@ module.exports = {}
       "restart_delay": 15000,
       "env": {}
 
-    // Smart Performance Optimizer
-    {
-      name: 'smart-performance-optimizer',
-      script: 'node',
-      args: 'scripts/automation/smart-performance-optimizer.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '0 */4 * * *', // Every 4 hours
-      max_memory_restart: '1G',
-      restart_delay: 15000,
-      env: {
         NODE_ENV: 'production',
         OPTIMIZATION_LEVEL: 'aggressive',
         PERFORMANCE_MONITORING: 'true'
@@ -116,19 +90,6 @@ module.exports = {}
       "restart_delay": 20000,
       "env": {}
 
-    // Intelligent Dependency Manager
-    {
-      name: 'intelligent-dependency-manager',
-      script: 'node',
-      args: 'scripts/automation/intelligent-dependency-manager.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '0 0 * * 0', // Weekly on Sunday at midnight
-      max_memory_restart: '512M',
-      restart_delay: 20000,
-      env: {
         NODE_ENV: 'production',
         AUTO_UPDATE: 'true',
         SECURITY_FIRST: 'true',
@@ -155,19 +116,6 @@ module.exports = {}
       "restart_delay": 30000,
       "env": {}
 
-    // Smart Deployment Automation
-    {
-      name: 'smart-deployment-automation',
-      script: 'node',
-      args: 'scripts/automation/smart-deployment-automation.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '0 */6 * * *', // Every 6 hours
-      max_memory_restart: '1G',
-      restart_delay: 30000,
-      env: {
         NODE_ENV: 'production',
         AUTO_DEPLOY: 'false', // Set to true for automatic deployment
         ROLLBACK_ENABLED: 'true',
@@ -194,19 +142,6 @@ module.exports = {}
       "restart_delay": 10000,
       "env": {}
 
-    // Intelligent Repository Manager
-    {
-      name: 'intelligent-repository-manager',
-      script: 'node',
-      args: 'scripts/automation/intelligent-repository-manager.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '*/30 * * * *', // Every 30 minutes
-      max_memory_restart: '512M',
-      restart_delay: 10000,
-      env: {
         NODE_ENV: 'production',
         AUTO_MERGE: 'false', // Set to true for automatic merging
         CONFLICT_RESOLUTION: 'intelligent',
@@ -233,19 +168,6 @@ module.exports = {}
       "restart_delay": 5000,
       "env": {}
 
-    // Advanced Development Workflow
-    {
-      name: 'advanced-development-workflow',
-      script: 'node',
-      args: 'scripts/automation/advanced-development-workflow.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '*/15 * * * *', // Every 15 minutes
-      max_memory_restart: '512M',
-      restart_delay: 5000,
-      env: {
         NODE_ENV: 'production',
         WORKFLOW_MODE: 'continuous',
         QUALITY_GATES: 'enabled'
@@ -271,19 +193,6 @@ module.exports = {}
       "restart_delay": 15000,
       "env": {}
 
-    // Intelligent CI/CD Orchestrator
-    {
-      name: 'intelligent-cicd-orchestrator',
-      script: 'node',
-      args: 'scripts/automation/intelligent-cicd-orchestrator.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '*/10 * * * *', // Every 10 minutes
-      max_memory_restart: '1G',
-      restart_delay: 15000,
-      env: {
         NODE_ENV: 'production',
         PIPELINE_MODE: 'intelligent',
         AUTO_DEPLOYMENT: 'false'
@@ -309,19 +218,6 @@ module.exports = {}
       "restart_delay": 10000,
       "env": {}
 
-    // Enhanced CI/CD Automation
-    {
-      name: 'enhanced-ci-cd-automation',
-      script: 'node',
-      args: 'scripts/automation/enhanced-ci-cd-automation.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '*/5 * * * *', // Every 5 minutes
-      max_memory_restart: '1G',
-      restart_delay: 10000,
-      env: {
         NODE_ENV: 'production',
         QUALITY_GATES: 'strict',
         PARALLEL_JOBS: '4'
@@ -347,19 +243,6 @@ module.exports = {}
       "restart_delay": 20000,
       "env": {}
 
-    // Enhanced Testing Automation
-    {
-      name: 'enhanced-testing-automation',
-      script: 'node',
-      args: 'scripts/automation/enhanced-testing-automation.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '*/20 * * * *', // Every 20 minutes
-      max_memory_restart: '1G',
-      restart_delay: 20000,
-      env: {
         NODE_ENV: 'production',
         TEST_STRATEGY: 'comprehensive',
         PARALLEL_TESTS: 'true'
@@ -385,19 +268,6 @@ module.exports = {}
       "restart_delay": 25000,
       "env": {}
 
-    // Enhanced Security Automation
-    {
-      name: 'enhanced-security-automation',
-      script: 'node',
-      args: 'scripts/automation/enhanced-security-automation.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '0 */3 * * *', // Every 3 hours
-      max_memory_restart: '512M',
-      restart_delay: 25000,
-      env: {
         NODE_ENV: 'production',
         SECURITY_LEVEL: 'maximum',
         VULNERABILITY_SCANNING: 'true'
@@ -423,19 +293,6 @@ module.exports = {}
       "restart_delay": 5000,
       "env": {}
 
-    // Project Health Monitor
-    {
-      name: 'project-health-monitor',
-      script: 'node',
-      args: 'scripts/automation/project-health-monitor.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '*/5 * * * *', // Every 5 minutes
-      max_memory_restart: '512M',
-      restart_delay: 5000,
-      env: {
         NODE_ENV: 'production',
         HEALTH_CHECKS: 'comprehensive',
         MONITORING_INTERVAL: '300000'
@@ -461,19 +318,6 @@ module.exports = {}
       "restart_delay": 2000,
       "env": {}
 
-    // PM2 Sync Automation
-    {
-      name: 'pm2-sync-automation',
-      script: 'node',
-      args: 'scripts/automation/pm2-sync-automation.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '*/1 * * * *', // Every minute
-      max_memory_restart: '1G',
-      restart_delay: 2000,
-      env: {
         NODE_ENV: 'production',
         SYNC_MODE: 'continuous',
         PROCESS_MONITORING: 'true'
@@ -499,19 +343,6 @@ module.exports = {}
       "restart_delay": 30000,
       "env": {}
 
-    // Link Checker Automation
-    {
-      name: 'link-checker-automation',
-      script: 'node',
-      args: 'scripts/automation/link-checker-automation.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '0 */8 * * *', // Every 8 hours
-      max_memory_restart: '512M',
-      restart_delay: 30000,
-      env: {
         NODE_ENV: 'production',
         CHECK_DEPTH: 'deep',
         EXTERNAL_LINKS: 'true'
@@ -537,19 +368,6 @@ module.exports = {}
       "restart_delay": 5000,
       "env": {}
 
-    // TypeScript Syntax Fixer
-    {
-      name: 'typescript-syntax-fixer',
-      script: 'node',
-      args: 'scripts/automation/typescript-syntax-fixer.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '*/10 * * * *', // Every 10 minutes
-      max_memory_restart: '256M',
-      restart_delay: 5000,
-      env: {
         NODE_ENV: 'production',
         AUTO_FIX: 'true',
         STRICT_MODE: 'true'
@@ -575,19 +393,6 @@ module.exports = {}
       "restart_delay": 3000,
       "env": {}
 
-    // Console Error Fixer
-    {
-      name: 'console-error-fixer',
-      script: 'node',
-      args: 'scripts/automation/console-error-fixer.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '*/5 * * * *', // Every 5 minutes
-      max_memory_restart: '256M',
-      restart_delay: 3000,
-      env: {
         NODE_ENV: 'production',
         ERROR_DETECTION: 'real-time',
         AUTO_FIX: 'true'
@@ -613,19 +418,6 @@ module.exports = {}
       "restart_delay": 10000,
       "env": {}
 
-    // Quality Checks
-    {
-      name: 'quality-checks',
-      script: 'node',
-      args: 'scripts/automation/quality-checks.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '*/15 * * * *', // Every 15 minutes
-      max_memory_restart: '256M',
-      restart_delay: 10000,
-      env: {
         NODE_ENV: 'production',
         QUALITY_STANDARDS: 'high',
         COVERAGE_THRESHOLD: '80'
@@ -651,19 +443,6 @@ module.exports = {}
       "restart_delay": 20000,
       "env": {}
 
-    // Security Audit
-    {
-      name: 'security-audit',
-      script: 'node',
-      args: 'scripts/automation/security-audit.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '0 */6 * * *', // Every 6 hours
-      max_memory_restart: '512M',
-      restart_delay: 20000,
-      env: {
         NODE_ENV: 'production',
         AUDIT_LEVEL: 'comprehensive',
         VULNERABILITY_ALERTS: 'true'
@@ -689,19 +468,6 @@ module.exports = {}
       "restart_delay": 60000,
       "env": {}
 
-    // Continuous Improvement
-    {
-      name: 'continuous-improvement',
-      script: 'node',
-      args: 'scripts/automation/continuous-improvement.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '0 2 * * *', // Daily at 2 AM
-      max_memory_restart: '256M',
-      restart_delay: 60000,
-      env: {
         NODE_ENV: 'production',
         IMPROVEMENT_MODE: 'automatic',
         LEARNING_ENABLED: 'true'
@@ -727,19 +493,6 @@ module.exports = {}
       "restart_delay": 120000,
       "env": {}
 
-    // Daily Build Test
-    {
-      name: 'daily-build-test',
-      script: 'node',
-      args: 'scripts/automation/daily-build-test.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '0 1 * * *', // Daily at 1 AM
-      max_memory_restart: '512M',
-      restart_delay: 120000,
-      env: {
         NODE_ENV: 'production',
         BUILD_STRATEGY: 'comprehensive',
         NOTIFICATION_ENABLED: 'true'
@@ -765,19 +518,6 @@ module.exports = {}
       "restart_delay": 5000,
       "env": {}
 
-    // Health Check
-    {
-      name: 'health-check',
-      script: 'node',
-      args: 'scripts/automation/health-check.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '*/2 * * * *', // Every 2 minutes
-      max_memory_restart: '256M',
-      restart_delay: 5000,
-      env: {
         NODE_ENV: 'production',
         HEALTH_CHECK_INTERVAL: '120000',
         ALERT_THRESHOLD: 'medium'
@@ -803,19 +543,6 @@ module.exports = {}
       "restart_delay": 30000,
       "env": {}
 
-    // Security Scanner
-    {
-      name: 'security-scanner',
-      script: 'node',
-      args: 'scripts/automation/security-scanner.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '0 */4 * * *', // Every 4 hours
-      max_memory_restart: '512M',
-      restart_delay: 30000,
-      env: {
         NODE_ENV: 'production',
         SCAN_DEPTH: 'comprehensive',
         REAL_TIME_SCANNING: 'true'
@@ -841,19 +568,6 @@ module.exports = {}
       "restart_delay": 5000,
       "env": {}
 
-    // Performance Monitor
-    {
-      name: 'performance-monitor',
-      script: 'node',
-      args: 'scripts/automation/performance-monitor.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '*/3 * * * *', // Every 3 minutes
-      max_memory_restart: '512M',
-      restart_delay: 5000,
-      env: {
         NODE_ENV: 'production',
         MONITORING_INTERVAL: '180000',
         PERFORMANCE_ALERTS: 'true'
@@ -865,18 +579,6 @@ module.exports = {}
       time: true
     }
   ],
-
-  // PM2 Deploy configuration;
-  "deploy": {}
-    production: {}
-
-  // PM2 Deploy configuration
-  deploy: {
-    production: {
-
-  // PM2 Deploy configuration;
-  "deploy": {}
-    production: {}
 
       user: 'node',
       host: 'your-production-server.com',

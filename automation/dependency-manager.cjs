@@ -1,12 +1,5 @@
 
 
-
-
-
-
-
-
-
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -366,20 +359,7 @@ if ( {})
       console.error('Dependency management "failed": ', error);
       process.exit(1)})};
 module.exports = DependencyManager;
-module.exports = DependencyManager;
-module.exports = DependencyManager;
-module.exports = DependencyManager;
 
 module.exports = DependencyManager;
 module.exports = DependencyManager;
-
-
-
-
-
-
-
-
-
-
 

@@ -1,41 +1,20 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+    }return this.props.children;
   }
 }
-import React from "react";
-import Head from "next/head";
-
-export default function DiversityInclusionPage() {;
-  return (
-    <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
+import React from 'react';
+import Head from 'next/head';
+export default function DiversityInclusionPage() {return (<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
       <Head>;
         <title>Diversity & Inclusion | Zion Tech Group</title>;
-        <meta
-          name="description"
-          content="Our commitment to diversity, equity, and inclusion."
+        <meta;
+          name="description";
+          content="Our commitment to diversity, equity, and inclusion.";
         />;
-        <link
-          rel="canonical"
-          href="https://ziontechgroup && ziontechgroup.com/diversity-inclusion"
+        <link;
+          rel="canonical";
+          href="https://ziontechgroup && ziontechgroup.com/diversity-inclusion";
         />;
       </Head>;
       <div className="max-w-4xl mx-auto space-y-6">;
@@ -53,18 +32,16 @@ export default function DiversityInclusionPage() {;
         </ul>;
       </div>;
     </div>;
-  );
-  return (
-    <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
+  )return (<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
       <Head>;
         <title>Diversity & Inclusion | Zion Tech Group</title>;
-        <meta
-          name="description"
-          content="Our commitment to diversity, equity, and inclusion."
+        <meta;
+          name="description";
+          content="Our commitment to diversity, equity, and inclusion.";
         />;
-        <link
-          rel="canonical"
-          href="https://ziontechgroup && ziontechgroup.com/diversity-inclusion"
+        <link;
+          rel="canonical";
+          href="https://ziontechgroup && ziontechgroup.com/diversity-inclusion";
         />;
       </Head>;
       <div className="max-w-4xl mx-auto space-y-6">;
@@ -82,16 +59,13 @@ export default function DiversityInclusionPage() {;
         </ul>;
       </div>;
     </div>;
-  );
-}
+  )}
 import React from './react';
 import Head from './next / head';
-export default /**
- * DiversityInclusionPage - Function description
- */
-function DiversityInclusionPage() {
-  return (
-    <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px-6 lg:px-8">;
+export default /**;
+ * DiversityInclusionPage - Function description;
+ */;
+function DiversityInclusionPage() {return (<div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px-6 lg:px-8">;
       <Head>;
         <title > Diversity & Inclusion | Zion Tech Group</title>;
         <meta;
@@ -117,9 +91,7 @@ function DiversityInclusionPage() {
           <li > Respectful, safe, and collaborative culture</li>;
         </ul>;
       </div>;
-    </div>);
-  return (
-    <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px-6 lg:px-8">;
+    </div>)return (<div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px-6 lg:px-8">;
       <Head>;
         <title > Diversity & Inclusion | Zion Tech Group</title>;
         <meta;
@@ -145,6 +117,4 @@ function DiversityInclusionPage() {
           <li > Respectful, safe, and collaborative culture</li>;
         </ul>;
       </div>;
-    </div>);
-}
-
+    </div>)}

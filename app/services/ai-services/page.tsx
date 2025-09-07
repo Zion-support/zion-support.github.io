@@ -1,278 +1,408 @@
-import Link from 'next/link';
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
 
 
-// Simple ServiceCard component
-const ServiceCard = ({ title, description, icon }) => (
-  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-    <div className="text-3xl mb-4">{icon}</div>
-    <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
-    <p className="text-gray-600">{description}</p>
-  </div>
-);
-export const metadata = { 
+export const metadata = {
   title: 'AI Services | Zion Tech Group',
-  description: 'Enterprise-grade AI solutions including RAG systems, conversational AI, predictive analytics, and computer vision applications.'
+  description: 'Comprehensive AI services including custom LLM development, RAG systems, AI agents, computer vision, and MLOps solutions for enterprise applications.',
+  keywords: 'AI services, machine learning, LLM development, RAG systems, AI agents, computer vision, MLOps, AI consulting'
+=======
+import Link from "next/link";
+
+export const metadata = {
+  title: "AI Services | Zion Tech Group",
+  description: "Comprehensive AI services including custom LLM development, RAG systems, AI agents, computer vision, and MLOps solutions for enterprise applications.",
+>>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
+=======
+export const metadata = {
+  title: 'Ai Services | Zion Tech Group',
+  description: 'Professional ai services services for your business needs.',
+  keywords: 'ai-services, services, business, technology'
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 };
 
-export default function AIServicesPage() {
+export default function ServicePage() {
   return (
-    <div className="animate-fade-in">
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <div className="space-y-16">
+      {/* Hero Section */}
+      <section className="text-center py-16 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          AI Services
+        </h1>
+        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Transform your business with cutting-edge artificial intelligence solutions. 
+          From custom LLM development to computer vision, we deliver enterprise-grade AI that drives real results.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="mailto:kleber@ziontechgroup.com?subject=AI Services Inquiry"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Get AI Consultation
+          </a>
+          <a
+            href="tel:+13024640950"
+            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+          >
+            Call +1 302 464 0950
+          </a>
+        </div>
+      </section>
+
+      {/* Core AI Services */}
       <section className="py-12">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">AI Services</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ship AI features with confidence: RAG, agents, fine-tuning, evals and MLOps. 
-            We help you build, deploy, and scale AI solutions that drive real business value.
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our AI Solutions</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Comprehensive AI services designed to accelerate your digital transformation and drive innovation.
           </p>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          <ServiceCard 
-            title="Applied AI Solutions" 
-            details={[
-              "RAG over private data",
-              "Task-specific agents",
-              "Vision + speech processing",
-              "Personalization engines",
-              "Content generation",
-              "Intelligent automation"
-            ]} 
-            icon="🤖"
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <AIServiceCard
+            icon="🧠"
+            title="Custom LLM Development"
+            description="Build and deploy large language models tailored to your specific business needs and use cases."
+            features={[
+              "Custom model training",
+              "Fine-tuning for specific domains",
+              "API integration",
+              "Performance optimization",
+              "Cost-effective deployment"
+            ]}
+            price="From $15,000"
           />
-          <ServiceCard 
-            title="Model Operations" 
-            details={[
-              "Offline evaluation systems",
-              "Safety + guardrails",
-              "Batch + streaming inference",
-              "Cost optimization",
-              "Performance monitoring",
-              "A/B testing frameworks"
-            ]} 
-            icon="⚙️"
-          />
-          <ServiceCard 
-            title="Data & MLOps" 
-            details={[
-              "Data pipeline automation",
-              "Feature store management",
+          <AIServiceCard
+            icon="🔍"
+            title="RAG Systems"
+            description="Retrieval-Augmented Generation systems that combine knowledge bases with LLMs for accurate, contextual responses."
+            features={[
+              "Knowledge base integration",
               "Vector database setup",
-              "Model drift detection",
-              "Continuous integration",
-              "Monitoring + alerting"
-            ]} 
-            icon="📊"
+              "Context-aware responses",
+              "Real-time data updates",
+              "Custom embeddings"
+            ]}
+            price="From $8,000"
+          />
+          <AIServiceCard
+            icon="🤖"
+            title="AI Agents & Automation"
+            description="Intelligent agents that automate complex workflows and decision-making processes."
+            features={[
+              "Workflow automation",
+              "Decision trees",
+              "Multi-agent systems",
+              "Integration with existing tools",
+              "Continuous learning"
+            ]}
+            price="From $12,000"
+          />
+          <AIServiceCard
+            icon="👁️"
+            title="Computer Vision"
+            description="Advanced image and video analysis solutions for object detection, recognition, and processing."
+            features={[
+              "Object detection",
+              "Image classification",
+              "Facial recognition",
+              "Video analysis",
+              "Real-time processing"
+            ]}
+            price="From $10,000"
+          />
+          <AIServiceCard
+            icon="🔧"
+            title="MLOps & Model Deployment"
+            description="End-to-end machine learning operations including model training, deployment, and monitoring."
+            features={[
+              "Model versioning",
+              "Automated training pipelines",
+              "A/B testing",
+              "Performance monitoring",
+              "Scalable deployment"
+            ]}
+            price="From $20,000"
+          />
+          <AIServiceCard
+            icon="💬"
+            title="Natural Language Processing"
+            description="Text analysis, sentiment analysis, and language understanding solutions for your applications."
+            features={[
+              "Sentiment analysis",
+              "Text classification",
+              "Named entity recognition",
+              "Language translation",
+              "Text summarization"
+            ]}
+            price="From $6,000"
           />
         </div>
-
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">AI Solutions Portfolio</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <SolutionCard
-              title="Intelligent Document Processing"
-              description="Extract, analyze, and process information from documents using advanced NLP and computer vision."
-              features={[
-                "OCR + text extraction",
-                "Document classification",
-                "Data validation",
-                "API integration"
-              ]}
-              pricing="Starting at $25,000"
-            />
-            <SolutionCard
-              title="Conversational AI Platform"
-              description="Build intelligent chatbots and virtual assistants with natural language understanding."
-              features={[
-                "Multi-channel support",
-                "Context awareness",
-                "Intent recognition",
-                "Human handoff"
-              ]}
-              pricing="Starting at $30,000"
-            />
-            <SolutionCard
-              title="Predictive Analytics Engine"
-              description="Leverage machine learning to predict trends, behaviors, and outcomes for better decision making."
-              features={[
-                "Time series forecasting",
-                "Anomaly detection",
-                "Risk assessment",
-                "Real-time predictions"
-              ]}
-              pricing="Starting at $35,000"
-            />
-            <SolutionCard
-              title="Computer Vision System"
-              description="Implement image and video analysis solutions for automation and quality control."
-              features={[
-                "Object detection",
-                "Image classification",
-                "Video analytics",
-                "Quality assurance"
-              ]}
-              pricing="Starting at $40,000"
-            />
-          </div>
-        </div>
-
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Technology Stack</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <TechCard
-              title="Large Language Models"
-              description="GPT-4, Claude, Llama, and custom fine-tuned models"
-              icon="🧠"
-            />
-            <TechCard
-              title="Vector Databases"
-              description="Pinecone, Weaviate, Chroma for semantic search"
-              icon="🔍"
-            />
-            <TechCard
-              title="ML Frameworks"
-              description="TensorFlow, PyTorch, Scikit-learn, Hugging Face"
-              icon="⚡"
-            />
-            <TechCard
-              title="Cloud Platforms"
-              description="AWS, GCP, Azure with GPU acceleration"
-              icon="☁️"
-            />
-          </div>
-        </div>
-
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Pricing Plans</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <Plan
-              name="AI Discovery"
-              price="$5k–$12k"
-              features={[
-                "2–3 weeks consultation",
-                "Use case design",
-                "Technology selection",
-                "Implementation roadmap",
-                "Proof of concept"
-              ]}
-            />
-            <Plan
-              name="Pilot"
-              price="$15k–$45k"
-              features={[
-                "4–8 weeks development",
-                "RAG / agent MVP",
-                "Evaluation framework",
-                "Safety guardrails",
-                "Performance dashboards"
-              ]}
-              popular={true}
-            />
-            <Plan
-              name="Production"
-              price="$50k+"
-              features={[
-                "Hardened infrastructure",
-                "Monitoring & alerting",
-                "SLA guarantees",
-                "Cost optimization",
-                "Ongoing maintenance"
-              ]}
-            />
-          </div>
-        </div>
-
-        <section className="bg-blue-50 rounded-xl p-8 text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            Ready to implement AI in your business?
-          </h2>
-          <p className="text-lg text-gray-600 mb-6">
-            Let's discuss your AI needs and create a solution that delivers measurable results.
-          </p>
-          <a
-            href="/contact"
-            className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-          </a>
-        </section>
       </section>
+
+      {/* Contact CTA */}
+      <section className="py-12 bg-blue-600 rounded-lg text-white text-center">
+        <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business with AI?</h2>
+        <p className="text-xl mb-8 max-w-2xl mx-auto">
+          Let&apos;s discuss how AI can solve your specific business challenges and drive growth.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="mailto:kleber@ziontechgroup.com?subject=AI Services Consultation"
+            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+          >
+            Get Free Consultation
+          </a>
+          <a
+            href="tel:+13024640950"
+            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+          >
+            Call +1 302 464 0950
+          </a>
+        </div>
+        <div className="mt-8 text-sm">
+          <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+          <p>📧 kleber@ziontechgroup.com</p>
+=======
+    <div className="animate-fade-in">
+      <div className="text-center mb-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          AI Services
+        </h1>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Transform your business with cutting-edge artificial intelligence solutions. From custom LLM development to intelligent automation, we deliver AI that drives real business value.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+        <div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Our AI Capabilities</h2>
+          <div className="space-y-4">
+            <FeatureItem
+              icon="🧠"
+              title="Custom LLM Development"
+              description="Build and deploy large language models tailored to your specific business needs and use cases."
+              benefits={["Custom model training", "Domain-specific optimization", "Cost-effective deployment", "Continuous learning"]}
+            />
+            <FeatureItem
+              icon="🔍"
+              title="RAG Systems & AI Agents"
+              description="Implement Retrieval-Augmented Generation systems and intelligent agents for enhanced decision-making."
+              benefits={["Real-time data access", "Context-aware responses", "Automated workflows", "Human-like interactions"]}
+            />
+            <FeatureItem
+              icon="👁️"
+              title="Computer Vision Solutions"
+              description="Develop advanced computer vision applications for image recognition, object detection, and visual analysis."
+              benefits={["Image classification", "Object detection", "Facial recognition", "Quality inspection"]}
+            />
+            <FeatureItem
+              icon="⚙️"
+              title="MLOps & Model Management"
+              description="End-to-end machine learning operations including model deployment, monitoring, and lifecycle management."
+              benefits={["Automated pipelines", "Model versioning", "Performance monitoring", "Scalable deployment"]}
+            />
+            <FeatureItem
+              icon="🤖"
+              title="AI Automation & Integration"
+              description="Seamlessly integrate AI capabilities into your existing systems and workflows for maximum efficiency."
+              benefits={["API integration", "Workflow automation", "Data processing", "System optimization"]}
+            />
+          </div>
+        </div>
+
+        <div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Why Choose Zion for AI?</h2>
+          <div className="space-y-6">
+            <BenefitCard
+              icon="🚀"
+              title="Proven Expertise"
+              description="Our team has successfully delivered 500+ AI projects across various industries with measurable results."
+            />
+            <BenefitCard
+              icon="💡"
+              title="Innovation & Research"
+              description="We stay at the forefront of AI technology, implementing the latest advances in machine learning and AI."
+            />
+            <BenefitCard
+              icon="🔒"
+              title="Enterprise-Grade Security"
+              description="All our AI solutions are built with security and compliance in mind, ensuring your data remains protected."
+            />
+            <BenefitCard
+              icon="📈"
+              title="Measurable ROI"
+              description="We focus on delivering AI solutions that provide clear, measurable business value and return on investment."
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="text-center mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-4">Our AI Development Process</h2>
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+          We follow a structured approach to ensure successful AI implementation and adoption.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <ProcessStep
+            step="1"
+            title="Discovery & Strategy"
+            description="Understand your business needs, data landscape, and define AI objectives."
+          />
+          <ProcessStep
+            step="2"
+            title="Development & Training"
+            description="Build, train, and optimize AI models tailored to your specific requirements."
+          />
+          <ProcessStep
+            step="3"
+            title="Deployment & Optimization"
+            description="Deploy AI solutions and continuously monitor and optimize performance."
+          />
+>>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
+        </div>
+      </div>
+
+      <CTA />
     </div>
   );
 }
 
+function FeatureItem({ icon, title, description, benefits }: { icon: string; title: string; description: string; benefits: string[] }) {
+  return (
+    <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <ul className="space-y-2">
+        {benefits.map((benefit, index) => (
+          <li key={index} className="text-sm text-gray-600 flex items-center">
+            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+            {benefit}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
-function SolutionCard({ title, description, features, pricing }: {
+function BenefitCard({ icon, title, description }: { icon: string; title: string; description: string }) {
+  return (
+    <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
+      <div className="text-4xl mb-4 text-blue-600">{icon}</div>
+      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600">{description}</p>
+    </div>
+  );
+}
+
+function ProcessStep({ step, title, description }: { step: string; title: string; description: string }) {
+  return (
+    <div className="text-center p-6 bg-white rounded-lg shadow-md border border-gray-200">
+      <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+        {step}
+      </div>
+      <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
+      <p className="text-gray-600">{description}</p>
+    </div>
+  );
+}
+
+function CTA() {
+  return (
+    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
+      <h3 className="text-2xl font-bold text-gray-900 mb-4">
+        Ready to Harness the Power of AI?
+      </h3>
+      <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+        Contact us today for a free AI consultation and discover how artificial intelligence can transform your business.
+      </p>
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="tel:+13024640950"
+          className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+        >
+          Call +1 302 464 0950
+        </a>
+        <a
+          href="mailto:kleber@ziontechgroup.com"
+          className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+        >
+          Email Us
+        </a>
+      </div>
+      <div className="mt-6 text-sm text-gray-600">
+        <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+      </div>
+    </div>
+  );
+}
+
+function AIServiceCard({ icon, title, description, features, price }: {
+  icon: string;
   title: string;
   description: string;
   features: string[];
-  pricing: string;
+  price: string;
 }) {
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+    <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
+      <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
       <p className="text-gray-600 mb-4">{description}</p>
-      <ul className="space-y-2 text-gray-600 mb-4">
+      <ul className="space-y-2 mb-6">
         {features.map((feature, index) => (
-          <li key={index} className="flex items-start">
-            <span className="text-blue-500 mr-2">•</span>
+          <li key={index} className="text-sm text-gray-600 flex items-center">
+            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
             {feature}
           </li>
         ))}
       </ul>
-      <div className="text-lg font-semibold text-gray-900">{pricing}</div>
-    </div>
-  );
-}
-
-function TechCard({ title, description, icon }: {
-  title: string;
-  description: string;
-  icon: string;
-}) {
-  return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow text-center">
-      <div className="text-3xl mb-3">{icon}</div>
-      <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
-      <p className="text-sm text-gray-600">{description}</p>
-    </div>
-  );
-}
-
-function Plan({ name, price, features, popular = false }: {
-  name: string;
-  price: string;
-  features: string[];
-  popular?: boolean;
-}) {
-  return (
-    <div className={`bg-white border rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow ${
-      popular ? 'border-blue-500 ring-2 ring-blue-100' : 'border-gray-200'
-    }`}>
-      {popular && (
-        <div className="bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-full inline-block mb-4">
-          Most Popular
-        </div>
-      )}
-      <h3 className="text-xl font-semibold text-gray-900 mb-2">{name}</h3>
-      <div className="text-3xl font-bold text-gray-900 mb-4">{price}</div>
-      <ul className="space-y-3 mb-6">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-start">
-            <span className="text-green-500 mr-2 mt-1">✓</span>
-            <span className="text-gray-600">{feature}</span>
-          </li>
-        ))}
-      </ul>
+      <div className="text-lg font-semibold text-blue-600 mb-4">{price}</div>
       <a
-        href="/contact"
-        className={`w-full block text-center py-3 px-4 rounded-lg font-semibold transition-colors ${
-          popular
-            ? 'bg-blue-600 text-white hover:bg-blue-700'
-            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-        }`}
+        href="mailto:kleber@ziontechgroup.com?subject=AI Service: {title}"
+        className="w-full block text-center py-2 px-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
       >
-        Get Started
+        Get Quote
       </a>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Ai Services
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional ai services services for your business needs.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Tailored ai services solutions designed for your specific business requirements.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
+            <p className="text-gray-300">
+              Cutting-edge technology and best practices to deliver exceptional results.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your ai services solutions run smoothly.
+            </p>
+          </div>
+        </div>
+      </div>
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
     </div>
   );
 }

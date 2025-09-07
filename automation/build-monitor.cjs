@@ -1,21 +1,11 @@
 
 
-
-
-
-
-
-
-
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
 const { promisify } = require('util');
+
 const execAsync = promisify(exec);
-const execAsync = promisify(exec);
-
-
-
 
 class BuildMonitor {
   constructor() {
@@ -35,15 +25,6 @@ const execAsync = promisify(exec);
 
 const execAsync = promisify(exec);
 
-
-
-
-
-const execAsync = promisify(exec);
-
-
-
-
 class BuildMonitor {}
   constructor() {}
     this.logFile = path.join(__dirname, 'logs', 'build-monitor.log');
@@ -54,14 +35,6 @@ class BuildMonitor {}
   log(message) {}
     const timestamp = new Date().toISOString();
 
-
-
-
-
-
-
-
-
     const logMessage = `[${timestamp}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -70,11 +43,6 @@ class BuildMonitor {}
     const startTime = Date.now();
     try {}
       this.log('Starting build process...');
-
-
-
-
-
 
       execSync('npm run clean', {
         cwd: this.projectRoot,
@@ -88,20 +56,6 @@ class BuildMonitor {}
         timeout: 300000,
       });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       const { stdout, stderr } = await execAsync('npm run build', {})
         "cwd": process.cwd(),
         "timeout": 300000, // 5 minutes timeout;
@@ -110,6 +64,7 @@ class BuildMonitor {}
 
       const endTime = Date.now();
       const duration = endTime - startTime;
+
       this.lastBuild = {
         timestamp: new Date().toISOString(),
         success: true,
@@ -118,10 +73,6 @@ class BuildMonitor {}
 
       const endTime = Date.now();
       const duration = endTime - startTime;
-
-
-
-
 
       const buildResult = {}
         "timestamp": new Date().toISOString(),
@@ -137,11 +88,6 @@ class BuildMonitor {}
       this.lastBuildTime = new Date();
       this.log(`Build completed successfully in ${duration}ms`);
 
-
-
-
-
-
       this.log(`Build completed successfully in ${buildTime}ms`);
       await this.saveBuildReport();
     } catch (error) {
@@ -151,20 +97,6 @@ class BuildMonitor {}
         success: false,
         error: error.message,
         output: error.stdout || error.stderr,
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
       return buildResult;
     } catch (error) {}
@@ -183,11 +115,6 @@ class BuildMonitor {}
         this.buildHistory.shift();
       };
       this.log(`Build failed after ${duration}"ms": ${error.message}`);
-
-
-
-
-
 
   async handleBuildFailure(error) {
     this.log('Handling build failure...');
@@ -216,20 +143,6 @@ class BuildMonitor {}
       nodeVersion: process.version,
       platform: process.platform,
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       return buildResult;
     };
   };
@@ -240,11 +153,6 @@ class BuildMonitor {}
         "cwd": process.cwd(),
         "timeout": 60000}
 });
-
-
-
-
-
 
   async reportBuildFailure(error) {
     try {
@@ -262,20 +170,6 @@ class BuildMonitor {}
       this.log('Build failure reported');
     } catch (_) {}
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
       this.log('Type check completed successfully');
       return { "success": true, "output": stdout, "errors": stderr };
@@ -368,20 +262,6 @@ class BuildMonitor {}
     try {}
       this.log('Optimizing build...');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       // Clean up first;
       await this.cleanupOldBuilds();
 
@@ -445,15 +325,10 @@ if (require.main === module) {}
     console.error('Build Monitor "failed": ', error);
     process.exit(1);
   }
+
 });
 };
 module.exports = BuildMonitor;
-});
-};
-module.exports = BuildMonitor;
-
-
-
 
 }
 const monitor = new BuildMonitor();
@@ -466,11 +341,5 @@ monitor.start().catch(error => {
 });
 };
 
-
-
-});
-};
-
 module.exports = BuildMonitor;
-
 
