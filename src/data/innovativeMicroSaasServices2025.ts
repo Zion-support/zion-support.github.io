@@ -1461,6 +1461,8 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
     competitors: ["ID Quantique", "Qrypt", "Quantum Xchange", "Post-Quantum"],
     marketSize: "$3.2 billion by 2027"
   },
+
+  // AI-Powered Marketing Automation Suite
   {
     id: "ai-supply-chain-optimizer",
     title: "AI Supply Chain Optimizer",
@@ -1524,6 +1526,8 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
     competitors: ["Blue Yonder", "Manhattan Associates", "Oracle SCM", "SAP SCM"],
     marketSize: "$18.7 billion by 2025"
   },
+
+  // AI-Powered HR Analytics Platform
   {
     id: "iot-healthcare-monitor",
     title: "IoT Healthcare Monitor",
@@ -1587,6 +1591,8 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
     competitors: ["Philips", "Medtronic", "GE Healthcare", "Siemens Healthineers"],
     marketSize: "$45.2 billion by 2027"
   },
+
+  // AI-Powered Financial Planning Platform
   {
     id: "blockchain-defi-platform",
     title: "Blockchain DeFi Platform",
@@ -1650,6 +1656,8 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
     competitors: ["Uniswap", "Compound", "Aave", "MakerDAO", "Curve Finance"],
     marketSize: "$67.4 billion by 2027"
   },
+
+  // AI-Powered Supply Chain Optimization
   {
     id: "sales-prospecting-cadence",
     title: "Sales Prospecting Cadence",
