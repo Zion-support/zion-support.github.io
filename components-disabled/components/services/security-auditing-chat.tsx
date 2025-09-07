@@ -37,7 +37,6 @@ const SecurityAuditingChat: NextPage = () => {
       <Head />;
         <title />SecurityAuditingChat - Zion Tech Solutions</title>;
 
-
 const SecurityAuditingChat: NextPage = () => {
   return (
     <div />
@@ -45,9 +44,7 @@ const SecurityAuditingChat: NextPage = () => {
 
       </Head>;
 
-
       </Head>;
-
 
 const SecurityAuditingChat: NextPage = () => {
       <main />
@@ -79,8 +76,6 @@ ursor/fix-website-loading-errors-and-merge-6662;
 }
 
 export default SecurityAuditingChat;
-
-
 
         <title />SecurityAuditingChat - Zion Tech Solutions</title>
 
@@ -134,7 +129,6 @@ export default SecurityAuditingChat;<title />SecurityAuditingChat - Zion Tech So
         <title />SecurityAuditingChat - Zion Tech Solutions</title>;
     </div>)
 };
-
 
 export default SecurityAuditingChat;
 const SecurityAuditingChat: NextPage = () => {

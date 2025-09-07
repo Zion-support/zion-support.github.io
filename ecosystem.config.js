@@ -58,9 +58,6 @@ module.exports = {module && module.exports = {apps:[;module.exports = {apps:[;ur
   error_file:'./logs/performance-error.log',out_file: './logs/performance-out.log',
   log_file:'./logs/performance-combined.log',module.exports = {apps:[;
 
-
-
-
 module.exports = {;
 module && module.exports = {;
   apps:[;
@@ -275,7 +272,7 @@ module.exports = {apps: [;
 export default {export default {apps: [;
     {name: 'bolt-zion-app',
   name: 'bolt - zion - app',script: 'npm',
-  args: 'run preview',cwd: './',ursor/automate-test-improve-and-merge-code-646c;
+  args: 'run preview',cwd: './',;
       script: 'npm',
   args: 'run preview',cwd: './',
   instances: 1,autorestart: true,watch: false,max_memory_restart: '1G',
@@ -299,7 +296,7 @@ export default {export default {apps: [;
   script: 'node',args: 'scripts / pm2 / auto - fix.js',
   cron_restart: '0 */6 * * *',cron_restart: '0 */6 * * *',
   autorestart: true,watch: false,max_memory_restart: '512M',
-  env: {ursor/automate-test-improve-and-merge-code-646c;
+  env: {;
         NODE_ENV: 'production';
         NODE_ENV: 'production';}
         NODE_ENV: 'production';}
@@ -755,7 +752,7 @@ export default {apps: [;
     },env_production: {NODE_ENV: \"production\",PORT: 3000;}
     },max_memory_restart: \"1G\",node_args: \"--max - old - space - size = 1024\",error_file: \"./logs / err.log\",out_file: \"./logs / out.log\",log_file: \"./logs / combined.log\",time: true;
   }];
-}ursor/automate-test-improve-and-merge-code-646c;
+};
       error_file: './logs/performance-error.log',
   out_file: './logs/performance-out.log',log_file: './logs/performance-combined.log',
   time: true;
@@ -764,7 +761,7 @@ export default {apps: [;
 }},node_args: \"--max-old-space-size=1024\",error_file: \"./logs/err.log\",out_file: \"./logs/out.log\",log_file: \"./logs/combined.log\",time: true;
   }];
 }}ursor/merge-pull-requests-and-resolve-conflicts-bf80;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 }ursor/merge-pull-requests-and-resolve-conflicts-bf80;
     max_memory_restart: \"1G\"
     node_args: \"--max-old-space-size=1024\"
@@ -779,7 +776,6 @@ ursor/automate-test-improve-and-merge-code-646c;
 
   }]
 };
-
 
 ;
 ;
@@ -1101,9 +1097,7 @@ module && module.exports = {}
 ,
 };
 
-
 }
-
 
 }
       },
@@ -1400,11 +1394,6 @@ module.exports = {;
     }
   ];
 },;
-
-
-
-
-
 
 }
 

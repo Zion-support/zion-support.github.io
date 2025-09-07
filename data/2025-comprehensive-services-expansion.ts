@@ -628,7 +628,6 @@ mobile: '+1 302 464 0950',
 ;
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
 
-
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: \"address\",}
@@ -645,7 +644,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
       'Intelligent code review system that analyzes pull requests, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.'
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [
   {
-
 
       'Custom rule configuration',
       'Team performance analytics',
@@ -667,7 +665,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     realService: true,
     technology: ['AI/ML, Static Analysis, Security Scanning'],
     integrations: ['GitHub, GitLab, Bitbucket, Jira, Slack'],
-
 
 useCases: [
       'Code quality improvement, Security compliance, Team productivity'

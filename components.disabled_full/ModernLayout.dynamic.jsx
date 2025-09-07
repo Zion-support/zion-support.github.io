@@ -4,7 +4,7 @@ const ModernLayout = dynamic(() => import(\"./ModernLayout\"),{'; \"loading\": (
 </p>';
 </p>';
 </p>';
-ursor/automate-test-improve-and-merge-code-646c;
+;
 const ModernLayout = dynamic(() => import(\"./ModernLayout\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default ModernLayout' ,';
 </p>';
 </p>';
@@ -32,7 +32,7 @@ const ModernLayout = dynamic(() => import(\"./ModernLayout\"),{'; \"loading\": (
 </p>';
 </p>';
 </p>';
-ursor/automate-test-improve-and-merge-code-646c;
+;
 </p>';
 </p>';
 </p>';
@@ -43,11 +43,7 @@ const ModernLayout = dynamic(() => import(\"./ModernLayout\"),{'; \"loading\": (
 </p>'
 </p>'
 
-
-
-
 </p>'
-
 
 </p>'
 

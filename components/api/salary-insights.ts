@@ -1,6 +1,5 @@
 
 
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { TALENT_PROFILES, TalentProfile  } from '../../data/talent';
 import OpenAI from 'openai';
@@ -31,7 +30,6 @@ trendMonthly: { label: string; value: number,}
   tags: string[];
   gptRecommendation?: string;
 };
-
 
 function median(values: number[]): number {
   const arr = [...values].sort((a, b) => a - b);

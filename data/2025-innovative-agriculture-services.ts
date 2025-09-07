@@ -399,7 +399,6 @@ mobile: '+1 302 464 0950',
 ;
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
 
-
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: \"address\",}
@@ -411,7 +410,6 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
   website: 'https://ziontechgroup && ziontechgroup.com'};
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
   {
-
 
   {
 
@@ -693,7 +691,6 @@ ursor/fix-website-loading-errors-and-merge-6662;
     customers: 123;
   }
 ];
-
 
 ];      'AI - powered climate control_crop growth monitoring_environmental optimization_real - time control_performance analytics_integration capabilities_custom growing protocols_multi - tier support';
       'Compliance management';

@@ -37,7 +37,6 @@ const DatabaseDesignChat: NextPage = () => {
       <Head />;
         <title />DatabaseDesignChat - Zion Tech Solutions</title>;
 
-
 const DatabaseDesignChat: NextPage = () => {
   return (
     <div />
@@ -45,9 +44,7 @@ const DatabaseDesignChat: NextPage = () => {
 
       </Head>;
 
-
       </Head>;
-
 
 const DatabaseDesignChat: NextPage = () => {
       <main />
@@ -79,8 +76,6 @@ ursor/fix-website-loading-errors-and-merge-6662;
 }
 
 export default DatabaseDesignChat;
-
-
 
         <title />DatabaseDesignChat - Zion Tech Solutions</title>
 
@@ -134,7 +129,6 @@ export default DatabaseDesignChat;<title />DatabaseDesignChat - Zion Tech Soluti
         <title />DatabaseDesignChat - Zion Tech Solutions</title>;
     </div>)
 };
-
 
 export default DatabaseDesignChat;
 const DatabaseDesignChat: NextPage = () => {

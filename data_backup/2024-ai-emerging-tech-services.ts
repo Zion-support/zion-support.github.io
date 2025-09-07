@@ -1,6 +1,6 @@
 
 ;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 import { ServiceVariant  } from '../types/service-variants';
 
 export interface AIEmergingTechService  {\"id\": string;
@@ -168,7 +168,7 @@ export const aiEmergingTechServices: AIEmergingTechService[]  = [ { id:,ai-video
   website: 'https:,}
 },realImplementation: true,implementationDetails:,Advanced climate modeling platform with AI prediction models,comprehensive risk assessment,and adaptation planning tools. Includes real-time monitoring,scenario modeling,and policy recommendations.',launchDate: '2024-02-01,customers: 420,rating: 4.8,reviews: 280,
 } ];ursor/integrate-build-improve-and-re-verify-8f7d;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 
 export interface AIEmergingTechService  {\"id\": string;}
 import { ServiceVariant } from \"../types/service-variants\";
@@ -427,6 +427,6 @@ export const \"aiEmergingTechServices\": AIEmergingTechService[] = [// AI-Powere
     ],\"popular\": true,icon:,🌍',\"color\": 'from-teal-500 to-cyan-600,textColor:,text-teal-400',\"link\": 'https://ziontechgroup.com/ai-climate-modeling-platform,\"marketPosition\": 'Competitive with ClimateAI ($5000/month), Jupiter Intelligence ($10000/month), and Climate X ($3000/month). Our \"advantage\": Lower cost, better AI models, and comprehensive features.,,\"targetAudience\": Climate scientists, Government agencies, Insurance companies, Urban planners, Environmental organizations',\"trialDays\": 21,setupTime:,1 week',\"category\": 'Climate Tech & AI,\"realService\": true,technology:,Python, TensorFlow, PyTorch, Climate models, React, Node.js, AWS, GPU clusters',\"integrations\": Climate databases, Satellite data, Weather stations, GIS systems, Policy databases,,\"useCases\": Climate prediction, Risk assessment, Adaptation planning, Policy development, Research collaboration,,\"roi\": 'Average customer sees 600% ROI within 8 months through improved planning and reduced climate risks.,\"competitors\": [,ClimateAI, Jupiter Intelligence, Climate X, The Climate Corporation, Climate Central'],\"marketSize\": '$1.8B market,growthRate:,35% annual growth',\"variant\": 'simulation-futuristic,\"contactInfo\": {mobile:,+1 302 464 0950',\"email\": 'kleber@ziontechgroup.com,address:,364 E Main St STE 1008 Middletown DE 19709',\"website\": 'https://ziontechgroup.com;}
     },\"realImplementation\": true,implementationDetails:,Advanced climate modeling platform with AI prediction models, comprehensive risk assessment, and adaptation planning tools. Includes real-time monitoring, scenario modeling, and policy recommendations.',\"launchDate\": '2024-02-01,\"customers\": 420,\"rating\": 4.8,\"reviews\": 280;
   }
-];ursor/automate-test-improve-and-merge-code-646c;
+];;
 ];
 

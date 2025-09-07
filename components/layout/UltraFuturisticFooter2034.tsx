@@ -265,7 +265,6 @@ className='text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-
               </motion.div>
             </div>
 
-
             {/* Services *}
 }
             <div className=\"lg:col-span-2\" />;
@@ -452,7 +451,6 @@ key={social.name}
                         <social.icon className='w-5 h-5' />                      </Link>
 
                       </Link>
-
 
                     )
 }

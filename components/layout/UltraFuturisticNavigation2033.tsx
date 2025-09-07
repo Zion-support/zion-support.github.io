@@ -284,7 +284,6 @@ if (e.key === 'Escape') closeMenu(),) => {
                   <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />
                 </button>
 
-
                 {/* Mega Menu *}
 }
                 <AnimatePresence />;

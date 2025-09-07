@@ -308,7 +308,6 @@ import { ApiDocsSpec } from './types';
 export default v1;
   ];
 
-
       ]
     },
       id: \"id\",
@@ -357,7 +356,6 @@ export default v1;
   properties: { items: { type: 'array',}
   items: { type: 'object' } }, nextPage: { type: 'string' } } }
           samples: [
-
 
         }
       ];

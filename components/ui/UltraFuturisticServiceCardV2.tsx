@@ -1,6 +1,5 @@
 
 
-
 import React from 'react';
 import { motion   } from 'framer-motion';
 import { ArrowRight, Star, Users, TrendingUp, Zap, Shield, Globe, Rocket  } from 'lucide-react';
@@ -67,9 +66,6 @@ interface ServiceCardProps  {service: {id: string;
         return <Zap className='w-5 h-5' />;
     }
 
-
-
-
   };
 
 const getGradientClass = (
@@ -112,7 +108,6 @@ const getGradientClass = (
               </div>
             </div>
 
-
             {service.popular && (
               <motion.div;
         <div className=\"absolute inset-0 opacity-5\" />;"
@@ -146,7 +141,6 @@ transition={{ delay: 0.5, type: 'spring'}
                 <span />POPULAR</span>
               </motion.div>
 
-            
 }
           </div>;
 <h3 className='text-xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300' />;
@@ -342,8 +336,6 @@ className='flex items-center space-x-2 text-sm'
         </div>;
                 <span className='text-gray-300' />{benefit}</span>              </motion.div>
 
-
-
         {/* Market info */}
 
         {service.marketSize && service.growthRate && (
@@ -453,7 +445,6 @@ className='absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 
     </motion.div>
   )
 };
-
 
 export default UltraFuturisticServiceCardV2;
 

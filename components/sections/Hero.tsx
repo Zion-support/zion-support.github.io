@@ -21,8 +21,6 @@ title: string;
 }
   stats   }) => {
 
-
-
   return (}
     <section className;}
             {subtitle}
@@ -145,6 +143,5 @@ className='mt-16 md:mt-20 animate-fade-in'
 };
 
 export default Hero;
-
 
 "

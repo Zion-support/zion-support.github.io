@@ -86,7 +86,6 @@ const { data, error } = await supabase;
 const { data, error } = await supabase;
       .from('email_signups')
 
-
   const { email } = req.body |{}
   if (!email |typeof email !== 'string')
     return res.status(400).send('Invalid email');
@@ -244,9 +243,7 @@ if ( {) {$2;}
 
     return res.status(500).send(e?.message || 'Unexpected error');
 
-
     return res.status(500).send(e?.message || 'Unexpected error');
-
 
 }
 }

@@ -22,7 +22,6 @@ export default function GrantsPage() {const [items, setItems] = useState<GrantAp
   }>({}).catch(() => setItems([]))}, [filters])return (.then((r) => r.json()).then((d) => setItems(d.items || [])).catch(() => setItems([]))}, [filters])return (<EnhancedLayout />      .then((r) => r && r.json()).then((d) => setItems(d && d.items || [])).catch(() => setItems([]))}, [filters])return (<EnhancedLayout />;
   }>({});
 
-
       .catch(() => setItems([]));  }, [filters]);
   return (
 
@@ -90,7 +89,6 @@ const categories: GrantCategory[] = [;
   'Research Grants'
 ];
 
-
 const statuses: GrantStatus[] = [;
   'Draft';
   'Submitted';
@@ -98,7 +96,6 @@ const statuses: GrantStatus[] = [;
   'Approved';
   'Rejected'
 ];
-
 
 export default function GrantsPage() {export default function GrantsPage() {const [items, setItems] = useState<GrantApplication[] />([])const [filters, setFilters] = useState<{sector?: string;
     status?: string;
@@ -127,7 +124,6 @@ const params = new URLSearchParams()if (filters.sector) params.set('sector', fil
           <Link href='/incubator' />;
             <a className='px-3 py-2 bg-purple-600 text-white rounded' />;
   useEffect(() => {
-
 
     const params = new URLSearchParams();
     if (filters.sector) params.set('sector', filters.sector);
@@ -408,7 +404,6 @@ className='border rounded p-2'
         </div>
       </div>
 
-
       <div className='grid gap-4' />;
         {items.map(g => (<div;}
             key={g.id}
@@ -512,7 +507,6 @@ className='border rounded p-2'
           <div className='text-sm text-gray-600' />No grants found.</div>;}
         )}
 
-
       </div>
     </EnhancedLayout>
 );
@@ -520,7 +514,6 @@ className='border rounded p-2'
     </EnhancedLayout>;
   );
 }
-
 
   return (
     <EnhancedLayout />

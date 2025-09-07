@@ -283,7 +283,7 @@ const closeAngles = (content.match(/>/g) || []).lengt;h; if ( { const missingAng
   const missingAngles = openAngles - closeAngl}e;s; content += '>'.repeat(missingAngles)modified = true} content = content.replace(/([^}])\n/g,(match,p1) => { if (&& !p1.trim().endsWith(') { && !p1.trim().endsWith('}') && !p1.trim().endsWith('{') && !p1.trim().endsWith('}')) { modified = true; return `${p1}\n`} return match})if ( { fs.writeFileSync(filePath,content,'utf8')) { { fs.writeFileSync(filePath,content,'utf8')}  return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message)return false} }
 
 const files = getAllFiles('/workspace;';)let fixedCount = ;0; for (const file of files) { if () { fixedCount++} } ) { ) { fixedCount++} } }  try { execSync('npm run lint',{ stdio: 'inheri,t' })} catch (error) {}\"#!/usr/bin/env node;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 #!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
@@ -884,7 +884,7 @@ const closeBrackets = (content.match(/\]/g) || []).lengt;h; if ( { const missing
 
 const closeAngles = (content.match(/>/g) || []).lengt;h; if ( { const missingAngles = openAngles - closeAngl) { {;}
   const missingAngles = openAngles - closeAngl}e;s; content += '>'.repeat(missingAngles)modified = true} content = content.replace(/([^}])\n/g,(match,p1) => { if (&& !p1.trim().endsWith(') { && !p1.trim().endsWith('}') && !p1.trim().endsWith('{') && !p1.trim().endsWith('}')) { modified = true; return `${p1}\n`} return match})if ( { fs.writeFileSync(filePath,content,'utf8')) { { fs.writeFileSync(filePath,content,'utf8')} console.log(`Fixed syntax errors in: ${filePat,h}`)return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message)return false} } console.log('Starting comprehensive syntax error fixes...')const files = getAllFiles('/workspace;';)let fixedCount = ;0; for (const file of files) { if () { fixedCount++} } console.log(`Fixed syntax errors in ${fixedCount} files.`)) { ) { fixedCount++} } console.log(`Fixed syntax errors in ${fixedCount} files.`)} console.log('\nRunning ESLint to check remaining issues...')try { execSync('npm run lint',{ stdio: 'inheri,t' })} catch (error) { console.log('ESLint found remaining issues that need manual fixing.')}\";
-ursor/automate-test-improve-and-merge-code-646c;
+;
 #!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process'; function getAllFiles(dir,extensions = ['.tsx','.ts','.jsx','.js']) { let files = [];}
 }
 const items = fs.readdirSync(dir;)for (const item of items) { const fullPath = path.join(dir,item;)const stat = fs.statSync(fullPath;)if (&& !item.startsWith('.') && item !== 'node_modules') { files = files.concat(getAllFiles(fullPath,extensions))} else if (extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } return files) { && !item.startsWith('.') && item !== 'node_modules') { files = files.concat(getAllFiles(fullPath,extensions))} else if (extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} };

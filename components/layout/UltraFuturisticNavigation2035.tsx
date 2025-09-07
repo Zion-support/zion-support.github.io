@@ -794,7 +794,6 @@ setIsScrolled(window.scrollY > 10)) => {
 }
 };
 
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -811,7 +810,6 @@ const closeDropdowns = (
 }
 };
 
-
 const closeMobileMenu = (
     setIsOpen(false);
 
@@ -820,8 +818,6 @@ closeDropdowns()) => {
 }
 };
 
-
-  
     >
 
       {/* Background Effects */}
@@ -902,7 +898,6 @@ initial={{ opacity: 0, y: 10, scale: 0.95 }
 }
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
-
 
 className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-800/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
 
@@ -1207,10 +1202,6 @@ className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50
                         />;
                       </button>;
 
-
-
-
-
                       {/* Mobile Dropdown */}
 
                       <AnimatePresence />
@@ -1245,9 +1236,6 @@ child.featured;
 
                                   </div>
                                 )}
-
-
-
 
                               </Link>
 
@@ -1309,8 +1297,6 @@ href={`mailto: ${contactInfo.email}`}
     </nav>
 )
 };
-
-
 
 }, [])
 };

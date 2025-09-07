@@ -152,7 +152,6 @@ export default DataPipelineEngineeringChat;<title />DataPipelineEngineeringChat 
     </div>)
 };
 
-
       </main>;
     </div>);
 

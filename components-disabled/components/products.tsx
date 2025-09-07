@@ -21,8 +21,6 @@ export default function Placeholder() {export default function Placeholder() {ex
 
 export default function Placeholder() {
 
-
-
 export default function Placeholder() {
   return (
     <main className='min-h-screen p-8' />
@@ -132,12 +130,7 @@ function Placeholder() {return (<main className=\"min - h-screen p - 8\" />;
 
 }
 
-
-
-
 }
-
-
 
       <Head />
         <title />Products - Placeholder</title>

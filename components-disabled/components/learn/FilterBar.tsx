@@ -154,7 +154,6 @@ className='border rounded px-3 py-2 bg-white dark: bg-black'
     </div>
   );
 
-
   );
   is_free: string;
   on_change: (next: { category: string; level: string; is_free: string,}
@@ -226,10 +225,7 @@ function FilterBar() {return (<div className=\"grid grid - cols - 1 sm:grid - co
 }
 }}
 
-
 }
-
-
 
 }
 }

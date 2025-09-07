@@ -1,6 +1,5 @@
 
 
-
 import React from 'react';
 import { motion   } from 'framer-motion';
 import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Database, Cloud, Lock, Rocket, Users, DollarSign, Target, Award, Phone   } from 'lucide-react';
@@ -29,7 +28,6 @@ import { iotEdgeComputing2025 } from '../../data/iot-edge-computing-2025';
 import { healthcareBiotech2025 } from '../../data/healthcare-biotech-2025';
 import { fintechFinancial2025 } from '../../data/fintech-financial-2025';
 import { educationElearning2025 } from '../../data/education-elearning-2025';
-
 
     {
       title: 'Cybersecurity & Security',
@@ -233,7 +231,6 @@ className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
                     </div>;{/* Features */}<p className='text-gray-400 text-sm leading-relaxed' />                        {service.description}{service.description}</p>;
                     </div>;
 
-
                     {/* Features */}
 
                       <p className='text-gray-400 text-sm leading-relaxed' />                        {service.description}
@@ -268,10 +265,6 @@ key={featureIndex}
                         )}
                       </ul>
                     </div>
-
-
-
-
 
                     {/* Pricing */}
 
@@ -401,7 +394,6 @@ href='tel: +13024640950'
     </section>
 )
 };
-
 
 export default ComprehensiveServicesShowcase2025;
 

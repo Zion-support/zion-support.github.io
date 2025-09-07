@@ -39,7 +39,7 @@ export default { apps: [ { name: 'bolt-zion-app',
   env: { NODE_ENV: 'production',}
 },log_file: 'logs/pm2/test-simple.log',
   error_file: 'logs/pm2/test-simple-error.log',out_file: 'logs/pm2/test-simple-out.log'} ,
-}ursor/automate-test-improve-and-merge-code-646c;
+};
 
 export default {\"apps\": [{name: 'bolt-zion-app',\"script\": 'npm',\"args\": 'run preview',\"cwd\": './',\"instances\": 1,\"autorestart\": true,\"watch\": false,\"max_memory_restart\": '1G',\"env\": {NODE_ENV: 'production,}
 },\"log_file\": 'logs/pm2/preview.log',\"error_file\": 'logs/pm2/preview-error.log',\"out_file\": 'logs/pm2/preview-out.log'},{\"name\": 'simple-monitor',\"script\": 'node',\"args\": 'scripts/pm2/simple-monitor.js',\"instances\": 1,\"autorestart\": true,\"watch\": false,\"max_memory_restart\": '512M',\"env\": {NODE_ENV: 'production';}
@@ -325,7 +325,7 @@ export default { apps: [ { name: 'bolt-zion-app',
   env: { NODE_ENV: 'production',}
 },log_file: 'logs/pm2/test-simple.log',
   error_file: 'logs/pm2/test-simple-error.log',out_file: 'logs/pm2/test-simple-out.log'} ,
-}ursor/automate-test-improve-and-merge-code-646c;
+};
 
 export default { apps: [ { name: 'bolt-zion-app',
   script: 'npm',args: 'run preview',

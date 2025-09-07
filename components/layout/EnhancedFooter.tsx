@@ -32,10 +32,8 @@ const currentYear = new Date().getFullYear();
 const company = null;
 ];
 
-
 const resources = null;
 ];
-
 
 const socialLinks = null;
 

@@ -453,7 +453,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
   // Advanced AI & Consciousness Services;
   {
 
-
       'Consciousness simulation engine',
       'Cognitive architecture modeling',
       'Emotional intelligence algorithms',

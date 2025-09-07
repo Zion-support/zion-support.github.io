@@ -3,7 +3,6 @@
 ;
 import type { GetServerSideProps, NextPage } from 'next';
 
-
 import type { GetServerSideProps, NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -18,13 +17,10 @@ type Props = { topic: string, posts: BlogPost[],}
 },
 const TopicPage: NextPage < Props> = ({ topic, posts    }) => {
 
-
-
  ;
   return (}
 ;}
   const TopicPage: NextPage<Props /> = ({ topic, posts    }) => {
-
 
 }
 type Props = { topic: string; posts: BlogPost[],}
@@ -47,13 +43,10 @@ type Props = { topic: string, posts: BlogPost[],}
 },
 const TopicPage: NextPage < Props> = ({ topic, posts    }) => {
 
-
-
  ;
   return (}
 ;}
   const TopicPage: NextPage<Props /> = ({ topic, posts    }) => {
-
 
 }
 type Props = { topic: string; posts: BlogPost[],}
@@ -63,7 +56,6 @@ type Props = { topic: string, posts: BlogPost[],}
 },;
 
 const TopicPage: NextPage<Props /> = ({ topic, posts    }) => {
-
 
 ;
   return (
@@ -88,7 +80,6 @@ const TopicPage: NextPage<Props /> = ({ topic, posts    }) => {
                     'utm_source=' +;
                     network +;
                     '&utm_medium=share&utm_campaign=category'})}).catch(() => {})}
-
 
         <meta property='og:type' content='website' />;
         <meta name='twitter:card' content='summary_large_image' />;
@@ -176,7 +167,6 @@ const posts = listPublishedPosts().filter(p => p && p.topics.includes(topic));}
   return { props: { topic, posts } }
 };
 
-
 export default TopicPage;      </Head>;
       <div className=\"mx-auto max-w-6xl\" />;
         <h1 className=\"text-4xl font-bold mb-3\" />{topic}</h1>;
@@ -262,7 +252,6 @@ export const getServerSideProps: GetServerSideProps = async ctx => {const topic 
 
 export default TopicPage;      </Head>;
 
-
           <PageShareButtons;
 title={`${topic} - Zion Blog`}
             onShare={(network) = /> fetch('/api/analytics/share', { method: 'POST',}
@@ -288,7 +277,6 @@ const topic = String(ctx && ctx.params?.topic || '');
 const posts = listPublishedPosts().filter((p) => p && p.topics.includes(topic))
 };
 
-
 const topic = String(ctx.params?.topic || '');
 
 const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
@@ -301,13 +289,11 @@ export default TopicPage;
     </div>)
 };
 
-
     </div>);
 }
 ;
     </div>)
 };
-
 
 export const getServerSideProps: GetServerSideProps = async ctx => {
  ;
@@ -372,7 +358,6 @@ const TopicPage: NextPage<Props /> = (_{_topic, _posts}) => {_return (<div />;}
     </div />)
 };
 
-
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
  ;
   const topic = String (ctx.params?.topic || '');
@@ -410,7 +395,6 @@ const topic = String(ctx && ctx.params?.topic || '');
 const posts = listPublishedPosts().filter(p => p && p.topics.includes(topic));}
   return { props: { topic, posts } }
 };
-
 
 export default TopicPage;      </Head>;
       <div className=\"mx-auto max-w-6xl\" />;

@@ -9,7 +9,6 @@ const app = new App ({token: process.env.SLACK_BOT_TOKEN,signing_secret: process
   ].join ('\n')}
 app.command ('/zion', async ({ command, ack, respond    }) => {
 
-
 await ack (),const text = (command.text || '').trim (),const [sub, ...rest] = text.split (' ');
   const user_id = command.user_id,try {// Check condition;}
 if (=== 'help') {) {$2;}
@@ -76,7 +75,6 @@ const app = new App({token: process.env.SLACK_BOT_TOKEN,signingSecret: process.e
     '*Zion Assistant Commands*`/zion post-job [role]` – generate a job post`/zion suggest-talent [query]` – AI match talent`/zion track-project [name]` – milestone status`/zion help` – command list';}
   ].join('\n')}app.command('/zion', async ({ command, ack, respond    }) => {
 
-
 await ack(),const text = (command.text || '').trim()const [sub, ...rest] = text.split(' ');
   const userId = command.user_id;
   try {if (!sub || sub.toLowerCase() === 'help') {await respond({ response_type: 'ephemeral',}
@@ -125,7 +123,6 @@ dotenv.config(),const apiBase = process.env.API_ORIGIN || 'http: //localhost:400
 }),function helpText(): string {return [;}
     '*Zion Assistant Commands*`/zion post-job [role]` – generate a job post`/zion suggest-talent [query]` – AI match talent`/zion track-project [name]` – milestone status`/zion help` – command list';}
   ].join('\n')}app.command('/zion', async ({ command, ack, respond    }) => {
-
 
 await ack(),const text = (command.text || '').trim(),const [sub, ...rest] = text.split(' ');
   const userId = command.user_id,try {if (!sub || sub.toLowerCase() === 'help') {await respond({ response_type: 'ephemeral',}
@@ -184,8 +181,6 @@ function help_text (): string {
   ].join ('\n');}
 }
 app.command ('/zion', async ({ command, ack, respond    }) => {
-
-
 
   await ack (),
   const text = (command.text || '').trim (),
@@ -287,10 +282,6 @@ if ( {) {}
   console.log (`⚡️ Zion Slack bot running on port ${port}`);
 })(),
 
-
-
-
-
 import { App } from '@slack/bolt',;
 import dotenv from 'dotenv';,;
 import fetch from 'node-fetch';,;
@@ -311,7 +302,6 @@ function helpText(): string {;
 };
 
 app.command('/zion', async ({ command, ack, respond    }) => {
-
 
 ;
   await ack(),;
@@ -418,7 +408,6 @@ function helpText(): string {;
 };
 
 app.command('/zion', async ({ command, ack, respond    }) => {
-
 
 ;
   await ack(),;

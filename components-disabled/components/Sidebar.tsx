@@ -352,8 +352,6 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps /> = ({ isOpen, onClose    }) => {
 
-
-
   const [openDropdowns, setOpenDropdowns] = useState<string[] />([]);
 
 const navigation = {
@@ -425,7 +423,6 @@ const handleDropdownToggle = (
   return $3;}
 }
 };
-
 
   return (
     <AnimatePresence />
@@ -819,7 +816,7 @@ const quick_links = [
     </AnimatePresence>)}
 
 export default Sidebar;ursor/expand-services-advertise-and-build-project-c52f;
-ursor/automate-test-improve-and-merge-code-646c;
+;
   X,ChevronDown,Home,Users,Briefcase,Phone,Mail,MapPin,Building2,User,LogOut,Search;
 } from 'lucide-react';
 
@@ -883,7 +880,6 @@ interface SidebarProps  {isOpen: boolean;}
       )}
     </AnimatePresence>
 };
-
 
 export default Sidebar;
 
@@ -999,8 +995,6 @@ href = \"/contact\"
 
 const Sidebar: React.FC < SidebarProps /> = ({ is_open, on_close    }) => {
 
-
-
  ;
   const [open_dropdowns, setOpenDropdowns] = useState < string[]>([]);
 ;
@@ -1011,7 +1005,6 @@ const handleDropdownToggle = (title: string) =>: any {
         ? prev.filter (item => item !== title);}
         : [...prev, title])}
 };
-
 
 const navigation = {
     'Services': [;
@@ -1178,7 +1171,6 @@ const quick_links = [
     </AnimatePresence>)
 };
 
-
 export default Sidebar;
 ;
   X, 
@@ -1320,7 +1312,6 @@ const toggleExpanded = (
   return $3;}
 }
 };
-
 
   return (
     <AnimatePresence />

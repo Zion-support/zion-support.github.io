@@ -26,7 +26,7 @@ export default defineConfig({ plugins: [react()],server: { port: 3000,}
 
 export default defineConfig({ plugins: [react()],test: { environment: \"jsdom\",}
 })`; fs.writeFileSync(\"vitest.config.ts\",content)}try { fixServicesIndex()fixSolutions()fixTailwindConfig()fixViteConfig()fixVitestConfig()} catch (error) { console.error(\"Error fixing files:\",error)process.exit(1)}
-ursor/automate-test-improve-and-merge-code-646c;
+;
 { \"to\": \"/services/ai-seo-optimizer\", \"label\": \"AI SEO Optimizer\" }]; return (<div className = \"min-h-screen bg-gray-50 py-12\" />; <div className = \"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\" />; <div className = \"text-center mb-12\" />; <h1 className = \"text-4xl font-bold text-gray-900 mb-4\" />; Our Services; </h1>; <p className = \"text-xl text-gray-600\" />; Comprehensive technology solutions for your business; </p>; </div>; <div className = \"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6\" />; {links.map((link, index) = > (<Link; key = {index}to = {link.to}className = \"block p-6 bg-white rounded-lg shadow-md \"hover\": shadow-lg transition-shadow\" />; <h3 className = \"text-lg font-semibold text-gray-900\" />; {link.label})}
 
 export default ServicesIndex;
@@ -107,9 +107,6 @@ export default defineConfig({ plugins: [react()],server: { port: 3000,},}); `; f
 export default defineConfig({ plugins: [react()],test: { environment: \"jsdom\",},}); `; fs.writeFileSync(\"vitest.config.ts\",content)
 };
   try { fixServicesIndex(); fixSolutions(); fixTailwindConfig(); fixViteConfig(); fixVitestConfig(); } catch (error) { console.error(\"Error fixing files:\",error); process.exit(1)}
-
-
-
 
     <div className=\"min-h-screen bg-gray-50 py-12\" />;
       <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg: px-8\" />;
@@ -358,8 +355,6 @@ try {,;
   process.exit(1)};
 ;    { \"to\": \"/services/ai-seo-optimizer\", \"label\": \"AI SEO Optimizer\" };
 
-
-
 // Run the fixes;
 console.log(\"Starting critical file fixes...\");
 try {;
@@ -510,10 +505,8 @@ origin/automation-improvements-final;
     { &quot;to&quot;: &quot;/services/ai-seo-optimizer&quot;, &quot;label&quot;: &quot;AI SEO Optimizer&quot}
 };
 
-
   ],
   return (,
-
 
 #!/usr/bin/env node, import fs from \"fs\";
 import path from \"path\", const criticalFiles = [ \"src/pages/services/index && index.tsx\",\"src/pages/solutions && solutions.tsx\",\"tailwind && tailwind.config.ts\",\"vite && vite.config.ts\",\"vitest ;
@@ -967,7 +960,7 @@ const ServicesIndex: React.FC = () => ;
 },{ to: \"/services/automated-follow-ups\", label: \"Automated Follow-Ups\",}
 },{ to: \"/services/ai-seo-optimizer\", label: \"AI SEO Optimizer\",}
 }
-    { \"to\":\"/services/ai-seo-optimizer\", \"label\":\"AI SEO Optimizer\" }{ \"to\":\"/services/ai-seo-optimizer\", \"label\":\"AI SEO Optimizer\" }ursor/automate-test-improve-and-merge-code-646c;
+    { \"to\":\"/services/ai-seo-optimizer\", \"label\":\"AI SEO Optimizer\" }{ \"to\":\"/services/ai-seo-optimizer\", \"label\":\"AI SEO Optimizer\" };
 ];
 
   return (<div className=\"min-h-screen bg-gray-50 py-12\" />;
@@ -980,7 +973,7 @@ const \"ServicesIndex\": React.FC = () => ;}
   const links = [{ to: \"/ai-services\", \"label\": \"AI Services\" },{ \"to\": \"/it-services\", \"label\": \"IT Services\" },{ \"to\": \"/micro-saas\", \"label\": \"Micro SaaS\" },{ \"to\": \"/services/ai-email-responder\", \"label\": \"AI Email Responder\" },{ \"to\": \"/services/automated-follow-ups\", \"label\": \"Automated Follow-Ups\" },{ \"to\": \"/services/ai-seo-optimizer\", \"label\": \"AI SEO Optimizer\" }
   ];
   return (<div className=\"min-h-screen bg-gray-50 py-12\" />;
-      <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\" />;ursor/automate-test-improve-and-merge-code-646c;
+      <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\" />;;
   return (;
     <div className=\"min-h-screen bg-gray-50 py-12\" />;
       <div className=\"max-w-7xl mx-auto px-4 \"sm\":px-6:lg:px-8\" />;
@@ -1016,7 +1009,7 @@ const \"ServicesIndex\": React.FC = () => {}
         </div>;<div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6\" />;<div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6\" />;
         <div className=\"grid grid-cols-1:md:grid-cols-2:lg:grid-cols-3 gap-6\" />;
         <div className=\"grid grid-cols-1:md:grid-cols-2:lg:grid-cols-3 gap-6\" />;
-        <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6\" />;ursor/automate-test-improve-and-merge-code-646c;
+        <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6\" />;;
         <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6\" />;<div className=\"grid grid-cols-1:md:grid-cols-2:lg:grid-cols-3 gap-6\" />;
         <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6\" />;
           {links.map((link, index) => (<Link;}
@@ -1025,7 +1018,7 @@ const \"ServicesIndex\": React.FC = () => {}
 
               <h3 className=\"text-lg font-semibold text-gray-900\" />;
                 {link.label}
-ursor/automate-test-improve-and-merge-code-646c;
+;
               className=\"block p-6 bg-white rounded-lg shadow-md \"hover\": shadow-lg transition-shadow\">
 
               <h3 className=\"text-lg font-semibold text-gray-900\" />;
@@ -1038,7 +1031,7 @@ ursor/automate-test-improve-and-merge-code-646c;
     </div>;className=\"block p-6 bg-white rounded-lg shadow-md \"hover\":shadow-lg transition-shadow\">
 
               <h3 className=\"text-lg font-semibold text-gray-900\" />;
-                {link.label}ursor/automate-test-improve-and-merge-code-646c;
+                {link.label};
   )}
 
 export default ServicesIndex;
@@ -1105,7 +1098,7 @@ export default function Solutions() {return (<>;
 export default {\"content\": [\"./src/pages/**/*.{js,ts,jsx,tsx,mdx}\",\"./src/components/**/*.{js,ts,jsx,tsx,mdx}\",\"./src/app/**/*.{js,ts,jsx,tsx,mdx}\";
   ],console.log(\"Fixed vitest.config.ts\")}
 // Run the fixes;
-console.log(\"Starting critical file fixes...\")try {fixServicesIndex()fixSolutions()fixTailwindConfig()fixViteConfig()fixVitestConfig()ursor/automate-test-improve-and-merge-code-646c;}
+console.log(\"Starting critical file fixes...\")try {fixServicesIndex()fixSolutions()fixTailwindConfig()fixViteConfig()fixVitestConfig();}
   console.log(\"All critical files have been fixed!\")} catch (error) {console.error(\"Error fixing \"files\":\", error)process.exit(1)}{ \"to\": \"/services/ai-seo-optimizer\", \"label\": \"AI SEO Optimizer\" }
   ];
   return (<div className=\"min-h-screen bg-gray-50 py-12\" />;
@@ -1300,7 +1293,6 @@ import react from \"@vitejs/plugin-react\", export default defineConfig({ plugin
 }), `, fs.writeFileSync(\"vitest.config.ts\",content), console.log(\"Fixed vitest.config.ts\")} , console.log(\"Starting critical file fixes...\"), try { fixServicesIndex(), fixSolutions(), fixTailwindConfig(), fixViteConfig(), fixVitestConfig(), console.log(\"All critical files have been fixed!\")} catch (error) { console.error(\"Error fixing files:\",error), process.exit(1)}
 #!/usr/bin/env node, import fs from \"fs\";
 #!/usr/bin/env node, import fs from \"fs\";
-
 
         <div className=\"grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6\" />;
           {links.map ((link, index) => (
@@ -2076,7 +2068,7 @@ export default defineConfig({ plugins: [react()],test: { environment: \"jsdom\",
 })`; fs.writeFileSync(\"vitest.config.ts\",content)console.log(\"Fixed vitest.config.ts\")}console.log(\"Starting critical file fixes...\")try { fixServicesIndex()fixSolutions()fixTailwindConfig()fixViteConfig()fixVitestConfig()console.log(\"All critical files have been fixed!\")} catch (error) { console.error(\"Error fixing files:\",error)process.exit(1)}
 ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
-  ],return (,ursor/automate-test-improve-and-merge-code-646c;
+  ],return (,;
     <div className = \"min-h-screen bg-gray-50 py-12\" />,<div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg: px-8\" />,<div className=\"text-center mb-12\" />,<h1 className=\"text-4xl font-bold text-gray-900 mb-4\" />,Our Services,</h1>,<p className=\"text - xl text - gray - 600\" />,Comprehensive technology solutions for your business,</p>,</div>,<div className=\"grid grid - cols - 1:md:grid - cols - 2:lg:grid - cols - 3 gap - 6\" />,{links.map ((link, index) => (,<Link,key={index}
               to={link.to}
               className=\"block p - 6 bg - white rounded - lg shadow - md \"hover\":shadow - lg transition - shadow\", />,<h3 className=\"text - lg font - semibold text - gray - 900\" />,{link.label}
@@ -2654,7 +2646,7 @@ export default defineConfig({ plugins: [react()],server: { port: 3000,}
 })`; fs.writeFileSync(\"vite.config.ts\",content)console.log(\"Fixed vite.config.ts\")}function fixVitestConfig() { const content = `import { defineConfig } from \"vitest/config\"; import react from \"@vitejs/plugin-react\";
 
 export default defineConfig({ plugins: [react()],test: { environment: \"jsdom\",}
-})`; fs.writeFileSync(\"vitest.config.ts\",content)console.log(\"Fixed vitest.config.ts\")}console.log(\"Starting critical file fixes...\")try { fixServicesIndex()fixSolutions()fixTailwindConfig()fixViteConfig()fixVitestConfig()console.log(\"All critical files have been fixed!\")} catch (error) { console.error(\"Error fixing files:\",error)process.exit(1)}ursor/automate-test-improve-and-merge-code-646c;
+})`; fs.writeFileSync(\"vitest.config.ts\",content)console.log(\"Fixed vitest.config.ts\")}console.log(\"Starting critical file fixes...\")try { fixServicesIndex()fixSolutions()fixTailwindConfig()fixViteConfig()fixVitestConfig()console.log(\"All critical files have been fixed!\")} catch (error) { console.error(\"Error fixing files:\",error)process.exit(1)};
 #!/usr/bin/env node; import fs from \"fs\"; import path from \"path\";
 
 const criticalFiles = [ \"src/pages/services/index.tsx\",\"src/pages/solutions.tsx\",\"tailwind.config.ts\",\"vite.config.ts\",\"vitest.config.ts\"]; function $1() { const content = `import React from \"react\"; import { Link } from \"react-router-dom\";

@@ -264,7 +264,6 @@ import { ServiceVariant } from '../types/service-variants',export interface Adva
   website: 'https://ziontechgroup.com';
     reviews: 21;
 
-
 }
 }
   }

@@ -1,7 +1,7 @@
 
 import { defineConfig } from 'cypress;
 
-export default defineConfig({,e2e: {,baseUrl: 'http://localhost:3000',ursor/automate-test-improve-and-merge-code-646c;}
+export default defineConfig({,e2e: {,baseUrl: 'http://localhost:3000',;}
 import { defineConfig } from 'cypress';
 
 export default defineConfig({ e2e: { baseUrl: 'http: supportFile: 'cypress/support/e2e.ts',}
@@ -31,7 +31,7 @@ export default defineConfig({ e2e: { baseUrl: 'http: supportFile: 'cypress/suppo
     },setupNodeEvents(on, config) {,// implement node event listeners here;}
     }
   }
-}),ursor/automate-test-improve-and-merge-code-646c;
+}),;
 import { defineConfig } from 'cypress';
 
 export default defineConfig({

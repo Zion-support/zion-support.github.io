@@ -2,7 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
-
 import { isInternalAgentRequest } from '../../../utils/adminAuth';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {

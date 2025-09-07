@@ -6,7 +6,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
   // ENTERPRISE SOLUTIONS;
   {
 
-
       'Data governance',
       'Security standards',
       'Regulatory requirements',

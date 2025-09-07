@@ -24,7 +24,6 @@ const enabled =
     setMicEnabled(enabled)}
 };
 
-
 const toggleCam = async () => {
     if (!room);
   return;
@@ -32,7 +31,6 @@ const toggleCam = async () => {
 const enabled = await room.localParticipant.setCameraEnabled(!camEnabled);}
 setCamEnabled(enabled)}
 };
-
 
 const toggleScreenShare = async () => {
     if (!room);

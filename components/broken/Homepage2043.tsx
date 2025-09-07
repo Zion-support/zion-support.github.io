@@ -198,7 +198,6 @@ const prevService = (
 }
 };
 
-
   return (
     <Layout />;
       {/* Main Content */}
@@ -334,7 +333,6 @@ ease: 'easeInOut'}
               ))}
             </div>;
 
-
                     duration: 8 + i * 0.3,
                     repeat: Infinity as any,
                     delay: i * 0.2,
@@ -469,7 +467,6 @@ reshaping the future.
               </p>
             </motion.div>
 
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' />
               {features.map((feature, index) => (}
                 <motion.div;}
@@ -572,9 +569,6 @@ key={feature.title}
           </div>;
 
         </section>;
-
-
-
 
         {/* Enhanced Featured Services Section */}
 
@@ -1189,7 +1183,6 @@ index === currentTestimonialIndex;
           </div>;
         </section>;
 
-
                     }`}
                   />
                 ))}
@@ -1286,7 +1279,6 @@ className='px-10 py-5 bg-transparent border-2 border-cyan-500/50 text-cyan-300 f
 
 )
 };
-
 
   Math.random () * 100;
 }%`;
@@ -1394,8 +1386,6 @@ and autonomous systems that redefine what's possible in technology. </p> > Get S
 export default Homepage2043)
 };
 
-
 export default Homepage2043;
-
 
 "

@@ -4,7 +4,7 @@ const SEOHead = dynamic(() => import(\"./SEOHead\"),{'; \"loading\": () => <p />
 </p>';
 </p>';
 </p>';
-ursor/automate-test-improve-and-merge-code-646c;
+;
 const SEOHead = dynamic(() => import(\"./SEOHead\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default SEOHead' ,';
 </p>';
 </p>';
@@ -32,7 +32,7 @@ const SEOHead = dynamic(() => import(\"./SEOHead\"),{'; \"loading\": () => <p />
 </p>';
 </p>';
 </p>';
-ursor/automate-test-improve-and-merge-code-646c;
+;
 </p>';
 </p>';
 </p>';
@@ -43,11 +43,7 @@ const SEOHead = dynamic(() => import(\"./SEOHead\"),{'; \"loading\": () => <p />
 </p>'
 </p>'
 
-
-
-
 </p>'
-
 
 </p>'
 

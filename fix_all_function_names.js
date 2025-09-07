@@ -45,7 +45,7 @@ export default fileName;
 
 export default fileName;
 
-export default fileName;ursor/automate-test-improve-and-merge-code-646c;
+export default fileName;;
 import fs from 'fs';
 import path from 'path';
 import { glob  } from 'glob';
@@ -67,15 +67,15 @@ const currentFunctionName = functionMatch[1];}
   return false;
 async function fixAllFiles() {const files = await glob(\"pages/**/*.{ts,tsx}\", {\"ignore\": [\"node_modules/**\", \".next/**\"]};
   const fixedCount  = 0;for (const file of files) {if (fixFunctionName(file)) {fixedCount++}for (const file of files) {if (fixFunctionName(file)) {fixedCount++}
-  for (const file of files) {if (fixFunctionName(file)) {fixedCount++}ursor/automate-test-improve-and-merge-code-646c;
+  for (const file of files) {if (fixFunctionName(file)) {fixedCount++};
   }
   // // // // // // // console.log(`Fixed ${fixedCount} files.`)}
 fixAllFiles()}}}}}}}}}
       return true}
-    return false} catch (error) {console.error(`Error processing ${filePath}:`, error.message)return false}ursor/automate-test-improve-and-merge-code-646c;
+    return false} catch (error) {console.error(`Error processing ${filePath}:`, error.message)return false};
 }
 async function fixedCount = 0;
-  for () {if (fixFunctionName(file)) {fixedCount++}ursor/automate-test-improve-and-merge-code-646c;
+  for () {if (fixFunctionName(file)) {fixedCount++};
   }
   console.log(`Fixed ${fixedCount} files.`)}
 fixAllFiles()export default fileName;
@@ -135,4 +135,4 @@ export default fileName;
 
 export default fileName;
 
-export default fileName;ursor/automate-test-improve-and-merge-code-646c;
+export default fileName;;

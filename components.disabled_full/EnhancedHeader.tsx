@@ -3,12 +3,12 @@ import { useRouter  } from 'next/router';
 import { Menu, X, Search, User, ShoppingCart, ChevronDown  } from 'lucide-react';
 export default function EnhancedHeader() {const router = useRouter()const [mobileMenuOpen, setMobileMenuOpen] = useState(false)const [searchQuery, setSearchQuery] = useState()const [scrolled, setScrolled] = useState(false)const [activeDropdown, setActiveDropdown] = useState<string | null />(null)useEffect(() => {const handleScroll = (setScrolled(window.scrollY > 50)) => {
   return $3;}
-}window.addEventListener('scroll', handleScroll)return () => window.removeEventListener('scroll', handleScroll)}, [])ursor/automate-test-improve-and-merge-code-646c;
+}window.addEventListener('scroll', handleScroll)return () => window.removeEventListener('scroll', handleScroll)}, []);
   const handleSearch = async (e: React.FormEvent) => {const handleSearch = async (e: React.FormEvent) => {const handleSearch = async (e: React.FormEvent) => {ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;}
-ursor/automate-test-improve-and-merge-code-646c;}
+;}
   const handleSearch = async (\"e\": React.FormEvent) => {e.preventDefault()if (searchQuery.trim()) {router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`)}
-  }ursor/automate-test-improve-and-merge-code-646c;
+  };
 ursor/fix-syntax-push-and-merge-to-main-40de;
   const toggleDropdown = (setActiveDropdown(activeDropdown === itemName ? null : itemName)) => {
   return $3;}
@@ -37,7 +37,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de;
   href: '/blog' },{ name: 'Contact',}
   href: '/contact' },ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/automate-test-improve-and-merge-code-646c;
+;
   const toggleDropdown = (setActiveDropdown(activeDropdown === itemName ? null : itemName)) => {
   return $3;}
 }const navigation = [{\"name\": 'Services',\"href\": '/services',\"dropdown\": [;}
@@ -51,13 +51,13 @@ ursor/automate-test-improve-and-merge-code-646c;
      />;
       {' '}>;
       {' '}
-ursor/automate-test-improve-and-merge-code-646c;
+;
       <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" />;
       <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" />;
       <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" />;
 ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/automate-test-improve-and-merge-code-646c;
+;
         { \"name\": 'Workflow Automation', \"href\": '/solutions/workflow-automation' }
       ]},{ \"name\": 'About', \"href\": '/about' },{ \"name\": 'Blog', \"href\": '/blog' },{ \"name\": 'Contact', \"href\": '/contact' }
   ];>;
@@ -79,17 +79,12 @@ export default function EnhancedHeader() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-
-
   const handleSearch = async (\"e\": React.FormEvent) => {
     e.preventDefault();}
     if (searchQuery.trim()) {}
       router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
     }
   };
-
-
-
 
   const toggleDropdown = (
     setActiveDropdown(activeDropdown === itemName ? null : itemName);) => {
@@ -129,8 +124,6 @@ className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white
     >
       {' '}
 
-
-
       <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\" />
         {' '}
         <div className=\"flex justify-between items-center h-16\" />;
@@ -150,13 +143,13 @@ className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white
             </a>{' '}
           </div>{' '}
           {}{' '}
-ursor/automate-test-improve-and-merge-code-646c;
+;
           <nav className=\"hidden md:flex items-center space-x-8\" />;
           <nav className=\"hidden md:flex items-center space-x-8\" />;
           <nav className=\"hidden md:flex items-center space-x-8\" />;
 ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/automate-test-improve-and-merge-code-646c;
+;
           <nav className=\"hidden \"md\": flex items-center space-x-8\" />;
             {' '}
             {navigation.map(item => (<div key={item.name} className=\"relative\" />;
@@ -165,17 +158,15 @@ ursor/automate-test-improve-and-merge-code-646c;
                     {' '}
                     <button;
                       onClick={() = /> toggleDropdown(item.name)}
-ursor/automate-test-improve-and-merge-code-646c;
+;
                       className=\"flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors duration-200\";
                       className=\"flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors duration-200\";
                       className=\"flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors duration-200\";
 ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/automate-test-improve-and-merge-code-646c;
+;
                       className=\"flex items-center space-x-1 text-gray-700 \"hover\": text-blue-600 transition-colors duration-200\";
                     >;
-
-
 
           <nav className=\"hidden \"md\": flex items-center space-x-8\" />
             {' '}
@@ -188,8 +179,6 @@ ursor/automate-test-improve-and-merge-code-646c;
                     <button;
 onClick={() = /> toggleDropdown(item.name)}
 
-
-
                       className=\"flex items-center space-x-1 text-gray-700 \"hover\": text-blue-600 transition-colors duration-200\"
                     >
                       {' '}
@@ -201,13 +190,13 @@ onClick={() = /> toggleDropdown(item.name)}
                         {item.dropdown.map(dropdownItem => (<a;}
                             key={dropdownItem.name}
                             href={dropdownItem.href}
-ursor/automate-test-improve-and-merge-code-646c;
+;
                             className=\"block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200\";
                             className=\"block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200\";
                             className=\"block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200\";
 ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/automate-test-improve-and-merge-code-646c;
+;
                             className=\"block px-4 py-2 text-gray-700 \"hover\": bg-gray-50 hover:text-blue-600 transition-colors duration-200\";
                            />;
                             {' '}
@@ -219,13 +208,13 @@ ursor/automate-test-improve-and-merge-code-646c;
                   </div>;
                 ) : (<a;
                     href={item.href}
-ursor/automate-test-improve-and-merge-code-646c;
+;
                     className=\"text-gray-700 hover:text-blue-600 transition-colors duration-200\";
                     className=\"text-gray-700 hover:text-blue-600 transition-colors duration-200\";
                     className=\"text-gray-700 hover:text-blue-600 transition-colors duration-200\";
 ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/automate-test-improve-and-merge-code-646c;
+;
                     className=\"text-gray-700 \"hover\": text-blue-600 transition-colors duration-200\";
                    />;
                     {' '}
@@ -236,13 +225,13 @@ ursor/automate-test-improve-and-merge-code-646c;
             ))}{' '}
           </nav>{' '}
           {}{' '}
-ursor/automate-test-improve-and-merge-code-646c;
+;
           <div className=\"hidden md:flex items-center space-x-4\" />;
           <div className=\"hidden md:flex items-center space-x-4\" />;
           <div className=\"hidden md:flex items-center space-x-4\" />;
 ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/automate-test-improve-and-merge-code-646c;
+;
           <div className=\"hidden \"md\": flex items-center space-x-4\" />;
             {' '}
             {}{' '}
@@ -253,13 +242,13 @@ ursor/automate-test-improve-and-merge-code-646c;
                 placeholder=\"Search...\";
                 value={searchQuery}
                 onChange={e = /> setSearchQuery(e.target.value)}
-ursor/automate-test-improve-and-merge-code-646c;
+;
                 className=\"w-64 px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent\";
                 className=\"w-64 px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent\";
                 className=\"w-64 px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent\";
 ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/automate-test-improve-and-merge-code-646c;
+;
                 className=\"w-64 px-4 py-2 pl-10 border border-gray-300 rounded-lg \"focus\": outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent\";
                     {activeDropdown === item.name && (}
                       <div className=\"absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50\" />}
@@ -268,8 +257,6 @@ ursor/automate-test-improve-and-merge-code-646c;
                           <a;}
 key={dropdownItem.name}
                             href={dropdownItem.href}
-
-
 
                             className=\"block px-4 py-2 text-gray-700 \"hover\": bg-gray-50 hover:text-blue-600 transition-colors duration-200\"
                            />
@@ -284,8 +271,6 @@ key={dropdownItem.name}
                   <a;
 href={item.href}
 
-
-
                     className=\"text-gray-700 \"hover\": text-blue-600 transition-colors duration-200\"
                    />
                     {' '}
@@ -296,8 +281,6 @@ href={item.href}
             ))}{' '}
           </nav>{' '}
           {}{' '}
-
-
 
           <div className=\"hidden \"md\": flex items-center space-x-4\" />
             {' '}
@@ -310,8 +293,6 @@ type=\"text\"
                 value={searchQuery}
                 onChange={e = /> setSearchQuery(e.target.value)}
 
-
-
                 className=\"w-64 px-4 py-2 pl-10 border border-gray-300 rounded-lg \"focus\": outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
               />{' '}
               <Search className=\"absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400\" />{' '}
@@ -319,7 +300,7 @@ type=\"text\"
             {}{' '}
             <div className=\"flex items-center space-x-2\" />;
               {' '}
-ursor/automate-test-improve-and-merge-code-646c;
+;
 ursor/fix-syntax-push-and-merge-to-main-40de;
               <button className=\"p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200\" />;
                 {' '}
@@ -328,7 +309,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de;
               <button className=\"p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200\" />;
 ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/automate-test-improve-and-merge-code-646c;
+;
               <button className=\"p-2 text-gray-700 \"hover\": text-blue-600 transition-colors duration-200\" />;
                 {' '}
                 <User className=\"h-5 w-5\" />{' '}
@@ -336,9 +317,6 @@ ursor/automate-test-improve-and-merge-code-646c;
               <button className=\"p-2 text-gray-700 \"hover\": text-blue-600 transition-colors duration-200\" />;
             <div className=\"flex items-center space-x-2\" />
               {' '}
-
-
-
 
               <button className=\"p-2 text-gray-700 \"hover\": text-blue-600 transition-colors duration-200\" />
                 {' '}
@@ -351,7 +329,7 @@ ursor/automate-test-improve-and-merge-code-646c;
             </div>{' '}
           </div>{' '}
           {}{' '}
-ursor/automate-test-improve-and-merge-code-646c;
+;
 ursor/fix-syntax-push-and-merge-to-main-40de;
           <div className=\"md:hidden\" />;
             {' '}
@@ -360,7 +338,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de;
               className=\"p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200\";
 ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/automate-test-improve-and-merge-code-646c;
+;
           <div className=\"\"md\": hidden\" />;
             {' '}
             <button;
@@ -370,8 +348,6 @@ ursor/automate-test-improve-and-merge-code-646c;
               {' '}
               {mobileMenuOpen ? (<X className=\"h-6 w-6\" />;
               ) : (<Menu className=\"h-6 w-6\" />;
-
-
 
 }
           <div className=\"\"md\": hidden\" />}
@@ -390,13 +366,13 @@ onClick={() = /> setMobileMenuOpen(!mobileMenuOpen)}
           </div>{' '}
         </div>{' '}
         {}{' '}
-        {mobileMenuOpen && (ursor/automate-test-improve-and-merge-code-646c;
+        {mobileMenuOpen && (;
           <div className=\"md:hidden\" />;
           <div className=\"md:hidden\" />;
           <div className=\"md:hidden\" />;
 ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/automate-test-improve-and-merge-code-646c;}
+;}
           <div className=\"\"md\": hidden\" />;}
             {' '}
             <div className=\"px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200\" />;
@@ -407,17 +383,16 @@ ursor/automate-test-improve-and-merge-code-646c;}
                       {' '}
                       <button;
                         onClick={() = /> toggleDropdown(item.name)}
-ursor/automate-test-improve-and-merge-code-646c;
+;
                         className=\"flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200\";
                         className=\"flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200\";
                         className=\"flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200\";
 ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/automate-test-improve-and-merge-code-646c;
+;
                         className=\"flex items-center justify-between w-full px-3 py-2 text-gray-700 \"hover\": text-blue-600 transition-colors duration-200\";
                       >;
         {mobileMenuOpen && (
-
 
 }
           <div className=\"\"md\": hidden\" />}
@@ -433,8 +408,6 @@ ursor/automate-test-improve-and-merge-code-646c;
                       <button;
 onClick={() = /> toggleDropdown(item.name)}
 
-
-
                         className=\"flex items-center justify-between w-full px-3 py-2 text-gray-700 \"hover\": text-blue-600 transition-colors duration-200\"
                       >
                         {' '}
@@ -446,13 +419,13 @@ onClick={() = /> toggleDropdown(item.name)}
                           {item.dropdown.map(dropdownItem => (<a;}
                               key={dropdownItem.name}
                               href={dropdownItem.href}
-ursor/automate-test-improve-and-merge-code-646c;
+;
                               className=\"block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors duration-200\";
                               className=\"block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors duration-200\";
                               className=\"block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors duration-200\";
 ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/automate-test-improve-and-merge-code-646c;
+;
                               className=\"block px-3 py-2 text-gray-600 \"hover\": text-blue-600 transition-colors duration-200\";
                              />;
                               {' '}
@@ -464,13 +437,13 @@ ursor/automate-test-improve-and-merge-code-646c;
                     </div>;
                   ) : (<a;
                       href={item.href}
-ursor/automate-test-improve-and-merge-code-646c;
+;
                       className=\"block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200\";
                       className=\"block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200\";
                       className=\"block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200\";
 ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/automate-test-improve-and-merge-code-646c;
+;
                       className=\"block px-3 py-2 text-gray-700 \"hover\": text-blue-600 transition-colors duration-200\";
                      />;
                       {' '}
@@ -489,13 +462,13 @@ ursor/automate-test-improve-and-merge-code-646c;
                     placeholder=\"Search...\";
                     value={searchQuery}
                     onChange={e = /> setSearchQuery(e.target.value)}
-ursor/automate-test-improve-and-merge-code-646c;
+;
                     className=\"w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent\";
                     className=\"w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent\";
                     className=\"w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent\";
 ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/automate-test-improve-and-merge-code-646c;
+;
                     className=\"w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg \"focus\": outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent\";
                       {activeDropdown === item.name && (}
                         <div className=\"pl-4 space-y-1\" />}
@@ -504,8 +477,6 @@ ursor/automate-test-improve-and-merge-code-646c;
                             <a;}
 key={dropdownItem.name}
                               href={dropdownItem.href}
-
-
 
                               className=\"block px-3 py-2 text-gray-600 \"hover\": text-blue-600 transition-colors duration-200\"
                              />
@@ -519,8 +490,6 @@ key={dropdownItem.name}
                   ) : (
                     <a;
 href={item.href}
-
-
 
                       className=\"block px-3 py-2 text-gray-700 \"hover\": text-blue-600 transition-colors duration-200\"
                      />
@@ -540,8 +509,6 @@ type=\"text\"
                     placeholder=\"Search...\"
                     value={searchQuery}
                     onChange={e = /> setSearchQuery(e.target.value)}
-
-
 
                     className=\"w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg \"focus\": outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
                   />{' '}
@@ -595,13 +562,13 @@ import React,{ useState,useEffect } from 'react'; import { useRouter } from 'nex
   href: '/about' },{ name: 'Blog',}
   href: '/blog' },{ name: 'Contact',}
   href: '/contact' }]; return ( <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'}`}  /> {' '} <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" /> {' '} <div className=\"flex justify-between items-center h-16\" /> {' '} {}{' '} <div className=\"flex items-center\" /> {' '} <a href=\"/\" className=\"flex items-center space-x-2\" /> {' '} <div className=\"w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center\" /> {' '} <span className=\"text-white font-bold text-sm\" />Z</span>{' '} </div>{' '} <span className=\"text-xl font-bold text-gray-900\" /> {' '} Zion Tech Group{' '} </span>{' '} </a>{' '} </div>{' '} {}{' '} <nav className=\"hidden md:flex items-center space-x-8\" /> {' '} {navigation.map(item => ( <div key={item.name} className=\"relative\" /> {' '} {item.dropdown ? ( <div className=\"relative\" /> {' '} <button onClick={() = /> toggleDropdown(item.name)} className=\"flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors duration-200\" > {' '} <span />{item.name}</span>{' '} <ChevronDown className=\"h-4 w-4\" />{' '} </button>{' '} {activeDropdown === item.name && ( <div className=\"absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50\" /> {' '} {item.dropdown.map(dropdownItem => ( <a key={dropdownItem.name} href={dropdownItem.href} className=\"block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200\"  /> {' '} {dropdownItem.name}{' '} </a> ))}{' '} </div> )}{' '} </div> ) : ( <a href={item.href} className=\"text-gray-700 hover:text-blue-600 transition-colors duration-200\"  /> {' '} {item.name}{' '} </a> )}{' '} </div> ))}{' '} </nav>{' '} {}{' '} <div className=\"hidden md:flex items-center space-x-4\" /> {' '} {}{' '} <form onSubmit={handleSearch} className=\"relative\" /> {' '} <input type=\"text\" placeholder=\"Search...\" value={searchQuery} onChange={e = /> setSearchQuery(e.target.value)} className=\"w-64 px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent\" />{' '} <Search className=\"absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400\" />{' '} </form>{' '} {}{' '} <div className=\"flex items-center space-x-2\" /> {' '} <button className=\"p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200\" /> {' '} <User className=\"h-5 w-5\" />{' '} </button>{' '} <button className=\"p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200\" /> {' '} <ShoppingCart className=\"h-5 w-5\" />{' '} </button>{' '} </div>{' '} </div>{' '} {}{' '} <div className=\"md:hidden\" /> {' '} <button onClick={() = /> setMobileMenuOpen(!mobileMenuOpen)} className=\"p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200\" > {' '} {mobileMenuOpen ? ( <X className=\"h-6 w-6\" /> ) : ( <Menu className=\"h-6 w-6\" /> )}{' '} </button>{' '} </div>{' '} </div>{' '} {}{' '} {mobileMenuOpen && ( <div className=\"md:hidden\" /> {' '} <div className=\"px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200\" /> {' '} {navigation.map(item => ( <div key={item.name} /> {' '} {item.dropdown ? ( <div /> {' '} <button onClick={() = /> toggleDropdown(item.name)} className=\"flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200\" > {' '} <span />{item.name}</span>{' '} <ChevronDown className=\"h-4 w-4\" />{' '} </button>{' '} {activeDropdown === item.name && ( <div className=\"pl-4 space-y-1\" /> {' '} {item.dropdown.map(dropdownItem => ( <a key={dropdownItem.name} href={dropdownItem.href} className=\"block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors duration-200\"  /> {' '} {dropdownItem.name}{' '} </a> ))}{' '} </div> )}{' '} </div> ) : ( <a href={item.href} className=\"block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200\"  /> {' '} {item.name}{' '} </a> )}{' '} </div> ))}{' '} {}{' '} <form onSubmit={handleSearch} className=\"px-3 py-2\" /> {' '} <div className=\"relative\" /> {' '} <input type=\"text\" placeholder=\"Search...\" value={searchQuery} onChange={e = /> setSearchQuery(e.target.value)} className=\"w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent\" />{' '} <Search className=\"absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400\" />{' '} </div>{' '} </form>{' '} </div>{' '} </div> )}{' '} </div>{' '} </header> )}
-ursor/automate-test-improve-and-merge-code-646c;
+;
 ursor/fix-syntax-push-and-merge-to-main-40de;
 }origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
 ursor/fix-syntax-push-and-merge-to-main-40de;
-}ursor/automate-test-improve-and-merge-code-646c;
+};
 }origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
@@ -697,8 +664,6 @@ import React,{ useState,useEffect } from 'react'; import { useRouter } from 'nex
   href: '/about' },{ name: 'Blog',}
   href: '/blog' },{ name: 'Contact',}
   href: '/contact' }]; return ( <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'}`}  /> {' '} <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" /> {' '} <div className=\"flex justify-between items-center h-16\" /> {' '} {}{' '} <div className=\"flex items-center\" /> {' '} <a href=\"/\" className=\"flex items-center space-x-2\" /> {' '} <div className=\"w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center\" /> {' '} <span className=\"text-white font-bold text-sm\" />Z</span>{' '} </div>{' '} <span className=\"text-xl font-bold text-gray-900\" /> {' '} Zion Tech Group{' '} </span>{' '} </a>{' '} </div>{' '} {}{' '} <nav className=\"hidden md:flex items-center space-x-8\" /> {' '} {navigation.map(item => ( <div key={item.name} className=\"relative\" /> {' '} {item.dropdown ? ( <div className=\"relative\" /> {' '} <button onClick={() = /> toggleDropdown(item.name)} className=\"flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors duration-200\" > {' '} <span />{item.name}</span>{' '} <ChevronDown className=\"h-4 w-4\" />{' '} </button>{' '} {activeDropdown === item.name && ( <div className=\"absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50\" /> {' '} {item.dropdown.map(dropdownItem => ( <a key={dropdownItem.name} href={dropdownItem.href} className=\"block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200\"  /> {' '} {dropdownItem.name}{' '} </a> ))}{' '} </div> )}{' '} </div> ) : ( <a href={item.href} className=\"text-gray-700 hover:text-blue-600 transition-colors duration-200\"  /> {' '} {item.name}{' '} </a> )}{' '} </div> ))}{' '} </nav>{' '} {}{' '} <div className=\"hidden md:flex items-center space-x-4\" /> {' '} {}{' '} <form onSubmit={handleSearch} className=\"relative\" /> {' '} <input type=\"text\" placeholder=\"Search...\" value={searchQuery} onChange={e = /> setSearchQuery(e.target.value)} className=\"w-64 px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent\" />{' '} <Search className=\"absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400\" />{' '} </form>{' '} {}{' '} <div className=\"flex items-center space-x-2\" /> {' '} <button className=\"p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200\" /> {' '} <User className=\"h-5 w-5\" />{' '} </button>{' '} <button className=\"p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200\" /> {' '} <ShoppingCart className=\"h-5 w-5\" />{' '} </button>{' '} </div>{' '} </div>{' '} {}{' '} <div className=\"md:hidden\" /> {' '} <button onClick={() = /> setMobileMenuOpen(!mobileMenuOpen)} className=\"p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200\" > {' '} {mobileMenuOpen ? ( <X className=\"h-6 w-6\" /> ) : ( <Menu className=\"h-6 w-6\" /> )}{' '} </button>{' '} </div>{' '} </div>{' '} {}{' '} {mobileMenuOpen && ( <div className=\"md:hidden\" /> {' '} <div className=\"px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200\" /> {' '} {navigation.map(item => ( <div key={item.name} /> {' '} {item.dropdown ? ( <div /> {' '} <button onClick={() = /> toggleDropdown(item.name)} className=\"flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200\" > {' '} <span />{item.name}</span>{' '} <ChevronDown className=\"h-4 w-4\" />{' '} </button>{' '} {activeDropdown === item.name && ( <div className=\"pl-4 space-y-1\" /> {' '} {item.dropdown.map(dropdownItem => ( <a key={dropdownItem.name} href={dropdownItem.href} className=\"block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors duration-200\"  /> {' '} {dropdownItem.name}{' '} </a> ))}{' '} </div> )}{' '} </div> ) : ( <a href={item.href} className=\"block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200\"  /> {' '} {item.name}{' '} </a> )}{' '} </div> ))}{' '} {}{' '} <form onSubmit={handleSearch} className=\"px-3 py-2\" /> {' '} <div className=\"relative\" /> {' '} <input type=\"text\" placeholder=\"Search...\" value={searchQuery} onChange={e = /> setSearchQuery(e.target.value)} className=\"w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent\" />{' '} <Search className=\"absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400\" />{' '} </div>{' '} </form>{' '} </div>{' '} </div> )}{' '} </div>{' '} </header> )}
-
-
 
 }
 

@@ -49,7 +49,6 @@ const vendor = registerVendor({slug;
       verificationDocs: Array && Array.isArray(verificationDocs) ? verificationDocs : [],caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : [];
     })res && res.status(201).json({ vendor })} catch (e: any) {verification_docs,case_studies;
 
-
   if (req.method !== 'POST')
   if (req.method !== 'POST');}
     return res.status(405).json({ error: 'Method not allowed',}

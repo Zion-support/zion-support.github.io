@@ -37,7 +37,6 @@ const CybersecurityChat: NextPage = () => {
       <Head />;
         <title />CybersecurityChat - Zion Tech Solutions</title>;
 
-
 const CybersecurityChat: NextPage = () => {
   return (
     <div />
@@ -45,9 +44,7 @@ const CybersecurityChat: NextPage = () => {
 
       </Head>;
 
-
       </Head>;
-
 
 const CybersecurityChat: NextPage = () => {
       <main />
@@ -79,8 +76,6 @@ ursor/fix-website-loading-errors-and-merge-6662;
 }
 
 export default CybersecurityChat;
-
-
 
         <title />CybersecurityChat - Zion Tech Solutions</title>
 
@@ -134,7 +129,6 @@ export default CybersecurityChat;<title />CybersecurityChat - Zion Tech Solution
         <title />CybersecurityChat - Zion Tech Solutions</title>;
     </div>)
 };
-
 
 export default CybersecurityChat;
 const CybersecurityChat: NextPage = () => {

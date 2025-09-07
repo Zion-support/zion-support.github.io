@@ -1,6 +1,6 @@
 
 ;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 
 export interface RealMarketService {
   \"id\": string;
@@ -646,7 +646,7 @@ export to ESPs and run quick A/B tests.,features[ 'AI suggestions and variants',
   variant: 'devops-futuristic as ,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address:,364 E Main St STE 1008 Middletown DE 19709',}
   website: 'https:,}
 },realImplementation: true,implementationDetails:,Repo scanner,config parser,pull‑request bot.',launchDate: '2025-02-22,customers: 14,rating: 4.5,reviews: 7 ]}},
-}ursor/automate-test-improve-and-merge-code-646c;
+};
 
 export interface RealMarketService  {\"id\": string;
 }
@@ -2276,7 +2276,7 @@ export to ESPs and run quick A/B tests.,features['AI suggestions and variants','
   },{id:,feature-flag-auditor',\"name\": 'Feature Flag Auditor,tagline:,Catch stale flags, drift, and experiment hygiene issues',\"price\": '$29,period:,/month',\"description\": Continuously scans your flags for stale keys, dead code, missing cleanups, and risky rollout patterns. Auto‑opens PRs with fixes.',features['Stale and orphan flag detection','Env parity and drift checks','Experiment hygiene scoring','Auto‑PR cleanup scripts';}
     ],\"popular\": false,icon:,🚩',\"color\": 'from-rose-600 to-orange-700,textColor:,text-rose-300',\"link\": 'https://ziontechgroup.com/services/feature-flag-auditor,marketPosition:,Augments LaunchDarkly/Flagsmith with hygiene guardrails.',\"targetAudience\": Platform, frontend, growth teams',\"trialDays\": 7,setupTime:,1 day',\"category\": 'Developer Tools,\"realService\": true,technology[,Static analysis, SDK hooks, CI'],integrations['LaunchDarkly, Flagsmith, Split.io'],useCases['Reduce tech debt, Safer rollouts, Faster cleanups'],\"roi\": 'Cut incidents from stale flags; improve developer velocity.,competitors[,Native vendor hygiene, manual audits'],\"marketSize\": '$2B experimentation,growthRate:,18% YoY',\"variant\": 'devops-futuristic as , \"contactInfo\": {mobile:,+1 302 464 0950',\"email\": 'kleber@ziontechgroup.com,address:,364 E Main St STE 1008 Middletown DE 19709',\"website\": 'https://ziontechgroup.com;}
     },\"realImplementation\": true,implementationDetails:,Repo scanner, config parser, pull‑request bot.',\"launchDate\": '2025-02-22,\"customers\": 14,\"rating\": 4.5,\"reviews\": 7;
-]}}}}ursor/automate-test-improve-and-merge-code-646c;
+]}}}};
 
 export interface RealMarketService {}
   id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}

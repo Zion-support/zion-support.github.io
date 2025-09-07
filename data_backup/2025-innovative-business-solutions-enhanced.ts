@@ -1149,7 +1149,7 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
 ;
 :corrupted_backup/2025-innovative-business-solutions-enhanced.ts;
 :data_backup/2025-innovative-business-solutions-enhanced.ts;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 import { ServiceVariant  } from '../types/service-variants';
 
 export interface InnovativeBusinessSolution  {\"id\": string;
@@ -1384,7 +1384,7 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
 ]}}
 :data_backup/2025-innovative-business-solutions-enhanced.ts;
 ursor/integrate-build-improve-and-re-verify-8f7d;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 
 export interface InnovativeBusinessSolution  {\"id\": string;
   name: string;
@@ -1445,7 +1445,7 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     ],\"popular\": true,icon:,🚚',\"color\": 'from-purple-600 to-pink-600,textColor:,text-purple-400',\"link\": 'https://ziontechgroup.com/ai-supply-chain-optimization,marketPosition:,Competes with SAP ($108/month), Oracle ($300/month), Infor ($200/month). Our \"advantage\": AI optimization reduces supply chain costs by 25% and improves delivery times by 40%.,\"targetAudience\": 'Supply chain managers, Logistics companies, Manufacturing companies, Retail companies, E-commerce',\"trialDays\": 14,setupTime:,6-8 hours',\"category\": 'AI Supply Chain & Logistics,\"realService\": true,technology[,Python, TensorFlow, React, Node.js, PostgreSQL, Redis'],integrations['SAP, Oracle, Infor, Shopify, WooCommerce, ERP systems'],useCases['Demand forecasting, Inventory management, Supplier optimization, Logistics planning, Cost reduction'],\"roi\": 'Supply chain teams report 500% ROI through reduced costs and improved efficiency.,competitors[,SAP, Oracle, Infor, Manhattan Associates'],\"marketSize\": '$31.2B supply chain management market,growthRate:,17% annual growth',\"variant\": 'ai-supply-chain-enterprise,\"contactInfo\": {mobile:,+1 302 464 0950',\"email\": 'kleber@ziontechgroup.com,address:,364 E Main St STE 1008 Middletown DE 19709',\"website\": 'https://ziontechgroup.com;}
     },\"realImplementation\": true,implementationDetails:,Comprehensive supply chain optimization platform with AI-powered demand forecasting and inventory management.',\"launchDate\": '2024-11-30,\"customers\": 98,\"rating\": 4.8,\"reviews\": 67;
 ]}}ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 
 export interface InnovativeBusinessSolution  {\"id\": string;
   name: string;

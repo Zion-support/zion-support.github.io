@@ -54,10 +54,7 @@ function handler() {if (return res.status (405).json ({ error: 'Method not allow
 }  if (return res.status (405).json ({ error: 'Method not allowed',}
 })) {$2;
 
-
-
 import formidable from 'formidable';
-
 
     );
     fs && fs.copyFileSync(file && file.filepath, targetPath);
@@ -118,7 +115,6 @@ const targetPath = path && path.join(
   });    appendAuditLog({ type: 'file_upload', section, name: path && path.basename(targetPath),}
 });
     res && res.status(200).json({ ok: true })
-
 
   })
 
@@ -197,7 +193,6 @@ const target_path = path.join (
 });
   });
 }
-
 
 }
 }

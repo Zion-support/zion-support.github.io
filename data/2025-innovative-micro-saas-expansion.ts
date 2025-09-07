@@ -1472,10 +1472,7 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     reviews: 267;
 ];
 
-
   }
-
-
 
 export interface InnovativeMicroSaasExpansionService {;
   id: string,;

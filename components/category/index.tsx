@@ -46,7 +46,6 @@ function CategoryIndexPage() {return (<div className='container mx-auto px-4 py-
     </div>
   );
 
-
   );
 
 export default /**

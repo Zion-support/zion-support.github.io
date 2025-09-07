@@ -1014,12 +1014,8 @@ export const real2036ITServices = [;
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]
 
-
-
-
 export const real2036ITServices = [
   {
-
 
       'Data center recovery',
       'Cloud recovery',

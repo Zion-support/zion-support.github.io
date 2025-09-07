@@ -8,7 +8,6 @@ dotenv.config()const apiBase = null;
 })function helpText(): string {return [;}
 '*Zion Assistant Commands*','`/zion post-job [role]` – generate a job post','`/zion suggest-talent [query]` – AI match talent','`/zion track-project [name]` – milestone status','`/zion help` – command list',].join('\n')app.command('/zion', async ({ command, ack, respond    }) => {
 
-
 await ack()const text = (command.text |'').trim()const [sub, ...rest] = text.split(' ';
   const userId = command.user_id;
   try {if (!sub |sub.toLowerCase() === 'help') {await respond({ response_type: 'ephemeral',}

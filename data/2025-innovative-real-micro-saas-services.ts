@@ -10,7 +10,6 @@ export interface InnovativeMicroSaasService {
 export interface InnovativeMicroSaasService {;
 export interface InnovativeMicroSaasService {
 
-
 export interface InnovativeMicroSaasService {;
   id: string;
   name: string;
@@ -1520,7 +1519,6 @@ import { ServiceVariant } from '../types/service-variants',export interface Enha
   email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com';
     reviews: 20;
-
 
 }
 }

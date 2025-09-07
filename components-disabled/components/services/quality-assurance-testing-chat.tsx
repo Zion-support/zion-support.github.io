@@ -152,7 +152,6 @@ export default QualityAssuranceTestingChat;<title />QualityAssuranceTestingChat 
     </div>)
 };
 
-
       </main>;
     </div>);
 

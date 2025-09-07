@@ -4,7 +4,7 @@ const EnhancedErrorBoundary = dynamic(() => import(\"./EnhancedErrorBoundary\"),
 </p>';
 </p>';
 </p>';
-ursor/automate-test-improve-and-merge-code-646c;
+;
 const EnhancedErrorBoundary = dynamic(() => import(\"./EnhancedErrorBoundary\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default EnhancedErrorBoundary' ,';
 </p>';
 </p>';
@@ -32,7 +32,7 @@ const EnhancedErrorBoundary = dynamic(() => import(\"./EnhancedErrorBoundary\"),
 </p>';
 </p>';
 </p>';
-ursor/automate-test-improve-and-merge-code-646c;
+;
 </p>';
 </p>';
 </p>';
@@ -43,11 +43,7 @@ const EnhancedErrorBoundary = dynamic(() => import(\"./EnhancedErrorBoundary\"),
 </p>'
 </p>'
 
-
-
-
 </p>'
-
 
 </p>'
 

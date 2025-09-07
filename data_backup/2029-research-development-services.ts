@@ -1,6 +1,6 @@
 
 ;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 
 export interface ResearchDevelopmentService2029 {
   \"id\": string;
@@ -59,7 +59,7 @@ export const \"researchDevelopmentServices2029\": ResearchDevelopmentService2029
     ],benefits['Accelerate biotech research','Improve drug discovery','Streamline clinical trials','Enhance collaboration','Ensure compliance','Reduce research costs';
     ],useCases['Pharmaceutical research','Genetic research','Clinical trials','Biotech development','Medical research','Agricultural biotech';}
     ],\"marketSize\": '$22 && 22.8B by 2029,competitors[,Benchling','LabVantage','SciNote','LabArchives'],technology['AI/ML','Biotechnology','Data Science','Research Tools'],integration['Lab equipment','Research databases','Clinical systems'],support['24/7 biotech support','Biotech experts','Research team'],compliance['FDA','HIPAA','GCP','Research ethics'],\"scalability\": Biotech-grade, multi-institution support,,\"roi\": '500% within 20 months,deployment:,Cloud-based, biotech infrastructure',\"maintenance\": Continuous updates, biotech optimization,,\"training\": Biotech training, research certification,,\"documentation\": Biotech research guides, best practices,,\"api\": 'Biotech research APIs,mobile:,Mobile biotech apps',\"security\": Biotech security, data protection,,\"backup\": Research backup, biotech redundancy,,\"monitoring\": 'Biotech research monitoring,analytics:,Biotech analytics, research insights',\"customization\": Custom biotech research, integration,,\"whiteLabel\": 'Available for biotech institutions,affiliate:,25% commission for referrals',\"referral\": $20,000 bonus for partnerships,,\"partnership\": 'Biotech research partnerships,funding:,Series B funding, $120M valuation',\"exit\": 'IPO or biotech acquisition,\"contact\": {mobile:,+1 302 464 0950',\"email\": 'kleber@ziontechgroup && ziontechgroup.com,website:,\"https\": //ziontechgroup && ziontechgroup.com,\"address\": '364 E Main St STE 1008 Middletown DE 19709';}
-]}}}}}}ursor/automate-test-improve-and-merge-code-646c;
+]}}}}}};
 
 export interface ResearchDevelopmentService2029 {
   \"id\": string;
@@ -238,7 +238,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
   customization: Custom biotech research,integration,,whiteLabel: 'Available for biotech institutions,affiliate:,25% commission for referrals',
   referral: $20,000 bonus for partnerships,,partnership: 'Biotech research partnerships,funding:,Series B funding,$120M valuation',}
   exit: 'IPO or biotech acquisition,contact: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com,website:,https: address: '364 E Main St STE 1008 Middletown DE 19709' ]}}}},
-}ursor/automate-test-improve-and-merge-code-646c;
+};
 
 export interface ResearchDevelopmentService2029 {}
   id: string; name: string; description: string; category: string[]; price: string; features: string[]; benefits: string[]; useCases: string[]; marketSize: string; competitors: string[]; technology: string[]; integration: string[]; support: string[]; compliance: string[]; scalability: string; roi: string; deployment: string; maintenance: string; training: string; documentation: string; api: string; mobile: string; security: string; backup: string; monitoring: string; analytics: string; customization: string; whiteLabel: string; affiliate: string; referral: string; partnership: string; funding: string; exit: string; contact: { mobile: string; email: string; website: string; address: string,}
@@ -628,7 +628,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
   customization: Custom biotech research,integration,,whiteLabel: 'Available for biotech institutions,affiliate:,25% commission for referrals',
   referral: $20,000 bonus for partnerships,,partnership: 'Biotech research partnerships,funding:,Series B funding,$120M valuation',}
   exit: 'IPO or biotech acquisition,contact: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com,website:,https: address: '364 E Main St STE 1008 Middletown DE 19709' ]}}}},
-}ursor/automate-test-improve-and-merge-code-646c;
+};
 
 export interface ResearchDevelopmentService2029 {}
   id: string; name: string; description: string; category: string[]; price: string; features: string[]; benefits: string[]; useCases: string[]; marketSize: string; competitors: string[]; technology: string[]; integration: string[]; support: string[]; compliance: string[]; scalability: string; roi: string; deployment: string; maintenance: string; training: string; documentation: string; api: string; mobile: string; security: string; backup: string; monitoring: string; analytics: string; customization: string; whiteLabel: string; affiliate: string; referral: string; partnership: string; funding: string; exit: string; contact: { mobile: string; email: string; website: string; address: string,}

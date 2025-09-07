@@ -3645,7 +3645,6 @@ mobile: '+1 302 464 0950',
 ;
 export const realMarketServices: RealMarketService[] = [;
 
-
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: \"address\",}
@@ -3684,10 +3683,8 @@ setupTime: '1 day',
     realService: true;
 technology: ['Node.js, TypeScript, PostgreSQL, Redis, OpenAI, Anthropic']
 
-
 export const realMarketServices: RealMarketService[] = [
   {
-
 
       'Unified API for multiple LLM providers',
       'Spend caps, rate limits, and usage alerts',
@@ -3706,7 +3703,6 @@ export const realMarketServices: RealMarketService[] = [
     popular: true,
     icon: '🧠',
   technology: ['Node.js, TypeScript, PostgreSQL, Redis, OpenAI, Anthropic'],
-
 
     integrations: [
       'OpenAI, Anthropic, Google AI Studio, Bedrock, Azure OpenAI'
@@ -4395,7 +4391,6 @@ realImplementation: true;
     variant: 'integration-futuristic',
   contactInfo: contact,
     realImplementation: true,
-
 
 implementationDetails: 'Replay-safe pullers, checksum compare, and reconciliation dashboards.',
   launchDate: '2025-08-22'
@@ -5307,7 +5302,6 @@ export const realMarketServices: RealMarketService[] = [;
       address: '364 E Main St STE 1008 Middletown DE 19709',;}
   }
 ];
-
 
 website: 'https://ziontechgroup.com';
     }

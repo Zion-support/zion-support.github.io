@@ -1,6 +1,5 @@
 
 
-
 import React, { useEffect, useRef, useState } from 'react';
 import { motion  } from 'framer-motion';
 
@@ -161,7 +160,6 @@ this.y = Math.random() * dimensions.height;}
       }this.vy = Math.random() * 2 + 1;          }}
         }
 
-
         // Energy pulse;
 if (this.type === 'energy') {}
 this.size = Math.sin(Date.now() * 0.01) * 2 + 3;}
@@ -308,10 +306,8 @@ const gridSize = 50;
         ctx && ctx.stroke();}
       }
 
-
       animationId = requestAnimationFrame(animate)
 };
-
 
     animate();
     return () => {
@@ -394,9 +390,6 @@ className='absolute inset-0'
 ease: 'easeInOut'}
           }}
 
-
-
-
         />
       </div>
         />;
@@ -404,7 +397,6 @@ ease: 'easeInOut'}
       {/* Content Layer */}
 
 <div className='relative z-20' />{children}</div>
-
 
       {/* Quantum Noise Effect */}
       <div className='fixed inset - 0 z - 30 pointer - events - none opacity - 5' />;

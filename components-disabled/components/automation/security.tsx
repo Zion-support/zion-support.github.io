@@ -26,7 +26,6 @@ export default function SecurityAudit({ report }: Props) {}
 };
 </pre> </div>) 
 
-
 export default function SecurityAudit({ report }: Props) {
   return (
     <div className=\"space-y-4\" />
@@ -38,9 +37,7 @@ export default function SecurityAudit({ report }: Props) {
       {report.generatedAt && (}
         <div className=\"text-sm text-gray-500\" />Generated at: {new Date(report.generatedAt).toLocaleString()}</div>
 
-
     </div>;
-
 
     </div>;
 );
@@ -57,10 +54,8 @@ function SecurityAudit() {return (<div className=\"space - y-4\" />;}
   );}
 }
 
-
   );
 }
-
 
   );
 }

@@ -59,7 +59,6 @@ const u = updates && updates.find((x: any) => x && x.id === id);}"
   if (!u) return res.status(404).json({ error: 'Not found'}
 });
 
-
   if (!u) return res.status(404).json({ error: 'Not found'}
 });
 

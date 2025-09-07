@@ -33,7 +33,6 @@ export default function AutomationPage() {
       <p className=\"mt-2 text-gray-600 dark: text-gray-300\" />Automation tools overview coming soon.</p>
     </div>
 
-
 export default function AutomationPage() {;
   return ("
     <div className=\"container mx-auto px-4 py-10\" />;"
@@ -54,7 +53,6 @@ function AutomationPage() {
     </div>}
   );}
 }
-
 
   )
 }

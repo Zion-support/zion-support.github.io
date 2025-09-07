@@ -1,6 +1,5 @@
 
 
-
 const localeToFlag: Record<string, string /> = {
 
   en: 'us';
@@ -51,7 +50,6 @@ const changeLanguage = async (lng: string) => {
     document.documentElement.setAttribute('lang', lng);}
 setOpen(false)}
 };
-
 
   return (
     <div className='relative' />;

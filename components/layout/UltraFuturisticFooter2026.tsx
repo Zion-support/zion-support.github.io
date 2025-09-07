@@ -186,7 +186,6 @@ const companyLinks = [
   href: '/contact'}
 },
 
-
   { name: 'Locations'}
   href: '/locations'}
 }
@@ -499,7 +498,6 @@ type='email'
           </div>
         </motion.div>
 
-
                 Subscribe;
               </button>;
             </div>;
@@ -605,10 +603,8 @@ href='/terms'
 
   );
 
-
     </footer>
   );
 }
-
 
 "

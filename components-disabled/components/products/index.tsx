@@ -15,12 +15,8 @@ return (
       <p className=\"mt-2 text-gray-600 dark: text-gray-300\" />Browse Zion products.</p>;
     </div>;
 
-
-
   );
 import React from 'react';
-
-
 
   );
 import React from 'react';
@@ -85,7 +81,6 @@ export default function ProductsIndexPage() {return (<div className='container m
   )
     </div>);
 }
-
 
 export default function ProductsIndexPage() {
   return (

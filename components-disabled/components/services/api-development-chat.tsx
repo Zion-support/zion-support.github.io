@@ -37,7 +37,6 @@ const ApiDevelopmentChat: NextPage = () => {
       <Head />;
         <title />ApiDevelopmentChat - Zion Tech Solutions</title>;
 
-
 const ApiDevelopmentChat: NextPage = () => {
   return (
     <div />
@@ -45,9 +44,7 @@ const ApiDevelopmentChat: NextPage = () => {
 
       </Head>;
 
-
       </Head>;
-
 
 const ApiDevelopmentChat: NextPage = () => {
       <main />
@@ -79,8 +76,6 @@ ursor/fix-website-loading-errors-and-merge-6662;
 }
 
 export default ApiDevelopmentChat;
-
-
 
         <title />ApiDevelopmentChat - Zion Tech Solutions</title>
 
@@ -134,7 +129,6 @@ export default ApiDevelopmentChat;<title />ApiDevelopmentChat - Zion Tech Soluti
         <title />ApiDevelopmentChat - Zion Tech Solutions</title>;
     </div>)
 };
-
 
 export default ApiDevelopmentChat;
 const ApiDevelopmentChat: NextPage = () => {

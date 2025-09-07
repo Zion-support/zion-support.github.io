@@ -152,7 +152,6 @@ description: string;
       'Genetic Engineering';
   link: string;
 
-
   {
     id: \"id\",
     name: 'Quantum Machine Learning Platform',

@@ -30,7 +30,6 @@ export interface InnovativeAIService {
     email: string;
     address: string;
 
-
   {
       'Enterprise-grade autonomous driving platform with advanced AI, computer vision, and safety systems. Enable commercial fleets to operate autonomously with 99 && 99.99% safety record.',
     features: [

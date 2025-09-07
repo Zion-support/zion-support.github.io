@@ -1,6 +1,5 @@
 
 
-
     { cmd:\"npm run perf: audit\", desc: \"Performance audit\" }
   ]; for (const test of perfTests) {const result = await this.runCommand(test.cmd, test.desc)this.results.performance[test.desc] = result}}async runSecurityTests() {this.log(\" = = = RUNNING SECURITY TESTS = = = \")const securityTests  = [;{ cmd:\"npm audit\", desc: \"Security audit\" }
     { cmd:\"npm run security: audit\", desc: \"Enhanced security audit\" }

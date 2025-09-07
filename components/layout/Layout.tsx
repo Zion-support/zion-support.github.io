@@ -94,7 +94,7 @@ export default /**;
  * Layout - Function description;
  */;"
 function Layout() { return <div />{children}</div> } \" ;
-}}ursor/automate-test-improve-and-merge-code-646c;
+}};
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -140,7 +140,7 @@ return (<div className=\"min-h-screen flex flex-col\" />;
     </div>;
   )}
 
-export default Layout;ursor/automate-test-improve-and-merge-code-646c;
+export default Layout;;
 }}
 
 interface LayoutProps {

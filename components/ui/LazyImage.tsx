@@ -44,7 +44,6 @@ const handleLoad = (
 }
 };
 
-
   return (
     <div className={`relative overflow - hidden ${class_name}`} />
 
@@ -58,8 +57,6 @@ alt=''
         }`}
         style={{ width, height }}
       />
-
-
 
       {/* Actual Image */}
       {isInView && (<motion&& motion.img;}
@@ -83,7 +80,6 @@ className='w-full h-full object-cover'
     </div>
 )
 };
-
 
 export default LazyImage;
 

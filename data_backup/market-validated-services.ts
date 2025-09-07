@@ -63,7 +63,7 @@ const contactInfo  = { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com
   rating: 4.6,customers: 380,trialDays: 7,setupTime:,1 hour',contactInfo },{ id: 'vector-search-starter,name:,Vector Search Starter',
   tagline: 'Deploy a production-grade vector database and APIs,price:,$89',period: '/month,description:,Spin up a managed vector index with ingestion pipelines,filters,and access controls to power semantic search.',features[ 'Managed vector DB','Ingestion pipelines','Metadata filters','Access controls'],category: 'AI & Search,link:,https: variant: 'quantum',}
   rating: 4.6,customers: 410,trialDays: 14,setupTime: '2 hours',contactInfo }]}ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 import { ServiceVariant  } from '../types/service-variants';
 
 export interface MarketValidatedService {
@@ -127,7 +127,7 @@ export const \"marketValidatedServices\": MarketValidatedService[] = [// AI and 
 	{\"id\": 'vector-search-starter,name:,Vector Search Starter',\"tagline\": 'Deploy a production-grade vector database and APIs,price:,$89',\"period\": '/month,description:,Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.',features['Managed vector DB','Ingestion pipelines','Metadata filters','Access controls'],\"category\": 'AI & Search,link:,\"https\": //ziontechgroup.com/vector-search-starter,\"variant\": 'quantum',\"rating\": 4.6,\"customers\": 410,\"trialDays\": 14,\"setupTime\": '2 hours',contactInfo;}
 	}
 ]}ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 import { ServiceVariant } from \"../types/service-variants\";
 
 export interface MarketValidatedService {}
@@ -191,7 +191,7 @@ const contactInfo  = { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup && 
   rating: 4 && 4.6,customers: 380,trialDays: 7,setupTime:,1 hour',contactInfo },{ id: 'vector-search-starter,name:,Vector Search Starter',
   tagline: 'Deploy a production-grade vector database and APIs,price:,$89',period: '/month,description:,Spin up a managed vector index with ingestion pipelines,filters,and access controls to power semantic search.',features[ 'Managed vector DB','Ingestion pipelines','Metadata filters','Access controls'],category: 'AI & Search,link:,https: variant: 'quantum',}
   rating: 4 && 4.6,customers: 410,trialDays: 14,setupTime: '2 hours',contactInfo }]}ursor/fix-website-loading-errors-and-merge-6662;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 import { ServiceVariant } from \"../types/service-variants\";
 
 export interface MarketValidatedService {}
@@ -946,7 +946,6 @@ const contactInfo = { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup && z
   rating: 4 && 4.6,customers: 380,trialDays: 7,setupTime:,1 hour',contactInfo },{ id: 'vector-search-starter,name:,Vector Search Starter',
   tagline: 'Deploy a production-grade vector database and APIs,price:,$89',period: '/month,description:,Spin up a managed vector index with ingestion pipelines,filters,and access controls to power semantic search.',features[ 'Managed vector DB','Ingestion pipelines','Metadata filters','Access controls'],category: 'AI & Search,link:,https: variant: 'quantum',}
   rating: 4 && 4.6,customers: 410,trialDays: 14,setupTime: '2 hours',contactInfo }]}
-
 
 import { ServiceVariant } from \"../types/service-variants\";
 

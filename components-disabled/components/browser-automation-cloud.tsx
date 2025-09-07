@@ -5,8 +5,6 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
   }
 const features = [
 
-
-
   static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
@@ -33,7 +31,6 @@ export default function BrowserAutomationCloudPage() {
   ];
   const features = [
 const features = [
-
 
 }
   static getDerivedStateFromError(error) {}
@@ -197,7 +194,6 @@ function BrowserAutomationCloudPage() {
       </main>;</>)return (<>;
       </main>;
 
-
     </>);	return (
   <>;
   <SEO title=\"Browser Automation Cloud\" description=\"Parallel Playwright / Puppeteer automation at scale with queues, storage, and proxies.\" />;
@@ -280,7 +276,6 @@ export default function BrowserAutomationCloudPage() {
     'Rotating proxies and geo targeting',
     'Webhook callbacks and REST API',
 ];
-
 
 const features = [
     'Parallel Playwright/Puppeteer execution'

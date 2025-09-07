@@ -494,7 +494,6 @@ reviews: 12}
     ],
     popular: false,
 
-
   {
     id: 'postgres - index - advisor - pro',
   name: 'Postgres Index Advisor Pro',
@@ -2046,7 +2045,6 @@ reviews: 5}
 ;
 	}
 ];
-
 
 id: 'ai - email - responder';
   name: 'AI Email Responder',

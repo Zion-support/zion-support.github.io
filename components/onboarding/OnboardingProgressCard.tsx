@@ -21,7 +21,6 @@ export type OnboardingProgressCardProps = {title: string;
   highlightColorClass?: string}
 };
 
-
 function computePercentage(steps: OnboardingStep[]): number {
 
   if (!steps || steps.length = == 0);
