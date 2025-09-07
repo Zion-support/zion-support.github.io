@@ -42,8 +42,9 @@ export default function ComprehensiveServicesShowcase2025() {
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('title');
   const [showFilters, setShowFilters] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  // Filter services
+  // Filter services with loading state
   const filteredServices = comprehensiveServices2025.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -56,6 +57,13 @@ export default function ComprehensiveServicesShowcase2025() {
     
     return matchesSearch && matchesCategory && matchesPrice;
   });
+
+  // Handle search with loading state
+  const handleSearch = (value: string) => {
+    setIsLoading(true);
+    setSearchTerm(value);
+    setTimeout(() => setIsLoading(false), 300);
+  };
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
@@ -85,6 +93,8 @@ export default function ComprehensiveServicesShowcase2025() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className={`relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group ${service.popular ? 'ring-2 ring-blue-500' : ''}`}
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
     >
       {service.popular && (
         <div className="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">
@@ -167,9 +177,14 @@ export default function ComprehensiveServicesShowcase2025() {
                   type="text"
                   placeholder="Search services..."
                   value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
+                  onChange={(e) => handleSearch(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
+                {isLoading && (
+                  <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
+                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-500"></div>
+                  </div>
+                )}
               </div>
 
               <div className="flex flex-wrap gap-4 justify-center">
@@ -190,17 +205,27 @@ export default function ComprehensiveServicesShowcase2025() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <AnimatePresence>
-            {sortedServices.map((service, index) => (
-              <ServiceCard key={service.id} service={service} index={index} />
-            ))}
+            {sortedServices.length > 0 ? (
+              sortedServices.map((service, index) => (
+                <ServiceCard key={service.id} service={service} index={index} />
+              ))
+            ) : (
+              <div className="col-span-full text-center py-12">
+                <div className="text-gray-500 text-lg mb-4">No services found matching your criteria</div>
+                <button
+                  onClick={() => {
+                    setSearchTerm('');
+                    setSelectedCategory('all');
+                    setSelectedPriceRange('all');
+                  }}
+                  className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                >
+                  Clear Filters
+                </button>
+              </div>
+            )}
           </AnimatePresence>
         </div>
-
-        {sortedServices.length === 0 && (
-          <div className="text-center py-12">
-            <div className="text-gray-500 text-lg">No services found matching your criteria</div>
-          </div>
-        )}
       </div>
 
       {/* Contact Section */}
