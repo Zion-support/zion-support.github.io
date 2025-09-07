@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 import { NextRequest, NextResponse } from "next/server";
-=======
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
->>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db
 
 export function middleware(request: NextRequest) {
   const response = NextResponse.next();
