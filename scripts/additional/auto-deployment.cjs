@@ -24,6 +24,9 @@ class AutoDeployment {
     } catch (error) {
       console.error("❌ Deployment failed:", error.message);
       process.exit(1);
+    }
+  }
+}
 
 const deployment = new AutoDeployment();
 deployment.deploy();

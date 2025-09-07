@@ -28,6 +28,9 @@ class DependencyUpdater {
       console.log("✅ Dependencies updated successfully!");
     } catch (error) {
       console.error("❌ Dependency update failed:", error.message);
+    }
+  }
+}
 
 const updater = new DependencyUpdater();
 updater.updateDependencies();
