@@ -9,7 +9,7 @@ console.log('🔧 Starting comprehensive merge conflict resolution...');
 // Function to resolve merge conflicts in a file
 function resolveMergeConflicts(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    const content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
     const lines = content.split('\n');
