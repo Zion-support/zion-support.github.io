@@ -72,7 +72,6 @@ export function usePerformance() {;"
     // Largest Contentful Paint (LCP);
     const lcpObserver = new PerformanceObserver((list) => {;
       }
-      const entries = list.getEntries();
       const lcpEntry = entries[entries.length - 1];
       if (lcpEntry) {;
         }
@@ -82,7 +81,6 @@ export function usePerformance() {;"
     // First Input Delay (FID);
     const fidObserver = new PerformanceObserver((list) => {;
       }
-      const entries = list.getEntries();
       const fidEntry = entries[entries.length - 1] as FirstInputEntry;
       if (fidEntry && 'processingStart' in fidEntry) {;'
         }
@@ -124,12 +122,9 @@ export function usePerformance() {"
     "domLoad": null,"
     "windowLoad": null,"
     "navigationStart": null};);"
-  const [isMonitoring, setIsMonitoring] = useState(false);
-  const observerRef = useRef<PerformanceObserver | null>(null);
       // // // // // // //
       return;
     // First Contentful Paint (FCP)
-    const fcpEntry = entries.find(entry => { return entry.name === 'first-contentful-paint'); }'
       if (fcpEntry) {
         }
         setMetrics(prev => ({ ...prev, "fcp": fcpEntry.startTime }));
@@ -137,7 +132,6 @@ export function usePerformance() {"
     );
         setMetrics(prev => ({ ...prev, "fcp": fcpEntry.startTime }))});"
     // Largest Contentful Paint (LCP)
-    const lcpEntry = entries[entries.length - 1];
       if (lcpEntry) {
         }
         setMetrics(prev => ({ ...prev, "lcp": lcpEntry.startTime }));
@@ -145,7 +139,6 @@ export function usePerformance() {"
     );
         setMetrics(prev => ({ ...prev, "lcp": lcpEntry.startTime }))});"
     // First Input Delay (FID)
-    const fidEntry = entries[entries.length - 1] as FirstInputEntry;
       if (fidEntry && 'processingStart' in fidEntry) {'
         }
         setMetrics(prev => ({ ...prev, "fid": fidEntry.processingStart - fidEntry.startTime }));
@@ -302,8 +295,6 @@ const getNavigationTiming = useCallback(() => {
 const getResourceTiming = useCallback(() => {
     }
     if (!enableResourceTiming || !performance.getEntriesByType) return;
-    const resources = performance.getEntriesByType('resource');'
-    const slowResources = resources.filter(resource => { return resource.duration > 1000); }
     if (slowResources.length > 0 && logToConsole) {
     }
     return resources}, [enableResourceTiming, logToConsole]);
@@ -316,7 +307,6 @@ try {
       }
       observerRef.current = new PerformanceObserver((list) => {
         }
-        const entries = list.getEntries();
         entries.forEach((entry) => {;
           }
           if (entry.name === 'first-contentful-paint') {;'
@@ -352,7 +342,6 @@ try {
       }
       lcpObserverRef.current = new PerformanceObserver((list) => {
         }
-        const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         if (lastEntry) {;
           }
@@ -463,7 +452,6 @@ try {
       }
       clsObserverRef.current = new PerformanceObserver((list) => {
         }
-        let clsValue = 0;
         for (const entry of list.getEntries()) {
           }
           if (!entry.hadRecentInput) {
@@ -694,7 +682,6 @@ export function useRenderTime() {;
 }
 const getPerformanceScore = useCallback(() => {
     }
-    let score = 100;
     // FCP scoring (0-100)
     if (metrics.fcp !== null) {
       }
@@ -724,7 +711,6 @@ const getPerformanceScore = useCallback(() => {
 const sendMetricsToAnalytics = useCallback(() => {
     }
     if (!sendToAnalytics) return;
-    const performanceScore = getPerformanceScore();
     const analyticsData = {
       ...metrics
       }
@@ -832,16 +818,12 @@ export function useAPIPerformance() {;
 export function useComponentPerformance() {"
   }
   const [renderTime, setRenderTime] = useState<number>(0);
-  const [mountTime, setMountTime] = useState<number>(0);
-  const startTime = useRef<number>(0);
   useEffect(() => {
     }
     startTime.current = performance.now();
     setMountTime(startTime.current);
     return () => {
       }
-      const endTime = performance.now();
-      const totalTime = endTime - startTime.current;
       setRenderTime(totalTime);
       // Log slow components,
 if (totalTime > 16) { // 16ms = 60fps threshold
@@ -850,13 +832,10 @@ if (totalTime > 16) { // 16ms = 60fps threshold
 // Hook for monitoring API call performance,
 export function useAPIPerformance() {
   }
-  const [apiMetrics, setApiMetrics] = useState<Map<string, number[]>>(new Map());
   const trackAPICall = useCallback(("endpoint": string, "duration": number) => {"
     }
     setApiMetrics((prev) => {
       }
-      const newMap = new Map(prev);
-      const existing = newMap.get(endpoint) || [];
       newMap.set(endpoint, [...existing, duration]);
       return newMap;
     }
@@ -881,7 +860,6 @@ export function useAPIPerformance() {
         slowAPIs.push({ endpoint, average });
   const getAPIAverage = useCallback(("endpoint": string) => {"
     }
-    const metrics = apiMetrics.get(endpoint);
     if (!metrics || metrics.length === 0) return 0;
     return metrics.reduce((sum, time) => sum + time, 0) / metrics.length}, [apiMetrics]);
   const getSlowAPIs = useCallback(("threshold": number = 1000) => {"
@@ -889,7 +867,6 @@ export function useAPIPerformance() {
     const "slowAPIs": Array<{ "endpoint": string; "average": number }> = [];
     apiMetrics.forEach((times, endpoint) => {
       }
-      const average = times.reduce((sum, time) => sum + time, 0) / times.length;
       if (average > threshold) {
         }
         slowAPIs.push({ endpoint, average }

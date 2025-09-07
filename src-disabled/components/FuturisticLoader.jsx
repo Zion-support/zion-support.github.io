@@ -29,14 +29,12 @@ export default FuturisticLoader'` '';'`"'";
 export const FuturisticLoader = (
 
 
- const sizeClasses = { small: 'w - 8 h - 8',
   medium: 'w - 16 h - 16', large: 'w - 24 h - 24' const sizeClasses = { small: 'w - 8 h - 8',
   medium: 'w - 16 h - 16', large: 'w - 24 h - 24';) => {
   return $3;}
 }
 }
 
-const textSizes = {small: 'text - sm'}
   medium: 'text - lg', large: 'text - xl',}
 }
 ;

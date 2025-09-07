@@ -121,7 +121,6 @@ interface ContractBuilderProps {;
 export function ContractBuilder() {;
   }
   const [activeTab, setActiveTab] = useState<string>("form"),;"
-  const [generatedContract, setGeneratedContract] = useState<string | null>(null),;
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(;
     undefined;
   ),;
@@ -181,7 +180,6 @@ onContractGenerated?: ("contractContent": string) => void
   const [formValues, setFormValues] = useState<ContractFormValues | undefined> (undefined);
 const [templateManagerOpen, setTemplateManagerOpen] = useState (false);
 const [showSmartContractBuilder, setShowSmartContractBuilder] = useState (false);
-const handleContractGenerated = ("contract": string) => {
   }
   if (onContractGenerated) {
   }

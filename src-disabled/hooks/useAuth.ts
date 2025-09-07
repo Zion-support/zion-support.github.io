@@ -90,7 +90,6 @@ export function useAuth() {
 
   const register = async (email: string, password: string, name: string) => {
     // Implement actual registration logic here
-    const mockUser: User = {
       id: '1',
       email,
       name,

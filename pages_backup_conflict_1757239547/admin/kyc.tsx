@@ -19,7 +19,6 @@ export default function AdminKycPage() {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ userId, action, reason: reason |undefined })})
-    const data = await res.json()
 
     if (data.ok) load()
   }

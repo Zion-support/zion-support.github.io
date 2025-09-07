@@ -136,7 +136,6 @@ export default function SearchPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedFilter, setSelectedFilter] = useState('All');
-  const [showFilters, setShowFilters] = useState(false);
   const filteredResults = searchResults.filter(result => {
     const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) |
                         result.description.toLowerCase().includes(searchQuery.toLowerCase());

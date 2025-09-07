@@ -75,7 +75,6 @@ class ComprehensiveAppImprovementSuite {
       { command: 'npm run build:analyze', description: 'Analyze bundle size' },
     ];
 
-    const results = [];
     for (const optimization of optimizations) {
       const result = await this.runCommand(optimization.command, optimization.description);
       results.push({ ...optimization, result });
@@ -96,7 +95,6 @@ class ComprehensiveAppImprovementSuite {
       { command: 'npm audit fix', description: 'Fix security vulnerabilities' },
     ];
 
-    const results = [];
     for (const step of securitySteps) {
       const result = await this.runCommand(step.command, step.description);
       results.push({ ...step, result });
@@ -187,7 +185,6 @@ class ComprehensiveAppImprovementSuite {
   async runComprehensiveImprovements() {
     this.log('🚀 Starting comprehensive app improvements...');
 
-    const improvements = [
       await this.improveCodeQuality(),
       await this.optimizePerformance(),
       await this.enhanceSecurity(),

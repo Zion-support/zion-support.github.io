@@ -1,18 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-
-
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
 =======
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
@@ -30,6 +22,7 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 #!/usr/bin/env node;
+<<<<<<< HEAD
 <<<<<<< HEAD
 const fs = require('fs')
 const path = require('path')
@@ -59,17 +52,11 @@ const mergedBranches = execSync('git branch -r --merged main', { "encoding"});
         execSync('git push origin main', { "stdio"})
         console.error(' Failed to push "changes")
 <<<<<<< HEAD
-    console.error(' Comprehensive branch merger "failed")
-<<<<<<< HEAD
-///usr/bin/env node
-///usr/bin/env node
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-// console.log('� Comprehensive Branch Merger')
 =======
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+    console.error(' Comprehensive branch merger "failed")
+
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

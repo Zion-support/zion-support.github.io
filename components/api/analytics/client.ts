@@ -1,4 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from 'next';'
 
 
 import { createServerClient } from '../../../utils/supabase/server';'
@@ -223,16 +222,21 @@ const funnel = [;
 
         { label: 'Hire', value: 2 }]})
   }
+      timeToHireDays,
+      talentViewed,
+      shortlisted,
+
+
 origin/cursor/automate-test-improve-and-merge-code-2533
-        { label: 'Post',}
-  value: 3,}
+        { label: 'Post}
+  value: 3}
 }
 '
 
 
-        { label: 'Hire', value: 2 }]})
+
+        { label: Hire', value: 2 }]})
   }
-        { label: 'Hire',}
+        { label: 'Hire'}
   value: 2 }]})
-  },
-}
+  }}

@@ -49,7 +49,6 @@ export default function BlogPost() {
       const currentPost = BLOG_POSTS.find((p) => p.slug === slug);
       if (currentPost) {
         setPost(currentPost);
-        const related = BLOG_POSTS.filter(
           (p) =>
             p.id !== currentPost.id &&
             (p.category === currentPost.category ||

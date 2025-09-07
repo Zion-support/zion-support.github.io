@@ -9,27 +9,17 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
 }
 import React, { useState } from 'react';
 import { Milestone } from '../../utils/types/milestones';
+import React, { useState } from 'react;
+import { Milestone } from ../../utils/types/milestones';
 
 type Props = any;
 
 type Props = {
-  }
-  "milestone": Milestone;
 
-  "project_id": string;
-  "role": 'client' | 'talent' | 'admin';'
-  "onAction": ("action": 'in_progress' | 'submitted' | 'approved' | 'paid';'
-    "milestoneId": string;
   ) => Promise<void> | void;
 }
 
 const statusSteps = [;
-  'Pending';'
-  'In Progress';'
-  'Submitted';'
-  'Approved';'
-  'Paid';'
-] as const;
 
 export default function MilestoneCard() {"milestone": Milestone;
   }
@@ -64,56 +54,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     milestoneId: string;
   ) => Promise<void> | void;
 }
-const statusSteps = ['
-  'Pending''
-  'In Progress''
-  'Submitted''
-  'Approved''
-  'Paid'
-] as const;
-export default function MilestoneCard({};
-  milestone;
-  projectId;
-  role;
-  onAction;
-}: Props) {}
-  milestone: Milestone;
-  project_id: string;'
-  role: 'client' | 'talent' | 'admin';'
-    milestone.status === 'In Progress';
-  const canClientApprove =;'
-    role !== 'talent' && milestone.status === 'Submitted';
-  const canClientMarkPaid =;'
-    role !== 'talent' && milestone.status === 'Approved';
-  return ('
-    <div className='border rounded-lg p-4 bg-white shadow-sm'>;'
-      <div className='flex items-start justify-between'>;
-        <div>;'
-          <h3 className='text-lg font-semibold'>{milestone && milestone.title}</h3>;'
-          <p className='text-sm text-gray-600'>;
-            Due: {new Date(milestone && milestone.dueDate).toLocaleDateString()}
+
           </p>;
         </div>;
+        <button;
+          className='text-sm text-blue-600;
+          onClick={() => setExpanded(v => !v)}>          {expanded ? Hide' : 'Details}type Props = {return (<div className=border rounded - lg p - 4 bg - white shadow - sm'>;
+        >          {expanded ? 'Hide : Details'}
 
-        <button,
-className='text-sm text-blue-600''
-          onClick={() => setExpanded(v => !v)}
 
-type Props = {}
-;
-  return ('
-    <div className='border rounded - lg p - 4 bg - white shadow - sm'>;'
-      <div className='flex items - start justify - between'>;
-        <div>;'
-          <h3 className='text - lg font - semibold'>{milestone.title}</h3>;'
-          <p className='text - sm text - gray - 600'>;
-            Due: {new Date (milestone.due_date).toLocaleDateString ()}
-          </p>;
-        </div>;
-        <button;'
-          className='text - sm text - blue - 600';
-          on_click={() => set_expanded (v => !v)}'
-        >          {expanded ? 'Hide' : 'Details'}
+          {expanded ? 'Hide : Details'}
         </button>;
       </div>;'
       <div className='mt - 3'>;'
@@ -347,34 +297,19 @@ const canClientMarkPaid  = role !== 'talent' && milestone.status === 'Approved';
         <div className='flex items - center gap - 2'>;'
           {status_steps.map ((step, idx) => (<div key={step} className='flex items - center'>;'
               <div;
-                className={
-                  'h - 2 w - 2 rounded - full ' +;
-                className={'h - 2 w - 2 rounded - full ' +;
-                  (idx <= current_index ? 'bg - green - 600' : 'bg - gray - 300')                }
+
+                  (idx <= current_index ? bg - green - 600 : 'bg - gray - 300')                }
                 title={step}
             <div key={step} className="flex items-center">
-              <div
-              {idx < status_steps.length - 1 && (          {status_steps.map ((step, idx) => (
-            <div key={step} className="flex items - center">;
               <div;
-import { Milestone } from '../../utils/types/milestones';
-type Props = $2;
-  projectId: string,
-  role: 'client' | 'talent' | 'admin',
-  onAction: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestoneId: string) => Promise<void> | void
-},
+              {idx < status_steps.length - 1 && (          {status_steps.map ((step, idx) => (
+            <div key={step} className=flex items - center">;
+              <div;
 
-                  'h-2 w-2 rounded-full ' +'
-                  (idx <= currentIndex ? 'bg-green-600' : 'bg-gray-300')'
                 }
-                title={step} />
+                title={step}
+              />
               {idx < statusSteps.length - 1 && (
-<div
-}
-className={
-                    'h - 0.5 w - 8 ' +;'
-                    (idx < current_index ? 'bg - green - 600' : 'bg - gray - 300');'
-                  } />
 
               )}
             </div>;
@@ -395,25 +330,27 @@ className={
                 />              )}
             </div>
           ))}
-        </div>                <div className={'h-0.5 w-8 ' + (idx < currentIndex ? 'bg-green-600' : 'bg-gray-300')} />
-
-                  'h - 2 w - 2 rounded - full ' + (idx <= current_index ? 'bg - green - 600' : 'bg - gray - 300');
+        </div>                <div className={h-0.5 w-8 ' + (idx < currentIndex ? 'bg-green-600 : bg-gray-300')} />
+'
+                  h - 2 w - 2 rounded - full  + (idx <= current_index ? 'bg - green - 600' : bg - gray - 300);
                 }
                 title={step}
-      {expanded && (
-        <div className='mt - 4 space - y-2 text - sm text - gray - 800'>          {milestone.description && <p>{milestone.description}</p>}
+      {expanded && ('
+        <div className='mt - 4 space - y-2 text - sm text - gray - 800>          {milestone.description && <p>{milestone.description}</p>}
           <div > Amount: ${milestone.amount_usd.to_fixed (2)}</div>;
           {milestone.attachments && milestone.attachments.length > 0 && (
                 }
                 title={step}
               />
               {idx < statusSteps.length - 1 && (
+                />
+origin/cursor/automate-test-improve-and-merge-code-2533
               )}
             </div>
           ))}
         </div>
 
-<div className='mt-2 text-xs text-gray-700'>'
+                      className=text-blue-600 underline'
 
           "Status": {milestone.statu
 }
@@ -472,6 +409,12 @@ className={
                   </li>;
                       {a.label || a.url}
                       rel='noreferrer'
+        </div>
+        <div className=mt-2 text-xs text-gray-700>Status: {milestone.status}</div>
+      </div>
+
+
+                      rel=noreferrer'
                      />
                       {a.label || a.url}
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -508,15 +451,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           )}
 
-                      className='text-blue-600 underline'
+                      className='text-blue-600 underline
 
-<div className='mt-4 flex flex-wrap gap-2' />
+<div className=mt-4 flex flex-wrap gap-2' />
         {canClientMarkInProgress && (
           <button
             className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"
-            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}
+            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700            onClick={() => onAction(in_progress', milestone.id)}
 
-            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone && milestone.id)}      <div className="mt-4 flex flex-wrap gap-2">;
+            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700            onClick={() => onAction(in_progress', milestone && milestone.id)}      <div className=mt-4 flex flex-wrap gap-2>;
         {canClientMarkInProgress && (;
           <button
             className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700">;
@@ -527,31 +470,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}      <div className="mt-4 flex flex-wrap gap-2">
         {canClientMarkInProgress && (
           <button"
-            className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"'
-            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}
-'"
-            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone && milestone.id)}      <div className="mt-4 flex flex-wrap gap-2">;
+            className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'
+            className=px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700            onClick={() => onAction('in_progress', milestone.id)}
+
+            className=px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress, milestone && milestone.id)}      <div className="mt-4 flex flex-wrap gap-2">;
         {canClientMarkInProgress && (;
-          <button"
-            className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700">;
+          <button
+            className=px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700">;
             Mark In Progress;
           </button>;
 "
-      <div className="mt-4 flex flex-wrap gap-2">
+      <div className=mt-4 flex flex-wrap gap-2>
         {canClientMarkInProgress && (
           <button"
-            className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"'
+            className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700
             onClick={() => onAction('in_progress', milestone.id)}
 
 
 
 
-<div className='mt-4 flex flex-wrap gap-2'>'
-        {canClientMarkInProgress && (
-          <button
-}
-className='px-3 py-1 text-sm rounded bg-indigo-600 text-white "hover":bg-indigo-700''
-            onClick={() => onAction('in_progress', milestone.id)}'
+
           >
             Mark In Progress
           </button>

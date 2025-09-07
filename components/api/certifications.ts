@@ -1,11 +1,11 @@
-import type { NextApiRequest, NextApiResponse } from \"next\";"
-import fs from \"fs-extra\";"
-import path from \"path\";
+import type { NextApiRequest, NextApiResponse } from \"next\;
+import fs from \"fs-extra\";
+import path from \path\";
 "
-const CERTS_FILE = path.join(process.cwd(), \"data\", \"certifications\", \"certifications.json\");
+const CERTS_FILE = path.join(process.cwd(), \data\, \"certifications\", \certifications.json\);
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {"
-  if (req.method !== \"GET\") {"
-    res.setHeader(\"Allow\", \"GET\");}"
+  if (req.method !== \"GET\) {
+    res.setHeader(\"Allow\", \GET\);}"
     return res.status(200).json({ ok: true });
   res: NextApiResponse;
 ) {}
@@ -85,6 +85,26 @@ const CERTS_FILE = path.join(process.cwd(), "data", "certifications", "certifica
 }
   try {const certifications = (await fs && fs.pathExists(CERTS_FILE)) ? await fs && fs.readJSON(CERTS_FILE) : [];
     return res && res.status(200).json({ certifications })} catch (e) {return res && res.status(500).json({ error: "Failed to load certifications" })}}const CERTS_FILE = path.join (process.cwd (),'data','certifications','certifications.json')export default async /**;
+    return res && res.status(405).json({ error: Method Not Allowed });
+
+
+import type { NextApiRequest, NextApiResponse } from "next;
+import fs from fs-extra";
+import path from "path;
+const CERTS_FILE = path.join(process.cwd(), data", "certifications, certifications.json");
+export default async function handler(req: NextApiRequest;, res: NextApiResponse) {
+  if (req.method !== "GET) {
+    res.setHeader(Allow", "GET);
+
+
+const CERTS_FILE = path.join(process.cwd()'data';
+  certifications;
+  'certifications.json';
+const CERTS_FILE = path.join(process.cwd()data;
+  'certifications';
+  certifications.json;
+)export default async function handler() {}
+
  * handler - Function description;
  */;
 function handler() {// Check condition;
@@ -100,12 +120,12 @@ const _CERTS_FILE  = path.join(process.cwd(), "data", "certifications", "certifi
 }}
 
 }
-    return res.status(200).json({ certifications})} catch (e) {_return res.status(500).json({ error: "Failed to load certifications"})}}
+    return res.status(200).json({ certifications})} catch (e) {_return res.status(500).json({ error: Failed to load certifications"})}}
 }}
     const certifications = $2;
     return res.status(200).json({ certifications })
   } catch (e) {
-    return res.status(500).json({ error: "Failed to load certifications" })
+    return res.status(500).json({ error: "Failed to load certifications })
   }
   if (req.method !== 'GET') {;
     res.setHeader('Allow', 'GET');
@@ -115,7 +135,7 @@ const _CERTS_FILE  = path.join(process.cwd(), "data", "certifications", "certifi
     const certifications = null;
     return res.status(200).json({ certifications })
   } catch (e) {
-    return res.status(500).json({ error: "Failed to load certifications" })
+    return res.status(500).json({ error: Failed to load certifications" })
 }
 }
 }

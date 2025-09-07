@@ -77,7 +77,6 @@ export function DisputeDetail() {const router = useRouter()const { disputeId } =
         (resolution && resolution.resolution_type as ResolutionType) || 'compromise'})if (success && dispute) {setDispute({...dispute,"resolution_summary": resolution && resolution.summary,"resolution_type": resolution && resolution.resolution_type,"resolved_at": new Date().toISOString()})} else {toast && toast.error('Failed to resolve dispute')}'
   }const handleSendMessage = async () => {if (!disputeId || !message && message.trim()) return;setIsSending(true)try {const success = await addDisputeMessage(disputeId, message, isAdmin)if (success) {// Refresh messages;
         }
-        const updatedMessages = await getDisputeMessages(disputeId)setMessages(updatedMessages)setMessage('')}'
     } catch (error) {logErrorToProduction('Error sending "message":', { "data": error })} finally {setIsSending(false)}},if (isLoading) {return (<div className="p-8 text-center">;"
         <div className="w-8 h-8 mx-auto mb-4 animate-spin border-4 border-primary border-t-transparent rounded-full"></div>;"
         <p>Loading dispute details...</p>;

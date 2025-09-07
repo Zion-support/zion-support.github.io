@@ -22,22 +22,21 @@ interface GeneratedContent {
     max: number
   },
   keyPoints: string[]
-import React from "react",;
-import { Button } from "@/components/ui/button",;
-import { Badge } from "@/components/ui/badge",;
-import { ArrowRight } from 'lucide-react';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-interface GeneratedContent {;
-  description: string,;
-  tags: string[],;
-  suggestedPrice: {;
-    min: number,;
+import React from react",
+import { Button } from "@/components/ui/button,
+import { Badge } from @/components/ui/badge",
+import { ArrowRight } from lucide-react';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card,
+interface GeneratedContent {
+  description: string,
+  tags: string[],
+  suggestedPrice: {
+    min: number,
     max: number;
-  },;
+  },
   keyPoints: string[];
 }
-;
-interface GeneratedContentDisplayProps {;
+interface GeneratedContentDisplayProps {
   content: GeneratedContent;
   onApply: () => void;
 }
@@ -48,14 +47,14 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 
 
   return (
-    <Card className="border border-zion-blue-light bg-zion-blue-dark">
+    <Card className=border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
-        <CardTitle className="text-white">Generated Content</CardTitle>
+        <CardTitle className="text-white>Generated Content</CardTitle>
       </CardHeader>
-      <CardContent className="space-y-4">
+      <CardContent className=space-y-4">
         <div>
-          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Description</h3>
-          <p className="text-white">{content.description}</p>
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2>Description</h3>
+          <p className=text-white">{content.description}</p>
         </div>
 
 
@@ -77,14 +76,11 @@ import {
   CardContent,
   CardFooter,
   CardHeader,
-  CardTitle,;
-} from '@/components/ui/card';
+  CardTitle} from '@/components/ui/card;
 
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge";
-import { ArrowRight } from 'lucide-react'
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from @/components/ui/badge";
+import { ArrowRight } from lucide-react'
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card;
 interface GeneratedContent {
   description: string;
   tags: string[];
@@ -103,26 +99,26 @@ export function GeneratedContentDisplay({
   onApply
 }: GeneratedContentDisplayProps) {
   return (
-    <Card className='border border-zion-blue-light bg-zion-blue-dark'>
+    <Card className='border border-zion-blue-light bg-zion-blue-dark>
       <CardHeader>
-        <CardTitle className='text-white'>Generated Content</CardTitle>
+        <CardTitle className=text-white'>Generated Content</CardTitle>
       </CardHeader>
-      <CardContent className='space-y-4'>
+      <CardContent className='space-y-4>
         <div>
-          <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
+          <h3 className=text-sm font-medium text-zion-slate-light mb-2'>
             Description
           </h3>
-          <p className='text-white'>{content.description}</p>
+          <p className='text-white>{content.description}</p>
         </div>
         <div>
-          <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
+          <h3 className=text-sm font-medium text-zion-slate-light mb-2'>
             Tags
           </h3>
-          <div className='flex flex-wrap gap-2'>
+          <div className='flex flex-wrap gap-2>
             {content.tags.map((tag, index) => (
               <Badge
                 key={index}
-                className='bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30'
+                className=bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30'
               >
 origin/cursor/automate-test-improve-and-merge-code-2533
                 {tag}
@@ -138,7 +134,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
             Suggested Price Range
           </h3>
-          <p className='text-white'>
+          <p className=text-white'>
             ${content.suggestedPrice.min.toFixed(2)} - $
             {content.suggestedPrice.max.toFixed(2)}
           </p>
@@ -161,14 +157,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
 
         <div>;
-          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Description</h3>;
-          <p className="text-white">{content.description}</p>;
+          <h3 className=text-sm font-medium text-zion-slate-light mb-2">Description</h3>;
+          <p className="text-white>{content.description}</p>;
         </div>;
         <div>;
-          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>;
-          <div className="flex flex-wrap gap-2">;
-            {content.tags.map((tag, index) => (<Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;
-import { Card,CardContent,CardFooter,CardHeader,CardTitle} from '@/components/ui/card';
+          <h3 className=text-sm font-medium text-zion-slate-light mb-2">Tags</h3>;
+          <div className="flex flex-wrap gap-2>;
+            {content.tags.map((tag, index) => (<Badge key={index} className=bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;
+import { Card,CardContent,CardFooter,CardHeader,CardTitle} from '@/components/ui/card;
 interface GeneratedContent  {description: string;
   tags: string[];
   suggestedPrice: {min: number;
@@ -176,37 +172,37 @@ interface GeneratedContent  {description: string;
   },keyPoints: string[];
 }interface GeneratedContentDisplayProps  {content: GeneratedContent;
   onApply: () => void;
-export function GeneratedContentDisplay() {return (<Card className='border border-zion-blue-light bg-zion-blue-dark'>;
+export function GeneratedContentDisplay() {return (<Card className=border border-zion-blue-light bg-zion-blue-dark'>;
       <CardHeader>;
-        <CardTitle className='text-white'>Generated Content</CardTitle>;
+        <CardTitle className='text-white>Generated Content</CardTitle>;
       </CardHeader>;
-      <CardContent className='space-y-4'>;
+      <CardContent className=space-y-4'>;
         <div>;
-          <h3 className='text-sm font-medium text-zion-slate-light mb-2'>;
+          <h3 className='text-sm font-medium text-zion-slate-light mb-2>;
             Description;
           </h3>;
-          <p className='text-white'>{content.description}</p>;
+          <p className=text-white'>{content.description}</p>;
         </div>;
         <div>;
-          <h3 className='text-sm font-medium text-zion-slate-light mb-2'>;
+          <h3 className='text-sm font-medium text-zion-slate-light mb-2>;
             Tags;
           </h3>;
-          <div className='flex flex-wrap gap-2'>;
+          <div className=flex flex-wrap gap-2'>;
             {content.tags.map((tag, index) => (<Badge;
                 key={index}
-                className='bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30';
+                className='bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30;
               >;
                 {tag}</Badge>;
             ))}<div>;
-          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>;
-          <p className="text-white">;
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2>Suggested Price Range</h3>;
+          <p className=text-white">;
             ${content.suggestedPrice.min.toFixed(2)} - ${content.suggestedPrice.max.toFixed(2)}<div></div>;
         </div>;
 <div>;
-          <h3 className='text-sm font-medium text-zion-slate-light mb-2'>;
+          <h3 className=text-sm font-medium text-zion-slate-light mb-2'>;
             Suggested Price Range;
           </h3>;
-          <p className='text-white'>;
+          <p className='text-white>;
             ${content.suggestedPrice.min.toFixed(2)} - $;
             {content.suggestedPrice.max.toFixed(2)}
           </p>;
@@ -214,36 +210,36 @@ export function GeneratedContentDisplay() {return (<Card className='border borde
           </p>;
         </div>;
         <div>;
-          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>;
-          <p className="text-white">;
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2>Suggested Price Range</h3>;
+          <p className=text-white">;
             ${content.suggestedPrice.min.toFixed(2)} - ${content.suggestedPrice.max.toFixed(2)}
           </p>;
         </div>;
         <div>;
-          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>;
-          <ul className="list-disc pl-5 text-white space-y-1">;
-          <h3 className='text-sm font-medium text-zion-slate-light mb-2'>;
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2>Key Selling Points</h3>;
+          <ul className=list-disc pl-5 text-white space-y-1">;
+          <h3 className=text-sm font-medium text-zion-slate-light mb-2'>;
             Key Selling Points;
           </h3>;
-          <ul className='list-disc pl-5 text-white space-y-1'>;
+          <ul className='list-disc pl-5 text-white space-y-1>;
             {content.keyPoints.map((point, index) => (<li key={index}>{point}</li>;
             {content.keyPoints.map((point, index,) => (<li key={index}>{point}</li>;
           </div>;
         </div>;<div>;
-          <h3 className='text-sm font-medium text-zion-slate-light mb-2'>;
+          <h3 className=text-sm font-medium text-zion-slate-light mb-2'>;
             Suggested Price Range;
           </h3>;
-          <p className='text-white'>;
+          <p className='text-white>;
             ${content && content.suggestedPrice.min && min.toFixed(2)} - $;
             {content && content.suggestedPrice.max && max.toFixed(2)}
           </p>;
         </div>;<div>;
-          <h3 className='text-sm font-medium text-zion-slate-light mb-2'>;
+          <h3 className=text-sm font-medium text-zion-slate-light mb-2'>;
             Key Selling Points;
           </h3>;
-          <ul className='list-disc pl-5 text-white space-y-1'>            {content && content.keyPoints.map((point, index) => (        <div>;
-          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>;
-          <p className="text-white">;
+          <ul className='list-disc pl-5 text-white space-y-1>            {content && content.keyPoints.map((point, index) => (        <div>;
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2>Suggested Price Range</h3>;
+          <p className=text-white">;
             ${content && content.suggestedPrice.min && min.toFixed(2)} - ${content && content.suggestedPrice.max && max.toFixed(2)}
           </p>;
         </div>;<div>;
@@ -278,65 +274,65 @@ key_points: string[];
 export /**;
  * GeneratedContentDisplay - Function description;
  */;
-function GeneratedContentDisplay() {return (<Card className='border border - zion - blue - light bg - zion - blue - dark'>;
+function GeneratedContentDisplay() {return (<Card className=border border - zion - blue - light bg - zion - blue - dark'>;
       <CardHeader>;
-        <CardTitle className='text - white'>Generated Content</CardTitle>;
+        <CardTitle className='text - white>Generated Content</CardTitle>;
       </CardHeader>;
-      <CardContent className='space - y-4'>;
+      <CardContent className=space - y-4'>;
         <div>;
-          <h3 className='text - sm font - medium text - zion - slate - light mb - 2'>;
+          <h3 className='text - sm font - medium text - zion - slate - light mb - 2>;
             Description;
           </h3>;
-          <p className='text - white'>{content.description}</p>;
+          <p className=text - white'>{content.description}</p>;
         </div>;
         <div>;
-          <h3 className='text - sm font - medium text - zion - slate - light mb - 2'>;
+          <h3 className='text - sm font - medium text - zion - slate - light mb - 2>;
             Tags;
           </h3>;
-          <div className='flex flex - wrap gap - 2'>;
+          <div className=flex flex - wrap gap - 2'>;
             {content.tags.map ((tag, index) => (<Badge;
                 key={index}
-                className='bg - zion - purple / 20 text - zion - purple hover:bg - zion - purple / 30';
-              >                {tag}              <Badge key={index} className="bg - zion - purple / 20 text - zion - purple hover:bg - zion - purple / 30">;
-          <h3 className="text - sm font - medium text - zion - slate - light mb - 2">Tags</h3>;
-          <div className="flex flex - wrap gap - 2">;
-            {content.tags.map ((tag, index) => (<Badge key={index} className="bg - zion - purple / 20 text - zion - purple hover:bg - zion - purple / 30">;
+                className='bg - zion - purple / 20 text - zion - purple hover:bg - zion - purple / 30;
+              >                {tag}              <Badge key={index} className="bg - zion - purple / 20 text - zion - purple hover:bg - zion - purple / 30>;
+          <h3 className=text - sm font - medium text - zion - slate - light mb - 2">Tags</h3>;
+          <div className="flex flex - wrap gap - 2>;
+            {content.tags.map ((tag, index) => (<Badge key={index} className=bg - zion - purple / 20 text - zion - purple hover:bg - zion - purple / 30">;
                 {tag}
               </Badge>))}
           </div>;
         </div>;
         <div>;
-          <h3 className='text - sm font - medium text - zion - slate - light mb - 2'>;
+          <h3 className=text - sm font - medium text - zion - slate - light mb - 2'>;
             Suggested Price Range;
           </h3>;
-          <p className='text - white'>;
+          <p className='text - white>;
             ${content.suggested_price.min.to_fixed (2)} - $;
             {content.suggested_price.max.to_fixed (2)}
           </p>;
         </div>;
         <div>;
-          <h3 className='text - sm font - medium text - zion - slate - light mb - 2'>;
+          <h3 className=text - sm font - medium text - zion - slate - light mb - 2'>;
             Key Selling Points;
           </h3>;
-          <ul className='list - disc pl - 5 text - white space - y-1'>            {content.key_points.map ((point, index) => (        <div>;
-          <h3 className="text - sm font - medium text - zion - slate - light mb - 2">Suggested Price Range</h3>;
-          <p className="text - white">;
+          <ul className='list - disc pl - 5 text - white space - y-1>            {content.key_points.map ((point, index) => (        <div>;
+          <h3 className="text - sm font - medium text - zion - slate - light mb - 2>Suggested Price Range</h3>;
+          <p className=text - white">;
             ${content.suggested_price.min.to_fixed (2)} - ${content.suggested_price.max.to_fixed (2)}
           </p>;
         </div>;
         <div>;
-          <h3 className="text - sm font - medium text - zion - slate - light mb - 2">Key Selling Points</h3>;
-          <ul className="list - disc pl - 5 text - white space - y-1">;
+          <h3 className="text - sm font - medium text - zion - slate - light mb - 2>Key Selling Points</h3>;
+          <ul className=list - disc pl - 5 text - white space - y-1">;
             {content.key_points.map ((point, index) => ({content.key_points.map ((point, index, ) => (<li key={index}>{point}</li>))}</ul>;
 
-          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
-          <p className="text-white">
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2>Suggested Price Range</h3>
+          <p className=text-white">
             ${content.suggestedPrice.min.toFixed(2)} - ${content.suggestedPrice.max.toFixed(2)}
           </p>
         </div>
         <div>
-          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>
-          <ul className="list-disc pl-5 text-white space-y-1">
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2>Key Selling Points</h3>
+          <ul className=list-disc pl-5 text-white space-y-1">
             {content.keyPoints.map((point, index) => (
               <li key={index}>{point}</li>
           </ul>;
@@ -351,9 +347,10 @@ function GeneratedContentDisplay() {return (<Card className='border border - zio
 
 
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white"
+          className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white
         >
           Apply to My Listing
-          <ArrowRight className="ml-2 h-4 w-4" />
+          <ArrowRight className=ml-2 h-4 w-4" />
         </Button>
       </CardFooter>
     </Card>
@@ -361,25 +358,25 @@ function GeneratedContentDisplay() {return (<Card className='border border - zio
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white";
         >;
           Apply to My Listing;
-          <ArrowRight className="ml-2 h-4 w-4" />;
+          <ArrowRight className="ml-2 h-4 w-4 />;
         </Button>;
       </CardFooter>;
     </Card>;
-  )className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white";
+  )className=w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white";
         >;
           Apply to My Listing;
-          <ArrowRight className="ml-2 h-4 w-4" />;
+          <ArrowRight className="ml-2 h-4 w-4 />;
         </Button>;
       </CardFooter>;
     </Card>;
   )}<Button;
           on_click={on_apply}
-          className='w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan text - white';
+          className=w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan text - white';
         >;
           Apply to My Listing;
-          <ArrowRight className='ml - 2 h - 4 w - 4' />        </Button>;
+          <ArrowRight className='ml - 2 h - 4 w - 4 />        </Button>;
       </CardFooter>;
-    </Card>)}          className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover: from - zion - cyan - light hover:to - zion - cyan text - white";
+    </Card>)}          className=w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover: from - zion - cyan - light hover:to - zion - cyan text - white";
         >;
           Apply to My Listing;
           <ArrowRight className="ml - 2 h - 4 w - 4" />;
@@ -395,7 +392,7 @@ function GeneratedContentDisplay() {return (<Card className='border border - zio
       <CardFooter>
         <Button
           onClick={onApply}
-className='w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white'
+className=w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white'
         >
           Apply to My Listing
           <ArrowRight className='ml-2 h-4 w-4' />

@@ -30,12 +30,6 @@ export default function BlogPost() {;
 import { BLOG_POSTS } from "@/data/blog-posts","
 export default function BlogPost() {
   }
-  const { slug } = useParams() as { "slug": string },;
-  const navigate = useNavigate();
-  const [post, setPost] = useState<BlogPostType | null>(null);
-  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]);
-  const [showShareMenu, setShowShareMenu] = useState(false);
-const { slug } = useParams() as { "slug": string },;
 const navigate = useNavigate(),;
 const [post, setPost] = useState<BlogPostType | null>(null),;
 const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]),;
@@ -95,18 +89,12 @@ import { AppLayout } from "@/layout/AppLayout",;"
 import { BLOG_POSTS } from "@/data/blog-posts",;"
 export default function BlogPost() {;
   }
-  const { slug } = useParams() as { "slug": string },;
 ;
 // Importing the sample blog posts - in a real app, you would fetch this from an API;
-import { BLOG_POSTS } from "@/data/blog-posts",;"
 ;
 export default function BlogPost() {;
   }
   const { slug } = useParams() as { "slug":string },;
-  const navigate = useNavigate(),;
-  const [post, setPost] = useState<BlogPostType | null>(null),;
-  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]),;
-  const [showShareMenu, setShowShareMenu] = useState(false),;
   useEffect(() => {;
     // Find the current post by slug;
     }
@@ -248,7 +236,6 @@ href={getShareUrl('linkedin')}'
                 className="object-cover w-full h-full""
                 onError={(e) => {
                   }
-                  const target = e.target as HTMLImageElement;
                   target.src = ""https": //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3""
               <img,
 src={post.featuredImage}
@@ -256,7 +243,6 @@ src={post.featuredImage}
                 className="object-cover w-full h-full""
                 onError={(e) => {
 }
-const target = e.target as HTMLImageElement,;
                   target.src = ""https": //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3""
           <div className="mb-12 max-w-5xl mx-auto">;"
             <div className="aspect-[21/9] rounded-lg overflow-hidden">;"
@@ -266,7 +252,6 @@ const target = e.target as HTMLImageElement,;
                 className="object-cover w-full h-full";"
                 onError={(e) => {;
                   }
-                  const target = e.target as HTMLImageElement;
                   target.src = ""https": //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3";"
                   )}
                 className="object-cover w-full h-full""
@@ -296,7 +281,6 @@ src={relatedPost && relatedPost.featuredImage}
                           className="object-cover w-full h-full""
                           onError={(e) => {;
                             }
-                            const target = e && e.target as HTMLImageElement;
                             target && target.src = ""https": //images && images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4 && 4.0.3";"
                 </span>;
               ))}

@@ -87,7 +87,6 @@ if ( {) {$2;
 if ( {) {$2;
 }
           throw new Error (upload_error.message)}
-        const { "data": publicUrlData } = supabase.storage;
           .from ('products').getPublicUrl (video_path)const { "error": update_error } = await supabase;'
           .from ('product_listings').update ({ "video_url": publicUrlData.public_url }).eq ('id', product_record.id)// Check condition;'
 if ( {) {$2;
@@ -103,7 +102,6 @@ if ( {) {$2;
 if ( {) {$2;
 }
           throw new Error (upload_error.message)}
-        const { "data": publicUrlData } = supabase.storage;
           .from ('products').getPublicUrl (model_path)const { "error": update_error } = await supabase;'
           .from ('product_listings').update ({ "model_url": publicUrlData.public_url }).eq ('id', product_record.id)// Check condition;'
 if ( {) {$2;

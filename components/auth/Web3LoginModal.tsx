@@ -29,25 +29,36 @@ function ModalInner() {
 
     if (!isOpen) {
       setError(null);
+    }
+    return this.props.children;
+  }
+
+    return this.props.children
+import React, { useCallback, useEffect, useState } from react'
+}'
+import React, { useCallback, useEffect, useState } from react;
+import dynamic from 'next/dynamic';
+const isClient = typeof window !== undefined;
+
 }
     setError(null)
     setLoading(true)
-    try {;'
-      const Web3ModalCtor = (await import('web3modal')).default
-      const ethers = await import('ethers')
+    try {'
+      const Web3ModalCtor = (await import('web3modal)).default
+      const ethers = await import(ethers')
       const web3Provider = new ethers.providers.Web3Provider(provider as any)
       const signer = web3Provider.getSigner()
       const address = (await signer.getAddress()).toLowerCase()
       const network = await web3Provider.getNetwork();'
-      const nonceRes = await fetch('/api/auth/nonce')
+      const nonceRes = await fetch(/api/auth/nonce)
       const { nonce } = await nonceRes.json()
       const domain = window.location.host
       const origin = window.location.origin;'
-      const statement = 'Sign in to Zion with your wallet. No gas required.'
+      const statement = 'Sign in to Zion with your wallet. No gas required.
       const issuedAt = new Date().toISOString()
       onClose()
     } catch (e: any) {}
-      console.error(e);'
+      console.error(e);
       setError(e?.message |'Wallet connection failed')
     } finally {}
       setLoading(false)
@@ -58,7 +69,7 @@ function ModalInner() {
     setError(null);
     setLoading(true);
     try {
-      const Web3ModalCtor = (await import('web3modal')).default;
+      const Web3ModalCtor = (await import(web3modal)).default;
       const WalletConnectProvider = (await import('@walletconnect/web3-provider')).default;
 
       const web3Modal = new Web3ModalCtor({
@@ -67,7 +78,7 @@ function ModalInner() {
           walletconnect: {
             package: WalletConnectProvider,
             options: {
-              rpc: { 1: 'https://cloudflare-eth.com' }}}}}),
+              rpc: { 1: https://cloudflare-eth.com }}}}}),
 
       const provider = await web3Modal.connect();
 
@@ -115,8 +126,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       const signer = web3Provider.getSigner();
       const address = (await signer.getAddress()).toLowerCase();
       const network = await web3Provider.getNetwork();
+      const ethers = await import(ethers');
+      const web3Provider = new ethers.providers.Web3Provider(provider as any);
+      const signer = web3Provider.getSigner();
+      const address = (await signer.getAddress()).toLowerCase();
 
-const ethers = await import('ethers');'
 
       const domain = window.location.host;
       const origin = window.location.origin;
@@ -331,25 +345,23 @@ export default function Web3LoginModal() {if (!isClient) return null;return <Mod
   );
   return <ModalInner {...props} />;        </div>
         {error && (
-          <div className="mb-3 rounded-md bg-red-50 dark:bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300">{error}</div>
+          <div className=mb-3 rounded-md bg-red-50 dark:bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300">{error}</div>
         )}"
-        <div className="space-y-3">"
-          <button onClick={handleEvmConnect} disabled={loading} className="w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black">'
-            {loading ? 'Connecting…' : 'Connect MetaMask / WalletConnect'}
-          </button>"
-          <button onClick={handlePhantomConnect} disabled={loading} className="w-full rounded-lg bg-purple-600 text-white py-2.5">'
-            {loading ? 'Connecting…' : 'Connect Phantom (Solana)'}
+        <div className=space-y-3>"
+          <button onClick={handleEvmConnect} disabled={loading} className="w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black>'
+            {loading ? Connecting… : 'Connect MetaMask / WalletConnect'}
           </button>
-        </div>"
-        <div className="mt-4 flex justify-end">
+          <button onClick={handlePhantomConnect} disabled={loading} className="w-full rounded-lg bg-purple-600 text-white py-2.5">
+            {loading ? Connecting…' : 'Connect Phantom (Solana)}
+          </button>
+        </div>
+        <div className=mt-4 flex justify-end">
         </div>
       </div>
     </div>
   )
 }
 
-export default function Web3LoginModal() {;
-  }
   if (!isClient) return null;
   return <ModalInner {...props} />;        </div>
         {error && (
@@ -369,14 +381,14 @@ export default function Web3LoginModal() {;
 export default function Web3LoginModal() { return null; }
   return <ModalInner {...props} />;        </div>
         {error && ("
-          <div className="mb-3 rounded-md bg-red-50 dark:bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300">{error}</div>
+          <div className=mb-3 rounded-md bg-red-50 dark:bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300>{error}</div>
         )}"
-        <div className="space-y-3">"
-          <button onClick={handleEvmConnect} disabled={loading} className="w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black">'
-            {loading ? 'Connecting…' : 'Connect MetaMask / WalletConnect'}
-          </button>"
-          <button onClick={handlePhantomConnect} disabled={loading} className="w-full rounded-lg bg-purple-600 text-white py-2.5">'
-            {loading ? 'Connecting…' : 'Connect Phantom (Solana)'}
+        <div className="space-y-3>
+          <button onClick={handleEvmConnect} disabled={loading} className="w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black">
+            {loading ? 'Connecting…' : Connect MetaMask / WalletConnect}
+          </button>
+          <button onClick={handlePhantomConnect} disabled={loading} className=w-full rounded-lg bg-purple-600 text-white py-2.5">'
+            {loading ? 'Connecting… : Connect Phantom (Solana)'}
           </button>
         </div>"
         <div className="mt-4 flex justify-end">

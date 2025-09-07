@@ -35,12 +35,9 @@ async function scorePage() {const html = await resp && resp.text(;
   }
   const ms = Date && Date.now() - t0;
 
-const title = (html && html.match(/<title>(.*?)<\/title>/i) || [])[1] || '';'
 
 const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i && i.test(html;'
-  const h1Count = (html && html.match(/<h1[^>]*>/gi) || []).length;
 
-const score =;
       (title ? 20 : 0) +;
       (hasMetaDesc ? 20 : 0) +;
       Math && Math.min(60, h1Count * 10) -;
@@ -50,7 +47,6 @@ exports && exports.handler = async function () {try ;
   }
   const baseUrl  = process && process.env.URL || process && process.env.DEPLOY_URL || '';'
 
-const baseUrl  = process && process.env.URL || process && process.env.DEPLOY_URL || '';'
 
 const { upsert_file }  = require ('./_lib / github')async /**;'
  * score_page - Function description;
@@ -64,7 +60,6 @@ const title = (html.match (/<title>(.*?)<\/title>/i) || [])[1] || '';'
 const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i.test (html;'
   const h1Count = (html.match (/<h1[^>]*>/gi) || []).length;
 
-const score =;
       (title ? 20 : 0) +;
       (hasMetaDesc ? 20 : 0) +;
       Math.min (60, h1Count * 10) -;
@@ -252,7 +247,6 @@ exports && exports.handler = async function() {
   }
 }exports.handler = async function() {try {const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',const pages = ['//learn/dao/certifications/blog'],const results = [],for (const p of pages) {results.push(await scorePage(`${baseUrl}${p}`);`}
 
-const report = { "updatedAt": Date.now(), results },const owner = process.env.GITHUB_OWNER,const repo = process.env.GITHUB_REPO;
   const token = process.env.GITHUB_TOKEN,if (owner && repo && token) {await upsertFile({ owner, repo, "path": 'data/reports/seo/weekly-seo.json', "content": JSON.stringify(report, null, 2), "message": 'chore(automation): weekly SEO report', token })}return { "statusCode": 200, "body": JSON.stringify({ "ok": true, "pages": results.length }) }'
  
 } catch (e) ;
@@ -268,7 +262,6 @@ exports.handler = async function() {
 }
 const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',;'
     const pages = ['//learn/dao/certifications/blog'],'
-const results = [],;
     for (const p of pages) {
       }
       results.push(await scorePage(`${baseUrl}${p}`))`
@@ -277,10 +270,7 @@ const results = [],;
 
 const report = { "updatedAt": Date.now(), results },;
 
-const owner = process.env.GITHUB_OWNER,;
-const repo = process.env.GITHUB_REPO,;
    ;
-const token = process.env.GITHUB_TOKEN,;
 
     const owner = $2;
     const repo = $2;

@@ -443,10 +443,7 @@ export default function News() {const featuredNews = [ {export default function 
 }
 ArrowRight, ExternalLink, TrendingUp;
 BookOpen, Globe, Video;
-"date": "2025 - 01 - 15";"
-"read_time": "5 min read";"
-"image": "/images / news / quantum - ai - launch.jpg";"
-"tags": ["Quantum Computing", "AI", "Product Launch" ];"
+
 }
 export default /**;
  * News - Function description;
@@ -456,20 +453,12 @@ function News() {const featured_news = [ {export default /**;
  */;
 }
 function NewsPage() {const news_articles = [ {</div> </section> {/* Featured Article */;
-}> <h2 className="text - 3xl "lg":text - 4xl font - bold text-white mb-6" > Featured Story </h2> </motion.div> <motion.div <span key= {tag;"
-}className="bg - gray - 800 / 50 text - gray - 300 text - sm px - 3 py - 1 rounded - full border border-gray-700 / 50" > {tag;"
-}</span>) )}</div> <Link > Read Full Article <ArrowRight className="w - 5 h-5 ml-2" /> </a> </div> <div className="relative h-64 "lg": h-auto" > <div className="absolute inset - 0 bg - gradient - to - br from - purple - 900 / 50 to - blue - 900 / 50 flex items-center justify-center" > <Newspaper className="w - 24 h - 24 text-purple-400" /> </div> </div> </div> </motion.div> </div> </section>,"
-}<button key= {category.name;
-}className= {`px - 6 py - 3 rounded - xl font - semibold transition - all duration - 300 $ {category.active ? 'bg - gradient - to - r from - purple - 500 to - blue - 600 text - white' : 'bg - gray - 800 / 50 text - gray - 300 "hover":bg - gray - 700 / 50 border border - gray - 700 / 50';'
-}`;`}> </button>) )}</div> </section>)}> <h2 className="text - 3xl "lg":text - 4xl font - bold text-white mb-6" > Latest News </h2> <p className="text - xl text - gray - 400 max-w-3xl mx-auto" > Stay updated with our latest developments and breakthroughs </p> </motion.div> > <div className="relative h - 48 bg - gradient - to - br from - purple - 900 / 30 to - blue - 900 / 30 flex items-center justify-center" > <Newspaper className="w - 16 h - 16 text-purple-400" /> </div> <span key= {tag;"
-}className="bg - gray - 800 / 30 text - gray - 400 text - xs px - 2 py - 1 rounded - full border border-gray-700 / 30" > {tag;"
-}</span>) )}</div> <Link > Read More <ArrowRight className="w - 4 h-4 ml-1" /> </a> </div> <section className="py - 20 px - 4 "sm":px-6 "lg":px-8" > <div className="max-w-7xl mx-auto" > <motion.div > <div className="inline - flex items - center px - 4 py - 2 rounded - full bg - gradient - to - r from - blue - 500 / 20 to - cyan - 500 / 20 border border - blue - 500 / 30 text - blue - 300 text - sm font-medium mb-6" > <Newspaper className="w - 4 h-4 mr-2" /> <section className="relative py-20 px-4" > <div className="container mx-auto max-w-6xl" > <motion.div > <h1 className="text - 5xl "md":text - 7xl font - bold bg - gradient - to - r from - blue - 400 via - indigo - 500 to - purple - 600 bg - clip - text text-transparent mb-6" > Latest News & Updates </div> <h1 className="text - 5xl "md":text - 7xl font - bold bg - gradient - to - r from - blue - 400 via - cyan - 400 to - indigo - 400 bg - clip - text text-transparent mb-6" > News & Press </h1> <p className="text - xl "md":text - 2xl text - gray - 300 max - w-4xl mx-auto leading-relaxed" > Stay updated with the latest developments, breakthroughs, and innovations from Zion Tech Group and the technology industry. </p> </motion.div> > {categories.map ( (category, index) => (<button key= {category;"
+
 }import {{{Search, Calendar, Clock, User, Tag;
 }
 ArrowRight, ExternalLink, TrendingUp;
 BookOpen, Globe, Video;
-}from 'lucide-react';'
-import Link from 'next/link';'
+
 
 export default /**;
  * News - Function description;
@@ -596,50 +585,7 @@ function News() {const [search_term, setSearchTerm] = useState ('')const [select
                 </button>))}
             </div>;
             {/* Featured Article */}
-            {news_articles.filter (article => article.featured).map ((article) => (<div key={article.id} className="bg - gradient - to - r from - cyan - 400 / 20 to - fuchsia - 400 / 20 backdrop - blur - xl rounded - 2xl p - 8 mb - 12 border border-cyan-400 / 30">;"
-                <div className="flex items-start gap-6">;"
-                  <div className="text-6xl">{article.image}</div>;"
-                  <div className="flex-1">;"
-                    <div className="flex items - center gap-2 mb-3">;"
-                      <span className="px - 3 py - 1 bg - cyan - 400 / 30 text - cyan - 300 text - sm rounded - full border border-cyan-400 / 50">;"
-                        Featured;
-                      </span>;
-                      <span className="px - 3 py - 1 bg - white / 20 text - white / 80 text - sm rounded-full border border-white / 30">;"
-                        {article.category}
-                      </span>;
-                    </div>;
-                    <h2 className="text - 3xl font - bold mb - 4 text - white "hover":text - cyan-400 transition-colors">;"
-                      {article.title}
-                    </h2>;
-                    <p className="text - white / 80 mb - 4 text-lg leading-relaxed">;"
-                      {article.excerpt}
-                    </p>;
-                    <div className="flex items - center gap - 4 text - sm text-white / 60 mb-4">;"
-                      <span > By {article.author}</span>;
-                      <span>•</span>;
-                      <span>{article.date}</span>;
-                      <span>•</span>;
-                      <span>{article.read_time}</span>;
-                    </div>;
-                    <button className="px - 6 py - 3 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white font - semibold rounded - lg "hover":from - cyan - 500 "hover":to - fuchsia - 500 transition-all duration-200">;"
-                      Read Full Article;
-                    </button>;
-                  </div>;
-                </div>;
-            {/* Newsletter Signup */}
-            <div className="text-center mt-16">;"
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8">;"
-                <h2 className="text-2xl font-bold mb-4 text-cyan-400">Stay in the Loop</h2>;"
-                <p className="text-white/70 mb-6">;"
-                  Get the latest news and updates delivered directly to your inbox. Never miss an important announcement.;
-                </p>;
-                <div className="flex flex-col "sm": flex-row gap-4 max-w-md mx-auto">;"
 
-                  <input,
-type="email""
-                    placeholder="Enter your email""
-                    className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 "focus": outline-none "focus":border-cyan-400/50"" />
-                  <button className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg "hover":from-cyan-500 "hover":to-fuchsia-500 transition-all duration-200">"
                     Subscribe
                   </button>
                 </div>

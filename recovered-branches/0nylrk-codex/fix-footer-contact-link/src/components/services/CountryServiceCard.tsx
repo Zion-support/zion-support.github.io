@@ -9,7 +9,6 @@ import { CountryPricing } from "@/data/onsiteServicePricing","
     }
     const "emojiMap": Record<string, string> = {
     }
-    const "emojiMap": Record<string, string> = {;
       "United Kingdom": "🇬🇧";"
       "Canada": "🇨🇦";"
       "Australia": "🇦🇺";"

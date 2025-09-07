@@ -2,15 +2,8 @@ import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationF
 import React from "react","
 import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm","
 import {TalentRegistrationForm} from "@/components/profile/TalentRegistrationForm";"
-import React from "react","
-import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm","
 
-import React from "react","
-import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm","
 
-import {TalentRegistrationForm} from "@/components/profile/TalentRegistrationForm";"
-import React from "react","
-import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm","
 export default function CreateTalentProfile() {
 }
 return (;
@@ -32,7 +25,6 @@ the Zion Marketplace.
     </div>
   )
 import React from "react";"
-import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm";"
 
 export default function CreateTalentProfile() {;
 }

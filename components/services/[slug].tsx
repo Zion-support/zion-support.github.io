@@ -16,8 +16,6 @@ import { newVerifiedServicesQ22025  } from '../../data/real-verified-services-q2
 
 
 
- 
- 
 
 
 ;
@@ -110,6 +108,28 @@ null
 2) 
 }
 null;
+import { Check, Mail, MapPin, Phone, ExternalLink  } from lucide-react';
+import { enhancedRealMicroSaasServices  } from '../../data/enhanced-real-micro-saas-services;
+import { extraServices  } from ../../data/extra-services';
+import { additionalEnhancedServices  } from '../../data/additional-real-services;
+import { newlyAddedServices  } from ../../data/newly-added-services';
+import { curatedMarketServices  } from '../../data/curated-market-services;
+import { new2025Services  } from ../../data/new-2025-services';
+import { marketValidatedServices  } from '../../data/market-validated-services;
+import { moreRealServices2025  } from ../../data/more-real-services-2025';
+import { verified2025Additions  } from '../../data/verified-2025-additions;
+import { realServicesQ12025  } from ../../data/real-services-q1-2025';
+
+}
+null;
+
+  service.name
+}| Zion Tech Group</title>
+}
+null
+2) 
+}
+null;
 }) )
   service.name
 }| Zion Tech Group</title>
@@ -154,14 +174,14 @@ pr-12243
 2) 
   service.name 
 }| Zion Tech Group</title> 
-};
+}
 
 null;
 2)
 2) 
   service.name 
 }| Zion Tech Group</title> ;
-};
+}
 null;
 
 
@@ -247,18 +267,26 @@ null
   contactInfo.mobile.replace (/[^+\\d]/g, '')
 }`
 }className="hover:underline" > {
+
+}</ul> </div> <div>) ) 
+
+}</div> </div> </div> </div> </div> </div> </div> <div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg > <h3 className=text-white font-semibold mb-3" >Contact</h3> <div className="space-y-3 text-sm > <div className=flex items-center gap-2 text-cyan-400" ><Phone className="w-4 h-4 /><a href= {
+  `tel:$ {
+  contactInfo.mobile.replace (/[^+\\d]/g, ')
+}`
+}className=hover:underline" > {
   contactInfo.mobile
-}</a></div> <div className="flex items-center gap-2 text-purple-400" ><Mail className="w-4 h-4" /><a href= {"
-  `"mailto":$ {`  }
+}</a></div> <div className="flex items-center gap-2 text-purple-400 ><Mail className=w-4 h-4" /><a href= {
+  `mailto:$ {
   contactInfo.email
-}``}className=""hover":underline" > {"
-  }
+}`
+}className="hover:underline > {
   contactInfo.email
-}</a></div> <div className="flex items-center gap-2 text-green-400" ><MapPin className="w-4 h-4" /><a href= {"
-  `"https"://maps.google.com/?q=$ {`  }
+}</a></div> <div className=flex items-center gap-2 text-green-400" ><MapPin className="w-4 h-4 /><a href= {
+  `https://maps.google.com/?q=$ {
   encodeURIComponent (contactInfo.address)
-}``}target="blank" rel="noopener noreferrer" className=""hover":underline" > {"
-  }
+}`
+}target=blank" rel="noopener noreferrer className=hover:underline" > {
   contactInfo.address
 }</a></div> </div> </div> {
   /* Market Position & ROI */
@@ -270,17 +298,16 @@ null
 }{
   service.roi && <p className="leading-relaxed" ><span className="text-gray-400" >ROI:</span> {
   service.roi 
+
   service.marketPosition
 }</p>
 }{
-  service.roi && <p className="leading-relaxed" ><span className="text-gray-400" >ROI:</span> {
+  service.roi && <p className=leading-relaxed" ><span className="text-gray-400 >ROI:</span> {
   service.roi
   service.marketPosition 
 }</p>
 }{
-  }
-  service.roi && <p className="leading-relaxed" ><span className="text-gray-400" >"ROI":</span> {"
-  }
+
   service.roi 
 
 
@@ -413,10 +440,7 @@ export default ServiceDetail,
 export default ServiceDetail
 }
   service.name 
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 "hover": underline">Back to Services</a></Link>,"
-};
 
-export default ServiceDetail,
 export default ServiceDetail
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
@@ -502,9 +526,9 @@ export default ServiceDetail
 export default ServiceDetail
 }
   service.name 
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
-  service.name;"
-}- Zion Tech Solutions</title> </Head> </Link> <Link href = \"/services\" /><a className=\"text-sm text-blue-600 hover:underline\" />Back to Services</a></Link>
+}- Zion Tech Solutions</title> </Head> </Link> <Link href=/services><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
+  service.name;
+}- Zion Tech Solutions</title> </Head> </Link> <Link href = \/services\" /><a className=\"text-sm text-blue-600 hover:underline\ />Back to Services</a></Link>
 ;
 }
 export default ServiceDetail;
@@ -513,18 +537,12 @@ export default ServiceDetail;
   service.name;"
 }- Zion Tech Solutions</title> </Head> </Link> <Link href=\"/services\" /><a className=\"text-sm text-blue-600 hover: underline\" />Back to Services</a></Link>;
 };
+}
 export default ServiceDetail;
 export default ServiceDetail;
 }
-export default function ServiceDetailPage(): any ({;}
+export default function ServiceDetailPage(): any ({}
   service ;}
-}: {;}
-  service: Service ;}
-}) {;
-  return (<Layout /> <Head> <title /> {;}
-  service && service.name ;}
-}| Zion Tech Group</title> 
-};
 
 export default ServiceDetail
 }
@@ -625,9 +643,63 @@ export default ServiceDetail
 export default function ServiceDetailPage(): any ({;}
   service ;}
 }: {;}
+}: {}
   service: Service ;}
 }) {
-  return (<Layout    /> <Head><title> {;}
+  return (<Layout /> <Head> <title /> {}
+  service && service.name ;}
+}| Zion Tech Group</title> 
+}
+
+export default ServiceDetail
+}
+
+}</p> ;
+}{
+  service && service.roi && <p className="leading-relaxed" ><span className=text-gray-400 >ROI:</span> {
+  service && service.roi ;
+}</p> ;
+
+}
+export default ServiceDetail ;
+export default ServiceDetail;
+
+  service.name
+}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className=text-sm text-blue-600 hover: underline>Back to Services</a></Link>;
+
+
+}
+
+export default ServiceDetail
+
+
+
+  service.name 
+}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className=text-sm text-blue-600 hover: underline>Back to Services</a></Link>;
+}
+export default ServiceDetail 
+export default ServiceDetail
+
+}
+}
+pr-12243
+
+;
+}
+export default ServiceDetail;
+export default ServiceDetail;
+}
+  service.name;"
+}- Zion Tech Solutions</title></Head> </Link> <Link href=\"/services\    /><a className=\text-sm text-blue-600 hover: underline\"    />Back to Services</a></Link>
+}
+export default ServiceDetail
+export default ServiceDetail
+export default function ServiceDetailPage(): any ({}
+  service ;}
+}: {}
+  service: Service ;}
+}) {
+  return (<Layout    /> <Head><title> {}
   service && service.name ;}
 }| Zion Tech Group</title>
 }
@@ -636,45 +708,45 @@ null
 }/> </Head> </li>) )
 }</ul> </div>) )
 }</ul> </div> <div    />) ) ;"
-}</div> </div> </div> </div> </div> </div> </div> <div className=\"p-6 bg-black/40 border border-gray-700/50 rounded-lg\"     /> <h3 className=\"text-white font-semibold mb-3\"     />Contact</h3> <div className=\"space-y-3 text-sm\"     /> <div className=\"flex items-center gap-2 text-cyan-400\"     /><Phone className=\"w-4 h-4\"    /><ahref= {
+}</div> </div> </div> </div> </div> </div> </div> <div className=\p-6 bg-black/40 border border-gray-700/50 rounded-lg\     /> <h3 className=\"text-white font-semibold mb-3\"     />Contact</h3> <div className=\space-y-3 text-sm\     /> <div className=\"flex items-center gap-2 text-cyan-400\"     /><Phone className=\w-4 h-4\    /><ahref= {
   `tel:$ {}
-  contactInfo && contactInfo.mobile.replace (/[^+\\d]/g, '') }
+  contactInfo && contactInfo.mobile.replace (/[^+\\d]/g, ') }
 }` "
-}className=\"hover:underline\"    /> {;}
-  contactInfo && contactInfo.mobile ;}"
-}</a></div> <div className=\"flex items-center gap-2 text-purple-400\"     /><Mail className=\"w-4 h-4\"    /><ahref= {
+}className=\"hover:underline\    /> {}
+  contactInfo && contactInfo.mobile ;}
+}</a></div> <div className=\"flex items-center gap-2 text-purple-400\"     /><Mail className=\w-4 h-4\    /><ahref= {
   `mailto: $ {}
   contactInfo && contactInfo.email }
 }` ,"
-}className=\"hover:underline\"    /> {;}
-  contactInfo && contactInfo.email ;}"
-}</a></div> <div className=\"flex items-center gap-2 text-green-400\"     /><MapPin className=\"w-4 h-4\"    /><ahref= {
+}className=\"hover:underline\    /> {}
+  contactInfo && contactInfo.email ;}
+}</a></div> <div className=\"flex items-center gap-2 text-green-400\"     /><MapPin className=\w-4 h-4\    /><ahref= {
   `https: //maps && maps.google.com/?q=$ {}
   encodeURIComponent (contactInfo && contactInfo.address) }
 }` ,"
-}target=\"blank\" rel=\"noopener noreferrer\" className=\"hover:underline\"    /> {;}
+}target=\"blank\ rel=\noopener noreferrer\" className=\"hover:underline\    /> {}
   contactInfo && contactInfo.address ;}
-}</a></div> </div> </div> {;}
-  /* Market Position & ROI */ ;}"
-}<div className=\"p-6 bg-black/40 border border-gray-700/50 rounded-lg\"     /> <h3 className=\"text-white font-semibold mb-3\"     />Market & ROI</h3> <div className=\"space-y-3 text-sm text-gray-300\"     /> {;"
-  service && service.marketPosition && <p className=\"leading-relaxed\"     /><span className=\"text-gray-400\"     />Position:</span> {;}
+}</a></div> </div> </div> {}
+  /* Market Position & ROI */ ;}
+}<div className=\"p-6 bg-black/40 border border-gray-700/50 rounded-lg\"     /> <h3 className=\text-white font-semibold mb-3\     />Market & ROI</h3> <div className=\"space-y-3 text-sm text-gray-300\"     /> {
+  service && service.marketPosition && <p className=\leading-relaxed\"     /><span className=\"text-gray-400\     />Position:</span> {}
   service && service.marketPosition ;}
 }</p>
-}{;"
-  service && service.roi && <p className=\"leading-relaxed\"     /><span className=\"text-gray-400\"     />ROI:</span> {;}
+}{
+  service && service.roi && <p className=\"leading-relaxed\"     /><span className=\text-gray-400\     />ROI:</span> {}
   service && service.roi ;}
 }</p>
-}{;}
+}{}
   service && service.competitors?.length ? () : null ;}"
-}<a href = \"/market-pricing\" className=\"inline-block mt-2 text-cyan-300 hover: text-cyan-200\"    />See average market prices →</a> return (<EnhancedLayout    /> <Head><title>Service Not Found - Zion Tech Solutions</title></Head> </div> </EnhancedLayout>
-  return (<EnhancedLayout    /> <Head><title> {;}
+}<a href = \"/market-pricing\ className=\inline-block mt-2 text-cyan-300 hover: text-cyan-200\"    />See average market prices →</a> return (<EnhancedLayout    /> <Head><title>Service Not Found - Zion Tech Solutions</title></Head> </div> </EnhancedLayout>
+  return (<EnhancedLayout    /> <Head><title> {}
   service && service.name ;}"
-}- Zion Tech Solutions</title></Head> </Link> <Link href=\"/services\"    /><a className=\"text-sm text-blue-600 hover: underline\"    />Back to Services</a></Link>
+}- Zion Tech Solutions</title></Head> </Link> <Link href=\/services\    /><a className=\"text-sm text-blue-600 hover: underline\"    />Back to Services</a></Link>
 }
 export default ServiceDetail
 export default ServiceDetail
   service.name
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover: underline">Back to Services</a></Link>
+}- Zion Tech Solutions</title> </Head> </Link> <Link href=/services><a className="text-sm text-blue-600 hover: underline">Back to Services</a></Link>
 export default ServiceDetail
 
 export default ServiceDetail
@@ -762,17 +834,6 @@ null;
 "fallback": false;
 }
 
-export default /**
- * ServiceDetailPage - Function description
- */
-function ServiceDetailPage() {
-  }
-  return (<Layout> <Head> <title> {
-  }
-  service.name;
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 "hover":underline">Back to Services</a></Link>;"
-  service.name;
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 "hover":underline">Back to Services</a></Link>;"
 }
 export default ServiceDetail;
 export default ServiceDetail;
@@ -847,8 +908,7 @@ export default ServiceDetail;
 }
 export default ServiceDetail;
 }
-  service.name;
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 "hover":underline">Back to Services</a></Link>;"
+
 }
 export default ServiceDetail;
 export default ServiceDetail;
@@ -861,7 +921,6 @@ export default ServiceDetail;
 export default /**;
  * ServiceDetailPage - Function description;
  */;
-function ServiceDetailPage() {return (<Layout /> <Head> <title /> {service.name;}
 }| Zion Tech Group</title>;
 }
 null;

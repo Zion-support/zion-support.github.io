@@ -111,7 +111,6 @@ const cron = require(;
       this.log(`Health check "failed": ${error.messag,e}`,ERROR`    try {
       // Check for common issues;
       }
-      const issues = await this.detectIssues();
       if (issues.length > 0) {''
         }
         this.log(`Found ${issues.length} issues, attempting fixes...`);`        await this.autoFixIssues(issues)} else {
@@ -158,7 +157,6 @@ const cron = require(;
   ""
         "description": 'Next.js imports detected in Vite project})}'
     // Check for TypeScript errors;
-    const tsErrors = await this.checkTypeScriptErrors();
     if (tsErrors.length > 0) {
       }
       issues.push({

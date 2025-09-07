@@ -1,14 +1,4 @@
 
-
-
-import React, { useEffect, useRef, useState } from 'react';'
-import { motion  } from 'framer-motion';'
-
-interface UltraQuantumHolographicBackgroundProps {
-  }
-  "children": React.ReactNode;
-  intensity?: 'low' | 'medium' | 'high' | 'ultra';'
-  colorScheme?: 'quantum' | 'holographic' | 'cyberpunk' | 'neon';'
   particleCount?: number;
   animationSpeed?: number;
   className?: string;}
@@ -18,11 +8,8 @@ export default function UltraQuantumHolographicBackground({children;
   }
   intensity;
 
-            "ease": "easeInOut""
-useEffect ( () => {
-  }
+
   const updateDimensions = () => {
-  }
   setDimensions ({
 origin/cursor/automate-test-improve-and-merge-code-2533
 useEffect ( () => {
@@ -147,15 +134,21 @@ overlay: 'rgba(0, 0, 0, 0.28)',
     intensity
   ];
   useEffect(() => {
-}
-const updateDimensions = () => {setDimensions({"width": window.innerWidth,"height": window.innerHeight})}updateDimensions()window.addEventListener('resize', updateDimensions)setIsVisible(true;'
-  return () => window.removeEventListener('resize', updateDimensions)}, [];'
-  useEffect(() => {
-}
-if (!canvasRef.current |!dimensions.width |!dimensions.height) return;
+      setDimensions({
+        width: window.innerWidth,
+height: window.innerHeight});
+    }
 
-const ctx = canvas.getContext('2d')if (!ctx);'
-  return;
+    updateDimensions();
+    window.addEventListener(resize', updateDimensions);
+    setIsVisible(true);
+
+return () => window.removeEventListener('resize, updateDimensions);
+  }, []);
+  useEffect(() => {
+    if (!canvasRef.current |!dimensions.width |!dimensions.height) return;
+    const ctx = canvas.getContext(2d');
+    if (!ctx) return;
     canvas.width = dimensions.width;
     canvas.height = dimensions.height;
     // Particle system
@@ -346,11 +339,12 @@ ctx.stroke();
             ctx.globalAlpha = alpha * 0.5;
             gradient.addColorStop(0, this.color);'
             gradient.addColorStop(1, 'transparent');
+            gradient.addColorStop(1, 'transparent);
             ctx.fillStyle = gradient;
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.fill();
-            break;'
+            break;
           case 'matrix':
             // Matrix digital rain
             ctx.fillStyle = this.color;
@@ -406,8 +400,6 @@ ctx.stroke();
         }
       }
 
-      draw() {
-        if (this.life <= 0) return;
 
         const alpha = this.life / this.maxLife;
         ctx.save();
@@ -518,67 +510,13 @@ for (let i = 0; i < particles.length; i += 10) {for (let j = i + 10; j < particl
       ctx.lineWidth = 0.3;
       ctx.globalAlpha = 0.2;
       const gridSize = 50;
-      for (let x = 0; x < dimensions && dimensions.width; x += gridSize) {;
+      for (let x = 0; x < dimensions && dimensions.width; x += gridSize) {
         ctx && ctx.beginPath();
         ctx && ctx.moveTo(x, 0);
         ctx && ctx.lineTo(x, dimensions && dimensions.height);
         ctx && ctx.stroke();
     }
 
-    // Create particles
-    const particles: Particle[] = [],
-    for (let i = 0, i < particleCount, i++) {
-      particles.push(new Particle())
-    }
-
-    // Animation loop
-    let animationId: number,
-    const animate = () => {
-      ctx.clearRect(0, 0, dimensions.width, dimensions.height);
-
-      // Draw quantum field background
-      const gradient = ctx.createRadialGradient(
-        dimensions.width / 2;
-        dimensions.height / 2;
-        0;
-        dimensions.width / 2;
-        dimensions.height / 2;
-        Math.max(dimensions.width, dimensions.height) / 2
-      );
-      gradient.addColorStop(0, colors.background);
-      gradient.addColorStop(1, colors.overlay);
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, dimensions.width, dimensions.height);
-
-      // Update and draw particles
-      particles.forEach((particle, index) => {
-        particle.update();
-        particle.draw();
-
-        // Remove dead particles and create new ones
-        if (particle.life <= 0) {
-          particles[index] = new Particle()
-        }
-      });
-
-      // Draw quantum entanglement lines
-      ctx.strokeStyle = colors.primary;
-      ctx.lineWidth = 0.5;
-      ctx.globalAlpha = 0.3;
-      
-      for (let i = 0, i < particles.length, i += 10) {
-        for (let j = i + 10, j < particles.length, j += 10) {
-          const p1 = particles[i];
-          const p2 = particles[j];
-          const distance = Math.sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2);
-          
-          if (distance < 100 && p1.life > 0 && p2.life > 0) {
-            ctx.beginPath();
-            ctx.moveTo(p1.x, p1.y);
-            ctx.lineTo(p2.x, p2.y);
-            ctx.stroke()
-          }
-        }
       }
 
       // Draw holographic grid
@@ -601,12 +539,14 @@ for (let i = 0; i < particles.length; i += 10) {for (let j = i + 10; j < particl
       }
       animationId = requestAnimationFrame(animate);    };      const gridSize = 50;
       for (let x = 0, x < dimensions && dimensions.width, x += gridSize) {;
+      animationId = requestAnimationFrame(animate);    }      const gridSize = 50;
+      for (let x = 0, x < dimensions && dimensions.width, x += gridSize) {
         ctx && ctx.beginPath();
         ctx && ctx.moveTo(x, 0);
         ctx && ctx.lineTo(x, dimensions && dimensions.height);
         ctx && ctx.stroke();
       }
-      for (let y = 0, y < dimensions && dimensions.height, y += gridSize) {;
+      for (let y = 0, y < dimensions && dimensions.height, y += gridSize) {
         ctx && ctx.beginPath();
         ctx && ctx.moveTo(0, y);
         ctx && ctx.lineTo(dimensions && dimensions.width, y);
@@ -616,7 +556,7 @@ for (let i = 0; i < particles.length; i += 10) {for (let j = i + 10; j < particl
     }
 
       animationId = requestAnimationFrame(animate)
-};
+}
 
     animate();
 
@@ -897,32 +837,35 @@ className='fixed inset-0 w-full h-full pointer-events-none z-0';
 
 origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Quantum Noise Effect */}
+      </div>
+        />;
+      </div>;
+
+
       <div className='fixed inset - 0 z - 30 pointer - events - none opacity - 5'>;
         <motion.div;'
           className='absolute inset - 0';
+      <div className='fixed inset - 0 z - 30 pointer - events - none opacity - 5'>;
+        <motion.div;
+          className=absolute inset - 0';
           animate={{}
-            background: [;'"`
-              `url ("data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractal_noise' base_frequency='0.9' num_octaves='4' stitch_tiles='stitch'/%3E%3C / filter%3E%3Crect width='100' height='100' filter='url (%23noise)'/%3E%3C / svg%3E")`,'"`
-              `url ("data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractal_noise' base_frequency='0.7' num_octaves='3' stitch_tiles='stitch'/%3E%3C / filter%3E%3Crect width='100' height='100' filter='url (%23noise)'/%3E%3C / svg%3E")`,
-            ],          }}
+            background: [;'`
+              `url ("data:image / svg + xml, %3Csvg view_box=0 0 100 100 xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id=noise%3E%3CfeTurbulence type='fractal_noise' base_frequency=0.9 num_octaves='4' stitch_tiles=stitch/%3E%3C / filter%3E%3Crect width='100' height=100 filter='url (%23noise)'/%3E%3C / svg%3E")`,`
+              `url (data:image / svg + xml, %3Csvg view_box=0 0 100 100' xmlns='http://www.w3.org / 2000 / svg%3E%3Cfilter id=noise'%3E%3CfeTurbulence type='fractal_noise base_frequency=0.7' num_octaves='3 stitch_tiles=stitch'/%3E%3C / filter%3E%3Crect width='100 height=100' filter='url (%23noise)/%3E%3C / svg%3E")`]}}
           transition={{}
             duration: 4;
-            repeat: Infinity'
-            ease: 'easeInOut',          }}
+            repeat: Infinity
+            ease: 'easeInOut'}}
         />
       </div>
-    </div>'"`
-  );              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`;'"`
-              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`
+    </div>"`
+  );              `url(data:image/svg+xml,%3Csvg viewBox=0 0 100 100' xmlns='http://www.w3.org/2000/svg%3E%3Cfilter id=noise'%3E%3CfeTurbulence type='fractalNoise baseFrequency=0.9' numOctaves='4 stitchTiles=stitch'/%3E%3C/filter%3E%3Crect width='100 height=100' filter='url(%23noise)/%3E%3C/svg%3E)`;"`
+              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns=http://www.w3.org/2000/svg%3E%3Cfilter id='noise'%3E%3CfeTurbulence type=fractalNoise baseFrequency='0.7' numOctaves=3 stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width=100 height='100' filter=url(%23noise)/%3E%3C/svg%3E)`
             ]
           }}
           transition={{
 
-            }
 
-            "background": [
-              `url(""data":image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='"http"://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`,`              `url(""data":image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='"http"://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`,`
-            ]
           }}
           transition={{
             duration: 4,
@@ -954,6 +897,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
 ))}
     </div>;
+      </div>
+    </div>
+
 );  )
 }
     </div>
@@ -997,24 +943,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             duration: 6,
           transition = $2;
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: easeInOut"
           }}
         />
       </div>
 
       {/* Content Layer */}
-      <div className="relative z-20">
+      <div className="relative z-20>
         {children}
       </div>
 
       {/* Quantum Noise Effect */}
-      <div className="fixed inset-0 z-30 pointer-events-none opacity-5">
+      <div className=fixed inset-0 z-30 pointer-events-none opacity-5">
         <motion.div
-          className="absolute inset-0"
+          className="absolute inset-0
           animate={{
             background: [
-              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`;
-              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`
+              `url(data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns=http://www.w3.org/2000/svg%3E%3Cfilter id='noise'%3E%3CfeTurbulence type=fractalNoise baseFrequency='0.9' numOctaves=4 stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width=100 height='100' filter=url(%23noise)/%3E%3C/svg%3E")`;
+              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns=http://www.w3.org/2000/svg%3E%3Cfilter id='noise'%3E%3CfeTurbulence type=fractalNoise baseFrequency='0.7' numOctaves=3 stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width=100 height='100' filter=url(%23noise)/%3E%3C/svg%3E)`
             ]
           }}
           transition={{
@@ -1024,31 +970,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           transition={{
             duration: 6
             repeat: Infinity
-            ease: 'easeInOut',            ease: "easeInOut"
+            ease: 'easeInOut',            ease: "easeInOut
           }}
         />
       </div>
         />
       </div>
-      {/* Content Layer */}'
-      <div className='relative z - 20'>{children}</div>
-      <div className='fixed inset - 0 z - 30 pointer - events - none opacity - 5'>
-        <motion.div;'
+      {/* Content Layer */}
+      <div className=relative z - 20'>{children}</div>
+      <div className='fixed inset - 0 z - 30 pointer - events - none opacity - 5>
+        <motion.div;
           className='absolute inset - 0'
           animate={{}
-            background: [;'"`
-              `url ("data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractal_noise' base_frequency='0.9' num_octaves='4' stitch_tiles='stitch'/%3E%3C / filter%3E%3Crect width='100' height='100' filter='url (%23noise)'/%3E%3C / svg%3E")`,'"`
-              `url ("data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractal_noise' base_frequency='0.7' num_octaves='3' stitch_tiles='stitch'/%3E%3C / filter%3E%3Crect width='100' height='100' filter='url (%23noise)'/%3E%3C / svg%3E")`,
-            ],          }}
+            background: [;`
+              `url ("data:image / svg + xml, %3Csvg view_box=0 0 100 100' xmlns='http://www.w3.org / 2000 / svg%3E%3Cfilter id=noise'%3E%3CfeTurbulence type='fractal_noise base_frequency=0.9' num_octaves='4 stitch_tiles=stitch'/%3E%3C / filter%3E%3Crect width='100 height=100' filter='url (%23noise)/%3E%3C / svg%3E")`,`
+              `url (data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns=http://www.w3.org / 2000 / svg%3E%3Cfilter id='noise'%3E%3CfeTurbulence type=fractal_noise base_frequency='0.7' num_octaves=3 stitch_tiles='stitch'/%3E%3C / filter%3E%3Crect width=100 height='100' filter=url (%23noise)/%3E%3C / svg%3E")`]}}
           transition={{}
             duration: 4
             repeat: Infinity'
-            ease: 'easeInOut',          }}
+            ease: 'easeInOut}}
         />
       </div>
-    </div>'"`
-  );              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`;'"`
-              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`
+    </div>"`
+  );              `url(data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns=http://www.w3.org/2000/svg%3E%3Cfilter id='noise'%3E%3CfeTurbulence type=fractalNoise baseFrequency='0.9' numOctaves=4 stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width=100 height='100' filter=url(%23noise)/%3E%3C/svg%3E)`;'"`
+              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100 xmlns=http://www.w3.org/2000/svg'%3E%3Cfilter id='noise%3E%3CfeTurbulence type=fractalNoise' baseFrequency='0.7 numOctaves=3' stitchTiles='stitch/%3E%3C/filter%3E%3Crect width=100' height='100 filter=url(%23noise)'/%3E%3C/svg%3E)`
             ]
           }}
           transition={{

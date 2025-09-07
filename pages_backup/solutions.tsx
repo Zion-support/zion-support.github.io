@@ -76,9 +76,7 @@ export default function Solutions() {
           </div>
         </div>
 
-import React from 'react';
 
-const solutions = [
   {
     title: 'Enterprise Solutions',
     icon: Shield,
@@ -114,7 +112,6 @@ import {
 } from 'lucide-react';
 
 export default function Solutions() {
-  const solutions = [
     {
       icon: Building,
       title: 'Enterprise Solutions',
@@ -334,11 +331,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 
 
-import React from 'react';
 import Layout from '../components/layout/Layout';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
-import {
   Target, Brain, Rocket, Shield, Zap, Atom, Cpu
   Lock, Cloud, Settings, Eye, Award, Clock, Heart
   Lightbulb, Search, Grid, List, TrendingUp
@@ -349,14 +342,11 @@ import {
 :pages/solutions.tsx
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
 } from 'lucide-react'
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
 
 import React from 'react',;
 import Layout from '../components/layout/Layout',;
 import SEO from '../components/SEO',;
 import { motion } from 'framer-motion',;
-import { 
   Target, Brain, Rocket, Shield, Zap, Atom, Cpu, 
   Lock, Cloud, Settings, Eye, Award, Clock, Heart, 
   Lightbulb, Search, Grid, List, TrendingUp, 
@@ -365,11 +355,9 @@ import {
   Monitor, Smartphone, Camera, Gamepad2, Palette, 
   Music, Film, BookOpenCheck, Building, MessageCircle, 
 
-import React from 'react',
 import Layout from '../components / layout / Layout',
 import SEO from '../components / SEO',
 import { motion } from 'framer-motion',
-import {
   Target, Brain, Rocket, Shield, Zap, Atom, Cpu,
   Lock, Cloud, Settings, Eye, Award, Clock, Heart,
   Lightbulb, Search, Grid, List, TrendingUp,
@@ -379,8 +367,6 @@ import {
   Music, Film, BookOpenCheck, Building, MessageCircle,
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
 } from 'lucide-react'
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
 } from 'lucide-react',;
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
@@ -519,7 +505,6 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
   }
 }
   ],
-  const solutionCapabilities = [
     {
       title: 'Industry Expertise',
       description: 'Deep domain knowledge across sectors',
@@ -555,7 +540,6 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
   }
 }
   ],
-  const caseStudies = [
     {
       title: "Healthcare Provider Digital Transformation",
       industry: "Healthcare",
@@ -1012,11 +996,6 @@ export default Solutions,
 
 },
 
-import React from 'react',
-import Layout from '../components/layout/Layout',
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
-import { Target, Brain, Rocket, Shield, Zap, Atom, Cpu;
   Lock, Cloud, Settings, Eye, Award, Clock, Heart;
   Lightbulb, Search, Grid, List, TrendingUp;
   User, ShoppingCart, Bell, HelpCircle, FileText;
@@ -1025,9 +1004,6 @@ import { Target, Brain, Rocket, Shield, Zap, Atom, Cpu;
   Music, Film, BookOpenCheck, Building, MessageCircle;
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
  } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
-const Solutions: NextPage;
 origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 export default Solutions;

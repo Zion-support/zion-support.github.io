@@ -8,6 +8,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
+
+import React, { useState, useEffect, useCallback, useRef } from 'react;
+import { motion, AnimatePresence  } from framer-motion';
 import { Activity, Zap, Clock, TrendingUp, TrendingDown;
   }
   AlertTriangle, CheckCircle, X, Settings, RefreshCw;
@@ -249,7 +252,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     }
 const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
  }
- const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
 
   return new Promise ( (resolve) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
@@ -286,10 +288,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }) 
 }, []);
-//Check for performance issues and add alerts const "newAlerts": string[] = [];
-if (newMetrics && newMetrics.loadTime > 3000) {;
-  const formatTime = (ms: number) : string => {;
-  if (ms === 0) return 'N/A';
+
 if (ms < 1000) return `$ {
   Math.round (ms) 
 }ms`;
@@ -297,8 +296,8 @@ if (ms < 1000) return `$ {
 
 
   const getScoreColor = $2;
-    if (score >= 70) return 'text-yellow-400',
-    return 'text-red-400'
+    if (score >= 70) return 'text-yellow-400,
+    return text-red-400'
   },
 
 if (ms < 1000) return `$ {
@@ -309,21 +308,15 @@ if (ms < 1000) return `$ {
 
 }
 
-const formatTime = ("ms": number) : (string) => {;
-  }
-  if (ms = == 0);
-return 'N/A';'
-};
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-};
+}
 
 const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {}
- const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {}
   return new Promise ( (resolve) => {}
-  if (typeof window !== 'undefined' && 'performance' in window) {'
-  //Wait for page to be fully loaded if (document.readyState === 'complete') {}
+  if (typeof window !== 'undefined && performance' in window) {'
+  //Wait for page to be fully loaded if (document.readyState === complete) {}
 })
 
 
@@ -378,6 +371,35 @@ let totalMetrics = 0;
   }
   totalMetrics++;
 pr-12243
+}, []);
+//Check for performance issues and add alerts const newAlerts: string[] = [];
+if (newMetrics && newMetrics.loadTime > 3000) {
+  const formatTime = (ms: number) : string => {'
+  if (ms === 0) return 'N/A;
+
+if (ms < 1000) return `$ {
+  Math.round (ms) 
+}ms`;
+pr-12243
+
+
+
+
+}
+
+//Get device icon const getDeviceIcon = (
+  switch (deviceType) {
+  case mobile': return Smartphone;
+case 'tablet: return Tablet;
+default: return Laptop;
+}
+const getPerformanceScore = () => {
+
+  let score = 0;
+let totalMetrics = 0;
+//FCP scoring (0-100) if (metrics && metrics.fcp !== null) {
+  totalMetrics++;
+
 if (metrics.fcp < 1800) score += 100;
 else if (metrics.fcp < 3000) score += 75;
 else if (metrics.fcp < 4000) score += 50;
@@ -605,7 +627,7 @@ else score += 25
 }
 else score += 25 
 
-};
+}
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 else score += 25 
@@ -662,10 +684,10 @@ if ( {) {
 
 '
 //Don't render anything in production return (<AnimatePresence> {}
-  isVisible && (<motion.div </div> <div className="flex items-center space-x-2" > <button > <RefreshCw className= {}
-  `w-4 h-4 $ {'
-  isLoading ? 'animate-spin': ''`
-}`"
+  isVisible && (<motion.div </div> <div className="flex items-center space-x-2 > <button > <RefreshCw className= {}
+  `w-4 h-4 $ {
+  isLoading ? animate-spin': '`
+}`
 }/> </button> <button > <BarChart3 className="w-4 h-4" /> </button> <button > <X className="w-4 h-4" /> </button> </div> </div> </div> </div> </div> </div> {}
   /* Expanded View */
 }<AnimatePresence> {}
@@ -678,13 +700,13 @@ if ( {) {
 }</div> </div> </div> </motion.div>)
 }</AnimatePresence> </div> </div> </motion.div> </AnimatePresence>)
 }
-// Helper functions const getScoreLabel = (score: number) => {'
-  if (score >= 90) return 'Excellent';'
-if (score >= 70) return 'Good';'
-if (score >= 50) return 'Needs Improvement';'
-  if (score >= 90) return 'Excellent';'
-if (score >= 70) return 'Good';'
-if (score >= 50) return 'Needs Improvement';
+// Helper functions const getScoreLabel = (score: number) => {
+  if (score >= 90) return 'Excellent';
+if (score >= 70) return Good';'
+if (score >= 50) return Needs Improvement;'
+  if (score >= 90) return 'Excellent;
+if (score >= 70) return 'Good';
+if (score >= 50) return Needs Improvement';
 }
 
 export default PerformanceMonitor;
@@ -970,137 +992,16 @@ if ( {) {
 });
 }, []);
 //Check for performance issues and add alerts const new_alerts: string[] = [];
-// Check condition
-if ( {) {
-  $2
+
 }
-  const format_time = (ms: number) : string => {
-  // Check condition
-if (return 'N / A') {
-  $2
-}
-// Check condition
-if (return `$ {) {
-  $2
-}
-  Math.round (ms);
+  Math.round (ms);`
 }ms`;
-;
 }
-//Get device icon const getDeviceIcon = (device_type: string) =>: any {
-  switch (device_type) {
-  case 'mobile': return Smartphone;
+
 case 'tablet': return Tablet;
 default: return Laptop;
-;
 }
-const getPerformanceScore = () =>: any {
-  let score = 0;
-let total_metrics = 0;
-//FCP scoring (0 - 100) // Check condition
-if ( {) {
-  $2
-}
-  total_metrics++;
-// Check condition
-if (score += 100) {
-  $2
-}
-else // Check condition
-if (score += 75) {
-  $2
-}
-else // Check condition
-if (score += 50) {
-  $2
-}
-else score += 25;
-}//LCP scoring (0 - 100) // Check condition
-if ( {) {
-  $2
-}
-  total_metrics++;
-// Check condition
-if (score += 100) {
-  $2
-}
-else // Check condition
-if (score += 75) {
-  $2
-}
-else // Check condition
-if (score += 50) {
-  $2
-}
-else score += 25;
-}//FID scoring (0 - 100) // Check condition
-if ( {) {
-  $2
-}
-  total_metrics++;
-// Check condition
-if (score += 100) {
-  $2
-}
-else // Check condition
-if (score += 75) {
-  $2
-}
-else // Check condition
-if (score += 50) {
-  $2
-}
-else score += 25;
-}//CLS scoring (0 - 100) // Check condition
-if ( {) {
-  $2
-}
-  total_metrics++;
-// Check condition
-if (score += 100) {
-  $2
-}
-else // Check condition
-if (score += 75) {
-  $2
-}
-else // Check condition
-if (score += 50) {
-  $2
-}
-else score += 25;
-}
-//Don't render anything in production return (<AnimatePresence> {
-  is_visible && (<motion.div </div> <div className="flex items - center space - x-2" > <button > <RefreshCw className= {
-  `w - 4 h - 4 $ {
-  is_loading ? 'animate - spin': '';
-}`;
-}/> </button> <button > <BarChart3 className="w - 4 h - 4" /> </button> <button > <X className="w - 4 h - 4" /> </button> </div> </div> </div> </div> </div> </div> {
-  /* Expanded View */;
-}<AnimatePresence> {
-  is_expanded && (<motion.div </div>);
-}</div> </div> </div>) );
-}</div> </div>);
-}<> <div>• Optimize images and assets</div> <div>• Minimize JavaScript bundles</div> <div>• Enable compression and caching</div> </>);
-}{
-  getPerformanceScore () >= 90 && (<div>• Excellent performance! Keep monitoring for any regressions.</div>);
-}</div> </div> </div> </motion.div>);
-}</AnimatePresence> </div> </div> </motion.div> </AnimatePresence>);
-}
-// Helper functions const getScoreLabel = (score: number) =>: any {
-  // Check condition
-if (return 'Excellent') {
-  $2
-}
-// Check condition
-if (return 'Good') {
-  $2
-}
-export default PerformanceMonitor;
 
-const getPerformanceMetrics = useCallback (async () : Promise < PerformanceMetrics> => ;
-  return new Promise ( (resolve) => {// Check condition;}
-if ( {) {$2;}
 }
   //Wait for page to be fully loaded // Check condition;
 if ( {) {$2;}
@@ -1124,4 +1025,7 @@ export default PerformanceMonitor;
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
+
+}
+
 

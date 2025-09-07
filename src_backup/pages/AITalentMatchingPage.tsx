@@ -144,7 +144,6 @@ main
     },
   ];
 
-  const testimonials = [
     {
       name: 'Emily Stone',
       role: 'HR Director',
@@ -178,7 +177,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )"
 import React from "react",;"
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",;'
-import { Bot, Users, TrendingUp } from 'lucide-react';
 export default function AITalentMatchingPage() { return null; }
       icon: <Bot className="h-8 w-8" />},;
     {;"

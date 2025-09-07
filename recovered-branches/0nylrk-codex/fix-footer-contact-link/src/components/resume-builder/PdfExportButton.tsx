@@ -13,9 +13,6 @@ import { DropdownMenu;
 import {useState} from 'react';'
 import {Button} from '@/components/ui/button';'
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu';'
-import {useState} from 'react';'
-import {Button} from '@/components/ui/button';'
-import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu';'
 // Use the centralized icon wrapper to avoid missing icon issues,
 import { FileText, ChevronDown, Loader2, Download  } from '@/components/icons';'
 import { Resume  } from '@/types/resume';'
@@ -33,7 +30,6 @@ export function PdfExportButton() {;
   const [includePortfolio, setIncludePortfolio] = useState(true);
   const [fontFamily, setFontFamily] = useState<FontFamily>('default');'
 import { useState } from 'react';'
-import { Button } from '@/components/ui/button';'
 import {;
   }
   DropdownMenu,;
@@ -55,11 +51,9 @@ interface PdfExportButtonProps {;
   }
   "resume": Resume;
 }
-  const [isExporting, setIsExporting] = useState(false);
 const [theme, setTheme] = useState<'light' | 'dark'>('light'),;'
 const [includePortfolio, setIncludePortfolio] = useState(true),;
 const [fontFamily, setFontFamily] = useState<FontFamily>('default'),;'
-  const [fontFamily, setFontFamily] = useState<FontFamily>('default');'
   const handleExport = async () => {
     }
     if (isExporting) return;
@@ -87,7 +81,6 @@ document.body.removeChild(link);
     setIsExporting(true),
     try {
       }
-      const "options": ExportOptions = {
         }
         theme,
         includePortfolio,
@@ -132,9 +125,6 @@ return (;
 export function PdfExportButton() {;
   }
   const [isExporting, setIsExporting] = useState(false),;
-  const [theme, setTheme] = useState<'light' | 'dark'>('light'),;'
-  const [includePortfolio, setIncludePortfolio] = useState(true),;
-  const [fontFamily, setFontFamily] = useState<FontFamily>('default'),;'
   const handleExport = async () => {;
     }
     if (isExporting) return,;
@@ -148,10 +138,7 @@ export function PdfExportButton() {;
         "maxProjects": 3,;
         fontFamily;
       },;
-      const pdfBlob = await exportResumeToPDF(resume, options),;
       // Create download link and trigger download;
-      const url = URL.createObjectURL(pdfBlob),;
-      const link = document.createElement('a'),;'
       link.href = url,;
       link.download = `${resume.basic_info.title || 'Resume'}.pdf`,;`
       document.body.appendChild(link),;
@@ -219,7 +206,6 @@ export function PdfExportButton() {;
     </DropdownMenu>;
   );
 }
-import {useState} from 'react';'
 import {Button} from '@/components / ui / button';'
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuCheckboxItem} from '@/components / ui / dropdown - menu';'
 // Use the centralized icon wrapper to avoid missing icon issues;

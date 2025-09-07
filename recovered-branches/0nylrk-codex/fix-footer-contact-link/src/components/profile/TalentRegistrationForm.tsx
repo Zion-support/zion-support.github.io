@@ -185,7 +185,6 @@ if ( {) {
     }
   },;
   // Get category color;
-  const getCategoryColor = ("category": CategoryType) => {;
     }
     switch (category) {;
       }
@@ -265,7 +264,6 @@ let finalSkills = skillTags,;
 "skills": skillTags,
 "location": values.location
   // Send notification email,
-const sendEnhancementNotification = async ("userId": string, "email": string) => {
       // Check condition
 }
 if ( {) {
@@ -336,7 +334,6 @@ const "aiSkills": string[] = [];
                     aiSkills.push(skill)
   },;
   // Send notification email;
-  const sendEnhancementNotification = async ("user_id": string, "email": string) => {
     }
     try {
       }
@@ -351,7 +348,6 @@ const "aiSkills": string[] = [];
     }
   },;
   // Handle form submission;
-  const onSubmit = async ("values": TalentFormValues) => {;
     }
     if (skillTags.length === 0) {;
       }
@@ -438,8 +434,6 @@ const "ai_skills": string[] = [],;
             // Extract skills from each category and ensure they're strings;'
 ;
       // Enhance profile if not already done;
-      let finalSummary = "",;"
-      let finalSkills = skillTags,;
       if (values.enhancedProfile && !generatedContent) {;
         }
         try {;

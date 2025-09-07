@@ -1,6 +1,6 @@
 
 
-import * as React from "react"
+import * as React from "react
 
 const Breadcrumb = React.forwardRef<;
   HTMLElement;
@@ -31,7 +31,7 @@ const Breadcrumb = React.forwardRef<
  
 const Breadcrumb = React.forwardRef<
   HTMLElement,
-  React.ComponentPropsWithoutRef<"nav"> & {
+  React.ComponentPropsWithoutRef<nav"> & {
     separator?: React.ReactNode
   }
 >(({ className, separator, ...props }, ref) => (

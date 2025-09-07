@@ -35,7 +35,6 @@ interface PricingGuidePageProps {
 
 
 export default function PricingGuidePage({ }: PricingGuidePageProps) {
-import React from 'react';
 interface Performance.testProps {
   // Add props here as needed
 }

@@ -14,7 +14,6 @@ import { ArrowUp, Filter, SortAsc, Users, TrendingUp, Star, Verified, MapPin } f
 import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
 
 
-import { ArrowUp, Filter, SortAsc, Users, TrendingUp, Star, Verified, MapPin } from 'lucide-react'
 import { generateAITalents, getTalentMarketStats, getRecommendedTalents  } from '@/utils/talentAutoFeedAlgorithm';
 import { TALENT_PROFILES  } from '@/data/talentData';
 import { TalentProfile  } from '@/types/talent';
@@ -56,7 +55,6 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
-import { ArrowUp, Filter, SortAsc, Users, TrendingUp, Star, Verified, MapPin } from 'lucide-react'
 import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll',
 import { generateAITalents, getTalentMarketStats, getRecommendedTalents } from '@/utils/talentAutoFeedAlgorithm',
 import { TALENT_PROFILES } from '@/data/talentData',
@@ -67,7 +65,6 @@ import { Badge } from '@/components/ui/badge',
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
 import Spinner from '@/components/ui/spinner',
 // Market insights component for talents
-const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
   <Card className="bg-gradient-to-r from-green-900/20 to-blue-900/20 border-green-700/30 mb-6">
     <CardContent className="p-6">
       <div className="flex items-center gap-2 mb-4">
@@ -528,7 +525,6 @@ const TalentLoadingGrid: React.FC<{ count?: number }> = ({ count = 8 }) => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">"
 
 // Loading skeleton for talent grid
-const TalentLoadingGrid: React.FC<{ count?: number }> = ({ count = 8 }) => (
   <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'>
     {Array.from({ length: count }).map((_, i) => (
       <SkeletonCard key={i} />
@@ -605,12 +601,10 @@ export default function TalentsPage() {;
   const [filterSpecialization, setFilterSpecialization] = useState(''),;
   const [filterAvailability, setFilterAvailability] = useState(''),;
   const [showRecommended, setShowRecommended] = useState(false),;
-  const [totalGenerated, setTotalGenerated] = useState(0),;
   // Fetch function for infinite scroll with AI talent generation;
   const fetchTalents = useCallback(async (page: number, limit: number) => {;
     // Add realistic loading delay;
     await new Promise(resolve => setTimeout(resolve, 300)),;
-    let allTalents: TalentProfile[] = [],;
     // Start with existing talent profiles;
     if (page === 1) {;
       allTalents = [...TALENT_PROFILES];
@@ -762,7 +756,6 @@ export default function TalentsPage() {;
   // Show scroll to top button,
 
   // Get unique specializations
-  const specializations = useMemo(() => {
     return Array.from(
       new Set(
         talents
@@ -818,7 +811,6 @@ import {
   MapPin,;
 } from 'lucide-react';
 import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
-import {
   generateAITalents,
   getTalentMarketStats,
   getRecommendedTalents,;
@@ -830,9 +822,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 origin/cursor/automate-test-improve-and-merge-code-2533
-import Spinner from '@/components/ui/spinner';
 // Market insights component for talents
-const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
   // Loading state
   if (loading && talents.length === 0) {
     return (
@@ -855,7 +845,6 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
   }
 :src/pages/TalentsPage.tsx
 
-    let filteredTalents = allTalents
     }
 }
 ;

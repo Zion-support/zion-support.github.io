@@ -304,7 +304,7 @@ type='text''
                       </option>
                     ))}
                   </select>
-<ChevronDown className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none' />'
+                  <ChevronDown className=absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
                 </div>
                     className='appearance-none bg-gray-700/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 pr-10';
                   >;
@@ -320,9 +320,18 @@ type='text''
                 </div>;
 
 
-                  </select>;
-                  <ChevronDown className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none' />;
-                </div>;
+                  >
+                    <Grid className=w-5 h-5 />
+                  </button>
+                  <button
+
+                  >
+                    <option value=name">Sort by Name</option>
+                    <option value="price>Sort by Price</option>
+                    <option value=roi">Sort by ROI</option>
+                  </select>
+                  <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none />
+                </div>
 
                 {/* Sort */}
                 <div className="relative">
@@ -425,6 +434,8 @@ onClick={() => setViewMode('list')}'
                   </button>
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+                  </button>
+
                 </div>
               </div>
             </div>
@@ -623,8 +634,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       ))}
                     </div>
 
-                          className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50''
-                        >
+
 
                           {tag}
                         </span>;
@@ -635,8 +645,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl "hover":from-cyan-600 "hover":to-purple-700 transition-all duration-300 group-"hover":shadow-lg group-"hover":shadow-cyan-500/25'>'
 
                       <span>Learn More</span>;
-                      <ArrowRight className='w-4 h-4 ml-2 group-"hover":translate-x-1 transition-transform' />;'
-                    </Link>;
+
                   </div>;
                 </motion && motion.div>;
               ))}
@@ -655,8 +664,12 @@ className='inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-
                       {service.tags.slice(0, 3).map((tag, idx) => (
                         <span;
                           key={idx}"
-                          className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50"'
-                          className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50'                        >
+                          className=px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50'                        >                    <div className=flex flex-wrap gap-2 mb-6>
+                      {service.tags.slice(0, 3).map((tag, idx) => (
+                        <span;
+                          key={idx}"
+                          className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50'
+                          className=px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50                        >
 
                         >
 
@@ -683,15 +696,6 @@ className='inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-
               ))}
             </motion.div>
           ) : (
-            <motion.div,
-key='list''
-              initial={{ "opacity": 0, "scale": 0.95 
-}
-              animate={{ "opacity": 1, "scale": 1 
-}
-              exit={{ "opacity": 0, "scale": 0.95 }}
-              transition={{ "duration": 0.3 
-}
 
 className='space-y-4''
             >
@@ -764,14 +768,14 @@ className='space-y-4''
                           </div>;
                           <div className='text-2xl font-bold text-cyan-400'>;
                             {service.price}
-                      {/* Icon and Category */}"
+                      {/* Icon and Category */}
                       <div className="flex items-center space-x-4">;`
                         <div className={`p-3 rounded-xl bg-gradient-to-br ${getCategoryColor(service && service.category)} shadow-lg`}>;
                           {getCategoryIcon(service && service.category)}
                         </div>;
-                        <div>;"
-                          <div className="text-sm text-gray-400">{service && service.category}</div>;"
-                          <div className="text-2xl font-bold text-cyan-400">{service && service.price}</div>;
+                        <div>;
+                          <div className=text-sm text-gray-400">{service && service.category}</div>;"
+                          <div className=text-2xl font-bold text-cyan-400>{service && service.price}</div>;
                         </div>;
                       </div>;
                       {/* Content */}
@@ -789,44 +793,44 @@ className='space-y-4''
                             <span;
                               key={idx}
                         </h3>;
-                        <p className='text-gray-300 mb-3 leading-relaxed'>;
+                        <p className='text-gray-300 mb-3 leading-relaxed>;
                           {service.description}
                         </p>;
                         <div className="flex flex - wrap gap - 2 mb - 3">;
                           {service.tags.slice (0, 4).map ((tag, idx) => (<span;
-                              key={idx}className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50';
+                              key={idx}className=px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50';
                             >;
 
-                              className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50''
+
                             >
-                  className="group"
+                  className=group
                 >
                   <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300">
-                    <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6">
+                    <div className=flex flex-col lg:flex-row items-start lg:items-center gap-6>
                       {/* Icon and Category */}
                       <div className="flex items-center space-x-4">
                         <div className={`p-3 rounded-xl bg-gradient-to-br ${getCategoryColor(service.category)} shadow-lg`}>
                           {getCategoryIcon(service.category)}
                         </div>
                         <div>
-                          <div className="text-sm text-gray-400">{service.category}</div>
+                          <div className=text-sm text-gray-400>{service.category}</div>
                           <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
                         </div>
                       </div>
 
                       {/* Content */}
-                      <div className="flex-1">
+                      <div className=flex-1>
                         <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                           {service.name}
                         </h3>
-                        <p className="text-gray-300 mb-3 leading-relaxed">
+                        <p className=text-gray-300 mb-3 leading-relaxed>
                           {service.description}
                         </p>
                         <div className="flex flex-wrap gap-2 mb-3">
                           {service.tags.slice(0, 4).map((tag, idx) => (
                             <span
                               key={idx}
-                              className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50"
+                              className=px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50
                             >
                               {tag}
                             </span>
@@ -850,16 +854,11 @@ className='space-y-4''
 
                       {/* Stats and CTA */}
                       <div className="flex flex-col items-end space-y-3">
-                        <div className="text-right">
+                        <div className=text-right>
                           <div className="text-sm text-gray-400">ROI</div>
-                          <div className="text-lg font-bold text-green-400">{service.roi}</div>
+                          <div className=text-lg font-bold text-green-400>{service.roi}</div>
                         </div>
-                        <Link,
-href={service.link}
-                          className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl "hover":from-cyan-600 "hover":to-purple-700 transition-all duration-300 group-"hover":shadow-lg group-"hover":shadow-cyan-500/25'>'
 
-                          <span>Learn More</span>;
-                          <ArrowRight className='w-4 h-4 ml-2 group-"hover":translate-x-1 transition-transform' />;'
                         </Link>;
                       </div>;
                     </div>;
@@ -867,20 +866,20 @@ href={service.link}
                 </motion && motion.div>;
         {/* No Results */}
         {filteredServices && filteredServices.length === 0 && (<motion&& motion.div;
-            className='text-center py-20'            initial={{ opacity: 0 }}
+            className=text-center py-20'            initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="text-center py-20";
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0 && 0.6 }}>;
-            <h3 className='text-2xl font-bold text-white mb-4'>;
+            <h3 className='text-2xl font-bold text-white mb-4>;
               No services found;
             </h3>;
-            <p className='text-gray-400 mb-8'>;
+            <p className=text-gray-400 mb-8'>;
               Try adjusting your search terms or category filter to find what;
               you're looking for.            </p>;
-                setSelectedCategory('all')}}
-              className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300";
+                setSelectedCategory(all)}}
+              className=px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300;
                           href={service.link}
                           className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25';
                         >;
@@ -889,10 +888,10 @@ href={service.link}
 
 className='group'
                 >
-                  <div className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300'>
+                  <div className=bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300>
                     <div className='flex flex-col lg:flex-row items-start lg:items-center gap-6'>
                       {/* Icon and Category */}
-                      <div className='flex items-center space-x-4'>
+                      <div className=flex items-center space-x-4>
                         <div
                           className={`p-3 rounded-xl bg-gradient-to-br ${getCategoryColor(service.category)} shadow-lg`}
                         >
@@ -902,35 +901,35 @@ className='group'
                           <div className='text-sm text-gray-400'>
                             {service.category}
                           </div>
-                          <div className='text-2xl font-bold text-cyan-400'>
+                          <div className=text-2xl font-bold text-cyan-400>
                             {service.price}
                           </div>
                         </div>
                       </div>
                       {/* Content */}
 <div className='flex-1'>
-                        <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
+                        <h3 className=text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors>
                           {service.name}
                         </h3>
                         <p className='text-gray-300 mb-3 leading-relaxed'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                           {service.description}
                         </p>;"
-                        <div className="flex flex - wrap gap - 2 mb - 3">;
+                        <div className="flex flex - wrap gap - 2 mb - 3>;
                           {service.tags.slice (0, 4).map ((tag, idx) => (
                             <span;
                               key={idx}
-                              className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50'
+                              className=px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50
                             >
 origin/cursor/automate-test-improve-and-merge-code-2533
                               {tag}
                             </span>
                           ))}
                       {/* Stats and CTA */}'
-                      <div className='flex flex-col items-end space-y-3'>;'
-                        <div className='text-right'>;'
-                          <div className='text-sm text-gray-400'>ROI</div>;'
-                          <div className='text-lg font-bold text-green-400'>;
+                      <div className='flex flex-col items-end space-y-3>;
+                        <div className='text-right'>;
+                          <div className=text-sm text-gray-400'>ROI</div>;'
+                          <div className=text-lg font-bold text-green-400>;
                             {service && service.roi}
                           </div>;
                         </div>;
@@ -944,12 +943,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                         </div>
                         <Link;
-                          href={service && service.link}'
-                          className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25'>;
+                          href={service && service.link}
+                          className=inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25'>;
                           <span>Learn More</span>;'
-                          <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />                        </Link>                        </div>;
+                          <ArrowRight className=w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform />                        </Link>                        </div>;
                         <Link;
-                          href={service && service.link}"
+                          href={service && service.link}
                           className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25">;
                           <span>Learn More</span>;"
                           <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />;
@@ -1039,27 +1038,27 @@ className='mt-20 text-center''
                               className="px - 2 py - 1 bg - gray - 700 / 50 text - gray - 300 text - xs rounded - lg border border - gray - 600 / 50";
                             >;
           </motion.div>'
-            <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>        <motion.div'
+            <h3 className='text-3xl md:text-4xl font-bold text-white mb-6>        <motion.div
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>        <motion.div;
         {/* CTA Section */}
           whileInView={{ opacity: 1, y: 0 }}"
-          className="mt-20 text-center""
-          className="mt-20 text-center"'
-            <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
+          className=mt-20 text-center"
+          className="mt-20 text-center
+            <h3 className=text-3xl md:text-4xl font-bold text-white mb-6'>
 
         )}
         {/* CTA Section */}
 <motion.div
-          className='mt-20 text-center'
+          className='mt-20 text-center
 origin/cursor/automate-test-improve-and-merge-code-2533
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.6, delay: 0 && 0.8 }}>;'
-          <div className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>;'
-            <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
+          transition={{ duration: 0 && 0.6, delay: 0 && 0.8 }}>;
+          <div className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>;
+            <h3 className=text-3xl md:text-4xl font-bold text-white mb-6'>;
               Ready to Transform Your Business?;
             </h3>;'
-            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>;"
+            <p className=text-xl text-gray-300 mb-8 max-w-3xl mx-auto>;
                               className="px - 2 py - 1 bg - gray - 700 / 50 text - gray - 300 text - xs rounded - lg border border - gray - 600 / 50";
                             >;
                               {tag}
@@ -1094,15 +1093,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>
                         <Link
                           href={service.link}
-                          className='inline - flex items - center px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 group - hover:shadow - lg group - hover:shadow - cyan - 500 / 25'    />
+                          className=inline - flex items - center px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 group - hover:shadow - lg group - hover:shadow - cyan - 500 / 25    />
 
                           <span     /> Learn More</span>
                           <ArrowRight className='w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform'    />                        </Link>                        </div>
                         <Link
                           href={service.link}"
-                          className=\"inline - flex items - center px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover: from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 group - hover:shadow - lg group - hover:shadow - cyan - 500 / 25\"    />
+                          className=\"inline - flex items - center px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover: from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 group - hover:shadow - lg group - hover:shadow - cyan - 500 / 25\    />
 
-                          <span     /> Learn More</span>;"
+                          <span     /> Learn More</span>;
                           <ArrowRight className=\"w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform\"    />
                         </Link>
                       </div>
@@ -1513,23 +1512,7 @@ export default Enhanced2027ServicesShowcase;
   }
   category
 }> {
-  }
-  category === 'all' ? 'All Categories' : category'
-}</option>) )
-}</select> <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" /> </div> > <option value="name" >Sort by Name</option> <option value="price" >Sort by Price</option> <option value="roi" >Sort by ROI</option> </select> <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" /> </div> <button onClick= {"
-  () => setViewMode ('grid')'
-}className= {
-  `p-2 rounded-lg transition-all duration-200 $ {`  }
-  viewMode === 'grid' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 "hover": text-white''
-}``}> <Grid className="w-5 h-5" /> </button> <button onClick= {"
-  () => setViewMode ('list')'
-}className= {
-  `p-2 rounded-lg transition-all duration-200 $ {`  }
-  viewMode === 'list' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 "hover":text-white''
-}``}> <List className="w-5 h-5" /> </button> </div> </div> </div> </div> </motion.div> {"
-  /* Results Count */
-}<motion.div > {
-  }
+
   filteredServices.map ( (service, index) => (<motion.div key= {
   }
   service.id

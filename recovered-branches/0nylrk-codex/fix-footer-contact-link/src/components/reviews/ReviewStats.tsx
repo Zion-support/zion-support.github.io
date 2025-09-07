@@ -3,8 +3,6 @@ import { Progress } from "@/components/ui/progress";
 interface ReviewStatsProps {
 
   ratingDistribution?: Record<number, number>interface ReviewStatsProps {
-import { Star } from "lucide-react";
-import { Progress } from "@/components/ui/progress";
 interface ReviewStatsProps {
   averageRating: number,
   totalReviews: number,

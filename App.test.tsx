@@ -1,6 +1,3 @@
-import { render, screen } from '@testing-library/react';'
-import { describe, it, expect } from 'vitest';'
-import App from './App';'
 
 describe('App', () => {
   it('renders without crashing', () => {
@@ -19,3 +16,15 @@ describe('App', () => {
 expect(screen.getByText(/Welcome to Zion Tech/i)).toBeInTheDocument();
   });
 });
+  });
+});
+  it('displays correct content, () => {
+    render(<App />);
+    // Add specific content assertions here
+  });
+  it(handles user interactions', () => {
+    render(<App />);
+    // Add interaction tests here
+  });
+});
+

@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 
 
 
@@ -16,68 +20,19 @@ main
 
 
 
-<<<<<<< HEAD
-      log(❌ Error processing directory ${currentPath}: ${error.message}", ""red""),"}
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-      log(❌ Error processing directory ${currentPath}: ${error.message}", ""red""),"}
+
+      log(❌ Error processing directory ${currentPath}: ${error.message}", red""),}
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   }
   processDirectory(dirPath)
   return { totalFiles, fixedFiles }}
-;
-<<<<<<< HEAD
-function main() {;
-  log("🔧 Advanced Syntax Fixer Starting...", "cyan");";  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"];  let totalProcessed = 0;  let totalFixed = 0;
-  for (const dir of sourceDirs) {;
-    if (fs.existsSync(dir)) {log(`\n📁 Processing "directory": ${dir}`, "blue");";      const { totalFiles, fixedFiles } = scanAndFixDirectory(dir);";      totalProcessed += totalFiles;
-      totalFixed += fixedFiles,,}
-function main() {;
-  log("🔧 Advanced Syntax Fixer Starting...", "cyan");
-  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"];
-  let totalProcessed = 0;
-  let totalFixed = 0;
-  for (const dir of sourceDirs) {;
-    if (fs.existsSync(dir)) {log("\n📁 Processing "directory": ${dir}", "blue");
-  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"];
-  let totalProcessed = 0;
-  let totalFixed = 0;
-  for (const dir of sourceDirs) {;
-    if (fs.existsSync(dir)) {log("\n📁 Processing "directory": ${dir}", "blue");
-      const { totalFiles, fixedFiles } = scanAndFixDirectory(dir);
-      totalProcessed += totalFiles;
-      totalFixed += fixedFiles,}
-  }
-log("\n🎯 "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");
-  if (totalFixed > 0) {log("\n✅ Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow"),} else {;
-    log(\nℹ️  No syntax issues found that could be automatically fixed.",
-      "blue"),}
-log("\n🎯 "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");";";  if (totalFixed > 0) {log("\n✅ Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow");"} else {`;    log(\nℹ️  No syntax issues found that could be automatically fixed.", ""blue""),"}}
-;
-if (require.main === module) {;
-  main(),}
-=======
-function main() {;"
-  log("🔧 Advanced Syntax Fixer Starting...", "cyan");";  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"];  let totalProcessed = 0;  let totalFixed = 0;"
-  for (const dir of sourceDirs) {;"
 
-    if (fs.existsSync(dir)) {log("\n📁 Processing "directory": ${dir}", "blue");"
-      const { totalFiles, fixedFiles } = scanAndFixDirectory(dir);
-      totalProcessed += totalFiles;
-      totalFixed += fixedFiles}
-  }"
-log("\n🎯 "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");
-  if (totalFixed > 0) {log("\n✅ Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow")} else {;
-    log(\nℹ️  No syntax issues found that could be automatically fixed.",")"
-
-if (require.main === module) {;
-  main()}
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 module.exports = { fixFile, scanAndFixDirectory }}}}}}
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -142,43 +97,41 @@ const unterminatedStringRegex = /(["])([^")];
       content = content.replace(unexpectedExportRegex, "$1;\nexport ")
       fixed = true;log(`Fixed unexpected export placement in ${filePath}, "yellow"`)
     // Fix "6"
+=======
+
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
         missingSemicolonBeforeReturnRegex,$1;\nreturn "
-    // Fix "2"
+    // Fix 2
       /import\s+\{\s*Link\s*\}\s+from\s+["]next\/link[];?\s*\nimport\s+\{\s*Link\s*\}\s+from\s+[]next\/link["]
-      content = content.replace(linkRegex, import { Link  } from "next/link)
-      fixed = true;log("Fixed duplicate Link imports in ${filePath}", "yellow")
-    // Fix "3"
-const unterminatedStringRegex = /([""])([^")];
-      content = content.replace(unterminatedStringRegex, "$1$2$1")
-      fixed = true;log("Fixed unterminated strings in ${filePath}", "yellow")
-    // Fix "4": Fix unexpected keyword "import"
+
       content = content.replace(unexpectedImportRegex, "$1;\nimport ")
-      fixed = true;log("Fixed unexpected import placement in ${filePath}", "yellow")
-    // Fix "5": Fix unexpected keyword "export"
-      content = content.replace(unexpectedExportRegex, "$1;\nexport ")
-      fixed = true;log("Fixed unexpected export placement in ${filePath}", "yellow")
+      fixed = true;log(Fixed unexpected import placement in ${filePath}, "yellow")
+    // Fix 5: Fix unexpected keyword "export"
+      content = content.replace(unexpectedExportRegex, $1;\nexport )
+      fixed = true;log("Fixed unexpected export placement in ${filePath}", yellow)
     // Fix "6"
-        missingSemicolonBeforeReturnRegex,$1;\nreturn "
-      fixed = true;log("Fixed missing semicolon before return in ${filePath}", "yellow")
-    // Fix "7"
-      content = content.replace(jsxClosingTagRegex, "<$1$2></$1>")
-      fixed = true;log(`Fixed JSX closing tag issues in ${filePath}, "yellow"`)
-    // Fix "8"
-      content = content.replace(missingCommaRegex, "$1,\n  $"2": ")
-      fixed = true;log(`Fixed missing commas in ${filePath}, "yellow"`)
-    // Fix "9"
-      content = content.replace(unterminatedCommentRegex, "/*$1*/")
-      fixed = true;log(`Fixed unterminated comments in ${filePath}, "yellow"`)
-    // Fix "10"
-      content = content.replace(duplicateExportRegex, "export default $1;");";      fixed = true;log(`Fixed duplicate exports in ${filePath}, "yellow");"}";"
-      fs.writeFileSync(filePath, content, "utf8");log(" Fixed syntax issues in ${filePath}", "green");";      return true;"}"
-    return false,} catch (error) {log(` Error fixing ${filePath}: ${error.message}, "red");";    return false;"}"
-  extensions = [".js", ".jsx", ".ts", ".tsx"]") {"}
-            !["node_modules", ".git", ".next", "dist", "]
-          if();            !["node_modules", ".git", ".next", "dist", "build"].includes(item)") {"}"
-        `red;"
+        missingSemicolonBeforeReturnRegex,$1;\nreturn 
+      fixed = true;log(Fixed missing semicolon before return in ${filePath}", "yellow)
+    // Fix 7"
+      content = content.replace(jsxClosingTagRegex, "<$1$2></$1>)
+      fixed = true;log(`Fixed JSX closing tag issues in ${filePath}, yellow"`)
+    // Fix "8
+      content = content.replace(missingCommaRegex, $1,\n  $"2": )
+      fixed = true;log(`Fixed missing commas in ${filePath}, yellow"`)
+    // Fix "9
+      content = content.replace(unterminatedCommentRegex, /*$1*/")
+      fixed = true;log(`Fixed unterminated comments in ${filePath}, "yellow`)
+    // Fix 10"
+      content = content.replace(duplicateExportRegex, "export default $1;);;      fixed = true;log(`Fixed duplicate exports in ${filePath}, "yellow");};"
+      fs.writeFileSync(filePath, content, "utf8);log( Fixed syntax issues in ${filePath}", "green);;      return true;"}"
+    return false} catch (error) {log(` Error fixing ${filePath}: ${error.message}, red);";    return false;"}
+  extensions = [.js", ".jsx, .ts", ".tsx]) {"}
+            !["node_modules, .git", ".next, dist", "]
+          if();            ![node_modules, ".git", .next, "dist", build].includes(item)") {"}
+        `red;
       log( Error processing directory ${currentPath}: ${error.message}")
         "red
+<<<<<<< HEAD
         `red;"
       log( Error processing directory ${currentPath}: ${error.message}", red),"
   log(" Advanced Syntax Fixer Starting...", "cyan");";  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"]
@@ -198,15 +151,10 @@ log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}
 <<<<<<< HEAD
 <<<<<<< HEAD
 log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");";";  if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow");"} else {`;    log(\nℹ  No syntax issues found that could be automatically fixed.", blue),"`}
+=======
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");";";  if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow");"} else {`;    log(\nℹ  No syntax issues found that could be automatically fixed.", ""blue""),"`}
-log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");";";  if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow");"} else {`;    log(\nℹ  No syntax issues found that could be automatically fixed.", ""blue""),"`}
-<<<<<<< HEAD
-log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");";";  if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow");"} else {`;    log(\nℹ  No syntax issues found that could be automatically fixed.", blue),"`}
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
       "blue"

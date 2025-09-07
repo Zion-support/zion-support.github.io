@@ -77,7 +77,6 @@ export function PointsBadge() { return null; }
       setLoginOpen(true);
     }
   },;
-  const handleRefresh = async (e: React.MouseEvent<HTMLButtonElement>) => {;,
   const handleRefresh = async (e: React.MouseEvent<HTMLButtonElement>) => {;
     e.preventDefault(),;
     e.stopPropagation(),;
@@ -98,22 +97,9 @@ export function PointsBadge() { return null; }
 
 import React, { useState } from 'react';
 
-import { Gift, RefreshCw } from 'lucide-react'
-import { usePoints  } from '@/hooks/usePoints';
-import { useAuth  } from '@/hooks/useAuth';
-import Link from 'next/link';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger  } from '@/components/ui/tooltip';
-import { LoginModal  } from '@/components/auth/LoginModal';
-import { Button  } from '@/components/ui/button';
-import {logErrorToProduction} from '@/utils/productionLogger';
 
 export function PointsBadge() {
 
-  const { isAuthenticated } = useAuth();
-  const { ledger, balance, loading, fetchLedger } = usePoints();
-  const [loginOpen, setLoginOpen] = useState(false);
-  const [isRefreshing, setIsRefreshing] = useState(false);
-  const points = null;
 
   return (
     <TooltipProvider>;

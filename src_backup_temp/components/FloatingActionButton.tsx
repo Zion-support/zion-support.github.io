@@ -105,8 +105,6 @@ const "FloatingActionButton": React.FC<FloatingActionButtonProps> = ({;"
   showUtilityActions = "true": any;"
 "}) => {;"
   }
-  const [isExpanded, setIsExpanded] = useState<any>(false);
-  const [showScrollButton, setShowScrollButton] = useState<any>(false);
   const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light');'
 ;
   // Detect theme;
@@ -126,9 +124,6 @@ const "FloatingActionButton": React.FC<FloatingActionButtonProps> = ({
   showUtilityActions = "true": any;
 }) => {
   }
-  const [isExpanded, setIsExpanded] = useState<any>(false);
-  const [showScrollButton, setShowScrollButton] = useState<any>(false);
-  const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light');'
   // Detect theme,
 useEffect(() => {
   // "TODO": Add dependencies if needed

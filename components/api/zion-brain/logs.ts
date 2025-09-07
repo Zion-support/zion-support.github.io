@@ -1,4 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from 'next';'
 
   return res && res.status(200).json({}
     entries: entries && entries.slice(-200),
@@ -50,12 +49,7 @@ return res.status (200).json ({ entries: entries.slice (-200), by_module, by_typ
       ),
 const { entries } = readLogs();
 
-const stuckOnly = req.query.stuck === '1' |req.query.stuck === 'true';'
-  if (stuckOnly) {
-}
-return res.status(200).json({
-      }
-      "entries": entries.filter(
+
 
         e => { return e.status === 'stuck' || e.status === 'laggy''
       )
@@ -183,6 +177,6 @@ return res.status(200).json({
     total: entries.length,}
   });
   }
-return res.status(200).json({ "entries": entries.slice(-200), byModule, byType, "total": entries.length,;
+return res.status(200).json({ entries: entries.slice(-200), byModule, byType, total: entries.length}
 });
 }

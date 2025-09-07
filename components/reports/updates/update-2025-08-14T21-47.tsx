@@ -29,10 +29,22 @@ name='description'
         </h1>;
         <div
           className='mt-4'
+  return (
+    <div className=min-h-screen bg-slate-950 text-white' />;
+      <Head>;
+        <title />Autonomous Update — 2025-08-14 21-47</title>;
+        <meta;
+name='description
+          content=Fresh autonomous update synthesized from recent site signals.'
+
+          content='Fresh autonomous update synthesized from recent site signals.
+        />;
+        <meta name='twitter:card' content=summary_large_image />;
+
           Autonomous Update — 2025-08-14 21-47;
         </h1>;
         <div'
-          className='mt-4'
+          className='mt-4
           dangerouslySetInnerHTML={{}
             __html:
               '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><p class="text-white/70">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>',;
@@ -41,67 +53,61 @@ name='description'
               '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><p class="text-white/70">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>',;
 pr-12243
 
-              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><p class="text-white/70">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>',;
+
+
+              '<p>Signal source: <a class=text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation target=_blank" rel="noopener>https://ziontechgroup && ziontechgroup.com/automation</a></p><p class=text-white/70">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>,
 
           }}
-        />;'
+        />;
         <p className='mt-6 text-white/60 text-sm'>;
 '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><p class="text-white/70">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>',;
               '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><p class="text-white/70">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>',;
 
-              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><p class="text-white/70">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>',;
+              <p>Signal source: <a class="text-cyan-300 underline href=https://ziontechgroup && ziontechgroup.com/automation" target="_blank rel=noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><p class="text-white/70>Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>,
 
-              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><p class="text-white/70">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>',;
+              '<p>Signal source: <a class=text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation target=_blank" rel="noopener>https://ziontechgroup && ziontechgroup.com/automation</a></p><p class=text-white/70">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>',
 pr-12243
           }}
         <div;
-          className='mt-4';}
+          className=mt-4;}
           dangerouslySetInnerHTML={{__html:;}
-              '<p />Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup && ziontechgroup.com/automation</a></p><p class=\"text-white/70\" />Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>','<p />Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup && ziontechgroup.com/automation</a></p><p class=\"text-white/70\" />Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>','<p />Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup && ziontechgroup.com/automation</a></p><p class=\"text-white/70\" />Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>'}}
+              '<p />Signal source: <a class=\"text-cyan-300 underline\ href=\https://ziontechgroup && ziontechgroup.com/automation\" target=\"_blank\ rel=\noopener\" />https://ziontechgroup && ziontechgroup.com/automation</a></p><p class=\"text-white/70\ />Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>',<p />Signal source: <a class=\text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com/automation\ target=\_blank\" rel=\"noopener\ />https://ziontechgroup && ziontechgroup.com/automation</a></p><p class=\text-white/70\" />Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>,'<p />Signal source: <a class=\"text-cyan-300 underline\ href=\https://ziontechgroup && ziontechgroup.com/automation\" target=\"_blank\ rel=\noopener\" />https://ziontechgroup && ziontechgroup.com/automation</a></p><p class=\"text-white/70\ />Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>'}}
         />;
         <p className='mt-6 text-white/60 text-sm' />;
           Auto-generated by Cloud Content Factory.;
         </p>;
       </main>;
-    </div>;"
-  )export default function Page() {'<p />Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/automation</a></p><p class=\"text-white/70\" />Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / Vi</p>';"
-              '<p />Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/automation</a></p><p class=\"text-white/70\" />Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / Vi</p>';
+    </div>;
+  )export default function Page() {'<p />Signal source: <a class=\"text-cyan-300 underline\" href=\https://ziontechgroup.com/automation\ target=\"_blank\" rel=\noopener\ />https://ziontechgroup.com/automation</a></p><p class=\"text-white/70\" />Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / Vi</p>';
+              <p />Signal source: <a class=\text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\ target=\_blank\" rel=\"noopener\ />https://ziontechgroup.com/automation</a></p><p class=\text-white/70\" />Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / Vi</p>;
         <div;
 className='mt-4'
           dangerouslySetInnerHTML={{
             __html:
 
-              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><p class="text-white/70">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>',;
+              <p>Signal source: <a class="text-cyan-300 underline href=https://ziontechgroup && ziontechgroup.com/automation" target="_blank rel=noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><p class="text-white/70>Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>,
 
-              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><p class="text-white/70">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>',;
+              '<p>Signal source: <a class=text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation target=_blank" rel="noopener>https://ziontechgroup && ziontechgroup.com/automation</a></p><p class=text-white/70">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>',
 
-              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><p class="text-white/70">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>',;
+              <p>Signal source: <a class="text-cyan-300 underline href=https://ziontechgroup && ziontechgroup.com/automation" target="_blank rel=noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><p class="text-white/70>Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>,
 
-              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><p class="text-white/70">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>',;
-
-
+              '<p>Signal source: <a class=text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation target=_blank" rel="noopener>https://ziontechgroup && ziontechgroup.com/automation</a></p><p class=text-white/70">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>',
 
 
 
 
-              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><p class="text-white/70">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>',;
 
 
-
-          }}
+              <p>Signal source: <a class="text-cyan-300 underline href=https://ziontechgroup && ziontechgroup.com/automation" target="_blank rel=noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><p class="text-white/70>Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>}}
         <div;
-          className='mt-4';'
-          dangerouslySetInnerHTML={{"__html":;
-              '<p>Signal "source": <a class="text-cyan-300 underline" href=""https"://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">"https"://ziontechgroup && ziontechgroup.com/automation</a></p><p class="text-white/70">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>','<p>Signal "source": <a class="text-cyan-300 underline" href=""https"://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">"https"://ziontechgroup && ziontechgroup.com/automation</a></p><p class="text-white/70">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>','<p>Signal "source": <a class="text-cyan-300 underline" href=""https"://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">"https"://ziontechgroup && ziontechgroup.com/automation</a></p><p class="text-white/70">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>'}}'
+
         />;
         <p className='mt-6 text-white/60 text-sm'>;'
           Auto-generated by Cloud Content Factory.;
         </p>;
       </main>;
     </div>;
-  )export default function Page() {'<p>Signal "source": <a class="text-cyan-300 underline" href=""https"://ziontechgroup.com/automation" target="_blank" rel="noopener">"https"://ziontechgroup.com/automation</a></p><p class="text-white/70">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / Vi</p>';'
-              '<p>Signal "source": <a class="text-cyan-300 underline" href=""https"://ziontechgroup.com/automation" target="_blank" rel="noopener">"https"://ziontechgroup.com/automation</a></p><p class="text-white/70">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / Vi</p>';'
-        <div
+
 }
 className='mt-4''
           dangerouslySetInnerHTML={{
@@ -120,7 +126,7 @@ className='mt-4''
 
 export default function Page() {return (<div className="min-h-screen bg-slate-950 text-white">;"
     </div>;
-  );export default function Page() {;
+  );export default function Page() {
 
 }
 
@@ -152,6 +158,18 @@ pr-12243
           }}
         />
         <p className='mt-6 text-white/60 text-sm'>'
+
+pr-12243
+
+              <p>Signal source: <a class="text-cyan-300 underline" href=https://ziontechgroup.com/automation target="_blank" rel=noopener>https://ziontechgroup.com/automation</a></p><p class="text-white/70">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / Vi</p>,
+
+pr-12243
+
+
+
+          }}
+        />'
+        <p className='mt-6 text-white/60 text-sm>
           Auto-generated by Cloud Content Factory.
         </p>
       </main>
@@ -161,23 +179,23 @@ pr-12243
           }}
         />
         />
-        <meta'
-          property='og:title''
-          content='Autonomous Update — 2025-08-14 21-47'
+        <meta
+          property='og:title'
+          content=Autonomous Update — 2025-08-14 21-47'
         />
         <meta'
-          property='og:description''
+          property=og:description'
 
-          content='Fresh autonomous update synthesized from recent site signals.'
-        />;'
-        <meta name='twitter:card' content='summary_large_image' />
+          content='Fresh autonomous update synthesized from recent site signals.
+        />;
+        <meta name='twitter:card' content=summary_large_image />
           Autonomous Update — 2025-08-14 21-47
         </h1>
         <div'
-          className='mt-4'
+          className='mt-4
           dangerouslySetInnerHTML={{}
             __html:
-              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup.com/automation</a></p><p class="text-white/70">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / Vi</p>'
+              <p>Signal source: <a class=text-cyan-300 underline href="https://ziontechgroup.com/automation" target=_blank rel="noopener">https://ziontechgroup.com/automation</a></p><p class=text-white/70>Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / Vi</p>'
           }}
         />;'
         <p className='mt-6 text-white/60 text-sm'>
@@ -191,6 +209,20 @@ pr-12243
 
   );export default function Page() {
   return (
+        <p className=mt-6 text-white/60 text-sm>
+          Auto-generated by Cloud Content Factory.
+        </p>
+      </main>
+
+  return (
+
+    </div>;
+
+
+  return (
+
+}
+
 
 export default function Page() {
 export default function Page() {
@@ -226,17 +258,21 @@ pr-12243
 
   return (";
     <div className="min-h-screen bg-slate-950 text-white">;
+  return (
+
+  return (";
+    <div className="min-h-screen bg-slate-950 text-white>;
       <Head>;
         <title>Autonomous Update — 2025-08-14 21-47</title>;
-        <meta name="description" content="Fresh autonomous update synthesized from recent site signals." />;"
-        <meta property=""og":title" content="Autonomous Update — 2025-08-14 21-47" />;"
-        <meta property=""og":description" content="Fresh autonomous update synthesized from recent site signals." />;"
-        <meta name=""twitter":card" content="summary_large_image" />;"
+        <meta name="description" content=Fresh autonomous update synthesized from recent site signals. />;"
+        <meta property="og:title content=Autonomous Update — 2025-08-14 21-47" />;"
+        <meta property=og:description content="Fresh autonomous update synthesized from recent site signals." />;
+        <meta name=twitter:card" content="summary_large_image />;
       </Head>;
-      <main className="container mx-auto px-6 py-12 prose prose-invert">;"
-        <h1 className="text-3xl font-extrabold">Autonomous Update — 2025-08-14 21-47</h1>;"
-        <div className="mt-4" dangerouslySetInnerHTML={{ "__html": "<p>Signal "source": <a class=\"text-cyan-300 underline\" href=\""https"://ziontechgroup && ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\">"https"://ziontechgroup && ziontechgroup.com/automation</a></p><p class=\"text-white/70\">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>" }} />;"
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Content Factory.</p>;"
+      <main className="container mx-auto px-6 py-12 prose prose-invert">;
+        <h1 className=text-3xl font-extrabold">Autonomous Update — 2025-08-14 21-47</h1>;"
+        <div className=mt-4 dangerouslySetInnerHTML={{ __html: "<p>Signal source: <a class=\"text-cyan-300 underline\ href=\https://ziontechgroup && ziontechgroup.com/automation\" target=\"_blank\ rel=\noopener\">https://ziontechgroup && ziontechgroup.com/automation</a></p><p class=\"text-white/70\>Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p> }} />;"
+        <p className="mt-6 text-white/60 text-sm>Auto-generated by Cloud Content Factory.</p>;
       </main>;
     </div>;
   );
@@ -250,8 +286,8 @@ export default /**;
  * Page - Function description;
  */
 function Page() {}
-  return ('
-    <div className='min - h-screen bg - slate - 950 text - white'>;
+  return (
+    <div className=min - h-screen bg - slate - 950 text - white'>;
       <Head>;
         <title > Autonomous Update — 2025 - 08 - 14 21 - 47</title>;
         <meta;'
@@ -263,39 +299,34 @@ export default function Page() {
 }
 }
 
-  return ("
+  return (
     <div className=\"min-h-screen bg-slate-950 text-white\" />;
       <Head>;
-        <title />Autonomous Update — 2025-08-14 21-47</title>;"
-        <meta name=\"description\" content=\"Fresh autonomous update synthesized from recent site signals.\" />;"
-        <meta property=\"og:title\" content=\"Autonomous Update — 2025-08-14 21-47\" />;"
-        <meta property=\"og:description\" content=\"Fresh autonomous update synthesized from recent site signals.\" />;"
-        <meta name=\"twitter:card\" content=\"summary_large_image\" />;
-      </Head>;"
-      <main className=\"container mx-auto px-6 py-12 prose prose-invert\" />;"
-        <h1 className=\"text-3xl font-extrabold\" />Autonomous Update — 2025-08-14 21-47</h1>;"
-        <div className=\"mt-4\" dangerouslySetInnerHTML={{ __html: \"<p />Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup && ziontechgroup.com/automation</a></p><p class=\"text-white/70\" />Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>\" }} />;"
+        <title />Autonomous Update — 2025-08-14 21-47</title>;
+        <meta name=\description\" content=\"Fresh autonomous update synthesized from recent site signals.\ />;
+        <meta property=\"og:title\" content=\Autonomous Update — 2025-08-14 21-47\ />;"
+        <meta property=\"og:description\ content=\Fresh autonomous update synthesized from recent site signals.\" />;"
+        <meta name=\twitter:card\ content=\"summary_large_image\" />;
+      </Head>;
+      <main className=\container mx-auto px-6 py-12 prose prose-invert\" />;"
+        <h1 className=\text-3xl font-extrabold\ />Autonomous Update — 2025-08-14 21-47</h1>;"
+        <div className=\"mt-4\ dangerouslySetInnerHTML={{ __html: \<p />Signal source: <a class=\"text-cyan-300 underline\" href=\https://ziontechgroup && ziontechgroup.com/automation\ target=\"_blank\" rel=\noopener\ />https://ziontechgroup && ziontechgroup.com/automation</a></p><p class=\"text-white/70\" />Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>\ }} />;
         <p className=\"mt-6 text-white/60 text-sm\" />Auto-generated by Cloud Content Factory.</p>;
       </main>;
     </div>;
   )}
-import Head from 'next / head';'
 
-export default /**;
- * Page - Function description;
- */;
-function Page() {return (<div className='min - h-screen bg - slate - 950 text - white'>;'
-  );
 }
 export default /**
  * Page - Function description
  */
-function Page() {
-}
-return (;
-    <div className='min - h-screen bg - slate - 950 text - white'>;'
-      <Head>;
-        <title  /> Autonomous Update — 2025 - 08 - 14 21 - 47</title>;
+
+          content=Fresh autonomous update synthesized from recent site signals.';
+        />;
+        <meta;'
+          property=og:title;'
+          content='Autonomous Update — 2025 - 08 - 14 21 - 47;
+        />;
         <meta;
           name='description';
           content='Fresh autonomous update synthesized from recent site signals.';
@@ -367,28 +398,21 @@ return (;
         <h1 className="text - 3xl font - extrabold">Autonomous Update — 2025 - 08 - 14 21 - 47</h1>;
         <div className="mt - 4" dangerouslySetInnerHTML={{ __html: "<p > Signal source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / automation" target="_blank" rel="noopener">https://ziontechgroup.com / automation</a></p><p class="text - white / 70">Automation HubDiscover our autonomous, self - healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / Vi</p>" }} />;
         <p className="mt - 6 text - white / 60 text - sm">Auto - generated by Cloud Content Factory.</p>;
+          Autonomous Update — 2025 - 08 - 14 21 - 47;
+        </h1>;
+        <div;
+          className=mt - 4';
+
       </main>;
     </div>;
     </div>;
-  )export default function Page() {return (export default function Page() {return (<div className="min-h-screen bg-slate-950 text-white">;"
-      <Head>;
-        <title>Autonomous Update — 2025-08-14 21-47</title>;
-        <meta name="description" content="Fresh autonomous update synthesized from recent site signals." />;"
-        <meta property=""og":title" content="Autonomous Update — 2025-08-14 21-47" />;"
-        <meta property=""og":description" content="Fresh autonomous update synthesized from recent site signals." />;"
-        <meta name=""twitter":card" content="summary_large_image" />;"
-      </Head>;
-      <main className="container mx-auto px-6 py-12 prose prose-invert">;"
-        <h1 className="text-3xl font-extrabold">Autonomous Update — 2025-08-14 21-47</h1>;"
-        <div className="mt-4" dangerouslySetInnerHTML={{ "__html": "<p>Signal "source": <a class=\"text-cyan-300 underline\" href=\""https"://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\">"https"://ziontechgroup.com/automation</a></p><p class=\"text-white/70\">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / Vi</p>" }} />;"
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Content Factory.</p>;"
+
       </main>;
     </div>;
   )}ursor/fix-website-loading-errors-and-merge-6662;
     </div>;
   )}
-    </div>;
-  )})} catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" })},"
+
 })
     </div>);
 }
@@ -421,9 +445,7 @@ pr-12243
     </div>
     </div>;
   );
-export default function Page() {
 }
-return (;
 
 export default function Page() {
   return ("
@@ -457,17 +479,21 @@ pr-12243
 
 
     <div className="min-h-screen bg-slate-950 text-white">
+
+
+
+    <div className=min-h-screen bg-slate-950 text-white>
       <Head>
         <title>Autonomous Update — 2025-08-14 21-47</title>
-        <meta name="description" content="Fresh autonomous update synthesized from recent site signals." />"
-        <meta property=""og":title" content="Autonomous Update — 2025-08-14 21-47" />"
-        <meta property=""og":description" content="Fresh autonomous update synthesized from recent site signals." />"
-        <meta name=""twitter":card" content="summary_large_image" />"
+        <meta name="description" content=Fresh autonomous update synthesized from recent site signals. />
+        <meta property="og:title" content=Autonomous Update — 2025-08-14 21-47 />
+        <meta property="og:description" content=Fresh autonomous update synthesized from recent site signals. />
+        <meta name="twitter:card" content=summary_large_image />
       </Head>
-      <main className="container mx-auto px-6 py-12 prose prose-invert">"
-        <h1 className="text-3xl font-extrabold">Autonomous Update — 2025-08-14 21-47</h1>"
-        <div className="mt-4" dangerouslySetInnerHTML={{ "__html": "<p>Signal "source": <a class=\"text-cyan-300 underline\" href=\""https"://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\">"https"://ziontechgroup.com/automation</a></p><p class=\"text-white/70\">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / Vi</p>" }} />"
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Content Factory.</p>"
+      <main className="container mx-auto px-6 py-12 prose prose-invert">
+        <h1 className=text-3xl font-extrabold>Autonomous Update — 2025-08-14 21-47</h1>
+        <div className="mt-4" dangerouslySetInnerHTML={{ __html: <p>Signal source: <a class=\text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\ target=\_blank\" rel=\"noopener\>https://ziontechgroup.com/automation</a></p><p class=\text-white/70\">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / Vi</p>" }} />
+        <p className=mt-6 text-white/60 text-sm>Auto-generated by Cloud Content Factory.</p>
       </main>
     </div>
   )
@@ -489,9 +515,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
+  } catch (error) {"
+
   }
 }
-;
 
   );
 origin/cursor/automate-test-improve-and-merge-code-2533

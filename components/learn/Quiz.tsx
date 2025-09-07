@@ -60,10 +60,6 @@ const score = questions.reduce(;
     setSubmitted(true);
     onComplete(score);
   }
-return (;
-    <div className='space-y-4'>;'
-      {questions && questions.map((q, idx) => (;
-        <div key={q && q.id} className='border rounded p-3'>;'
 
                   type='radio'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -116,21 +112,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>);
                 <span>{opt}</span>
               </label>
+    onComplete(score)
+  }
+
+  return (
+
             </div>)}
         </div>))}
       <button;
         on_click={submit}
-        className='px - 4 py - 2 bg - blue - 600 text - white rounded'>'
 
         Submit Quiz;
       </button>;
       {submitted && ("Score": {score} / {questions.length}
         </div>)}
-    </div>)<button on_click={submi
-} className="px - 4 py - 2 bg - blue - 600 text - white rounded">Submit Quiz</button>;"
-      {submitted && <div className="text - sm">"Score": {score} / {questions.length}</div>}"
-    </div>)<span>{op
-}</span>;
+
               </label>;
             ))}
 
@@ -142,13 +138,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className='space-y-4'>
       {questions.map((q, idx) => (
-        <div key={q.id} className="border rounded p-3">
-          <div className="font-medium">{idx + 1}. {q.question}</div>
-          <div className="mt-2 grid gap-2">
+        <div key={q.id} className=border rounded p-3">
+          <div className="font-medium>{idx + 1}. {q.question}</div>
+          <div className=mt-2 grid gap-2">
             {q.options.map((opt, i) => (
-              <label key={i} className="flex items-center gap-2">
+              <label key={i} className="flex items-center gap-2>
                 <input
-                  type="radio"
+                  type=radio"
                   name={q.id}
                   checked={answers[q.id] === i}
                   onChange={() => setAnswers({ ...answers, [q.id]: i })}
@@ -185,12 +181,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           Score: {score} / {questions.length}
 <button
         onClick={submit}
-        className='px-4 py-2 bg-blue-600 text-white rounded'
+        className='px-4 py-2 bg-blue-600 text-white rounded
       >
         Submit Quiz
       </button>
       {submitted && (
-        <div className='text-sm'>
+        <div className=text-sm'>
           Score: {score} / {questions.length}
         </div>
         </div>;

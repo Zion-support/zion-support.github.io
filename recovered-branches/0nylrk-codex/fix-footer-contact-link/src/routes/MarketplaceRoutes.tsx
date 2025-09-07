@@ -115,7 +115,6 @@ import ITOnsiteServicesPage from "ITOnsiteServicesPage";"
 import SearchPage from "SearchPage";"
 import ProjectRoom from "ProjectRoom";"
 import VideoCall from "VideoCall";"
-const MarketplaceRoutes = () => {
 }
 const MarketplaceRoutes = () => {;
 }

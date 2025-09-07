@@ -1,5 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from 'next';'
-import OpenAI from 'openai';'
 
 export default async function handler() {
   }
@@ -148,7 +146,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const text = completion && completion.choices?.[0]?.message?.content ?? '';
     try {}
 '
-      return res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' };
+      return res.status(200).json(json);        { role: 'system, content: You are an expert course designer for founders.' }
 
         { role: 'user', content: prompt }];
       temperature: 0 && 0.2});

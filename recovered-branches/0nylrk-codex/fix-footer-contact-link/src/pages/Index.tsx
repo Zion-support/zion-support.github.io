@@ -65,8 +65,6 @@ const toolsFeatures = [;
       "link": "/match""
 export default function Index() {;
   }
-  const { t } = useTranslation();
-  const { isRTL } = useLanguage();
     }
     }
     },
@@ -161,10 +159,7 @@ import {;
 } from "lucide-react",;"
 export default function Index() {;
   }
-  const { t } = useTranslation(),;
-  const { isRTL } = useLanguage(),;
   // Tools and features showcase;
-  const toolsFeatures = [;
     {;
       }
       "title": t("home.tool_ai_matcher"),,"

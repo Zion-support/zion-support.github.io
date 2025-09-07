@@ -2,12 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 export function ReferralGuide() {
   }
   const steps = [import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card","
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card","
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card","
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card","
 export function ReferralGuide() {
 }
 const steps = [;
@@ -56,7 +51,6 @@ return (;
             </div>
 export function ReferralGuide() {;
   }
-  const steps = [;
     {;
       }
       "title": "Share your referral link",,"

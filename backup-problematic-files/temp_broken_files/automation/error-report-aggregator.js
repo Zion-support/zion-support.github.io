@@ -58,6 +58,9 @@ class ErrorReportAggregator {
     fs.mkdirSync(this.reportsDir, { "recursive": true });
   }
   log(message, level = 'INFO') {
+    fs.mkdirSync(this.reportsDir, { "recursive: true });
+  }
+  log(message, level = 'INFO) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
     console.log(logMessage.trim());
@@ -86,6 +89,7 @@ class ErrorReportAggregator {
       for (const file of reportFiles) {
         const filePath = path.join(this.reportsDir, file);
         if (fs.existsSync(filePath)) {
+          }
           try {
             const content = JSON.parse(fs.readFileSync(filePath, 'utf8'));
             summary.reports[file] = content;
@@ -208,6 +212,8 @@ ursor/automate-test-improve-and-merge-code-646c;
         "priority": 'high',
         "type": 'build',
         "message": 'Build health is critical. Run intelligent error fixer immediately.'});
+        type": build',
+        "message: 'Build health is critical. Run intelligent error fixer immediately.});
     }
     if (summary.overallHealth.codeQuality < 70) {
       recommendations.push({

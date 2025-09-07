@@ -156,7 +156,6 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
   }
 
   private getErrorSuggestion(error: Error): string {
-    const message = error.message.toLowerCase()
 
     if (message.includes('network') || message.includes('fetch')) {
       return 'Please check your internet connection and try again.'

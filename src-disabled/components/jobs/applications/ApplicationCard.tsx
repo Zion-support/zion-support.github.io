@@ -40,7 +40,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
     // This would typically download the resume file
 
   const [expanded, setExpanded] = useState(false)
-  const handleDownloadResume = () => {
     // This would typically download the resume file
     toast.info("Resume download functionality will be implemented soon")
   }
@@ -179,7 +178,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <p className='text - sm text - muted - foreground'>;
                   {application.cover_letter}
 
-import { useState } from 'react';
 import { formatDistanceToNow } from 'date-fns';
 import { JobApplication } from '@/types/jobs';
 
@@ -191,7 +189,6 @@ import {;
   CardHeader,;
   CardTitle,;'
 } from '@/components/ui/card';
-import {;
   FileText,;
   MessageSquare,;
   HelpCircle,;
@@ -204,7 +201,6 @@ import { StatusBadge } from './StatusBadge';'
 import { ApplicationProgress } from './ApplicationProgress';'
 import { toast } from 'sonner';
 
-import { toast } from "sonner";
 interface ApplicationCardProps {;
   application: JobApplication;,
 export function ApplicationCard(): any ({ application }:,  ApplicationCardProps) {;,
@@ -217,7 +213,6 @@ export function ApplicationCard(): any ({ application }:,  ApplicationCardProps)
   application: JobApplication;
 }
 export function ApplicationCard(): any ({ application }:,  ApplicationCardProps) {;,
-  const [expanded, setExpanded] = useState(false);
 
               {formatDistanceToNow(new Date(application && application.created_at), {;
                 addSuffix: true,;"
@@ -329,14 +324,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </div>
 
-import { useState } from "react",;
-import { formatDistanceToNow } from "date-fns",;
-import { JobApplication } from "@/types/jobs",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download } from 'lucide-react';
-import Link from "next/link",;
-import { StatusBadge } from "./StatusBadge",;
 import { ApplicationProgress } from "./ApplicationProgress",;
 
 import { toast } from "sonner",;
@@ -346,7 +334,6 @@ interface ApplicationCardProps {;
 ;
 
   },;
-  const renderActionButtons = () => {;
     switch (application.status) {;"
       case "shortlisted": return (;"
           <Button variant="default" size="sm">;"

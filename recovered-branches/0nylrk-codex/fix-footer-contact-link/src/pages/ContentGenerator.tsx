@@ -66,7 +66,6 @@ React.useEffect(() => {
       }
       toast.error("You must be logged in to access this page");"
       navigate("/login?redirect=/content-generator")"
-import React, { useState } from 'react';'
 import { Header } from "@/components/Header";"
 import { Footer } from "@/components/Footer",;"
 import { Button } from "@/components/ui/button",;"

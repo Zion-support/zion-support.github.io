@@ -145,7 +145,6 @@ this && this.results.performance && performance.alerts.push({
       }
     }
     // Check for outdated packages,
-const packageJsonPath = path && path.join(this && this.projectRoot, 'package && package.json');'
     if (fs && fs.existsSync(packageJsonPath)) {
       }
       try {
@@ -188,7 +187,6 @@ const packageJsonPath = path && path.join(this && this.projectRoot, 'package && 
   }
   getBuildSize() {
     }
-    const buildDir = path && path.join(this && this.projectRoot, '.next');'
     if (fs && fs.existsSync(buildDir)) {
       }
       return this && this.getDirectorySize(buildDir)}

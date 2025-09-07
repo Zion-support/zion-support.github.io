@@ -67,7 +67,6 @@ const Blueprint20250818123006: React.FC = () => {
       benefit: 'Proactive issue detection and resolution'
       status: 'implemented'
     }
-  const edgeNodes = [
     {
       name: 'North America',
       description: 'Primary edge node with high availability',
@@ -101,7 +100,6 @@ const Blueprint20250818123006: React.FC = () => {
   }
 }
   ];
-  const features = [
     {
       feature: 'Global Load Balancing',
       description: 'Intelligent traffic routing based on location and performance',

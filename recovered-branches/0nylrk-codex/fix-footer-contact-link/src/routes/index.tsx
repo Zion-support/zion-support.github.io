@@ -21,8 +21,6 @@ import MobileAppRoutes from "./MobileAppRoutes",
 import ContentRoutes from "./ContentRoutes",
 import ErrorRoutes from "./ErrorRoutes",
 import EnterpriseRoutes from "./EnterpriseRoutes",
-import CommunityRoutes from "./CommunityRoutes";
-import DeveloperRoutes from "./DeveloperRoutes";
 export {
   AuthRoutes,
   DashboardRoutes,

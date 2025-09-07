@@ -234,10 +234,8 @@ const negativeWords = [;
 text
       .toLowerCase()
       .split(/\s+/)
-      .forEach(word = > {
-       ;
-  }
-  const cleanWord = word.replace(/[^\w]/g, '');'
+      .forEach(word => {
+        const cleanWord = word.replace(/[^\w]/g, ');
         if (cleanWord.length > 2) {
           }
           wordCounts.set(cleanWord, (wordCounts.get(cleanWord) |0) + 1);
@@ -293,19 +291,7 @@ text
     const trigramCounts = new Map<string, number>(),
 
 
-for (let i = 0; i < wordsArray.length - 1; i++) {
-      }
-      const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;`      bigramCounts.set(bigram, (bigramCounts.get(bigram) |0) + 1);
-    }
-    for (let i = 0; i < wordsArray.length - 2; i++) {
-      }
-      const trigram = `${wordsArray[i]} ${wordsArray[i + 1]} ${wordsArray[i + 2]}`;`      trigramCounts.set(trigram, (trigramCounts.get(trigram) || 0) + 1);
-    }
 
-const bigrams = Array.from(bigramCounts.entries());
-      .sort((a, b) => b[1] - a[1])
-      .slice(0, 5)
-      .map(([phrase, count]) => ({ phrase, count }));
 
 const trigrams = Array.from(trigramCounts.entries());
     for (let i = 0; i < wordsArray && wordsArray.length - 1; i++) {

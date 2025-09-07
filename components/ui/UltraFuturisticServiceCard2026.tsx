@@ -1,23 +1,18 @@
 id: string;
 
 
-  "id": string;
-
-  "name": string;
-  "tagline": string;
-  "description": string;
   price?: string | {monthly?: number;
     }
     yearly?: number;
     currency?: string;
     trialDays?: number;
-import React from 'react';
+import React from react';
     monthly?: number;
     yearly?: number;
     currency?: string;
   period?: string;
   pricing?: any;
-  "features": string[],;
+
   popular?: boolean;
     setupTime?: string;
   },period?: string;
@@ -204,6 +199,79 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
           textColor: 'text-gray-400',
           iconBg: 'bg-gray-500/20',
           iconBorder: 'border-gray-400/30'
+          iconBorder: 'border-purple-400/30
+        },
+      case quantum':
+        return {
+          gradient: 'from-cyan-600 via-blue-600 to-cyan-700,
+          borderColor: border-cyan-400/30',
+          textColor: 'text-cyan-400,
+          iconBg: bg-cyan-500/20',
+          iconBorder: 'border-cyan-400/30
+        },
+      case space':
+        return {
+          gradient: 'from-indigo-600 via-purple-600 to-indigo-700,
+          borderColor: border-indigo-400/30',
+          textColor: 'text-indigo-400,
+          iconBg: bg-indigo-500/20',
+          iconBorder: 'border-indigo-400/30
+        },
+      case cybersecurity':
+        return {
+          gradient: 'from-red-600 via-orange-600 to-red-700,
+          borderColor: border-red-400/30',
+          textColor: 'text-red-400,
+          iconBg: bg-red-500/20',
+          iconBorder: 'border-red-400/30
+        },
+      case enterprise':
+        return {
+          gradient: 'from-indigo-600 via-purple-600 to-indigo-700,
+          borderColor: border-indigo-400/30',
+          textColor: 'text-indigo-400,
+          iconBg: bg-indigo-500/20',
+          iconBorder: 'border-indigo-400/30
+        },
+      case automation':
+        return {
+          gradient: 'from-green-600 via-emerald-600 to-green-700,
+          borderColor: border-green-400/30',
+          textColor: 'text-green-400,
+          iconBg: bg-green-500/20',
+          iconBorder: 'border-green-400/30
+        },
+      case it':
+        return {
+          gradient: 'from-blue-600 via-indigo-600 to-blue-700,
+          borderColor: border-blue-400/30',
+          textColor: 'text-blue-400,
+          iconBg: bg-blue-500/20',
+          iconBorder: 'border-blue-400/30
+        },
+      case emerging':
+        return {
+          gradient: 'from-yellow-600 via-orange-600 to-yellow-700,
+          borderColor: border-yellow-400/30',
+          textColor: 'text-yellow-400,
+          iconBg: bg-yellow-500/20',
+          iconBorder: 'border-yellow-400/30
+        },
+      case premium':
+        return {
+          gradient: 'from-amber-600 via-yellow-600 to-amber-700,
+          borderColor: border-amber-400/30',
+          textColor: 'text-amber-400,
+          iconBg: bg-amber-500/20',
+          iconBorder: 'border-amber-400/30
+        },
+      default:
+        return {
+          gradient: from-gray-600 via-gray-700 to-gray-800',
+          borderColor: 'border-gray-400/30,
+          textColor: text-gray-400',
+          iconBg: 'bg-gray-500/20,
+          iconBorder: border-gray-400/30'
         }
     }
   },

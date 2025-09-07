@@ -1,5 +1,5 @@
 :src/components/contracts/page/ContractTypeCards.tsx
-import { Button } from '@/components/ui/button'
+import { Button } from '@/components/ui/button
 import {
   Card
   CardContent
@@ -7,9 +7,9 @@ import {
   CardFooter
   CardHeader
   CardTitle
-} from '@/components/ui/card'
+} from @/components/ui/card'
 
-import { FileText, ShieldCheck } from 'lucide-react'
+import { FileText, ShieldCheck } from 'lucide-react
 interface ContractTypeCardsProps {
   onStandardClick: () => void
   onSmartClick: () => void
@@ -17,9 +17,9 @@ export function ContractTypeCards({
   onStandardClick
   onSmartClick
 }: ContractTypeCardsProps) {
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { FileText, ShieldCheck } from 'lucide-react'
+import { Button } from "@/components/ui/button,
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from @/components/ui/card",
+import { FileText, ShieldCheck } from lucide-react'
 
 interface ContractTypeCardsProps {
   onStandardClick: () => void,
@@ -31,14 +31,15 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import {
+import { Button } from "@/components/ui/button;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from @/components/ui/card";
   Card
   CardContent
   CardDescription
   CardFooter
   CardHeader
   CardTitle
-} from '@/components/ui/card'
-import { FileText, ShieldCheck } from 'lucide-react'
+} from '@/components/ui/card
 
   onStandardClick: () => void;
   onSmartClick: () => void
@@ -47,16 +48,18 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
 origin/cursor/automate-test-improve-and-merge-code-2533
 
   return (
-    <div className="grid md:grid-cols-2 gap-6 mb-10">
+    <div className="grid md:grid-cols-2 gap-6 mb-10>
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
 <CardTitle className="flex items-center gap-2">
+          <CardTitle className=flex items-center gap-2">
+<CardTitle className="flex items-center gap-2>
 
 
-<CardTitle className="flex items-center gap-2">
+<CardTitle className=flex items-center gap-2">
 
-            <FileText className="h-5 w-5" />
+            <FileText className="h-5 w-5 />
 
             Standard Contracts
           </CardTitle>
@@ -69,41 +72,41 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
-          <ul className="space-y-2">
-            <li className="text-sm">✓ Legally binding templates</li>
-            <li className="text-sm">✓ Milestone-based payment terms</li>
-            <li className="text-sm">✓ IP rights and confidentiality clauses</li>
-            <li className="text-sm">✓ DocuSign integration</li>
+          <ul className=space-y-2">
+            <li className="text-sm>✓ Legally binding templates</li>
+            <li className=text-sm">✓ Milestone-based payment terms</li>
+            <li className="text-sm>✓ IP rights and confidentiality clauses</li>
+            <li className=text-sm">✓ DocuSign integration</li>
           </ul>
         </CardContent>
         <CardFooter>
 
-          <Button variant="outline" onClick={onStandardClick}>
+          <Button variant="outline onClick={onStandardClick}>
 
 
-          <Button variant="outline" onClick={onStandardClick}>
+          <Button variant=outline" onClick={onStandardClick}>
 
 
-          <Button variant="outline" onClick={onStandardClick}>
+          <Button variant="outline onClick={onStandardClick}>
 
-<ul className='space-y-2'>
-            <li className='text-sm'>✓ Legally binding templates</li>
-            <li className='text-sm'>✓ Milestone-based payment terms</li>
-            <li className='text-sm'>✓ IP rights and confidentiality clauses</li>
-            <li className='text-sm'>✓ DocuSign integration</li>
+<ul className='space-y-2>
+            <li className=text-sm'>✓ Legally binding templates</li>
+            <li className='text-sm>✓ Milestone-based payment terms</li>
+            <li className=text-sm'>✓ IP rights and confidentiality clauses</li>
+            <li className='text-sm>✓ DocuSign integration</li>
           </ul>
         </CardContent>
         <CardFooter>
 :src/components/contracts/page/ContractTypeCards.tsx
-          <Button variant="outline" onClick={onStandardClick}>
+          <Button variant=outline" onClick={onStandardClick}>
           </Button>
         </CardFooter>
       </Card>
       <Card>
-        <CardHeader className='bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg'>
-          <div className='flex justify-between items-center'>
-            <CardTitle className='flex items-center gap-2'>
-              <ShieldCheck className='h-5 w-5 text-primary' />
+        <CardHeader className=bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg'>
+          <div className='flex justify-between items-center>
+            <CardTitle className=flex items-center gap-2'>
+              <ShieldCheck className='h-5 w-5 text-primary />
               Smart Contracts
             </CardTitle>
             <span className='px-2 py-1 bg-primary/10 text-primary text-xs rounded-full'>              Blockchain Powered      <Card>
@@ -115,35 +118,35 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </CardFooter>
       </Card>
 
-        <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
-          <div className="flex justify-between items-center">
-            <CardTitle className="flex items-center gap-2">
-              <ShieldCheck className="h-5 w-5 text-primary" />
+        <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg>
+          <div className=flex justify-between items-center">
+            <CardTitle className="flex items-center gap-2>
+              <ShieldCheck className=h-5 w-5 text-primary" />
               Smart Contracts
             </CardTitle>
-            <span className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">
+            <span className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full>
 
 <Card>
-        <CardHeader className='bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg'>
-          <div className='flex justify-between items-center'>
-            <CardTitle className='flex items-center gap-2'>
-              <ShieldCheck className='h-5 w-5 text-primary' />
+        <CardHeader className=bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg'>
+          <div className='flex justify-between items-center>
+            <CardTitle className=flex items-center gap-2'>
+              <ShieldCheck className='h-5 w-5 text-primary />
               Smart Contracts
             </CardTitle>
-            <span className='px-2 py-1 bg-primary/10 text-primary text-xs rounded-full'>
+            <span className=px-2 py-1 bg-primary/10 text-primary text-xs rounded-full'>
 origin/cursor/automate-test-improve-and-merge-code-2533
       
       <Card>
 
 
 
-        <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
-          <div className="flex justify-between items-center">
-            <CardTitle className="flex items-center gap-2">
-              <ShieldCheck className="h-5 w-5 text-primary" />
+        <CardHeader className=bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
+          <div className="flex justify-between items-center>
+            <CardTitle className=flex items-center gap-2">
+              <ShieldCheck className="h-5 w-5 text-primary />
               Smart Contracts
             </CardTitle>
-            <span className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">
+            <span className=px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">
               Blockchain Powered
             </span>
           </div>
@@ -158,6 +161,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <li className="text-sm">✓ Transaction verification</li>
             <li className="text-sm">✓ Permanent on-chain record</li>
             <li className="text-sm">✓ Multi-signature approval flow</li>
+          <ul className="space-y-2>
+            <li className=text-sm">✓ All standard contract features</li>
+            <li className="text-sm>✓ Automatic escrow payment release</li>
+            <li className=text-sm">✓ Transaction verification</li>
+            <li className="text-sm>✓ Permanent on-chain record</li>
+            <li className=text-sm">✓ Multi-signature approval flow</li>
           </ul>
         </CardContent>
         <CardFooter>
@@ -165,17 +174,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             onClick={onSmartClick}
 
 
-<ul className='space-y-2'>
-            <li className='text-sm'>✓ All standard contract features</li>
-            <li className='text-sm'>✓ Automatic escrow payment release</li>
-            <li className='text-sm'>✓ Transaction verification</li>
-            <li className='text-sm'>✓ Permanent on-chain record</li>
-            <li className='text-sm'>✓ Multi-signature approval flow</li>
+<ul className='space-y-2>
+            <li className=text-sm'>✓ All standard contract features</li>
+            <li className='text-sm>✓ Automatic escrow payment release</li>
+            <li className=text-sm'>✓ Transaction verification</li>
+            <li className='text-sm>✓ Permanent on-chain record</li>
+            <li className=text-sm'>✓ Multi-signature approval flow</li>
           </ul>
         </CardContent>
         <CardFooter>
           <Button
-            className='w-full bg-gradient-to-r from-blue-600 to-indigo-600'
+            className='w-full bg-gradient-to-r from-blue-600 to-indigo-600
             onClick={onSmartClick}
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -207,87 +216,92 @@ import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { FileText, ShieldCheck } from 'lucide-react';
 interface ContractTypeCardsProps {;
+
+          <Button 
+            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 
+import { Button } from @/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card,
+import { FileText, ShieldCheck } from lucide-react';
+interface ContractTypeCardsProps {
   onStandardClick: () => void;
   onSmartClick: () => void;
 
 
-export function ContractTypeCards(): any ({;
-  onStandardClick,;
-  onSmartClick,;
-}:,  ContractTypeCardsProps) {;
+export function ContractTypeCards(): any ({
+  onStandardClick,
+  onSmartClick}:,  ContractTypeCardsProps) {
   return (
-    <div className='grid md:grid-cols-2 gap-6 mb-10'>;
-;
-import { Button  } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
+    <div className='grid md:grid-cols-2 gap-6 mb-10>;
+import { Button  } from @/components/ui/button';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card;
 import { Card;
   CardContent;
   CardDescription;
   CardFooter;
   CardHeader;
   CardTitle;
- } from '@/components/ui/card';
-import { FileText, ShieldCheck  } from 'lucide-react';
+ } from @/components/ui/card';
+import { FileText, ShieldCheck  } from 'lucide-react;
 interface ContractTypeCardsProps  {onStandardClick: () => void;
   onSmartClick: () => void;
-export function ContractTypeCards() {return (<div className='grid md:grid-cols-2 gap-6 mb-10'>;
+export function ContractTypeCards() {return (<div className=grid md:grid-cols-2 gap-6 mb-10'>;
       <Card>;
         <CardHeader>;
-          <CardTitle className='flex items-center gap-2'>;
+          <CardTitle className='flex items-center gap-2>;
   onStandardClick: () => void;
   onSmartClick: () => void;
 }
-export function ContractTypeCards() {return (<div className="grid md:grid-cols-2 gap-6 mb-10">;
+export function ContractTypeCards() {return (<div className=grid md:grid-cols-2 gap-6 mb-10">;
       <Card>;
         <CardHeader>;
-          <CardTitle className="flex items-center gap-2">;
-<CardTitle className="flex items-center gap-2">;
-            <FileText className="h-5 w-5" />;
+          <CardTitle className="flex items-center gap-2>;
+<CardTitle className=flex items-center gap-2">;
+            <FileText className="h-5 w-5 />;
             Standard Contracts;
           </CardTitle>;
           <CardDescription>Generate traditional legal agreements for your projects;
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
-          <ul className="space-y-2">;
-            <li className="text-sm">✓ Legally binding templates</li>;
-            <li className="text-sm">✓ Milestone-based payment terms</li>;
-            <li className="text-sm">✓ IP rights and confidentiality clauses</li>;
-            <li className="text-sm">✓ DocuSign integration</li>;
+          <ul className=space-y-2">;
+            <li className="text-sm>✓ Legally binding templates</li>;
+            <li className=text-sm">✓ Milestone-based payment terms</li>;
+            <li className="text-sm>✓ IP rights and confidentiality clauses</li>;
+            <li className=text-sm">✓ DocuSign integration</li>;
           </ul>;
         </CardContent>;
         <CardFooter>;
-          <Button variant="outline" onClick={onStandardClick}>;
-          <Button variant="outline" onClick={onStandardClick}>;
-<ul className='space-y-2'>;
-            <li className='text-sm'>✓ Legally binding templates</li>;
-            <li className='text-sm'>✓ Milestone-based payment terms</li>;
-            <li className='text-sm'>✓ IP rights and confidentiality clauses</li>;
-            <li className='text-sm'>✓ DocuSign integration</li>;
+          <Button variant="outline onClick={onStandardClick}>;
+          <Button variant=outline" onClick={onStandardClick}>;
+<ul className=space-y-2'>;
+            <li className='text-sm>✓ Legally binding templates</li>;
+            <li className=text-sm'>✓ Milestone-based payment terms</li>;
+            <li className='text-sm>✓ IP rights and confidentiality clauses</li>;
+            <li className=text-sm'>✓ DocuSign integration</li>;
           </ul>;
         </CardContent>;
         <CardFooter>;
-          <Button variant='outline' onClick={onStandardClick}>;
+          <Button variant='outline onClick={onStandardClick}>;
             Create Standard Contract;
           </Button>;
         </CardFooter>;
       </Card>;
       <Card>;
-        <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">;
-          <div className="flex justify-between items-center">;
-            <CardTitle className="flex items-center gap-2">;
-              <ShieldCheck className="h-5 w-5 text-primary" />;
+        <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg>;
+          <div className=flex justify-between items-center">;
+            <CardTitle className="flex items-center gap-2>;
+              <ShieldCheck className=h-5 w-5 text-primary" />;
               Smart Contracts;
             </CardTitle>;
-            <span className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">;
+            <span className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full>;
 <Card>;
-        <CardHeader className='bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg'>;
-          <div className='flex justify-between items-center'>;
-            <CardTitle className='flex items-center gap-2'>;
-              <ShieldCheck className='h-5 w-5 text-primary' />;
+        <CardHeader className=bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg'>;
+          <div className='flex justify-between items-center>;
+            <CardTitle className=flex items-center gap-2'>;
+              <ShieldCheck className='h-5 w-5 text-primary />;
               Smart Contracts;
             </CardTitle>;
-            <span className='px-2 py-1 bg-primary/10 text-primary text-xs rounded-full'>;
+            <span className=px-2 py-1 bg-primary/10 text-primary text-xs rounded-full'>;
               Blockchain Powered;
             </span>;
           </div>;
@@ -295,39 +309,39 @@ export function ContractTypeCards() {return (<div className="grid md:grid-cols-2
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
-          <ul className="space-y-2">;
-            <li className="text-sm">✓ All standard contract features</li>;
-            <li className="text-sm">✓ Automatic escrow payment release</li>;
-            <li className="text-sm">✓ Transaction verification</li>;
-            <li className="text-sm">✓ Permanent on-chain record</li>;
-            <li className="text-sm">✓ Multi-signature approval flow</li>;
+          <ul className=space-y-2">;
+            <li className="text-sm>✓ All standard contract features</li>;
+            <li className=text-sm">✓ Automatic escrow payment release</li>;
+            <li className="text-sm>✓ Transaction verification</li>;
+            <li className=text-sm">✓ Permanent on-chain record</li>;
+            <li className="text-sm>✓ Multi-signature approval flow</li>;
           </ul>;
         </CardContent>;
         <CardFooter>;
           <Button;
-            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600";
-            onClick={onSmartClick}<ul className='space-y-2'>;
-            <li className='text-sm'>✓ All standard contract features</li>;
-            <li className='text-sm'>✓ Automatic escrow payment release</li>;
-            <li className='text-sm'>✓ Transaction verification</li>;
-            <li className='text-sm'>✓ Permanent on-chain record</li>;
-            <li className='text-sm'>✓ Multi-signature approval flow</li>;
+            className=w-full bg-gradient-to-r from-blue-600 to-indigo-600";
+            onClick={onSmartClick}<ul className='space-y-2>;
+            <li className=text-sm'>✓ All standard contract features</li>;
+            <li className='text-sm>✓ Automatic escrow payment release</li>;
+            <li className=text-sm'>✓ Transaction verification</li>;
+            <li className='text-sm>✓ Permanent on-chain record</li>;
+            <li className=text-sm'>✓ Multi-signature approval flow</li>;
           </ul>;
         </CardContent>;
         <CardFooter>;
           <Button;
-            className='w-full bg-gradient-to-r from-blue-600 to-indigo-600';
+            className='w-full bg-gradient-to-r from-blue-600 to-indigo-600;
             onClick={onSmartClick}>;
             Create Smart Contract;
           </Button>;
         </CardFooter>;
       </Card>;
     </div>;
-import {Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from '@/components/ui/card';
+import {Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from @/components/ui/card';
           <Button;
-            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600";
-import { Button } from "@/components/ui/button",import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",interface ContractTypeCardsProps  {onStandardClick: () => void;
-  onSmartClick: () => void;export function ContractTypeCards(): any ({onStandardClick,onSmartClick}: ContractTypeCardsProps) {return (<div className='grid md:grid-cols-2 gap-6 mb-10'>;
+            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600;
+import { Button } from @/components/ui/button",import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card,interface ContractTypeCardsProps  {onStandardClick: () => void;
+  onSmartClick: () => void;export function ContractTypeCards(): any ({onStandardClick,onSmartClick}: ContractTypeCardsProps) {return (<div className='grid md:grid-cols-2 gap-6 mb-10>;
       <Card>;
         <CardHeader>;
           <CardTitle className='flex items-center gap-2'>;
@@ -336,72 +350,72 @@ import { Button } from "@/components/ui/button",import { Card, CardContent, Card
             <FileText className="h-5 w-5" />;
 interface ContractTypeCardsProps {;
   onStandardClick: () => void,;
+            <FileText className="h-5 w-5 />;
+interface ContractTypeCardsProps {
+  onStandardClick: () => void,
   onSmartClick: () => void;
 }
-export function ContractTypeCards(): any ({ onStandardClick, onSmartClick }:,  ContractTypeCardsProps) {;
+export function ContractTypeCards(): any ({ onStandardClick, onSmartClick }:,  ContractTypeCardsProps) {
   return (
 
 
-    <div className="grid md:grid-cols-2 gap-6 mb-10">;
+    <div className=grid md:grid-cols-2 gap-6 mb-10">;
 
       <Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
             <FileText className="h-5 w-5" />;
 
-import { Button } from '@/components / ui / button';
-import { Button } from '@/components/ui/ button';
-import {
+import { Button } from @/components / ui / button';
+import { Button } from '@/components/ui/ button;
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
-} from '@/components/ui/ card';
-import { FileText, ShieldCheck } from 'lucide-react';
+  CardTitle} from @/components/ui/ card';
+import { FileText, ShieldCheck } from 'lucide-react;
 interface ContractTypeCardsProps {
   onStandardClick: () => void;
-            <FileText className="h-5 w-5" />;interface ContractTypeCardsProps  {onStandardClick: () => void,onSmartClick: () => void;
-}export function ContractTypeCards(): any ({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {return (<div className="grid md:grid-cols-2 gap-6 mb-10">;
+            <FileText className="h-5 w-5 />;interface ContractTypeCardsProps  {onStandardClick: () => void,onSmartClick: () => void;
+}export function ContractTypeCards(): any ({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {return (<div className=grid md:grid-cols-2 gap-6 mb-10">;
       <Card>;
         <CardHeader>;
-          <CardTitle className="flex items-center gap-2">;
-            <FileText className="h-5 w-5" />;import { Button  } from '@/components / ui / button';
-import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from '@/components / ui / card';
+          <CardTitle className="flex items-center gap-2>;
+            <FileText className=h-5 w-5" />;import { Button  } from @/components / ui / button';
+import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from '@/components / ui / card;
 interface ContractTypeCardsProps  {onStandardClick: () => void;
   onSmartClick: () => void;
 export /**;
  * ContractTypeCards - Function description;
  */;
-function ContractTypeCards() {return (<div className='grid md:grid - cols - 2 gap - 6 mb - 10'>;
+function ContractTypeCards() {return (<div className=grid md:grid - cols - 2 gap - 6 mb - 10'>;
   onStandardClick: () => void;,
   onSmartClick: () => void;,
 export /**
  * ContractTypeCards - Function description
  */
-function ContractTypeCards() {
   return (
-    <div className='grid md:grid - cols - 2 gap - 6 mb - 10'>;
+    <div className='grid md:grid - cols - 2 gap - 6 mb - 10>;
       <Card>;
         <CardHeader>;
-          <CardTitle className='flex items - center gap - 2'>;
-            <FileText className='h - 5 w - 5' />            Standard Contracts;
-          <CardTitle className="flex items - center gap - 2">;
-            <FileText className="h - 5 w - 5" />;
+          <CardTitle className=flex items - center gap - 2'>;
+            <FileText className='h - 5 w - 5 />            Standard Contracts;
+          <CardTitle className="flex items - center gap - 2>;
+            <FileText className=h - 5 w - 5" />;
 interface ContractTypeCardsProps  {onStandardClick: () => void,onSmartClick: () => void;
 }
 export /**;
  * ContractTypeCards - Function description;
  */;
-function ContractTypeCards() {return (<div className="grid md:grid - cols - 2 gap - 6 mb - 10">;
       <Card>;
         <CardHeader>;
           <CardTitle className="flex items - center gap - 2">;
             <FileText className="h - 5 w - 5" />;
+            <FileText className=h - 5 w - 5" />;
 
             Standard Contracts;
-            <FileText className="h - 5 w - 5" />;Standard Contracts;
+            <FileText className="h - 5 w - 5 />;Standard Contracts;
             Standard Contracts;
 
           </CardTitle>;
@@ -411,12 +425,12 @@ function ContractTypeCards() {return (<div className="grid md:grid - cols - 2 ga
         <CardContent>;
 
 
-          <ul className='space - y-2'>;
-        <CardContent>;<ul className='space - y-2'>;
-            <li className='text - sm'>✓ Legally binding templates</li>;
-            <li className='text - sm'>✓ Milestone - based payment terms</li>;
-            <li className='text - sm'>✓ IP rights and confidentiality clauses</li>;
-            <li className='text - sm'>✓ DocuSign integration</li>;
+          <ul className=space - y-2'>;
+        <CardContent>;<ul className='space - y-2>;
+            <li className=text - sm'>✓ Legally binding templates</li>;
+            <li className='text - sm>✓ Milestone - based payment terms</li>;
+            <li className=text - sm'>✓ IP rights and confidentiality clauses</li>;
+            <li className='text - sm>✓ DocuSign integration</li>;
 
           </ul>;
         </CardContent>;
@@ -426,10 +440,10 @@ function ContractTypeCards() {return (<div className="grid md:grid - cols - 2 ga
         </CardFooter>;
       </Card>;
       <Card>;
-        <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">;
-          <div className="flex justify-between items-center">;
-            <CardTitle className="flex items-center gap-2">;
-              <ShieldCheck className="h-5 w-5 text-primary" />;
+        <CardHeader className=bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">;
+          <div className="flex justify-between items-center>;
+            <CardTitle className=flex items-center gap-2">;
+              <ShieldCheck className="h-5 w-5 text-primary />;
               Smart Contracts;
             </CardTitle>;
             <span className='px - 2 py - 1 bg - primary / 10 text - primary text - xs rounded - full'>              Blockchain Powered      <Card>;
@@ -440,11 +454,19 @@ function ContractTypeCards() {return (<div className="grid md:grid - cols - 2 ga
               Smart Contracts;
             </CardTitle>;
             <span className="px - 2 py - 1 bg - primary / 10 text - primary text - xs rounded - full">;
+            <span className=px - 2 py - 1 bg - primary / 10 text - primary text - xs rounded - full'>              Blockchain Powered      <Card>;
+        <CardHeader className=bg - gradient - to - r from - blue - 500 / 10 to - purple - 500 / 10 rounded - t-lg">;
+          <div className="flex justify - between items - center>;
+            <CardTitle className=flex items - center gap - 2">;
+              <ShieldCheck className="h - 5 w - 5 text - primary />;
+              Smart Contracts;
+            </CardTitle>;
+            <span className=px - 2 py - 1 bg - primary / 10 text - primary text - xs rounded - full">;
 
 
 
               Blockchain Powered;
-            <span className="px - 2 py - 1 bg - primary / 10 text - primary text - xs rounded - full">;Blockchain Powered;
+            <span className="px - 2 py - 1 bg - primary / 10 text - primary text - xs rounded - full>;Blockchain Powered;
             </span>;
           </div>;
           <CardDescription>Deploy agreements on Ethereum or Polygon with escrow capabilities;
@@ -452,59 +474,59 @@ function ContractTypeCards() {return (<div className="grid md:grid - cols - 2 ga
         </CardHeader>;
         <CardContent>;
 
-          <ul className='space - y-2'>;
-        <CardContent>;<ul className='space - y-2'>;
+          <ul className='space - y-2>;
+        <CardContent>;<ul className=space - y-2'>;
 
-          <ul className='space - y-2'>;
+          <ul className='space - y-2>;
         <CardFooter>;
 
-          <Button variant='outline' on_click={onStandardClick}>            Create Standard Contract;
+          <Button variant=outline' on_click={onStandardClick}>            Create Standard Contract;
 
-          <ul className="space - y-2">;"
-            <li className="text - sm">✓ Legally binding templates</li>;""
-            <li className="text - sm">✓ Milestone - based payment terms</li>;""
-            <li className="text - sm">✓ IP rights and confidentiality clauses</li>;""
-            <li className="text - sm">✓ DocuSign integration</li>;"
-          <Button variant="outline" on_click={onStandardClick}>;"
+          <ul className=space - y-2">;"
+            <li className=text - sm>✓ Legally binding templates</li>;""
+            <li className=text - sm>✓ Milestone - based payment terms</li>;""
+            <li className=text - sm>✓ IP rights and confidentiality clauses</li>;""
+            <li className=text - sm>✓ DocuSign integration</li>;"
+          <Button variant="outline on_click={onStandardClick}>;
 
-        <CardHeader className='bg - gradient - to - r from - blue - 500 / 10 to - purple - 500 / 10 rounded - t-lg'>;
+        <CardHeader className='bg - gradient - to - r from - blue - 500 / 10 to - purple - 500 / 10 rounded - t-lg>;
 
-          <div className='flex justify - between items - center'>;
+          <div className=flex justify - between items - center'>;
 
-              <ShieldCheck className='h - 5 w - 5 text - primary' />;
+              <ShieldCheck className='h - 5 w - 5 text - primary />;
 
-            <span className='px - 2 py - 1 bg - primary / 10 text - primary text - xs rounded - full'>              Blockchain Powered      <Card>;
-        <CardHeader className="bg - gradient - to - r from - blue - 500 / 10 to - purple - 500 / 10 rounded - t-lg">;"
-          <div className="flex justify - between items - center">;"
-              <ShieldCheck className="h - 5 w - 5 text - primary" />;"
+            <span className=px - 2 py - 1 bg - primary / 10 text - primary text - xs rounded - full'>              Blockchain Powered      <Card>;
+        <CardHeader className="bg - gradient - to - r from - blue - 500 / 10 to - purple - 500 / 10 rounded - t-lg">;
+          <div className=flex justify - between items - center">;"
+              <ShieldCheck className=h - 5 w - 5 text - primary />;"
 
             ;"
-            <span className="px - 2 py - 1 bg - primary / 10 text - primary text - xs rounded - full">;"
+            <span className=px - 2 py - 1 bg - primary / 10 text - primary text - xs rounded - full>;"
             </span>;
           </div>;
 
 pr-12325
-            <li className='text - sm'>✓ All standard contract features</li>;
-            <li className='text - sm'>✓ Automatic escrow payment release</li>;
-            <li className='text - sm'>✓ Transaction verification</li>;
-            <li className='text - sm'>✓ Permanent on - chain record</li>;
-            <li className='text - sm'>✓ Multi - signature approval flow</li>;
-          <ul className="space-y-2">;
-            <li className="text-sm">✓ All standard contract features</li>;
-            <li className="text-sm">✓ Automatic escrow payment release</li>;
-            <li className="text-sm">✓ Transaction verification</li>;
-            <li className="text-sm">✓ Permanent on-chain record</li>;
-            <li className="text-sm">✓ Multi-signature approval flow</li>;
+            <li className='text - sm>✓ All standard contract features</li>;
+            <li className=text - sm'>✓ Automatic escrow payment release</li>;
+            <li className='text - sm>✓ Transaction verification</li>;
+            <li className=text - sm'>✓ Permanent on - chain record</li>;
+            <li className='text - sm>✓ Multi - signature approval flow</li>;
+          <ul className="space-y-2>;
+            <li className=text-sm">✓ All standard contract features</li>;
+            <li className="text-sm>✓ Automatic escrow payment release</li>;
+            <li className=text-sm">✓ Transaction verification</li>;
+            <li className="text-sm>✓ Permanent on-chain record</li>;
+            <li className=text-sm">✓ Multi-signature approval flow</li>;
           </ul>;
         </CardContent>;
         <CardFooter>;
           <Button;
-            className='w - full bg - gradient - to - r from - blue - 600 to - indigo - 600'            on_click={onSmartClick}          <ul className="space - y-2">;
-            <li className="text - sm">✓ All standard contract features</li>;
-            <li className="text - sm">✓ Automatic escrow payment release</li>;
-            <li className="text - sm">✓ Transaction verification</li>;
-            <li className="text - sm">✓ Permanent on - chain record</li>;
-            <li className="text - sm">✓ Multi - signature approval flow</li>;
+            className=w - full bg - gradient - to - r from - blue - 600 to - indigo - 600'            on_click={onSmartClick}          <ul className="space - y-2>;
+            <li className=text - sm">✓ All standard contract features</li>;
+            <li className="text - sm>✓ Automatic escrow payment release</li>;
+            <li className=text - sm">✓ Transaction verification</li>;
+            <li className="text - sm>✓ Permanent on - chain record</li>;
+            <li className=text - sm">✓ Multi - signature approval flow</li>;
           </ul>;
         </CardContent>;
         <CardFooter>;
@@ -512,6 +534,8 @@ pr-12325
             className="w - full bg - gradient - to - r from - blue - 600 to - indigo - 600";
             on_click = {onSmartClick, }
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600";
+            on_click = {onSmartClick}
+            className=w-full bg-gradient-to-r from-blue-600 to-indigo-600";
             onClick={onSmartClick}
           >;
 
@@ -527,8 +551,6 @@ pr-12325
     </div>);
 }
 
-;
-
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -540,14 +562,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )}})}</div>)})}
     </div>;
   );
-};
+}
 }
 :src/components/contracts/page/ContractTypeCards.tsx
 }
-
-;
-
-;
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533

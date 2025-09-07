@@ -42,6 +42,7 @@ this.intensity = Math.random () * 0.5 + 0.5;
 this.phase = Math.random () * Math.PI * 2;
 this.color = `hsl ($ {
 
+this.color = `hsl ($ {
   200 + Math.random () * 60
 this.color = `hsl ($ {
 }
@@ -51,15 +52,8 @@ this.color = `hsl ($ {
 }, 80%, 60%) `
 const UltraAdvancedQuantumBackground: React.FC<
   UltraAdvancedQuantumBackgroundProps
-> = ({ children, className = ''    }) => {'
-
-
-
- ;
-  }
+> = ({ children, className = ' }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-
- ;
   const canvasRef = useRef<HTMLCanvasElement />(null);
 
   useEffect(() => {
@@ -69,7 +63,6 @@ this.color = `hsl ($ {}
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-const ctx = canvas.getContext('2d');'
     if (!ctx) return;
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -118,6 +111,8 @@ let animationFrameId: number
       life: number
       maxLife: number
         this.x = Math.random() * canvas.width;
+        this.x = Math.random() * canvas.width;
+
         this.y = Math.random() * canvas.height;
         this.vx = (Math.random() - 0.5) * 2;
         this.vy = (Math.random() - 0.5) * 2;
@@ -132,29 +127,13 @@ interface UltraAdvancedQuantumBackgroundProps {
   className?: string
 }
 
-const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundProps> = ({ 
-  children;
-  className = '' 
-}) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
+        this.y += this.vy;
+        this.life--;
+        if (this.x < 0 |this.x > canvas.width) this.vx *= -1;
+        if (this.y < 0 |this.y > canvas.height) this.vy *= -1;
 
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-    let animationFrameId: number,
-    let particles: Particle[] = [],
-    let quantumFields: QuantumField[] = [],
-    let neuralNetworks: NeuralNetwork[] = [],
-
-    class Particle {
-      x: number,
+      maxLife: number;      x: number,
       y: number,
       vx: number,
       vy: number,
@@ -184,6 +163,8 @@ this.maxLife = 100;}
         this && this.vx = (Math && Math.random() - 0 && 0.5) * 2;
         this && this.vy = (Math && Math.random() - 0 && 0.5) * 2;
         this && this.size = Math && Math.random() * 3 + 1;
+        this && this.x = Math && Math.random() * canvas && canvas.width;
+
         this && this.color = `hsl(${Math && Math.random() * 360}, 70%, 60%)`;
         this && this.life = Math && Math.random() * 100;
         this && this.maxLife = 100;      }        this && this.maxLife = 100;
@@ -199,7 +180,7 @@ this.maxLife = 100;}
       }draw() {this.y = Math.random() * canvas.height;        }this.y = Math.random() * canvas.height;}
       }
 
-      draw() {;
+      draw() {
 
           this.y = Math.random() * canvas.height;        }
 
@@ -381,7 +362,6 @@ node.y += (Math.random() - 0.5) * 0.5;
         this.connections.forEach(connection = > ;
   const from = this.nodes[connection.from];
 
-const to = this.nodes[connection.to];
 
           ctx.beginPath();
           ctx.moveTo(from.x, from.y);
@@ -583,9 +563,31 @@ node.y += (Math.random() - 0.5) * 0.5;}
     // Initialize
 for (let i = 0; i < 100; i++) {
       }
-      particles.push(new Particle());
-    }
-    for (let i = 0; i < 8; i++) {
+
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        this.life--;
+
+        if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+        if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+
+        if (this.life <= 0) {
+          this.life = this.maxLife;
+          this.x = Math.random() * canvas.width;
+          this.y = Math.random() * canvas.height
+        }
+      }
+
+      draw() {
+        if (!ctx) return;
+        ctx.save();
+        ctx.globalAlpha = this.life / this.maxLife;
+        ctx.fillStyle = this.color;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore()
       }
       quantumFields.push(new QuantumField());
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -603,6 +605,39 @@ const animate = () => {
       // Update and draw quantum fields
       quantumFields.forEach(field => {
         field.update();
+        ctx.strokeStyle = 'rgba(100, 200, 255, 0.3);
+        ctx.lineWidth = 1;
+        this.connections.forEach(connection => {
+          const from = this.nodes[connection.from];
+          const to = this.nodes[connection.to];
+          ctx.beginPath();
+          ctx.moveTo(from.x, from.y);
+          ctx.lineTo(to.x, to.y);
+          ctx.stroke();        });          ctx.stroke()
+        });
+        // Draw nodes
+        ctx.fillStyle = rgba(100, 200, 255, 0.8)';
+        this.nodes.forEach(node => {
+          ctx.beginPath();
+          ctx.arc(node.x, node.y, 3, 0, Math.PI * 2);
+          ctx.fill()
+        });
+
+        ctx.restore()
+      }
+    }
+
+    // Initialize
+    for (let i = 0, i < 100, i++) {
+      particles.push(new Particle())
+    }
+
+    for (let i = 0, i < 8, i++) {
+      quantumFields.push(new QuantumField())
+
+    neuralNetworks.push(new NeuralNetwork());
+
+
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
@@ -665,7 +700,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
 
 animationFrameId = requestAnimationFrame(animate)
-};
+}
 
     animate();
 
@@ -674,7 +709,7 @@ const handleResize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight
 animationFrameId = requestAnimationFrame(animate);
-    };
+    }
 
     window.addEventListener('resize', handleResize);'
     return () => {
@@ -791,21 +826,21 @@ className='absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-400 t
 origin/cursor/automate-test-improve-and-merge-code-2533
         transition={{
           duration: 5,
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.1),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.1),transparent_50%)]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black>
+        <div className=absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.1),transparent_50%)] />
+        <div className=absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.1),transparent_50%)]" />
       </div>
 
       {/* Animated Quantum Grid */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_98%,rgba(120,119,198,0.3)_100%)] bg-[length:50px_50px]" />
-        <div className="absolute inset-0 bg-[linear-gradient(0deg,transparent_98%,rgba(120,119,198,0.3)_100%)] bg-[length:50px_50px]" />
+      <div className="absolute inset-0 opacity-20>
+        <div className=absolute inset-0 bg-[linear-gradient(90deg,transparent_98%,rgba(120,119,198,0.3)_100%)] bg-[length:50px_50px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(0deg,transparent_98%,rgba(120,119,198,0.3)_100%)] bg-[length:50px_50px] />
       </div>
 
       {/* Floating Quantum Elements */}
       <motion.div
-        className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-20 blur-xl"
+        className=absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-20 blur-xl"
         animate={{
           scale: [1, 1.2, 1];
           opacity: [0.2, 0.4, 0.2]}}
@@ -1024,7 +1059,22 @@ export default UltraAdvancedQuantumBackground;
 
 
 };
+        />;
+      </div>;
+    </div>;
+
+
+          }}
+        />
+      </div>
+    </div>
+
+}
+
+export default UltraAdvancedQuantumBackground;
+
+}
 
 export default UltraAdvancedQuantumBackground;  );
-};
+}
 export default UltraAdvancedQuantumBackground;

@@ -93,3 +93,7 @@ const RegisterPage = () => {
 };
 
 export default RegisterPage;
+  return (
+    <Layout>
+      <Head>
+

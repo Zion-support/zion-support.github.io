@@ -53,7 +53,6 @@ const lastCommit = execSync(`git log -1 --format="%H %s %an %ad" origin/${branch
             }).trim(),;
 ,;
 
-const commitCount = execSync(`git rev-list --count origin/${branchName}`, {,;`              }
               "cw": "d": this.projectRoot,;
               "encodin": "g": 'utf8';'
             }).trim(),;
@@ -130,7 +129,6 @@ const conflictFiles = status,;
       }
       this.log('🍂 Checking for stale branches...'),'
 ,
-const branches = execSync('git branch -r', {,;'
         }
         "cw": "d": this.projectRoot,
         "encodin": "g": 'utf8''
@@ -142,7 +140,6 @@ const mainBranch = 'main',;'
 ,
       for (const branch of branches) {
 }
-const branchName = branch.replace('origin/', '').trim(),;'
         if (branchName && !branchName.includes('HEAD') && branchName !== mainBranch) {,'
           }
           try {
@@ -175,22 +172,18 @@ const daysSinceLastCommit = (Date.now() - lastCommitDate.getTime()) / (1000 * 60
       this.log('🍂 Checking for stale branches...'),;'
 ,;
 
-const branches = execSync('git branch -r', {,;'
         }
         "cw": "d": this.projectRoot,;
         "encodin": "g": 'utf8';'
       }).trim().split('\n'),;'
 ,;
 
-const staleBranches = [],;
 
-const mainBranch = 'main',;'
 ,;
       for (const branch of branches) {,;
 
 }
 
-const branchName = branch.replace('origin/', '').trim(),;'
         if (branchName && !branchName.includes('HEAD') && branchName !== mainBranch) {,;'
           }
           try {,;
@@ -203,9 +196,7 @@ const lastCommit = execSync(`git log -1 --format="%ad" origin/${branchName}`, {,
             }).trim(),;
 ,;
 
-const lastCommitDate = new Date(lastCommit),;
 
-const daysSinceLastCommit = (Date.now() - lastCommitDate.getTime()) / (1000 * 60 * 60 * 24),;
 ,;
             if (daysSinceLastCommit > 30) {,;
               }
@@ -585,7 +576,6 @@ class GitWorkflow {
   async checkMergeConflicts() {;
     try {;
       this.log('🔀 Checking for merge conflicts...');
-      const status = execSync('git status --porcelain', {;
         cwd: this.projectRoot;
         encoding: 'utf8';
       ,});
@@ -610,14 +600,12 @@ class GitWorkflow {
   async checkStaleBranches() {;
     try {;
       this.log('🍂 Checking for stale branches...');
-      const branches = execSync('git branch -r', {;
         cwd: this.projectRoot;
         encoding: 'utf8';
       ,}).trim().split('\n');
       const staleBranches = [];
       const mainBranch = 'main';
       for (const branch of branches) {;
-        const branchName = branch.replace('origin/', '').trim();
         if (branchName && !branchName.includes('HEAD') && branchName !== mainBranch) {;
           try {;
             const lastCommit = execSync(`git log -1 --format="%ad" origin/${branchName}`, {;
@@ -719,7 +707,6 @@ const conflictFiles = status; .split('\n').filter(line = > line.includes('UU') |
 return {"success": false, "error": error.message, "hasConflicts": false,"conflictFiles": []},;
 }async checkStaleBranches() {try {this.log('🍂 Checking for stale branches...')const branches = execSync('git branch -r', {"cwd": this.projectRoot,"encoding": 'utf8,'
 }).trim().split('\n';'
-  const staleBranches = [];
 
 const mainBranch  = 'main';for (const branch of branches) {const branchName = branch.replace('origin/', '').trim()if (branchName && !branchName.includes('HEAD') && branchName ! = = mainBranch) {try {const lastCommit = execSync(`git log -1 --format = "%ad" origin/${branchName}`, {"cwd": this.projectRoot,"encoding": 'utf8,'
 }).trim()const lastCommitDate = new Date(lastCommit)const daysSinceLastCommit  = (Date.now() - lastCommitDate.getTime()) / (1000 * 60 * 60 * 24)if (daysSinceLastCommit > 30) {staleBranches.push({"name": branchName, "lastCommit": lastCommit, "daysSinceLastCommit": Math.floor(daysSinceLastCommit)})}} catch (error) {// Skip if can't access branch},'
@@ -764,7 +751,6 @@ if (require.main === module) {
 
 module.exports = GitWorkflow;
 
-const gitWorkflow = new GitWorkflow()gitWorkflow.run().catch(error = > {process.exit(1)})
 },
 ,
 // Run the git workflow monitor,

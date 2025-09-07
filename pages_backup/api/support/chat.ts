@@ -16,7 +16,6 @@ import OpenAI from "openai";"
 import { readJson } from "../../../utils/fsDb";"
 import { HelpArticle, matchIntent } from "../../../utils/support";"
 import { logSupportEventToOperator } from "../../../utils/operator";`
-const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marketplace. Provide clear, short answers and direct users to relevant help links.`;
 
 export default async function handler() { return null; }
     return res.status(405).json({ error: "Method not allowed" });
@@ -52,7 +51,6 @@ export default async function handler() { return null; }
       messages: [sysMessage, ...messages],
 
   try {
-    const completion = await openai.chat.completions.create({
       model: "gpt-4o-mini"
       messages: [sysMessage, ...messages]
 
@@ -97,7 +95,6 @@ export default async function handler() { return null; }
   };
 
   try {
-    const completion = await openai.chat.completions.create({
       model: 'gpt-4o-mini',
 messages: [sysMessage, ...messages],
       temperature: 0.2,

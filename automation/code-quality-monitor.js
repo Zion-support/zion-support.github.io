@@ -62,9 +62,6 @@ class CodeQualityMonitor {; constructor() {; this.metrics = {; complexity: 0, ma
 
 
 
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
 ;
 class CodeQualityMonitor {;
   constructor() {;
@@ -84,7 +81,6 @@ class CodeQualityMonitor {;
       results.lint.issues = results.lint.errors + results.lint.warnings;this.log(`ESLint: ${results.lint.issues} issues found`, 'WARN')}this.log(`"ESLint": ${results.lint.issues} issues found`, 'WARN')}
     // TypeScript check;
     try {execSync('npx tsc --noEmit', { "stdio": 'pipe', "cwd": process.cwd() })results.typeCheck.status = 'pass';this.log('TypeScript: PASS')this.log('"TypeScript": PASS')} catch (error) {results.typeCheck.status = 'fail';
-      const output = error.stdout || error.message;
       results.typeCheck.errors = (output.match(/error TS/g) || []).length;this.log(`TypeScript: ${results.typeCheck.errors} errors found`, 'WARN')}this.log(`"TypeScript": ${results.typeCheck.errors} errors found`, 'WARN')}
     // Test coverage (if tests exist)try {if (fs.existsSync('jest.config.js') || fs.existsSync('jest.config.cjs')) {const coverage = execSync('yarn test --coverage --silent', {"stdio": 'pipe',"encoding": 'utf8',"cwd": process.cwd()})// Parse coverage percentage (simplified)const coverageMatch = coverage.match(/All files.*?(\d+\.?\d*)%/)if (coverageMatch) {results.testCoverage.percentage = parseFloat(coverageMatch[1])results.testCoverage.status = 'pass';
         }
@@ -203,7 +199,6 @@ class CodeQualityMonitor { constructor () { this.metrics = { complexity: 0, main
 ;
 ;
 #!/usr/bin/env node,;
-const fs = require("fs");
 const path = require("path"),;
 const { execSync } = require("child_process"),;
 ,;

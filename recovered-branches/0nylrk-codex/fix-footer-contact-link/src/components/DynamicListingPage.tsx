@@ -61,13 +61,6 @@ return matchesSearch && matchesCategory && matchesPrice && matchesRating;
 "title": listing.title,
 "category": listing.category,
 "image": listing.images?.[0]
-  const navigate = useNavigate(),;
-  const [searchQuery, setSearchQuery] = useState(""),;"
-  const [selectedCategory, setSelectedCategory] = useState("all"),;"
-  const [view, setView] = useState<ListingView>("grid"),;"
-  const [isLoading, setIsLoading] = useState(false),;
-  const [priceRange, setPriceRange] = useState<PriceRange>(initialPrice),;
-  const [selectedRating, setSelectedRating] = useState<number | null>(null),;
     setTimeout(() => {;
       }
       setIsLoading(false),;
@@ -193,12 +186,10 @@ const matchesPrice = listing.price === null || (;
       listing.price >= currentPriceFilter[0] && 
       listing.price <= currentPriceFilter[1]
     ),
-const matchesRating =;
       selectedRating === null || 
       (listing.rating !== undefined && listing.rating >= selectedRating),
 return matchesSearch && matchesCategory && matchesPrice && matchesRating;
   }),
-  const handleRequestQuote = ("listingId": string) => {
     }
     setIsLoading(true),
     

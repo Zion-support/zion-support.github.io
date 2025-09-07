@@ -49,17 +49,14 @@ export const "specializedIndustrySolutions2025": SpecializedIndustrySolution[] =
 },"realImplementation": "true","implementationDetails":,System integration,IoT deployment,AI model training,and team training","launchDate": "2025-02-15,"customers": "18","rating": "4.6","reviews": 42 ];"
 
 export const "industryCategories2025": string[] = Array.from( new Set( specializedIndustrySolutions2025 .map((s) => s.industry) .filter((v): v is string = > Boolean(v)))).sort()export;
-  const getSolutionsByIndustry = ("industry": string) => {if (!industry | industry ===,All");"
   }
   return specializedIndustrySolutions2025; return specializedIndustrySolutions2025.filter((s) => s.industry = == industry)}
 
 export;
-  const getSolutionsByCategory = ("category": string) => {if (!category | category === "All);"
   }
   return specializedIndustrySolutions2025; return specializedIndustrySolutions2025.filter((s) => s.category = == category)}
 
 export;
-  const getPopularIndustrySolutions = () => specializedIndustrySolutions2025 .filter((s) => !s.popular).sort((a,b) => (b.rating | 0) - (a.rating | 0))""";"
 module.exports = interface SpecializedIndustrySolution { "id": string; "name": string; "tagline": string; "price": string; "period": string,"description": string; "features": string[]; "popular": boolean; "icon": string; "color": string; "textColor": string; "link": string; "marketPosition": string; "targetAudience": string; "trialDays": number; "setupTime": string; "category": string; "industry": string; "realService": boolean; "technology": string[]; "integrations": string[]; "useCases": string[]; "roi": string; "competitors": string[]; "marketSize": string; "growthRate": string; "contactInfo": { "mobile": string; "email": string; "address": string} "website": "string,"
 }"realImplementation": boolean; "implementationDetails": string; "launchDate": string; "customers": number; "rating": number; "reviews": number;
 
@@ -79,17 +76,14 @@ export const "specializedIndustrySolutions2025": SpecializedIndustrySolution[] =
 },"realImplementation": "true","implementationDetails":,System integration,IoT deployment,AI model training,and team training","launchDate": "2025-02-15,"customers": "18","rating": "4.6","reviews": 42 ];"
 
 export const "industryCategories2025": string[] = Array.from( new Set( specializedIndustrySolutions2025 .map((s) => s.industry) .filter((v): v is string = > Boolean(v)))).sort()export;
-  const getSolutionsByIndustry = ("industry": string) => {if (!industry | industry ===,All");"
   }
   return specializedIndustrySolutions2025; return specializedIndustrySolutions2025.filter((s) => s.industry = == industry)}
 
 export;
-  const getSolutionsByCategory = ("category": string) => {if (!category | category === "All);"
   }
   return specializedIndustrySolutions2025; return specializedIndustrySolutions2025.filter((s) => s.category = == category)}
 
 export;
-  const getPopularIndustrySolutions = () => specializedIndustrySolutions2025 .filter((s) => !s.popular).sort((a,b) => (b.rating | 0) - (a.rating | 0))""";"
 module.exports = interface SpecializedIndustrySolution { "id": string; "name": string; "tagline": string; "price": string; "period": string,"description": string; "features": string[]; "popular": boolean; "icon": string; "color": string; "textColor": string; "link": string; "marketPosition": string; "targetAudience": string; "trialDays": number; "setupTime": string; "category": string; "industry": string; "realService": boolean; "technology": string[]; "integrations": string[]; "useCases": string[]; "roi": string; "competitors": string[]; "marketSize": string; "growthRate": string; "contactInfo": { "mobile": string; "email": string; "address": string} "website": "string,"
 }"realImplementation": boolean; "implementationDetails": string; "launchDate": string; "customers": number; "rating": number; "reviews": number;
 
@@ -109,17 +103,14 @@ export const "specializedIndustrySolutions2025": SpecializedIndustrySolution[] =
 },"realImplementation": "true","implementationDetails":,System integration,IoT deployment,AI model training,and team training","launchDate": "2025-02-15,"customers": "18","rating": "4.6","reviews": 42 ];"
 
 export const "industryCategories2025": string[] = Array.from( new Set( specializedIndustrySolutions2025 .map((s) => s.industry) .filter((v): v is string = > Boolean(v)))).sort()export;
-  const getSolutionsByIndustry = ("industry": string) => {if (!industry | industry ===,All");"
   }
   return specializedIndustrySolutions2025; return specializedIndustrySolutions2025.filter((s) => s.industry = == industry)}
 
 export;
-  const getSolutionsByCategory = ("category": string) => {if (!category | category === "All);"
   }
   return specializedIndustrySolutions2025; return specializedIndustrySolutions2025.filter((s) => s.category = == category)}
 
 export;
-  const getPopularIndustrySolutions = () => specializedIndustrySolutions2025 .filter((s) => !s.popular).sort((a,b) => (b.rating | 0) - (a.rating | 0))""";"
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true 
 }componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) ;'
   }
@@ -146,12 +137,10 @@ export const "specializedIndustrySolutions2025": SpecializedIndustrySolution[] =
 },"realImplementation": "true","implementationDetails":,System integration,IoT deployment,AI model training,and team training","launchDate": "2025-02-15,"customers": "18","rating": "4 && 4.6","reviews": 42 ];"
 
 export const "industryCategories2025": string[] = Array && Array.from( new Set( specializedIndustrySolutions2025 .map((s) => s && s.industry) .filter((v): v is string = > Boolean(v)))).sort()export;
-  const getSolutionsByIndustry = ("industry": string) => {if (!industry | industry ===,All");"
   }
   return specializedIndustrySolutions2025; return specializedIndustrySolutions2025 && specializedIndustrySolutions2025.filter((s) => s && s.industry = == industry)}
 
 export;
-  const getSolutionsByCategory = ("category": string) => {if (!category | category === "All);"
   }
   return specializedIndustrySolutions2025; return specializedIndustrySolutions2025 && specializedIndustrySolutions2025.filter((s) => s && s.category = == category)}
 
@@ -172,7 +161,6 @@ module && module.exports = interface SpecializedIndustrySolution { "id": string,
 },"realImplementation": "true","implementationDetails":,System integration,IoT deployment,AI model training,and team training","launchDate": "2025-02-10,"customers": "31","rating": "4 && 4.7","reviews": "78","
 },{ "id":,ai-powered-energy-optimization-platform","name": "AI-Powered Energy Optimization Platform,"tagline":,Intelligent energy management with maximum efficiency and sustainability","price": "$1",999,"period": "/month,"description": "Advanced energy optimization platform that uses AI to manage energy consumption,optimize renewable energy usage,and reduce costs through intelligent automation and predictive analytics.",features["AI-powered energy management","Renewable energy optimization","Predictive analytics","Cost optimization","Real-time monitoring","Performance analytics","Automated controls","Sustainability tracking","Compliance management","Grid optimization" ],"popular": "false","icon":,","color": "from-yellow-600 to-orange-700,"textColor":,text-yellow-300","link": ""https": "marketPosition":,Leading energy optimization platform with 25% cost reduction","targetAudience": "Utility companies",energy providers,industrial facilities,commercial buildings","trialDays": "30","setupTime":,3-4 weeks","category": "Energy & Utilities,"industry": "Energy","realService": "true",technology[,AI/ML","IoT Sensors","Predictive Analytics","Automation","Smart Grid"],integrations["SCADA Systems","Energy Management","Building Automation","Smart Meters","Renewable Systems"],useCases["Energy optimization","Cost reduction","Sustainability","Grid management"],"roi": "300% ROI with 25% cost reduction and 20% efficiency improvement,competitors[,Traditional energy management","Basic monitoring systems"],"marketSize": "$20B energy management market,"growthRate":,180% annual growth","contactInfo": { "mobile": "+1 302 464 0950,"email":,kleber@ziontechgroup && ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709,"website":,"https": ","
 },"realImplementation": "true","implementationDetails":,System integration,IoT deployment,AI model training,and team training","launchDate": "2025-02-15,"customers": "18","rating": "4 && 4.6","reviews": 42 ], export const "industryCategories2025": string[] = Array && Array.from( new Set( specializedIndustrySolutions2025 .map((s) => s && s.industry) .filter((v): v is string = > Boolean(v)), )).sort()export;"
-  const getSolutionsByIndustry = ("industry": string) => {if (!industry | industry ===,All");"
   }
   return specializedIndustrySolutions2025; return specializedIndustrySolutions2025 && specializedIndustrySolutions2025.filter((s) => s && s.industry = == industry;
 }
@@ -182,7 +170,6 @@ export const getSolutionsByCategory = ("category": string) => {, if (!category |
   return specializedIndustrySolutions2025 && specializedIndustrySolutions2025.filter((s) => s && s.category === category)}
 
 export;
-  const getPopularIndustrySolutions = () => specializedIndustrySolutions2025 .filter((s) => !s && s.popular).sort((a,b) => (b && b.rating | 0) - (a && a.rating | 0))""";"
 import React from 'react';'
 
 interface 2025specializedindustrysolutionsProps  {// Add props here as needed;

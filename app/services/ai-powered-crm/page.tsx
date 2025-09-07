@@ -99,6 +99,11 @@ export const metadata = {
   description: 'Revolutionary customer relationship management powered by artificial intelligence for enhanced sales and customer satisfaction.',
   keywords: 'AI CRM, customer relationship management, sales automation, customer analytics, AI-powered sales'
 };
+export const metadata = {
+  title: AI-Powered CRM | Zion Tech Group',
+  description: 'Revolutionary customer relationship management powered by artificial intelligence for enhanced sales and customer satisfaction.,
+  keywords: AI CRM, customer relationship management, sales automation, customer analytics, AI-powered sales'
+}
 
 interface FeatureCardProps {
   title: string;

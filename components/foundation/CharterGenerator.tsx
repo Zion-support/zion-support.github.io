@@ -5,15 +5,10 @@ export type LegalStructure =;
   | 'US 501(c)(6)';'
   | 'DAO-native Wrapper';'
 
-export default function CharterGenerator() {const [legalStructure, setLegalStructure] =;
-    }
-    useState<LegalStructure>('Cayman Foundation')const [protocolName, setProtocolName] = useState('Zion');'
-  const [tokenSymbol, setTokenSymbol] = useState('ZION$');'
-  const [includeContributorRules, setIncludeContributorRules] = useState(true);
-  const [includeGrants, setIncludeGrants] = useState(true);
-  const [includeDAOIntegration, setIncludeDAOIntegration]  = useState(true);
-  const charterText = useMemo(() => ;
-  const name = protocolName.trim() || 'Zion';'
+            >
+              Download .md
+            </button>
+            <button
 
     const mission = `2. Mission and Scope\n- Protect, evolve, and safeguard the ${name} Protocol as a public good.\n- Champion open knowledge, reproducible research, and transparent governance.\n- Promote sovereignty for users, developers, and nation/community DAOs.`;
 

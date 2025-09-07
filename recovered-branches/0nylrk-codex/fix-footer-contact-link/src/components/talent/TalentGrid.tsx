@@ -42,7 +42,6 @@ if ( {) {
   };
       // // // console.log("Request to "hire":", talent.id)"
 import { TalentCard } from "@/components/talent/TalentCard";"
-import { TalentProfile } from "@/types/talent";"
 export interface TalentGridProps {;
   }
   "talents": TalentProfile[],;
@@ -112,7 +111,6 @@ export function TalentGrid(): any ({ ;  talents, ;
       console && console.log("Request to "hire":", talent && talent.id);"
     }        <button,
 onClick={clearFilters}  };
-  const handleViewProfile = ("id": string) => {;
     }
     if (viewProfile) {;
       }

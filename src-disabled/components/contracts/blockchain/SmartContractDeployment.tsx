@@ -50,7 +50,6 @@ interface SmartContractDeploymentProps {}
   solidity_code: string,
 isDeploying;
 }: SmartContractDeploymentProps) {
-  const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({
 )
 pr-12325
   on_deploy: (options: DeploymentOptions, ) => Promise < void>,
@@ -175,7 +174,6 @@ export function SmartContractDeployment(): any ({ ;
     walletAddress: '';
   });
 
-  const handleDeployContract = async () => {;
     if (deploymentOptions && deploymentOptions.deployToChain && !deploymentOptions && deploymentOptions.walletAddress) {;"
       toast && toast.error("Please enter a wallet address for blockchain deployment");
       return;
@@ -260,7 +258,6 @@ export function SmartContractDeployment(): any ({ ;
               </div>
 
 }: SmartContractDeploymentProps) {
-  const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({
     network: 'none';
     useEscrow: true;
     deployToChain: false;

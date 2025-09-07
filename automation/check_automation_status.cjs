@@ -26,7 +26,6 @@ main
 
 main
 
-  const statusReport = {
     "timestamp": new Date().toISOString(),
     "pm2Processes": [],
     "automationScripts": [],
@@ -156,7 +155,6 @@ main
     const automationScripts = [
       'automation/master-orchestrator.cjs',
     console.log('📋 Checking automation scripts...');
-    const automationScripts = [
       'scripts/comprehensive-automation-suite.cjs',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -164,10 +162,8 @@ main
 
 
     console.log('📋 Checking automation scripts...');
-    const automationScripts = [
       'automation/master-orchestrator.cjs',
     console.log('📋 Checking automation scripts...');
-    const automationScripts = [
 
 
 
@@ -263,7 +259,6 @@ main
           : 'missing'});
 
     try {
-      const healthCheck = execSync('node automation/health-check.cjs', { encoding: 'utf8' });
       statusReport.systemHealth.healthCheck = 'passed';
       console.log('✅ Health check passed');
     } catch (error) {
@@ -276,7 +271,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     // Check system health
 
-    const systemHealth = {
       "memoryUsage": process.memoryUsage(),
       "uptime": process.uptime(),
       "nodeVersion": process.version,
@@ -336,7 +330,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       statusReport.systemHealth.healthCheck = 'failed';
       console.log('❌ Health check failed');
 
-    const systemHealth = {
       memoryUsage: process.memoryUsage(),
       uptime: process.uptime(),
       nodeVersion: process.version,
@@ -379,7 +372,6 @@ main
 
     return statusReport;
 
-    const systemHealth = {
       "memoryUsage": process.memoryUsage(),
       "uptime": process.uptime(),
       "nodeVersion": process.version,
@@ -390,7 +382,6 @@ main
     // Determine overall status;
     const runningProcesses = statusReport.pm2Processes.filter("
 
-    const availableScripts = statusReport.automationScripts.filter(
       script => script.exists && script.isExecutable;)
 
     if (runningProcesses.length > 0 && availableScripts.length > 0) {
@@ -457,7 +448,6 @@ main
 
 
 
-    const reportPath = path.join(
 
       process.cwd(),
       'automation-status-report.json'
@@ -495,7 +485,6 @@ main
   } catch (error) {
     console.error('❌ Error checking automation "status": ', error.message);
 
-    const reportPath = path.join(process.cwd(), 'logs', 'automation-status-report.json');
     try {
   // TODO: Implement
 }
@@ -608,9 +597,6 @@ if (require.main === module) {
 #!/usr/bin/env node;
 
 
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
   console.log(' Checking Automation Status...')
       console.error('Fatal "error")
 

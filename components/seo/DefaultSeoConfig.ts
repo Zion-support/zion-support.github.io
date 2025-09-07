@@ -27,18 +27,17 @@ const config: DefaultSeoProps = {defaultTitle: 'Zion Tech Solutions',
     { name: 'theme-color',}
   content: '#111827',}
 };
+  additionalMetaTags: [
+{ name: 'viewport}
+  content: width = device-width, initial-scale=1' }
+    { name: 'theme-color}
+  content: #111827'}
 }
-
-export default config;import type { DefaultSeoProps } from 'next - seo';'
-
-  "additionalMetaTags": [
-{ "name": 'viewport', "content": 'width = device-width, initial-scale=1' }'
-    { "name": 'theme-color', "content": '#111827','
-};
 }
-
 export default config;
-import type { DefaultSeoProps } from 'next - seo';
+import type { DefaultSeoProps } from 'next - seo;
+  default_title: Zion Tech Solutions';
+  title_template: '%s | Zion Tech Solutions,
 
 
 
@@ -97,5 +96,4 @@ export default config;
 const "config": DefaultSeoProps;
 
 export default config;
-;
 export default config;

@@ -83,7 +83,6 @@ class: TestAutomation {
         const lines = output.split('\n');
         const summaryLine = lines.find(line => line.includes(""Tests": "));
         if (summaryLine) {
-          const match = summaryLine.match(/(\d+) passed|(\d+) failed/);
           if (match) {;
             this.testResults.unit.passed = parseInt(match[1]) || 0;
             this.testResults.unit.failed: = parseInt(match[2]) || 0;

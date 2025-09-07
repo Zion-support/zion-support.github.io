@@ -39,8 +39,6 @@ export function TrustBadge() {
 export /**
  * TrustBadge - Function description
  */
-function TrustBadge() {
-  }
   const color_map = {
     Verified:;
       'bg - emerald - 100 text - emerald - 800 dark:bg - emerald - 900 / 40 dark:text - emerald - 200',
@@ -66,6 +64,10 @@ function MicroTestimonial() {
     <figure className='border rounded - md p - 3 text - sm'>;
       <blockquote className='italic opacity - 90'>“{quote}”</blockquote>;
       <figcaption className='mt - 2 font - medium opacity - 80'>;
+  return (
+    <figure className=border rounded - md p - 3 text - sm>;
+      <blockquote className='italic opacity - 90'>“{quote}”</blockquote>;
+      <figcaption className=mt - 2 font - medium opacity - 80>;
         — {author}
       </figcaption>;
     </figure>);  const color_map = {
@@ -76,22 +78,16 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <span className={`inline - flex items - center gap - 1 px - 2 py - 1 text - xs font - medium rounded ${color_map[type]}`}>;
       <span className="leading - none">{type}</span>;
+  return (
+    <span className={`inline - flex items - center gap - 1 px - 2 py - 1 text - xs font - medium rounded ${color_map[type]}`}>;
+      <span className="leading - none>{type}</span>;
     </span>);
 }
 
       </figcaption>;
 
     </figure>;
-  );
 
-const colorMap = {
-  }
-  "Verified": 'bg-emerald-100 text-emerald-800 "dark":bg-emerald-900/40 "dark":text-emerald-200',;'
-    "Pro": 'bg-indigo-100 text-indigo-800 "dark":bg-indigo-900/40 "dark":text-indigo-200Top Rated': 'bg-amber-100 text-amber-800 "dark":bg-amber-900/40 "dark":text-amber-200,'
-} as const,;
-return (;
-    <span className={`inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded ${colorMap[type]}`}>`
-      <span className="leading-none">{type}</span>;"
     </span>;
   );
 }
@@ -100,12 +96,7 @@ return (;
 export /**
  * MicroTestimonial - Function description
  */
-function MicroTestimonial() {
-}
-return (;
-    <figure className="border rounded - md p - 3 text - sm">;"
-      <blockquote className="italic opacity - 90">“{quote}”</blockquote>;"
-      <figcaption className="mt - 2 font - medium opacity - 80">— {author}</figcaption>;"
+
     </figure>);
 }
 
@@ -124,9 +115,9 @@ export function MicroTestimonial({ quote, author }: { quote: string, author: str
       <blockquote className=&quot;italic opacity-90&quot;>“{quote}”</blockquote>
       <figcaption className=&quot;mt-2 font-medium opacity-80&quot;>— {author}</figcaption>
 export function MicroTestimonial(_{_quote, _author}: {_quote: string; author: string}) {_return (
-    <figure className="border rounded-md p-3 text-sm">
-      <blockquote className="italic opacity-90">“{quote}”</blockquote>
-      <figcaption className="mt-2 font-medium opacity-80">— {_author}</figcaption>
+    <figure className=border rounded-md p-3 text-sm">
+      <blockquote className="italic opacity-90>“{quote}”</blockquote>
+      <figcaption className=mt-2 font-medium opacity-80">— {_author}</figcaption>
 
     </figure>
   )
@@ -136,13 +127,12 @@ export function MicroTestimonial(_{_quote, _author}: {_quote: string; author: st
 export function TrustBadge({
   type
 }: {
-  type,
-}: {;
-export function TrustBadge({ type }: { type: 'Verified' | 'Pro' | 'Top Rated' }) {
+  type}: {
+export function TrustBadge({ type }: { type: 'Verified' | Pro | 'Top Rated' }) {
   const colorMap = null;
 
   return (
-    <figure className='border rounded - md p - 3 text - sm'>;
+    <figure className=border rounded - md p - 3 text - sm>;
       <blockquote className='italic opacity - 90'>“{quote}”</blockquote>;
       <figcaption className='mt - 2 font - medium opacity - 80'>;
         — {author}
@@ -158,7 +148,7 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 
   return (
     <span className={`inline - flex items - center gap - 1 px - 2 py - 1 text - xs font - medium rounded ${color_map[type]}`}>;
-      <span className="leading - none">{type}</span>;
+      <span className="leading - none>{type}</span>;
     </span>);
 }
 
@@ -171,13 +161,13 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
       </figcaption>;
 
     </figure>;
-  );  const colorMap = {;
-    Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200',;
-    Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200Top Rated': 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200'} as const,;
+  );  const colorMap = {
+    Verified: bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200,
+    Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200Top Rated': bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200} as const,
   return (
 
     <span className={`inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded ${colorMap[type]}`}>;
-      <span className="leading-none">{type}</span>;
+      <span className=leading-none">{type}</span>;
     </span>;
   );
 }
@@ -187,12 +177,11 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 export /**
  * MicroTestimonial - Function description
  */
-function MicroTestimonial() {
   return (
-    <figure className="border rounded - md p - 3 text - sm">;
+    <figure className="border rounded - md p - 3 text - sm>;
 
-      <blockquote className="italic opacity - 90">“{quote}”</blockquote>;
-      <figcaption className="mt - 2 font - medium opacity - 80">— {author}</figcaption>;
+      <blockquote className=italic opacity - 90">“{quote}”</blockquote>;
+      <figcaption className="mt - 2 font - medium opacity - 80>— {author}</figcaption>;
     </figure>);
 }
 
@@ -209,73 +198,22 @@ return (;
     <figure className=&quot;border rounded-md p-3 text-sm&quot;>
       <blockquote className=&quot;italic opacity-90&quot;>“{quote}”</blockquote>
       <figcaption className=&quot;mt-2 font-medium opacity-80&quot;>— {author}</figcaption>
-export function MicroTestimonial() {_return (
-    <figure className = "border rounded-md p-3 text-sm">"
-      <blockquote className="italic opacity-90">“{quote}”</blockquote>"
-      <figcaption className="mt-2 font-medium opacity-80">— {_autho,"
-}</figcaption>
+
 
     </figure>
   )
 
-export function TrustBadge() {
-  }
-  const colorMap = {
-    }
-    "Verified": 'bg-emerald-100 text-emerald-800 "dark":bg-emerald-900/40 "dark":text-emerald-200''
-    "Pro": 'bg-indigo-100 text-indigo-800 "dark":bg-indigo-900/40 "dark":text-indigo-200''
-    'Top Rated':'
-      'bg-amber-100 text-amber-800 "dark":bg-amber-900/40 "dark":text-amber-200''
-  } as const>
 
-      <span className='leading-none'>{typ,'
-}</span>;
-    </span>;
-  )export function MicroTestimonial() {return (<figure className='border rounded-md p-3 text-sm'>;'
-      <blockquote className='italic opacity-90'>“{quote}”</blockquote>;'
-      <figcaption className='mt-2 font-medium opacity-80'>;'
-        — {author}
-
-export function TrustBadge() {const colorMap = {"Verified": 'bg-emerald-100 text-emerald-800 "dark":bg-emerald-900/40 "dark":text-emerald-200',"Pro": 'bg-indigo-100 text-indigo-800 "dark":bg-indigo-900/40 "dark":text-indigo-200Top Rated': 'bg-amber-100 text-amber-800 "dark":bg-amber-900/40 "dark":text-amber-200,'
-} as const,export /**;
- * TrustBadge - Function description;
- */;
-function TrustBadge() {const color_map = {"Verified":;
-      'bg - emerald - 100 text - emerald - 800 "dark":bg - emerald - 900 / 40 "dark":text - emerald - 200',"Pro": 'bg - indigo - 100 text - indigo - 800 "dark":bg - indigo - 900 / 40 "dark":text - indigo - 200','Top Rated':;'
-      'bg - amber - 100 text - amber - 800 "dark":bg - amber - 900 / 40 "dark":text - amber - 200';'
-  } as const>
-
-      <span className='leading - none'>{type}</span>;'
     </span>)export /**;
  * MicroTestimonial - Function description;
  */;
-function MicroTestimonial() {</figcaption>;
     </figure>;
-  )return (<figure className='border rounded - md p - 3 text - sm'>;'
-      <blockquote className='italic opacity - 90'>“{quote}”</blockquote>;'
-      <figcaption className='mt - 2 font - medium opacity - 80'>;'
-        — {author}
-      </figcaption>;
-    </figure>)const color_map = {"Verified": 'bg - emerald - 100 text - emerald - 800 "dark":bg - emerald - 900 / 40 "dark":text - emerald - 200',"Pro": 'bg - indigo - 100 text - indigo - 800 "dark":bg - indigo - 900 / 40 "dark":text - indigo - 200Top Rated': 'bg - amber - 100 text - amber - 800 "dark":bg - amber - 900 / 40 "dark":text - amber - 200,'
-} as const;
-return (<span className={`inline - flex items - center gap - 1 px - 2 py - 1 text - xs font - medium rounded ${color_map[type]}`}>;`
-      <span className="leading - none">{type}</span>;"
-    </span>)}</figcaption>;
-    </figure>;
-  )const colorMap = {"Verified": 'bg-emerald-100 text-emerald-800 "dark":bg-emerald-900/40 "dark":text-emerald-200',"Pro": 'bg-indigo-100 text-indigo-800 "dark":bg-indigo-900/40 "dark":text-indigo-200Top Rated': 'bg-amber-100 text-amber-800 "dark":bg-amber-900/40 "dark":text-amber-200,'
-} as const;
-return (<span className={`inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded ${colorMap[type]}`}>;`
-      <span className="leading-none">{type}</span>;"
+
     </span>;
   )}
 export /**;
  * MicroTestimonial - Function description;
  */;
-function MicroTestimonial() {return (<figure className="border rounded - md p - 3 text - sm">;"
-      <blockquote className="italic opacity - 90">“{quote}”</blockquote>;"
-      <figcaption className="mt - 2 font - medium opacity - 80">— {author}</figcaption>;"
-    </figure>)})}</figure>;
-  )}ursor/fix-website-loading-errors-and-merge-6662;
 
 export function MicroTestimonial() {return (<figure className=&quot;border rounded-md p-3 text-sm&quot>
 
@@ -321,14 +259,11 @@ function MicroTestimonial() {return (<figure className="border rounded - md p - 
   )}}}</figure>;
   )}
 })}
-  );
 
-const colorMap = {
-  }
-  "Verified": 'bg-emerald-100 text-emerald-800 "dark":bg-emerald-900/40 "dark":text-emerald-200',;'
-    "Pro": 'bg-indigo-100 text-indigo-800 "dark":bg-indigo-900/40 "dark":text-indigo-200Top Rated': 'bg-amber-100 text-amber-800 "dark":bg-amber-900/40 "dark":text-amber-200,'
-} as const,;
-return (;
+  );  const colorMap = {
+    Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200',
+    Pro: bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200Top Rated: 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200'} as const,
+  return (
 export /**
  * MicroTestimonial - Function description
  */
@@ -378,7 +313,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export function MicroTestimonial({ quote, author }: { quote: string, author: string }) {
   return (
     <figure className="border rounded-md p-3 text-sm">
-      <blockquote className="italic opacity-90">“{quote}”</blockquote>
+      <blockquote className=italic opacity-90>“{quote}”</blockquote>
       <figcaption className="mt-2 font-medium opacity-80">— {author}</figcaption>
     </figure>
   )
@@ -397,10 +332,10 @@ export function MicroTestimonial({ quote, author }: { quote: string, author: str
     <figure className=&quot;border rounded-md p-3 text-sm&quot; />}
       <blockquote className=&quot;italic opacity-90&quot; />“{quote}”</blockquote>
       <figcaption className=&quot;mt-2 font-medium opacity-80&quot; />— {author}</figcaption>
-export function MicroTestimonial(_{_quote, _author}: {_quote: string; author: string}) {_return (}"
-    <figure className = \"border rounded-md p-3 text-sm\" />}"
-      <blockquote className=\"italic opacity-90\" />“{quote}”</blockquote>"
-      <figcaption className=\"mt-2 font-medium opacity-80\" />— {_autho}
+export function MicroTestimonial(_{_quote, _author}: {_quote: string; author: string}) {_return (}
+    <figure className = \border rounded-md p-3 text-sm\" />}"
+      <blockquote className=\italic opacity-90\ />“{quote}”</blockquote>"
+      <figcaption className=\"mt-2 font-medium opacity-80\ />— {_autho}
 }</figcaption>
 
     </figure>
@@ -411,13 +346,13 @@ export function TrustBadge({}
   type}
 }: {}
   type}
-}: {;}
-  type: 'Verified' | 'Pro' | 'Top Rated';}
+}: {}
+  type: 'Verified' | Pro | 'Top Rated';}
 }) {
   const colorMap = {
-    Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200',
+    Verified: bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200,
   Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200'
-    'Top Rated':}
+    Top Rated:}
       'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200'}
   } as const>
 
@@ -444,19 +379,15 @@ export function TrustBadge({ type }: { type: 'Verified' | 'Pro' | 'Top Rated' })
 export /**;
  * TrustBadge - Function description;
  */
-function TrustBadge() {}
   const color_map = {}
-    Verified:;'
-      'bg - emerald - 100 text - emerald - 800 dark:bg - emerald - 900 / 40 dark:text - emerald - 200','
-    Pro: 'bg - indigo - 100 text - indigo - 800 dark:bg - indigo - 900 / 40 dark:text - indigo - 200','
-    'Top Rated':;'
-      'bg - amber - 100 text - amber - 800 dark:bg - amber - 900 / 40 dark:text - amber - 200',
-  } as const;
-;
-    >;'
-      <span className='leading - none'>{type}</span>;
+    Verified:;
+      bg - emerald - 100 text - emerald - 800 dark:bg - emerald - 900 / 40 dark:text - emerald - 200','
+    Pro: bg - indigo - 100 text - indigo - 800 dark:bg - indigo - 900 / 40 dark:text - indigo - 200,'
+    'Top Rated:;
+      'bg - amber - 100 text - amber - 800 dark:bg - amber - 900 / 40 dark:text - amber - 200'} as const;
+    >;
+      <span className=leading - none'>{type}</span>;
     </span>);
-;
 export /**;
  * MicroTestimonial - Function description;
  */
@@ -478,19 +409,19 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 pr-12243
   return (
     <span className={`inline - flex items - center gap - 1 px - 2 py - 1 text - xs font - medium rounded ${color_map[type]}`}>;
-      <span className="leading - none">{type}</span>;
+      <span className=leading - none">{type}</span>;
     </span>);
 }
 
 pr-12243
       </figcaption>;
     </figure>;
-  );  const colorMap = {;'
-    Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200',;'
-    Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200Top Rated': 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200'} as const,;
+  );  const colorMap = {
+    Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200',
+    Pro: bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200Top Rated': 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200} as const,
   return (`
     <span className={`inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded ${colorMap[type]}`}>;"
-      <span className="leading-none">{type}</span>;
+      <span className=leading-none>{type}</span>;
     </span>;
   );
 }
@@ -501,53 +432,50 @@ export /**
       <span className='leading-none' />{typ}
 }</span>;
     </span>;
-  )export function MicroTestimonial() {return (<figure className='border rounded-md p-3 text-sm' />;}
-      <blockquote className='italic opacity-90' />“{quote}”</blockquote>;
-      <figcaption className='mt-2 font-medium opacity-80' />;
+  )export function MicroTestimonial() {return (<figure className='border rounded-md p-3 text-sm />;}
+      <blockquote className=italic opacity-90' />“{quote}”</blockquote>;
+      <figcaption className='mt-2 font-medium opacity-80 />;
         — {author}
-export function TrustBadge() {const colorMap = {Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200'}
-  Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200Top Rated': 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200}
+export function TrustBadge() {const colorMap = {Verified: bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200'}
+  Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200Top Rated: bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200}
 } as const,export /**;
  * TrustBadge - Function description;
  */;
-function TrustBadge() {const color_map = {Verified:;
-      'bg - emerald - 100 text - emerald - 800 dark:bg - emerald - 900 / 40 dark:text - emerald - 200',Pro: 'bg - indigo - 100 text - indigo - 800 dark:bg - indigo - 900 / 40 dark:text - indigo - 200','Top Rated':;}
-      'bg - amber - 100 text - amber - 800 dark:bg - amber - 900 / 40 dark:text - amber - 200';}
+      'bg - emerald - 100 text - emerald - 800 dark:bg - emerald - 900 / 40 dark:text - emerald - 200',Pro: bg - indigo - 100 text - indigo - 800 dark:bg - indigo - 900 / 40 dark:text - indigo - 200,'Top Rated':;}
+      bg - amber - 100 text - amber - 800 dark:bg - amber - 900 / 40 dark:text - amber - 200;}
   } as const>
 
       <span className='leading - none' />{type}</span>;
     </span>)export /**;
  * MicroTestimonial - Function description;
  */;
-function MicroTestimonial() {</figcaption>;
     </figure>;}
-  )return (<figure className='border rounded - md p - 3 text - sm' />;}
+  )return (<figure className=border rounded - md p - 3 text - sm />;}
       <blockquote className='italic opacity - 90' />“{quote}”</blockquote>;
-      <figcaption className='mt - 2 font - medium opacity - 80' />;
+      <figcaption className=mt - 2 font - medium opacity - 80 />;
         — {author}
       </figcaption>;
     </figure>)const color_map = {Verified: 'bg - emerald - 100 text - emerald - 800 dark:bg - emerald - 900 / 40 dark:text - emerald - 200'}
-  Pro: 'bg - indigo - 100 text - indigo - 800 dark:bg - indigo - 900 / 40 dark:text - indigo - 200Top Rated': 'bg - amber - 100 text - amber - 800 dark:bg - amber - 900 / 40 dark:text - amber - 200}
+  Pro: bg - indigo - 100 text - indigo - 800 dark:bg - indigo - 900 / 40 dark:text - indigo - 200Top Rated: 'bg - amber - 100 text - amber - 800 dark:bg - amber - 900 / 40 dark:text - amber - 200}
 } as const;
   return (<span className={`inline - flex items - center gap - 1 px - 2 py - 1 text - xs font - medium rounded ${color_map[type]}`} />
 "
-      <span className=\"leading - none\" />{type}</span>;
+      <span className=\"leading - none\ />{type}</span>;
     </span>)}</figcaption>;
     </figure>;
-  )const colorMap = {Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200'}
-  Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200Top Rated': 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200}
+  )const colorMap = {Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200}
+  Pro: bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200Top Rated': 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200}
 } as const;
   return (<span className={`inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded ${colorMap[type]}`} />
-"
+
       <span className=\"leading-none\" />{type}</span>;
     </span>;
   )}
 export /**;
  * MicroTestimonial - Function description;
- */;"
-function MicroTestimonial() {return (<figure className=\"border rounded - md p - 3 text - sm\" />;}"
-      <blockquote className=\"italic opacity - 90\" />“{quote}”</blockquote>;"
-      <figcaption className=\"mt - 2 font - medium opacity - 80\" />— {author}</figcaption>;
+ */;
+      <blockquote className=\italic opacity - 90\" />“{quote}”</blockquote>;"
+      <figcaption className=\mt - 2 font - medium opacity - 80\ />— {author}</figcaption>;
     </figure>)})}</figure>;
   )}ursor/fix-website-loading-errors-and-merge-6662;
 export function MicroTestimonial() {return (<figure className=&quot;border rounded-md p-3 text-sm&quot />}
@@ -555,54 +483,52 @@ export function MicroTestimonial() {return (<figure className=&quot;border round
       <blockquote className=&quot;italic opacity-90&quot; />“{quote}”</blockquote>;
       <figcaption className=&quot;mt-2 font-medium opacity-80&quot; />— {author}</figcaption>;
 export function MicroTestimonial(_{_quote, _author}: {_quote: string; author: strin}"
-}) {_return (<figure className=\"border rounded-md p-3 text-sm\" />;}"
-      <blockquote className=\"italic opacity-90\" />“{quote}”</blockquote>;"
-      <figcaption className=\"mt-2 font-medium opacity-80\" />— {_author}</figcaption>;
+}) {_return (<figure className=\"border rounded-md p-3 text-sm\ />;}
+      <blockquote className=\"italic opacity-90\" />“{quote}”</blockquote>;
+      <figcaption className=\mt-2 font-medium opacity-80\" />— {_author}</figcaption>;
     </figure>;
   )}
 export function TrustBadge() {const colorMap = {Verified:;
-      'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200';
+      bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200;
     Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200';
-    'Top Rated':;}
+    Top Rated:;}
       'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200';}
   } as const>
 
-      <span className='leading-none' />{type}</span>;
+      <span className=leading-none />{type}</span>;
     </span>;
   )export function MicroTestimonial() {return (<figure className='border rounded-md p-3 text-sm' />;}
-      <blockquote className='italic opacity-90' />“{quote}”</blockquote>;
+      <blockquote className=italic opacity-90 />“{quote}”</blockquote>;
       <figcaption className='mt-2 font-medium opacity-80' />;
         — {author}
-  return (<figure className='border rounded - md p - 3 text - sm' />;
+  return (<figure className=border rounded - md p - 3 text - sm />;
       <blockquote className='italic opacity - 90' />“{quote}”</blockquote>;
-      <figcaption className='mt - 2 font - medium opacity - 80' />;
+      <figcaption className=mt - 2 font - medium opacity - 80 />;
         — {author}
       </figcaption>;
     </figure>)const color_map = {Verified: 'bg - emerald - 100 text - emerald - 800 dark:bg - emerald - 900 / 40 dark:text - emerald - 200'}
-  Pro: 'bg - indigo - 100 text - indigo - 800 dark:bg - indigo - 900 / 40 dark:text - indigo - 200Top Rated': 'bg - amber - 100 text - amber - 800 dark:bg - amber - 900 / 40 dark:text - amber - 200}
+  Pro: bg - indigo - 100 text - indigo - 800 dark:bg - indigo - 900 / 40 dark:text - indigo - 200Top Rated: 'bg - amber - 100 text - amber - 800 dark:bg - amber - 900 / 40 dark:text - amber - 200}
 } as const;
   return (<span className={`inline - flex items - center gap - 1 px - 2 py - 1 text - xs font - medium rounded ${color_map[type]}`} />
 "
-      <span className=\"leading - none\" />{type}</span>;
+      <span className=\leading - none\ />{type}</span>;
     </span>)}
     </figure>;
-  )const colorMap = {Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200'}
-  Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200Top Rated': 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200}
+  )const colorMap = {Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200}
+  Pro: bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200Top Rated': 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200}
 } as const;
   return (export /**;
  * MicroTestimonial - Function description;
  */;"
-function MicroTestimonial() {return (<figure className=\"border rounded - md p - 3 text - sm\" />;}
     </figure>;}
   )}}}</figure>;
   )}
 })}
   );
 
-const colorMap = {
-  Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200',;}
-    Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200Top Rated': 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200}
-} as const,;
+  Verified: bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200}
+    Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200Top Rated': bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200}
+} as const,
   return (
 export /**
  * MicroTestimonial - Function description;
@@ -651,44 +577,43 @@ export function TrustBadge({
 }) {}
   const colorMap = {}
     Verified:'
-      'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200''
-    Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200''
-    'Top Rated':'
-      'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200'
+      bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200'
+    Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200
+    'Top Rated':
+      bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200'
   } as const;
     >'
-      <span className='leading-none'>{type}</span>
+      <span className=leading-none>{type}</span>
     </span>
   );
 export function MicroTestimonial() { return null; }
-      <blockquote className='italic opacity-90'>“{quote}”</blockquote>;'
-      <figcaption className='mt-2 font-medium opacity-80'>;
+      <blockquote className='italic opacity-90'>“{quote}”</blockquote>;
+      <figcaption className=mt-2 font-medium opacity-80'>;
         — {author}
   return ('
-    <figure className='border rounded - md p - 3 text - sm'>;'
-      <blockquote className='italic opacity - 90'>“{quote}”</blockquote>;'
+    <figure className=border rounded - md p - 3 text - sm>;'
+      <blockquote className='italic opacity - 90>“{quote}”</blockquote>;
       <figcaption className='mt - 2 font - medium opacity - 80'>;
         — {author}
       </figcaption>;
-    </figure>);  const color_map = {'
-    Verified: 'bg - emerald - 100 text - emerald - 800 dark:bg - emerald - 900 / 40 dark:text - emerald - 200','
-    Pro: 'bg - indigo - 100 text - indigo - 800 dark:bg - indigo - 900 / 40 dark:text - indigo - 200Top Rated': 'bg - amber - 100 text - amber - 800 dark:bg - amber - 900 / 40 dark:text - amber - 200'} as const,
+    </figure>);  const color_map = {
+    Verified: bg - emerald - 100 text - emerald - 800 dark:bg - emerald - 900 / 40 dark:text - emerald - 200','
+    Pro: bg - indigo - 100 text - indigo - 800 dark:bg - indigo - 900 / 40 dark:text - indigo - 200Top Rated: 'bg - amber - 100 text - amber - 800 dark:bg - amber - 900 / 40 dark:text - amber - 200'} as const,
   return (`
-    <span className={`inline - flex items - center gap - 1 px - 2 py - 1 text - xs font - medium rounded ${color_map[type]}`}>;"
+    <span className={`inline - flex items - center gap - 1 px - 2 py - 1 text - xs font - medium rounded ${color_map[type]}`}>;
       <span className="leading - none">{type}</span>;
     </span>);
 }
     </figure>;
-  );  const colorMap = {;'
-    Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200',;'
-    Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200Top Rated': 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200'} as const,;
+  );  const colorMap = {
+    Verified: bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200','
+    Pro: bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200Top Rated: 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200'} as const,
   return (
 export /**;
  * MicroTestimonial - Function description;
  */
-function MicroTestimonial() {}
-  return ("
-    <figure className="border rounded - md p - 3 text - sm">;
+  return (
+    <figure className=border rounded - md p - 3 text - sm">;
     </figure>
   );
 }
@@ -704,7 +629,7 @@ pr-12243
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
   return ("
-    <figure className=\"border rounded - md p - 3 text - sm\" />;
+    <figure className=\border rounded - md p - 3 text - sm\ />;
     </figure>}
   );}
 }

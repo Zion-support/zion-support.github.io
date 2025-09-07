@@ -128,7 +128,6 @@ export const CreateResumeForm = ({}
             </Button>;
           </div>;'
           <Button variant='ghost' on_click={on_cancel} className='mt - 4'>            Cancel;
-  const handle_submit = async () => {}
     if () return) {}
   $2;
 }

@@ -112,9 +112,7 @@ const glob = require('glob')
   log(message, type = 'INFO')
       const fixedQuoted = quoted.replace(/"([a-z]+)"
 
-      const fixedQuoted = quoted.replace(/"([a-z]+)"
 
 
 
-      const fixedQuoted = quoted.replace(/"([a-z]+)"
 

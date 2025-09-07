@@ -213,7 +213,6 @@ const BlueprintsIndexPage: React.FC = () => {
   }
 }
   ];
-  const recentBlueprints = [
     {
       id: 'blueprint-2025-01-17-130835',
       name: 'AI Content Factory Blueprint',

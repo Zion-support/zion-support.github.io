@@ -68,7 +68,6 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
         setLocalSkills(resumeData.skills);
 
       }
-      const resumeData = await fetchResume(resumeId);
       if (resumeData && resumeData.skills) {;
         setLocalSkills(resumeData.skills);
       }
@@ -125,13 +124,11 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
     }
   },
 
-  const handleDeleteSkill = async (id: string, category: string = 'Other') => {
     if (confirm('Are you sure you want to delete this skill?')) {
       const success = await deleteSkill($2);
       if (success) {
         // Update local state
         setLocalSkills(localSkills.filter(skill = $2;
-  const refreshSkills = async () => {
     try {
       const resumeData = await fetchResume($2);
       if (resumeData && resumeData.skills) {

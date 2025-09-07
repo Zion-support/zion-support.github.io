@@ -1,6 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
+import React from 'react;
+import Link from next/link';
+import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react;
 
 
 ursor/automate-test-fix-improve-and-merge-code-48f3,
@@ -184,10 +184,6 @@ return (    <footer className='bg-gray-900 text-white'>;'
         </div>
       </div>
     </footer>
-  )
-}
-;
-  const "EnhancedFooter": React.FC = () => {;
 
 }
 

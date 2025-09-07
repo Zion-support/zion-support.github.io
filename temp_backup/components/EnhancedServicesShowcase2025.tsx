@@ -151,7 +151,6 @@ benefits: [;}
   {{id: 'cloud-native-platform',
   title: 'Cloud-Native Development Platform',description: 'Modern cloud-native development and deployment platform',];
 
-const services: Service[] = [;
   {id: 'ai-automation-suite',
   title: 'AI-Powered Automation Suite',description:;}
       'Comprehensive automation platform leveraging artificial intelligence for business process optimization',icon: <FaRobot className='w-6 h-6' />,features: [;}

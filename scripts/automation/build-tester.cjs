@@ -1,67 +1,50 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-    this.logFile = path.join(this.projectRoot, 'logs', 'build-tester.log')
-    this.reportFile = path.join(this.projectRoot, 'error-reports')
-    fs.appendFileSync(this.logFile, logMessage + '\n')
-      this.log(' Starting build test...')
-const result = execSync('npm run build');
-        "encoding"
-        "stdio"
-        "encoding"
-        "stdio"
-        "output"
-        "encoding"
-        "stdio"
-        "output"
-      this.log(' Build Test "Summary")
-      this.log(`   Type "Check"`)
-      this.log(`   Lint "Check"`)
-      this.log(`   "Overall"`)
-        "priority"
-        "issue"
-        "action"
-        "impact"
-        "priority"
-        "issue"
-        "action"
-        "impact"
-        "priority"
-        "issue"
-        "action"
-        "impact"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
-  console.error('Fatal "error")
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-<<<<<<< HEAD
-=======
+const fs = require('fs')
+const path = require(path')
+const { execSync } = require('child_process')
+    this.logFile = path.join(this.projectRoot, logs', 'build-tester.log)
+    this.reportFile = path.join(this.projectRoot, error-reports')
+    fs.appendFileSync(this.logFile, logMessage + '\n)
+      this.log( Starting build test...')
+      const result = execSync('npm run build)
+        "encoding
+        stdio"
+        "encoding
+        stdio"
+        "output
+        encoding"
+        "stdio
+        output"
+      this.log( Build Test "Summary)
+      this.log(`   Type Check"`)
+      this.log(`   Lint "Check`)
+      this.log(`   Overall"`)
+        "priority
+        issue"
+        "action
+        impact"
+        "priority
+        issue"
+        "action
+        impact"
+        "priority
+        issue"
+        "action
+        impact"
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-  console.error('Fatal "error")
+
+  console.error('Fatal "error)
+
+  console.error('Fatal error")
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
   console.error('Fatal "error")
-<<<<<<< HEAD
-  console.error('Fatal "error")
 
-
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======

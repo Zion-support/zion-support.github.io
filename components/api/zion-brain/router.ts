@@ -46,17 +46,17 @@ function isAuthorized(req: NextApiRequest): boolean {
     appendLog({ module: 'router', type: 'audit', status: 'error', latencyMs, payload: { error: e?.message || 'unknown' } });'
     return res.status(500).json({ error: 'Router failure' })
   };
+
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json($2);
+  if (req.method !== POST') return res.status(405).json($2);
   if (!isAuthorized(req)) return res.status(401).json($2);
   const started = Date.now($2);
   try {
     }
     const { text, payload } = req.body || {};
 
-const result = detectIntent(String(text || ''));'
 
 const routed = await routeToChain(result.intent, payload || {});
 

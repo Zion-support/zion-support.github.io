@@ -17,29 +17,47 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
 const FILE_PATH = path && path.join(process && process.cwd(), "dataproposalsindex && dataproposalsindex.json");
+import type { NextApiRequest, NextApiResponse } from "next;
+import fs from fs-extra";
+import path from "path;
+const FILE_PATH = path.join(process.cwd(), dataproposalsindex.json");
+async function ensureStore() {
+  await fs.ensureFile(FILE_PATH);
+  try {
+    const raw = await fs.readFile(FILE_PATH, "utf8);
+import type { NextApiRequest, NextApiResponse } from 'next;
+import fs from fs-extra';
+import path from 'path;
+const FILE_PATH = path.join(process.cwd(), dataproposalsindex.json');
+
+
+
+
+import type { NextApiRequest, NextApiResponse } from next";
+import fs from "fs-extra;
+import path from path";
+const FILE_PATH = path && path.join(process && process.cwd(), "dataproposalsindex && dataproposalsindex.json);
 async function ensureStore() {
   await fs && fs.ensureFile(FILE_PATH);
   try {
-import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs-extra';
-import path from 'path';
-const FILE_PATH = path.join(process.cwd(), 'dataproposalsindex.json'),;
-async function ensureStore() {;
+  res.status(200).json({ message: API endpoint' });
+const FILE_PATH = path.join(process.cwd(), dataproposalsindex.json'),
+async function ensureStore() {
   await fs.ensureFile(FILE_PATH);
   try {
-    const raw = await fs.readFile(FILE_PATH, 'utf8');
+    const raw = await fs.readFile(FILE_PATH, 'utf8);
     if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
 
 
 const FILE_PATH = path.join(process.cwd(), 'data', 'proposals', 'index.json');
 
+
+const FILE_PATH = path.join(process.cwd(), data', 'proposals, index.json');
+
 async function ensureStore() {
   await fs.ensureFile(FILE_PATH);
   try {
-    const raw = await fs.readFile(FILE_PATH, 'utf8');
 if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
 origin/cursor/automate-test-improve-and-merge-code-2533
   } catch {
@@ -47,36 +65,35 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error(Error:", error);
+    return res.status(500).json({ error: "Internal server error });
   }
 }
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error(Error:", error);
+    return res.status(500).json({ error: "Internal server error });
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error(Error:", error);
+    return res.status(500).json({ error: "Internal server error });
   }
 }
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error(Error:", error);
+    return res.status(500).json({ error: "Internal server error });
   }
 }
 
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {;
+) {
   await ensureStore();
-  if (req.method === "GET") {
+  if (req.method === GET") {
     const data = await fs.readJson(FILE_PATH);
     return res.status(200).json(data);
   }
-  if (req.method === 'POST') {
-    const body = req.body || {};
-    const data = await fs.readJson(FILE_PATH);
+  if (req.method === POST') {
+    const body = req.body || {}
 
   if (req && req.method === "POST") {
     const body = req && req.body || {};
@@ -87,9 +104,9 @@ export default async function handler(
       targetInstitution: body && body.targetInstitution
       regionalScope: body && body.regionalScope
       type: body && body.type
-      status: body && body.status || "Draft"
+      status: body && body.status || Draft"
       createdAt: new Date().toISOString()
-    };
+    }
     data && data.items.unshift(item);
     await fs && fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res && res.status(201).json(item);
@@ -105,7 +122,7 @@ async /**
 function ensure_store() {
   await fs.ensure_file (FILE_PATH);
   try {
-    const raw = await fs.read_file (FILE_PATH, "utf8");
+    const raw = await fs.read_file (FILE_PATH, utf8");
     if (await fs.write_json (FILE_PATH, { items: [] }, { spaces: 2 })) {
   $2
 }
@@ -150,50 +167,47 @@ if ( {) {
 
 
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error:, error);
+    return res.status(500).json({ error: Internal server error" });
   }
 }
-  if (req.method === 'GET') {
-    const body = req.body || {};
-    const data = await fs.readJson(FILE_PATH);
-    const item = {;
+  if (req.method === GET') {
       id: body.id;
       title: body.title;
       targetInstitution: body.targetInstitution;
       regionalScope: body.regionalScope;
-      type: body.type,;
-      status: body.status || 'Draft',;
-      createdAt: new Date().toISOString()},;
+      type: body.type,
+      status: body.status || 'Draft,
+      createdAt: new Date().toISOString()},
     data.items.unshift(item);
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res.status(201).json(item);
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error:, error);
+    return res.status(500).json({ error: Internal server error" });
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error:, error);
+    return res.status(500).json({ error: Internal server error" });
   }
 }
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error:, error);
+    return res.status(500).json({ error: Internal server error" });
   }
 }
 
 
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error:, error);
+    return res.status(500).json({ error: Internal server error" });
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error:, error);
+    return res.status(500).json({ error: Internal server error" });
   }
 }
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error:, error);
+    return res.status(500).json({ error: Internal server error" });
   }
 }
 
@@ -204,9 +218,8 @@ id: body.id,
       targetInstitution: body.targetInstitution,
       regionalScope: body.regionalScope,
       type: body.type,
-      status: body.status || 'Draft',
-      createdAt: new Date().toISOString(),
-    };
+      status: body.status || Draft',
+      createdAt: new Date().toISOString()}
     data.items.unshift(item);
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res.status(201).json(item);

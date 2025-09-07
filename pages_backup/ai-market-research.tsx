@@ -1,6 +1,5 @@
 import Head from 'next/head';
 
-import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Search  } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
@@ -78,11 +77,9 @@ import {
                 href='/contact'
 
 import Head from 'next / head';
-import {
 
 import React from 'react';
 '
-import Head from 'next/head';
 
   Phone,
   Mail,

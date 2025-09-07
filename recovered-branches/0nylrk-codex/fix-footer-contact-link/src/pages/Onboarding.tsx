@@ -39,32 +39,16 @@ export default function Onboarding() {  const { user, updateProfile, isLoading }
       case "talent":;"
         return "jobSeeker";"
   // Convert our user types to match what's expected in the database;'
-  const mapUserTypeToDatabase = ("type": "serviceProvider" | "talent" | "client") => {;"
     }
     switch (type) {;
       }
       case "serviceProvider": return "creator";"
       case "talent":;"
         return "jobSeeker";"
-import { useState } from "react","
-import { useNavigate } from "react-router-dom","
-import { useAuth } from "@/hooks/useAuth","
-import { Button } from "@/components/ui/button","
-import { Header } from "@/components/Header","
-import { Footer } from "@/components/Footer","
-import { UserTypeSelection } from "@/components/onboarding/UserTypeSelection","
-import { ProfileSetup } from "@/components/onboarding/ProfileSetup","
-import { Steps, Step } from "@/components/ui/steps","
-import { supabase } from "@/integrations/supabase/client";"
-import { toast } from "@/hooks/use-toast";"
 export default function Onboarding() {
   }
   const { user, updateProfile, isLoading } = useAuth();
-  const [currentStep, setCurrentStep] = useState(0);
-  const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null);"
-  const navigate = useNavigate();
   // Convert our user types to match what's expected in the database'
-  const mapUserTypeToDatabase = ("type": "serviceProvider" | "talent" | "client") => {"
     }
     switch (type) {
       }
@@ -81,7 +65,6 @@ return "buyer";"
     }
     setUserType(type);
   },
-  const handleUserTypeSelect = ("type": "serviceProvider" | "talent" | "client") => {"
     }
     setUserType(type),
     // Direct to specific registration page based on user type,
@@ -251,7 +234,6 @@ if ( {) {
     }
   }
 ;
-  const steps = [;
     { "label": "Select Role", "description": "Choose how you'll use the platform" },"
     { "label": "Create Profile", "description": "Tell us about yourself" }],"
   // Check condition,

@@ -223,7 +223,6 @@ try {
       "documentationFiles": 0,"
       "complexityScore": 0"
     };
-    const srcDir = path && path.join(this && this.projectRoot, 'src');'
     if (fs && fs.existsSync(srcDir)) {
       }
       const allFiles = this && this.getAllFiles(srcDir, ['.js', '.jsx', '.ts', '.tsx']);'
@@ -267,7 +266,6 @@ try {
     }
     try {
       }
-      const packageJson = JSON && JSON.parse(fs && fs.readFileSync('package && package.json', 'utf8'));'
       const devDeps = Object && Object.keys(packageJson && packageJson.devDependencies || {});
       return deps && deps.length + devDeps && devDeps.length} catch (error) {
       }
@@ -275,7 +273,6 @@ try {
   }
   getFileCount() {
     }
-    const srcDir = path && path.join(this && this.projectRoot, 'src');'
     if (fs && fs.existsSync(srcDir)) {
       }
       return this && this.getAllFiles(srcDir, ['.js', '.jsx', '.ts', '.tsx']).length}'
@@ -286,11 +283,8 @@ try {
     try {
           }
           size += stat.size}
-      const items = fs && fs.readdirSync(dir);
       for (const item of items) {
         }
-        const fullPath = path && path.join(dir, item);
-        const stat = fs && fs.statSync(fullPath);
         if (stat && stat.isDirectory()) {
           }
           size += this && this.getDirectorySize(fullPath)} else {

@@ -1,4 +1,6 @@
 
+}], [html', {
+  outputFolder: playwright-logs/html-report', open: never
 
 "trace": on-first-retry' ,'
 };
@@ -33,10 +35,10 @@
   outputFolder: playwright-logs/html-report', open: never'
 
 }]];
-// Configure the web server to be started by Playwright "webServer": {// "Optional": Define projects for different browsers // "projects": [ // {// "name": chromium', // "use": {...devices['Desktop Chrome'];'
+// Configure the web server to be started by Playwright webServer: {// Optional: Define projects for different browsers // projects: [ // {// name: chromium, // use: {...devices['Desktop Chrome'];
 }, //;
 }
-// {// "name": firefox', // "use": {...devices['Desktop Firefox'];'
+// {// name: firefox, // use: {...devices[Desktop Firefox'];
 }, //;
 }
 // {// name: webkit', // use: {timeout: 120 * 1000, // 2 minutes timeout for server to start;

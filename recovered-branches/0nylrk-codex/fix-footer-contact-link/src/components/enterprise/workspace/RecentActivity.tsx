@@ -76,7 +76,6 @@ return (;
     </Card>
   )
 import React from "react";"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";"
 import { Badge } from "@/components/ui/badge",;"
     {;
       }
@@ -159,7 +158,6 @@ import { Badge } from "@/components/ui/badge",;"
 "timestamp": "2d ago";"
 "type": "comment" "
 }];
-const getBadgeForType = ("type": string) => {
   }
   switch (type) {
   }

@@ -57,7 +57,6 @@ export function loadTemplates(): ZgpTemplate[] {
 
 export function listProposals(): ZgpProposal[] {
   ensureDataFilesExist($2);
-  const raw = fs.readFileSync($2);
   const data = $2;
   return data.proposals || []
 }
@@ -131,7 +130,6 @@ export function updateProposal(id: string, update: {
   status?: ZgpProposal['status'],
   votingResultUrl?: string
 }): ZgpProposal {
-  const proposals = listProposals($2);
   const index = proposals.findIndex($2);
   if (index === -1) throw new Error($2);
   const current = $2;

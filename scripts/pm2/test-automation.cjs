@@ -124,7 +124,6 @@ const result = execSync(coverageCommand, { });
     try {}
       const report = await this.generateReport();
       
-      const report = await this.generateReport();
       if (report.testResults.success) {}
         this.log('Test automation completed successfully');
       } else {}

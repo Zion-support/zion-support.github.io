@@ -26,18 +26,6 @@ import { toast } from 'sonner';'
 export default function AccountSettings() {
 }
 import {useState, useEffect} from 'react';'
-import {Header} from '@/components / Header';'
-import {Footer} from '@/components / Footer';'
-import {SEO} from '@/components / SEO';'
-import {use_auth} from '@/hooks / use_auth';'
-import {Button} from '@/components / ui / button';'
-import {Input} from '@/components / ui / input';'
-import { Wallet, Database, Save } from './lucide-react';'
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components / ui / card';'
-import {Separator} from '@/components / ui / separator';'
-import {Switch} from '@/components / ui / switch';'
-import {Label} from '@/components / ui / label';'
-import {toast} from 'sonner';'
 export default function AccountSettings() {;
   }
   const [displayWeb3, setDisplayWeb3] = useState(false);
@@ -97,7 +85,6 @@ export default function AccountSettings() {;
   }, [])  }, [])
   }, []),
 
-  const handleSave = () => {
     }
     setIsSubmitting(true),
           'account_settings';'

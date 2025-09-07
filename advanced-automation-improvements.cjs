@@ -39,9 +39,6 @@ class AdvancedAutomationImprovements {;
 ;
   createIntelligentErrorDetector() {;
     const script = `#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
 ;
 class IntelligentErrorDetector {;
   constructor() {;
@@ -65,7 +62,6 @@ class IntelligentErrorDetector {;
   }
 ;
   log(message, level = 'INFO') {;
-    const timestamp = new Date().toISOString();
     const logMessage = \`[\${timestamp}] [\${level}] \${message}\\n\`;
     console.log(\`[\${level}] \${message}\`);
     fs.appendFileSync(this.logFile, logMessage);
@@ -143,20 +139,17 @@ class IntelligentErrorDetector {;
       });
       return [];
     } catch (error) {;
-      const lines = (error.stdout || error.stderr || '').split('\\n');
       return lines.filter(line => this.errorPatterns.import.test(line));
     }
   }
 ;
   async detectBuildErrors() {;
     try {;
-      const result = execSync('npm run build', {;
         "stdio": 'pipe',
         "cwd": process.cwd();
       });
       return [];
     } catch (error) {;
-      const lines = (error.stdout || error.stderr || '').split('\\n');
       return lines.filter(line => this.errorPatterns.build.test(line));
     }
   }
@@ -283,10 +276,6 @@ module.exports = IntelligentErrorDetector;`;
   }
 ;
   createPerformanceMonitor() {;
-    const script = `#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
 ;
 class PerformanceMonitor {;
   constructor() {;
@@ -302,15 +291,12 @@ class PerformanceMonitor {;
   }
 ;
   ensureLogDirectory() {;
-    const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {;
       fs.mkdirSync(logDir, { "recursive": true });
     }
   }
 ;
   log(message, level = 'INFO') {;
-    const timestamp = new Date().toISOString();
-    const logMessage = \`[\${timestamp}] [\${level}] \${message}\\n\`;
     console.log(\`[\${level}] \${message}\`);
     fs.appendFileSync(this.logFile, logMessage);
   }
@@ -394,7 +380,6 @@ class PerformanceMonitor {;
   }
 ;
   async generatePerformanceReport() {;
-    const report = {;
       ...this.metrics,
       "recommendations": this.generateRecommendations();
     };
@@ -432,7 +417,6 @@ if (require.main === module) {;
 ;
 module.exports = PerformanceMonitor;`;
 
-    const scriptPath = path.join(
       this.projectRoot,
 
 
@@ -443,10 +427,6 @@ module.exports = PerformanceMonitor;`;
   }
 ;
   createSecurityScanner() {;
-    const script = `#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
 ;
 class SecurityScanner {;
   constructor() {;
@@ -457,15 +437,12 @@ class SecurityScanner {;
   }
 ;
   ensureLogDirectory() {;
-    const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {;
       fs.mkdirSync(logDir, { "recursive": true });
     }
   }
 ;
   log(message, level = 'INFO') {;
-    const timestamp = new Date().toISOString();
-    const logMessage = \`[\${timestamp}] [\${level}] \${message}\\n\`;
     console.log(\`[\${level}] \${message}\`);
     fs.appendFileSync(this.logFile, logMessage);
   }
@@ -521,7 +498,6 @@ class SecurityScanner {;
   }
 ;
   async scanCodeSecurity() {;
-    const files = this.getSourceFiles();
     const securityPatterns = {;
       "hardcodedSecrets": /(password|secret|key|token)\\s*[:=]\\s*['"][^'"]+['"]/gi,
       "evalUsage": /eval\\s*\\(/gi,
@@ -531,7 +507,6 @@ class SecurityScanner {;
 ;
     files.forEach(file => {;
       try {;
-        const content = fs.readFileSync(file, 'utf8');
 ;
         Object.entries(securityPatterns).forEach(([patternName, pattern]) => {;
           const matches = content.match(pattern);
@@ -557,14 +532,11 @@ class SecurityScanner {;
       "tokens": /(token|access[_-]?token)\\s*[:=]\\s*['"][^'"]+['"]/gi;
     };
 ;
-    const files = this.getSourceFiles();
 ;
     files.forEach(file => {;
       try {;
-        const content = fs.readFileSync(file, 'utf8');
 ;
         Object.entries(sensitivePatterns).forEach(([patternName, pattern]) => {;
-          const matches = content.match(pattern);
           if (matches) {;
             this.securityIssues.push({;
               file,
@@ -582,13 +554,8 @@ class SecurityScanner {;
   }
 ;
   getSourceFiles() {;
-    const files = [];
-    const walkDir = (dir) => {;
       try {;
-        const items = fs.readdirSync(dir);
         items.forEach(item => {;
-          const fullPath = path.join(dir, item);
-          const stat = fs.statSync(fullPath);
 ;
           if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {;
             walkDir(fullPath);
@@ -606,7 +573,6 @@ class SecurityScanner {;
   }
 ;
   async generateSecurityReport() {;
-    const report = {;
       "timestamp": new Date().toISOString(),
       "vulnerabilities": this.vulnerabilities,
       "securityIssues": this.securityIssues,
@@ -633,7 +599,6 @@ if (require.main === module) {;
 ;
 module.exports = SecurityScanner;`;
 
-    const scriptPath = path.join(
       this.projectRoot,
 
 
@@ -644,10 +609,6 @@ module.exports = SecurityScanner;`;
   }
 ;
   createGitWorkflowAutomator() {;
-    const script = `#!/usr/bin/env node;
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
 ;
 class GitWorkflowAutomator {;
   constructor() {;
@@ -657,15 +618,12 @@ class GitWorkflowAutomator {;
   }
 ;
   ensureLogDirectory() {;
-    const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {;
       fs.mkdirSync(logDir, { "recursive": true });
     }
   }
 ;
   log(message, level = 'INFO') {;
-    const timestamp = new Date().toISOString();
-    const logMessage = \`[\${timestamp}] [\${level}] \${message}\\n\`;
     console.log(\`[\${level}] \${message}\`);
     fs.appendFileSync(this.logFile, logMessage);
   }
@@ -673,7 +631,6 @@ class GitWorkflowAutomator {;
   async runCommand(command, description) {;
     this.log(\`"Running": \${description}\`);
     try {;
-      const result = execSync(command, {;
         "cwd": this.projectRoot,
         "stdio": 'pipe',
         "encoding": 'utf8';
@@ -756,7 +713,6 @@ class GitWorkflowAutomator {;
       await this.runCommand('git pull origin main', 'Pull latest changes');
 ;
       // Merge current branch;
-      const currentBranch = await this.getCurrentBranch();
       if (currentBranch !== 'main') {;
         await this.runCommand(\`git merge \${currentBranch}\`, \`Merge \${currentBranch} into main\`);
       }
@@ -785,7 +741,6 @@ if (require.main === module) {;
 ;
 module.exports = GitWorkflowAutomator;`;
 
-    const scriptPath = path.join(
       this.projectRoot,
 
 

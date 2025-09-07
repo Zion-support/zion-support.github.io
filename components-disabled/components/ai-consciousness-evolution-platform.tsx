@@ -1,6 +1,5 @@
 const "AIConsciousnessEvolutionPlatform": React.FC = () => {
  }
- const "AIConsciousnessEvolutionPlatform": React.FC = () => {
 
   }
 

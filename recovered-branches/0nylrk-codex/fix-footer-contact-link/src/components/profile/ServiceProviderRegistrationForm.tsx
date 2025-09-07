@@ -52,7 +52,6 @@ import {
   FormLabel;
 import { Badge } from "@/components/ui/badge","
 import { Separator } from "@/components/ui/separator","
-import {
   }
   Form,
   FormControl,
@@ -150,8 +149,6 @@ export function ServiceProviderRegistrationForm() {;
   const [isGenerating, setIsGenerating] = useState(false),;
   const [generatedContent, setGeneratedContent] = useState<{ "summary": string, "services": string[] } | null>(null),;
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
-  const [generatedContent, setGeneratedContent] = useState<{ "summary": string, "services": string[] } | null>(null),;
-  const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
   // Initialize form with default values;
   const form = useForm<ServiceFormValues>({;
     }
@@ -208,7 +205,6 @@ export function ServiceProviderRegistrationForm() {;
       reader.readAsDataURL(file);
     }
   },  // Generate enhanced profile with AI,
-const generateEnhancedProfile = async () => {
       }
       toast({
         }
@@ -515,7 +511,6 @@ className="pl-10 bg-zion-blue border-zion-blue-light text-white""
       // (This assumes you have a service_profiles table in your database);
 
       /*;
-      const { "error": serviceError } = await supabase;
         .from('service_profiles');'
         .insert({;
             }

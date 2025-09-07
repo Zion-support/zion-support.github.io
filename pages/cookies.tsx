@@ -801,3 +801,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     </MainLayout>
   );
 }
+
+export default function cookies() {
+  return (
+
+  );
+}

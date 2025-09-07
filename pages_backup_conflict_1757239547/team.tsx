@@ -451,10 +451,7 @@ export default function TeamPage() {
     </Layout>
   );
 }
-import Head from "next/head";
-import { motion } from "framer-motion";
 import { Brain, Cloud, Shield, Users } from "lucide-react";
-const teamMembers = [
   {
     name: "Dr. Sarah Johnson"
     role: "Chief Technology Officer"

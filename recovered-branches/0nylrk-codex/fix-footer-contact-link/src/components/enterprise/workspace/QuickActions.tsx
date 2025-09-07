@@ -19,7 +19,6 @@ import { FileText, Plus, Users, Search, Calendar } from "lucide-react","
       "description": "Set up candidate interviews""
       "color": "bg-amber-100 "dark":bg-amber-900/20""
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";"
-import { Button } from "@/components/ui/button";"
 import { FileText, Plus, Users, Search, Calendar } from "lucide-react",;"
       <CardHeader>;
         <CardTitle>Quick Actions</CardTitle>;

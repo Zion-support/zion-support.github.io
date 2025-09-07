@@ -65,13 +65,6 @@ if (!id || typeof id !== 'string') {
       </div>
     )
   }
-return (;
-    <>
-      <Head>
-        <title>{service.name} | Zion Tech Group - Micro SaaS Services</title>
-<meta name='description' content={service.description} />'
-        <meta,
-property='"og": title''
 
           content={`${service.name} | Zion Tech Group,`
 } />;
@@ -101,7 +94,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 className='text-gray-400 hover:text-white'
               >
-                <ArrowLeft className='w-4 h-4 mr-2' />'
+                <ArrowLeft className="w-4 h-4 mr-2" />
+
+                className='text-gray-400 hover:text-white'
+              >
+                <ArrowLeft className=w-4 h-4 mr-2 />
+origin/cursor/automate-test-improve-and-merge-code-2533
                 Back to Services
               </Button>
               <Button
@@ -119,6 +117,7 @@ variant='primary'
                 size="sm""
                 icon={<ExternalLink className="w-4 h-4" />}
               >
+              >
                 Visit Service;
               </Button>
             </div>
@@ -129,32 +128,33 @@ variant='primary'
 
         {/* Service Detail Content */}
         <ServiceDetail service={service} />;
-        {/* Service Detail Content */}
-        <ServiceDetail service={service} />;{/* Related Services CTA */}
-        <section className='py-16 bg-gray-900/50'>;'
-          <div className='max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8 text-center'>;'
-            <h2 className='text-3xl font-bold text-white mb-6'>;'
-            </h2>;
-            <p className='text-gray-400 mb-8 max-w-2xl mx-auto'>;'
-              Explore our complete portfolio of micro SaaS services to find the;
-              perfect solution for your business needs.;
-            </p>;
-            <div className='flex flex-col "sm":flex-row gap-4 justify-center'>;'
+
+
         {/* Related Services CTA */}
-        <section className='py-16 bg-gray-900/50'>;'
-          <div className='max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8 text-center'>;'
-            <h2 className='text-3xl font-bold text-white mb-6'>;'
+        <section className='py-16 bg-gray-900/50'>
+          <div className=max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>'
+            <h2 className=text-3xl font-bold text-white mb-6>
+            </h2>'
+            <p className='text-gray-400 mb-8 max-w-2xl mx-auto>
+              Explore our complete portfolio of micro SaaS services to find the;
+              perfect solution for your business needs.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+        {/* Related Services CTA */}
+        <section className=py-16 bg-gray-900/50'>;'
+          <div className=max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center>;'
+            <h2 className='text-3xl font-bold text-white mb-6>;
             </h2>;
-            <p className='text-gray-400 mb-8 max-w-2xl mx-auto'>;'
+            <p className='text-gray-400 mb-8 max-w-2xl mx-auto'>;
               Explore our complete portfolio of micro SaaS services to find the;
               perfect solution for your business needs.;
             </p>;
-            <div className='flex flex-col "sm":flex-row gap-4 justify-center'>;'
-              <Button;
-                href='/services';'
-                variant='primary';'
-                size='lg';'
-                className='shadow-2xl shadow-blue-500/25'>;'
+            <div className=flex flex-col sm:flex-row gap-4 justify-center'>;
+              <Button'
+                href=/services'
+                variant='primary
+                size='lg'
+                className=shadow-2xl shadow-blue-500/25'>;
                 View All Services;
               </Button>;
               <Button'
@@ -212,17 +212,16 @@ export default /**;
 function ServiceDetailPage() {}
   const router = use_router ();
   const { id } = router.query;
-;
   // Check condition;
 if ( {) {}
   $2;
 }
-    return ('
-      <div className='min - h-screen bg - black flex items - center justify - center'>;'
-        <div className='text - center'>;'
-          <h1 className='text - 2xl font - bold text - white mb - 4'>;
+    return (
+      <div className=min - h-screen bg - black flex items - center justify - center'>;'
+        <div className=text - center>;'
+          <h1 className='text - 2xl font - bold text - white mb - 4>;
             Service Not Found;
-          </h1>;'
+          </h1>;
           <p className='text - gray - 400 mb - 6'>;
             The requested service could not be found.;
           </p>;
@@ -238,21 +237,20 @@ if ( {) {}
       </div>);
   }
   const service = getServiceById (id);
-;
   // Check condition;
 if ( {) {}
   $2;
 }
-    return ('
-      <div className='min - h-screen bg - black flex items - center justify - center'>;'
-        <div className='text - center'>;'
-          <h1 className='text - 2xl font - bold text - white mb - 4'>;
+    return (
+      <div className=min - h-screen bg - black flex items - center justify - center'>;'
+        <div className=text - center>;'
+          <h1 className='text - 2xl font - bold text - white mb - 4>;
             Service Not Found;
-          </h1>;'
-          <p className='text - gray - 400 mb - 6'>;"
+          </h1>;
+          <p className='text - gray - 400 mb - 6'>;
             The requested service "{id}" could not be found.;
-          </p>;'
-          <Button href='/services' variant='primary'>;'
+          </p>;
+          <Button href=/services' variant='primary>;
             <ArrowLeft className='w - 4 h - 4 mr - 2' />            Back to Services;
           </Button>;
         </div>;
@@ -309,56 +307,57 @@ if ( {) {}
               >;
                 <ArrowLeft className="w - 4 h-4 mr-2" />;
 
-import {ArrowLeft, ExternalLink} from 'lucide-react';
+
+import {ArrowLeft, ExternalLink} from 'lucide-react;
 export default function ServiceDetailPage() {
 
-  if (!id || typeof id !== 'string') {;
+  if (!id || typeof id !== string') {
 
     return (
-      <div className='min-h-screen bg-black flex items-center justify-center'>;
-        <div className='text-center'>;
-          <h1 className='text-2xl font-bold text-white mb-4'>;
+      <div className='min-h-screen bg-black flex items-center justify-center>;
+        <div className=text-center'>;
+          <h1 className='text-2xl font-bold text-white mb-4>;
             Service Not Found;
           </h1>;
-          <p className='text-gray-400 mb-6'>;
+          <p className=text-gray-400 mb-6'>;
             The requested service could not be found.;
           </p>;
-          <Button href='/services' variant='primary'>;
-            <ArrowLeft className='w-4 h-4 mr-2' />            Back to Services      <div className="min-h-screen bg-black flex items-center justify-center">;
+          <Button href='/services variant=primary'>;
+            <ArrowLeft className='w-4 h-4 mr-2 />            Back to Services      <div className=min-h-screen bg-black flex items-center justify-center>;
         <div className="text-center">;
-          <h1 className="text-2xl font-bold text-white mb-4">Service Not Found</h1>;
+          <h1 className=text-2xl font-bold text-white mb-4>Service Not Found</h1>;
           <p className="text-gray-400 mb-6">The requested service could not be found.</p>;
-          <Button href="/services" variant="primary">;
-            <ArrowLeft className="w-4 h-4 mr-2" />;
+          <Button href=/services variant="primary">;
+            <ArrowLeft className=w-4 h-4 mr-2 />;
           </Button>;
         </div>;
       </div>;
     )}
-  const service  = getServiceById(id)if (!service) {return (if (!id || typeof id !== 'string') {return (<div className='min-h-screen bg-black flex items-center justify-center'>;
-        <div className='text-center'>;
-          <h1 className='text-2xl font-bold text-white mb-4'>;
+  const service  = getServiceById(id)if (!service) {return (if (!id || typeof id !== string') {return (<div className='min-h-screen bg-black flex items-center justify-center>;
+        <div className=text-center'>;
+          <h1 className='text-2xl font-bold text-white mb-4>;
             Service Not Found;
           </h1>;
-          <p className='text-gray-400 mb-6'>;
+          <p className=text-gray-400 mb-6'>;
             The requested service could not be found.;
           </p>;
-          <Button href='/services' variant='primary'>;
-            <ArrowLeft className='w-4 h-4 mr-2' />;
+          <Button href='/services variant=primary'>;
+            <ArrowLeft className='w-4 h-4 mr-2 />;
             Back to Services;
           </Button>;
         </div>;
       </div>;
     )}
-  const service = getServiceById(id)if (!service) {return (<div className='min-h-screen bg-black flex items-center justify-center'>;
-        <div className='text-center'>;
-          <h1 className='text-2xl font-bold text-white mb-4'>;
+  const service = getServiceById(id)if (!service) {return (<div className=min-h-screen bg-black flex items-center justify-center'>;
+        <div className='text-center>;
+          <h1 className=text-2xl font-bold text-white mb-4'>;
             Service Not Found;
           </h1>;
-          <p className='text-gray-400 mb-6'>;
+          <p className='text-gray-400 mb-6>;
             The requested service "{id}" could not be found.;
           </p>;
-          <Button href='/services' variant='primary'>;
-            <ArrowLeft className='w-4 h-4 mr-2' />;
+          <Button href=/services' variant='primary>;
+            <ArrowLeft className=w-4 h-4 mr-2' />;
             Back to Services;
           </Button>;
         </div>;
@@ -367,30 +366,30 @@ export default function ServiceDetailPage() {
   return (<>;
       <Head>;
         <title>{service.name} | Zion Tech Group - Micro SaaS Services</title>;
-<meta name='description' content={service.description} />;
+<meta name='description content={service.description} />;
         <meta;
-          property='og:title';
+          property=og:title';
           content={`${service.name} | Zion Tech Group`}
         />;
         <meta property='og:description' content={service.description} />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
-      <div className='min-h-screen bg-black'>;
+      <div className='min-h-screen bg-black>;
         {/* Navigation */}
     );
   }
   const service = getServiceById(id);
 
-  if (!service) {;
+  if (!service) {
     return (
               <Button
-                href='/services'
-                variant='ghost'
-                size='sm'
-        <meta name="description" content={service.description} />
+                href=/services'
+                variant='ghost
+                size=sm'
+        <meta name=description content={service.description} />
         <meta property="og:title" content={`${service.name} | Zion Tech Group`} />
-        <meta property="og:description" content={service.description} />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta property=og:description content={service.description} />
+        <meta name="twitter:card" content=summary_large_image />
       </Head>
 
       <div className="min-h-screen bg-black">
@@ -667,6 +666,13 @@ href='/services'
                 variant='primary'
                 size='lg'
                 className='shadow-2xl shadow-blue-500/25'
+                View All Services;
+              </Button>;
+
+href='/services
+                variant=primary'
+                size='lg
+                className=shadow-2xl shadow-blue-500/25'
                />
                 View All Services;
               </Button>;
@@ -691,9 +697,9 @@ href='/services'
 }
     </>)}
                 href="/contact"
-                variant="outline"
+                variant=outline
                 size="lg"
-                className="border-white/20 text-white hover:border-white/40"
+                className=border-white/20 text-white hover:border-white/40
               >
                 Get Custom Solution
               </Button>
@@ -709,8 +715,8 @@ href='/services'
             <p className='text-gray-400 mb-8 max-w-2xl mx-auto'>
               Explore our complete portfolio of micro SaaS services to find the
               perfect solution for your business needs.
-            </p>'
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            </p>
+            <div className=flex flex-col sm:flex-row gap-4 justify-center'>
 
               </Button>
             </div>

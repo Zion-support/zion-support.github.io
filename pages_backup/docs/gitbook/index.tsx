@@ -50,11 +50,7 @@ import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
 function list(dir: string, baseDir: string) {;
-  const items = fs.readdirSync(dir);
   return items.map((name) => {;
-    const full = path.join(dir, name);
-    const rel = path.relative(baseDir, full);
-    const stat = fs.statSync(full);
     return { name, rel, isDir: stat.isDirectory()   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

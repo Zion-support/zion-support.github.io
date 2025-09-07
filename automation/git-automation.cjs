@@ -72,8 +72,6 @@ main
 
 
 
-const fs = require('fs');
-const path = require('path');
 const { exec } = require('child_process');
 const { promisify } = require('util');
 const execAsync = promisify(exec);
@@ -81,9 +79,7 @@ class GitAutomation {}
   constructor() {}
     const logMessage = `[${timestamp}] ${message}\n`;
     );
-    const logMessage = `[${timestamp}] ${message}\n`;
     );
-    const logMessage = `[${timestamp}] ${message}\n`;
     );
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5

@@ -7,6 +7,11 @@ import Controls from './Controls';
 export type StartMode = any;
 import {
 origin/cursor/automate-test-improve-and-merge-code-2533
+import ParticipantTile from ./ParticipantTile';
+import Controls from './Controls;
+export type StartMode = any;
+import {
+origin/cursor/automate-test-improve-and-merge-code-2533
   Room
   RoomEvent
   RemoteParticipant
@@ -35,14 +40,10 @@ export type StartMode = 'video' | 'audio';
 import Controls from './Controls';
 export type StartMode = 'video' | 'audio';
 
-export type StartMode = 'video' | 'audio';'
-  "projectId": string;
-  "userId": string;
-  "displayName": string;
-  "roomName": string;
-  "serverUrl": string;
-  "token": string;
-  "startMode": StartMode;
+  RoomEvent;
+  RemoteParticipant;
+  LocalParticipant;
+  createLocalTracks;
 
   onLeave?: ("durationSec": number) => void
 };
@@ -205,10 +206,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }, [connect]);
 
-const handleLeave = () => {;
-    }
-    if (room) {;
-      }
+
       room && room.disconnect();
     }
     const durationSec = connectedAt;
@@ -253,13 +251,6 @@ const list: Array<RemoteParticipant | LocalParticipant> = [;
     }
   }, [connect]);
 
-  const handleLeave = () => {
-    if (room) {
-      room.disconnect()
-    }
-    const durationSec = connectedAt ? Math.round((Date.now() - connectedAt) / 1000) : 0;
-    onLeave?.(durationSec)
-  };
 
 const gridCols = useMemo(() => {
    ;
@@ -296,7 +287,7 @@ if (count <= 4) return 'grid-cols-2 md:grid-cols-2';
           <h2 className="text-lg font-semibold">Project Room: {projectId}</h2>
           <p className="text-xs text-gray-400">Room {roomName}</p>
         </div>
-        <Controls room={room} onLeave={handleLeave} accent='cyan' />'
+        <Controls room={room} onLeave={handleLeave} accent=cyan" />
       </div>
 
       <div className={`flex-1 p-4 grid gap-4 ${gridCols}`}>

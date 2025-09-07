@@ -1,9 +1,9 @@
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion;
 import { Phone, Mail, MapPin, Globe, ArrowRight, Star;
   Rocket, Brain, Atom, Building, Briefcase, Microscope;
   Twitter, Facebook, Linkedin, Instagram, Youtube;}
   Github, Zap, Sparkles, Shield, Cpu, Database}
- } from 'lucide-react';
+ } from lucide-react';
 
 import { motion } from 'framer-motion';
 
@@ -98,9 +98,57 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 const serviceCategories = [
   {
     title: 'AI & Machine Learning'
+
+  Phone;
+  Mail;
+  MapPin;
+  Globe;
+  ArrowRight;
+  Star;
+  Rocket;
+  Brain;
+  Atom;
+  Building;
+  Briefcase;
+  Microscope;
+  Twitter;
+  Facebook;
+  Linkedin;
+  Instagram;
+  Youtube;
+  Github;
+  Zap;
+  Sparkles;
+  Shield;
+  Cpu
+  Database;} from 'lucide-react';import {}
+  Phone, Mail, MapPin, Globe, ArrowRight, Star;
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ArrowRight,
+  Star,
+  Rocket,
+  Brain,
+  Atom,
+  Building,
+  Briefcase,
+  Microscope,
+  Twitter,
+  Facebook,
+  Linkedin,
+  Instagram,
+  Youtube,
+  Github,
+  Zap,
+  Sparkles,
+  Shield,
+
+    title: AI & Machine Learning
     icon: Brain;
     services: ['
-  },];      { name: 'DevOps Automation', href: '/devops-automation' }
+  }];      { name: 'DevOps Automation, href: /devops-automation' }
     ];
   }
 ];
@@ -605,14 +653,7 @@ href={service.href}
                     {section && section.links.map(link => (<li key={link && link.name}>;
                         <Link;
                           href={link && link.href}
-                          className='text-sm text-gray-400 "hover": text-white transition-colors duration-200'>                <div key={section && section.titl,'
-}>;
-                  <h5 className="text-sm font-medium text-gray-300 mb-3">{section && section.title}</h5>;"
-                  <ul className="space-y-2">;"
-                    {section && section.links.map((link) => (<li key={link && link.name}>;
-                        <Link;
-                          href={link && link.href}
-                          className="text-sm text-gray-400 "hover":text-white transition-colors duration-200">;"
+
                           {link && link.name}
                         </Link>;
                       </li>;{/* Footer Sections */}
@@ -877,31 +918,47 @@ const UltraFuturisticFooter2029 = () =>: any {}
                   <ul className='space-y-2'>;'
                     {section.links.map(link => (<li key={link.name}>;
                         <Link;
-                          href={link.href}
+const UltraFuturisticFooter2029 = () =>: any {}
+  return ('
+    <footer className=bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 border - t border - slate - 700 / 50>;
+      {/* Main Footer Content */}'
+      <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 16>;
+        <div className='grid grid - cols - 1 lg:grid - cols - 4 gap - 12'>;
+          {/* Company Info */}
+          <div className=lg:col - span - 1'>;'
+            <div className=flex items - center space - x-3 mb - 6>;'
+              <div className='w - 10 h - 10 bg - gradient - to - r from - purple - 500 to - blue - 500 rounded - xl flex items - center justify - center>;
+                <Rocket className='w - 6 h - 6 text - white' />;
+              </div>;
+              <div>;
+                <h3 className=text - xl font - bold text - white'>;
+                  Zion Tech Group;
+                </h3>;'
+                <p className=text - sm text - gray - 400>Innovating the Future</p>;
+              </div>;
+            </div>;'
+            <p className='text - gray - 400 mb - 6 leading - relaxed>;
+              Leading the revolution in AI, quantum computing, and autonomous;
+              technology solutions. Transforming businesses with cutting - edge;
+              innovation.;
+            </p>;
 
-                          className='text-sm text-gray-400 "hover": text-white transition-colors duration-200''
-                        >
-                          {link.name}
-      {/* Bottom Footer *
-}
-<div className='border-t border-slate-700/50'>;'
-        <div className='max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8 py-8'>;'
-          <div className='flex flex-col "md":flex-row justify-between items-center space-y-4 "md":space-y-0'>;'
-            <div className='text-sm text-gray-400'>;'
-              © 2025 Zion Tech Group. All rights reserved.;
+                  <social.icon className=w - 5 h - 5 />;
+                </a>))}
             </div>;
-            <div className='flex items-center space-x-6 text-sm text-gray-400'>;'
+          </div>;
+
+            <div className=text-sm text-gray-400'>
+
+              © 2025 Zion Tech Group. All rights reserved.
+            </div>'
+            <div className=flex items-center space-x-6 text-sm text-gray-400>
                         </Link>;
                       </li>))}
                   </ul>;
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
+                </div>))}
+            </div>;
+          </div>;
 
       {/* Bottom Footer */}
       <div className="border-t border-slate-700/50">
@@ -953,10 +1010,8 @@ type='email''
         </div>
       </div>
     </footer>
-)
-};
+
 export default UltraFuturisticFooter2029;
-;
   );
 export default UltraFuturisticFooter2029;  )
 }

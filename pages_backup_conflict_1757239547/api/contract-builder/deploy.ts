@@ -24,7 +24,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ abi, tx })
   } catch (e: any) {
     return res.status(400).json({ error: e?.message |'Failed to prepare deployment tx' })
-import { Interface } from 'ethers';
 // Simple ABI for demonstration (release/refund);
 const abi = [;
   'constructor(address _client, address _talent, address _token, uint256 _totalAmount, string _projectTitle)function release() externalfunction refund() externalfunction client() view returns (address)function talent() view returns (address)function totalAmount() view returns (uint256)';

@@ -318,14 +318,11 @@ const customScripts = [;
 
   async runSecurityScan() {
     const securityIssues = [];
-    const srcDir = path.join(this.projectRoot, 'src');
 
     if (fs.existsSync(srcDir)) {
-      const files = this.getAllFiles(srcDir, ['.js', '.jsx', '.ts', '.tsx']);
 
       for (const file of files) {
         try {
-          const content = fs.readFileSync(file, 'utf8');
 
           // Check for security issues
           if (
@@ -365,14 +362,11 @@ const customScripts = [;
 
   async runCodeQualityAnalysis() {
     const qualityIssues = [];
-    const srcDir = path.join(this.projectRoot, 'src');
 
     if (fs.existsSync(srcDir)) {
-      const files = this.getAllFiles(srcDir, ['.js', '.jsx', '.ts', '.tsx']);
 
       for (const file of files) {
         try {
-          const content = fs.readFileSync(file, 'utf8');
 
           // Check for code quality issues
           if (content.includes('console.log') && !file.includes('.test.')) {
@@ -415,7 +409,6 @@ const packageJson = JSON.parse(;
       };
 
       const outdatedDeps = [];
-      const securityIssues = [];
 
       // Check for known security issues
       const knownIssues = {
@@ -446,11 +439,8 @@ const packageJson = JSON.parse(;
 
   getAllFiles(dir, extensions) {
     let files = [];
-    const items = fs.readdirSync(dir);
 
     for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
 
       if (
         stat.isDirectory() &&
@@ -557,8 +547,6 @@ fixer
     process.exit(1);
   });
 #!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
 const automationFiles = ['automation/dependency-fixer.cjs'];
   'automation/typescript-fixer.cjs'
   'automation/health-check.cjs'
@@ -622,9 +610,6 @@ automationFiles.forEach(fixAutomationFile);
       .replace(/['"]lucide-react;['"]/g, ")
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
 
 console.log('🔧 Starting Comprehensive Automation Fixer...');
 
@@ -798,9 +783,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         // Ensure proper structure
         if (!content.includes('class PerformanceMonitor')) {
           content = `#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
 
 class PerformanceMonitor {
   constructor() {
@@ -844,8 +826,6 @@ module.exports = PerformanceMonitor;`;
         // Ensure proper structure
         if (!content.includes('class HealthMonitor')) {
           content = `#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
 
 class HealthMonitor {
   constructor() {
@@ -885,8 +865,6 @@ module.exports = HealthMonitor;`;
         // Ensure proper structure
         if (!content.includes('const fs = require')) {
           content = `#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
 
 console.log('🗺️  Generating sitemap...');
 console.log('✅ Sitemap generation completed');
@@ -915,8 +893,6 @@ module.exports = {};`;
         // Ensure proper structure
         if (!content.includes('const fs = require')) {
           content = `#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
 
 console.log('🔍 Generating search index...');
 console.log('✅ Search index generation completed');
@@ -945,8 +921,6 @@ module.exports = {};`;
         // Ensure proper structure
         if (!content.includes('class EnhancedMasterAutomationOrchestrator')) {
           content = `#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
 const { execSync, spawn } = require('child_process');
 
 class EnhancedMasterAutomationOrchestrator {
@@ -957,7 +931,6 @@ class EnhancedMasterAutomationOrchestrator {
   }
 
   log(message, type = 'INFO') {
-    const timestamp = new Date().toISOString();
     const logMessage = \`[\${timestamp}] [\${type}] \${message}\`;
     console.log(logMessage);
   }
@@ -995,8 +968,6 @@ module.exports = EnhancedMasterAutomationOrchestrator;`;
         // Ensure proper structure
         if (!content.includes('class AICodeQualityAnalyzer')) {
           content = `#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
 
 class AICodeQualityAnalyzer {
   constructor() {
@@ -1046,9 +1017,6 @@ console.log('✅ Sitemap generation completed');
       {
         path: 'automation/ultimate-automation-suite.cjs',
         content: `#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
 
 class UltimateAutomationSuite {
   constructor() {
@@ -1057,8 +1025,6 @@ class UltimateAutomationSuite {
   }
 
   log(message, type = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const logMessage = \`[\${timestamp}] [\${type}] \${message}\`;
     console.log(logMessage);
   }
 
@@ -1088,7 +1054,6 @@ class UltimateAutomationSuite {
   }
 
   generateReport() {
-    const report = {
       timestamp: new Date().toISOString(),
       results: this.results,
       summary: {
@@ -1115,8 +1080,6 @@ module.exports = UltimateAutomationSuite;
       {
         path: 'automation/continuous-improvement.cjs',
         content: `#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
 
 class ContinuousImprovement {
   constructor() {
@@ -1124,8 +1087,6 @@ class ContinuousImprovement {
   }
 
   log(message, type = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const logMessage = \`[\${timestamp}] [\${type}] \${message}\`;
     console.log(logMessage);
   }
 
@@ -1222,7 +1183,6 @@ module.exports = ContinuousImprovement;
 
   // Generate comprehensive report
   generateReport() {
-    const report = {
       timestamp: new Date().toISOString(),
       fixes: this.fixes,
       improvements: this.improvements,
@@ -1263,7 +1223,6 @@ module.exports = ContinuousImprovement;
 
 // Run if called directly
 if (require.main === module) {
-  const fixer = new ComprehensiveAutomationFixer();
   fixer.run();
 }
 

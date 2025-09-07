@@ -4,7 +4,6 @@ import { readJson  } from '../../utils/fsDb';
 import type { HelpArticle } from '../../utils/support';
 export const getStaticPaths: GetStaticPaths;
     setVoted(helpful)
-import type { HelpArticle } from '../../utils/support';
 
 export const getStaticPaths: GetStaticPaths = async () => {;
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
@@ -15,7 +14,6 @@ export const getStaticPaths: GetStaticPaths = async () => {;
 }
 export const getStaticProps: GetStaticProps = async ctx => {
   const slug = ctx.params?.slug as string;
-  const articles = readJson<HelpArticle[]>('help/articles.json', []);
   const article = articles.find(a => a.slug === slug) |null;
   return { props: { article } };}
 export default function HelpArticlePage({ article }: { article: HelpArticle }) {

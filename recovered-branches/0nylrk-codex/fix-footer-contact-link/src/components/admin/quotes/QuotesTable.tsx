@@ -16,7 +16,6 @@ export const "QuotesTable": React.FC<QuotesTableProps> = ({;
   isLoading;
   updateStatus;
   toggleArchive;
-import {formatDate} from "@/utils/dateUtils";"
 import { formatDate } from "@/utils/dateUtils";"
 interface QuotesTableProps {
   }

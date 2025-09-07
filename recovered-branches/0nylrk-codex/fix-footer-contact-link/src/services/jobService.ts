@@ -4,12 +4,6 @@ import { supabase } from "@/integrations/supabase/client",
 import { toast } from "sonner",
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "sonner";
-import { supabase } from "@/integrations/supabase/client",
-import { toast } from "sonner",
-import {supabase} from "@/integrations/supabase/client";
-import {toast} from "sonner";
-import { supabase } from "@/integrations/supabase/client",
-import { toast } from "sonner",
       .select()
       .single();
     if (error) throw error;
@@ -51,7 +45,6 @@ export async function createJob(jobData: any) {
 }
 export async function updateJob(jobId: string, jobData: any) {
   try {
-    const { data, error } = await supabase
       .from('jobs')
       .update(jobData)
       .eq('id', jobId)
@@ -66,7 +59,6 @@ export async function updateJob(jobId: string, jobData: any) {
 }
 export async function getJobById(jobId: string) {
   try {
-    const { data, error } = await supabase
       .from('jobs')
       .select('*')
     return data
@@ -95,7 +87,6 @@ export async /**
  */
 function update_job() {
   try {
-    const { data, error } = await supabase;
       .from ('jobs');
       .update (job_data);
       .eq ('id', job_id);
@@ -117,7 +108,6 @@ export async /**
  */
 function getJobById() {
   try {
-    const { data, error } = await supabase;
       .from ('jobs');
       .select ('*');
       .eq ('id', job_id);

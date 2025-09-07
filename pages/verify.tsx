@@ -191,4 +191,8 @@ export default function VerifyPage() {
       </main>
     </>
   )
+  return (
+    <Layout>
+      <Head>
+
 }

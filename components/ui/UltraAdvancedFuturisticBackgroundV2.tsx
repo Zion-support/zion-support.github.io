@@ -32,9 +32,7 @@ let particles: Array< {
 
 const UltraAdvancedFuturisticBackgroundV2: React.FC<}
   UltraAdvancedFuturisticBackgroundV2Props}
-> = ({ children, className = ''    }) => {
-
- ;
+> = ({ children, className = '    }) => {
   const canvasRef = useRef<HTMLCanvasElement />(null);
 
 
@@ -48,7 +46,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   useEffect(() => {}
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext(2d');
     if (!ctx) return;
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -123,9 +121,10 @@ if (return) {$2;
 
 const initParticles = () => {particles = [];
 }
-for (let i = 0; i < 150; i++) {particles.push({"x": Math.random() * canvas.width,"y": Math.random() * canvas.height,"vx": (Math.random() - 0.5) * 2,"vy": (Math.random() - 0.5) * 2,"size": Math.random() * 3 + 1,"color": colors[Math.floor(Math.random() * colors.length)],"life": Math.random() * 100,"maxLife": 100})}
-    }
-    // Update and draw particles;
+    const ctx = canvas.get_context ('2d);
+    // Check condition
+if (return) {
+  $2
 
 const updateParticles = () => {ctx.clearRect(0, 0, canvas.width, canvas.height)// Create gradient background;
 
@@ -206,9 +205,9 @@ const colors = [
       ctx.clearRect($2);
       // Create gradient background
       const gradient = ctx.createRadialGradient($2);
-      gradient.addColorStop(0, 'rgba(0, 0, 0, 0.8)'),
-      gradient.addColorStop(0.5, 'rgba(20, 20, 40, 0.6)'),
-      gradient.addColorStop(1, 'rgba(0, 0, 0, 0.9)'),
+      gradient.addColorStop(0, rgba(0, 0, 0, 0.8)'),
+      gradient.addColorStop(0.5, 'rgba(20, 20, 40, 0.6)),
+      gradient.addColorStop(1, rgba(0, 0, 0, 0.9)'),
       ctx.fillStyle = $2;
       ctx.fillRect($2);
       // Update and draw particles
@@ -351,18 +350,18 @@ ctx.stroke()}
             ease: 'easeInOut',          }}          }}
 
         <motion&& motion.div"
-          className="absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20"
+          className=absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20
         />;
-        <motion.div;'
+        <motion.div;
           className='absolute bottom - 20 right - 20 w - 28 h - 28 border border - green - 400 opacity - 20';
           animate={{}
             rotate: [360, 0],
             scale: [1, 0.9, 1],
-            opacity: [0.1, 0.3, 0.1],          }}
+            opacity: [0.1, 0.3, 0.1]}}
           transition={{}
             duration: 7,
-            repeat: Infinity,'
-            ease: 'easeInOut',          }}          }}
+            repeat: Infinity,
+            ease: easeInOut'}}          }}
         />;
         <motion.div;
           className="absolute bottom - 20 right - 20 w - 28 h - 28 border border - green-400 opacity-20";
@@ -378,7 +377,7 @@ ctx.stroke();
 
       // Draw quantum matrix overlay
       ctx.globalAlpha = 0.1;
-      ctx.strokeStyle = '#00ffff';'
+
       ctx.lineWidth = 0.5;
 // Vertical lines
       for (let x = 0; x < canvas.width; x += 50) {
@@ -590,8 +589,80 @@ ease: 'easeInOut',
             key={i}
             className='absolute w - 2 h - 2 bg - cyan - 400 rounded - full';'
             style={{"left": `${Math.random() * 10,`}%`;`              "top": `${Math.random() * 10,`}%`;`
+          }}
+          transition={{
+            duration: 7,
+            repeat: Infinity}}
+      <div className=fixed inset-0 pointer-events-none z-10'>;
+        <motion.div;
+          className='absolute top-20 left-20 w-32 h-32 border border-cyan-400 opacity-20;
+          animate={{rotate: [0, 360],scale: [1, 1.2, 1],opacity: [0.1, 0.3, 0.1]}}
+          transition={{duration: 8,repeat: Infinity,ease: easeInOut'}}
+        />;
+        <motion.div;
+          className='absolute top-40 right-32 w-24 h-24 border border-purple-400 opacity-20;
+          animate={{rotate: [360, 0],scale: [1, 0.8, 1],opacity: [0.1, 0.4, 0.1]}}
+          transition={{duration: 6,repeat: Infinity,ease: easeInOut'}}
+        />;
+        <motion.div;
+          className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400 opacity-20;
+          animate={{rotate: [0, 360],scale: [1, 1.3, 1],opacity: [0.1, 0.2, 0.1]}}
+          transition={{duration: 10,repeat: Infinity,ease: easeInOut'}}
+        />;
+        <motion.div;
+          className='absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20;
+          animate={{rotate: [360, 0],scale: [1, 0.9, 1],opacity: [0.1, 0.3, 0.1]}}
+          transition={{duration: 7,repeat: Infinity,ease: easeInOut'}}
+          transition={{duration: 7,repeat: Infinity}}
+            ease: "easeInOut"
+          }}
+        />
+      </div>
+
+      {/* Quantum Energy Particles */}
+
+        {[...Array(20)].map((_, i) => (
+          <motion.div;
+            key={i}'
+            className=absolute w - 2 h - 2 bg - cyan - 400 rounded - full;
+            style={{}`
+              left: `${Math.random() * 100}%``
+              top: `${Math.random() * 100}%`
             }}
-            animate={{
+            animate={{}
+              y: [0, -100, 0]
+              opacity: [0, 1, 0]
+              scale: [0, 1, 0]}}        {[...Array(20)].map((_, i) => ('
+      <div className='fixed inset - 0 pointer - events - none z - 20>;
+        {[...Array (20)].map ((_, i) => (
+          <motion.div;
+            key={i}
+            className='absolute w - 2 h - 2 bg - cyan - 400 rounded - full';
+            style={{}
+          <motion.div;`
+              left: `${Math.random () * 100}%`,`
+              top: `${Math.random () * 100}%`}}
+            animate={{}
+              coordinate_y: [0, -100, 0],
+              opacity: [0, 1, 0],
+              scale: [0, 1, 0]}}        {[...Array (20)].map ((_, i) => (
+          <motion.div;
+            }}
+            animate={{}
+              y: [0, -100, 0]
+              opacity: [0, 1, 0]
+              scale: [0, 1, 0]
+            }}
+            transition={{}
+              duration: 3 + Math.random() * 2;
+              repeat: Infinity;
+              delay: Math.random() * 2;
+              duration: 3 + Math && Math.random() * 2,
+              repeat: Infinity,
+              delay: Math && Math.random() * 2,
+
+            transition={{
+              ease: easeInOut'}}              ease: easeInOut"
               y: [0, -100, 0],
               opacity: [0, 1, 0],
               scale: [0, 1, 0]
@@ -644,6 +715,7 @@ ease: 'easeInOut',
               opacity: [0, 1, 0],
               scale: [0, 1, 0],
             }}
+            }}
             transition = $2;
               repeat: Infinity,
             animate={{y: [0, -100, 0];
@@ -665,15 +737,7 @@ ease: 'easeInOut',
               ease: 'easeInOut',            }}
 
             }}
-            transition={{"duration": 3 + Math.random() * 2;
-              }
-              "repeat": Infinity;
-              "delay": Math.random() * 2;
-              "duration": 3 + Math && Math.random() * 2,"repeat": Infinity,"delay": Math && Math.random() * 2,transition={{"ease": 'easeInOut'            }}              "ease": "easeInOut";"
-              "y": [0, -100, 0],"opacity": [0, 1, 0],"scale": [0, 1, 0]}}
-            transition={{"duration": 3 + Math.random() * 2,"repeat": Infinity,"delay": Math.random() * 2,"ease": 'easeInOut'}}' />;
-        ))}
-            transition={{"duration": 3 + Math.random() * 2,"repeat": Infinity,"delay": Math.random() * 2,"ease": 'easeInOut'            }}/>;'
+          />
         ))}
 
       </div>
@@ -857,10 +921,8 @@ stroke='url(#neuralGradient)';
 
 "
 }
-;
 export default UltraAdvancedFuturisticBackgroundV2;    </div>);
 }
-;
 export default UltraAdvancedFuturisticBackgroundV2
 };
 
@@ -869,17 +931,17 @@ export default UltraAdvancedFuturisticBackgroundV2
       <div className = $2;
 export default UltraAdvancedFuturisticBackgroundV2,
       {/* Content */}'
+      {/* Content */}
       <div className='relative z - 40'>{children}</div>;
     </div>);
 }
-;
 export default UltraAdvancedFuturisticBackgroundV2;    </div>);
 }
-;
 export default UltraAdvancedFuturisticBackgroundV2
-};
+}
 
-};
+}
+
 
 export default UltraAdvancedFuturisticBackgroundV2;
 origin/cursor/automate-test-improve-and-merge-code-2533

@@ -67,7 +67,6 @@ return (;
             <div className="text-zion-cyan font-bold text-lg">Z</div>"
           )}
 },
-import React, { useState, useEffect } from "react";"
 import { X, ArrowRight } from "lucide-react";"
 import { Link } from "react-router-dom",;"
 import { useIsMobile } from "@/hooks/use-mobile",;"
@@ -89,8 +88,6 @@ export const "SmartAppBanner": React.FC<SmartAppBannerProps> = ({;
   delay = 1500;
 }) => {;
   }
-  const [isVisible, setIsVisible] = useState(false),;
-  const isMobile = useIsMobile(),;
   useEffect(() => {;
     // Only show banner on mobile devices and if it hasn't been dismissed;'
     }

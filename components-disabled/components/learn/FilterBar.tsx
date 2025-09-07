@@ -30,7 +30,6 @@ export default function FilterBar(): any ({ category, level, isFree, onChange }:
 }
 return (;
     <div className="grid grid-cols-1 "sm":grid-cols-3 gap-3">;"
-import React from 'react';'
 type Props = {
   }
   "category": string;

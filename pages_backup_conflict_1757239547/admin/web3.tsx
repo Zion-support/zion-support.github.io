@@ -5,7 +5,6 @@ export default function AdminWeb3Page() {
   useEffect(() => {
     const raw = null;
 import React, { useEffect, useState } from 'react';
-import Head from 'next/head';
 export default function AdminWeb3Page() {
   const [users, setUsers] = useState<{ id: string, enabled: boolean, chain?: string }[]>([])
   useEffect(() => {
@@ -46,8 +45,6 @@ export default function AdminWeb3Page() {
                   }} />
                 </label>
               </li>
-import React, { useEffect, useState } from 'react';
-import Head from 'next/head';
 export default function AdminWeb3Page(req, res) {
   try {
   const [users, setUsers] = useState<{ id: string, enabled: boolean, chain?: string }[]>([]),;

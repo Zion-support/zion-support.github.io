@@ -1,34 +1,15 @@
 const fs = require('fs');
-const path = require('path');
+const path = require(path');
 
 function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
-<<<<<<< HEAD
-=======
-    if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
-      console.log(`Fixing merge conflicts in: ${filePath}`);
-      
-      // Simple merge conflict resolution - take the HEAD version
-      const lines = content.split('\n');
-      const resolvedLines = [];
-      let inConflict = false;
-      let takeHead = true;
-      
-      for (let i = 0; i < lines.length; i++) {
-        const line = lines[i];
-        
-        if (line.includes('')) {
-          inConflict = true;
-          takeHead = true;
-          continue;
-        } else if (line.includes('')) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
           takeHead = false;
           continue;
-        } else if (line.includes('>>>>>>>')) {
+        } else if (line.includes(>>>>>>>')) {
           inConflict = false;
           continue;
         }
@@ -38,8 +19,8 @@ function fixMergeConflicts(filePath) {
         }
       }
       
-      const resolvedContent = resolvedLines.join('\n');
-      fs.writeFileSync(filePath, resolvedContent, 'utf8');
+      const resolvedContent = resolvedLines.join('\n);
+      fs.writeFileSync(filePath, resolvedContent, utf8');
       console.log(`Fixed: ${filePath}`);
     }
   } catch (error) {
@@ -56,13 +37,13 @@ function findAndFixConflicts(dir) {
     
     if (stat.isDirectory()) {
       findAndFixConflicts(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+    } else if (file.endsWith('.tsx) || file.endsWith(.ts') || file.endsWith('.jsx) || file.endsWith(.js')) {
       fixMergeConflicts(filePath);
     }
   }
 }
 
 // Fix conflicts in app directory
-console.log('Fixing merge conflicts in app directory...');
-findAndFixConflicts('./app');
+console.log('Fixing merge conflicts in app directory...);
+findAndFixConflicts(./app');
 console.log('Merge conflicts fixed!');

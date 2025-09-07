@@ -346,7 +346,6 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
 }
 import { motion } from 'framer-motion';'
 import { Shield,, Lock,, Eye,, AlertTriangle,, ArrowRight,, CheckCircle,, Star,, Globe,, Settings,, Users } from 'lucide-react';'
-const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })const "CybersecurityPage": React.FC = () => {const services = [{"id": 1,"title": "Security Assessment","description": "Comprehensive security evaluation to identify vulnerabilities and risks in your systems.","features": [;"
         "Vulnerability scanning","Penetration testing","Security audit","Risk assessment","Compliance review";"
       ],"pricing": "Starting at $2,500","delivery": "1-3 weeks","category": "Assessment","icon": <Shield className="w-8 h-8" />;"
     },{"id": 2,"title": "Data Protection","description": "Advanced data encryption and protection solutions to secure your sensitive information.","features": ["Data encryption","Access control","Data backup","Privacy compliance","Data loss prevention";"

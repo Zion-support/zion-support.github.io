@@ -32,11 +32,26 @@ const ApiDevelopmentChat: NextPage = () => {;
 
 
 
+import type { NextPage } from "next;
+import Head from next/head";
+import Link from "next/link;
 
 
 
 
 const ApiDevelopmentChat: NextPage = () => {
+  return (
+    <div>;
+      <Head>;
+        <title>ApiDevelopmentChat - Zion Tech Solutions</title>;
+        <meta name=description" content="ApiDevelopmentChat service />{ "}
+
+
+
+
+
+
+
   return (
     <div>
       <Head>
@@ -44,7 +59,7 @@ const ApiDevelopmentChat: NextPage = () => {
       </Head>;
 
 
-        <meta name="description" content="ApiDevelopmentChat service" />
+        <meta name="description content=ApiDevelopmentChat service" />
       </Head>
 
       </Head>;
@@ -52,7 +67,7 @@ const ApiDevelopmentChat: NextPage = () => {
       <main>
         <h1>ApiDevelopmentChat</h1>
         <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>
+        <a href="/services>Back to Services</a>
       </main>
     </div>
       </Head>;
@@ -63,7 +78,7 @@ const ApiDevelopmentChat: NextPage = () => {
       <main>;
         <h1>ApiDevelopmentChat</h1>;
         <p>Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;
+        <a href=/services">Back to Services</a>;
       </main>;
     </div>;
   );

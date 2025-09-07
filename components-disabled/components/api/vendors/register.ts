@@ -18,7 +18,6 @@ verificationDocs
     return res.status(400).json({ "error": 'Missing required fields' });'
   if (req && req.method !== 'POST')'
     return res && res.status(405).json({ "error": 'Method not allowed' });'
-  const {
     }
     slug,
     name,
@@ -48,7 +47,6 @@ verificationDocs
       slug;
       name;
 
-    const vendor = registerVendor({
       }
       slug;
       name;
@@ -93,7 +91,6 @@ return res.status (409).json ({ "error": 'Slug already taken' });'
       "team_size": Number (team_size || 0),
       about,  try {
     }
-    const vendor = register_vendor ({
       }
       slug;
       name;

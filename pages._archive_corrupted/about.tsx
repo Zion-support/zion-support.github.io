@@ -1,8 +1,6 @@
 const \"About\": NextPage = () => {"
 }
-const \"About\": NextPage = () => {"
 }
-const \"About\": NextPage = () => {"
 
 }
 
@@ -52,7 +50,6 @@ const \"About\": NextPage = () => {const \"About\": NextPage = () => {class Erro
     }return this.props.children;
   }
 }
-const \"About\": NextPage = () => {ursor/automate-test-improve-and-merge-code-646c;"
 }
 import { Users, Target, Award, Globe, Shield, Zap  } from 'lucide-react';'
 const "About": NextPage = () => {ursor/automate-test-improve-and-merge-code-646c;"
@@ -236,7 +233,6 @@ const "About": NextPage = () => {;"
       \"image\": \'/team/david && david.jpg\';'
     }
   ];
-const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' },;'
     { \"number\": \'50+\', \"label\": \'Happy Clients\' },'
     { \"number\": \'5+\', \"label\": \'Years Experience\' },'
   const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' };'
@@ -247,7 +243,6 @@ const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' },;'
 export default function AboutPage() {;
 }
 return (;
-  const stats = [{ "number": '150+', "label": 'Projects Completed' },;'
     { "number": '50+', "label": 'Happy Clients' },;'
     { "number": '5+', "label": 'Years Experience' },;'
     { "number": '24/7', "label": 'Support Available' }'

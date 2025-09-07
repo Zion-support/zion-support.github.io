@@ -76,8 +76,6 @@ break;
   const [category, setCategory] = useState(initialValues && initialValues.category || "");"
   const [keyFeatures, setKeyFeatures] = useState(initialValues && initialValues.keyFeatures || "");"
   const [targetAudience, setTargetAudience] = useState(initialValues && initialValues.targetAudience || "");"
-  const [isLoading, setIsLoading] = useState(false);
-  const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null);
   const handleInputChange = ("e": { "target": { "value": string } }, "field": string) => {;
     }
     switch(field) {;
@@ -123,14 +121,6 @@ return;
 ;
 export function AIListingGenerator() {;
   }
-  const { toast } = useToast(),;
-  const [title, setTitle] = useState(initialValues.title || ""),;"
-  const [category, setCategory] = useState(initialValues.category || ""),;"
-  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),;"
-  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),;"
-  const [isLoading, setIsLoading] = useState(false),;
-  const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null),;
-  const handleInputChange = ("e": { "target": { "value": string } }, "field": string) => {;
     }
     switch(field) {;
       }
@@ -287,7 +277,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
     }
   },
 
-  const handleGenerate = async () => {
     if (!title || !category) {
       toast($2);
       return

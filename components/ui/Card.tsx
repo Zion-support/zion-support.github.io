@@ -16,37 +16,31 @@ export default function Card() {return (<div className={`bg-white rounded-lg sha
 pr-12243
     </div>;
   )}
-import { cn  } from '../../lib/utils';'
 
-interface HTMLDivElement extends HTMLElement  {"tagName": "DIV";"
 }
 pr-12243
 import React from "react";
 import { cn } from "../../lib/utils";
+import React from react";
+import { cn } from "../../lib/utils;
 
-interface HTMLParagraphElement extends HTMLElement  {"tagName": "P";"
-}
 
-interface HTMLHeadingElement extends HTMLElement  {"tagName": "H1" | "H2" | "H3" | "H4" | "H5" | "H6";"
 }
 
 const Card = React.forwardRef<;
   HTMLDivElement,React.HTMLAttributes<HTMLDivElement />;
 >(({ className, ...props }, ref) => (<div;
-    ref = {ref}
-    className={cn("rounded-lg border bg-card text-card-foreground shadow-sm",className,)}"
+
     {...props}
-;
   const CardContent = React && React.forwardRef<;
   HTMLDivElement,React && React.HTMLAttributes<HTMLDivElement />;
 >(({ className, ...props }, ref) => (const CardTitle = React.forwardRef<;
   HTMLParagraphElement,React.HTMLAttributes<HTMLHeadingElement />;
 >(({ className, ...props }, ref) => (<h3;
     ref={ref}"
-    className={cn(\"text-2xl font-semibold leading-none tracking-tight\",className,// Define HTML element types;
+    className={cn(\"text-2xl font-semibold leading-none tracking-tight\,className,// Define HTML element types;
 
-const CardContent = React && React.forwardRef<;
-  HTMLDivElement,;
+  HTMLDivElement,
   React && React.HTMLAttributes<HTMLDivElement>;
 >(({ className, ...props }, ref) => (;
 
@@ -57,9 +51,8 @@ const CardTitle = React.forwardRef<
   <h3
     ref={ref}
     className={cn(
-      "text-2xl font-semibold leading-none tracking-tight",
+      text-2xl font-semibold leading-none tracking-tight",
       className,
-import { cn } from '../../lib/utils';
 // Define HTML element types
 interface HTMLElement {
   className: string;
@@ -70,13 +63,13 @@ interface HTMLElement  {className: string;
   style: { [key: string]: string ;}
 }
 
-interface HTMLDivElement extends HTMLElement  {tagName: 'DIV';}
+interface HTMLDivElement extends HTMLElement  {tagName: 'DIV;}
 }
 
-interface HTMLParagraphElement extends HTMLElement  {tagName: 'P';}
+interface HTMLParagraphElement extends HTMLElement  {tagName: P';}
 }
 
-interface HTMLHeadingElement extends HTMLElement  {tagName: 'H1' | 'H2' | 'H3' | 'H4' | 'H5' | 'H6';}
+interface HTMLHeadingElement extends HTMLElement  {tagName: 'H1 | H2' | 'H3 | H4' | 'H5 | H6';}
 }
 
 const Card = null;
@@ -85,7 +78,7 @@ const Card = null;
     {...props}
   />
 ));
-Card.displayName = "Card";
+Card.displayName = "Card;
 
 const CardHeader = React.forwardRef<
   HTMLDivElement;
@@ -93,11 +86,12 @@ const CardHeader = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("flex flex-col space-y-1.5 p-6", className)}
+    className={cn(flex flex-col space-y-1.5 p-6", className)}
     {...props}
   />
 ));
-CardHeader.displayName = "CardHeader";
+CardHeader.displayName = "CardHeader;
+
 
 const CardTitle = React.forwardRef<
   HTMLParagraphElement;
@@ -112,7 +106,7 @@ const CardTitle = React.forwardRef<
     {...props}
   />
 ));
-CardTitle.displayName = "CardTitle";
+CardTitle.displayName = CardTitle";
 
 const CardDescription = React.forwardRef<
   HTMLParagraphElement;
@@ -150,7 +144,7 @@ const CardFooter = React.forward_ref<;
     {...props}
   />
 ));
-CardDescription.displayName = "CardDescription";
+CardDescription.displayName = CardDescription";
 
 const CardContent = React.forwardRef<
   HTMLDivElement;
@@ -171,20 +165,20 @@ interface CardProps  {children: React.ReactNode;
   className?: string;
 }export default function Card() {return (<div className={`bg-white rounded-lg shadow-md p-6 ${className}`}>;
       {children}
-import React from "react";
-import { cn } from "../../lib/utils";
+import React from "react;
+import { cn } from ../../lib/utils";
 
 
 interface HTMLDivElement extends HTMLElement {
-  tagName: "DIV";
+  tagName: "DIV;
 }
 
 interface HTMLParagraphElement extends HTMLElement {
-  tagName: "P";
+  tagName: P";
 }
 
 interface HTMLHeadingElement extends HTMLElement {
-  tagName: "H1" | "H2" | "H3" | "H4" | "H5" | "H6";
+  tagName: "H1 | H2" | "H3 | H4" | "H5 | H6";
 }
 
 const Card = React.forwardRef<
@@ -194,15 +188,15 @@ const Card = React.forwardRef<
   <div
     </div>;
   )}
-import { cn  } from '../../lib/utils';
-interface HTMLDivElement extends HTMLElement  {tagName: "DIV";
-}interface HTMLParagraphElement extends HTMLElement  {tagName: "P";
-}interface HTMLHeadingElement extends HTMLElement  {tagName: "H1" | "H2" | "H3" | "H4" | "H5" | "H6";
+import { cn  } from '../../lib/utils;
+interface HTMLDivElement extends HTMLElement  {tagName: "DIV;
+}interface HTMLParagraphElement extends HTMLElement  {tagName: P";
+}interface HTMLHeadingElement extends HTMLElement  {tagName: "H1 | H2" | "H3 | H4" | "H5 | H6";
 }const Card = React.forwardRef<;
   HTMLDivElement,React.HTMLAttributes<HTMLDivElement>;
 >(({ className, ...props }, ref) => (<div;
     ref={ref}
-    className={cn("rounded-lg border bg-card text-card-foreground shadow-sm",className,)}
+    className={cn("rounded-lg border bg-card text-card-foreground shadow-sm,className,)}
     {...props}const CardContent = React && React.forwardRef<;
   HTMLDivElement,React && React.HTMLAttributes<HTMLDivElement>;
 >(({ className, ...props }, ref) => (const CardTitle = React.forwardRef<;
@@ -257,25 +251,12 @@ interface HTMLElement  {className: string
   textContent: string | null;}
   style: { [key: string]: string }
 }
-
-interface HTMLElement  {"className": string;
-  }
-  "id": string;
-  "innerHTML": string;
-  "textContent": string | null;
-  "style": { ["key": string]: string }
+interface HTMLDivElement extends HTMLElement  {tagName: DIV';
 }
-
-interface HTMLDivElement extends HTMLElement  {"tagName": 'DIV';'
+interface HTMLParagraphElement extends HTMLElement  {tagName: 'P;
 }
-
-interface HTMLParagraphElement extends HTMLElement  {"tagName": 'P';'
-}
-
-interface HTMLHeadingElement extends HTMLElement  {"tagName": 'H1' | 'H2' | 'H3' | 'H4' | 'H5' | 'H6';'
-}
-
-const Card = null;
+interface HTMLHeadingElement extends HTMLElement  {tagName: H1' | 'H2 | H3' | 'H4 | H5' | 'H6;
+}const Card = null;
       className;
     )}
     {...props}
@@ -290,6 +271,7 @@ const Card = null;
 
 
 const CardDescription = React.forwardRef<
+
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => (
@@ -299,9 +281,7 @@ const CardDescription = React.forwardRef<
     )}
     {...props}
   />;
-))CardTitle.displayName = "CardTitle";"
 
-const CardDescription = React.forwardRef<;
   HTMLParagraphElement,const CardDescription = React.forwardRef<;
   HTMLParagraphElement,const CardDescription  = null;React.HTMLAttributes<HTMLParagraphElement>;
 >(({ className, ...props }, ref) => (<p;
@@ -396,10 +376,6 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
       on_click={on_click}
     >;
       {/* Subtle background pattern */}
-        <div className = "absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 "hover": opacity - 100 transition - opacity duration - 300 pointer - events - none" />)}"
-    </div>
-},export default Card,export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent;
-}
 
 },
 export default Card,
@@ -448,7 +424,7 @@ const CardFooter = null;
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("flex items-center p-6 pt-0", className)}
+    className={cn(flex items-center p-6 pt-0, className)}
     {...props}
   />;"
 ))CardFooter.displayName = \"CardFooter\";
@@ -475,6 +451,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 export default Card;
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 export default function Card({ children, className = '' }: CardProps) {
+export default function Card({ children, className = ' }: CardProps) {
   return (
     <div className={`bg-white rounded-lg shadow-md p-6 ${className}`}>
       {children}

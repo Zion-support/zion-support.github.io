@@ -14,7 +14,6 @@ export function TalentCardContent() {
 "skills": string[] | undefined;
     "skills": string[] | undefined
 }
-  const [isHovering, setIsHovering] = useState(false);
 return (;
     <div>
 import React, { useState } from "react";"
@@ -30,9 +29,7 @@ interface TalentCardContentProps {;
 
 export function TalentCardContent(): any ({ summary, bio, timezone, skills }: TalentCardContentProps) {;
   }
-  const [isHovering, setIsHovering] = useState(false);
 
-  const [isHovering, setIsHovering] = useState(false);
   return (;
 interface TalentCardContentProps {;
   }

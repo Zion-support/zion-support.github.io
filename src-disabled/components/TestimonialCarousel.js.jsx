@@ -60,16 +60,12 @@ const testimonials = [{ id: 1, name: 'Sarah Johnson',
   rating: 5, category: 'Infrastructure',}
   project: 'Cloud Infrastructure,}
 }] export function TestimonialCarousel() { const [currentIndex, setCurrentIndex] = useState(0);}
-  const [direction, setDirection] = useState(0) useEffect(() => {}
- const timer = setInterval(() => { setDirection(1) setCurrentIndex(prev => (prev + 1) % testimonials.length) }, 5000) return () => clearInterval(timer) }, []) const swipePower = (;) => {
   return $3;}
 }
   return Math.abs(offset) * velocity }
 
-const paginate = newDirection => { setDirection(newDirection) setCurrentIndex() prev => (prev + newDirection + testimonials.length) % testimonials.length );}
 }
 
-const goToSlide = index => { setDirection(index > currentIndex ? 1 : -1) setCurrentIndex(index) };
   return (' <section className='py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden' /> {}' <div className='absolute inset-0 opacity-5' />' <div className='absolute top-20 left-20 w-32 h-32 border border-zion-cyan rounded-full' /></div>' <div className='absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full' /></div>' <div className='absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full' /></div> </div> ' <div className='container mx-auto px-4 relative z-10' /> {} <motion.div' className='text-center mb-16' initial={{ opacity: 0, y: 20 ,}
 } whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}  />' <h2 className='text-4xl md:text-5xl font-bold text-white mb-6' /> What Our{'}' <span className='bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent' /> Users Say </span> </h2>' <p className='text-zion-slate-light text-lg max-w-3xl mx-auto leading-relaxed' /> Join thousands of satisfied customers who have transformed their businesses with Zion Tech Group </p> </motion.div> {}' <div className='relative max-w-6xl mx-auto' /> <AnimatePresence initial={false} custom={direction} /> <motion.div key={currentIndex} custom={direction} variants={slideVariant,}
 }' initial='enter' animate='center' exit='exit' transition={{x: { type: 'spring'}

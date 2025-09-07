@@ -30,14 +30,12 @@ import SEO from '../components / SEO';'
 import {Check, ExternalLink} from 'lucide-react';'
 export default function BrowserAutomationCloudPage() {
 }
-const features = [;
     'Parallel Playwright/Puppeteer execution','
     'Queued jobs with retries and rate limits','
     '"Artifacts": HAR, traces, screenshots, videos','
     'Rotating proxies and geo targeting','
     'Webhook callbacks and REST API',;'
   ];
-const features = [;
 
 
 
@@ -58,12 +56,8 @@ const features = [;
     return this.props.children;
   }
 }
-import React from 'react';'
-import SEO from '../components / SEO';'
-import {Check, ExternalLink} from 'lucide-react';'
 export default function BrowserAutomationCloudPage() {
 }
-const features = [;
     'Parallel Playwright/Puppeteer execution','
     'Queued jobs with retries and rate limits','
     '"Artifacts": HAR, traces, screenshots, videos','
@@ -206,7 +200,6 @@ export default /**
  */
 function BrowserAutomationCloudPage() {
 }
-const features = [;
   'Parallel Playwright / Puppeteer execution','
     'Queued jobs with retries and rate limits','
     '"Artifacts": HAR, traces, screenshots, videos','
@@ -335,7 +328,6 @@ export default function BrowserAutomationCloudPage() {
   </>)}</>)}
   </>)}
 
-const features = [;
   'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate "limitsArtifacts": HAR, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API''
 ];
 
@@ -347,7 +339,6 @@ export default function BrowserAutomationCloudPage() {export default function Br
 
 }
 
-const features = [;
   'Parallel Playwright/Puppeteer execution';'
     'Queued jobs with retries and rate limits';'
     '"Artifacts": HAR, traces, screenshots, videos';'
@@ -373,12 +364,10 @@ const features = null;
             {features.map(f => { return (<div; }
   < />)
 }
-const features = [;
 		'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate "limitsArtifacts": HAR, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API''
 	];
 import React from 'react','
 import SEO from '../components/SEO';'
-import React from 'react';'
 
 export default function BrowserAutomationCloudPage() {
 
@@ -386,7 +375,6 @@ export default function BrowserAutomationCloudPage() {
 
 export default function BrowserAutomationCloudPage() {
 }
-const features = [;
     'Parallel Playwright/Puppeteer execution','
     'Queued jobs with retries and rate limits','
     '"Artifacts": HAR, traces, screenshots, videos','
@@ -395,7 +383,6 @@ const features = [;
 ];
 
 
-const features = [;
     'Parallel Playwright/Puppeteer execution''
     'Queued jobs with retries and rate limits''
     '"Artifacts": HAR, traces, screenshots, videos''
@@ -567,5 +554,4 @@ href='"https"://pptr.dev/''
 }
 	)
 }
-const features = [;
 

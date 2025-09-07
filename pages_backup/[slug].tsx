@@ -64,9 +64,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-import React, { useMemo } from 'react';
 import Head from 'next / head';
-import {GetStaticPaths, GetStaticProps} from 'next';
 
         return false;
       }
@@ -76,11 +74,6 @@ if (return by_link) {
   $2
 }
   }, [slug]);
-import React, { useMemo } from 'react';
-import Head from 'next/head';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import Button from '../components/ui/Button';
-import Card from '../components/ui/Card';
 import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../data/extra-services';

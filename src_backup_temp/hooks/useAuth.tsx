@@ -131,9 +131,6 @@ export function useAuth() {;
       ;
       if (response.ok) {;
         }
-        const data = await response.json();
-        const user = data.user;
-        const token = data.token;
         ;
         localStorage.setItem('user', JSON.stringify(user));'
         localStorage.setItem('token', token);'

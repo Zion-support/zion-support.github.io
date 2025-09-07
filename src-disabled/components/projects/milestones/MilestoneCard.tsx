@@ -59,7 +59,6 @@ export function MilestoneCard({
 import React from 'react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { format } from 'date-fns';
 
 interface MilestoneCardProps {;
@@ -106,8 +105,6 @@ export function MilestoneCard({;
       case 'rejected':;
         return 'bg-red-500';
 
-import React from 'react';
-import {
   Card,
   CardContent,
   CardFooter,
@@ -137,12 +134,8 @@ import { Button  } from '@/components / ui / button';
 interface MilestoneCardProps {
   id: string,
   project_id: string,
-import React from 'react',
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { format } from 'date-fns',
-import { Check, ArrowDown, X } from 'lucide-react'
 import { useDisputeCheck } from '@/hooks/useDisputeCheck',
 import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge',
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',

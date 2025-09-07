@@ -8,8 +8,6 @@ export default function CourseView() {
 
 import ProgressBar from '../../components/learn/ProgressBar';
 import Quiz from '../../components/learn/Quiz';
-import CertificatePreview from '../../components/learn/CertificatePreview';
-import CoachWidget from '../../components/learn/CoachWidget';
 export default function CourseView() {;
   const router = useRouter();
   const { courseId } = router.query as { courseId: string }
@@ -71,12 +69,9 @@ export default function CourseView() {;
 
 export default function CourseView(req, res) {
   try {
-  const router = useRouter();
   const { courseId } = router.query as { courseId: string };
-  const [course, setCourse] = useState<any>(null);
   const [progress, setProgress] = useState<any>({ percent: 0, completedLessons: [] }),;
   const [currentLessonId, setCurrentLessonId] = useState<string | null>(null);
-  const [finalPassed, setFinalPassed] = useState(false);
   useEffect(() => {;
     if (!courseId) return,;
     async function load() {;
@@ -84,8 +79,6 @@ export default function CourseView(req, res) {
         fetch(`/api/learn/courses/${courseId}`);
         fetch(`/api/learn/progress?userId=demo-user`);
       ]),;
-      const courseData = await courseResp.json();
-      const progData = await progResp.json();
       setCourse(courseData.course);
       const cp = (progData.progress && progData.progress[courseId]) || { percent: 0, completedLessons: [] },;
       setProgress(cp);
@@ -108,7 +101,6 @@ export default function CourseView(req, res) {
       headers: { 'Content-Type': 'application/json' },;
       body: JSON.stringify({ userId: 'demo-user', courseId, lessonId, percent });
     }),;
-    const data = await resp.json();
     setProgress(data.progress);
     } catch (error) {
     console.error("Error:", error);
@@ -127,7 +119,6 @@ export default function CourseView(req, res) {
 ;
   async function onFinalQuizComplete(score: number) {;
     const needed = course?.finalQuiz?.passThreshold || 0;
-    const passed = score >= needed;
     setFinalPassed(passed);
     } catch (error) {
     console.error("Error:", error);

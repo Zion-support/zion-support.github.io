@@ -8,15 +8,6 @@ export type DisputeAttachment = $2;
   uploadedAt: string,
   uploadedByUserId: string},
 
-export interface Dispute {
-  }
-  export type DisputeReason =;
-  | 'Scope Disagreement';'
-  | 'Quality Issues';'
-  | 'Delivery Delay';'
-  | 'Payment Issue';'
-  | 'Communication Breakdown';'
-  | 'Other';'
 
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved';'
 

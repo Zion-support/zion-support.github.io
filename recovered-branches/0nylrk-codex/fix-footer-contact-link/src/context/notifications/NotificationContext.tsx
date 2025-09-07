@@ -51,12 +51,9 @@ export const NotificationProvider = ({ children }: { "children": ReactNode }): J
 useEffect(() => {
     }
     notificationOps.fetchNotifications();import {supabase} from '@/integrations/supabase/client';'
-import {useAuth} from '@/hooks/useAuth';'
-import {useNotificationOperations} from './useNotificationOperations';'
 import {NotificationContextType} from './types';'
 export const useNotifications = (): (NotificationContextType) => {;
   }
-  const context = useContext(NotificationContext) as NotificationContextType;
   if (!context) {
     }
     throw new Error('useNotifications must be used within a NotificationProvider')import React, { createContext, useContext, useEffect, ReactNode } from 'react';'
@@ -94,7 +91,6 @@ const channel = supabase;
             "table": 'notifications''
             "filter": `user_id=eq.${user.id}`    // Set up real-time subscription for new notifications;`    if (user) {;
       }
-      const channel = supabase;
         .channel('notifications-changes');'
         .on('postgres_changes', ;'
           {;

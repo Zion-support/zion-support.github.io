@@ -110,8 +110,6 @@ return new Response (;
 ;
         error = data && data.error?.message || "Unknown error occurred during training";"
     // Map OpenAI status to our internal status names;
-    let status;
-    let error = null;
 ;
     switch (data.status) {
       }

@@ -50,7 +50,6 @@ const generateJsonSitemap = () => {
     generatedAt: new Date().toISOString()
   };
   
-  const publicDir = path.join(__dirname, '..', 'public');
   fs.writeFileSync(
     path.join(publicDir, 'sitemap.json'),
     JSON.stringify(jsonSitemap, null, 2)
@@ -60,7 +59,6 @@ const generateJsonSitemap = () => {
 
 const generateTextSitemap = () => {
   const textSitemap = pages.map(page => `${baseUrl}${page.url}`).join('\n');
-  const publicDir = path.join(__dirname, '..', 'public');
   fs.writeFileSync(path.join(publicDir, 'sitemap.txt'), textSitemap);
   console.log('✅ Text sitemap generated successfully');
 };

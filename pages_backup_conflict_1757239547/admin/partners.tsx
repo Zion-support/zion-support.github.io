@@ -88,11 +88,9 @@ const AdminPartnersPage: React.FC = () => {
     const res = await fetch(
       `/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`
     );
-    const json = await res.json();
     setFlags(json.flags |[]);
 
   }
-    const json = await res.json();
     setFlags(json.flags || []);
     } catch (error) {
     console.error("Error:", error);

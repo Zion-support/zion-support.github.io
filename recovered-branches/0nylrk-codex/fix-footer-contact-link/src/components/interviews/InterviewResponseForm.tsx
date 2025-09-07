@@ -8,8 +8,6 @@ import React from './react';
 import { Button  } from '@/components / ui / button';
 import { Interview  } from '@/types / interview';
 import { format, parseISO  } from './date - fns';
-import React from "react",
-import { Button } from "@/components/ui/button",
 import { Interview } from "@/types/interview";
 import { format, parseISO } from "date-fns";
 interface InterviewResponseFormProps {
@@ -20,7 +18,6 @@ interface InterviewResponseFormProps {
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Interview } from "@/types/interview";
 import { format, parseISO } from "date-fns";export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading }: InterviewResponseFormProps) {
   // Format interview date and time
   const interviewDate = parseISO(interview.scheduled_date),

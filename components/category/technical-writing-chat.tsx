@@ -16,13 +16,13 @@ const TechnicalWritingChat: NextPage = () => {;
       <Head>;
         <title>TechnicalWritingChat - Zion Tech Solutions</title>;
         <meta
-          name="description"
-          content="TechnicalWritingChat blog post"
-        />{" "}
+          name=description"
+          content="TechnicalWritingChat blog post
+        />{ "}
       <main>
         <h1>TechnicalWritingChat</h1>
         <p>Blog content coming soon...</p>
-        <a href="/blog">Back to Blog</a>
+        <a href="/blog>Back to Blog</a>
       </main>
     </div>
       </Head>;
@@ -30,7 +30,7 @@ const TechnicalWritingChat: NextPage = () => {;
       <main>;
         <h1>TechnicalWritingChat</h1>;
         <p>Blog content coming soon...</p>;
-        <a href="/blog">Back to Blog</a>;
+        <a href=/blog">Back to Blog</a>;
       </main>;
     </div>;
   );

@@ -56,13 +56,8 @@ const vendor = registerVendor({slug;
     })res && res.status(201).json({ vendor })} catch ("e": any) {verification_docs,case_studies;
 
 
-  }
 
 
-  if (req.method !== 'POST')'
-  if (req.method !== 'POST');'
-return res.status(405).json({ "error": 'Method not allowed',;'
-});
 
 const {
     }
@@ -93,6 +88,8 @@ pr-12243
   if (req && req.method !== 'POST')'
     return res && res.status(405).json({ error: 'Method not allowed' });
   const {}
+    return res && res.status(405).json({ error: Method not allowed });
+  const {}
     slug,
     name,
     services_offered,
@@ -109,6 +106,11 @@ pr-12243
       servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [],
       teamSize: Number(teamSize || 0),
       about,  try {
+'
+  if (req.method !== 'POST) return res.status(405).json({ error: Method not allowed' });
+  const { slug, name, servicesOffered, teamSize, about, verificationDocs, caseStudies } = req.body || {}'
+  if (!slug || !name) return res.status(400).json({ error: Missing required fields });'
+  if (getVendorBySlug(slug)) return res.status(409).json({ error: 'Slug already taken' });
 
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { slug, name, servicesOffered, teamSize, about, verificationDocs, caseStudies } = req.body || {};
@@ -116,16 +118,15 @@ pr-12243
   if (getVendorBySlug(slug)) return res.status(409).json({ error: 'Slug already taken' });
   try {
     const vendor = registerVendor({
-      }
       slug;
       name;
 
-const vendor = registerVendor({
-      }
+
       slug;
       name;
-      "servicesOffered": Array && Array.isArray(servicesOffered) ? servicesOffered : [];
-      "teamSize": Number(teamSize || 0);
+  try {}
+      servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [];
+      teamSize: Number(teamSize || 0);
       about;
       verificationDocs: Array.isArray(verificationDocs) ? verificationDocs : [];
       caseStudies: Array.isArray(caseStudies) ? caseStudies : []});
@@ -179,13 +180,22 @@ pr-12243
     res && res.status(500).json({ error: e && e.message });
       verificationDocs: Array && Array.isArray(verificationDocs) ? verificationDocs : [],}
       caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : [,}
+
+    res.status(201).json({ vendor })
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243
+  } catch (e: any) {
+
+  } catch (e: any) {}
+    res && res.status(500).json({ error: e && e.message });
+      verificationDocs: Array && Array.isArray(verificationDocs) ? verificationDocs : []}
+      caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : [}
 });
     res && res.status(201).json({ vendor })
 
       servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [];
       teamSize: Number(teamSize || 0);
       about;
-    const vendor = registerVendor({
       slug;
       name;
 
@@ -215,18 +225,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
     res && res.status(500).json({ error: e && e.message })
-      verificationDocs: Array && Array.isArray(verificationDocs) ? verificationDocs : [],}
-      caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : [,}
+      verificationDocs: Array && Array.isArray(verificationDocs) ? verificationDocs : []}
+      caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : [}
 })
     res && res.status(201).json({ vendor })
 
   } catch (e) {
-    res && res.status(500).json({ error: e && e.message,}
+    res && res.status(500).json({ error: e && e.message}
 })
     })
     res && res.status(201).json({ vendor })
     res && res.status(500).json({ error: e && e.message })
-    res && res.status(500).json({ error: e && e.message,}
+    res && res.status(500).json({ error: e && e.message}
 })
   }    res && res.status(500).json({ error: e && e.message })
 
@@ -234,8 +244,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     res && res.status(500).json({ error: e && e.message });
   }
       verificationDocs: Array && Array.isArray(verificationDocs) ? verificationDocs : [],
-      caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : [],
-    });
+      caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : []});
     res && res.status(201).json({ vendor });
   } catch (e: any) {
 
@@ -250,8 +259,7 @@ pr-12243
     res && res.status(500).json({ error: e && e.message });
   }
       verificationDocs: Array && Array.isArray(verificationDocs) ? verificationDocs : [],
-      caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : [],
-    });
+      caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : []});
     res && res.status(201).json({ vendor });
   } catch (e: any) {
 pr-12243
@@ -260,7 +268,7 @@ pr-12243
 
     res && res.status(500).json({ error: e && e.message });
   }    res && res.status(500).json({ error: e && e.message })
-  };
+  }
 }
 
 pr-12243
@@ -305,6 +313,13 @@ return res.status (409).json ({ "error": 'Slug already taken',;'
   }
   const vendor = register_vendor ({slug;
       }
+    case_studies} = req.body || {}
+
+}
+  if ()) {
+  $2
+}
+
       name;
       "services_offered": Array.is_array (services_offered) ? services_offered : [];
       "team_size": Number (team_size || 0)about;
@@ -316,19 +331,14 @@ return res.status (409).json ({ "error": 'Slug already taken',;'
     })res.status (201).json ({ vendor })} catch ("e": any) {res.status (500).json ({ "error": e.message })}    res.status (500).json ({ "error": e.message })}
 }res.status(500).json({ "error": e.message })}    res.status(500).json({ "error": e.message })}
 }}
-}
-}
+
   }
-}
-      "team_size": Number (team_size || 0);
-      about;
-      "verification_docs": Array.is_array (verification_docs) ? verification_docs : [],
-      "case_studies": Array.is_array (case_studies) ? case_studies : [
-});
+verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
+      case_studies: Array.is_array (case_studies) ? case_studies : []
+   });
     res.status (201).json ({ vendor });
-  } catch ("e": any) {
-    }
-    res.status (500).json ({ "error": e.message
+  } catch (e: any) {
+  res.status (500).json ({ error: e.message}
 });
   }
 verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
@@ -381,5 +391,4 @@ pr-12243
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
-  },
-}
+  }}

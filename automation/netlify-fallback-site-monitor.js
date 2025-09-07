@@ -65,7 +65,6 @@ exports.handler = async (_event, _context) => {
     
     try {
         // Basic fallback logic;
-        const result = {
 
         console && console.error('Fallback execution error:', error),
         return {

@@ -75,7 +75,6 @@ const [isLoading, setIsLoading] = useState(true),;
 
   
 
-  const handleRefresh = () => {
     }
     fetchReviews()
 };
@@ -157,10 +156,6 @@ import { Star, AlertTriangle } from "lucide-react",;"
 import { toast } from "@/components/ui/use-toast",;"
 function ReviewsModerationContent() {;
   }
-  const [activeTab, setActiveTab] = useState("pending"),;"
-  const [reviews, setReviews] = useState([]),;
-  const [isLoading, setIsLoading] = useState(true),;
-  const fetchReviews = async () => {;
     }
     setIsLoading(true),;
     try {;  const fetch_reviews = async () => {

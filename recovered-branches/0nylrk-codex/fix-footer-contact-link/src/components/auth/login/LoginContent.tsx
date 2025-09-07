@@ -1,6 +1,5 @@
 import { LoginCard } from "./LoginCard";
 
-import { LoginCard } from "./LoginCard";
 import { LoginCard } from "./LoginCard",
 
 import { LoginCard  } from './LoginCard';
@@ -34,7 +33,6 @@ function LoginContent() {
               <h3 className="text-3xl font-bold text-white mb-4">Join the Zion Community</h3>;
               <p className="text-lg text-white/80">;
                 Connect with thousands of AI professionals, discover new opportunities, and showcase your services to a global audience.;
-import { LoginCard } from "./LoginCard";
 export function LoginContent() {
   return (
     <div className="flex min-h-screen bg-zion-blue">
@@ -64,7 +62,6 @@ export function LoginContent() {
   )
 }
   )
-import { LoginCard } from "./LoginCard";
 export function LoginContent() {;
   return (;
     <div className="flex min-h-screen bg-zion-blue">;

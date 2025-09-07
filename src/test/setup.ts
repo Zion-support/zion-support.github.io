@@ -8,6 +8,14 @@ Object.defineProperty(window, "matchMedia", {
   writable: true,
   value: jest.fn().mockImplementation((query) => ({
 import '@testing-library/jest-dom';
+// Test setup file for Jest
+require(@testing-library/jest-dom");
+
+// Mock window.matchMedia
+Object.defineProperty(window, "matchMedia, {
+  writable: true,
+  value: jest.fn().mockImplementation((query) => ({
+import '@testing-library/jest-dom;
 
     matches: false,
     media: query,

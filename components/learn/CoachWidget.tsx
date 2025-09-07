@@ -23,7 +23,7 @@ export default function CoachWidget() {
   }
   );
 }'
-import React, { useState } from 'react';
+import React, { useState } from 'react;
 export default /**;
  * CoachWidget - Function description;
  */
@@ -39,21 +39,20 @@ function ask() {}
         headers: { 'Content - Type': 'application / json' },
         body: JSON.stringify ({ prompt: input }),
       });
-      const data = await resp.json ();'
+      const data = await resp.json ();
       set_reply (data.text || '');
     } finally {}
       set_loading (false);    }
   }
   return (      });
-      const data = await resp.json ();'
-      set_reply (data.text || '');
+      set_reply (data.text || ');
     } finally {}
       set_loading (false);
     }
   }
   return ('
-    <div className='border rounded p - 3'>;'
-      <div className='font - medium mb - 2'>ZionGPT Coach</div>;'
+    <div className=border rounded p - 3>;'
+      <div className='font - medium mb - 2>ZionGPT Coach</div>;
       <div className='flex gap - 2'>;
         <input;'
           className='flex - 1 border rounded px - 3 py - 2 bg - white dark:bg - black';'

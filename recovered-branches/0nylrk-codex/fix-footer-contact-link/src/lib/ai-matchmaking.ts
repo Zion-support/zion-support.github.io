@@ -87,7 +87,6 @@ return matches.sort((a, b) => b.score - a.score).slice(0, limit)
 return [];
 ;
 // Sample data for testing when API is not available;
-const "sampleData": MatchResultItem[] = [;
   {;
     }
     "id": "talent-1",;"

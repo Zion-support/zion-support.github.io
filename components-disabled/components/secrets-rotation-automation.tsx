@@ -69,24 +69,17 @@ const features = [;
 
   }
 
-  const features = [;
 
 import React from "react";"
 import SEO from "../components/SEO";"
 import { Check, ExternalLink } from "lucide-react";"
 export default function SecretsRotationAutomationPage() {
 }
-const features = [;
   export default function SecretsRotationAutomationPage() {
 
   }
 
-  const features = [;
 
-import React from "react";"
-import SEO from "../components/SEO";"
-import { Check, ExternalLink } from "lucide-react";"
-const features = [;
     "Automated key and secret rotation""
     "JIT credentials with expirations""
     "Policy approvals and audit trails""
@@ -96,7 +89,6 @@ const features = [;
 return (;
 export default function SecretsRotationAutomationPage() {
 }
-const features = [;
     "Automated key and secret rotation","
     "JIT credentials with expirations","
     "Policy approvals and audit trails","
@@ -268,7 +260,6 @@ key={
       </main>;</>)}}</>)}ursor/fix-website-loading-errors-and-merge-6662;
     </>)}
 
-const features = [;
   'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support''
 ];
 
@@ -322,7 +313,6 @@ const features  = null;return (<>;
     </>);
 }
 
-const features = [;
 		'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support''
 	];
 return (;

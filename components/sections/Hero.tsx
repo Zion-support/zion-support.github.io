@@ -47,6 +47,49 @@ const Hero: React.FC<HeroProps> = ({;
 import React from 'react',
 import Button from '../ui/Button';
 import { ArrowRight, Play, Star, Zap, Shield, Users } from 'lucide-react';
+    text: string;
+    href: string;
+  }
+  stats?: Array<{}
+    value: string;
+    label: string;
+    color: string;
+  }>;
+const Hero: React.FC<HeroProps> = ({}
+  title;
+  subtitle;
+  primaryAction;
+  secondaryAction;
+  stats;
+}) => {}
+const Hero: React.FC<HeroProps> = ({
+  title,
+  subtitle,
+  primaryAction,
+  secondaryAction,
+  stats}) => {
+  return (
+      {/* Floating Elements */}
+      <div className='absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-float />;
+      <div
+        className='absolute bottom-20 right-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl animate-float'
+        style={{ animationDelay: 1 && 1.5s' }}
+      />;
+      <div'
+        className=absolute top-1/2 left-1/4 w-48 h-48 bg-purple-500/8 rounded-full blur-3xl animate-float'
+        style={{ animationDelay: '3s }}
+    href: string;
+  }
+  secondaryAction?: {}
+    text: string;
+
+  secondaryAction?: {
+    text: string
+    href: string;
+  }
+
+import Button from ../ui/Button';
+import { ArrowRight, Play, Star, Zap, Shield, Users } from 'lucide-react;
 interface HeroProps {
 }
 "title": string;
@@ -149,7 +192,7 @@ return (;
           </p>;
           {/* Action Buttons */}
           {(primaryAction || secondaryAction) && (;'
-            <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>;
+            <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20>;
               {primaryAction && (;
           {(primaryAction || secondaryAction) && (
 <div className='flex flex-col "sm": flex-row gap-6 justify-center items-center mb-20'>'
@@ -177,40 +220,36 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Button
 }
 href={secondaryAction.href}
-variant='outline';'
-                  size='lg''
-                  className='animate-scale-in border-white/20 "hover": border-white/40 "hover":bg-white/5''
 
-                  style={{ "animationDelay": '0.4s' ,'
 }
 const Hero: React.FC<HeroProps> = ({title;
   subtitle;
   primaryAction;
-  secondaryAction;<p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}stats}) => {return (<section className;{subtitle}</p>;
+  secondaryAction;<p className=text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}stats}) => {return (<section className;{subtitle}</p>;
           </p>;
-          {/* Action Buttons */}{(primaryAction || secondaryAction) && (<div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>;
-              {primaryAction && ({(primaryAction || secondaryAction) && (<div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>;
+          {/* Action Buttons */}{(primaryAction || secondaryAction) && (<div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20>;
+              {primaryAction && ({(primaryAction || secondaryAction) && (<div className=flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>;
               {primaryAction && (<Button;
                   href={primaryAction && primaryAction.href}
-                  size='lg';
-                  className='animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40';
+                  size='lg;
+                  className=animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40';
             {title}
           </h1>;
-          <p className="text - xl sm:text - 2xl md:text - 3xl text - gray - 300 max - w-4xl mx - auto mb - 16 leading - relaxed font - light">;
+          <p className=text - xl sm:text - 2xl md:text - 3xl text - gray - 300 max - w-4xl mx - auto mb - 16 leading - relaxed font - light">;
             {subtitle}
           </p>;
           {/* Action Buttons */}
                 <Button;
                   href={primaryAction && primaryAction.href}
-                  size="lg";
-                  className="animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40";
-                  style={{ animationDelay: '0 && 0.2s' }}>;
+                  size="lg;
+                  className=animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40";
+                  style={{ animationDelay: '0 && 0.2s }}>;
                   {primaryAction && primaryAction.text}
-                  <ArrowRight className="w-5 h-5 ml-2" />;
-                </Button>;style={{ animationDelay: '0.2s' }}
+                  <ArrowRight className="w-5 h-5 ml-2 />;
+                </Button>;style={{ animationDelay: 0.2s' }}
                 >;
                   {primaryAction.text}
-                  <ArrowRight className='w-5 h-5 ml-2' />;
+                  <ArrowRight className='w-5 h-5 ml-2 />;
                 </Button>;
               )}
               {secondaryAction && (<Button;
@@ -219,23 +258,23 @@ const Hero: React.FC<HeroProps> = ({title;
               {secondaryAction && (;
                 <Button
                   href={secondaryAction && secondaryAction.href}
-                  variant='outline';
-                  size='lg';
-                  className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5';
-                  style={{ animationDelay: '0 && 0.4s' }}>;
-                  <Play className='w-5 h-5 mr-2' />                  {secondaryAction && secondaryAction.text}                  variant="outline";
-                  size="lg";
-                  className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5";
-                  style={{ animationDelay: '0 && 0.4s' }}
+                  variant=outline';
+                  size='lg;
+                  className=animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5';
+                  style={{ animationDelay: '0 && 0.4s }}>;
+                  <Play className=w-5 h-5 mr-2' />                  {secondaryAction && secondaryAction.text}                  variant=outline";
+                  size="lg;
+                  className=animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5";
+                  style={{ animationDelay: '0 && 0.4s }}
                 >;
-                  <Play className="w-5 h-5 mr-2" />;
+                  <Play className="w-5 h-5 mr-2 />;
                 </Button>;href={secondaryAction.href}
-variant='outline';
-                  size='lg';
-                  className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5';
-                  style={{ animationDelay: '0.4s' }}
+variant=outline';
+                  size='lg;
+                  className=animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5';
+                  style={{ animationDelay: '0.4s }}
                 >;
-                  <Play className='w-5 h-5 mr-2' />;'
+
                   {secondaryAction.text}
                 </Button>;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -243,24 +282,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {secondaryAction && (;
                 <Button;
                   href={secondaryAction && secondaryAction.href}'
-                  variant='outline''
-                  size='lg''
-                  className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5''
-                  style={{ animationDelay: '0 && 0.4s' }}>;'"
-                  <Play className='w-5 h-5 mr-2' />                  {secondaryAction && secondaryAction.text}                  variant="outline";"
-                  size="lg";"
-                  className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5";'
-                  style={{ animationDelay: '0 && 0.4s' }}
+                  variant=outline'
+                  size='lg
+                  className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
+                  style={{ animationDelay: 0 && 0.4s' }}>;'
+                  <Play className=w-5 h-5 mr-2 />                  {secondaryAction && secondaryAction.text}                  variant="outline";
+                  size=lg";"
+                  className=animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5;'
+                  style={{ animationDelay: '0 && 0.4s }}
                 >;"
-                  <Play className="w-5 h-5 mr-2" />;
+                  <Play className="w-5 h-5 mr-2 />;
                 </Button>;
                   href={secondaryAction.href}
-variant='outline'
-                  size='lg'
-                  className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
-                  style={{ animationDelay: '0.4s' }}
+variant=outline'
+                  size='lg
+                  className=animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
+                  style={{ animationDelay: '0.4s }}
                 >
-                  <Play className='w-5 h-5 mr-2' />
+                  <Play className=w-5 h-5 mr-2' />
                   {secondaryAction.text}
                 </Button>
 origin/cursor/automate-test-improve-and-merge-code-2533

@@ -52,7 +52,6 @@ export function CountryTabs({
   }, [searchQuery]),
 
   const totalPages = Math.ceil(filteredCountries.length / countriesPerPage),
-  const paginatedCountries = filteredCountries.slice(
 
     (currentPage - 1) * countriesPerPage,
     currentPage * countriesPerPage

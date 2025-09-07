@@ -13,6 +13,7 @@
 #!/usr/bin/env node;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ///usr/bin/env node
 =======
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
@@ -36,6 +37,12 @@ const filesToFix = ['pages/NotFound.tsx','pages/_document.tsx','pages/about.tsx'
         {"pattern": /content="([^"]*)"\s*\/>/g,"replacement": 'content="$1"}
           "replacement": 'const Layout = dynamic(() => import("../components/Layout"), { "ssr"}
 <<<<<<< HEAD
+=======
+
+          "replacement"
+        {pattern: /content="([^"]*)\s*\/>/g,replacement": 'content="$1}
+          replacement": 'const Layout = dynamic(() => import("../components/Layout), { ssr"}
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
           "pattern"
 
 
@@ -43,9 +50,7 @@ const filesToFix = ['pages/NotFound.tsx','pages/_document.tsx','pages/about.tsx'
 
 
 
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======

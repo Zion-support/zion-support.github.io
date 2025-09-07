@@ -23,19 +23,10 @@ import React, {
   createContext,
   useContext,
   useEffect,
-  useMemo,;
-  useState,;
-import React, {
+  useMemo,
+  useState,
+import React, {}
 
-import React, {;
-  createContext,;
-  useContext,;
-  useEffect,;
-  useMemo,;
-  useState,;
-} from 'react';
-export type UserRole = 'client' | 'talent';
-type RoleContextValue = {;
   role: UserRole;
   setRole: (role: UserRole) => void;}
 const RoleContext = createContext<RoleContextValue | undefined>(undefined);

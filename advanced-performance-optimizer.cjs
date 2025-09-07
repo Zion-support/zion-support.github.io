@@ -95,8 +95,6 @@ function createPerformanceMonitor() {
   
   const performanceScript = `#!/usr/bin/env node
 
-const { execSync } = require('child_process');
-const fs = require('fs');
 
 console.log('🔍 Performance Monitoring Starting...\\n');
 
@@ -214,8 +212,6 @@ function createSEOOptimizer() {
   
 const seoScript = `#!/usr/bin/env node;
 
-const fs = require('fs');
-const path = require('path');
 
 console.log('🔍 SEO Optimization Starting...\\n');
 
@@ -310,8 +306,6 @@ function createAccessibilityChecker() {
   
 const a11yScript = `#!/usr/bin/env node;
 
-const { execSync } = require('child_process');
-const fs = require('fs');
 
 console.log('♿ Accessibility Check Starting...\\n');
 

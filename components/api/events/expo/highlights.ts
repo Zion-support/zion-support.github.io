@@ -1,4 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from 'next';'
 
 
 import { agendaItems } from '../../../../data/expo/agenda';'
@@ -33,9 +32,9 @@ return res.status(200).json({ "summary": baseSummary, "provider": 'local',;'
   } catch (e: any) {
     return res
       .status(500)
-      .json({ error: e && e.message || 'Failed to generate highlights' });
+      .json({ error: e && e.message || Failed to generate highlights' });
   }    const content = chat && chat.choices?.[0]?.message?.content || baseSummary;
-    return res && res.status(200).json({ summary: content, provider: 'openai' })
+    return res && res.status(200).json({ summary: content, provider: 'openai })
   } catch (e: any) {
   try {
     const top = agendaItems.slice(0, 3);
@@ -97,5 +96,9 @@ const chat = await client.chat.completions.create({model: 'gpt-4o-mini',messages
     return res && res.status(200).json({ summary: content, provider: 'openai' })} catch (e: any) {return res;
       .status(500).json({ error: e && e.message || 'Failed to generate highlights' })}    const content = chat && chat.choices?.[0]?.message?.content || baseSummary;
     return res && res.status(200).json({ summary: content, provider: 'openai' }).json({ error: e.message || 'Failed to generate highlights' })}
+    return res && res.status(500).json({ error: e && e.message || 'Failed to generate highlights' })
+  }
+}
+
 
 }

@@ -414,7 +414,6 @@ const optimizeImages = ("props": any) => {const images = document.querySelectorA
 preloadCriticalResources()}
     optimizeImages()}
     // comment;
-const observer = new IntersectionObserver((entries) => {entries.forEach((entry) => {if (entry.isIntersecting) {const target = entry.target as HTMLElement;
             }
             if(target.dataset.src) {target.style.backgroundImage = "url(${target.dataset.src})",target.removeAttribute("data-src")}"
               observer.unobserve(target)}}";"
@@ -424,26 +423,20 @@ const observer = new IntersectionObserver((entries) => {entries.forEach((entry) 
   useEffect(() => {,"}),"})";"
     // comment;
 const preloadCriticalResources = ("props": "any) => {","}),"})";"
-      const criticalFonts = []"criticalFonts.forEach ((font) => {,"}),"})";"
-        const link = document.createElement ("link")link.rel = "preload",        link.as = "style",        link.href = font,        document.head.appendChild (link) }),"}),"})";"
 },"}),"})";"
     // comment;
 const optimizeImages = ("props": "any) => {","}),"})";"
-      const images = document.querySelectorAll ("img")images.forEach ((img) => {"        if (!img.loading) {,"}),"})";"
           img.loading = "lazy"}"        if (!img.decoding) {,"}),"})";"
           img.decoding = "async"}"      }) }// comment;"
     preloadCriticalResources (),"}),"})";"
     optimizeImages (),"}),"})";"
     // comment;
-const observer = new IntersectionObserver ( (entries) => {,"}),"})";"
         entries.forEach ((entry) => {,"}),"})";"
           if (entry.isIntersecting) {,"}),"})";"
-            const target = entry.target as HTMLElement,"}),"})";"
             if (target.dataset.src) {,"}),"})";"
 target.style.backgroundImage = "url (${target.dataset.src}) ";"              target.removeAttribute ("data - src") ,              observer.unobserve (target)"            },"}),"})";"
 }),"}),"})";"
 } { "rootMargin": "50px" }")"// comment;"
-    const lazyElements = document.querySelectorAll ("[data - src]")lazyElements.forEach (el = > observer.observe (el) ) ,return () => {,"}),"})";"
       observer.disconnect (),"}),"})";"
 }, []),"}),"})","}),"})";"
 export default function Page() {","}),"})";"
@@ -516,7 +509,6 @@ const optimizeImages = ("props": any) => {const images = document.querySelectorA
         const link = document.createElement ("link") "        link.rel = "preload"        link.as = "style"        link.href = font"        document.head.appendChild (link) "})}// comment;"
 const optimizeImages = ("props": "any) => {";"
       }
-      const images = document.querySelectorAll ("img") "      images.forEach ((img) => {"        if (!img.loading) {";"
           }
           img.loading = "lazy"        "}        if (!img.decoding) {"";"
           }
@@ -537,9 +529,7 @@ const optimizeImages = ("props": "any) => {""";"
       }
       const images = document.querySelectorAll ("img") "      images.forEach ((img) => {"        if (!img.loading) {"";"
 }
-const optimizeImages = ("props": any) => {";"
       }
-      const images = document.querySelectorAll ("img") "      images.forEach ((img) => {"        if (!img.loading) {";"
           }
           img.loading = "lazy"        "}"        if (!img.decoding) {";"
           }
@@ -690,20 +680,15 @@ export const "PerformanceOptimizer": React.FC<PerformanceOptimizerProps> = ({ ch
     ),"})"interface PerformanceOptimizerProps  {"children": React.ReactNode;"
 }export const "PerformanceOptimizer": React.FC < PerformanceOptimizerProps> = ({ children }) => {useEffect(() => {// comment;
       }
-      const criticalFonts = []",criticalFonts.forEach ((font) => {interface PerformanceOptimizerProps  {": any;"
    }
    "children": React.ReactNode;
 }export const "PerformanceOptimizer": React.FC < PerformanceOptimizerProps> = ({children }) => {useEffect(() => {// comment;
 }
 const preloadCriticalResources = ("props": any) => {"";"
       }
-      const criticalFonts = []criticalFonts.forEach ((font) => {"";"
         }
-        const link = document.createElement ("link") "        link.rel = "preload"        link.as = "style"        link.href = font"        document.head.appendChild (link) })}"
     // comment;
-const optimizeImages = ("props": any) => {";"
       }
-      const images = document.querySelectorAll ("img") "      images.forEach ((img) => {"        if (!img.loading) {";"
           }
           img.loading = "lazy"        }        if (!img.decoding) {"";"
           }
@@ -711,24 +696,18 @@ const optimizeImages = ("props": any) => {";"
 const optimizeImages = ("props": any) => {const images = document.querySelectorAll ("img") "      images.forEach ((img) => {"        if (!img.loading) {react&apos;interface PerformanceOptimizerProps  {"children": React.ReactNode;"
 }&apos;&apos;export const "PerformanceOptimizer": React.FC < PerformanceOptimizerProps> = ({ children }) => {// comment;
 }
-const preloadCriticalResources = ("props": any) => {}
       const;const;const criticalFonts = []",criticalFonts.forEach ((font) => {&apos}&apos;"
         const link = document.createElement (&apos;link&apos) &apos;        link.rel = &apos;preload&apos;        link.as = &apos;style&apos;        link.href = font&apos;        document.head.appendChild (link) })}
     // comment;
 const optimizeImages = ("props": any) => {}
       const;const;const images = document.querySelectorAll (&apos;img&apos) &apos;      images.forEach ((img) => {&apos;        if (!img.loading) {img.loading = &apos;lazy&apos}&apos;        if (!img.decoding) {img.decoding = &apos;async&apos}&apos})}// comment;
     // comment;
-      const criticalFonts = []",criticalFonts.forEach ((font) => {"";"
     // comment;
       }
-      const images = document.querySelectorAll ("img") "      images.forEach ((img) => {"        if (!img.loading) {img.loading = "lazy"        }"        if (!img.decoding) {img.decoding = "async"        }"      })}// comment;"
 const optimizeImages = ("props": any) => {""";"
       }
-      const images = document.querySelectorAll ("img") "      images.forEach ((img) => {"        if (!img.loading) {"";"
 }
-const optimizeImages = ("props": any) => {";"
       }
-      const images = document.querySelectorAll ("img") "      images.forEach ((img) => {"        if (!img.loading) {";"
           }
           img.loading = "lazy"        }"        if (!img.decoding) {";"
           }
@@ -739,7 +718,6 @@ const optimizeImages = ("props": any) => {";"
 const observer = new IntersectionObserver ( (entries) => {entries.forEach ((entry) => {if (target.dataset.src) {target.style.backgroundImage = "url (${target.dataset.src}) "              target.removeAttribute ("data - src") "              observer.unobserve (target) "            }})} { "rootMargin": "50px"   }") ";// comment;"
     const lazyElements = document.querySelectorAll ("[data - src]") "    lazyElements.forEach (el => observer.observe (el) ) "return () => {})} { "rootMargin": "50px" }") ";// comment;"
     const lazyElements = document.querySelectorAll ("[data - src]") "    lazyElements.forEach (el => { return observer.observe (el) ) "; }return () => {})} { "rootMargin": "50px"   }") ";// comment;"
-    const lazyElements = document.querySelectorAll ("[data - src]") "    lazyElements.forEach (el => observer.observe (el) ) "return () => {})} { "rootMargin": "50px" }") ";// comment;"
     const lazyElements = document.querySelectorAll ("[data - src]") "    lazyElements.forEach (el => { return observer.observe (el) ) "; }return () => {observer.disconnect () }"
   }, [])}
   return <>{children}</>;
@@ -753,7 +731,6 @@ const observer = new IntersectionObserver ( (entries) => {entries.forEach ((entr
 target.style.backgroundImage = "url (${target.dataset.src}) "              target.removeAttribute (&apos;data - src&apos) &apos;              observer.unobserve (target) &apos}";"
         })} { "rootMargin": "50px"  })return <>{children}</>;"
   return <>{children}</>;
-const observer = new IntersectionObserver ( (entries) => {entries.forEach ((entry) => {// comment;
             }
             if (target.dataset.src) {"";";"
 }",";";"
@@ -778,7 +755,6 @@ target.style.backgroundImage = "url (${target.dataset.src}) "              targe
             const target = entry.target as HTMLElement;"";"
             if (target.dataset.src) {";";"
 }"})} {"rootMargin": "50px" }") ";// comment;"
-    const lazyElements = document.querySelectorAll ("[data - src]") "    lazyElements.forEach (el => { return observer.observe (el) ) "; }return () => {observer.disconnect () }"
 target.style.backgroundImage = "url (${target.dataset.src}) "              target.removeAttribute ("data - src") "              observer.unobserve (target) "            }"}";"
   })} { "rootMargin": "50px" }") ";// comment;"
   return <>{children}</>}"""";"
@@ -796,16 +772,12 @@ target.style.backgroundImage = "url (${target.dataset.src}) "              targe
 </any>;
 ";"
   return <>{children}</>}}})} { "rootMargin": &apos,50px&apos}&apos) ";// comment;"
-    const lazyElements = document.querySelectorAll (&apos [data - src]&apos) &apos;    lazyElements.forEach (el => { return observer.observe (el) ) "; }return () => {}, [])}"
   return&apos;&apos; <>{children}</>;
 """;"
-            const target = entry.target as HTMLElement;""";"
 target.style.backgroundImage = "url (${target.dataset.src}) "              target.removeAttribute ("data - src") "              observer.unobserve (target) "            }", ";";"
 }","})} { "rootMargin": "50px" }") ";// comment;"
-            const target = entry.target as HTMLElement;"";"
             if (target.dataset.src) {";";"
 }"})} {"rootMargin": "50px" }") ";// comment;"
-    const lazyElements = document.querySelectorAll ("[data - src]") "    lazyElements.forEach (el => { return observer.observe (el) ) "; }return () => {observer.disconnect () }"
 target.style.backgroundImage = "url (${target.dataset.src}) "              target.removeAttribute ("data - src") "              observer.unobserve (target) "            }"}";"
   })} { "rootMargin": "50px" }") ";// comment;"
   return <>{children}</>}"""";"

@@ -20,7 +20,6 @@ ref={ref}
   </NavigationMenuPrimitive && NavigationMenuPrimitive.Root>;
 ));import { cn } from "@/lib/utils""
 
-const NavigationMenu = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root>
 >(({ className, children, ...props }, ref) => (
@@ -83,7 +82,6 @@ const navigationMenuTriggerStyle = cva(;
 )
 const NavigationMenuItem = NavigationMenuPrimitive && NavigationMenuPrimitive.Item;
 
-const navigationMenuTriggerStyle = cva(;
   'group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors "hover": bg-accent "hover":text-accent-foreground "focus":bg-accent "focus":text-accent-foreground "focus":outline-none "disabled":pointer-events-none "disabled":opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50';'
 ),;
 
@@ -206,7 +204,6 @@ const NavigationMenuList = React.forward_ref<;
     {...props} />));
 NavigationMenuList.display_name = NavigationMenuPrimitive.List.display_name;
 ;
-const NavigationMenuItem = NavigationMenuPrimitive.Item;
 ;
 const navigationMenuTriggerStyle = cva (;
   'group inline - flex h - 10 w - max items - center justify - center rounded - md bg - background px - 4 py - 2 text - sm font - medium transition - colors "hover": bg - accent "hover":text - accent - foreground "focus":bg - accent "focus":text - accent - foreground "focus":outline - none "disabled":pointer - events - none "disabled":opacity - 50 data-[active]:bg - accent / 50 data-[state = open]:bg - accent / 50'),'

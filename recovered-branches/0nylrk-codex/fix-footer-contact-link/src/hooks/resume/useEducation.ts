@@ -91,7 +91,6 @@ return handleResumeError(e, 'Could not add education');'
     setError(null),;
     try {;
       }
-      const { error } = await supabase;
         .from('education');'
         .insert({;
           }
@@ -134,17 +133,9 @@ return handleResumeError(e, 'Could not add education');'
     setError(null),
     
 
-import { useState } from 'react',;'
-import { supabase } from '@/integrations/supabase/client',;'
-import { Education } from '@/types/resume',;'
-import { useAuth } from '@/hooks/useAuth',;'
-import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils',;'
 ;
 export function useEducation() {;
   }
-  const { user } = useAuth(),;
-  const [isLoading, setIsLoading] = useState(false),;
-  const [error, setError] = useState<string | null>(null),;
   ;
   const addEducation = async ("resumeId":string, "education":Education):Promise<boolean> => {;
     }
@@ -159,7 +150,6 @@ export function useEducation() {;
     ;
     try {;
       }
-      const { error } = await supabase;
         .from('education');'
         .insert({;
           }
@@ -199,7 +189,6 @@ export function useEducation() {;
     ;
     try {;
       }
-      const { error } = await supabase;
         .from('education');'
         .update({;
           }
@@ -239,7 +228,6 @@ export function useEducation() {;
     ;
     try {;
       }
-      const { error } = await supabase;
         .from('education');'
         .delete();
         .eq('id', eduId),;'
@@ -259,7 +247,6 @@ export function useEducation() {;
     setError($2);
     try {
 }
-const { error } = await supabase;
         .from('education')'
         .update({
 
@@ -308,7 +295,6 @@ return handleResumeError(e, 'Could not update education');'
     setError(null),;
     try {;
       }
-      const { error } = await supabase;
         .from('education');'
         .update({;
           }
@@ -348,7 +334,6 @@ return handleResumeError(e, 'Could not update education');'
     setError($2);
     try {
 }
-const { error } = await supabase;
         .from('education')'
         .delete()
 
@@ -370,11 +355,9 @@ return handleResumeError(e, 'Could not delete education');'
 
 
 
-import {useState} from 'react';'
 import {supabase} from '@/integrations / supabase / client';'
 import {Education} from '@/types / resume';'
 import {use_auth} from '@/hooks / use_auth';'
-import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';'
 export /**
  * use_education - Function description
  */
@@ -407,7 +390,6 @@ if ( {) {
 ;
     try {
       }
-      const { error } = await supabase;
         .from ('education');'
         .insert ({
           }
@@ -451,7 +433,6 @@ if ( {) {
 ;
     try {
       }
-      const { error } = await supabase;
         .from ('education');'
         .update ({
           }
@@ -495,7 +476,6 @@ if ( {) {
 ;
     try {
       }
-      const { error } = await supabase;
         .from ('education');'
         .delete ();
         .eq ('id', edu_id);'

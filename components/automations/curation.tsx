@@ -1,6 +1,6 @@
-import React from \"react\","
-import fs from \"fs\";"
-import path from \"path\";
+import React from \"react\,
+import fs from \"fs\";
+import path from \path\";
 
 
 type Experiment = {
@@ -12,8 +12,7 @@ import fs from 'fs';
 import path from 'path';
 
 type Experiment = any;
-import React from 'react';'
-import fs from 'fs';'
+import React from react';
 
 import path from 'path';'
 
@@ -25,9 +24,9 @@ hypothesis?: string;
 metric?: string;
 effort?: number;impact?: number;
 }
-import React from "react";
-import fs from "fs";
-import path from "path";
+import React from "react;
+import fs from fs";
+import path from "path;
 type Experiment = $2;
   hypothesis?: string,
   metric?: string,
@@ -37,7 +36,6 @@ type Experiment = $2;
 
 type Props = {
 
-  }
 
   "updatedAt": string | null;
 "items": Experiment[]
@@ -261,21 +259,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       )}<div className='mt-6 space-y-4'    />
         {items.map((exp, idx) => (<div;}
             key={idx}
-            className='rounded-xl border border-gray-200 bg-white p-5 shadow-sm'>'
-
-            <div className='text-base font-semibold text-gray-900'>;'
+            className=rounded-xl border border-gray-200 bg-white p-5 shadow-sm';
+          >;
+            <div className='text-base font-semibold text-gray-900>;
               {exp.title}
             </div>;
-            {(exp.hypothesis |exp.metric) && (<div className='mt-2 text-sm text-gray-700'>;'
+            {(exp.hypothesis |exp.metric) && (<div className=mt-2 text-sm text-gray-700'>;
                 {exp.hypothesis && (<div>;
-                    <span className='font-medium'>"Hypothesis": </span>{' '}'
-                    {exp.hypothesi
-}
+                    <span className='font-medium>Hypothesis:</span>{ '}
+                    {exp.hypothesis}
                   </div>;
                 )}
                 {exp.metric && (<div>;
-                    <span className='font-medium'>"Metric": </span> {exp.metri,'
-}
+                    <span className='font-medium>Metric:</span> {exp.metric}
                   </div>;
                 )}
               </div>;
@@ -515,7 +511,6 @@ export async function getStaticProps() { return null; }
       }
       "props": {
 
-        }
 
         "updatedAt": parsed.updatedAt || null,
 "items": parsed.items || []
@@ -523,7 +518,6 @@ export async function getStaticProps() { return null; }
       "revalidate": 300
     };
   } catch {
-    }
     return {
       props: {
         updatedAt: null,

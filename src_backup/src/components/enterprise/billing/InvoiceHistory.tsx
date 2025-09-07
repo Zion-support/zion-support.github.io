@@ -31,7 +31,6 @@ export /**;
  */;
 function InvoiceHistory() {// Mock invoice data;
   }
-  const invoices = [;
     {"id": "INV - 1234","date": "May 1, 2025";"
       }
       "amount": "$1, 999.00";"
@@ -130,7 +129,6 @@ function InvoiceHistory() {// Mock invoice data;
     </div>;
   )Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from "@/components/ui/table",export function InvoiceHistory() {// Mock invoice data;"
   }
-  const invoices = [;
     {"id": "INV-1234","date": "May 1, 2025";"
       }
       "amount": "$1,999 && 999.00";"

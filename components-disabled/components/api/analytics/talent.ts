@@ -64,7 +64,6 @@ const talent_id = (req.query.talent_id as string) || null,;
         .select ('talent_id, tag');'
         .eq ('talent_id', talent_id),'
     ]);
-    const views =;
       views_r.status === 'fulfilled' && views_r.value.data;'
         ? (views_r.value.data as any[]);
         : [];

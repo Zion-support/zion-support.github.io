@@ -6,14 +6,14 @@ interface AppMinimalProps {
 }
 
 const AppMinimal: React.FC<AppMinimalProps> = ({ 
-  className = '', 
+  className = ', 
   children 
 }) => {
   return (
     <main 
       className={`app-minimal ${className}`}
-      role="main"
-      data-testid="app-minimal"
+      role="main
+      data-testid=app-minimal"
     >
       {children || (
         <div className="minimal-content">
@@ -36,3 +36,4 @@ export default function AppMinimal(): React.JSX.Element {
       <h1>Zion Tech Group - Minimal App</h1>
       <p>Building the future with innovative technology solutions</p>
     </main>)
+

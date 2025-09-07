@@ -75,23 +75,18 @@ const srcFiles = this.findSourceFiles()let consoleLogCount = 0; for (const file 
   }
   const matches = content.match(/console\.(log|warn|error|info)/g)if (matches) {consoleLogCount += matches.length} }#!/usr/bin/"env": node,import fs from 'fs';import path from 'path';import { fileURLToPath  } from 'url';import { execSync  } from 'child_process';'
 
-const __dirname = path.dirname(__filename)';"class": AppHealthMonitor { constructor() { this.projectRoot = path.resolve(__dirname,'..')';this."healthReport": = { "timestamp": "new": Date().toISOString(,) "overall": 'unknown,','; "checks":  ,;'
 } this.projectRoot = path.resolve(__dirname,'..')this.healthReport = {"timestamp": new Date().toISOString(),"overall": 'unknown',"checks": {} },'
 } "async": runHealthChecks() { ';"await": this.checkDependencies()"await": this.checkBuildHealth()"await": this.checkCodeQuality()"await": this.checkPerformance()"await": this.checkSecurity()"await": this.checkAccessibility()this.generateReport(,'
 } "async": checkDependencies() { ';"try": { const packageJsonPath  = path.join(this.projectRoot,'package.json')';'
 
 }
 
-const packageJson  = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'))';'
 
-const issues = []; try { const outdated = execSync('npm outdated --json',{ '; "encoding": 'utf8,','; "cwd": this.projectRoo,t "stdio": 'pipe''}) const outdatedDeps = JSON.parse(outdated)"if": (Object.keys(outdatedDeps).length > 0) { issues.push(`${Object.keys(outdatedDeps).length} outdated dependencies`)}await this.checkDependencies()await this.checkBuildHealth()await this.checkCodeQuality()await this.checkPerformance()await this.checkSecurity()await this.checkAccessibility()this.generateReport(,`} async checkDependencies() {'  try {' const packageJsonPath = path.join(this.projectRoot,'package.json')const packageJson  = JSON.parse(fs.readFileSync(packageJsonPath,'utf8');'
   }
-  const issues = []; try {' const outdatedDeps = JSON.parse(outdated)if (Object.keys(outdatedDeps).length > 0) { issues.push(' `${Object.keys(outdatedDeps).length} outdated dependencies` )} } catch (error) {} try { execSync('npm audit --audit-level=moderate',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('Security vulnerabilities detected','}'; this.healthReport.checks."dependencies": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "totalDependencies": Object.keys(packageJson."dependencies": || ,{}).length + Object.keys(packageJson.devDependencies || {}).length } } catch (error) { this.healthReport.checks.dependencies = { "status": 'error,','; "issues": ['"Failed": to check dependencies'],'; "error": error."message": } },'
 } async checkBuildHealth() { ';"try": { const buildDir  = path.join(this.projectRoot,'.next')';'
 
 }
 
-const buildExists = fs.existsSync(buildDir)"let": buildAge = null; "if": (buildExists) { const stats = fs.statSync(buildDir)"buildAge": = Date.now() - stats.mtime.getTime(
 } let buildSuccess = false; "try": { execSync('npm run build',{ '; "cwd": this.projectRoo,t "stdio": 'pipe,','; "timeout": "60000": }) buildSuccess = true} catch (error) ,'
 } this.healthReport.checks.build = { "status": "buildSuccess": ? 'healthy' : 'error,','; "buildExists": buildExist,s "buildAge": buildAg,e "buildSuccess": buildSucces,s "issues": "buildSuccess": ? [] : ['"Build": process failed']'},'
 } "catch": (error) { this.healthReport.checks.build = { "status": 'error,','; "issues": ['"Failed": to check build health'],'; "error": error."message": } },'
@@ -99,70 +94,55 @@ const buildExists = fs.existsSync(buildDir)"let": buildAge = null; "if": (buildE
 }'; try { execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('ESLint errors detected','
 }';'
 
-const srcFiles = this.findSourceFiles()"let": consoleLogCount = 0; "for": (const file of srcFiles) { const content  = fs.readFileSync(file,'utf8')';'
 
 }
 
-const matches = content.match(/console\.(log|warn|error|info)/g)"if": (matches) { consoleLogCount += matches.length} } if (consoleLogCount > 0) { issues.push(`${consoleLogCount} console statements found`,`} this.healthReport.checks.codeQuality = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "consoleLogCount": consoleLogCoun,t "totalSourceFiles": srcFiles."length": },'
 } catch (error) { this.healthReport.checks.codeQuality = { "status": 'error,','; "issues": ['"Failed": to check code quality'],'; "error": error."message": } },'
 } async checkPerformance() { ';"try": { const issues = [];'
 
 }
 
-const buildDir  = path.join(this.projectRoot,'.next')';"if": (fs.existsSync(buildDir)) { const bundleSize = this.getDirectorySize(buildDir)"if": (bundleSize > 50 * 1024 * 1024) { issues.push('Large bundle size detected')},'
 }
 ;
-  const publicDir  = path.join(this.projectRoot,'public')';"if": (fs.existsSync(publicDir)) { const imageSize = this.getImageDirectorySize(publicDir)"if": (imageSize > 10 * 1024 * 1024) { issues.push('Large images detected')},'
 } this.healthReport.checks."performance": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "bundleSize": fs.existsSync(buildDir) ? this.getDirectorySize(buildDir) : 0 "imageSize": fs.existsSync(publicDir) ? this.getImageDirectorySize(publicDir) : "0": },'
 } catch (error) { this.healthReport.checks.performance = { "status": 'error,','; "issues": ['"Failed": to check performance'],'; "error": error."message": } },'
 } async checkSecurity() { ';"try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles()"for": (const file of srcFiles) {;
   }
-  const content  = fs.readFileSync(file,'utf8')';"if": (content.includes('password') || content.includes('secret') || content.includes('api_key')) {'; issues.push('"Potential": hardcoded secrets found')';break} } try { execSync('npm audit --audit-level=high',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('High severity vulnerabilities detected','
 }'; this.healthReport.checks."security": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": "issues": },'
 } catch (error) { this.healthReport.checks.security = { "status": 'error,','; "issues": ['"Failed": to check security'],'; "error": error."message": } },'
 } async checkAccessibility() { ';"try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles()"let": accessibilityIssues = 0; "for": (const file of srcFiles) { const content  = fs.readFileSync(file,'utf8')';if (content.includes('<img') && !content.includes('alt=')) {'; accessibilityIssues++} if (content.includes('<button') && !content.includes('aria-label') && !content.includes('aria-labelledby')) {'; accessibilityIssues++} } "if": (accessibilityIssues > 0) { issues.push(`${accessibilityIssues} accessibility issues found`,`} this.healthReport.checks.accessibility = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "accessibilityIssues": "accessibilityIssues": },'
 } catch (error) { this.healthReport.checks.accessibility = { "status": 'error,','; "issues": ['"Failed": to check accessibility'],'; "error": error."message":,'
 }
 
-const buildDir = path.join(this.projectRoot,'.next';'
-  const buildExists  = fs.existsSync(buildDir)let buildAge = null; if (buildExists) {const stats = fs.statSync(buildDir)buildAge = Date.now() - stats.mtime.getTime()}let buildSuccess = false; try {' execSync('npm run build',{ "cwd": this.projectRoot "stdio": 'pipe',"timeout": 60000 })buildSuccess = tru,'
 } catch (error) {this.healthReport.checks.build = {"status": buildSuccess ? 'healthy' : 'error',"buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed']},'
 } catch (error) {this.healthReport.checks.build = {"status": 'error',"issues": ['Failed to check build health'],"error": error.messag,'
 } this.healthReport.checks.build = {' "status": buildSuccess ? 'healthy' : 'error' "buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed'] ,'
 } catch (error) { this.healthReport.checks.build = {' "status": 'error',"issues": ['Failed to check build health'] "error": error.message }},'
 } async checkCodeQuality() {'  try ;'
   }
-  const issues = []; try {' execSync('npx tsc --noEmit',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('TypeScript compilation errors','
 } try {' execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('ESLint errors detected','
 }
 
 const srcFiles = this.findSourceFiles()let consoleLogCount = 0;  }#!/usr/bin/"env": node,import fs from 'fs';import path from 'path';import { fileURLToPath  } from 'url';import { execSync  } from 'child_process';'
 
-const __dirname = path.dirname(__filename)';"class": AppHealthMonitor { constructor() { this.projectRoot = path.resolve(__dirname,'..')';this."healthReport": = { "timestamp": "new": Date().toISOString(,) "overall": 'unknown,','; "checks":  ,;'
 } this.projectRoot = path.resolve(__dirname,'..')this.healthReport = {"timestamp": new Date().toISOString(),"overall": 'unknown',"checks": {} },'
 } "async": runHealthChecks() { ';"await": this.checkDependencies()"await": this.checkBuildHealth()"await": this.checkCodeQuality()"await": this.checkPerformance()"await": this.checkSecurity()"await": this.checkAccessibility()this.generateReport(,'
 } "async": checkDependencies() { ';"try": { const packageJsonPath  = path.join(this.projectRoot,'package.json')';'
 
 }
 
-const packageJson  = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'))';'
 
-const issues = []; try { const outdated = execSync('npm outdated --json',{ '; "encoding": 'utf8,','; "cwd": this.projectRoo,t "stdio": 'pipe''}) const outdatedDeps = JSON.parse(outdated)"if": (Object.keys(outdatedDeps).length > 0) { issues.push(`${Object.keys(outdatedDeps).length} outdated dependencies`)}await this.checkDependencies()await this.checkBuildHealth()await this.checkCodeQuality()await this.checkPerformance()await this.checkSecurity()await this.checkAccessibility()this.generateReport(,`} async checkDependencies() {'  try {' const packageJsonPath = path.join(this.projectRoot,'package.json')const packageJson  = JSON.parse(fs.readFileSync(packageJsonPath,'utf8');'
   }
-  const issues = []; try {' const outdatedDeps = JSON.parse(outdated)if (Object.keys(outdatedDeps).length > 0) { issues.push(' `${Object.keys(outdatedDeps).length} outdated dependencies` )} } catch (error) {} try { execSync('npm audit --audit-level=moderate',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('Security vulnerabilities detected','}'; this.healthReport.checks."dependencies": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "totalDependencies": Object.keys(packageJson."dependencies": || ,{}).length + Object.keys(packageJson.devDependencies || {}).length } } catch (error) { this.healthReport.checks.dependencies = { "status": 'error,','; "issues": ['"Failed": to check dependencies'],'; "error": error."message": } },'
 } async checkBuildHealth() { ';"try": { const buildDir  = path.join(this.projectRoot,'.next')';'
 
 }
 
-const buildExists = fs.existsSync(buildDir)"let": buildAge = null; "if": (buildExists) { const stats = fs.statSync(buildDir)"buildAge": = Date.now() - stats.mtime.getTime(
 } let buildSuccess = false; "try": { execSync('npm run build',{ '; "cwd": this.projectRoo,t "stdio": 'pipe,','; "timeout": "60000": }) buildSuccess = true} catch (error) ,'
 } this.healthReport.checks.build = { "status": "buildSuccess": ? 'healthy' : 'error,','; "buildExists": buildExist,s "buildAge": buildAg,e "buildSuccess": buildSucces,s "issues": "buildSuccess": ? [] : ['"Build": process failed']'},'
 } "catch": (error) { this.healthReport.checks.build = { "status": 'error,','; "issues": ['"Failed": to check build health'],'; "error": error."message": } },'
@@ -170,71 +150,56 @@ const buildExists = fs.existsSync(buildDir)"let": buildAge = null; "if": (buildE
 }'; try { execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('ESLint errors detected','
 }';'
 
-const srcFiles = this.findSourceFiles()"let": consoleLogCount = 0; "for": (const file of srcFiles) { const content  = fs.readFileSync(file,'utf8')';'
 
 }
 
-const matches = content.match(/console\.(log|warn|error|info)/g)"if": (matches) { consoleLogCount += matches.length} } if (consoleLogCount > 0) { issues.push(`${consoleLogCount} console statements found`,`} this.healthReport.checks.codeQuality = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "consoleLogCount": consoleLogCoun,t "totalSourceFiles": srcFiles."length": },'
 } catch (error) { this.healthReport.checks.codeQuality = { "status": 'error,','; "issues": ['"Failed": to check code quality'],'; "error": error."message": } },'
 } async checkPerformance() { ';"try": { const issues = [];'
 
 }
 
-const buildDir  = path.join(this.projectRoot,'.next')';"if": (fs.existsSync(buildDir)) { const bundleSize = this.getDirectorySize(buildDir)"if": (bundleSize > 50 * 1024 * 1024) { issues.push('Large bundle size detected')},'
 }
 ;
-  const publicDir  = path.join(this.projectRoot,'public')';"if": (fs.existsSync(publicDir)) { const imageSize = this.getImageDirectorySize(publicDir)"if": (imageSize > 10 * 1024 * 1024) { issues.push('Large images detected')},'
 } this.healthReport.checks."performance": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "bundleSize": fs.existsSync(buildDir) ? this.getDirectorySize(buildDir) : 0 "imageSize": fs.existsSync(publicDir) ? this.getImageDirectorySize(publicDir) : "0": },'
 } catch (error) { this.healthReport.checks.performance = { "status": 'error,','; "issues": ['"Failed": to check performance'],'; "error": error."message": } },'
 } async checkSecurity() { ';"try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles()"for": (const file of srcFiles) {;
   }
-  const content  = fs.readFileSync(file,'utf8')';"if": (content.includes('password') || content.includes('secret') || content.includes('api_key')) {'; issues.push('"Potential": hardcoded secrets found')';break} } try { execSync('npm audit --audit-level=high',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('High severity vulnerabilities detected','
 }'; this.healthReport.checks."security": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": "issues": },'
 } catch (error) { this.healthReport.checks.security = { "status": 'error,','; "issues": ['"Failed": to check security'],'; "error": error."message": } },'
 } async checkAccessibility() { ';"try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles()"let": accessibilityIssues = 0; "for": (const file of srcFiles) { const content  = fs.readFileSync(file,'utf8')';if (content.includes('<img') && !content.includes('alt=')) {'; accessibilityIssues++} if (content.includes('<button') && !content.includes('aria-label') && !content.includes('aria-labelledby')) {'; accessibilityIssues++} } "if": (accessibilityIssues > 0) { issues.push(`${accessibilityIssues} accessibility issues found`,`} this.healthReport.checks.accessibility = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "accessibilityIssues": "accessibilityIssues": },'
 } catch (error) { this.healthReport.checks.accessibility = { "status": 'error,','; "issues": ['"Failed": to check accessibility'],'; "error": error."message":,'
 }
 
-const buildDir = path.join(this.projectRoot,'.next';'
-  const buildExists  = fs.existsSync(buildDir)let buildAge = null; if (buildExists) {const stats = fs.statSync(buildDir)buildAge = Date.now() - stats.mtime.getTime()}let buildSuccess = false; try {' execSync('npm run build',{ "cwd": this.projectRoot "stdio": 'pipe',"timeout": 60000 })buildSuccess = tru,'
 } catch (error) {this.healthReport.checks.build = {"status": buildSuccess ? 'healthy' : 'error',"buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed']},'
 } catch (error) {this.healthReport.checks.build = {"status": 'error',"issues": ['Failed to check build health'],"error": error.messag,'
 } this.healthReport.checks.build = {' "status": buildSuccess ? 'healthy' : 'error' "buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed'] ,'
 } catch (error) { this.healthReport.checks.build = {' "status": 'error',"issues": ['Failed to check build health'] "error": error.message }},'
 } async checkCodeQuality() {'  try ;'
   }
-  const issues = []; try {' execSync('npx tsc --noEmit',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('TypeScript compilation errors','
 } try {' execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('ESLint errors detected','
 }
 
 const srcFiles = this.findSourceFiles()let consoleLogCount = 0;  }
 #!/usr/bin/"env": node,import fs from 'fs';import path from 'path';import { fileURLToPath  } from 'url';import { execSync  } from 'child_process';'
 
-const __dirname = path.dirname(__filename)';"class": AppHealthMonitor { constructor() { this.projectRoot = path.resolve(__dirname,'..')';this."healthReport": = { "timestamp": "new": Date().toISOString(,) "overall": 'unknown,','; "checks":  ,;'
 } this.projectRoot = path.resolve(__dirname,'..')this.healthReport = {"timestamp": new Date().toISOString(),"overall": 'unknown',"checks": {} },'
 } "async": runHealthChecks() { ';"await": this.checkDependencies()"await": this.checkBuildHealth()"await": this.checkCodeQuality()"await": this.checkPerformance()"await": this.checkSecurity()"await": this.checkAccessibility()this.generateReport(,'
 } "async": checkDependencies() { ';"try": { const packageJsonPath  = path.join(this.projectRoot,'package.json')';'
 
 }
 
-const packageJson  = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'))';'
 
-const issues = []; try { const outdated = execSync('npm outdated --json',{ '; "encoding": 'utf8,','; "cwd": this.projectRoo,t "stdio": 'pipe''}) const outdatedDeps = JSON.parse(outdated)"if": (Object.keys(outdatedDeps).length > 0) { issues.push(`${Object.keys(outdatedDeps).length} outdated dependencies`)}await this.checkDependencies()await this.checkBuildHealth()await this.checkCodeQuality()await this.checkPerformance()await this.checkSecurity()await this.checkAccessibility()this.generateReport(,`} async checkDependencies() {'  try {' const packageJsonPath = path.join(this.projectRoot,'package.json')const packageJson  = JSON.parse(fs.readFileSync(packageJsonPath,'utf8');'
   }
-  const issues = []; try {' const outdatedDeps = JSON.parse(outdated)if (Object.keys(outdatedDeps).length > 0) { issues.push(' `${Object.keys(outdatedDeps).length} outdated dependencies` )} } catch (error) {} try { execSync('npm audit --audit-level=moderate',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('Security vulnerabilities detected','}'; this.healthReport.checks."dependencies": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "totalDependencies": Object.keys(packageJson."dependencies": || ,{}).length + Object.keys(packageJson.devDependencies || {}).length } } catch (error) { this.healthReport.checks.dependencies = { "status": 'error,','; "issues": ['"Failed": to check dependencies'],'; "error": error."message": } },'
 } async checkBuildHealth() { ';"try": { const buildDir  = path.join(this.projectRoot,'.next')';'
 
 }
 
-const buildExists = fs.existsSync(buildDir)"let": buildAge = null; "if": (buildExists) { const stats = fs.statSync(buildDir)"buildAge": = Date.now() - stats.mtime.getTime(
 } let buildSuccess = false; "try": { execSync('npm run build',{ '; "cwd": this.projectRoo,t "stdio": 'pipe,','; "timeout": "60000": }) buildSuccess = true} catch (error) ,'
 } this.healthReport.checks.build = { "status": "buildSuccess": ? 'healthy' : 'error,','; "buildExists": buildExist,s "buildAge": buildAg,e "buildSuccess": buildSucces,s "issues": "buildSuccess": ? [] : ['"Build": process failed']'},'
 } "catch": (error) { this.healthReport.checks.build = { "status": 'error,','; "issues": ['"Failed": to check build health'],'; "error": error."message": } },'
@@ -242,70 +207,54 @@ const buildExists = fs.existsSync(buildDir)"let": buildAge = null; "if": (buildE
 }'; try { execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('ESLint errors detected','
 }';'
 
-const srcFiles = this.findSourceFiles()"let": consoleLogCount = 0; "for": (const file of srcFiles) { const content  = fs.readFileSync(file,'utf8')';'
 
 }
 
-const matches = content.match(/console\.(log|warn|error|info)/g)"if": (matches) { consoleLogCount += matches.length} } if (consoleLogCount > 0) { issues.push(`${consoleLogCount} console statements found`,`} this.healthReport.checks.codeQuality = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "consoleLogCount": consoleLogCoun,t "totalSourceFiles": srcFiles."length": },'
 } catch (error) { this.healthReport.checks.codeQuality = { "status": 'error,','; "issues": ['"Failed": to check code quality'],'; "error": error."message": } },'
 } async checkPerformance() { ';"try": { const issues = [];'
 
 }
 
-const buildDir  = path.join(this.projectRoot,'.next')';"if": (fs.existsSync(buildDir)) { const bundleSize = this.getDirectorySize(buildDir)"if": (bundleSize > 50 * 1024 * 1024) { issues.push('Large bundle size detected')},'
 }
 ;
-  const publicDir  = path.join(this.projectRoot,'public')';"if": (fs.existsSync(publicDir)) { const imageSize = this.getImageDirectorySize(publicDir)"if": (imageSize > 10 * 1024 * 1024) { issues.push('Large images detected')},'
 } this.healthReport.checks."performance": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "bundleSize": fs.existsSync(buildDir) ? this.getDirectorySize(buildDir) : 0 "imageSize": fs.existsSync(publicDir) ? this.getImageDirectorySize(publicDir) : "0": },'
 } catch (error) { this.healthReport.checks.performance = { "status": 'error,','; "issues": ['"Failed": to check performance'],'; "error": error."message": } },'
 } async checkSecurity() { ';"try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles()"for": (const file of srcFiles) {;
   }
-  const content  = fs.readFileSync(file,'utf8')';"if": (content.includes('password') || content.includes('secret') || content.includes('api_key')) {'; issues.push('"Potential": hardcoded secrets found')';break} } try { execSync('npm audit --audit-level=high',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('High severity vulnerabilities detected','
 }'; this.healthReport.checks."security": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": "issues": },'
 } catch (error) { this.healthReport.checks.security = { "status": 'error,','; "issues": ['"Failed": to check security'],'; "error": error."message": } },'
 } async checkAccessibility() { ';"try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles()"let": accessibilityIssues = 0; "for": (const file of srcFiles) { const content  = fs.readFileSync(file,'utf8')';if (content.includes('<img') && !content.includes('alt=')) {'; accessibilityIssues++} if (content.includes('<button') && !content.includes('aria-label') && !content.includes('aria-labelledby')) {'; accessibilityIssues++} } "if": (accessibilityIssues > 0) { issues.push(`${accessibilityIssues} accessibility issues found`,`} this.healthReport.checks.accessibility = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "accessibilityIssues": "accessibilityIssues": },'
 } catch (error) { this.healthReport.checks.accessibility = { "status": 'error,','; "issues": ['"Failed": to check accessibility'],'; "error": error."message":,'
 }
 
-const buildDir = path.join(this.projectRoot,'.next';'
-  const buildExists  = fs.existsSync(buildDir)let buildAge = null; if (buildExists) {const stats = fs.statSync(buildDir)buildAge = Date.now() - stats.mtime.getTime()}let buildSuccess = false; try {' execSync('npm run build',{ "cwd": this.projectRoot "stdio": 'pipe',"timeout": 60000 })buildSuccess = tru,'
 } catch (error) {this.healthReport.checks.build = {"status": buildSuccess ? 'healthy' : 'error',"buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed']},'
 } catch (error) {this.healthReport.checks.build = {"status": 'error',"issues": ['Failed to check build health'],"error": error.messag,'
 } this.healthReport.checks.build = {' "status": buildSuccess ? 'healthy' : 'error' "buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed'] ,'
 } catch (error) { this.healthReport.checks.build = {' "status": 'error',"issues": ['Failed to check build health'] "error": error.message }},'
 } async checkCodeQuality() {'  try ;'
   }
-  const issues = []; try {' execSync('npx tsc --noEmit',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('TypeScript compilation errors','
 } try {' execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('ESLint errors detected','
 }
 
-const srcFiles = this.findSourceFiles()let consoleLogCount = 0;  }#!/usr/bin/"env": node,import fs from 'fs';import path from 'path';import { fileURLToPath  } from 'url';import { execSync  } from 'child_process';'
 
-const __dirname = path.dirname(__filename)';"class": AppHealthMonitor { constructor() { this.projectRoot = path.resolve(__dirname,'..')';this."healthReport": = { "timestamp": "new": Date().toISOString(,) "overall": 'unknown,','; "checks":  ,;'
 } this.projectRoot = path.resolve(__dirname,'..')this.healthReport = {"timestamp": new Date().toISOString(),"overall": 'unknown',"checks": {} },'
 } "async": runHealthChecks() { ';"await": this.checkDependencies()"await": this.checkBuildHealth()"await": this.checkCodeQuality()"await": this.checkPerformance()"await": this.checkSecurity()"await": this.checkAccessibility()this.generateReport(,'
 } "async": checkDependencies() { ';"try": { const packageJsonPath  = path.join(this.projectRoot,'package.json')';'
 
 }
 
-const packageJson  = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'))';'
 
-const issues = []; try { const outdated = execSync('npm outdated --json',{ '; "encoding": 'utf8,','; "cwd": this.projectRoo,t "stdio": 'pipe''}) const outdatedDeps = JSON.parse(outdated)"if": (Object.keys(outdatedDeps).length > 0) { issues.push(`${Object.keys(outdatedDeps).length} outdated dependencies`)}await this.checkDependencies()await this.checkBuildHealth()await this.checkCodeQuality()await this.checkPerformance()await this.checkSecurity()await this.checkAccessibility()this.generateReport(,`} async checkDependencies() {'  try {' const packageJsonPath = path.join(this.projectRoot,'package.json')const packageJson  = JSON.parse(fs.readFileSync(packageJsonPath,'utf8');'
   }
-  const issues = []; try {' const outdatedDeps = JSON.parse(outdated)if (Object.keys(outdatedDeps).length > 0) { issues.push(' `${Object.keys(outdatedDeps).length} outdated dependencies` )} } catch (error) {} try { execSync('npm audit --audit-level=moderate',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('Security vulnerabilities detected','}'; this.healthReport.checks."dependencies": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "totalDependencies": Object.keys(packageJson."dependencies": || ,{}).length + Object.keys(packageJson.devDependencies || {}).length } } catch (error) { this.healthReport.checks.dependencies = { "status": 'error,','; "issues": ['"Failed": to check dependencies'],'; "error": error."message": } },'
 } async checkBuildHealth() { ';"try": { const buildDir  = path.join(this.projectRoot,'.next')';'
 
 }
 
-const buildExists = fs.existsSync(buildDir)"let": buildAge = null; "if": (buildExists) { const stats = fs.statSync(buildDir)"buildAge": = Date.now() - stats.mtime.getTime(
 } let buildSuccess = false; "try": { execSync('npm run build',{ '; "cwd": this.projectRoo,t "stdio": 'pipe,','; "timeout": "60000": }) buildSuccess = true} catch (error) ,'
 } this.healthReport.checks.build = { "status": "buildSuccess": ? 'healthy' : 'error,','; "buildExists": buildExist,s "buildAge": buildAg,e "buildSuccess": buildSucces,s "issues": "buildSuccess": ? [] : ['"Build": process failed']'},'
 } "catch": (error) { this.healthReport.checks.build = { "status": 'error,','; "issues": ['"Failed": to check build health'],'; "error": error."message": } },'
@@ -313,73 +262,57 @@ const buildExists = fs.existsSync(buildDir)"let": buildAge = null; "if": (buildE
 }'; try { execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('ESLint errors detected','
 }';'
 
-const srcFiles = this.findSourceFiles()"let": consoleLogCount = 0; "for": (const file of srcFiles) { const content  = fs.readFileSync(file,'utf8')';'
 
 }
 
-const matches = content.match(/console\.(log|warn|error|info)/g)"if": (matches) { consoleLogCount += matches.length} } if (consoleLogCount > 0) { issues.push(`${consoleLogCount} console statements found`,`} this.healthReport.checks.codeQuality = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "consoleLogCount": consoleLogCoun,t "totalSourceFiles": srcFiles."length": },'
 } catch (error) { this.healthReport.checks.codeQuality = { "status": 'error,','; "issues": ['"Failed": to check code quality'],'; "error": error."message": } },'
 } async checkPerformance() { ';"try": { const issues = [];'
 
 }
 
-const buildDir  = path.join(this.projectRoot,'.next')';"if": (fs.existsSync(buildDir)) { const bundleSize = this.getDirectorySize(buildDir)"if": (bundleSize > 50 * 1024 * 1024) { issues.push('Large bundle size detected')},'
 }
 ;
-  const publicDir  = path.join(this.projectRoot,'public')';"if": (fs.existsSync(publicDir)) { const imageSize = this.getImageDirectorySize(publicDir)"if": (imageSize > 10 * 1024 * 1024) { issues.push('Large images detected')},'
 } this.healthReport.checks."performance": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "bundleSize": fs.existsSync(buildDir) ? this.getDirectorySize(buildDir) : 0 "imageSize": fs.existsSync(publicDir) ? this.getImageDirectorySize(publicDir) : "0": },'
 } catch (error) { this.healthReport.checks.performance = { "status": 'error,','; "issues": ['"Failed": to check performance'],'; "error": error."message": } },'
 } async checkSecurity() { ';"try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles()"for": (const file of srcFiles) {;
   }
-  const content  = fs.readFileSync(file,'utf8')';"if": (content.includes('password') || content.includes('secret') || content.includes('api_key')) {'; issues.push('"Potential": hardcoded secrets found')';break} } try { execSync('npm audit --audit-level=high',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('High severity vulnerabilities detected','
 }'; this.healthReport.checks."security": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": "issues": },'
 } catch (error) { this.healthReport.checks.security = { "status": 'error,','; "issues": ['"Failed": to check security'],'; "error": error."message": } },'
 } async checkAccessibility() { ';"try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles()"let": accessibilityIssues = 0; "for": (const file of srcFiles) { const content  = fs.readFileSync(file,'utf8')';if (content.includes('<img') && !content.includes('alt=')) {'; accessibilityIssues++} if (content.includes('<button') && !content.includes('aria-label') && !content.includes('aria-labelledby')) {'; accessibilityIssues++} } "if": (accessibilityIssues > 0) { issues.push(`${accessibilityIssues} accessibility issues found`,`} this.healthReport.checks.accessibility = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "accessibilityIssues": "accessibilityIssues": },'
 } catch (error) { this.healthReport.checks.accessibility = { "status": 'error,','; "issues": ['"Failed": to check accessibility'],'; "error": error."message":,'
 }
 
-const buildDir = path.join(this.projectRoot,'.next';'
-  const buildExists  = fs.existsSync(buildDir)let buildAge = null; if (buildExists) {const stats = fs.statSync(buildDir)buildAge = Date.now() - stats.mtime.getTime()}let buildSuccess = false; try {' execSync('npm run build',{ "cwd": this.projectRoot "stdio": 'pipe',"timeout": 60000 })buildSuccess = tru,'
 } catch (error) {this.healthReport.checks.build = {"status": buildSuccess ? 'healthy' : 'error',"buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed']},'
 } catch (error) {this.healthReport.checks.build = {"status": 'error',"issues": ['Failed to check build health'],"error": error.messag,'
 } this.healthReport.checks.build = {' "status": buildSuccess ? 'healthy' : 'error' "buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed'] ,'
 } catch (error) { this.healthReport.checks.build = {' "status": 'error',"issues": ['Failed to check build health'] "error": error.message }},'
 } async checkCodeQuality() {'  try ;'
   }
-  const issues = []; try {' execSync('npx tsc --noEmit',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('TypeScript compilation errors','
 } try {' execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('ESLint errors detected','
 }
 
-const srcFiles = this.findSourceFiles()let consoleLogCount = 0; for (const file of srcFiles) {' const srcFiles = this.findSourceFiles()let consoleLogCount = 0; for (const file of srcFiles) {const content = fs.readFileSync(file,'utf8';'
   }
   const matches = content.match(/console\.(log|warn|error|info)/g)if (matches) {consoleLogCount += matches.length} }
 #!/usr/bin/"env": node,import fs from 'fs';import path from 'path';import { fileURLToPath  } from 'url';import { execSync  } from 'child_process';'
 
-const __dirname = path.dirname(__filename)';"class": AppHealthMonitor { constructor() { this.projectRoot = path.resolve(__dirname,'..')';this."healthReport": = { "timestamp": "new": Date().toISOString(,) "overall": 'unknown,','; "checks":  ,;'
 } this.projectRoot = path.resolve(__dirname,'..')this.healthReport = {"timestamp": new Date().toISOString(),"overall": 'unknown',"checks": {} },'
 } "async": runHealthChecks() { ';"await": this.checkDependencies()"await": this.checkBuildHealth()"await": this.checkCodeQuality()"await": this.checkPerformance()"await": this.checkSecurity()"await": this.checkAccessibility()this.generateReport(,'
 } "async": checkDependencies() { ';"try": { const packageJsonPath  = path.join(this.projectRoot,'package.json')';'
 
 }
 
-const packageJson  = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'))';'
 
-const issues = []; try { const outdated = execSync('npm outdated --json',{ '; "encoding": 'utf8,','; "cwd": this.projectRoo,t "stdio": 'pipe''}) const outdatedDeps = JSON.parse(outdated)"if": (Object.keys(outdatedDeps).length > 0) { issues.push(`${Object.keys(outdatedDeps).length} outdated dependencies`)}await this.checkDependencies()await this.checkBuildHealth()await this.checkCodeQuality()await this.checkPerformance()await this.checkSecurity()await this.checkAccessibility()this.generateReport(,`} async checkDependencies() {'  try {' const packageJsonPath = path.join(this.projectRoot,'package.json')const packageJson  = JSON.parse(fs.readFileSync(packageJsonPath,'utf8');'
   }
-  const issues = []; try {' const outdatedDeps = JSON.parse(outdated)if (Object.keys(outdatedDeps).length > 0) { issues.push(' `${Object.keys(outdatedDeps).length} outdated dependencies` )} } catch (error) {} try { execSync('npm audit --audit-level=moderate',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('Security vulnerabilities detected','}'; this.healthReport.checks."dependencies": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "totalDependencies": Object.keys(packageJson."dependencies": || ,{}).length + Object.keys(packageJson.devDependencies || {}).length } } catch (error) { this.healthReport.checks.dependencies = { "status": 'error,','; "issues": ['"Failed": to check dependencies'],'; "error": error."message": } },'
 } async checkBuildHealth() { ';"try": { const buildDir  = path.join(this.projectRoot,'.next')';'
 
 }
 
-const buildExists = fs.existsSync(buildDir)"let": buildAge = null; "if": (buildExists) { const stats = fs.statSync(buildDir)"buildAge": = Date.now() - stats.mtime.getTime(
 } let buildSuccess = false; "try": { execSync('npm run build',{ '; "cwd": this.projectRoo,t "stdio": 'pipe,','; "timeout": "60000": }) buildSuccess = true} catch (error) ,'
 } this.healthReport.checks.build = { "status": "buildSuccess": ? 'healthy' : 'error,','; "buildExists": buildExist,s "buildAge": buildAg,e "buildSuccess": buildSucces,s "issues": "buildSuccess": ? [] : ['"Build": process failed']'},'
 } "catch": (error) { this.healthReport.checks.build = { "status": 'error,','; "issues": ['"Failed": to check build health'],'; "error": error."message": } },'
@@ -387,71 +320,55 @@ const buildExists = fs.existsSync(buildDir)"let": buildAge = null; "if": (buildE
 }'; try { execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('ESLint errors detected','
 }';'
 
-const srcFiles = this.findSourceFiles()"let": consoleLogCount = 0; "for": (const file of srcFiles) { const content  = fs.readFileSync(file,'utf8')';'
 
 }
 
-const matches = content.match(/console\.(log|warn|error|info)/g)"if": (matches) { consoleLogCount += matches.length} } if (consoleLogCount > 0) { issues.push(`${consoleLogCount} console statements found`,`} this.healthReport.checks.codeQuality = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "consoleLogCount": consoleLogCoun,t "totalSourceFiles": srcFiles."length": },'
 } catch (error) { this.healthReport.checks.codeQuality = { "status": 'error,','; "issues": ['"Failed": to check code quality'],'; "error": error."message": } },'
 } async checkPerformance() { ';"try": { const issues = [];'
 
 }
 
-const buildDir  = path.join(this.projectRoot,'.next')';"if": (fs.existsSync(buildDir)) { const bundleSize = this.getDirectorySize(buildDir)"if": (bundleSize > 50 * 1024 * 1024) { issues.push('Large bundle size detected')},'
 }
 ;
-  const publicDir  = path.join(this.projectRoot,'public')';"if": (fs.existsSync(publicDir)) { const imageSize = this.getImageDirectorySize(publicDir)"if": (imageSize > 10 * 1024 * 1024) { issues.push('Large images detected')},'
 } this.healthReport.checks."performance": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "bundleSize": fs.existsSync(buildDir) ? this.getDirectorySize(buildDir) : 0 "imageSize": fs.existsSync(publicDir) ? this.getImageDirectorySize(publicDir) : "0": },'
 } catch (error) { this.healthReport.checks.performance = { "status": 'error,','; "issues": ['"Failed": to check performance'],'; "error": error."message": } },'
 } async checkSecurity() { ';"try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles()"for": (const file of srcFiles) {;
   }
-  const content  = fs.readFileSync(file,'utf8')';"if": (content.includes('password') || content.includes('secret') || content.includes('api_key')) {'; issues.push('"Potential": hardcoded secrets found')';break} } try { execSync('npm audit --audit-level=high',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('High severity vulnerabilities detected','
 }'; this.healthReport.checks."security": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": "issues": },'
 } catch (error) { this.healthReport.checks.security = { "status": 'error,','; "issues": ['"Failed": to check security'],'; "error": error."message": } },'
 } async checkAccessibility() { ';"try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles()"let": accessibilityIssues = 0; "for": (const file of srcFiles) { const content  = fs.readFileSync(file,'utf8')';if (content.includes('<img') && !content.includes('alt=')) {'; accessibilityIssues++} if (content.includes('<button') && !content.includes('aria-label') && !content.includes('aria-labelledby')) {'; accessibilityIssues++} } "if": (accessibilityIssues > 0) { issues.push(`${accessibilityIssues} accessibility issues found`,`} this.healthReport.checks.accessibility = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "accessibilityIssues": "accessibilityIssues": },'
 } catch (error) { this.healthReport.checks.accessibility = { "status": 'error,','; "issues": ['"Failed": to check accessibility'],'; "error": error."message":,'
 }
 
-const buildDir = path.join(this.projectRoot,'.next';'
-  const buildExists  = fs.existsSync(buildDir)let buildAge = null; if (buildExists) {const stats = fs.statSync(buildDir)buildAge = Date.now() - stats.mtime.getTime()}let buildSuccess = false; try {' execSync('npm run build',{ "cwd": this.projectRoot "stdio": 'pipe',"timeout": 60000 })buildSuccess = tru,'
 } catch (error) {this.healthReport.checks.build = {"status": buildSuccess ? 'healthy' : 'error',"buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed']},'
 } catch (error) {this.healthReport.checks.build = {"status": 'error',"issues": ['Failed to check build health'],"error": error.messag,'
 } this.healthReport.checks.build = {' "status": buildSuccess ? 'healthy' : 'error' "buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed'] ,'
 } catch (error) { this.healthReport.checks.build = {' "status": 'error',"issues": ['Failed to check build health'] "error": error.message }},'
 } async checkCodeQuality() {'  try ;'
   }
-  const issues = []; try {' execSync('npx tsc --noEmit',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('TypeScript compilation errors','
 } try {' execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('ESLint errors detected','
 }
 
-const srcFiles = this.findSourceFiles()let consoleLogCount = 0;  }
 #!/usr/bin/"env": node,import fs from 'fs';import path from 'path';import { fileURLToPath  } from 'url';import { execSync  } from 'child_process';'
 
-const __dirname = path.dirname(__filename)';"class": AppHealthMonitor { constructor() { this.projectRoot = path.resolve(__dirname,'..')';this."healthReport": = { "timestamp": "new": Date().toISOString(,) "overall": 'unknown,','; "checks":  ,;'
 } this.projectRoot = path.resolve(__dirname,'..')this.healthReport = {"timestamp": new Date().toISOString(),"overall": 'unknown',"checks": {} },'
 } "async": runHealthChecks() { ';"await": this.checkDependencies()"await": this.checkBuildHealth()"await": this.checkCodeQuality()"await": this.checkPerformance()"await": this.checkSecurity()"await": this.checkAccessibility()this.generateReport(,'
 } "async": checkDependencies() { ';"try": { const packageJsonPath  = path.join(this.projectRoot,'package.json')';'
 
 }
 
-const packageJson  = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'))';'
 
-const issues = []; try { const outdated = execSync('npm outdated --json',{ '; "encoding": 'utf8,','; "cwd": this.projectRoo,t "stdio": 'pipe''}) const outdatedDeps = JSON.parse(outdated)"if": (Object.keys(outdatedDeps).length > 0) { issues.push(`${Object.keys(outdatedDeps).length} outdated dependencies`)}await this.checkDependencies()await this.checkBuildHealth()await this.checkCodeQuality()await this.checkPerformance()await this.checkSecurity()await this.checkAccessibility()this.generateReport(,`} async checkDependencies() {'  try {' const packageJsonPath = path.join(this.projectRoot,'package.json')const packageJson  = JSON.parse(fs.readFileSync(packageJsonPath,'utf8');'
   }
-  const issues = []; try {' const outdatedDeps = JSON.parse(outdated)if (Object.keys(outdatedDeps).length > 0) { issues.push(' `${Object.keys(outdatedDeps).length} outdated dependencies` )} } catch (error) {} try { execSync('npm audit --audit-level=moderate',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('Security vulnerabilities detected','}'; this.healthReport.checks."dependencies": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "totalDependencies": Object.keys(packageJson."dependencies": || ,{}).length + Object.keys(packageJson.devDependencies || {}).length } } catch (error) { this.healthReport.checks.dependencies = { "status": 'error,','; "issues": ['"Failed": to check dependencies'],'; "error": error."message": } },'
 } async checkBuildHealth() { ';"try": { const buildDir  = path.join(this.projectRoot,'.next')';'
 
 }
 
-const buildExists = fs.existsSync(buildDir)"let": buildAge = null; "if": (buildExists) { const stats = fs.statSync(buildDir)"buildAge": = Date.now() - stats.mtime.getTime(
 } let buildSuccess = false; "try": { execSync('npm run build',{ '; "cwd": this.projectRoo,t "stdio": 'pipe,','; "timeout": "60000": }) buildSuccess = true} catch (error) ,'
 } this.healthReport.checks.build = { "status": "buildSuccess": ? 'healthy' : 'error,','; "buildExists": buildExist,s "buildAge": buildAg,e "buildSuccess": buildSucces,s "issues": "buildSuccess": ? [] : ['"Build": process failed']'},'
 } "catch": (error) { this.healthReport.checks.build = { "status": 'error,','; "issues": ['"Failed": to check build health'],'; "error": error."message": } },'
@@ -459,73 +376,57 @@ const buildExists = fs.existsSync(buildDir)"let": buildAge = null; "if": (buildE
 }'; try { execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('ESLint errors detected','
 }';'
 
-const srcFiles = this.findSourceFiles()"let": consoleLogCount = 0; "for": (const file of srcFiles) { const content  = fs.readFileSync(file,'utf8')';'
 
 }
 
-const matches = content.match(/console\.(log|warn|error|info)/g)"if": (matches) { consoleLogCount += matches.length} } if (consoleLogCount > 0) { issues.push(`${consoleLogCount} console statements found`,`} this.healthReport.checks.codeQuality = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "consoleLogCount": consoleLogCoun,t "totalSourceFiles": srcFiles."length": },'
 } catch (error) { this.healthReport.checks.codeQuality = { "status": 'error,','; "issues": ['"Failed": to check code quality'],'; "error": error."message": } },'
 } async checkPerformance() { ';"try": { const issues = [];'
 
 }
 
-const buildDir  = path.join(this.projectRoot,'.next')';"if": (fs.existsSync(buildDir)) { const bundleSize = this.getDirectorySize(buildDir)"if": (bundleSize > 50 * 1024 * 1024) { issues.push('Large bundle size detected')},'
 }
 ;
-  const publicDir  = path.join(this.projectRoot,'public')';"if": (fs.existsSync(publicDir)) { const imageSize = this.getImageDirectorySize(publicDir)"if": (imageSize > 10 * 1024 * 1024) { issues.push('Large images detected')},'
 } this.healthReport.checks."performance": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "bundleSize": fs.existsSync(buildDir) ? this.getDirectorySize(buildDir) : 0 "imageSize": fs.existsSync(publicDir) ? this.getImageDirectorySize(publicDir) : "0": },'
 } catch (error) { this.healthReport.checks.performance = { "status": 'error,','; "issues": ['"Failed": to check performance'],'; "error": error."message": } },'
 } async checkSecurity() { ';"try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles()"for": (const file of srcFiles) {;
   }
-  const content  = fs.readFileSync(file,'utf8')';"if": (content.includes('password') || content.includes('secret') || content.includes('api_key')) {'; issues.push('"Potential": hardcoded secrets found')';break} } try { execSync('npm audit --audit-level=high',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('High severity vulnerabilities detected','
 }'; this.healthReport.checks."security": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": "issues": },'
 } catch (error) { this.healthReport.checks.security = { "status": 'error,','; "issues": ['"Failed": to check security'],'; "error": error."message": } },'
 } async checkAccessibility() { ';"try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles()"let": accessibilityIssues = 0; "for": (const file of srcFiles) { const content  = fs.readFileSync(file,'utf8')';if (content.includes('<img') && !content.includes('alt=')) {'; accessibilityIssues++} if (content.includes('<button') && !content.includes('aria-label') && !content.includes('aria-labelledby')) {'; accessibilityIssues++} } "if": (accessibilityIssues > 0) { issues.push(`${accessibilityIssues} accessibility issues found`,`} this.healthReport.checks.accessibility = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "accessibilityIssues": "accessibilityIssues": },'
 } catch (error) { this.healthReport.checks.accessibility = { "status": 'error,','; "issues": ['"Failed": to check accessibility'],'; "error": error."message":,'
 }
 
-const buildDir = path.join(this.projectRoot,'.next';'
-  const buildExists  = fs.existsSync(buildDir)let buildAge = null; if (buildExists) {const stats = fs.statSync(buildDir)buildAge = Date.now() - stats.mtime.getTime()}let buildSuccess = false; try {' execSync('npm run build',{ "cwd": this.projectRoot "stdio": 'pipe',"timeout": 60000 })buildSuccess = tru,'
 } catch (error) {this.healthReport.checks.build = {"status": buildSuccess ? 'healthy' : 'error',"buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed']},'
 } catch (error) {this.healthReport.checks.build = {"status": 'error',"issues": ['Failed to check build health'],"error": error.messag,'
 } this.healthReport.checks.build = {' "status": buildSuccess ? 'healthy' : 'error' "buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed'] ,'
 } catch (error) { this.healthReport.checks.build = {' "status": 'error',"issues": ['Failed to check build health'] "error": error.message }},'
 } async checkCodeQuality() {'  try ;'
   }
-  const issues = []; try {' execSync('npx tsc --noEmit',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('TypeScript compilation errors','
 } try {' execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('ESLint errors detected','
 }
 
-const srcFiles = this.findSourceFiles()let consoleLogCount = 0;  }
 ursor/integrate-build-improve-and-re-verify-8f7d;
 ursor/fix-syntax-push-and-merge-to-main-40de;
 #!/usr/bin/"env": node,import fs from 'fs';import path from 'path';import { fileURLToPath  } from 'url';import { execSync  } from 'child_process';'
 
-const __dirname = path.dirname(__filename)';"class": AppHealthMonitor { constructor() { this.projectRoot = path.resolve(__dirname,'..')';this."healthReport": = { "timestamp": "new": Date().toISOString(,) "overall": 'unknown,','; "checks":  ,;'
 } this.projectRoot = path.resolve(__dirname,'..')this.healthReport = {"timestamp": new Date().toISOString(),"overall": 'unknown',"checks": {} },'
 } "async": runHealthChecks() { ';"await": this.checkDependencies()"await": this.checkBuildHealth()"await": this.checkCodeQuality()"await": this.checkPerformance()"await": this.checkSecurity()"await": this.checkAccessibility()this.generateReport(,'
 } "async": checkDependencies() { ';"try": { const packageJsonPath  = path.join(this.projectRoot,'package.json')';'
 
 }
 
-const packageJson  = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'))';'
 
-const issues = []; try { const outdated = execSync('npm outdated --json',{ '; "encoding": 'utf8,','; "cwd": this.projectRoo,t "stdio": 'pipe''}) const outdatedDeps = JSON.parse(outdated)"if": (Object.keys(outdatedDeps).length > 0) { issues.push(`${Object.keys(outdatedDeps).length} outdated dependencies`)}await this.checkDependencies()await this.checkBuildHealth()await this.checkCodeQuality()await this.checkPerformance()await this.checkSecurity()await this.checkAccessibility()this.generateReport(,`} async checkDependencies() {'  try {' const packageJsonPath = path.join(this.projectRoot,'package.json')const packageJson  = JSON.parse(fs.readFileSync(packageJsonPath,'utf8');'
   }
-  const issues = []; try {' const outdatedDeps = JSON.parse(outdated)if (Object.keys(outdatedDeps).length > 0) { issues.push(' `${Object.keys(outdatedDeps).length} outdated dependencies` )} } catch (error) {} try { execSync('npm audit --audit-level=moderate',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('Security vulnerabilities detected','}'; this.healthReport.checks."dependencies": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "totalDependencies": Object.keys(packageJson."dependencies": || ,{}).length + Object.keys(packageJson.devDependencies || {}).length } } catch (error) { this.healthReport.checks.dependencies = { "status": 'error,','; "issues": ['"Failed": to check dependencies'],'; "error": error."message": } },'
 } async checkBuildHealth() { ';"try": { const buildDir  = path.join(this.projectRoot,'.next')';'
 
 }
 
-const buildExists = fs.existsSync(buildDir)"let": buildAge = null; "if": (buildExists) { const stats = fs.statSync(buildDir)"buildAge": = Date.now() - stats.mtime.getTime(
 } let buildSuccess = false; "try": { execSync('npm run build',{ '; "cwd": this.projectRoo,t "stdio": 'pipe,','; "timeout": "60000": }) buildSuccess = true} catch (error) ,'
 } this.healthReport.checks.build = { "status": "buildSuccess": ? 'healthy' : 'error,','; "buildExists": buildExist,s "buildAge": buildAg,e "buildSuccess": buildSucces,s "issues": "buildSuccess": ? [] : ['"Build": process failed']'},'
 } "catch": (error) { this.healthReport.checks.build = { "status": 'error,','; "issues": ['"Failed": to check build health'],'; "error": error."message": } },'
@@ -533,73 +434,56 @@ const buildExists = fs.existsSync(buildDir)"let": buildAge = null; "if": (buildE
 }'; try { execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('ESLint errors detected','
 }';'
 
-const srcFiles = this.findSourceFiles()"let": consoleLogCount = 0; "for": (const file of srcFiles) { const content  = fs.readFileSync(file,'utf8')';'
 
 }
 
-const matches = content.match(/console\.(log|warn|error|info)/g)"if": (matches) { consoleLogCount += matches.length} } if (consoleLogCount > 0) { issues.push(`${consoleLogCount} console statements found`,`} this.healthReport.checks.codeQuality = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "consoleLogCount": consoleLogCoun,t "totalSourceFiles": srcFiles."length": },'
 } catch (error) { this.healthReport.checks.codeQuality = { "status": 'error,','; "issues": ['"Failed": to check code quality'],'; "error": error."message": } },'
 } async checkPerformance() { ';"try": { const issues = [];'
 
 }
 
-const buildDir  = path.join(this.projectRoot,'.next')';"if": (fs.existsSync(buildDir)) { const bundleSize = this.getDirectorySize(buildDir)"if": (bundleSize > 50 * 1024 * 1024) { issues.push('Large bundle size detected')},'
 }
 ;
-  const publicDir  = path.join(this.projectRoot,'public')';"if": (fs.existsSync(publicDir)) { const imageSize = this.getImageDirectorySize(publicDir)"if": (imageSize > 10 * 1024 * 1024) { issues.push('Large images detected')},'
 } this.healthReport.checks."performance": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "bundleSize": fs.existsSync(buildDir) ? this.getDirectorySize(buildDir) : 0 "imageSize": fs.existsSync(publicDir) ? this.getImageDirectorySize(publicDir) : "0": },'
 } catch (error) { this.healthReport.checks.performance = { "status": 'error,','; "issues": ['"Failed": to check performance'],'; "error": error."message": } },'
 } async checkSecurity() { ';"try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles()"for": (const file of srcFiles) {;
   }
-  const content  = fs.readFileSync(file,'utf8')';"if": (content.includes('password') || content.includes('secret') || content.includes('api_key')) {'; issues.push('"Potential": hardcoded secrets found')';break} } try { execSync('npm audit --audit-level=high',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('High severity vulnerabilities detected','
 }'; this.healthReport.checks."security": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": "issues": },'
 } catch (error) { this.healthReport.checks.security = { "status": 'error,','; "issues": ['"Failed": to check security'],'; "error": error."message": } },'
 } async checkAccessibility() { ';"try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles()"let": accessibilityIssues = 0; "for": (const file of srcFiles) { const content  = fs.readFileSync(file,'utf8')';if (content.includes('<img') && !content.includes('alt=')) {'; accessibilityIssues++} if (content.includes('<button') && !content.includes('aria-label') && !content.includes('aria-labelledby')) {'; accessibilityIssues++} } "if": (accessibilityIssues > 0) { issues.push(`${accessibilityIssues} accessibility issues found`,`} this.healthReport.checks.accessibility = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "accessibilityIssues": "accessibilityIssues": },'
 } catch (error) { this.healthReport.checks.accessibility = { "status": 'error,','; "issues": ['"Failed": to check accessibility'],'; "error": error."message":,'
 }
 
-const buildDir = path.join(this.projectRoot,'.next';'
-  const buildExists  = fs.existsSync(buildDir)let buildAge = null; if (buildExists) {const stats = fs.statSync(buildDir)buildAge = Date.now() - stats.mtime.getTime()}let buildSuccess = false; try {' execSync('npm run build',{ "cwd": this.projectRoot "stdio": 'pipe',"timeout": 60000 })buildSuccess = tru,'
 } catch (error) {this.healthReport.checks.build = {"status": buildSuccess ? 'healthy' : 'error',"buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed']},'
 } catch (error) {this.healthReport.checks.build = {"status": 'error',"issues": ['Failed to check build health'],"error": error.messag,'
 } this.healthReport.checks.build = {' "status": buildSuccess ? 'healthy' : 'error' "buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed'] ,'
 } catch (error) { this.healthReport.checks.build = {' "status": 'error',"issues": ['Failed to check build health'] "error": error.message }},'
 } async checkCodeQuality() {'  try ;'
   }
-  const issues = []; try {' execSync('npx tsc --noEmit',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('TypeScript compilation errors','
 } try {' execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('ESLint errors detected','
 }
 
-const srcFiles = this.findSourceFiles()let consoleLogCount = 0; for (const file of srcFiles) {' const srcFiles = this.findSourceFiles()let consoleLogCount = 0; for (const file of srcFiles) {const content = fs.readFileSync(file,'utf8';'
   }
-  const matches = content.match(/console\.(log|warn|error|info)/g)if (matches) {consoleLogCount += matches.length} }
 #!/usr/bin/"env": node,import fs from 'fs';import path from 'path';import { fileURLToPath  } from 'url';import { execSync  } from 'child_process';'
 
-const __dirname = path.dirname(__filename)';"class": AppHealthMonitor { constructor() { this.projectRoot = path.resolve(__dirname,'..')';this."healthReport": = { "timestamp": "new": Date().toISOString(,) "overall": 'unknown,','; "checks":  ,;'
 } this.projectRoot = path.resolve(__dirname,'..')this.healthReport = {"timestamp": new Date().toISOString(),"overall": 'unknown',"checks": {} },'
 } "async": runHealthChecks() { ';"await": this.checkDependencies()"await": this.checkBuildHealth()"await": this.checkCodeQuality()"await": this.checkPerformance()"await": this.checkSecurity()"await": this.checkAccessibility()this.generateReport(,'
 } "async": checkDependencies() { ';"try": { const packageJsonPath  = path.join(this.projectRoot,'package.json')';'
 
 }
 
-const packageJson  = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'))';'
 
-const issues = []; try { const outdated = execSync('npm outdated --json',{ '; "encoding": 'utf8,','; "cwd": this.projectRoo,t "stdio": 'pipe''}) const outdatedDeps = JSON.parse(outdated)"if": (Object.keys(outdatedDeps).length > 0) { issues.push(`${Object.keys(outdatedDeps).length} outdated dependencies`)}await this.checkDependencies()await this.checkBuildHealth()await this.checkCodeQuality()await this.checkPerformance()await this.checkSecurity()await this.checkAccessibility()this.generateReport(,`} async checkDependencies() {'  try {' const packageJsonPath = path.join(this.projectRoot,'package.json')const packageJson  = JSON.parse(fs.readFileSync(packageJsonPath,'utf8');'
   }
-  const issues = []; try {' const outdatedDeps = JSON.parse(outdated)if (Object.keys(outdatedDeps).length > 0) { issues.push(' `${Object.keys(outdatedDeps).length} outdated dependencies` )} } catch (error) {} try { execSync('npm audit --audit-level=moderate',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('Security vulnerabilities detected','}'; this.healthReport.checks."dependencies": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "totalDependencies": Object.keys(packageJson."dependencies": || ,{}).length + Object.keys(packageJson.devDependencies || {}).length } } catch (error) { this.healthReport.checks.dependencies = { "status": 'error,','; "issues": ['"Failed": to check dependencies'],'; "error": error."message": } },'
 } async checkBuildHealth() { ';"try": { const buildDir  = path.join(this.projectRoot,'.next')';'
 
 }
 
-const buildExists = fs.existsSync(buildDir)"let": buildAge = null; "if": (buildExists) { const stats = fs.statSync(buildDir)"buildAge": = Date.now() - stats.mtime.getTime(
 } let buildSuccess = false; "try": { execSync('npm run build',{ '; "cwd": this.projectRoo,t "stdio": 'pipe,','; "timeout": "60000": }) buildSuccess = true} catch (error) ,'
 } this.healthReport.checks.build = { "status": "buildSuccess": ? 'healthy' : 'error,','; "buildExists": buildExist,s "buildAge": buildAg,e "buildSuccess": buildSucces,s "issues": "buildSuccess": ? [] : ['"Build": process failed']'},'
 } "catch": (error) { this.healthReport.checks.build = { "status": 'error,','; "issues": ['"Failed": to check build health'],'; "error": error."message": } },'
@@ -607,73 +491,57 @@ const buildExists = fs.existsSync(buildDir)"let": buildAge = null; "if": (buildE
 }'; try { execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('ESLint errors detected','
 }';'
 
-const srcFiles = this.findSourceFiles()"let": consoleLogCount = 0; "for": (const file of srcFiles) { const content  = fs.readFileSync(file,'utf8')';'
 
 }
 
-const matches = content.match(/console\.(log|warn|error|info)/g)"if": (matches) { consoleLogCount += matches.length} } if (consoleLogCount > 0) { issues.push(`${consoleLogCount} console statements found`,`} this.healthReport.checks.codeQuality = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "consoleLogCount": consoleLogCoun,t "totalSourceFiles": srcFiles."length": },'
 } catch (error) { this.healthReport.checks.codeQuality = { "status": 'error,','; "issues": ['"Failed": to check code quality'],'; "error": error."message": } },'
 } async checkPerformance() { ';"try": { const issues = [];'
 
 }
 
-const buildDir  = path.join(this.projectRoot,'.next')';"if": (fs.existsSync(buildDir)) { const bundleSize = this.getDirectorySize(buildDir)"if": (bundleSize > 50 * 1024 * 1024) { issues.push('Large bundle size detected')},'
 }
 ;
-  const publicDir  = path.join(this.projectRoot,'public')';"if": (fs.existsSync(publicDir)) { const imageSize = this.getImageDirectorySize(publicDir)"if": (imageSize > 10 * 1024 * 1024) { issues.push('Large images detected')},'
 } this.healthReport.checks."performance": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "bundleSize": fs.existsSync(buildDir) ? this.getDirectorySize(buildDir) : 0 "imageSize": fs.existsSync(publicDir) ? this.getImageDirectorySize(publicDir) : "0": },'
 } catch (error) { this.healthReport.checks.performance = { "status": 'error,','; "issues": ['"Failed": to check performance'],'; "error": error."message": } },'
 } async checkSecurity() { ';"try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles()"for": (const file of srcFiles) {;
   }
-  const content  = fs.readFileSync(file,'utf8')';"if": (content.includes('password') || content.includes('secret') || content.includes('api_key')) {'; issues.push('"Potential": hardcoded secrets found')';break} } try { execSync('npm audit --audit-level=high',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('High severity vulnerabilities detected','
 }'; this.healthReport.checks."security": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": "issues": },'
 } catch (error) { this.healthReport.checks.security = { "status": 'error,','; "issues": ['"Failed": to check security'],'; "error": error."message": } },'
 } async checkAccessibility() { ';"try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles()"let": accessibilityIssues = 0; "for": (const file of srcFiles) { const content  = fs.readFileSync(file,'utf8')';if (content.includes('<img') && !content.includes('alt=')) {'; accessibilityIssues++} if (content.includes('<button') && !content.includes('aria-label') && !content.includes('aria-labelledby')) {'; accessibilityIssues++} } "if": (accessibilityIssues > 0) { issues.push(`${accessibilityIssues} accessibility issues found`,`} this.healthReport.checks.accessibility = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "accessibilityIssues": "accessibilityIssues": },'
 } catch (error) { this.healthReport.checks.accessibility = { "status": 'error,','; "issues": ['"Failed": to check accessibility'],'; "error": error."message":,'
 }
 
-const buildDir = path.join(this.projectRoot,'.next';'
-  const buildExists  = fs.existsSync(buildDir)let buildAge = null; if (buildExists) {const stats = fs.statSync(buildDir)buildAge = Date.now() - stats.mtime.getTime()}let buildSuccess = false; try {' execSync('npm run build',{ "cwd": this.projectRoot "stdio": 'pipe',"timeout": 60000 })buildSuccess = tru,'
 } catch (error) {this.healthReport.checks.build = {"status": buildSuccess ? 'healthy' : 'error',"buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed']},'
 } catch (error) {this.healthReport.checks.build = {"status": 'error',"issues": ['Failed to check build health'],"error": error.messag,'
 } this.healthReport.checks.build = {' "status": buildSuccess ? 'healthy' : 'error' "buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed'] ,'
 } catch (error) { this.healthReport.checks.build = {' "status": 'error',"issues": ['Failed to check build health'] "error": error.message }},'
 } async checkCodeQuality() {'  try ;'
   }
-  const issues = []; try {' execSync('npx tsc --noEmit',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('TypeScript compilation errors','
 } try {' execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('ESLint errors detected','
 }
 
-const srcFiles = this.findSourceFiles()let consoleLogCount = 0;  }
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 ursor/integrate-build-improve-and-re-verify-8f7d;
 #!/usr/bin/"env": node,import fs from 'fs';import path from 'path';import { fileURLToPath  } from 'url';import { execSync  } from 'child_process';'
 
-const __dirname = path.dirname(__filename)';"class": AppHealthMonitor { constructor() { this.projectRoot = path.resolve(__dirname,'..')';this."healthReport": = { "timestamp": "new": Date().toISOString(,) "overall": 'unknown,','; "checks":  ,;'
 } this.projectRoot = path.resolve(__dirname,'..')this.healthReport = {"timestamp": new Date().toISOString(),"overall": 'unknown',"checks": {} },'
 } "async": runHealthChecks() { ';"await": this.checkDependencies()"await": this.checkBuildHealth()"await": this.checkCodeQuality()"await": this.checkPerformance()"await": this.checkSecurity()"await": this.checkAccessibility()this.generateReport(,'
 } "async": checkDependencies() { ';"try": { const packageJsonPath  = path.join(this.projectRoot,'package.json')';'
 
 }
 
-const packageJson  = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'))';'
 
-const issues = []; try { const outdated = execSync('npm outdated --json',{ '; "encoding": 'utf8,','; "cwd": this.projectRoo,t "stdio": 'pipe''}) const outdatedDeps = JSON.parse(outdated)"if": (Object.keys(outdatedDeps).length > 0) { issues.push(`${Object.keys(outdatedDeps).length} outdated dependencies`)}await this.checkDependencies()await this.checkBuildHealth()await this.checkCodeQuality()await this.checkPerformance()await this.checkSecurity()await this.checkAccessibility()this.generateReport(,`} async checkDependencies() {'  try {' const packageJsonPath = path.join(this.projectRoot,'package.json')const packageJson  = JSON.parse(fs.readFileSync(packageJsonPath,'utf8');'
   }
-  const issues = []; try {' const outdatedDeps = JSON.parse(outdated)if (Object.keys(outdatedDeps).length > 0) { issues.push(' `${Object.keys(outdatedDeps).length} outdated dependencies` )} } catch (error) {} try { execSync('npm audit --audit-level=moderate',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('Security vulnerabilities detected','}'; this.healthReport.checks."dependencies": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "totalDependencies": Object.keys(packageJson."dependencies": || ,{}).length + Object.keys(packageJson.devDependencies || {}).length } } catch (error) { this.healthReport.checks.dependencies = { "status": 'error,','; "issues": ['"Failed": to check dependencies'],'; "error": error."message": } },'
 } async checkBuildHealth() { ';"try": { const buildDir  = path.join(this.projectRoot,'.next')';'
 
 }
 
-const buildExists = fs.existsSync(buildDir)"let": buildAge = null; "if": (buildExists) { const stats = fs.statSync(buildDir)"buildAge": = Date.now() - stats.mtime.getTime(
 } let buildSuccess = false; "try": { execSync('npm run build',{ '; "cwd": this.projectRoo,t "stdio": 'pipe,','; "timeout": "60000": }) buildSuccess = true} catch (error) ,'
 } this.healthReport.checks.build = { "status": "buildSuccess": ? 'healthy' : 'error,','; "buildExists": buildExist,s "buildAge": buildAg,e "buildSuccess": buildSucces,s "issues": "buildSuccess": ? [] : ['"Build": process failed']'},'
 } "catch": (error) { this.healthReport.checks.build = { "status": 'error,','; "issues": ['"Failed": to check build health'],'; "error": error."message": } },'
@@ -681,72 +549,56 @@ const buildExists = fs.existsSync(buildDir)"let": buildAge = null; "if": (buildE
 }'; try { execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('ESLint errors detected','
 }';'
 
-const srcFiles = this.findSourceFiles()"let": consoleLogCount = 0; "for": (const file of srcFiles) { const content  = fs.readFileSync(file,'utf8')';'
 
 }
 
-const matches = content.match(/console\.(log|warn|error|info)/g)"if": (matches) { consoleLogCount += matches.length} } if (consoleLogCount > 0) { issues.push(`${consoleLogCount} console statements found`,`} this.healthReport.checks.codeQuality = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "consoleLogCount": consoleLogCoun,t "totalSourceFiles": srcFiles."length": },'
 } catch (error) { this.healthReport.checks.codeQuality = { "status": 'error,','; "issues": ['"Failed": to check code quality'],'; "error": error."message": } },'
 } async checkPerformance() { ';"try": { const issues = [];'
 
 }
 
-const buildDir  = path.join(this.projectRoot,'.next')';"if": (fs.existsSync(buildDir)) { const bundleSize = this.getDirectorySize(buildDir)"if": (bundleSize > 50 * 1024 * 1024) { issues.push('Large bundle size detected')},'
 }
 ;
-  const publicDir  = path.join(this.projectRoot,'public')';"if": (fs.existsSync(publicDir)) { const imageSize = this.getImageDirectorySize(publicDir)"if": (imageSize > 10 * 1024 * 1024) { issues.push('Large images detected')},'
 } this.healthReport.checks."performance": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "bundleSize": fs.existsSync(buildDir) ? this.getDirectorySize(buildDir) : 0 "imageSize": fs.existsSync(publicDir) ? this.getImageDirectorySize(publicDir) : "0": },'
 } catch (error) { this.healthReport.checks.performance = { "status": 'error,','; "issues": ['"Failed": to check performance'],'; "error": error."message": } },'
 } async checkSecurity() { ';"try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles()"for": (const file of srcFiles) {;
   }
-  const content  = fs.readFileSync(file,'utf8')';"if": (content.includes('password') || content.includes('secret') || content.includes('api_key')) {'; issues.push('"Potential": hardcoded secrets found')';break} } try { execSync('npm audit --audit-level=high',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('High severity vulnerabilities detected','
 }'; this.healthReport.checks."security": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": "issues": },'
 } catch (error) { this.healthReport.checks.security = { "status": 'error,','; "issues": ['"Failed": to check security'],'; "error": error."message": } },'
 } async checkAccessibility() { ';"try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles()"let": accessibilityIssues = 0; "for": (const file of srcFiles) { const content  = fs.readFileSync(file,'utf8')';if (content.includes('<img') && !content.includes('alt=')) {'; accessibilityIssues++} if (content.includes('<button') && !content.includes('aria-label') && !content.includes('aria-labelledby')) {'; accessibilityIssues++} } "if": (accessibilityIssues > 0) { issues.push(`${accessibilityIssues} accessibility issues found`,`} this.healthReport.checks.accessibility = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "accessibilityIssues": "accessibilityIssues": },'
 } catch (error) { this.healthReport.checks.accessibility = { "status": 'error,','; "issues": ['"Failed": to check accessibility'],'; "error": error."message":,'
 }
 
-const buildDir = path.join(this.projectRoot,'.next';'
-  const buildExists  = fs.existsSync(buildDir)let buildAge = null; if (buildExists) {const stats = fs.statSync(buildDir)buildAge = Date.now() - stats.mtime.getTime()}let buildSuccess = false; try {' execSync('npm run build',{ "cwd": this.projectRoot "stdio": 'pipe',"timeout": 60000 })buildSuccess = tru,'
 } catch (error) {this.healthReport.checks.build = {"status": buildSuccess ? 'healthy' : 'error',"buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed']},'
 } catch (error) {this.healthReport.checks.build = {"status": 'error',"issues": ['Failed to check build health'],"error": error.messag,'
 } this.healthReport.checks.build = {' "status": buildSuccess ? 'healthy' : 'error' "buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed'] ,'
 } catch (error) { this.healthReport.checks.build = {' "status": 'error',"issues": ['Failed to check build health'] "error": error.message }},'
 } async checkCodeQuality() {'  try ;'
   }
-  const issues = []; try {' execSync('npx tsc --noEmit',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('TypeScript compilation errors','
 } try {' execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('ESLint errors detected','
 }
 
-const srcFiles = this.findSourceFiles()let consoleLogCount = 0;  }
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 #!/usr/bin/"env": node,import fs from 'fs';import path from 'path';import { fileURLToPath  } from 'url';import { execSync  } from 'child_process';'
 
-const __dirname = path.dirname(__filename)';"class": AppHealthMonitor { constructor() { this.projectRoot = path.resolve(__dirname,'..')';this."healthReport": = { "timestamp": "new": Date().toISOString(,) "overall": 'unknown,','; "checks":  ,;'
 } this.projectRoot = path.resolve(__dirname,'..')this.healthReport = {"timestamp": new Date().toISOString(),"overall": 'unknown',"checks": {} },'
 } "async": runHealthChecks() { ';"await": this.checkDependencies()"await": this.checkBuildHealth()"await": this.checkCodeQuality()"await": this.checkPerformance()"await": this.checkSecurity()"await": this.checkAccessibility()this.generateReport(,'
 } "async": checkDependencies() { ';"try": { const packageJsonPath  = path.join(this.projectRoot,'package.json')';'
 
 }
 
-const packageJson  = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'))';'
 
-const issues = []; try { const outdated = execSync('npm outdated --json',{ '; "encoding": 'utf8,','; "cwd": this.projectRoo,t "stdio": 'pipe''}) const outdatedDeps = JSON.parse(outdated)"if": (Object.keys(outdatedDeps).length > 0) { issues.push(`${Object.keys(outdatedDeps).length} outdated dependencies`)}await this.checkDependencies()await this.checkBuildHealth()await this.checkCodeQuality()await this.checkPerformance()await this.checkSecurity()await this.checkAccessibility()this.generateReport(,`} async checkDependencies() {'  try {' const packageJsonPath = path.join(this.projectRoot,'package.json')const packageJson  = JSON.parse(fs.readFileSync(packageJsonPath,'utf8');'
   }
-  const issues = []; try {' const outdatedDeps = JSON.parse(outdated)if (Object.keys(outdatedDeps).length > 0) { issues.push(' `${Object.keys(outdatedDeps).length} outdated dependencies` )} } catch (error) {} try { execSync('npm audit --audit-level=moderate',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('Security vulnerabilities detected','}'; this.healthReport.checks."dependencies": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "totalDependencies": Object.keys(packageJson."dependencies": || ,{}).length + Object.keys(packageJson.devDependencies || {}).length } } catch (error) { this.healthReport.checks.dependencies = { "status": 'error,','; "issues": ['"Failed": to check dependencies'],'; "error": error."message": } },'
 } async checkBuildHealth() { ';"try": { const buildDir  = path.join(this.projectRoot,'.next')';'
 
 }
 
-const buildExists = fs.existsSync(buildDir)"let": buildAge = null; "if": (buildExists) { const stats = fs.statSync(buildDir)"buildAge": = Date.now() - stats.mtime.getTime(
 } let buildSuccess = false; "try": { execSync('npm run build',{ '; "cwd": this.projectRoo,t "stdio": 'pipe,','; "timeout": "60000": }) buildSuccess = true} catch (error) ,'
 } this.healthReport.checks.build = { "status": "buildSuccess": ? 'healthy' : 'error,','; "buildExists": buildExist,s "buildAge": buildAg,e "buildSuccess": buildSucces,s "issues": "buildSuccess": ? [] : ['"Build": process failed']'},'
 } "catch": (error) { this.healthReport.checks.build = { "status": 'error,','; "issues": ['"Failed": to check build health'],'; "error": error."message": } },'
@@ -754,73 +606,56 @@ const buildExists = fs.existsSync(buildDir)"let": buildAge = null; "if": (buildE
 }'; try { execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('ESLint errors detected','
 }';'
 
-const srcFiles = this.findSourceFiles()"let": consoleLogCount = 0; "for": (const file of srcFiles) { const content  = fs.readFileSync(file,'utf8')';'
 
 }
 
-const matches = content.match(/console\.(log|warn|error|info)/g)"if": (matches) { consoleLogCount += matches.length} } if (consoleLogCount > 0) { issues.push(`${consoleLogCount} console statements found`,`} this.healthReport.checks.codeQuality = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "consoleLogCount": consoleLogCoun,t "totalSourceFiles": srcFiles."length": },'
 } catch (error) { this.healthReport.checks.codeQuality = { "status": 'error,','; "issues": ['"Failed": to check code quality'],'; "error": error."message": } },'
 } async checkPerformance() { ';"try": { const issues = [];'
 
 }
 
-const buildDir  = path.join(this.projectRoot,'.next')';"if": (fs.existsSync(buildDir)) { const bundleSize = this.getDirectorySize(buildDir)"if": (bundleSize > 50 * 1024 * 1024) { issues.push('Large bundle size detected')},'
 }
 ;
-  const publicDir  = path.join(this.projectRoot,'public')';"if": (fs.existsSync(publicDir)) { const imageSize = this.getImageDirectorySize(publicDir)"if": (imageSize > 10 * 1024 * 1024) { issues.push('Large images detected')},'
 } this.healthReport.checks."performance": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "bundleSize": fs.existsSync(buildDir) ? this.getDirectorySize(buildDir) : 0 "imageSize": fs.existsSync(publicDir) ? this.getImageDirectorySize(publicDir) : "0": },'
 } catch (error) { this.healthReport.checks.performance = { "status": 'error,','; "issues": ['"Failed": to check performance'],'; "error": error."message": } },'
 } async checkSecurity() { ';"try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles()"for": (const file of srcFiles) {;
   }
-  const content  = fs.readFileSync(file,'utf8')';"if": (content.includes('password') || content.includes('secret') || content.includes('api_key')) {'; issues.push('"Potential": hardcoded secrets found')';break} } try { execSync('npm audit --audit-level=high',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('High severity vulnerabilities detected','
 }'; this.healthReport.checks."security": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": "issues": },'
 } catch (error) { this.healthReport.checks.security = { "status": 'error,','; "issues": ['"Failed": to check security'],'; "error": error."message": } },'
 } async checkAccessibility() { ';"try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles()"let": accessibilityIssues = 0; "for": (const file of srcFiles) { const content  = fs.readFileSync(file,'utf8')';if (content.includes('<img') && !content.includes('alt=')) {'; accessibilityIssues++} if (content.includes('<button') && !content.includes('aria-label') && !content.includes('aria-labelledby')) {'; accessibilityIssues++} } "if": (accessibilityIssues > 0) { issues.push(`${accessibilityIssues} accessibility issues found`,`} this.healthReport.checks.accessibility = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "accessibilityIssues": "accessibilityIssues": },'
 } catch (error) { this.healthReport.checks.accessibility = { "status": 'error,','; "issues": ['"Failed": to check accessibility'],'; "error": error."message":,'
 }
 
-const buildDir = path.join(this.projectRoot,'.next';'
-  const buildExists  = fs.existsSync(buildDir)let buildAge = null; if (buildExists) {const stats = fs.statSync(buildDir)buildAge = Date.now() - stats.mtime.getTime()}let buildSuccess = false; try {' execSync('npm run build',{ "cwd": this.projectRoot "stdio": 'pipe',"timeout": 60000 })buildSuccess = tru,'
 } catch (error) {this.healthReport.checks.build = {"status": buildSuccess ? 'healthy' : 'error',"buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed']},'
 } catch (error) {this.healthReport.checks.build = {"status": 'error',"issues": ['Failed to check build health'],"error": error.messag,'
 } this.healthReport.checks.build = {' "status": buildSuccess ? 'healthy' : 'error' "buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed'] ,'
 } catch (error) { this.healthReport.checks.build = {' "status": 'error',"issues": ['Failed to check build health'] "error": error.message }},'
 } async checkCodeQuality() {'  try ;'
   }
-  const issues = []; try {' execSync('npx tsc --noEmit',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('TypeScript compilation errors','
 } try {' execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('ESLint errors detected','
 }
 
-const srcFiles = this.findSourceFiles()let consoleLogCount = 0; for (const file of srcFiles) {' const srcFiles = this.findSourceFiles()let consoleLogCount = 0; for (const file of srcFiles) {const content = fs.readFileSync(file,'utf8';'
   }
-  const matches = content.match(/console\.(log|warn|error|info)/g)if (matches) {consoleLogCount += matches.length} }
 #!/usr/bin/"env": node,import fs from 'fs';import path from 'path';import { fileURLToPath  } from 'url';import { execSync  } from 'child_process';'
 
-const __dirname = path.dirname(__filename)';"class": AppHealthMonitor { constructor() { this.projectRoot = path.resolve(__dirname,'..')';this."healthReport": = { "timestamp": "new": Date().toISOString(,) "overall": 'unknown,','; "checks":  ,;'
 } this.projectRoot = path.resolve(__dirname,'..')this.healthReport = {"timestamp": new Date().toISOString(),"overall": 'unknown',"checks": {} },'
 } "async": runHealthChecks() { ';"await": this.checkDependencies()"await": this.checkBuildHealth()"await": this.checkCodeQuality()"await": this.checkPerformance()"await": this.checkSecurity()"await": this.checkAccessibility()this.generateReport(,'
 } "async": checkDependencies() { ';"try": { const packageJsonPath  = path.join(this.projectRoot,'package.json')';'
 
 }
 
-const packageJson  = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'))';'
 
-const issues = []; try { const outdated = execSync('npm outdated --json',{ '; "encoding": 'utf8,','; "cwd": this.projectRoo,t "stdio": 'pipe''}) const outdatedDeps = JSON.parse(outdated)"if": (Object.keys(outdatedDeps).length > 0) { issues.push(`${Object.keys(outdatedDeps).length} outdated dependencies`)}await this.checkDependencies()await this.checkBuildHealth()await this.checkCodeQuality()await this.checkPerformance()await this.checkSecurity()await this.checkAccessibility()this.generateReport(,`} async checkDependencies() {'  try {' const packageJsonPath = path.join(this.projectRoot,'package.json')const packageJson  = JSON.parse(fs.readFileSync(packageJsonPath,'utf8');'
   }
-  const issues = []; try {' const outdatedDeps = JSON.parse(outdated)if (Object.keys(outdatedDeps).length > 0) { issues.push(' `${Object.keys(outdatedDeps).length} outdated dependencies` )} } catch (error) {} try { execSync('npm audit --audit-level=moderate',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('Security vulnerabilities detected','}'; this.healthReport.checks."dependencies": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "totalDependencies": Object.keys(packageJson."dependencies": || ,{}).length + Object.keys(packageJson.devDependencies || {}).length } } catch (error) { this.healthReport.checks.dependencies = { "status": 'error,','; "issues": ['"Failed": to check dependencies'],'; "error": error."message": } },'
 } async checkBuildHealth() { ';"try": { const buildDir  = path.join(this.projectRoot,'.next')';'
 
 }
 
-const buildExists = fs.existsSync(buildDir)"let": buildAge = null; "if": (buildExists) { const stats = fs.statSync(buildDir)"buildAge": = Date.now() - stats.mtime.getTime(
 } let buildSuccess = false; "try": { execSync('npm run build',{ '; "cwd": this.projectRoo,t "stdio": 'pipe,','; "timeout": "60000": }) buildSuccess = true} catch (error) ,'
 } this.healthReport.checks.build = { "status": "buildSuccess": ? 'healthy' : 'error,','; "buildExists": buildExist,s "buildAge": buildAg,e "buildSuccess": buildSucces,s "issues": "buildSuccess": ? [] : ['"Build": process failed']'},'
 } "catch": (error) { this.healthReport.checks.build = { "status": 'error,','; "issues": ['"Failed": to check build health'],'; "error": error."message": } },'
@@ -828,52 +663,41 @@ const buildExists = fs.existsSync(buildDir)"let": buildAge = null; "if": (buildE
 }'; try { execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('ESLint errors detected','
 }';'
 
-const srcFiles = this.findSourceFiles()"let": consoleLogCount = 0; "for": (const file of srcFiles) { const content  = fs.readFileSync(file,'utf8')';'
 
 }
 
-const matches = content.match(/console\.(log|warn|error|info)/g)"if": (matches) { consoleLogCount += matches.length} } if (consoleLogCount > 0) { issues.push(`${consoleLogCount} console statements found`,`} this.healthReport.checks.codeQuality = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "consoleLogCount": consoleLogCoun,t "totalSourceFiles": srcFiles."length": },'
 } catch (error) { this.healthReport.checks.codeQuality = { "status": 'error,','; "issues": ['"Failed": to check code quality'],'; "error": error."message": } },'
 } async checkPerformance() { ';"try": { const issues = [];'
 
 }
 
-const buildDir  = path.join(this.projectRoot,'.next')';"if": (fs.existsSync(buildDir)) { const bundleSize = this.getDirectorySize(buildDir)"if": (bundleSize > 50 * 1024 * 1024) { issues.push('Large bundle size detected')},'
 }
 ;
-  const publicDir  = path.join(this.projectRoot,'public')';"if": (fs.existsSync(publicDir)) { const imageSize = this.getImageDirectorySize(publicDir)"if": (imageSize > 10 * 1024 * 1024) { issues.push('Large images detected')},'
 } this.healthReport.checks."performance": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "bundleSize": fs.existsSync(buildDir) ? this.getDirectorySize(buildDir) : 0 "imageSize": fs.existsSync(publicDir) ? this.getImageDirectorySize(publicDir) : "0": },'
 } catch (error) { this.healthReport.checks.performance = { "status": 'error,','; "issues": ['"Failed": to check performance'],'; "error": error."message": } },'
 } async checkSecurity() { ';"try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles()"for": (const file of srcFiles) {;
   }
-  const content  = fs.readFileSync(file,'utf8')';"if": (content.includes('password') || content.includes('secret') || content.includes('api_key')) {'; issues.push('"Potential": hardcoded secrets found')';break} } try { execSync('npm audit --audit-level=high',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('High severity vulnerabilities detected','
 }'; this.healthReport.checks."security": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": "issues": },'
 } catch (error) { this.healthReport.checks.security = { "status": 'error,','; "issues": ['"Failed": to check security'],'; "error": error."message": } },'
 } async checkAccessibility() { ';"try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles()"let": accessibilityIssues = 0; "for": (const file of srcFiles) { const content  = fs.readFileSync(file,'utf8')';if (content.includes('<img') && !content.includes('alt=')) {'; accessibilityIssues++} if (content.includes('<button') && !content.includes('aria-label') && !content.includes('aria-labelledby')) {'; accessibilityIssues++} } "if": (accessibilityIssues > 0) { issues.push(`${accessibilityIssues} accessibility issues found`,`} this.healthReport.checks.accessibility = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "accessibilityIssues": "accessibilityIssues": },'
 } catch (error) { this.healthReport.checks.accessibility = { "status": 'error,','; "issues": ['"Failed": to check accessibility'],'; "error": error."message":,'
 }
 
-const buildDir = path.join(this.projectRoot,'.next';'
-  const buildExists  = fs.existsSync(buildDir)let buildAge = null; if (buildExists) {const stats = fs.statSync(buildDir)buildAge = Date.now() - stats.mtime.getTime()}let buildSuccess = false; try {' execSync('npm run build',{ "cwd": this.projectRoot "stdio": 'pipe',"timeout": 60000 })buildSuccess = tru,'
 } catch (error) {this.healthReport.checks.build = {"status": buildSuccess ? 'healthy' : 'error',"buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed']},'
 } catch (error) {this.healthReport.checks.build = {"status": 'error',"issues": ['Failed to check build health'],"error": error.messag,'
 } this.healthReport.checks.build = {' "status": buildSuccess ? 'healthy' : 'error' "buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed'] ,'
 } catch (error) { this.healthReport.checks.build = {' "status": 'error',"issues": ['Failed to check build health'] "error": error.message }},'
 } async checkCodeQuality() {'  try ;'
   }
-  const issues = []; try {' execSync('npx tsc --noEmit',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('TypeScript compilation errors','
 } try {' execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('ESLint errors detected','
 }
 
-const srcFiles = this.findSourceFiles()let consoleLogCount = 0;  }
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 #!/usr/bin/"env": node,import fs from 'fs';'
 
@@ -954,7 +778,6 @@ const stats = fs.statSync(buildDir); buildAge = Date.now() - stats.mtime.getTime
 
 }
 
-const issues = []; try {' execSync('npx tsc --noEmit',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('TypeScript compilation errors','
 } try {' execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('ESLint errors detected','
 }
 
@@ -968,27 +791,21 @@ const matches = content.match(/console\.(log|warn|error|info)/g); if (matches) {
 
 #!/usr/bin/"env": node,import fs from 'fs';; import path from 'path';; import { fileURLToPath } from 'url';; import { execSync } from 'child_process';;'
 
-const __dirname = path.dirname(__filename); ';; "class": AppHealthMonitor { constructor() { this.projectRoot = path.resolve(__dirname,'..')';; this."healthReport": = { "timestamp": "new": Date().toISOString(,) "overall": 'unknown,','; "checks":  ,;'
 } this.projectRoot = path.resolve(__dirname,'..'); this.healthReport = {; "timestamp": new Date().toISOString(),"overall": 'unknown',"checks": {} },'
 } "async": runHealthChecks() { ';; "await": this.checkDependencies(); "await": this.checkBuildHealth(); "await": this.checkCodeQuality(); "await": this.checkPerformance(); "await": this.checkSecurity(); "await": this.checkAccessibility(); this.generateReport()} "async": checkDependencies() { ';; "try": { const packageJsonPath = path.join(this.projectRoot,'package.json')';;'
 
 }
 
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'))';;'
 
-const issues = []; try { const outdated = execSync('npm outdated --json',{ '; "encoding": 'utf8,','; "cwd": this.projectRoo,t "stdio": 'pipe','
 }) const outdatedDeps = JSON.parse(outdated); "if": (Object.keys(outdatedDeps).length > 0) { issues.push(`${Object.keys(outdatedDeps).length} outdated dependencies`,`}  ; await this.checkDependencies(); await this.checkBuildHealth(); await this.checkCodeQuality(); await this.checkPerformance(); await this.checkSecurity(); await this.checkAccessibility(); this.generateReport()} async checkDependencies() {'  try {' const packageJsonPath = path.join(this.projectRoot,'package.json');'
 
 }
 
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8')); ;'
 
-const issues = []; try {' const outdatedDeps = JSON.parse(outdated); if (Object.keys(outdatedDeps).length > 0) { issues.push(' `${Object.keys(outdatedDeps).length} outdated dependencies` )} } catch (error) {} try { execSync('npm audit --audit-level=moderate',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('Security vulnerabilities detected','}'; this.healthReport.checks."dependencies": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "totalDependencies": Object.keys(packageJson."dependencies": || ,{}).length + Object.keys(packageJson.devDependencies || {}).length } } catch (error) { this.healthReport.checks.dependencies = { "status": 'error,','; "issues": ['"Failed": to check dependencies'],'; "error": error."message": } },'
 } async checkBuildHealth() { ';; "try": { const buildDir = path.join(this.projectRoot,'.next')';;'
 
 }
 
-const buildExists = fs.existsSync(buildDir); "let": buildAge = null; "if": (buildExists) { const stats = fs.statSync(buildDir); "buildAge": = Date.now() - stats.mtime.getTime(
 } let buildSuccess = false; "try": { execSync('npm run build',{ '; "cwd": this.projectRoo,t "stdio": 'pipe,','; "timeout": "60000": }) buildSuccess = true} catch (error) ,'
 } this.healthReport.checks.build = { "status": "buildSuccess": ? 'healthy' : 'error,','; "buildExists": buildExist,s "buildAge": buildAg,e "buildSuccess": buildSucces,s "issues": "buildSuccess": ? [] : ['"Build": process failed']'},'
 } "catch": (error) { this.healthReport.checks.build = { "status": 'error,','; "issues": ['"Failed": to check build health'],'; "error": error."message": } },'
@@ -996,44 +813,35 @@ const buildExists = fs.existsSync(buildDir); "let": buildAge = null; "if": (buil
 }'; try { execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('ESLint errors detected','
 }';'
 
-const srcFiles = this.findSourceFiles(); "let": consoleLogCount = 0; "for": (const file of srcFiles) { const content = fs.readFileSync(file,'utf8')';;'
 
 }
 
-const matches = content.match(/console\.(log|warn|error|info)/g); "if": (matches) { consoleLogCount += matches.length} } if (consoleLogCount > 0) { issues.push(`${consoleLogCount} console statements found`,`} this.healthReport.checks.codeQuality = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "consoleLogCount": consoleLogCoun,t "totalSourceFiles": srcFiles."length": },'
 } catch (error) { this.healthReport.checks.codeQuality = { "status": 'error,','; "issues": ['"Failed": to check code quality'],'; "error": error."message": } },'
 } async checkPerformance() { ';; "try": { const issues = [];'
 
 }
 
-const buildDir = path.join(this.projectRoot,'.next')';; "if": (fs.existsSync(buildDir)) { const bundleSize = this.getDirectorySize(buildDir); "if": (bundleSize > 50 * 1024 * 1024) { issues.push('Large bundle size detected')},'
 }
 
-const publicDir = path.join(this.projectRoot,'public')';; "if": (fs.existsSync(publicDir)) { const imageSize = this.getImageDirectorySize(publicDir); "if": (imageSize > 10 * 1024 * 1024) { issues.push('Large images detected')},'
 } this.healthReport.checks."performance": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "bundleSize": fs.existsSync(buildDir) ? this.getDirectorySize(buildDir) : 0 "imageSize": fs.existsSync(publicDir) ? this.getImageDirectorySize(publicDir) : "0": },'
 } catch (error) { this.healthReport.checks.performance = { "status": 'error,','; "issues": ['"Failed": to check performance'],'; "error": error."message": } },'
 } async checkSecurity() { ';; "try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles(); "for": (const file of srcFiles) { const content = fs.readFileSync(file,'utf8')';; "if": (content.includes('password') || content.includes('secret') || content.includes('api_key')) {'; issues.push('"Potential": hardcoded secrets found')';; break} } try { execSync('npm audit --audit-level=high',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('High severity vulnerabilities detected','
 }'; this.healthReport.checks."security": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": "issues": },'
 } catch (error) { this.healthReport.checks.security = { "status": 'error,','; "issues": ['"Failed": to check security'],'; "error": error."message": } },'
 } async checkAccessibility() { ';; "try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles(); "let": accessibilityIssues = 0; "for": (const file of srcFiles) { const content = fs.readFileSync(file,'utf8')';; if (content.includes('<img') && !content.includes('alt=')) {'; accessibilityIssues++} if (content.includes('<button') && !content.includes('aria-label') && !content.includes('aria-labelledby')) {'; accessibilityIssues++} } "if": (accessibilityIssues > 0) { issues.push(`${accessibilityIssues} accessibility issues found`,`} this.healthReport.checks.accessibility = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "accessibilityIssues": "accessibilityIssues": },'
 } catch (error) { this.healthReport.checks.accessibility = { "status": 'error,','; "issues": ['"Failed": to check accessibility'],'; "error": error."message":,'
 }
 
-const buildDir = path.join(this.projectRoot,'.next');'
 
-const buildExists = fs.existsSync(buildDir); ; let buildAge = null; if (buildExists) {;
 
 }
 
-const stats = fs.statSync(buildDir); buildAge = Date.now() - stats.mtime.getTime()} ; let buildSuccess = false; try {' execSync('npm run build',{ "cwd": this.projectRoot "stdio": 'pipe',"timeout": 60000,'
 }); buildSuccess = true} catch (error) {; ; this.healthReport.checks.build = {; "status": buildSuccess ? 'healthy' : 'error',"buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed']},'
 } catch (error) {; this.healthReport.checks.build = {; "status": 'error',"issues": ['Failed to check build health'],"error": error.messag,'
 } this.healthReport.checks.build = {' "status": buildSuccess ? 'healthy' : 'error' "buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed'] ,'
@@ -1042,34 +850,27 @@ const stats = fs.statSync(buildDir); buildAge = Date.now() - stats.mtime.getTime
 
 }
 
-const issues = []; try {' execSync('npx tsc --noEmit',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('TypeScript compilation errors','
 } try {' execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('ESLint errors detected','
 }
 
 const srcFiles = this.findSourceFiles(); let consoleLogCount = 0;  }
 #!/usr/bin/"env": node,import fs from 'fs';; import path from 'path';; import { fileURLToPath } from 'url';; import { execSync } from 'child_process';;'
 
-const __dirname = path.dirname(__filename); ';; "class": AppHealthMonitor { constructor() { this.projectRoot = path.resolve(__dirname,'..')';; this."healthReport": = { "timestamp": "new": Date().toISOString(,) "overall": 'unknown,','; "checks":  ,;'
 } this.projectRoot = path.resolve(__dirname,'..'); this.healthReport = {; "timestamp": new Date().toISOString(),"overall": 'unknown',"checks": {} },'
 } "async": runHealthChecks() { ';; "await": this.checkDependencies(); "await": this.checkBuildHealth(); "await": this.checkCodeQuality(); "await": this.checkPerformance(); "await": this.checkSecurity(); "await": this.checkAccessibility(); this.generateReport()} "async": checkDependencies() { ';; "try": { const packageJsonPath = path.join(this.projectRoot,'package.json')';;'
 
 }
 
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'))';;'
 
-const issues = []; try { const outdated = execSync('npm outdated --json',{ '; "encoding": 'utf8,','; "cwd": this.projectRoo,t "stdio": 'pipe','
 }) const outdatedDeps = JSON.parse(outdated); "if": (Object.keys(outdatedDeps).length > 0) { issues.push(`${Object.keys(outdatedDeps).length} outdated dependencies`,`}  ; await this.checkDependencies(); await this.checkBuildHealth(); await this.checkCodeQuality(); await this.checkPerformance(); await this.checkSecurity(); await this.checkAccessibility(); this.generateReport()} async checkDependencies() {'  try {' const packageJsonPath = path.join(this.projectRoot,'package.json');'
 
 }
 
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8')); ;'
 
-const issues = []; try {' const outdatedDeps = JSON.parse(outdated); if (Object.keys(outdatedDeps).length > 0) { issues.push(' `${Object.keys(outdatedDeps).length} outdated dependencies` )} } catch (error) {} try { execSync('npm audit --audit-level=moderate',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('Security vulnerabilities detected','}'; this.healthReport.checks."dependencies": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "totalDependencies": Object.keys(packageJson."dependencies": || ,{}).length + Object.keys(packageJson.devDependencies || {}).length } } catch (error) { this.healthReport.checks.dependencies = { "status": 'error,','; "issues": ['"Failed": to check dependencies'],'; "error": error."message": } },'
 } async checkBuildHealth() { ';; "try": { const buildDir = path.join(this.projectRoot,'.next')';;'
 
 }
 
-const buildExists = fs.existsSync(buildDir); "let": buildAge = null; "if": (buildExists) { const stats = fs.statSync(buildDir); "buildAge": = Date.now() - stats.mtime.getTime(
 } let buildSuccess = false; "try": { execSync('npm run build',{ '; "cwd": this.projectRoo,t "stdio": 'pipe,','; "timeout": "60000": }) buildSuccess = true} catch (error) ,'
 } this.healthReport.checks.build = { "status": "buildSuccess": ? 'healthy' : 'error,','; "buildExists": buildExist,s "buildAge": buildAg,e "buildSuccess": buildSucces,s "issues": "buildSuccess": ? [] : ['"Build": process failed']'},'
 } "catch": (error) { this.healthReport.checks.build = { "status": 'error,','; "issues": ['"Failed": to check build health'],'; "error": error."message": } },'
@@ -1077,44 +878,35 @@ const buildExists = fs.existsSync(buildDir); "let": buildAge = null; "if": (buil
 }'; try { execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('ESLint errors detected','
 }';'
 
-const srcFiles = this.findSourceFiles(); "let": consoleLogCount = 0; "for": (const file of srcFiles) { const content = fs.readFileSync(file,'utf8')';;'
 
 }
 
-const matches = content.match(/console\.(log|warn|error|info)/g); "if": (matches) { consoleLogCount += matches.length} } if (consoleLogCount > 0) { issues.push(`${consoleLogCount} console statements found`,`} this.healthReport.checks.codeQuality = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "consoleLogCount": consoleLogCoun,t "totalSourceFiles": srcFiles."length": },'
 } catch (error) { this.healthReport.checks.codeQuality = { "status": 'error,','; "issues": ['"Failed": to check code quality'],'; "error": error."message": } },'
 } async checkPerformance() { ';; "try": { const issues = [];'
 
 }
 
-const buildDir = path.join(this.projectRoot,'.next')';; "if": (fs.existsSync(buildDir)) { const bundleSize = this.getDirectorySize(buildDir); "if": (bundleSize > 50 * 1024 * 1024) { issues.push('Large bundle size detected')},'
 }
 
-const publicDir = path.join(this.projectRoot,'public')';; "if": (fs.existsSync(publicDir)) { const imageSize = this.getImageDirectorySize(publicDir); "if": (imageSize > 10 * 1024 * 1024) { issues.push('Large images detected')},'
 } this.healthReport.checks."performance": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "bundleSize": fs.existsSync(buildDir) ? this.getDirectorySize(buildDir) : 0 "imageSize": fs.existsSync(publicDir) ? this.getImageDirectorySize(publicDir) : "0": },'
 } catch (error) { this.healthReport.checks.performance = { "status": 'error,','; "issues": ['"Failed": to check performance'],'; "error": error."message": } },'
 } async checkSecurity() { ';; "try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles(); "for": (const file of srcFiles) { const content = fs.readFileSync(file,'utf8')';; "if": (content.includes('password') || content.includes('secret') || content.includes('api_key')) {'; issues.push('"Potential": hardcoded secrets found')';; break} } try { execSync('npm audit --audit-level=high',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('High severity vulnerabilities detected','
 }'; this.healthReport.checks."security": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": "issues": },'
 } catch (error) { this.healthReport.checks.security = { "status": 'error,','; "issues": ['"Failed": to check security'],'; "error": error."message": } },'
 } async checkAccessibility() { ';; "try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles(); "let": accessibilityIssues = 0; "for": (const file of srcFiles) { const content = fs.readFileSync(file,'utf8')';; if (content.includes('<img') && !content.includes('alt=')) {'; accessibilityIssues++} if (content.includes('<button') && !content.includes('aria-label') && !content.includes('aria-labelledby')) {'; accessibilityIssues++} } "if": (accessibilityIssues > 0) { issues.push(`${accessibilityIssues} accessibility issues found`,`} this.healthReport.checks.accessibility = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "accessibilityIssues": "accessibilityIssues": },'
 } catch (error) { this.healthReport.checks.accessibility = { "status": 'error,','; "issues": ['"Failed": to check accessibility'],'; "error": error."message":,'
 }
 
-const buildDir = path.join(this.projectRoot,'.next');'
 
-const buildExists = fs.existsSync(buildDir); ; let buildAge = null; if (buildExists) {;
 
 }
 
-const stats = fs.statSync(buildDir); buildAge = Date.now() - stats.mtime.getTime()} ; let buildSuccess = false; try {' execSync('npm run build',{ "cwd": this.projectRoot "stdio": 'pipe',"timeout": 60000,'
 }); buildSuccess = true} catch (error) {; ; this.healthReport.checks.build = {; "status": buildSuccess ? 'healthy' : 'error',"buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed']},'
 } catch (error) {; this.healthReport.checks.build = {; "status": 'error',"issues": ['Failed to check build health'],"error": error.messag,'
 } this.healthReport.checks.build = {' "status": buildSuccess ? 'healthy' : 'error' "buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed'] ,'
@@ -1123,35 +915,27 @@ const stats = fs.statSync(buildDir); buildAge = Date.now() - stats.mtime.getTime
 
 }
 
-const issues = []; try {' execSync('npx tsc --noEmit',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('TypeScript compilation errors','
 } try {' execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('ESLint errors detected','
 }
 
-const srcFiles = this.findSourceFiles(); let consoleLogCount = 0;  }
 
 #!/usr/bin/"env": node,import fs from 'fs';; import path from 'path';; import { fileURLToPath } from 'url';; import { execSync } from 'child_process';;'
 
-const __dirname = path.dirname(__filename); ';; "class": AppHealthMonitor { constructor() { this.projectRoot = path.resolve(__dirname,'..')';; this."healthReport": = { "timestamp": "new": Date().toISOString(,) "overall": 'unknown,','; "checks":  ,;'
 } this.projectRoot = path.resolve(__dirname,'..'); this.healthReport = {; "timestamp": new Date().toISOString(),"overall": 'unknown',"checks": {} },'
 } "async": runHealthChecks() { ';; "await": this.checkDependencies(); "await": this.checkBuildHealth(); "await": this.checkCodeQuality(); "await": this.checkPerformance(); "await": this.checkSecurity(); "await": this.checkAccessibility(); this.generateReport()} "async": checkDependencies() { ';; "try": { const packageJsonPath = path.join(this.projectRoot,'package.json')';;'
 
 }
 
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'))';;'
 
-const issues = []; try { const outdated = execSync('npm outdated --json',{ '; "encoding": 'utf8,','; "cwd": this.projectRoo,t "stdio": 'pipe','
 }) const outdatedDeps = JSON.parse(outdated); "if": (Object.keys(outdatedDeps).length > 0) { issues.push(`${Object.keys(outdatedDeps).length} outdated dependencies`,`}  ; await this.checkDependencies(); await this.checkBuildHealth(); await this.checkCodeQuality(); await this.checkPerformance(); await this.checkSecurity(); await this.checkAccessibility(); this.generateReport()} async checkDependencies() {'  try {' const packageJsonPath = path.join(this.projectRoot,'package.json');'
 
 }
 
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8')); ;'
 
-const issues = []; try {' const outdatedDeps = JSON.parse(outdated); if (Object.keys(outdatedDeps).length > 0) { issues.push(' `${Object.keys(outdatedDeps).length} outdated dependencies` )} } catch (error) {} try { execSync('npm audit --audit-level=moderate',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('Security vulnerabilities detected','}'; this.healthReport.checks."dependencies": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "totalDependencies": Object.keys(packageJson."dependencies": || ,{}).length + Object.keys(packageJson.devDependencies || {}).length } } catch (error) { this.healthReport.checks.dependencies = { "status": 'error,','; "issues": ['"Failed": to check dependencies'],'; "error": error."message": } },'
 } async checkBuildHealth() { ';; "try": { const buildDir = path.join(this.projectRoot,'.next')';;'
 
 }
 
-const buildExists = fs.existsSync(buildDir); "let": buildAge = null; "if": (buildExists) { const stats = fs.statSync(buildDir); "buildAge": = Date.now() - stats.mtime.getTime(
 } let buildSuccess = false; "try": { execSync('npm run build',{ '; "cwd": this.projectRoo,t "stdio": 'pipe,','; "timeout": "60000": }) buildSuccess = true} catch (error) ,'
 } this.healthReport.checks.build = { "status": "buildSuccess": ? 'healthy' : 'error,','; "buildExists": buildExist,s "buildAge": buildAg,e "buildSuccess": buildSucces,s "issues": "buildSuccess": ? [] : ['"Build": process failed']'},'
 } "catch": (error) { this.healthReport.checks.build = { "status": 'error,','; "issues": ['"Failed": to check build health'],'; "error": error."message": } },'
@@ -1159,44 +943,35 @@ const buildExists = fs.existsSync(buildDir); "let": buildAge = null; "if": (buil
 }'; try { execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('ESLint errors detected','
 }';'
 
-const srcFiles = this.findSourceFiles(); "let": consoleLogCount = 0; "for": (const file of srcFiles) { const content = fs.readFileSync(file,'utf8')';;'
 
 }
 
-const matches = content.match(/console\.(log|warn|error|info)/g); "if": (matches) { consoleLogCount += matches.length} } if (consoleLogCount > 0) { issues.push(`${consoleLogCount} console statements found`,`} this.healthReport.checks.codeQuality = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "consoleLogCount": consoleLogCoun,t "totalSourceFiles": srcFiles."length": },'
 } catch (error) { this.healthReport.checks.codeQuality = { "status": 'error,','; "issues": ['"Failed": to check code quality'],'; "error": error."message": } },'
 } async checkPerformance() { ';; "try": { const issues = [];'
 
 }
 
-const buildDir = path.join(this.projectRoot,'.next')';; "if": (fs.existsSync(buildDir)) { const bundleSize = this.getDirectorySize(buildDir); "if": (bundleSize > 50 * 1024 * 1024) { issues.push('Large bundle size detected')},'
 }
 
-const publicDir = path.join(this.projectRoot,'public')';; "if": (fs.existsSync(publicDir)) { const imageSize = this.getImageDirectorySize(publicDir); "if": (imageSize > 10 * 1024 * 1024) { issues.push('Large images detected')},'
 } this.healthReport.checks."performance": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "bundleSize": fs.existsSync(buildDir) ? this.getDirectorySize(buildDir) : 0 "imageSize": fs.existsSync(publicDir) ? this.getImageDirectorySize(publicDir) : "0": },'
 } catch (error) { this.healthReport.checks.performance = { "status": 'error,','; "issues": ['"Failed": to check performance'],'; "error": error."message": } },'
 } async checkSecurity() { ';; "try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles(); "for": (const file of srcFiles) { const content = fs.readFileSync(file,'utf8')';; "if": (content.includes('password') || content.includes('secret') || content.includes('api_key')) {'; issues.push('"Potential": hardcoded secrets found')';; break} } try { execSync('npm audit --audit-level=high',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('High severity vulnerabilities detected','
 }'; this.healthReport.checks."security": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": "issues": },'
 } catch (error) { this.healthReport.checks.security = { "status": 'error,','; "issues": ['"Failed": to check security'],'; "error": error."message": } },'
 } async checkAccessibility() { ';; "try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles(); "let": accessibilityIssues = 0; "for": (const file of srcFiles) { const content = fs.readFileSync(file,'utf8')';; if (content.includes('<img') && !content.includes('alt=')) {'; accessibilityIssues++} if (content.includes('<button') && !content.includes('aria-label') && !content.includes('aria-labelledby')) {'; accessibilityIssues++} } "if": (accessibilityIssues > 0) { issues.push(`${accessibilityIssues} accessibility issues found`,`} this.healthReport.checks.accessibility = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "accessibilityIssues": "accessibilityIssues": },'
 } catch (error) { this.healthReport.checks.accessibility = { "status": 'error,','; "issues": ['"Failed": to check accessibility'],'; "error": error."message":,'
 }
 
-const buildDir = path.join(this.projectRoot,'.next');'
 
-const buildExists = fs.existsSync(buildDir); ; let buildAge = null; if (buildExists) {;
 
 }
 
-const stats = fs.statSync(buildDir); buildAge = Date.now() - stats.mtime.getTime()} ; let buildSuccess = false; try {' execSync('npm run build',{ "cwd": this.projectRoot "stdio": 'pipe',"timeout": 60000,'
 }); buildSuccess = true} catch (error) {; ; this.healthReport.checks.build = {; "status": buildSuccess ? 'healthy' : 'error',"buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed']},'
 } catch (error) {; this.healthReport.checks.build = {; "status": 'error',"issues": ['Failed to check build health'],"error": error.messag,'
 } this.healthReport.checks.build = {' "status": buildSuccess ? 'healthy' : 'error' "buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed'] ,'
@@ -1205,40 +980,30 @@ const stats = fs.statSync(buildDir); buildAge = Date.now() - stats.mtime.getTime
 
 }
 
-const issues = []; try {' execSync('npx tsc --noEmit',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('TypeScript compilation errors','
 } try {' execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('ESLint errors detected','
 }
 
-const srcFiles = this.findSourceFiles(); let consoleLogCount = 0; for (const file of srcFiles) {' const srcFiles = this.findSourceFiles(); let consoleLogCount = 0; for (const file of srcFiles) {;'
 
 }
 
-const content = fs.readFileSync(file,'utf8');'
 
-const matches = content.match(/console\.(log|warn|error|info)/g); if (matches) {; consoleLogCount += matches.length} }
 #!/usr/bin/"env": node,import fs from 'fs';; import path from 'path';; import { fileURLToPath } from 'url';; import { execSync } from 'child_process';;'
 
-const __dirname = path.dirname(__filename); ';; "class": AppHealthMonitor { constructor() { this.projectRoot = path.resolve(__dirname,'..')';; this."healthReport": = { "timestamp": "new": Date().toISOString(,) "overall": 'unknown,','; "checks":  ,;'
 } this.projectRoot = path.resolve(__dirname,'..'); this.healthReport = {; "timestamp": new Date().toISOString(),"overall": 'unknown',"checks": {} },'
 } "async": runHealthChecks() { ';; "await": this.checkDependencies(); "await": this.checkBuildHealth(); "await": this.checkCodeQuality(); "await": this.checkPerformance(); "await": this.checkSecurity(); "await": this.checkAccessibility(); this.generateReport()} "async": checkDependencies() { ';; "try": { const packageJsonPath = path.join(this.projectRoot,'package.json')';;'
 
 }
 
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'))';;'
 
-const issues = []; try { const outdated = execSync('npm outdated --json',{ '; "encoding": 'utf8,','; "cwd": this.projectRoo,t "stdio": 'pipe','
 }) const outdatedDeps = JSON.parse(outdated); "if": (Object.keys(outdatedDeps).length > 0) { issues.push(`${Object.keys(outdatedDeps).length} outdated dependencies`,`}  ; await this.checkDependencies(); await this.checkBuildHealth(); await this.checkCodeQuality(); await this.checkPerformance(); await this.checkSecurity(); await this.checkAccessibility(); this.generateReport()} async checkDependencies() {'  try {' const packageJsonPath = path.join(this.projectRoot,'package.json');'
 
 }
 
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8')); ;'
 
-const issues = []; try {' const outdatedDeps = JSON.parse(outdated); if (Object.keys(outdatedDeps).length > 0) { issues.push(' `${Object.keys(outdatedDeps).length} outdated dependencies` )} } catch (error) {} try { execSync('npm audit --audit-level=moderate',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('Security vulnerabilities detected','}'; this.healthReport.checks."dependencies": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "totalDependencies": Object.keys(packageJson."dependencies": || ,{}).length + Object.keys(packageJson.devDependencies || {}).length } } catch (error) { this.healthReport.checks.dependencies = { "status": 'error,','; "issues": ['"Failed": to check dependencies'],'; "error": error."message": } },'
 } async checkBuildHealth() { ';; "try": { const buildDir = path.join(this.projectRoot,'.next')';;'
 
 }
 
-const buildExists = fs.existsSync(buildDir); "let": buildAge = null; "if": (buildExists) { const stats = fs.statSync(buildDir); "buildAge": = Date.now() - stats.mtime.getTime(
 } let buildSuccess = false; "try": { execSync('npm run build',{ '; "cwd": this.projectRoo,t "stdio": 'pipe,','; "timeout": "60000": }) buildSuccess = true} catch (error) ,'
 } this.healthReport.checks.build = { "status": "buildSuccess": ? 'healthy' : 'error,','; "buildExists": buildExist,s "buildAge": buildAg,e "buildSuccess": buildSucces,s "issues": "buildSuccess": ? [] : ['"Build": process failed']'},'
 } "catch": (error) { this.healthReport.checks.build = { "status": 'error,','; "issues": ['"Failed": to check build health'],'; "error": error."message": } },'
@@ -1246,44 +1011,35 @@ const buildExists = fs.existsSync(buildDir); "let": buildAge = null; "if": (buil
 }'; try { execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('ESLint errors detected','
 }';'
 
-const srcFiles = this.findSourceFiles(); "let": consoleLogCount = 0; "for": (const file of srcFiles) { const content = fs.readFileSync(file,'utf8')';;'
 
 }
 
-const matches = content.match(/console\.(log|warn|error|info)/g); "if": (matches) { consoleLogCount += matches.length} } if (consoleLogCount > 0) { issues.push(`${consoleLogCount} console statements found`,`} this.healthReport.checks.codeQuality = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "consoleLogCount": consoleLogCoun,t "totalSourceFiles": srcFiles."length": },'
 } catch (error) { this.healthReport.checks.codeQuality = { "status": 'error,','; "issues": ['"Failed": to check code quality'],'; "error": error."message": } },'
 } async checkPerformance() { ';; "try": { const issues = [];'
 
 }
 
-const buildDir = path.join(this.projectRoot,'.next')';; "if": (fs.existsSync(buildDir)) { const bundleSize = this.getDirectorySize(buildDir); "if": (bundleSize > 50 * 1024 * 1024) { issues.push('Large bundle size detected')},'
 }
 
-const publicDir = path.join(this.projectRoot,'public')';; "if": (fs.existsSync(publicDir)) { const imageSize = this.getImageDirectorySize(publicDir); "if": (imageSize > 10 * 1024 * 1024) { issues.push('Large images detected')},'
 } this.healthReport.checks."performance": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "bundleSize": fs.existsSync(buildDir) ? this.getDirectorySize(buildDir) : 0 "imageSize": fs.existsSync(publicDir) ? this.getImageDirectorySize(publicDir) : "0": },'
 } catch (error) { this.healthReport.checks.performance = { "status": 'error,','; "issues": ['"Failed": to check performance'],'; "error": error."message": } },'
 } async checkSecurity() { ';; "try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles(); "for": (const file of srcFiles) { const content = fs.readFileSync(file,'utf8')';; "if": (content.includes('password') || content.includes('secret') || content.includes('api_key')) {'; issues.push('"Potential": hardcoded secrets found')';; break} } try { execSync('npm audit --audit-level=high',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('High severity vulnerabilities detected','
 }'; this.healthReport.checks."security": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": "issues": },'
 } catch (error) { this.healthReport.checks.security = { "status": 'error,','; "issues": ['"Failed": to check security'],'; "error": error."message": } },'
 } async checkAccessibility() { ';; "try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles(); "let": accessibilityIssues = 0; "for": (const file of srcFiles) { const content = fs.readFileSync(file,'utf8')';; if (content.includes('<img') && !content.includes('alt=')) {'; accessibilityIssues++} if (content.includes('<button') && !content.includes('aria-label') && !content.includes('aria-labelledby')) {'; accessibilityIssues++} } "if": (accessibilityIssues > 0) { issues.push(`${accessibilityIssues} accessibility issues found`,`} this.healthReport.checks.accessibility = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "accessibilityIssues": "accessibilityIssues": },'
 } catch (error) { this.healthReport.checks.accessibility = { "status": 'error,','; "issues": ['"Failed": to check accessibility'],'; "error": error."message":,'
 }
 
-const buildDir = path.join(this.projectRoot,'.next');'
 
-const buildExists = fs.existsSync(buildDir); ; let buildAge = null; if (buildExists) {;
 
 }
 
-const stats = fs.statSync(buildDir); buildAge = Date.now() - stats.mtime.getTime()} ; let buildSuccess = false; try {' execSync('npm run build',{ "cwd": this.projectRoot "stdio": 'pipe',"timeout": 60000,'
 }); buildSuccess = true} catch (error) {; ; this.healthReport.checks.build = {; "status": buildSuccess ? 'healthy' : 'error',"buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed']},'
 } catch (error) {; this.healthReport.checks.build = {; "status": 'error',"issues": ['Failed to check build health'],"error": error.messag,'
 } this.healthReport.checks.build = {' "status": buildSuccess ? 'healthy' : 'error' "buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed'] ,'
@@ -1292,34 +1048,26 @@ const stats = fs.statSync(buildDir); buildAge = Date.now() - stats.mtime.getTime
 
 }
 
-const issues = []; try {' execSync('npx tsc --noEmit',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('TypeScript compilation errors','
 } try {' execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('ESLint errors detected','
 }
 
-const srcFiles = this.findSourceFiles(); let consoleLogCount = 0;  }
 #!/usr/bin/"env": node,import fs from 'fs';; import path from 'path';; import { fileURLToPath } from 'url';; import { execSync } from 'child_process';;'
 
-const __dirname = path.dirname(__filename); ';; "class": AppHealthMonitor { constructor() { this.projectRoot = path.resolve(__dirname,'..')';; this."healthReport": = { "timestamp": "new": Date().toISOString(,) "overall": 'unknown,','; "checks":  ,;'
 } this.projectRoot = path.resolve(__dirname,'..'); this.healthReport = {; "timestamp": new Date().toISOString(),"overall": 'unknown',"checks": {} },'
 } "async": runHealthChecks() { ';; "await": this.checkDependencies(); "await": this.checkBuildHealth(); "await": this.checkCodeQuality(); "await": this.checkPerformance(); "await": this.checkSecurity(); "await": this.checkAccessibility(); this.generateReport()} "async": checkDependencies() { ';; "try": { const packageJsonPath = path.join(this.projectRoot,'package.json')';;'
 
 }
 
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'))';;'
 
-const issues = []; try { const outdated = execSync('npm outdated --json',{ '; "encoding": 'utf8,','; "cwd": this.projectRoo,t "stdio": 'pipe','
 }) const outdatedDeps = JSON.parse(outdated); "if": (Object.keys(outdatedDeps).length > 0) { issues.push(`${Object.keys(outdatedDeps).length} outdated dependencies`,`}  ; await this.checkDependencies(); await this.checkBuildHealth(); await this.checkCodeQuality(); await this.checkPerformance(); await this.checkSecurity(); await this.checkAccessibility(); this.generateReport()} async checkDependencies() {'  try {' const packageJsonPath = path.join(this.projectRoot,'package.json');'
 
 }
 
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8')); ;'
 
-const issues = []; try {' const outdatedDeps = JSON.parse(outdated); if (Object.keys(outdatedDeps).length > 0) { issues.push(' `${Object.keys(outdatedDeps).length} outdated dependencies` )} } catch (error) {} try { execSync('npm audit --audit-level=moderate',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('Security vulnerabilities detected','}'; this.healthReport.checks."dependencies": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "totalDependencies": Object.keys(packageJson."dependencies": || ,{}).length + Object.keys(packageJson.devDependencies || {}).length } } catch (error) { this.healthReport.checks.dependencies = { "status": 'error,','; "issues": ['"Failed": to check dependencies'],'; "error": error."message": } },'
 } async checkBuildHealth() { ';; "try": { const buildDir = path.join(this.projectRoot,'.next')';;'
 
 }
 
-const buildExists = fs.existsSync(buildDir); "let": buildAge = null; "if": (buildExists) { const stats = fs.statSync(buildDir); "buildAge": = Date.now() - stats.mtime.getTime(
 } let buildSuccess = false; "try": { execSync('npm run build',{ '; "cwd": this.projectRoo,t "stdio": 'pipe,','; "timeout": "60000": }) buildSuccess = true} catch (error) ,'
 } this.healthReport.checks.build = { "status": "buildSuccess": ? 'healthy' : 'error,','; "buildExists": buildExist,s "buildAge": buildAg,e "buildSuccess": buildSucces,s "issues": "buildSuccess": ? [] : ['"Build": process failed']'},'
 } "catch": (error) { this.healthReport.checks.build = { "status": 'error,','; "issues": ['"Failed": to check build health'],'; "error": error."message": } },'
@@ -1327,44 +1075,35 @@ const buildExists = fs.existsSync(buildDir); "let": buildAge = null; "if": (buil
 }'; try { execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('ESLint errors detected','
 }';'
 
-const srcFiles = this.findSourceFiles(); "let": consoleLogCount = 0; "for": (const file of srcFiles) { const content = fs.readFileSync(file,'utf8')';;'
 
 }
 
-const matches = content.match(/console\.(log|warn|error|info)/g); "if": (matches) { consoleLogCount += matches.length} } if (consoleLogCount > 0) { issues.push(`${consoleLogCount} console statements found`,`} this.healthReport.checks.codeQuality = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "consoleLogCount": consoleLogCoun,t "totalSourceFiles": srcFiles."length": },'
 } catch (error) { this.healthReport.checks.codeQuality = { "status": 'error,','; "issues": ['"Failed": to check code quality'],'; "error": error."message": } },'
 } async checkPerformance() { ';; "try": { const issues = [];'
 
 }
 
-const buildDir = path.join(this.projectRoot,'.next')';; "if": (fs.existsSync(buildDir)) { const bundleSize = this.getDirectorySize(buildDir); "if": (bundleSize > 50 * 1024 * 1024) { issues.push('Large bundle size detected')},'
 }
 
-const publicDir = path.join(this.projectRoot,'public')';; "if": (fs.existsSync(publicDir)) { const imageSize = this.getImageDirectorySize(publicDir); "if": (imageSize > 10 * 1024 * 1024) { issues.push('Large images detected')},'
 } this.healthReport.checks."performance": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "bundleSize": fs.existsSync(buildDir) ? this.getDirectorySize(buildDir) : 0 "imageSize": fs.existsSync(publicDir) ? this.getImageDirectorySize(publicDir) : "0": },'
 } catch (error) { this.healthReport.checks.performance = { "status": 'error,','; "issues": ['"Failed": to check performance'],'; "error": error."message": } },'
 } async checkSecurity() { ';; "try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles(); "for": (const file of srcFiles) { const content = fs.readFileSync(file,'utf8')';; "if": (content.includes('password') || content.includes('secret') || content.includes('api_key')) {'; issues.push('"Potential": hardcoded secrets found')';; break} } try { execSync('npm audit --audit-level=high',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('High severity vulnerabilities detected','
 }'; this.healthReport.checks."security": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": "issues": },'
 } catch (error) { this.healthReport.checks.security = { "status": 'error,','; "issues": ['"Failed": to check security'],'; "error": error."message": } },'
 } async checkAccessibility() { ';; "try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles(); "let": accessibilityIssues = 0; "for": (const file of srcFiles) { const content = fs.readFileSync(file,'utf8')';; if (content.includes('<img') && !content.includes('alt=')) {'; accessibilityIssues++} if (content.includes('<button') && !content.includes('aria-label') && !content.includes('aria-labelledby')) {'; accessibilityIssues++} } "if": (accessibilityIssues > 0) { issues.push(`${accessibilityIssues} accessibility issues found`,`} this.healthReport.checks.accessibility = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "accessibilityIssues": "accessibilityIssues": },'
 } catch (error) { this.healthReport.checks.accessibility = { "status": 'error,','; "issues": ['"Failed": to check accessibility'],'; "error": error."message":,'
 }
 
-const buildDir = path.join(this.projectRoot,'.next');'
 
-const buildExists = fs.existsSync(buildDir); ; let buildAge = null; if (buildExists) {;
 
 }
 
-const stats = fs.statSync(buildDir); buildAge = Date.now() - stats.mtime.getTime()} ; let buildSuccess = false; try {' execSync('npm run build',{ "cwd": this.projectRoot "stdio": 'pipe',"timeout": 60000,'
 }); buildSuccess = true} catch (error) {; ; this.healthReport.checks.build = {; "status": buildSuccess ? 'healthy' : 'error',"buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed']},'
 } catch (error) {; this.healthReport.checks.build = {; "status": 'error',"issues": ['Failed to check build health'],"error": error.messag,'
 } this.healthReport.checks.build = {' "status": buildSuccess ? 'healthy' : 'error' "buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed'] ,'
@@ -1373,36 +1112,28 @@ const stats = fs.statSync(buildDir); buildAge = Date.now() - stats.mtime.getTime
 
 }
 
-const issues = []; try {' execSync('npx tsc --noEmit',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('TypeScript compilation errors','
 } try {' execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('ESLint errors detected','
 }
 
-const srcFiles = this.findSourceFiles(); let consoleLogCount = 0;  }
 ursor/integrate-build-improve-and-re-verify-8f7d,
 ursor/fix-syntax-push-and-merge-to-main-40de
 #!/usr/bin/"env": node,import fs from 'fs';; import path from 'path';; import { fileURLToPath } from 'url';; import { execSync } from 'child_process';;'
 
-const __dirname = path.dirname(__filename); ';; "class": AppHealthMonitor { constructor() { this.projectRoot = path.resolve(__dirname,'..')';; this."healthReport": = { "timestamp": "new": Date().toISOString(,) "overall": 'unknown,','; "checks":  ,;'
 } this.projectRoot = path.resolve(__dirname,'..'); this.healthReport = {; "timestamp": new Date().toISOString(),"overall": 'unknown',"checks": {} },'
 } "async": runHealthChecks() { ';; "await": this.checkDependencies(); "await": this.checkBuildHealth(); "await": this.checkCodeQuality(); "await": this.checkPerformance(); "await": this.checkSecurity(); "await": this.checkAccessibility(); this.generateReport()} "async": checkDependencies() { ';; "try": { const packageJsonPath = path.join(this.projectRoot,'package.json')';;'
 
 }
 
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'))';;'
 
-const issues = []; try { const outdated = execSync('npm outdated --json',{ '; "encoding": 'utf8,','; "cwd": this.projectRoo,t "stdio": 'pipe','
 }) const outdatedDeps = JSON.parse(outdated); "if": (Object.keys(outdatedDeps).length > 0) { issues.push(`${Object.keys(outdatedDeps).length} outdated dependencies`,`}  ; await this.checkDependencies(); await this.checkBuildHealth(); await this.checkCodeQuality(); await this.checkPerformance(); await this.checkSecurity(); await this.checkAccessibility(); this.generateReport()} async checkDependencies() {'  try {' const packageJsonPath = path.join(this.projectRoot,'package.json');'
 
 }
 
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8')); ;'
 
-const issues = []; try {' const outdatedDeps = JSON.parse(outdated); if (Object.keys(outdatedDeps).length > 0) { issues.push(' `${Object.keys(outdatedDeps).length} outdated dependencies` )} } catch (error) {} try { execSync('npm audit --audit-level=moderate',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('Security vulnerabilities detected','}'; this.healthReport.checks."dependencies": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "totalDependencies": Object.keys(packageJson."dependencies": || ,{}).length + Object.keys(packageJson.devDependencies || {}).length } } catch (error) { this.healthReport.checks.dependencies = { "status": 'error,','; "issues": ['"Failed": to check dependencies'],'; "error": error."message": } },'
 } async checkBuildHealth() { ';; "try": { const buildDir = path.join(this.projectRoot,'.next')';;'
 
 }
 
-const buildExists = fs.existsSync(buildDir); "let": buildAge = null; "if": (buildExists) { const stats = fs.statSync(buildDir); "buildAge": = Date.now() - stats.mtime.getTime(
 } let buildSuccess = false; "try": { execSync('npm run build',{ '; "cwd": this.projectRoo,t "stdio": 'pipe,','; "timeout": "60000": }) buildSuccess = true} catch (error) ,'
 } this.healthReport.checks.build = { "status": "buildSuccess": ? 'healthy' : 'error,','; "buildExists": buildExist,s "buildAge": buildAg,e "buildSuccess": buildSucces,s "issues": "buildSuccess": ? [] : ['"Build": process failed']'},'
 } "catch": (error) { this.healthReport.checks.build = { "status": 'error,','; "issues": ['"Failed": to check build health'],'; "error": error."message": } },'
@@ -1410,44 +1141,35 @@ const buildExists = fs.existsSync(buildDir); "let": buildAge = null; "if": (buil
 }'; try { execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('ESLint errors detected','
 }';'
 
-const srcFiles = this.findSourceFiles(); "let": consoleLogCount = 0; "for": (const file of srcFiles) { const content = fs.readFileSync(file,'utf8')';;'
 
 }
 
-const matches = content.match(/console\.(log|warn|error|info)/g); "if": (matches) { consoleLogCount += matches.length} } if (consoleLogCount > 0) { issues.push(`${consoleLogCount} console statements found`,`} this.healthReport.checks.codeQuality = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "consoleLogCount": consoleLogCoun,t "totalSourceFiles": srcFiles."length": },'
 } catch (error) { this.healthReport.checks.codeQuality = { "status": 'error,','; "issues": ['"Failed": to check code quality'],'; "error": error."message": } },'
 } async checkPerformance() { ';; "try": { const issues = [];'
 
 }
 
-const buildDir = path.join(this.projectRoot,'.next')';; "if": (fs.existsSync(buildDir)) { const bundleSize = this.getDirectorySize(buildDir); "if": (bundleSize > 50 * 1024 * 1024) { issues.push('Large bundle size detected')},'
 }
 
-const publicDir = path.join(this.projectRoot,'public')';; "if": (fs.existsSync(publicDir)) { const imageSize = this.getImageDirectorySize(publicDir); "if": (imageSize > 10 * 1024 * 1024) { issues.push('Large images detected')},'
 } this.healthReport.checks."performance": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "bundleSize": fs.existsSync(buildDir) ? this.getDirectorySize(buildDir) : 0 "imageSize": fs.existsSync(publicDir) ? this.getImageDirectorySize(publicDir) : "0": },'
 } catch (error) { this.healthReport.checks.performance = { "status": 'error,','; "issues": ['"Failed": to check performance'],'; "error": error."message": } },'
 } async checkSecurity() { ';; "try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles(); "for": (const file of srcFiles) { const content = fs.readFileSync(file,'utf8')';; "if": (content.includes('password') || content.includes('secret') || content.includes('api_key')) {'; issues.push('"Potential": hardcoded secrets found')';; break} } try { execSync('npm audit --audit-level=high',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('High severity vulnerabilities detected','
 }'; this.healthReport.checks."security": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": "issues": },'
 } catch (error) { this.healthReport.checks.security = { "status": 'error,','; "issues": ['"Failed": to check security'],'; "error": error."message": } },'
 } async checkAccessibility() { ';; "try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles(); "let": accessibilityIssues = 0; "for": (const file of srcFiles) { const content = fs.readFileSync(file,'utf8')';; if (content.includes('<img') && !content.includes('alt=')) {'; accessibilityIssues++} if (content.includes('<button') && !content.includes('aria-label') && !content.includes('aria-labelledby')) {'; accessibilityIssues++} } "if": (accessibilityIssues > 0) { issues.push(`${accessibilityIssues} accessibility issues found`,`} this.healthReport.checks.accessibility = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "accessibilityIssues": "accessibilityIssues": },'
 } catch (error) { this.healthReport.checks.accessibility = { "status": 'error,','; "issues": ['"Failed": to check accessibility'],'; "error": error."message":,'
 }
 
-const buildDir = path.join(this.projectRoot,'.next');'
 
-const buildExists = fs.existsSync(buildDir); ; let buildAge = null; if (buildExists) {;
 
 }
 
-const stats = fs.statSync(buildDir); buildAge = Date.now() - stats.mtime.getTime()} ; let buildSuccess = false; try {' execSync('npm run build',{ "cwd": this.projectRoot "stdio": 'pipe',"timeout": 60000,'
 }); buildSuccess = true} catch (error) {; ; this.healthReport.checks.build = {; "status": buildSuccess ? 'healthy' : 'error',"buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed']},'
 } catch (error) {; this.healthReport.checks.build = {; "status": 'error',"issues": ['Failed to check build health'],"error": error.messag,'
 } this.healthReport.checks.build = {' "status": buildSuccess ? 'healthy' : 'error' "buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed'] ,'
@@ -1456,40 +1178,30 @@ const stats = fs.statSync(buildDir); buildAge = Date.now() - stats.mtime.getTime
 
 }
 
-const issues = []; try {' execSync('npx tsc --noEmit',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('TypeScript compilation errors','
 } try {' execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('ESLint errors detected','
 }
 
-const srcFiles = this.findSourceFiles(); let consoleLogCount = 0; for (const file of srcFiles) {' const srcFiles = this.findSourceFiles(); let consoleLogCount = 0; for (const file of srcFiles) {;'
 
 }
 
-const content = fs.readFileSync(file,'utf8');'
 
-const matches = content.match(/console\.(log|warn|error|info)/g); if (matches) {; consoleLogCount += matches.length} }
 #!/usr/bin/"env": node,import fs from 'fs';; import path from 'path';; import { fileURLToPath } from 'url';; import { execSync } from 'child_process';;'
 
-const __dirname = path.dirname(__filename); ';; "class": AppHealthMonitor { constructor() { this.projectRoot = path.resolve(__dirname,'..')';; this."healthReport": = { "timestamp": "new": Date().toISOString(,) "overall": 'unknown,','; "checks":  ,;'
 } this.projectRoot = path.resolve(__dirname,'..'); this.healthReport = {; "timestamp": new Date().toISOString(),"overall": 'unknown',"checks": {} },'
 } "async": runHealthChecks() { ';; "await": this.checkDependencies(); "await": this.checkBuildHealth(); "await": this.checkCodeQuality(); "await": this.checkPerformance(); "await": this.checkSecurity(); "await": this.checkAccessibility(); this.generateReport()} "async": checkDependencies() { ';; "try": { const packageJsonPath = path.join(this.projectRoot,'package.json')';;'
 
 }
 
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'))';;'
 
-const issues = []; try { const outdated = execSync('npm outdated --json',{ '; "encoding": 'utf8,','; "cwd": this.projectRoo,t "stdio": 'pipe','
 }) const outdatedDeps = JSON.parse(outdated); "if": (Object.keys(outdatedDeps).length > 0) { issues.push(`${Object.keys(outdatedDeps).length} outdated dependencies`,`}  ; await this.checkDependencies(); await this.checkBuildHealth(); await this.checkCodeQuality(); await this.checkPerformance(); await this.checkSecurity(); await this.checkAccessibility(); this.generateReport()} async checkDependencies() {'  try {' const packageJsonPath = path.join(this.projectRoot,'package.json');'
 
 }
 
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8')); ;'
 
-const issues = []; try {' const outdatedDeps = JSON.parse(outdated); if (Object.keys(outdatedDeps).length > 0) { issues.push(' `${Object.keys(outdatedDeps).length} outdated dependencies` )} } catch (error) {} try { execSync('npm audit --audit-level=moderate',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('Security vulnerabilities detected','}'; this.healthReport.checks."dependencies": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "totalDependencies": Object.keys(packageJson."dependencies": || ,{}).length + Object.keys(packageJson.devDependencies || {}).length } } catch (error) { this.healthReport.checks.dependencies = { "status": 'error,','; "issues": ['"Failed": to check dependencies'],'; "error": error."message": } },'
 } async checkBuildHealth() { ';; "try": { const buildDir = path.join(this.projectRoot,'.next')';;'
 
 }
 
-const buildExists = fs.existsSync(buildDir); "let": buildAge = null; "if": (buildExists) { const stats = fs.statSync(buildDir); "buildAge": = Date.now() - stats.mtime.getTime(
 } let buildSuccess = false; "try": { execSync('npm run build',{ '; "cwd": this.projectRoo,t "stdio": 'pipe,','; "timeout": "60000": }) buildSuccess = true} catch (error) ,'
 } this.healthReport.checks.build = { "status": "buildSuccess": ? 'healthy' : 'error,','; "buildExists": buildExist,s "buildAge": buildAg,e "buildSuccess": buildSucces,s "issues": "buildSuccess": ? [] : ['"Build": process failed']'},'
 } "catch": (error) { this.healthReport.checks.build = { "status": 'error,','; "issues": ['"Failed": to check build health'],'; "error": error."message": } },'
@@ -1497,44 +1209,35 @@ const buildExists = fs.existsSync(buildDir); "let": buildAge = null; "if": (buil
 }'; try { execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('ESLint errors detected','
 }';'
 
-const srcFiles = this.findSourceFiles(); "let": consoleLogCount = 0; "for": (const file of srcFiles) { const content = fs.readFileSync(file,'utf8')';;'
 
 }
 
-const matches = content.match(/console\.(log|warn|error|info)/g); "if": (matches) { consoleLogCount += matches.length} } if (consoleLogCount > 0) { issues.push(`${consoleLogCount} console statements found`,`} this.healthReport.checks.codeQuality = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "consoleLogCount": consoleLogCoun,t "totalSourceFiles": srcFiles."length": },'
 } catch (error) { this.healthReport.checks.codeQuality = { "status": 'error,','; "issues": ['"Failed": to check code quality'],'; "error": error."message": } },'
 } async checkPerformance() { ';; "try": { const issues = [];'
 
 }
 
-const buildDir = path.join(this.projectRoot,'.next')';; "if": (fs.existsSync(buildDir)) { const bundleSize = this.getDirectorySize(buildDir); "if": (bundleSize > 50 * 1024 * 1024) { issues.push('Large bundle size detected')},'
 }
 
-const publicDir = path.join(this.projectRoot,'public')';; "if": (fs.existsSync(publicDir)) { const imageSize = this.getImageDirectorySize(publicDir); "if": (imageSize > 10 * 1024 * 1024) { issues.push('Large images detected')},'
 } this.healthReport.checks."performance": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "bundleSize": fs.existsSync(buildDir) ? this.getDirectorySize(buildDir) : 0 "imageSize": fs.existsSync(publicDir) ? this.getImageDirectorySize(publicDir) : "0": },'
 } catch (error) { this.healthReport.checks.performance = { "status": 'error,','; "issues": ['"Failed": to check performance'],'; "error": error."message": } },'
 } async checkSecurity() { ';; "try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles(); "for": (const file of srcFiles) { const content = fs.readFileSync(file,'utf8')';; "if": (content.includes('password') || content.includes('secret') || content.includes('api_key')) {'; issues.push('"Potential": hardcoded secrets found')';; break} } try { execSync('npm audit --audit-level=high',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('High severity vulnerabilities detected','
 }'; this.healthReport.checks."security": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": "issues": },'
 } catch (error) { this.healthReport.checks.security = { "status": 'error,','; "issues": ['"Failed": to check security'],'; "error": error."message": } },'
 } async checkAccessibility() { ';; "try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles(); "let": accessibilityIssues = 0; "for": (const file of srcFiles) { const content = fs.readFileSync(file,'utf8')';; if (content.includes('<img') && !content.includes('alt=')) {'; accessibilityIssues++} if (content.includes('<button') && !content.includes('aria-label') && !content.includes('aria-labelledby')) {'; accessibilityIssues++} } "if": (accessibilityIssues > 0) { issues.push(`${accessibilityIssues} accessibility issues found`,`} this.healthReport.checks.accessibility = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "accessibilityIssues": "accessibilityIssues": },'
 } catch (error) { this.healthReport.checks.accessibility = { "status": 'error,','; "issues": ['"Failed": to check accessibility'],'; "error": error."message":,'
 }
 
-const buildDir = path.join(this.projectRoot,'.next');'
 
-const buildExists = fs.existsSync(buildDir); ; let buildAge = null; if (buildExists) {;
 
 }
 
-const stats = fs.statSync(buildDir); buildAge = Date.now() - stats.mtime.getTime()} ; let buildSuccess = false; try {' execSync('npm run build',{ "cwd": this.projectRoot "stdio": 'pipe',"timeout": 60000,'
 }); buildSuccess = true} catch (error) {; ; this.healthReport.checks.build = {; "status": buildSuccess ? 'healthy' : 'error',"buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed']},'
 } catch (error) {; this.healthReport.checks.build = {; "status": 'error',"issues": ['Failed to check build health'],"error": error.messag,'
 } this.healthReport.checks.build = {' "status": buildSuccess ? 'healthy' : 'error' "buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed'] ,'
@@ -1543,36 +1246,28 @@ const stats = fs.statSync(buildDir); buildAge = Date.now() - stats.mtime.getTime
 
 }
 
-const issues = []; try {' execSync('npx tsc --noEmit',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('TypeScript compilation errors','
 } try {' execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('ESLint errors detected','
 }
 
-const srcFiles = this.findSourceFiles(); let consoleLogCount = 0;  }
 origin/cursor/integrate-build-improve-and-re-verify-c7b5,
 ursor/integrate-build-improve-and-re-verify-8f7d
 #!/usr/bin/"env": node,import fs from 'fs';; import path from 'path';; import { fileURLToPath } from 'url';; import { execSync } from 'child_process';;'
 
-const __dirname = path.dirname(__filename); ';; "class": AppHealthMonitor { constructor() { this.projectRoot = path.resolve(__dirname,'..')';; this."healthReport": = { "timestamp": "new": Date().toISOString(,) "overall": 'unknown,','; "checks":  ,;'
 } this.projectRoot = path.resolve(__dirname,'..'); this.healthReport = {; "timestamp": new Date().toISOString(),"overall": 'unknown',"checks": {} },'
 } "async": runHealthChecks() { ';; "await": this.checkDependencies(); "await": this.checkBuildHealth(); "await": this.checkCodeQuality(); "await": this.checkPerformance(); "await": this.checkSecurity(); "await": this.checkAccessibility(); this.generateReport()} "async": checkDependencies() { ';; "try": { const packageJsonPath = path.join(this.projectRoot,'package.json')';;'
 
 }
 
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'))';;'
 
-const issues = []; try { const outdated = execSync('npm outdated --json',{ '; "encoding": 'utf8,','; "cwd": this.projectRoo,t "stdio": 'pipe','
 }) const outdatedDeps = JSON.parse(outdated); "if": (Object.keys(outdatedDeps).length > 0) { issues.push(`${Object.keys(outdatedDeps).length} outdated dependencies`,`}  ; await this.checkDependencies(); await this.checkBuildHealth(); await this.checkCodeQuality(); await this.checkPerformance(); await this.checkSecurity(); await this.checkAccessibility(); this.generateReport()} async checkDependencies() {'  try {' const packageJsonPath = path.join(this.projectRoot,'package.json');'
 
 }
 
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8')); ;'
 
-const issues = []; try {' const outdatedDeps = JSON.parse(outdated); if (Object.keys(outdatedDeps).length > 0) { issues.push(' `${Object.keys(outdatedDeps).length} outdated dependencies` )} } catch (error) {} try { execSync('npm audit --audit-level=moderate',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('Security vulnerabilities detected','}'; this.healthReport.checks."dependencies": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "totalDependencies": Object.keys(packageJson."dependencies": || ,{}).length + Object.keys(packageJson.devDependencies || {}).length } } catch (error) { this.healthReport.checks.dependencies = { "status": 'error,','; "issues": ['"Failed": to check dependencies'],'; "error": error."message": } },'
 } async checkBuildHealth() { ';; "try": { const buildDir = path.join(this.projectRoot,'.next')';;'
 
 }
 
-const buildExists = fs.existsSync(buildDir); "let": buildAge = null; "if": (buildExists) { const stats = fs.statSync(buildDir); "buildAge": = Date.now() - stats.mtime.getTime(
 } let buildSuccess = false; "try": { execSync('npm run build',{ '; "cwd": this.projectRoo,t "stdio": 'pipe,','; "timeout": "60000": }) buildSuccess = true} catch (error) ,'
 } this.healthReport.checks.build = { "status": "buildSuccess": ? 'healthy' : 'error,','; "buildExists": buildExist,s "buildAge": buildAg,e "buildSuccess": buildSucces,s "issues": "buildSuccess": ? [] : ['"Build": process failed']'},'
 } "catch": (error) { this.healthReport.checks.build = { "status": 'error,','; "issues": ['"Failed": to check build health'],'; "error": error."message": } },'
@@ -1580,44 +1275,35 @@ const buildExists = fs.existsSync(buildDir); "let": buildAge = null; "if": (buil
 }'; try { execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('ESLint errors detected','
 }';'
 
-const srcFiles = this.findSourceFiles(); "let": consoleLogCount = 0; "for": (const file of srcFiles) { const content = fs.readFileSync(file,'utf8')';;'
 
 }
 
-const matches = content.match(/console\.(log|warn|error|info)/g); "if": (matches) { consoleLogCount += matches.length} } if (consoleLogCount > 0) { issues.push(`${consoleLogCount} console statements found`,`} this.healthReport.checks.codeQuality = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "consoleLogCount": consoleLogCoun,t "totalSourceFiles": srcFiles."length": },'
 } catch (error) { this.healthReport.checks.codeQuality = { "status": 'error,','; "issues": ['"Failed": to check code quality'],'; "error": error."message": } },'
 } async checkPerformance() { ';; "try": { const issues = [];'
 
 }
 
-const buildDir = path.join(this.projectRoot,'.next')';; "if": (fs.existsSync(buildDir)) { const bundleSize = this.getDirectorySize(buildDir); "if": (bundleSize > 50 * 1024 * 1024) { issues.push('Large bundle size detected')},'
 }
 
-const publicDir = path.join(this.projectRoot,'public')';; "if": (fs.existsSync(publicDir)) { const imageSize = this.getImageDirectorySize(publicDir); "if": (imageSize > 10 * 1024 * 1024) { issues.push('Large images detected')},'
 } this.healthReport.checks."performance": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "bundleSize": fs.existsSync(buildDir) ? this.getDirectorySize(buildDir) : 0 "imageSize": fs.existsSync(publicDir) ? this.getImageDirectorySize(publicDir) : "0": },'
 } catch (error) { this.healthReport.checks.performance = { "status": 'error,','; "issues": ['"Failed": to check performance'],'; "error": error."message": } },'
 } async checkSecurity() { ';; "try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles(); "for": (const file of srcFiles) { const content = fs.readFileSync(file,'utf8')';; "if": (content.includes('password') || content.includes('secret') || content.includes('api_key')) {'; issues.push('"Potential": hardcoded secrets found')';; break} } try { execSync('npm audit --audit-level=high',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('High severity vulnerabilities detected','
 }'; this.healthReport.checks."security": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": "issues": },'
 } catch (error) { this.healthReport.checks.security = { "status": 'error,','; "issues": ['"Failed": to check security'],'; "error": error."message": } },'
 } async checkAccessibility() { ';; "try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles(); "let": accessibilityIssues = 0; "for": (const file of srcFiles) { const content = fs.readFileSync(file,'utf8')';; if (content.includes('<img') && !content.includes('alt=')) {'; accessibilityIssues++} if (content.includes('<button') && !content.includes('aria-label') && !content.includes('aria-labelledby')) {'; accessibilityIssues++} } "if": (accessibilityIssues > 0) { issues.push(`${accessibilityIssues} accessibility issues found`,`} this.healthReport.checks.accessibility = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "accessibilityIssues": "accessibilityIssues": },'
 } catch (error) { this.healthReport.checks.accessibility = { "status": 'error,','; "issues": ['"Failed": to check accessibility'],'; "error": error."message":,'
 }
 
-const buildDir = path.join(this.projectRoot,'.next');'
 
-const buildExists = fs.existsSync(buildDir); ; let buildAge = null; if (buildExists) {;
 
 }
 
-const stats = fs.statSync(buildDir); buildAge = Date.now() - stats.mtime.getTime()} ; let buildSuccess = false; try {' execSync('npm run build',{ "cwd": this.projectRoot "stdio": 'pipe',"timeout": 60000,'
 }); buildSuccess = true} catch (error) {; ; this.healthReport.checks.build = {; "status": buildSuccess ? 'healthy' : 'error',"buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed']},'
 } catch (error) {; this.healthReport.checks.build = {; "status": 'error',"issues": ['Failed to check build health'],"error": error.messag,'
 } this.healthReport.checks.build = {' "status": buildSuccess ? 'healthy' : 'error' "buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed'] ,'
@@ -1626,35 +1312,27 @@ const stats = fs.statSync(buildDir); buildAge = Date.now() - stats.mtime.getTime
 
 }
 
-const issues = []; try {' execSync('npx tsc --noEmit',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('TypeScript compilation errors','
 } try {' execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('ESLint errors detected','
 }
 
-const srcFiles = this.findSourceFiles(); let consoleLogCount = 0;  }
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 #!/usr/bin/"env": node,import fs from 'fs';; import path from 'path';; import { fileURLToPath } from 'url';; import { execSync } from 'child_process';;'
 
-const __dirname = path.dirname(__filename); ';; "class": AppHealthMonitor { constructor() { this.projectRoot = path.resolve(__dirname,'..')';; this."healthReport": = { "timestamp": "new": Date().toISOString(,) "overall": 'unknown,','; "checks":  ,;'
 } this.projectRoot = path.resolve(__dirname,'..'); this.healthReport = {; "timestamp": new Date().toISOString(),"overall": 'unknown',"checks": {} },'
 } "async": runHealthChecks() { ';; "await": this.checkDependencies(); "await": this.checkBuildHealth(); "await": this.checkCodeQuality(); "await": this.checkPerformance(); "await": this.checkSecurity(); "await": this.checkAccessibility(); this.generateReport()} "async": checkDependencies() { ';; "try": { const packageJsonPath = path.join(this.projectRoot,'package.json')';;'
 
 }
 
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'))';;'
 
-const issues = []; try { const outdated = execSync('npm outdated --json',{ '; "encoding": 'utf8,','; "cwd": this.projectRoo,t "stdio": 'pipe','
 }) const outdatedDeps = JSON.parse(outdated); "if": (Object.keys(outdatedDeps).length > 0) { issues.push(`${Object.keys(outdatedDeps).length} outdated dependencies`,`}  ; await this.checkDependencies(); await this.checkBuildHealth(); await this.checkCodeQuality(); await this.checkPerformance(); await this.checkSecurity(); await this.checkAccessibility(); this.generateReport()} async checkDependencies() {'  try {' const packageJsonPath = path.join(this.projectRoot,'package.json');'
 
 }
 
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8')); ;'
 
-const issues = []; try {' const outdatedDeps = JSON.parse(outdated); if (Object.keys(outdatedDeps).length > 0) { issues.push(' `${Object.keys(outdatedDeps).length} outdated dependencies` )} } catch (error) {} try { execSync('npm audit --audit-level=moderate',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('Security vulnerabilities detected','}'; this.healthReport.checks."dependencies": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "totalDependencies": Object.keys(packageJson."dependencies": || ,{}).length + Object.keys(packageJson.devDependencies || {}).length } } catch (error) { this.healthReport.checks.dependencies = { "status": 'error,','; "issues": ['"Failed": to check dependencies'],'; "error": error."message": } },'
 } async checkBuildHealth() { ';; "try": { const buildDir = path.join(this.projectRoot,'.next')';;'
 
 }
 
-const buildExists = fs.existsSync(buildDir); "let": buildAge = null; "if": (buildExists) { const stats = fs.statSync(buildDir); "buildAge": = Date.now() - stats.mtime.getTime(
 } let buildSuccess = false; "try": { execSync('npm run build',{ '; "cwd": this.projectRoo,t "stdio": 'pipe,','; "timeout": "60000": }) buildSuccess = true} catch (error) ,'
 } this.healthReport.checks.build = { "status": "buildSuccess": ? 'healthy' : 'error,','; "buildExists": buildExist,s "buildAge": buildAg,e "buildSuccess": buildSucces,s "issues": "buildSuccess": ? [] : ['"Build": process failed']'},'
 } "catch": (error) { this.healthReport.checks.build = { "status": 'error,','; "issues": ['"Failed": to check build health'],'; "error": error."message": } },'
@@ -1662,44 +1340,35 @@ const buildExists = fs.existsSync(buildDir); "let": buildAge = null; "if": (buil
 }'; try { execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('ESLint errors detected','
 }';'
 
-const srcFiles = this.findSourceFiles(); "let": consoleLogCount = 0; "for": (const file of srcFiles) { const content = fs.readFileSync(file,'utf8')';;'
 
 }
 
-const matches = content.match(/console\.(log|warn|error|info)/g); "if": (matches) { consoleLogCount += matches.length} } if (consoleLogCount > 0) { issues.push(`${consoleLogCount} console statements found`,`} this.healthReport.checks.codeQuality = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "consoleLogCount": consoleLogCoun,t "totalSourceFiles": srcFiles."length": },'
 } catch (error) { this.healthReport.checks.codeQuality = { "status": 'error,','; "issues": ['"Failed": to check code quality'],'; "error": error."message": } },'
 } async checkPerformance() { ';; "try": { const issues = [];'
 
 }
 
-const buildDir = path.join(this.projectRoot,'.next')';; "if": (fs.existsSync(buildDir)) { const bundleSize = this.getDirectorySize(buildDir); "if": (bundleSize > 50 * 1024 * 1024) { issues.push('Large bundle size detected')},'
 }
 
-const publicDir = path.join(this.projectRoot,'public')';; "if": (fs.existsSync(publicDir)) { const imageSize = this.getImageDirectorySize(publicDir); "if": (imageSize > 10 * 1024 * 1024) { issues.push('Large images detected')},'
 } this.healthReport.checks."performance": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "bundleSize": fs.existsSync(buildDir) ? this.getDirectorySize(buildDir) : 0 "imageSize": fs.existsSync(publicDir) ? this.getImageDirectorySize(publicDir) : "0": },'
 } catch (error) { this.healthReport.checks.performance = { "status": 'error,','; "issues": ['"Failed": to check performance'],'; "error": error."message": } },'
 } async checkSecurity() { ';; "try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles(); "for": (const file of srcFiles) { const content = fs.readFileSync(file,'utf8')';; "if": (content.includes('password') || content.includes('secret') || content.includes('api_key')) {'; issues.push('"Potential": hardcoded secrets found')';; break} } try { execSync('npm audit --audit-level=high',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('High severity vulnerabilities detected','
 }'; this.healthReport.checks."security": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": "issues": },'
 } catch (error) { this.healthReport.checks.security = { "status": 'error,','; "issues": ['"Failed": to check security'],'; "error": error."message": } },'
 } async checkAccessibility() { ';; "try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles(); "let": accessibilityIssues = 0; "for": (const file of srcFiles) { const content = fs.readFileSync(file,'utf8')';; if (content.includes('<img') && !content.includes('alt=')) {'; accessibilityIssues++} if (content.includes('<button') && !content.includes('aria-label') && !content.includes('aria-labelledby')) {'; accessibilityIssues++} } "if": (accessibilityIssues > 0) { issues.push(`${accessibilityIssues} accessibility issues found`,`} this.healthReport.checks.accessibility = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "accessibilityIssues": "accessibilityIssues": },'
 } catch (error) { this.healthReport.checks.accessibility = { "status": 'error,','; "issues": ['"Failed": to check accessibility'],'; "error": error."message":,'
 }
 
-const buildDir = path.join(this.projectRoot,'.next');'
 
-const buildExists = fs.existsSync(buildDir); ; let buildAge = null; if (buildExists) {;
 
 }
 
-const stats = fs.statSync(buildDir); buildAge = Date.now() - stats.mtime.getTime()} ; let buildSuccess = false; try {' execSync('npm run build',{ "cwd": this.projectRoot "stdio": 'pipe',"timeout": 60000,'
 }); buildSuccess = true} catch (error) {; ; this.healthReport.checks.build = {; "status": buildSuccess ? 'healthy' : 'error',"buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed']},'
 } catch (error) {; this.healthReport.checks.build = {; "status": 'error',"issues": ['Failed to check build health'],"error": error.messag,'
 } this.healthReport.checks.build = {' "status": buildSuccess ? 'healthy' : 'error' "buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed'] ,'
@@ -1708,40 +1377,30 @@ const stats = fs.statSync(buildDir); buildAge = Date.now() - stats.mtime.getTime
 
 }
 
-const issues = []; try {' execSync('npx tsc --noEmit',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('TypeScript compilation errors','
 } try {' execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('ESLint errors detected','
 }
 
-const srcFiles = this.findSourceFiles(); let consoleLogCount = 0; for (const file of srcFiles) {' const srcFiles = this.findSourceFiles(); let consoleLogCount = 0; for (const file of srcFiles) {;'
 
 }
 
-const content = fs.readFileSync(file,'utf8');'
 
-const matches = content.match(/console\.(log|warn|error|info)/g); if (matches) {; consoleLogCount += matches.length} }
 #!/usr/bin/"env": node,import fs from 'fs';; import path from 'path';; import { fileURLToPath } from 'url';; import { execSync } from 'child_process';;'
 
-const __dirname = path.dirname(__filename); ';; "class": AppHealthMonitor { constructor() { this.projectRoot = path.resolve(__dirname,'..')';; this."healthReport": = { "timestamp": "new": Date().toISOString(,) "overall": 'unknown,','; "checks":  ,;'
 } this.projectRoot = path.resolve(__dirname,'..'); this.healthReport = {; "timestamp": new Date().toISOString(),"overall": 'unknown',"checks": {} },'
 } "async": runHealthChecks() { ';; "await": this.checkDependencies(); "await": this.checkBuildHealth(); "await": this.checkCodeQuality(); "await": this.checkPerformance(); "await": this.checkSecurity(); "await": this.checkAccessibility(); this.generateReport()} "async": checkDependencies() { ';; "try": { const packageJsonPath = path.join(this.projectRoot,'package.json')';;'
 
 }
 
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'))';;'
 
-const issues = []; try { const outdated = execSync('npm outdated --json',{ '; "encoding": 'utf8,','; "cwd": this.projectRoo,t "stdio": 'pipe','
 }) const outdatedDeps = JSON.parse(outdated); "if": (Object.keys(outdatedDeps).length > 0) { issues.push(`${Object.keys(outdatedDeps).length} outdated dependencies`,`}  ; await this.checkDependencies(); await this.checkBuildHealth(); await this.checkCodeQuality(); await this.checkPerformance(); await this.checkSecurity(); await this.checkAccessibility(); this.generateReport()} async checkDependencies() {'  try {' const packageJsonPath = path.join(this.projectRoot,'package.json');'
 
 }
 
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8')); ;'
 
-const issues = []; try {' const outdatedDeps = JSON.parse(outdated); if (Object.keys(outdatedDeps).length > 0) { issues.push(' `${Object.keys(outdatedDeps).length} outdated dependencies` )} } catch (error) {} try { execSync('npm audit --audit-level=moderate',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('Security vulnerabilities detected','}'; this.healthReport.checks."dependencies": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "totalDependencies": Object.keys(packageJson."dependencies": || ,{}).length + Object.keys(packageJson.devDependencies || {}).length } } catch (error) { this.healthReport.checks.dependencies = { "status": 'error,','; "issues": ['"Failed": to check dependencies'],'; "error": error."message": } },'
 } async checkBuildHealth() { ';; "try": { const buildDir = path.join(this.projectRoot,'.next')';;'
 
 }
 
-const buildExists = fs.existsSync(buildDir); "let": buildAge = null; "if": (buildExists) { const stats = fs.statSync(buildDir); "buildAge": = Date.now() - stats.mtime.getTime(
 } let buildSuccess = false; "try": { execSync('npm run build',{ '; "cwd": this.projectRoo,t "stdio": 'pipe,','; "timeout": "60000": }) buildSuccess = true} catch (error) ,'
 } this.healthReport.checks.build = { "status": "buildSuccess": ? 'healthy' : 'error,','; "buildExists": buildExist,s "buildAge": buildAg,e "buildSuccess": buildSucces,s "issues": "buildSuccess": ? [] : ['"Build": process failed']'},'
 } "catch": (error) { this.healthReport.checks.build = { "status": 'error,','; "issues": ['"Failed": to check build health'],'; "error": error."message": } },'
@@ -1749,44 +1408,35 @@ const buildExists = fs.existsSync(buildDir); "let": buildAge = null; "if": (buil
 }'; try { execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('ESLint errors detected','
 }';'
 
-const srcFiles = this.findSourceFiles(); "let": consoleLogCount = 0; "for": (const file of srcFiles) { const content = fs.readFileSync(file,'utf8')';;'
 
 }
 
-const matches = content.match(/console\.(log|warn|error|info)/g); "if": (matches) { consoleLogCount += matches.length} } if (consoleLogCount > 0) { issues.push(`${consoleLogCount} console statements found`,`} this.healthReport.checks.codeQuality = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "consoleLogCount": consoleLogCoun,t "totalSourceFiles": srcFiles."length": },'
 } catch (error) { this.healthReport.checks.codeQuality = { "status": 'error,','; "issues": ['"Failed": to check code quality'],'; "error": error."message": } },'
 } async checkPerformance() { ';; "try": { const issues = [];'
 
 }
 
-const buildDir = path.join(this.projectRoot,'.next')';; "if": (fs.existsSync(buildDir)) { const bundleSize = this.getDirectorySize(buildDir); "if": (bundleSize > 50 * 1024 * 1024) { issues.push('Large bundle size detected')},'
 }
 
-const publicDir = path.join(this.projectRoot,'public')';; "if": (fs.existsSync(publicDir)) { const imageSize = this.getImageDirectorySize(publicDir); "if": (imageSize > 10 * 1024 * 1024) { issues.push('Large images detected')},'
 } this.healthReport.checks."performance": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "bundleSize": fs.existsSync(buildDir) ? this.getDirectorySize(buildDir) : 0 "imageSize": fs.existsSync(publicDir) ? this.getImageDirectorySize(publicDir) : "0": },'
 } catch (error) { this.healthReport.checks.performance = { "status": 'error,','; "issues": ['"Failed": to check performance'],'; "error": error."message": } },'
 } async checkSecurity() { ';; "try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles(); "for": (const file of srcFiles) { const content = fs.readFileSync(file,'utf8')';; "if": (content.includes('password') || content.includes('secret') || content.includes('api_key')) {'; issues.push('"Potential": hardcoded secrets found')';; break} } try { execSync('npm audit --audit-level=high',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('High severity vulnerabilities detected','
 }'; this.healthReport.checks."security": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": "issues": },'
 } catch (error) { this.healthReport.checks.security = { "status": 'error,','; "issues": ['"Failed": to check security'],'; "error": error."message": } },'
 } async checkAccessibility() { ';; "try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles(); "let": accessibilityIssues = 0; "for": (const file of srcFiles) { const content = fs.readFileSync(file,'utf8')';; if (content.includes('<img') && !content.includes('alt=')) {'; accessibilityIssues++} if (content.includes('<button') && !content.includes('aria-label') && !content.includes('aria-labelledby')) {'; accessibilityIssues++} } "if": (accessibilityIssues > 0) { issues.push(`${accessibilityIssues} accessibility issues found`,`} this.healthReport.checks.accessibility = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "accessibilityIssues": "accessibilityIssues": },'
 } catch (error) { this.healthReport.checks.accessibility = { "status": 'error,','; "issues": ['"Failed": to check accessibility'],'; "error": error."message":,'
 }
 
-const buildDir = path.join(this.projectRoot,'.next');'
 
-const buildExists = fs.existsSync(buildDir); ; let buildAge = null; if (buildExists) {;
 
 }
 
-const stats = fs.statSync(buildDir); buildAge = Date.now() - stats.mtime.getTime()} ; let buildSuccess = false; try {' execSync('npm run build',{ "cwd": this.projectRoot "stdio": 'pipe',"timeout": 60000,'
 }); buildSuccess = true} catch (error) {; ; this.healthReport.checks.build = {; "status": buildSuccess ? 'healthy' : 'error',"buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed']},'
 } catch (error) {; this.healthReport.checks.build = {; "status": 'error',"issues": ['Failed to check build health'],"error": error.messag,'
 } this.healthReport.checks.build = {' "status": buildSuccess ? 'healthy' : 'error' "buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed'] ,'
@@ -1795,11 +1445,9 @@ const stats = fs.statSync(buildDir); buildAge = Date.now() - stats.mtime.getTime
 
 }
 
-const issues = []; try {' execSync('npx tsc --noEmit',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('TypeScript compilation errors','
 } try {' execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('ESLint errors detected','
 }
 
-const srcFiles = this.findSourceFiles(); let consoleLogCount = 0;  }
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 #!/usr/bin/"env": node,"
 import fs from 'fs';'
@@ -1840,7 +1488,6 @@ const issues = [];
 }
 
 const packageJsonPath = path.join(this.projectRoot, 'package.json')const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8');'
-  const issues = [];
       // Check for outdated dependencies;
       try {';'
 
@@ -1936,7 +1583,6 @@ const matches = content.match(/console\.(log|warn|error|info)/g)"if": (matches) 
 
 }
 
-const buildDir = path.join(this.projectRoot, '.next')';'
       "if": (fs.existsSync(buildDir)) {const bundleSize = this.getDirectorySize(buildDir)"if": (bundleSize > 50 * 1024 * 1024) { // 50MB;"
           }
           issues.push('Large bundle size detected')}'}'
@@ -2014,7 +1660,6 @@ const srcFiles = this.findSourceFiles()"let": accessibilityIssues = 0;
 const buildDir = path.join(this.projectRoot, '.next';'
   const buildExists = fs.existsSync(buildDir)let buildAge = null;
       if (buildExists) {const stats = fs.statSync(buildDir)buildAge = Date.now() - stats.mtime.getTime()}// Try to run a build check;
-      let buildSuccess = false;
       try {';'
         }
         execSync('npm run build', {"cwd": this.projectRoot;"
@@ -2076,16 +1721,13 @@ const __dirname = path.dirname(__filename)console.log('🏥 "App": Health Monito
 
 }
 
-const packageJson  = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'))';'
 
 const issues = []; try { const outdated = execSync('npm outdated --json',{ '; "encoding": 'utf8,','; "cwd": this.projectRoo,t "stdio": 'pipe''}) const outdatedDeps = JSON.parse(outdated)"if": (Object.keys(outdatedDeps).length > 0) { issues.push(`${Object.keys(outdatedDeps).length} outdated dependencies`)} console.log('🔍 Running comprehensive health checks...')await this.checkDependencies()await this.checkBuildHealth()await this.checkCodeQuality()await this.checkPerformance()await this.checkSecurity()await this.checkAccessibility()this.generateReport(,'} async checkDependencies() {' console.log('📦 Checking dependencies...')try {' const packageJsonPath = path.join(this.projectRoot,'package.json')const packageJson  = JSON.parse(fs.readFileSync(packageJsonPath,'utf8');'
   }
-  const issues = []; try {' const outdatedDeps = JSON.parse(outdated)if (Object.keys(outdatedDeps).length > 0) { issues.push(' `${Object.keys(outdatedDeps).length} outdated dependencies` )} } catch (error) {} try { execSync('npm audit --audit-level=moderate',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('Security vulnerabilities detected','}'; this.healthReport.checks."dependencies": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "totalDependencies": Object.keys(packageJson."dependencies": || ,{}).length + Object.keys(packageJson.devDependencies || {}).length } } catch (error) { this.healthReport.checks.dependencies = { "status": 'error,','; "issues": ['"Failed": to check dependencies'],'; "error": error."message": } },'
 } async checkBuildHealth() { console.log('🔨 Checking build health...')';"try": { const buildDir  = path.join(this.projectRoot,'.next')';'
 
 }
 
-const buildExists = fs.existsSync(buildDir)"let": buildAge = null; "if": (buildExists) { const stats = fs.statSync(buildDir)"buildAge": = Date.now() - stats.mtime.getTime(
 } let buildSuccess = false; "try": { execSync('npm run build',{ '; "cwd": this.projectRoo,t "stdio": 'pipe,','; "timeout": "60000": }) buildSuccess = true} catch (error) ,'
 } this.healthReport.checks.build = { "status": "buildSuccess": ? 'healthy' : 'error,','; "buildExists": buildExist,s "buildAge": buildAg,e "buildSuccess": buildSucces,s "issues": "buildSuccess": ? [] : ['"Build": process failed']'},'
 } "catch": (error) { this.healthReport.checks.build = { "status": 'error,','; "issues": ['"Failed": to check build health'],'; "error": error."message": } },'
@@ -2093,71 +1735,55 @@ const buildExists = fs.existsSync(buildDir)"let": buildAge = null; "if": (buildE
 }'; try { execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('ESLint errors detected','
 }';'
 
-const srcFiles = this.findSourceFiles()"let": consoleLogCount = 0; "for": (const file of srcFiles) { const content  = fs.readFileSync(file,'utf8')';'
 
 }
 
-const matches = content.match(/console\.(log|warn|error|info)/g)"if": (matches) { consoleLogCount += matches.length} } if (consoleLogCount > 0) { issues.push(`${consoleLogCount} console statements found`,`} this.healthReport.checks.codeQuality = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "consoleLogCount": consoleLogCoun,t "totalSourceFiles": srcFiles."length": },'
 } catch (error) { this.healthReport.checks.codeQuality = { "status": 'error,','; "issues": ['"Failed": to check code quality'],'; "error": error."message": } },'
 } async checkPerformance() { console.log('⚡ Checking performance...')';"try": { const issues = [];'
 
 }
 
-const buildDir  = path.join(this.projectRoot,'.next')';"if": (fs.existsSync(buildDir)) { const bundleSize = this.getDirectorySize(buildDir)"if": (bundleSize > 50 * 1024 * 1024) { issues.push('Large bundle size detected')},'
 }
 ;
-  const publicDir  = path.join(this.projectRoot,'public')';"if": (fs.existsSync(publicDir)) { const imageSize = this.getImageDirectorySize(publicDir)"if": (imageSize > 10 * 1024 * 1024) { issues.push('Large images detected')},'
 } this.healthReport.checks."performance": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "bundleSize": fs.existsSync(buildDir) ? this.getDirectorySize(buildDir) : 0 "imageSize": fs.existsSync(publicDir) ? this.getImageDirectorySize(publicDir) : "0": },'
 } catch (error) { this.healthReport.checks.performance = { "status": 'error,','; "issues": ['"Failed": to check performance'],'; "error": error."message": } },'
 } async checkSecurity() { console.log('🔒 Checking security...')';"try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles()"for": (const file of srcFiles) {;
   }
-  const content  = fs.readFileSync(file,'utf8')';"if": (content.includes('password') || content.includes('secret') || content.includes('api_key')) {'; issues.push('"Potential": hardcoded secrets found')';break} } try { execSync('npm audit --audit-level=high',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('High severity vulnerabilities detected','
 }'; this.healthReport.checks."security": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": "issues": },'
 } catch (error) { this.healthReport.checks.security = { "status": 'error,','; "issues": ['"Failed": to check security'],'; "error": error."message": } },'
 } async checkAccessibility() { console.log('♿ Checking accessibility...')';"try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles()"let": accessibilityIssues = 0; "for": (const file of srcFiles) { const content  = fs.readFileSync(file,'utf8')';if (content.includes('<img') && !content.includes('alt=')) {'; accessibilityIssues++} if (content.includes('<button') && !content.includes('aria-label') && !content.includes('aria-labelledby')) {'; accessibilityIssues++} } "if": (accessibilityIssues > 0) { issues.push(`${accessibilityIssues} accessibility issues found`,`} this.healthReport.checks.accessibility = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "accessibilityIssues": "accessibilityIssues": },'
 } catch (error) { this.healthReport.checks.accessibility = { "status": 'error,','; "issues": ['"Failed": to check accessibility'],'; "error": error."message":,'
 }
 
-const buildDir = path.join(this.projectRoot,'.next';'
-  const buildExists  = fs.existsSync(buildDir)let buildAge = null; if (buildExists) {const stats = fs.statSync(buildDir)buildAge = Date.now() - stats.mtime.getTime()}let buildSuccess = false; try {' execSync('npm run build',{ "cwd": this.projectRoot "stdio": 'pipe',"timeout": 60000 })buildSuccess = tru,'
 } catch (error) {this.healthReport.checks.build = {"status": buildSuccess ? 'healthy' : 'error',"buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed']},'
 } catch (error) {this.healthReport.checks.build = {"status": 'error',"issues": ['Failed to check build health'],"error": error.messag,'
 } this.healthReport.checks.build = {' "status": buildSuccess ? 'healthy' : 'error' "buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed'] ,'
 } catch (error) { this.healthReport.checks.build = {' "status": 'error',"issues": ['Failed to check build health'] "error": error.message }},'
 } async checkCodeQuality() {' console.log('📝 Checking code quality...')try ;'
   }
-  const issues = []; try {' execSync('npx tsc --noEmit',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('TypeScript compilation errors','
 } try {' execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('ESLint errors detected','
 }
 
-const srcFiles = this.findSourceFiles()let consoleLogCount = 0;  }
 #!/usr/bin/"env": node,import fs from 'fs';import path from 'path';import { fileURLToPath  } from 'url';import { execSync  } from 'child_process';'
 
-const __dirname = path.dirname(__filename)console.log('🏥 "App": Health Monitor Starting...')';"class": AppHealthMonitor { constructor() { this.projectRoot = path.resolve(__dirname,'..')';this."healthReport": = { "timestamp": "new": Date().toISOString(,) "overall": 'unknown,','; "checks":  ,;'
 } this.projectRoot = path.resolve(__dirname,'..')this.healthReport = {"timestamp": new Date().toISOString(),"overall": 'unknown',"checks": {} },'
 } "async": runHealthChecks() { console.log('🔍 Running comprehensive health checks...')';"await": this.checkDependencies()"await": this.checkBuildHealth()"await": this.checkCodeQuality()"await": this.checkPerformance()"await": this.checkSecurity()"await": this.checkAccessibility()this.generateReport(,'
 } "async": checkDependencies() { console.log('📦 Checking dependencies...')';"try": { const packageJsonPath  = path.join(this.projectRoot,'package.json')';'
 
 }
 
-const packageJson  = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'))';'
 
-const issues = []; try { const outdated = execSync('npm outdated --json',{ '; "encoding": 'utf8,','; "cwd": this.projectRoo,t "stdio": 'pipe''}) const outdatedDeps = JSON.parse(outdated)"if": (Object.keys(outdatedDeps).length > 0) { issues.push(`${Object.keys(outdatedDeps).length} outdated dependencies`)} console.log('🔍 Running comprehensive health checks...')await this.checkDependencies()await this.checkBuildHealth()await this.checkCodeQuality()await this.checkPerformance()await this.checkSecurity()await this.checkAccessibility()this.generateReport(,'} async checkDependencies() {' console.log('📦 Checking dependencies...')try {' const packageJsonPath = path.join(this.projectRoot,'package.json')const packageJson  = JSON.parse(fs.readFileSync(packageJsonPath,'utf8');'
   }
-  const issues = []; try {' const outdatedDeps = JSON.parse(outdated)if (Object.keys(outdatedDeps).length > 0) { issues.push(' `${Object.keys(outdatedDeps).length} outdated dependencies` )} } catch (error) {} try { execSync('npm audit --audit-level=moderate',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('Security vulnerabilities detected','}'; this.healthReport.checks."dependencies": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "totalDependencies": Object.keys(packageJson."dependencies": || ,{}).length + Object.keys(packageJson.devDependencies || {}).length } } catch (error) { this.healthReport.checks.dependencies = { "status": 'error,','; "issues": ['"Failed": to check dependencies'],'; "error": error."message": } },'
 } async checkBuildHealth() { console.log('🔨 Checking build health...')';"try": { const buildDir  = path.join(this.projectRoot,'.next')';'
 
 }
 
-const buildExists = fs.existsSync(buildDir)"let": buildAge = null; "if": (buildExists) { const stats = fs.statSync(buildDir)"buildAge": = Date.now() - stats.mtime.getTime(
 } let buildSuccess = false; "try": { execSync('npm run build',{ '; "cwd": this.projectRoo,t "stdio": 'pipe,','; "timeout": "60000": }) buildSuccess = true} catch (error) ,'
 } this.healthReport.checks.build = { "status": "buildSuccess": ? 'healthy' : 'error,','; "buildExists": buildExist,s "buildAge": buildAg,e "buildSuccess": buildSucces,s "issues": "buildSuccess": ? [] : ['"Build": process failed']'},'
 } "catch": (error) { this.healthReport.checks.build = { "status": 'error,','; "issues": ['"Failed": to check build health'],'; "error": error."message": } },'
@@ -2165,48 +1791,38 @@ const buildExists = fs.existsSync(buildDir)"let": buildAge = null; "if": (buildE
 }'; try { execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('ESLint errors detected','
 }';'
 
-const srcFiles = this.findSourceFiles()"let": consoleLogCount = 0; "for": (const file of srcFiles) { const content  = fs.readFileSync(file,'utf8')';'
 
 }
 
-const matches = content.match(/console\.(log|warn|error|info)/g)"if": (matches) { consoleLogCount += matches.length} } if (consoleLogCount > 0) { issues.push(`${consoleLogCount} console statements found`,`} this.healthReport.checks.codeQuality = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "consoleLogCount": consoleLogCoun,t "totalSourceFiles": srcFiles."length": },'
 } catch (error) { this.healthReport.checks.codeQuality = { "status": 'error,','; "issues": ['"Failed": to check code quality'],'; "error": error."message": } },'
 } async checkPerformance() { console.log('⚡ Checking performance...')';"try": { const issues = [];'
 
 }
 
-const buildDir  = path.join(this.projectRoot,'.next')';"if": (fs.existsSync(buildDir)) { const bundleSize = this.getDirectorySize(buildDir)"if": (bundleSize > 50 * 1024 * 1024) { issues.push('Large bundle size detected')},'
 }
 ;
-  const publicDir  = path.join(this.projectRoot,'public')';"if": (fs.existsSync(publicDir)) { const imageSize = this.getImageDirectorySize(publicDir)"if": (imageSize > 10 * 1024 * 1024) { issues.push('Large images detected')},'
 } this.healthReport.checks."performance": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "bundleSize": fs.existsSync(buildDir) ? this.getDirectorySize(buildDir) : 0 "imageSize": fs.existsSync(publicDir) ? this.getImageDirectorySize(publicDir) : "0": },'
 } catch (error) { this.healthReport.checks.performance = { "status": 'error,','; "issues": ['"Failed": to check performance'],'; "error": error."message": } },'
 } async checkSecurity() { console.log('🔒 Checking security...')';"try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles()"for": (const file of srcFiles) {;
   }
-  const content  = fs.readFileSync(file,'utf8')';"if": (content.includes('password') || content.includes('secret') || content.includes('api_key')) {'; issues.push('"Potential": hardcoded secrets found')';break} } try { execSync('npm audit --audit-level=high',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('High severity vulnerabilities detected','
 }'; this.healthReport.checks."security": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": "issues": },'
 } catch (error) { this.healthReport.checks.security = { "status": 'error,','; "issues": ['"Failed": to check security'],'; "error": error."message": } },'
 } async checkAccessibility() { console.log('♿ Checking accessibility...')';"try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles()"let": accessibilityIssues = 0; "for": (const file of srcFiles) { const content  = fs.readFileSync(file,'utf8')';if (content.includes('<img') && !content.includes('alt=')) {'; accessibilityIssues++} if (content.includes('<button') && !content.includes('aria-label') && !content.includes('aria-labelledby')) {'; accessibilityIssues++} } "if": (accessibilityIssues > 0) { issues.push(`${accessibilityIssues} accessibility issues found`,`} this.healthReport.checks.accessibility = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "accessibilityIssues": "accessibilityIssues": },'
 } catch (error) { this.healthReport.checks.accessibility = { "status": 'error,','; "issues": ['"Failed": to check accessibility'],'; "error": error."message":,'
 }
 
-const buildDir = path.join(this.projectRoot,'.next';'
-  const buildExists  = fs.existsSync(buildDir)let buildAge = null; if (buildExists) {const stats = fs.statSync(buildDir)buildAge = Date.now() - stats.mtime.getTime()}let buildSuccess = false; try {' execSync('npm run build',{ "cwd": this.projectRoot "stdio": 'pipe',"timeout": 60000 })buildSuccess = tru,'
 } catch (error) {this.healthReport.checks.build = {"status": buildSuccess ? 'healthy' : 'error',"buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed']},'
 } catch (error) {this.healthReport.checks.build = {"status": 'error',"issues": ['Failed to check build health'],"error": error.messag,'
 } this.healthReport.checks.build = {' "status": buildSuccess ? 'healthy' : 'error' "buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed'] ,'
 } catch (error) { this.healthReport.checks.build = {' "status": 'error',"issues": ['Failed to check build health'] "error": error.message }},'
 } async checkCodeQuality() {' console.log('📝 Checking code quality...')try ;'
   }
-  const issues = []; try {' execSync('npx tsc --noEmit',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('TypeScript compilation errors','
 } try {' execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('ESLint errors detected','
 }
 
@@ -2224,8 +1840,6 @@ const srcFiles = this.findSourceFiles();
 
 }
 
-const srcFiles = this.findSourceFiles();
-      let consoleLogCount = 0;
       for (const file of srcFiles) {;
 
 }
@@ -2250,21 +1864,16 @@ const __dirname = path.dirname(__filename); console.log('🏥 "App": Health Moni
 
 }
 
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'))';;'
 
-const issues = []; try { const outdated = execSync('npm outdated --json',{ '; "encoding": 'utf8,','; "cwd": this.projectRoo,t "stdio": 'pipe','
 }) const outdatedDeps = JSON.parse(outdated); "if": (Object.keys(outdatedDeps).length > 0) { issues.push(`${Object.keys(outdatedDeps).length} outdated dependencies`,`} console.log('🔍 Running comprehensive health checks...'); ; await this.checkDependencies(); await this.checkBuildHealth(); await this.checkCodeQuality(); await this.checkPerformance(); await this.checkSecurity(); await this.checkAccessibility(); this.generateReport()} async checkDependencies() {' console.log('📦 Checking dependencies...'); try {' const packageJsonPath = path.join(this.projectRoot,'package.json');'
 
 }
 
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8')); ;'
 
-const issues = []; try {' const outdatedDeps = JSON.parse(outdated); if (Object.keys(outdatedDeps).length > 0) { issues.push(' `${Object.keys(outdatedDeps).length} outdated dependencies` )} } catch (error) {} try { execSync('npm audit --audit-level=moderate',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('Security vulnerabilities detected','}'; this.healthReport.checks."dependencies": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "totalDependencies": Object.keys(packageJson."dependencies": || ,{}).length + Object.keys(packageJson.devDependencies || {}).length } } catch (error) { this.healthReport.checks.dependencies = { "status": 'error,','; "issues": ['"Failed": to check dependencies'],'; "error": error."message": } },'
 } async checkBuildHealth() { console.log('🔨 Checking build health...')';; "try": { const buildDir = path.join(this.projectRoot,'.next')';;'
 
 }
 
-const buildExists = fs.existsSync(buildDir); "let": buildAge = null; "if": (buildExists) { const stats = fs.statSync(buildDir); "buildAge": = Date.now() - stats.mtime.getTime(
 } let buildSuccess = false; "try": { execSync('npm run build',{ '; "cwd": this.projectRoo,t "stdio": 'pipe,','; "timeout": "60000": }) buildSuccess = true} catch (error) ,'
 } this.healthReport.checks.build = { "status": "buildSuccess": ? 'healthy' : 'error,','; "buildExists": buildExist,s "buildAge": buildAg,e "buildSuccess": buildSucces,s "issues": "buildSuccess": ? [] : ['"Build": process failed']'},'
 } "catch": (error) { this.healthReport.checks.build = { "status": 'error,','; "issues": ['"Failed": to check build health'],'; "error": error."message": } },'
@@ -2272,44 +1881,35 @@ const buildExists = fs.existsSync(buildDir); "let": buildAge = null; "if": (buil
 }'; try { execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('ESLint errors detected','
 }';'
 
-const srcFiles = this.findSourceFiles(); "let": consoleLogCount = 0; "for": (const file of srcFiles) { const content = fs.readFileSync(file,'utf8')';;'
 
 }
 
-const matches = content.match(/console\.(log|warn|error|info)/g); "if": (matches) { consoleLogCount += matches.length} } if (consoleLogCount > 0) { issues.push(`${consoleLogCount} console statements found`,`} this.healthReport.checks.codeQuality = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "consoleLogCount": consoleLogCoun,t "totalSourceFiles": srcFiles."length": },'
 } catch (error) { this.healthReport.checks.codeQuality = { "status": 'error,','; "issues": ['"Failed": to check code quality'],'; "error": error."message": } },'
 } async checkPerformance() { console.log('⚡ Checking performance...')';; "try": { const issues = [];'
 
 }
 
-const buildDir = path.join(this.projectRoot,'.next')';; "if": (fs.existsSync(buildDir)) { const bundleSize = this.getDirectorySize(buildDir); "if": (bundleSize > 50 * 1024 * 1024) { issues.push('Large bundle size detected')},'
 }
 
-const publicDir = path.join(this.projectRoot,'public')';; "if": (fs.existsSync(publicDir)) { const imageSize = this.getImageDirectorySize(publicDir); "if": (imageSize > 10 * 1024 * 1024) { issues.push('Large images detected')},'
 } this.healthReport.checks."performance": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "bundleSize": fs.existsSync(buildDir) ? this.getDirectorySize(buildDir) : 0 "imageSize": fs.existsSync(publicDir) ? this.getImageDirectorySize(publicDir) : "0": },'
 } catch (error) { this.healthReport.checks.performance = { "status": 'error,','; "issues": ['"Failed": to check performance'],'; "error": error."message": } },'
 } async checkSecurity() { console.log('🔒 Checking security...')';; "try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles(); "for": (const file of srcFiles) { const content = fs.readFileSync(file,'utf8')';; "if": (content.includes('password') || content.includes('secret') || content.includes('api_key')) {'; issues.push('"Potential": hardcoded secrets found')';; break} } try { execSync('npm audit --audit-level=high',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('High severity vulnerabilities detected','
 }'; this.healthReport.checks."security": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": "issues": },'
 } catch (error) { this.healthReport.checks.security = { "status": 'error,','; "issues": ['"Failed": to check security'],'; "error": error."message": } },'
 } async checkAccessibility() { console.log('♿ Checking accessibility...')';; "try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles(); "let": accessibilityIssues = 0; "for": (const file of srcFiles) { const content = fs.readFileSync(file,'utf8')';; if (content.includes('<img') && !content.includes('alt=')) {'; accessibilityIssues++} if (content.includes('<button') && !content.includes('aria-label') && !content.includes('aria-labelledby')) {'; accessibilityIssues++} } "if": (accessibilityIssues > 0) { issues.push(`${accessibilityIssues} accessibility issues found`,`} this.healthReport.checks.accessibility = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "accessibilityIssues": "accessibilityIssues": },'
 } catch (error) { this.healthReport.checks.accessibility = { "status": 'error,','; "issues": ['"Failed": to check accessibility'],'; "error": error."message":,'
 }
 
-const buildDir = path.join(this.projectRoot,'.next');'
 
-const buildExists = fs.existsSync(buildDir); ; let buildAge = null; if (buildExists) {;
 
 }
 
-const stats = fs.statSync(buildDir); buildAge = Date.now() - stats.mtime.getTime()} ; let buildSuccess = false; try {' execSync('npm run build',{ "cwd": this.projectRoot "stdio": 'pipe',"timeout": 60000,'
 }); buildSuccess = true} catch (error) {; ; this.healthReport.checks.build = {; "status": buildSuccess ? 'healthy' : 'error',"buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed']},'
 } catch (error) {; this.healthReport.checks.build = {; "status": 'error',"issues": ['Failed to check build health'],"error": error.messag,'
 } this.healthReport.checks.build = {' "status": buildSuccess ? 'healthy' : 'error' "buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed'] ,'
@@ -2318,34 +1918,26 @@ const stats = fs.statSync(buildDir); buildAge = Date.now() - stats.mtime.getTime
 
 }
 
-const issues = []; try {' execSync('npx tsc --noEmit',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('TypeScript compilation errors','
 } try {' execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('ESLint errors detected','
 }
 
-const srcFiles = this.findSourceFiles(); let consoleLogCount = 0;  }
 #!/usr/bin/"env": node,import fs from 'fs';; import path from 'path';; import { fileURLToPath } from 'url';; import { execSync } from 'child_process';;'
 
-const __dirname = path.dirname(__filename); console.log('🏥 "App": Health Monitor Starting...')';; "class": AppHealthMonitor { constructor() { this.projectRoot = path.resolve(__dirname,'..')';; this."healthReport": = { "timestamp": "new": Date().toISOString(,) "overall": 'unknown,','; "checks":  ,;'
 } this.projectRoot = path.resolve(__dirname,'..'); this.healthReport = {; "timestamp": new Date().toISOString(),"overall": 'unknown',"checks": {} },'
 } "async": runHealthChecks() { console.log('🔍 Running comprehensive health checks...')';; "await": this.checkDependencies(); "await": this.checkBuildHealth(); "await": this.checkCodeQuality(); "await": this.checkPerformance(); "await": this.checkSecurity(); "await": this.checkAccessibility(); this.generateReport()} "async": checkDependencies() { console.log('📦 Checking dependencies...')';; "try": { const packageJsonPath = path.join(this.projectRoot,'package.json')';;'
 
 }
 
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'))';;'
 
-const issues = []; try { const outdated = execSync('npm outdated --json',{ '; "encoding": 'utf8,','; "cwd": this.projectRoo,t "stdio": 'pipe','
 }) const outdatedDeps = JSON.parse(outdated); "if": (Object.keys(outdatedDeps).length > 0) { issues.push(`${Object.keys(outdatedDeps).length} outdated dependencies`,`} console.log('🔍 Running comprehensive health checks...'); ; await this.checkDependencies(); await this.checkBuildHealth(); await this.checkCodeQuality(); await this.checkPerformance(); await this.checkSecurity(); await this.checkAccessibility(); this.generateReport()} async checkDependencies() {' console.log('📦 Checking dependencies...'); try {' const packageJsonPath = path.join(this.projectRoot,'package.json');'
 
 }
 
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8')); ;'
 
-const issues = []; try {' const outdatedDeps = JSON.parse(outdated); if (Object.keys(outdatedDeps).length > 0) { issues.push(' `${Object.keys(outdatedDeps).length} outdated dependencies` )} } catch (error) {} try { execSync('npm audit --audit-level=moderate',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('Security vulnerabilities detected','}'; this.healthReport.checks."dependencies": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "totalDependencies": Object.keys(packageJson."dependencies": || ,{}).length + Object.keys(packageJson.devDependencies || {}).length } } catch (error) { this.healthReport.checks.dependencies = { "status": 'error,','; "issues": ['"Failed": to check dependencies'],'; "error": error."message": } },'
 } async checkBuildHealth() { console.log('🔨 Checking build health...')';; "try": { const buildDir = path.join(this.projectRoot,'.next')';;'
 
 }
 
-const buildExists = fs.existsSync(buildDir); "let": buildAge = null; "if": (buildExists) { const stats = fs.statSync(buildDir); "buildAge": = Date.now() - stats.mtime.getTime(
 } let buildSuccess = false; "try": { execSync('npm run build',{ '; "cwd": this.projectRoo,t "stdio": 'pipe,','; "timeout": "60000": }) buildSuccess = true} catch (error) ,'
 } this.healthReport.checks.build = { "status": "buildSuccess": ? 'healthy' : 'error,','; "buildExists": buildExist,s "buildAge": buildAg,e "buildSuccess": buildSucces,s "issues": "buildSuccess": ? [] : ['"Build": process failed']'},'
 } "catch": (error) { this.healthReport.checks.build = { "status": 'error,','; "issues": ['"Failed": to check build health'],'; "error": error."message": } },'
@@ -2353,27 +1945,22 @@ const buildExists = fs.existsSync(buildDir); "let": buildAge = null; "if": (buil
 }'; try { execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('ESLint errors detected','
 }';'
 
-const srcFiles = this.findSourceFiles(); "let": consoleLogCount = 0; "for": (const file of srcFiles) { const content = fs.readFileSync(file,'utf8')';;'
 
 }
 
-const matches = content.match(/console\.(log|warn|error|info)/g); "if": (matches) { consoleLogCount += matches.length} } if (consoleLogCount > 0) { issues.push(`${consoleLogCount} console statements found`,`} this.healthReport.checks.codeQuality = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "consoleLogCount": consoleLogCoun,t "totalSourceFiles": srcFiles."length": },'
 } catch (error) { this.healthReport.checks.codeQuality = { "status": 'error,','; "issues": ['"Failed": to check code quality'],'; "error": error."message": } },'
 } async checkPerformance() { console.log('⚡ Checking performance...')';; "try": { const issues = [];'
 
 }
 
-const buildDir = path.join(this.projectRoot,'.next')';; "if": (fs.existsSync(buildDir)) { const bundleSize = this.getDirectorySize(buildDir); "if": (bundleSize > 50 * 1024 * 1024) { issues.push('Large bundle size detected')},'
 }
 
-const publicDir = path.join(this.projectRoot,'public')';; "if": (fs.existsSync(publicDir)) { const imageSize = this.getImageDirectorySize(publicDir); "if": (imageSize > 10 * 1024 * 1024) { issues.push('Large images detected')},'
 } this.healthReport.checks."performance": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": issue,s "bundleSize": fs.existsSync(buildDir) ? this.getDirectorySize(buildDir) : 0 "imageSize": fs.existsSync(publicDir) ? this.getImageDirectorySize(publicDir) : "0": },'
 } catch (error) { this.healthReport.checks.performance = { "status": 'error,','; "issues": ['"Failed": to check performance'],'; "error": error."message": } },'
 } async checkSecurity() { console.log('🔒 Checking security...')';; "try": { const issues = [];'
 
 }
 
-const srcFiles = this.findSourceFiles(); "for": (const file of srcFiles) { const content = fs.readFileSync(file,'utf8')';; "if": (content.includes('password') || content.includes('secret') || content.includes('api_key')) {'; issues.push('"Potential": hardcoded secrets found')';; break} } try { execSync('npm audit --audit-level=high',{ '; "cwd": this.projectRoo,t "stdio": 'pipe''})} "catch": (error) { issues.push('High severity vulnerabilities detected','
 }'; this.healthReport.checks."security": = { "status": issues."length": === 0 ? 'healthy' : 'warning,','; "issues": "issues": },'
 } catch (error) { this.healthReport.checks.security = { "status": 'error,','; "issues": ['"Failed": to check security'],'; "error": error."message": } },'
 } async checkAccessibility() { console.log('♿ Checking accessibility...')';; "try": { const issues = [];'
@@ -2385,13 +1972,10 @@ const srcFiles = this.findSourceFiles(); "let": accessibilityIssues = 0; "for": 
 } catch (error) { this.healthReport.checks.accessibility = { "status": 'error,','; "issues": ['"Failed": to check accessibility'],'; "error": error."message":,'
 }
 
-const buildDir = path.join(this.projectRoot,'.next');'
 
-const buildExists = fs.existsSync(buildDir); ; let buildAge = null; if (buildExists) {;
 
 }
 
-const stats = fs.statSync(buildDir); buildAge = Date.now() - stats.mtime.getTime()} ; let buildSuccess = false; try {' execSync('npm run build',{ "cwd": this.projectRoot "stdio": 'pipe',"timeout": 60000,'
 }); buildSuccess = true} catch (error) {; ; this.healthReport.checks.build = {; "status": buildSuccess ? 'healthy' : 'error',"buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed']},'
 } catch (error) {; this.healthReport.checks.build = {; "status": 'error',"issues": ['Failed to check build health'],"error": error.messag,'
 } this.healthReport.checks.build = {' "status": buildSuccess ? 'healthy' : 'error' "buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed'] ,'
@@ -2400,11 +1984,9 @@ const stats = fs.statSync(buildDir); buildAge = Date.now() - stats.mtime.getTime
 
 }
 
-const issues = []; try {' execSync('npx tsc --noEmit',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('TypeScript compilation errors','
 } try {' execSync('npx eslint . --ext .js,.jsx,.ts,.tsx',{ "cwd": this.projectRoot "stdio": 'pipe' })} catch (error) {' issues.push('ESLint errors detected','
 }
 
-const srcFiles = this.findSourceFiles(); let consoleLogCount = 0;  }
 
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5,

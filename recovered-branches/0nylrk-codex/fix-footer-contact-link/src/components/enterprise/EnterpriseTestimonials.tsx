@@ -47,7 +47,6 @@ CarouselContent
 CarouselNext
   CarouselPrevious
 } from "@/components/ui/carousel";"
-const testimonials = [;
   {
     }
     "quote":
@@ -96,8 +95,6 @@ return (                      <img;
                         src={testimonial && testimonial.image}
                         alt={testimonial && testimonial.author}
                         className="h-full w-full object-cover""
-import React from "react";"
-import { Quote } from "lucide-react";"
 import {;
   }
   Carousel,;
@@ -105,7 +102,6 @@ import {;
   CarouselItem,;
   CarouselNext,;
   CarouselPrevious} from "@/components/ui/carousel",;"
-const testimonials = [;
   {;
     }
     "quote": "Implementing Zion's Enterprise solution has reduced our time-to-hire by 40% and significantly improved the quality of candidates we're seeing.",;"
@@ -140,7 +136,6 @@ export function EnterpriseTestimonials() {;
                     <div className="h-12 w-12 rounded-full overflow-hidden bg-muted">;"
 import React from './react';'
 import { Quote  } from './lucide-react';'
-import {
   }
   Carousel,
   CarouselContent,

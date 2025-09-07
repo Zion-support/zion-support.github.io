@@ -22,7 +22,6 @@ export default function Profile() {
 }
 const { user, isLoading, logout } = useAuth(),;
 const navigate = useNavigate(),;
-  const { user, isLoading, logout } = useAuth();
 return (;
       <>
         <Header />
@@ -77,8 +76,6 @@ import { useNavigate } from "react-router-dom",;"
 import { toast } from "sonner",;"
 export default function Profile() {;
   }
-  const { user, isLoading, logout } = useAuth(),;
-  const navigate = useNavigate(),;
   useEffect(() => {;
     }
     if (!isLoading && !user) {;

@@ -4,15 +4,16 @@ class ErrorBoundary extends React.Component {
     this.state = { hasError: false };
   }
 
+import React from 'react;
+import SEO from ../components/SEO';
+import { Check, ExternalLink } from 'lucide-react;
+
+
+import React from react',
+import SEO from '../components/SEO;
+import React from react';
 
 export default function BrowserAutomationCloudPage() {
-  const features = [
-    'Parallel Playwright/Puppeteer execution',
-    'Queued jobs with retries and rate limits',
-    'Artifacts: HAR, traces, screenshots, videos',
-    'Rotating proxies and geo targeting',
-    'Webhook callbacks and REST API',;
-  ];
 
 
 import { Check, ExternalLink } from 'lucide-react';

@@ -44,7 +44,6 @@ export default function AnalyticsPage() {
     'Track business metrics'
     'Generate actionable insights',  ];
 export default function AnalyticsPage() {
-  const features = [
     {
       icon: <BarChart3 className="w-8 h-8 text-white" />,
       title: 'Real-time Dashboards',
@@ -67,7 +66,6 @@ export default function AnalyticsPage() {
     },;
   ];
 
-  const benefits = [
     'Make data-driven decisionsIdentify growth opportunitiesOptimize user experienceMonitor system healthTrack business metricsGenerate actionable insights'
   ],
   return (

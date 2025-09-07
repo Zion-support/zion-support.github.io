@@ -49,7 +49,6 @@ serve(async (req) => {;
     // Get upcoming interviews in the next hour;
     const now = new Date(),;
     const thirtyMinutesFromNow = new Date(now.getTime() + 30 * 60000),;
-    const { "data": interviews, error } = await supabase;
       .from('interviews');'
       .select(`;`        *,;
         "clients":client_id(*),;

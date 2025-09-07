@@ -28,7 +28,6 @@ export interface AdminUser  {id: string;
 import type { NextApiRequest } from 'next';
 
 
-import type { NextApiRequest } from 'next';
 
 
 
@@ -47,7 +46,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 export function getSessionFromReq(req: NextApiRequest): Session | null {
   // Mock implementation - replace with actual session logic;
-  const authHeader = req.headers.authorization;
   if (!authHeader) {
     return null;
   }
@@ -194,8 +192,6 @@ export function isInternalAgentRequest(req: NextApiRequest): boolean {
   // Check for internal agent headers or IPs
   const userAgent = req.headers['user-agent'] |'';
   // Check for internal agent headers or IPs;
-  const userAgent = req.headers['user-agent'] || '';
-  const internalAgents = ['zion-bot', 'internal-agent', 'automation'];
   return internalAgents.some(agent => userAgent.toLowerCase().includes(agent))}
 export const isAdmin = () => {// Placeholder implementation;
   return true;

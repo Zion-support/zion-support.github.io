@@ -2,11 +2,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, ChevronDown, Brain, Network, Cloud, Shield, Code, Zap } from 'lucide-react';
 import { useRouter } from 'next/router';
 
-ursor/automate-test-improve-and-merge-code-646c;
-'use client';'use client';import React, { useState } from 'react';'
-import Link from 'next/link';'
-import { motion, AnimatePresence  } from 'framer-motion';'
-import { Menu, X, ChevronDown, Phone, Mail, MapPin  } from 'lucide-react';'
 
 'use client';
 "use client";
@@ -99,7 +94,63 @@ export default function Header() {
     }
   ];
 
-const toggleDropdown = ("name": string) => {setActiveDropdown(activeDropdown === name ? null : name);
+const servicesDropdown = [
+  {
+    title: 'AI & Machine Learning,
+    description: Custom AI solutions and ML models',
+    href: '/services/ai-ml,
+    icon: Brain
+  },
+  {
+    title: Cloud Solutions',
+    description: 'Scalable cloud infrastructure,
+    href: /services/cloud',
+    icon: Cloud
+  },
+  {
+    title: 'Cybersecurity,
+    description: Advanced security solutions',
+    href: '/services/cybersecurity,
+    icon: Shield
+  },
+  {
+    title: Data Analytics',
+    description: 'Business intelligence and insights,
+    href: /services/analytics',
+    icon: BarChart3
+  },
+  {
+    title: 'Web Development,
+    description: Modern web applications',
+    href: '/services/web-development,
+    icon: Code
+  },
+  {
+    title: Database Solutions',
+    description: 'Database design and optimization,
+    href: /services/database',
+    icon: Database
+  }
+];
+
+const solutionsDropdown = [
+  {
+    title: 'Digital Transformation,
+    description: Complete business modernization',
+    href: '/solutions/digital-transformation,
+    icon: Zap
+  },
+  {
+    title: Enterprise Solutions',
+    description: 'Large-scale business systems,
+    href: /solutions/enterprise',
+    icon: Building
+  },
+  {
+    title: 'Startup Acceleration,
+    description: Rapid growth and scaling',
+    href: '/solutions/startup,
+    icon: Rocket
   }
   return (<header className="bg-white shadow-lg sticky top-0 z-50">;"
       {/* Top Bar */}
@@ -145,21 +196,14 @@ const toggleDropdown = ("name": string) => {setActiveDropdown(activeDropdown ===
                   onClick={() => item.dropdown && toggleDropdown(item.name)}
                   className="flex items-center space-x-1 text-gray-700 "hover": text-blue-600 transition-colors duration-200 font-medium">"
 
-                  <Link href={item.href}>{item.nam
-}</Link>;
-                  {item.dropdown && (<ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.name ? 'rotate-180' : '';'                    }`} />;`                  )}
-                </button>;
-                {/* Dropdown Menu */}
-                {item.dropdown && (<AnimatePresence>;
-                    {activeDropdown === item.name && (<motion.div;
-                        }
-                        initial={{ "opacity": 0, "y": 10 
-}
-                        animate={{ "opacity": 1, "y": 0 
-}
-                        exit={{ "opacity": 0, "y": 10 
-}
-                        className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">"
+const industriesDropdown = [
+  { name: Healthcare', href: '/industries/healthcare, icon: Stethoscope },
+  { name: Finance', href: '/industries/finance, icon: Landmark },
+  { name: Education', href: '/industries/education, icon: GraduationCap },
+  { name: Manufacturing', href: '/industries/manufacturing, icon: Factory },
+  { name: Retail', href: '/industries/retail, icon: ShoppingCart },
+  { name: Government', href: '/industries/government, icon: Building }
+];
 
                         {item.dropdown.map((subItem) => (<Link;
                             }
@@ -270,6 +314,21 @@ const router = useRouter();
               ))}
             </div>
           </nav>
+
+
+
+                    <div className="p-6>
+                      <div className=grid grid-cols-2 gap-4">
+                        {servicesDropdown.map((service) => (
+                          <Link key={service.title} href={service.href} className="group>
+                            <div className=flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                              <service.icon className="w-6 h-6 text-blue-600 mt-1 />
+                              <div>
+                                <h3 className=font-semibold text-gray-900 group-hover:text-blue-600">{service.title}</h3>
+                                <p className="text-sm text-gray-600>{service.description}</p>
+                              </div>
+                            </div>
+
                           </Link>
                         ))}
                       </motion.div>
@@ -290,6 +349,16 @@ const router = useRouter();
           </button>
         </div>
         
+          {/* Mobile Menu Button */}
+          <button
+            onClick={toggleMenu}
+            className=lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+          >
+            {isMenuOpen ? <X className="w-6 h-6 /> : <Menu className=w-6 h-6" />}
+          </button>
+
+        </div>
+
         {/* Mobile Navigation */}
         <AnimatePresence>
           {isMenuOpen && (
@@ -312,7 +381,7 @@ const router = useRouter();
                     {item.dropdown && (
                       <button
                         onClick={() => toggleDropdown(item.name)}
-                        className="p-1"
+                        className="p-1
                       >
                         <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
                           activeDropdown === item.name ? 'rotate-180' : ''
@@ -321,13 +390,10 @@ const router = useRouter();
                     )}
                   </div>
                   {item.dropdown && activeDropdown === item.name && (
-                    <div className="ml-4 mt-2 space-y-1">
+                    <div className=ml-4 mt-2 space-y-1">
                       {item.dropdown.map((subItem) => (
                         <Link
-}
-key={item.name}
-                          href={item.href}
-                          className="block px-4 py-2 text-sm text-gray-700 "hover":bg-gray-100""
+
                         >
                           {subItem.name}
                         </Link>
@@ -444,6 +510,13 @@ key={item.name}
 };
 
 export default Header;
+}
+export default Header;
+
+    </header>
+  );
+}
+}
               </div>
             </motion.div>
           )}

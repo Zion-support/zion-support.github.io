@@ -1,12 +1,7 @@
 #!/usr/bin/env node
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
 
-console.log('🏥 Starting Health Check...');
 
-class HealthChecker {
   constructor() {
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
@@ -58,44 +53,6 @@ class HealthChecker {
     this.log('\n📦 CHECKING DEPENDENCIES');
     
     try {
-      const issues = [];
-      const fixes = [];
-
-      // Check if package.json exists
-      const packageJsonPath = path.join(this.projectRoot, 'package.json');
-      if (!fs.existsSync(packageJsonPath)) {
-        issues.push('package.json not found');
-        fixes.push('Create package.json file');
-        this.results.dependencies = { success: false, issues, fixes };
-        return;
-      }
-
-      // Check if node_modules exists
-      const nodeModulesPath = path.join(this.projectRoot, 'node_modules');
-      if (!fs.existsSync(nodeModulesPath)) {
-        issues.push('node_modules directory missing');
-        fixes.push('Run npm install');
-      }
-
-      // Check for package-lock.json
-      const packageLockPath = path.join(this.projectRoot, 'package-lock.json');
-      if (!fs.existsSync(packageLockPath)) {
-        issues.push('package-lock.json missing');
-        fixes.push('Run npm install to generate package-lock.json');
-      }
-
-      // Check for outdated dependencies
-      const outdatedResult = await this.runCommand('npm outdated', 'Check for outdated dependencies');
-      if (outdatedResult.success && outdatedResult.output.trim()) {
-        issues.push('Outdated dependencies found');
-        fixes.push('Run npm update to update dependencies');
-      }
-
-      this.results.dependencies = {
-        success: issues.length === 0,
-        issues,
-        fixes
-      };
 
     } catch (error) {
       this.log(`❌ Failed to check dependencies: ${error.message}`, 'ERROR');
@@ -108,31 +65,7 @@ class HealthChecker {
   }
 
   async checkConfiguration() {
-    this.log('\n⚙️ CHECKING CONFIGURATION');
-    
-    try {
-      const issues = [];
-      const fixes = [];
 
-      const configFiles = [
-        { file: 'package.json', required: true },
-        { file: 'next.config.js', required: false },
-        { file: 'tsconfig.json', required: false },
-        { file: 'tailwind.config.js', required: false },
-        { file: '.env.local', required: false },
-        { file: '.gitignore', required: true }
-      ];
-
-      for (const { file, required } of configFiles) {
-        const filePath = path.join(this.projectRoot, file);
-        if (!fs.existsSync(filePath)) {
-          if (required) {
-            issues.push(`Missing required configuration file: ${file}`);
-            fixes.push(`Create ${file}`);
-          } else {
-            this.log(`ℹ️ Optional configuration file not found: ${file}`, 'INFO');
-          }
-        }
       }
 
       this.results.configuration = {
@@ -149,35 +82,14 @@ class HealthChecker {
         fixes: []
       };
     }
+
   }
 
   async checkTypeScript() {
     this.log('\n🔷 CHECKING TYPESCRIPT');
     
     try {
-      const issues = [];
-      const fixes = [];
 
-      const tsResult = await this.runCommand('npm run type-check', 'TypeScript Type Checking');
-      
-      if (!tsResult.success) {
-        issues.push('TypeScript compilation errors found');
-        fixes.push('Fix TypeScript errors and run npm run type-check');
-      }
-
-      this.results.typescript = {
-        success: tsResult.success,
-        issues,
-        fixes
-      };
-
-    } catch (error) {
-      this.log(`❌ Failed to check TypeScript: ${error.message}`, 'ERROR');
-      this.results.typescript = {
-        success: false,
-        issues: ['Failed to check TypeScript'],
-        fixes: []
-      };
     }
   }
 
@@ -185,89 +97,14 @@ class HealthChecker {
     this.log('\n🔍 CHECKING LINTING');
     
     try {
-      const issues = [];
-      const fixes = [];
 
-      const lintResult = await this.runCommand('npm run lint:check', 'ESLint Check');
-      
-      if (!lintResult.success) {
-        issues.push('ESLint errors found');
-        fixes.push('Run npm run lint:fix to fix linting issues');
-      }
-
-      this.results.linting = {
-        success: lintResult.success,
-        issues,
-        fixes
-      };
-
-    } catch (error) {
-      this.log(`❌ Failed to check linting: ${error.message}`, 'ERROR');
-      this.results.linting = {
-        success: false,
-        issues: ['Failed to check linting'],
-        fixes: []
-      };
-    }
-  }
-
-  async checkBuild() {
-    this.log('\n🏗️ CHECKING BUILD');
-    
-    try {
-      const issues = [];
-      const fixes = [];
-
-      const buildResult = await this.runCommand('npm run build', 'Application Build');
-      
-      if (!buildResult.success) {
-        issues.push('Build failed');
-        fixes.push('Fix build errors and run npm run build');
-      }
-
-      this.results.build = {
-        success: buildResult.success,
-        issues,
-        fixes
-      };
-
-    } catch (error) {
-      this.log(`❌ Failed to check build: ${error.message}`, 'ERROR');
-      this.results.build = {
-        success: false,
-        issues: ['Failed to check build'],
-        fixes: []
-      };
     }
   }
 
   async checkTests() {
     this.log('\n🧪 CHECKING TESTS');
     
-    try {
-      const issues = [];
-      const fixes = [];
 
-      const testResult = await this.runCommand('npm run test:smoke', 'Smoke Tests');
-      
-      if (!testResult.success) {
-        issues.push('Tests failed');
-        fixes.push('Fix test failures and run npm run test:smoke');
-      }
-
-      this.results.tests = {
-        success: testResult.success,
-        issues,
-        fixes
-      };
-
-    } catch (error) {
-      this.log(`❌ Failed to check tests: ${error.message}`, 'ERROR');
-      this.results.tests = {
-        success: false,
-        issues: ['Failed to check tests'],
-        fixes: []
-      };
     }
   }
 

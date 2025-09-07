@@ -16,13 +16,13 @@ const MobileAppDevelopmentChat: NextPage = () => {;
       <Head>;
         <title>MobileAppDevelopmentChat - Zion Tech Solutions</title>;
         <meta
-          name="description"
-          content="MobileAppDevelopmentChat service"
-        />{" "}
+          name=description"
+          content="MobileAppDevelopmentChat service
+        />{ "}
       <main>
         <h1>MobileAppDevelopmentChat</h1>
         <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>
+        <a href="/services>Back to Services</a>
       </main>
     </div>
       </Head>;
@@ -30,7 +30,7 @@ const MobileAppDevelopmentChat: NextPage = () => {;
       <main>;
         <h1>MobileAppDevelopmentChat</h1>;
         <p>Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;
+        <a href=/services">Back to Services</a>;
       </main>;
     </div>;
   );

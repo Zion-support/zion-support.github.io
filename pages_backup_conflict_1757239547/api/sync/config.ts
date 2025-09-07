@@ -56,7 +56,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
   if (req.method === "POST") {
-    const { optIn, paused, scope, peers, instanceId } = req.body as Partial<InstanceConfig> & {
       peers?: Peer[]
       scope?: SyncScope
       instanceId?: string

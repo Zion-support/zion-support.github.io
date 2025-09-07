@@ -1,26 +1,26 @@
-import { useState  } from 'react';
-import { Card, CardContent, CardFooter  } from '@/components/ui/card';
-import { Button  } from '@/components/ui/button';
-import { Badge  } from '@/components/ui/badge';
-import Image from 'next/image';
-import { PortfolioProject  } from '@/types/resume';
+import { useState  } from 'react;
+import { Card, CardContent, CardFooter  } from @/components/ui/card';
+import { Button  } from '@/components/ui/button;
+import { Badge  } from @/components/ui/badge';
+import Image from 'next/image;
+import { PortfolioProject  } from @/types/resume';
 interface ProjectCardProps  {project: PortfolioProject;
-  onEdit: (project: PortfolioProject) => void;onDelete: (projectId: string) => void; import Image from 'next/image';
+  onEdit: (project: PortfolioProject) => void;onDelete: (projectId: string) => void; import Image from 'next/image;
 interface ProjectCardProps  {project: PortfolioProject;
   onEdit: (project: PortfolioProject,) => void;
   onDelete: (projectId: string,) => void;
-import { useState   } from 'react';
-import { Card, CardContent, CardFooter   } from '@/components/ui/card';
-import { Button   } from '@/components/ui/button';
-import { Badge   } from '@/components/ui/badge';
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle   } from '@/components/ui/alert-dialog';
-import { Edit, Trash2, Github, Link, FileText  } from 'lucide-react';
+import { useState   } from react';
+import { Card, CardContent, CardFooter   } from '@/components/ui/card;
+import { Button   } from @/components/ui/button';
+import { Badge   } from '@/components/ui/badge;
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle   } from @/components/ui/alert-dialog';
+import { Edit, Trash2, Github, Link, FileText  } from 'lucide-react;
 interface ProjectCardProps  {project: PortfolioProject;
   onEdit: (project: PortfolioProject) => void;
   onDelete: (projectId: string) => void
 origin/cursor/automate-test-improve-and-merge-code-2533
-import Image from 'next/image';
-import { PortfolioProject } from '@/types/resume';
+import Image from next/image';
+import { PortfolioProject } from '@/types/resume;
 interface ProjectCardProps {
 
 
@@ -28,21 +28,21 @@ interface ProjectCardProps {
   onEdit: (project: PortfolioProject) => void;
 
 
-  onDelete: (projectId: string) => void; import Image from 'next/image'
+  onDelete: (projectId: string) => void; import Image from next/image'
 interface ProjectCardProps {
   project: PortfolioProject
   onEdit: (project: PortfolioProject,) => void
   onDelete: (projectId: string,) => void
-import { useState } from 'react';'
-import { Card, CardContent, CardFooter } from '@/components/ui/card';'
-import { Button } from '@/components/ui/button';'
-import { Badge } from '@/components/ui/badge';
+import { useState } from 'react;
+import { Card, CardContent, CardFooter } from '@/components/ui/card';
+import { Button } from @/components/ui/button';'
+import { Badge } from @/components/ui/badge;
 
 }
 
 }
 
-interface ProjectCardProps {;
+interface ProjectCardProps {
   project: PortfolioProject;
   onDelete: (projectId: string) => void;
 }}interface ProjectCardProps  {project: PortfolioProject;
@@ -50,30 +50,30 @@ interface ProjectCardProps {;
   onDelete: (projectId: string) => void;import Image from 'next/image';
 interface ProjectCardProps  {project: PortfolioProject,onEdit: (project: PortfolioProject,) => void,onDelete: (projectId: string,) => void;
 }export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardProps) {const [deleteDialogOpen, setDeleteDialogOpen]  = useState(false)const handleDelete = () => {if (project && project.id) {onDelete(project && project.id)}
-    setDeleteDialogOpen(false)}return (<Card className='h-full flex flex-col'>;
+    setDeleteDialogOpen(false)}return (<Card className=h-full flex flex-col>;
       <div className='relative h-48 overflow-hidden rounded-t-lg bg-muted'>        {project && project.image_url ? (<Image;
             src={project && project.image_url}
             alt={project && project.title}
-            className='object-cover';
-            loading='lazy'    <Card className="h-full flex flex-col">;
-      <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">;
+            className=object-cover;
+            loading='lazy'    <Card className="h-full flex flex-col>;
+      <div className=relative h-48 overflow-hidden rounded-t-lg bg-muted">;
         {project && project.image_url ? (<Image;
             src={project && project.image_url}
             alt={project && project.title}
-            className='object-cover';
+            className=object-cover;
             loading='lazy';
-        ) : (<div className='w-full h-full flex items-center justify-center bg-muted'>;
+        ) : (<div className=w-full h-full flex items-center justify-center bg-muted>;
             <FileText className='h-12 w-12 text-muted-foreground/50' />;
           </div>;
-        )}import { Card, CardContent, CardFooter  } from '@/components / ui / card';
+        )}import { Card, CardContent, CardFooter  } from @/components / ui / card;
 import { Button  } from '@/components / ui / button';
-import { Badge  } from '@/components / ui / badge';
+import { Badge  } from @/components / ui / badge;
 import { AlertDialog,AlertDialogAction,AlertDialogCancel,AlertDialogContent,AlertDialogDescription,AlertDialogFooter,AlertDialogHeader,AlertDialogTitle} from '@/components / ui / alert - dialog';
-import Image from 'next / image';
+import Image from next / image;
 import { PortfolioProject  } from '@/types / resume';
 interface ProjectCardProps  {project: PortfolioProject;
   on_edit: (project: PortfolioProject) => void;
-  on_delete: (project_id: string) => void; import Image from 'next / image';
+  on_delete: (project_id: string) => void; import Image from next / image;
 interface ProjectCardProps  {project: PortfolioProject,on_edit: (project: PortfolioProject, ) => void,on_delete: (project_id: string, ) => void;
 }
 export /**;
@@ -85,104 +85,103 @@ if ( {) {$2;
       on_delete (project.id)}
     setDeleteDialogOpen (false)}
   return (<Card className='h - full flex flex - col'>;
-      <div className='relative h - 48 overflow - hidden rounded - t-lg bg - muted'>        {project.image_url ? (<Image;
+      <div className=relative h - 48 overflow - hidden rounded - t-lg bg - muted>        {project.image_url ? (<Image;
             src={project.image_url}
             alt={project.title}
             className='object - cover';
-            loading='lazy'    <Card className="h - full flex flex - col">;
-      <div className="relative h - 48 overflow - hidden rounded - t-lg bg - muted">;
+            loading=lazy    <Card className="h - full flex flex - col>;
+      <div className=relative h - 48 overflow - hidden rounded - t-lg bg - muted">;
         {project.image_url ? (<Image;
             src={project.image_url}
             alt={project.title}
             className='object - cover';
-            loading='lazy') : (<div className='w - full h - full flex items - center justify - center bg - muted'>;
-            <FileText className='h - 12 w - 12 text - muted - foreground / 50' />;
+            loading=lazy) : (<div className='w - full h - full flex items - center justify - center bg - muted'>;
+            <FileText className=h - 12 w - 12 text - muted - foreground / 50 />;
           </div>)}
       </div>;
       <CardContent className='flex - grow pt - 6'>;
-        <div className='space - y-2'>;
-          <h3 className='font - semibold text - lg'>{project.title}</h3>;{project.description && (<p className='text - sm text - muted - foreground line - clamp - 3'>;
+        <div className=space - y-2>;
+          <h3 className='font - semibold text - lg'>{project.title}</h3>;{project.description && (<p className=text - sm text - muted - foreground line - clamp - 3>;
               {project.description}{project.technologies && project.technologies.length > 0 && (<div className='flex flex-wrap gap-1 mt-2'>;
-              {project.technologies.map((tech, index) => (<Badge key={index} variant='secondary' className='text-xs'>                  {tech}                <Badge key={index} variant="secondary" className="text-xs">;
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle  } from '@/components/ui/alert-dialog';
+              {project.technologies.map((tech, index) => (<Badge key={index} variant=secondary className='text-xs'>                  {tech}                <Badge key={index} variant="secondary className=text-xs">;
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle  } from @/components/ui/alert-dialog;
 interface ProjectCardProps  {project: PortfolioProject,onEdit: (project: PortfolioProject) => void,onDelete: (projectId: string) => void;
 }export function ProjectCard() {const [ deleteDialogOpen, setDeleteDialogOpen ] = useState(false),const handleDelete = () => {if (project.id) {onDelete(project.id)}
-    setDeleteDialogOpen(false)}return (<Card className="h-full flex flex-col">;
-      <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">;
+    setDeleteDialogOpen(false)}return (<Card className="h-full flex flex-col>;
+      <div className=relative h-48 overflow-hidden rounded-t-lg bg-muted">;
         {project.image_url ? (<Image;
             src={project.image_url}
             alt={project.title}
 className='object-cover'
-            loading='lazy'
+            loading=lazy
         ) : (
           <div className='w-full h-full flex items-center justify-center bg-muted'>
-            <FileText className='h-12 w-12 text-muted-foreground/50' />
+            <FileText className=h-12 w-12 text-muted-foreground/50 />
           </div>
         )}
       </div>
       <CardContent className='flex-grow pt-6'>
-        <div className='space-y-2'>
+        <div className=space-y-2>
           <h3 className='font-semibold text-lg'>{project.title}</h3>
           {project.description && (
-            <p className='text-sm text-muted-foreground line-clamp-3'>
+            <p className=text-sm text-muted-foreground line-clamp-3>
               {project.description}
             </p>
           )}
           {project.technologies && project.technologies.length > 0 && (
             <div className='flex flex-wrap gap-1 mt-2'>
               {project.technologies.map((tech, index) => (
-                <Badge key={index} variant='secondary' className='text-xs'>
+                <Badge key={index} variant=secondary className='text-xs'>
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 
-            className="object-cover"
-            loading="lazy"
+            className="object-cover
+            loading=lazy"
           />
 
-  onEdit: (project: PortfolioProject) => void;'
-  onDelete: (projectId: string) => void;import Image from 'next/image';'
-import { PortfolioProject } from '@/types/resume';
-interface ProjectCardProps {;
-  project: PortfolioProject,;
-  onEdit: (project: PortfolioProject,) => void,;
+  onEdit: (project: PortfolioProject) => void;
+  onDelete: (projectId: string) => void;import Image from next/image';'
+import { PortfolioProject } from @/types/resume;
+interface ProjectCardProps {
+  project: PortfolioProject,
+  onEdit: (project: PortfolioProject,) => void,
   onDelete: (projectId: string,) => void;
 }
 
-export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardProps) {;
+export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardProps) {
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
 
-  const handleDelete = () => {;
-    if (project && project.id) {;
+  const handleDelete = () => {
+    if (project && project.id) {
       onDelete(project && project.id);
     }
     setDeleteDialogOpen(false)
-};
+}
 
   return ('
-    <Card className='h-full flex flex-col'>;'
+    <Card className='h-full flex flex-col>;
       <div className='relative h-48 overflow-hidden rounded-t-lg bg-muted'>        {project && project.image_url ? (;
           <Image;
             src={project && project.image_url}
-            alt={project && project.title}'
-            className='object-cover''
-            loading='lazy'    <Card className="h-full flex flex-col">;"
+            alt={project && project.title}
+            className=object-cover''
+            loading=lazy    <Card className="h-full flex flex-col>;
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">;
         {project && project.image_url ? (;
           <Image;
             src={project && project.image_url}
             alt={project && project.title}'
-            className='object-cover''
+            className='object-cover
             loading='lazy'
-        ) : ('
-          <div className='w-full h-full flex items-center justify-center bg-muted'>;'
-            <FileText className='h-12 w-12 text-muted-foreground/50' />;
+        ) : (
+          <div className=w-full h-full flex items-center justify-center bg-muted'>;'
+            <FileText className=h-12 w-12 text-muted-foreground/50 />;
           </div>;
         )}
 '
-import { useState } from 'react';'
-import { Card, CardContent, CardFooter } from '@/components / ui / card';'
-import { Button } from '@/components / ui / button';'
-import { Badge } from '@/components / ui / badge';
+import { Card, CardContent, CardFooter } from '@/components / ui / card';
+import { Button } from @/components / ui / button';'
+import { Badge } from @/components / ui / badge;
 import {}
   AlertDialog,
   AlertDialogAction,
@@ -193,7 +192,6 @@ import {}
   AlertDialogHeader,
 
  */
-function ProjectCard() {}
   const [deleteDialogOpen, setDeleteDialogOpen] = useState (false);
   const handle_delete = () =>: any {}
     // Check condition;
@@ -205,7 +203,7 @@ if ( {) {}
     setDeleteDialogOpen (false);
   }
   return ('
-    <Card className='h - full flex flex - col'>;'
+    <Card className='h - full flex flex - col>;
       <div className='relative h - 48 overflow - hidden rounded - t-lg bg - muted'>        {project.image_url ? (
           <Image;
             src={project.image_url}
@@ -213,28 +211,27 @@ if ( {) {}
         {project.image_url ? (
           <Image;
             src={project.image_url}
-            alt={project.title}'
-            className='object - cover';'
-            loading='lazy') : ('
-          <div className='w - full h - full flex items - center justify - center bg - muted'>;'
+            alt={project.title}
+            className=object - cover';'
+            loading=lazy) : ('
+          <div className='w - full h - full flex items - center justify - center bg - muted>;
             <FileText className='h - 12 w - 12 text - muted - foreground / 50' />;
           </div>)}
-      </div>;'
-      <CardContent className='flex - grow pt - 6'>;'
-        <div className='space - y-2'>;'
-          <h3 className='font - semibold text - lg'>{project.title}</h3>;
+      </div>;
+      <CardContent className=flex - grow pt - 6'>;'
+        <div className=space - y-2>;'
+          <h3 className='font - semibold text - lg>{project.title}</h3>;
 
-          {project.description && ('
+          {project.description && (
             <p className='text - sm text - muted - foreground line - clamp - 3'>;
               {project.description}
 
-          {project.technologies && project.technologies.length > 0 && ('
-            <div className='flex flex-wrap gap-1 mt-2'>
-              {project.technologies.map((tech, index) => ('"
-                <Badge key={index} variant='secondary' className='text-xs'>                  {tech}                <Badge key={index} variant="secondary" className="text-xs">'
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog';'
-import { Edit, Trash2, Github, Link, FileText } from 'lucide-react'';
-import Image from 'next/image';'
+          {project.technologies && project.technologies.length > 0 && (
+            <div className=flex flex-wrap gap-1 mt-2'>
+              {project.technologies.map((tech, index) => ('
+                <Badge key={index} variant=secondary className='text-xs'>                  {tech}                <Badge key={index} variant=secondary" className="text-xs>
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from @/components/ui/alert-dialog';'
+import { Edit, Trash2, Github, Link, FileText } from lucide-react';
 import { PortfolioProject } from '@/types/resume';
 interface ProjectCardProps {}
   project: PortfolioProject,
@@ -250,45 +247,45 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {}
       onDelete(project.id)
     }
     setDeleteDialogOpen(false);
-  };
+  }
 
   return (
-    <Card className="h-full flex flex-col">
+    <Card className=h-full flex flex-col">
 
-      <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
+      <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted>
         {project.image_url ? (
           <Image;
             src={project.image_url}
             alt={project.title}
 
         ) : (
-          <div className="w-full h-full flex items-center justify-center bg-muted">
+          <div className=w-full h-full flex items-center justify-center bg-muted">
 
-            <FileText className="h-12 w-12 text-muted-foreground/50" />
+            <FileText className="h-12 w-12 text-muted-foreground/50 />
           </div>
         )}
       </div>
 
-className='object-cover'
+className=object-cover
             loading='lazy'
         ) : (
-          <div className='w-full h-full flex items-center justify-center bg-muted'>
+          <div className=w-full h-full flex items-center justify-center bg-muted>
             <FileText className='h-12 w-12 text-muted-foreground/50' />
           </div>
         )}
       </div>
-      <CardContent className='flex-grow pt-6'>
+      <CardContent className=flex-grow pt-6>
         <div className='space-y-2'>
-          <h3 className='font-semibold text-lg'>{project.title}</h3>
+          <h3 className=font-semibold text-lg>{project.title}</h3>
           {project.description && (
             <p className='text-sm text-muted-foreground line-clamp-3'>
               {project.description}
             </p>
           )}
           {project.technologies && project.technologies.length > 0 && (
-            <div className='flex flex-wrap gap-1 mt-2'>
+            <div className=flex flex-wrap gap-1 mt-2>
               {project.technologies.map((tech, index) => (
-                <Badge key={index} variant='secondary' className='text-xs'>
+                <Badge key={index} variant='secondary' className=text-xs>
 origin/cursor/automate-test-improve-and-merge-code-2533
                   {tech}
                 </Badge>
@@ -299,172 +296,172 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </CardContent>
 <CardFooter className='flex justify-between border-t bg-muted/40 p-4'>
-        <div className='flex gap-2'>
+        <div className=flex gap-2>
           {project.github_url && (
 origin/cursor/automate-test-improve-and-merge-code-2533
 
         </div>
       </CardContent>
 <CardFooter className='flex justify-between border-t bg-muted/40 p-4'>
-        <div className='flex gap-2'>
+        <div className=flex gap-2>
           {project.github_url && (
 origin/cursor/automate-test-improve-and-merge-code-2533
             <a
               href={project && project.github_url}
               target='_blank'
-              rel='noopener noreferrer'
+              rel=noopener noreferrer
               aria-label='GitHub'
-              title='GitHub'
-              href = {project && project.github_url,}
+              title=GitHub
+              href = {project && project.github_url}
 
-      <CardFooter className="flex justify-between border-t bg-muted/40 p-4">
+      <CardFooter className=flex justify-between border-t bg-muted/40 p-4">
 
-        <div className="flex gap-2">
+        <div className="flex gap-2>
           {project.github_url && (
             <a;
               href={project.github_url}
 
-              title="GitHub"
+              title=GitHub"
             >"
-              <Button variant="ghost" size="icon" aria-label="GitHub link">"
-                <Github className="h-4 w-4" />
+              <Button variant=ghost size="icon" aria-label=GitHub link>"
+                <Github className="h-4 w-4 />
               </Button>
             </Link>
           )}
           {project.demo_url && (
             <a
-            alt={project.title}className="object-cover";
-            loading="lazy";
+            alt={project.title}className=object-cover";
+            loading="lazy;
           />;
-        ) : (<div className="w-full h-full flex items-center justify-center bg-muted">;
-            <FileText className="h-12 w-12 text-muted-foreground/50" />;
+        ) : (<div className=w-full h-full flex items-center justify-center bg-muted">;
+            <FileText className="h-12 w-12 text-muted-foreground/50 />;
           </div>;
         )}
       </div>;
       </div>;<CardContent className='flex-grow pt-6'>;
-        <div className='space-y-2'>;
-          <h3 className='font-semibold text-lg'>{project && project.title}</h3>;{project && project.description && (<p className='text-sm text-muted-foreground line-clamp-3'>;
+        <div className=space-y-2>;
+          <h3 className='font-semibold text-lg'>{project && project.title}</h3>;{project && project.description && (<p className=text-sm text-muted-foreground line-clamp-3>;
               {project && project.description}
             </p>;className='object-cover';
-            loading='lazy';
+            loading=lazy;
         ) : (<div className='w-full h-full flex items-center justify-center bg-muted'>;
-            <FileText className='h-12 w-12 text-muted-foreground/50' />;
+            <FileText className=h-12 w-12 text-muted-foreground/50 />;
           </div>;
         )}
       </div>;
       <CardContent className='flex-grow pt-6'>;
-        <div className='space-y-2'>;
+        <div className=space-y-2>;
           <h3 className='font-semibold text-lg'>{project.title}</h3>;
-          {project.description && (<p className='text-sm text-muted-foreground line-clamp-3'>;
+          {project.description && (<p className=text-sm text-muted-foreground line-clamp-3>;
               {project.description}
             </p>;
           )}
           {project.technologies && project.technologies.length > 0 && (<div className='flex flex-wrap gap-1 mt-2'>;
-              {project.technologies.map((tech, index) => (<Badge key={index} variant='secondary' className='text-xs'>;
+              {project.technologies.map((tech, index) => (<Badge key={index} variant=secondary className='text-xs'>;
                   {tech}
                 </Badge>;
               ))}
             </div>;
-          )}{project && project.technologies && project && project.technologies.length > 0 && (<div className='flex flex-wrap gap-1 mt-2'>;
-              {project && project.technologies.map((tech, index) => (<Badge key={index} variant='secondary' className='text-xs'>                  {tech}                <Badge key={index} variant="secondary" className="text-xs">;
+          )}{project && project.technologies && project && project.technologies.length > 0 && (<div className=flex flex-wrap gap-1 mt-2>;
+              {project && project.technologies.map((tech, index) => (<Badge key={index} variant='secondary' className=text-xs>                  {tech}                <Badge key={index} variant=secondary" className="text-xs>;
           />;
-        ) : (<div className="w-full h-full flex items-center justify-center bg-muted">;
-            <FileText className="h-12 w-12 text-muted-foreground/50" />;
+        ) : (<div className=w-full h-full flex items-center justify-center bg-muted">;
+            <FileText className="h-12 w-12 text-muted-foreground/50 />;
           </div>;
         )}
-      </div>;<CardContent className="flex-grow pt-6">;
-        <div className="space-y-2">;
-          <h3 className="font-semibold text-lg">{project && project.title}</h3>;{project && project.description && (<p className="text-sm text-muted-foreground line-clamp-3">{project && project.description}</p>;
-          )}{project && project.technologies && project && project.technologies.length > 0 && (<div className="flex flex-wrap gap-1 mt-2">;
-              {project && project.technologies.map((tech, index) => (<Badge key={index} variant="secondary" className="text-xs">;{tech}
+      </div>;<CardContent className=flex-grow pt-6">;
+        <div className="space-y-2>;
+          <h3 className=font-semibold text-lg">{project && project.title}</h3>;{project && project.description && (<p className="text-sm text-muted-foreground line-clamp-3>{project && project.description}</p>;
+          )}{project && project.technologies && project && project.technologies.length > 0 && (<div className=flex flex-wrap gap-1 mt-2">;
+              {project && project.technologies.map((tech, index) => (<Badge key={index} variant="secondary className=text-xs">;{tech}
                 </Badge>;
               ))}
             </div>;
           )}</div>;
       </CardContent>;
 <CardFooter className='flex justify-between border-t bg-muted/40 p-4'>;
-        <div className='flex gap-2'>;
+        <div className=flex gap-2>;
           {project.github_url && (<a;
               href={project && project.github_url}
               target='_blank';
-              rel='noopener noreferrer';
+              rel=noopener noreferrer;
               aria-label='GitHub';
-              title='GitHub';
-              href = {project && project.github_url}<CardFooter className="flex justify-between border-t bg-muted/40 p-4">;
-        <div className="flex gap-2">;
+              title=GitHub;
+              href = {project && project.github_url}<CardFooter className="flex justify-between border-t bg-muted/40 p-4>;
+        <div className=flex gap-2">;
           {project.github_url && (<a;
-              href={project.github_url}target="_blank";
-              rel="noopener noreferrer";
-              aria-label="GitHub";
-              title="GitHub";
+              href={project.github_url}target="_blank;
+              rel=noopener noreferrer";
+              aria-label="GitHub;
+              title=GitHub";
             >;
-              <Button variant="ghost" size="icon" aria-label="GitHub link">;
-                <Github className="h-4 w-4" />;
+              <Button variant="ghost size=icon" aria-label="GitHub link>;
+                <Github className=h-4 w-4" />;
               </Button>;
             </Link>;
           )}</div>;<div className='flex gap-2'>;{project.demo_url && (<a;
               href={project.demo_url}
-              target='_blank';
+              target=_blank;
               rel='noopener noreferrer';
-              aria-label='Live demo';
+              aria-label=Live demo;
               title='Live demo'            >;
-              <Button variant='ghost' size='icon' aria-label='Live demo link'>;
+              <Button variant=ghost size='icon' aria-label=Live demo link>;
                 <Link className='h-4 w-4' />;
               </Button>;
             </a>;
           )}
         </div>
-<div className='flex gap-2'>
+<div className=flex gap-2>
 origin/cursor/automate-test-improve-and-merge-code-2533
 
         </div>;
 '
-        <div className='flex gap-2'>;
+        <div className='flex gap-2>;
 
           {project.demo_url && (
             <a
               href={project.demo_url}
-              target='_blank'
-              rel='noopener noreferrer'
-              aria-label='Live demo'
-              title='Live demo'            >
-              <Button variant='ghost' size='icon' aria-label='Live demo link'>
-                <Link className='h-4 w-4' />
+              target=_blank'
+              rel='noopener noreferrer
+              aria-label=Live demo'
+              title='Live demo            >
+              <Button variant=ghost' size='icon aria-label=Live demo link'>
+                <Link className='h-4 w-4 />
               </Button>
             </a>
           )}
         </div>
-<div className='flex gap-2'>
+<div className=flex gap-2'>
 origin/cursor/automate-test-improve-and-merge-code-2533
           <Button
-            variant='ghost'
+            variant='ghost
 
-            size='icon'
+            size=icon'
         </div>;
-<div className='flex gap-2'>;
+<div className='flex gap-2>;
           <Button;
-            variant='ghost';
-            size='icon';
+            variant=ghost';
+            size='icon;
             onClick={() => onEdit(project)}
-            onClick={() => onEdit(project)}'
+            onClick={() => onEdit(project)}
             aria-label='Edit project';
-          >;'
-            <Edit className='h-4 w-4' />;
+          >;
+            <Edit className=h-4 w-4' />;
           <Button'
-            variant='ghost''
-            size='icon'
+            variant=ghost'
+            size='icon
             onClick={() => setDeleteDialogOpen(true)}
 
-                <Link className="h-4 w-4" />
+                <Link className="h-4 w-4 />
               </Button>
             </Link>
           )}
         </div>
 
-            <Edit className="h-4 w-4" />
+            <Edit className=h-4 w-4" />
           </Button>"
-          <Button variant="ghost" size="icon" onClick={() => setDeleteDialogOpen(true)} aria-label="Delete project">"
-            <Trash2 className="h-4 w-4" />
+          <Button variant=ghost size="icon" onClick={() => setDeleteDialogOpen(true)} aria-label=Delete project>"
+            <Trash2 className="h-4 w-4 />
           </Button>
         </div>
       </CardFooter>
@@ -483,7 +480,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <AlertDialogCancel>Cancel</AlertDialogCancel>
 <AlertDialogAction
               onClick={handleDelete}
-              className='bg-destructive text-destructive-foreground'
+              className=bg-destructive text-destructive-foreground'
             >
 origin/cursor/automate-test-improve-and-merge-code-2533
               Delete
@@ -492,12 +489,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </AlertDialogContent>
 
         </div>;
-        <div className="flex gap-2">;
-          <Button variant="ghost" size="icon" onClick={() => onEdit(project)} aria-label="Edit project">;
-            <Edit className="h-4 w-4" />;
+        <div className=flex gap-2">;
+          <Button variant="ghost size=icon" onClick={() => onEdit(project)} aria-label="Edit project>;
+            <Edit className=h-4 w-4" />;
           </Button>;
-          <Button variant="ghost" size="icon" onClick={() => setDeleteDialogOpen(true)} aria-label="Delete project">;
-            <Trash2 className="h-4 w-4" />;
+          <Button variant="ghost size=icon" onClick={() => setDeleteDialogOpen(true)} aria-label="Delete project>;
+            <Trash2 className=h-4 w-4" />;
           </Button>;
         </div>;
       </CardFooter>;
@@ -506,8 +503,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <AlertDialogHeader>;
             <AlertDialogTitle>Delete Project</AlertDialogTitle>;
             <AlertDialogDescription>;
-            aria-label='Delete project';
-          >;'
+            aria-label='Delete project;
+          >;
             <Trash2 className='h-4 w-4' />;
           </Button>;
         </div>;
@@ -517,60 +514,60 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <AlertDialogTitle>Delete Project</AlertDialogTitle>;
 
             </p>)}
-          {project.technologies && project.technologies.length > 0 && ('
-            <div className='flex flex - wrap gap - 1 mt - 2'>;
+          {project.technologies && project.technologies.length > 0 && (
+            <div className=flex flex - wrap gap - 1 mt - 2'>;
 
                   {tech}
                 </Badge>))}
             </div>)}
         </div>;
       </CardContent>;'
-      <CardFooter className='flex justify - between border - t bg - muted / 40 p - 4'>;'
-        <div className='flex gap - 2'>;
+      <CardFooter className=flex justify - between border - t bg - muted / 40 p - 4>;'
+        <div className='flex gap - 2>;
           {project.github_url && (
             <a;
-              href={project.github_url}'
-              target='_blank';'
-              rel='noopener noreferrer';'
-              aria - label='GitHub';'
-              title='GitHub';
-              href = {project.github_url, }"
-              target="_blank";"
-              rel="noopener noreferrer";"
-              aria - label="GitHub";"
-              title="GitHub";
-            >;'
-              <Button variant='ghost' size='icon' aria - label='GitHub link'>;'
-                <Github className='h - 4 w - 4' />;
+              href={project.github_url}
+              target='_blank';
+              rel=noopener noreferrer';'
+              aria - label=GitHub;'
+              title='GitHub;
+              href = {project.github_url}"
+              target=_blank;"
+              rel="noopener noreferrer;
+              aria - label="GitHub";
+              title=GitHub";
+            >;
+              <Button variant='ghost' size=icon aria - label='GitHub link'>;
+                <Github className=h - 4 w - 4' />;
               </Button>;
             </a>)}
           {project.demo_url && (
             <a;
               href={project.demo_url}'
-              target='_blank';'
-              rel='noopener noreferrer';'
-              aria - label='Live demo';'
-              title='Live demo'            >;'
-              <Button variant='ghost' size='icon' aria - label='Live demo link'>;'
-                <Link className='h - 4 w - 4' />              </Button>;
+              target=_blank;'
+              rel='noopener noreferrer;
+              aria - label='Live demo';
+              title=Live demo'            >;'
+              <Button variant=ghost size='icon' aria - label=Live demo link>;'
+                <Link className='h - 4 w - 4 />              </Button>;
 
               </Button>;
             </a>)}
-        </div>;'
+        </div>;
         <div className='flex gap - 2'>;
-          <Button;'
-            variant='ghost';'
-            size='icon';
+          <Button;
+            variant=ghost';'
+            size=icon;
             on_click={() => on_edit (project)}'
-            aria - label='Edit project';
-          >;'
+            aria - label='Edit project;
+          >;
             <Edit className='h - 4 w - 4' />;
-          <Button;'
-            variant='ghost';'
-            size='icon';
+          <Button;
+            variant=ghost';'
+            size=icon;
             on_click={() => setDeleteDialogOpen (true)}'
-            aria - label='Delete project';
-          >;'
+            aria - label='Delete project;
+          >;
             <Trash2 className='h - 4 w - 4' />;
           </Button>;
         </div>;
@@ -583,7 +580,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </AlertDialogHeader>;
           <AlertDialogFooter>;
 
-              className='bg-destructive text-destructive-foreground'>              Delete              Are you sure you want to delete this project? This action cannot be undone.;
+              className=bg-destructive text-destructive-foreground>              Delete              Are you sure you want to delete this project? This action cannot be undone.;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
@@ -604,11 +601,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>
 
-            <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">
+            <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground>
 
 <AlertDialogAction
               onClick={handleDelete}
-              className='bg-destructive text-destructive-foreground'
+              className=bg-destructive text-destructive-foreground
             >
 
               Delete
@@ -617,11 +614,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </AlertDialogFooter>
         </AlertDialogContent>
 
-              className='bg-destructive text-destructive-foreground'>            <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">;
+              className='bg-destructive text-destructive-foreground'>            <AlertDialogAction onClick={handleDelete} className=bg-destructive text-destructive-foreground">;
             <AlertDialogCancel > Cancel</AlertDialogCancel>;
             <AlertDialogAction;
-              on_click={handle_delete}'
-              className='bg - destructive text - destructive - foreground';
+              on_click={handle_delete}
+              className=bg - destructive text - destructive - foreground';
             >              Delete              Are you sure you want to delete this project? This action cannot be undone.;
             </AlertDialogDescription>;
           </AlertDialogHeader>;

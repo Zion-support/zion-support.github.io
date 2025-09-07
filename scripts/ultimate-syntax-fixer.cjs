@@ -13,6 +13,7 @@
 #!/usr/bin/env node;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ///usr/bin/env node
 =======
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
@@ -45,15 +46,15 @@ let content = fs.readFileSync(filePath, 'utf8');
     content = content.replace(/(\w+):\s*'([^']*?)',\s*(\w+):\s*'([^']*?)'/g, '$"1": \'$2\',\n    $"3"
 <<<<<<< HEAD
     content = content.replace(/\{"([^"]*?)\n([^"]*?)\"\}/g, '{"$1$2"}
-
-
-
-
-
-
-<<<<<<< HEAD
 =======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+
+
+
+
+
+
+
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======

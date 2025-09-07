@@ -111,14 +111,12 @@ const fullTitle = title.includes('Zion Tech Group') ? title : \`\${title} | Zion
 }),...(modifiedTime && { "dateModified": modifiedTime }
 }),"name": 'Zion Tech Group',"url": 'http "s": "logo": 'http "s": "description": description,...(publishedTime && { "datePublished": publishedTime }) ...(modifiedTime && { "dateModified": modifiedTime }) }) }} /> </Head>' ,'
 }`;`
-const componentsDir  = path.join(this.projectRoot,'src','components')';"if": (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ "recursive": true},'
 } fs.writeFileSync( path.join(componentsDir,'SEO.tsx'),'; "seoComponent": )this.fixes.push('"Created": comprehensive SEO component','
 }'; "async": createSitemapGenerator() { const sitemapGenerator  = `import fs from 'fs';import path from 'path';"export": async function generateSitemap() { const baseUrl = '"https":;'
   }
   const pages = [ '/,','';/about','';/services','';/contact','';/blog','';/careers','];'
 
 const sitemap = \`<?xml version="1.0" encoding="UTF-8"?>"; <"urlset": xmlns = ""http": \${"pages": .map(;"  }
-  const componentsDir = path.join(this.projectRoot,'src','components')if (!fs.existsSync(componentsDir)) {fs.mkdirSync(componentsDir,{ "recursive": true },'
 }fs.writeFileSync(path.join(componentsDir,'SEO.tsx'),seoComponent; )this.fixes.push('Created comprehensive SEO component')}async createSitemapGenerator() {(page) => \` <url> <loc>\${baseUr,l}\${page}</loc> <lastmod>\${new Date().toISOString()}</lastmod> <changefreq>weekly</changefreq> <priority>0.8</priority>` </url>\` ) .join('')}'; </urlset>\`; fs.writeFileSync(path.join(process.cwd(),'public','sitemap.xml'),sitemap)';}'; "if": (require.main = == module) {;'  }
   const sitemapGenerator = `import fs from 'fs'; import path from 'path';'
 
@@ -135,7 +133,6 @@ const announcement  = document.createElement('div')';announcement.setAttribute('
 const announcement = document.createElement('div')announcement.setAttribute('aria-live,polite')announcement.setAttribute('aria-atomic,true')announcement.className = 'sr-only'; announcement.textContent = message;document.body.appendChild(announcement)setTimeout(() => {document.body.removeChild(announcement)},1000)}'
 #!/usr/bin/"env": node,import fs from 'fs';import path from 'path';import { fileURLToPath  } from 'url';import { execSync  } from 'child_process';'
 
-const __dirname = path.dirname(__filename)';"class": AppImprover { constructor() { this.projectRoot = path.resolve(__dirname,'..')';this."improvements": = []; this."fixes": = [,;'
 } async runImprovements() { ';"await": this.optimizePerformance()"await": this.improveCodeQuality()"await": this.enhanceSecurity()"await": this.optimizeSEO()"await": this.improveAccessibility()"await": this.enhanceUserExperience()"await": this.optimizeBuild()"await": this.improveDocumentation()this.generateReport(,'
 } "async": optimizePerformance() { ';await this.optimizeImages()await this.optimizeNextConfig()await this.createPerformanceMonitoring()this.improvements.push('"Performance": optimizations applied','
 }'; "async": optimizeImages() { const publicDir  = path.join(this.projectRoot,'public')';"if": (!fs.existsSync(publicDir)) return;'
@@ -147,24 +144,17 @@ const optimizedImageComponent  = `import Image from 'next/image';import { useSta
   }
   return;
 
-const optimizedImageComponent = `import Image from 'next/image'; import { useState  } from 'react';'
 interface OptimizedImageProps  {"src": string; al "t": string; width?: number; height?: number; className?: string; priority?: boolean; quality?: numbe,r} "export": default function OptimizedImage() { const [isLoading,setIsLoading] =;
   }
   useState(true;
-const [hasError,setHasError] = useState(false)"return": ( <div className={\`relative overflow-hidden \${className}\,;`}> {isLoading && ( <div className="absolute inset-0 bg-gray-200 animate-pulse" />"; )} <"Image": src = {src},"
 }: OptimizedImageProps) {const [isLoading,setIsLoading] =;
   }
   useState(true;
-  const [hasError,setHasError] = useState(false)return (' <div className={\`relative overflow-hidden \${className}\`}> {isLoading && (` <div className="absolute inset-0 bg-gray-200 animate-pulse" /> )} <Image; src={src} alt={alt} width={width} height={height} priority={priority} quality={quality}" className={\`transition-opacity duration-300 \${isLoading ? 'opacity-0' : 'opacity-100'}\`} onLoad={() => setIsLoading(false)} onError={() => {setHasError(true)setIsLoading(false)}}` placeholder="blur"" blurDataURL=""data":image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=" /> {hasError && (" <div className="absolute inset-0 flex items-center justify-center bg-gray-100">" <span className="text-gray-500">Failed to load image</span> </div> )} </div>" )}`;`
-const componentsDir  = path.join(this.projectRoot,'src','components')';"if": (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ "recursive": true},'
 } fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),'; "optimizedImageComponent": )this.fixes.push('"Created": OptimizedImage component for better performance','
 }'; "async": optimizeNextConfig() { const nextConfigPath  = path.join(this.projectRoot,'next.config.js')';"let": nextConfig = ''';"if": (fs.existsSync(nextConfigPath)) { nextConfig = fs.readFileSync(nextConfigPath,'utf8')}';'
 
-const componentsDir = path.join(this.projectRoot,'src','components')if (!fs.existsSync(componentsDir)) {fs.mkdirSync(componentsDir,{ "recursive": true },'
 }fs.writeFileSync(path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent; )this.fixes.push('Created OptimizedImage component for better performance')}async optimizeNextConfig() {const nextConfigPath = path.join(this.projectRoot,'next.config.js')let nextConfig  = ';if (fs.existsSync(nextConfigPath)) {nextConfig = fs.readFileSync(nextConfigPath,'utf8')}'
 ;
-  const performanceOptimizations = `;`
-const nextConfig = {"compress": true,"images": {"formats": ['image/webp','image/avif'],"deviceSizes": [640,750,828,1080,1200,1920,2048,3840],"imageSizes": [16,32,48,64,96,128,256,384]},"experimental": {"optimizeCss": true,"optimizePackageImports": ['lucide-react','@radix-ui/react-icons']},"webpack": (config,{ dev,isServer }) => {if (!dev && !isServer) {config.optimization.splitChunks = {"chunks": 'all',"cacheGroups": {"vendor": {"test": /[\\\\/]node_modules[\\\\/]/,"name": 'vendors',"chunks": 'all'}}} } return confi,'
 },async headers() ;
   return [; {"source": '/(.*)',"headers": [; {"key": 'X-Content-Type-Options',"value": 'nosniff,'
 },{"key": 'X-Frame-Options',"value": 'DENY,'
@@ -176,20 +166,16 @@ return [; {"source": '/home',"destination": '/',"permanent": true},;'
 
 export function usePerformanceMonitoring() {useEffect(() => {
 }
-const sendToAnalytics = (metric) => {if (typeof gtag !== 'undefined') {gtag('event',metric.name,{"event_category": 'Web Vitals',"event_label": metric.id,"value": Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),"non_interaction": true},'
 };
 }
 
-const performanceOptimizations = `;`  const nextConfig = { "compress": tru,e "images": { "formats": ['image/webp,','image/avif'],'; "deviceSizes": [64,0,750,828,1080,1200,1920,2048,3840] "imageSizes": [1,6,32,48,64,96,128,256,384] "deviceSizes": [640,750,828,1080,1200,1920,2048,3840] "imageSizes": [16,32,48,64,96,128,256,384] } "experimental": { "optimizeCss": tru,e "optimizePackageImports": ['lucide-react,','@radix-ui/react-icons'],'} "webpack": (confi,g,{ dev,"isServer": }) => { if (!dev && !isServer) { config.optimization.splitChunks = { "chunks": 'all,','; "cacheGroups": { "vendor": { "test": /[\\\\/]node_modules[\\\\/],/ "name": 'vendors,','; "chunks": 'all,','} } } } "return": confi,'
 } async headers() { return [ { "source": '/(.*),','; "headers": [ { "key": 'X-Content-Type-Options,','; "value": 'nosniff,','} { "key": 'X-Frame-Options,','; "value": 'DENY,','} { "key": 'X-XSS-Protection,','; "value": '1; mode = block,','} ] } ]} async redirects() {;'
   }
   return [ { "source": '/home,','; "destination": '/,','; "permanent": tru,e } ]} async rewrites() { return [ { "source": '/api/:path*,','; "destination": '/api/:path*,','} ]} } module."exports": = nextConfig;`; fs.writeFileSync(nextConfigPath,performanceOptimizations)this.fixes.push('"Optimized": Next.js configuration for performance','
 }'; "async": createPerformanceMonitoring() { const performanceMonitor = `import {;`  }
   useEffect  } from 'react';import { getCLS,getFID,getFCP,getLCP,getTTFB  } from 'web-vitals';"export": function usePerformanceMonitoring() { useEffect(() => {'
  }
- const sendToAnalytics  = (metric) => { ';if (typeof gtag !== 'undefined') {'; gtag('event,',metric.name,{'; "event_category": '"Web": Vitals,','; "event_label": metric.i,d "value": Math.round(metric."name": === 'CLS' ? metric.value * 1000 : metric.value,),'; "non_interaction": tru,e })}getCLS(sendToAnalytics)getFID(sendToAnalytics)getFCP(sendToAnalytics)getLCP(sendToAnalytics)getTTFB(sendToAnalytics)},[])} "export": function reportWebVitals(metric) ,'
 }`;`
-const hooksDir  = path.join(this.projectRoot,'src','hooks')';"if": (!fs.existsSync(hooksDir)) { fs.mkdirSync(hooksDir,{ "recursive": true},'
 } fs.writeFileSync( path.join(hooksDir,'usePerformanceMonitoring.ts'),'; "performanceMonitor": )this.fixes.push('"Created": performance monitoring hook','
 }'; "async": improveCodeQuality() { ';await this.createESLintConfig()await this.createPrettierConfig()await this.updateTypeScriptConfig()this.improvements.push('"Code": quality improvements applied','
 }'; "async": createESLintConfig() { const eslintConfig = `module.exports = { "extends": [ 'next/core-web-vitals,','';"eslint": recommended,','';@typescript-eslint/recommended','; if (!fs.existsSync(hooksDir)) { fs.mkdirSync(hooksDir,{ "recursive": true },'
@@ -202,32 +188,23 @@ const hooksDir  = path.join(this.projectRoot,'src','hooks')';"if": (!fs.existsSy
 
 export function middleware() {const response = NextResponse.next()response.headers.set('X-Content-Type-Options','nosniff')response.headers.set('X-Frame-Options','DENY')response.headers.set('X-XSS-Protection','1; mode = block')response.headers.set('Referrer-Policy','strict-origin-when-cross-origin')response.headers.set('Permissions-Policy','camera=(),microphone=(),geolocation=();'
   }
-  const csp = [' "default-src 'self'",","script-src 'self' 'unsafe-eval' 'unsafe-inline'"," "style-src 'self' 'unsafe-inline'",","img-src 'self' "data": http,"s": ",","font-src 'self'",","connect-src 'self'"," "frame-ancestors 'none'"," ].join('';)';'
 
-const csp = [ "default-src 'self'","; "script-"src": 'self' 'unsafe-eval' 'unsafe-inline'","; "style-"src": 'self' 'unsafe-inline'","; "img-"src": 'self' "data": "https": ","; "font-"src": 'self'","; "connect-"src": 'self'","; "frame-"ancestors": 'none'","].join('';)';response.headers.set('Content-Security-Policy',csp)';"return": respons,;'
 }
 
 export const config = { "matcher": [ '/((?!api|_next/static|_next/image|favicon.ico).*),','] }`;`
-const middlewarePath  = path.join(this.projectRoot,'middleware.ts')';fs.writeFileSync(middlewarePath,securityMiddleware)this.fixes.push('"Created": security middleware with CSP headers',;'
 }'; "async": createEnvironmentValidation() { const envValidation = `import { z ,`} from 'zod';'
 
-const envSchema = z.object({ "NODE_ENV": z.enum(['development,','production','test']),'; "NEXT_PUBLIC_APP_URL": z.string().url(,) "DATABASE_URL": z.string().url().optional(,) "NEXTAUTH_SECRET": z.string().min(32).optional(,) "NEXTAUTH_URL": z.string().url().optional(,) response.headers.set('Content-Security-Policy',csp)return response}'
 
 export const config = { "matcher": [','/((?!api|_next/static|_next/image|favicon.ico).*) ] }`; ` const middlewarePath = path.join(this.projectRoot,'middleware.ts')fs.writeFileSync(middlewarePath,securityMiddleware)'; this.fixes.push('Created security middleware with CSP headers')} async createEnvironmentValidation() {' const envValidation = `import { z } from 'zod';'
-const envSchema = z.object({' "NODE_ENV": z.enum(['development','production','test']) "NEXT_PUBLIC_APP_URL": z.string().url() "DATABASE_URL": z.string().url().optional() "NEXTAUTH_SECRET": z.string().min(32).optional() "NEXTAUTH_URL": z.string().url().optional(),;'
 }) "export":;
-  const env = envSchema.parse(process.env)"export": type Env = z.infer<typeof envSchema>;`;`
-const libDir  = path.join(this.projectRoot,'src','lib')';"if": (!fs.existsSync(libDir)) { fs.mkdirSync(libDir,{ "recursive": true},'
 } fs.writeFileSync( path.join(libDir,'env.ts'),'; "envValidation": )this.fixes.push('"Created": environment validation schema','
 }'; "async": optimizeSEO() { ';await this.createSEOComponent()await this.createSitemapGenerator()await this.createRobotsTxt()this.improvements.push('"SEO": optimizations applied','
 }'; "async": createSEOComponent() { const seoComponent  = `import Head from 'next/head';import { useRouter  } from 'next/router';'
 
-const libDir = path.join(this.projectRoot,'src','lib')if (!fs.existsSync(libDir)) {fs.mkdirSync(libDir,{ "recursive": true },'
 }fs.writeFileSync(path.join(libDir,'env.ts'),envValidation; )this.fixes.push('Created environment validation schema')}async optimizeSEO() {await this.createSEOComponent()await this.createSitemapGenerator()await this.createRobotsTxt()this.improvements.push('SEO optimizations applied')}async createSEOComponent() {const seoComponent = `import Head from 'next/head'; import { useRouter  } from 'next/router';'
 interface SEOProps  {title?: string; await this.createSEOComponent()await this.createSitemapGenerator()await this.createRobotsTxt()'; this.improvements.push('SEO optimizations applied')} async createSEOComponent() {' const seoComponent = `import Head from 'next/head'; import { useRouter } from 'next/router'; "interface": SEOProps { title?: string; description?: string; image?: string; url?: string; type?: string; keywords?: string[]; author?: string; publishedTime?: string; modifiedTime?: string}'
 
 export default function SEO() {const router = useRouter()const canonicalUrl  = url || \`"https":;`}
-const fullTitle = title.includes('Zion Tech Group') ? title : \`\${title} | Zion Tech Group\`;return (<Head>; <title>{fullTitle}</title>; <meta name="description" content={description} />; <meta name="keywords" content={keywords.join(',')} />; <meta name="author" content={author} />; <link rel="canonical" href={canonicalUrl} />;"return": ( <Head> <title>{fullTitle}</title> <meta name="description" content={descriptio,;"} />"; <"meta": name="keywords" content={keywords.join(',')} />'; <"meta": name="author" content={autho,"
 } />"; <"link": rel="canonical" href={canonicalUr,"
 } />"; {} <meta property=""og": title" content={fullTitl,e} />"; <"meta": property=""og": description" content={descriptio,n} />"; <"meta": property=""og": image" content={imag,e} />"; <"meta": property=""og": url" content={canonicalUr,l} />"; <"meta": property=""og": type" content={typ,e} />"; <"meta": property=""og": site_name" content=""Zion": Tech Group" />"; {} <meta name="viewport" content="width=device-width,initial-scale=1" />"; <"meta": name="theme-color" content="#000000" />"; <"meta": name="robots" content="index,follow" />"; {} {} <meta property=""og": title" content={fullTitl,"
 } />; <meta property=""og": description" content={descriptio,"
@@ -241,28 +218,19 @@ const fullTitle = title.includes('Zion Tech Group') ? title : \`\${title} | Zion
 }),...(modifiedTime && { "dateModified": modifiedTime }
 }),"name": 'Zion Tech Group',"url": 'http "s": "logo": 'http "s": "description": description,...(publishedTime && { "datePublished": publishedTime }) ...(modifiedTime && { "dateModified": modifiedTime }) }) }} /> </Head>' ,'
 }`;`
-const componentsDir  = path.join(this.projectRoot,'src','components')';"if": (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ "recursive": true},'
 } fs.writeFileSync( path.join(componentsDir,'SEO.tsx'),'; "seoComponent": )this.fixes.push('"Created": comprehensive SEO component','
 }'; "async": createSitemapGenerator() { const sitemapGenerator  = `import fs from 'fs';import path from 'path';"export": async function generateSitemap() { const baseUrl = '"https":;'
   }
-  const pages = [ '/,','';/about','';/services','';/contact','';/blog','';/careers','];'
 
-const sitemap = \`<?xml version="1.0" encoding="UTF-8"?>"; <"urlset": xmlns = ""http": \${"pages": .map(;"  }
-  const componentsDir = path.join(this.projectRoot,'src','components')if (!fs.existsSync(componentsDir)) {fs.mkdirSync(componentsDir,{ "recursive": true },'
 }fs.writeFileSync(path.join(componentsDir,'SEO.tsx'),seoComponent; )this.fixes.push('Created comprehensive SEO component')}async createSitemapGenerator() {(page) => \` <url> <loc>\${baseUr,l}\${page}</loc> <lastmod>\${new Date().toISOString()}</lastmod> <changefreq>weekly</changefreq> <priority>0.8</priority>` </url>\` ) .join('')}'; </urlset>\`; fs.writeFileSync(path.join(process.cwd(),'public','sitemap.xml'),sitemap)';}'; "if": (require.main = == module) {;'  }
-  const sitemapGenerator = `import fs from 'fs'; import path from 'path';'
 
 export async function generateSitemap() {const baseUrl = '"https":;'
   }
-  const pages = [';/',';/about',';/services',';/contact',';/blog',';/careers'];'
 
-const sitemap = \`<?xml version="1.0" encoding="UTF-8"?>; <urlset xmlns=""http": \${pages; .map((page) => \`; <url>; <loc>\${baseUrl}\${page}</loc>; <lastmod>\${new Date().toISOString()}</lastmod>; <changefreq>weekly</changefreq>; <priority>0.8</priority>; </url>\`; ).join(')} </urlset>\`;fs.writeFileSync(path.join(process.cwd(),'public','sitemap.xml'),sitemap)}if (require.main === module) {generateSitemap()}`;fs.writeFileSync(path.join(this.projectRoot,'scripts','generate-sitemap.js'),sitemapGenerator; )this.fixes.push('Created sitemap generator')}async createRobotsTxt() {const robotsTxt = `User-"agent": *; "Allow": /; sitemapGenerator )'; this.fixes.push('Created sitemap generator')} async createRobotsTxt() {' const robotsTxt = `User-"agent": * "Allow": / "Sitemap": "https": "Disallow": /admin/ "Disallow": /api/ Disallo "w": /_next/` Disallo "w": /private/`; fs.writeFileSync(` path.join(this.projectRoot,'public','robots.txt') robotsTxt )'; this.fixes.push('Created robots.txt file')} async improveAccessibility() {'  await this.createAccessibilityUtils()await this.createSkipLink()'; this.improvements.push('Accessibility improvements applied')} async createAccessibilityUtils() {' const announceToScreenReader = ("message": string) => {";"
 
 }
 
-const announcement  = document.createElement('div')';announcement.setAttribute('aria-live','polite')';announcement.setAttribute('aria-atomic','true')';announcement.className = 'sr-only'';announcement.textContent = message';;'
 
-const announcement = document.createElement('div')announcement.setAttribute('aria-live,polite')announcement.setAttribute('aria-atomic,true')announcement.className = 'sr-only'; announcement.textContent = message;document.body.appendChild(announcement)setTimeout(() => {document.body.removeChild(announcement)},1000)}'
 #!/usr/bin/"env": node,import fs from 'fs';'
 import path from 'path';'
 import { fileURLToPath  } from 'url';'
@@ -307,7 +275,6 @@ const publicDir = path.join(this.projectRoot, 'public')if (!fs.existsSync(public
   return;
     // Create optimized image component';'
 
-const optimizedImageComponent = "import Image from 'next/image';'
 
 interface OptimizedImageProps  {"src": string;"
   }
@@ -402,7 +369,6 @@ const sendToAnalytics = (metric) => {// Send to your analytics service;
       if (typeof gtag !== 'undefined') {gtag('event', metric.name, {"event_category": 'Web Vitals',"event_label": metric.id,"value": Math.round(metric.name = == 'CLS' ? metric.value * 1000 : metric.value),"non_interaction": true})}"
     }
 ;
-  const performanceOptimizations = ";"
 // Performance optimizations;
 const nextConfig = {;
   // Enable compression;
@@ -471,7 +437,6 @@ import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 }
 }
 
-const nextConfig = {// Enable compression;
   "compress": tru,e;"
   // "Optimize": images,"images": {"formats": ['image/webp, ', 'image/avif'], ';'
     "deviceSizes": [64,0, 750, 828, 1080, 1200, 1920, 2048, 3840];"
@@ -517,8 +482,6 @@ module."exports": = nextConfig;";
     fs.writeFileSync(nextConfigPath, performanceOptimizations);
     this.fixes.push('"Optimized": Next.js configuration for performance')}';
   "async": createPerformanceMonitoring() {
-    const performanceMonitor = "import { useEffect } from 'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 "export": function usePerformanceMonitoring() {
   useEffect(() => {
     const sendToAnalytics = (metric) => {
@@ -729,24 +692,17 @@ const optimizedImageComponent  = `import Image from 'next/image';import { useSta
   }
   return;
 
-const optimizedImageComponent = `import Image from 'next/image'; import { useState  } from 'react';'
 interface OptimizedImageProps  {"src": string; al "t": string; width?: number; height?: number; className?: string; priority?: boolean; quality?: numbe,r} "export": default function OptimizedImage() { const [isLoading,setIsLoading] =;
   }
   useState(true;
-const [hasError,setHasError] = useState(false)"return": ( <div className={\`relative overflow-hidden \${className}\,;`}> {isLoading && ( <div className="absolute inset-0 bg-gray-200 animate-pulse" />"; )} <"Image": src = {src},"
 }: OptimizedImageProps) {const [isLoading,setIsLoading] =;
   }
   useState(true;
-  const [hasError,setHasError] = useState(false)return (' <div className={\`relative overflow-hidden \${className}\`}> {isLoading && (` <div className="absolute inset-0 bg-gray-200 animate-pulse" /> )} <Image; src={src} alt={alt} width={width} height={height} priority={priority} quality={quality}" className={\`transition-opacity duration-300 \${isLoading ? 'opacity-0' : 'opacity-100'}\`} onLoad={() => setIsLoading(false)} onError={() => {setHasError(true)setIsLoading(false)}}` placeholder="blur"" blurDataURL=""data":image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=" /> {hasError && (" <div className="absolute inset-0 flex items-center justify-center bg-gray-100">" <span className="text-gray-500">Failed to load image</span> </div> )} </div>" )}`;`
-const componentsDir  = path.join(this.projectRoot,'src','components')';"if": (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ "recursive": true},'
 } fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),'; "optimizedImageComponent": )this.fixes.push('"Created": OptimizedImage component for better performance','
 }'; "async": optimizeNextConfig() { const nextConfigPath  = path.join(this.projectRoot,'next.config.js')';"let": nextConfig = ''';"if": (fs.existsSync(nextConfigPath)) { nextConfig = fs.readFileSync(nextConfigPath,'utf8')}';'
 
-const componentsDir = path.join(this.projectRoot,'src','components')if (!fs.existsSync(componentsDir)) {fs.mkdirSync(componentsDir,{ "recursive": true },'
 }fs.writeFileSync(path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent; )this.fixes.push('Created OptimizedImage component for better performance')}async optimizeNextConfig() {const nextConfigPath = path.join(this.projectRoot,'next.config.js')let nextConfig  = ';if (fs.existsSync(nextConfigPath)) {nextConfig = fs.readFileSync(nextConfigPath,'utf8')}'
 ;
-  const performanceOptimizations = `;`
-const nextConfig = {"compress": true,"images": {"formats": ['image/webp','image/avif'],"deviceSizes": [640,750,828,1080,1200,1920,2048,3840],"imageSizes": [16,32,48,64,96,128,256,384]},"experimental": {"optimizeCss": true,"optimizePackageImports": ['lucide-react','@radix-ui/react-icons']},"webpack": (config,{ dev,isServer }) => {if (!dev && !isServer) {config.optimization.splitChunks = {"chunks": 'all',"cacheGroups": {"vendor": {"test": /[\\\\/]node_modules[\\\\/]/,"name": 'vendors',"chunks": 'all'}}} } return confi,'
 },async headers() ;
   return [; {"source": '/(.*)',"headers": [; {"key": 'X-Content-Type-Options',"value": 'nosniff,'
 },{"key": 'X-Frame-Options',"value": 'DENY,'
@@ -762,7 +718,6 @@ const sendToAnalytics = (metric) => {console.log('Performance "metric":',metric)
 };
 }
 
-const performanceOptimizations = `;`  const nextConfig = { "compress": tru,e "images": { "formats": ['image/webp,','image/avif'],'; "deviceSizes": [64,0,750,828,1080,1200,1920,2048,3840] "imageSizes": [1,6,32,48,64,96,128,256,384] "deviceSizes": [640,750,828,1080,1200,1920,2048,3840] "imageSizes": [16,32,48,64,96,128,256,384] } "experimental": { "optimizeCss": tru,e "optimizePackageImports": ['lucide-react,','@radix-ui/react-icons'],'} "webpack": (confi,g,{ dev,"isServer": }) => { if (!dev && !isServer) { config.optimization.splitChunks = { "chunks": 'all,','; "cacheGroups": { "vendor": { "test": /[\\\\/]node_modules[\\\\/],/ "name": 'vendors,','; "chunks": 'all,','} } } } "return": confi,'
 } async headers() { return [ { "source": '/(.*),','; "headers": [ { "key": 'X-Content-Type-Options,','; "value": 'nosniff,','} { "key": 'X-Frame-Options,','; "value": 'DENY,','} { "key": 'X-XSS-Protection,','; "value": '1; mode = block,','} ] } ]} async redirects() {;'
   }
   return [ { "source": '/home,','; "destination": '/,','; "permanent": tru,e } ]} async rewrites() { return [ { "source": '/api/:path*,','; "destination": '/api/:path*,','} ]} } module."exports": = nextConfig;`; fs.writeFileSync(nextConfigPath,performanceOptimizations)this.fixes.push('"Optimized": Next.js configuration for performance','
@@ -770,7 +725,6 @@ const performanceOptimizations = `;`  const nextConfig = { "compress": tru,e "im
   useEffect  } from 'react';import { getCLS,getFID,getFCP,getLCP,getTTFB  } from 'web-vitals';"export": function usePerformanceMonitoring() { useEffect(() => {'
  }
  const sendToAnalytics  = (metric) => { console.log('Performance "metric":',metric)';if (typeof gtag !== 'undefined') {'; gtag('event,',metric.name,{'; "event_category": '"Web": Vitals,','; "event_label": metric.i,d "value": Math.round(metric."name": === 'CLS' ? metric.value * 1000 : metric.value,),'; "non_interaction": tru,e })}getCLS(sendToAnalytics)getFID(sendToAnalytics)getFCP(sendToAnalytics)getLCP(sendToAnalytics)getTTFB(sendToAnalytics)},[])} "export": function reportWebVitals() { console.log('Web "Vitals":',metric)}`;`
-const hooksDir  = path.join(this.projectRoot,'src','hooks')';"if": (!fs.existsSync(hooksDir)) { fs.mkdirSync(hooksDir,{ "recursive": true},'
 } fs.writeFileSync( path.join(hooksDir,'usePerformanceMonitoring.ts'),'; "performanceMonitor": )this.fixes.push('"Created": performance monitoring hook','
 }'; "async": improveCodeQuality() { console.log('📝 Improving code quality...')';await this.createESLintConfig()await this.createPrettierConfig()await this.updateTypeScriptConfig()this.improvements.push('"Code": quality improvements applied','
 }'; "async": createESLintConfig() { const eslintConfig = `module.exports = { "extends": [ 'next/core-web-vitals,','';"eslint": recommended,','';@typescript-eslint/recommended','; if (!fs.existsSync(hooksDir)) { fs.mkdirSync(hooksDir,{ "recursive": true },'
@@ -783,32 +737,23 @@ const hooksDir  = path.join(this.projectRoot,'src','hooks')';"if": (!fs.existsSy
 
 export function middleware() {const response = NextResponse.next()response.headers.set('X-Content-Type-Options','nosniff')response.headers.set('X-Frame-Options','DENY')response.headers.set('X-XSS-Protection','1; mode = block')response.headers.set('Referrer-Policy','strict-origin-when-cross-origin')response.headers.set('Permissions-Policy','camera=(),microphone=(),geolocation=();'
   }
-  const csp = [' "default-src 'self'",","script-src 'self' 'unsafe-eval' 'unsafe-inline'"," "style-src 'self' 'unsafe-inline'",","img-src 'self' "data": http,"s": ",","font-src 'self'",","connect-src 'self'"," "frame-ancestors 'none'"," ].join('';)';'
 
-const csp = [ "default-src 'self'","; "script-"src": 'self' 'unsafe-eval' 'unsafe-inline'","; "style-"src": 'self' 'unsafe-inline'","; "img-"src": 'self' "data": "https": ","; "font-"src": 'self'","; "connect-"src": 'self'","; "frame-"ancestors": 'none'","].join('';)';response.headers.set('Content-Security-Policy',csp)';"return": respons,;'
 }
 
 export const config = { "matcher": [ '/((?!api|_next/static|_next/image|favicon.ico).*),','] }`;`
-const middlewarePath  = path.join(this.projectRoot,'middleware.ts')';fs.writeFileSync(middlewarePath,securityMiddleware)this.fixes.push('"Created": security middleware with CSP headers',;'
 }'; "async": createEnvironmentValidation() { const envValidation = `import { z ,`} from 'zod';'
 
-const envSchema = z.object({ "NODE_ENV": z.enum(['development,','production','test']),'; "NEXT_PUBLIC_APP_URL": z.string().url(,) "DATABASE_URL": z.string().url().optional(,) "NEXTAUTH_SECRET": z.string().min(32).optional(,) "NEXTAUTH_URL": z.string().url().optional(,) response.headers.set('Content-Security-Policy',csp)return response}'
 
 export const config = { "matcher": [','/((?!api|_next/static|_next/image|favicon.ico).*) ] }`; ` const middlewarePath = path.join(this.projectRoot,'middleware.ts')fs.writeFileSync(middlewarePath,securityMiddleware)'; this.fixes.push('Created security middleware with CSP headers')} async createEnvironmentValidation() {' const envValidation = `import { z } from 'zod';'
-const envSchema = z.object({' "NODE_ENV": z.enum(['development','production','test']) "NEXT_PUBLIC_APP_URL": z.string().url() "DATABASE_URL": z.string().url().optional() "NEXTAUTH_SECRET": z.string().min(32).optional() "NEXTAUTH_URL": z.string().url().optional(),;'
 }) "export":;
-  const env = envSchema.parse(process.env)"export": type Env = z.infer<typeof envSchema>;`;`
-const libDir  = path.join(this.projectRoot,'src','lib')';"if": (!fs.existsSync(libDir)) { fs.mkdirSync(libDir,{ "recursive": true},'
 } fs.writeFileSync( path.join(libDir,'env.ts'),'; "envValidation": )this.fixes.push('"Created": environment validation schema','
 }'; "async": optimizeSEO() { console.log('🔍 Optimizing SEO...')';await this.createSEOComponent()await this.createSitemapGenerator()await this.createRobotsTxt()this.improvements.push('"SEO": optimizations applied','
 }'; "async": createSEOComponent() { const seoComponent  = `import Head from 'next/head';import { useRouter  } from 'next/router';'
 
-const libDir = path.join(this.projectRoot,'src','lib')if (!fs.existsSync(libDir)) {fs.mkdirSync(libDir,{ "recursive": true },'
 }fs.writeFileSync(path.join(libDir,'env.ts'),envValidation; )this.fixes.push('Created environment validation schema')}async optimizeSEO() {console.log('🔍 Optimizing SEO...')await this.createSEOComponent()await this.createSitemapGenerator()await this.createRobotsTxt()this.improvements.push('SEO optimizations applied')}async createSEOComponent() {const seoComponent = `import Head from 'next/head'; import { useRouter  } from 'next/router';'
 interface SEOProps  {title?: string; await this.createSEOComponent()await this.createSitemapGenerator()await this.createRobotsTxt()'; this.improvements.push('SEO optimizations applied')} async createSEOComponent() {' const seoComponent = `import Head from 'next/head'; import { useRouter } from 'next/router'; "interface": SEOProps { title?: string; description?: string; image?: string; url?: string; type?: string; keywords?: string[]; author?: string; publishedTime?: string; modifiedTime?: string}'
 
 export default function SEO() {const router = useRouter()const canonicalUrl  = url || \`"https":;`}
-const fullTitle = title.includes('Zion Tech Group') ? title : \`\${title} | Zion Tech Group\`;return (<Head>; <title>{fullTitle}</title>; <meta name="description" content={description} />; <meta name="keywords" content={keywords.join(',')} />; <meta name="author" content={author} />; <link rel="canonical" href={canonicalUrl} />;"return": ( <Head> <title>{fullTitle}</title> <meta name="description" content={descriptio,;"} />"; <"meta": name="keywords" content={keywords.join(',')} />'; <"meta": name="author" content={autho,"
 } />"; <"link": rel="canonical" href={canonicalUr,"
 } />"; {} <meta property=""og": title" content={fullTitl,e} />"; <"meta": property=""og": description" content={descriptio,n} />"; <"meta": property=""og": image" content={imag,e} />"; <"meta": property=""og": url" content={canonicalUr,l} />"; <"meta": property=""og": type" content={typ,e} />"; <"meta": property=""og": site_name" content=""Zion": Tech Group" />"; {} <meta name="viewport" content="width=device-width,initial-scale=1" />"; <"meta": name="theme-color" content="#000000" />"; <"meta": name="robots" content="index,follow" />"; {} {} <meta property=""og": title" content={fullTitl,"
 } />; <meta property=""og": description" content={descriptio,"
@@ -822,60 +767,44 @@ const fullTitle = title.includes('Zion Tech Group') ? title : \`\${title} | Zion
 }),...(modifiedTime && { "dateModified": modifiedTime }
 }),"name": 'Zion Tech Group',"url": 'http "s": "logo": 'http "s": "description": description,...(publishedTime && { "datePublished": publishedTime }) ...(modifiedTime && { "dateModified": modifiedTime }) }) }} /> </Head>' ,'
 }`;`
-const componentsDir  = path.join(this.projectRoot,'src','components')';"if": (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ "recursive": true},'
 } fs.writeFileSync( path.join(componentsDir,'SEO.tsx'),'; "seoComponent": )this.fixes.push('"Created": comprehensive SEO component','
 }'; "async": createSitemapGenerator() { const sitemapGenerator  = `import fs from 'fs';import path from 'path';"export": async function generateSitemap() { const baseUrl = '"https":;'
   }
-  const pages = [ '/,','';/about','';/services','';/contact','';/blog','';/careers','];'
 
-const sitemap = \`<?xml version="1.0" encoding="UTF-8"?>"; <"urlset": xmlns = ""http": \${"pages": .map(;"  }
-  const componentsDir = path.join(this.projectRoot,'src','components')if (!fs.existsSync(componentsDir)) {fs.mkdirSync(componentsDir,{ "recursive": true },'
 }fs.writeFileSync(path.join(componentsDir,'SEO.tsx'),seoComponent; )this.fixes.push('Created comprehensive SEO component')}async createSitemapGenerator() {(page) => \` <url> <loc>\${baseUr,l}\${page}</loc> <lastmod>\${new Date().toISOString()}</lastmod> <changefreq>weekly</changefreq> <priority>0.8</priority>` </url>\` ) .join('')}'; </urlset>\`; fs.writeFileSync(path.join(process.cwd(),'public','sitemap.xml'),sitemap)';console.log('"Sitemap": generated successfully','}'; "if": (require.main = == module) {;'
   }
-  const sitemapGenerator = `import fs from 'fs'; import path from 'path';'
 
 export async function generateSitemap() {const baseUrl = '"https":;'
   }
-  const pages = [';/',';/about',';/services',';/contact',';/blog',';/careers'];'
 
 const sitemap = \`<?xml version="1.0" encoding="UTF-8"?>; <urlset xmlns=""http": \${pages; .map((page) => \`; <url>; <loc>\${baseUrl}\${page}</loc>; <lastmod>\${new Date().toISOString()}</lastmod>; <changefreq>weekly</changefreq>; <priority>0.8</priority>; </url>\`; ).join(')} </urlset>\`;fs.writeFileSync(path.join(process.cwd(),'public','sitemap.xml'),sitemap)console.log('Sitemap generated successfully')}if (require.main === module) {generateSitemap()}`;fs.writeFileSync(path.join(this.projectRoot,'scripts','generate-sitemap.js'),sitemapGenerator; )this.fixes.push('Created sitemap generator')}async createRobotsTxt() {const robotsTxt = `User-"agent": *; "Allow": /; sitemapGenerator )'; this.fixes.push('Created sitemap generator')} async createRobotsTxt() {' const robotsTxt = `User-"agent": * "Allow": / "Sitemap": "https": "Disallow": /admin/ "Disallow": /api/ Disallo "w": /_next/` Disallo "w": /private/`; fs.writeFileSync(` path.join(this.projectRoot,'public','robots.txt') robotsTxt )'; this.fixes.push('Created robots.txt file')} async improveAccessibility() {' console.log('♿ Improving accessibility...')await this.createAccessibilityUtils()await this.createSkipLink()'; this.improvements.push('Accessibility improvements applied')} async createAccessibilityUtils() {' const announceToScreenReader = ("message": string) => {";"
 
 }
 
-const announcement  = document.createElement('div')';announcement.setAttribute('aria-live','polite')';announcement.setAttribute('aria-atomic','true')';announcement.className = 'sr-only'';announcement.textContent = message';;'
 
 const announcement = document.createElement('div')announcement.setAttribute('aria-live,polite')announcement.setAttribute('aria-atomic,true')announcement.className = 'sr-only'; announcement.textContent = message;document.body.appendChild(announcement)setTimeout(() => {document.body.removeChild(announcement)},1000)}#!/usr/bin/"env": node,import fs from 'fs';import path from 'path';import { fileURLToPath  } from 'url';import { execSync  } from 'child_process';'
 
-const __dirname = path.dirname(__filename)console.log('🚀 "Comprehensive": App Improver Starting...')';"class": AppImprover { constructor() { this.projectRoot = path.resolve(__dirname,'..')';this."improvements": = []; this."fixes": = [,;'
 } async runImprovements() { console.log('🔧 Running comprehensive app improvements...')';"await": this.optimizePerformance()"await": this.improveCodeQuality()"await": this.enhanceSecurity()"await": this.optimizeSEO()"await": this.improveAccessibility()"await": this.enhanceUserExperience()"await": this.optimizeBuild()"await": this.improveDocumentation()this.generateReport(,'
 } "async": optimizePerformance() { console.log('⚡ Optimizing performance...')';await this.optimizeImages()await this.optimizeNextConfig()await this.createPerformanceMonitoring()this.improvements.push('"Performance": optimizations applied','
 }'; "async": optimizeImages() { const publicDir  = path.join(this.projectRoot,'public')';"if": (!fs.existsSync(publicDir)) return;'
 
 }
 
-const optimizedImageComponent  = `import Image from 'next/image';import { useState  } from 'react';"interface": OptimizedImageProps { console.log('🔧 Running comprehensive app improvements...')await this.optimizePerformance()await this.improveCodeQuality()await this.enhanceSecurity()await this.optimizeSEO()await this.improveAccessibility()await this.enhanceUserExperience()await this.optimizeBuild()await this.improveDocumentation()this.generateReport(,'
 } async optimizePerformance() {' console.log('⚡ Optimizing performance...')await this.optimizeImages()await this.optimizeNextConfig()await this.createPerformanceMonitoring()'; this.improvements.push('Performance optimizations applied')} async optimizeImages() {' const publicDir = path.join(this.projectRoot,'public')if (!fs.existsSync(publicDir));'
   }
   return;
 
-const optimizedImageComponent = `import Image from 'next/image'; import { useState  } from 'react';'
 interface OptimizedImageProps  {"src": string; al "t": string; width?: number; height?: number; className?: string; priority?: boolean; quality?: numbe,r} "export": default function OptimizedImage() { const [isLoading,setIsLoading] =;
   }
   useState(true;
-const [hasError,setHasError] = useState(false)"return": ( <div className={\`relative overflow-hidden \${className}\,;`}> {isLoading && ( <div className="absolute inset-0 bg-gray-200 animate-pulse" />"; )} <"Image": src = {src},"
 }: OptimizedImageProps) {const [isLoading,setIsLoading] =;
   }
   useState(true;
-  const [hasError,setHasError] = useState(false)return (' <div className={\`relative overflow-hidden \${className}\`}> {isLoading && (` <div className="absolute inset-0 bg-gray-200 animate-pulse" /> )} <Image; src={src} alt={alt} width={width} height={height} priority={priority} quality={quality}" className={\`transition-opacity duration-300 \${isLoading ? 'opacity-0' : 'opacity-100'}\`} onLoad={() => setIsLoading(false)} onError={() => {setHasError(true)setIsLoading(false)}}` placeholder="blur"" blurDataURL=""data":image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=" /> {hasError && (" <div className="absolute inset-0 flex items-center justify-center bg-gray-100">" <span className="text-gray-500">Failed to load image</span> </div> )} </div>" )}`;`
-const componentsDir  = path.join(this.projectRoot,'src','components')';"if": (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ "recursive": true},'
 } fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),'; "optimizedImageComponent": )this.fixes.push('"Created": OptimizedImage component for better performance','
 }'; "async": optimizeNextConfig() { const nextConfigPath  = path.join(this.projectRoot,'next.config.js')';"let": nextConfig = ''';"if": (fs.existsSync(nextConfigPath)) { nextConfig = fs.readFileSync(nextConfigPath,'utf8')}';'
 
-const componentsDir = path.join(this.projectRoot,'src','components')if (!fs.existsSync(componentsDir)) {fs.mkdirSync(componentsDir,{ "recursive": true },'
 }fs.writeFileSync(path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent; )this.fixes.push('Created OptimizedImage component for better performance')}async optimizeNextConfig() {const nextConfigPath = path.join(this.projectRoot,'next.config.js')let nextConfig  = ';if (fs.existsSync(nextConfigPath)) {nextConfig = fs.readFileSync(nextConfigPath,'utf8')}'
 ;
-  const performanceOptimizations = `;`
-const nextConfig = {"compress": true,"images": {"formats": ['image/webp','image/avif'],"deviceSizes": [640,750,828,1080,1200,1920,2048,3840],"imageSizes": [16,32,48,64,96,128,256,384]},"experimental": {"optimizeCss": true,"optimizePackageImports": ['lucide-react','@radix-ui/react-icons']},"webpack": (config,{ dev,isServer }) => {if (!dev && !isServer) {config.optimization.splitChunks = {"chunks": 'all',"cacheGroups": {"vendor": {"test": /[\\\\/]node_modules[\\\\/]/,"name": 'vendors',"chunks": 'all'}}} } return confi,'
 },async headers() ;
   return [; {"source": '/(.*)',"headers": [; {"key": 'X-Content-Type-Options',"value": 'nosniff,'
 },{"key": 'X-Frame-Options',"value": 'DENY,'
@@ -887,19 +816,15 @@ return [; {"source": '/home',"destination": '/',"permanent": true},;'
 
 export function usePerformanceMonitoring() {useEffect(() => {
 }
-const sendToAnalytics = (metric) => {console.log('Performance "metric":',metric)if (typeof gtag !== 'undefined') {gtag('event',metric.name,{"event_category": 'Web Vitals',"event_label": metric.id,"value": Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),"non_interaction": true},'
 };
 }
 
-const performanceOptimizations = `;`  const nextConfig = { "compress": tru,e "images": { "formats": ['image/webp,','image/avif'],'; "deviceSizes": [64,0,750,828,1080,1200,1920,2048,3840] "imageSizes": [1,6,32,48,64,96,128,256,384] "deviceSizes": [640,750,828,1080,1200,1920,2048,3840] "imageSizes": [16,32,48,64,96,128,256,384] } "experimental": { "optimizeCss": tru,e "optimizePackageImports": ['lucide-react,','@radix-ui/react-icons'],'} "webpack": (confi,g,{ dev,"isServer": }) => { if (!dev && !isServer) { config.optimization.splitChunks = { "chunks": 'all,','; "cacheGroups": { "vendor": { "test": /[\\\\/]node_modules[\\\\/],/ "name": 'vendors,','; "chunks": 'all,','} } } } "return": confi,'
 } async headers() { return [ { "source": '/(.*),','; "headers": [ { "key": 'X-Content-Type-Options,','; "value": 'nosniff,','} { "key": 'X-Frame-Options,','; "value": 'DENY,','} { "key": 'X-XSS-Protection,','; "value": '1; mode = block,','} ] } ]} async redirects() {;'
   }
   return [ { "source": '/home,','; "destination": '/,','; "permanent": tru,e } ]} async rewrites() { return [ { "source": '/api/:path*,','; "destination": '/api/:path*,','} ]} } module."exports": = nextConfig;`; fs.writeFileSync(nextConfigPath,performanceOptimizations)this.fixes.push('"Optimized": Next.js configuration for performance','
 }'; "async": createPerformanceMonitoring() { const performanceMonitor = `import {;`  }
   useEffect  } from 'react';import { getCLS,getFID,getFCP,getLCP,getTTFB  } from 'web-vitals';"export": function usePerformanceMonitoring() { useEffect(() => {'
  }
- const sendToAnalytics  = (metric) => { console.log('Performance "metric":',metric)';if (typeof gtag !== 'undefined') {'; gtag('event,',metric.name,{'; "event_category": '"Web": Vitals,','; "event_label": metric.i,d "value": Math.round(metric."name": === 'CLS' ? metric.value * 1000 : metric.value,),'; "non_interaction": tru,e })}getCLS(sendToAnalytics)getFID(sendToAnalytics)getFCP(sendToAnalytics)getLCP(sendToAnalytics)getTTFB(sendToAnalytics)},[])} "export": function reportWebVitals() { console.log('Web "Vitals":',metric)}`;`
-const hooksDir  = path.join(this.projectRoot,'src','hooks')';"if": (!fs.existsSync(hooksDir)) { fs.mkdirSync(hooksDir,{ "recursive": true},'
 } fs.writeFileSync( path.join(hooksDir,'usePerformanceMonitoring.ts'),'; "performanceMonitor": )this.fixes.push('"Created": performance monitoring hook','
 }'; "async": improveCodeQuality() { console.log('📝 Improving code quality...')';await this.createESLintConfig()await this.createPrettierConfig()await this.updateTypeScriptConfig()this.improvements.push('"Code": quality improvements applied','
 }'; "async": createESLintConfig() { const eslintConfig = `module.exports = { "extends": [ 'next/core-web-vitals,','';"eslint": recommended,','';@typescript-eslint/recommended','; if (!fs.existsSync(hooksDir)) { fs.mkdirSync(hooksDir,{ "recursive": true },'
@@ -912,32 +837,23 @@ const hooksDir  = path.join(this.projectRoot,'src','hooks')';"if": (!fs.existsSy
 
 export function middleware() {const response = NextResponse.next()response.headers.set('X-Content-Type-Options','nosniff')response.headers.set('X-Frame-Options','DENY')response.headers.set('X-XSS-Protection','1; mode = block')response.headers.set('Referrer-Policy','strict-origin-when-cross-origin')response.headers.set('Permissions-Policy','camera=(),microphone=(),geolocation=();'
   }
-  const csp = [' "default-src 'self'",","script-src 'self' 'unsafe-eval' 'unsafe-inline'"," "style-src 'self' 'unsafe-inline'",","img-src 'self' "data": http,"s": ",","font-src 'self'",","connect-src 'self'"," "frame-ancestors 'none'"," ].join('';)';'
 
-const csp = [ "default-src 'self'","; "script-"src": 'self' 'unsafe-eval' 'unsafe-inline'","; "style-"src": 'self' 'unsafe-inline'","; "img-"src": 'self' "data": "https": ","; "font-"src": 'self'","; "connect-"src": 'self'","; "frame-"ancestors": 'none'","].join('';)';response.headers.set('Content-Security-Policy',csp)';"return": respons,;'
 }
 
 export const config = { "matcher": [ '/((?!api|_next/static|_next/image|favicon.ico).*),','] }`;`
-const middlewarePath  = path.join(this.projectRoot,'middleware.ts')';fs.writeFileSync(middlewarePath,securityMiddleware)this.fixes.push('"Created": security middleware with CSP headers',;'
 }'; "async": createEnvironmentValidation() { const envValidation = `import { z ,`} from 'zod';'
 
-const envSchema = z.object({ "NODE_ENV": z.enum(['development,','production','test']),'; "NEXT_PUBLIC_APP_URL": z.string().url(,) "DATABASE_URL": z.string().url().optional(,) "NEXTAUTH_SECRET": z.string().min(32).optional(,) "NEXTAUTH_URL": z.string().url().optional(,) response.headers.set('Content-Security-Policy',csp)return response}'
 
 export const config = { "matcher": [','/((?!api|_next/static|_next/image|favicon.ico).*) ] }`; ` const middlewarePath = path.join(this.projectRoot,'middleware.ts')fs.writeFileSync(middlewarePath,securityMiddleware)'; this.fixes.push('Created security middleware with CSP headers')} async createEnvironmentValidation() {' const envValidation = `import { z } from 'zod';'
-const envSchema = z.object({' "NODE_ENV": z.enum(['development','production','test']) "NEXT_PUBLIC_APP_URL": z.string().url() "DATABASE_URL": z.string().url().optional() "NEXTAUTH_SECRET": z.string().min(32).optional() "NEXTAUTH_URL": z.string().url().optional(),;'
 }) "export":;
-  const env = envSchema.parse(process.env)"export": type Env = z.infer<typeof envSchema>;`;`
-const libDir  = path.join(this.projectRoot,'src','lib')';"if": (!fs.existsSync(libDir)) { fs.mkdirSync(libDir,{ "recursive": true},'
 } fs.writeFileSync( path.join(libDir,'env.ts'),'; "envValidation": )this.fixes.push('"Created": environment validation schema','
 }'; "async": optimizeSEO() { console.log('🔍 Optimizing SEO...')';await this.createSEOComponent()await this.createSitemapGenerator()await this.createRobotsTxt()this.improvements.push('"SEO": optimizations applied','
 }'; "async": createSEOComponent() { const seoComponent  = `import Head from 'next/head';import { useRouter  } from 'next/router';'
 
-const libDir = path.join(this.projectRoot,'src','lib')if (!fs.existsSync(libDir)) {fs.mkdirSync(libDir,{ "recursive": true },'
 }fs.writeFileSync(path.join(libDir,'env.ts'),envValidation; )this.fixes.push('Created environment validation schema')}async optimizeSEO() {console.log('🔍 Optimizing SEO...')await this.createSEOComponent()await this.createSitemapGenerator()await this.createRobotsTxt()this.improvements.push('SEO optimizations applied')}async createSEOComponent() {const seoComponent = `import Head from 'next/head'; import { useRouter  } from 'next/router';'
 interface SEOProps  {title?: string; await this.createSEOComponent()await this.createSitemapGenerator()await this.createRobotsTxt()'; this.improvements.push('SEO optimizations applied')} async createSEOComponent() {' const seoComponent = `import Head from 'next/head'; import { useRouter } from 'next/router'; "interface": SEOProps { title?: string; description?: string; image?: string; url?: string; type?: string; keywords?: string[]; author?: string; publishedTime?: string; modifiedTime?: string}'
 
 export default function SEO() {const router = useRouter()const canonicalUrl  = url || \`"https":;`}
-const fullTitle = title.includes('Zion Tech Group') ? title : \`\${title} | Zion Tech Group\`;return (<Head>; <title>{fullTitle}</title>; <meta name="description" content={description} />; <meta name="keywords" content={keywords.join(',')} />; <meta name="author" content={author} />; <link rel="canonical" href={canonicalUrl} />;"return": ( <Head> <title>{fullTitle}</title> <meta name="description" content={descriptio,;"} />"; <"meta": name="keywords" content={keywords.join(',')} />'; <"meta": name="author" content={autho,"
 } />"; <"link": rel="canonical" href={canonicalUr,"
 } />"; {} <meta property=""og": title" content={fullTitl,e} />"; <"meta": property=""og": description" content={descriptio,n} />"; <"meta": property=""og": image" content={imag,e} />"; <"meta": property=""og": url" content={canonicalUr,l} />"; <"meta": property=""og": type" content={typ,e} />"; <"meta": property=""og": site_name" content=""Zion": Tech Group" />"; {} <meta name="viewport" content="width=device-width,initial-scale=1" />"; <"meta": name="theme-color" content="#000000" />"; <"meta": name="robots" content="index,follow" />"; {} {} <meta property=""og": title" content={fullTitl,"
 } />; <meta property=""og": description" content={descriptio,"
@@ -951,61 +867,43 @@ const fullTitle = title.includes('Zion Tech Group') ? title : \`\${title} | Zion
 }),...(modifiedTime && { "dateModified": modifiedTime }
 }),"name": 'Zion Tech Group',"url": 'http "s": "logo": 'http "s": "description": description,...(publishedTime && { "datePublished": publishedTime }) ...(modifiedTime && { "dateModified": modifiedTime }) }) }} /> </Head>' ,'
 }`;`
-const componentsDir  = path.join(this.projectRoot,'src','components')';"if": (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ "recursive": true},'
 } fs.writeFileSync( path.join(componentsDir,'SEO.tsx'),'; "seoComponent": )this.fixes.push('"Created": comprehensive SEO component','
 }'; "async": createSitemapGenerator() { const sitemapGenerator  = `import fs from 'fs';import path from 'path';"export": async function generateSitemap() { const baseUrl = '"https":;'
   }
-  const pages = [ '/,','';/about','';/services','';/contact','';/blog','';/careers','];'
 
-const sitemap = \`<?xml version="1.0" encoding="UTF-8"?>"; <"urlset": xmlns = ""http": \${"pages": .map(;"  }
-  const componentsDir = path.join(this.projectRoot,'src','components')if (!fs.existsSync(componentsDir)) {fs.mkdirSync(componentsDir,{ "recursive": true },'
 }fs.writeFileSync(path.join(componentsDir,'SEO.tsx'),seoComponent; )this.fixes.push('Created comprehensive SEO component')}async createSitemapGenerator() {(page) => \` <url> <loc>\${baseUr,l}\${page}</loc> <lastmod>\${new Date().toISOString()}</lastmod> <changefreq>weekly</changefreq> <priority>0.8</priority>` </url>\` ) .join('')}'; </urlset>\`; fs.writeFileSync(path.join(process.cwd(),'public','sitemap.xml'),sitemap)';console.log('"Sitemap": generated successfully','}'; "if": (require.main = == module) {;'
   }
-  const sitemapGenerator = `import fs from 'fs'; import path from 'path';'
 
 export async function generateSitemap() {const baseUrl = '"https":;'
   }
-  const pages = [';/',';/about',';/services',';/contact',';/blog',';/careers'];'
 
-const sitemap = \`<?xml version="1.0" encoding="UTF-8"?>; <urlset xmlns=""http": \${pages; .map((page) => \`; <url>; <loc>\${baseUrl}\${page}</loc>; <lastmod>\${new Date().toISOString()}</lastmod>; <changefreq>weekly</changefreq>; <priority>0.8</priority>; </url>\`; ).join(')} </urlset>\`;fs.writeFileSync(path.join(process.cwd(),'public','sitemap.xml'),sitemap)console.log('Sitemap generated successfully')}if (require.main === module) {generateSitemap()}`;fs.writeFileSync(path.join(this.projectRoot,'scripts','generate-sitemap.js'),sitemapGenerator; )this.fixes.push('Created sitemap generator')}async createRobotsTxt() {const robotsTxt = `User-"agent": *; "Allow": /; sitemapGenerator )'; this.fixes.push('Created sitemap generator')} async createRobotsTxt() {' const robotsTxt = `User-"agent": * "Allow": / "Sitemap": "https": "Disallow": /admin/ "Disallow": /api/ Disallo "w": /_next/` Disallo "w": /private/`; fs.writeFileSync(` path.join(this.projectRoot,'public','robots.txt') robotsTxt )'; this.fixes.push('Created robots.txt file')} async improveAccessibility() {' console.log('♿ Improving accessibility...')await this.createAccessibilityUtils()await this.createSkipLink()'; this.improvements.push('Accessibility improvements applied')} async createAccessibilityUtils() {' const announceToScreenReader = ("message": string) => {";"
 
 }
 
-const announcement  = document.createElement('div')';announcement.setAttribute('aria-live','polite')';announcement.setAttribute('aria-atomic','true')';announcement.className = 'sr-only'';announcement.textContent = message';;'
 
-const announcement = document.createElement('div')announcement.setAttribute('aria-live,polite')announcement.setAttribute('aria-atomic,true')announcement.className = 'sr-only'; announcement.textContent = message;document.body.appendChild(announcement)setTimeout(() => {document.body.removeChild(announcement)},1000)}'
 #!/usr/bin/"env": node,import fs from 'fs';import path from 'path';import { fileURLToPath  } from 'url';import { execSync  } from 'child_process';'
 
-const __dirname = path.dirname(__filename)console.log('🚀 "Comprehensive": App Improver Starting...')';"class": AppImprover { constructor() { this.projectRoot = path.resolve(__dirname,'..')';this."improvements": = []; this."fixes": = [,;'
 } async runImprovements() { console.log('🔧 Running comprehensive app improvements...')';"await": this.optimizePerformance()"await": this.improveCodeQuality()"await": this.enhanceSecurity()"await": this.optimizeSEO()"await": this.improveAccessibility()"await": this.enhanceUserExperience()"await": this.optimizeBuild()"await": this.improveDocumentation()this.generateReport(,'
 } "async": optimizePerformance() { console.log('⚡ Optimizing performance...')';await this.optimizeImages()await this.optimizeNextConfig()await this.createPerformanceMonitoring()this.improvements.push('"Performance": optimizations applied','
 }'; "async": optimizeImages() { const publicDir  = path.join(this.projectRoot,'public')';"if": (!fs.existsSync(publicDir)) return;'
 
 }
 
-const optimizedImageComponent  = `import Image from 'next/image';import { useState  } from 'react';"interface": OptimizedImageProps { console.log('🔧 Running comprehensive app improvements...')await this.optimizePerformance()await this.improveCodeQuality()await this.enhanceSecurity()await this.optimizeSEO()await this.improveAccessibility()await this.enhanceUserExperience()await this.optimizeBuild()await this.improveDocumentation()this.generateReport(,'
 } async optimizePerformance() {' console.log('⚡ Optimizing performance...')await this.optimizeImages()await this.optimizeNextConfig()await this.createPerformanceMonitoring()'; this.improvements.push('Performance optimizations applied')} async optimizeImages() {' const publicDir = path.join(this.projectRoot,'public')if (!fs.existsSync(publicDir));'
   }
   return;
 
-const optimizedImageComponent = `import Image from 'next/image'; import { useState  } from 'react';'
 interface OptimizedImageProps  {"src": string; al "t": string; width?: number; height?: number; className?: string; priority?: boolean; quality?: numbe,r} "export": default function OptimizedImage() { const [isLoading,setIsLoading] =;
   }
   useState(true;
-const [hasError,setHasError] = useState(false)"return": ( <div className={\`relative overflow-hidden \${className}\,;`}> {isLoading && ( <div className="absolute inset-0 bg-gray-200 animate-pulse" />"; )} <"Image": src = {src},"
 }: OptimizedImageProps) {const [isLoading,setIsLoading] =;
   }
   useState(true;
-  const [hasError,setHasError] = useState(false)return (' <div className={\`relative overflow-hidden \${className}\`}> {isLoading && (` <div className="absolute inset-0 bg-gray-200 animate-pulse" /> )} <Image; src={src} alt={alt} width={width} height={height} priority={priority} quality={quality}" className={\`transition-opacity duration-300 \${isLoading ? 'opacity-0' : 'opacity-100'}\`} onLoad={() => setIsLoading(false)} onError={() => {setHasError(true)setIsLoading(false)}}` placeholder="blur"" blurDataURL=""data":image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=" /> {hasError && (" <div className="absolute inset-0 flex items-center justify-center bg-gray-100">" <span className="text-gray-500">Failed to load image</span> </div> )} </div>" )}`;`
-const componentsDir  = path.join(this.projectRoot,'src','components')';"if": (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ "recursive": true},'
 } fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),'; "optimizedImageComponent": )this.fixes.push('"Created": OptimizedImage component for better performance','
 }'; "async": optimizeNextConfig() { const nextConfigPath  = path.join(this.projectRoot,'next.config.js')';"let": nextConfig = ''';"if": (fs.existsSync(nextConfigPath)) { nextConfig = fs.readFileSync(nextConfigPath,'utf8')}';'
 
-const componentsDir = path.join(this.projectRoot,'src','components')if (!fs.existsSync(componentsDir)) {fs.mkdirSync(componentsDir,{ "recursive": true },'
 }fs.writeFileSync(path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent; )this.fixes.push('Created OptimizedImage component for better performance')}async optimizeNextConfig() {const nextConfigPath = path.join(this.projectRoot,'next.config.js')let nextConfig  = ';if (fs.existsSync(nextConfigPath)) {nextConfig = fs.readFileSync(nextConfigPath,'utf8')}'
 ;
-  const performanceOptimizations = `;`
-const nextConfig = {"compress": true,"images": {"formats": ['image/webp','image/avif'],"deviceSizes": [640,750,828,1080,1200,1920,2048,3840],"imageSizes": [16,32,48,64,96,128,256,384]},"experimental": {"optimizeCss": true,"optimizePackageImports": ['lucide-react','@radix-ui/react-icons']},"webpack": (config,{ dev,isServer }) => {if (!dev && !isServer) {config.optimization.splitChunks = {"chunks": 'all',"cacheGroups": {"vendor": {"test": /[\\\\/]node_modules[\\\\/]/,"name": 'vendors',"chunks": 'all'}}} } return confi,'
 },async headers() ;
   return [; {"source": '/(.*)',"headers": [; {"key": 'X-Content-Type-Options',"value": 'nosniff,'
 },{"key": 'X-Frame-Options',"value": 'DENY,'
@@ -1017,19 +915,15 @@ return [; {"source": '/home',"destination": '/',"permanent": true},;'
 
 export function usePerformanceMonitoring() {useEffect(() => {
 }
-const sendToAnalytics = (metric) => {console.log('Performance "metric":',metric)if (typeof gtag !== 'undefined') {gtag('event',metric.name,{"event_category": 'Web Vitals',"event_label": metric.id,"value": Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),"non_interaction": true},'
 };
 }
 
-const performanceOptimizations = `;`  const nextConfig = { "compress": tru,e "images": { "formats": ['image/webp,','image/avif'],'; "deviceSizes": [64,0,750,828,1080,1200,1920,2048,3840] "imageSizes": [1,6,32,48,64,96,128,256,384] "deviceSizes": [640,750,828,1080,1200,1920,2048,3840] "imageSizes": [16,32,48,64,96,128,256,384] } "experimental": { "optimizeCss": tru,e "optimizePackageImports": ['lucide-react,','@radix-ui/react-icons'],'} "webpack": (confi,g,{ dev,"isServer": }) => { if (!dev && !isServer) { config.optimization.splitChunks = { "chunks": 'all,','; "cacheGroups": { "vendor": { "test": /[\\\\/]node_modules[\\\\/],/ "name": 'vendors,','; "chunks": 'all,','} } } } "return": confi,'
 } async headers() { return [ { "source": '/(.*),','; "headers": [ { "key": 'X-Content-Type-Options,','; "value": 'nosniff,','} { "key": 'X-Frame-Options,','; "value": 'DENY,','} { "key": 'X-XSS-Protection,','; "value": '1; mode = block,','} ] } ]} async redirects() {;'
   }
   return [ { "source": '/home,','; "destination": '/,','; "permanent": tru,e } ]} async rewrites() { return [ { "source": '/api/:path*,','; "destination": '/api/:path*,','} ]} } module."exports": = nextConfig;`; fs.writeFileSync(nextConfigPath,performanceOptimizations)this.fixes.push('"Optimized": Next.js configuration for performance','
 }'; "async": createPerformanceMonitoring() { const performanceMonitor = `import {;`  }
   useEffect  } from 'react';import { getCLS,getFID,getFCP,getLCP,getTTFB  } from 'web-vitals';"export": function usePerformanceMonitoring() { useEffect(() => {'
  }
- const sendToAnalytics  = (metric) => { console.log('Performance "metric":',metric)';if (typeof gtag !== 'undefined') {'; gtag('event,',metric.name,{'; "event_category": '"Web": Vitals,','; "event_label": metric.i,d "value": Math.round(metric."name": === 'CLS' ? metric.value * 1000 : metric.value,),'; "non_interaction": tru,e })}getCLS(sendToAnalytics)getFID(sendToAnalytics)getFCP(sendToAnalytics)getLCP(sendToAnalytics)getTTFB(sendToAnalytics)},[])} "export": function reportWebVitals() { console.log('Web "Vitals":',metric)}`;`
-const hooksDir  = path.join(this.projectRoot,'src','hooks')';"if": (!fs.existsSync(hooksDir)) { fs.mkdirSync(hooksDir,{ "recursive": true},'
 } fs.writeFileSync( path.join(hooksDir,'usePerformanceMonitoring.ts'),'; "performanceMonitor": )this.fixes.push('"Created": performance monitoring hook','
 }'; "async": improveCodeQuality() { console.log('📝 Improving code quality...')';await this.createESLintConfig()await this.createPrettierConfig()await this.updateTypeScriptConfig()this.improvements.push('"Code": quality improvements applied','
 }'; "async": createESLintConfig() { const eslintConfig = `module.exports = { "extends": [ 'next/core-web-vitals,','';"eslint": recommended,','';@typescript-eslint/recommended','; if (!fs.existsSync(hooksDir)) { fs.mkdirSync(hooksDir,{ "recursive": true },'
@@ -1042,32 +936,23 @@ const hooksDir  = path.join(this.projectRoot,'src','hooks')';"if": (!fs.existsSy
 
 export function middleware() {const response = NextResponse.next()response.headers.set('X-Content-Type-Options','nosniff')response.headers.set('X-Frame-Options','DENY')response.headers.set('X-XSS-Protection','1; mode = block')response.headers.set('Referrer-Policy','strict-origin-when-cross-origin')response.headers.set('Permissions-Policy','camera=(),microphone=(),geolocation=();'
   }
-  const csp = [' "default-src 'self'",","script-src 'self' 'unsafe-eval' 'unsafe-inline'"," "style-src 'self' 'unsafe-inline'",","img-src 'self' "data": http,"s": ",","font-src 'self'",","connect-src 'self'"," "frame-ancestors 'none'"," ].join('';)';'
 
-const csp = [ "default-src 'self'","; "script-"src": 'self' 'unsafe-eval' 'unsafe-inline'","; "style-"src": 'self' 'unsafe-inline'","; "img-"src": 'self' "data": "https": ","; "font-"src": 'self'","; "connect-"src": 'self'","; "frame-"ancestors": 'none'","].join('';)';response.headers.set('Content-Security-Policy',csp)';"return": respons,;'
 }
 
 export const config = { "matcher": [ '/((?!api|_next/static|_next/image|favicon.ico).*),','] }`;`
-const middlewarePath  = path.join(this.projectRoot,'middleware.ts')';fs.writeFileSync(middlewarePath,securityMiddleware)this.fixes.push('"Created": security middleware with CSP headers',;'
 }'; "async": createEnvironmentValidation() { const envValidation = `import { z ,`} from 'zod';'
 
-const envSchema = z.object({ "NODE_ENV": z.enum(['development,','production','test']),'; "NEXT_PUBLIC_APP_URL": z.string().url(,) "DATABASE_URL": z.string().url().optional(,) "NEXTAUTH_SECRET": z.string().min(32).optional(,) "NEXTAUTH_URL": z.string().url().optional(,) response.headers.set('Content-Security-Policy',csp)return response}'
 
 export const config = { "matcher": [','/((?!api|_next/static|_next/image|favicon.ico).*) ] }`; ` const middlewarePath = path.join(this.projectRoot,'middleware.ts')fs.writeFileSync(middlewarePath,securityMiddleware)'; this.fixes.push('Created security middleware with CSP headers')} async createEnvironmentValidation() {' const envValidation = `import { z } from 'zod';'
-const envSchema = z.object({' "NODE_ENV": z.enum(['development','production','test']) "NEXT_PUBLIC_APP_URL": z.string().url() "DATABASE_URL": z.string().url().optional() "NEXTAUTH_SECRET": z.string().min(32).optional() "NEXTAUTH_URL": z.string().url().optional(),;'
 }) "export":;
-  const env = envSchema.parse(process.env)"export": type Env = z.infer<typeof envSchema>;`;`
-const libDir  = path.join(this.projectRoot,'src','lib')';"if": (!fs.existsSync(libDir)) { fs.mkdirSync(libDir,{ "recursive": true},'
 } fs.writeFileSync( path.join(libDir,'env.ts'),'; "envValidation": )this.fixes.push('"Created": environment validation schema','
 }'; "async": optimizeSEO() { console.log('🔍 Optimizing SEO...')';await this.createSEOComponent()await this.createSitemapGenerator()await this.createRobotsTxt()this.improvements.push('"SEO": optimizations applied','
 }'; "async": createSEOComponent() { const seoComponent  = `import Head from 'next/head';import { useRouter  } from 'next/router';'
 
-const libDir = path.join(this.projectRoot,'src','lib')if (!fs.existsSync(libDir)) {fs.mkdirSync(libDir,{ "recursive": true },'
 }fs.writeFileSync(path.join(libDir,'env.ts'),envValidation; )this.fixes.push('Created environment validation schema')}async optimizeSEO() {console.log('🔍 Optimizing SEO...')await this.createSEOComponent()await this.createSitemapGenerator()await this.createRobotsTxt()this.improvements.push('SEO optimizations applied')}async createSEOComponent() {const seoComponent = `import Head from 'next/head'; import { useRouter  } from 'next/router';'
 interface SEOProps  {title?: string; await this.createSEOComponent()await this.createSitemapGenerator()await this.createRobotsTxt()'; this.improvements.push('SEO optimizations applied')} async createSEOComponent() {' const seoComponent = `import Head from 'next/head'; import { useRouter } from 'next/router'; "interface": SEOProps { title?: string; description?: string; image?: string; url?: string; type?: string; keywords?: string[]; author?: string; publishedTime?: string; modifiedTime?: string}'
 
 export default function SEO() {const router = useRouter()const canonicalUrl  = url || \`"https":;`}
-const fullTitle = title.includes('Zion Tech Group') ? title : \`\${title} | Zion Tech Group\`;return (<Head>; <title>{fullTitle}</title>; <meta name="description" content={description} />; <meta name="keywords" content={keywords.join(',')} />; <meta name="author" content={author} />; <link rel="canonical" href={canonicalUrl} />;"return": ( <Head> <title>{fullTitle}</title> <meta name="description" content={descriptio,;"} />"; <"meta": name="keywords" content={keywords.join(',')} />'; <"meta": name="author" content={autho,"
 } />"; <"link": rel="canonical" href={canonicalUr,"
 } />"; {} <meta property=""og": title" content={fullTitl,e} />"; <"meta": property=""og": description" content={descriptio,n} />"; <"meta": property=""og": image" content={imag,e} />"; <"meta": property=""og": url" content={canonicalUr,l} />"; <"meta": property=""og": type" content={typ,e} />"; <"meta": property=""og": site_name" content=""Zion": Tech Group" />"; {} <meta name="viewport" content="width=device-width,initial-scale=1" />"; <"meta": name="theme-color" content="#000000" />"; <"meta": name="robots" content="index,follow" />"; {} {} <meta property=""og": title" content={fullTitl,"
 } />; <meta property=""og": description" content={descriptio,"
@@ -1081,64 +966,46 @@ const fullTitle = title.includes('Zion Tech Group') ? title : \`\${title} | Zion
 }),...(modifiedTime && { "dateModified": modifiedTime }
 }),"name": 'Zion Tech Group',"url": 'http "s": "logo": 'http "s": "description": description,...(publishedTime && { "datePublished": publishedTime }) ...(modifiedTime && { "dateModified": modifiedTime }) }) }} /> </Head>' ,'
 }`;`
-const componentsDir  = path.join(this.projectRoot,'src','components')';"if": (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ "recursive": true},'
 } fs.writeFileSync( path.join(componentsDir,'SEO.tsx'),'; "seoComponent": )this.fixes.push('"Created": comprehensive SEO component','
 }'; "async": createSitemapGenerator() { const sitemapGenerator  = `import fs from 'fs';import path from 'path';"export": async function generateSitemap() { const baseUrl = '"https":;'
   }
-  const pages = [ '/,','';/about','';/services','';/contact','';/blog','';/careers','];'
 
-const sitemap = \`<?xml version="1.0" encoding="UTF-8"?>"; <"urlset": xmlns = ""http": \${"pages": .map(;"  }
-  const componentsDir = path.join(this.projectRoot,'src','components')if (!fs.existsSync(componentsDir)) {fs.mkdirSync(componentsDir,{ "recursive": true },'
 }fs.writeFileSync(path.join(componentsDir,'SEO.tsx'),seoComponent; )this.fixes.push('Created comprehensive SEO component')}async createSitemapGenerator() {(page) => \` <url> <loc>\${baseUr,l}\${page}</loc> <lastmod>\${new Date().toISOString()}</lastmod> <changefreq>weekly</changefreq> <priority>0.8</priority>` </url>\` ) .join('')}'; </urlset>\`; fs.writeFileSync(path.join(process.cwd(),'public','sitemap.xml'),sitemap)';console.log('"Sitemap": generated successfully','}'; "if": (require.main = == module) {;'
   }
-  const sitemapGenerator = `import fs from 'fs'; import path from 'path';'
 
 export async function generateSitemap() {const baseUrl = '"https":;'
   }
-  const pages = [';/',';/about',';/services',';/contact',';/blog',';/careers'];'
 
-const sitemap = \`<?xml version="1.0" encoding="UTF-8"?>; <urlset xmlns=""http": \${pages; .map((page) => \`; <url>; <loc>\${baseUrl}\${page}</loc>; <lastmod>\${new Date().toISOString()}</lastmod>; <changefreq>weekly</changefreq>; <priority>0.8</priority>; </url>\`; ).join(')} </urlset>\`;fs.writeFileSync(path.join(process.cwd(),'public','sitemap.xml'),sitemap)console.log('Sitemap generated successfully')}if (require.main === module) {generateSitemap()}`;fs.writeFileSync(path.join(this.projectRoot,'scripts','generate-sitemap.js'),sitemapGenerator; )this.fixes.push('Created sitemap generator')}async createRobotsTxt() {const robotsTxt = `User-"agent": *; "Allow": /; sitemapGenerator )'; this.fixes.push('Created sitemap generator')} async createRobotsTxt() {' const robotsTxt = `User-"agent": * "Allow": / "Sitemap": "https": "Disallow": /admin/ "Disallow": /api/ Disallo "w": /_next/` Disallo "w": /private/`; fs.writeFileSync(` path.join(this.projectRoot,'public','robots.txt') robotsTxt )'; this.fixes.push('Created robots.txt file')} async improveAccessibility() {' console.log('♿ Improving accessibility...')await this.createAccessibilityUtils()await this.createSkipLink()'; this.improvements.push('Accessibility improvements applied')} async createAccessibilityUtils() {' const announceToScreenReader = ("message": string) => {";"
 
 }
 
-const announcement  = document.createElement('div')';announcement.setAttribute('aria-live','polite')';announcement.setAttribute('aria-atomic','true')';announcement.className = 'sr-only'';announcement.textContent = message';;'
 
-const announcement = document.createElement('div')announcement.setAttribute('aria-live,polite')announcement.setAttribute('aria-atomic,true')announcement.className = 'sr-only'; announcement.textContent = message;document.body.appendChild(announcement)setTimeout(() => {document.body.removeChild(announcement)},1000)}'
 :corrupted_backup/comprehensive-app-improver.js;
 :scripts/comprehensive-app-improver.js;
 ursor/automate-test-improve-and-merge-code-646c;
 #!/usr/bin/"env": node,import fs from 'fs';import path from 'path';import { fileURLToPath  } from 'url';import { execSync  } from 'child_process';'
 
-const __dirname = path.dirname(__filename)console.log('🚀 "Comprehensive": App Improver Starting...')';"class": AppImprover { constructor() { this.projectRoot = path.resolve(__dirname,'..')';this."improvements": = []; this."fixes": = [,;'
 } async runImprovements() { console.log('🔧 Running comprehensive app improvements...')';"await": this.optimizePerformance()"await": this.improveCodeQuality()"await": this.enhanceSecurity()"await": this.optimizeSEO()"await": this.improveAccessibility()"await": this.enhanceUserExperience()"await": this.optimizeBuild()"await": this.improveDocumentation()this.generateReport(,'
 } "async": optimizePerformance() { console.log('⚡ Optimizing performance...')';await this.optimizeImages()await this.optimizeNextConfig()await this.createPerformanceMonitoring()this.improvements.push('"Performance": optimizations applied','
 }'; "async": optimizeImages() { const publicDir  = path.join(this.projectRoot,'public')';"if": (!fs.existsSync(publicDir)) return;'
 
 }
 
-const optimizedImageComponent  = `import Image from 'next/image';import { useState  } from 'react';"interface": OptimizedImageProps { console.log('🔧 Running comprehensive app improvements...')await this.optimizePerformance()await this.improveCodeQuality()await this.enhanceSecurity()await this.optimizeSEO()await this.improveAccessibility()await this.enhanceUserExperience()await this.optimizeBuild()await this.improveDocumentation()this.generateReport(,'
 } async optimizePerformance() {' console.log('⚡ Optimizing performance...')await this.optimizeImages()await this.optimizeNextConfig()await this.createPerformanceMonitoring()'; this.improvements.push('Performance optimizations applied')} async optimizeImages() {' const publicDir = path.join(this.projectRoot,'public')if (!fs.existsSync(publicDir));'
   }
   return;
 
-const optimizedImageComponent = `import Image from 'next/image'; import { useState  } from 'react';'
 interface OptimizedImageProps  {"src": string; al "t": string; width?: number; height?: number; className?: string; priority?: boolean; quality?: numbe,r} "export": default function OptimizedImage() { const [isLoading,setIsLoading] =;
   }
   useState(true;
-const [hasError,setHasError] = useState(false)"return": ( <div className={\`relative overflow-hidden \${className}\,;`}> {isLoading && ( <div className="absolute inset-0 bg-gray-200 animate-pulse" />"; )} <"Image": src = {src},"
 }: OptimizedImageProps) {const [isLoading,setIsLoading] =;
   }
   useState(true;
-  const [hasError,setHasError] = useState(false)return (' <div className={\`relative overflow-hidden \${className}\`}> {isLoading && (` <div className="absolute inset-0 bg-gray-200 animate-pulse" /> )} <Image; src={src} alt={alt} width={width} height={height} priority={priority} quality={quality}" className={\`transition-opacity duration-300 \${isLoading ? 'opacity-0' : 'opacity-100'}\`} onLoad={() => setIsLoading(false)} onError={() => {setHasError(true)setIsLoading(false)}}` placeholder="blur"" blurDataURL=""data":image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=" /> {hasError && (" <div className="absolute inset-0 flex items-center justify-center bg-gray-100">" <span className="text-gray-500">Failed to load image</span> </div> )} </div>" )}`;`
-const componentsDir  = path.join(this.projectRoot,'src','components')';"if": (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ "recursive": true},'
 } fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),'; "optimizedImageComponent": )this.fixes.push('"Created": OptimizedImage component for better performance','
 }'; "async": optimizeNextConfig() { const nextConfigPath  = path.join(this.projectRoot,'next.config.js')';"let": nextConfig = ''';"if": (fs.existsSync(nextConfigPath)) { nextConfig = fs.readFileSync(nextConfigPath,'utf8')}';'
 
-const componentsDir = path.join(this.projectRoot,'src','components')if (!fs.existsSync(componentsDir)) {fs.mkdirSync(componentsDir,{ "recursive": true },'
 }fs.writeFileSync(path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent; )this.fixes.push('Created OptimizedImage component for better performance')}async optimizeNextConfig() {const nextConfigPath = path.join(this.projectRoot,'next.config.js')let nextConfig  = ';if (fs.existsSync(nextConfigPath)) {nextConfig = fs.readFileSync(nextConfigPath,'utf8')}'
 ;
-  const performanceOptimizations = `;`
-const nextConfig = {"compress": true,"images": {"formats": ['image/webp','image/avif'],"deviceSizes": [640,750,828,1080,1200,1920,2048,3840],"imageSizes": [16,32,48,64,96,128,256,384]},"experimental": {"optimizeCss": true,"optimizePackageImports": ['lucide-react','@radix-ui/react-icons']},"webpack": (config,{ dev,isServer }) => {if (!dev && !isServer) {config.optimization.splitChunks = {"chunks": 'all',"cacheGroups": {"vendor": {"test": /[\\\\/]node_modules[\\\\/]/,"name": 'vendors',"chunks": 'all'}}} } return confi,'
 },async headers() ;
   return [; {"source": '/(.*)',"headers": [; {"key": 'X-Content-Type-Options',"value": 'nosniff,'
 },{"key": 'X-Frame-Options',"value": 'DENY,'
@@ -1150,19 +1017,15 @@ return [; {"source": '/home',"destination": '/',"permanent": true},;'
 
 export function usePerformanceMonitoring() {useEffect(() => {
 }
-const sendToAnalytics = (metric) => {console.log('Performance "metric":',metric)if (typeof gtag !== 'undefined') {gtag('event',metric.name,{"event_category": 'Web Vitals',"event_label": metric.id,"value": Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),"non_interaction": true},'
 };
 }
 
-const performanceOptimizations = `;`  const nextConfig = { "compress": tru,e "images": { "formats": ['image/webp,','image/avif'],'; "deviceSizes": [64,0,750,828,1080,1200,1920,2048,3840] "imageSizes": [1,6,32,48,64,96,128,256,384] "deviceSizes": [640,750,828,1080,1200,1920,2048,3840] "imageSizes": [16,32,48,64,96,128,256,384] } "experimental": { "optimizeCss": tru,e "optimizePackageImports": ['lucide-react,','@radix-ui/react-icons'],'} "webpack": (confi,g,{ dev,"isServer": }) => { if (!dev && !isServer) { config.optimization.splitChunks = { "chunks": 'all,','; "cacheGroups": { "vendor": { "test": /[\\\\/]node_modules[\\\\/],/ "name": 'vendors,','; "chunks": 'all,','} } } } "return": confi,'
 } async headers() { return [ { "source": '/(.*),','; "headers": [ { "key": 'X-Content-Type-Options,','; "value": 'nosniff,','} { "key": 'X-Frame-Options,','; "value": 'DENY,','} { "key": 'X-XSS-Protection,','; "value": '1; mode = block,','} ] } ]} async redirects() {;'
   }
   return [ { "source": '/home,','; "destination": '/,','; "permanent": tru,e } ]} async rewrites() { return [ { "source": '/api/:path*,','; "destination": '/api/:path*,','} ]} } module."exports": = nextConfig;`; fs.writeFileSync(nextConfigPath,performanceOptimizations)this.fixes.push('"Optimized": Next.js configuration for performance','
 }'; "async": createPerformanceMonitoring() { const performanceMonitor = `import {;`  }
   useEffect  } from 'react';import { getCLS,getFID,getFCP,getLCP,getTTFB  } from 'web-vitals';"export": function usePerformanceMonitoring() { useEffect(() => {'
  }
- const sendToAnalytics  = (metric) => { console.log('Performance "metric":',metric)';if (typeof gtag !== 'undefined') {'; gtag('event,',metric.name,{'; "event_category": '"Web": Vitals,','; "event_label": metric.i,d "value": Math.round(metric."name": === 'CLS' ? metric.value * 1000 : metric.value,),'; "non_interaction": tru,e })}getCLS(sendToAnalytics)getFID(sendToAnalytics)getFCP(sendToAnalytics)getLCP(sendToAnalytics)getTTFB(sendToAnalytics)},[])} "export": function reportWebVitals() { console.log('Web "Vitals":',metric)}`;`
-const hooksDir  = path.join(this.projectRoot,'src','hooks')';"if": (!fs.existsSync(hooksDir)) { fs.mkdirSync(hooksDir,{ "recursive": true},'
 } fs.writeFileSync( path.join(hooksDir,'usePerformanceMonitoring.ts'),'; "performanceMonitor": )this.fixes.push('"Created": performance monitoring hook','
 }'; "async": improveCodeQuality() { console.log('📝 Improving code quality...')';await this.createESLintConfig()await this.createPrettierConfig()await this.updateTypeScriptConfig()this.improvements.push('"Code": quality improvements applied','
 }'; "async": createESLintConfig() { const eslintConfig = `module.exports = { "extends": [ 'next/core-web-vitals,','';"eslint": recommended,','';@typescript-eslint/recommended','; if (!fs.existsSync(hooksDir)) { fs.mkdirSync(hooksDir,{ "recursive": true },'
@@ -1175,32 +1038,23 @@ const hooksDir  = path.join(this.projectRoot,'src','hooks')';"if": (!fs.existsSy
 
 export function middleware() {const response = NextResponse.next()response.headers.set('X-Content-Type-Options','nosniff')response.headers.set('X-Frame-Options','DENY')response.headers.set('X-XSS-Protection','1; mode = block')response.headers.set('Referrer-Policy','strict-origin-when-cross-origin')response.headers.set('Permissions-Policy','camera=(),microphone=(),geolocation=();'
   }
-  const csp = [' "default-src 'self'",","script-src 'self' 'unsafe-eval' 'unsafe-inline'"," "style-src 'self' 'unsafe-inline'",","img-src 'self' "data": http,"s": ",","font-src 'self'",","connect-src 'self'"," "frame-ancestors 'none'"," ].join('';)';'
 
-const csp = [ "default-src 'self'","; "script-"src": 'self' 'unsafe-eval' 'unsafe-inline'","; "style-"src": 'self' 'unsafe-inline'","; "img-"src": 'self' "data": "https": ","; "font-"src": 'self'","; "connect-"src": 'self'","; "frame-"ancestors": 'none'","].join('';)';response.headers.set('Content-Security-Policy',csp)';"return": respons,;'
 }
 
 export const config = { "matcher": [ '/((?!api|_next/static|_next/image|favicon.ico).*),','] }`;`
-const middlewarePath  = path.join(this.projectRoot,'middleware.ts')';fs.writeFileSync(middlewarePath,securityMiddleware)this.fixes.push('"Created": security middleware with CSP headers',;'
 }'; "async": createEnvironmentValidation() { const envValidation = `import { z ,`} from 'zod';'
 
-const envSchema = z.object({ "NODE_ENV": z.enum(['development,','production','test']),'; "NEXT_PUBLIC_APP_URL": z.string().url(,) "DATABASE_URL": z.string().url().optional(,) "NEXTAUTH_SECRET": z.string().min(32).optional(,) "NEXTAUTH_URL": z.string().url().optional(,) response.headers.set('Content-Security-Policy',csp)return response}'
 
 export const config = { "matcher": [','/((?!api|_next/static|_next/image|favicon.ico).*) ] }`; ` const middlewarePath = path.join(this.projectRoot,'middleware.ts')fs.writeFileSync(middlewarePath,securityMiddleware)'; this.fixes.push('Created security middleware with CSP headers')} async createEnvironmentValidation() {' const envValidation = `import { z } from 'zod';'
-const envSchema = z.object({' "NODE_ENV": z.enum(['development','production','test']) "NEXT_PUBLIC_APP_URL": z.string().url() "DATABASE_URL": z.string().url().optional() "NEXTAUTH_SECRET": z.string().min(32).optional() "NEXTAUTH_URL": z.string().url().optional(),;'
 }) "export":;
-  const env = envSchema.parse(process.env)"export": type Env = z.infer<typeof envSchema>;`;`
-const libDir  = path.join(this.projectRoot,'src','lib')';"if": (!fs.existsSync(libDir)) { fs.mkdirSync(libDir,{ "recursive": true},'
 } fs.writeFileSync( path.join(libDir,'env.ts'),'; "envValidation": )this.fixes.push('"Created": environment validation schema','
 }'; "async": optimizeSEO() { console.log('🔍 Optimizing SEO...')';await this.createSEOComponent()await this.createSitemapGenerator()await this.createRobotsTxt()this.improvements.push('"SEO": optimizations applied','
 }'; "async": createSEOComponent() { const seoComponent  = `import Head from 'next/head';import { useRouter  } from 'next/router';'
 
-const libDir = path.join(this.projectRoot,'src','lib')if (!fs.existsSync(libDir)) {fs.mkdirSync(libDir,{ "recursive": true },'
 }fs.writeFileSync(path.join(libDir,'env.ts'),envValidation; )this.fixes.push('Created environment validation schema')}async optimizeSEO() {console.log('🔍 Optimizing SEO...')await this.createSEOComponent()await this.createSitemapGenerator()await this.createRobotsTxt()this.improvements.push('SEO optimizations applied')}async createSEOComponent() {const seoComponent = `import Head from 'next/head'; import { useRouter  } from 'next/router';'
 interface SEOProps  {title?: string; await this.createSEOComponent()await this.createSitemapGenerator()await this.createRobotsTxt()'; this.improvements.push('SEO optimizations applied')} async createSEOComponent() {' const seoComponent = `import Head from 'next/head'; import { useRouter } from 'next/router'; "interface": SEOProps { title?: string; description?: string; image?: string; url?: string; type?: string; keywords?: string[]; author?: string; publishedTime?: string; modifiedTime?: string}'
 
 export default function SEO() {const router = useRouter()const canonicalUrl  = url || \`"https":;`}
-const fullTitle = title.includes('Zion Tech Group') ? title : \`\${title} | Zion Tech Group\`;return (<Head>; <title>{fullTitle}</title>; <meta name="description" content={description} />; <meta name="keywords" content={keywords.join(',')} />; <meta name="author" content={author} />; <link rel="canonical" href={canonicalUrl} />;"return": ( <Head> <title>{fullTitle}</title> <meta name="description" content={descriptio,;"} />"; <"meta": name="keywords" content={keywords.join(',')} />'; <"meta": name="author" content={autho,"
 } />"; <"link": rel="canonical" href={canonicalUr,"
 } />"; {} <meta property=""og": title" content={fullTitl,e} />"; <"meta": property=""og": description" content={descriptio,n} />"; <"meta": property=""og": image" content={imag,e} />"; <"meta": property=""og": url" content={canonicalUr,l} />"; <"meta": property=""og": type" content={typ,e} />"; <"meta": property=""og": site_name" content=""Zion": Tech Group" />"; {} <meta name="viewport" content="width=device-width,initial-scale=1" />"; <"meta": name="theme-color" content="#000000" />"; <"meta": name="robots" content="index,follow" />"; {} {} <meta property=""og": title" content={fullTitl,"
 } />; <meta property=""og": description" content={descriptio,"
@@ -1214,61 +1068,43 @@ const fullTitle = title.includes('Zion Tech Group') ? title : \`\${title} | Zion
 }),...(modifiedTime && { "dateModified": modifiedTime }
 }),"name": 'Zion Tech Group',"url": 'http "s": "logo": 'http "s": "description": description,...(publishedTime && { "datePublished": publishedTime }) ...(modifiedTime && { "dateModified": modifiedTime }) }) }} /> </Head>' ,'
 }`;`
-const componentsDir  = path.join(this.projectRoot,'src','components')';"if": (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ "recursive": true},'
 } fs.writeFileSync( path.join(componentsDir,'SEO.tsx'),'; "seoComponent": )this.fixes.push('"Created": comprehensive SEO component','
 }'; "async": createSitemapGenerator() { const sitemapGenerator  = `import fs from 'fs';import path from 'path';"export": async function generateSitemap() { const baseUrl = '"https":;'
   }
-  const pages = [ '/,','';/about','';/services','';/contact','';/blog','';/careers','];'
 
-const sitemap = \`<?xml version="1.0" encoding="UTF-8"?>"; <"urlset": xmlns = ""http": \${"pages": .map(;"  }
-  const componentsDir = path.join(this.projectRoot,'src','components')if (!fs.existsSync(componentsDir)) {fs.mkdirSync(componentsDir,{ "recursive": true },'
 }fs.writeFileSync(path.join(componentsDir,'SEO.tsx'),seoComponent; )this.fixes.push('Created comprehensive SEO component')}async createSitemapGenerator() {(page) => \` <url> <loc>\${baseUr,l}\${page}</loc> <lastmod>\${new Date().toISOString()}</lastmod> <changefreq>weekly</changefreq> <priority>0.8</priority>` </url>\` ) .join('')}'; </urlset>\`; fs.writeFileSync(path.join(process.cwd(),'public','sitemap.xml'),sitemap)';console.log('"Sitemap": generated successfully','}'; "if": (require.main = == module) {;'
   }
-  const sitemapGenerator = `import fs from 'fs'; import path from 'path';'
 
 export async function generateSitemap() {const baseUrl = '"https":;'
   }
-  const pages = [';/',';/about',';/services',';/contact',';/blog',';/careers'];'
 
-const sitemap = \`<?xml version="1.0" encoding="UTF-8"?>; <urlset xmlns=""http": \${pages; .map((page) => \`; <url>; <loc>\${baseUrl}\${page}</loc>; <lastmod>\${new Date().toISOString()}</lastmod>; <changefreq>weekly</changefreq>; <priority>0.8</priority>; </url>\`; ).join(')} </urlset>\`;fs.writeFileSync(path.join(process.cwd(),'public','sitemap.xml'),sitemap)console.log('Sitemap generated successfully')}if (require.main === module) {generateSitemap()}`;fs.writeFileSync(path.join(this.projectRoot,'scripts','generate-sitemap.js'),sitemapGenerator; )this.fixes.push('Created sitemap generator')}async createRobotsTxt() {const robotsTxt = `User-"agent": *; "Allow": /; sitemapGenerator )'; this.fixes.push('Created sitemap generator')} async createRobotsTxt() {' const robotsTxt = `User-"agent": * "Allow": / "Sitemap": "https": "Disallow": /admin/ "Disallow": /api/ Disallo "w": /_next/` Disallo "w": /private/`; fs.writeFileSync(` path.join(this.projectRoot,'public','robots.txt') robotsTxt )'; this.fixes.push('Created robots.txt file')} async improveAccessibility() {' console.log('♿ Improving accessibility...')await this.createAccessibilityUtils()await this.createSkipLink()'; this.improvements.push('Accessibility improvements applied')} async createAccessibilityUtils() {' const announceToScreenReader = ("message": string) => {";"
 
 }
 
-const announcement  = document.createElement('div')';announcement.setAttribute('aria-live','polite')';announcement.setAttribute('aria-atomic','true')';announcement.className = 'sr-only'';announcement.textContent = message';;'
 
-const announcement = document.createElement('div')announcement.setAttribute('aria-live,polite')announcement.setAttribute('aria-atomic,true')announcement.className = 'sr-only'; announcement.textContent = message;document.body.appendChild(announcement)setTimeout(() => {document.body.removeChild(announcement)},1000)}'
 #!/usr/bin/"env": node,import fs from 'fs';import path from 'path';import { fileURLToPath  } from 'url';import { execSync  } from 'child_process';'
 
-const __dirname = path.dirname(__filename)console.log('🚀 "Comprehensive": App Improver Starting...')';"class": AppImprover { constructor() { this.projectRoot = path.resolve(__dirname,'..')';this."improvements": = []; this."fixes": = [,;'
 } async runImprovements() { console.log('🔧 Running comprehensive app improvements...')';"await": this.optimizePerformance()"await": this.improveCodeQuality()"await": this.enhanceSecurity()"await": this.optimizeSEO()"await": this.improveAccessibility()"await": this.enhanceUserExperience()"await": this.optimizeBuild()"await": this.improveDocumentation()this.generateReport(,'
 } "async": optimizePerformance() { console.log('⚡ Optimizing performance...')';await this.optimizeImages()await this.optimizeNextConfig()await this.createPerformanceMonitoring()this.improvements.push('"Performance": optimizations applied','
 }'; "async": optimizeImages() { const publicDir  = path.join(this.projectRoot,'public')';"if": (!fs.existsSync(publicDir)) return;'
 
 }
 
-const optimizedImageComponent  = `import Image from 'next/image';import { useState  } from 'react';"interface": OptimizedImageProps { console.log('🔧 Running comprehensive app improvements...')await this.optimizePerformance()await this.improveCodeQuality()await this.enhanceSecurity()await this.optimizeSEO()await this.improveAccessibility()await this.enhanceUserExperience()await this.optimizeBuild()await this.improveDocumentation()this.generateReport(,'
 } async optimizePerformance() {' console.log('⚡ Optimizing performance...')await this.optimizeImages()await this.optimizeNextConfig()await this.createPerformanceMonitoring()'; this.improvements.push('Performance optimizations applied')} async optimizeImages() {' const publicDir = path.join(this.projectRoot,'public')if (!fs.existsSync(publicDir));'
   }
   return;
 
-const optimizedImageComponent = `import Image from 'next/image'; import { useState  } from 'react';'
 interface OptimizedImageProps  {"src": string; al "t": string; width?: number; height?: number; className?: string; priority?: boolean; quality?: numbe,r} "export": default function OptimizedImage() { const [isLoading,setIsLoading] =;
   }
   useState(true;
-const [hasError,setHasError] = useState(false)"return": ( <div className={\`relative overflow-hidden \${className}\,;`}> {isLoading && ( <div className="absolute inset-0 bg-gray-200 animate-pulse" />"; )} <"Image": src = {src},"
 }: OptimizedImageProps) {const [isLoading,setIsLoading] =;
   }
   useState(true;
-  const [hasError,setHasError] = useState(false)return (' <div className={\`relative overflow-hidden \${className}\`}> {isLoading && (` <div className="absolute inset-0 bg-gray-200 animate-pulse" /> )} <Image; src={src} alt={alt} width={width} height={height} priority={priority} quality={quality}" className={\`transition-opacity duration-300 \${isLoading ? 'opacity-0' : 'opacity-100'}\`} onLoad={() => setIsLoading(false)} onError={() => {setHasError(true)setIsLoading(false)}}` placeholder="blur"" blurDataURL=""data":image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=" /> {hasError && (" <div className="absolute inset-0 flex items-center justify-center bg-gray-100">" <span className="text-gray-500">Failed to load image</span> </div> )} </div>" )}`;`
-const componentsDir  = path.join(this.projectRoot,'src','components')';"if": (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ "recursive": true},'
 } fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),'; "optimizedImageComponent": )this.fixes.push('"Created": OptimizedImage component for better performance','
 }'; "async": optimizeNextConfig() { const nextConfigPath  = path.join(this.projectRoot,'next.config.js')';"let": nextConfig = ''';"if": (fs.existsSync(nextConfigPath)) { nextConfig = fs.readFileSync(nextConfigPath,'utf8')}';'
 
-const componentsDir = path.join(this.projectRoot,'src','components')if (!fs.existsSync(componentsDir)) {fs.mkdirSync(componentsDir,{ "recursive": true },'
 }fs.writeFileSync(path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent; )this.fixes.push('Created OptimizedImage component for better performance')}async optimizeNextConfig() {const nextConfigPath = path.join(this.projectRoot,'next.config.js')let nextConfig  = ';if (fs.existsSync(nextConfigPath)) {nextConfig = fs.readFileSync(nextConfigPath,'utf8')}'
 ;
-  const performanceOptimizations = `;`
-const nextConfig = {"compress": true,"images": {"formats": ['image/webp','image/avif'],"deviceSizes": [640,750,828,1080,1200,1920,2048,3840],"imageSizes": [16,32,48,64,96,128,256,384]},"experimental": {"optimizeCss": true,"optimizePackageImports": ['lucide-react','@radix-ui/react-icons']},"webpack": (config,{ dev,isServer }) => {if (!dev && !isServer) {config.optimization.splitChunks = {"chunks": 'all',"cacheGroups": {"vendor": {"test": /[\\\\/]node_modules[\\\\/]/,"name": 'vendors',"chunks": 'all'}}} } return confi,'
 },async headers() ;
   return [; {"source": '/(.*)',"headers": [; {"key": 'X-Content-Type-Options',"value": 'nosniff,'
 },{"key": 'X-Frame-Options',"value": 'DENY,'
@@ -1280,19 +1116,15 @@ return [; {"source": '/home',"destination": '/',"permanent": true},;'
 
 export function usePerformanceMonitoring() {useEffect(() => {
 }
-const sendToAnalytics = (metric) => {console.log('Performance "metric":',metric)if (typeof gtag !== 'undefined') {gtag('event',metric.name,{"event_category": 'Web Vitals',"event_label": metric.id,"value": Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),"non_interaction": true},'
 };
 }
 
-const performanceOptimizations = `;`  const nextConfig = { "compress": tru,e "images": { "formats": ['image/webp,','image/avif'],'; "deviceSizes": [64,0,750,828,1080,1200,1920,2048,3840] "imageSizes": [1,6,32,48,64,96,128,256,384] "deviceSizes": [640,750,828,1080,1200,1920,2048,3840] "imageSizes": [16,32,48,64,96,128,256,384] } "experimental": { "optimizeCss": tru,e "optimizePackageImports": ['lucide-react,','@radix-ui/react-icons'],'} "webpack": (confi,g,{ dev,"isServer": }) => { if (!dev && !isServer) { config.optimization.splitChunks = { "chunks": 'all,','; "cacheGroups": { "vendor": { "test": /[\\\\/]node_modules[\\\\/],/ "name": 'vendors,','; "chunks": 'all,','} } } } "return": confi,'
 } async headers() { return [ { "source": '/(.*),','; "headers": [ { "key": 'X-Content-Type-Options,','; "value": 'nosniff,','} { "key": 'X-Frame-Options,','; "value": 'DENY,','} { "key": 'X-XSS-Protection,','; "value": '1; mode = block,','} ] } ]} async redirects() {;'
   }
   return [ { "source": '/home,','; "destination": '/,','; "permanent": tru,e } ]} async rewrites() { return [ { "source": '/api/:path*,','; "destination": '/api/:path*,','} ]} } module."exports": = nextConfig;`; fs.writeFileSync(nextConfigPath,performanceOptimizations)this.fixes.push('"Optimized": Next.js configuration for performance','
 }'; "async": createPerformanceMonitoring() { const performanceMonitor = `import {;`  }
   useEffect  } from 'react';import { getCLS,getFID,getFCP,getLCP,getTTFB  } from 'web-vitals';"export": function usePerformanceMonitoring() { useEffect(() => {'
  }
- const sendToAnalytics  = (metric) => { console.log('Performance "metric":',metric)';if (typeof gtag !== 'undefined') {'; gtag('event,',metric.name,{'; "event_category": '"Web": Vitals,','; "event_label": metric.i,d "value": Math.round(metric."name": === 'CLS' ? metric.value * 1000 : metric.value,),'; "non_interaction": tru,e })}getCLS(sendToAnalytics)getFID(sendToAnalytics)getFCP(sendToAnalytics)getLCP(sendToAnalytics)getTTFB(sendToAnalytics)},[])} "export": function reportWebVitals() { console.log('Web "Vitals":',metric)}`;`
-const hooksDir  = path.join(this.projectRoot,'src','hooks')';"if": (!fs.existsSync(hooksDir)) { fs.mkdirSync(hooksDir,{ "recursive": true},'
 } fs.writeFileSync( path.join(hooksDir,'usePerformanceMonitoring.ts'),'; "performanceMonitor": )this.fixes.push('"Created": performance monitoring hook','
 }'; "async": improveCodeQuality() { console.log('📝 Improving code quality...')';await this.createESLintConfig()await this.createPrettierConfig()await this.updateTypeScriptConfig()this.improvements.push('"Code": quality improvements applied','
 }'; "async": createESLintConfig() { const eslintConfig = `module.exports = { "extends": [ 'next/core-web-vitals,','';"eslint": recommended,','';@typescript-eslint/recommended','; if (!fs.existsSync(hooksDir)) { fs.mkdirSync(hooksDir,{ "recursive": true },'
@@ -1305,32 +1137,23 @@ const hooksDir  = path.join(this.projectRoot,'src','hooks')';"if": (!fs.existsSy
 
 export function middleware() {const response = NextResponse.next()response.headers.set('X-Content-Type-Options','nosniff')response.headers.set('X-Frame-Options','DENY')response.headers.set('X-XSS-Protection','1; mode = block')response.headers.set('Referrer-Policy','strict-origin-when-cross-origin')response.headers.set('Permissions-Policy','camera=(),microphone=(),geolocation=();'
   }
-  const csp = [' "default-src 'self'",","script-src 'self' 'unsafe-eval' 'unsafe-inline'"," "style-src 'self' 'unsafe-inline'",","img-src 'self' "data": http,"s": ",","font-src 'self'",","connect-src 'self'"," "frame-ancestors 'none'"," ].join('';)';'
 
-const csp = [ "default-src 'self'","; "script-"src": 'self' 'unsafe-eval' 'unsafe-inline'","; "style-"src": 'self' 'unsafe-inline'","; "img-"src": 'self' "data": "https": ","; "font-"src": 'self'","; "connect-"src": 'self'","; "frame-"ancestors": 'none'","].join('';)';response.headers.set('Content-Security-Policy',csp)';"return": respons,;'
 }
 
 export const config = { "matcher": [ '/((?!api|_next/static|_next/image|favicon.ico).*),','] }`;`
-const middlewarePath  = path.join(this.projectRoot,'middleware.ts')';fs.writeFileSync(middlewarePath,securityMiddleware)this.fixes.push('"Created": security middleware with CSP headers',;'
 }'; "async": createEnvironmentValidation() { const envValidation = `import { z ,`} from 'zod';'
 
-const envSchema = z.object({ "NODE_ENV": z.enum(['development,','production','test']),'; "NEXT_PUBLIC_APP_URL": z.string().url(,) "DATABASE_URL": z.string().url().optional(,) "NEXTAUTH_SECRET": z.string().min(32).optional(,) "NEXTAUTH_URL": z.string().url().optional(,) response.headers.set('Content-Security-Policy',csp)return response}'
 
 export const config = { "matcher": [','/((?!api|_next/static|_next/image|favicon.ico).*) ] }`; ` const middlewarePath = path.join(this.projectRoot,'middleware.ts')fs.writeFileSync(middlewarePath,securityMiddleware)'; this.fixes.push('Created security middleware with CSP headers')} async createEnvironmentValidation() {' const envValidation = `import { z } from 'zod';'
-const envSchema = z.object({' "NODE_ENV": z.enum(['development','production','test']) "NEXT_PUBLIC_APP_URL": z.string().url() "DATABASE_URL": z.string().url().optional() "NEXTAUTH_SECRET": z.string().min(32).optional() "NEXTAUTH_URL": z.string().url().optional(),;'
 }) "export":;
-  const env = envSchema.parse(process.env)"export": type Env = z.infer<typeof envSchema>;`;`
-const libDir  = path.join(this.projectRoot,'src','lib')';"if": (!fs.existsSync(libDir)) { fs.mkdirSync(libDir,{ "recursive": true},'
 } fs.writeFileSync( path.join(libDir,'env.ts'),'; "envValidation": )this.fixes.push('"Created": environment validation schema','
 }'; "async": optimizeSEO() { console.log('🔍 Optimizing SEO...')';await this.createSEOComponent()await this.createSitemapGenerator()await this.createRobotsTxt()this.improvements.push('"SEO": optimizations applied','
 }'; "async": createSEOComponent() { const seoComponent  = `import Head from 'next/head';import { useRouter  } from 'next/router';'
 
-const libDir = path.join(this.projectRoot,'src','lib')if (!fs.existsSync(libDir)) {fs.mkdirSync(libDir,{ "recursive": true },'
 }fs.writeFileSync(path.join(libDir,'env.ts'),envValidation; )this.fixes.push('Created environment validation schema')}async optimizeSEO() {console.log('🔍 Optimizing SEO...')await this.createSEOComponent()await this.createSitemapGenerator()await this.createRobotsTxt()this.improvements.push('SEO optimizations applied')}async createSEOComponent() {const seoComponent = `import Head from 'next/head'; import { useRouter  } from 'next/router';'
 interface SEOProps  {title?: string; await this.createSEOComponent()await this.createSitemapGenerator()await this.createRobotsTxt()'; this.improvements.push('SEO optimizations applied')} async createSEOComponent() {' const seoComponent = `import Head from 'next/head'; import { useRouter } from 'next/router'; "interface": SEOProps { title?: string; description?: string; image?: string; url?: string; type?: string; keywords?: string[]; author?: string; publishedTime?: string; modifiedTime?: string}'
 
 export default function SEO() {const router = useRouter()const canonicalUrl  = url || \`"https":;`}
-const fullTitle = title.includes('Zion Tech Group') ? title : \`\${title} | Zion Tech Group\`;return (<Head>; <title>{fullTitle}</title>; <meta name="description" content={description} />; <meta name="keywords" content={keywords.join(',')} />; <meta name="author" content={author} />; <link rel="canonical" href={canonicalUrl} />;"return": ( <Head> <title>{fullTitle}</title> <meta name="description" content={descriptio,;"} />"; <"meta": name="keywords" content={keywords.join(',')} />'; <"meta": name="author" content={autho,"
 } />"; <"link": rel="canonical" href={canonicalUr,"
 } />"; {} <meta property=""og": title" content={fullTitl,e} />"; <"meta": property=""og": description" content={descriptio,n} />"; <"meta": property=""og": image" content={imag,e} />"; <"meta": property=""og": url" content={canonicalUr,l} />"; <"meta": property=""og": type" content={typ,e} />"; <"meta": property=""og": site_name" content=""Zion": Tech Group" />"; {} <meta name="viewport" content="width=device-width,initial-scale=1" />"; <"meta": name="theme-color" content="#000000" />"; <"meta": name="robots" content="index,follow" />"; {} {} <meta property=""og": title" content={fullTitl,"
 } />; <meta property=""og": description" content={descriptio,"
@@ -1344,61 +1167,43 @@ const fullTitle = title.includes('Zion Tech Group') ? title : \`\${title} | Zion
 }),...(modifiedTime && { "dateModified": modifiedTime }
 }),"name": 'Zion Tech Group',"url": 'http "s": "logo": 'http "s": "description": description,...(publishedTime && { "datePublished": publishedTime }) ...(modifiedTime && { "dateModified": modifiedTime }) }) }} /> </Head>' ,'
 }`;`
-const componentsDir  = path.join(this.projectRoot,'src','components')';"if": (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ "recursive": true},'
 } fs.writeFileSync( path.join(componentsDir,'SEO.tsx'),'; "seoComponent": )this.fixes.push('"Created": comprehensive SEO component','
 }'; "async": createSitemapGenerator() { const sitemapGenerator  = `import fs from 'fs';import path from 'path';"export": async function generateSitemap() { const baseUrl = '"https":;'
   }
-  const pages = [ '/,','';/about','';/services','';/contact','';/blog','';/careers','];'
 
-const sitemap = \`<?xml version="1.0" encoding="UTF-8"?>"; <"urlset": xmlns = ""http": \${"pages": .map(;"  }
-  const componentsDir = path.join(this.projectRoot,'src','components')if (!fs.existsSync(componentsDir)) {fs.mkdirSync(componentsDir,{ "recursive": true },'
 }fs.writeFileSync(path.join(componentsDir,'SEO.tsx'),seoComponent; )this.fixes.push('Created comprehensive SEO component')}async createSitemapGenerator() {(page) => \` <url> <loc>\${baseUr,l}\${page}</loc> <lastmod>\${new Date().toISOString()}</lastmod> <changefreq>weekly</changefreq> <priority>0.8</priority>` </url>\` ) .join('')}'; </urlset>\`; fs.writeFileSync(path.join(process.cwd(),'public','sitemap.xml'),sitemap)';console.log('"Sitemap": generated successfully','}'; "if": (require.main = == module) {;'
   }
-  const sitemapGenerator = `import fs from 'fs'; import path from 'path';'
 
 export async function generateSitemap() {const baseUrl = '"https":;'
   }
-  const pages = [';/',';/about',';/services',';/contact',';/blog',';/careers'];'
 
-const sitemap = \`<?xml version="1.0" encoding="UTF-8"?>; <urlset xmlns=""http": \${pages; .map((page) => \`; <url>; <loc>\${baseUrl}\${page}</loc>; <lastmod>\${new Date().toISOString()}</lastmod>; <changefreq>weekly</changefreq>; <priority>0.8</priority>; </url>\`; ).join(')} </urlset>\`;fs.writeFileSync(path.join(process.cwd(),'public','sitemap.xml'),sitemap)console.log('Sitemap generated successfully')}if (require.main === module) {generateSitemap()}`;fs.writeFileSync(path.join(this.projectRoot,'scripts','generate-sitemap.js'),sitemapGenerator; )this.fixes.push('Created sitemap generator')}async createRobotsTxt() {const robotsTxt = `User-"agent": *; "Allow": /; sitemapGenerator )'; this.fixes.push('Created sitemap generator')} async createRobotsTxt() {' const robotsTxt = `User-"agent": * "Allow": / "Sitemap": "https": "Disallow": /admin/ "Disallow": /api/ Disallo "w": /_next/` Disallo "w": /private/`; fs.writeFileSync(` path.join(this.projectRoot,'public','robots.txt') robotsTxt )'; this.fixes.push('Created robots.txt file')} async improveAccessibility() {' console.log('♿ Improving accessibility...')await this.createAccessibilityUtils()await this.createSkipLink()'; this.improvements.push('Accessibility improvements applied')} async createAccessibilityUtils() {' const announceToScreenReader = ("message": string) => {";"
 
 }
 
-const announcement  = document.createElement('div')';announcement.setAttribute('aria-live','polite')';announcement.setAttribute('aria-atomic','true')';announcement.className = 'sr-only'';announcement.textContent = message';;'
 
-const announcement = document.createElement('div')announcement.setAttribute('aria-live,polite')announcement.setAttribute('aria-atomic,true')announcement.className = 'sr-only'; announcement.textContent = message;document.body.appendChild(announcement)setTimeout(() => {document.body.removeChild(announcement)},1000)}'
 #!/usr/bin/"env": node,import fs from 'fs';import path from 'path';import { fileURLToPath  } from 'url';import { execSync  } from 'child_process';'
 
-const __dirname = path.dirname(__filename)console.log('🚀 "Comprehensive": App Improver Starting...')';"class": AppImprover { constructor() { this.projectRoot = path.resolve(__dirname,'..')';this."improvements": = []; this."fixes": = [,;'
 } async runImprovements() { console.log('🔧 Running comprehensive app improvements...')';"await": this.optimizePerformance()"await": this.improveCodeQuality()"await": this.enhanceSecurity()"await": this.optimizeSEO()"await": this.improveAccessibility()"await": this.enhanceUserExperience()"await": this.optimizeBuild()"await": this.improveDocumentation()this.generateReport(,'
 } "async": optimizePerformance() { console.log('⚡ Optimizing performance...')';await this.optimizeImages()await this.optimizeNextConfig()await this.createPerformanceMonitoring()this.improvements.push('"Performance": optimizations applied','
 }'; "async": optimizeImages() { const publicDir  = path.join(this.projectRoot,'public')';"if": (!fs.existsSync(publicDir)) return;'
 
 }
 
-const optimizedImageComponent  = `import Image from 'next/image';import { useState  } from 'react';"interface": OptimizedImageProps { console.log('🔧 Running comprehensive app improvements...')await this.optimizePerformance()await this.improveCodeQuality()await this.enhanceSecurity()await this.optimizeSEO()await this.improveAccessibility()await this.enhanceUserExperience()await this.optimizeBuild()await this.improveDocumentation()this.generateReport(,'
 } async optimizePerformance() {' console.log('⚡ Optimizing performance...')await this.optimizeImages()await this.optimizeNextConfig()await this.createPerformanceMonitoring()'; this.improvements.push('Performance optimizations applied')} async optimizeImages() {' const publicDir = path.join(this.projectRoot,'public')if (!fs.existsSync(publicDir));'
   }
   return;
 
-const optimizedImageComponent = `import Image from 'next/image'; import { useState  } from 'react';'
 interface OptimizedImageProps  {"src": string; al "t": string; width?: number; height?: number; className?: string; priority?: boolean; quality?: numbe,r} "export": default function OptimizedImage() { const [isLoading,setIsLoading] =;
   }
   useState(true;
-const [hasError,setHasError] = useState(false)"return": ( <div className={\`relative overflow-hidden \${className}\,;`}> {isLoading && ( <div className="absolute inset-0 bg-gray-200 animate-pulse" />"; )} <"Image": src = {src},"
 }: OptimizedImageProps) {const [isLoading,setIsLoading] =;
   }
   useState(true;
-  const [hasError,setHasError] = useState(false)return (' <div className={\`relative overflow-hidden \${className}\`}> {isLoading && (` <div className="absolute inset-0 bg-gray-200 animate-pulse" /> )} <Image; src={src} alt={alt} width={width} height={height} priority={priority} quality={quality}" className={\`transition-opacity duration-300 \${isLoading ? 'opacity-0' : 'opacity-100'}\`} onLoad={() => setIsLoading(false)} onError={() => {setHasError(true)setIsLoading(false)}}` placeholder="blur"" blurDataURL=""data":image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=" /> {hasError && (" <div className="absolute inset-0 flex items-center justify-center bg-gray-100">" <span className="text-gray-500">Failed to load image</span> </div> )} </div>" )}`;`
-const componentsDir  = path.join(this.projectRoot,'src','components')';"if": (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ "recursive": true},'
 } fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),'; "optimizedImageComponent": )this.fixes.push('"Created": OptimizedImage component for better performance','
 }'; "async": optimizeNextConfig() { const nextConfigPath  = path.join(this.projectRoot,'next.config.js')';"let": nextConfig = ''';"if": (fs.existsSync(nextConfigPath)) { nextConfig = fs.readFileSync(nextConfigPath,'utf8')}';'
 
-const componentsDir = path.join(this.projectRoot,'src','components')if (!fs.existsSync(componentsDir)) {fs.mkdirSync(componentsDir,{ "recursive": true },'
 }fs.writeFileSync(path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent; )this.fixes.push('Created OptimizedImage component for better performance')}async optimizeNextConfig() {const nextConfigPath = path.join(this.projectRoot,'next.config.js')let nextConfig  = ';if (fs.existsSync(nextConfigPath)) {nextConfig = fs.readFileSync(nextConfigPath,'utf8')}'
 ;
-  const performanceOptimizations = `;`
-const nextConfig = {"compress": true,"images": {"formats": ['image/webp','image/avif'],"deviceSizes": [640,750,828,1080,1200,1920,2048,3840],"imageSizes": [16,32,48,64,96,128,256,384]},"experimental": {"optimizeCss": true,"optimizePackageImports": ['lucide-react','@radix-ui/react-icons']},"webpack": (config,{ dev,isServer }) => {if (!dev && !isServer) {config.optimization.splitChunks = {"chunks": 'all',"cacheGroups": {"vendor": {"test": /[\\\\/]node_modules[\\\\/]/,"name": 'vendors',"chunks": 'all'}}} } return confi,'
 },async headers() ;
   return [; {"source": '/(.*)',"headers": [; {"key": 'X-Content-Type-Options',"value": 'nosniff,'
 },{"key": 'X-Frame-Options',"value": 'DENY,'
@@ -1410,19 +1215,15 @@ return [; {"source": '/home',"destination": '/',"permanent": true},;'
 
 export function usePerformanceMonitoring() {useEffect(() => {
 }
-const sendToAnalytics = (metric) => {console.log('Performance "metric":',metric)if (typeof gtag !== 'undefined') {gtag('event',metric.name,{"event_category": 'Web Vitals',"event_label": metric.id,"value": Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),"non_interaction": true},'
 };
 }
 
-const performanceOptimizations = `;`  const nextConfig = { "compress": tru,e "images": { "formats": ['image/webp,','image/avif'],'; "deviceSizes": [64,0,750,828,1080,1200,1920,2048,3840] "imageSizes": [1,6,32,48,64,96,128,256,384] "deviceSizes": [640,750,828,1080,1200,1920,2048,3840] "imageSizes": [16,32,48,64,96,128,256,384] } "experimental": { "optimizeCss": tru,e "optimizePackageImports": ['lucide-react,','@radix-ui/react-icons'],'} "webpack": (confi,g,{ dev,"isServer": }) => { if (!dev && !isServer) { config.optimization.splitChunks = { "chunks": 'all,','; "cacheGroups": { "vendor": { "test": /[\\\\/]node_modules[\\\\/],/ "name": 'vendors,','; "chunks": 'all,','} } } } "return": confi,'
 } async headers() { return [ { "source": '/(.*),','; "headers": [ { "key": 'X-Content-Type-Options,','; "value": 'nosniff,','} { "key": 'X-Frame-Options,','; "value": 'DENY,','} { "key": 'X-XSS-Protection,','; "value": '1; mode = block,','} ] } ]} async redirects() {;'
   }
   return [ { "source": '/home,','; "destination": '/,','; "permanent": tru,e } ]} async rewrites() { return [ { "source": '/api/:path*,','; "destination": '/api/:path*,','} ]} } module."exports": = nextConfig;`; fs.writeFileSync(nextConfigPath,performanceOptimizations)this.fixes.push('"Optimized": Next.js configuration for performance','
 }'; "async": createPerformanceMonitoring() { const performanceMonitor = `import {;`  }
   useEffect  } from 'react';import { getCLS,getFID,getFCP,getLCP,getTTFB  } from 'web-vitals';"export": function usePerformanceMonitoring() { useEffect(() => {'
  }
- const sendToAnalytics  = (metric) => { console.log('Performance "metric":',metric)';if (typeof gtag !== 'undefined') {'; gtag('event,',metric.name,{'; "event_category": '"Web": Vitals,','; "event_label": metric.i,d "value": Math.round(metric."name": === 'CLS' ? metric.value * 1000 : metric.value,),'; "non_interaction": tru,e })}getCLS(sendToAnalytics)getFID(sendToAnalytics)getFCP(sendToAnalytics)getLCP(sendToAnalytics)getTTFB(sendToAnalytics)},[])} "export": function reportWebVitals() { console.log('Web "Vitals":',metric)}`;`
-const hooksDir  = path.join(this.projectRoot,'src','hooks')';"if": (!fs.existsSync(hooksDir)) { fs.mkdirSync(hooksDir,{ "recursive": true},'
 } fs.writeFileSync( path.join(hooksDir,'usePerformanceMonitoring.ts'),'; "performanceMonitor": )this.fixes.push('"Created": performance monitoring hook','
 }'; "async": improveCodeQuality() { console.log('📝 Improving code quality...')';await this.createESLintConfig()await this.createPrettierConfig()await this.updateTypeScriptConfig()this.improvements.push('"Code": quality improvements applied','
 }'; "async": createESLintConfig() { const eslintConfig = `module.exports = { "extends": [ 'next/core-web-vitals,','';"eslint": recommended,','';@typescript-eslint/recommended','; if (!fs.existsSync(hooksDir)) { fs.mkdirSync(hooksDir,{ "recursive": true },'
@@ -1435,32 +1236,23 @@ const hooksDir  = path.join(this.projectRoot,'src','hooks')';"if": (!fs.existsSy
 
 export function middleware() {const response = NextResponse.next()response.headers.set('X-Content-Type-Options','nosniff')response.headers.set('X-Frame-Options','DENY')response.headers.set('X-XSS-Protection','1; mode = block')response.headers.set('Referrer-Policy','strict-origin-when-cross-origin')response.headers.set('Permissions-Policy','camera=(),microphone=(),geolocation=();'
   }
-  const csp = [' "default-src 'self'",","script-src 'self' 'unsafe-eval' 'unsafe-inline'"," "style-src 'self' 'unsafe-inline'",","img-src 'self' "data": http,"s": ",","font-src 'self'",","connect-src 'self'"," "frame-ancestors 'none'"," ].join('';)';'
 
-const csp = [ "default-src 'self'","; "script-"src": 'self' 'unsafe-eval' 'unsafe-inline'","; "style-"src": 'self' 'unsafe-inline'","; "img-"src": 'self' "data": "https": ","; "font-"src": 'self'","; "connect-"src": 'self'","; "frame-"ancestors": 'none'","].join('';)';response.headers.set('Content-Security-Policy',csp)';"return": respons,;'
 }
 
 export const config = { "matcher": [ '/((?!api|_next/static|_next/image|favicon.ico).*),','] }`;`
-const middlewarePath  = path.join(this.projectRoot,'middleware.ts')';fs.writeFileSync(middlewarePath,securityMiddleware)this.fixes.push('"Created": security middleware with CSP headers',;'
 }'; "async": createEnvironmentValidation() { const envValidation = `import { z ,`} from 'zod';'
 
-const envSchema = z.object({ "NODE_ENV": z.enum(['development,','production','test']),'; "NEXT_PUBLIC_APP_URL": z.string().url(,) "DATABASE_URL": z.string().url().optional(,) "NEXTAUTH_SECRET": z.string().min(32).optional(,) "NEXTAUTH_URL": z.string().url().optional(,) response.headers.set('Content-Security-Policy',csp)return response}'
 
 export const config = { "matcher": [','/((?!api|_next/static|_next/image|favicon.ico).*) ] }`; ` const middlewarePath = path.join(this.projectRoot,'middleware.ts')fs.writeFileSync(middlewarePath,securityMiddleware)'; this.fixes.push('Created security middleware with CSP headers')} async createEnvironmentValidation() {' const envValidation = `import { z } from 'zod';'
-const envSchema = z.object({' "NODE_ENV": z.enum(['development','production','test']) "NEXT_PUBLIC_APP_URL": z.string().url() "DATABASE_URL": z.string().url().optional() "NEXTAUTH_SECRET": z.string().min(32).optional() "NEXTAUTH_URL": z.string().url().optional(),;'
 }) "export":;
-  const env = envSchema.parse(process.env)"export": type Env = z.infer<typeof envSchema>;`;`
-const libDir  = path.join(this.projectRoot,'src','lib')';"if": (!fs.existsSync(libDir)) { fs.mkdirSync(libDir,{ "recursive": true},'
 } fs.writeFileSync( path.join(libDir,'env.ts'),'; "envValidation": )this.fixes.push('"Created": environment validation schema','
 }'; "async": optimizeSEO() { console.log('🔍 Optimizing SEO...')';await this.createSEOComponent()await this.createSitemapGenerator()await this.createRobotsTxt()this.improvements.push('"SEO": optimizations applied','
 }'; "async": createSEOComponent() { const seoComponent  = `import Head from 'next/head';import { useRouter  } from 'next/router';'
 
-const libDir = path.join(this.projectRoot,'src','lib')if (!fs.existsSync(libDir)) {fs.mkdirSync(libDir,{ "recursive": true },'
 }fs.writeFileSync(path.join(libDir,'env.ts'),envValidation; )this.fixes.push('Created environment validation schema')}async optimizeSEO() {console.log('🔍 Optimizing SEO...')await this.createSEOComponent()await this.createSitemapGenerator()await this.createRobotsTxt()this.improvements.push('SEO optimizations applied')}async createSEOComponent() {const seoComponent = `import Head from 'next/head'; import { useRouter  } from 'next/router';'
 interface SEOProps  {title?: string; await this.createSEOComponent()await this.createSitemapGenerator()await this.createRobotsTxt()'; this.improvements.push('SEO optimizations applied')} async createSEOComponent() {' const seoComponent = `import Head from 'next/head'; import { useRouter } from 'next/router'; "interface": SEOProps { title?: string; description?: string; image?: string; url?: string; type?: string; keywords?: string[]; author?: string; publishedTime?: string; modifiedTime?: string}'
 
 export default function SEO() {const router = useRouter()const canonicalUrl  = url || \`"https":;`}
-const fullTitle = title.includes('Zion Tech Group') ? title : \`\${title} | Zion Tech Group\`;return (<Head>; <title>{fullTitle}</title>; <meta name="description" content={description} />; <meta name="keywords" content={keywords.join(',')} />; <meta name="author" content={author} />; <link rel="canonical" href={canonicalUrl} />;"return": ( <Head> <title>{fullTitle}</title> <meta name="description" content={descriptio,;"} />"; <"meta": name="keywords" content={keywords.join(',')} />'; <"meta": name="author" content={autho,"
 } />"; <"link": rel="canonical" href={canonicalUr,"
 } />"; {} <meta property=""og": title" content={fullTitl,e} />"; <"meta": property=""og": description" content={descriptio,n} />"; <"meta": property=""og": image" content={imag,e} />"; <"meta": property=""og": url" content={canonicalUr,l} />"; <"meta": property=""og": type" content={typ,e} />"; <"meta": property=""og": site_name" content=""Zion": Tech Group" />"; {} <meta name="viewport" content="width=device-width,initial-scale=1" />"; <"meta": name="theme-color" content="#000000" />"; <"meta": name="robots" content="index,follow" />"; {} {} <meta property=""og": title" content={fullTitl,"
 } />; <meta property=""og": description" content={descriptio,"
@@ -1474,61 +1266,43 @@ const fullTitle = title.includes('Zion Tech Group') ? title : \`\${title} | Zion
 }),...(modifiedTime && { "dateModified": modifiedTime }
 }),"name": 'Zion Tech Group',"url": 'http "s": "logo": 'http "s": "description": description,...(publishedTime && { "datePublished": publishedTime }) ...(modifiedTime && { "dateModified": modifiedTime }) }) }} /> </Head>' ,'
 }`;`
-const componentsDir  = path.join(this.projectRoot,'src','components')';"if": (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ "recursive": true},'
 } fs.writeFileSync( path.join(componentsDir,'SEO.tsx'),'; "seoComponent": )this.fixes.push('"Created": comprehensive SEO component','
 }'; "async": createSitemapGenerator() { const sitemapGenerator  = `import fs from 'fs';import path from 'path';"export": async function generateSitemap() { const baseUrl = '"https":;'
   }
-  const pages = [ '/,','';/about','';/services','';/contact','';/blog','';/careers','];'
 
-const sitemap = \`<?xml version="1.0" encoding="UTF-8"?>"; <"urlset": xmlns = ""http": \${"pages": .map(;"  }
-  const componentsDir = path.join(this.projectRoot,'src','components')if (!fs.existsSync(componentsDir)) {fs.mkdirSync(componentsDir,{ "recursive": true },'
 }fs.writeFileSync(path.join(componentsDir,'SEO.tsx'),seoComponent; )this.fixes.push('Created comprehensive SEO component')}async createSitemapGenerator() {(page) => \` <url> <loc>\${baseUr,l}\${page}</loc> <lastmod>\${new Date().toISOString()}</lastmod> <changefreq>weekly</changefreq> <priority>0.8</priority>` </url>\` ) .join('')}'; </urlset>\`; fs.writeFileSync(path.join(process.cwd(),'public','sitemap.xml'),sitemap)';console.log('"Sitemap": generated successfully','}'; "if": (require.main = == module) {;'
   }
-  const sitemapGenerator = `import fs from 'fs'; import path from 'path';'
 
 export async function generateSitemap() {const baseUrl = '"https":;'
   }
-  const pages = [';/',';/about',';/services',';/contact',';/blog',';/careers'];'
 
-const sitemap = \`<?xml version="1.0" encoding="UTF-8"?>; <urlset xmlns=""http": \${pages; .map((page) => \`; <url>; <loc>\${baseUrl}\${page}</loc>; <lastmod>\${new Date().toISOString()}</lastmod>; <changefreq>weekly</changefreq>; <priority>0.8</priority>; </url>\`; ).join(')} </urlset>\`;fs.writeFileSync(path.join(process.cwd(),'public','sitemap.xml'),sitemap)console.log('Sitemap generated successfully')}if (require.main === module) {generateSitemap()}`;fs.writeFileSync(path.join(this.projectRoot,'scripts','generate-sitemap.js'),sitemapGenerator; )this.fixes.push('Created sitemap generator')}async createRobotsTxt() {const robotsTxt = `User-"agent": *; "Allow": /; sitemapGenerator )'; this.fixes.push('Created sitemap generator')} async createRobotsTxt() {' const robotsTxt = `User-"agent": * "Allow": / "Sitemap": "https": "Disallow": /admin/ "Disallow": /api/ Disallo "w": /_next/` Disallo "w": /private/`; fs.writeFileSync(` path.join(this.projectRoot,'public','robots.txt') robotsTxt )'; this.fixes.push('Created robots.txt file')} async improveAccessibility() {' console.log('♿ Improving accessibility...')await this.createAccessibilityUtils()await this.createSkipLink()'; this.improvements.push('Accessibility improvements applied')} async createAccessibilityUtils() {' const announceToScreenReader = ("message": string) => {";"
 
 }
 
-const announcement  = document.createElement('div')';announcement.setAttribute('aria-live','polite')';announcement.setAttribute('aria-atomic','true')';announcement.className = 'sr-only'';announcement.textContent = message';;'
 
-const announcement = document.createElement('div')announcement.setAttribute('aria-live,polite')announcement.setAttribute('aria-atomic,true')announcement.className = 'sr-only'; announcement.textContent = message;document.body.appendChild(announcement)setTimeout(() => {document.body.removeChild(announcement)},1000)}'
 #!/usr/bin/"env": node,import fs from 'fs';import path from 'path';import { fileURLToPath  } from 'url';import { execSync  } from 'child_process';'
 
-const __dirname = path.dirname(__filename)console.log('🚀 "Comprehensive": App Improver Starting...')';"class": AppImprover { constructor() { this.projectRoot = path.resolve(__dirname,'..')';this."improvements": = []; this."fixes": = [,;'
 } async runImprovements() { console.log('🔧 Running comprehensive app improvements...')';"await": this.optimizePerformance()"await": this.improveCodeQuality()"await": this.enhanceSecurity()"await": this.optimizeSEO()"await": this.improveAccessibility()"await": this.enhanceUserExperience()"await": this.optimizeBuild()"await": this.improveDocumentation()this.generateReport(,'
 } "async": optimizePerformance() { console.log('⚡ Optimizing performance...')';await this.optimizeImages()await this.optimizeNextConfig()await this.createPerformanceMonitoring()this.improvements.push('"Performance": optimizations applied','
 }'; "async": optimizeImages() { const publicDir  = path.join(this.projectRoot,'public')';"if": (!fs.existsSync(publicDir)) return;'
 
 }
 
-const optimizedImageComponent  = `import Image from 'next/image';import { useState  } from 'react';"interface": OptimizedImageProps { console.log('🔧 Running comprehensive app improvements...')await this.optimizePerformance()await this.improveCodeQuality()await this.enhanceSecurity()await this.optimizeSEO()await this.improveAccessibility()await this.enhanceUserExperience()await this.optimizeBuild()await this.improveDocumentation()this.generateReport(,'
 } async optimizePerformance() {' console.log('⚡ Optimizing performance...')await this.optimizeImages()await this.optimizeNextConfig()await this.createPerformanceMonitoring()'; this.improvements.push('Performance optimizations applied')} async optimizeImages() {' const publicDir = path.join(this.projectRoot,'public')if (!fs.existsSync(publicDir));'
   }
   return;
 
-const optimizedImageComponent = `import Image from 'next/image'; import { useState  } from 'react';'
 interface OptimizedImageProps  {"src": string; al "t": string; width?: number; height?: number; className?: string; priority?: boolean; quality?: numbe,r} "export": default function OptimizedImage() { const [isLoading,setIsLoading] =;
   }
   useState(true;
-const [hasError,setHasError] = useState(false)"return": ( <div className={\`relative overflow-hidden \${className}\,;`}> {isLoading && ( <div className="absolute inset-0 bg-gray-200 animate-pulse" />"; )} <"Image": src = {src},"
 }: OptimizedImageProps) {const [isLoading,setIsLoading] =;
   }
   useState(true;
-  const [hasError,setHasError] = useState(false)return (' <div className={\`relative overflow-hidden \${className}\`}> {isLoading && (` <div className="absolute inset-0 bg-gray-200 animate-pulse" /> )} <Image; src={src} alt={alt} width={width} height={height} priority={priority} quality={quality}" className={\`transition-opacity duration-300 \${isLoading ? 'opacity-0' : 'opacity-100'}\`} onLoad={() => setIsLoading(false)} onError={() => {setHasError(true)setIsLoading(false)}}` placeholder="blur"" blurDataURL=""data":image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=" /> {hasError && (" <div className="absolute inset-0 flex items-center justify-center bg-gray-100">" <span className="text-gray-500">Failed to load image</span> </div> )} </div>" )}`;`
-const componentsDir  = path.join(this.projectRoot,'src','components')';"if": (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ "recursive": true},'
 } fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),'; "optimizedImageComponent": )this.fixes.push('"Created": OptimizedImage component for better performance','
 }'; "async": optimizeNextConfig() { const nextConfigPath  = path.join(this.projectRoot,'next.config.js')';"let": nextConfig = ''';"if": (fs.existsSync(nextConfigPath)) { nextConfig = fs.readFileSync(nextConfigPath,'utf8')}';'
 
-const componentsDir = path.join(this.projectRoot,'src','components')if (!fs.existsSync(componentsDir)) {fs.mkdirSync(componentsDir,{ "recursive": true },'
 }fs.writeFileSync(path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent; )this.fixes.push('Created OptimizedImage component for better performance')}async optimizeNextConfig() {const nextConfigPath = path.join(this.projectRoot,'next.config.js')let nextConfig  = ';if (fs.existsSync(nextConfigPath)) {nextConfig = fs.readFileSync(nextConfigPath,'utf8')}'
 ;
-  const performanceOptimizations = `;`
-const nextConfig = {"compress": true,"images": {"formats": ['image/webp','image/avif'],"deviceSizes": [640,750,828,1080,1200,1920,2048,3840],"imageSizes": [16,32,48,64,96,128,256,384]},"experimental": {"optimizeCss": true,"optimizePackageImports": ['lucide-react','@radix-ui/react-icons']},"webpack": (config,{ dev,isServer }) => {if (!dev && !isServer) {config.optimization.splitChunks = {"chunks": 'all',"cacheGroups": {"vendor": {"test": /[\\\\/]node_modules[\\\\/]/,"name": 'vendors',"chunks": 'all'}}} } return confi,'
 },async headers() ;
   return [; {"source": '/(.*)',"headers": [; {"key": 'X-Content-Type-Options',"value": 'nosniff,'
 },{"key": 'X-Frame-Options',"value": 'DENY,'
@@ -1540,19 +1314,15 @@ return [; {"source": '/home',"destination": '/',"permanent": true},;'
 
 export function usePerformanceMonitoring() {useEffect(() => {
 }
-const sendToAnalytics = (metric) => {console.log('Performance "metric":',metric)if (typeof gtag !== 'undefined') {gtag('event',metric.name,{"event_category": 'Web Vitals',"event_label": metric.id,"value": Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),"non_interaction": true},'
 };
 }
 
-const performanceOptimizations = `;`  const nextConfig = { "compress": tru,e "images": { "formats": ['image/webp,','image/avif'],'; "deviceSizes": [64,0,750,828,1080,1200,1920,2048,3840] "imageSizes": [1,6,32,48,64,96,128,256,384] "deviceSizes": [640,750,828,1080,1200,1920,2048,3840] "imageSizes": [16,32,48,64,96,128,256,384] } "experimental": { "optimizeCss": tru,e "optimizePackageImports": ['lucide-react,','@radix-ui/react-icons'],'} "webpack": (confi,g,{ dev,"isServer": }) => { if (!dev && !isServer) { config.optimization.splitChunks = { "chunks": 'all,','; "cacheGroups": { "vendor": { "test": /[\\\\/]node_modules[\\\\/],/ "name": 'vendors,','; "chunks": 'all,','} } } } "return": confi,'
 } async headers() { return [ { "source": '/(.*),','; "headers": [ { "key": 'X-Content-Type-Options,','; "value": 'nosniff,','} { "key": 'X-Frame-Options,','; "value": 'DENY,','} { "key": 'X-XSS-Protection,','; "value": '1; mode = block,','} ] } ]} async redirects() {;'
   }
   return [ { "source": '/home,','; "destination": '/,','; "permanent": tru,e } ]} async rewrites() { return [ { "source": '/api/:path*,','; "destination": '/api/:path*,','} ]} } module."exports": = nextConfig;`; fs.writeFileSync(nextConfigPath,performanceOptimizations)this.fixes.push('"Optimized": Next.js configuration for performance','
 }'; "async": createPerformanceMonitoring() { const performanceMonitor = `import {;`  }
   useEffect  } from 'react';import { getCLS,getFID,getFCP,getLCP,getTTFB  } from 'web-vitals';"export": function usePerformanceMonitoring() { useEffect(() => {'
  }
- const sendToAnalytics  = (metric) => { console.log('Performance "metric":',metric)';if (typeof gtag !== 'undefined') {'; gtag('event,',metric.name,{'; "event_category": '"Web": Vitals,','; "event_label": metric.i,d "value": Math.round(metric."name": === 'CLS' ? metric.value * 1000 : metric.value,),'; "non_interaction": tru,e })}getCLS(sendToAnalytics)getFID(sendToAnalytics)getFCP(sendToAnalytics)getLCP(sendToAnalytics)getTTFB(sendToAnalytics)},[])} "export": function reportWebVitals() { console.log('Web "Vitals":',metric)}`;`
-const hooksDir  = path.join(this.projectRoot,'src','hooks')';"if": (!fs.existsSync(hooksDir)) { fs.mkdirSync(hooksDir,{ "recursive": true},'
 } fs.writeFileSync( path.join(hooksDir,'usePerformanceMonitoring.ts'),'; "performanceMonitor": )this.fixes.push('"Created": performance monitoring hook','
 }'; "async": improveCodeQuality() { console.log('📝 Improving code quality...')';await this.createESLintConfig()await this.createPrettierConfig()await this.updateTypeScriptConfig()this.improvements.push('"Code": quality improvements applied','
 }'; "async": createESLintConfig() { const eslintConfig = `module.exports = { "extends": [ 'next/core-web-vitals,','';"eslint": recommended,','';@typescript-eslint/recommended','; if (!fs.existsSync(hooksDir)) { fs.mkdirSync(hooksDir,{ "recursive": true },'
@@ -1565,32 +1335,23 @@ const hooksDir  = path.join(this.projectRoot,'src','hooks')';"if": (!fs.existsSy
 
 export function middleware() {const response = NextResponse.next()response.headers.set('X-Content-Type-Options','nosniff')response.headers.set('X-Frame-Options','DENY')response.headers.set('X-XSS-Protection','1; mode = block')response.headers.set('Referrer-Policy','strict-origin-when-cross-origin')response.headers.set('Permissions-Policy','camera=(),microphone=(),geolocation=();'
   }
-  const csp = [' "default-src 'self'",","script-src 'self' 'unsafe-eval' 'unsafe-inline'"," "style-src 'self' 'unsafe-inline'",","img-src 'self' "data": http,"s": ",","font-src 'self'",","connect-src 'self'"," "frame-ancestors 'none'"," ].join('';)';'
 
-const csp = [ "default-src 'self'","; "script-"src": 'self' 'unsafe-eval' 'unsafe-inline'","; "style-"src": 'self' 'unsafe-inline'","; "img-"src": 'self' "data": "https": ","; "font-"src": 'self'","; "connect-"src": 'self'","; "frame-"ancestors": 'none'","].join('';)';response.headers.set('Content-Security-Policy',csp)';"return": respons,;'
 }
 
 export const config = { "matcher": [ '/((?!api|_next/static|_next/image|favicon.ico).*),','] }`;`
-const middlewarePath  = path.join(this.projectRoot,'middleware.ts')';fs.writeFileSync(middlewarePath,securityMiddleware)this.fixes.push('"Created": security middleware with CSP headers',;'
 }'; "async": createEnvironmentValidation() { const envValidation = `import { z ,`} from 'zod';'
 
-const envSchema = z.object({ "NODE_ENV": z.enum(['development,','production','test']),'; "NEXT_PUBLIC_APP_URL": z.string().url(,) "DATABASE_URL": z.string().url().optional(,) "NEXTAUTH_SECRET": z.string().min(32).optional(,) "NEXTAUTH_URL": z.string().url().optional(,) response.headers.set('Content-Security-Policy',csp)return response}'
 
 export const config = { "matcher": [','/((?!api|_next/static|_next/image|favicon.ico).*) ] }`; ` const middlewarePath = path.join(this.projectRoot,'middleware.ts')fs.writeFileSync(middlewarePath,securityMiddleware)'; this.fixes.push('Created security middleware with CSP headers')} async createEnvironmentValidation() {' const envValidation = `import { z } from 'zod';'
-const envSchema = z.object({' "NODE_ENV": z.enum(['development','production','test']) "NEXT_PUBLIC_APP_URL": z.string().url() "DATABASE_URL": z.string().url().optional() "NEXTAUTH_SECRET": z.string().min(32).optional() "NEXTAUTH_URL": z.string().url().optional(),;'
 }) "export":;
-  const env = envSchema.parse(process.env)"export": type Env = z.infer<typeof envSchema>;`;`
-const libDir  = path.join(this.projectRoot,'src','lib')';"if": (!fs.existsSync(libDir)) { fs.mkdirSync(libDir,{ "recursive": true},'
 } fs.writeFileSync( path.join(libDir,'env.ts'),'; "envValidation": )this.fixes.push('"Created": environment validation schema','
 }'; "async": optimizeSEO() { console.log('🔍 Optimizing SEO...')';await this.createSEOComponent()await this.createSitemapGenerator()await this.createRobotsTxt()this.improvements.push('"SEO": optimizations applied','
 }'; "async": createSEOComponent() { const seoComponent  = `import Head from 'next/head';import { useRouter  } from 'next/router';'
 
-const libDir = path.join(this.projectRoot,'src','lib')if (!fs.existsSync(libDir)) {fs.mkdirSync(libDir,{ "recursive": true },'
 }fs.writeFileSync(path.join(libDir,'env.ts'),envValidation; )this.fixes.push('Created environment validation schema')}async optimizeSEO() {console.log('🔍 Optimizing SEO...')await this.createSEOComponent()await this.createSitemapGenerator()await this.createRobotsTxt()this.improvements.push('SEO optimizations applied')}async createSEOComponent() {const seoComponent = `import Head from 'next/head'; import { useRouter  } from 'next/router';'
 interface SEOProps  {title?: string; await this.createSEOComponent()await this.createSitemapGenerator()await this.createRobotsTxt()'; this.improvements.push('SEO optimizations applied')} async createSEOComponent() {' const seoComponent = `import Head from 'next/head'; import { useRouter } from 'next/router'; "interface": SEOProps { title?: string; description?: string; image?: string; url?: string; type?: string; keywords?: string[]; author?: string; publishedTime?: string; modifiedTime?: string}'
 
 export default function SEO() {const router = useRouter()const canonicalUrl  = url || \`"https":;`}
-const fullTitle = title.includes('Zion Tech Group') ? title : \`\${title} | Zion Tech Group\`;return (<Head>; <title>{fullTitle}</title>; <meta name="description" content={description} />; <meta name="keywords" content={keywords.join(',')} />; <meta name="author" content={author} />; <link rel="canonical" href={canonicalUrl} />;"return": ( <Head> <title>{fullTitle}</title> <meta name="description" content={descriptio,;"} />"; <"meta": name="keywords" content={keywords.join(',')} />'; <"meta": name="author" content={autho,"
 } />"; <"link": rel="canonical" href={canonicalUr,"
 } />"; {} <meta property=""og": title" content={fullTitl,e} />"; <"meta": property=""og": description" content={descriptio,n} />"; <"meta": property=""og": image" content={imag,e} />"; <"meta": property=""og": url" content={canonicalUr,l} />"; <"meta": property=""og": type" content={typ,e} />"; <"meta": property=""og": site_name" content=""Zion": Tech Group" />"; {} <meta name="viewport" content="width=device-width,initial-scale=1" />"; <"meta": name="theme-color" content="#000000" />"; <"meta": name="robots" content="index,follow" />"; {} {} <meta property=""og": title" content={fullTitl,"
 } />; <meta property=""og": description" content={descriptio,"
@@ -1604,26 +1365,18 @@ const fullTitle = title.includes('Zion Tech Group') ? title : \`\${title} | Zion
 }),...(modifiedTime && { "dateModified": modifiedTime }
 }),"name": 'Zion Tech Group',"url": 'http "s": "logo": 'http "s": "description": description,...(publishedTime && { "datePublished": publishedTime }) ...(modifiedTime && { "dateModified": modifiedTime }) }) }} /> </Head>' ,'
 }`;`
-const componentsDir  = path.join(this.projectRoot,'src','components')';"if": (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ "recursive": true},'
 } fs.writeFileSync( path.join(componentsDir,'SEO.tsx'),'; "seoComponent": )this.fixes.push('"Created": comprehensive SEO component','
 }'; "async": createSitemapGenerator() { const sitemapGenerator  = `import fs from 'fs';import path from 'path';"export": async function generateSitemap() { const baseUrl = '"https":;'
   }
-  const pages = [ '/,','';/about','';/services','';/contact','';/blog','';/careers','];'
 
-const sitemap = \`<?xml version="1.0" encoding="UTF-8"?>"; <"urlset": xmlns = ""http": \${"pages": .map(;"  }
-  const componentsDir = path.join(this.projectRoot,'src','components')if (!fs.existsSync(componentsDir)) {fs.mkdirSync(componentsDir,{ "recursive": true },'
 }fs.writeFileSync(path.join(componentsDir,'SEO.tsx'),seoComponent; )this.fixes.push('Created comprehensive SEO component')}async createSitemapGenerator() {(page) => \` <url> <loc>\${baseUr,l}\${page}</loc> <lastmod>\${new Date().toISOString()}</lastmod> <changefreq>weekly</changefreq> <priority>0.8</priority>` </url>\` ) .join('')}'; </urlset>\`; fs.writeFileSync(path.join(process.cwd(),'public','sitemap.xml'),sitemap)';console.log('"Sitemap": generated successfully','}'; "if": (require.main = == module) {;'
   }
-  const sitemapGenerator = `import fs from 'fs'; import path from 'path';'
 
 export async function generateSitemap() {const baseUrl = '"https":;'
   }
-  const pages = [';/',';/about',';/services',';/contact',';/blog',';/careers'];'
 
-const sitemap = \`<?xml version="1.0" encoding="UTF-8"?>; <urlset xmlns=""http": \${pages; .map((page) => \`; <url>; <loc>\${baseUrl}\${page}</loc>; <lastmod>\${new Date().toISOString()}</lastmod>; <changefreq>weekly</changefreq>; <priority>0.8</priority>; </url>\`; ).join(')} </urlset>\`;fs.writeFileSync(path.join(process.cwd(),'public','sitemap.xml'),sitemap)console.log('Sitemap generated successfully')}if (require.main === module) {generateSitemap()}`;fs.writeFileSync(path.join(this.projectRoot,'scripts','generate-sitemap.js'),sitemapGenerator; )this.fixes.push('Created sitemap generator')}async createRobotsTxt() {const robotsTxt = `User-"agent": *; "Allow": /; sitemapGenerator )'; this.fixes.push('Created sitemap generator')} async createRobotsTxt() {' const robotsTxt = `User-"agent": * "Allow": / "Sitemap": "https": "Disallow": /admin/ "Disallow": /api/ Disallo "w": /_next/` Disallo "w": /private/`; fs.writeFileSync(` path.join(this.projectRoot,'public','robots.txt') robotsTxt )'; this.fixes.push('Created robots.txt file')} async improveAccessibility() {' console.log('♿ Improving accessibility...')await this.createAccessibilityUtils()await this.createSkipLink()'; this.improvements.push('Accessibility improvements applied')} async createAccessibilityUtils() {' const announceToScreenReader = ("message": string) => {";"
 
 }
 
-const announcement  = document.createElement('div')';announcement.setAttribute('aria-live','polite')';announcement.setAttribute('aria-atomic','true')';announcement.className = 'sr-only'';announcement.textContent = message';;'
 
 const announcement = document.createElement('div')announcement.setAttribute('aria-live,polite')announcement.setAttribute('aria-atomic,true')announcement.className = 'sr-only'; announcement.textContent = message;document.body.appendChild(announcement)setTimeout(() => {document.body.removeChild(announcement)},1000)}

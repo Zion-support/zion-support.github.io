@@ -59,7 +59,6 @@ dedicated talent pool, and powerful admin controls.
                   alt="Enterprise 3";"
                   className="h-8";" />;                />;
 import React from "react";"
-import { Button } from "@/components/ui/button";"
 import { GradientHeading } from "@/components/GradientHeading",;"
 ;
 export function EnterpriseHero() {;
@@ -100,7 +99,6 @@ export function EnterpriseHero() {;
   )
 import React from "React";"
 import { Button } from "@/components/ui/button",;"
-import { GradientHeading } from "@/components/GradientHeading";"
 export function EnterpriseHero() {;
   }
   return (;

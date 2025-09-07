@@ -84,7 +84,6 @@ const features = [;
 return (;
 export default function ApiPerformanceTestingPage() {
 }
-const features = [;
     "k6/Gatling-compatible test runner","
     "SLO-aware latency reports","
     "Regression baselines per endpoint","
@@ -326,7 +325,6 @@ key={
       </main>;</>)}}</>)}ursor/fix-website-loading-errors-and-merge-6662;
     </>)}
 
-const features = [;
   'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging''
 ];
 
@@ -380,7 +378,6 @@ const features  = null;return (<>;
     </>);
 }
 
-const features = [;
 		'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging''
 	];
 return (;

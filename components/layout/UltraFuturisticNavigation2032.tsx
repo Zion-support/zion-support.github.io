@@ -46,15 +46,9 @@ const contactInfo  = null;const serviceCategories = [;
     title: '⚛️ Quantum & Emerging Tech 2030',icon: AtomIcon,color: 'from - indigo - 600 via - blue - 600 to - cyan - 600',description: 'Quantum computing and beyond',const mainNavigation = [;
 
 const contactInfo = null;
-
-const serviceCategories = [;
+origin/cursor/automate-test-improve-and-merge-code-2533
+const serviceCategories = [
   {
-    }
-    "title": '🧠 AI & Consciousness 2030''
-    "icon": BrainIcon,
-"color": 'from-violet-600 via-purple-600 to-indigo-600''
-    "description": 'Next-generation AI consciousness and emotional intelligence''
-    "services": [
 
 {
         }
@@ -78,16 +72,11 @@ const serviceCategories = [;
 
     title: '🧠 AI & Consciousness 2030'
     icon: BrainIcon'
-    color: 'from-violet-600 via-purple-600 to-indigo-600''
-    description: 'Next-generation AI consciousness and emotional intelligence'
+    color: from-violet-600 via-purple-600 to-indigo-600'
+    description: 'Next-generation AI consciousness and emotional intelligence
     services: []
 ];
 
-];'
-    title: '⚛️ Quantum & Emerging Tech 2030',
-    icon: AtomIcon,'
-    color: 'from - indigo - 600 via - blue - 600 to - cyan - 600','
-    description: 'Quantum computing and beyond',
 
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home }
@@ -212,80 +201,16 @@ const serviceCategories = $2;
   {
     title: '⚛️ Quantum & Emerging Tech 2030',
     icon: AtomIcon,
-    color: 'from-indigo-600 via-blue-600 to-cyan-600',
-    description: 'Quantum computing and beyond',
-    services: [
-      { name: 'Quantum Internet Security Gateway', href: '/quantum-internet-security-gateway', description: 'Unbreakable quantum encryption', price: '$15,999/month' },
-      { name: 'Biotech DNA Computing Platform', href: '/biotech-dna-computing-platform', description: 'DNA-based computation', price: '$25,999/month' },
-      { name: 'Neuromorphic Computing Platform', href: '/neuromorphic-computing-platform', description: 'Brain-inspired computing', price: '$899/month' },
-      { name: 'Photonic Computing Infrastructure', href: '/photonic-computing-infrastructure', description: 'Light-speed computing', price: '$699/month' }
-    ]
-  },
-  {
-    title: '🚀 Space & Metaverse 2030',
-    icon: Rocket,
-    color: 'from-teal-600 via-emerald-600 to-green-600',
-    description: 'Space exploration and digital reality',
-    services: [
-      { name: 'Space Mining Automation Platform', href: '/space-mining-automation-platform', description: 'Automated asteroid mining', price: '$45,999/month' },
-      { name: 'Metaverse Development Platform', href: '/metaverse-development-platform', description: 'Build immersive virtual worlds', price: '$499/month' },
-      { name: 'Virtual Event Hologram Platform', href: '/virtual-event-hologram-platform', description: 'Immersive holographic events', price: '$799/month' },
-      { name: 'AI Predictive Health Analytics', href: '/ai-predictive-health-analytics', description: 'Predictive health outcomes', price: '$7,999/month' }
-    ]
-  },
-  {
-    title: '⚙️ Enterprise IT 2030',
-    icon: CpuIcon,
-    color: 'from-blue-600 via-cyan-600 to-teal-600',
-    description: 'Autonomous enterprise infrastructure',
-    services: [
-      { name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform', description: 'Fully autonomous DevOps', price: '$799/month' },
-      { name: 'Zero Trust Network Architecture', href: '/zero-trust-network-architecture', description: 'Never trust, always verify', price: '$599/month' },
-      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Distributed edge computing', price: '$449/month' },
-      { name: 'AI-Powered IT Operations Center', href: '/ai-it-operations-center', description: 'Intelligent IT operations', price: '$699/month' }
-    ]
-  },
-  {
-    title: '🎯 Business Solutions 2030',
-    icon: Target,
-    color: 'from-green-600 via-yellow-600 to-orange-600',
-    description: 'Practical business solutions with AI',
-    services: [
-      { name: 'AI Business Intelligence Suite', href: '/ai-business-intelligence-suite', description: 'Intelligent business insights', price: '$299/month' },
-      { name: 'AI Customer Success Automation', href: '/ai-customer-success-automation', description: 'Automate customer success', price: '$199/month' },
-      { name: 'Blockchain Supply Chain Transparency', href: '/blockchain-supply-chain-transparency', description: 'End-to-end traceability', price: '$399/month' },
-      { name: 'AI Meeting Transcriber Pro', href: '/ai-meeting-transcriber-pro', description: 'Professional transcription', price: '$149/month' }
-    ]
-  },
-  {
-    title: '🔬 Research & Development 2030',
-    icon: Microscope,
-    color: 'from-orange-600 via-red-600 to-pink-600',
-    description: 'Breakthrough research solutions',
-    services: [
-      { name: 'Swarm Robotics Orchestration', href: '/swarm-robotics-orchestration', description: 'Coordinate robot swarms', price: '$449/month' },
-      { name: 'Brain-Computer Interface Platform', href: '/brain-computer-interface-platform', description: 'Direct neural interface', price: '$1,299/month' },
-      { name: 'Quantum Machine Learning Platform', href: '/quantum-machine-learning-platform', description: 'Quantum-enhanced ML', price: '$2,999/month' },
-      { name: 'Synthetic Biology Automation Platform', href: '/synthetic-biology-automation-platform', description: 'Automate biology research', price: '$3,999/month' }
-    ]
-  }
-],
+    color: from - indigo - 600 via - blue - 600 to - cyan - 600','
+    description: Quantum computing and beyond,
 
-const mainNavigation = [
-  { name: 'Home', href: '/', icon: Home},
-  { name: 'Services', href: '/services', icon: Briefcase},
-  { name: 'Solutions', href: '/solutions', icon: Layers},
-  { name: 'Pricing', href: '/pricing', icon: DollarSign},
-  { name: 'Resources', href: '/resources', icon: BookOpen},
-  { name: 'Case Studies', href: '/case-studies', icon: TrendingUp},
-  { name: 'Blog', href: '/blog', icon: MessageCircle},
-  { name: 'Contact', href: '/contact', icon: MessageCircle}
-],
 
 const companyLinks = [
   { name: 'Support', href: '/support' },
 { name: 'Status', href: '/status' },
 ];
+  { name: 'Support', href: /support },
+{ name: 'Status', href: /status }];
 export default function UltraFuturisticNavigation2032() {
 origin/cursor/automate-test-improve-and-merge-code-2533
   const [isOpen, setIsOpen] = useState(false);
@@ -294,23 +219,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   useEffect(() => {}
     const handleScroll = () => {}
 const mainNavigation = [;'
-  { name: 'Home', href: '/', icon: Home },;'
-  { name: 'Services', href: '/services', icon: Briefcase },;'
-  { name: 'Solutions', href: '/solutions', icon: Layers },;'
-  { name: 'Pricing', href: '/pricing', icon: DollarSign },;'
-  { name: 'Resources', href: '/resources', icon: BookOpen },;'
-  { name: 'Case Studies', href: '/case-studies', icon: TrendingUp },;'
-  { name: 'Blog', href: '/blog', icon: MessageCircle },;'
-  { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
+  { name: 'Home, href: /', icon: Home },'
+  { name: Services, href: '/services', icon: Briefcase },
+  { name: Solutions', href: '/solutions, icon: Layers },
+  { name: 'Pricing', href: /pricing, icon: DollarSign },'
+  { name: 'Resources, href: /resources', icon: BookOpen },'
+  { name: Case Studies, href: '/case-studies', icon: TrendingUp },
+  { name: Blog', href: '/blog, icon: MessageCircle },
+  { name: 'Contact', href: /contact, icon: MessageCircle }];  { name: 'Contact', href: /contact, icon: MessageCircle }
 ];
 
-}
 
-setIsScrolled(window.scrollY > 20)
-};
-
-    window.addEventListener('scroll', handleScroll);'
-    return () => window.removeEventListener('scroll', handleScroll);'
   }, []);
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -338,11 +257,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='flex items-center space-x-6 text-gray-300'>
               <div className='flex items-center space-x-2'>
 const toggleMenu = () => setIsOpen(!isOpen);
+                <Rocket className=w-7 h-7 text-white" />
+              </div>
+              <div>"
+                <div className=text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent>
 
-const closeMenu = () => setIsOpen(false);
-return (;
-    <>;
-      {/* Top Contact Bar */}
 
 <div className='bg-gradient-to-r from-cyan-900/90 via-purple-900/90 to-pink-900/90 backdrop-blur-sm border-b border-cyan-500/20'>'
         <div className='max-w-7xl mx-auto px-4 "sm": px-6 "lg":px-8'>'
@@ -423,10 +342,18 @@ href={`"tel":${contactInfo.mobile}`}`                  className='"hover":text-c
               <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>;'
                 <Rocket className='w-7 h-7 text-white' />;
               </div>;
-              <div>;'
+              <div>;
                 <div className='text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>;
                   Zion Tech Group;
-                </div>;'
+
+              </div>
+
+                <Rocket className=w-7 h-7 text-white />;
+              </div>;
+              <div>;'
+                <div className='text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent>;
+                  Zion Tech Group;
+                </div>;
                 <div className='text-xs text-gray-400'>;
                   2030 Future Technology;
                 </div>              </div>;
@@ -437,43 +364,25 @@ href={`"tel":${contactInfo.mobile}`}`                  className='"hover":text-c
               </div>;
             </Link>;
 
-            {/* Desktop Navigation */}
-<div className='hidden "lg":flex items-center space-x-8'>'
-              {mainNavigation.map(item => (
+
                 <Link
 }
 key={item.name}
                   href={item.href}
-              {/* Services Dropdown *
-}
-              <div className='relative group'>;'
-                <button className='text-gray-300 "hover":text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group'>;'
-                  <Briefcase className='w-4 h-4 group-"hover":scale-110 transition-transform' />;'
-                  <span>Services</span>;
-                  <ChevronDown className='w-4 h-4 group-"hover":rotate-180 transition-transform' />;'
-                </button>;
-                {/* Mega Menu */}
-                <div className='absolute top-full left-0 w-screen max-w-7xl transform -translate-x-1/2 left-1/2 opacity-0 invisible group-"hover":opacity-100 group-"hover":visible transition-all duration-300 pt-4'>;'
-                  <div className='bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-8 shadow-2xl shadow-cyan-500/20'>;'
-                    <div className='grid grid-cols-2 gap-8'>;'
-                      {serviceCategories.map((category, index) => (<div key={index} className='space-y-4'>;'
-                          <div className='flex items-center space-x-3'>;'
-                            <div;
-                              className={`w-10 h-10 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center`}>`
-                              <category.icon className='w-5 h-5 text-white' />;'
+
                             </div>;
                             <div>;
                               <h3 className='text-lg font-semibold text-white'>;'
                                 {category.title}
                               </h3>;
-                              <p className='text-sm text-gray-400'>;'
+
                                 {category.description}
                           <div className='space-y-2'>                            {category.services.map((service, serviceIndex) => (
                               <Link
                               </p>;
                             </div>;
                           </div>;
-                          <div className='space-y-2'>                            {category.services.map((service, serviceIndex) => (<Link;
+                          <div className=space-y-2>                            {category.services.map((service, serviceIndex) => (<Link;
                                 key={serviceIndex}
                                 href={service.href}
                                 className='block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group'                <Link
@@ -519,30 +428,30 @@ key={item.name}
                               <h3 className="text-lg font-semibold text-white">{category.title}</h3>
                               <p className="text-sm text-gray-400">{category.description}</p>
                             </div>;
-                            <div>;'
-                              <h3 className='text-lg font-semibold text-white'>;
+                            <div>;
+                              <h3 className=text-lg font-semibold text-white'>;
                                 {category && category.title}
                               </h3>;'
-                              <p className='text-sm text-gray-400'>;
+                              <p className=text-sm text-gray-400>;
                                 {category && category.description}
                               </p>;
                             </div>;
                           </div>;'
-                          <div className='space-y-2'>                            {category && category.services.map((service, serviceIndex) => (;
+                          <div className='space-y-2>                            {category && category.services.map((service, serviceIndex) => (;
                               <Link;
                                 key={serviceIndex}
-                                href={service && service.href}'
+                                href={service && service.href}
                                 className='block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group'                <Link;
                   key={item && item.name}
-                  href={item && item.href}"
-                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group">;"
-                  <item && item.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />;
+                  href={item && item.href}
+                  className=text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group">;"
+                  <item && item.icon className=w-4 h-4 group-hover:scale-110 transition-transform />;
                   <span>{item && item.name}</span>;
                 </Link>;"
-            <div className="hidden lg:flex items-center space-x-8">
+            <div className="hidden lg:flex items-center space-x-8>
               {mainNavigation.map((item) => (
             {/* Desktop Navigation */}
-<div className='hidden lg:flex items-center space-x-8'>
+<div className=hidden lg:flex items-center space-x-8>
               {mainNavigation.map(item => (
 origin/cursor/automate-test-improve-and-merge-code-2533
                 <Link
@@ -550,28 +459,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   key={item.name}
                   href={item.href}
               {/* Services Dropdown */}'
-              <div className='relative group'>'
-                <button className='text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group'>'
-                  <Briefcase className='w-4 h-4 group-hover:scale-110 transition-transform' />
+              <div className='relative group>
+                <button className='text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group'>
+                  <Briefcase className=w-4 h-4 group-hover:scale-110 transition-transform' />
                   <span>Services</span>'
-                  <ChevronDown className='w-4 h-4 group-hover:rotate-180 transition-transform' />
+                  <ChevronDown className=w-4 h-4 group-hover:rotate-180 transition-transform />
                 </button>
                 {/* Mega Menu */}'
-                <div className='absolute top-full left-0 w-screen max-w-7xl transform -translate-x-1/2 left-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4'>'
-                  <div className='bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-8 shadow-2xl shadow-cyan-500/20'>'
-                    <div className='grid grid-cols-2 gap-8'>
+                <div className='absolute top-full left-0 w-screen max-w-7xl transform -translate-x-1/2 left-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4>
+                  <div className='bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-8 shadow-2xl shadow-cyan-500/20'>
+                    <div className=grid grid-cols-2 gap-8'>
                       {serviceCategories.map((category, index) => ('
-                        <div key={index} className='space-y-4'>'
-                          <div className='flex items-center space-x-3'>
+                        <div key={index} className=space-y-4>'
+                          <div className='flex items-center space-x-3>
                             <div;`
                               className={`w-10 h-10 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center`}
-                            >'
+                            >
                               <category.icon className='w-5 h-5 text-white' />
                             </div>
-                            <div>'
-                              <h3 className='text-lg font-semibold text-white'>
+                            <div>
+                              <h3 className=text-lg font-semibold text-white'>
                             <div />;
-                              <h3 className='text-lg font-semibold text-white' />;
+                              <h3 className='text-lg font-semibold text-white />;
                                 {category.title}
                               </h3>'
                               <p className='text-sm text-gray-400'>
@@ -637,26 +546,19 @@ className='block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group'
 key={serviceIndex}
                                 href={service.href}
 
-className='block p-3 rounded-lg "hover": bg-gray-800/50 transition-colors group''
-                              >
-                                <div className='flex items-center justify-between'>'
-                                  <div>
-                                    <div className='text-white group-"hover":text-cyan-400 transition-colors font-medium'>'
 
-                                      {service.nam
-}
                                     </div>;
                                     <div className='text-sm text-gray-400'>;'
                                       {service.description}                                    </div>;
                                   </div>;
-                                  <div className='text-cyan-400 font-semibold text-sm'>;'
+
                                     {service.price}
-                                    <div className="text-white group-hover:text-cyan-400 transition-colors font-medium">
+                                    <div className=text-white group-hover:text-cyan-400 transition-colors font-medium>
                                       {service.name}
                                     </div>
                                     <div className="text-sm text-gray-400">{service.description}</div>
                                   </div>
-                                  <div className="text-cyan-400 font-semibold text-sm">{service.price}</div>
+                                  <div className=text-cyan-400 font-semibold text-sm>{service.price}</div>
                                 </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
                               </Link>
@@ -676,7 +578,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <button className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl">
                   Get Started
 <div className='hidden lg:flex items-center space-x-4' />
-              <Link href='/contact' />
+              <Link href=/contact />
                 <button className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl' />
                   Get Started;
                 </button>
@@ -867,6 +769,36 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             <div>;
                               <h3 className="text - lg font - semibold text - white">{category.title}</h3>;"
                               <p className="text - sm text - gray - 400">{category.description}</p>;"
+
+                  <item.icon className=w - 4 h - 4 group - hover:scale - 110 transition - transform />;
+                  <span>{item.name}</span>;
+                </Link>))}
+
+                                key={service_index}
+                                href={service.href}'
+                                className='block p - 3 rounded - lg hover:bg - gray - 800 / 50 transition - colors group                <Link;
+                  key={item.name}
+
+                </Link>))}
+              {/* Services Dropdown */}
+              <div className="relative group">;
+                <button className=text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 flex items - center space - x-2 group>;
+                  <Briefcase className="w - 4 h - 4 group - hover:scale - 110 transition - transform" />;
+                  <span > Services</span>;
+                  <ChevronDown className=w - 4 h - 4 group - hover:rotate - 180 transition - transform />;
+                </button>;
+                {/* Mega Menu */}
+                <div className="absolute top - full left - 0 w - screen max - w-7xl transform -translate - x-1 / 2 left - 1/2 opacity - 0 invisible group - hover:opacity - 100 group - hover:visible transition - all duration - 300 pt - 4">;
+                  <div className=bg - black / 95 backdrop - blur - xl border border - cyan - 500 / 20 rounded - 2xl p - 8 shadow - 2xl shadow - cyan - 500 / 20>;
+                    <div className="grid grid - cols - 2 gap - 8">;
+                      {service_categories.map ((category, index) => (<div key={index} className=space - y-4>;
+                          <div className="flex items - center space - x-3">;
+                            <div className={`w - 10 h - 10 bg - gradient - to - r ${category.color} rounded - xl flex items - center justify - center`}>;
+                              <category.icon className=w - 5 h - 5 text - white />;
+                            </div>;
+                            <div>;
+                              <h3 className="text - lg font - semibold text - white">{category.title}</h3>;
+                              <p className=text - sm text - gray - 400>{category.description}</p>;
                             </div>;
                           </div>;
                           <div className="space - y-2">;"
@@ -874,7 +806,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                 }
                                 key={service_index}
                                 href={service.href}
-                                className='block p - 3 rounded - lg "hover":bg - gray - 800 / 50 transition - colors group'>'
 
                                 <div className='flex items - center justify - between'>;'
                                   <div>;
@@ -914,16 +845,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               onClick={toggleMenu}
 className='lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors'
             >
-              {isOpen ? ('
+              {isOpen ? (
                 <X className='w-6 h-6' />
               ) : ('
                 <Menu className='w-6 h-6' />"
             {/* CTA Buttons */}
-            <div className='hidden "lg":flex items - center space - x-4'>;'
-              <Link href='/contact'>;'
-                <button className='px - 6 py - 2 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - lg font - semibold "hover":from - cyan - 600 "hover":to - blue - 700 transition - all duration - 200 shadow - lg "hover":shadow - xl'>                  Get Started            <div className="hidden "lg":flex items - center space - x-4">;"
-              <Link href="/contact">;"
-                <button className="px - 6 py - 2 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - lg font - semibold "hover":from - cyan - 600 "hover":to - blue - 700 transition - all duration - 200 shadow - lg "hover":shadow - xl">;"
+
                   Get Started;
                 </button>;
               </Link>;
@@ -931,13 +858,12 @@ className='lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-g
             <button;
               onClick={toggleMenu}
 
-className='"lg": hidden p-2 rounded-lg text-gray-300 "hover":text-cyan-400 "hover":bg-gray-800/50 transition-colors''
             >
 
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
-              className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors"
+              className=lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
 className='lg: hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors'
@@ -968,21 +894,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </nav>
-className='lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors';
+className=lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors;
             >;
               {isOpen ? (<X className='w-6 h-6' />;
-              ) : (<Menu className='w-6 h-6' />;
-              )}            </button>              className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors";
+              ) : (<Menu className=w-6 h-6 />;
+              )}            </button>              className=lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors";
             >;
             {/* Mobile Menu Button */}
             <button;
               onClick={toggleMenu}
               className='lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors'>;
-              {isOpen ? (<X className='w-6 h-6' />;
+              {isOpen ? (<X className=w-6 h-6 />;
               ) : (<Menu className='w-6 h-6' />;
-              )}            </button>              className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors";
+              )}            </button>              className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors;
             >;
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />})}</button>;
+              {isOpen ? <X className=w-6 h-6" /> : <Menu className="w-6 h-6 />})}</button>;
           </div>;
         </div>;
       </nav>;
@@ -1106,17 +1032,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <Rocket className='w-6 h-6 text-white' />
                     </div>
                     <div>
-                      <div className='text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>'
+                      <div className=text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent>
                         Zion Tech Group
                       </div>
                     </div>
                   </div>
-<button,
-onClick={closeMen
-}
-                    className='p-2 rounded-lg text-gray-300 "hover":text-cyan-400 "hover":bg-gray-800/50'>'
 
-                    <X className='w-6 h-6' />;'
                   </button>;
                 </div>;
                 {/* Mobile Navigation */}
@@ -1226,10 +1147,10 @@ className='flex items-center space-x-3 text-gray-300 "hover": text-cyan-400 tran
                       />
                     </button>
                     {activeCategory === 0 && (
-                      <div className='pl-8 space-y-2'>'
-                        {serviceCategories.map((category, index) => (
-                          <div key={index} className='space-y-2'>'
-                            <div className='text-sm font-medium text-cyan-400 py-2'>'
+                      <div className=pl-8 space-y-2' />}
+                        {serviceCategories.map((category, index) => (}
+                          <div key={index} className='space-y-2 />
+                            <div className=text-sm font-medium text-cyan-400 py-2' />
                               {category.title}
                             </div>
                             {category.services.map((service, serviceIndex) => (
@@ -1240,7 +1161,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                 href={service && service.href}
                                 onClick={closeMenu}
 
-className='block text-sm text-gray-400 "hover": text-cyan-400 transition-colors py-1''
                               >
                                 {service.name}
                               </Link>
@@ -1252,9 +1172,7 @@ key={serviceIndex}
                                 href={service && service.href}
                                 onClick={closeMenu}
 
-                            )
-}
-                          </div>;
+
                         ))}
                       </div>
                     )}
@@ -1285,8 +1203,8 @@ className='block text-sm text-gray-400 "hover": text-cyan-400 transition-colors 
                       ))}
 
                   {/* Contact Info */}
-<div className='pt-4 border-t border-gray-700/50' />
-                    <div className='text-sm font-medium text-gray-400 mb-3' />
+<div className='pt-4 border-t border-gray-700/50 />
+                    <div className=text-sm font-medium text-gray-400 mb-3' />
                       Contact;
                     </div>
                   </div>
@@ -1309,28 +1227,21 @@ className='block text-sm text-gray-400 "hover": text-cyan-400 transition-colors 
 
                         <span>{contactInfo.mobile}</span>
                       ))}
-                      </div>"
-                      <div className="flex items-center space-x-2">"
-                        <Mail className="w-4 h-4 text-purple-400" />
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <Mail className=w-4 h-4 text-purple-400" />
                         <span>{contactInfo.email}</span>
                       </div>"
-                      <div className="flex items-center space-x-2">"
-                        <MapPin className="w-4 h-4 text-pink-400" />"
+                      <div className=flex items-center space-x-2>"
+                        <MapPin className="w-4 h-4 text-pink-400 />
                         <span className="text-xs">{contactInfo.address}</span>
-                        <span className='text-xs'>{contactInfo.address}</span>
+                        <span className=text-xs>{contactInfo.address}</span>
 origin/cursor/automate-test-improve-and-merge-code-2533
 
                         <span>{contactInfo.mobile}</span>
                       ))}
                       </div>
-                      <div className='flex items-center space-x-2'>'
-                        <Mail className='w-4 h-4 text-purple-400' />'
-                        <span>{contactInfo.email}</span>
-                      </div>
-                      <div className='flex items-center space-x-2'>'
-                        <MapPin className='w-4 h-4 text-pink-400' />'
 
-                        <span className='text-xs'>{contactInfo.address}</span>'
                       </div>
                     </div>
                   </div>
@@ -1351,87 +1262,87 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>
       </AnimatePresence>;
       {/* Spacer for fixed navigation */}'
-      <div className='h-20' />;
-    </>;"
-  );      <div className="h-20" />;
+      <div className='h-20 />;
+    </>;
+  );      <div className=h-20" />;
     </>;
   );
                   <button;
-                    on_click={close_menu}'
+                    on_click={close_menu}
                     className='p - 2 rounded - lg text - gray - 300 hover:text - cyan - 400 hover:bg - gray - 800 / 50';
-                  >;'
-                    <X className='w - 6 h - 6' />                  </button>;
+                  >;
+                    <X className=w - 6 h - 6' />                  </button>;
                 </div>;
                 {/* Mobile Navigation */}'
-                <div className='space - y-6'>;
+                <div className=space - y-6>;
                   {main_navigation.map (item => (                    <Link;
                       key={item.name}
                       href={item.href}
                       on_click={close_menu}'
-                      className='flex items - center space - x-3 text - gray - 300 hover:text - cyan - 400 transition - colors p - 3 rounded - lg hover:bg - gray - 800 / 50';
-                    >;'"
-                      <item.icon className='w - 5 h - 5' />                      <span>{item.name}</span>                  <button on_click={close_menu} className="p - 2 rounded - lg text - gray - 300 hover:text - cyan - 400 hover:bg - gray - 800 / 50">;"
-                    <X className="w - 6 h - 6" />;
+                      className='flex items - center space - x-3 text - gray - 300 hover:text - cyan - 400 transition - colors p - 3 rounded - lg hover:bg - gray - 800 / 50;
+                    >;"
+                      <item.icon className='w - 5 h - 5' />                      <span>{item.name}</span>                  <button on_click={close_menu} className=p - 2 rounded - lg text - gray - 300 hover:text - cyan - 400 hover:bg - gray - 800 / 50>;"
+                    <X className="w - 6 h - 6 />;
                   </button>;
                 </div>;
-                {/* Mobile Navigation */}'
-                <div className='space - y-6'>;"
+                {/* Mobile Navigation */}
+                <div className=space - y-6'>;
                   {main_navigation.map (item => (                <div className="space - y-6">;
                   {main_navigation.map ((item) => (
                     <Link;
                       key={item.name}
                       href={item.href}
                       on_click={close_menu}'
-                      className='flex items - center space - x-3 text - gray - 300 hover:text - cyan - 400 transition - colors p - 3 rounded - lg hover:bg - gray - 800 / 50';
-                    >;'"
-                      <item.icon className='w - 5 h - 5' />                      className="flex items - center space - x-3 text - gray - 300 hover:text - cyan - 400 transition - colors p - 3 rounded - lg hover:bg - gray - 800 / 50";
+                      className=flex items - center space - x-3 text - gray - 300 hover:text - cyan - 400 transition - colors p - 3 rounded - lg hover:bg - gray - 800 / 50;
+                    >;'
+                      <item.icon className='w - 5 h - 5 />                      className=flex items - center space - x-3 text - gray - 300 hover:text - cyan - 400 transition - colors p - 3 rounded - lg hover:bg - gray - 800 / 50";
                     >;"
-                      <item.icon className="w - 5 h - 5" />;
+                      <item.icon className=w - 5 h - 5 />;
                       <span>{item.name}</span>;
                     </Link>))}
-                  {/* Services Accordion */}'
+                  {/* Services Accordion */}
                   <div className='space - y-2'>;
                     <button;
                       on_click={() =>;
                         setActiveCategory (active_category === 0 ? null : 0);
-                      }'
-                      className='w - full flex items - center justify - between p - 3 rounded - lg text - gray - 300 hover:text - cyan - 400 hover:bg - gray - 800 / 50 transition - colors';
+                      }
+                      className=w - full flex items - center justify - between p - 3 rounded - lg text - gray - 300 hover:text - cyan - 400 hover:bg - gray - 800 / 50 transition - colors';
                     >;'
-                      <span className='flex items - center space - x-3'>;'
-                        <Briefcase className='w - 5 h - 5' />;
+                      <span className=flex items - center space - x-3>;'
+                        <Briefcase className='w - 5 h - 5 />;
                         <span > Services</span>;
                       </span>;
-                      <ChevronRightIcon;'`
-                        className={`w - 5 h - 5 transition - transform ${active_category === 0 ? 'rotate - 90' : ''}`}
+                      <ChevronRightIcon;`
+                        className={`w - 5 h - 5 transition - transform ${active_category === 0 ? 'rotate - 90' : }`}
                       />;
                     </button>;
                     {active_category === 0 && ('
-                      <div className='pl - 8 space - y-2'>;
-                        {service_categories.map ((category, index) => ('
-                          <div key={index} className='space - y-2'>;'
-                            <div className='text - sm font - medium text - cyan - 400 py - 2'>;
+                      <div className='pl - 8 space - y-2>;
+                        {service_categories.map ((category, index) => (
+                          <div key={index} className='space - y-2'>;
+                            <div className=text - sm font - medium text - cyan - 400 py - 2'>;
                               {category.title}
                             </div>                            {category.services.map ((service, service_index) => (                    <button;
                       on_click={() => setActiveCategory (active_category === 0 ? null : 0)}"
-                      className="w - full flex items - center justify - between p - 3 rounded - lg text - gray - 300 hover:text - cyan - 400 hover:bg - gray - 800 / 50 transition - colors";
-                    >;"
-                      <span className="flex items - center space - x-3">;"
-                        <Briefcase className="w - 5 h - 5" />;
+                      className="w - full flex items - center justify - between p - 3 rounded - lg text - gray - 300 hover:text - cyan - 400 hover:bg - gray - 800 / 50 transition - colors;
+                    >;
+                      <span className="flex items - center space - x-3">;
+                        <Briefcase className=w - 5 h - 5" />;
                         <span > Services</span>;
                       </span>;'`
-                      <ChevronRightIcon className={`w - 5 h - 5 transition - transform ${active_category === 0 ? 'rotate - 90' : ''}`} />;
+                      <ChevronRightIcon className={`w - 5 h - 5 transition - transform ${active_category === 0 ? rotate - 90 : ''}`} />;
                     </button>;
                     {active_category === 0 && ("
-                      <div className="pl - 8 space - y-2">;
+                      <div className=pl - 8 space - y-2>;
                         {service_categories.map ((category, index) => ("
-                          <div key={index} className="space - y-2">;"
+                          <div key={index} className="space - y-2>;
                             <div className="text - sm font - medium text - cyan - 400 py - 2">{category.title}</div>;
                             {category.services.map ((service, service_index) => (
                               <Link;
                                 key={service_index}
                                 href={service.href}
-                                on_click={close_menu}'"
-                                className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors py - 1'                              >                                className="block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors py - 1";
+                                on_click={close_menu}
+                                className=block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors py - 1'                              >                                className=block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors py - 1";
                               >;
                                 {service.name}
                               </Link>))}
@@ -1439,62 +1350,62 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>)}
                   </div>;
                   {/* Company Links */}'
-                  <div className='pt - 4 border - t border - gray - 700 / 50'>;'
-                    <div className='text - sm font - medium text - gray - 400 mb - 3'>;
+                  <div className=pt - 4 border - t border - gray - 700 / 50>;'
+                    <div className='text - sm font - medium text - gray - 400 mb - 3>;
                       Company;
-                    </div>;'
+                    </div>;
                     <div className='space - y-2'>;
                       {company_links.map (link => (                        <Link;
                           key={link.name}
                           href={link.href}
-                          on_click={close_menu}'"
-                          className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors py - 1'                        >                  <div className="pt - 4 border - t border - gray - 700 / 50">;"
-                    <div className="text - sm font - medium text - gray - 400 mb - 3">Company</div>;"
+                          on_click={close_menu}"
+                          className=block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors py - 1'                        >                  <div className=pt - 4 border - t border - gray - 700 / 50>;"
+                    <div className="text - sm font - medium text - gray - 400 mb - 3>Company</div>;
                     <div className="space - y-2">;
                       {company_links.map ((link) => (
                           key={link.name}
                           href={link.href}
-                          on_click={close_menu}'"
-                          className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors py - 1'                          className="block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors py - 1";
+                          on_click={close_menu}'
+                          className=block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors py - 1                          className=block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors py - 1";
                         >;
                           {link.name}
                         </Link>))}
                     </div>;
                   </div>;
                   {/* Contact Info */}'
-                  <div className='pt - 4 border - t border - gray - 700 / 50'>;'
+                  <div className='pt - 4 border - t border - gray - 700 / 50>;
                     <div className='text - sm font - medium text - gray - 400 mb - 3'>;
                       Contact;
-                    </div>;'
-                    <div className='space - y-2 text - sm text - gray - 400'>;'
-                      <div className='flex items - center space - x-2'>;'
-                        <Phone className='w - 4 h - 4 text - cyan - 400' />;
+                    </div>;
+                    <div className=space - y-2 text - sm text - gray - 400'>;'
+                      <div className=flex items - center space - x-2>;'
+                        <Phone className='w - 4 h - 4 text - cyan - 400 />;
                         <span>{contact_info.mobile}</span>;
-                      </div>;'
-                      <div className='flex items - center space - x-2'>;'
-                        <Mail className='w - 4 h - 4 text - purple - 400' />;
+                      </div>;
+                      <div className='flex items - center space - x-2'>;
+                        <Mail className=w - 4 h - 4 text - purple - 400' />;
                         <span>{contact_info.email}</span>;
                       </div>;'
-                      <div className='flex items - center space - x-2'>;'
-                        <MapPin className='w - 4 h - 4 text - pink - 400' />;'
+                      <div className=flex items - center space - x-2>;'
+                        <MapPin className='w - 4 h - 4 text - pink - 400 />;
                         <span className='text - xs'>{contact_info.address}</span>                      </div>                        <span>{contact_info.mobile}</span>;
                       </div>;"
-                      <div className="flex items - center space - x-2">;"
-                        <Mail className="w - 4 h - 4 text - purple - 400" />;
+                      <div className=flex items - center space - x-2>;"
+                        <Mail className="w - 4 h - 4 text - purple - 400 />;
                         <span>{contact_info.email}</span>;
-                      </div>;"
-                      <div className="flex items - center space - x-2">;"
-                        <MapPin className="w - 4 h - 4 text - pink - 400" />;"
-                        <span className="text - xs">{contact_info.address}</span>;
+                      </div>;
+                      <div className="flex items - center space - x-2">;
+                        <MapPin className=w - 4 h - 4 text - pink - 400" />;"
+                        <span className=text - xs>{contact_info.address}</span>;
                       </div>;
                     </div>;
                   </div>;
-                  {/* CTA Button */}'
-                  <div className='pt - 4'>;'
-                    <Link href='/contact' on_click={close_menu}>;'"
-                      <button className='w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 200'>                        Get Started Today                  <div className="pt - 4">;"
-                    <Link href="/contact" on_click={close_menu}>;"
-                      <button className="w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 200">;
+                  {/* CTA Button */}
+                  <div className=pt - 4'>;'
+                    <Link href=/contact on_click={close_menu}>;'"
+                      <button className='w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 200>                        Get Started Today                  <div className="pt - 4>;
+                    <Link href="/contact" on_click={close_menu}>;
+                      <button className=w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 200">;
                         Get Started Today;
                       </button>;
                     </Link>;
@@ -1504,9 +1415,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </motion.div>)}
       </AnimatePresence>;
-      {/* Spacer for fixed navigation */}'
+      {/* Spacer for fixed navigation */}
       <div className='h - 20' />;"
-    </>);      <div className="h - 20" />;
+    </>);      <div className=h - 20 />;
     </>);
 }
 
@@ -1518,7 +1429,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                   {/* CTA Button */}
                   <div className="pt-4">
-                    <Link href="/contact" onClick={closeMenu}>
+                    <Link href=/contact onClick={closeMenu}>
                       <button className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200">
                         Get Started Today
                       </button>
@@ -1535,24 +1446,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Spacer for fixed navigation */}
       <div className='h-20' />;
     </>;
-  )<div className="h-20" />;
+  )<div className=h-20 />;
     </>;
   )<button;
                     on_click={close_menu}
-                    className='p - 2 rounded - lg text - gray - 300 hover:text - cyan - 400 hover:bg - gray - 800 / 50';
+                    className=p - 2 rounded - lg text - gray - 300 hover:text - cyan - 400 hover:bg - gray - 800 / 50;
                   >;
                     <X className='w - 6 h - 6' />                  </button>;
                 </div>;
                 {/* Mobile Navigation */}
-                <div className='space - y-6'>;
+                <div className=space - y-6>;
                   {main_navigation.map (item => (                    <Link;
                       key={item.name}
                       href={item.href}
                       on_click={close_menu}
                       className='flex items - center space - x-3 text - gray - 300 hover:text - cyan - 400 transition - colors p - 3 rounded - lg hover:bg - gray - 800 / 50';
                     >;
-                      <item.icon className='w - 5 h - 5' />                      <span>{item.name}</span>                  <button on_click={close_menu} className="p - 2 rounded - lg text - gray - 300 hover:text - cyan - 400 hover:bg - gray - 800 / 50">;
-                    <X className="w - 6 h - 6" />;
+                      <item.icon className=w - 5 h - 5 />                      <span>{item.name}</span>                  <button on_click={close_menu} className="p - 2 rounded - lg text - gray - 300 hover:text - cyan - 400 hover:bg - gray - 800 / 50">;
+                    <X className=w - 6 h - 6 />;
                   </button>;
                 </div>;
                 {/* Mobile Navigation */}
@@ -1562,50 +1473,50 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       key={item.name}
                       href={item.href}
                       on_click={close_menu}
-                      className='flex items - center space - x-3 text - gray - 300 hover:text - cyan - 400 transition - colors p - 3 rounded - lg hover:bg - gray - 800 / 50';
+                      className=flex items - center space - x-3 text - gray - 300 hover:text - cyan - 400 transition - colors p - 3 rounded - lg hover:bg - gray - 800 / 50;
                     >;
-                      <item.icon className='w - 5 h - 5' />                      className="flex items - center space - x-3 text - gray - 300 hover:text - cyan - 400 transition - colors p - 3 rounded - lg hover:bg - gray - 800 / 50";
+                      <item.icon className='w - 5 h - 5' />                      className=flex items - center space - x-3 text - gray - 300 hover:text - cyan - 400 transition - colors p - 3 rounded - lg hover:bg - gray - 800 / 50;
                     >;
                       <item.icon className="w - 5 h - 5" />;
                       <span>{item.name}</span>;
                     </Link>))}
                   {/* Services Accordion */}
-                  <div className='space - y-2'>;
+                  <div className=space - y-2>;
                     <button;
                       on_click={() =>;
                         setActiveCategory (active_category === 0 ? null : 0)}
                       className='w - full flex items - center justify - between p - 3 rounded - lg text - gray - 300 hover:text - cyan - 400 hover:bg - gray - 800 / 50 transition - colors';
                     >;
-                      <span className='flex items - center space - x-3'>;
+                      <span className=flex items - center space - x-3>;
                         <Briefcase className='w - 5 h - 5' />;
                         <span > Services</span>;
                       </span>;
                       <ChevronRightIcon;
-                        className={`w - 5 h - 5 transition - transform ${active_category === 0 ? 'rotate - 90' : ''}`}
+                        className={`w - 5 h - 5 transition - transform ${active_category === 0 ? rotate - 90 : ''}`}
                       />;
                     </button>;
-                    {active_category === 0 && (<div className='pl - 8 space - y-2'>;
+                    {active_category === 0 && (<div className=pl - 8 space - y-2>;
                         {service_categories.map ((category, index) => (<div key={index} className='space - y-2'>;
-                            <div className='text - sm font - medium text - cyan - 400 py - 2'>;
+                            <div className=text - sm font - medium text - cyan - 400 py - 2>;
                               {category.title}
                             </div>                            {category.services.map ((service, service_index) => (                    <button;
                       on_click={() => setActiveCategory (active_category === 0 ? null : 0)}
-                      className="w - full flex items - center justify - between p - 3 rounded - lg text - gray - 300 hover:text - cyan - 400 hover:bg - gray - 800 / 50 transition - colors";
+                      className=w - full flex items - center justify - between p - 3 rounded - lg text - gray - 300 hover:text - cyan - 400 hover:bg - gray - 800 / 50 transition - colors;
                     >;
                       <span className="flex items - center space - x-3">;
-                        <Briefcase className="w - 5 h - 5" />;
+                        <Briefcase className=w - 5 h - 5 />;
                         <span > Services</span>;
                       </span>;
-                      <ChevronRightIcon className={`w - 5 h - 5 transition - transform ${active_category === 0 ? 'rotate - 90' : ''}`} />;
+                      <ChevronRightIcon className={`w - 5 h - 5 transition - transform ${active_category === 0 ? 'rotate - 90' : }`} />;
                     </button>;
                     {active_category === 0 && (<div className="pl - 8 space - y-2">;
-                        {service_categories.map ((category, index) => (<div key={index} className="space - y-2">;
+                        {service_categories.map ((category, index) => (<div key={index} className=space - y-2>;
                             <div className="text - sm font - medium text - cyan - 400 py - 2">{category.title}</div>;
                             {category.services.map ((service, service_index) => (<Link;
                                 key={service_index}
                                 href={service.href}
                                 on_click={close_menu}
-                                className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors py - 1'                              >                                className="block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors py - 1";
+                                className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors py - 1'                              >                                className=block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors py - 1;
                               >;
                                 {service.name}
                               </Link>))}
@@ -1613,22 +1524,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>)}
                   </div>;
                   {/* Company Links */}
-                  <div className='pt - 4 border - t border - gray - 700 / 50'>;
+                  <div className=pt - 4 border - t border - gray - 700 / 50>;
                     <div className='text - sm font - medium text - gray - 400 mb - 3'>;
                       Company;
                     </div>;
-                    <div className='space - y-2'>;
+                    <div className=space - y-2>;
                       {company_links.map (link => (                        <Link;
                           key={link.name}
                           href={link.href}
                           on_click={close_menu}
                           className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors py - 1'                        >                  <div className="pt - 4 border - t border - gray - 700 / 50">;
-                    <div className="text - sm font - medium text - gray - 400 mb - 3">Company</div>;
+                    <div className=text - sm font - medium text - gray - 400 mb - 3>Company</div>;
                     <div className="space - y-2">;
                       {company_links.map ((link) => (key={link.name}
                           href={link.href}
                           on_click={close_menu}
-                          className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors py - 1'                          className="block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors py - 1";
+                          className=block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors py - 1                          className=block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors py - 1;
                         >;
                           {link.name}
                         </Link>))}
@@ -1636,38 +1547,38 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                   {/* Contact Info */}
                   <div className='pt - 4 border - t border - gray - 700 / 50'>;
-                    <div className='text - sm font - medium text - gray - 400 mb - 3'>;
+                    <div className=text - sm font - medium text - gray - 400 mb - 3>;
                       Contact;
                     </div>;
                     <div className='space - y-2 text - sm text - gray - 400'>;
-                      <div className='flex items - center space - x-2'>;
+                      <div className=flex items - center space - x-2>;
                         <Phone className='w - 4 h - 4 text - cyan - 400' />;
                         <span>{contact_info.mobile}</span>;
                       </div>;
-                      <div className='flex items - center space - x-2'>;
+                      <div className=flex items - center space - x-2>;
                         <Mail className='w - 4 h - 4 text - purple - 400' />;
                         <span>{contact_info.email}</span>;
                       </div>;
-                      <div className='flex items - center space - x-2'>;
+                      <div className=flex items - center space - x-2>;
                         <MapPin className='w - 4 h - 4 text - pink - 400' />;
-                        <span className='text - xs'>{contact_info.address}</span>                      </div>                        <span>{contact_info.mobile}</span>;
+                        <span className=text - xs>{contact_info.address}</span>                      </div>                        <span>{contact_info.mobile}</span>;
                       </div>;
                       <div className="flex items - center space - x-2">;
-                        <Mail className="w - 4 h - 4 text - purple - 400" />;
+                        <Mail className=w - 4 h - 4 text - purple - 400 />;
                         <span>{contact_info.email}</span>;
                       </div>;
                       <div className="flex items - center space - x-2">;
-                        <MapPin className="w - 4 h - 4 text - pink - 400" />;
+                        <MapPin className=w - 4 h - 4 text - pink - 400 />;
                         <span className="text - xs">{contact_info.address}</span>;
                       </div>;
                     </div>;
                   </div>;
                   {/* CTA Button */}
                   <div className='pt - 4'>;
-                    <Link href='/contact' on_click={close_menu}>;
-                      <button className='w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 200'>                        Get Started Today                  <div className="pt - 4">;
+                    <Link href=/contact on_click={close_menu}>;
+                      <button className='w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 200'>                        Get Started Today                  <div className=pt - 4>;
                     <Link href="/contact" on_click={close_menu}>;
-                      <button className="w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 200">;
+                      <button className=w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 200>;
                         Get Started Today;
                       </button>;
                     </Link>;
@@ -1715,5 +1626,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 "
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+
 
 "

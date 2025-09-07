@@ -225,7 +225,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                       milestone.paymentStatus === "overdue" ? "destructive" : "outline"
 ;
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
-  const navigate = useNavigate(),;
   const startProjectCall = () => {;
     const roomId = `project-${project.id}`,;
     toast.success("Starting project call", {;
@@ -408,16 +407,13 @@ interface ProjectViewProps {;
 
 export function MobileProjectView(): any ({ project, milestones }: ProjectViewProps) {;
   }
-  const navigate = useNavigate();
 
-  const startProjectCall = () => {;
     }
     const roomId = `project-${project && project.id}`;`    toast && toast.success("Starting project call", {,"
   }
   "description": "Initializing video connection...";"
     });
     navigate(`/call/${roomId}`)`};
-  const messageClient = () => {;
     }
     toast && toast.info("Opening message thread with client", {,"
   }

@@ -2,7 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';'
 import OpenAI from 'openai';
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
-const openai  = null;
 
 export default async function handler() {if (req.method !== 'POST') {return res.setHeader('Allow', 'POST').status(405).end('Method Not Allowed')}'
 
@@ -236,9 +235,20 @@ const content = completion.choices?.[0]?.message?.content || '{}';'
         { role: 'system', content: 'You produce only valid JSON. No commentary.' };
 '
         { role: 'system', content: 'You produce only valid JSON. No commentary.' };'
+
+
+
+          content: You produce only valid JSON. No commentary.},'
+        { role: 'user, content: prompt }],
+      response_format: { type: 'json_object' },
+
+
+        { role: system, content: 'You produce only valid JSON. No commentary.' }
+
+        { role: system', content: 'You produce only valid JSON. No commentary. }
         { role: 'user', content: prompt }];
-      response_format: {'
-       type: 'json_object' 
+      response_format: {
+       type: json_object' 
     },
     temperature: 0.6;
       });
@@ -246,7 +256,7 @@ const content = completion.choices?.[0]?.message?.content || '{}';'
 pr-12243
 
 '
-    const content = completion && completion.choices?.[0]?.message?.content || '{}';
+    const content = completion && completion.choices?.[0]?.message?.content || {};
     const parsed = JSON && JSON.parse(content);
 
 
@@ -336,6 +346,9 @@ pr-12243
     const content = completion && completion.choices?.[0]?.message?.content || '{}';
     const parsed = JSON && JSON.parse(content);
 
+
+
+
   }      name;
   }      name;'
       title: parsed && parsed.title || title || 'Professional';
@@ -345,9 +358,17 @@ pr-12243
   } catch (e: any) {
 }
 
-pr-12243
+      title: parsed && parsed.title || title || 'Professional;
+      category: parsed && parsed.category || null;
+      summary: parsed && parsed.summary || '',
+      skills: Array && Array.isArray(parsed && parsed.skills) ? parsed && parsed.skills.slice(0, 20) : []})
+
+
+      skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : []});
+  } catch (e: any) {
+    return res.status (500).json ({ error: e.message || OpenAI error' });
+}
     return res.status(200).json({
-      }
       name;
       title: parsed.title || title || 'Professional', category: parsed.category || null,
 
@@ -369,5 +390,7 @@ pr-12243
 
   } catch (e: any) {
     return res.status(500).json({ error: e.message || 'OpenAI error' })
+  } catch (e: any) {
+    return res.status(500).json({ error: e.message || OpenAI error' })
   }
 }

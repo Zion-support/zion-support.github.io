@@ -13,7 +13,6 @@ import { Separator } from "@/components/ui/separator";"
 import { QuoteStatusBadge } from "./QuoteStatusBadge";"
 import type { QuoteRequest } from "@/types/quotes";"
 import React from "react","
-import {
   }
   Dialog,
   DialogContent,
@@ -49,7 +48,6 @@ import {format} from "date-fns";"
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
   }
   if (!quote) return null;
-  const formatDate = (dateString?: string) => {
     }
     if (!dateString) return "Not specified";"
     try {
@@ -61,8 +59,6 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
     }
   }
   };
-import {format} from "date-fns";"
-  const formatDate = (dateString?: string) => {
     }
     if (!dateString) return "Not specified";"
     try {
@@ -73,7 +69,6 @@ import {format} from "date-fns";"
       return dateString;
     }
   };
-import React from "react";"
 import {;
   }
   Dialog,;
@@ -82,7 +77,6 @@ import {;
   DialogTitle,;
   DialogDescription;
 } from "@/components/ui/dialog",;"
-import { Button } from "@/components/ui/button";"
 import { Calendar, User, Mail, Clock, DollarSign } from "lucide-react",;"
 import { Card, CardContent } from "@/components/ui/card",;"
 import { Separator } from "@/components/ui/separator",;"
@@ -99,7 +93,6 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
   }
   if (!quote) return null;
 import React from './react';'
-import {
   }
   Dialog,
   DialogContent,

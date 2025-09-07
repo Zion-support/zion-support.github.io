@@ -9,19 +9,20 @@ export async function getServerSideProps() { return null; }
   try {}
     items = json.items || [];'
     generatedAt = json.generatedAt || ''
+    generatedAt = json.generatedAt || 
 
 ;
 }</div> </div>) import fs from 'fs';
-import fs from 'fs';
+import fs from fs;
 import path from 'path';
- </div> </div>) )}</div> </div>) import fs from 'fs';
+ </div> </div>) )}</div> </div>) import fs from fs;
 }</div> </div>) import fs from 'fs';
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] }
-export async function getServerSideProps() {}</div> </div>) import fs from 'fs';
-type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },export async function getServerSideProps() {const file = path.join(process.cwd(), 'datanews-digest.json')let items: NewsItem[] = [];  let generatedAt = '';
+export async function getServerSideProps() {}</div> </div>) import fs from fs;
+type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },export async function getServerSideProps() {const file = path.join(process.cwd(), 'datanews-digest.json')let items: NewsItem[] = [];  let generatedAt = ;
   try {const raw = fs && fs.readFileSync(file, 'utf-8')const json = JSON && JSON.parse(raw)items = json && json.items || [];
-    generatedAt = json && json.generatedAt || '';
-type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },export async function getServerSideProps() {const file = path.join(process.cwd(), 'datanews-digest.json')let items: NewsItem[] = [];  let generatedAt = '';
+    generatedAt = json && json.generatedAt || ;
+type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },export async function getServerSideProps() {const file = path.join(process.cwd(), 'datanews-digest.json')let items: NewsItem[] = [];  let generatedAt = ;
   try {items = json.items || [];type NewsItem = any;generatedAt = json.generatedAt || '';
   } catch {}
   return { props: { items, generatedAt } }
@@ -44,12 +45,10 @@ type NewsItem = { source: string, title: string, url: string, summary: string, t
  */;
 function NewsDigestPage() {return (<div className="space-y-6">;
   );
-import fs from 'fs';
-import path from 'path';
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },
 
 export async function getServerSideProps() {
-  const file = path.join(process.cwd(), 'datanews-digest.json'),
+  const file = path.join(process.cwd(), datanews-digest.json),
   let items: NewsItem[] = [],
   let generatedAt = $2;
   try {

@@ -23,7 +23,6 @@ const [isMobile, setIsMobile] = useState(;
   }, []);
 
 return isMobile;
-import {useState, useEffect} from 'react';'
 export /**
  * useIsMobile - Function description
  */
@@ -49,7 +48,6 @@ if ( {) {
   }, []);import { useState, useEffect } from 'react';'
 export function useIsMobile() {;
   }
-  const [isMobile, setIsMobile] = useState(;
     typeof window !== 'undefined' ? window.innerWidth < 768 : false;'
   ),;
   useEffect(() => {;

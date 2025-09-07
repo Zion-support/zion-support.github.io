@@ -39,9 +39,6 @@ import { useProjects } from "@/hooks/useProjects";
 import { SEO } from "@/components/SEO";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import Link from "next/link";
-import { Clock, Briefcase } from 'lucide-react''
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Star } from 'lucide-react';
@@ -81,7 +78,6 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import Link from "next/link",
-import { Clock, Briefcase } from 'lucide-react'
 
 function ProjectsContent() {
   const { projects, isLoading } = useProjects(),
@@ -109,11 +105,9 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import Link from 'next/link'
 
-import { Clock, Briefcase } from 'lucide-react'
 function ProjectsContent() { const { projects, isLoading  } = useProjects()
 function ProjectsContent() {
 
-import { Clock, Briefcase } from 'lucide-react'
 function ProjectsContent() { const { projects, isLoading  } = useProjects()
 function ProjectsContent() {
   const { projects, isLoading } = useProjects();
@@ -213,7 +207,6 @@ import { Badge } from "@/components/ui/badge",;
 import Link from "next/link",;
 import { Clock, Briefcase } from 'lucide-react';
 function ProjectsContent() {;
-  const { projects, isLoading } = useProjects();
   return (;
     <>;
       <SEO title="My Projects | Zion AI Marketplace" description="View and manage your projects." />;

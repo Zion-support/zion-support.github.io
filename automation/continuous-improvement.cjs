@@ -61,8 +61,6 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
 cursor/website-audit-and-update-with-deployment-76dc;
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
 class ContinuousImprovement {}
   constructor() {}
 this.logFile = path.join(__dirname, 'logs', 'continuous-improvement.log');ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
@@ -139,7 +137,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
-    const logMessage = `[${timestamp}] ${message}\n`
     )
     fs.appendFileSync(this.logFile, logMessage)
   async runCodeQualityChecks() {
@@ -237,7 +234,6 @@ module.exports = ContinuousImprovement;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-const improvement = new ContinuousImprovement();
 improvement.run().catch(console.error);
 
 module.exports = ContinuousImprovement;
@@ -291,7 +287,6 @@ async runPerformanceCheck() {}
 };
 // Start the automation if this file is run directly;
 if (require.main === module) {}
-  const automation = new ContinuousImprovement();
   automation.start().catch(console.error);ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
 module.exports = ContinuousImprovement;
 
@@ -339,7 +334,6 @@ module.exports = ContinuousImprovement;
 
 
 
-const improvement = new ContinuousImprovement();
 improvement.run().catch(console.error);
 
 module.exports = ContinuousImprovement;

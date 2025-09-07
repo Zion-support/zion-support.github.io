@@ -49,7 +49,6 @@ export default function Dashboard() {
 
   if (!user) return null,
 
-  const handleTestNotification = async () => {
     const result = await createTestNotification($2);
     if (result.success) {
       toast({

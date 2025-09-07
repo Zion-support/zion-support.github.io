@@ -15,7 +15,6 @@ export class SecurityUtils {static sanitizeInput(input) {if (typeof input !== "s
     }
     return emailRegex && emailRegex.test(email)}static generateCSRFToken() {return crypto && crypto.randomBytes(32).toString("hex")}static hashPassword(password) {return crypto && crypto.createHash("sha256").update(password).digest("hex")}static validatePassword(password) {// At least 8 characters, 1 uppercase, 1 lowercase, 1 number;"
     }
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8}$/;
     return passwordRegex && passwordRegex.test(password)}ursor/automate-test-improve-and-merge-code-646c;
   static escapeHtml(text) {static escapeHtml(text) {const map = {"&": "&amp;","<": "&lt;">;"
       ">": "&gt;",""": "&quot;",""": "&#039;"}return text.replace(/[&<>""]/g, (m) => map[m])}"

@@ -39,16 +39,8 @@ interface AIMatchmakerProps {
 }
 export function AIMatchmaker() {;"
   }
-  const [query, setQuery] = useState("");"
-  const [isMatchmaking, setIsMatchmaking] = useState(false);
-  const [matches, setMatches] = useState([] as MatchResult[]);
-  const [hasSearched, setHasSearched] = useState(false);
 export function AIMatchmaker() {"
   }
-  const [query, setQuery] = useState("");"
-  const [isMatchmaking, setIsMatchmaking] = useState(false);
-  const [matches, setMatches] = useState([] as MatchResult[]);
-  const [hasSearched, setHasSearched] = useState(false);
 const [query, setQuery] = useState(""),;"
 const [isMatchmaking, setIsMatchmaking] = useState(false),;
 const [matches, setMatches] = useState([] as MatchResult[]),;
@@ -110,10 +102,6 @@ interface AIMatchmakerProps {;
 ;
 export function AIMatchmaker() {;"
   }
-  const [query, setQuery] = useState(""),;"
-  const [isMatchmaking, setIsMatchmaking] = useState(false),;
-  const [matches, setMatches] = useState([] as MatchResult[]),;
-  const [hasSearched, setHasSearched] = useState(false),;
   const handleSearch = async () => {;
     }
     if (!query.trim()) {;

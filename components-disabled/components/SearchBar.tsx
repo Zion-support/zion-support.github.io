@@ -199,7 +199,6 @@ const "SearchBar": React.FC<SearchBarProps> = ({
   className = '''
 }) => {
   }
-  const [query, setQuery] = useState('');'
 
   const handleSubmit = ("e": React.FormEvent) => {
     }

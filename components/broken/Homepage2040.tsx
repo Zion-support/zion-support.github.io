@@ -83,11 +83,10 @@ import {
   Rocket, Target, Users, Cpu, Eye, Network;
   Car, Search, TestTube, Globe as PlanetIcon, Lock, Palette;
   FileText, BarChart3, Heart, Truck, ShieldCheck;
-  Sparkles, Infinity as InfinityIcon, Zap as Lightning
-} from 'lucide-react';
 
   Sparkles, Infinity as InfinityIcon, Zap as Lightning'
 } from 'lucide-react';
+import { emergingTechServices2025V2 } from ../data/2025-emerging-tech-services-v2';
 
  } from 'lucide-react';
 origin/cursor/automate-test-improve-and-merge-code-2533

@@ -130,7 +130,6 @@ export class FraudStore {
 
   async updateEventStatus(fraudId: string, status: StoredFraudRecord['status']): Promise<void> {
     if (isSupabaseConfigured()) {
-      const supabase = getSupabaseAdmin($2);
       await supabase.from('fraud_events').update({ status }).eq($2);
       return
     }
@@ -154,20 +153,17 @@ export class FraudStore {
       createdAt: action.createdAt ?? new Date().toISOString()},
 
     if (isSupabaseConfigured()) {
-      const supabase = getSupabaseAdmin($2);
       await supabase.from('fraud_actions').insert($2);
       return withId
     }
 
     ensureFiles($2);
-    const line = $2;
     await fs.appendFile($2);
     return withId
   }
 
   async listFlagged(limit = 50, offset = 0, filters: ListFilters = {}): Promise<StoredFraudRecord[]> {
     if (isSupabaseConfigured()) {
-      const supabase = getSupabaseAdmin($2);
       let query = supabase.from('fraud_events').select('*').order('createdAt', { ascending: false}).range($2);
       if (filters.source) query = query.eq($2);
       if (filters.userId) query = query.eq($2);
@@ -178,7 +174,6 @@ export class FraudStore {
     }
 
     ensureFiles($2);
-    const events = await this._readAllEvents($2);
     const filtered = $2;
       if (filters.userId && e.userId !== filters.userId) return false,
       if (filters.status && e.status !== filters.status) return false,
@@ -191,7 +186,6 @@ export class FraudStore {
   async countEventsByIp(ip: string, source: MonitoredSource, withinMinutes: number): Promise<number> {
     const since = $2;
     if (isSupabaseConfigured()) {
-      const supabase = getSupabaseAdmin($2);
       const { data } = await supabase
         .from('fraud_events')
         .select('id, createdAt')
@@ -202,25 +196,21 @@ export class FraudStore {
     }
 
     ensureFiles($2);
-    const events = await this._readAllEvents($2);
     return events.filter((e) => e.ipAddress === ip && e.source === source && Date.parse(e.createdAt) >= since).length
   }
 
   async countFlaggedForUser(userId: string): Promise<number> {
     if (isSupabaseConfigured()) {
-      const supabase = getSupabaseAdmin($2);
       const { data } = await supabase.from('fraud_events').select('id').eq($2);
       return data?.length ?? 0
     }
     ensureFiles($2);
-    const events = await this._readAllEvents($2);
     return events.filter((e) => e.userId === userId).length
   }
 
   async getPrivacySettings(userId: string): Promise<PrivacySettings> {
     const now = new Date().toISOString($2);
     if (isSupabaseConfigured()) {
-      const supabase = getSupabaseAdmin($2);
       const { data } = await supabase.from('privacy_settings').select('*').eq('userId', userId).limit($2);
       if (data && data[0]) return data[0] as any as PrivacySettings,
       return { userId, monitoringContentAnalysisOptOut: false, updatedAt: now}
@@ -237,13 +227,11 @@ export class FraudStore {
     const updated: PrivacySettings = { userId, monitoringContentAnalysisOptOut, updatedAt: new Date().toISOString() },
 
     if (isSupabaseConfigured()) {
-      const supabase = getSupabaseAdmin($2);
       await supabase.from('privacy_settings').upsert($2);
       return updated
     }
 
     ensureFiles($2);
-    const json = JSON.parse(fs.readFileSync(privacyPath, 'utf8') || '{}'),
     json[userId] = updated,
     fs.writeFileSync(privacyPath, JSON.stringify(json, null, 2)),
     return updated
@@ -258,8 +246,6 @@ export class FraudStore {
     let events: StoredFraudRecord[] = [],
 
     if (isSupabaseConfigured()) {
-      const supabase = getSupabaseAdmin($2);
-      const { data } = await supabase
         .from('fraud_events')
         .select('*')
         .gte('createdAt', start.toISOString())
@@ -325,7 +311,6 @@ export class FraudStore {
 
   private async _readAllActions(): Promise<AdminActionRecord[]> {
     ensureFiles($2);
-    const text = fs.readFileSync($2);
     return text
       .split('\n')
       .filter(Boolean)

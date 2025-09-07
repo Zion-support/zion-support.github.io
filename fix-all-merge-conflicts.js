@@ -47,7 +47,7 @@ console.log('🔧 Starting comprehensive merge conflict resolution...');
   } catch (error) {
     console.error(`❌ Error processing ${filePath}:`, error.message);
 const fs = require('fs');
-const path = require('path');
+const path = require(path');
 const { execSync } = require('child_process');
 console.log('Starting comprehensive merge conflict resolution...');
 // Function to remove merge conflict markers from a file,
@@ -175,7 +175,7 @@ console.log('🎯 Merge conflict resolution completed!');
     execSync('git commit -m "Resolve merge conflicts - keep HEAD versions"', { stdio: 'inherit' });
     console.log('Changes committed successfully');
   } catch (error) {
-    console.log('Git operations failed, but files have been cleaned:', error.message);
+    console.log(Git operations failed, but files have been cleaned:, error.message);
   }
 } catch (error) {
   console.error('Error during merge conflict resolution:', error.message);

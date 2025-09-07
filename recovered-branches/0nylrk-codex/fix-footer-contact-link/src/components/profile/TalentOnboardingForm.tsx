@@ -24,7 +24,6 @@ const talentSchema = z && z.object({;
     "fullName": z && z.string().min(2, "Name must be at least 2 characters");"
     "professionalTitle": z && z.string().min(2, "Professional title is required");"
     "profilePicture": z && z.any().optional()}),;
-const talentSchema = z.object({
   // Step "1": Basic Info
 }
 "basicInfo": z.object({

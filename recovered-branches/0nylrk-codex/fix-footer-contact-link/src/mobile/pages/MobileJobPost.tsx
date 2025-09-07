@@ -78,7 +78,6 @@ const [skills, setSkills] = useState<string[]>([;
         <Textarea,
 id="description" "
           placeholder="Describe the job role and responsibilities" "
-import React, { useState } from "react";"
 import { MobileHeader } from "../components/common/MobileHeader";"
 import { BottomNavigation } from "../components/common/BottomNavigation",;"
 import { Button } from "@/components/ui/button",;"
@@ -99,7 +98,6 @@ import { Card, CardContent } from "@/components/ui/card",;"
 type JobPostStep = "details" | "requirements" | "budget" | "preview",;"
 export function MobileJobPost() {;
   }
-  const [currentStep, setCurrentStep] = useState<JobPostStep>("details");"
   const goToNextStep = () => {;
     }
     if (currentStep === "details") {;"
@@ -248,12 +246,10 @@ return (;
   },
   function RequirementsStep() {
 }
-const [skills, setSkills] = useState<string[]>([;
     "React","
     "TypeScript","
     "Node.js","
   ]);
-  const [newSkill, setNewSkill] = useState("");"
   const addSkill = () => {
     }
     if (newSkill && !skills.includes(newSkill)) {
@@ -262,7 +258,6 @@ const [skills, setSkills] = useState<string[]>([;
       setNewSkill("");"
     }
   };
-  const removeSkill = ("skill": string) => {
     }
     setSkills(skills.filter((s) => s !== skill))
 };
@@ -309,7 +304,6 @@ key={skill}
 ;
 function RequirementsStep() {;
   }
-  const [skills, setSkills] = useState<string[]>([;
     "React", "TypeScript", "Node.js";"
   ]),;
   const [newSkill, setNewSkill] = useState(""),;"

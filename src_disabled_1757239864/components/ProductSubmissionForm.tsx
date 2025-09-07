@@ -75,14 +75,12 @@ export function ProductSubmissionForm() {
   };
 
   const handleVideoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
     if (file) {
       form.setValue("video", file)
     }
   };
 
   const handleModelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
     if (file) {
       form.setValue("model", file)
     }
@@ -172,7 +170,6 @@ export function ProductSubmissionForm() {
       // Upload video if provided
       if (values.video) {
         const videoPath = `product_videos/${productRecord.id}/${values.video.name}`;
-        const { error: uploadError } = await supabase.storage
           .from('products')
           .upload(videoPath, values.video);
 
@@ -180,11 +177,9 @@ export function ProductSubmissionForm() {
           throw new Error(uploadError.message)
         }
 
-        const { data: publicUrlData } = supabase.storage
           .from('products')
           .getPublicUrl(videoPath);
 
-        const { error: updateError } = await supabase
           .from('product_listings')
           .update({ video_url: publicUrlData.publicUrl })
           .eq('id', productRecord.id);
@@ -197,7 +192,6 @@ export function ProductSubmissionForm() {
       // Upload model if provided
       if (values.model) {
         const modelPath = `product_models/${productRecord.id}/${values.model.name}`;
-        const { error: uploadError } = await supabase.storage
           .from('products')
           .upload(modelPath, values.model);
 
@@ -205,11 +199,9 @@ export function ProductSubmissionForm() {
           throw new Error(uploadError.message)
         }
 
-        const { data: publicUrlData } = supabase.storage
           .from('products')
           .getPublicUrl(modelPath);
 
-        const { error: updateError } = await supabase
           .from('product_listings')
           .update({ model_url: publicUrlData.publicUrl })
           .eq('id', productRecord.id);

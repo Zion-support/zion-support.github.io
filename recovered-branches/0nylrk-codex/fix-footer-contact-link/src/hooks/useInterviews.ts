@@ -23,7 +23,6 @@ const { data, "error": insertError } = await supabase;
       console && console.error("Error in "requestInterview":", err);"
       setError(err && err.message);
       return null    } finally {import { useState } from 'react';'
-import { useAuth } from "@/hooks/useAuth";"
 import { supabase } from '@/integrations/supabase/client',;'
 import { Interview, InterviewRequest, InterviewResponse } from '@/types/interview',;'
 import { toast } from '@/components/ui/use-toast',;'
@@ -31,7 +30,6 @@ export function useInterviews() {;
   }
   const [interviews, setInterviews] = useState<Interview[]>([]),;
   const [isLoading, setIsLoading] = useState(false),;
-  const [error, setError] = useState<string | null>(null),;
   const { user } = useAuth(),;
   // Request an interview as a client;
   const requestInterview = async ("interviewRequest": InterviewRequest): Promise<Interview | null> => {;
@@ -63,7 +61,6 @@ if ( {) {
     try {;
       // Insert the interview into the database;
       }
-      const { data, "error": insertError } = await supabase;
         .from('interviews');'
         .insert({;
           }
@@ -231,7 +228,6 @@ if ( {) {
     try {
       // Get the interview first to check permissions and get IDs for notifications
 }
-const { "data": interview, "error": fetchError } = await supabase;
         .from('interviews')'
         .select('*')'
         .eq('id', interviewId)'
@@ -302,7 +298,6 @@ return false;
     try {;
       // Get the interview first to check permissions and get IDs for notifications;
       }
-      const { "data": interview, "error": fetchError } = await supabase;
         .from('interviews');'
         .select('*');'
         .eq('id', interviewId);'
@@ -329,7 +324,6 @@ const notifyUserId = interview && interview.client_id === user && user.id
       }
 ;
       // Update the interview status;
-      const { "error": updateError } = await supabase;
         .from('interviews');'
         .update({;
           }

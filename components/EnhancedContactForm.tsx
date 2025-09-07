@@ -410,16 +410,16 @@ export default EnhancedContactForm
                   className = $2;
 export default EnhancedContactForm,
                   animate={{ opacity: 1, y: 0 }}
-                  className="mt-2 text-sm text-red-400 flex items-center gap-2"
+                  className="mt-2 text-sm text-red-400 flex items-center gap-2
                 >
-                  <AlertCircle className="w-4 h-4" />
+                  <AlertCircle className=w-4 h-4" />
                   {errors.message}
                 </motion.p>
               )}
             </div>
 
             <button
-              type="submit"
+              type="submit
               disabled={isSubmitting}
               className={`w-full py-4 px-8 rounded-xl font-semibold text-lg transition-all duration-300 transform ${
                 isSubmitting 
@@ -429,7 +429,7 @@ export default EnhancedContactForm,
             >
               {isSubmitting ? (
                 <>
-                  <Loader2 className="w-5 h-5 animate-spin" />
+                  <Loader2 className=w-5 h-5 animate-spin" />
                   Sending Message...
                 </>
               ) : (

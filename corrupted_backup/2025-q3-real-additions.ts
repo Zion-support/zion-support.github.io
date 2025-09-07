@@ -23,7 +23,6 @@ export interface RealAdditionService2025Q3 {
 	launchDate?: string;
 	customers?: number;
 	rating?: number;
-reviews?: number;
 
 export const "realAdditions2025Q3": RealAdditionService2025Q3[] = [{"id":,ai-email-copilot',"name": 'AI Email Responder Copilot,"tagline":,Auto-draft, classify, and reply to inbound emails with policy guardrails',"description": Reduce response times with an AI copilot that prioritizes, drafts, and routes emails across shared inboxes. Includes approval flows, tone controls, and CRM sync.,,"price": '$79,"period":,/month',"category": 'AI Assistants,features[;'
   'Priority inbox and intent detection','Policy-aware auto-drafting with approvals','CRM sync and follow-up reminders','Tone and brand voice controls','Analytics and SLA tracking';'

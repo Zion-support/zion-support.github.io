@@ -20,7 +20,6 @@ const features = [
   'Mobile app integration'
   'HIPAA-compliant platform',];  website: 'https://ziontechgroup.com'
 }
-const features = [
   'AI-powered medical image analysisSymptom assessment algorithmsTreatment recommendation enginePatient history integrationReal-time diagnostic updatesMulti-specialty coverageMobile app integrationHIPAA-compliant platform'
 const pricingPlans = [
   {

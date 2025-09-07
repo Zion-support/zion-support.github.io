@@ -93,6 +93,23 @@ export default function UseTokensButton() {const [open, setOpen] = useState(fals
 onClick={() = /> setOpen(true)}
         className=\"enhanced-button enhanced-button-primary\">
 
+
+
+
+
+export default function UseTokensButton({
+  serviceId
+  defaultType
+}: {
+  serviceId?: string;
+  defaultType?: RedemptionType;
+
+      >;
+    <>;}
+      <button;}
+onClick={() = /> setOpen(true)}
+        className=\enhanced-button enhanced-button-primary\>
+
         Use Tokens;
       </button>;
       <UseTokensModal
@@ -121,7 +138,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )const [open, setOpen] = useState(false)return (<>;
       <button;
         on_click={() => set_open (true)}
-        className="enhanced - button enhanced - button - primary";
+        className=enhanced - button enhanced - button - primary;
       />
     </>
   );

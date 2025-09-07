@@ -7,8 +7,8 @@ console.log('🚀 Starting Complete PR Workflow - All Tasks in Order...');
   function execGitCommand(command, options = {}) {
   try {
     const result = execSync(command, { 
-      encoding: 'utf8', 
-      stdio: options.silent ? 'pipe' : 'inherit',
+      encoding: 'utf8, 
+      stdio: options.silent ? pipe' : 'inherit,
       ...options 
     });
     return result.trim();
@@ -30,12 +30,12 @@ console.log('🚀 Starting Complete PR Workflow - All Tasks in Order...');
   const conflictFiles = [];
   // Search for files with conflict markers,
   try {
-    const result = execGitCommand('git diff --name-only --diff-filter=U', { silent: true });
+    const result = execGitCommand(git diff --name-only --diff-filter=U', { silent: true });
     if (result) {
-      conflictFiles.push(...result.split('\n').filter(f => f.trim()));
+      conflictFiles.push(...result.split('\n).filter(f => f.trim()));
     }
   } catch (error) {
-    console.log('No active merge conflicts found');
+    console.log(No active merge conflicts found');
   }
   // Search for conflict markers in all files,
   const searchDirs = ['app', 'components', 'pages', 'src', 'lib', 'utils'];
@@ -43,7 +43,7 @@ console.log('🚀 Starting Complete PR Workflow - All Tasks in Order...');
     if (fs.existsSync(dir)) {
       const files = getAllFiles(dir);
       for (const file of files) {
-        if (file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.tsx') || file.endsWith('.css')) {
+        if (file.endsWith('.js) || file.endsWith(.jsx') || file.endsWith('.ts) || file.endsWith(.tsx') || file.endsWith('.css)) {
           try {
             const content = fs.readFileSync(file, 'utf8');
             if (content.includes('<<<<<<<') || content.includes('
@@ -89,9 +89,9 @@ console.log('🚀 Starting Complete PR Workflow - All Tasks in Order...');
     // Check if there are any uncommitted changes,
   const status = execGitCommand('git status --porcelain', { silent: true });
     if (status) {
-      console.log('Committing uncommitted changes...');
+      console.log(Committing uncommitted changes...);
       execGitCommand('git add .');
-      execGitCommand('git commit -m "Resolve merge conflicts and apply improvements"');
+      execGitCommand(git commit -m "Resolve merge conflicts and apply improvements);
     }
     // Push changes to main,
   console.log('Pushing changes to main...');
@@ -99,7 +99,7 @@ console.log('🚀 Starting Complete PR Workflow - All Tasks in Order...');
     console.log('✅ Successfully merged PR into main branch');
     return true;
   } catch (error) {
-    console.error('❌ Failed to merge PR into main:', error.message);
+    console.error(❌ Failed to merge PR into main:, error.message);
     return false;
   }
 }
@@ -116,7 +116,7 @@ console.log('🚀 Starting Complete PR Workflow - All Tasks in Order...');
     const prs = JSON.parse(result);
     console.log(`Found ${prs.length} open PRs`);
     if (prs.length === 0) {
-      console.log('✅ No open PRs found');
+      console.log(✅ No open PRs found);
       return true;
     }
     // Process each PR,
@@ -156,7 +156,7 @@ console.log('🚀 Starting Complete PR Workflow - All Tasks in Order...');
     console.log(`\\n📈 Summary: Merged ${mergedCount}/${prs.length} PRs`);
     return true;
   } catch (error) {
-    console.error('❌ Error processing GitHub PRs:', error.message);
+    console.error(❌ Error processing GitHub PRs:, error.message);
     return false;
   }
 }
@@ -218,7 +218,7 @@ console.log('🚀 Starting Complete PR Workflow - All Tasks in Order...');
     console.log('✅ Successfully merged improvements to main');
     return true;
   } catch (error) {
-    console.error('❌ Error merging improvements to main:', error.message);
+    console.error(❌ Error merging improvements to main:, error.message);
     return false;
   }
 }
@@ -259,38 +259,38 @@ function addAnalytics() {
   async function main() {
   try {
     console.log('🚀 Starting Complete PR Workflow...');
-    console.log('This will execute all 4 tasks in order:\\n');
+    console.log(This will execute all 4 tasks in order:\\n);
     console.log('1. Resolve merge conflicts and merge PR into main');
-    console.log('2. Check GitHub for open PRs and resolve conflicts');
+    console.log(2. Check GitHub for open PRs and resolve conflicts);
     console.log('3. Implement improvements');
     console.log('4. Merge improvements back to main\\n');
     getCurrentStatus();
     // Task 1: Resolve merge conflicts and merge PR into main,
   console.log('\\n🔄 TASK 1: Resolving merge conflicts and merging PR into main...');
     if (!mergePRToMain()) {
-      console.log('❌ Task 1 failed. Continuing with remaining tasks...');
+      console.log(❌ Task 1 failed. Continuing with remaining tasks...);
     }
     // Task 2: Check GitHub PRs,
   console.log('\\n🔄 TASK 2: Checking GitHub for open PRs...');
     if (!checkAndProcessGitHubPRs()) {
-      console.log('❌ Task 2 failed. Continuing with remaining tasks...');
+      console.log(❌ Task 2 failed. Continuing with remaining tasks...);
     }
     // Task 3: Implement improvements,
   console.log('\\n🔄 TASK 3: Implementing improvements...');
     if (!implementImprovements()) {
-      console.log('❌ Task 3 failed. Continuing with remaining tasks...');
+      console.log(❌ Task 3 failed. Continuing with remaining tasks...);
     }
     // Task 4: Merge improvements back to main,
   console.log('\\n🔄 TASK 4: Merging improvements back to main...');
     if (!mergeImprovementsToMain()) {
-      console.log('❌ Task 4 failed.');
+      console.log(❌ Task 4 failed.);
     }
     console.log('\\n🎉 Complete PR Workflow finished!');
-    console.log('\\n📋 Summary:');
+    console.log(\\n📋 Summary:);
     console.log('✅ All tasks have been processed');
-    console.log('✅ Merge conflicts resolved');
+    console.log(✅ Merge conflicts resolved);
     console.log('✅ GitHub PRs processed');
-    console.log('✅ Improvements implemented');
+    console.log(✅ Improvements implemented);
     console.log('✅ Changes merged to main');
   } catch (error) {
     console.error('❌ Error during workflow execution:', error.message);

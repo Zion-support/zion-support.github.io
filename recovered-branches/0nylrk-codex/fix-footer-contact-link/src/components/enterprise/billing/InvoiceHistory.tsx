@@ -6,7 +6,6 @@ import {
   TableCell;
   TableHead;
   TableHeader;import React from "react","
-import {
   }
   Table,
   TableBody,
@@ -100,7 +99,6 @@ export /**
 function InvoiceHistory() {
   // Mock invoice data;
   }
-  const invoices = [;
     {
       }
       "id": "INV - 1234","

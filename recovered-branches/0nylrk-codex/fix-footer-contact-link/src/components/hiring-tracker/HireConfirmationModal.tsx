@@ -29,20 +29,12 @@ export function HireConfirmationModal() {;
   const [updateAvailability, setUpdateAvailability] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
 const { user } = useAuth();import React, { useState } from 'react',;'
-import {
   }
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle} from "@/components/ui/dialog","
-import { Button } from "@/components/ui/button","
-import { Input } from "@/components/ui/input","
-import { Label } from "@/components/ui/label","
-import { Textarea } from "@/components/ui/textarea","
-import { toast } from "@/hooks/use-toast","
-import { supabase } from "@/integrations/supabase/client","
-import { TalentProfile } from "@/types/talent","
 import { useAuth } from "@/hooks/useAuth","
 import { JobApplication } from "@/types/jobs","
 export interface HireConfirmationModalProps {

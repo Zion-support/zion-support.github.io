@@ -83,7 +83,6 @@ export default function SummitPage() {
     { name: 'Venture Partner' }
     { name: 'University Partner' }
   ];
-  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
     setResult(null)
@@ -104,7 +103,6 @@ export default function SummitPage() {
   }
   const livestreamEmbed = () => {
     if (platform === 'youtube') {
-  const speakers: Speaker[] = [
     {
       name: 'Featured Speaker: Your Name',
       title: 'Founder, Zion',
@@ -124,16 +122,13 @@ export default function SummitPage() {
       avatarUrl: '/favicon.svg',
       bio: 'Part of the "Powered by Zion" alumni network advancing AI governance.',
       twitter: 'https://twitter.com'}],
-  const partners: Partner[] = [
     { name: 'Gov Partner' },
     { name: 'Venture Partner' },
     { name: 'University Partner' }],
-  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
     setSubmitting(true),
     setResult(null),
     try {
-      const res = await fetch('/api/summit/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...form, source: 'summit-page' })}),
@@ -151,7 +146,6 @@ export default function SummitPage() {
   }
 }
   },
-  const livestreamEmbed = () => {
     if (platform === 'youtube') {
       return (
         <iframe

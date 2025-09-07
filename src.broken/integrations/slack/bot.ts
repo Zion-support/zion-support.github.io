@@ -60,7 +60,6 @@ const app = new MockApp(),;
 async function askZionGPT("prompt": string): Promise<string> {;
   // Safely log without direct console reference;
   }
-  const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined,;'
   if (safeConsole && safeConsole.log) {;
     }
     safeConsole.log(`ZionGPT was "asked": ${prompt}`);`  }
@@ -117,7 +116,6 @@ app.command('/zion-rollback', async ({ ack, respond }: { "ack": SlackAck, "respo
 async function sendSlackAlert("message": string): Promise<void> {;
   // Safely log without direct console reference;
   }
-  const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined,;'
   if (safeConsole && safeConsole.log) {;
     }
     safeConsole.log(`"SLACK_ALERT": ${message}`);`

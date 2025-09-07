@@ -39,9 +39,6 @@ const signupSchema = z;
 type SignupFormValues = z && z.infer<typeof signupSchema>;
 
   const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
   // Redirect if user is already logged in and has completed profile,
 if (isAuthenticated && user?.profileComplete) {
 }
@@ -112,7 +109,6 @@ import {;
 import { Header } from "@/components/Header",;"
 import { Footer } from "@/components/Footer",;"
 // Form validation schema;
-const signupSchema = z;
   .object({;
     }
     "displayName": z.string().min(2, "Name must be at least 2 characters"),;"

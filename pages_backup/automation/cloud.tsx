@@ -93,7 +93,6 @@ import { useEffect, useState } from 'react',
       </div>
     </div>
 
-import { useEffect, useState } from 'react';
 export default function CloudAutomationHub(req, res) {
   try {
   const [logs, setLogs] = useState<any[]>([]);
@@ -108,7 +107,6 @@ export default function CloudAutomationHub(req, res) {
 
 }
 '
-import { useEffect, useState } from 'react',;
 ;
 export default /**;
  * CloudAutomationHub - Function description;
@@ -131,13 +129,11 @@ function CloudAutomationHub() {}
 }
 
 '
-import { useEffect, useState } from 'react',;
 ;
 export default /**;
  * CloudAutomationHub - Function description;
  */
 function CloudAutomationHub() {}
-  const [logs, set_logs] = useState < any[]>([]),
   useEffect (() => {'
     fetch ('/api / automation / cloud - logs');
       .then ((r) => r.json ());

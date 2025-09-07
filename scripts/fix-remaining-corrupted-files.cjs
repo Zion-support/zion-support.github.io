@@ -1,18 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 =======
@@ -29,6 +21,7 @@
 
 
 #!/usr/bin/env node;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ///usr/bin/env node
@@ -68,21 +61,17 @@ let content = '';
       content = """
     "email"""
     "password"""
+=======
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
       content = "
-    "email"
+    email
     "password"
-      content = "
-    "email"
+      content = 
+    email"
     "password"
-<<<<<<< HEAD
-content = """
-    "email"""
-    "password"""
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
   'pages/login.tsx,

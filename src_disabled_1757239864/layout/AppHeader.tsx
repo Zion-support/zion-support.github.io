@@ -1,4 +1,4 @@
-const showTagline = router.pathname === '/'
+const showTagline = router.pathname === '/
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [loginOpen, setLoginOpen] = useState(false)
   const isMobile = useIsMobile()
@@ -6,25 +6,25 @@ const showTagline = router.pathname === '/'
   const { user } = useAuth()
   const isLoggedIn = useSelector((state: RootState,) => state.auth.isLoggedIn)
   const router = useRouter()
-  const showTagline = router.pathname === '/'
-import React, { useState } from 'react';
-import { useMessaging } from '@/context/MessagingContext';
-import Link from 'next/link';
-import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation';
-import { Logo } from '@/components/header/Logo';
-import { useTranslation } from 'react-i18next';
-import { Menu, X } from 'lucide-react'
-import { MobileMenu } from '@/components/header/MobileMenu';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-import { PointsBadge } from '@/components/loyalty/PointsBadge';
-import { LoginModal } from '@/components/auth/LoginModal';
-import { useAuth } from '@/hooks/useAuth';
-import { UserMenu } from '@/components/header/UserMenu';
-import { useSelector } from 'react-redux';
-import type { RootState } from '@/store';
-import { cn } from '@/lib/utils', // Import cn utility
-import { useRouter } from 'next/router';
+  const showTagline = router.pathname === /'
+import React, { useState } from 'react;
+import { useMessaging } from @/context/MessagingContext';
+import Link from 'next/link;
+import { ResponsiveNavigation } from @/components/navigation/ResponsiveNavigation';
+import { Logo } from '@/components/header/Logo;
+import { useTranslation } from react-i18next';
+import { Menu, X } from 'lucide-react
+import { MobileMenu } from @/components/header/MobileMenu';
+import { useIsMobile } from '@/hooks/use-mobile;
+import { MobileBottomNav } from @/components/header/MobileBottomNav';
+import { PointsBadge } from '@/components/loyalty/PointsBadge;
+import { LoginModal } from @/components/auth/LoginModal';
+import { useAuth } from '@/hooks/useAuth;
+import { UserMenu } from @/components/header/UserMenu';
+import { useSelector } from 'react-redux;
+import type { RootState } from @/store';
+import { cn } from '@/lib/utils, // Import cn utility
+import { useRouter } from next/router';
 export function AppHeader() {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -34,7 +34,7 @@ export function AppHeader() {
   const { user } = useAuth();
   const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn),
   const router = useRouter();
-  const showTagline = router.pathname === '/';
+  const showTagline = router.pathname === '/;
 
   // Messaging context (unread message count)
   const { unreadCount } = useMessaging();
@@ -42,7 +42,7 @@ export function AppHeader() {
   const openLoginModal = (returnToPath?: string) => {
     // The actual returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu)
     // using router.push with shallow:true before this function is called.
-    // This function's main job is just to open the modal.
+    // This functions main job is just to open the modal.
     // If a returnToPath is passed, we could potentially use it for other logic here if needed in the future.
     setLoginOpen(true)
   };
@@ -50,16 +50,16 @@ export function AppHeader() {
   return (
     <>
       <header
-        style={{ "--nav-height": "64px" } as React.CSSProperties}
+        style={{ "--nav-height: 64px" } as React.CSSProperties}
         className={cn(
-          "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground";
-          { "bg-red-500": mobileMenuOpen }
+          "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground;
+          { bg-red-500": mobileMenuOpen }
         )}
       >
-        <div className="container flex h-16 items-center px-4 sm:px-6">
+        <div className="container flex h-16 items-center px-4 sm:px-6>
           <Logo />
           {showTagline && (
-            <span className="ml-4 hidden text-sm text-muted-foreground md:inline">
+            <span className=ml-4 hidden text-sm text-muted-foreground md:inline">
               {t('home.header_tagline')}
             </span>
           )}
@@ -73,22 +73,22 @@ export function AppHeader() {
           <div className="md:hidden ml-auto mr-4">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring
               aria-expanded={mobileMenuOpen}
-              aria-label={t('general.toggle_mobile_menu')}
+              aria-label={t(general.toggle_mobile_menu)}
             >
-              <span className="sr-only">{t('general.open_main_menu')}</span>
+              <span className=sr-only">{t('general.open_main_menu')}</span>
               {mobileMenuOpen ? (
-                <X className="block h-6 w-6" aria-hidden="true" />
+                <X className="block h-6 w-6 aria-hidden=true" />
               ) : (
-                <Menu className="block h-6 w-6" aria-hidden="true" />
+                <Menu className="block h-6 w-6 aria-hidden=true" />
               )}
             </button>
           </div>
 
           <PointsBadge />
           {!isLoggedIn && (
-            <div className="ml-4 relative z-10 flex items-center">
+            <div className="ml-4 relative z-10 flex items-center>
               <Link
                 href="/auth/login"
                 className="text-sm font-medium text-foreground/70 hover:text-foreground"
@@ -106,10 +106,10 @@ export function AppHeader() {
                 {t('auth.login')}
               </Link>
               <Link
-                href="/signup"
-                className="ml-2 text-sm font-medium text-foreground/70 hover:text-foreground"
-                aria-label={t('auth.signup')}
-                data-testid="signup-nav-link"
+                href=/signup"
+                className="ml-2 text-sm font-medium text-foreground/70 hover:text-foreground
+                aria-label={t(auth.signup)}
+                data-testid=signup-nav-link"
               >
                 {t('auth.signup')}
               </Link>
@@ -117,7 +117,7 @@ export function AppHeader() {
           )}
           {/* User avatar menu */}
           {isLoggedIn && (
-            <div className="ml-4">
+            <div className="ml-4>
               <UserMenu />
             </div>
           )}
@@ -126,11 +126,11 @@ export function AppHeader() {
       
       {/* Mobile menu - positioned outside of header to prevent overlap issues */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 z-60 pt-16">
+        <div className=md:hidden fixed inset-0 z-60 pt-16">
           <div 
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm
             onClick={() => setMobileMenuOpen(false)}
-            aria-hidden="true"
+            aria-hidden=true"
           />
           <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
             <MobileMenu 

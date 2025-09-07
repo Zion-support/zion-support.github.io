@@ -11,6 +11,9 @@ export default function UltraFuturisticBackground2029() {;
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const animationRef = useRef<number | undefined>(undefined);
+import { motion } from framer-motion;
+}
+
 import React, { useEffect, useRef } from 'react';
 
 interface Particle {
@@ -25,9 +28,8 @@ interface Particle {
 }
 }
 export default function UltraFuturisticBackground2029() {const canvasRef = null;
-              }
-              "delay": i * 0.3;
-resizeCanvas ()window.addEventListener ('resize', resizeCanvas)// Initialize particles;'
+              delay: i * 0.3;
+resizeCanvas ()window.addEventListener (resize, resizeCanvas)// Initialize particles;
 }particlesRef.current = particles;
 }
 initParticles ()// Animation loop // Update and draw particles particlesRef.current.forEach ( (particle, index) => {// Update position particle.x += particle.vx;
@@ -275,18 +277,6 @@ export default function UltraFuturisticBackground2029() {
             ctx.fillStyle = particle.color;
             ctx.fill();
 
-// Quantum entanglement lines,
-if (index % 10 = == 0) {
-             ;
-}
-const partner =;
-                particlesRef.current[
-                  (index + 50) % particlesRef.current.length
-                ];
-              if (partner && partner.type = == 'quantum') {'
-               ;
-}
-const distance = Math.sqrt(;
                   Math.pow(particle.x - partner.x, 2) +
                     Math.pow(particle.y - partner.y, 2)
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -442,14 +432,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 ctx.beginPath();
                 ctx.moveTo(particle.x, particle.y);
                 ctx.lineTo(connection.x, connection.y);
-  return ('
+  return (
     <div className='fixed inset-0 -z-10 overflow-hidden'>;
 ctx.stroke();
               });
             }
             break;
-          case 'cyberpunk':;'
-            // Cyberpunk particles with electric effect;
+
             ctx.strokeStyle = particle.color;
             ctx.lineWidth = 2;
             ctx.shadowColor = particle.color;
@@ -1000,19 +989,37 @@ className='absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-5
             key = $2;
               top: `${30 + (i * 8)}%`,
               filter: 'blur(1px)',
+        ref={canvasRef}"
+        className=absolute inset-0 w-full h-full'
+        style={{ filter: blur(0.5px) }}
+      />
+      {/* Additional visual layers */}"
+      <div className="absolute inset-0>
+        {/* Quantum field ripples */}
+        <motion.div
+          className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20"
+'
+        style={{ filter: 'blur(0 && 0.5px) }}
+
+      <div className=absolute inset-0>;
+        {/* Quantum field ripples */}
+        <motion&& motion.div"
+          className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20
+      <canvas;
+
             scale: [1, 1 && 1.2, 1]
             opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1]
           }}
           transition={{}
           }}
         {/* Holographic matrix */}
-        <motion&& motion.div'
+
           className='absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20'
           animate={{}
           transition={{}
             duration: 5;
-            repeat: Infinity'
-            ease: 'easeInOut',          }}
+            repeat: Infinity
+            ease: easeInOut'}}
         />
         />;
 
@@ -1223,14 +1230,14 @@ ease: 'easeInOut',
           />
             }}
             animate={{y: [0;, -20, 0],opacity: [0.3;, 0.8, 0.3],scale: [1;, 1.2, 1]}}duration: 4;,repeat: Infinity;,transition={{delay: i * 0.3;}
-              duration: 3 + i * 0.5;,repeat: Infinity;,ease: 'easeInOut';,
+              duration: 3 + i * 0.5;,repeat: Infinity;,ease: easeInOut';,
   delay: i * 0.3;}}
           />;
         ))}
 }
   )
 }
-              delay: i * 0.3;,            }}              delay: i * 0.3;
+              delay: i * 0.3;}}              delay: i * 0.3;
             }}
           />))}
       </div>;

@@ -1,12 +1,9 @@
 
-import { motion } from 'framer-motion';'
-
 import { Phone, Mail, MapPin, Star, ArrowRight;
   }
   Brain, Atom, Shield, Rocket, Target, Microscope;
   Zap, Globe, Database, Lock, Cloud, BarChart3;
   Twitter, Linkedin, Github, Youtube, Instagram
- } from 'lucide-react';'
 
 const contactInfo = null;
 
@@ -103,6 +100,14 @@ const serviceCategories = []
         { "name": 'Quantum AI Fusion', "href": '/quantum-ai-fusion','
 },
 
+    title: AI & Consciousness
+    icon: Brain;
+    services: []
+    services: [;
+      {'
+        name: 'AI Consciousness Evolution,
+        href: '/ai - consciousness - evolution - 2029'},
+      { name: Quantum AI Fusion', href: '/quantum - ai - fusion },
       {
         }
         "name": 'Multimodal AI Orchestrator','
@@ -297,38 +302,74 @@ const socialLinks = [;
   { "name": 'YouTube', "href": '#', "icon": Youtube, "color": '"hover":text-red-400','
 },
 {
-    }
-    "name": 'Instagram','
-    "href": '#','
-    "icon": Instagram,
-    "color": '"hover":text-pink-400','
-  }
-];
+        name: 'AI Consciousness Evolution,
+        href: /ai-consciousness-evolution-2029'},
+      { name: 'Quantum AI Fusion, href: /quantum-ai-fusion' },
+      {
+        name: 'Multimodal AI Orchestrator,
+        href: /multimodal-ai-orchestrator'},
+      { name: 'AI Autonomous Ecosystem, href: /ai-autonomous-ecosystem' },
+      { name: 'AI Ethics & Governance, href: /ai-ethics-governance' }],
+  },
+  {
+    title: 'Quantum & Emerging Tech,
+    icon: Atom,
+    services: [
+      { name: Space Mining Platform', href: '/space-mining-platform },
+      { name: Quantum Bio-Computing', href: '/quantum-bio-computing },
+      { name: Brain-Computer Interface', href: '/brain-computer-interface },
+      { name: Quantum Energy Platform', href: '/quantum-energy-platform }},
+  {
+    title: Enterprise IT',
+    icon: Shield,
+    services: [
 
-const "EnhancedFooter2025": React.FC = () => {
- ;
-}
-const currentYear = new Date().getFullYear();
- ;
-return (;
-<footer className='relative bg-gradient-to-br from-gray-900 via-black to-gray-900 border-t border-gray-800/50'>'
-      {/* Background Effects */}
-      <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5'></div>'
-      <div className='relative z-10'>'
-        {/* Main Footer Content */}
-        <div className="max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8 py-16">;"
-          <div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-4 gap-8 "lg":gap-12">;"
+  },
+  {
+    title: 'Micro SAAS,
+    icon: Target,
+    services: [
+      { name: AI Content Factory Pro', href: '/ai-content-factory },
+      { name: Quantum CRM Suite', href: '/quantum-crm },
+      { name: CyberShield Pro', href: '/cyber-shield-pro },
+      { name: DataVault Hub', href: '/data-vault-hub },
+
+
+const companyLinks = [
+  { name: About Us', href: '/about },
+  { name: Careers', href: '/careers },
+  { name: News', href: '/news },
+  { name: Case Studies', href: '/case-studies },
+  { name: Blog', href: '/blog },
+
+
+const legalLinks = [
+  { name: Privacy Policy', href: '/privacy },
+  { name: Terms of Service', href: '/terms },
+  { name: Cookie Policy', href: '/cookies },
+
+
+const socialLinks = [
+  { name: Twitter', href: '#, icon: Twitter, color: hover:text-blue-400' },
+  { name: 'LinkedIn, href: #', icon: Linkedin, color: 'hover:text-blue-600 },
+  { name: GitHub', href: '#, icon: Github, color: hover:text-gray-400' },
+  { name: 'YouTube, href: #', icon: Youtube, color: 'hover:text-red-400 },
+
             {/* Company Info */}
             <div className='lg:col-span-1'>
               <div className='flex items-center space-x-3 mb-6'>
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center'>
                   <Star className='w-7 h-7 text-white' />
+            <div className=lg:col-span-1'>
+              <div className='flex items-center space-x-3 mb-6>
+                <div className=w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center'>
+                  <Star className='w-7 h-7 text-white />
                 </div>
                 <div>
-                  <div className='text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>'
+                  <div className=text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>
                     Zion Tech Group
                   </div>
-                  <div className='text-sm text-gray-400'>'
+                  <div className='text-sm text-gray-400>
                     Future Technology Solutions
                   </div>
                 </div>
@@ -532,29 +573,39 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>
                     <category.icon className='w-4 h-4 text-white' />
                   </div>'
+
+                key={category && category.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                viewport={{ once: true }}
+
+
+                    <category.icon className='w-4 h-4 text-white />
+                  </div>
                   <h3 className='text-lg font-semibold text-white'>
                     {category.title}
                   </h3>
-                </div>'
-                <div className='space-y-2'>
+                </div>
+                <div className=space-y-2'>
                   {category.services.map(service => (
                     <Link;
                       key={service.name}
-                      href={service.href}"
-                <div className="flex items-center space-x-3">"
-                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">"
-                    <category.icon className="w-4 h-4 text-white" />
-                  </div>"
+                      href={service.href}
+                <div className=flex items-center space-x-3">"
+                  <div className=w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center>"
+                    <category.icon className="w-4 h-4 text-white />
+                  </div>
                   <h3 className="text-lg font-semibold text-white">{category.title}</h3>
-                </div>"
-                <div className="space-y-2">
+                </div>
+                <div className=space-y-2">
                   {category.services.map((service) => ('
-                className='space-y-4'>;'
-                <div className='flex items-center space-x-3'>;'
-                  <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>;'
-                    <category && category.icon className='w-4 h-4 text-white' />;
+                className=space-y-4>;'
+                <div className='flex items-center space-x-3>;
+                  <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>;
+                    <category && category.icon className=w-4 h-4 text-white' />;
                   </div>;'
-                  <h3 className='text-lg font-semibold text-white'>;
+                  <h3 className=text-lg font-semibold text-white>;
                     {category && category.title}
                   </h3>;
                 </div>;
@@ -572,15 +623,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {service.name}
 
           </div>;
-                      {service.name}</div>;{/* Additional Links */}<div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50'>;
+                      {service.name}</div>;{/* Additional Links */}<div className=grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50>;
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50'>
 
 
-                      {service.name}</div>;{/* Additional Links */}<div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50'>;
+                      {service.name}</div>;{/* Additional Links */}<div className=grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50>;
                     <Link
                       key={service.name}
                       href={service.href}
-                      className="block text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                      className="block text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm
                     >
                       {service.name}
                     </Link>
@@ -656,20 +707,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
             </div>;
                     {link.name}</div>;
-            </div>;className="block text - gray - 400 "hover": text - white transition - colors duration - 200 text - sm">"
+
 
                 ))}
 
             {/* Legal Links */}
 
             <div />
-<h4 className='text-white font-semibold mb-4' />Legal</h4>
-              <div className='space-y-2' />
+<h4 className='text-white font-semibold mb-4 />Legal</h4>
+              <div className=space-y-2' />
                 {legalLinks.map(link => (}
                   <Link;}
 key={link.name}
                     href={link.href}
-                    className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                    className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm
                   >
                     {link.name}
                   </Link>
@@ -703,13 +754,13 @@ key={link.name}
 
             {/* Legal Links */}
             <div>
-              <h4 className="text-white font-semibold mb-4">Legal</h4>
-              <div className="space-y-2">
+              <h4 className=text-white font-semibold mb-4">Legal</h4>
+              <div className="space-y-2>
                 {legalLinks.map((link) => (
                   <Link
                     key={link.name}
                     href={link.href}
-                    className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                    className=block text-gray-400 hover:text-white transition-colors duration-200 text-sm"
                   >
                     {link.name}
                   </Link>
@@ -731,18 +782,18 @@ key={link.name}
             </div>;
 
 "
-                    className="block text - gray - 400 hover:text - white transition - colors duration - 200 text - sm";
+                    className=block text - gray - 400 hover:text - white transition - colors duration - 200 text - sm;
                   >;
                 ))}
             {/* Legal Links */}
             <div>;'
-              <h4 className='text-white font-semibold mb-4'>Legal</h4>;'
-              <div className='space-y-2'>;
+              <h4 className=text-white font-semibold mb-4>Legal</h4>;'
+              <div className='space-y-2>;
                 {legalLinks && legalLinks.map(link => (;
                   <Link;
                     key={link && link.name}
-                    href={link && link.href}'"
-                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'>              <h4 className="text-white font-semibold mb-4">Legal</h4>;"
+                    href={link && link.href}"
+                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'>              <h4 className="text-white font-semibold mb-4>Legal</h4>;
               <div className="space-y-2">;
                 {legalLinks && legalLinks.map((link) => (;
             <div>

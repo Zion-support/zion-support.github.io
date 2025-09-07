@@ -140,7 +140,6 @@ export function useSmartContracts() {;
   const { user } = useAuth(),;
   const [isLoading, setIsLoading] = useState(false),;
   const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle'),;'
-  const generateSolidityContract = async (;
     "values": ContractFormValues,;
     "talent": TalentProfile,;
     "clientName": string;

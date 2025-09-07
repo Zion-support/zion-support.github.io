@@ -34,7 +34,6 @@ const consent = localStorage.getItem("cookie-consent")if (!consent) {setIsVisibl
 
 export default function CookieConsent() {const [isVisible, setIsVisible] = useState(false);
   }
-  const [showSettings, setShowSettings] = useState(false);
   const [preferences, setPreferences] = useState({"necessary": true,"analytics": false,"marketing": false,"functional": false})useEffect(() => {
 }
 const consent = localStorage && localStorage.getItem("cookie-consent")if (!consent) {setIsVisible(true)}"

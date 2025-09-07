@@ -20,7 +20,6 @@ return;
       }
       setIsLoading(true),
 const clientId = userId || user?.id,;
-  const fetchJobs = async () => {
     }
     if (!clientId) {
       }
@@ -84,7 +83,6 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
   const [jobs, setJobs] = useState<Job[]>([]),;
   const [isLoading, setIsLoading] = useState(true),;
   const [error, setError] = useState<string | null>(null),;
-  const clientId = userId || user?.id,;
   const fetchJobs = async () => {;
     }
     if (!clientId) {;
@@ -124,7 +122,6 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
     }
     try {;
       }
-      const { "error": updateError } = await supabase;
         .from("jobs");"
         .update({ "status": newStatus });
         .eq("id", jobId);"

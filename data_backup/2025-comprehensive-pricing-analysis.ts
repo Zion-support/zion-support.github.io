@@ -162,7 +162,6 @@ export const getPricingAnalysisByService = ("serviceId": string) => ;
   return comprehensivePricingAnalysis2025.find(s => { return s.serviceId === serviceId)}
 
 export; }
-  const getPricingAnalysisByCategory = ("category": string) => {if (!category || category ===,All');'
   }
   return comprehensivePricingAnalysis2025; return comprehensivePricingAnalysis2025.filter(s = > s.category === category;
 }
@@ -201,7 +200,6 @@ export const getPricingAnalysisByService = ("serviceId": string) => ;
   return comprehensivePricingAnalysis2025.find(s => { return s.serviceId === serviceId)}
 
 export; }
-  const getPricingAnalysisByCategory = ("category": string) => {if (!category || category ===,All');'
   }
   return comprehensivePricingAnalysis2025; return comprehensivePricingAnalysis2025.filter(s = > s.category === category;
 }
@@ -211,7 +209,6 @@ export const getMarketInsights = () => { const insights = { "totalMarketSize": '
   return insights}
 
 export;
-  const getCompetitiveLandscape = () => {;
   }
   return { aiServices[ 'IBM Watson','Google AI','Microsoft Azure AI','Amazon SageMaker'],quantumComputing[ 'IBM Quantum','Google Quantum AI','Microsoft Azure Quantum','D-Wave'],cybersecurity[ 'CrowdStrike','SentinelOne','Darktrace','Palo Alto Networks'],manufacturing[ 'Siemens','Rockwell Automation','ABB','GE Digital'],blockchain[ 'Chainalysis','ConsenSys','Alchemy','Infura'];'
 }
@@ -240,7 +237,6 @@ export const getPricingAnalysisByService = ("serviceId": string) => ;
   return comprehensivePricingAnalysis2025.find(s => { return s.serviceId === serviceId)}
 
 export; }
-  const getPricingAnalysisByCategory = ("category": string) => {if (!category || category ===,All');'
   }
   return comprehensivePricingAnalysis2025; return comprehensivePricingAnalysis2025.filter(s = > s.category === category;
 }
@@ -250,7 +246,6 @@ export const getMarketInsights = () => { const insights = { "totalMarketSize": '
   return insights}
 
 export;
-  const getCompetitiveLandscape = () => {;
   }
   return { aiServices[ 'IBM Watson','Google AI','Microsoft Azure AI','Amazon SageMaker'],quantumComputing[ 'IBM Quantum','Google Quantum AI','Microsoft Azure Quantum','D-Wave'],cybersecurity[ 'CrowdStrike','SentinelOne','Darktrace','Palo Alto Networks'],manufacturing[ 'Siemens','Rockwell Automation','ABB','GE Digital'],blockchain[ 'Chainalysis','ConsenSys','Alchemy','Infura'];'
 }
@@ -279,7 +274,6 @@ export const getPricingAnalysisByService = ("serviceId": string) => ;
   return comprehensivePricingAnalysis2025.find(s => { return s.serviceId === serviceId)}
 
 export; }
-  const getPricingAnalysisByCategory = ("category": string) => {if (!category || category ===,All');'
   }
   return comprehensivePricingAnalysis2025; return comprehensivePricingAnalysis2025.filter(s = > s.category === category;
 }
@@ -289,7 +283,6 @@ export const getMarketInsights = () => { const insights = { "totalMarketSize": '
   return insights}
 
 export;
-  const getCompetitiveLandscape = () => {;
   }
   return { aiServices[ 'IBM Watson','Google AI','Microsoft Azure AI','Amazon SageMaker'],quantumComputing[ 'IBM Quantum','Google Quantum AI','Microsoft Azure Quantum','D-Wave'],cybersecurity[ 'CrowdStrike','SentinelOne','Darktrace','Palo Alto Networks'],manufacturing[ 'Siemens','Rockwell Automation','ABB','GE Digital'],blockchain[ 'Chainalysis','ConsenSys','Alchemy','Infura'];'
 }
@@ -318,7 +311,6 @@ export const getPricingAnalysisByService = ("serviceId": string) => ;
   return comprehensivePricingAnalysis2025.find(s => { return s.serviceId === serviceId)}
 
 export; }
-  const getPricingAnalysisByCategory = ("category": string) => {if (!category || category ===,All');'
   }
   return comprehensivePricingAnalysis2025; return comprehensivePricingAnalysis2025.filter(s = > s.category === category;
 }
@@ -328,7 +320,6 @@ export const getMarketInsights = () => { const insights = { "totalMarketSize": '
   return insights}
 
 export;
-  const getCompetitiveLandscape = () => {;
   }
   return { aiServices[ 'IBM Watson','Google AI','Microsoft Azure AI','Amazon SageMaker'],quantumComputing[ 'IBM Quantum','Google Quantum AI','Microsoft Azure Quantum','D-Wave'],cybersecurity[ 'CrowdStrike','SentinelOne','Darktrace','Palo Alto Networks'],manufacturing[ 'Siemens','Rockwell Automation','ABB','GE Digital'],blockchain[ 'Chainalysis','ConsenSys','Alchemy','Infura'];'
 }
@@ -357,7 +348,6 @@ export const getPricingAnalysisByService = ("serviceId": string) => ;
   return comprehensivePricingAnalysis2025.find(s => { return s.serviceId === serviceId)}
 
 export; }
-  const getPricingAnalysisByCategory = ("category": string) => {if (!category || category ===,All');'
   }
   return comprehensivePricingAnalysis2025; return comprehensivePricingAnalysis2025.filter(s = > s.category === category;
 }
@@ -367,7 +357,6 @@ export const getMarketInsights = () => { const insights = { "totalMarketSize": '
   return insights}
 
 export;
-  const getCompetitiveLandscape = () => {;
   }
   return { aiServices[ 'IBM Watson','Google AI','Microsoft Azure AI','Amazon SageMaker'],quantumComputing[ 'IBM Quantum','Google Quantum AI','Microsoft Azure Quantum','D-Wave'],cybersecurity[ 'CrowdStrike','SentinelOne','Darktrace','Palo Alto Networks'],manufacturing[ 'Siemens','Rockwell Automation','ABB','GE Digital'],blockchain[ 'Chainalysis','ConsenSys','Alchemy','Infura'];'
 }
@@ -396,7 +385,6 @@ export const getPricingAnalysisByService = ("serviceId": string) => ;
   return comprehensivePricingAnalysis2025.find(s => { return s.serviceId === serviceId)}
 
 export; }
-  const getPricingAnalysisByCategory = ("category": string) => {if (!category || category ===,All');'
   }
   return comprehensivePricingAnalysis2025; return comprehensivePricingAnalysis2025.filter(s = > s.category === category;
 }
@@ -406,7 +394,6 @@ export const getMarketInsights = () => { const insights = { "totalMarketSize": '
   return insights}
 
 export;
-  const getCompetitiveLandscape = () => {;
   }
   return { aiServices[ 'IBM Watson','Google AI','Microsoft Azure AI','Amazon SageMaker'],quantumComputing[ 'IBM Quantum','Google Quantum AI','Microsoft Azure Quantum','D-Wave'],cybersecurity[ 'CrowdStrike','SentinelOne','Darktrace','Palo Alto Networks'],manufacturing[ 'Siemens','Rockwell Automation','ABB','GE Digital'],blockchain[ 'Chainalysis','ConsenSys','Alchemy','Infura'];'
 }
@@ -435,7 +422,6 @@ export const getPricingAnalysisByService = ("serviceId": string) => ;
   return comprehensivePricingAnalysis2025.find(s => { return s.serviceId === serviceId)}
 
 export; }
-  const getPricingAnalysisByCategory = ("category": string) => {if (!category || category ===,All');'
   }
   return comprehensivePricingAnalysis2025; return comprehensivePricingAnalysis2025.filter(s = > s.category === category;
 }
@@ -445,7 +431,6 @@ export const getMarketInsights = () => { const insights = { "totalMarketSize": '
   return insights}
 
 export;
-  const getCompetitiveLandscape = () => {;
   }
   return { aiServices[ 'IBM Watson','Google AI','Microsoft Azure AI','Amazon SageMaker'],quantumComputing[ 'IBM Quantum','Google Quantum AI','Microsoft Azure Quantum','D-Wave'],cybersecurity[ 'CrowdStrike','SentinelOne','Darktrace','Palo Alto Networks'],manufacturing[ 'Siemens','Rockwell Automation','ABB','GE Digital'],blockchain[ 'Chainalysis','ConsenSys','Alchemy','Infura'];'
 }
@@ -474,7 +459,6 @@ export const getPricingAnalysisByService = ("serviceId": string) => ;
   return comprehensivePricingAnalysis2025.find(s => { return s.serviceId === serviceId)}
 
 export; }
-  const getPricingAnalysisByCategory = ("category": string) => {if (!category || category ===,All');'
   }
   return comprehensivePricingAnalysis2025; return comprehensivePricingAnalysis2025.filter(s = > s.category === category;
 }
@@ -484,7 +468,6 @@ export const getMarketInsights = () => { const insights = { "totalMarketSize": '
   return insights}
 
 export;
-  const getCompetitiveLandscape = () => {;
   }
   return { aiServices[ 'IBM Watson','Google AI','Microsoft Azure AI','Amazon SageMaker'],quantumComputing[ 'IBM Quantum','Google Quantum AI','Microsoft Azure Quantum','D-Wave'],cybersecurity[ 'CrowdStrike','SentinelOne','Darktrace','Palo Alto Networks'],manufacturing[ 'Siemens','Rockwell Automation','ABB','GE Digital'],blockchain[ 'Chainalysis','ConsenSys','Alchemy','Infura']}}:data_backup/2025-comprehensive-pricing-analysis.ts;'
 
@@ -610,7 +593,6 @@ export const getPricingAnalysisByService = ("serviceId": string) => ;"
   return comprehensivePricingAnalysis2025.find(s => { return s.serviceId === serviceId)}
 
 export; }
-  const getPricingAnalysisByCategory = ("category": string) => {if (!category || category ===,All');'
   }
   return comprehensivePricingAnalysis2025;
   return comprehensivePricingAnalysis2025.filter(s = > s.category === category;
@@ -621,7 +603,6 @@ export const getMarketInsights = () => {const insights = {"totalMarketSize": '$1
   return insights}
 
 export;
-  const getCompetitiveLandscape = () => ;
   return {aiServices['IBM Watson','Google AI','Microsoft Azure AI','Amazon SageMaker'],quantumComputing['IBM Quantum','Google Quantum AI','Microsoft Azure Quantum','D-Wave'],cybersecurity['CrowdStrike','SentinelOne','Darktrace','Palo Alto Networks'],manufacturing['Siemens','Rockwell Automation','ABB','GE Digital'],blockchain['Chainalysis','ConsenSys','Alchemy','Infura'];'
 }
 
@@ -649,7 +630,6 @@ export const getPricingAnalysisByService = ("serviceId": string) => ;
   return comprehensivePricingAnalysis2025.find(s => { return s.serviceId === serviceId)}
 
 export; }
-  const getPricingAnalysisByCategory = ("category": string) => {if (!category || category ===,All');'
   }
   return comprehensivePricingAnalysis2025; return comprehensivePricingAnalysis2025.filter(s = > s.category === category;
 }
@@ -659,7 +639,6 @@ export const getMarketInsights = () => { const insights = { "totalMarketSize": '
   return insights}
 
 export;
-  const getCompetitiveLandscape = () => {;
   }
   return { aiServices[ 'IBM Watson','Google AI','Microsoft Azure AI','Amazon SageMaker'],quantumComputing[ 'IBM Quantum','Google Quantum AI','Microsoft Azure Quantum','D-Wave'],cybersecurity[ 'CrowdStrike','SentinelOne','Darktrace','Palo Alto Networks'],manufacturing[ 'Siemens','Rockwell Automation','ABB','GE Digital'],blockchain[ 'Chainalysis','ConsenSys','Alchemy','Infura'];'
 }
@@ -688,7 +667,6 @@ export const getPricingAnalysisByService = ("serviceId": string) => ;
   return comprehensivePricingAnalysis2025.find(s => { return s.serviceId === serviceId)}
 
 export; }
-  const getPricingAnalysisByCategory = ("category": string) => {if (!category || category ===,All');'
   }
   return comprehensivePricingAnalysis2025; return comprehensivePricingAnalysis2025.filter(s = > s.category === category;
 }
@@ -698,7 +676,6 @@ export const getMarketInsights = () => { const insights = { "totalMarketSize": '
   return insights}
 
 export;
-  const getCompetitiveLandscape = () => {;
   }
   return { aiServices[ 'IBM Watson','Google AI','Microsoft Azure AI','Amazon SageMaker'],quantumComputing[ 'IBM Quantum','Google Quantum AI','Microsoft Azure Quantum','D-Wave'],cybersecurity[ 'CrowdStrike','SentinelOne','Darktrace','Palo Alto Networks'],manufacturing[ 'Siemens','Rockwell Automation','ABB','GE Digital'],blockchain[ 'Chainalysis','ConsenSys','Alchemy','Infura'];'
 }
@@ -727,7 +704,6 @@ export const getPricingAnalysisByService = ("serviceId": string) => ;
   return comprehensivePricingAnalysis2025.find(s => { return s.serviceId === serviceId)}
 
 export; }
-  const getPricingAnalysisByCategory = ("category": string) => {if (!category || category ===,All');'
   }
   return comprehensivePricingAnalysis2025; return comprehensivePricingAnalysis2025.filter(s = > s.category === category;
 }
@@ -737,6 +713,5 @@ export const getMarketInsights = () => { const insights = { "totalMarketSize": '
   return insights}
 
 export;
-  const getCompetitiveLandscape = () => {;
   }
   return { aiServices[ 'IBM Watson','Google AI','Microsoft Azure AI','Amazon SageMaker'],quantumComputing[ 'IBM Quantum','Google Quantum AI','Microsoft Azure Quantum','D-Wave'],cybersecurity[ 'CrowdStrike','SentinelOne','Darktrace','Palo Alto Networks'],manufacturing[ 'Siemens','Rockwell Automation','ABB','GE Digital'],blockchain[ 'Chainalysis','ConsenSys','Alchemy','Infura']}}

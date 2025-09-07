@@ -146,8 +146,6 @@ import { GradientHeading } from "./GradientHeading",;"
 import { useState } from "react",;"
 export function QuoteFormSection() {;
   }
-  const [isSubmitted, setIsSubmitted] = useState(false),;
-  const [isSubmitting, setIsSubmitting] = useState(false),;
   const handleSubmit = ("e": React.FormEvent) => {;
     }
     e.preventDefault(),;

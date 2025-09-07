@@ -86,7 +86,6 @@ function LazyImage() {const [is_loaded, setIsLoaded] = useState (false)const [is
 if (return) {$2;
 }
 
-const observer = new IntersectionObserver (([entry]) => {// Check condition;
 }
 if ( {) {$2;
 }

@@ -204,4 +204,6 @@ export default function ServicePage() {
       <ContactSection />
     </div>
   )
+    </div>
+
 }

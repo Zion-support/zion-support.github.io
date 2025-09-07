@@ -147,7 +147,6 @@ main
   async runBuildProcess() {
     this.log('🏗️ Running build process...');
 
-    const commands = [
       { cmd: 'npm run clean', desc: 'Clean build artifacts' },
       { cmd: 'npm run build', desc: 'Build application' },
     ];

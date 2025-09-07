@@ -117,7 +117,6 @@ control={form && form.control}
     }
 
   }, [initialData, form]),;
-  const handleSubmit = ("data": BasicInfoFormData) => {;
     }
     onSave(data),;
     if (onComplete) {;

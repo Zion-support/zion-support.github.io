@@ -27,8 +27,7 @@ export function useApi<T>(
       const result = await apiCall();
       setData(result);
     } catch (err) {
-      }
-      setError(err instanceof Error ? err.message : 'An error occurred');'
+
     } finally {
       }
       setLoading(false);

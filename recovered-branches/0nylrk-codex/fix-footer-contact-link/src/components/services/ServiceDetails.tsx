@@ -12,11 +12,7 @@ interface ServiceDetailsProps {
 export function ServiceDetails({ country }: ServiceDetailsProps) {
   // Get datacenters for regions (simplified - in production this would come from a real database)
 
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Server, Clock, MapPin} from "lucide-react";
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Server, Clock, MapPin } from "lucide-react",
 
 // Component to show service details for the selected country;
 export /**
@@ -25,8 +21,6 @@ export /**
 function ServiceDetails() {
   // Get datacenters for regions (simplified - in production this would come from a real database);
   const get_datacenters = (country: string): string[] => {
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Server, Clock, MapPin } from "lucide-react";
 interface ServiceDetailsProps {
   country: string}
 
@@ -82,7 +76,6 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
     return regions[country] |regions["default"]
   }
   // Get region-specific image
-  const getRegionalImage = (country: string): string => {
     // In a real app, you'd have specific images for each region
     const regions: Record<string string> = {
       "United States": "https://source.unsplash.com/featured/900x700/?datacenter,usa",

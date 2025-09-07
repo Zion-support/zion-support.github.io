@@ -140,7 +140,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                       alt={featuredPost.author.name}
                       className="w-10 h-10 rounded-full mr-3"
                       onError={(e) => {
-                        const target = e.currentTarget as HTMLImageElement;
                         target.src = "/images/blog-placeholder.svg"
                       }}
                     />
@@ -212,7 +211,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                       alt={post.featuredImageAlt || post.title}
                       className="object-cover w-full h-full hover: scale-105 transition-transform duration-300"
                       onError={(e) => {
-                        const target = e.currentTarget as HTMLImageElement;
                         target.src = "/images/blog-placeholder.svg"
                       }}
                     />
@@ -238,7 +236,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                         alt={post.author.name}
                         className="w-8 h-8 rounded-full mr-2"
                         onError={(e) => {
-                          const target = e.currentTarget as HTMLImageElement;
                           target.src = "/images/blog-placeholder.svg"
                         }}
                       />

@@ -15,8 +15,6 @@ CardContent
 CardTitle
   CardDescription,
 CardFooter
-import { useState } from "react";"
-import {
   }
   Card,
   CardContent,
@@ -44,7 +42,6 @@ return (  return (;
             <div className="flex flex-wrap gap-1">"
               {match.matched_skills.slice(0, 5).map((skill, i) => (
                 <Badge key={i} variant="secondary" className="text-xs">"
-import { useState } from "react";"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";"
 import { Badge } from "@/components/ui/badge",;"
 import { Button } from "@/components/ui/button",;"

@@ -16,13 +16,13 @@ const DataPipelineEngineeringChat: NextPage = () => {;
       <Head>;
         <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>;
         <meta
-          name="description"
-          content="DataPipelineEngineeringChat service"
-        />{" "}
+          name=description"
+          content="DataPipelineEngineeringChat service
+        />{ "}
       <main>
         <h1>DataPipelineEngineeringChat</h1>
         <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>
+        <a href="/services>Back to Services</a>
       </main>
     </div>
       </Head>;
@@ -30,7 +30,7 @@ const DataPipelineEngineeringChat: NextPage = () => {;
       <main>;
         <h1>DataPipelineEngineeringChat</h1>;
         <p>Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;
+        <a href=/services">Back to Services</a>;
       </main>;
     </div>;
   );

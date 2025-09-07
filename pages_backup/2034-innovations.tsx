@@ -52,7 +52,6 @@ export default function Innovations2034Page() {
 
   return (
 
-const contactInfo = null;
                   color: 'from-indigo-500 to-purple-600'
                 }
               ].map((feature, index) => (

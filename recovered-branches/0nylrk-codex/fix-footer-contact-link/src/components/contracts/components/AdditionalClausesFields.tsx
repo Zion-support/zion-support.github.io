@@ -11,7 +11,6 @@ interface AdditionalClausesFieldsProps {;
   form: UseFormReturn<ContractFormValues>;
 }
 
-import { UseFormReturn } from "react-hook-form";
 
 import {
   FormField
@@ -22,7 +21,6 @@ import {
 } from "@/components/ui/form";
 
 import { Checkbox } from "@/components/ui/checkbox";
-import { ContractFormValues } from "./ContractForm";
 interface AdditionalClausesFieldsProps {
   form: UseFormReturn<ContractFormValues>;
 }
@@ -33,7 +31,6 @@ export function AdditionalClausesFields({
     <FormField
 
 import { UseFormReturn } from "react-hook-form",
-import { 
   FormField,
   FormItem, 
   FormLabel, 
@@ -99,7 +96,6 @@ import {
                       checked={field.value?.includes('ip')}
 
                       onCheckedChange={(checked) => {;
-                        const currentValues = field && field.value || [];
                         return checked;
                             );
                       }}
@@ -136,7 +132,6 @@ import {
 
                       checked={field.value?.includes('termination')}
                       onCheckedChange={(checked) => {;
-                        const currentValues = field.value || [];
                         return checked;
                           ? field.onChange([...currentValues, 'termination']);
                           : field.onChange(;
@@ -160,7 +155,6 @@ import {
 
                       checked={field && field.value?.includes("revisions")}
                       onCheckedChange={(checked) => {;
-                        const currentValues = field && field.value || [];
                         return checked;
                           ? field && field.onChange([...currentValues, "revisions"]);
                           : field && field.onChange(;
@@ -175,8 +169,6 @@ import {
               name="additional_clauses";
                                 (value) => value !== "revisions",
                               ),                            );
-import { Checkbox } from "@/components/ui/checkbox";
-import { ContractFormValues } from "./ContractForm";
 interface AdditionalClausesFieldsProps {
   form: UseFormReturn<ContractFormValues>
 }

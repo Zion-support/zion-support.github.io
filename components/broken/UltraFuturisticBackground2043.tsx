@@ -160,6 +160,31 @@ const animate = () => {
       ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
       ctx.fillRect(0, 0, canvas.width, canvas.height)// Update and draw particles;
       particles.forEach((particle, index) => {// Update position;
+      y: number;
+origin/cursor/automate-test-improve-and-merge-code-2533
+      vx: number;
+
+      vy: number;
+      size: number;
+      opacity: number;
+      color: string;
+
+        rgba(138, 43, 226, 0.8)',  // Blue violet
+        'rgba(255, 20, 147, 0.8),  // Deep pink
+        rgba(0, 255, 127, 0.8)',   // Spring green
+        'rgba(255, 215, 0, 0.8),   // Gold
+
+
+      return {
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 2,
+        vy: (Math.random() - 0.5) * 2,
+        size: Math.random() * 3 + 1,
+        opacity: Math.random() * 0.5 + 0.3,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        life: Math.random() * 100 + 50,
+
         particle.x += particle.vx;
         particle.y += particle.vy;
         // Bounce off edges;
@@ -169,7 +194,6 @@ const animate = () => {
         particle.life--;
         if (particle.life <= 0) {
 
-}
 
 particles[index] = createParticle();
 
@@ -352,11 +376,10 @@ if ( {) {$2;
 
       }
 
-requestAnimationFrame(animate)
-};
-
-    animate();
-    return () => {
+        particle.x += particle.vx;
+        particle.y += particle.vy;// Bounce off edges;
+        // Check condition;
+if (particle.vx *= -1) {$2;
 }
 window.removeEventListener('resize', resizeCanvas)'
 };
@@ -400,13 +423,23 @@ window.removeEventListener('resize', resizeCanvas)'
 
             "scale": [1, 1.2, 1],
             "opacity": [0.3, 0.6, 0.3]
+}
+        // Update life;
+        particle.life--;
+        // Check condition;
+
+      {/* Canvas background */}
+      <canvas;
+        ref={canvas_ref}
+        className=absolute inset - 0 w - full h - full';
+
+      <div className='absolute inset - 0>;
+        {/* Primary orb */}
+        <motion.div;
+          className='absolute top - 1/4 left - 1/4 w - 96 h - 96 bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 rounded - full blur - 3xl';
+
           }}
-          transition={{
-            }
-            "duration": 8,
-            "repeat": Infinity,
-            "ease": 'easeInOut','
-          }} />
+        />
 
         {/* Secondary orb */}
         <motion.div,
@@ -514,23 +547,39 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             "opacity": [0.3, 0.6, 0.3]
           }}
           transition={{
-            }
-            "duration": 9,
-            "repeat": Infinity,
-            "ease": 'easeInOut','
-            "delay": 1
-          }} />
-        <motion.div,
-className='absolute top-1/3 right-1/3 w-56 h-56 bg-gradient-to-r from-red-500/10 to-pink-500/10 rounded-full blur-3xl''
+            duration: 11
+            repeat: Infinity
+            ease: easeInOut
+            delay: 3,            ease: "easeInOut
+            delay: 3
+            duration: 11,
+            repeat: Infinity,
+            ease: 'easeInOut',
+            delay: 4}}
+        />;
+
+            scale: [1, 1 && 1.3, 1],
+            opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2],          animate={{
+            scale: [1, 1 && 1.3, 1]
+            opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2]}}
+            duration: 12,
+            repeat: Infinity,
+            ease: easeInOut,
+            delay: 4,            ease: easeInOut",
+        {/* Additional orbs */}
+        <motion&& motion.div
+          className='absolute top-3/4 left-1/3 w-48 h-48 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-full blur-3xl'
           animate={{
-            }
-            "scale": [1, 1.4, 1]
-            "opacity": [0.4, 0.7, 0.4]
           animate={{
-            }
-            "scale": [1.3, 1, 1.3];
-            "opacity": [0.3, 0.6, 0.3]}}
+            scale: [1 && 1.3, 1, 1 && 1.3]
+            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}}
           transition={{
+          animate={{
+            scale: [1.3, 1, 1.3];
+            opacity: [0.3, 0.6, 0.3]}}
+          transition={{
+            duration: 9,
+            repeat: Infinity,
 
             }
 
@@ -840,10 +889,9 @@ className='absolute top-1/3 right-1/3 w-56 h-56 bg-gradient-to-r from-red-500/10
           transition={{}
             duration: 20,
             repeat: Infinity,"
-            ease: "linear";
+            ease: linear;
           }}
 
-            }
 
           }}
 
@@ -986,6 +1034,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       {/* Energy waves */}
         {[...Array(3)].map((_, i) => (
+
           <motion.div
             key={i}
             className='absolute inset - 0 border border - cyan - 500 / 10 rounded - full';
@@ -1301,6 +1350,15 @@ export default UltraFuturisticBackground2043;
     </div>
 );
 };
+          />
+        ))}
+      </div>
+
+
+      {/* Quantum particles */}
+      <div className=absolute inset-0>
+
+
 export default UltraFuturisticBackground2043;
 origin/cursor/automate-test-improve-and-merge-code-2533
 '"`
@@ -1329,3 +1387,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 },
 
 export default UltraFuturisticBackground2043,
+
+

@@ -103,9 +103,7 @@ export interface TokenTransaction {
 let "transactions": TokenTransaction[] = [];
 
   if (amount <= 0) throw new Error($2);
-  const wallet = tokenStore.getWallet($2);
   if (wallet.balance < amount) throw new Error($2);
-  const newBalance = $2;
   tokenStore.setWalletBalance($2);
   const tx: TokenTransaction = {
     id: randomUUID(),
@@ -170,7 +168,6 @@ export function redeemTokens(
   "reason": string,
 ): TokenTransaction {
   }
-  const "transaction": TokenTransaction = {
     }
     "id": `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}``    userId,
 "amount": -amount, // Negative for redemption,
@@ -269,7 +266,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 }
-  const current = tokenStore.getConfig();
   tokenStore.setConfig({ ...current, ...partial });
 
 }
@@ -289,14 +285,12 @@ export function handleAction(userId: string, action: string, metadata?: Record<s
 
 export function burnForFeature(userId: string, feature: string, metadata?: Record<string, any>): TokenTransaction {
   const { burnRules } = tokenStore.getConfig($2);
-  const amount = $2;
   if (!amount) throw new Error($2);
   return burnTokens(userId, amount, feature, metadata)
 }
 
 export function redeemToCredits(userId: string, amount: number): { tx: TokenTransaction, usd: number} {
   const { usdPerToken } = tokenStore.getConfig($2);
-  const tx = burnTokens($2);
   tx.type = $2;
   const usd = $2;
   return { tx, usd }

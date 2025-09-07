@@ -78,7 +78,6 @@ export default function ITOnsiteServicesPage() {
   const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"],
   
   // Filter countries based on search query
-  const filteredCountries = onsiteServicePricing
     .filter(country =>
       country.country.toLowerCase().includes(searchQuery.toLowerCase())
     )
@@ -93,7 +92,6 @@ export default function ITOnsiteServicesPage() {
       return a.country.localeCompare(b.country)
     }),
   
-  const handleCountrySelect = (country: CountryPricing) => {
     setSelectedCountry($2);
     // Scroll to the service details section
     setTimeout(() => {

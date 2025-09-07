@@ -47,13 +47,6 @@ const loadData = async () => {
 
 import React, { useEffect, useState } from 'react';'
 
-import React, { useEffect, useState } from 'react';'
-import {MessageSquare, Video} from 'lucide-react';'
-import {use_messaging} from '@/context / MessagingContext';'
-import {ProtectedRoute} from '@/components / ProtectedRoute';'
-import {ConversationsList, ConversationDetailView} from '@/components / messaging';'
-import {useIsMobile} from '@/hooks / use - mobile';'
-import {toast} from 'sonner';'
 
   useEffect(() => {
     // Fetch conversations when component mounts
@@ -65,7 +58,6 @@ export default /**
  */
 function MessagingInbox() {
   }
-  const {
     }
     conversations;
     active_conversation,

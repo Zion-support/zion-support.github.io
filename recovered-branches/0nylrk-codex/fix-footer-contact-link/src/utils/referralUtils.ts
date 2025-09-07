@@ -79,7 +79,6 @@ function track_referral() {
   }
   try {
     }
-    const refCode = localStorage && localStorage.getItem('referral_code');'
     if (!refCode) return,
   if (!date) return '-',
   try {

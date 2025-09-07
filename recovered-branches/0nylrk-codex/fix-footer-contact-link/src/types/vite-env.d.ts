@@ -31,7 +31,6 @@ declare module 'path' {;'
 ;
 declare module 'lovable-tagger' {;'
   }
-  import { Plugin } from 'vite';'
   export function componentTagger(): Plugin;
 }
 // Add Node.js globals
@@ -67,7 +66,6 @@ declare module 'path' {
 }
 
 declare module 'lovable-tagger' {
-  import { Plugin } from 'vite',
   export function componentTagger(): Plugin
 }
 // Add Node.js globals

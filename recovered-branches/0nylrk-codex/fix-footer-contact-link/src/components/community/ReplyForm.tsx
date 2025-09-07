@@ -18,7 +18,6 @@ import {;
   FormItem,;
   FormMessage,;
 } from "@/components/ui/form";"
-import { Card, CardContent, CardFooter } from "@/components/ui/card";"
 interface ReplyFormProps {;
   }
   "onSubmit": ("content": string) => Promise<void>;
@@ -34,7 +33,6 @@ import { useState } from "react";"
 import { useForm } from "react-hook-form";"
 import { Button } from "@/components/ui/button";"
 import { Textarea } from "@/components/ui/textarea";"
-import {
   }
   Form,
   FormControl,
@@ -42,7 +40,6 @@ import {
   FormItem,
 FormMessage,;
 } from "@/components/ui/form";"
-import { Card, CardContent, CardFooter } from "@/components/ui/card";"
 return (;
     <Card>;
       <CardContent className="pt-6">;"
@@ -97,7 +94,6 @@ return (;
                       className="min - h-[100px] resize-y";"
   FormMessage;
 } from "@/components/ui/form",;"
-import { Card, CardContent, CardFooter } from "@/components/ui/card";"
 ;
 interface ReplyFormProps {;
   }
@@ -191,15 +187,12 @@ control={form && form.control}
                     <Textarea,
 export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
   }
-  const [is_submitting, setIsSubmitting] = useState (false);
 ;
-  const form = use_form < ReplyFormValues>({
     }
     "default_values": {
       }
       "content": ""}});"
 ;
-  const handle_submit = async ("values": ReplyFormValues) => {
     }
     setIsSubmitting (true);
     try {
@@ -251,7 +244,6 @@ return (;
 export default ReplyForm;
 ;
 } from "@/components/ui/form";"
-import { Card, CardContent, CardFooter } from "@/components/ui/card";"
 interface ReplyFormProps {
   }
   "onSubmit": ("content": string) => Promise<void>;
@@ -287,7 +279,6 @@ import { useState } from "react","
 import { useForm } from "react-hook-form","
 import { Button } from "@/components/ui/button","
 import { Textarea } from "@/components/ui/textarea","
-import {
   }
   Form,
   FormControl,
@@ -300,11 +291,9 @@ interface ReplyFormProps {
   }
   "onSubmit": ("content": string) => Promise<void>,
   parentId?: string,
-import { useState } from "react";"
 import { useForm } from "react-hook-form",;"
 import { Button } from "@/components/ui/button",;"
 import { Textarea } from "@/components/ui/textarea",;"
-import {;
   }
   Form,;
   FormControl,;
@@ -312,23 +301,12 @@ import {;
   FormItem,;
   FormMessage,;
 } from "@/components/ui/form";"
-import { Card, CardContent, CardFooter } from "@/components/ui/card";"
 interface ReplyFormProps {;
   }
   "onSubmit": ("content": string) => Promise<void>;
   parentId?: string
 }
-import { useState  } from './react';'
-import { use_form  } from './react - hook - form';'
-import { Button  } from '@/components / ui / button';'
-import { Textarea  } from '@/components / ui / textarea';'
-import {
 }
-import { useState } from "react";"
-import { useForm } from "react-hook-form";"
-import { Button } from "@/components/ui/button";"
-import { Textarea } from "@/components/ui/textarea";"
-import {
 }
 interface ReplyFormValues {;
   }

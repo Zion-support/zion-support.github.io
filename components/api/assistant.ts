@@ -44,12 +44,10 @@ export default async function handler(
     const { messages } = req.body as {
       }
       messages?: Array<{
-        }
-        "role": 'user' | 'assistant' | 'system';'
 
-        "content": string;
-      }>;
-    }
+      model: 'gpt-4o',
+      temperature: 0.3,
+      messages: preparedMessages});
 
 const preparedMessages = [;
   { "role": 'system' as const, "content": SYSTEM_PROMPT,'
@@ -82,9 +80,8 @@ const message = completion.choices?.[0]?.message || {
       "content": 'Sorry, I could not respond.','
     };
     return res.status(200).json({ message });
-  } catch ("error": any) {
-    }
-    console.error('Assistant API "error":', error?.message || error);'
-return res.status(500).json({ "error": 'Assistant request failed',;'
+  } catch (error: any) {
+    console.error(Assistant API error:, error?.message || error);}
+    return res.status(500).json({ error: 'Assistant request failed'}
 });
   }

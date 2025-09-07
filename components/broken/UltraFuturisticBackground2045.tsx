@@ -232,9 +232,6 @@ particles.forEach((particle, index) => {
         ctx.shadowColor = particle.color;
         ctx.shadowBlur = 20;
 
-        particle.x += particle.vx,
-        particle.y += particle.vy,
-        particle.life--,
 
         // Wrap around edges
         if (particle.x < 0) particle.x = $2;
@@ -280,8 +277,6 @@ particles.forEach((particle, index) => {
         }
       }),
 
-      // Draw connecting lines between nearby particles
-      particles.forEach((particle1, i) => {
 
           const dx = particle1.x - particle2.x;
           const dy = particle1.y - particle2.y;
@@ -433,13 +428,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               linear - gradient (rgba (0, 255, 255, 0.1) 1px, transparent 1px);
               linear - gradient (90deg, rgba (0, 255, 255, 0.1) 1px, transparent 1px);`
             `;'
-            background_size: '50px 50px';
+            background_size: 50px 50px;
           }}
           animate={{'
-            background_position: ['0px 0px50px 50px']}}
+            background_position: ['0px 0px50px 50px]}}
           transition={{}
         {/* Floating Neon Shapes */}
-        <motion&& motion.div'
+        <motion&& motion.div
           className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg'
           animate={{}
         />
@@ -447,13 +442,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion.div"
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg"
             duration: 20,
-            repeat: Infinity,'
-            ease: 'linear';
+            repeat: Infinity,
+            ease: linear';
           }}
         />;
         {/* Floating Neon Shapes */}
         <motion.div;'
-          className='absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 30 rounded - lg';
+          className=absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 30 rounded - lg;
           animate={{}
             opacity: [0.3, 0.6, 0.3],          animate={{}
             rotate: [0, 360];
@@ -777,7 +772,6 @@ className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/30 transf
 className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 rounded-full''
           animate={{
 
-            }
 
             y: [0, -20, 0],
             opacity: [0.2, 0.5, 0.2],
@@ -1080,8 +1074,8 @@ className='absolute bottom-1/4 right-1/4 w-6 h-6 bg-gradient-to-r from-purple-40
           }}
           transition={{}
             duration: 15;
-            repeat: Infinity'
-            ease: 'linear',          }}
+            repeat: Infinity
+            ease: 'linear'}}
         />;
       </div>;
     </div>;
@@ -1121,5 +1115,5 @@ export default UltraFuturisticBackground2045;
       </div>
     </div>
 )
-};
+}
 export default UltraFuturisticBackground2045;

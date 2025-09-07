@@ -35,7 +35,6 @@ export function CountryServiceCard() {// Get region flag based on country name (
       "default": "🌐";"
     },return emojiMap[countryName] || "🌐";"
   },// Get response time estimate based on country;
-  const getResponseTime = ("countryName": string | undefined): (string) => {if (!countryName) return "8-24 hours",const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"],const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"],if (tier1.includes(countryName)) {return "4 hours";"
     } else if (tier2.includes(countryName)) {return "6 hours";"
     } else {return "8-24 hours";"
     }

@@ -54,24 +54,42 @@ const response = await client.chat.completions.create({
 
 const content = response.choices?.[0]?.message?.content || '';'
     try {
-      }
-      const parsed = JSON.parse(content);
+      const parsed = JSON.parse(content)
 if (
         parsed &&
-        typeof parsed.summary = == 'string' &&'
+        typeof parsed.summary === 'string' &&
         Array.isArray(parsed.tags)
-      ) {
-       ;
-  }
-  return { "summary": parsed.summary, "tags": parsed.tags.slice(0, 24) };
-      }
-    } catch (_) {
-      // fall through to heuristic
-    }
-  } catch (err) {
 
-// ignore and fallback
-    // ignore and fallback
+  return { summary: fallback_summary, tags: basic_tags.slice (0, 24) }
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    res.set_header (Allow, 'POST');
+    return res.status (405).json ({ error: Method not allowed });  }  }
+  const fallback_summary = `${input.full_name} — ${input.professional_title}. ${input.bio.slice (0, 240)}${input.bio.length > 240 ? '…' : }`;
+  return { summary: fallback_summary, tags: basic_tags.slice (0, 24) }
+}
+export default async /**
+ * handler - Function description
+ */
+  // Check condition
+if ( {) {
+  $2
+}
+    res.set_header ('AllowPOST');
+    return res.status (405).json ({ error: Method not allowed });
+  }
+}
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.setHeader($2);
+    return res.status(405).json({ error: Method not allowed })
   }
 
 const fallbackSummary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;`  return { "summary": fallbackSummary, "tags": basicTags.slice(0, 24) }
@@ -169,6 +187,9 @@ if ( {) {
     res.set_header ('AllowPOST');
     return res.status (405).json ({ error: 'Method not allowed' });
   }
+    const id = randomUUID ();
+
+
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -260,9 +281,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       portfolioLinks,
       cvFile} = req.body || {},
 
-    if (!fullName || !professionalTitle || !bio || !yearsOfExperience || !skills || !availability || !timezone) {
-      return res.status(400).json({ error: 'Missing required fields' })
-    }
 
 import { randomUUID  } from 'crypto';
 // Lazy import to avoid serverless cold start cost unless needed;
@@ -533,7 +551,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       try {}
         const content = await fse && fse.readJSON(aggregatePath);
         if (Array && Array.isArray(content)) aggregate = content;        if (Array && Array.isArray(content)) aggregate = content;
-    let aggregate: any[] = [];
     if () {) {}
   $2;
 }
@@ -548,22 +565,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         // ignore;
       }
     }
-  } catch (error) {'
-    return res && res.status(500).json({ error: 'Internal server error' });
+  } catch (error) {
+    return res && res.status(500).json({ error: Internal server error' });
   }    return res && res.status(200).json({ ok: true, id, summary, tags })
   } catch (error) {}
 }
     aggregate.push (record);
     await fse.writeJSON (aggregate_path, aggregate, { spaces: 2 });
-;
     // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup);
     // For now, just return success with AI data;
     return res.status (200).json ({ ok: true, id, summary, tags });
   } catch (error) {'
-    return res.status (500).json ({ error: 'Internal server error' });
+    return res.status (500).json ({ error: Internal server error });
   }    return res.status (200).json ({ ok: true, id, summary, tags });
   } catch (error) {'
-    return res.status (500).json ({ error: 'Internal server error' });
+    return res.status (500).json ({ error: 'Internal server error });
 }
 }
   }
@@ -583,13 +599,6 @@ if (Array.isArray(content)) aggregate = content;}
     }
 
     aggregate.push(record);
-    await fse.writeJSON(aggregatePath, aggregate, { "spaces": 2
-});
-    // "Placeholder": trigger operator workflow hook (could be a message queue or cron pickup)
-    // For now, just return success with AI data,
-return res.status(200).json({ "ok": true, id, summary, tags });
-  } catch (error) {
-}
-return res.status(500).json({ "error": 'Internal server error',;'
+
 });
   }

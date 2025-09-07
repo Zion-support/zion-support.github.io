@@ -94,7 +94,6 @@ type CarouselProps = {opts?: CarouselOptions;
   canScrollNext: boolean;
   orientation: "horizontal" | "vertical";
 } & Omit<CarouselProps "orientation">;
-const CarouselContext = React.createContext<CarouselContextProps | null>(null)function useCarousel(): CarouselContextProps {const context = React.useContext(CarouselContext) as CarouselContextProps | null;
   if (!context) {throw new Error("useCarousel must be used within a <Carousel />")}return context as CarouselContextProps;
 }const Carousel = React.forwardRef<;
   HTMLDivElement;
@@ -182,9 +181,6 @@ const Carousel = React.forwardRef<
         }
 
 import * as React from &quot;react & quot;
-import useEmblaCarousel from &quot;embla - carousel - react & quot;
-import { ArrowLeft, ArrowRight } from 'lucide-react';
-import { cn } from &quot;@/lib / utils & quot;
 import { Button } from &quot;@/components / ui / button & quot;
 
       };

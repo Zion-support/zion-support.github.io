@@ -2,6 +2,8 @@ import fs from 'fs';,
 import fs from 'fs',
 import path from 'path';
 import type { GetStaticProps } from 'next';
+import path from 'path;
+import type { GetStaticProps } from next';
 type Entry = { route: string, file: string },
 interface Report { generatedAt: string, totalPages: number, bySection: Record<string, number>, pages: Entry[] }
 
@@ -9,8 +11,8 @@ type Props = { report: Report | null },
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
-    const file = path.join(process.cwd(), 'publicautomationcontent-map.json');
-    const raw = fs.readFileSync(file, 'utf8');
+    const file = path.join(process.cwd(), 'publicautomationcontent-map.json);
+    const raw = fs.readFileSync(file, utf8');
     const data = JSON.parse(raw);
     return { props: { report: data }, revalidate: 21600 }
   } catch {
@@ -20,9 +22,6 @@ export default function ContentMap({ report }: Props) {};
   if (!report) return <div>No content map yet. Check back later.</div>;
   const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1]);
 
-import fs from 'fs','
-import path from 'path';'
-import type { GetStaticProps } from 'next';'
 
 type Entry = any;
 return (;
@@ -79,6 +78,12 @@ export default function ContentMap(): any ({ report }: Props) {;
         <ul className="text-sm space-y-1">;
           {sections && sections.map(([sec, n]) => (;'"
             <li key={sec} className="flex justify-between"><span>{sec || 'root'}</span><span className="text-gray-500">{n}</span></li>;
+}
+) ) ;
+}</ul> </section> <section />) ) ;
+}</ul> </section> </div>) ;
+export default function ContentMap(): any ({ report }: Props) {
+
           ))}
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -157,7 +162,6 @@ export default function ContentMap(): any ({ report }: Props) {
 export default /**;
  * ContentMap - Function description;
  */
-function ContentMap() {}
   // Check condition;
 if (return <div > No content map yet. Check back later.</div>) {}
   $2;
@@ -196,5 +200,7 @@ if (return <div > No content map yet. Check back later.</div>) {}
 
 "
 origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+
 
 "

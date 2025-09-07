@@ -201,28 +201,56 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       "avatar": '👩‍💼','
     },
     {
-      }
-      "name": 'Marcus Rodriguez','
-      "role": 'VP Quantum Computing, QuantumCorp','
-      "company": 'QuantumCorp','
-      "content":;
-        "Their quantum bio - computing platform accelerated our drug discovery by 1000x. We're now leading the industry in pharmaceutical innovation.","
-
-      "rating": 5,
-      "avatar": "👩‍💼""
-   
-};
+      name: "Marcus Rodriguez",
+      role: VP Quantum Computing, QuantumCorp,
+      company: "QuantumCorp",
+      content: Their quantum bio-computing platform accelerated our drug discovery by 1000x. We're now leading the industry in pharmaceutical innovation.,
+      rating: 5,
+      avatar: "👨‍💻"
+    },
     {
+      name: Dr. Emily Watson,
+      role: "Research Director, SpaceLabs",
+      company: SpaceLabs,
+      content: "The space mining automation platform opened new frontiers in resource extraction. Were now mining asteroids with unprecedented efficiency.",
+      rating: 5,
+      avatar: 👩‍🔬
+    }
+          <div className=text-center max-w-7xl mx-auto relative z-10'>            <motion.div          <div className="text-center max-w-7xl mx-auto relative z-10">
 
-      }
+      company: 'FutureTech Inc.,
+      content:
+        Zion Tech Group's AI consciousness evolution platform is revolutionary. We've achieved breakthroughs in ethical AI development that seemed impossible just months ago.
+      avatar: 👩‍💼'
+    }
+'
+      name: Dr. Sarah Chen,'
+      role: 'Chief AI Officer, FutureTech Inc.,
+      company: 'FutureTech Inc.',
+      content:;"
+        "Zion Tech Groups AI consciousness evolution platform is revolutionary. We've achieved breakthroughs in ethical AI development that seemed impossible just months ago.,'
+      avatar: 👩‍💼},
+    {'
+      name: 'Marcus Rodriguez,
+      role: 'VP Quantum Computing, QuantumCorp',
+      company: QuantumCorp',
+      content:;'
+        "Their quantum bio - computing platform accelerated our drug discovery by 1000x. Were now leading the industry in pharmaceutical innovation.",
 
-      "name": 'Dr. Emily Watson''
-      "role": 'Research Director, SpaceLabs''
-      "company": 'SpaceLabs''
-      "content":
-        "The space mining automation platform opened new frontiers in resource extraction. We're now mining asteroids with unprecedented efficiency.","
-      "rating": 5,
-      "avatar": '👩‍🔬','
+      rating: 5,
+      avatar: 👩‍💼"
+    }
+    {}
+      rating: 5,"
+      avatar: 👨‍💻
+    }
+    {"
+      name: "Dr. Emily Watson,
+      role: "Research Director, SpaceLabs";
+      company: SpaceLabs","
+      content: The space mining automation platform opened new frontiers in resource extraction. We're now mining asteroids with unprecedented efficiency.,
+      rating: 5,"
+      avatar: "👩‍🔬
     }
   ];
       name: 'Dr. Emily Watson'
@@ -460,37 +488,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   style={{
                     }
                     "left": `${Math.random() * 10,`}%`,`                    "top": `${Math.random() * 10,`}%`,`                  }} />
+
+                />
+
               ))}
             </div>
           </div>
 
-          {/* Hero Content */}
 
-<div className='text-center max-w-7xl mx-auto relative z-10'>'
-            <motion.div,
-initial={{ "opacity": 0, "y": 50 
-}
-              animate={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 
-}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
             >
-              <h1 
-                id="hero-heading"
-                className="text-6xl md:text-8xl lg:text-9xl font-bold mb-8 leading-tight"
-              >
-                <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                  2041
-                </span>
-                <br />
-                <span className="text-white">
-                  Future is Now
-                </span>
-              </h1>
-              
-              <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed">
-                Experience the revolution of technology with our cutting-edge 2041 services. 
-                From AI consciousness evolution to quantum space mining, we're redefining what's possible.
-              </p>
 
 <h1,
 id='hero-heading''
@@ -631,19 +640,10 @@ className='text-center'
         {/* Featured Services Section *
 }
 
-<section className='py-20 px-4 bg-gradient-to-b from-black to-gray-900/50'>'
-          <div className='max-w-7xl mx-auto'>'
-            <motion.div,
-className='text-center mb-16''
-              initial={{ "opacity": 0, "y": 30 
-}
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true 
-}
+
             >
               </h2>"
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">'
+              <p className=text-xl text-gray-300 max-w-3xl mx-auto>'
                 Experience the future of technology with our cutting-edge services that are redefining industries and pushing the boundaries of what's possible.
               </p>
             </motion.div>
@@ -652,37 +652,37 @@ className='text-center mb-16''
           </div>;
         </section>;
 
-        {/* Featured Services Section */}'
-        <section className='py-20 px-4 bg-gradient-to-b from-black to-gray-900/50'>;'
-          <div className='max-w-7xl mx-auto'>;
+        {/* Featured Services Section */}
+        <section className=py-20 px-4 bg-gradient-to-b from-black to-gray-900/50'>;'
+          <div className=max-w-7xl mx-auto>;
             <motion&& motion.div'"
-              className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900/50">;"
+              className='text-center mb-16              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900/50>;
           <div className="max-w-7xl mx-auto">;
-            <motion&& motion.div "
-              className="text-center mb-16"
+            <motion&& motion.div 
+              className=text-center mb-16"
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;'
+              viewport={{ once: true }}>;
               <h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>;
                 Revolutionary 2041 Services;
-              </h2>;'
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+              </h2>;
+              <p className=text-xl text-gray-300 max-w-3xl mx-auto'>;
                 Experience the future of technology with our cutting-edge;
                 services that are redefining industries and pushing the;'
-                boundaries of what's possible.;
+                boundaries of whats possible.;
               </p>;
             </motion && motion.div>;
-            <motion&& motion.div'
+            <motion&& motion.div
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'              initial={{ opacity: 0, y: 30 }}                Revolutionary 2041 Services;
               </h2>;"
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">;'
-                Experience the future of technology with our cutting-edge services that are redefining industries and pushing the boundaries of what's possible.;
+              <p className=text-xl text-gray-300 max-w-3xl mx-auto>;
+                Experience the future of technology with our cutting-edge services that are redefining industries and pushing the boundaries of whats possible.;
               </p>;
             </motion && motion.div>;"
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8
 
             <motion.div'
-              className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'              initial={{ opacity: 0, y: 30 }}
+              className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8              initial={{ opacity: 0, y: 30 }}
 
 <h2 className='text-5xl "md":text-6xl font-bold text-white mb-6'>'
                 Revolutionary 2041 Services
@@ -997,8 +997,10 @@ className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500
                     ))}
                   </div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
+                  </div>
+                  <div className=font-semibold text-white>{testimonial.name}</div>
                   <div className="text-cyan-400">{testimonial.role}</div>
-                  <div className="text-gray-500 text-sm">{testimonial.company}</div>
+                  <div className=text-gray-500 text-sm>{testimonial.company}</div>
                 </motion.div>
 origin/cursor/automate-test-improve-and-merge-code-2533
               ))}
@@ -1230,7 +1232,14 @@ href='/2041-futuristic-services-showcase''
 };
 
 
-  Math.random () * 100 
+                  <div className="text-gray-500 text-sm>{testimonial && testimonial.company}</div>;
+                </motion && motion.div>;
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >;
+              {testimonials.map ((testimonial, index) => (
+                <motion.div;
+                  key={testimonial.name}
 
 }%`;`"top": `$ {Math.random () * 100;`}%`;`}/>) )}</div> </div> <motion.div initial= {{"opacity": 0, "y": 50;
 }animate= {{"opacity": 1, "y": 0;

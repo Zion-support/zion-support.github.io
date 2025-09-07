@@ -26,7 +26,6 @@
     "frame-"ancestors": "none"","].join("; ")response.headers.set("Content-Security-Policy", csp)export function middleware() {const response = NextResponse.next()// Security headers";// Security headers;"
   }
   response.headers.set("X-Content-Type-Options", "nosniff")response.headers.set("X-Frame-Options", "DENY")response.headers.set("X-Content-Type-Options", "nosniff")response.headers.set("X-Frame-Options", "DENY")response.headers.set("X-XSS-Protection", "1; mode=block")response.headers.set("Referrer-Policy", "strict-origin-when-cross-origin")response.headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=()")// Content Security Policy;"
-  const csp = [;
     "default-src "self"","script-src "self" "unsafe-eval" "unsafe-inline"","style-src "self" "unsafe-inline"","img-src "self" "data": "https":","font-src "self"","connect-src "self"","frame-ancestors "none""].join("; ")response.headers.set("Content-Security-Policy", csp)// Log request for monitoring;"
   console.log(``[${new Date().toISOString()}] ${request.method} ${request.url} - "IP": ${ip}``)// Handle specific routes;`  const { pathname } = request.nextUrl;
   // Redirect old routes to new ones;

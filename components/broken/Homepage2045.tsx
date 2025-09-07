@@ -242,40 +242,40 @@ className='text-center';
     );
   }
   return (
-    <Layout>;'
+    <Layout>;
       <div className='min-h-screen bg-black text-white relative overflow-x-hidden'>;
         {/* Hero Section */}
-        <section'
-          id='hero''
-          className='relative min-h-screen flex items-center justify-center overflow-hidden'>;
+        <section
+          id=hero''
+          className=relative min-h-screen flex items-center justify-center overflow-hidden>;
           {/* Animated Background Elements */}'
-          <div className='absolute inset-0 pointer-events-none'>;
-            <motion&& motion.div'
+          <div className='absolute inset-0 pointer-events-none>;
+            <motion&& motion.div
               className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg'
               animate={{}
               }}
               transition={{}
                 duration: 8;
-                repeat: Infinity'
-                ease: 'easeInOut',              }}'
-              className='absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full'
+                repeat: Infinity
+                ease: easeInOut'}}'
+              className=absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full
               animate={{}
               }}
               transition={{}
                 duration: 6;
                 repeat: Infinity'
-                ease: 'easeInOut'
+                ease: 'easeInOut
               }}
 import { ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket;
 origin/cursor/automate-test-improve-and-merge-code-2533
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
-  Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles'
- } from 'lucide-react';'
-import Link from 'next/link';
+  Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles
+ } from 'lucide-react';
+import Link from next/link';
 
 // Import our new innovative services'
-import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';'
-import { innovative2040ITServices } from '../data/innovative-2040-it-services';'
+import { innovative2040FuturisticServices } from ../data/innovative-2040-futuristic-services;'
+import { innovative2040ITServices } from '../data/innovative-2040-it-services;
 import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
 
 import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';
@@ -284,7 +284,7 @@ import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-ad
 '
 import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-futuristic-services';
 // Loading fallback component;
-const LoadingFallback = () => ('
+const LoadingFallback = () => (
   <div className='min-h-screen flex items-center justify-center bg-gray-900'>    <motion.div;
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
@@ -296,13 +296,13 @@ const LoadingFallback = () =>: any (
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}'
-      className='text - center';
+      className=text - center;
     >;'
-      <div className='relative'>;'
-        <Loader2 className='w - 16 h - 16 text - cyan - 400 animate - spin mx - auto mb - 4' />;'
-        <div className='absolute inset - 0 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - full blur - xl opacity - 20 animate - pulse'></div>;
+      <div className='relative>;
+        <Loader2 className='w - 16 h - 16 text - cyan - 400 animate - spin mx - auto mb - 4' />;
+        <div className=absolute inset - 0 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - full blur - xl opacity - 20 animate - pulse'></div>;
       </div>;'
-      <p className='text - xl text - gray - 300 mb - 2'>;
+      <p className=text - xl text - gray - 300 mb - 2>;
         Loading Zion Tech Group 2045...;
       </p>;'
       <p className='text - sm text - gray - 500'>;
@@ -329,8 +329,13 @@ const LoadingFallback = () =>: any (
       const sections = document.querySelectorAll ('section[id]');
       sections.for_each (section => observer.observe (section));
 ;
+        Preparing your futuristic digital transformation journey;
+
+    </motion.div>;
+
+      const sections = document.querySelectorAll (section[id]');
+      sections.for_each (section => observer.observe (section));
       return () => observer.disconnect ();      sections.for_each ((section) => observer.observe (section));
-;
       return () => observer.disconnect ();
     }
   }, []);
@@ -344,48 +349,6 @@ const LoadingFallback = () =>: any (
     animate: {
       transition: {
 
-  return (
-    <Layout>
-      <div className='min-h-screen bg-black text-white relative overflow-x-hidden'>
-  }if (isLoading) {return (<div className='min-h-screen bg-black flex items-center justify-center'>;
-        <div className='text-center'>;
-          <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400 mx-auto mb-4'></div>;
-          <p className='text-cyan-400 text-xl'>Loading Zion Tech Group...</p>;
-        </div>;
-      </div>;
-    )}return (<Layout>;
-      <div className='min-h-screen bg-black text-white relative overflow-x-hidden'>;
-import React, { useState, useEffect } from 'react';
-import Layout from './layout/Layout';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, 
-  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart,
-  Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles
-} from 'lucide-react',
-import Link from 'next/link';
-// Import our new innovative services
-import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';
-import { innovative2040ITServices } from '../data/innovative-2040-it-services';
-import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
-import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-futuristic-services';
-// Loading fallback component
-const LoadingFallback = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-900">
-    <motion.div
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1}}
-      transition = $2;
-const Homepage2045: React.FC = () => {
-  const [isLoading, setIsLoading] = useState($2);
-  const [isVisible, setIsVisible] = useState($2);
-  const [activeSection, setActiveSection] = useState($2);
-  useEffect(() => {
-    // Simulate content loading with better timing
-    const timer = setTimeout(() => {
-      setIsLoading($2);
-      setIsVisible(true)
-    }, 800),
 
     return () => clearTimeout(timer)
   }, []),
@@ -468,10 +431,9 @@ const Homepage2045: React.FC = () => {
                 opacity: [0.3, 0.5, 0.3]}}
   const fadeInUp = {}
     initial: { opacity: 0, coordinate_y: 60 },
-    animate: { opacity: 1, coordinate_y: 0 },'"
-    transition: { duration: 0.6, ease: 'ease_out' },  }    transition: { duration: 0.6, ease: "ease_out" }
+    animate: { opacity: 1, coordinate_y: 0 },"
+    transition: { duration: 0.6, ease: 'ease_out' }}    transition: { duration: 0.6, ease: "ease_out }
   }
-;
   const stagger_container = {}
     animate: {}
       transition: {}
@@ -507,8 +469,6 @@ const Homepage2045: React.FC = () => {
 setIsVisible(true);
     }, 800);
 
-    return () => clearTimeout(timer);
-  }, []);
 
   // Intersection Observer for better performance
   useEffect(() => {
@@ -656,20 +616,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           {/* Hero Content */}
 
-          <div className='relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-          <div className="relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30}}
-              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
               className="mb-8"
-              className="mb-8"
+
+className=mb-8
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
-              <motion.h1
-                initial={{ opacity: 0, y: 20}}
-                animate={{ opacity: 1, y: 0}}
+              <motion.h1;
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-5xl md:text-7xl font-bold mb-6"
               >
@@ -789,20 +746,20 @@ href='/services''
                 Explore Services
               </Link>
             </motion.div>
-              animate={{ opacity: 1, y: 0 }}className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105">;
+              animate={{ opacity: 1, y: 0 }}className=px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105>;
                 Explore Services;
               </Link>;
             </motion && motion.div>;transition={{ duration: 0.8, delay: 0.6 }}
 className='flex flex-col sm:flex-row gap-4 justify-center items-center';
             >;
               <Link;
-                href='/contact';
+                href=/contact;
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105';
               >;
                 Get Started;
               </Link>;
               <Link;
-href='/services';
+href=/services;
                 className='px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105';
               >;
                 Explore Services;
@@ -826,23 +783,15 @@ href='/services';
               transition={{ "duration": 0.8, "delay": 0.8 }}
 className='mt-16 grid grid-cols-1 "md":grid-cols-3 gap-8''
             >
-              <div className='text-center'>'
-                <div className='text-3xl "md":text-4xl font-bold text-cyan-400 mb-2'>'
-                  500+
-                </div>
-                <div className='text-gray-400'>Innovative Services</div>'
-              </div>
-              <div className='text-center'>'
-                <div className='text-3xl "md":text-4xl font-bold text-purple-400 mb-2'>'
+
                   4.9/5
                 </div>
                 <div className='text-gray-400'>Customer Rating</div>'
               </div>
-              <div className='text-center'>'
-                <div className='text-3xl "md":text-4xl font-bold text-pink-400 mb-2'>'
+
                   1000+
                 </div>
-                <div className='text-gray-400'>Happy Clients</div>              </div>            >
+                <div className=text-gray-400>Happy Clients</div>              </div>            >
 
             {/* Stats */}
             <motion.div
@@ -979,10 +928,94 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Revolutionary Services
                 </span>
               </h2>
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>'
-                Discover our cutting-edge solutions that are transforming,
-industries and pushing the boundaries of what's possible with'
+              <p className=text-xl text-gray-300 max-w-3xl mx-auto">'
+                Discover our cutting-edge solutions that are transforming industries and pushing the boundaries of whats possible with technology.
+              </p>
+            </motion.div>"
+                ease: 'easeInOut'}}                ease: easeInOut;
+              }}
+            />;
+          </div>;
 
+              transition={{ duration: 0.8 }}
+              className=mb - 8            >          <div className="relative z - 10 text - center max - w-6xl mx - auto px - 4 sm:px-6 lg:px-8">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='mb - 8'              className=mb-8;
+
+            >;
+              <motion.h1;
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                animate={{ opacity: 1, coordinate_y: 0 }}
+
+              >;
+                <span className=bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent>                  Future of Technology                className="text - 5xl md:text - 7xl font-bold mb-6";
+              >;
+                <span className=bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip-text text-transparent>;
+
+                  Future of Technology;
+                </span>;
+              </motion.h1>;
+              <motion.p;
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                animate={{ opacity: 1, coordinate_y: 0 }}
+
+                Transform your business with Zion Tech Group's revolutionary AI services, quantum computing, and cutting - edge emerging technologies. Leading the future of technology innovation.;
+              </motion.p>;
+            </motion.div>;
+            {/* CTA Buttons */}
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+
+              <Link;
+                href='/services;
+                className=px - 8 py - 4 border border - cyan - 400 / 50 text - cyan - 400 rounded - lg font - semibold text - lg hover:bg - cyan - 400 / 10 transition - all duration - 300 transform hover:scale - 105'              >              className="flex flex - col sm:flex - row gap - 4 justify-center items-center";
+            >;
+              <Link;
+                href=/contact;
+                className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white rounded - lg font - semibold text - lg hover:from - cyan - 600 hover:to - purple - 600 transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25 hover:shadow - xl hover:shadow - cyan-500 / 30 transform hover:scale-105";
+              >;
+                Get Started;
+              </Link>;
+              <Link;
+                href='/services;
+                className=px - 8 py - 4 border border - cyan - 400 / 50 text - cyan - 400 rounded - lg font - semibold text - lg hover:bg - cyan - 400 / 10 transition - all duration - 300 transform hover:scale - 105'                href=/services;
+                className="px - 8 py - 4 border border - cyan - 400 / 50 text - cyan - 400 rounded - lg font - semibold text - lg hover:bg - cyan - 400 / 10 transition - all duration-300 transform hover:scale-105";
+
+              >;
+                Explore Services;
+              </Link>;
+            </motion.div>;
+            {/* Stats */}
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+
+                </div>;
+                <div className='text - gray - 400>Happy Clients</div>              </div>            >;
+              <div className=text-center>;
+                <div className="text - 3xl md:text - 4xl font - bold text - cyan-400 mb-2">500+</div>;
+                <div className=text-gray-400>Innovative Services</div>;
+              </div>;
+              <div className="text-center">;
+                <div className=text - 3xl md:text - 4xl font - bold text - purple-400 mb-2>4.9 / 5</div>;
+                <div className="text-gray-400">Customer Rating</div>;
+              </div>;
+              <div className=text-center>;
+                <div className="text - 3xl md:text - 4xl font - bold text - pink-400 mb-2">1000+</div>;
+                <div className=text-gray-400>Happy Clients</div>;
+
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
                 technology.
               </p>
             </motion.div>
@@ -1441,59 +1474,76 @@ className='group'>'
                   href: "/ai-services"
                 },
                 {
-                  icon: <Atom className = $2;
-                  title: "Quantum Technology",
-                  description: "Breakthrough quantum computing solutions for next-generation applications",
-                  color: "from-purple-400 to-pink-500",
-                  href: "/quantum-services"
-                },
-                {
-                  icon: <Rocket className = $2;
-                  title: "Space Technology",
-                  description: "Advanced space exploration and resource management platforms",
-                  color: "from-emerald-400 to-teal-500",
-                  href: "/space-technology"
-                },
-                {
-                  icon: <Shield className = $2;
-                  title: "Enterprise Solutions",
-                  description: "Advanced infrastructure and security solutions for modern enterprises",
-                  color: "from-orange-400 to-red-500",
-                  href: "/enterprise-solutions"
-                },
-                {
-                  icon: <Target className = $2;
-                  title: "Micro SAAS",
-                  description: "Innovative business solutions that drive growth and efficiency",
-                  color: "from-indigo-400 to-purple-500",
-                  href: "/micro-saas"
-                },
-                {
-                  icon: <Sparkles className = $2;
-                  title: "Emerging Tech",
-                  description: "Cutting-edge technologies that define the future of innovation",
-                  color: "from-yellow-400 to-orange-500",
-                  href: "/emerging-tech"
+                  icon: <Brain className='w-12 h-12 />
+                  title: AI & Consciousness'
+                  description:
+                    'Revolutionary AI platforms with emotional intelligence and autonomous operations
+                  color: from-cyan-400 to-blue-500'
+                  href: '/ai-services
                 }
-              ].map((service, index) => (
+                {
+                  icon: <Atom className=w-12 h-12' />
+                  title: 'Quantum Technology
+                  description:
+                    Breakthrough quantum computing solutions for next-generation applications'
+                  color: 'from-purple-400 to-pink-500
+                  href: /quantum-services'
+                }
+                {
+                  icon: <Rocket className='w-12 h-12 />
+                  title: Space Technology'
+                  description:
+                    'Advanced space exploration and resource management platforms
+                  color: from-emerald-400 to-teal-500'
+                  href: '/space-technology
+                }
+                {
+                  icon: <Shield className=w-12 h-12' />
+                  title: 'Enterprise Solutions
+                  description:
+                    Advanced infrastructure and security solutions for modern enterprises'
+                  color: 'from-orange-400 to-red-500
+                  href: /enterprise-solutions'
+                }
+                {
+                  icon: <Target className='w-12 h-12 />
+                  title: Micro SAAS'
+                  description:
+                    'Innovative business solutions that drive growth and efficiency
+                  color: from-indigo-400 to-purple-500'
+                  href: '/micro-saas
+                }
+                {
+                  icon: <Sparkles className=w-12 h-12' />
+                  title: 'Emerging Tech
+                  description:
+                    Cutting-edge technologies that define the future of innovation',
+                  color: 'from-yellow-400 to-orange-500,
+                  href: /emerging-tech'}].map((service, index) => (
                 <motion.div
                   key={service.title}
-                  initial={{ opacity: 0, y: 30}}
-                  whileInView={{ opacity: 1, y: 0}}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true}}
-                  className="group"
+                  viewport={{ once: true }}
+className='group
                 >
                   <Link href={service.href}>
-                    <div className="relative p-8 bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25">
-                      <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <div className=relative p-8 bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25'>
+                      <div
+                        className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`}
+                      >
                         {service.icon}
                       </div>
-                      <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                      <p className="text-gray-400 mb-6">{service.description}</p>
-                      <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
-                        <span className="mr-2">Learn More</span>
-                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                      <h3 className='text-2xl font-bold text-white mb-4>
+                        {service.title}
+                      </h3>
+                      <p className=text-gray-400 mb-6'>
+                        {service.description}
+                      </p>
+                      <div className='flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors>
+                        <span className=mr-2'>Learn More</span>
+                        <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform />
                       </div>
                     </div>
                   </Link>
@@ -1502,13 +1552,16 @@ className='group'>'
             </div>
           </div>
         </section>
-
         {/* Latest Innovations Section */}
-        <section id="latest-innovations" className="py-20 relative bg-gray-900/30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section
+          id=latest-innovations'
+          className='py-20 relative bg-gray-900/30
+        >
+          <div className=max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <motion.div
-              initial={{ opacity: 0, y: 30}}
-              whileInView={{ opacity: 1, y: 0}}
+origin/cursor/automate-test-improve-and-merge-code-2533
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true}}
               className="text-center mb-16"
@@ -1533,30 +1586,49 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <h2 className='text-4xl md:text-5xl font-bold mb-6'>
                 <span className='bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>
+                    <div className='relative p-8 bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25>;
+                      <div;
+                        className={`w-16 h-16 bg-gradient-to-r ${service && service.color} rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`}>;
+                        {service && service.icon}
+
+                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />;
+                    </div>;
+                  </Link>;
+                </motion && motion.div>;
+              ))}
+        {/* Latest Innovations Section */}
+
+          <div className=max-w-7xl mx-auto px-4 sm:px-6 lg:px-8>;
+            <motion&& motion.div;
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8 }}
+
+                <span className=bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>
                   Latest Innovations;
                 </span>
               </h2>'
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+              <p className=text-xl text-gray-300 max-w-3xl mx-auto>
                 Explore our newest revolutionary services that are setting new;
                 standards in technology innovation.              </p>
             </motion.div>
             {/* Featured New Services */}            >"
-              className="text-center mb-16"
-            >"
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">"
-                <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+              className="text-center mb-16
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                <span className=bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                   Latest Innovations;
                 </span>
               </h2>"
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className=text-xl text-gray-300 max-w-3xl mx-auto>
                 Explore our newest revolutionary services that are setting new standards in technology innovation.
                 standards in technology innovation.
 origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
             </motion.div>'
-              className='text-center mb-16'>;'
-              <h2 className='text-4xl md:text-5xl font-bold mb-6'>;'
-                <span className='bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>;
+              className='text-center mb-16>;
+              <h2 className='text-4xl md:text-5xl font-bold mb-6'>;
+                <span className=bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>;
                   Latest Innovations;
                 </span>;
               </h2>;'
@@ -1570,6 +1642,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Latest Innovations;
                 </span>;
               </h2>;
+              <p className=text-xl text-gray-300 max-w-3xl mx-auto>;
+                Explore our newest revolutionary services that are setting new;
+                standards in technology innovation.              </p>;
+            </motion && motion.div>;
+
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
                 Explore our newest revolutionary services that are setting new standards in technology innovation.;
               </p>;
@@ -1596,7 +1673,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             </span>;
                           )}
                         </div>;
-                        <h3 className='text-xl font-bold text-white mb-2'>;'
+
                           {service.name}
                         </h3>;
                         <p className='text-gray-400 text-sm mb-4'>;'
@@ -1620,12 +1697,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
 
-            <motion.div,
-initial={{ "opacity": 0, "y": 20 
-}
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0 && 0.6 }}
-              viewport={{ "once": true }}
 
 className='text-center mt-12''
             >
@@ -1738,6 +1809,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105"
                 >
                   Call Now
+            </motion.div>
+          </div>
+        </section>
+        {/* Contact CTA Section */}
+        <section id=contact-cta" className="py-20 relative>
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+
                 </a>
               </div>
             </motion.div>
@@ -1769,7 +1852,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }viewport= {
   {
 
-  }
 
   "once": true 
 
@@ -1967,6 +2049,10 @@ export default Homepage2045
 }> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>)
 };export default Homepage2045;export default Homepage2045;
 };
+export default Homepage2045
+}> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className=flex flex-col sm:flex-row gap-4 justify-center items-center > <Link href="/contact" className=px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105 > Get Started </a> <a href="tel:+1 302 464 0950" className=px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105 > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>)
+}export default Homepage2045;export default Homepage2045;
+}
                   </motion.div>))}            </div>                    </div>;
                   </Link>;
                 </motion.div>))}
@@ -1975,8 +2061,8 @@ export default Homepage2045
               initial={{ opacity: 0, coordinate_y: 20 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.6 }}
-              viewport={{ once: true }}'
-              className='text - center mt - 12';
+              viewport={{ once: true }}
+              className=text - center mt - 12';
             >;
               <Link;'
                 href='/services';'
@@ -2003,19 +2089,19 @@ export default Homepage2045
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >;'
-              <h2 className='text - 4xl md:text - 5xl font - bold mb - 6'>;'
-                <span className='bg - gradient - to - r from - cyan - 400 to - purple - 500 bg - clip - text text - transparent'>;
+            >;
+              <h2 className=text - 4xl md:text - 5xl font - bold mb - 6'>;'
+                <span className=bg - gradient - to - r from - cyan - 400 to - purple - 500 bg - clip - text text - transparent>;
                   Ready to Transform?;
                 </span>;
               </h2>;'
-              <p className='text - xl text - gray - 300 mb - 8'>;'
+              <p className='text - xl text - gray - 300 mb - 8>;
                 Let's discuss how our revolutionary technology solutions can;
                 drive your business into the future.;
               </p>;'
-              <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center'>;
+              <div className=flex flex - col sm:flex - row gap - 4 justify - center items - center>;
                 <Link;'
-                  href='/contact';'
+                  href='/contact;
                   className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white rounded - lg font - semibold text - lg hover:from - cyan - 600 hover:to - purple - 600 transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25 hover:shadow - xl hover:shadow - cyan - 500 / 30 transform hover:scale - 105'                >;
                   Get Started;
                 </Link>;
@@ -2053,7 +2139,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   transition: {
 };
   /* CTA Buttons */ "
-}<motion.div > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <Link href="/services" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Explore Services </a> </motion.div> {}
+}<motion.div > <Link href="/contact className=px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <Link href="/services className=px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Explore Services </a> </motion.div> {}
   /* Stats */'"
 }<motion.div > <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2" >500+</div> <div className="text-gray-400" >Innovative Services</div> </div> <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2" >4.9/5</div> <div className="text-gray-400" >Customer Rating</div> </div> <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2" >1000+</div> <div className="text-gray-400" >Happy Clients</div> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6" > <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent" > Revolutionary Services </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover our cutting-edge solutions that are transforming industries and pushing the boundaries of what's possible with technology. </p> </motion.div> </div> </div> </a> </motion.div>) )"
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6" > <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent" > Latest Innovations </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Explore our newest revolutionary services that are setting new standards in technology innovation. </p> </motion.div> New </span>)"
@@ -2070,9 +2156,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   {}
   duration: 0.8;
 }viewport= {}
-  {'"
-}> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
-};export default Homepage2045;
+  {"
+}> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8 > Lets discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className=flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact className=px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950 className=px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
+}export default Homepage2045;
 
 export default Homepage2045;
 
@@ -2080,15 +2166,11 @@ export default Homepage2045;
 }> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>)
 };export default Homepage2045;export default Homepage2045;
 '"
-}> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
-};export default Homepage2045;
+}> Ready to Transform? </span> </h2> <p className=text-xl text-gray-300 mb-8 > Lets discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href=/contact className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href=tel:+1 302 464 0950 className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
+}export default Homepage2045;
 
 export default Homepage2045;
   once: true;
-'"
-}> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
-};export default Homepage2045;export default Homepage2045
-};export default Homepage2045;
 
   once: true 
 
@@ -2097,14 +2179,14 @@ export default Homepage2045;
 export default Homepage2045;
 origin/cursor/automate-test-improve-and-merge-code-2533
 const LoadingFallback = () => (;
-  <div className='min-h-screen flex items-center justify-center bg-gray-900'>    <motion&& motion.div
+  <div className='min-h-screen flex items-center justify-center bg-gray-900>    <motion&& motion.div
       initial={{ opacity: 0;, scale: 0 && 0.5 ;}}
       animate={{ opacity: 1;, scale: 1 ;}}
       transition={{ duration: 0 && 0.5 ;}}
-      className='text-center'// Loading fallback component
+      className=text-center'// Loading fallback component
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
   Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles;
-} from 'lucide-react';
-import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-futuristic-services';
+} from 'lucide-react;
+import { revolutionary2044FuturisticServices } from ../data/revolutionary-2044-futuristic-services';
 // Loading fallback component
 

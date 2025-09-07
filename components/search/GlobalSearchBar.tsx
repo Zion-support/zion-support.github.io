@@ -20,6 +20,8 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
 }
   componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
   render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+  componentDidCatch(error, errorInfo) {console.error(Error caught by boundary:', error, errorInfo)}
+  render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }
     return this.props.children;
   }
@@ -70,17 +72,21 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+
+
   constructor(props) {
-    }
+
     super(props);
-    this.state = { "hasError": false
-};
+    this.state = { hasError: false }
   }
-  
-  static getDerivedStateFromError(error) {
+
+  static getDerivedStateFromError(error) {}
+    return { hasError: true}
 }
-return { "hasError": true,;
-};
+  }
+
+  componentDidCatch(error, errorInfo) {}
+    console.error(Error caught by boundary:', error, errorInfo);}
   }
   
   componentDidCatch(error, errorInfo) {
@@ -101,38 +107,7 @@ const id = setTimeout(run, 150)return () => clearTimeout(id)}, [query])const j =
     }
 
 const id = setTimeout(run, 150;
-  return () => clearTimeout(id)const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, { "signal": controller.current!.signal,`}),const j = await r.json()setSuggestions(j.suggestions || [])setOpen(true)} catch {}
-   ;
-}
 
-const id = setTimeout(run, 150;
-  return () => clearTimeout(id)}, [query])fetch('/api/telemetry/search', { "method": 'POST', "headers": { 'Content-Type': 'application/json','
-}, "body": JSON.stringify({ "q": query }) }).catch(() => 
-}),router.push(`/search?q=${encodeURIComponent(query)}`)setOpen(false)}`;
-  const startVoice = () => {if (typeof window === 'undefined');'
-  }
-  return;
-
-const "Speech": any = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition,import {;
-  }
-  useEffect, useMemo, useRef, useState   } from 'react';'
-
-export default function GlobalSearchBar() {export default function GlobalSearchBar() {const router = useRouter()const [query, setQuery] =;
-  }
-  useState('');'
-  const [suggestions, setSuggestions] = useState<string[]>([])const [open, setOpen] = useState(false;
-  const controller = useRef<AbortController | null>(null;
-  useEffect(() => {
-}
-if (!query) {setSuggestions([])return;      return;
-}
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}
-  static getDerivedStateFromError(error) {return { "hasError": true 
-}
-  componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}static getDerivedStateFromError(error) {return { "hasError": true ,'
-}componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) ;'
-  }
-  return <div>Something went wrong.</div>;
     }return this.props.children;
   }
 }
@@ -146,13 +121,10 @@ if (!query) {setSuggestions([])return;      return;
 
 const id = setTimeout(run, 150)return () => clearTimeout(id)}, [query])const j = await r && r.json()setSuggestions(j && j.suggestions || [])setOpen(true;
   return () => clearTimeout(id)}, [query])const j = await r && r.json()setSuggestions(j && j.suggestions || [])setOpen(true)} catch {}
-   ;
 }
 
 const id = setTimeout(run, 150)const router = useRouter()const [query, setQuery] =;
-  useState('');'
-  const [suggestions, setSuggestions] = useState<string[]>([])const [open, setOpen] = useState(false;
-  const controller = useRef<AbortController | null>(null)setSuggestions([];
+
   return;      return;
       setSuggestions([])return;
     }
@@ -169,11 +141,10 @@ export default function GlobalSearchBar() {;
 
     controller && controller.current?.abort();
     controller && controller.current = new AbortController();
-    const run = async () => {;
-      try {;
-        const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {;
-          signal: controller && controller.current!.signal,;
-        });
+    const run = async () => {
+      try {
+        const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {
+          signal: controller && controller.current!.signal});
         const j = await r && r.json();
         setSuggestions(j && j.suggestions || []);
 
@@ -291,10 +262,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 export default function GlobalSearchBar() {const router = useRouter()const [query, setQuery] =;
-  }
-  useState('');'
-  const [suggestions, setSuggestions] = useState<string[]>([])const [open, setOpen] = useState(false;
-  const controller = useRef<AbortController | null>(null;
+
   useEffect(() => {
 }
 if (!query) {setSuggestions([])return;      return;
@@ -312,94 +280,11 @@ const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {"signal": 
     const id = setTimeout(run, 150)return () => clearTimeout(id)}, [query])const j = await r.json()setSuggestions(j.suggestions |[])setOpen(true)} catch {}
     }
 
-const id = setTimeout(run, 150;
-  return () => clearTimeout(id)const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, { "signal": controller.current!.signal,`}),const j = await r.json()setSuggestions(j.suggestions || [])setOpen(true)} catch {}
-   ;
-}
-
-const id = setTimeout(run, 150;
-  return () => clearTimeout(id)}, [query])fetch('/api/telemetry/search', { "method": 'POST', "headers": { 'Content-Type': 'application/json','
-}, "body": JSON.stringify({ "q": query }) }).catch(() => 
-}),router.push(`/search?q=${encodeURIComponent(query)}`)setOpen(false)}`;
-  const startVoice = () => {if (typeof window === 'undefined');'
-  }
-  return;
-
-const "Speech": any = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-  return () => clearTimeout(id)}, [query];
-  const onSubmit = (e?: React.FormEvent) => {e?.preventDefault()if (!query.trim());
-  }
-  return;
-    fetch('/api/telemetry/search', {"method": 'POST';'
-      }
-      "headers": { 'Content-Type': 'application/json' }'
-      "body": JSON.stringify({ "q": query })}).catch(() => {})router.push(`/search?q = ${encodeURIComponent(query)}`)setOpen(false,`}
-;
-  const startVoice = () => {if (typeof window === 'undefined');'
-  }
-  return;
-
-const "Speech": any =;
-      (window as any).SpeechRecognition |;
-      (window as any).webkitSpeechRecognition;    if (!Speech) return;    fetch('/api/telemetry/search', { "method": 'POST', "headers": { 'Content-Type': 'application/json','
-}, "body": JSON.stringify({ "q": query }) }).catch(() => {})router.push(`/search?q = ${encodeURIComponent(query)}`)setOpen(false,`}
-;
-  const startVoice = () => {if (typeof window === 'undefined');'
-  }
-  return;
-
-const "Speech": any =;
-      (window as any).SpeechRecognition |;
-      (window as any).webkitSpeechRecognition;
-
-const "Speech": any = (window as any).SpeechRecognition |(window as any).webkitSpeechRecognition;
-fetch('/api/telemetry/search', {"method": 'POST',"headers": { 'Content-Type': 'application/json','
-},"body": JSON.stringify({ "q": query })}).catch(() => {})router.push(`/search?q = ${encodeURIComponent(query)}`)setOpen(false,`}
-;
-  const startVoice = () => {if (typeof window === 'undefined');'
-  }
-  return;
-
-const "Speech": any =;
-      (window as any).SpeechRecognition ||;
-      (window as any).webkitSpeechRecognition;
-    if (!Speech) return;
-
-const rec = new Speech()rec.lang = 'en-US';'
-    rec.onresult = ("e": any) => ;
-  const transcript = e.results?.[0]?.[0]?.transcript || '';'
-if (transcript) setQuery(q => { return (q ? q + ' ' + transcript : transcript))}rec.start()}'
-    >; }
       <input;
         value={query}
         onChange={e => setQuery(e.target.value)}
         onFocus={() => setOpen(suggestions.length > 0)}
-        className='w-full rounded-md border border-gray-300 "dark":border-gray-700 bg-white/80 "dark":bg-gray-900/60 backdrop-blur px-3 py-2 pr-20 text-sm "focus":outline-none "focus":ring-2 "focus":ring-indigo-500';'
-        placeholder='Search talent, jobs, projects...';'
-        aria-label='Search';'
-      />;
-      <div className='absolute inset-y-0 right-2 flex items-center gap-2'>;'
-        <button;
-          type='button';'
-          onClick={startVoice}
-          className='inline-flex "sm":hidden text-gray-500 "hover":text-gray-800 "dark":"hover":text-gray-200';'
-          aria-label='Voice search'>'
 
-          🎤;
-        </button>;
-        <button;
-          type='submit';'
-          className='text-sm font-medium text-indigo-600 "hover":text-indigo-700'>'
-
-          Search;
-        </button>;
-      </div>;
-      {open && suggestions.length > 0 && (<div className='absolute z-50 mt-1 w-full rounded-md border border-gray-200 "dark":border-gray-800 bg-white "dark":bg-gray-900 shadow-lg'>;'
-          <ul className='max-h-64 overflow-auto py-1 text-sm'>;'
-            {suggestions.map((s, i) => (<li key={i}>;
-                <button;
-                  type='button';'
-                  onClick={() => {setQuery(s)setOpen(false)router.push(`/search?q=${encodeURIComponent(s)}`)}}`            {suggestions && suggestions.map((s, i) => (;
               <li key={i}>;
 
     }
@@ -411,11 +296,10 @@ if (transcript) setQuery(q => { return (q ? q + ' ' + transcript : transcript))}
 
       } catch {}
     }
-    const id = setTimeout(run, 150);
 '
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from react;
   const router = useRouter();'
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState(');
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [open, setOpen] = useState(false);
   const controller = useRef<AbortController | null>(null);
@@ -427,42 +311,41 @@ import { useEffect, useMemo, useRef, useState } from 'react';
         setOpen(true);
       } catch {}
     }
-    const id = setTimeout(run, 150);
   }, [query]);
     if (!Speech) return;
-    const rec = new Speech();'
+    const rec = new Speech();
     rec.lang = 'en-US';
     rec.onresult = (e: any) => {}
       <input;
         value={query}
         onChange={e => setQuery(e && e.target.value)}
-        onFocus={() => setOpen(suggestions && suggestions.length > 0)}'
-        className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-gray-900/60 backdrop-blur px-3 py-2 pr-20 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500';'
-        placeholder='Search talent, jobs, projects...';'
-        aria-label='Search';
-      />;'
+        onFocus={() => setOpen(suggestions && suggestions.length > 0)}
+        className=w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-gray-900/60 backdrop-blur px-3 py-2 pr-20 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500';'
+        placeholder=Search talent, jobs, projects...;'
+        aria-label='Search;
+      />;
       <div className='absolute inset-y-0 right-2 flex items-center gap-2'>;
-        <button'
-          type='button'
+        <button
+          type=button'
           onClick={startVoice}'
-          className='inline-flex sm:hidden text-gray-500 hover:text-gray-800 dark:hover:text-gray-200''
-          aria-label='Voice search'>;
+          className=inline-flex sm:hidden text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'
+          aria-label='Voice search>;
           🎤;
         </button>;
-        <button'
-          type='submit''
-          className='text-sm font-medium text-indigo-600 hover:text-indigo-700'>;
+        <button
+          type='submit'
+          className=text-sm font-medium text-indigo-600 hover:text-indigo-700'>;
           Search;
         </button>;
       </div>;
       {open && suggestions && suggestions.length > 0 && (;'
-        <div className='absolute z-50 mt-1 w-full rounded-md border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-lg'>;'
-          <ul className='max-h-64 overflow-auto py-1 text-sm'>;
+        <div className=absolute z-50 mt-1 w-full rounded-md border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-lg>;'
+          <ul className='max-h-64 overflow-auto py-1 text-sm>;
             {suggestions && suggestions.map((s, i) => (;
               <li key={i}>;
-                <button'
+                <button
                   type='button'
-                  onClick={() => {;
+                  onClick={() => {
                     setQuery(s);
                     setOpen(false);`
                     router && router.push(`/search?q=${encodeURIComponent(s)}`);
@@ -470,28 +353,28 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 
 
     rec.start()
-  }'
-                  className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    };
+  }
+                  className=w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    }
     rec && rec.start();
-  };
+  }
 
   return (
-    <form onSubmit={onSubmit} className="relative w-full max-w-lg" role="search">;
+    <form onSubmit={onSubmit} className="relative w-full max-w-lg role=search">;
       <input;
         value={query}
         onChange={(e) => setQuery(e && e.target.value)}
         onFocus={() => setOpen(suggestions && suggestions.length > 0)}"
-        className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-gray-900/60 backdrop-blur px-3 py-2 pr-20 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500";"
-        placeholder="Search talent, jobs, projects...";"
+        className=w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-gray-900/60 backdrop-blur px-3 py-2 pr-20 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500;"
+        placeholder="Search talent, jobs, projects...;
         aria-label="Search";
-      />;"
-      <div className="absolute inset-y-0 right-2 flex items-center gap-2">;"
-        <button type="button" onClick={startVoice} className="inline-flex sm:hidden text-gray-500 hover:text-gray-800 dark:hover:text-gray-200" aria-label="Voice search">🎤</button>;"
-        <button type="submit" className="text-sm font-medium text-indigo-600 hover:text-indigo-700">Search</button>;
+      />;
+      <div className=absolute inset-y-0 right-2 flex items-center gap-2">;"
+        <button type=button onClick={startVoice} className="inline-flex sm:hidden text-gray-500 hover:text-gray-800 dark:hover:text-gray-200" aria-label=Voice search>🎤</button>;"
+        <button type="submit className=text-sm font-medium text-indigo-600 hover:text-indigo-700">Search</button>;
       </div>;
       {open && suggestions && suggestions.length > 0 && (;"
-        <div className="absolute z-50 mt-1 w-full rounded-md border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-lg">;"
-          <ul className="max-h-64 overflow-auto py-1 text-sm">;
+        <div className=absolute z-50 mt-1 w-full rounded-md border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-lg>;"
+          <ul className="max-h-64 overflow-auto py-1 text-sm>;
             {suggestions && suggestions.map((s, i) => (;
               <li key={i}>;
 pr-12243
@@ -500,23 +383,19 @@ pr-12243
     return this.props.children;
   }
 }
-import React from 'react';
-import { useEffect, useMemo, useRef, useState } from 'react';
-import { useRouter } from 'next/router';
+import React from 'react;
+import { useEffect, useMemo, useRef, useState } from react';
+import { useRouter } from 'next/router;
 export default function GlobalSearchBar() {
   const router = useRouter();
-  const [query, setQuery] = useState('');
-  const [suggestions, setSuggestions] = useState<string[]>([]);
-  const [open, setOpen] = useState(false);
-  const controller = useRef<AbortController | null>(null);
   useEffect(() => {
     if (!query) {
       setSuggestions([]);
       return;      return;
       setSuggestions([]);
       return
-import { useEffect, useMemo, useRef, useState  } from 'react';
-import { useRouter } from 'next/router';
+import { useEffect, useMemo, useRef, useState  } from 'react;
+import { useRouter } from next/router';
   const router = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
@@ -524,7 +403,6 @@ pr-12243
     controller.current?.abort();
     controller.current = new AbortController();
 
-const run = async () => {
       }
       try {
         const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {
@@ -643,13 +521,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           type='button'
           onClick={startVoice}'
           className='inline-flex sm:hidden text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'
+    rec.lang = 'en-US';
+
+        <button
+    rec.onresult = (e: any) => {}
+        <button
+          type=button'
+          onClick={startVoice}'
+          className=inline-flex sm:hidden text-gray-500 hover:text-gray-800 dark:hover:text-gray-200
+
           aria-label='Voice search'
         >
           🎤
         </button>
-        <button,
-type='submit''
-          className='text-sm font-medium text-indigo-600 "hover":text-indigo-700''
+        <button
+          type=submit
+          className='text-sm font-medium text-indigo-600 hover:text-indigo-700'
         >
           Search
         </button>
@@ -662,16 +549,18 @@ type='submit''
                 <button
                   type='button'
                   onClick={() => {
-                    }
                     setQuery(s);
                     setOpen(false);
-                    router.push(`/search?q=${encodeURIComponent(s)}`);`                  }}
-                  className = 'w-full text-left px-3 py-2 "hover": bg-gray-50 "dark":"hover":bg-gray-800'                >    }'
-    rec.start(
-}
-  ;
-  return (<form onSubmit={onSubmit} className="relative w-full max-w-lg" role="search">;"
-      <input;
+                    router.push(`/search?q=${encodeURIComponent(s)}`);
+                  }}
+                  className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    }
+    rec.start()
+  }
+  }
+
+  return (
+    <form onSubmit={onSubmit} className=relative w-full max-w-lg" role="search>
+      <input
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         onFocus={() => setOpen(suggestions.length > 0)}
@@ -708,19 +597,21 @@ type='submit''
         placeholder="Search talent, jobs, projects..."
         aria-label="Search"
       />
-      <div className="absolute inset-y-0 right-2 flex items-center gap-2">"
-        <button type="button" onClick={startVoice} className="inline-flex "sm":hidden text-gray-500 "hover":text-gray-800 "dark":"hover":text-gray-200" aria-label="Voice search">🎤</button>"
-        <button type="submit" className="text-sm font-medium text-indigo-600 "hover":text-indigo-700">Search</button>"
+      <div className="absolute inset-y-0 right-2 flex items-center gap-2>
+        <button type=button" onClick={startVoice} className="inline-flex sm:hidden text-gray-500 hover:text-gray-800 dark:hover:text-gray-200 aria-label=Voice search">🎤</button>
+        <button type="submit className=text-sm font-medium text-indigo-600 hover:text-indigo-700">Search</button>
       </div>
       {open && suggestions.length > 0 && (
-        <div className="absolute z-50 mt-1 w-full rounded-md border border-gray-200 "dark":border-gray-800 bg-white "dark":bg-gray-900 shadow-lg">"
-          <ul className="max-h-64 overflow-auto py-1 text-sm">"
+        <div className="absolute z-50 mt-1 w-full rounded-md border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-lg>
+          <ul className=max-h-64 overflow-auto py-1 text-sm">
             {suggestions.map((s, i) => (
               <li key={i}>
-                <button,
-type="button""
-                  onClick={() => {;
-                    }
+pr-12243
+                <button
+
+                <button"
+                  type=button
+                  onClick={() => {
                     setQuery(s);
                     setOpen(false);
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >
@@ -829,17 +720,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {s}
     </form>;
   )})}
-import { use_router  } from 'next / router';'
 
-export default /**;
- * GlobalSearchBar - Function description;
- */;
-function GlobalSearchBar() {const router = use_router ()const [query, set_query] = useState ('')const [suggestions, set_suggestions] = useState < string[]>([])const [open, set_open] =;'
-  }
-  useState (false;
-  const controller = useRef < AbortController | null>(null;
-  useEffect (() => {// Check condition;
-}
 if ( {) {$2;
 }
       set_suggestions ([])return;      return;
@@ -858,7 +739,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                     router.push(`/search?q=${encodeURIComponent(s)}`)
                   }}
-                  className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
+                  className=w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
+                >
+                  {s}
+
+
+                    router.push(`/search?q=${encodeURIComponent(s)}`)
+                  }}
+                  className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800
                 >
                   {s}
 
@@ -872,7 +760,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                     router.push(`/search?q=${encodeURIComponent(s)}`)
                   }}
-                  className="w-full text-left px-3 py-2 hover:bg-gray-50 dark: hover: bg-gray-800"
+                  className=w-full text-left px-3 py-2 hover:bg-gray-50 dark: hover: bg-gray-800"
                 >
                   {s}
 
@@ -894,13 +782,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
-import { use_router } from 'next / router';
+import { use_router } from 'next / router;
 export default /**
  * GlobalSearchBar - Function description
  */
-function GlobalSearchBar() {
-  }
-  const router = use_router ();
 
 const [query, set_query] = useState ('');'
 
@@ -1025,7 +910,6 @@ if (return) {}
     }
     rec.start ();
   }
-;
     >;
       <input;
         value={query}
@@ -1156,6 +1040,36 @@ if (return) {}
                   className="w - full text - left px - 3 py - 2 hover:bg - gray - 50 dark:hover:bg - gray - 800";
                 >;
                   {s}
+
+        on_focus={() => set_open (suggestions.length > 0)}
+        className='w - full rounded - md border border - gray - 300 dark:border - gray - 700 bg - white / 80 dark:bg - gray - 900 / 60 backdrop - blur px - 3 py - 2 pr - 20 text - sm focus:outline - none focus:ring - 2 focus:ring - indigo - 500;
+        placeholder=Search talent, jobs, projects...';
+        aria - label='Search;
+      />;
+      <div className=absolute inset - y-0 right - 2 flex items - center gap - 2'>;
+        <button;
+          type='button;
+          on_click={start_voice}
+          className=inline - flex sm:hidden text - gray - 500 hover:text - gray - 800 dark:hover:text - gray - 200';
+          aria - label='Voice search;
+        >;
+          🎤;
+        </button>;
+        <button;
+          type=submit';
+          className='text - sm font - medium text - indigo - 600 hover:text - indigo - 700;
+        >;
+          Search;
+        </button>;
+      </div>;
+      {open && suggestions.length > 0 && (
+        <div className=absolute z - 50 mt - 1 w - full rounded - md border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - gray - 900 shadow - lg'>;
+          <ul className='max - h-64 overflow - auto py - 1 text - sm>;
+            {suggestions.map ((s, i) => (
+              <li key={i}>;
+                <button;
+                  type=button';
+
                 </button>;
 const Speech: any =
       (window as any).SpeechRecognition ||

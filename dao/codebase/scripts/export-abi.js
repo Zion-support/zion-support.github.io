@@ -82,7 +82,6 @@ function main() {
   const outDir = path.join(__dirname, '../abi');
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir);
   const artifactsDir = path.join(__dirname, '../artifacts/contracts');
-  const abis = [
     ['VoteToken.solVoteToken'],
 const fs = require($2);
 const path = require($2);

@@ -16,13 +16,13 @@ const TechnicalDocumentationChat: NextPage = () => {;
       <Head>;
         <title>TechnicalDocumentationChat - Zion Tech Solutions</title>;
         <meta
-          name="description"
-          content="TechnicalDocumentationChat service"
-        />{" "}
+          name=description"
+          content="TechnicalDocumentationChat service
+        />{ "}
       <main>
         <h1>TechnicalDocumentationChat</h1>
         <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>
+        <a href="/services>Back to Services</a>
       </main>
     </div>
       </Head>;
@@ -30,7 +30,7 @@ const TechnicalDocumentationChat: NextPage = () => {;
       <main>;
         <h1>TechnicalDocumentationChat</h1>;
         <p>Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;
+        <a href=/services">Back to Services</a>;
       </main>;
     </div>;
   );

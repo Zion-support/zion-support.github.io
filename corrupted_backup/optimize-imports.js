@@ -318,7 +318,6 @@ class ImportOptimizer {;
     const lucidePattern = /import\s*{\s*([^}]+)\s*}\s*from\s*[;"
   '']lucide-react[''];?\s*/g    const matches = [...content.matchAll(lucidePattern)];
     if (matches.length > 1) {
-      const allIcons = new Set();
       matches.forEach(match => {
         const icons = match[1].split(',
       ').map(icon => icon.trim());
@@ -338,14 +337,12 @@ class ImportOptimizer {;
     // Group Radix UI imports;
     const radixPattern = /import\s*{\s*([^}]+)\s*}\s*from\s*[']@radix-ui\/([^']+)['"];?\s*/g    const matches = [...content.matchAll(radixPattern)];
     if (matches.length > 1) {;
-      const groupedImports = new Map();
       matches.forEach(match => {;
         const components = match[1].split(', ').map(comp => comp.trim());
         optimizedImports += "import { ${Array.from(components).join(',
       ')} } from '@radix-ui/${packageName}
   ';\n"})"
       return content.replace(radixPattern, '').replace(/^/, optimizedImports)}
-        const packageName = match[2];
         if (!groupedImports.has(packageName)) {;
           groupedImports.set(packageName, new Set())}
         components.forEach(comp => groupedImports.get(packageName).add(comp))});
@@ -358,12 +355,10 @@ class ImportOptimizer {;
     // Simple unused import removal (basic implementation);
     const lines = content.split(',
       '\n');
-    const usedIdentifiers = new Set();
     // Find all used identifiers;
     lines.forEach(line => {
       if (!line.trim().startsWith('
   'import')) {
-        const matches = line.match(/\b[A-Z][a-zA-Z0-9]*\b/g);
         if (matches) {
           matches.forEach(match => usedIdentifiers.add(match));
     // Simple unused import removal (basic implementation);

@@ -1,22 +1,21 @@
 size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4"
+size === "sm ? h-3 w-3" : size === "lg ? h-5 w-5" : "h-4 w-4
 
 
 
-import React from "react",
-import { cn } from "@/lib/utils",
-import React from "react";
-import { cn } from "@/lib/utils";
+import React from react",
+import { cn } from "@/lib/utils,
+import React from react";
+import { cn } from "@/lib/utils;
 origin/cursor/automate-test-improve-and-merge-code-2533
 :src/components/ui/severity-indicator.tsx
-import React from "react";
-import { cn } from "@/lib/utils";
-import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
+import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react
 
 interface SeverityIndicatorProps {
-  severity: "safe" | "suspicious" | "dangerous";
+  severity: safe" | "suspicious | dangerous";
   showIcon?: boolean;
   showText?: boolean;
-  size?: "sm" | "md" | "lg";
+  size?: "sm | md" | "lg;
   className?: string
 }
 
@@ -24,26 +23,26 @@ export function SeverityIndicator({
   severity,
   showIcon = true,
   showText = true,
-  size = 'md',
+  size = md',
   className,
 origin/cursor/automate-test-improve-and-merge-code-2533
 export function SeverityIndicator({ 
   severity;
   showIcon;
-  severity: "safe" | "suspicious" | "dangerous"
+  severity: safe" | "suspicious | dangerous"
   showIcon?: boolean
   showText?: boolean
-  size?: "sm" | "md" | "lg"
+  size?: "sm | md" | "lg
   className?: string
 }
 export function SeverityIndicator({
   severity
   showIcon = true
   showText = true
-  size = "md"
+  size = md"
       default:
         return <CheckCircle className={cn(
-          size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4"
+          size === "sm ? h-3 w-3" : size === "lg ? h-5 w-5" : "h-4 w-4
   className?: string
 }
 
@@ -51,49 +50,48 @@ export function SeverityIndicator({
   severity, 
   showIcon = true, 
   showText = true, 
-  size = "md",
+  size = md",
   className 
 }: SeverityIndicatorProps) {
   const getSeverityIcon = () => {
     switch (severity) {
       case 'dangerous':
           "text-green-500"
+          "text-green-500
         )} />;
-
-;
-size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4";
-import React from "react",import { cn } from "@/lib/utils",import React from 'react';
-import { cn  } from '@/lib/utils';
-import { AlertTriangle, AlertCircle, CheckCircle  } from 'lucide-react';
-interface SeverityIndicatorProps  {severity: "safe" | "suspicious" | "dangerous",showIcon?: boolean,showText?: boolean,size?: "sm" | "md" | "lg",className?: string;
-}export function SeverityIndicator() {const getSeverityIcon = () => {switch (severity) {case 'dangerous':;
-        return <AlertCircle className={cn(size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4","text-destructive";
-        )} />,case 'suspicious':;
-        return <AlertTriangle className={cn(size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4","text-amber-500";
+size === sm" ? "h-3 w-3 : size === lg" ? "h-5 w-5 : h-4 w-4";
+import React from "react,import { cn } from @/lib/utils",import React from react';
+import { cn  } from '@/lib/utils;
+import { AlertTriangle, AlertCircle, CheckCircle  } from lucide-react';
+interface SeverityIndicatorProps  {severity: "safe | suspicious" | "dangerous,showIcon?: boolean,showText?: boolean,size?: sm" | "md | lg",className?: string;
+}export function SeverityIndicator() {const getSeverityIcon = () => {switch (severity) {case 'dangerous:;
+        return <AlertCircle className={cn(size === "sm ? h-3 w-3" : size === "lg ? h-5 w-5" : "h-4 w-4,text-destructive";
+        )} />,case suspicious':;
+        return <AlertTriangle className={cn(size === "sm ? h-3 w-3" : size === "lg ? h-5 w-5" : "h-4 w-4,text-amber-500";
         )} />,default:;
-        return <CheckCircle className={cn(size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4","text-green-500";
+        return <CheckCircle className={cn(size === "sm ? h-3 w-3" : size === "lg ? h-5 w-5" : "h-4 w-4,text-green-500";
         )} />;
-          "text-green-500";
-        )} />;interface SeverityIndicatorProps  {severity: "safe" | "suspicious" | "dangerous",showIcon?: boolean,showText?: boolean,size?: "sm" | "md" | "lg",className?: string;
+          "text-green-500;
+        )} />;interface SeverityIndicatorProps  {severity: safe" | "suspicious | dangerous",showIcon?: boolean,showText?: boolean,size?: "sm | md" | "lg,className?: string;
 }
-export function SeverityIndicator ({severity,show_icon = true,show_text = true,size = "md";
+export function SeverityIndicator ({severity,show_icon = true,show_text = true,size = md";
       default:;
         return <AlertCircle className={cn(
-          size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4",
-          "text-destructive"
+          size === "sm ? h-3 w-3" : size === "lg ? h-5 w-5" : "h-4 w-4,
+          text-destructive"
         )} />,
-      case 'suspicious':
+      case 'suspicious:
         return <AlertTriangle className={cn(
-          size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4",
-          "text-amber-500"
+          size === "sm ? h-3 w-3" : size === "lg ? h-5 w-5" : "h-4 w-4,
+          text-amber-500"
         )} />,
       default:
         return <CheckCircle className={cn(
-          size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4",
-          "text-green-500"
+          size === "sm ? h-3 w-3" : size === "lg ? h-5 w-5" : "h-4 w-4,
+          text-green-500"
         )} />
 interface SeverityIndicatorProps {
-  severity: "safe" | "suspicious" | "dangerous","
+  severity: "safe | suspicious" | "dangerous,
   showIcon?: boolean,
   showText?: boolean,
 
@@ -106,23 +104,22 @@ export function SeverityIndicator({
   showText = true,
 
         )} />;
-;
 interface SeverityIndicatorProps {
-  severity: "safe" | "suspicious" | "dangerous","
+  severity: "safe" | suspicious | "dangerous",
   showIcon?: boolean,
   showText?: boolean,
-  size?: "sm" | "md" | "lg","
+  size?: sm" | "md | lg","
   className?: string
 }
 export function SeverityIndicator ({
   severity,
   show_icon = true,
   show_text = true,
-  size = "md";
+  size = md;
       default:;,
         return <CheckCircle className={cn (
-          size === "sm" ? "h - 3 w - 3" : size === "lg" ? "h - 5 w - 5" : "h - 4 w - 4";
-          "text - green - 500")} />;
+          size === "sm" ? h - 3 w - 3 : size === "lg" ? h - 5 w - 5 : "h - 4 w - 4";
+          text - green - 500)} />;
 
     }
   }
@@ -130,7 +127,7 @@ export function SeverityIndicator ({
         
           />
         );
-      case 'suspicious':
+      case suspicious':
         
           />
         );
@@ -139,16 +136,16 @@ export function SeverityIndicator ({
           />
         );
     }
-  };
+  }
 
   return (
-    <div className={cn('flex items-center gap-1', className)}>
+    <div className={cn('flex items-center gap-1, className)}>
       {showIcon && getSeverityIcon()}
-      {showText && <span className='capitalize text-sm'>{severity}</span>}
+      {showText && <span className=capitalize text-sm'>{severity}</span>}
     </div>
   );
 
-};
+}
 return (</div>) ;
 }'"
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -157,103 +154,96 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
 
   return (
-    <div className={cn("flex items-center gap-1", className)}>
+    <div className={cn("flex items-center gap-1, className)}>
 
       {showIcon && getSeverityIcon()}
-      {showText && <span className="capitalize text-sm">{severity}</span>}
+      {showText && <span className=capitalize text-sm">{severity}</span>}
     </div>
   )
 
       {showIcon && getSeverityIcon()}
-      {showText && <span className="capitalize text-sm">{severity}</span>}
+      {showText && <span className="capitalize text-sm>{severity}</span>}
     </div>
 :src/components/ui/severity-indicator.tsx
   );
-};
+}
   );
 
-import React from "react",;
-import { cn } from "@/lib/utils",;
-import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
-interface SeverityIndicatorProps {;
-  severity: "safe" | "suspicious" | "dangerous",;
-  showIcon?: boolean,;
-  showText?: boolean,;
-  size?: "sm" | "md" | "lg",;
+import { AlertTriangle, AlertCircle, CheckCircle } from lucide-react;
+interface SeverityIndicatorProps {
+  severity: safe" | "suspicious | dangerous",
+  showIcon?: boolean,
+  showText?: boolean,
+  size?: "sm | md" | "lg,
   className?: string;
 }
-;
-export function SeverityIndicator({;
-  severity,;
-  showIcon = true,;
-  showText = true,;
-  size = "md",;
+export function SeverityIndicator({
+  severity,
+  showIcon = true,
+  showText = true,
+  size = md",
   className;
-}: SeverityIndicatorProps) {;
-  const getSeverityIcon = () => {;
-    switch (severity) {;
+}: SeverityIndicatorProps) {
+    switch (severity) {
       case 'dangerous':;
         return <AlertCircle className={cn(;
-          size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4",;
-          "text-destructive";
-        )} />,;
-      case 'suspicious':;
+          size === "sm ? h-3 w-3" : size === "lg ? h-5 w-5" : "h-4 w-4,
+          text-destructive";
+        )} />,
+      case suspicious:;
         return <AlertTriangle className={cn(;
-          size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4",;
-          "text-amber-500";
-        )} />,;
+          size === "sm ? h-3 w-3" : size === "lg ? h-5 w-5" : "h-4 w-4,
+          text-amber-500";
+        )} />,
       default:;
         return <CheckCircle className={cn(;
-          size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4";
-        return <CheckCircle className={cn (size === "sm" ? "h - 3 w - 3" : size === "lg" ? "h - 5 w - 5" : "h - 4 w - 4";
-          "text - green - 500")} />;}
+          size === "sm ? h-3 w-3" : size === "lg ? h-5 w-5" : "h-4 w-4;
+        return <CheckCircle className={cn (size === sm" ? "h - 3 w - 3 : size === lg" ? "h - 5 w - 5 : h - 4 w - 4";
+          "text - green - 500)} />;}
   }/>;
         )case 'suspicious':;
           />;
         )default:;
           />;
         )}
-  }return (<div className={cn('flex items-center gap-1', className)}>;
+  }return (<div className={cn(flex items-center gap-1, className)}>;
       {showIcon && getSeverityIcon()}
       {showText && <span className='capitalize text-sm'>{severity}</span>}
     </div>;
-  )}return (</div>)}'";
+  )}return (</div>)};
   return (<div className={cn("flex items-center gap-1", className)}>;
       {showIcon && getSeverityIcon()}
-      {showText && <span className="capitalize text-sm">{severity}</span>}
+      {showText && <span className=capitalize text-sm>{severity}</span>}
     </div>;
   ){showIcon && getSeverityIcon()}
       {showText && <span className="capitalize text-sm">{severity}</span>}
     </div>;
-  )interface SeverityIndicatorProps  {severity: "safe" | "suspicious" | "dangerous",showIcon?: boolean,showText?: boolean,size?: "sm" | "md" | "lg",className?: string;
-}export function SeverityIndicator() {const getSeverityIcon = () => {switch (severity) {case 'dangerous':;
-        return <AlertCircle className={cn(size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4","text-destructive";
+  )interface SeverityIndicatorProps  {severity: safe | "suspicious" | dangerous,showIcon?: boolean,showText?: boolean,size?: "sm" | md | "lg",className?: string;
+}export function SeverityIndicator() {const getSeverityIcon = () => {switch (severity) {case dangerous':;
+        return <AlertCircle className={cn(size === sm ? "h-3 w-3" : size === lg ? "h-5 w-5" : h-4 w-4,"text-destructive";
         )} />,case 'suspicious':;
-        return <AlertTriangle className={cn(size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4","text-amber-500";
+        return <AlertTriangle className={cn(size === sm ? "h-3 w-3" : size === lg ? "h-5 w-5" : h-4 w-4,"text-amber-500";
         )} />,default:;
-        return <CheckCircle className={cn(size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4";
+        return <CheckCircle className={cn(size === sm ? "h-3 w-3" : size === lg ? "h-5 w-5" : h-4 w-4;
           "text-green-500";
         )} />;
     }
-  }return (<div className={cn("flex items-center gap-1", className)}>;
+  }return (<div className={cn(flex items-center gap-1, className)}>;
       {showIcon && getSeverityIcon()}
       {showText && <span className="capitalize text-sm">{severity}</span>}</div>;
-  )}<div className={cn ("flex items - center gap - 1", class_name)}>;
+  )}<div className={cn (flex items - center gap - 1, class_name)}>;
       {showText && <span className="capitalize text-sm">{severity}</span>}
     </div>;
   );
 }
-;
 
-    <div className={cn ("flex items - center gap - 1", class_name)}>;
+    <div className={cn (flex items - center gap - 1, class_name)}>;
       {show_icon && getSeverityIcon ()}
       {show_text && <span className="capitalize text - sm">{severity}</span>}
     </div>);
 });
 
 }
-
-;
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533

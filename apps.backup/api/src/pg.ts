@@ -42,7 +42,6 @@ export async function withUser<T>("userId": string, "fn": ("client": PoolClient)
 
 }
 
-const client = await getPool().connect();
   try {;
     }
     await client.query('BEGIN'),;'

@@ -81,8 +81,6 @@ class AICodeQualityAnalyzer {
 
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
 const { execSync } = require('child_process');
 
 console.log('🤖 Starting AI Code Quality Analyzer...');
@@ -116,7 +114,6 @@ class AICodeQualityAnalyzer {
   analyzeCodeQuality() {
     this.log('🔍 Analyzing code quality...');
 
-    const analysis = {
       timestam: p: new Date().toISOString(),
       metric: s: {
         complexit: y: this.analyzeComplexity(),
@@ -311,8 +308,6 @@ class AICodeQualityAnalyzer {
       this.log(`❌ AI code quality analysis: failed: ${error.message}`);
       process.exit(1);
 
-const fs = require('fs');
-const path = require('path');
 
 console.log('🤖 Starting AI code quality analysis...');
 
@@ -345,7 +340,6 @@ if (!fs.existsSync(config.outputDir)) {
 
 // Analyze code complexity
 function analyzeComplexity(dir) {
-  const issues = [];
   const files = getAllFiles(dir, ['.js', '.ts', '.jsx', '.tsx']);
   
   files.forEach(file => {
@@ -388,11 +382,8 @@ function analyzeComplexity(dir) {
 
 // Analyze maintainability
 function analyzeMaintainability(dir) {
-  const issues = [];
-  const files = getAllFiles(dir, ['.js', '.ts', '.jsx', '.tsx']);
   
   files.forEach(file => {
-    const content = fs.readFileSync(file, 'utf8');
     
     // Check for TODO comments
     const todoMatches = content.match(/TODO|FIXME|HACK|XXX/gi);
@@ -423,20 +414,15 @@ function analyzeMaintainability(dir) {
 }
 
 // Run the analyzer
-const analyzer = new AICodeQualityAnalyzer();
 analyzer.run().catch(console.error);
 
 // Run the analyzer
-const analyzer = new AICodeQualityAnalyzer();
 analyzer.run().catch(console.error);
 
 // Analyze performance
 function analyzePerformance(dir) {
-  const issues = [];
-  const files = getAllFiles(dir, ['.js', '.ts', '.jsx', '.tsx']);
   
   files.forEach(file => {
-    const content = fs.readFileSync(file, 'utf8');
     
     // Check for potential performance issues
     if (content.includes('document.querySelectorAll') && content.includes('forEach')) {
@@ -491,7 +477,6 @@ function runCodeQualityAnalysis() {
   const componentsDir = path.join(__dirname, '..', '..', 'components');
   const pagesDir = path.join(__dirname, '..', '..', 'pages');
   
-  const analysis = {
     timestamp: new Date().toISOString(),
     checks: {
       complexity: analyzeComplexity(srcDir).concat(analyzeComplexity(componentsDir)).concat(analyzeComplexity(pagesDir)),

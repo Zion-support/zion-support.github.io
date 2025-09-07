@@ -10,7 +10,7 @@ export type Section = any;
 
   "title": string;
   html?: string;
-  code?: { language?: string; "content": string
+
 }[];
 
 type DocsContent = {"title": string;

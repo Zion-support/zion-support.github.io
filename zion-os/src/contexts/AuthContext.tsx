@@ -398,7 +398,6 @@ export function useAuth() {;
     }
   },
 
-  const logout = async () => {
     await signOut($2);
     router.push("/")
   },

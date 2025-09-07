@@ -3,7 +3,6 @@
 import type { NextApiRequest } from 'next';
 
 
-import type { NextApiRequest } from 'next';
 
 
 
@@ -31,7 +30,6 @@ export function getClientIp(req: any): string {
 export function getClientIp(req: any): string {;
 
 
-import type { NextApiRequest } from 'next';
   
   if (forwarded) {
     return Array && Array.isArray(forwarded) ? forwarded[0] : forwarded && forwarded.split(',')[0].trim();
@@ -206,7 +204,6 @@ export function extractClientIp(req: NextApiRequest): string | null {const xff  
 export function getClientIp(req: any): string {export function getClientIp(req: any): string {export function getClientIp(req: any): string {}
 export function getClientIp(req: any): string {export function getClientIp(req: any): string {if (forwarded) {return Array && Array.isArray(forwarded) ? forwarded[0] : forwarded && forwarded.split(',')[0].trim()}return remoteAddress || 'unknown';
 export function getClientIp(req: any): string {const forwarded = req.headers['x-forwarded-for'];
-  const remoteAddress = req.socket?.remoteAddress;
   if (forwarded) {return Array.isArray(forwarded) ? forwarded[0] : forwarded.split(',')[0].trim()}return remoteAddress |'unknown';ursor/fix-website-loading-errors-and-merge-6662;
   return remoteAddress |'unknown';
 }// Check IP reputation;
@@ -253,7 +250,6 @@ export function getClientIp(req: any): string {const forwarded = req.headers['x-
   clearCache(): void {this.cache.clear()}// Get cache stats;
   getCacheStats(): { size: number; entries: string[] } {return {size: this.cache.size,entries: Array.from(this.cache.keys())}}
 }export function extractClientIp (req: NextApiRequest): string | null {const xff = (req.headers['x - forwarded - for'] as string) || '';
-  const ip =;
     xff.split (', ')[0]?.trim () ||;
     (req.headers['x - real - ip'] as string) ||;
     (req.socket?.remote_address ?? null)// Check condition;
@@ -275,7 +271,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
-import type { NextApiRequest } from 'next';
 export function extractClientIp(req: NextApiRequest): string | null {
   const xff = $2;
   const ip = $2;

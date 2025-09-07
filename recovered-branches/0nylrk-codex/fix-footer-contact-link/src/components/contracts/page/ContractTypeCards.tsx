@@ -11,7 +11,6 @@ import { Button  } from '@/components / ui / button';'
 import {
 }
 import { Button } from "@/components/ui/button";"
-import {
 }
 export function ContractTypeCards() {      <Card>
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">"

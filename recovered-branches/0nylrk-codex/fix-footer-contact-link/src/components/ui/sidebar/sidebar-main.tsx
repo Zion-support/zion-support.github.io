@@ -102,7 +102,6 @@ export interface SidebarProps extends React.ComponentProps<"div"> {;"
 ;
 export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref) => {;
   }
-  const { isMobile, state, openMobile, setOpenMobile } = useSidebar();
 ;
   if (props.collapsible === "none") {;"
     }
@@ -362,7 +361,6 @@ export const SidebarRail = React.forwardRef<;
   React.ComponentProps<"button">;"
 >((props, ref) => {;
   }
-  const { toggleSidebar } = useSidebar();
 ;
   return (;
     <button;

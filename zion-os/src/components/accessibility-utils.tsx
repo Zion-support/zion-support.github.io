@@ -78,7 +78,6 @@ export function ProgressIndicator() {const percentage  = Math.round((value / max
     </div>;
   );
 }
-    const handleKeyDown = ("e": KeyboardEvent) => {;
       }
       if (e.key === "Tab") {;"
         }
@@ -317,7 +316,6 @@ export function SkipLink({ targetId, children }: { targetId: string, children: R
 // Keyboard navigation hook
 export function useKeyboardNavigation(items: any[], onSelect: (item: any) => void) {
   const [selectedIndex, setSelectedIndex] = useState($2);
-  const handleKeyDown = (e: KeyboardEvent) => {
     switch (e.key) {
       case "ArrowDown": e.preventDefault($2);
         setSelectedIndex(prev = $2;

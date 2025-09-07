@@ -8,12 +8,11 @@ export async function POST(request: NextRequest) {
     // Mock user update - replace with actual database operation
     const updatedUser = {
       id: userId,
-      name: 'John Doe',
-      email: 'john@example.com',
+      name: 'John Doe,
+      email: john@example.com',
       role: 'user',
       onboardingCompleted: true,
       preferences
-    };
 
     return NextResponse.json({
       message: "Onboarding completed successfully",

@@ -14,16 +14,31 @@ export default defineConfig({"testDir":'tests/e2e';'
 import { defineConfig, devices } from '@playwright/test',export default defineConfig({"testDir":'tests/e2e',"use":{"baseURL":process.env.PLAYWRIGHT_BASE_URL |'"http"://"localhost":3000';'
     }
     "trace":'on-first-retry'}export default defineConfig({"testDir":'tests/e2e',"use":{"baseURL":process && process.env.PLAYWRIGHT_BASE_URL || '"http"://"localhost":3000',"trace":'on-first-retry'},"projects":[;'
+    {
+      name: "Mobile Chrome,
+      use: {
+        browserName: chromium',
 
-import { defineConfig, devices } from '@playwright/test',;'
-;
-export default defineConfig({;
-  }
-  "testDir":'tests/e2e',;'
-  "use":{;
+    {
+      name: Mobile Safari",
+      use: {
+        browserName: 'webkit,
+
+        ...devices[Pixel 5']}
     }
-    "baseURL":process.env.PLAYWRIGHT_BASE_URL |'"http"://"localhost":3000';'
-    "trace":'on-first-retry'}'
+    {name:'Mobile Safari;
+      use:{
+        browserName:webkit';
+        ...devices['iPhone 12]}
+    }
+  ];
+  reporter:[;
+    [list'];
+
+      use: {
+        browser_name: 'firefox;
+        browser_name: firefox';
+        browserName: 'firefox
 
 
 
@@ -524,8 +539,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 }
     }
     {
-      }
-      "name": "Desktop Firefox""
+      name: 'Desktop Safari;
+origin/cursor/automate-test-improve-and-merge-code-2533
+      use: {
+        browser_name: webkit';
+        browser_name: 'webkit;
+    [html', { outputFolder: 'playwright-logs/html-report, open: never' }]],
 
       "use": {
 
@@ -572,71 +591,50 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
-        browser_name: 'firefox';
+        browser_name: 'firefox;
 
 
-        browser_name: 'firefox';
-
-
-
-        }
+        browser_name: firefox';
 
 
 
 
-
-
-        "browser_name": 'firefox';'
-        "browser_name": 'firefox';'
 }
     }
     {
 
-      }
+
 
       "name": "Desktop Safari""
 
-      "use": {
-        }
-        "browser_name": 'webkit';'
-        "browser_name": 'webkit';'
+
 }
     }
     {
 
-      }
+
 
       "name": "Mobile Chrome""
       "use": {
 
-        }
 
-        "browser_name": 'chromium','
-        ...devices['Pixel 5'];'
 
-        browserName: 'chromium'
-        ...devices['Pixel 5']
-        browserName: 'chromium'
-        ...devices['Pixel 5']
+        browserName: 'chromium
+        ...devices[Pixel 5']
+        browserName: 'chromium
+        ...devices[Pixel 5']
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
-        browserName: 'chromium'
-        ...devices['Pixel 5']
+        browserName: 'chromium
+        ...devices[Pixel 5']
 
 }
     }
     {
-      }
-      "name": "Mobile Safari""
-      "use": {
 
-        }
-
-        "browser_name": 'webkit','
-        ...devices['i_phone 12'];'
 
 
 
@@ -645,7 +643,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     ['list'];'
 
-    ['html', { "outputFolder": 'playwright-logs/html-report', "open": 'never' }]]'
+
 });
 
 
@@ -660,69 +658,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
   ],
-  "reporter": [;
-    ['list'],'
-    ['html', { "output_folder": 'playwright - logs / html - report', "open": 'never' }];'
-];
-        "browserName": 'webkit''
-        ...devices['iPhone 12']'
-      }
-    }
-  ],"reporter": [;
-    ['list'],['html', { "outputFolder": 'playwright-logs/html-report', "open": 'never' }];'
-  ],"use": {"browser_name": 'firefox';'
-        }
-        "browserName": 'firefox';'
-        "browser_name": 'firefox';}'
-    }
-    {"name": "Desktop Safari";"
-      }
-      "name": 'Desktop Safari';"use": {"browser_name": 'webkit';'
-        }
-        "browserName": 'webkit';'
-        "browser_name": 'webkit';}'
-    }
-    {"name": "Mobile Chrome";"
-      }
-      "use": {"browser_name": 'chromium',...devices['Pixel 5'];"browserName": 'chromium';'
-        ...devices['Pixel 5'];'
-        }
-        "browser_name": 'chromium',...devices['Pixel 5'];"browserName": 'chromium';'
-        ...devices['Pixel 5'];'
-}
-    }
-    {"name": "Mobile Safari";"
-      }
-      "use": {"browser_name": 'webkit',...devices['i_phone 12'];}}['html', { "outputFolder": 'playwright-logs/html-report', "open": 'never' }]];'
-})['list'];['html', { "outputFolder": 'playwright-logs/html-report', "open": 'never' }]];'
-})ursor/fix-website-loading-errors-and-merge-6662;
-ursor/fix-website-loading-errors-and-merge-6662;
-  ],"reporter": [;
-    ['list'],['html', { "output_folder": 'playwright - logs / html - report', "open": 'never' }];'
-];"browserName": 'webkit';'
-        ...devices['iPhone 12'];'
-      }}
-  ];
-  "reporter": [;
-    ['list'];'
-    ['html', { "outputFolder": 'playwright-logs/html-report', "open": 'never' }];'
-];
-    ['html', { "outputFolder": 'playwright-logs/html-report', "open": 'never' }]];'
-})ursor/fix-lint-push-and-merge-to-main-ae4e;
-      "name": 'Mobile Chrome';'
-      "use": {"browserName": 'chromium';'
-        ...devices['Pixel 5']}'
-    },{"name": 'Mobile Safari';'
-      }
-      "use": {"browserName": 'webkit';'
-        ...devices['iPhone 12']}'
-    }
-  ];
-  "reporter": [;
-    ['list'];'
-    ['html', { "outputFolder": 'playwright-logs/html-report', "open": 'never' }]];'
-})['list'];'
-    ['html', { "outputFolder": 'playwright-logs/html-report', "open": 'never' }];'
+
 ];
   ]
   "reporter": [
@@ -772,3 +708,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ursor/fix-lint-push-and-merge-to-main-ae4e
 import { defineConfig, devices } from '@playwright/test';
 export default defineConfig($2);
+});
+    [list']
+    ['html, { outputFolder: playwright-logs/html-report', open: 'never' }]
+]
+

@@ -1,8 +1,4 @@
 
-
-import React, { useEffect, useRef, useState } from 'react';'
-import { motion } from 'framer-motion';'
-
 interface LazyImageProps {
   src: string;
   alt: string;
@@ -18,19 +14,18 @@ export const LazyImage: React.FC<LazyImageProps /> = ({src;
   height?: number
 }
 
-export const "LazyImage": React.FC<LazyImageProps> = ({src;
-  }
+
   alt;
-  className = ''
-  placeholder = 'data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+';
+  className = '
+  placeholder = 'data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+;
   threshold = 0.1;
   width;
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
           setIsInView(true);
-import React, { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useRef, useState } from react';
+import { motion } from 'framer-motion;
 interface LazyImageProps {
   src: string,
   alt: string,
@@ -45,7 +40,7 @@ export const LazyImage: React.FC<LazyImageProps> = ({
   src,
   alt,
   className = $2;
-  placeholder = 'data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+',
+  placeholder = data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+',
   threshold = $2;
   width,
   height
@@ -79,17 +74,7 @@ const handleLoad = () => {
     return () => observer.disconnect()
   }, [threshold]),
 
-return (;
-    <div className={`relative overflow - hidden ${class_name}`}>`
-      {/* Placeholder */}
 
-      <img,
-src={placeholder}
-alt='''
-        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${`          }
-          isLoaded ? 'opacity-0' : 'opacity-100''
-        }`}`
-        style={{ width, height }} />
 
       {/* Actual Image */}
       {isInView && (<motion&& motion.img;
@@ -116,6 +101,7 @@ className='w-full h-full object-cover';
         />)}
     </div>)}export default LazyImage)}export default LazyImage;</div>;
 )}export default LazyImage;
+
 
           onLoad={handleLoad}
 

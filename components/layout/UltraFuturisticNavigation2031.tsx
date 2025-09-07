@@ -410,50 +410,35 @@ export default function UltraFuturisticNavigation2031() { return null; }
   useEffect(() => {}
     const handleScroll = () => {}
 const mainNavigation = [;'
-  { name: 'Home', href: '/', icon: Home },;'
-  { name: 'Services', href: '/services', icon: Briefcase },;
-  {;'
-    name: '2030 Services',;'
-    href: '/services/2030-futuristic-services',;
-    icon: Rocket,;'
-  },  { name: 'AI Solutions', href: '/ai-services', icon: Brain },  { name: '2030 Services', href: '/services/2030-futuristic-services', icon: Rocket },;'
-  { name: 'AI Solutions', href: '/ai-services', icon: Brain },;'
-  { name: 'IT Solutions', href: '/it-services', icon: Cpu },;'
-  { name: 'Quantum Tech', href: '/quantum-services', icon: Atom },;'
-  { name: 'Space Tech', href: '/space-tech', icon: Rocket },;'
-  { name: 'Pricing', href: '/pricing', icon: DollarSign },;'
-  { name: 'About', href: '/about', icon: Users },;'
-  { name: 'Contact', href: '/contact', icon: MessageCircle },;'
-  { name: 'Resources', href: '/resources', icon: BookOpen },];  { name: 'Resources', href: '/resources', icon: BookOpen }
+  { name: 'Home, href: /', icon: Home },'
+  { name: Services, href: '/services', icon: Briefcase },
+  {
+    name: 2030 Services','
+    href: /services/2030-futuristic-services,
+    icon: Rocket,'
+  },  { name: 'AI Solutions, href: /ai-services', icon: Brain },  { name: '2030 Services, href: /services/2030-futuristic-services', icon: Rocket },'
+  { name: AI Solutions, href: '/ai-services', icon: Brain },
+  { name: IT Solutions', href: '/it-services, icon: Cpu },
+  { name: 'Quantum Tech', href: /quantum-services, icon: Atom },'
+  { name: 'Space Tech, href: /space-tech', icon: Rocket },'
+  { name: Pricing, href: '/pricing', icon: DollarSign },
+  { name: About', href: '/about, icon: Users },
+  { name: 'Contact', href: /contact, icon: MessageCircle },'
+  { name: 'Resources, href: /resources', icon: BookOpen }];  { name: 'Resources, href: /resources', icon: BookOpen }
 ];
 export default function UltraFuturisticNavigation2031() { return null; }
-    };'
-    window && window.addEventListener('scroll', handleScroll);'
-    return () => window && window.removeEventListener('scroll', handleScroll);  }, []);      setScrolled(window && window.scrollY > 50);
-    };'
-    window && window.addEventListener('scroll', handleScroll);'
-    return () => window && window.removeEventListener('scroll', handleScroll);
-      setScrolled(window.scrollY > 50)
-    };'
-    window.addEventListener('scroll', handleScroll);'
-    return () => window.removeEventListener('scroll', handleScroll)
-
-const [activeCategory, setActiveCategory] = useState<string | null>(null);
-
-const [scrolled, setScrolled] = useState(false);
-  useEffect(() => {
-
+    }'
+    window && window.addEventListener(scroll, handleScroll);'
+    return () => window && window.removeEventListener('scroll, handleScroll);  }, []);      setScrolled(window && window.scrollY > 50);
     }
+    window && window.addEventListener('scroll', handleScroll);
+    return () => window && window.removeEventListener(scroll', handleScroll);
+      setScrolled(window.scrollY > 50)
+    }'
+    window.addEventListener(scroll, handleScroll);'
+    return () => window.removeEventListener('scroll, handleScroll)
 
-    const handleScroll = () => {
 
-}
-
-setScrolled(window.scrollY > 50)
-};
-
-    window.addEventListener('scroll', handleScroll);'
-    return () => window.removeEventListener('scroll', handleScroll);'
   }, []);
 
 return (;
@@ -657,7 +642,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
 
-      </div>;
 
       {/* Main Navigation */}
         scrolled '
@@ -721,15 +705,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <h1 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
                   Zion Tech Group;
                 </h1>;'
-                <p className='text-xs text-gray-400'>2031 Future Technology</p>              </div>;
+                <p className=text-xs text-gray-400>2031 Future Technology</p>              </div>;
             </motion && motion.div>;
                 <p className='text-xs text-gray-400'>2031 Future Technology</p>
              />
               <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center' />
                 <Rocket className='w-6 h-6 text-white' />
-              </div>'
-              <div className='hidden sm:block'>'
-                <h1 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+              </div>
+              <div className=hidden sm:block'>'
+                <h1 className=text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent>
 
               className="flex items-center space-x-3"
             >
@@ -851,6 +835,17 @@ className='relative group';
                 </motion.div>;
                   {/* Hover effect */}"
                   <div className=\"absolute -bottom-1 left-0 w-0 h-0 && 0.5 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-300 group-hover:w-full\" /></div>;
+              {mainNavigation.map((item, index) => (<motion.div;
+                  }
+                  key={item.name}
+
+              ))}
+            </div>
+                  <div className=absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-300 group-hover:w-full'></div>                </motion.div>
+
+                </motion.div>
+
+
                 </motion && motion.div>;
 
               ))}
@@ -1153,22 +1148,19 @@ function UltraFuturisticNavigation2031() {const [is_open, setIsOpen] = useState 
                 </motion.div>))}
             </div>;
             {/* CTA Buttons */}
-            <div className='hidden "lg":flex items - center space - x-4'>              <motion.button;'
-                initial={{ "opacity": 0, "scale": 0.8 
-}
-
-                animate={{ "opacity": 1, "scale": 1 
-}
-
-                transition={{ "duration": 0.5, "delay": 0.9 }}
-className='px-6 py-2 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold "hover":bg-cyan-400 "hover":text-black transition-all duration-200 transform "hover":shadow-xl "hover":shadow-cyan-500/30''
+            <div className='hidden lg:flex items - center space - x-4>              <motion.button;
+                initial={{ opacity: 0, scale: 0.8 }}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1}}
+                transition={{ duration: 0.5, delay: 0.9 }}
+                className=px-6 py-2 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30
               >
                 Contact Us
                   {/* Hover effect */}"
                   <div className=\"absolute -bottom - 1 left - 0 w - 0 h - 0.5 bg - gradient - to - r from - cyan - 500 to - purple - 500 transition - all duration - 300 group - hover:w - full\" /></div>;
                 </motion.div>))}
             </div>;
-            {/* CTA Buttons */}'
+            {/* CTA Buttons */}
             <div className='hidden lg:flex items - center space - x-4'>              <motion.button;
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -1186,9 +1178,9 @@ className='px-6 py-2 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semi
                 className='text-gray-300 hover:text-white transition-colors duration-200';
               >;
                 {isOpen ? (;'
-                  <X className='w-6 h-6' />;
-                ) : (;'
-                  <Menu className='w-6 h-6' />;"
+                  <X className='w-6 h-6 />;
+                ) : (;
+                  <Menu className='w-6 h-6' />;
                 )}              </motion && motion.button>                className="text-gray-300 hover:text-white transition-colors duration-200";
               >;"
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -1232,18 +1224,6 @@ className='text-gray-300 "hover":text-white transition-colors duration-200''
           </div>
         </div>
 
-<div className='hidden "lg":block border-t border-gray-800/50 bg-black/40 backdrop-blur-sm'>'
-          <div className='max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8'>'
-            <div className='flex items-center justify-center space-x-8 py-3'>'
-              {serviceCategories.map((category, index) => (
-                <motion.div
-}
-key={category.title}
-                  initial={{ "opacity": 0, "y": 10 
-}
-                  animate={{ "opacity": 1, "y": 0 
-}
-                  transition={{ "duration": 0.5, "delay": index * 0.1 }}
 
 className='relative group''
 
@@ -1425,8 +1405,8 @@ className='absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-xl borde
                           <div className='mb-3'>
                             <h3 className='text-lg font-semibold text-white mb-1'>
                               {category.title}
-                            </h3>;'
-                            <p className='text - sm text - gray - 400'>;
+                            </h3>;
+                            <p className=text - sm text - gray - 400'>;
                               {category.description}
                                 transition={{}
                                   duration: 0.2,
@@ -1444,17 +1424,17 @@ key={category.title}
                   transition={{ duration: 0.5;, delay: index * 0.1 ;}}
 
                   {/* Dropdown Menu */}
-                  className='relative group';
-<div className='hidden lg:block border-t border-gray-800/50 bg-black/40 backdrop-blur-sm'>;
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
-            <div className='flex items-center justify-center space-x-8 py-3'>;
+                  className=relative group';
+<div className='hidden lg:block border-t border-gray-800/50 bg-black/40 backdrop-blur-sm>;
+          <div className=max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
+            <div className='flex items-center justify-center space-x-8 py-3>;
               {serviceCategories.map((category, index) => (<motion.div;
                   key={category.title}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-className='relative group';
-                  className='relative group'
+className=relative group';
+                  className='relative group
                   onMouseEnter={() => setActiveCategory(category.title)}
                   onMouseLeave={() => setActiveCategory(null)}
                 >;
@@ -1519,10 +1499,6 @@ transition={{
                                   "duration": 0.2,
                                   "delay": serviceIndex * 0.05
                                 }}
-                              >
-                                <Link,
-href={service.href}
-                                  className='block p - 3 rounded - xl bg - gray - 900 / 50 "hover":bg - gradient - to - r "hover":from - cyan - 900 / 20 "hover":to - purple - 900 / 20 border border - transparent "hover":border - cyan - 500 / 30 transition - all duration - 200'>'
 
                                   <div className='flex items - start justify - between'>;'
                                     <div className='flex - 1'>;'
@@ -1556,12 +1532,12 @@ href={service.href}
                                         {service.price}
                                       </span>                                    </div>                              >;
                                 <Link;
-                                  href={service.href}"
+                                  href={service.href}
                                   className="block p - 3 rounded - xl bg - gray - 900 / 50 hover:bg - gradient - to - r hover:from - cyan - 900 / 20 hover:to - purple - 900 / 20 border border - transparent hover:border - cyan - 500 / 30 transition - all duration - 200";
-                                >;"
-                                  <div className="flex items - start justify - between">;"
-                                    <div className="flex - 1">;"
-                                      <h4 className="font - medium text - white group - hover:text - cyan - 400 transition - colors duration - 200">;
+                                >;
+                                  <div className=flex items - start justify - between">;"
+                                    <div className=flex - 1>;"
+                                      <h4 className="font - medium text - white group - hover:text - cyan - 400 transition - colors duration - 200>;
                                         {service.name}
             </div>;
           </div>;
@@ -1578,11 +1554,11 @@ href={service.href}
                                         {service.price}</span>                                    </div>                              >;
                                 <Link;
                                   href={service.href}
-                                  className="block p - 3 rounded - xl bg - gray - 900 / 50 hover:bg - gradient - to - r hover:from - cyan - 900 / 20 hover:to - purple - 900 / 20 border border - transparent hover:border - cyan - 500 / 30 transition - all duration - 200";
+                                  className=block p - 3 rounded - xl bg - gray - 900 / 50 hover:bg - gradient - to - r hover:from - cyan - 900 / 20 hover:to - purple - 900 / 20 border border - transparent hover:border - cyan - 500 / 30 transition - all duration - 200";
                                 >;
-                                  <div className="flex items - start justify - between">;
-                                    <div className="flex - 1">;
-                                      <h4 className="font - medium text - white group - hover:text - cyan - 400 transition - colors duration - 200">;
+                                  <div className="flex items - start justify - between>;
+                                    <div className=flex - 1">;
+                                      <h4 className="font - medium text - white group - hover:text - cyan - 400 transition - colors duration - 200>;
                                         {service.name}
             </div>;
           </div>;
@@ -1738,16 +1714,57 @@ className='flex items-center space-x-3 text-gray-300 hover:text-white transition
                   >
                     <item.icon className='w-5 h-5' />'
                     <span className='text-lg'>{item.name}</span>'
+                >
+                  <X className=w-6 h-6" />
+                </button>
+              </div>
+
+                    key={item && item.name}
+                    href={item && item.href}
+
+                    className=flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 hover:text-cyan-400';
+                  >;'
+                    <item && item.icon className=w-5 h-5 />;'
+                    <span className='text-lg>{item && item.name}</span>;
+                  </Link>;
+                ))}"
+                    <item.icon className=w-5 h-5 />"
+                    <span className="text-lg>{item.name}</span>
                   </Link>
                 ))}
-                <div className='pt-6 border-t border-gray-800'>'
-                  <div className='space-y-4'>'
-                    <button className='w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold "hover":from-cyan-600 "hover":to-blue-600 transition-all duration-200'>'
+                <div className="pt-6 border-t border-gray-800">
+                  <div className=space-y-4">"
+                    <button className=w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200>
+                      Get Started;
+                    </button>"
+                    <button className="w-full px-6 py-3 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-200>
+
+className=flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 hover:text-cyan-400'
+                  >
+                    <item.icon className=w-5 h-5" />
+                    <span className="text-lg>{item.name}</span>
+                  </Link>
+                ))}
+                    className='flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 hover:text-cyan-400;
+                  >;
+                    <item && item.icon className=w-5 h-5' />;
+                    <span className='text-lg>{item && item.name}</span>;
+                  </Link>;
+                ))}
+                    <item.icon className=w-5 h-5" />
+                    <span className="text-lg>{item.name}</span>
+                  </Link>
+                ))}
+
+                <div className=pt-6 border-t border-gray-800">
+                  <div className="space-y-4>
+                    <button className=w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200">
                       Get Started
                     </button>
                     <button className="w-full px-6 py-3 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-200">
                       Contact Us
                     <button className='w-full px-6 py-3 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-200' />
+                    <button className=w-full px-6 py-3 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-200' />
                       Contact Us;
                     </button>
                   </div>
@@ -2089,4 +2106,92 @@ className='flex items-center space-x-3 text-gray-300 hover:text-white transition
     </>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
+      {/* Spacer for fixed navigation */}
+      <div className='h-32 lg:h-40'></div>
+    </>"
+);      <div className="h-32 lg: h-40></div>
+    </>
+  )}
+
+}
+      {/* Mobile Navigation Menu */}
+      <AnimatePresence>;
+        {is_open && (
+
+            className=fixed top - 0 right - 0 h - full w - 80 bg - black / 95 backdrop - blur - xl border - l border - cyan - 500 / 20 z - 50 lg:hidden;
+          >;'
+            <div className='p - 6>;
+              <div className='flex justify - between items - center mb - 8'>;
+                <h2 className=text - xl font - bold text - white'>Menu</h2>;
+                <button;
+                  on_click={() => setIsOpen (false)}'
+                  className=text - gray - 400 hover:text - white transition - colors duration - 200;
+                >;'
+                  <X className='w - 6 h - 6 />;
+                </button>;
+              </div>;
+              <div className='space - y-6'>;
+                {main_navigation.map (item => (                  <Link;
+                    key={item.name}
+                    href={item.href}
+                    on_click={() => setIsOpen (false)}
+                    className=flex items - center space - x-3 text - gray - 300 hover:text - white transition - colors duration - 200 hover:text - cyan - 400'          >;
+            <div className="p - 6">;
+              <div className=flex justify - between items - center mb - 8">;"
+                <h2 className=text - xl font - bold text - white>Menu</h2>;
+                <button;
+                  on_click={() => setIsOpen (false)}"
+                  className="text - gray - 400 hover:text - white transition - colors duration - 200;
+                >;
+                  <X className="w - 6 h - 6" />;
+                </button>;
+              </div>;
+              <div className=space - y-6">;
+                {main_navigation.map ((item) => (
+                  <Link;
+                    key={item.name}
+                    href={item.href}
+                    on_click={() => setIsOpen (false)}'
+                    className=flex items - center space - x-3 text - gray - 300 hover:text - white transition - colors duration - 200 hover:text - cyan - 400;
+                  >;'
+                    <item.icon className='w - 5 h - 5 />;
+                    <span className='text - lg'>{item.name}</span>;
+                  </Link>))}
+                <div className=pt - 6 border - t border - gray - 800'>;'
+                  <div className=space - y-4>;'
+                    <button className='w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - xl font - semibold hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200>;
+                      Get Started;
+                    </button>;
+                    <button className='w - full px - 6 py - 3 border - 2 border - cyan - 400 text - cyan - 400 rounded - xl font - semibold hover:bg - cyan - 400 hover:text - black transition - all duration - 200'>                      Contact Us                  >;"
+                    <item.icon className=w - 5 h - 5 />;"
+                    <span className="text - lg>{item.name}</span>;
+                  </Link>))}
+                <div className="pt - 6 border - t border - gray - 800">;
+                  <div className=space - y-4">;"
+                    <button className=w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - xl font - semibold hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200>;
+                      Get Started;
+                    </button>;"
+                    <button className="w - full px - 6 py - 3 border - 2 border - cyan - 400 text - cyan - 400 rounded - xl font - semibold hover:bg - cyan - 400 hover:text - black transition - all duration - 200>;
+                      Contact Us;
+                    </button>;
+                  </div>;
+                </div>;
+              </div>;
+            </div>;
+          </motion.div>)}
+      </AnimatePresence>;
+      {/* Spacer for fixed navigation */}
+      <div className=h - 32 lg:h - 40'></div>;
+    </>);      <div className="h - 32 lg: h - 40"></div>;
+    </>),
+    </>
+  )
+
+}
+
+<div className='h-32 lg:h-40'></div>
+    </>
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+
 "

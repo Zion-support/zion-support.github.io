@@ -29,8 +29,7 @@ type Outdated = { name: string, current: string, latest: string, type: 'dependen
 type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'dev_dependency' },export async /**;
  * getServerSideProps - Function description;
  */;
-function getServerSideProps() {const file = path.join (process.cwd (), 'datadep - radar.json')let "outdated": Outdated[] = [];  let generated_at = '';'
-  }
+function getServerSideProps() {const file = path.join (process.cwd (), 'datadep - radar.json)let outdated: Outdated[] = [];  let generated_at = ';
   try {} catch {}
   return { props: { outdated, generated_at } }
 }
@@ -51,36 +50,36 @@ function DepRadarPage() {
       <h1 className="text-2xl font-semibold">AI Automation: Dependency Radar</h1>;
       <div className="text - xs text-gray-500">Last updated: {generated_at ? new Date (generated_at).toLocaleString () : '—'}</div>;
       {outdated.length === 0 ? (
-        <div className="text-sm text-gray-600">All dependencies up to date.</div>
+        <div className="text-sm text-gray-600>All dependencies up to date.</div>
       ) : (
-        <div className="overflow-auto border rounded">
-          <table className="min-w-full text-sm">
-            <thead className="bg-gray-50">
+        <div className=overflow-auto border rounded">
+          <table className="min-w-full text-sm>
+            <thead className=bg-gray-50">
               <tr>
-                <th className="text-left p-2">Package</th>
-                <th className="text-left p-2">Current</th>
-                <th className="text-left p-2">Latest</th>
-                <th className="text-left p-2">Type</th>
+                <th className="text-left p-2>Package</th>
+                <th className=text-left p-2">Current</th>
+                <th className="text-left p-2>Latest</th>
+                <th className=text-left p-2">Type</th>
 "
-        <div className=\"text-sm text-gray-600\" />All dependencies up to date.</div>
+        <div className=\text-sm text-gray-600\ />All dependencies up to date.</div>
       ) : ("
-        <div className=\"overflow-auto border rounded\" />"
-          <table className=\"min-w-full text-sm\" />"
-            <thead className=\"bg-gray-50\" />
+        <div className=\"overflow-auto border rounded\ />
+          <table className=\"min-w-full text-sm\" />
+            <thead className=\bg-gray-50\" />
               <tr />"
-                <th className=\"text-left p-2\" />Package</th>"
-                <th className=\"text-left p-2\" />Current</th>"
-                <th className=\"text-left p-2\" />Latest</th>"
-                <th className=\"text-left p-2\" />Type</th>
+                <th className=\text-left p-2\ />Package</th>"
+                <th className=\"text-left p-2\ />Current</th>
+                <th className=\"text-left p-2\" />Latest</th>
+                <th className=\text-left p-2\" />Type</th>
               </tr>
             </thead>
             <tbody />}
               {outdated.map(o => (}"
-                <tr key={o.name} className=\"border-t\" />"
-                  <td className=\"p-2\" />{o.name}</td>"
-                  <td className=\"p-2\" />{o.current}</td>"
-                  <td className=\"p-2\" />{o.latest}</td>"
-                  <td className=\"p-2\" />{o.type}</td>
+                <tr key={o.name} className=\border-t\ />"
+                  <td className=\"p-2\ />{o.name}</td>
+                  <td className=\"p-2\" />{o.current}</td>
+                  <td className=\p-2\" />{o.latest}</td>"
+                  <td className=\p-2\ />{o.type}</td>
                 </tr>
 
 import fs from 'fs';
@@ -120,28 +119,24 @@ export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outd
             </thead>
             <tbody>
               {outdated.map(o => (
-                <tr key={o.name} className="border-t">"
-                  <td className="p-2">{o.name}</td>"
-                  <td className="p-2">{o.current}</td>"
-                  <td className="p-2">{o.latest}</td>"
-                  <td className="p-2">{o.type}</td>"
+
                 </tr>
       {outdated.length === 0 ? (<div className="text-sm text-gray-600">All dependencies up to date.</div>;
-      ) : (<div className="overflow-auto border rounded">;
+      ) : (<div className=overflow-auto border rounded>;
           <table className="min-w-full text-sm">;
-            <thead className="bg-gray-50">;
+            <thead className=bg-gray-50>;
               <tr>;
                 <th className="text-left p-2">Package</th>;
-                <th className="text-left p-2">Current</th>;
+                <th className=text-left p-2>Current</th>;
                 <th className="text-left p-2">Latest</th>;
-                <th className="text-left p-2">Type</th>;
+                <th className=text-left p-2>Type</th>;
               </tr>;
             </thead>;
             <tbody>;
               {outdated.map(o => (<tr key={o.name} className="border-t">;
-                  <td className="p-2">{o.name}</td>;
+                  <td className=p-2>{o.name}</td>;
                   <td className="p-2">{o.current}</td>;
-                  <td className="p-2">{o.latest}</td>;
+                  <td className=p-2>{o.latest}</td>;
                   <td className="p-2">{o.type}</td>;
                 </tr>;
               ))}
@@ -160,10 +155,10 @@ export default /**;
  * DepRadarPage - Function description;
  */
 function DepRadarPage() {}
-  return ("
-    <div className="space - y-6">;"
-      <h1 className="text - 2xl font - semibold">AI Automation: Dependency Radar</h1>;'"
-      <div className="text - xs text - gray - 500">Last updated: {generated_at ? new Date (generated_at).toLocaleString () : '—'}</div>;
+  return (
+    <div className=space - y-6">;"
+      <h1 className=text - 2xl font - semibold>AI Automation: Dependency Radar</h1>;"
+      <div className="text - xs text - gray - 500>Last updated: {generated_at ? new Date (generated_at).toLocaleString () : '—'}</div>;
       {outdated.length === 0 ? (
 '"
 

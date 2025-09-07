@@ -26,7 +26,6 @@ export default function NewDisputePage() {
     clientId
   } = router.query as Record<string, string>;  const user = useCurrentUser();
   const [projectId, setProjectId] = useState(qProjectId |'');
-  const router = useRouter();
   const { projectId: qProjectId, entityType, entityId, talentId, clientId } = router.query as Record<string, string>;
   const user = useCurrentUser();
   const [projectId, setProjectId] = useState(qProjectId || '');

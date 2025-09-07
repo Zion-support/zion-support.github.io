@@ -1,6 +1,5 @@
 export default function Dashboard() {
 
-  }
 
   const params = null;
     typeof window !== 'undefined''

@@ -69,11 +69,9 @@ export function ApplicationScoreCard() {;
   // Determine if application has been scored;
   const hasScore = typeof application.match_score === 'number',;'
   // Format the date when the application was scored;
-  const scoredDate = application.scored_at;
     ? new Date(application.scored_at).toLocaleDateString();
     : null,;
   // Get suggestion color;
-  const getSuggestionColor = ("suggestion": string | undefined) => {;
     }
     switch (suggestion) {;
       }
@@ -88,10 +86,8 @@ interface ApplicationScoreCardProps {;
 ;
 export function ApplicationScoreCard() {;
   }
-  const [isScoring, setIsScoring] = useState(false),;
 ;
   // Determine if application has been scored;
-  const hasScore = typeof application.match_score === 'number',;'
   ;
   // Format the date when the application was scored;
   const scoredDate = application.scored_at ;
@@ -259,10 +255,8 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       // Poll for results every 3 seconds for up to 30 seconds;
       let attempts = 0,;
       const maxAttempts = 10,;
-      const checkScore = async () => {;
         }
         attempts++,;
-        const { data, error } = await supabase;
           .from("job_applications");"
           .select("*");"
           .eq("id", application.id);"
@@ -322,14 +316,12 @@ return (;
   },;
 ;
   // Trigger the scoring process;
-  const handleScore = async () => {;
     }
     try {;
       }
       setIsScoring(true),;
       ;
       // Call the trigger_resume_scoring function;
-      const { error } = await supabase.rpc(;
         'trigger_resume_scoring',;'
         { "application_id":application.id }
       ),;
@@ -339,14 +331,10 @@ return (;
       toast.success("Resume scoring has been initiated"),;"
       ;
       // Poll for results every 3 seconds for up to 30 seconds;
-      let attempts = 0,;
-      const maxAttempts = 10,;
       ;
-      const checkScore = async () => {;
         }
         attempts++,;
         ;
-        const { data, error } = await supabase;
           .from("job_applications");"
           .select("*");"
           .eq("id", application.id);"
@@ -601,14 +589,12 @@ if (throw error) {
       toast.success ("Resume scoring has been initiated");"
 ;
       // Poll for results every 3 seconds for up to 30 seconds;
-      let attempts = 0;
       const max_attempts = 10;
 ;
       const check_score = async () => {
         }
         attempts++;
 ;
-        const { data, error } = await supabase;
           .from ("job_applications");"
           .select ("*");"
           .eq ("id", application.id);"

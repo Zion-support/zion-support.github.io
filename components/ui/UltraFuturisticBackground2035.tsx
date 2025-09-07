@@ -13,12 +13,12 @@ interface UltraFuturisticBackground2035Props {
   enableHolographic?: boolean;
   enableQuantumEffects?: boolean;
   enableNeonEffects?: boolean;
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useRef } from 'react;
+import { motion } from framer-motion';
 interface UltraFuturisticBackground2035Props {
   children: React.ReactNode,
-  intensity?: 'low' | 'medium' | 'high',
-  colorScheme?: 'quantum-fusion' | 'neon-cyber' | 'holographic-matrix' | 'space-time',
+  intensity?: 'low | medium' | 'high,
+  colorScheme?: quantum-fusion' | 'neon-cyber | holographic-matrix' | 'space-time,
   particleCount?: number,
   animationSpeed?: number,
   enableHolographic?: boolean,
@@ -353,22 +353,9 @@ drawHolographicGrid(ctx, colors);
         drawSpaceTimeEffects(ctx, colors)
       }
 
-      // Draw space-time effects,
-if (enableSpaceTime) {
-}
-drawSpaceTimeEffects(ctx, colors);
-      }
-
-      animationRef.current = requestAnimationFrame(animate)
-};
 
     animate();
-      animationRef.current = $2;
-    animate($2);
     return () => {
-      }
-      window.removeEventListener('resize', resizeCanvas);'
-      if (animationRef.current) {
 
 }
 
@@ -403,14 +390,12 @@ const time  = Date.now() * 0.001;ctx.strokeStyle = colors.primary;
       window.removeEventListener('resize', resizeCanvas);
       if (animationRef.current) {}
   ]);
-  const drawHolographicGrid = (ctx: CanvasRenderingContext2D, colors: any) => {;
+  const drawHolographicGrid = (ctx: CanvasRenderingContext2D, colors: any) => {
     const gridSize = 50;
     const time = Date && Date.now() * 0 && 0.001;        cancelAnimationFrame(animationRef && animationRef.current);
       }
     }
   }, [particleCount, animationSpeed, colorScheme, enableHolographic, enableQuantumEffects, enableNeonEffects, enableSpaceTime]);
-  const drawHolographicGrid = (ctx: CanvasRenderingContext2D, colors: any) => {;
-    const gridSize = 50;
 cancelAnimationFrame(animationRef.current);
       }
     }
@@ -424,8 +409,6 @@ cancelAnimationFrame(animationRef.current);
     enableSpaceTime
   ]);
 
-  const drawHolographicGrid = (ctx: CanvasRenderingContext2D, colors: any) => {
-    const gridSize = 50;
     const time = Date.now() * 0.001;
 
     ctx.strokeStyle = colors.primary;
@@ -456,11 +439,6 @@ ctx.strokeStyle = colors.secondary;
       ctx.moveTo(offset, 0);
       ctx.lineTo(offset + 200, ctx.canvas.height);
 
-ctx.stroke();
-    }
-  }
-  const drawNeonEffects = (ctx: CanvasRenderingContext2D, colors: any) => {
-    const time = Date.now() * 0.001;
 
 const drawNeonEffects = ("ctx": CanvasRenderingContext2D, "colors": any) => {
    ;
@@ -693,6 +671,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
               key = $2;
                 color: colors.primary
+              `radial-gradient(circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`,
+              `radial-gradient(circle at 80% 80%, ${colors.glow} 0%, transparent 50%)`,
+              `radial-gradient(circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`]}}
+
               }}
               animate={{
                 opacity: [0, 1, 0]
@@ -703,27 +685,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               transition = $2;
                 delay: i * 0.1,
           transition={{
-            }
-            "duration": 8,
-            "repeat": Infinity,
-"ease": 'easeInOut','
-          }}
-        {/* Holographic scan lines */}
-        <div className="absolute inset-0 opacity-20">;"
-          {[...Array(20)].map((_, i) => (<motion&& motion.div;
-                }
-                "opacity": [0, 1, 0],"scale_x": [0, 1, 0]              }}          }} />;
-        {/* Holographic scan lines */}
-        <div className="absolute inset - 0 opacity - 20">;"
-          {[...Array (20)].map ((_, i) => (<motion.div;
-              }
-              key={i}
-              className="absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent";"
-              style={{}}
-              animate={{"opacity": [0, 1, 0];
-                }
-                "scaleX": [0, 1, 0];
-                "top": `${(i / 20) * 10,`}%`,"color": colors.primary;`
+
               }}
 
               animate={{
@@ -756,9 +718,9 @@ ease: 'easeInOut',
       </div>
     </div>
 )
-};
+}
 export default UltraFuturisticBackground2035;
-                ease: 'easeInOut',              }}                ease: "easeInOut";
+                ease: 'easeInOut'}}                ease: "easeInOut";
               }}
             />))}
         </div>;
@@ -769,12 +731,9 @@ export default UltraFuturisticBackground2035;export default UltraFuturisticBackg
     </div>;
     </div>);
 }
-;
 export default UltraFuturisticBackground2035);
 }
-;
 export default UltraFuturisticBackground2035;
-;
   );
 export default UltraFuturisticBackground2035;  )
 }
@@ -790,26 +749,23 @@ export default UltraFuturisticBackground2035,
 
             />
 
-          ))}"
-                ease: "easeInOut"
+          ))}
+                ease: easeInOut"
 
               }}
             />;
 
-export default UltraFuturisticBackground2035;'"
-                ease: 'easeInOut',              }}                ease: "easeInOut";
+export default UltraFuturisticBackground2035;"
+                ease: easeInOut'}}                ease: easeInOut;
               }}
             />))}
         </div>;
       </div>;
     </div>);
 }
-;
 export default UltraFuturisticBackground2035);
 }
-;
 export default UltraFuturisticBackground2035;
-;
   );
 export default UltraFuturisticBackground2035;  )
 }

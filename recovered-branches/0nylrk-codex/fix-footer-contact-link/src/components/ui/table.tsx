@@ -13,7 +13,6 @@ const Table = $2;
 />
   </div>
 ))
-import { cn } from "@/lib/utils"
 
 const Table = React.forwardRef<
   HTMLTableElement

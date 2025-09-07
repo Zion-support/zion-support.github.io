@@ -24,6 +24,19 @@ import Image from 'next / image';
 import React from \"react\";"
 import Image from \"next/image\";
 
+export default OptimizedImage;
+      quality={quality}
+      style={style}
+
+  );
+}
+
+export default OptimizedImage;
+
+import Image from next / image';
+
+
+
 interface OptimizedImageProps {
   src: string,
   alt: string,
@@ -47,6 +60,9 @@ import React from "react";
 import Image from "next/image";
 import Image from 'next / image';
 ;
+import React from "react;
+import Image from next/image";
+
 
 
 import React from "react";
@@ -55,6 +71,8 @@ import React from "react";
 import Image from "next/image";
 
 import React from \"react\";"
+
+import React from \"react\;
 import Image from \"next/image\";
 
 interface OptimizedImageProps {
@@ -84,6 +102,7 @@ const "OptimizedImage": React.FC<OptimizedImageProps> = ({ src,;
 }) => {
 
 }
+  height}
     return (
       <Image;
         src={src}
@@ -111,7 +130,14 @@ const "OptimizedImage": React.FC<OptimizedImageProps> = ({ src,;
  ;
   return (}
     <Image;}
+}) => {
+  return (
+    <Image
+      src={src}
+  return (}
+    <Image;}
 src={src}
+
       alt={alt}
       width={width}
       height={height}
@@ -147,8 +173,19 @@ export default OptimizedImage;
 "
 export default OptimizedImage;
 '
+export default OptimizedImage;
+      sizes={sizes}
+      quality={quality}
+    />
+  );
+}
+
+
+
+export default OptimizedImage;
+
   )
-};
+}
 export default OptimizedImage;
 "
 export default OptimizedImage;

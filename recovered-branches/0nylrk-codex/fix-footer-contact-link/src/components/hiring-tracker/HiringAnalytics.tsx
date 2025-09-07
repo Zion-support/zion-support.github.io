@@ -84,7 +84,6 @@ export function HiringAnalytics() {;
         : 0;
 
       // Funnel data;
-      const funnelData = [;
         { "name": 'Applied', "value": applications.length },;'
         { "name": 'Shortlisted', "value": applications && applications.filter(app => { return app && app.status === 'shortlisted').length },; }'
         { "name": 'Interview', "value": applications && applications.filter(app => { return app && app.status === 'interview').length },; }'
@@ -111,7 +110,6 @@ return (;
   const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'];'
 const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'],;'
   return (  const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'];'
-const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'],;'
 return (;
     ),;
   }

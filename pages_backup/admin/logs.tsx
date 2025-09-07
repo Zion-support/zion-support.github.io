@@ -2,7 +2,6 @@ import path from 'path';
 
 :pages/admin/logs.tsx
 import fs from 'fs';
-import path from 'path';
 import { useState, useEffect } from 'react';
 import { GetServerSideProps } from 'next';
 
@@ -63,35 +62,25 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / ca
 import { Badge } from '@/components / ui / badge';'
 import { Button } from '@/components / ui / button';'
 import { Input } from '@/components / ui / input';
-import {}
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,';
 } from '@/components / ui / select';
-import {}
   AlertTriangle,
   Info,
   AlertCircle,
   XCircle,
   Search,
 
-import path from 'path';
 
 '
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';'
 import { Badge } from '@/components/ui/badge';'
 import { Button } from '@/components/ui/button';'
-import { Input } from '@/components/ui/input';
 
-import fs from 'fs';
-import path from 'path';
 
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 
   id: string;
   timestamp: string;
@@ -102,7 +91,6 @@ import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';'
 import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw } from 'lucide-react';
 '
-import { logErrorToProduction } from '@/utils/productionLogger';
 
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
 import { Badge  } from '@/components/ui/badge';
@@ -111,7 +99,6 @@ import { Input  } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
 import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw  } from 'lucide-react';
 origin/cursor/automate-test-improve-and-merge-code-2533
-import { logErrorToProduction } from '@/utils/productionLogger';
 
 interface LogEntry {
 interface LogEntry {;
@@ -140,8 +127,6 @@ interface LogEntry {;
 
 interface LogsPageProps {
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw } from 'lucide-react';
-import { logErrorToProduction } from '@/utils/productionLogger';
 interface LogEntry {
   id: string;
   timestamp: string;
@@ -222,7 +207,6 @@ const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
 
 const LogLevelIcon = null;
   lastUpdated: string;
-const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
   switch (level) {
     case 'debug':
 return <Info className='h-4 w-4 text-blue-500' />;
@@ -296,7 +280,6 @@ interface LogsPageProps {
   lastUpdated: string;
 }
 
-const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
   switch (level) {
     case 'debug':
       return <Info className="h-4 w-4 text-blue-500" />;
@@ -349,7 +332,6 @@ export default function LogsPage({
   lastUpdated,
 }: LogsPageProps) {
 origin/cursor/automate-test-improve-and-merge-code-2533
-  const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
 
   const [filteredLogs, setFilteredLogs] = useState<LogEntry[]>(initialLogs);
   const [searchTerm, setSearchTerm] = useState('');
@@ -363,7 +345,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
     Boolean
 
-const categories = Array.from(new Set(logs.map(log => log.category))).filter(
 origin/cursor/automate-test-improve-and-merge-code-2533
     Boolean
 
@@ -420,7 +401,6 @@ const dataUri =
       'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`;
 :pages/admin/logs.tsx
-    const dataStr = JSON.stringify(filteredLogs, null, 2);
     const dataUri = 'data: application/json,charset=utf-8,'+ encodeURIComponent(dataStr);
 
   };
@@ -431,7 +411,6 @@ const dataUri =
 '
       'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
 
-    const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`;
 
   const categories = Array.from(new Set(logs.map(log => log.category))).filter(Boolean);
   const sources = Array.from(new Set(logs.map(log => log.source))).filter(Boolean);
@@ -501,7 +480,6 @@ const dataUri =
   }
 }
   },;
-  const exportLogs = () => {;
     const dataStr = JSON.stringify(filteredLogs, null, 2);'
     const dataUri = 'data: application/json,charset=utf-8,'+ encodeURIComponent(dataStr);`
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`,;
@@ -530,7 +508,6 @@ const dataUri =
     linkElement && linkElement.click();
   };
 
-  const formatTimestamp = (timestamp: string) => {;
     return new Date(timestamp).toLocaleString();  };
 '
   const formatPerformance = (performance?: LogEntry['performance']) => {;
@@ -555,16 +532,10 @@ const dataUri =
             <RefreshCw'`
               className={`h-4 w-4 mr-2 ${isLoading ? 'animate-spin' : ''}`}
 
-    const dataStr = JSON.stringify(filteredLogs, null, 2);
-    const dataUri = 'data: application/json,charset=utf-8,'+ encodeURIComponent(dataStr);
-    const linkElement = document.createElement('a');
     linkElement.setAttribute('href', dataUri);
     linkElement.setAttribute('download', exportFileDefaultName);
 
-    const dataStr = JSON.stringify(filteredLogs, null, 2);
-    const dataUri = 'data: application/json,charset=utf-8,'+ encodeURIComponent(dataStr);
 
-    const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`,;
 '
     const linkElement = document.createElement('a');'
     linkElement.setAttribute('href', dataUri);'
@@ -573,13 +544,11 @@ const dataUri =
   }
 
   },;
-  const formatTimestamp = (timestamp: string) => {;
     return new Date(timestamp).toLocaleString();
   };
 
   const formatPerformance = (performance?: LogEntry['performance']) => {
     if (!performance) return null;
-    const parts = [];
 
     if (performance.memory) {
       parts.push(`Memory: ${(performance.memory / 1024 / 1024).toFixed(1)}MB`)
@@ -598,16 +567,13 @@ const dataUri =
   const totalCount = logs.length;
 
   },;
-  const formatTimestamp = (timestamp: string) => {;
     return new Date(timestamp).toLocaleString();
   };
 
   },;
-  const formatTimestamp = (timestamp: string) => {;
     return new Date(timestamp).toLocaleString();
   };
 
-  const formatPerformance = (performance?: LogEntry['performance']) => {;
 
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
       } catch (error) {"
@@ -1126,9 +1092,7 @@ logs.sort(
     const errorCount = logs.filter(
       log => log.level === 'error' || log.level === 'critical'
     ).length;
-    const warningCount = logs.filter(log => log.level === 'warn').length;
 
-    const totalCount = logs.length;
     return {
       props: {
         logs: logs.slice(0, 1000), // Limit to most recent 1000 logs
@@ -1197,7 +1161,6 @@ errorCount,
 export const getServerSideProps: GetServerSideProps = async () => {;
   try {'
     const logsDir = path.join(process.cwd(), 'logs'),;
-    const logs: LogEntry[] = [];
     // Read all log files;
     if (fs.existsSync(logsDir)) {;
       const files = fs.readdirSync(logsDir);'

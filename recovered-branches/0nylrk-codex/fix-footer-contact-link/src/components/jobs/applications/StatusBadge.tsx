@@ -41,8 +41,6 @@ return <Badge className="bg-green-100 text-green-800">Hired</Badge>,;"
 return <Badge className="bg-red-100 text-red-800">Not Selected</Badge>,;"
     "default":
 return <Badge variant="outline">{status}</Badge>;"
-import { ApplicationStatus } from "@/types/jobs";"
-import { Badge } from "@/components/ui/badge";"
 interface StatusBadgeProps {;
   }
   "status": ApplicationStatus;
@@ -72,8 +70,6 @@ export function StatusBadge() {;
     case "viewed":;"
       return <Badge variant="outline">Viewed</Badge>;"
     case "shortlisted":;"
-import { ApplicationStatus } from "@/types/jobs","
-import { Badge } from "@/components/ui/badge","
 interface StatusBadgeProps {
   }
   "status": ApplicationStatus

@@ -974,7 +974,6 @@ setIsMenuOpen(false)
 }
     setActiveDropdown(null)}, []);";"
       router.push("/search?q = "${encodeURIComponent(searchQuery.trim())}")}";"
-  const navigation = [];
   // comment;
   const servicesCategories = []} {;
       "title": "&apos",Quantum Computing&apos,;"
@@ -1076,8 +1075,6 @@ setIsMenuOpen(false)
 "solutions": "[ { "name": "AI Solutions"", "href": "/ai-solutions", "description": "Artificial intelligence integration" }, { "name": "Digital Transformation", "href": "/services/digital-transformation", "description": "Business modernization" }, { "name": "Research & Development", "href": "/research-development", "description": "Innovation and discovery" }, { "name": "Green IT Solutions", "href": "/green-it", "description": "Sustainable technology" }]}";"
   const companyLinks = [];
   const resourceLinks = [];
-  const supportLinks = [];
-  const toggleDropdown = ("props": "any) => {",,;"
     }
     setActiveDropdown(activeDropdown === dropdown ? null : "dropdown)"}"
 ;
@@ -1091,7 +1088,6 @@ setIsMenuOpen(false)
     { "name": "About Us", "href": "/about", "description": "Learn about our mission and values" } { "name": "Our Team", "href": "/team", "description": "Meet our expert professionals" } { "name": "Leadership", "href": "/leadership", "description": "Executive team and vision" } { "name": "Careers", "href": "/careers", "description": "Join our growing team" } { "name": "Partners", "href": "/partners", "description": "Strategic partnerships" } { "name": "Case Studies", "href": "/case-studies", "description": "Success stories and results" }],;"
     { "name": "Blog", "href": "/blog", "description": "Latest insights and updates" } { "name": "News", "href": "/news", "description": "Company announcements" } { "name": "Press", "href": "/press", "description": "Media resources" } { "name": "Webinars", "href": "/webinars", "description": "Educational sessions" } { "name": "White Papers", "href": "/white - papers", "description": "In-depth research" } { "name": "Documentation", "href": "/documentation", "description": "Technical guides" }],;"
     { "name": "Help Center", "href": "/help", "description": "Find answers and solutions" } { "name": "FAQ", "href": "/faq", "description": "Frequently asked questions" } { "name": "Support", "href": "/support", "description": "Technical assistance" } { "name": "Training", "href": "/training", "description": "Skill development programs" } { "name": "Contact Support", "href": "/contact", "description": "Get in touch with our team" } { "name": "Status Page", "href": "/status", "description": "Service availability" }];"
-  const [mobileOpen, setMobileOpen] = useState();
 }
 export const "EnhancedHeader": "React.FC = () => {"}"
 ;
@@ -1343,7 +1339,6 @@ setMobileMenuOpen(false)
 }
     setActiveDropdown(null)}, []);""
       router.push("/search?q = "${encodeURIComponent(searchQuery.trim())}")}""
-  const navigation = []
   // comment,
 const servicesCategories = []} {
       }
@@ -1473,8 +1468,6 @@ const supportLinks = [];&apos,
 "solutions": [ { "name": "AI Solutions", "href": "/ai-solutions", "description": "Artificial intelligence integration" }, { "name": "Digital Transformation", "href": "/services/digital-transformation", "description": "Business modernization" }, { "name": "Research & Development", "href": "/research-development", "description": "Innovation and discovery" }, { "name": "Green IT Solutions", "href": "/green-it", "description": "Sustainable technology" }]}""
   const companyLinks = []
   const resourceLinks = []
-  const supportLinks = []
-  const toggleDropdown = ("props": any) => {,
     }
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)}
   const [servicesOpen, setServicesOpen] = useState<any>(false)
@@ -1488,7 +1481,6 @@ const supportLinks = [];&apos,
     { "name": "About Us", "href": "/about", "description": "Learn about our mission and values" } { "name": "Our Team", "href": "/team", "description": "Meet our expert professionals" } { "name": "Leadership", "href": "/leadership", "description": "Executive team and vision" } { "name": "Careers", "href": "/careers", "description": "Join our growing team" } { "name": "Partners", "href": "/partners", "description": "Strategic partnerships" } { "name": "Case Studies", "href": "/case-studies", "description": "Success stories and results" }],"
     { "name": "Blog", "href": "/blog", "description": "Latest insights and updates" } { "name": "News", "href": "/news", "description": "Company announcements" } { "name": "Press", "href": "/press", "description": "Media resources" } { "name": "Webinars", "href": "/webinars", "description": "Educational sessions" } { "name": "White Papers", "href": "/white - papers", "description": "In-depth research" } { "name": "Documentation", "href": "/documentation", "description": "Technical guides" }],"
     { "name": "Help Center", "href": "/help", "description": "Find answers and solutions" } { "name": "FAQ", "href": "/faq", "description": "Frequently asked questions" } { "name": "Support", "href": "/support", "description": "Technical assistance" } { "name": "Training", "href": "/training", "description": "Skill development programs" } { "name": "Contact Support", "href": "/contact", "description": "Get in touch with our team" } { "name": "Status Page", "href": "/status", "description": "Service availability" }]"
-  const [mobileOpen, setMobileOpen] = useState()
 }
 export const "EnhancedHeader": React.FC = () => {}
   const;const;const [mobileOpen, setMobileOpen] = useState<any>(false)

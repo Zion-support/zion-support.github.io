@@ -169,8 +169,62 @@ function getUserId(req: NextApiRequest): string {
       ];
       return res.status(200).json({ "notifications": fallback
 });
+
+
+    // If countOnly, return unread count quickly
+    if (countOnly === 'true) {
+      const { data, error } = await supabase
+        .from(notifications')
+        .select('id, { count: exact', head: true })
+        .eq('user_id, userId)
+        .eq(read_status', false);
+
+      if (error) {
+        // Fallback to 0 on error (e.g., table missing)
+
+      if (!count) {
+        const { count: exactCount } = await supabase
+          .from('notifications)
+          .select(id', { count: 'exact })
+          .eq(user_id', userId)
+          .eq('read_status, false);
+
     }
-  };
+    // Build query based on filter;
+    let query = supabase
+      .from('notifications')
+      .select(*')'
+      .eq(user_id, userId)'
+      .order('created_at, { ascending: false });
+    if (filter === 'unread') {
+      query = query && query.eq(read_status', false);'
+    } else if ([system, 'onboarding', quote, 'match'].includes(filter)) {
+      query = query && query.eq(type', filter as NotificationType);
+    }'
+    if (filter === unread) {'
+      query = query && query.eq('read_status, false)
+    } else if (['systemonboardingquotematch'].includes(filter)) {
+      query = query && query.eq(type', filter as NotificationType);
+    }
+
+          user_id: userId,
+          type: 'onboarding,
+          title: Welcome to Zion AI Marketplace',
+          body: 'Complete your profile to get personalized matches.,
+
+        {
+          id: seed-2',
+          user_id: userId,
+          type: 'system,
+          title: System maintenance scheduled',
+          body: 'We will be undergoing maintenance this weekend.,
+
+
+function getUserId(req: NextApiRequest): string {
+
+
+    }
+  }
 }
       return res.status (200).json ({ "notifications": fallback
 });
@@ -206,13 +260,13 @@ export default async function handler() {filter = 'all',countOnly,limit = '50',o
 }
 
   }}
-          related_action: '/status'}],
+          related_action: /status'}],
       return res.status(200).json({ notifications: fallback})
     }
 
     return res.status(200).json({ notifications: data as NotificationItem[] })
   } catch (e) {
-    return res.status(500).json({ error: 'Unexpected error' })
+    return res.status(500).json({ error: 'Unexpected error })
   }
 }
     return res.status (200).json ({ notifications: data as NotificationItem[] });

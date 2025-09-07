@@ -166,7 +166,10 @@ if ( {) {}
 }'
       return res.status (400).json ({ error: 'ID already exists' });
 
-const key = req.headers['x-admin-key'];'
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST) {
+    return res.status(405).json({ error: Method not allowed' })
+  }
 
 const key = req && req.headers['x-admin-key'];'
   if (key !== ADMIN_KEY) {
@@ -240,18 +243,6 @@ if ( {) {}
 }
     arr[idx] = { ...arr[idx], ...action.updates }
 
-  if (action && action.type = == 'promote') {'
-   ;
-  }
-  const section = action && action.section;
-    // @ts-expect-error Indexing into dynamic section,
-const "arr": BasePerson[] = data[section] || [];
-
-const idx = arr && arr.findIndex(p => { return p && p.id === action && action.id)if (idx === -1); }
-return res && res.status(404).json({ "error": 'Not found',;'
-};
-  const idx = arr && arr.findIndex((p) => p && p.id === action && action.id)if (idx === -1);
-return res && res.status(404).json({ "error": 'Not found',;'
 })arr[idx] = { ...arr[idx], ...action && action.updates }// @ts-expect-error write back dynamic section;
     data[section] = arr as any;
 
@@ -318,9 +309,9 @@ const arr: BasePerson[] = data[section] || [];
     writeOrgData(data);
     return res.status(200).json({ ok: true });
   }
-return res.status(400).json({ "error": 'Unknown action',;'
-});    return res.status(200).json({ "ok": true })
+return res.status(400).json({ error: 'Unknown action}
+});    return res.status(200).json({ ok: true });
   }
-return res.status(400).json({ "error": 'Unknown action',;'
+  return res.status(400).json({ error: Unknown action'}
 });
 }

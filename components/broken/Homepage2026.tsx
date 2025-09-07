@@ -9,25 +9,22 @@ import { ArrowRight, Star;
 
 import { motion } from 'framer-motion';'
 
+import Link from 'next/link;
+import { motion } from framer-motion';
 import { ArrowRight, Star;
-  }
-  Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin;
-  Users, Building, Rocket, CheckCircle, Phone, Mail
- } from 'lucide-react';'
+  Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin;}
+  Users, Building, Rocket, CheckCircle, Phone, Mail}
+ } from 'lucide-react;
 
-const "Homepage2026": React.FC;
-
-const "Homepage2026": React.FC = () => {
- ;
-}
-return (;
+const Homepage2026: React.FC = () => {
+  return (
     <Layout>;
-import { motion  } from 'framer-motion';
+import { motion  } from framer-motion';
 import {const Homepage2026: React.FC = () => {return (<Layout>;
       {/* Main Content */}
-      <main className='relative z-10'>;
+      <main className='relative z-10>;
         {/* Hero Section */}
-        <section className='min-h-screen flex items-center justify-center px-4 relative overflow-hidden'>;
+        <section className=min-h-screen flex items-center justify-center px-4 relative overflow-hidden'>;
           {/* Background Elements */}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -50,99 +47,40 @@ import {
   CheckCircle,
   Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin;
   Users, Building, Rocket, CheckCircle, Phone, Mail;
-import { motion } from 'framer-motion';
-import { 
+import { motion } from 'framer-motion;
   ArrowRight, Star, 
   Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin,
   Users, Building, Rocket, CheckCircle, Phone, Mail
-} from 'lucide-react',
+} from lucide-react',
 
-const Homepage2026: React.FC = () => {
   return (
     <Layout>
       {/* Main Content */}
-      <main className="relative z-10">
+      <main className="relative z-10>
         {/* Hero Section */}
-        <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
+        <section className=min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
           {/* Background Elements */}
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg animate-pulse"></div>
-            <div className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full animate-pulse delay-1000"></div>
-            <div className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45 animate-pulse delay-2000"></div>
+          <div className="absolute inset-0 pointer-events-none>
+            <div className=absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg animate-pulse"></div>
+            <div className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full animate-pulse delay-1000></div>
+            <div className=absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45 animate-pulse delay-2000"></div>
           </div>
           
-          <div className="text-center max-w-4xl mx-auto relative z-10">
+          <div className="text-center max-w-4xl mx-auto relative z-10>
             <motion.div
               initial={{ opacity: 0, y: 20}}
               animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              className="space-y-6"
+              className=space-y-6"
             >
-      <main className='relative z-10'>
+      <main className='relative z-10>
 
 
 
 
 <main className='relative z-10'>'
         {/* Hero Section */}
-        <section className='min - h-screen flex items - center justify - center px - 4 relative overflow - hidden'>;'
-          {/* Background Elements */}
 
-          <div className='absolute inset-0 pointer-events-none'>'
-            <div className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg animate-pulse'></div>'
-            <div className='absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full animate-pulse delay-1000'></div>'
-            <div className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45 animate-pulse delay-2000'></div>'
-          </div>
-
-          <div className='text-center max-w-4xl mx-auto relative z-10'>'
-            <motion.div,
-initial={{ "opacity": 0, "y": 20 
-}
-              animate={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
-className='space-y-6''
-            >
-              {/* Company Badge *
-}
-              <motion.div;
-                initial={{ "opacity": 0, "scale": 0.8 
-}
-                animate={{ "opacity": 1, "scale": 1 
-}
-
-                transition={{ "duration": 0.6, "delay": 0.2 
-}
-className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium''
-              >
-                <Star className='w-4 h-4' />'
-                <span>Innovation Leader 2026</span>
-              </motion.div>
-              <h1 className='text-5xl "md":text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>'
-                Zion Tech Group
-              </h1>
-              <p className='text-xl "md":text-2xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed'>'
-                Pioneering the future of technology with innovative micro SAAS,
-services, cutting-edge IT infrastructure, and advanced AI,
-solutions
-              </p>
-              {/* Enhanced CTA Section */}
-              <div className='flex flex-col "sm": flex-row gap-4 justify-center mb-8'>'
-                <Link href='/comprehensive-2025-services-showcase'>'
-                  <button className='group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg "hover":from-cyan-600 "hover":to-blue-700 transition-all duration-300 transform "hover":scale-105 shadow-lg shadow-cyan-500/25'>'
-                    <span className='flex items-center gap-2'>'
-                      Explore Services
-                      <ArrowRight className='w-5 h-5 group-"hover":translate-x-1 transition-transform' />'
-                    </span>
-                  </button>
-                </Link>
-                <Link href='/services'>'
-                  <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg "hover":bg-cyan-400 "hover":text-black transition-all duration-300 transform "hover":scale-105'>'
-                    All Services
-                  </button>
-                </Link>
-                <a href='"mailto":kleber@ziontechgroup.com'>'
-
-                  <button className='px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg "hover":bg-purple-400 "hover":text-black transition-all duration-300 transform "hover":scale-105'>'
                     Get Started
                   </button>
                 </a>
@@ -158,20 +96,6 @@ initial={{ "opacity": 0, "y": 20
 }
 
 
-                transition={{ "duration": 0.8, "delay": 0.4 
-}
-className='flex items-center justify-center space-x-6 text-sm text-gray-400'>'
-
-                <div className='flex items-center space-x-2'>;'
-                  <Shield className='w-4 h-4 text-green-400' />;'
-                  <span>Enterprise Security</span>;
-                </div>;
-                <div className='flex items-center space-x-2'>;'
-                  <Globe className='w-4 h-4 text-blue-400' />;'
-                  <span>Global Reach</span>;
-                </div>;
-                <div className='flex items-center space-x-2'>;'
-                  <TrendingUp className='w-4 h-4 text-purple-400' />;'
                   <span>Proven Results</span>;
                 </div>;
               </motion.div>;
@@ -930,13 +854,38 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='flex items-center space-x-2 text-sm text-gray-300'>'
                     <CheckCircle className='w-4 h-4 text-green-400' />'
                     <span>AI Content Automation Suite - $299/month</span>
-                  </div>
-                  <div className='flex items-center space-x-2 text-sm text-gray-300'>'
-                    <CheckCircle className='w-4 h-4 text-green-400' />'
+                  </div>'
+                  <div className='flex items-center space-x-2 text-sm text-gray-300>
+                    <CheckCircle className='w-4 h-4 text-green-400' />
                     <span>AI Customer Service Automation - $199/month</span>
                   </div>
-                  <div className='flex items-center space-x-2 text-sm text-gray-300'>'
-                    <CheckCircle className='w-4 h-4 text-green-400' />'
+                  <div className=flex items-center space-x-2 text-sm text-gray-300'>'
+                    <CheckCircle className=w-4 h-4 text-green-400 />
+                    <span>AI Sales Automation Platform - $399/month</span>
+                  </div>
+                </div>'
+                <Link href='/comprehensive-2025-services-showcase>
+                  <button className='w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors'>                    Learn More              >
+              <motion&& motion.div;
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}"
+                <div className=text-5xl mb-6>🤖</div>"
+                <h3 className="text-2xl font-semibold text-white mb-4>AI Automation Services</h3>
+                <p className="text-gray-300 mb-6">
+                  Intelligent automation solutions that streamline operations and boost productivity.
+                  From content creation to customer service, our AI solutions save time and improve efficiency.
+                </p>
+                <div className=space-y-3 mb-6">"
+                  <div className=flex items-center space-x-2 text-sm text-gray-300>"
+                    <CheckCircle className="w-4 h-4 text-green-400 />
+                    <span>AI Content Automation Suite - $299/month</span>
+                  </div>
+                  <div className="flex items-center space-x-2 text-sm text-gray-300">
+                    <CheckCircle className=w-4 h-4 text-green-400" />
+                    <span>AI Customer Service Automation - $199/month</span>
+                  </div>"
+                  <div className=flex items-center space-x-2 text-sm text-gray-300>"
+                    <CheckCircle className="w-4 h-4 text-green-400 />
                     <span>AI Sales Automation Platform - $399/month</span>
                   </div>
                 </div>
@@ -976,43 +925,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
-                transition={{ "duration": 0 && 0.6, "delay": 0 && 0.1 
-}
-                className='bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-lg p-8 "hover":border-blue-400/50 transition-all duration-300'>;'
-                <div className='text-5xl mb-6'>🤖</div>;'
-                <h3 className='text-2xl font-semibold text-white mb-4'>;'
-                  AI Automation Services;
-                </h3>;
-                <p className='text-gray-300 mb-6'>;'
-              {/* Trust Indicators */}
-              <motion.div;
-                initial={{ "opacity": 0, "coordinate_y": 20 
-}
-                animate={{ "opacity": 1, "coordinate_y": 0 
-}
-                transition={{ "duration": 0.8, "delay": 0.4 
-}
-                className='flex items - center justify - center space - x-6 text - sm text - gray - 400';'
-              >              >;
-                <div className="flex items - center space - x-2">;"
-                  <Shield className="w - 4 h - 4 text - green - 400" />;"
-                  <span > Enterprise Security</span>;
-                </div>;
-                <div className="flex items - center space - x-2">;"
-                  <Globe className="w - 4 h - 4 text - blue - 400" />;"
-                  <span > Global Reach</span>;
-                </div>;
-                <div className='flex items - center space - x-2'>;'
-                  <Shield className='w - 4 h - 4 text - green - 400' />;'
-                  <span > Enterprise Security</span>;
-                </div>;
-                <div className='flex items - center space - x-2'>;'
-                  <Globe className='w - 4 h - 4 text - blue - 400' />;'
-                  <span > Global Reach</span>;
-                </div>;
-                <div className='flex items - center space - x-2'>;'
-                  <TrendingUp className='w - 4 h - 4 text - purple - 400' />                  <span > Proven Results</span>                <div className="flex items - center space - x-2">;"
-                  <TrendingUp className="w - 4 h - 4 text - purple - 400" />;"
                   <span > Proven Results</span>;
                 </div>;
               </motion.div>;
@@ -1290,8 +1202,8 @@ className='bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-g
                 <div className='text-5xl mb-6'>🏗️</div>;
                 <h3 className='text-2xl font-semibold text-white mb-4'>;
                   IT Infrastructure Services;
-                </h3>;
-                <p className='text-gray-300 mb-6'>;'
+                </h3>;'
+                <p className='text-gray-300 mb-6>;
                   Robust infrastructure solutions for modern digital businesses.;
                   Edge computing, zero trust security, and hybrid cloud;
                   management for enterprise-grade performance.;
@@ -1402,6 +1314,9 @@ drive growth.
                 <Link href="/comprehensive-2025-services-showcase">
                   <button className="w-full px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors">
                     Learn More
+                    <span>Smart Appointment Scheduler - $69/month</span>
+                  </div>
+
                   </button>
                 </Link>
               </motion.div>
@@ -1628,6 +1543,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Link href="/comprehensive-2025-services-showcase">
                   <button className="w-full px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors">
                     Learn More
+                    <span>AI Data Analysis - $399/month</span>
+                  </div>
+
                   </button>
                 </Link>
               </motion.div>
@@ -1738,35 +1656,19 @@ href='"https": //ziontechgroup.com''
                       </a>
                     </div>
                   </div>
-<div className='flex items-center space-x-3'>'
-                    <Phone className='w-5 h-5 text-green-400' />'
-                    <div>
-                      <div className='text-sm text-gray-400'>Phone</div>'
-                      <a,
-href='"tel":+13024640950''
-                        className='text-cyan-400 "hover":underline font-medium''
+
                       >
                         +1 302 464 0950
                       </a>
                     </div>
                   </div>
-<div className='flex items-center space-x-3'>'
-                    <Mail className='w-5 h-5 text-yellow-400' />'
-                    <div>
-                      <div className='text-sm text-gray-400'>Email</div>'
-                      <a,
-href='"mailto":kleber@ziontechgroup.com''
-                        className='text-cyan-400 "hover":underline font-medium''
+
                       >
                         kleber@ziontechgroup.com
                       </a>
                     </div>
                   </div>
-<div className='flex items-center space-x-3'>'
-                    <MapPin className='w-5 h-5 text-purple-400' />'
-                    <div>
-                      <div className='text-sm text-gray-400'>Address</div>'
-                      <div className='text-white font-medium'>'
+
                         364 E Main St STE 1008
                         <br />
                         Middletown DE 19709
@@ -1840,8 +1742,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   href='mailto:kleber@ziontechgroup.com';
                   className='inline - flex items - center space - x-2 px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105';
                 >;
-                  <span > Get Started Today</span>;
-                  <ArrowRight className='w - 5 h - 5' />;
+                  Call Now;
                 </a>;
                 <a;
                   href='tel:+13024640950';
@@ -1931,4 +1832,7 @@ href='"tel":+13024640950''
 };
 export default Homepage2026;
 origin/cursor/automate-test-improve-and-merge-code-2533
+
+export default Homepage2026;
+
 

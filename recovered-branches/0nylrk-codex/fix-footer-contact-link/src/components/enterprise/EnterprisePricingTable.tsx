@@ -12,7 +12,6 @@ import {
 import { Badge } from "@/components/ui/badge";"
 import { Button } from "@/components/ui/button","
 import { Check, X } from "lucide-react","
-import {
   }
   Table,
   TableBody,
@@ -113,7 +112,6 @@ export /**
  */
 function EnterprisePricingTable() {
   }
-  const plans = [;
     {
       }
       "name": "Teams","

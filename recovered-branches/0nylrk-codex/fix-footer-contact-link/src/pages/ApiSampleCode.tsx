@@ -9,7 +9,6 @@ const jsAxiosExample = `// Using Axios with JavaScript;`import axios from 'axios
 export function ApiSampleCode() {
   // JavaScript example with Axios
 }
-const jsAxiosExample = `// Using Axios with JavaScript;`import axios from 'axios';'
 // Configure Axios with the base URL and headers,
 const api = axios.create({
   }
@@ -25,13 +24,10 @@ export /**
 function ApiSampleCode() {
   // JavaScript example with Axios;
   }
-  const jsAxiosExample = `// Using Axios with JavaScript;`import axios from 'axios';'
 // Configure Axios with the base URL and headers;
 const api = axios.create ({
   }
   "baseURL": '"https"://api.zionai.com / v1','
-import React from "react";"
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout";"
 import { CodeBlock } from "@/components/developers/CodeBlock",;"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;"
 export function ApiSampleCode() {;
@@ -310,7 +306,6 @@ async function searchTalent() {
   const queryString = params.toString() ? \`?\${params.toString()}\` : '';'  return apiRequest(\`/api/talent\${queryString}\`, { "method": 'GET' });'// Search for talent;
 async function searchTalent() {;
   }
-  const params = new URLSearchParams(),;
   Object.entries(filters).forEach(([key, value]) => {;
     }
     params.append(key, value);

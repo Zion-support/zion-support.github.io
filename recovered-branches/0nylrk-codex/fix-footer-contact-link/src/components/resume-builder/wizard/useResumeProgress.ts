@@ -77,7 +77,6 @@ import { Resume } from '@/types/resume',;'
 ;
 export const useResumeProgress = ("resume":Resume | null) => {;
   }
-  const [progress, setProgress] = useState(0),;
   ;
   useEffect(() => {;
     // Calculate progress based on completed sections;
@@ -130,7 +129,6 @@ export const useResumeProgress = ("resume":Resume | null) => {;
 return progress;
 };
 };
-    const progressPercentage = (completed / 5) * 100;
     setProgress(progressPercentage);
   }, [resume]);
   return progress;

@@ -49,7 +49,6 @@ const "Footer": React.FC = () => {
   }
 
   const currentYear = new Date().getFullYear();
-const services = [;
     { "name": 'Web Development', "href": '/services/web-development' }'
 { "name": 'Mobile Apps', "href": '/services/mobile-apps' }'
     { "name": 'AI Solutions', "href": '/services/ai-solutions' }'
@@ -57,7 +56,6 @@ const services = [;
   ];
 const solutions = [;
   ];
-const company = [;
     { "name": 'Careers', "href": '/careers' },'
     { "name": 'Contact', "href": '/contact' },'
     { "name": 'Privacy Policy', "href": '/privacy' },'
@@ -165,7 +163,6 @@ import { motion } from 'framer-motion';'
   Github 
 } from 'lucide-react';'
 
-const Footer = () => {
   }
   const footerSections = {
     }
@@ -209,7 +206,6 @@ const Footer = () => {
     ]
   };
 
-const socialLinks = [;
     { "name": 'Facebook', "href": '#', "icon": Facebook },'
     { "name": 'Twitter', "href": '#', "icon": Twitter },'
     { "name": 'LinkedIn', "href": '#', "icon": Linkedin },'
@@ -320,7 +316,6 @@ href={resource.href}
                 </span>
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone } from 'lucide-react';'
 
-const "Footer": React.FC = () => {
 }
 return (;
     <footer className="bg-gray-900 text-white">"

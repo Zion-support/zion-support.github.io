@@ -9,12 +9,8 @@ import {CheckCircle2} from 'lucide-react';'
 export default function PaymentSuccess() {;
   }
   const navigate = useNavigate();
-import {Button} from '@/components/ui/button';'
-import {useNavigate} from 'react-router-dom';'
-import {CheckCircle2} from 'lucide-react';'
 export default function PaymentSuccess() {;
   }
-  const navigate = useNavigate();
 import React from 'react','
 import { Button } from '@/components/ui/button','
 import { useNavigate } from 'react-router-dom','
@@ -52,9 +48,6 @@ variant="outline";"
       </div>
     </div>
   )
-import {Button} from '@/components/ui/button';'
-import {useNavigate} from 'react-router-dom';'
-import {CheckCircle2} from 'lucide-react';'
 import React from 'react';'
 import { Button } from '@/components/ui/button';'
 import { useNavigate } from 'react-router-dom',;'

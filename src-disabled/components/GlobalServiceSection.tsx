@@ -67,7 +67,6 @@ export function GlobalServiceSection() {
           <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">",
 
 import { GradientHeading } from "./GradientHeading",
-import { Server, HardDrive, Network, Clock, Recycle, Truck } from 'lucide-react'
 import { Button } from "./ui/button",
 const services = [
   {
@@ -204,7 +203,6 @@ export function GlobalServiceSection() {;
               </div>
               <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
               <p className="text-zion-slate-light mb-4">{service.description}</p>
-const services = [;
   {
     title: 'Servers','
     description:;
@@ -284,10 +282,6 @@ function GlobalServiceSection() {
           <Button className='bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white text - lg py - 6 px - 8'>        <div className="flex justify - center mt - 12">;
           <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white text - lg py - 6 px - 8">;",
   )
-import { GradientHeading } from "./GradientHeading",;
-import { Server, HardDrive, Network, Clock, Recycle, Truck } from 'lucide-react';
-import { Button } from "./ui/button",;
-const services = [;
   {;
     title: "Servers",;
     description: "Enterprise-grade servers for any workload with 24/7 maintenance and support",;

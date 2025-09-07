@@ -49,7 +49,6 @@ export default function ProfilePage() {
   const [isLoading, setIsLoading] = useState($2);
   const [isError, setIsError] = useState($2);
   useEffect(() => {
-    const fetchProfile = async () => {
       setIsLoading($2);
       setIsError($2);
       try {
@@ -70,8 +69,6 @@ const { data, error } = await supabase;
       } finally {
         }
         setIsLoading(false)
-import { useState, useEffect } from "react";"
-import { useParams } from "react-router-dom";"
 import { supabase } from "@/integrations/supabase/client",;"
 import { toast } from "@/components/ui/use-toast",;"
 import { SEO } from "@/components/SEO",;"
@@ -97,9 +94,6 @@ export default function ProfilePage() {;
   // type argument and cast the result instead to prevent TS2347 errors.;
   }
   const { profileId } = useParams() as { profileId?: string };
-  const [profileData, setProfileData] = useState<any>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [isError, setIsError] = useState(false);
 
   useEffect(() => {;
     }
@@ -109,7 +103,6 @@ export default function ProfilePage() {;
       setIsError(false);
       try {;
         }
-        const { data, error } = await supabase;
           .from("talent_profiles");"
           .select("*");"
           .eq("id", profileId);"

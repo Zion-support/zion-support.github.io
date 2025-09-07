@@ -35,12 +35,8 @@ export function BlogSection() {;
 return (;
 import { GradientHeading } from "./GradientHeading",;"
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;"
-import { Button } from "./ui/button",;"
-import { Link } from "react-router-dom",;"
-import { BLOG_POSTS } from "@/data/blog-posts",;"
 ;
 // Get the 3 most recent blog posts;
-const recentPosts = [...BLOG_POSTS].sort((a, b) => {;
   }
   return new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime(),;
 }).slice(0, 3),;

@@ -38,6 +38,8 @@ type RequestBody = $2;
   remote: boolean,
   employmentType: 'contract' | 'freelance' | 'full-time'
 };
+  employmentType: contract' | 'freelance | full-time'
+}
 
 const completion = await client.chat.completions.create ({
   }
@@ -59,7 +61,7 @@ type InsightResponse = {
 }[];
   "tags": string[];
   gptRecommendation?: string
-};
+}
 
 
 function median("values": number[]): number {
@@ -174,18 +176,6 @@ async function maybeGetGptRecommendation(input: RequestBody, stats: { median: nu
     const skillsStr = input.skills.join();
     const prompt = `Based on current market trends, provide a competitive hourly and monthly rate for a ${input.roleTitle} with ${skillsStr} in ${input.region}. Include a global comparison. Return a concise paragraph with a recommended hourly and monthly rate (USD), and a brief rationale.`;
 
-    const completion = await client.chat.completions.create({
-      model: 'gpt-4o-mini';
-      messages: [
-        { role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.' };
-        { role: 'user', content: prompt }];
-      temperature: 0.2;
-      max_tokens: 300});
-    return completion.choices?.[0]?.message?.content || undefined
-  } catch {
-    return undefined
-  }
-}
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<InsightResponse | { error: string }>) {
   if (req.method !== 'POST') {
@@ -720,7 +710,14 @@ return res.status (200).json (response);  return res.status (200).json (response
     trendMonthly: trend,
     regionalComparison,
     tags,
-    gptRecommendation
-  };
+    gpt_recommendation}
+return res.status (200).json (response);  return res.status (200).json (response);
+}
+}
+}
+}
+}
+}
+
 
   return res.status(200).json(response);

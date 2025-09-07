@@ -227,7 +227,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { BriefcaseIcon, Clock } from 'lucide-react';
 
 import { Button } from '@/components / ui / button';
 import {}

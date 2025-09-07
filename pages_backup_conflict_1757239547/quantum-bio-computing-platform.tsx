@@ -35,8 +35,6 @@ export default function QuantumBioComputingPlatformPage() {
 		</UltraFuturisticBackground>
 	)
 import React from 'react';
-import Head from 'next/head';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 export default function QuantumBioComputingPlatformPage(req, res) {
   try {
 	return (;

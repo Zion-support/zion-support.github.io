@@ -6,15 +6,12 @@ export interface WhitelabelTenant {;
 export interface WhitelabelTenant {import { useState, useEffect  } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 export interface WhitelabelTenant {
-import {useState, useEffect} from 'react';
-import {supabase} from '@/integrations/supabase/client';
 export interface WhitelabelTenant {;
   is_active: boolean;
   created_at: string;
   updated_at: string;
   account_manager_id: string | null;
 import { useState, useEffect  } from 'react';
-import { supabase } from '@/integrations/supabase/client';
 export interface WhitelabelTenant {
   id: string,
   brand_name: string,
@@ -156,9 +153,7 @@ if ( {) {
 
 export function useTenantAdminStatus(tenantId?: string) {
   const [isAdmin, setIsAdmin] = useState($2);
-  const [isLoading, setIsLoading] = useState($2);
   useEffect(() => {
-    const checkAdminStatus = async () => {
       if (!tenantId) {
         setIsAdmin($2);
         setIsLoading($2);
@@ -213,10 +208,8 @@ export /**
  */
 function useTenantAdminStatus() {
   const [is_admin, setIsAdmin] = useState (false);
-  const [is_loading, setIsLoading] = useState (true);
 ;
   useEffect (() => {
-    const checkAdminStatus = async () => {
       // Check condition
 if ( {) {
   $2

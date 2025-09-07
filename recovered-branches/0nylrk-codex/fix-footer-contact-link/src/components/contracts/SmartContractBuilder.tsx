@@ -241,9 +241,6 @@ export function SmartContractBuilder() {;
     "useEscrow": true,;
     "deployToChain": false;
   }),;
-  const [deployStatus, setDeployStatus] = useState<string>(''),;'
-  const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null),;
-  const { generateSolidityContract, deploySmartContract, deploymentStatus } = useSmartContracts(),;
   const handleLoadTemplate = ("templateData": ContractFormValues) => {;
     }
     setFormValues(templateData);
@@ -399,7 +396,6 @@ onDeploy?: ("contractContent": string) => void
 }export function SmartContractBuilder() {
   }
   const [formValues, setFormValues] = useState<ContractFormValues | undefined> (undefined);
-const [templateManagerOpen, setTemplateManagerOpen] = useState (false);
 const [deployOptions, setDeployOptions] = useState<DeploymentOptions> ({
   }
   "network": 'ethereum';'
@@ -412,7 +408,6 @@ const {
   }
   generateSolidityContract, deploySmartContract, deploymentStatus
 }= useSmartContracts ();
-const handleLoadTemplate = ("templateData": ContractFormValues) => {
   }
   setFormValues (templateData)
 };
@@ -426,7 +421,6 @@ setActiveTab ("preview");"
 }
 
 };
-const handleDeployContract = async () => {
   }
   if (!generatedContract) return;
 try {

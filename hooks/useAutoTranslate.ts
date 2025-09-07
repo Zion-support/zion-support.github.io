@@ -78,7 +78,6 @@ if ( {) {$2;
 }
       set_translations ({})return;    }      return;
 return;}
-    let cancelled = false;
     const timer = set_timeout (async () => {try {set_loading (true)set_error (undefined)const res = await translateTextViaAI (text, targets)if (set_translations (res)) {$2;
 }
         setLoading(true)setError(undefined)const res = await translateTextViaAI(text, targets)if (!cancelled) setTranslations(res)} catch (e: any) {if (set_error (e?.message || 'Translation failed')) {$2;

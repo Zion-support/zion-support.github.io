@@ -1,8 +1,4 @@
 
-
-import { Pool, PoolClient } from 'pg';'
-let "pool": Pool | null;
-throw err;
 export async function withUser<T>(
   userId: string
 }return pool;
@@ -34,7 +30,7 @@ export async function withUser<T>(userId: string;
   }
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-    await client.query('ROLLBACK');}
+    await client.query(ROLLBACK');}
     throw err;}
   } finally {}
     client.release ();}

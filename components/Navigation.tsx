@@ -1662,9 +1662,8 @@ import {
   Zap,
   Globe,
   BarChart3,
-  Search,;
-} from "lucide-react";
-import SearchModal from "./SearchModal";
+  Search} from "lucide-react;
+import SearchModal from ./SearchModal";
 
   Menu
   X
@@ -1687,8 +1686,7 @@ import SearchModal from "./SearchModal";
   Globe
   BarChart3
   Search
-} from "lucide-react";
-import SearchModal from "./SearchModal";
+} from "lucide-react;
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -1698,27 +1696,27 @@ export default function Navigation() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const services = [
     {
-      name: "AI Services"
-      href: "/ai-services"
-      description: "Machine Learning, NLP, Computer Vision"
+      name: "AI Services
+      href: /ai-services"
+      description: "Machine Learning, NLP, Computer Vision
       icon: BarChart3
     }
     {
-      name: "IT Services"
-      href: "/it-services"
-      description: "Cloud, DevOps, Cybersecurity"
+      name: IT Services"
+      href: "/it-services
+      description: Cloud, DevOps, Cybersecurity"
       icon: Shield
     }
     {
-      name: "Micro SaaS"
-      href: "/micro-saas"
-      description: "Custom SaaS Solutions"
+      name: "Micro SaaS
+      href: /micro-saas"
+      description: "Custom SaaS Solutions
       icon: Zap
     }
     {
-      name: "Blockchain"
-      href: "/blockchain"
-      description: "Smart Contracts;, DeFi, NFTs"
+      name: Blockchain"
+      href: "/blockchain
+      description: Smart Contracts;, DeFi, NFTs"
       icon: Building
   const mobileMenuVariants = {
     closed: {
@@ -1726,15 +1724,15 @@ export default function Navigation() {
       height: 0,
       transition: {
         duration: 0.3,
-        ease: 'easeInOut'
+        ease: easeInOut'
 
     },
     open: {
       opacity: 1,
-      height: 'auto',
+      height: 'auto,
       transition: {
         duration: 0.3,
-        ease: 'easeInOut',
+        ease: easeInOut',
         staggerChildren: 0.1
 
   }
@@ -1753,51 +1751,51 @@ export default function Navigation() {
         duration: 0.2
 
     {
-      name: "Cybersecurity"
-      href: "/cybersecurity"
-      description: "Security Audits;, Compliance"
+      name: "Cybersecurity
+      href: /cybersecurity"
+      description: "Security Audits;, Compliance
       icon: Shield
   ]
     {
-      name: "Startup Solutions"
-      href: "/startup"
-      description: "Scalable startup platforms"
+      name: Startup Solutions"
+      href: "/startup
+      description: Scalable startup platforms"
       icon: Zap
     {
     {
-      name: "Training"
-      href: "/training"
-      description: "Professional development"
+      name: "Training
+      href: /training"
+      description: "Professional development
     {
-      name: "Events"
-      href: "/events"
-      description: "Webinars and conferences"
+      name: Events"
+      href: "/events
+      description: Webinars and conferences"
     }
-    { name: "News", href: "/news", description: "Industry news and updates" }
+    { name: "News, href: /news", description: "Industry news and updates }
   ];
   const quickLinks = [
-    { name: "About Us", href: "/about" }
-    { name: "Our Team", href: "/team" }
-    { name: "Careers", href: "/careers" }
-    { name: "Contact", href: "/contact" }
-    { name: "Support", href: "/support" }
-    { name: "Status", href: "/status" }
+    { name: About Us", href: "/about }
+    { name: Our Team", href: "/team }
+    { name: Careers", href: "/careers }
+    { name: Contact", href: "/contact }
+    { name: Support", href: "/support }
+    { name: Status", href: "/status }
   ];
   return (
     <>
       {/* Top Bar */}
-      <div className="bg-blue-900 text-white py-2">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm">
-            <div className="flex items-center space-x-6 mb-2 md:mb-0">
-              <div className="flex items-center">
-                <Phone className="w-4 h-4 mr-2" />
-                <a href="tel:+13024640950" className="hover:text-blue-300">
+      <div className=bg-blue-900 text-white py-2">
+        <div className="container mx-auto px-4>
+          <div className=flex flex-col md:flex-row justify-between items-center text-sm">
+            <div className="flex items-center space-x-6 mb-2 md:mb-0>
+              <div className=flex items-center">
+                <Phone className="w-4 h-4 mr-2 />
+                <a href=tel:+13024640950" className="hover:text-blue-300>
                   +1 302 464 0950
                 </a>
               </div>
-              <div className="flex items-center">
-                <Mail className="w-4 h-4 mr-2" />
+              <div className=flex items-center">
+                <Mail className="w-4 h-4 mr-2 />
                 <a
                 </a>
               </div>
@@ -1806,23 +1804,23 @@ export default function Navigation() {
         </div>
       </div>
       {/* Main Navigation */}
-      <nav className="bg-white shadow-lg sticky top-0 z-50">
-        <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center py-4">
+      <nav className=bg-white shadow-lg sticky top-0 z-50">
+        <div className="container mx-auto px-4>
+          <div className=flex justify-between items-center py-4">
             {/* Logo */}
                   Technology Solutions
                 </div>
               </div>
             </Link>
               {/* Services Dropdown */}
-              <div className="relative group">
+              <div className="relative group>
                 <button
-                  className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                  className=flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors"
                   onMouseEnter={() => setIsServicesOpen(true)}
                   onMouseLeave={() => setIsServicesOpen(false)}
                 >
                   Services
-                  <ChevronDown className="w-4 h-4 ml-1" />
+                  <ChevronDown className="w-4 h-4 ml-1 />
                 </button>
                 <AnimatePresence>
                   {isServicesOpen && (
@@ -1830,30 +1828,30 @@ export default function Navigation() {
                       initial={{ opacity: 0;, y: 10 ;}}
                       animate={{ opacity: 1;, y: 0 ;}}
                       exit={{ opacity: 0;, y: 10 ;}}
-                      className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
+                      className=absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsServicesOpen(true)}
                       onMouseLeave={() => setIsServicesOpen(false)}
                     >
-                      <div className="grid grid-cols-2 gap-4 px-6">
+                      <div className="grid grid-cols-2 gap-4 px-6>
                         {services && services.map((service, index) => {
                           const IconComponent = service && service.icon
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items - center space - x-8">
+            <div className=hidden lg:flex items - center space - x-8">
               <Link
-                href="/"
-                className="text - gray - 700 hover:text - blue - 600 font - medium transition - colors"
+                href="/
+                className=text - gray - 700 hover:text - blue - 600 font - medium transition - colors"
               >
                 Home
               </Link>
               {/* Services Dropdown */}
-              <div className="relative group">
+              <div className="relative group>
                 <button
-                  className="flex items - center text - gray - 700 hover:text - blue - 600 font - medium transition - colors"
+                  className=flex items - center text - gray - 700 hover:text - blue - 600 font - medium transition - colors"
                   onMouseEnter={() => setIsServicesOpen (true)}
                   onMouseLeave={() => setIsServicesOpen (false)}
                 >
                   Services
-                  <ChevronDown className="w - 4 h - 4 ml - 1" />
+                  <ChevronDown className="w - 4 h - 4 ml - 1 />
                 </button>
                 <AnimatePresence>
                   {isServicesOpen && (
@@ -1861,25 +1859,25 @@ export default function Navigation() {
                       initial={{ opacity: 0;, coordinate_y: 10 ;}}
                       animate={{ opacity: 1;, coordinate_y: 0 ;}}
                       exit={{ opacity: 0;, coordinate_y: 10 ;}}
-                      className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4"
+                      className=absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4"
                       onMouseEnter={() => setIsServicesOpen (true)}
                       onMouseLeave={() => setIsServicesOpen (false)}
                     >
-                      <div className="grid grid - cols - 2 gap - 4 px - 6">
+                      <div className="grid grid - cols - 2 gap - 4 px - 6>
                         {services.map ((service, index) => {
                           const IconComponent = service.icon
                           return (
                             <Link
                               key={index}
               {/* Solutions Dropdown */}
-              <div className="relative group">
+              <div className=relative group">
                 <button
-                  className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                  className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors
                   onMouseEnter={() => setIsSolutionsOpen(true)}
                   onMouseLeave={() => setIsSolutionsOpen(false)}
                 >
                   Solutions
-                  <ChevronDown className="w-4 h-4 ml-1" />
+                  <ChevronDown className=w-4 h-4 ml-1" />
                 </button>
                 <AnimatePresence>
                   {isSolutionsOpen && (
@@ -1887,49 +1885,49 @@ export default function Navigation() {
                       initial={{ opacity: 0;, y: 10 ;}}
                       animate={{ opacity: 1;, y: 0 ;}}
                       exit={{ opacity: 0;, y: 10 ;}}
-                      className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
+                      className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4
                       onMouseEnter={() => setIsSolutionsOpen(true)}
                       onMouseLeave={() => setIsSolutionsOpen(false)}
                     >
-                      <div className="grid grid-cols-2 gap-4 px-6">
+                      <div className=grid grid-cols-2 gap-4 px-6">
                         {solutions && solutions.map((solution, index) => {
                           const IconComponent = solution && solution.icon
                               href={service.href}
-                              className="p - 3 rounded - lg hover:bg - blue - 50 transition - colors group"
+                              className="p - 3 rounded - lg hover:bg - blue - 50 transition - colors group
                             >
-                              <div className="flex items - center mb - 2">
-                                <IconComponent className="w - 5 h - 5 text - blue - 600 mr - 2" />
-                                <div className="font - medium text - gray - 900 group - hover:text - blue - 600">
+                              <div className=flex items - center mb - 2">
+                                <IconComponent className="w - 5 h - 5 text - blue - 600 mr - 2 />
+                                <div className=font - medium text - gray - 900 group - hover:text - blue - 600">
                                   {service.name}
                                 </div>
                               </div>
-                              <div className="text - sm text - gray - 500">
+                              <div className="text - sm text - gray - 500>
                                 {service.description}
                               </div>
                             </Link>)
                         })}
                       </div>
-                      <div className="border - t border - gray - 200 mt - 4 pt - 4 px - 6">
+                      <div className=border - t border - gray - 200 mt - 4 pt - 4 px - 6">
                         <Link
-                          href="/services"
-                          className="flex items - center text - blue - 600 hover:text - blue - 700 font - medium"
+                          href="/services
+                          className=flex items - center text - blue - 600 hover:text - blue - 700 font - medium"
                         >
                           View All Services
-                          <ArrowRight className="w - 4 h - 4 ml - 2" />
+                          <ArrowRight className="w - 4 h - 4 ml - 2 />
                         </Link>
                       </div>
                     </motion.div>)}
                 </AnimatePresence>
               </div>
               {/* Solutions Dropdown */}
-              <div className="relative group">
+              <div className=relative group">
                 <button
-                  className="flex items - center text - gray - 700 hover:text - blue - 600 font - medium transition - colors"
+                  className="flex items - center text - gray - 700 hover:text - blue - 600 font - medium transition - colors
                   onMouseEnter={() => setIsSolutionsOpen (true)}
                   onMouseLeave={() => setIsSolutionsOpen (false)}
                 >
                   Solutions
-                  <ChevronDown className="w - 4 h - 4 ml - 1" />
+                  <ChevronDown className=w - 4 h - 4 ml - 1" />
                 </button>
                 <AnimatePresence>
                   {isSolutionsOpen && (
@@ -1937,25 +1935,25 @@ export default function Navigation() {
                       initial={{ opacity: 0;, coordinate_y: 10 ;}}
                       animate={{ opacity: 1;, coordinate_y: 0 ;}}
                       exit={{ opacity: 0;, coordinate_y: 10 ;}}
-                      className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4"
+                      className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4
                       onMouseEnter={() => setIsSolutionsOpen (true)}
                       onMouseLeave={() => setIsSolutionsOpen (false)}
                     >
-                      <div className="grid grid - cols - 2 gap - 4 px - 6">
+                      <div className=grid grid - cols - 2 gap - 4 px - 6">
                         {solutions.map ((solution, index) => {
                           const IconComponent = solution.icon
                           return (
                             <Link
                               key={index}
               {/* Industries Dropdown */}
-              <div className="relative group">
+              <div className="relative group>
                 <button
-                  className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                  className=flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors"
                   onMouseEnter={() => setIsIndustriesOpen(true)}
                   onMouseLeave={() => setIsIndustriesOpen(false)}
                 >
                   Industries
-                  <ChevronDown className="w-4 h-4 ml-1" />
+                  <ChevronDown className="w-4 h-4 ml-1 />
                 </button>
                 <AnimatePresence>
                   {isIndustriesOpen && (
@@ -1963,20 +1961,20 @@ export default function Navigation() {
                       initial={{ opacity: 0;, y: 10 ;}}
                       animate={{ opacity: 1;, y: 0 ;}}
                       exit={{ opacity: 0;, y: 10 ;}}
-                      className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
+                      className=absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsIndustriesOpen(true)}
                       onMouseLeave={() => setIsIndustriesOpen(false)}
                     >
-                      <div className="px-6">
+                      <div className="px-6>
                         {industries && industries.map((industry, index) => (
                           <Link
                             key={index}
                             href={industry && industry.href}
-                            className="block p-3 rounded-lg hover:bg-blue-50 transition-colors group">
-                            <div className="font-medium text-gray-900 group-hover:text-blue-600">
+                            className=block p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                            <div className="font-medium text-gray-900 group-hover:text-blue-600>
                               {industry && industry.name}
                             </div>
-                            <div className="text-sm text-gray-500">
+                            <div className=text-sm text-gray-500">
                               {industry && industry.description}
                             </div>
                           </Link>
@@ -1985,14 +1983,14 @@ export default function Navigation() {
                     </motion && motion.div>
                   )}
               {/* Resources Dropdown */}
-              <div className="relative group">
+              <div className="relative group>
                 <button
-                  className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                  className=flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors"
                   onMouseEnter={() => setIsResourcesOpen(true)}
                   onMouseLeave={() => setIsResourcesOpen(false)}
                 >
                   Resources
-                  <ChevronDown className="w-4 h-4 ml-1" />
+                  <ChevronDown className="w-4 h-4 ml-1 />
                 </button>
                 <AnimatePresence>
                   {isResourcesOpen && (
@@ -2000,20 +1998,20 @@ export default function Navigation() {
                       initial={{ opacity: 0;, y: 10 ;}}
                       animate={{ opacity: 1;, y: 0 ;}}
                       exit={{ opacity: 0;, y: 10 ;}}
-                      className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
+                      className=absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsResourcesOpen(true)}
                       onMouseLeave={() => setIsResourcesOpen(false)}
                     >
-                      <div className="px-6">
+                      <div className="px-6>
                         {resources && resources.map((resource, index) => (
                           <Link
                             key={index}
                             href={resource && resource.href}
-                            className="block p-3 rounded-lg hover:bg-blue-50 transition-colors group">
-                            <div className="font-medium text-gray-900 group-hover:text-blue-600">
+                            className=block p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                            <div className="font-medium text-gray-900 group-hover:text-blue-600>
                               {resource && resource.name}
                             </div>
-                            <div className="text-sm text-gray-500">
+                            <div className=text-sm text-gray-500">
                               {resource && resource.description}
                             </div>
                           </Link>
@@ -2025,8 +2023,8 @@ export default function Navigation() {
                 </AnimatePresence>
               </div>
               <Link
-                href="/pricing"
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                href="/pricing
+                className=text-gray-700 hover:text-blue-600 font-medium transition-colors">
                 Pricing
               </Link>
             </div>
@@ -2035,159 +2033,159 @@ export default function Navigation() {
                 Get Started
               </Link>
               <a
-                href="tel:+13024640950"
-                className="bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-2 rounded-lg font-medium transition-colors"
+                href="tel:+13024640950
+                className=bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-2 rounded-lg font-medium transition-colors"
               >
                 Call Now
               </a>
             </div>
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors">
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors>
                 Get Started
               </Link>
               <a
-                href="tel:+13024640950"
-                className="bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-2 rounded-lg font-medium transition-colors">
+                href=tel:+13024640950"
+                className="bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-2 rounded-lg font-medium transition-colors>
                 Call Now
               </a>
             </div>
             {/* Mobile Menu Button */}
             <button
-              className="lg:hidden p-2"
+              className=lg:hidden p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? (
-                <X className="w-6 h-6" />
+                <X className="w-6 h-6 />
               ) : (
-                <Menu className="w-6 h-6" />
+                <Menu className=w-6 h-6" />
               )}
           {/* Mobile Menu */}
           <AnimatePresence>
             {isMenuOpen && (
               <motion&& motion.div
                 initial={{ opacity: 0;, height: 0 ;}}
-                animate={{ opacity: 1;, height: "auto" ;}}
+                animate={{ opacity: 1;, height: "auto ;}}
                 exit={{ opacity: 0;, height: 0 ;}}
-                className="lg:hidden border-t border-gray-200">
-                <div className="py-4 space-y-2">
+                className=lg:hidden border-t border-gray-200">
+                <div className="py-4 space-y-2>
                   <Link
-                    href="/"
-                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg"
+                    href=/"
+                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg
                     onClick={() => setIsMenuOpen(false)}
                   {/* Mobile Services */}
-                  <div className="px-4 py-2">
-                    <div className="font-medium text-gray-900 mb-2">
+                  <div className=px-4 py-2">
+                    <div className="font-medium text-gray-900 mb-2>
                       Services
                     </div>
-                    <div className="space-y-1 ml-4">
+                    <div className=space-y-1 ml-4">
                       {services && services.map((service, index) => (
                         <Link
                           key={index}
                           href={service && service.href}
-                          className="block py-1 text-sm text-gray-600 hover:text-blue-600"
+                          className="block py-1 text-sm text-gray-600 hover:text-blue-600
                           onClick={() => setIsMenuOpen(false)}
                         >
                           {service && service.name}
                         </Link>
                       ))}
                   {/* Mobile Solutions */}
-                  <div className="px-4 py-2">
-                    <div className="font-medium text-gray-900 mb-2">
+                  <div className=px-4 py-2">
+                    <div className="font-medium text-gray-900 mb-2>
                       Solutions
                     </div>
-                    <div className="space-y-1 ml-4">
+                    <div className=space-y-1 ml-4">
                       {solutions && solutions.map((solution, index) => (
                         <Link
                           key={index}
                           href={solution && solution.href}
-                          className="block py-1 text-sm text-gray-600 hover:text-blue-600"
+                          className="block py-1 text-sm text-gray-600 hover:text-blue-600
                           onClick={() => setIsMenuOpen(false)}
                         >
                           {solution && solution.name}
                         </Link>
                       ))}
                   {/* Mobile Industries */}
-                  <div className="px-4 py-2">
-                    <div className="font-medium text-gray-900 mb-2">
+                  <div className=px-4 py-2">
+                    <div className="font-medium text-gray-900 mb-2>
                       Industries
                     </div>
-                    <div className="space-y-1 ml-4">
+                    <div className=space-y-1 ml-4">
                       {industries && industries.map((industry, index) => (
                         <Link
                           key={index}
                           href={industry && industry.href}
-                          className="block py-1 text-sm text-gray-600 hover:text-blue-600"
+                          className="block py-1 text-sm text-gray-600 hover:text-blue-600
                           onClick={() => setIsMenuOpen(false)}
                         >
                           {industry && industry.name}
                         </Link>
                       ))}
                   {/* Mobile Resources */}
-                  <div className="px-4 py-2">
-                    <div className="font-medium text-gray-900 mb-2">
+                  <div className=px-4 py-2">
+                    <div className="font-medium text-gray-900 mb-2>
                       Resources
                     </div>
-                    <div className="space-y-1 ml-4">
+                    <div className=space-y-1 ml-4">
                       {resources && resources.map((resource, index) => (
                         <Link
                           key={index}
                           href={resource && resource.href}
-                          className="block py-1 text-sm text-gray-600 hover:text-blue-600"
+                          className="block py-1 text-sm text-gray-600 hover:text-blue-600
                           onClick={() => setIsMenuOpen(false)}
                         >
                           {resource && resource.name}
                         </Link>
                       ))}
                   <Link
-                    href="/pricing"
-                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg"
+                    href=/pricing"
+                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg
                     onClick={() => setIsMenuOpen(false)}
                     <Link
-                      href="/contact"
-                      className="block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium text-center"
+                      href=/contact"
+                      className="block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium text-center
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Get Started
                     </Link>
                     <a
-                      href="tel:+13024640950"
-                      className="block bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-lg font-medium text-center"
+                      href=tel:+13024640950"
+                      className="block bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-lg font-medium text-center
                       onClick={() => setIsMenuOpen(false)}
                               href={solution.href}
-                              className="p - 3 rounded - lg hover:bg - blue - 50 transition - colors group"
+                              className=p - 3 rounded - lg hover:bg - blue - 50 transition - colors group"
                             >
-                              <div className="flex items - center mb - 2">
-                                <IconComponent className="w - 5 h - 5 text - blue - 600 mr - 2" />
-                                <div className="font - medium text - gray - 900 group - hover:text - blue - 600">
+                              <div className="flex items - center mb - 2>
+                                <IconComponent className=w - 5 h - 5 text - blue - 600 mr - 2" />
+                                <div className="font - medium text - gray - 900 group - hover:text - blue - 600>
                                   {solution.name}
                                 </div>
                               </div>
-                              <div className="text - sm text - gray - 500">
+                              <div className=text - sm text - gray - 500">
                                 {solution.description}
                               </div>
                             </Link>)
                         })}
                       </div>
-                      <div className="border - t border - gray - 200 mt - 4 pt - 4 px - 6">
+                      <div className="border - t border - gray - 200 mt - 4 pt - 4 px - 6>
                         <Link
-                          href="/solutions"
-                          className="flex items - center text - blue - 600 hover:text - blue - 700 font - medium"
+                          href=/solutions"
+                          className="flex items - center text - blue - 600 hover:text - blue - 700 font - medium
                         >
                           View All Solutions
-                          <ArrowRight className="w - 4 h - 4 ml - 2" />
+                          <ArrowRight className=w - 4 h - 4 ml - 2" />
                         </Link>
                       </div>
                     </motion.div>)}
                 </AnimatePresence>
               </div>
               {/* Industries Dropdown */}
-              <div className="relative group">
+              <div className="relative group>
                 <button
-                  className="flex items - center text - gray - 700 hover:text - blue - 600 font - medium transition - colors"
+                  className=flex items - center text - gray - 700 hover:text - blue - 600 font - medium transition - colors"
                   onMouseEnter={() => setIsIndustriesOpen (true)}
                   onMouseLeave={() => setIsIndustriesOpen (false)}
                 >
                   Industries
-                  <ChevronDown className="w - 4 h - 4 ml - 1" />
+                  <ChevronDown className="w - 4 h - 4 ml - 1 />
                 </button>
                 <AnimatePresence>
                   {isIndustriesOpen && (
@@ -2195,21 +2193,21 @@ export default function Navigation() {
                       initial={{ opacity: 0;, coordinate_y: 10 ;}}
                       animate={{ opacity: 1;, coordinate_y: 0 ;}}
                       exit={{ opacity: 0;, coordinate_y: 10 ;}}
-                      className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4"
+                      className=absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4"
                       onMouseEnter={() => setIsIndustriesOpen (true)}
                       onMouseLeave={() => setIsIndustriesOpen (false)}
                     >
-                      <div className="px - 6">
+                      <div className="px - 6>
                         {industries.map ((industry, index) => (
                           <Link
                             key={index}
                             href={industry.href}
-                            className="block p - 3 rounded - lg hover:bg - blue - 50 transition - colors group"
+                            className=block p - 3 rounded - lg hover:bg - blue - 50 transition - colors group"
                           >
-                            <div className="font - medium text - gray - 900 group - hover:text - blue - 600">
+                            <div className="font - medium text - gray - 900 group - hover:text - blue - 600>
                               {industry.name}
                             </div>
-                            <div className="text - sm text - gray - 500">
+                            <div className=text - sm text - gray - 500">
                               {industry.description}
                             </div>
                           </Link>))}
@@ -2218,14 +2216,14 @@ export default function Navigation() {
                 </AnimatePresence>
               </div>
               {/* Resources Dropdown */}
-              <div className="relative group">
+              <div className="relative group>
                 <button
-                  className="flex items - center text - gray - 700 hover:text - blue - 600 font - medium transition - colors"
+                  className=flex items - center text - gray - 700 hover:text - blue - 600 font - medium transition - colors"
                   onMouseEnter={() => setIsResourcesOpen (true)}
                   onMouseLeave={() => setIsResourcesOpen (false)}
                 >
                   Resources
-                  <ChevronDown className="w - 4 h - 4 ml - 1" />
+                  <ChevronDown className="w - 4 h - 4 ml - 1 />
                 </button>
                 <AnimatePresence>
                   {isResourcesOpen && (
@@ -2233,21 +2231,21 @@ export default function Navigation() {
                       initial={{ opacity: 0;, coordinate_y: 10 ;}}
                       animate={{ opacity: 1;, coordinate_y: 0 ;}}
                       exit={{ opacity: 0;, coordinate_y: 10 ;}}
-                      className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4"
+                      className=absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4"
                       onMouseEnter={() => setIsResourcesOpen (true)}
                       onMouseLeave={() => setIsResourcesOpen (false)}
                     >
-                      <div className="px - 6">
+                      <div className="px - 6>
                         {resources.map ((resource, index) => (
                           <Link
                             key={index}
                             href={resource.href}
-                            className="block p - 3 rounded - lg hover:bg - blue - 50 transition - colors group"
+                            className=block p - 3 rounded - lg hover:bg - blue - 50 transition - colors group"
                           >
-                            <div className="font - medium text - gray - 900 group - hover:text - blue - 600">
+                            <div className="font - medium text - gray - 900 group - hover:text - blue - 600>
                               {resource.name}
                             </div>
-                            <div className="text - sm text - gray - 500">
+                            <div className=text - sm text - gray - 500">
                               {resource.description}
                             </div>
                           </Link>))}
@@ -2256,42 +2254,42 @@ export default function Navigation() {
                 </AnimatePresence>
               </div>
               <Link
-                href="/pricing"
-                className="text - gray - 700 hover:text - blue - 600 font - medium transition - colors"
+                href="/pricing
+                className=text - gray - 700 hover:text - blue - 600 font - medium transition - colors"
               >
                 Pricing
               </Link>
             </div>
             {/* Search and CTA Buttons */}
-            <div className="hidden lg:flex items - center space - x-4">
+            <div className="hidden lg:flex items - center space - x-4>
               <button
                 on_click={() => setIsSearchOpen (true)}
-                className="p - 2 text - gray - 700 hover:text - blue - 600 transition - colors"
-                aria - label="Search"
+                className=p - 2 text - gray - 700 hover:text - blue - 600 transition - colors"
+                aria - label="Search
               >
-                <Search className="w - 5 h - 5" />
+                <Search className=w - 5 h - 5" />
               </button>
               <Link
-                href="/contact"
-                className="bg - blue - 600 hover:bg - blue - 700 text - white px - 6 py - 2 rounded - lg font - medium transition - colors"
+                href="/contact
+                className=bg - blue - 600 hover:bg - blue - 700 text - white px - 6 py - 2 rounded - lg font - medium transition - colors"
               >
                 Get Started
               </Link>
               <a
-                href="tel:+13024640950"
-                className="bg - transparent border - 2 border - blue - 600 text - blue - 600 hover:bg - blue - 600 hover:text - white px - 6 py - 2 rounded - lg font - medium transition - colors"
+                href="tel:+13024640950
+                className=bg - transparent border - 2 border - blue - 600 text - blue - 600 hover:bg - blue - 600 hover:text - white px - 6 py - 2 rounded - lg font - medium transition - colors"
               >
                 Call Now
               </a>
             </div>
             {/* Mobile Menu Button */}
             <button
-              className="lg:hidden p - 2"
+              className="lg:hidden p - 2
               on_click={() => setIsMenuOpen (!isMenuOpen)}
             >
               {isMenuOpen ? (
-                <X className="w - 6 h - 6" />) : (
-                <Menu className="w - 6 h - 6" />)}
+                <X className=w - 6 h - 6" />) : (
+                <Menu className="w - 6 h - 6 />)}
             </button>
           </div>
           {/* Mobile Menu */}
@@ -2299,29 +2297,29 @@ export default function Navigation() {
             {isMenuOpen && (
               <motion.div
                 initial={{ opacity: 0;, height: 0 ;}}
-                animate={{ opacity: 1;, height: "auto" ;}}
+                animate={{ opacity: 1;, height: auto" ;}}
                 exit={{ opacity: 0;, height: 0 ;}}
-                className="lg:hidden border - t border - gray - 200"
+                className="lg:hidden border - t border - gray - 200
               >
-                <div className="py - 4 space - y-2">
+                <div className=py - 4 space - y-2">
                   <Link
-                    href="/"
-                    className="block px - 4 py - 2 text - gray - 700 hover:bg - blue - 50 hover:text - blue - 600 rounded - lg"
+                    href="/
+                    className=block px - 4 py - 2 text - gray - 700 hover:bg - blue - 50 hover:text - blue - 600 rounded - lg"
                     on_click={() => setIsMenuOpen (false)}
                   >
                     Home
                   </Link>
                   {/* Mobile Services */}
-                  <div className="px - 4 py - 2">
-                    <div className="font - medium text - gray - 900 mb - 2">
+                  <div className="px - 4 py - 2>
+                    <div className=font - medium text - gray - 900 mb - 2">
                       Services
                     </div>
-                    <div className="space - y-1 ml - 4">
+                    <div className="space - y-1 ml - 4>
                       {services.map ((service, index) => (
                         <Link
                           key={index}
                           href={service.href}
-                          className="block py - 1 text - sm text - gray - 600 hover:text - blue - 600"
+                          className=block py - 1 text - sm text - gray - 600 hover:text - blue - 600"
                           on_click={() => setIsMenuOpen (false)}
                         >
                           {service.name}
@@ -2329,16 +2327,16 @@ export default function Navigation() {
                     </div>
                   </div>
                   {/* Mobile Solutions */}
-                  <div className="px - 4 py - 2">
-                    <div className="font - medium text - gray - 900 mb - 2">
+                  <div className="px - 4 py - 2>
+                    <div className=font - medium text - gray - 900 mb - 2">
                       Solutions
                     </div>
-                    <div className="space - y-1 ml - 4">
+                    <div className="space - y-1 ml - 4>
                       {solutions.map ((solution, index) => (
                         <Link
                           key={index}
                           href={solution.href}
-                          className="block py - 1 text - sm text - gray - 600 hover:text - blue - 600"
+                          className=block py - 1 text - sm text - gray - 600 hover:text - blue - 600"
                           on_click={() => setIsMenuOpen (false)}
                         >
                           {solution.name}
@@ -2346,16 +2344,16 @@ export default function Navigation() {
                     </div>
                   </div>
                   {/* Mobile Industries */}
-                  <div className="px - 4 py - 2">
-                    <div className="font - medium text - gray - 900 mb - 2">
+                  <div className="px - 4 py - 2>
+                    <div className=font - medium text - gray - 900 mb - 2">
                       Industries
                     </div>
-                    <div className="space - y-1 ml - 4">
+                    <div className="space - y-1 ml - 4>
                       {industries.map ((industry, index) => (
                         <Link
                           key={index}
                           href={industry.href}
-                          className="block py - 1 text - sm text - gray - 600 hover:text - blue - 600"
+                          className=block py - 1 text - sm text - gray - 600 hover:text - blue - 600"
                           on_click={() => setIsMenuOpen (false)}
                         >
                           {industry.name}
@@ -2363,16 +2361,16 @@ export default function Navigation() {
                     </div>
                   </div>
                   {/* Mobile Resources */}
-                  <div className="px - 4 py - 2">
-                    <div className="font - medium text - gray - 900 mb - 2">
+                  <div className="px - 4 py - 2>
+                    <div className=font - medium text - gray - 900 mb - 2">
                       Resources
                     </div>
-                    <div className="space - y-1 ml - 4">
+                    <div className="space - y-1 ml - 4>
                       {resources.map ((resource, index) => (
                         <Link
                           key={index}
                           href={resource.href}
-                          className="block py - 1 text - sm text - gray - 600 hover:text - blue - 600"
+                          className=block py - 1 text - sm text - gray - 600 hover:text - blue - 600"
                           on_click={() => setIsMenuOpen (false)}
                         >
                           {resource.name}
@@ -2380,23 +2378,23 @@ export default function Navigation() {
                     </div>
                   </div>
                   <Link
-                    href="/pricing"
-                    className="block px - 4 py - 2 text - gray - 700 hover:bg - blue - 50 hover:text - blue - 600 rounded - lg"
+                    href="/pricing
+                    className=block px - 4 py - 2 text - gray - 700 hover:bg - blue - 50 hover:text - blue - 600 rounded - lg"
                     on_click={() => setIsMenuOpen (false)}
                   >
                     Pricing
                   </Link>
-                  <div className="px - 4 py - 2 space - y-2">
+                  <div className="px - 4 py - 2 space - y-2>
                     <Link
-                      href="/contact"
-                      className="block bg - blue - 600 hover:bg - blue - 700 text - white px - 4 py - 2 rounded - lg font - medium text - center"
+                      href=/contact"
+                      className="block bg - blue - 600 hover:bg - blue - 700 text - white px - 4 py - 2 rounded - lg font - medium text - center
                       on_click={() => setIsMenuOpen (false)}
                     >
                       Get Started
                     </Link>
                     <a
-                      href="tel:+13024640950"
-                      className="block bg - transparent border - 2 border - blue - 600 text - blue - 600 hover:bg - blue - 600 hover:text - white px - 4 py - 2 rounded - lg font - medium text - center"
+                      href=tel:+13024640950"
+                      className="block bg - transparent border - 2 border - blue - 600 text - blue - 600 hover:bg - blue - 600 hover:text - white px - 4 py - 2 rounded - lg font - medium text - center
                       on_click={() => setIsMenuOpen (false)}
                     >
                       Call Now
@@ -2420,40 +2418,38 @@ export default function Navigation() {
         on_close={() => setIsSearchOpen (false)}
       />
     </>)
-import React, { useState } from 'react'
-import Link from 'next/link'
-import {
+import React, { useState } from 'react
+import Link from next/link'
   Menu,
-  X,
-} from 'lucide-react'
+  X} from 'lucide-react
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   ]
   return (
-    <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+    <nav className=bg-slate-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8>
+        <div className=flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">Z</span>
+          <Link href="/ className=flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center>
+              <span className=text-white font-bold text-lg">Z</span>
             </div>
-            <span className="text-white text-xl font-bold">Zion Tech Group</span>
+            <span className="text-white text-xl font-bold>Zion Tech Group</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className=hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
-              <div key={item.name} className="relative">
+              <div key={item.name} className="relative>
                 {item.dropdown ? (
-                  <div className="relative">
+                  <div className=relative">
                     <button
                       onClick={() => toggleDropdown(item.name)}
-                      className="flex items-center text-gray-300 hover:text-white transition-colors"
+                      className="flex items-center text-gray-300 hover:text-white transition-colors
                     >
                       {item.name}
-                      <ChevronDown className="ml-1 h-4 w-4" />
+                      <ChevronDown className=ml-1 h-4 w-4" />
                     </button>
 
                     <AnimatePresence>
@@ -2462,13 +2458,13 @@ const Navigation = () => {
                           initial={{ opacity: 0;, y: -10 ;}}
                           animate={{ opacity: 1;, y: 0 ;}}
                           exit={{ opacity: 0;, y: -10 ;}}
-                          className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50"
+                          className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50
                         >
                           {item.dropdown.map((dropdownItem) => (
                             <Link
                               key={dropdownItem.name}
                               href={dropdownItem.href}
-                              className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
+                              className=block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
                               onClick={() => setActiveDropdown(null)}
                             >
                               {dropdownItem.name}
@@ -2481,7 +2477,7 @@ const Navigation = () => {
                 ) : (
                   <Link
                     href={item.href}
-                    className="text-gray-300 hover:text-white transition-colors"
+                    className="text-gray-300 hover:text-white transition-colors
                   >
                     {item.name}
                   </Link>
@@ -2491,23 +2487,23 @@ const Navigation = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className=hidden md:flex items-center space-x-4">
             <Link
-              href="/contact"
-              className="inline-flex items-center px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+              href="/contact
+              className=inline-flex items-center px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
             >
               Get Started
-              <ArrowRight className="ml-2 h-4 w-4" />
+              <ArrowRight className="ml-2 h-4 w-4 />
             </Link>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className=md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white transition-colors"
+              className="text-gray-300 hover:text-white transition-colors
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <X className=h-6 w-6" /> : <Menu className="h-6 w-6 />}
             </button>
           </div>
         </div>
@@ -2517,29 +2513,29 @@ const Navigation = () => {
           {isOpen && (
             <motion.div
               initial={{ opacity: 0;, height: 0 ;}}
-              animate={{ opacity: 1;, height: 'auto' ;}}
+              animate={{ opacity: 1;, height: auto' ;}}
               exit={{ opacity: 0;, height: 0 ;}}
-              className="md:hidden border-t border-gray-800"
+              className=md:hidden border-t border-gray-800"
             >
-              <div className="py-4 space-y-2">
+              <div className="py-4 space-y-2>
                 {navigation.map((item) => (
                   <div key={item.name}>
                     {item.dropdown ? (
                       <div>
                         <button
                           onClick={() => toggleDropdown(item.name)}
-                          className="flex items-center justify-between w-full px-4 py-2 text-left text-gray-300 hover:text-white transition-colors"
+                          className=flex items-center justify-between w-full px-4 py-2 text-left text-gray-300 hover:text-white transition-colors"
                         >
                           {item.name}
-                          <ChevronDown className="h-4 w-4" />
+                          <ChevronDown className="h-4 w-4 />
                         </button>
                         {activeDropdown === item.name && (
-                          <div className="pl-4 space-y-1">
+                          <div className=pl-4 space-y-1">
                             {item.dropdown.map((dropdownItem) => (
                               <Link
                                 key={dropdownItem.name}
                                 href={dropdownItem.href}
-                                className="block px-4 py-2 text-gray-400 hover:text-white transition-colors"
+                                className="block px-4 py-2 text-gray-400 hover:text-white transition-colors
                                 onClick={() => {
                                   setIsOpen(false)
                                   setActiveDropdown(null)
@@ -2554,7 +2550,7 @@ const Navigation = () => {
                     ) : (
                       <Link
                         href={item.href}
-                        className="block px-4 py-2 text-gray-300 hover:text-white transition-colors"
+                        className=block px-4 py-2 text-gray-300 hover:text-white transition-colors"
                         onClick={() => setIsOpen(false)}
                       >
                         {item.name}
@@ -2562,10 +2558,10 @@ const Navigation = () => {
                     )}
                   </div>
                 ))}
-                <div className="pt-4 border-t border-gray-800">
+                <div className="pt-4 border-t border-gray-800>
                   <Link
-                    href="/contact"
-                    className="block px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg text-center hover:bg-blue-700 transition-colors"
+                    href=/contact"
+                    className="block px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg text-center hover:bg-blue-700 transition-colors
                     onClick={() => setIsOpen(false)}
                   >
                     Get Started
@@ -2578,19 +2574,18 @@ const Navigation = () => {
       </div>
 
 const Navigation: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-  };
+  }
 
   return (
-    <nav className="bg-white shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex items-center">
-            <Link href="/" className="flex-shrink-0">
-              <span className="text-2xl font-bold text-blue-600">
+    <nav className=bg-white shadow-lg">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
+        <div className=flex justify-between h-16">
+          <div className="flex items-center>
+            <Link href=/" className="flex-shrink-0>
+              <span className=text-2xl font-bold text-blue-600">
                 Zion Tech
               </span>
             </Link>

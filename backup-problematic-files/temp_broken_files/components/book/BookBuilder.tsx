@@ -144,6 +144,11 @@ export default function BookBuilder() {
         <div className='flex gap-2'>
           <button
             className='btn btn-sm btn-outline'
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+
+            <div className='pt-4>
+              <img
+
             onClick={handleGenerateWithAI}
             disabled={busy}
           >
@@ -151,17 +156,17 @@ export default function BookBuilder() {
             <option value="LETTER">8.5x11 Letter</option>
             <option value="A4">A4</option>
           </select>
-          <button className="btn btn-sm btn-primary" onClick={handleExportPdf} disabled={busy}>
-            <Download className="w-4 h-4 mr-1" /> PDF
+          <button className="btn btn-sm btn-primary onClick={handleExportPdf} disabled={busy}>
+            <Download className=w-4 h-4 mr-1" /> PDF
           </button>
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
 
           <button
-            className='btn btn-sm btn-secondary'
+            className='btn btn-sm btn-secondary
             onClick={handleExportEpub}
             disabled={busy}
           >
-            <FileType className='w-4 h-4 mr-1' /> EPUB
+            <FileType className=w-4 h-4 mr-1' /> EPUB
           </button>
 
           <button className="btn btn-sm btn-secondary" onClick={handleExportEpub} disabled={busy}>
@@ -171,10 +176,10 @@ export default function BookBuilder() {
         </div>
       </div>
 
-      <section className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div className="space-y-4">
-          <h2 className="font-semibold flex items-center gap-2">
-            <BookOpen className="w-4 h-4" /> Cover & Branding
+      <section className="grid grid-cols-1 lg:grid-cols-2 gap-6>
+        <div className=space-y-4">
+          <h2 className="font-semibold flex items-center gap-2>
+            <BookOpen className=w-4 h-4" /> Cover & Branding
           </h2>
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
             <label className=&quot;space-y-1&quot;>
@@ -315,27 +320,27 @@ className=&quot;w-full border rounded px-3 py-2&quot;
           <h2 className="font-semibold flex items-center gap-2">
             <Settings className="w-4 h-4" /> Visual Elements
           </h2>
-          <div className="space-y-3">
-            <label className="block">
-              <span className="text-sm opacity-70">Timeline images</span>
-              <input type="file" accept="image/*" multiple onChange={(e) => onUploadImages(e.target.files, 'timelineImages' as any)} />
+          <div className="space-y-3>
+            <label className=block">
+              <span className="text-sm opacity-70>Timeline images</span>
+              <input type=file" accept="image/* multiple onChange={(e) => onUploadImages(e.target.files, timelineImages' as any)} />
             </label>
-            <label className="block">
-              <span className="text-sm opacity-70">DAO vote charts</span>
-              <input type="file" accept="image/*" multiple onChange={(e) => onUploadImages(e.target.files, 'daoVoteCharts' as any)} />
+            <label className=block">
+              <span className="text-sm opacity-70>DAO vote charts</span>
+              <input type=file" accept="image/* multiple onChange={(e) => onUploadImages(e.target.files, 'daoVoteCharts as any)} />
             </label>
-            <label className="block">
-              <span className="text-sm opacity-70">Figma UI screenshots</span>
-              <input type="file" accept="image/*" multiple onChange={(e) => onUploadImages(e.target.files, 'uiScreens' as any)} />
+            <label className=block">
+              <span className="text-sm opacity-70>Figma UI screenshots</span>
+              <input type=file" accept="image/* multiple onChange={(e) => onUploadImages(e.target.files, uiScreens' as any)} />
             </label>
-            <div className="grid grid-cols-3 gap-2">
+            <div className=grid grid-cols-3 gap-2">
               {project.visuals.timelineImages.concat(project.visuals.daoVoteCharts).concat(project.visuals.uiScreens).slice(0, 6).map((src, i) => (
                 <div key={i} className="aspect-video bg-gray-100 rounded flex items-center justify-center overflow-hidden">
                   <img src={src} alt="visual" className="object-cover w-full h-full" />
                 </div>
               ))}
 
-            <div className='grid grid-cols-3 gap-2'>
+            <div className='grid grid-cols-3 gap-2>
               {project.visuals.timelineImages
                 .concat(project.visuals.daoVoteCharts)
                 .concat(project.visuals.uiScreens)
@@ -583,6 +588,7 @@ className=&quot;w-full min-h-[160px] border rounded p-2&quot;
     </div>;
   )}
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+
 
   );
 }

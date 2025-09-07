@@ -65,7 +65,6 @@ import { toast  } from '@/components/ui/use-toast';
 import { HELP_CATEGORIES  } from './help-content';
 import React, { useState } from "react",import { Button } from "@/components/ui/button",import { Card } from "@/components/ui/card",import { toast } from "@/components/ui/use-toast",interface HelpArticleViewProps  {articleId: string;
 }const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null)// Find the article in all categories;
-  let article = null;
   for (const category of HELP_CATEGORIES) {const found = category.articles.find(a => a.id === articleId)if (found) {article = found;
       break;
     }

@@ -14,7 +14,6 @@ export default function Services() {
                       className={`p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-${category.color}-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                       style={{ transitionDelay: `${index * 200}ms` }}
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
 
 export default function Services() {
@@ -123,7 +122,6 @@ export default function Services() {
             }}>
               <div style={{ fontSize: 24, fontWeight: 700, color: '#22c55e' }}>40+</div>
               <div style={{ fontSize: 14, opacity: 0.8 }}>IT Solutions</div>
-  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => setIsLoaded(true), 100);
@@ -255,11 +253,8 @@ export default function Services() {
     icon: Brain,
 
 export default function Services() {
-  const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer);  }, []);
-  const contact: ContactInfo = {
     phone: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -374,8 +369,6 @@ export default function Services() {
                   </p>
                 </motion.div>
               ))}
-import Head from 'next/head';
-import Link from 'next/link';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 export default function Services() {

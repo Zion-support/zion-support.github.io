@@ -16,6 +16,4 @@ return;
   }
 
 const body = null;
-  res.status(200).json({ "ok": true })
-}
 

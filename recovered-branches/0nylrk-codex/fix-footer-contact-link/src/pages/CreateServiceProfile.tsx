@@ -2,15 +2,8 @@ import { ServiceProviderRegistrationForm } from "@/components/profile/ServicePro
 import React from "react","
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm","
 import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";"
-import React from "react","
-import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm","
 
-import React from "react","
-import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm","
 
-import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";"
-import React from "react","
-import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm","
 export default function CreateServiceProfile() {
 }
 return (;
@@ -31,10 +24,8 @@ profile to get discovered on the Zion Marketplace.
     </div>
   )
 
-import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";"
 
 import React from "react";"
-import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";"
 
 export default function CreateServiceProfile() {;
 }

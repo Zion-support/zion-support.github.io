@@ -11,4 +11,4 @@ const securityHeaders = [
   { key: "Referrer-Policy", value: "origin-when-cross-origin" }
 ];
 
-module.exports = { securityHeaders };
+module.exports = { securityHeaders }

@@ -5,7 +5,6 @@ const benefits = [;
 import { GradientHeading } from './GradientHeading';'
 import { FeatureCard } from './FeatureCard';'
 import { Bot, Clock, Globe, TrendingDown } from './lucide-react';'
-const benefits = [;
   {
     }
     "title": "AI - Powered Matchmaking","
@@ -14,7 +13,6 @@ const benefits = [;
 import { GradientHeading } from "./GradientHeading","
 import { FeatureCard } from "./FeatureCard","
 import { Bot, Clock, Globe, TrendingDown } from "lucide-react","
-const benefits = [;
   {
     }
     "title": "AI-Powered Matchmaking","
@@ -34,7 +32,6 @@ return (;
 import { GradientHeading } from "./GradientHeading";"
 import { FeatureCard } from "./FeatureCard";"
 import { Bot, Clock, Globe, TrendingDown } from "lucide-react",;"
-const benefits = [;
   {;
     }
     "title": "AI-Powered Matchmaking",,"

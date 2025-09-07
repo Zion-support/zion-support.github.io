@@ -31,11 +31,8 @@ export function DeveloperPortal() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState<string>("documentation");
 export function DeveloperPortal() {
-  const { user } = useAuth();
 
-  const { user } = useAuth();
 
-  const [activeTab, setActiveTab] = useState<string>("documentation");
 
 import { ApiLogs } from "@/components/developers/ApiLogs",
 interface TabDefinition {
@@ -68,7 +65,6 @@ export function DeveloperPortal() {
         </p>
       </div>
   const { user } = useAuth(),
-  const [activeTab, setActiveTab] = useState<string>("documentation"),
               return (
       {/* Tabs */}
       <div className = $2;

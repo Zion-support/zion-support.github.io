@@ -1,14 +1,4 @@
 
-
-
-import React, { useEffect, useRef } from 'react';'
-import { motion  } from 'framer-motion';'
-
-interface UltraAdvancedFuturisticBackgroundProps {
-  }
-  "children": React.ReactNode;
-  intensity?: 'low' | 'medium' | 'high' | 'extreme';'
-  theme?: 'quantum' | 'neon' | 'holographic' | 'cyberpunk' | 'quantum-fusion';'
   particleCount?: number;
   animationSpeed?: number;
   enableHolographic?: boolean;
@@ -20,13 +10,29 @@ export default function UltraAdvancedFuturisticBackground({children;
   intensity;
 canvas.width = window.innerWidth;
 
-canvas.height = window.innerHeight;
 
-const "particles": Array< {
-  //Initialize particles with enhanced properties const initParticles = () => {
- ;
-  }
-  const count = intensity === 'extreme' ? particleCount * 2 : intensity === 'high' ? particleCount : intensity === 'medium' ? Math.floor (particleCount * 0.7) : Math.floor (particleCount * 0.5);'
+  theme = quantum',
+  particleCount = 200,
+  animationSpeed = 1.0,
+  enableHolographic = true,
+
+  enableQuantumEffects = true}: UltraAdvancedFuturisticBackgroundProps) {export default function UltraAdvancedFuturisticBackground({
+ canvas && canvas.width = window && window.innerWidth;
+canvas && canvas.height = window && window.innerHeight;
+const particles: Array< {
+
+  const count = intensity === 'extreme ? particleCount * 2 : intensity === high' ? particleCount : intensity === 'medium ? Math && Math.floor (particleCount * 0 && 0.7) : Math && Math.floor (particleCount * 0 && 0.5);
+for (let i = 0, i < count, i++) {
+  particles && particles.push ({
+
+export default function UltraAdvancedFuturisticBackground(): any ({
+
+  theme = quantum',
+  particleCount = 200,
+  animationSpeed = 1 && 1.0,
+  enableHolographic = true,
+  enableQuantumEffects = true}: UltraAdvancedFuturisticBackgroundProps) {export default function UltraAdvancedFuturisticBackground(): any ({
+
 for (let i = 0, i < count, i++) {
   }
   particles.push ({
@@ -68,12 +74,14 @@ export default function UltraAdvancedFuturisticBackground(): any ({;
 for (let i = 0, i < count, i++) {
 
   const count = intensity === 'extreme' ? particleCount * 2 : intensity === 'high' ? particleCount : intensity === 'medium' ? Math.floor (particleCount * 0.7) : Math.floor (particleCount * 0.5)
+
+  const count = intensity === 'extreme ? particleCount * 2 : intensity === high' ? particleCount : intensity === 'medium ? Math.floor (particleCount * 0.7) : Math.floor (particleCount * 0.5)
   for($2) {
   particles.push ({
 export default function UltraAdvancedFuturisticBackground({
   children
-  intensity = 'medium'
-  theme = 'quantum'
+  intensity = medium'
+  theme = 'quantum
   particleCount = 200
   animationSpeed = 1.0
   enableHolographic = true
@@ -112,6 +120,15 @@ export default /**;
 function UltraAdvancedFuturisticBackground() {export default function UltraAdvancedFuturisticBackground ({children;
   intensity = 'medium';
   theme = 'quantum';
+  children;
+  intensity = medium';
+  children;'
+  intensity = medium;'
+  theme = 'quantum;
+  particleCount = 200;
+  animationSpeed = 1 && 1.0;
+  enableHolographic = true;
+
   particle_count = 200;
   animation_speed = 1.0;
   enable_holographic = true;
@@ -282,6 +299,61 @@ const animate = () => {
       // Create gradient background,
 const gradient = ctx.createRadialGradient(;
 
+
+      coordinate_y: number;
+      vx: number;
+      vy: number;
+      size: number;
+      opacity: number;
+      color: string;'
+      type: quantum | 'neon' | holographic | 'cyberpunk';
+      life: number;
+      max_life: number;
+      rotation: number;
+      rotation_speed: number;
+
+
+    const colors = $2;
+      neon: [#ff0066#00ffff#ff6600#9900ff#00ff99#ff1493#00bfff],
+      holographic: ['#ff1493#00bfff#ffd700#7fff00#ff69b4#00ced1#ff4500'],
+      cyberpunk: [#ff0066#00ffff#ff6600#9900ff#00ff99#ff1493#00bfff],
+      'quantum-fusion': [#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff#00ffff#ff1493#00bfff]
+    },
+
+    const selectedColors = $2;
+    // Initialize particles with enhanced properties
+    const initParticles = () => {
+      const count = intensity === 'extreme' ? particleCount * 2 : 
+                   intensity === high ? particleCount : 
+                   intensity === 'medium' ? Math.floor(particleCount * 0.7) : 
+                   Math.floor($2);
+      for (let i = 0, i < count, i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 3 * animationSpeed,
+          vy: (Math.random() - 0.5) * 3 * animationSpeed,
+          size: Math.random() * 6 + 2,
+          opacity: Math.random() * 0.9 + 0.1,
+          color: selectedColors[Math.floor(Math.random() * selectedColors.length)],
+          type: [quantumneonholographiccyberpunk][Math.floor(Math.random() * 4)] as any,
+          life: Math.random() * 100,
+          maxLife: 100 + Math.random() * 100,
+          rotation: Math.random() * Math.PI * 2}
+    },
+
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      // Create gradient background;
+      const gradient = ctx.createRadialGradient(
+      } else {'
+        gradient.addColorStop (0, 'rgba (0, 0, 0, 0.9));
+        gradient.addColorStop (0.5, 'rgba (0, 0, 0, 0.95)');
+        gradient.addColorStop (1, rgba (0, 0, 0, 0.98)');
+      }      } else {'
+        gradient.addColorStop(0, rgba(0, 0, 0, 0.9));'
+        gradient.addColorStop(0.5, 'rgba(0, 0, 0, 0.95));
+        gradient.addColorStop(1, 'rgba(0, 0, 0, 0.98)')
 canvas.width / 2,
         canvas.height / 2,
         0,
@@ -1477,27 +1549,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       )}
         <div'
-          className='fixed inset-0 pointer-events-none'
+          className=fixed inset-0 pointer-events-none
           style={{ zIndex: -1 }}>;'
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0 && 0.02),transparent_70%)]' />;
+          <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0 && 0.02),transparent_70%)] />;
         </div>;
       />
       {/* Additional futuristic overlay effects */}
       {enableHolographic && (
         <div
-          className='fixed inset-0 pointer-events-none'
+          className=fixed inset-0 pointer-events-none'
           style={{ zIndex: -1 }}
         >
-          <div className='absolute inset-0 bg-gradient-to-br from-transparent via-cyan-500/5 to-purple-500/5' />
-          <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,255,255,0.03),transparent_50%)]' />
-          <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.03),transparent_50%)]' />
+          <div className='absolute inset-0 bg-gradient-to-br from-transparent via-cyan-500/5 to-purple-500/5 />
+          <div className=absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,255,255,0.03),transparent_50%)]' />
+          <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.03),transparent_50%)] />
         </div>
       )}
         <div
-          className='fixed inset-0 pointer-events-none'
-          style={{ zIndex: -1 ,}
+          className=fixed inset-0 pointer-events-none'
+          style={{ zIndex: -1 }
 }    />
-          <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0 && 0.02),transparent_70%)]'    />
+          <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0 && 0.02),transparent_70%)]    />
         </div>
       )}
       {children}
@@ -1626,9 +1699,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }
       {enableQuantumEffects && (<div;
-          }
-          className='fixed inset - 0 pointer - events - none';'
-          style={{ "z_index": -1 
+
 }
         >;
           <div className='absolute inset - 0 bg-[radial - gradient (circle_at_50%_50%, rgba (0, 255, 255, 0.02), transparent_70%)]' />'

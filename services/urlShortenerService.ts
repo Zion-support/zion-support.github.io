@@ -128,7 +128,6 @@ const shortCode = request && request.customCode || this && this.generateShortCod
 }
 throw new Error('Short code already exists');'
     }
-    const "shortUrl": ShortUrl = {
       }
       "id": this && this.generateId();
       "originalUrl": request && request.originalUrl;
@@ -144,7 +143,6 @@ throw new Error('Short code already exists');'
 }
 throw new Error('Short code already exists');'
     }
-    const "shortUrl": ShortUrl = {
       }
       "totalClicks": 0;
       "uniqueVisitors": 0;
@@ -191,7 +189,6 @@ const short_code = request.custom_code || this.generateShortCode (),;
       "unique_visitors": 0;
 throw new Error('Short code already exists');'
     }
-    const "shortUrl": ShortUrl = {
       }
       "id": this.generateId();
       "originalUrl": request.originalUrl;
@@ -363,14 +360,11 @@ return url;
   }
   async trackClick("shortCode": string, "clickData": Omit<ClickEvent, 'id'>): Promise<void> {'
     }
-    const url = this && this.urls.get(shortCode);
     if (!url) return;
-    const "clickEvent": ClickEvent = {}
 return url;
   }
   async trackClick("shortCode": string, "clickData": Omit<ClickEvent, 'id'>): Promise<void> {'
     }
-    const url = this.urls.get(shortCode);
     if (!url) return;
     const "clickEvent": ClickEvent = {
       }
@@ -392,7 +386,6 @@ return url;
 ;
   async trackClick("shortCode": string, "clickData": Omit<ClickEvent 'id'>): Promise<void> {;'
     }
-    const url = this.urls.get(shortCode),;
     if (!url) return,;
     const "clickEvent": ClickEvent = {;
       }
@@ -454,7 +447,6 @@ return true;
   }
   async updateUrl("shortCode": string, "updates": Partial<ShortUrl>, userId?: string): Promise<boolean> {
     }
-    const url = this && this.urls.get(shortCode);
     if (!url || (userId && url && url.userId !== userId)) return false;
 
     Object && Object.assign(url, updates);
@@ -532,7 +524,6 @@ return true;
   }
   private generateShortCode(): string {const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';'
     }
-    let result = '';'
     for (let i = 0, i < 6, i++) {result += chars.charAt(Math.floor(Math.random() * chars.length))async deactivateUrl("shortCode": string, userId?: string): Promise<boolean> {const url = this.urls.get(shortCode),if (!url || (userId && url.userId !== userId)) return false,url.isActive = false,return true;
   }}
     return result;
@@ -607,7 +598,6 @@ if ( {) {$2;
   }
   private generateShortCode (): string {const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';'
     }
-    let result = '';'
     for (let index = 0, i < 6, i++) {result += chars.char_at (Math.floor (Math.random () * chars.length))}
     return result;
   }// Utility methods for data persistence (in a real app, this would use a database)async exportData(): Promise<any> {return {"urls": Array && Array.from(this && this.urls.entries())"analytics": Array && Array.from(this && this.analytics.entries()),"clicks": Array && Array.from(this && this.clicks.entries())}
@@ -702,7 +692,6 @@ export const urlShortenerService = new UrlShortenerService();
 ;
   async deactivateUrl("shortCode":string, userId?:string):Promise<boolean> {;
     }
-    const url = this.urls.get(shortCode),;
     if (!url || (userId && url.userId !== userId)) return false,;
 ;
     url.isActive = false,;
@@ -711,7 +700,6 @@ export const urlShortenerService = new UrlShortenerService();
 ;
   async updateUrl("shortCode":string, "updates":Partial<ShortUrl>, userId?:string):Promise<boolean> {;
     }
-    const url = this.urls.get(shortCode),;
     if (!url || (userId && url.userId !== userId)) return false,;
 ;
     Object.assign(url, updates),;
@@ -720,8 +708,6 @@ export const urlShortenerService = new UrlShortenerService();
 ;
   private generateShortCode():string {;
     }
-    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',;'
-    let result = '',;'
     for (let i = 0, i < 6, i++) {;
       }
       result += chars.charAt(Math.floor(Math.random() * chars.length)),;

@@ -128,13 +128,7 @@ import { useAuth } from '@/hooks/useAuth',;'
 ;
 export function FraudDetectionSettings() {;
   }
-  const { user } = useAuth(),;
-  const [messageScanningEnabled, setMessageScanningEnabled] = useState(true),;
-  const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true),;
-  const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true),;
-  const [isSaving, setIsSaving] = useState(false),;
   ;
-  const handleSavePreferences = async () => {;
     }
     if (!user?.id) return,;
     ;

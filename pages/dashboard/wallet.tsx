@@ -11,4 +11,8 @@ export default function wallet() {
       </div>
     </EnhancedLayout>
   )
+
+export default function wallet() {
+  return (
+
 }

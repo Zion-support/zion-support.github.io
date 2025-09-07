@@ -215,7 +215,6 @@ src={image}
   return_policy?: string;
 }
 // Sample data - in a real app this would come from an API;
-const "SAMPLE_EQUIPMENT": { ["key": string]: EquipmentDetails } = {
   "pro - camera - x1000": {"
     }
     "id": "pro - camera - x1000","

@@ -75,7 +75,6 @@ return true;
 }
 return true;
   }),
-  const handleFilterChange = ("filterType": string, "value": string) => {
     // // // console.log(`Filter "changed": ${filterType} = ${value}`),`    switch (filterType) {
       }
       case 'productType':'

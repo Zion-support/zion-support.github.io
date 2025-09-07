@@ -60,10 +60,15 @@ export default function SEOHead({
   title = 'Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions',
   description = 'Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions.',
   keywords = 'micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, blockchain, quantum computing, enterprise solutions',
+
+export default function SEOHead({
+  title = 'Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions,
+  description = Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions.',
+  keywords = 'micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, blockchain, quantum computing, enterprise solutions,
   canonicalUrl,
-  ogImage = '/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
+  ogImage = /og-image.jpg',
+  ogType = 'website,
+  twitterCard = summary_large_image',
   structuredData,
   noindex = false,
   nofollow = false,
@@ -102,13 +107,13 @@ export default function SEOHead({
     <Head>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
-      <meta name="description" content={fullDescription} />
-      <meta name="keywords" content={fullKeywords} />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta charSet="utf-8" />
+      <meta name=description" content={fullDescription} />
+      <meta name="keywords content={fullKeywords} />
+      <meta name=viewport" content="width=device-width, initial-scale=1 />
+      <meta charSet=utf-8" />
 
       {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      {canonicalUrl && <link rel="canonical href={canonicalUrl} />}
 
       {/* Open Graph Tags */}
       <meta property="og: title" content={fullTitle} />
@@ -138,20 +143,20 @@ export default function SEOHead({
       {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
 
       {/* Twitter */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={fullDescription} />
-      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:card content={twitterCard} />
+      <meta name=twitter:title" content={fullTitle} />
+      <meta name="twitter:description content={fullDescription} />
+      <meta name=twitter:image" content={ogImage} />
 
       {/* Additional Meta Tags */}
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="theme-color" content="#0f172a" />
-      <meta name="msapplication-TileColor" content="#0f172a" />
+      <meta name="author content=Zion Tech Group" />
+      <meta name="theme-color content=#0f172a" />
+      <meta name="msapplication-TileColor content=#0f172a" />
 
       {/* Structured Data */}
       {structuredData && (
         <script
-          type="application/ld+json"
+          type="application/ld+json
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       )}
@@ -168,7 +173,7 @@ export default function SEOHead({
       <link rel="preconnect" href="https://www.googletagmanager.com" />
       {/* Structured Data */}
       <script;
-        type="application / ld + json";
+        type=application / ld + json";
         dangerouslySetInnerHTML={{
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts && fonts.googleapis.com" />;
@@ -181,9 +186,9 @@ export default function SEOHead({
         }}
       />;
       {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />;
-      <link rel="preconnect" href="https://fonts.gstatic.com" cross_origin="anonymous" />;
-      <link rel="preconnect" href="https://images.unsplash.com" />;
+      <link rel="preconnect href=https://fonts.googleapis.com" />;
+      <link rel="preconnect href=https://fonts.gstatic.com" cross_origin="anonymous />;
+      <link rel=preconnect" href="https://images.unsplash.com" />;
     </Head>);
 }
 ;

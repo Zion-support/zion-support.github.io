@@ -40,7 +40,6 @@ const features = [;
     "icon": Globe;
   }
 ];
-const features = [;
   {"title": 'Private Hiring Portal',"description":;'
       'Create a secure, private hiring portal accessible only to your team members.',"icon": Shield},{"title": 'Dedicated Talent Pool',"description":;'
       'Access to a curated pool of pre-vetted talent matched to your industry and needs.',"icon": Users},{"title": 'Custom SLA',"description":;'
@@ -57,7 +56,6 @@ export function EnterpriseFeatures() {return (<section id='features' className='
             Built for Enterprise Needs;
           </h2>;
           <p className='text-xl text-muted-foreground max-w-2xl mx-auto'>;'
-const features = [;
   {"title": 'Private Hiring Portal',"description":;'
       'Create a secure, private hiring portal accessible only to your team members.',"icon": Shield},{"title": 'Dedicated Talent Pool',"description":;'
       'Access to a curated pool of pre - vetted talent matched to your industry and needs.',"icon": Users},{"title": 'Custom SLA',"description":;'
@@ -115,7 +113,6 @@ import React from "react",const features = [;"
               <p className="text-muted-foreground">{feature.description}</p>;"
               <p className='text-muted-foreground'>{feature.description}</p>;'
             </div>;
-const features = [;
   {"title": "Private Hiring Portal","description": "Create a secure, private hiring portal accessible only to your team members.","icon": Shield},{"title": "Dedicated Talent Pool","description": "Access to a curated pool of pre-vetted talent matched to your industry and needs.","icon": Users},{"title": "Custom SLA","description": "Get guaranteed response times and dedicated support with our custom SLAs.","icon": Award},{"title": "Branded Onboarding","description": "Customize the onboarding experience with your company branding and messaging.","icon": Briefcase},{"title": "Admin Dashboards","description": "Powerful analytics and management tools for team leaders and administrators.","icon": Settings},{"title": "Global Access","description": "Connect with talent across multiple regions with localized interfaces.","icon": Globe}];"
 export function EnterpriseFeatures() {return (<section id="features" className="py-20 px-4 "md":px-6 bg-muted/50">;"
       <div className="container mx-auto max-w-6xl">;"

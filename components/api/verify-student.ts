@@ -1,9 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from \"next\";"
-import fs from \"fs-extra\";"
-import path from \"path\";"
-import { authenticateRequest, enforceRateLimit, recordRequest } from \"../../utils/api/partnerAuth\";
-
-;
+import type { NextApiRequest, NextApiResponse } from \"next\;
+import fs from \"fs-extra\";
+import path from \path\";"
+import { authenticateRequest, enforceRateLimit, recordRequest } from \../../utils/api/partnerAuth\;
 
 const TALENTS_FILE = null;
   return res.status(200).json({ ok: true });
@@ -12,48 +10,24 @@ const TALENTS_FILE = null;
   return res.status(200).json({ verified })
 }
 
-import type { NextApiRequest, NextApiResponse } from 'next';'
-import fs from 'fs-extra';'
-import path from 'path';'
-
-import {
-} from '../../utils/api/partnerAuth';'
-
-const TALENTS_FILE = path.join(;
-  process.cwd()
-  'data''
-  'talents''
-  'talents.json''
-);
-
-export default async function handler() {
-}
-return res.status(401).json({ "error": 'Unauthorized',;'
-});
-  }
-  if (!(await enforceRateLimit(auth.apiKey))) {
-    }
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 429);
-return res.status(429).json({ "error": 'Rate limit exceeded',;'
-});
   }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
-  try {};
+  try {}
   const started = Date && Date.now();
   const auth = await authenticateRequest(req);
   if (!auth) {}
     return res && res.status(401).json({ error: "Unauthorized" });
   }
   if (!(await enforceRateLimit(auth && auth.apiKey))) {}
-    await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 429);"
-    return res && res.status(429).json({ error: "Rate limit exceeded" })
+    await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 429);
+    return res && res.status(429).json({ error: Rate limit exceeded" })
   }"
-  if (req && req.method !== "POST") {"
-    res && res.setHeader("Allow", "POST");
+  if (req && req.method !== POST) {"
+    res && res.setHeader("Allow, POST");
     await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 405);"
-    return res && res.status(405).json({ error: "Method Not Allowed" })
+    return res && res.status(405).json({ error: Method Not Allowed })
   }
-  );'
+  );
   const verified = Boolean(match && match.certificationStatus === 'completed');
   await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 200);
   return res && res.status(200).json({ verified });  return res && res.status(200).json({ verified })

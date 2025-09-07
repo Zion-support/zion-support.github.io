@@ -205,8 +205,6 @@ import { useNavigate } from "react-router-dom",;"
 export default function Partners() {;
   }
   const [activeTab, setActiveTab] = useState("overview"),;"
-  const { user, isAuthenticated } = useAuth();
-  const navigate = useNavigate();
   // If not authenticated, display partner program info and signup CTA;
   if (!isAuthenticated) {;
 }

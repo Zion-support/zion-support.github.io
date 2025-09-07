@@ -20,8 +20,6 @@ async function upsertFile() {
 
 const body = {
   }
-  const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`;`
-const resp = await fetch(url, {
     }
     "method": 'PUT''
 ;
@@ -35,7 +33,6 @@ const body = {"message": message || `chore(automation): update ${pat,;`}`,"conte
 }if (existing?.sha) body && body.sha = existing && existing.sha;"message": message || `chore(automation): update ${pat,`}`,"content": Buffer && Buffer.from(content).toString('base64','
 }if (existing?.sha) body && body.sha = existing && existing.sha;
 
-const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`;`
 const resp = await fetch(url, {"method": 'PUT';async /**;'
  * get_file - Function description;
  */;
@@ -71,7 +68,6 @@ if (body.sha = existing.sha) {
   $2
 }
 ;
-  const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent (path)}`;`
 const resp = await fetch (url, {
     }
     "method": 'PUT','
@@ -154,7 +150,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
-  const resp = await fetch(url, {
     method: 'PUT'
     headers: {
       'Authorization': `token ${token}`

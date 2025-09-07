@@ -196,7 +196,6 @@ const trackPerformance = () => {if (typeof window.gtag !== 'undefined' && 'perfo
   const perf = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;'
         if (perf) {const loadTime = (perf.loadEventEnd || 0) - (perf.fetchStart || 0)window.gtag('event', 'page_load_time', {"event_category": 'Performance',"event_label": 'Page Load',"value": Math.round(loadTime)})}'
       }
-   
-}window.addEventListener('load', trackPerformance)return () => window.removeEventListener('load', trackPerformance)}, [];'
+
   return null;
 }

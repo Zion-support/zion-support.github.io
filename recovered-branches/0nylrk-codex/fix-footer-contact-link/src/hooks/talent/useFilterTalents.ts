@@ -33,7 +33,6 @@ export function useFilterTalents(talents: TalentProfile[]) {
     )
   },
   
-  const toggleRegion = (region: string) => {
     setSelectedRegions(prev =>
       prev.includes(region)
         ? prev.filter(r => r !== region)

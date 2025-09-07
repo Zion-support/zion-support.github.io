@@ -79,7 +79,6 @@ class ChunkErrorHandler {;
   }
 ;
   private handleScriptError(event: ErrorEvent): void {;
-    const { error, filename } = event;
     if (this.isChunkError(error, filename)) {;
       event.preventDefault(), // Prevent the error from bubbling up;
       this.handleChunkError(error, { filename, source: 'script' });
@@ -224,7 +223,6 @@ class ChunkErrorHandler {;
  * Handles automatic retry, cache clearing, and graceful degradation
  */
 
-import { logErrorToProduction } from './productionLogger';
 interface ChunkErrorStats {
   errorCount: number;
   lastErrorTime: number;
@@ -316,7 +314,6 @@ interface ChunkErrorStats {
   }
   // Public method to reset error state;
   public resetErrorState(): void {}
-    const sessionKey = this && this.getSessionKey();
     this && this.errorStats.delete(sessionKey);
 
   }
@@ -411,7 +408,6 @@ export default chunkErrorHandler;
 ;
   // Public method to reset error state;
   public resetErrorState(): void {;
-    const sessionKey = this.getSessionKey(),;
     this.errorStats.delete(sessionKey);
   }
 }

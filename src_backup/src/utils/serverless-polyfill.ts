@@ -13,7 +13,6 @@ if (typeof self === 'undefined') {if (typeof global !== 'undefined') {(global as
     }
     if (typeof globalThis !== 'undefined') {(globalThis as any).self = global;'
   }
-  var "__awaiter": any;
 // "CRITICAL": Self polyfill - must be first;
 // Check condition;
 if ( {) {$2;

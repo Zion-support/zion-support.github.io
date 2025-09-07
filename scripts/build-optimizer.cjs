@@ -83,17 +83,13 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
-const { execSync } = require('child_process')
-const fs = require('fs')
 // console.log(' Build Optimizer Starting...)
     console.log('🧹 Cleaning previous builds...)
     if (fs.existsSync('.next')
 
 #!/usr/bin/env node
 
-const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
 console.log('🔍 Build Optimizer Starting...');
 

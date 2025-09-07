@@ -32,8 +32,8 @@ export function MilestoneSuggestions({
       scope: `${projectName}: ${scopeSummary}`,
       startDate: startDate.toISOString(),
       endDate: endDate ? endDate.toISOString() : null,
-      projectType: projectType || "Other"
-    };
+      projectType: projectType || "Other
+    }
 
     const milestones = await generateMilestones(input);
     
@@ -44,33 +44,33 @@ export function MilestoneSuggestions({
       }
     }
   }
-  };
+  }
 
   const formatDate = (dateString: string) => {
     try {
-      return format(parseISO(dateString), 'MMM dd, yyyy')
+      return format(parseISO(dateString), MMM dd, yyyy')
     } catch (error) {
       return dateString
     }
-  };
+  }
 
   return (
-    <div className="space-y-4">
+    <div className=space-y-4">
       {!showSuggestions && (
         <Button
-          variant="outline"
+          variant="outline
           onClick={handleGenerateMilestones}
           disabled={isGenerating || !scopeSummary || !startDate}
-          className="w-full"
+          className=w-full"
         >
           {isGenerating ? (
             <>
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              <Loader2 className="mr-2 h-4 w-4 animate-spin />
               Generating milestones...
             </>
           ) : (
             <>
-              <Sparkles className="mr-2 h-4 w-4" />
+              <Sparkles className=mr-2 h-4 w-4" />
               Suggest Project Milestones with AI
             </>
           )}
@@ -79,18 +79,18 @@ export function MilestoneSuggestions({
 
       {showSuggestions && generatedMilestones.length > 0 && (
         <Card>
-          <CardHeader className="pb-3">
-            <CardTitle className="text-lg flex items-center">
-              <Sparkles className="h-5 w-5 mr-2 text-primary" />
+          <CardHeader className="pb-3>
+            <CardTitle className=text-lg flex items-center">
+              <Sparkles className="h-5 w-5 mr-2 text-primary />
               AI-Suggested Milestones
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="space-y-3">
+            <div className=space-y-3">
               {generatedMilestones.map((milestone, index) => (
-                <div key={index} className="p-3 border rounded-lg bg-muted/10">
-                  <div className="flex items-center justify-between mb-1">
-                    <div className="font-medium flex items-center">
+                <div key={index} className="p-3 border rounded-lg bg-muted/10>
+                  <div className=flex items-center justify-between mb-1">
+                    <div className="font-medium flex items-center>
                       {milestone.title}
                       <Badge variant="secondary" className="ml-2 text-xs">
                         AI Suggested
@@ -107,7 +107,7 @@ export function MilestoneSuggestions({
                 </div>
               ))}
 
-              <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">
+              <div className=flex items-center justify-center mt-4 text-sm text-muted-foreground">
                 <Check className="h-4 w-4 mr-1 text-green-500" />
                 These milestones will be added to your contract
               </div>

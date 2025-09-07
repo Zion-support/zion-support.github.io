@@ -47,9 +47,9 @@ export function useMessageChannelHandler({
   }, [onMessage, onError]);
 
   useEffect(() => {
-    window.addEventListener('message', handleMessage);
+    window.addEventListener('message, handleMessage);
     return () => {
-      window.removeEventListener('message', handleMessage);
-    };
+      window.removeEventListener(message', handleMessage);
+    }
   }, [handleMessage]);
 }

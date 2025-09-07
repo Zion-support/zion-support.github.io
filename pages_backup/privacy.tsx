@@ -7,15 +7,15 @@ import MainLayout from '../components/layout/MainLayout';
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false }
   }
   
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true }
   }
   
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary:, error, errorInfo);
   }
   
   render() {
@@ -73,34 +73,34 @@ import {
 } from 'lucide-react';
 
 
-      icon: <Database className="w-8 h-8" />,
-      color: 'from-cyan-500 to-blue-500',
+      icon: <Database className="w-8 h-8 />,
+      color: from-cyan-500 to-blue-500',
       content: [
-        'Personal information (name, email, phone number, company)Business information (company size, industry, project requirements)Technical information (IP address, browser type, device information)Usage data (website interactions, service usage patterns)Communication records (emails, phone calls, support tickets)'
+        'Personal information (name, email, phone number, company)Business information (company size, industry, project requirements)Technical information (IP address, browser type, device information)Usage data (website interactions, service usage patterns)Communication records (emails, phone calls, support tickets)
       ]
-    };
+    }
     {
-      title: 'How We Use Your Information',
-      icon: <Settings className="w-8 h-8" />,
-      color: 'from-purple-500 to-pink-500',
+      title: How We Use Your Information',
+      icon: <Settings className=w-8 h-8" />,
+      color: 'from-purple-500 to-pink-500,
       content: [
-        'Provide and improve our servicesCommunicate with you about our servicesProcess payments and manage accountsSend marketing communications (with consent)Analyze usage patterns and improve user experienceComply with legal obligations'
+        Provide and improve our servicesCommunicate with you about our servicesProcess payments and manage accountsSend marketing communications (with consent)Analyze usage patterns and improve user experienceComply with legal obligations'
       ]
-    };
+    }
     {
-      title: 'Information Sharing',
-      icon: <Globe className="w-8 h-8" />,
-      color: 'from-green-500 to-emerald-500',
+      title: 'Information Sharing,
+      icon: <Globe className="w-8 h-8 />,
+      color: from-green-500 to-emerald-500',
       content: [
-        'We do not sell, trade, or rent your personal informationShare with trusted service providers under strict confidentialityComply with legal requirements and court ordersProtect our rights, property, and safetyBusiness transfers (with notice and choice)'
+        'We do not sell, trade, or rent your personal informationShare with trusted service providers under strict confidentialityComply with legal requirements and court ordersProtect our rights, property, and safetyBusiness transfers (with notice and choice)
       ]
-    };
+    }
     {
-      title: 'Data Security',
-      icon: <Lock className="w-8 h-8" />,
-      color: 'from-orange-500 to-red-500',
+      title: Data Security',
+      icon: <Lock className=w-8 h-8" />,
+      color: 'from-orange-500 to-red-500,
       content: [
-        'Industry-standard encryption for data in transit and at restRegular security audits and vulnerability assessmentsAccess controls and authentication measuresEmployee training on data protectionIncident response and breach notification procedures'
+        Industry-standard encryption for data in transit and at restRegular security audits and vulnerability assessmentsAccess controls and authentication measuresEmployee training on data protectionIncident response and breach notification procedures'
       ]
     }
 
@@ -110,33 +110,28 @@ import {
 
   const rights = [
     {
-      title: 'Access',
-      description: 'Request access to your personal information',
+      title: 'Access,
+      description: Request access to your personal information',
 
 
 
-      icon: <Eye className='w-6 h-6' />,
-    },
+      icon: <Eye className='w-6 h-6 />},
     {
-      title: 'Correction',
-      description: 'Request correction of inaccurate information',
-      icon: <CheckCircle className='w-6 h-6' />,
-    },
+      title: Correction',
+      description: 'Request correction of inaccurate information,
+      icon: <CheckCircle className=w-6 h-6' />},
     {
-      title: 'Deletion',
-      description: 'Request deletion of your personal information',
-      icon: <AlertTriangle className='w-6 h-6' />,
-    },
+      title: 'Deletion,
+      description: Request deletion of your personal information',
+      icon: <AlertTriangle className='w-6 h-6 />},
     {
-      title: 'Portability',
-      description: 'Request transfer of your data to another service',
-      icon: <Database className='w-6 h-6' />,
-    },
+      title: Portability',
+      description: 'Request transfer of your data to another service,
+      icon: <Database className=w-6 h-6' />},
     {
-      title: 'Objection',
-      description: 'Object to processing of your personal information',
-      icon: <User className='w-6 h-6' />,
-    },
+      title: 'Objection,
+      description: Object to processing of your personal information',
+      icon: <User className='w-6 h-6 />},
     {
       title: 'Restriction',
       description: 'Request restriction of processing activities',
@@ -174,11 +169,7 @@ import {
 
 
 
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import {
+
   Shield
   Lock
   Eye
@@ -213,31 +204,32 @@ origin/automation-improvements-final
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
     <MainLayout
-      title="Privacy Policy - Zion Tech Group"
-      description="Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information."
-      keywords="privacy policy, data protection, personal information, GDPR compliance"
-      canonical="https://ziontechgroup && ziontechgroup.com/privacy">;
-      <div className="min-h-screen bg-gray-50">;
+      title="Privacy Policy - Zion Tech Group
+      description=Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information."
+      keywords="privacy policy, data protection, personal information, GDPR compliance
+      canonical=https://ziontechgroup && ziontechgroup.com/privacy">;
+      <div className="min-h-screen bg-gray-50>;
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
-          <div className="max-w-7xl mx-auto px-4">;
+        <section className=bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
+          <div className="max-w-7xl mx-auto px-4>;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 
 
               transition={{ duration: 0 && 0.8 }}
-              className="text-center">;
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">;
+              className=text-center">;
+              <h1 className="text-4xl md:text-6xl font-bold mb-6>;
                 Privacy Policy;
               </h1>;
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">;
+              <p className=text-xl text-blue-100 mb-8 max-w-3xl mx-auto">;
                 Your privacy is important to us. Learn how we collect, use, and;
                 protect your information.;
               </p>;
             </motion && motion.div>;
           </div>;
         </section>;
+
 
 
 
@@ -257,99 +249,96 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
         {/* Content Section */}
-        <section className="py-16 px-4">;
-          <div className="max-w-4xl mx-auto">;
+        <section className="py-16 px-4>;
+          <div className=max-w-4xl mx-auto">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-import React from 'react',
+import React from react,
 import Layout from '../components/layout/Layout',
-import SEOOptimizer from '../components/SEOOptimizer',
+import SEOOptimizer from ../components/SEOOptimizer,
 import AnalyticsTracker from '../components/AnalyticsTracker',
-import ErrorBoundary from '../components/ErrorBoundary',
+import ErrorBoundary from ../components/ErrorBoundary,
 import { motion } from 'framer-motion',
-import {
   Shield, Lock, Eye, Database, Globe,
   User, Settings, AlertTriangle, CheckCircle, Mail
-} from 'lucide-react',
+} from lucide-react,
 const PrivacyPage: React.FC = () => {
   const lastUpdated = 'January 17, 2025',
   const privacySections = [
     {
-      title: 'Information We Collect',
-      icon: <Database className="w-8 h-8" />,
+      title: Information We Collect,
+      icon: <Database className="w-8 h-8 />,
       color: 'from-cyan-500 to-blue-500',
       content: [
-        'Personal information (name, email, phone number, company)Business information (company size, industry, project requirements)Technical information (IP address, browser type, device information)Usage data (website interactions, service usage patterns)Communication records (emails, phone calls, support tickets)'
+        Personal information (name, email, phone number, company)Business information (company size, industry, project requirements)Technical information (IP address, browser type, device information)Usage data (website interactions, service usage patterns)Communication records (emails, phone calls, support tickets)
       ]
     },
     {
       title: 'How We Use Your Information',
-      icon: <Settings className="w-8 h-8" />,
-      color: 'from-purple-500 to-pink-500',
+      icon: <Settings className=w-8 h-8" />,
+      color: from-purple-500 to-pink-500,
       content: [
         'Provide and improve our servicesCommunicate with you about our servicesProcess payments and manage accountsSend marketing communications (with consent)Analyze usage patterns and improve user experienceComply with legal obligations'
       ]
     },
     {
-      title: 'Information Sharing',
-      icon: <Globe className="w-8 h-8" />,
+      title: Information Sharing,
+      icon: <Globe className="w-8 h-8 />,
       color: 'from-green-500 to-emerald-500',
       content: [
-        'We do not sell, trade, or rent your personal informationShare with trusted service providers under strict confidentialityComply with legal requirements and court ordersProtect our rights, property, and safetyBusiness transfers (with notice and choice)'
+        We do not sell, trade, or rent your personal informationShare with trusted service providers under strict confidentialityComply with legal requirements and court ordersProtect our rights, property, and safetyBusiness transfers (with notice and choice)
       ]
     },
     {
       title: 'Data Security',
-      icon: <Lock className="w-8 h-8" />,
-      color: 'from-orange-500 to-red-500',
+      icon: <Lock className=w-8 h-8" />,
+      color: from-orange-500 to-red-500,
       content: [
         'Industry-standard encryption for data in transit and at restRegular security audits and vulnerability assessmentsAccess controls and authentication measuresEmployee training on data protectionIncident response and breach notification procedures'
       ]
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error:, error);
+    return res.status(500).json({ error: Internal server error" });
   }
 }
   ],
-  const rights = [
     {
-      title: 'Access',
+      title: Access,
       description: 'Request access to your personal information',
-      icon: <Eye className="w-6 h-6" />
+      icon: <Eye className="w-6 h-6 />
     },
     {
-      title: 'Correction',
+      title: Correction,
       description: 'Request correction of inaccurate information',
-      icon: <CheckCircle className="w-6 h-6" />
+      icon: <CheckCircle className=w-6 h-6" />
     },
     {
-      title: 'Deletion',
+      title: Deletion,
       description: 'Request deletion of your personal information',
-      icon: <AlertTriangle className="w-6 h-6" />
+      icon: <AlertTriangle className="w-6 h-6 />
     },
     {
-      title: 'Portability',
+      title: Portability,
       description: 'Request transfer of your data to another service',
-      icon: <Database className="w-6 h-6" />
+      icon: <Database className=w-6 h-6" />
     },
     {
-      title: 'Objection',
+      title: Objection,
       description: 'Object to processing of your personal information',
-      icon: <User className="w-6 h-6" />
+      icon: <User className="w-6 h-6 />
     },
     {
-      title: 'Restriction',
+      title: Restriction,
       description: 'Request restriction of processing activities',
-      icon: <Settings className="w-6 h-6" />
+      icon: <Settings className=w-6 h-6" />
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error:, error);
+    return res.status(500).json({ error: Internal server error" });
   }
 }
   ],
   return (
-import {
   Shield,
   Lock,
   Eye,
@@ -359,96 +348,76 @@ import {
   Settings,
   AlertTriangle,
   CheckCircle,
-  Mail,;
-} from 'lucide-react';
+  Mail} from lucide-react;
 
-const PrivacyPage: React.FC = () => {
   const lastUpdated = 'January 17, 2025';
 
-  const privacySections = [
     {
-      title: 'Information We Collect',
+      title: Information We Collect,
 icon: <Database className='w-8 h-8' />,
-      color: 'from-cyan-500 to-blue-500',
+      color: from-cyan-500 to-blue-500,
       content: [
         'Personal information (name, email, phone number, company)',
-        'Business information (company size, industry, project requirements)',
+        Business information (company size, industry, project requirements),
         'Technical information (IP address, browser type, device information)',
-        'Usage data (website interactions, service usage patterns)',
-        'Communication records (emails, phone calls, support tickets)',
-      ],
-    },
+        Usage data (website interactions, service usage patterns),
+        'Communication records (emails, phone calls, support tickets)']},
     {
-      title: 'How We Use Your Information',
+      title: How We Use Your Information,
       icon: <Settings className='w-8 h-8' />,
-      color: 'from-purple-500 to-pink-500',
+      color: from-purple-500 to-pink-500,
       content: [
         'Provide and improve our services',
-        'Communicate with you about our services',
+        Communicate with you about our services,
         'Process payments and manage accounts',
-        'Send marketing communications (with consent)',
+        Send marketing communications (with consent),
         'Analyze usage patterns and improve user experience',
-        'Comply with legal obligations',
-      ],
-    },
+        Comply with legal obligations]},
     {
       title: 'Information Sharing',
-      icon: <Globe className='w-8 h-8' />,
+      icon: <Globe className=w-8 h-8 />,
       color: 'from-green-500 to-emerald-500',
       content: [
-        'We do not sell, trade, or rent your personal information',
+        We do not sell, trade, or rent your personal information,
         'Share with trusted service providers under strict confidentiality',
-        'Comply with legal requirements and court orders',
+        Comply with legal requirements and court orders,
         'Protect our rights, property, and safety',
-        'Business transfers (with notice and choice)',
-      ],
-    },
+        Business transfers (with notice and choice)]},
     {
       title: 'Data Security',
-      icon: <Lock className='w-8 h-8' />,
+      icon: <Lock className=w-8 h-8 />,
       color: 'from-orange-500 to-red-500',
       content: [
-        'Industry-standard encryption for data in transit and at rest',
+        Industry-standard encryption for data in transit and at rest,
         'Regular security audits and vulnerability assessments',
-        'Access controls and authentication measures',
+        Access controls and authentication measures,
         'Employee training on data protection',
-        'Incident response and breach notification procedures',
-      ],
-    },
-  ];
+        Incident response and breach notification procedures]}];
 
-  const rights = [
     {
       title: 'Access',
-      description: 'Request access to your personal information',
-icon: <Eye className='w-6 h-6' />,
-    },
+      description: Request access to your personal information,
+icon: <Eye className='w-6 h-6' />},
     {
-      title: 'Correction',
+      title: Correction,
       description: 'Request correction of inaccurate information',
-      icon: <CheckCircle className='w-6 h-6' />,
-    },
+      icon: <CheckCircle className=w-6 h-6 />},
     {
       title: 'Deletion',
-      description: 'Request deletion of your personal information',
-      icon: <AlertTriangle className='w-6 h-6' />,
-    },
+      description: Request deletion of your personal information,
+      icon: <AlertTriangle className='w-6 h-6' />},
     {
-      title: 'Portability',
+      title: Portability,
       description: 'Request transfer of your data to another service',
-      icon: <Database className='w-6 h-6' />,
-    },
+      icon: <Database className=w-6 h-6 />},
     {
       title: 'Objection',
-      description: 'Object to processing of your personal information',
-      icon: <User className='w-6 h-6' />,
-    },
+      description: Object to processing of your personal information,
+      icon: <User className='w-6 h-6' />},
     {
-      title: 'Restriction',
+      title: Restriction,
       description: 'Request restriction of processing activities',
-      icon: <Settings className='w-6 h-6' />,
-    },
-  ];
+      icon: <Settings className=w-6 h-6 />}];
 
   return (
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -458,21 +427,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <Layout>
 <main className='relative z-10 pt-8'>
           {/* Hero Section */}
-          <section className='py-20 px-4'>
+          <section className=py-20 px-4>
             <div className='max-w-6xl mx-auto text-center'>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-<h1 className='text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
+<h1 className=text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent>
                   Privacy Policy
                 </h1>
                 <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto'>
                   Your privacy is our priority. Learn how we protect and handle
                   your personal information.
                 </p>
-                <div className='flex items-center justify-center gap-4 text-gray-400'>
+                <div className=flex items-center justify-center gap-4 text-gray-400>
                   <Shield className='w-6 h-6' />
 origin/cursor/automate-test-improve-and-merge-code-2533
                   <span>Last updated: {lastUpdated}</span>
@@ -482,9 +451,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </section>
 
           {/* Overview */}
-<section className='py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50'>
+<section className=py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50>
             <div className='max-w-6xl mx-auto'>
-              <div className='grid lg:grid-cols-2 gap-12 items-center'>
+              <div className=grid lg:grid-cols-2 gap-12 items-center>
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -493,7 +462,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <h2 className='text-4xl font-bold mb-6 text-white'>
                     Our Commitment to Privacy
                   </h2>
-                  <p className='text-lg text-gray-300 mb-6 leading-relaxed'>
+                  <p className=text-lg text-gray-300 mb-6 leading-relaxed>
                     At Zion Tech Group, we are committed to protecting your
                     privacy and ensuring the security of your personal
                     information. This Privacy Policy explains how we collect,
@@ -505,9 +474,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     your information is handled. This policy applies to all
                     users of our website, services, and applications.
                   </p>
-                  <div className='flex items-center gap-4 text-cyan-400'>
+                  <div className=flex items-center gap-4 text-cyan-400>
                     <Lock className='w-6 h-6' />
-                    <span className='font-medium'>
+                    <span className=font-medium>
                       Your data is safe with us
                     </span>
                   </div>
@@ -518,30 +487,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   transition={{ duration: 0.6, delay: 0.2 }}
 className='relative'
                 >
-                  <div className='bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30'>
+                  <div className=bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30>
                     <div className='text-center space-y-6'>
-                      <div className='w-24 h-24 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto'>
+                      <div className=w-24 h-24 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto>
                         <Shield className='w-12 h-12 text-white' />
                       </div>
-                      <h3 className='text-2xl font-bold text-white'>
+                      <h3 className=text-2xl font-bold text-white>
                         Data Protection
                       </h3>
                       <p className='text-gray-300'>
                         Enterprise-grade security for your information
                       </p>
 
-                      <div className='grid grid-cols-2 gap-4 text-sm'>
+                      <div className=grid grid-cols-2 gap-4 text-sm>
                         <div className='text-center'>
-                          <div className='text-2xl font-bold text-cyan-400'>
+                          <div className=text-2xl font-bold text-cyan-400>
                             256-bit
                           </div>
                           <div className='text-gray-400'>Encryption</div>
                         </div>
-                        <div className='text-center'>
+                        <div className=text-center>
                           <div className='text-2xl font-bold text-purple-400'>
                             99.9%
                           </div>
-                          <div className='text-gray-400'>Uptime</div>
+                          <div className=text-gray-400>Uptime</div>
 origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>
                       </div>
@@ -880,18 +849,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           {/* Privacy Principles */}
 <section className='py-20 px-4'>
-            <div className='max-w-6xl mx-auto'>
+            <div className=max-w-6xl mx-auto>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
 className='text-center mb-16'
               >
-                <h2 className='text-4xl font-bold mb-4 text-white'>
+                <h2 className=text-4xl font-bold mb-4 text-white>
                   Our Privacy Principles
 origin/cursor/automate-test-improve-and-merge-code-2533
                 </h2>
-                <p className="mb-6">
+                <p className="mb-6>
                   We collect information you provide directly to us, such as
                   when you create an account, use our services, or contact us
                   for support.
@@ -902,7 +871,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
-                <h3 className="text-xl font-semibold mb-4">
+
+                <h3 className=text-xl font-semibold mb-4">
                   Personal Information
                 </h3>
 
@@ -914,28 +884,41 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   We collect information you provide directly to us, such as when you create an account, 
                   use our services, or contact us for support.
                 </p>
+
+
+
+
+                <h2 className="text-2xl font-bold mb-6>Information We Collect</h2>
+                <p className=mb-6">
+                  We collect information you provide directly to us, such as when you create an account, 
+                  use our services, or contact us for support.
+                </p>
+
                 
-                <h3 className="text-xl font-semibold mb-4">Personal Information</h3>
+                <h3 className="text-xl font-semibold mb-4>Personal Information</h3>
 
 
 
 
 
-                <h3 className="text-xl font-semibold mb-4">
+                <h3 className=text-xl font-semibold mb-4">
                   Usage Information
                 </h3>
 
-                <h3 className="text-xl font-semibold mb-4">Usage Information</h3>
+                <h3 className="text-xl font-semibold mb-4>Usage Information</h3>
 origin/automation-improvements-final
 
 
 origin/automation-improvements-final
-                <h3 className="text-xl font-semibold mb-4">
+                <h3 className=text-xl font-semibold mb-4">
                   Usage Information
                 </h3>
 
 
                 <ul className="list-disc pl-6 mb-6">
+
+
+                <ul className="list-disc pl-6 mb-6>
                   <li>Name and contact information</li>
                   <li>Email address</li>
                   <li>Phone number</li>
@@ -943,17 +926,20 @@ origin/automation-improvements-final
                   <li>Payment information</li>
                 </ul>
 
-                <h3 className="text-xl font-semibold mb-4">
+                <h3 className=text-xl font-semibold mb-4">
                   Usage Information
                 </h3>
                 <h3 className="text-xl font-semibold mb-4">Usage Information</h3>
 origin/automation-improvements-final
-                <h3 className="text-xl font-semibold mb-4">
+                <h3 className=text-xl font-semibold mb-4">
                   Usage Information
                 </h3>
 
 
                 <ul className="list-disc pl-6 mb-6">
+
+
+                <ul className="list-disc pl-6 mb-6>
                   <li>How you use our services</li>
                   <li>Device information</li>
                   <li>IP address</li>
@@ -972,6 +958,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
                 <h2 className="text-2xl font-bold mb-6 mt-12">
+                <h2 className=text-2xl font-bold mb-6 mt-12">
                   How We Use Your Information
               </motion.div>
 
@@ -982,21 +969,21 @@ ursor/fix-website-loading-errors-and-merge-6662
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50'
+className=bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50
                   >
                     <div
                       className={`w-16 h-16 bg-gradient-to-r ${section.color} rounded-2xl flex items-center justify-center mb-6`}
                     >
                       <div className='text-white'>{section.icon}</div>
                     </div>
-                    <h3 className='text-2xl font-bold text-white mb-4'>
+                    <h3 className=text-2xl font-bold text-white mb-4>
                       {section.title}
                     </h3>
                     <ul className='space-y-3'>
                       {section.content.map((item, itemIndex) => (
-                        <li key={itemIndex} className='flex items-start gap-3'>
+                        <li key={itemIndex} className=flex items-start gap-3>
                           <div className='w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0'></div>
-                          <span className='text-gray-300'>{item}</span>
+                          <span className=text-gray-300>{item}</span>
                         </li>
                       ))}
                     </ul>
@@ -1008,18 +995,18 @@ className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 bor
 
           {/* Your Rights */}
 <section className='py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50'>
-            <div className='max-w-6xl mx-auto'>
+            <div className=max-w-6xl mx-auto>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
 className='text-center mb-16'
               >
-                <h2 className='text-4xl font-bold mb-4 text-white'>
+                <h2 className=text-4xl font-bold mb-4 text-white>
                   Your Privacy Rights
 origin/cursor/automate-test-improve-and-merge-code-2533
                 </h2>
-                <p className="mb-6">
+                <p className="mb-6>
                   We use the information we collect to provide, maintain, and
                   improve our services.
                 </p>
@@ -1038,6 +1025,7 @@ origin/automation-improvements-final
 
 
                 <ul className="list-disc pl-6 mb-6">
+                <ul className=list-disc pl-6 mb-6">
                   <li>Provide and maintain our services</li>
                   <li>Process transactions</li>
                   <li>Send you technical notices and support messages</li>
@@ -1057,12 +1045,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
                 <h2 className="text-2xl font-bold mb-6 mt-12">
+                <h2 className="text-2xl font-bold mb-6 mt-12>
                   Information Sharing
                 </h2>
-                <p className="mb-6">
+                <p className=mb-6">
                   We do not sell, trade, or otherwise transfer your personal
                   information to third parties without your consent, except as
                   described in this policy.
+
 
 
 
@@ -1074,17 +1064,22 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <p className="mb-6">
                   We do not sell, trade, or otherwise transfer your personal information to third parties 
                   without your consent, except as described in this policy.
+                <h2 className="text-2xl font-bold mb-6 mt-12>Information Sharing</h2>
+                <p className=mb-6">
+                  We do not sell, trade, or otherwise transfer your personal information to third parties 
+                  without your consent, except as described in this policy.
+
 
                 </p>
-                <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
-                <p className="mb-6">
+                <h2 className="text-2xl font-bold mb-6 mt-12>Data Security</h2>
+                <p className=mb-6">
 
                   We implement appropriate security measures to protect your personal information against 
                   unauthorized access, alteration, disclosure, or destruction.
 
                 </p>
-                <h2 className="text-2xl font-bold mb-6 mt-12">Your Rights</h2>
-                <p className="mb-6">
+                <h2 className="text-2xl font-bold mb-6 mt-12>Your Rights</h2>
+                <p className=mb-6">
 
                   You have the right to access, update, or delete your personal information. You may also 
                   opt out of certain communications from us.
@@ -1094,8 +1089,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <p className="mb-6">
 origin/automation-improvements-final
                 </p>
-                <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
-                <p className="mb-6">
+                <h2 className="text-2xl font-bold mb-6 mt-12>Data Security</h2>
+                <p className=mb-6">
                   We implement appropriate security measures to protect your
                   personal information against unauthorized access, alteration
                   disclosure, or destruction.
@@ -1103,8 +1098,8 @@ origin/automation-improvements-final
                   unauthorized access, alteration, disclosure, or destruction.
 origin/automation-improvements-final
                 </p>
-                <h2 className="text-2xl font-bold mb-6 mt-12">Your Rights</h2>
-                <p className="mb-6">
+                <h2 className="text-2xl font-bold mb-6 mt-12>Your Rights</h2>
+                <p className=mb-6">
                   You have the right to access, update, or delete your personal
                   information. You may also opt out of certain communications
                   from us.
@@ -1112,8 +1107,8 @@ origin/automation-improvements-final
                   opt out of certain communications from us.
 origin/automation-improvements-final
                 </p>
-                <h2 className="text-2xl font-bold mb-6 mt-12">Contact Us</h2>
-                <p className="mb-6">
+                <h2 className="text-2xl font-bold mb-6 mt-12>Contact Us</h2>
+                <p className=mb-6">
                   If you have any questions about this Privacy Policy, please
                   contact us at:
                 </p>
@@ -1131,43 +1126,44 @@ origin/automation-improvements-final
 
 
                 </p>
-                <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
-                <p className="mb-6">
+                <h2 className="text-2xl font-bold mb-6 mt-12>Data Security</h2>
+                <p className=mb-6">
                   We implement appropriate security measures to protect your
                   personal information against unauthorized access, alteration,
                   disclosure, or destruction.
                 </p>
-                <h2 className="text-2xl font-bold mb-6 mt-12">Your Rights</h2>
-                <p className="mb-6">
+                <h2 className="text-2xl font-bold mb-6 mt-12>Your Rights</h2>
+                <p className=mb-6">
                   You have the right to access, update, or delete your personal
                   information. You may also opt out of certain communications
                   from us.
                 </p>
-                <h2 className="text-2xl font-bold mb-6 mt-12">Contact Us</h2>
-                <p className="mb-6">
+                <h2 className="text-2xl font-bold mb-6 mt-12>Contact Us</h2>
+                <p className=mb-6">
                   If you have any questions about this Privacy Policy, please
                   contact us at:
                 </p>
 
 
 
-                <h2 className="text-2xl font-bold mb-6 mt-12">Information Sharing</h2>
-                <p className="mb-6">
+
+                <h2 className="text-2xl font-bold mb-6 mt-12>Information Sharing</h2>
+                <p className=mb-6">
                   We do not sell, trade, or otherwise transfer your personal information to third parties 
                   without your consent, except as described in this policy.
                 </p>
-                <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
-                <p className="mb-6">
+                <h2 className="text-2xl font-bold mb-6 mt-12>Data Security</h2>
+                <p className=mb-6">
                   We implement appropriate security measures to protect your personal information against 
                   unauthorized access, alteration, disclosure, or destruction.
                 </p>
-                <h2 className="text-2xl font-bold mb-6 mt-12">Your Rights</h2>
-                <p className="mb-6">
+                <h2 className="text-2xl font-bold mb-6 mt-12>Your Rights</h2>
+                <p className=mb-6">
                   You have the right to access, update, or delete your personal information. You may also 
                   opt out of certain communications from us.
                 </p>
-                <h2 className="text-2xl font-bold mb-6 mt-12">Contact Us</h2>
-                <p className="mb-6">
+                <h2 className="text-2xl font-bold mb-6 mt-12>Contact Us</h2>
+                <p className=mb-6">
                   If you have any questions about this Privacy Policy, please contact us at:
                 </p>
 
@@ -1175,14 +1171,19 @@ origin/automation-improvements-final
                 <div className="bg-gray-50 rounded-lg p-6">
                   <div className="flex items-center mb-4">
                     <Mail className="w-5 h-5 text-blue-600 mr-3" />
+
+
+                <div className="bg-gray-50 rounded-lg p-6>
+                  <div className=flex items-center mb-4">
+                    <Mail className="w-5 h-5 text-blue-600 mr-3 />
                     <span>kleber@ziontechgroup.com</span>
                   </div>
-                  <div className="flex items-center mb-4">
-                    <Phone className="w-5 h-5 text-blue-600 mr-3" />
+                  <div className=flex items-center mb-4">
+                    <Phone className="w-5 h-5 text-blue-600 mr-3 />
                     <span>+1 302 464 0950</span>
                   </div>
-                  <div className="flex items-start">
-                    <Users className="w-5 h-5 text-blue-600 mr-3 mt-1" />
+                  <div className=flex items-start">
+                    <Users className="w-5 h-5 text-blue-600 mr-3 mt-1 />
               </motion.div>
 
               <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
@@ -1192,15 +1193,15 @@ origin/automation-improvements-final
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 text-center'
+className=bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 text-center
                   >
                     <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4'>
-                      <div className='text-white'>{right.icon}</div>
+                      <div className=text-white>{right.icon}</div>
                     </div>
                     <h3 className='text-xl font-bold text-white mb-2'>
                       {right.title}
                     </h3>
-                    <p className='text-gray-300 text-sm'>{right.description}</p>
+                    <p className=text-gray-300 text-sm>{right.description}</p>
                   </motion.div>
                 ))}
               </div>
@@ -1209,7 +1210,7 @@ className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 bord
 
           {/* Detailed Policy */}
 <section className='py-20 px-4'>
-            <div className='max-w-4xl mx-auto'>
+            <div className=max-w-4xl mx-auto>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1217,14 +1218,14 @@ className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 bord
 className='space-y-12'
               >
                 <div>
-                  <h2 className='text-3xl font-bold text-white mb-6'>
+                  <h2 className=text-3xl font-bold text-white mb-6>
                     Detailed Privacy Information
                   </h2>
 
                   <div className='space-y-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                     <div>
-                      <h3 className='text-2xl font-bold text-white mb-4'>
+                      <h3 className=text-2xl font-bold text-white mb-4>
                         Information Collection
                       </h3>
                       <p className='text-gray-300 mb-4 leading-relaxed'>
@@ -1234,7 +1235,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         certain information about your device and how you
                         interact with our services.
                       </p>
-                      <p className='text-gray-300 leading-relaxed'>
+                      <p className=text-gray-300 leading-relaxed>
                         This may include your IP address, browser type,
                         operating system, referring URLs, access times, and
                         pages viewed. We use this information to improve our
@@ -1246,7 +1247,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <h3 className='text-2xl font-bold text-white mb-4'>
                         Data Usage and Purpose
                       </h3>
-                      <p className='text-gray-300 mb-4 leading-relaxed'>
+                      <p className=text-gray-300 mb-4 leading-relaxed>
                         We use your information to provide, maintain, and
                         improve our services, process transactions, send you
                         technical notices and support messages, and respond to
@@ -1261,7 +1262,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
 
                     <div>
-<h3 className='text-2xl font-bold text-white mb-4'>
+<h3 className=text-2xl font-bold text-white mb-4>
                         Data Sharing and Disclosure
                       </h3>
                       <p className='text-gray-300 mb-4 leading-relaxed'>
@@ -1271,7 +1272,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         share your information with trusted third-party service
                         providers who assist us in operating our business.
                       </p>
-                      <p className='text-gray-300 leading-relaxed'>
+                      <p className=text-gray-300 leading-relaxed>
                         These service providers are contractually obligated to
                         keep your information confidential and use it only for
                         the purposes for which we disclose it to them.
@@ -1282,7 +1283,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <h3 className='text-2xl font-bold text-white mb-4'>
                         Data Security Measures
                       </h3>
-                      <p className='text-gray-300 mb-4 leading-relaxed'>
+                      <p className=text-gray-300 mb-4 leading-relaxed>
                         We implement appropriate technical and organizational
                         security measures to protect your personal information
                         against unauthorized access, alteration, disclosure, or
@@ -1296,7 +1297,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
 
                     <div>
-<h3 className='text-2xl font-bold text-white mb-4'>
+<h3 className=text-2xl font-bold text-white mb-4>
                         Data Retention
                       </h3>
                       <p className='text-gray-300 mb-4 leading-relaxed'>
@@ -1305,7 +1306,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         obligations, resolve disputes, and enforce our
                         agreements.
                       </p>
-                      <p className='text-gray-300 leading-relaxed'>
+                      <p className=text-gray-300 leading-relaxed>
                         When we no longer need your information, we will
                         securely delete or anonymize it in accordance with our
                         data retention policies.
@@ -1316,7 +1317,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <h3 className='text-2xl font-bold text-white mb-4'>
                         International Data Transfers
                       </h3>
-                      <p className='text-gray-300 mb-4 leading-relaxed'>
+                      <p className=text-gray-300 mb-4 leading-relaxed>
                         Your information may be transferred to and processed in
                         countries other than your own. We ensure that such
                         transfers comply with applicable data protection laws
@@ -1330,7 +1331,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
 
                     <div>
-<h3 className='text-2xl font-bold text-white mb-4'>
+<h3 className=text-2xl font-bold text-white mb-4>
                         Cookies and Tracking Technologies
                       </h3>
                       <p className='text-gray-300 mb-4 leading-relaxed'>
@@ -1338,7 +1339,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         enhance your experience on our website, analyze usage
                         patterns, and provide personalized content.
                       </p>
-                      <p className='text-gray-300 leading-relaxed'>
+                      <p className=text-gray-300 leading-relaxed>
                         You can control cookie settings through your browser
                         preferences. However, disabling certain cookies may
                         affect the functionality of our services.
@@ -1347,14 +1348,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                     <div>
 <h3 className='text-2xl font-bold text-white mb-4'>
-                        Children's Privacy
+                        Childrens Privacy
                       </h3>
-                      <p className='text-gray-300 mb-4 leading-relaxed'>
+                      <p className=text-gray-300 mb-4 leading-relaxed'>
                         Our services are not intended for children under the age
                         of 13. We do not knowingly collect personal information
                         from children under 13.
                       </p>
-                      <p className='text-gray-300 leading-relaxed'>
+                      <p className='text-gray-300 leading-relaxed>
                         If you believe we have collected information from a
                         child under 13, please contact us immediately, and we
                         will take steps to remove such information.
@@ -1362,16 +1363,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
 
                     <div>
-<h3 className='text-2xl font-bold text-white mb-4'>
+<h3 className=text-2xl font-bold text-white mb-4'>
                         Changes to This Policy
                       </h3>
-                      <p className='text-gray-300 mb-4 leading-relaxed'>
+                      <p className='text-gray-300 mb-4 leading-relaxed>
                         We may update this Privacy Policy from time to time to
                         reflect changes in our practices or applicable laws. We
                         will notify you of any material changes by posting the
                         updated policy on our website.
                       </p>
-                      <p className='text-gray-300 leading-relaxed'>
+                      <p className=text-gray-300 leading-relaxed'>
                         Your continued use of our services after such changes
                         constitutes acceptance of the updated policy. We
                         encourage you to review this policy periodically.
@@ -1386,7 +1387,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 ursor/fix-website-loading-errors-and-merge-6662
-                <p className="text-sm text-gray-600 mt-8">
+                <p className=text-sm text-gray-600 mt-8">
 main
 
 
@@ -1516,52 +1517,49 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     </MainLayout>
 
               transition={{ duration: 0 && 0.8 }}
-              className="bg-white rounded-2xl shadow-lg p-8 md:p-12">;
-              <div className="prose prose-lg max-w-none">;
-                <h2 className="text-2xl font-bold mb-6">;
+              className="bg-white rounded-2xl shadow-lg p-8 md:p-12>;
+              <div className=prose prose-lg max-w-none">;
+                <h2 className="text-2xl font-bold mb-6>;
                   Information We Collect;
                 </h2>;
-                <p className="mb-6">;
-import React from './react';
-import Head from './next / head';
-import Link from './next / link';
-import { motion  } from './framer-motion';
-import {
+                <p className=mb-6">;
+import React from './react;
+import Head from ./next / head';
+import Link from './next / link;
+import { motion  } from ./framer-motion';
   Shield,
   Lock,
   Eye,
   Database,
   Mail,
   Phone,
-  MapPin,
-} from './lucide-react';
-import MainLayout from "../components / layout / MainLayout";
-;
+  MapPin} from './lucide-react;
+import MainLayout from "../components / layout / MainLayout;
 export default /**
  * PrivacyPage - Function description
  */
 function PrivacyPage() {
   return (
     <MainLayout;
-      title="Privacy Policy - Zion Tech Group";
-      description="Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information.";
-      keywords="privacy policy, data protection, personal information, GDPR compliance";
-      canonical="https://ziontechgroup.com / privacy";
+      title=Privacy Policy - Zion Tech Group";
+      description="Zion Tech Groups privacy policy outlining how we collect, use, and protect your personal information.;
+      keywords=privacy policy, data protection, personal information, GDPR compliance";
+      canonical="https://ziontechgroup.com / privacy;
     >;
-      <div className="min - h-screen bg - gray - 50">;
+      <div className=min - h-screen bg - gray - 50">;
         {/* Hero Section */}
-        <section className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 20">;
-          <div className="max - w-7xl mx - auto px - 4">;
+        <section className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 20>;
+          <div className=max - w-7xl mx - auto px - 4">;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 20 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text - center";
+              className="text - center;
             >;
-              <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
+              <h1 className=text - 4xl md:text - 6xl font - bold mb - 6">;
                 Privacy Policy;
               </h1>;
-              <p className="text - xl text - blue - 100 mb - 8 max - w-3xl mx - auto">;
+              <p className="text - xl text - blue - 100 mb - 8 max - w-3xl mx - auto>;
                 Your privacy is important to us. Learn how we collect, use, and;
                 protect your information.;
               </p>;
@@ -1569,19 +1567,20 @@ function PrivacyPage() {
           </div>;
         </section>;
         {/* Content Section */}
-        <section className="py - 16 px - 4">;
-          <div className="max - w-4xl mx - auto">;
+        <section className=py - 16 px - 4">;
+          <div className="max - w-4xl mx - auto>;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 20 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
-              className="bg - white rounded - 2xl shadow - lg p - 8 md:p - 12";
+              className=bg - white rounded - 2xl shadow - lg p - 8 md:p - 12";
             >;
-              <div className="prose prose - lg max - w-none">;
-                <h2 className="text - 2xl font - bold mb - 6">;
+              <div className="prose prose - lg max - w-none>;
+                <h2 className=text - 2xl font - bold mb - 6">;
                   Information We Collect;
                 </h2>;
-                <p className="mb - 6">;
+                <p className="mb - 6>;
+
 
 
 
@@ -1591,34 +1590,34 @@ function PrivacyPage() {
                   for support.;
                 </p>;
 
-                <h3 className="text - xl font - semibold mb - 4">;
+                <h3 className=text - xl font - semibold mb - 4">;
                   Personal Information;
                 </h3>;
-                <ul className="list - disc pl - 6 mb - 6">;
+                <ul className="list - disc pl - 6 mb - 6>;
                   <li > Name and contact information</li>;
                   <li > Email address</li>;
                   <li > Phone number</li>;
                   <li > Company information</li>;
                   <li > Payment information</li>;
                 </ul>;
-                <h3 className="text - xl font - semibold mb - 4">;
+                <h3 className=text - xl font - semibold mb - 4">;
                   Usage Information;
                 </h3>;
-                <ul className="list - disc pl - 6 mb - 6">;
+                <ul className="list - disc pl - 6 mb - 6>;
                   <li > How you use our services</li>;
                   <li > Device information</li>;
                   <li > IP address</li>;
                   <li > Browser type and version</li>;
                   <li > Operating system</li>;
                 </ul>;
-                <h2 className="text - 2xl font - bold mb - 6 mt - 12">;
+                <h2 className=text - 2xl font - bold mb - 6 mt - 12">;
                   How We Use Your Information;
                 </h2>;
-                <p className="mb - 6">;
+                <p className="mb - 6>;
                   We use the information we collect to provide, maintain, and;
                   improve our services.;
                 </p>;
-                <ul className="list - disc pl - 6 mb - 6">;
+                <ul className=list - disc pl - 6 mb - 6">;
                   <li > Provide and maintain our services</li>;
                   <li > Process transactions</li>;
                   <li > Send you technical notices and support messages</li>;
@@ -1626,10 +1625,11 @@ function PrivacyPage() {
                   <li > Improve our services and develop new features</li>;
                   <li > Monitor and analyze usage and trends</li>;
                 </ul>;
-                <h2 className="text - 2xl font - bold mb - 6 mt - 12">;
+                <h2 className="text - 2xl font - bold mb - 6 mt - 12>;
                   Information Sharing;
                 </h2>;
-                <p className="mb - 6">;
+                <p className=mb - 6">;
+
 
 
 
@@ -1638,14 +1638,15 @@ function PrivacyPage() {
                   described in this policy.;
                 </p>;
 
-                <h2 className="text - 2xl font - bold mb - 6 mt - 12">Data Security</h2>;
-                <p className="mb - 6">;
+                <h2 className="text - 2xl font - bold mb - 6 mt - 12>Data Security</h2>;
+                <p className=mb - 6">;
                   We implement appropriate security measures to protect your;
                   personal information against unauthorized access, alteration,
                   disclosure, or destruction.;
                 </p>;
-                <h2 className="text - 2xl font - bold mb - 6 mt - 12">Your Rights</h2>;
-                <p className="mb - 6">;
+                <h2 className="text - 2xl font - bold mb - 6 mt - 12>Your Rights</h2>;
+                <p className=mb - 6">;
+
 
 
 
@@ -1658,92 +1659,90 @@ function PrivacyPage() {
       <SEOOptimizer />
       <AnalyticsTracker />
       <Layout>
-        <main className="relative z-10 pt-8">
+        <main className="relative z-10 pt-8>
           {/* Hero Section */}
-          <section className="py-20 px-4">
-            <div className="max-w-6xl mx-auto text-center">
+          <section className=py-20 px-4">
+            <div className="max-w-6xl mx-auto text-center>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                <h1 className=text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                   Privacy Policy
                 </h1>
-                <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto>
                   Your privacy is our priority. Learn how we protect and handle your personal information.
                 </p>
-                <div className="flex items-center justify-center gap-4 text-gray-400">
-                  <Shield className="w-6 h-6" />
-} from "lucide-react";
-import MainLayout from "../components/layout/MainLayout";
+                <div className=flex items-center justify-center gap-4 text-gray-400">
+                  <Shield className="w-6 h-6 />
+} from lucide-react";
+import MainLayout from "../components/layout/MainLayout;
 
 } from 'lucide-react';
 
   const _privacySections = [
     {
-      title: 'Information We Collect',
+      title: Information We Collect,
 icon: <Database className=&quot;w-8 h-8&quot; />,
       color: 'from-cyan-500 to-blue-500',
       content: [
-        'Personal information (name, email, phone number, company)Business information (company size, industry, project requirements)Technical information (IP address, browser type, device information)Usage data (website interactions, service usage patterns)Communication records (emails, phone calls, support tickets)'
+        Personal information (name, email, phone number, company)Business information (company size, industry, project requirements)Technical information (IP address, browser type, device information)Usage data (website interactions, service usage patterns)Communication records (emails, phone calls, support tickets)
       ]
 },
     {
       title: 'How We Use Your Information',
       icon: <Settings className=&quot;w-8 h-8&quot; />,
-      color: 'from-purple-500 to-pink-500',
+      color: from-purple-500 to-pink-500,
       content: [
         'Provide and improve our servicesCommunicate with you about our servicesProcess payments and manage accountsSend marketing communications (with consent)Analyze usage patterns and improve user experienceComply with legal obligations'
       ]
 },
     {
-      title: 'Information Sharing',
+      title: Information Sharing,
       icon: <Globe className=&quot;w-8 h-8&quot; />,
       color: 'from-green-500 to-emerald-500',
       content: [
-        'We do not sell, trade, or rent your personal informationShare with trusted service providers under strict confidentialityComply with legal requirements and court ordersProtect our rights, property, and safetyBusiness transfers (with notice and choice)'
+        We do not sell, trade, or rent your personal informationShare with trusted service providers under strict confidentialityComply with legal requirements and court ordersProtect our rights, property, and safetyBusiness transfers (with notice and choice)
       ]
 },
     {
       title: 'Data Security',
       icon: <Lock className=&quot;w-8 h-8&quot; />,
-      color: 'from-orange-500 to-red-500',
+      color: from-orange-500 to-red-500,
       content: [
         'Industry-standard encryption for data in transit and at restRegular security audits and vulnerability assessmentsAccess controls and authentication measuresEmployee training on data protectionIncident response and breach notification procedures'
       ]
     }
-],
-  ];
+]];
 
-  const rights = [
     {
-      title: 'Access',
+      title: Access,
       description: 'Request access to your personal information',
 icon: <Eye className=&quot;w-6 h-6&quot; />
     },
     {
-      title: 'Correction',
+      title: Correction,
       description: 'Request correction of inaccurate information',
 icon: <CheckCircle className=&quot;w-6 h-6&quot; />
     },
     {
-      title: 'Deletion',
+      title: Deletion,
       description: 'Request deletion of your personal information',
 icon: <AlertTriangle className=&quot;w-6 h-6&quot; />
     },
     {
-      title: 'Portability',
+      title: Portability,
       description: 'Request transfer of your data to another service',
 icon: <Database className=&quot;w-6 h-6&quot; />
     },
     {
-      title: 'Objection',
+      title: Objection,
       description: 'Object to processing of your personal information',
 icon: <User className=&quot;w-6 h-6&quot; />
     },
     {
-      title: 'Restriction',
+      title: Restriction,
       description: 'Request restriction of processing activities',
 icon: <Settings className=&quot;w-6 h-6&quot; />
     }
@@ -1774,11 +1773,10 @@ icon: <Settings className=&quot;w-6 h-6&quot; />
                   <span>Last updated: {lastUpdated}</span>
   ];
 
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import {
+import React from react";
+import Head from "next/head;
+import Link from next/link";
+import { motion } from "framer-motion;
   Shield
   Lock
   Eye
@@ -1787,32 +1785,31 @@ import {
   Phone
   MapPin
   Users
-} from "lucide-react";
-import MainLayout from "../components/layout/MainLayout";
+} from lucide-react";
 
 export default function PrivacyPage() {
   return (
 
     <MainLayout
-      title="Privacy Policy - Zion Tech Group"
-      description="Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information."
-      keywords="privacy policy, data protection, personal information, GDPR compliance"
-      canonical="https://ziontechgroup.com/privacy"
+      title=Privacy Policy - Zion Tech Group"
+      description="Zion Tech Groups privacy policy outlining how we collect, use, and protect your personal information.
+      keywords=privacy policy, data protection, personal information, GDPR compliance"
+      canonical="https://ziontechgroup.com/privacy
     >
-      <div className="min-h-screen bg-gray-50">
+      <div className=min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4">
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20>
+          <div className=max-w-7xl mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center"
+              className="text-center
             >
-<h1 className="text-4xl md:text-6xl font-bold mb-6">
+<h1 className=text-4xl md:text-6xl font-bold mb-6">
                 Privacy Policy
               </h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto>
                 Your privacy is important to us. Learn how we collect, use, and
                 protect your information.
               </p>
@@ -1821,28 +1818,28 @@ export default function PrivacyPage() {
         </section>
 
         {/* Content Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto">
+        <section className=py-16 px-4">
+          <div className="max-w-4xl mx-auto>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="bg-white rounded-2xl shadow-lg p-8 md:p-12"
+              className=bg-white rounded-2xl shadow-lg p-8 md:p-12"
             >
-              <div className="prose prose-lg max-w-none">
-<h2 className="text-2xl font-bold mb-6">
+              <div className="prose prose-lg max-w-none>
+<h2 className=text-2xl font-bold mb-6">
                   Information We Collect
 
                 </h2>
-                <p className="mb-6">
+                <p className="mb-6>
                   We collect information you provide directly to us, such as
                   when you create an account, use our services, or contact us
                   for support.
                 </p>
-<h3 className="text-xl font-semibold mb-4">
+<h3 className=text-xl font-semibold mb-4">
                   Personal Information
                 </h3>
-                <ul className="list-disc pl-6 mb-6">
+                <ul className="list-disc pl-6 mb-6>
                   <li>Name and contact information</li>
                   <li>Email address</li>
                   <li>Phone number</li>
@@ -1850,15 +1847,15 @@ export default function PrivacyPage() {
                   <li>Payment information</li>
                 </ul>
 
-                <h3 className="text-xl font-semibold mb-4">
+                <h3 className=text-xl font-semibold mb-4">
                   Usage Information
                 </h3>
 
-                <h3 className="text-xl font-semibold mb-4">
+                <h3 className="text-xl font-semibold mb-4>
                   Usage Information
                 </h3>
 
-                <ul className="list-disc pl-6 mb-6">
+                <ul className=list-disc pl-6 mb-6">
                   <li>How you use our services</li>
                   <li>Device information</li>
                   <li>IP address</li>
@@ -1866,15 +1863,15 @@ export default function PrivacyPage() {
                   <li>Operating system</li>
                 </ul>
 
-                <h2 className="text-2xl font-bold mb-6 mt-12">
+                <h2 className="text-2xl font-bold mb-6 mt-12>
                   How We Use Your Information
                 </h2>
-                <p className="mb-6">
+                <p className=mb-6">
                   We use the information we collect to provide, maintain, and
                   improve our services.
                 </p>
 
-                <ul className="list-disc pl-6 mb-6">
+                <ul className="list-disc pl-6 mb-6>
                   <li>Provide and maintain our services</li>
                   <li>Process transactions</li>
                   <li>Send you technical notices and support messages</li>
@@ -1883,63 +1880,63 @@ export default function PrivacyPage() {
                   <li>Monitor and analyze usage and trends</li>
                 </ul>
 
-                <h2 className="text-2xl font-bold mb-6 mt-12">
+                <h2 className=text-2xl font-bold mb-6 mt-12">
                   Information Sharing
                 </h2>
-                <p className="mb-6">
+                <p className="mb-6>
                   We do not sell, trade, or otherwise transfer your personal
                   information to third parties without your consent, except as
                   described in this policy.
 
                 </p>
-                <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
-                <p className="mb-6">
+                <h2 className=text-2xl font-bold mb-6 mt-12">Data Security</h2>
+                <p className="mb-6>
 We implement appropriate security measures to protect your
                   personal information against unauthorized access, alteration
                   disclosure, or destruction.
                 </p>
-                <h2 className="text-2xl font-bold mb-6 mt-12">Your Rights</h2>
-                <p className="mb-6">
+                <h2 className=text-2xl font-bold mb-6 mt-12">Your Rights</h2>
+                <p className="mb-6>
 You have the right to access, update, or delete your personal
                   information. You may also opt out of certain communications
                   from us.
                 </p>
-                <h2 className="text-2xl font-bold mb-6 mt-12">Contact Us</h2>
-                <p className="mb-6">
+                <h2 className=text-2xl font-bold mb-6 mt-12">Contact Us</h2>
+                <p className="mb-6>
 If you have any questions about this Privacy Policy, please
                   contact us at:
                 </p>
 
                 </p>
-                <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
-                <p className="mb-6">
+                <h2 className=text-2xl font-bold mb-6 mt-12">Data Security</h2>
+                <p className="mb-6>
                   We implement appropriate security measures to protect your
                   personal information against unauthorized access, alteration,
                   disclosure, or destruction.
                 </p>
-                <h2 className="text-2xl font-bold mb-6 mt-12">Your Rights</h2>
-                <p className="mb-6">
+                <h2 className=text-2xl font-bold mb-6 mt-12">Your Rights</h2>
+                <p className="mb-6>
                   You have the right to access, update, or delete your personal
                   information. You may also opt out of certain communications
                   from us.
                 </p>
-                <h2 className="text-2xl font-bold mb-6 mt-12">Contact Us</h2>
-                <p className="mb-6">
+                <h2 className=text-2xl font-bold mb-6 mt-12">Contact Us</h2>
+                <p className="mb-6>
                   If you have any questions about this Privacy Policy, please
                   contact us at:
                 </p>
 
-                <div className="bg-gray-50 rounded-lg p-6">
-                  <div className="flex items-center mb-4">
-                    <Mail className="w-5 h-5 text-blue-600 mr-3" />
+                <div className=bg-gray-50 rounded-lg p-6">
+                  <div className="flex items-center mb-4>
+                    <Mail className=w-5 h-5 text-blue-600 mr-3" />
                     <span>kleber@ziontechgroup.com</span>
                   </div>
-                  <div className="flex items-center mb-4">
-                    <Phone className="w-5 h-5 text-blue-600 mr-3" />
+                  <div className="flex items-center mb-4>
+                    <Phone className=w-5 h-5 text-blue-600 mr-3" />
                     <span>+1 302 464 0950</span>
                   </div>
-                  <div className="flex items-start">
-                    <Users className="w-5 h-5 text-blue-600 mr-3 mt-1" />
+                  <div className="flex items-start>
+                    <Users className=w-5 h-5 text-blue-600 mr-3 mt-1" />
                     <div>
                       <p>Zion Tech Group</p>
                       <p>364 E Main St STE 1008</p>
@@ -1948,10 +1945,10 @@ If you have any questions about this Privacy Policy, please
                   </div>
                 </div>
 
-<p className="text-sm text-gray-600 mt-8">
-                <p className="text-sm text-gray-600 mt-8">
+<p className="text-sm text-gray-600 mt-8>
+                <p className=text-sm text-gray-600 mt-8">
 
-<p className="text-sm text-gray-600 mt-8">
+<p className="text-sm text-gray-600 mt-8>
 
                   Last updated: January 2024
                 </p>
@@ -1969,52 +1966,52 @@ If you have any questions about this Privacy Policy, please
             </div>
           </section>
 {/* Overview */}
-          <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <section className=py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
+            <div className="max-w-6xl mx-auto>
+              <div className=grid lg:grid-cols-2 gap-12 items-center">
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6 }}
                 >
-<h2 className="text-4xl font-bold mb-6 text-white">
+<h2 className="text-4xl font-bold mb-6 text-white>
                     Our Commitment to Privacy
                   </h2>
-                  <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+                  <p className=text-lg text-gray-300 mb-6 leading-relaxed">
                     At Zion Tech Group, we are committed to protecting your privacy and ensuring the security 
                     of your personal information. This Privacy Policy explains how we collect, use, disclose;
                     and safeguard your information when you use our services.
                   </p>
-                  <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+                  <p className="text-lg text-gray-300 mb-6 leading-relaxed>
                     We believe in transparency and want you to understand how your information is handled. 
                     This policy applies to all users of our website, services, and applications.
                   </p>
-                  <div className="flex items-center gap-4 text-cyan-400">
-                    <Lock className="w-6 h-6" />
-                    <span className="font-medium">Your data is safe with us</span>
+                  <div className=flex items-center gap-4 text-cyan-400">
+                    <Lock className="w-6 h-6 />
+                    <span className=font-medium">Your data is safe with us</span>
                   </div>
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
-className="relative"
+className="relative
                 >
-                  <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30">
-                    <div className="text-center space-y-6">
-                      <div className="w-24 h-24 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto">
-                        <Shield className="w-12 h-12 text-white" />
+                  <div className=bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30">
+                    <div className="text-center space-y-6>
+                      <div className=w-24 h-24 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto">
+                        <Shield className="w-12 h-12 text-white />
                       </div>
-                      <h3 className="text-2xl font-bold text-white">Data Protection</h3>
-                      <p className="text-gray-300">Enterprise-grade security for your information</p>
-                      <div className="grid grid-cols-2 gap-4 text-sm">
-                        <div className="text-center">
-                          <div className="text-2xl font-bold text-cyan-400">256-bit</div>
-                          <div className="text-gray-400">Encryption</div>
+                      <h3 className=text-2xl font-bold text-white">Data Protection</h3>
+                      <p className="text-gray-300>Enterprise-grade security for your information</p>
+                      <div className=grid grid-cols-2 gap-4 text-sm">
+                        <div className="text-center>
+                          <div className=text-2xl font-bold text-cyan-400">256-bit</div>
+                          <div className="text-gray-400>Encryption</div>
                         </div>
-                        <div className="text-center">
-                          <div className="text-2xl font-bold text-purple-400">99.9%</div>
-                          <div className="text-gray-400">Uptime</div>
+                        <div className=text-center">
+                          <div className="text-2xl font-bold text-purple-400>99.9%</div>
+                          <div className=text-gray-400">Uptime</div>
                         </div>
                       </div>
                     </div>
@@ -2024,37 +2021,37 @@ className="relative"
             </div>
           </section>
 {/* Privacy Principles */}
-          <section className="py-20 px-4">
-            <div className="max-w-6xl mx-auto">
+          <section className="py-20 px-4>
+            <div className=max-w-6xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-className="text-center mb-16"
+className="text-center mb-16
               >
-                <h2 className="text-4xl font-bold mb-4 text-white">Our Privacy Principles</h2>
-                <p className="text-xl text-gray-300">The foundation of how we handle your data</p>
+                <h2 className=text-4xl font-bold mb-4 text-white">Our Privacy Principles</h2>
+                <p className="text-xl text-gray-300>The foundation of how we handle your data</p>
               </motion.div>
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className=grid md:grid-cols-2 gap-8">
                 {privacySections.map((section, index) => (
                   <motion.div
                     key={section.title}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50"
+className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50
                   >
                     <div className={`w-16 h-16 bg-gradient-to-r ${section.color} rounded-2xl flex items-center justify-center mb-6`}>
-                      <div className="text-white">
+                      <div className=text-white">
                         {section.icon}
                       </div>
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-4">{section.title}</h3>
-                    <ul className="space-y-3">
+                    <h3 className="text-2xl font-bold text-white mb-4>{section.title}</h3>
+                    <ul className=space-y-3">
                       {section.content.map((item, itemIndex) => (
-                        <li key={itemIndex} className="flex items-start gap-3">
-                          <div className="w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0"></div>
-                          <span className="text-gray-300">{item}</span>
+                        <li key={itemIndex} className="flex items-start gap-3>
+                          <div className=w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-300>{item}</span>
                         </li>
                       ))}
                     </ul>
@@ -2064,185 +2061,185 @@ className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 bor
             </div>
           </section>
 {/* Your Rights */}
-          <section className="py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50">
-            <div className="max-w-6xl mx-auto">
+          <section className=py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50">
+            <div className="max-w-6xl mx-auto>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-className="text-center mb-16"
+className=text-center mb-16"
               >
-                <h2 className="text-4xl font-bold mb-4 text-white">Your Privacy Rights</h2>
-                <p className="text-xl text-gray-300">You have control over your personal information</p>
+                <h2 className="text-4xl font-bold mb-4 text-white>Your Privacy Rights</h2>
+                <p className=text-xl text-gray-300">You have control over your personal information</p>
               </motion.div>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6>
                 {rights.map((right, index) => (
                   <motion.div
                     key={right.title}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 text-center"
+className=bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 text-center"
                   >
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                      <div className="text-white">
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4>
+                      <div className=text-white">
                         {right.icon}
                       </div>
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-2">{right.title}</h3>
-                    <p className="text-gray-300 text-sm">{right.description}</p>
+                    <h3 className="text-xl font-bold text-white mb-2>{right.title}</h3>
+                    <p className=text-gray-300 text-sm">{right.description}</p>
                   </motion.div>
                 ))}
               </div>
             </div>
           </section>
 {/* Detailed Policy */}
-          <section className="py-20 px-4">
-            <div className="max-w-4xl mx-auto">
+          <section className="py-20 px-4>
+            <div className=max-w-4xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-className="space-y-12"
+className="space-y-12
               >
                 <div>
-                  <h2 className="text-3xl font-bold text-white mb-6">Detailed Privacy Information</h2>
-                  <div className="space-y-8">
+                  <h2 className=text-3xl font-bold text-white mb-6">Detailed Privacy Information</h2>
+                  <div className="space-y-8>
                     <div>
-                      <h3 className='text-2xl font-bold text-white mb-4'>
+                      <h3 className=text-2xl font-bold text-white mb-4'>
                         Information Collection
                       </h3>
-                      <p className='text-gray-300 mb-4 leading-relaxed'>
+                      <p className='text-gray-300 mb-4 leading-relaxed>
                         We collect information you provide directly to us, such
                         as when you create an account, request a quote, or
                         contact our support team. We also automatically collect
                         certain information about your device and how you
                         interact with our services.
                       </p>
-                      <p className='text-gray-300 leading-relaxed'>
+                      <p className=text-gray-300 leading-relaxed'>
                         This may include your IP address, browser type,
                         operating system, referring URLs, access times, and
                         pages viewed. We use this information to improve our
                         services and provide a better user experience.                      </p>
                     </div>
 <div>
-                      <h3 className="text-2xl font-bold text-white mb-4">Data Usage and Purpose</h3>
-                      <p className="text-gray-300 mb-4 leading-relaxed">
+                      <h3 className=text-2xl font-bold text-white mb-4">Data Usage and Purpose</h3>
+                      <p className="text-gray-300 mb-4 leading-relaxed>
                         We use your information to provide, maintain, and improve our services, process 
                         transactions, send you technical notices and support messages, and respond to your 
                         comments and questions.
                       </p>
-<p className="text-gray-300 leading-relaxed">
+<p className=text-gray-300 leading-relaxed">
                         With your consent, we may also use your information to send you marketing communications 
                         about our services, special offers, and updates. You can opt out of these communications 
                         at any time.
                       </p>
-                      <p className='text-gray-300 leading-relaxed'>
+                      <p className='text-gray-300 leading-relaxed>
                         With your consent, we may also use your information to
                         send you marketing communications about our services,
                         special offers, and updates. You can opt out of these
                         communications at any time.                      </p>
                     </div>
 <div>
-                      <h3 className="text-2xl font-bold text-white mb-4">Data Sharing and Disclosure</h3>
-                      <p className="text-gray-300 mb-4 leading-relaxed">
+                      <h3 className="text-2xl font-bold text-white mb-4>Data Sharing and Disclosure</h3>
+                      <p className=text-gray-300 mb-4 leading-relaxed">
                         We do not sell, trade, or otherwise transfer your personal information to third parties 
                         without your consent, except as described in this policy. We may share your information 
                         with trusted third-party service providers who assist us in operating our business.
                       </p>
-<p className="text-gray-300 leading-relaxed">
+<p className="text-gray-300 leading-relaxed>
                         These service providers are contractually obligated to keep your information confidential 
                         and use it only for the purposes for which we disclose it to them.
                       </p>
-                      <p className='text-gray-300 leading-relaxed'>
+                      <p className=text-gray-300 leading-relaxed'>
                         These service providers are contractually obligated to
                         keep your information confidential and use it only for
                         the purposes for which we disclose it to them.                      </p>
                     </div>
 <div>
-                      <h3 className="text-2xl font-bold text-white mb-4">Data Security Measures</h3>
-                      <p className="text-gray-300 mb-4 leading-relaxed">
+                      <h3 className=text-2xl font-bold text-white mb-4">Data Security Measures</h3>
+                      <p className="text-gray-300 mb-4 leading-relaxed>
                         We implement appropriate technical and organizational security measures to protect 
                         your personal information against unauthorized access, alteration, disclosure, or destruction.
                       </p>
-                      <p className="text-gray-300 leading-relaxed">
+                      <p className=text-gray-300 leading-relaxed">
                         These measures include encryption, access controls, regular security assessments;
                         and employee training on data protection best practices.
                       </p>
-                      <p className='text-gray-300 leading-relaxed'>
+                      <p className='text-gray-300 leading-relaxed>
                         These measures include encryption, access controls,
                         regular security assessments, and employee training on
                         data protection best practices.                      </p>
                     </div>
                     <div>
-<h3 className="text-2xl font-bold text-white mb-4">Data Retention</h3>
-                      <p className="text-gray-300 mb-4 leading-relaxed">
+<h3 className="text-2xl font-bold text-white mb-4>Data Retention</h3>
+                      <p className=text-gray-300 mb-4 leading-relaxed">
                         We retain your personal information for as long as necessary to provide our services;
                         comply with legal obligations, resolve disputes, and enforce our agreements.
                       </p>
-                      <p className="text-gray-300 leading-relaxed">
+                      <p className="text-gray-300 leading-relaxed>
                         When we no longer need your information, we will securely delete or anonymize it 
                         in accordance with our data retention policies.
                       </p>
-                      <p className='text-gray-300 leading-relaxed'>
+                      <p className=text-gray-300 leading-relaxed'>
                         When we no longer need your information, we will
                         securely delete or anonymize it in accordance with our
                         data retention policies.                      </p>
                     </div>
 <div>
-                      <h3 className="text-2xl font-bold text-white mb-4">International Data Transfers</h3>
-                      <p className="text-gray-300 mb-4 leading-relaxed">
+                      <h3 className=text-2xl font-bold text-white mb-4">International Data Transfers</h3>
+                      <p className="text-gray-300 mb-4 leading-relaxed>
                         Your information may be transferred to and processed in countries other than your own. 
                         We ensure that such transfers comply with applicable data protection laws and that 
                         appropriate safeguards are in place.
                       </p>
-<p className="text-gray-300 leading-relaxed">
+<p className=text-gray-300 leading-relaxed">
                         For transfers to countries outside the European Economic Area, we rely on adequacy 
                         decisions, standard contractual clauses, or other appropriate safeguards.
                       </p>
-                      <p className='text-gray-300 leading-relaxed'>
+                      <p className='text-gray-300 leading-relaxed>
                         For transfers to countries outside the European Economic
                         Area, we rely on adequacy decisions, standard
                         contractual clauses, or other appropriate safeguards.                      </p>
                     </div>
 <div>
-                      <h3 className="text-2xl font-bold text-white mb-4">Cookies and Tracking Technologies</h3>
-                      <p className="text-gray-300 mb-4 leading-relaxed">
+                      <h3 className="text-2xl font-bold text-white mb-4>Cookies and Tracking Technologies</h3>
+                      <p className=text-gray-300 mb-4 leading-relaxed">
                         We use cookies and similar tracking technologies to enhance your experience on our 
                         website, analyze usage patterns, and provide personalized content.
                       </p>
-                      <p className="text-gray-300 leading-relaxed">
+                      <p className="text-gray-300 leading-relaxed>
                         You can control cookie settings through your browser preferences. However, disabling 
                         certain cookies may affect the functionality of our services.
                       </p>
-                      <p className='text-gray-300 leading-relaxed'>
+                      <p className=text-gray-300 leading-relaxed'>
                         You can control cookie settings through your browser
                         preferences. However, disabling certain cookies may
                         affect the functionality of our services.                      </p>
                     </div>
 <div>
-                      <h3 className="text-2xl font-bold text-white mb-4">Children's Privacy</h3>
-                      <p className="text-gray-300 mb-4 leading-relaxed">
+                      <h3 className=text-2xl font-bold text-white mb-4">Children's Privacy</h3>
+                      <p className="text-gray-300 mb-4 leading-relaxed>
                         Our services are not intended for children under the age of 13. We do not knowingly 
                         collect personal information from children under 13.
                       </p>
-                      <p className="text-gray-300 leading-relaxed">
+                      <p className=text-gray-300 leading-relaxed">
                         If you believe we have collected information from a child under 13, please contact 
                         us immediately, and we will take steps to remove such information.
                       </p>
-                      <p className='text-gray-300 leading-relaxed'>
+                      <p className=text-gray-300 leading-relaxed>
                         If you believe we have collected information from a
                         child under 13, please contact us immediately, and we
                         will take steps to remove such information.                      </p>
                     </div>
 <div>
-                      <h3 className="text-2xl font-bold text-white mb-4">Changes to This Policy</h3>
-                      <p className="text-gray-300 mb-4 leading-relaxed">
+                      <h3 className="text-2xl font-bold text-white mb-4>Changes to This Policy</h3>
+                      <p className=text-gray-300 mb-4 leading-relaxed">
                         We may update this Privacy Policy from time to time to reflect changes in our 
                         practices or applicable laws. We will notify you of any material changes by posting 
                         the updated policy on our website.
                       </p>
-<p className="text-gray-300 leading-relaxed">
+<p className="text-gray-300 leading-relaxed>
                         Your continued use of our services after such changes constitutes acceptance of 
                         the updated policy. We encourage you to review this policy periodically.
                       </p>
@@ -2257,17 +2254,17 @@ className="space-y-12"
             </div>
           </section>
 {/* Contact Information */}
-          <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
-            <div className="max-w-4xl mx-auto text-center">
+          <section className=py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
+            <div className="max-w-4xl mx-auto text-center>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-<h2 className="text-4xl font-bold mb-6 text-white">
+<h2 className=text-4xl font-bold mb-6 text-white">
                   Questions About Privacy?
                 </h2>
-                <p className='text-xl text-gray-300 mb-8'>
+                <p className=text-xl text-gray-300 mb-8>
                   If you have any questions about this Privacy Policy or our
                   data practices, please don't hesitate to contact us.
                 </p>
@@ -2276,31 +2273,31 @@ className="space-y-12"
           </section>
 
           {/* Contact Information */}
-<section className='py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50'>
-            <div className='max-w-4xl mx-auto text-center'>
+<section className='py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50>
+            <div className=max-w-4xl mx-auto text-center'>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-<h2 className='text-4xl font-bold mb-6 text-white'>
+<h2 className='text-4xl font-bold mb-6 text-white>
                   Questions About Privacy?
                 </h2>
-                <p className='text-xl text-gray-300 mb-8'>
+                <p className=text-xl text-gray-300 mb-8'>
                   If you have any questions about this Privacy Policy or our
                   data practices, please don't hesitate to contact us.
                 </p>
 origin/cursor/automate-test-improve-and-merge-code-2533
-                <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+                <div className=flex flex-col sm:flex-row gap-4 justify-center>
                   <a
                     href='mailto:kleber@ziontechgroup.com'
-                    className='bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2'
+                    className=bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2
                   >
                     <Mail className='w-5 h-5' />
                     Email Us
                   </a>
                   <a
-                    href='/contact'
+                    href=/contact
                     className='border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2'
                   >
                     <User className='w-5 h-5' />                    Contact Form
@@ -2308,23 +2305,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+
     </MainLayout>;
   );
 }
 
-                <div className="flex flex-col sm: flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: flex-row gap-4 justify-center>
                   <a
-                    href="mailto:kleber@ziontechgroup.com"
-                    className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
+                    href=mailto:kleber@ziontechgroup.com"
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2
                   >
-                    <Mail className="w-5 h-5" />
+                    <Mail className=w-5 h-5" />
                     Email Us
                   </Link>
                   <a
-                    href="/contact"
-                    className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
+                    href="/contact
+                    className=border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
                   >
-                    <User className="w-5 h-5" />
+                    <User className="w-5 h-5 />
                     Contact Form
                   </Link>
                   <a
@@ -2336,6 +2334,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </Link>
 
                     <User className='w-5 h-5' />
+                    <User className=w-5 h-5 />
                     Contact Form
                   </a>
 
@@ -2353,7 +2352,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </ErrorBoundary>
 
   );
-};
+}
 export default PrivacyPage;
 
 
@@ -2363,7 +2362,7 @@ export default PrivacyPage;
 
 
   )
-};
+}
 
 export default PrivacyPage;
 
@@ -2376,17 +2375,17 @@ export default PrivacyPage;
                   If you have any questions about this Privacy Policy, please;
                   contact us at:;
                 </p>;
-                <div className="bg - gray - 50 rounded - lg p - 6">;
-                  <div className="flex items - center mb - 4">;
-                    <Mail className="w - 5 h - 5 text - blue - 600 mr - 3" />;
+                <div className=bg - gray - 50 rounded - lg p - 6">;
+                  <div className="flex items - center mb - 4>;
+                    <Mail className=w - 5 h - 5 text - blue - 600 mr - 3" />;
                     <span > kleber@ziontechgroup.com</span>;
                   </div>;
-                  <div className="flex items - center mb - 4">;
-                    <Phone className="w - 5 h - 5 text - blue - 600 mr - 3" />;
+                  <div className="flex items - center mb - 4>;
+                    <Phone className=w - 5 h - 5 text - blue - 600 mr - 3" />;
                     <span>+1 302 464 0950</span>;
                   </div>;
-                  <div className="flex items - start">;
-                    <Users className="w - 5 h - 5 text - blue - 600 mr - 3 mt - 1" />;
+                  <div className="flex items - start>;
+                    <Users className=w - 5 h - 5 text - blue - 600 mr - 3 mt - 1" />;
                     <div>;
                       <p > Zion Tech Group</p>;
                       <p > 364 E Main St STE 1008</p>;
@@ -2394,7 +2393,7 @@ export default PrivacyPage;
                     </div>;
                   </div>;
                 </div>;
-<p className="text - sm text - gray - 600 mt - 8">;
+<p className="text - sm text - gray - 600 mt - 8>;
                   Last updated: January 2024;
                 </p>;
               </div>;
@@ -2405,18 +2404,19 @@ export default PrivacyPage;
     </MainLayout>);
 }
                 <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+                <div className=flex flex-col sm: flex-row gap-4 justify-center">;
                   <a;
-                    href="mailto:kleber@ziontechgroup.com";
-                    className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2";
+                    href="mailto:kleber@ziontechgroup.com;
+                    className=bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2";
                   >;
-                    <Mail className="w-5 h-5" />;
+                    <Mail className="w-5 h-5 />;
                     Email Us;
                   </a>;
                   <a;
-                    href="/contact";
-                    className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2";
+                    href=/contact";
+                    className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2;
                   >;
-                    <User className="w-5 h-5" />;
+                    <User className=w-5 h-5" />;
                     Contact Form;
                   </a>;
                 </div>;
@@ -2427,10 +2427,10 @@ export default PrivacyPage;
       </Layout>;
     </ErrorBoundary>;
   );
-},;
+},
 export default PrivacyPage;
 );
-};
+}
 export default PrivacyPage;
 
 main
@@ -2438,6 +2438,6 @@ main
 
 
 );
-};
+}
 export default PrivacyPage;
 origin/cursor/automate-test-improve-and-merge-code-2533

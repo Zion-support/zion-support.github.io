@@ -8,16 +8,13 @@ import { motion } from 'framer-motion';
 interface EnhancedFuturisticBackgroundProps {
   children: React.ReactNode;
   className?: string;
-  intensity?: 'low' | 'medium' | 'high';'
-  colorScheme?: 'quantum' | 'cyberpunk' | 'holographic' | 'neural' | 'cosmic';'
+
   particleCount?: number;
   animationSpeed?: number;
 }const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> = ({children;
 const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps /> = ({children;
   className;
 
-const colorSchemes = {"quantum": {resizeCanvas ()window.addEventListener ('resize', resizeCanvas)// Wrap around edges if (this.x < 0) this.x = canvas.width;'
-}
 if (this.x > canvas.width) this.x = 0;
 if (this.y < 0) this.y = canvas.height;
 if (this.y > canvas.height) this.y = 0;
@@ -72,6 +69,28 @@ const EnhancedFuturisticBackground: React.FC<
  ;
   }
   const canvasRef = useRef<HTMLCanvasElement>(null);
+
+// Fade out near end of life if (this.life < 20) {}
+}
+
+
+}let particles: Particle[] = []
+let connections: Connection[] = []
+// Initialize particles ctx.fill_style = colors.primary
+ctx.font = `$ {
+
+  fontSize }
+}px monospace`
+const EnhancedFuturisticBackground: React.FC<
+  EnhancedFuturisticBackgroundProps
+> = ({ children,
+  className = ',
+  intensity = 'medium,
+  colorScheme = quantum',
+  particleCount = 100}
+  animationSpeed = 1}
+   }) => {
+  const canvasRef = useRef<HTMLCanvasElement />(null);
 
 const animationRef = useRef<number | undefined />(undefined);
 
@@ -319,6 +338,40 @@ this.opacity *= 0.95;
         this.y += this.vy,
         this.life--,
 
+      accent: '#ffff00,
+      background: rgba(0, 0, 0, 0.85)',
+      particles: ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff],
+      glow: #00ffff'
+    },
+    cyberpunk: {
+      primary: '#ff0080,
+      secondary: #00ffff',
+      accent: '#ffff00,
+      background: rgba(20, 0, 40, 0.9)',
+      particles: ['#ff0080#00ffff#ffff00#ff4000#8000ff#00ff80],
+      glow: #ff0080'
+    },
+    holographic: {
+      primary: '#00ffff,
+      secondary: #ff00ff',
+      accent: '#ffff00,
+      background: rgba(0, 20, 40, 0.85)',
+      particles: ['#00ffff#ff00ff#ffff00#00ff80#ff8000#8000ff],
+      glow: #00ffff'
+    },
+    neural: {
+      primary: '#00ff80,
+      secondary: #ff0080',
+      accent: '#ffff00,
+      background: rgba(0, 40, 20, 0.9)',
+      particles: ['#00ff80#ff0080#ffff00#00ffff#ff8000#8000ff],
+      glow: #00ff80'
+    },
+    cosmic: {
+      primary: '#ff6b6b,
+      secondary: #4ecdc4',
+      accent: '#45b7d1,
+
         // Wrap around edges
         if (this.x < 0) this.x = $2;
         if (this.x > canvas.width) this.x = $2;
@@ -345,7 +398,7 @@ this.y,
 this.size
         );
         gradient.addColorStop(0, this.color);
-        gradient.addColorStop(1, 'transparent');'
+
         ctx.fillStyle = gradient;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
@@ -547,27 +600,26 @@ if ( {) {$2;
     for (let i = 0; i < settings.particleCount; i++) {particles.push(new Particle())}
     // Matrix rain effect;
     const matrixRain = () => {const characters =;
-        '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+        '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン;
       const fontSize = 12;
       const columns = canvas.width / fontSize;
       const drops: number[]  = [];for (let i = 0; i < columns; i++) {drops[i] = 1;}
-      const drawMatrix = () => {ctx.fillStyle = 'rgba(0, 0, 0, 0.06)';
+      const drawMatrix = () => {ctx.fillStyle = rgba(0, 0, 0, 0.06)';
         ctx.fillRect(0, 0, canvas.width, canvas.height)ctx.fillStyle = colors.primary;
-        ctx.font = `${fontSize}px monospace`;;
+        ctx.font = `${fontSize}px monospace`;
     // Initialize particles;
     for (let index = 0; i < settings.particle_count; i++) {particles.push (new Particle ())}
     // Matrix rain effect;
     const matrix_rain = () =>: any {const characters =;
-        '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';      const font_size = 12;    let particles: Particle[] = [],let connections: Connection[] = [],// Initialize particles;
+        '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン;      const font_size = 12;    let particles: Particle[] = [],let connections: Connection[] = [],// Initialize particles;
     for (let index = 0, i < settings.particle_count, i++) {particles.push (new Particle ())}
     // Matrix rain effect;
-    const matrix_rain = () =>: any {const characters =;
-        '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';      const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+        01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';      const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン;
       const font_size = 12;
       const columns = canvas.width / font_size;
       const drops: number[]  = [];for (let index = 0; i < columns; i++) {drops[i] = 1;      }      for (let index = 0, i < columns, i++) {drops[i] = 1;
       }
-      const draw_matrix = () =>: any {ctx.fill_style = 'rgba (0, 0, 0, 0.06)';
+      const draw_matrix = () =>: any {ctx.fill_style = rgba (0, 0, 0, 0.06)';
         ctx.fill_rect (0, 0, canvas.width, canvas.height)ctx.fill_style = colors.primary;
         ctx.font = `${font_size}px monospace`;for (let index = 0; i < drops.length; i++) {const text =;
             characters[Math.floor (Math.random () * characters.length)];
@@ -611,7 +663,7 @@ const size  = Math.random() * 20 + 10;ctx.save()ctx.globalAlpha = 0.1;
         ctx.strokeStyle = colors.accent;
 
 ctx.stroke();
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.06)',
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.06),
         ctx.fillRect($2);
         ctx.fillStyle = $2;
         ctx.font = $2;
@@ -760,8 +812,5 @@ className='fixed inset-0 w-full h-full pointer-events-none z-0'
         }} />
 
       {/* Content */}
-      <div className='relative z-10'>{children}</div>'
-    </div>
-  )
-};
+
 export default EnhancedFuturisticBackground;

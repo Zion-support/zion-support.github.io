@@ -11,7 +11,6 @@ export interface AddedService {
   icon?: string;
   link?: string;
   rating?: number;
-customerCount?: number;
 
 export const "added2025Services": AddedService[] = [{"id":,ai-assistant-pro',"name": 'AI Assistant Pro,"tagline":,Secure, branded AI copilot with RAG and analytics',"description": Deploy a production-grade AI assistant with retrieval over your docs, Slack/Teams channels, human handoff, analytics dashboards, and policy guardrails.,,"price": 'Starting at $149,"period":,/month',"category": 'AI & Machine Learning,features[,RAG over docs','Slack/Teams integration','Human handoff','Conversation analytics','Guardrails & policy','Audit logs'],"icon": '🤖,"link":,"https": //ziontechgroup.com/ai-assistant,"rating": 4.8,"customerCount": 320;"
   },{"id":,agentic-rag-platform',"name": 'Agentic RAG Platform,"tagline":,Production RAG with hybrid search and agents',"description": Hybrid BM25+vector search, chunking strategies, citations, and agent tools with eval suites and cost/performance dashboards.,,"price": 'Starting at $179,"period":,/month',"category": 'AI & Machine Learning,features[,Hybrid search','Chunking + citations','Agent tools','Eval harness','Latency/cost KPIs','Observability'],"icon": '🔗,"link":,"https": //ziontechgroup.com/agentic-rag,"rating": 4.7,"customerCount": 210;"

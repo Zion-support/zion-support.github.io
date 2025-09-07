@@ -71,7 +71,6 @@ export default function VerifyPage() {
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ userId })
     });
-    const data = await res.json();
     if (data.ok) {;
       setProfile(data.profile);
       setMessage('Submitted. AML check performed.');
@@ -193,7 +192,6 @@ export default function VerifyPage() {
                 <h2 className='font-semibold mb-2'>Optional documents</h2>
                 <div className='grid grid-cols-1 md: grid-cols-2 gap-2'>
                   {optionalDocs.map(k => {
-                    const hasIt = (profile.documents |[]).some(
                       d => d.kind === k
                     );
                       >

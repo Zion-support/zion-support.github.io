@@ -29,15 +29,9 @@ const AdminRoutes = () => {;
 path="/admin/quotes""
         element={
 }
-import { Fragment } from "react";"
-import { Route, Routes } from "react-router-dom";"
 import { ProtectedRoute } from "@/components/ProtectedRoute",;"
 ;
-import TokenManager from "@/pages/admin/TokenManager";"
-import IntegrationsPage from "@/pages/admin/IntegrationsPage";"
 import TokenManager from "@/pages/admin/TokenManager","
-import IntegrationsPage from "@/pages/admin/IntegrationsPage","
-const AdminRoutes = () => {
 }
 return (;
     <Routes>
@@ -119,7 +113,6 @@ path="/admin/integrations""
 export default AdminRoutes;
 import { Fragment } from "react",;"
 import { Route, Routes } from "react-router-dom",;"
-import { ProtectedRoute } from "@/components/ProtectedRoute",;"
 // Admin Pages;
 import QuoteManager from "QuoteManager";"
 import ReviewsModeration from "ReviewsModeration";"
@@ -130,7 +123,6 @@ import SupportRequests from "SupportRequests";"
 import FraudDetection from "FraudDetection";"
 import TokenManager from "TokenManager";"
 import IntegrationsPage from "IntegrationsPage";"
-const AdminRoutes = () => {;
   }
   return (;
     <Routes>;

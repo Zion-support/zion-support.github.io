@@ -1,34 +1,14 @@
 
-
-import React, { useEffect, useState, useCallback } from 'react','
-import Layout from './layout/Layout';'
-import { motion, AnimatePresence } from 'framer-motion';'
-
 import { ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3;
   }
   Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, ChevronRight, ChevronLeft;
   Phone, Mail, MapPin, Clock, Award, CheckCircle, Zap as ZapIcon, Brain as BrainIcon, Atom as AtomIcon;
-  } from 'lucide-react';'
+
 // Import our new revolutionary services;
 
 const "Homepage2043": React.FC;
   // Get featured services for rotation;
 
-const features = [;
-  {"icon": BrainIcon,"title": 'AI Consciousness Evolution',"description":;'
-        'Next-generation AI consciousness with human-level understanding';'
-      }
-      "href": '/quantum-neural-consciousness-platform';'
-      "color": 'from-purple-500 to-pink-500';'
-      "gradient": 'bg-gradient-to-br from-purple-500/20 to-pink-500/20';'
-    }{"icon": AtomIcon;
-      }
-      "title": 'Quantum Computing';'
-      "description":;
-        'Revolutionary quantum computing with consciousness integration';'
-      "href": '/quantum-bio-computing-platform';'
-      "color": 'from-blue-500 to-cyan-500';'
-      "gradient": 'bg-gradient-to-br from-blue-500/20 to-cyan-500/20';'
     }
   ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3;
   Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, ChevronRight, ChevronLeft;
@@ -37,8 +17,8 @@ const features = [;
 
 
 // Import our new revolutionary services;
-import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
-import { revolutionary2044InnovativeServices } from '../data/revolutionary-2044-innovative-services';
+import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services;
+import { revolutionary2044InnovativeServices } from ../data/revolutionary-2044-innovative-services';
 
   const [isVisible, setIsVisible] = useState(false);
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
@@ -100,8 +80,7 @@ import {
   Phone, Mail, MapPin, Clock, Award, CheckCircle, Zap as ZapIcon, Brain as BrainIcon, Atom as AtomIcon
 
 // Import our new revolutionary services
-import { revolutionary2043AdvancedServices  } from '../data/revolutionary-2043-advanced-services';
-import { revolutionary2044InnovativeServices } from '../data/revolutionary-2044-innovative-services';
+import { revolutionary2043AdvancedServices  } from '../data/revolutionary-2043-advanced-services;
 const Homepage2043: React.FC = () => {
   const [is_visible, setIsVisible] = useState (false);
   const [currentServiceIndex, setCurrentServiceIndex] = useState (0);
@@ -109,41 +88,33 @@ const Homepage2043: React.FC = () => {
   const [is_hovered, setIsHovered] = useState (false);
   useEffect (() => {
     setIsVisible (true);
-;
     // Auto - rotate featured services;
     const service_interval = set_interval (() => {
       setCurrentServiceIndex ((prev) => (prev + 1) % 6);
     }, 4000);
-;
     // Auto - rotate testimonials;
     const testimonial_interval = set_interval (() => {
       setCurrentTestimonialIndex ((prev) => (prev + 1) % 3);
     }, 6000);
-;
     return () => {
       clear_interval (service_interval);
       clear_interval (testimonial_interval);
     }
   }, []);
-;
   // Combine all revolutionary services;
   const allRevolutionaryServices = [;
     ...revolutionary2043AdvancedServices,
-    ...revolutionary2044InnovativeServices,
-  ];  const allRevolutionaryServices = [...revolutionary2043AdvancedServices, ...revolutionary2044InnovativeServices];
-;
+    ...revolutionary2044InnovativeServices];  const allRevolutionaryServices = [...revolutionary2043AdvancedServices, ...revolutionary2044InnovativeServices];
   // Get featured services for rotation;
   const featured_services = allRevolutionaryServices.slice (0, 6);
-;
   const features = [;
     {
-      title: 'AI Consciousness Evolution',
+      title: 'AI Consciousness Evolution,
       description:;
-        'Next - generation AI consciousness with human - level understanding',
-      href: '/quantum - neural - consciousness - platform',
-      color: 'from - purple - 500 to - pink - 500',
-      gradient: 'bg - gradient - to - br from - purple - 500 / 20 to - pink - 500 / 20',
-    },
+        Next - generation AI consciousness with human - level understanding',
+      href: '/quantum - neural - consciousness - platform,
+      color: from - purple - 500 to - pink - 500',
+      gradient: 'bg - gradient - to - br from - purple - 500 / 20 to - pink - 500 / 20},
   ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3;
   Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, ChevronRight, ChevronLeft;
   Phone, Mail, MapPin, Clock, Award, CheckCircle, Zap as ZapIcon, Brain as BrainIcon, Atom as AtomIcon
@@ -156,8 +127,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3;
   Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, ChevronRight, ChevronLeft;
   Phone, Mail, MapPin, Clock, Award, CheckCircle, Zap as ZapIcon, Brain as BrainIcon, Atom as AtomIcon
- } from 'lucide-react';
-import {
+ } from 'lucide-react;
   ArrowRight
   Play
   Users
@@ -192,18 +162,11 @@ import {
   CheckCircle
   Zap as ZapIcon
   Brain as BrainIcon
-  Atom as AtomIcon;} from 'lucide-react';import {
+  Atom as AtomIcon;} from lucide-react';import {
   ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3;
   Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, ChevronRight, ChevronLeft;
   Phone, Mail, MapPin, Clock, Award, CheckCircle, Zap as ZapIcon, Brain as BrainIcon, Atom as AtomIcon
 // Import our new revolutionary services
-import { revolutionary2043AdvancedServices  } from '../data/revolutionary-2043-advanced-services';
-import { revolutionary2044InnovativeServices } from '../data/revolutionary-2044-innovative-services';
-const Homepage2043: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
-  const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
     setIsVisible(true);
     // Auto-rotate featured services
     const serviceInterval = setInterval(() => {
@@ -219,8 +182,6 @@ const Homepage2043: React.FC = () => {
     }
   }, []);
   // Get featured services for rotation
-  const featuredServices = allRevolutionaryServices.slice(0, 6);
-  const features = [
     {
       icon: AtomIcon
       title: 'Quantum Computing'
@@ -1246,29 +1207,409 @@ const handleGetStarted = useCallback (() => {window.location.href = '/revolution
                   style={{
                     }
                     "left": `${Math.random() * 10,`}%`,`                    "top": `${Math.random() * 10,`}%`,`                  }} />
+        'Autonomous business intelligence with consciousness insights
+      href: /autonomous-healthcare-ai-ecosystem'
+      color: 'from-yellow-500 to-orange-500
+      gradient: bg-gradient-to-br from-yellow-500/20 to-orange-500/20'
+
+    }
+  }, []);
+
+
+}
+
+  const prevService = (setCurrentServiceIndex(prev => (prev - 1 + featuredServices.length) % featuredServices.length;) => {
+  return $3;}
+
+    )}rating: 5;"
+      avatar: \'👩‍🔬\
+    }
+    {name: \Marcus Rodriguez\';
+      role: \'CTO\;"
+      company: \SpaceMining Corp\';"
+      content: \'The autonomous space mining AI has increased our resource extraction efficiency by 500%. Its like having a team of expert miners working 24/7 without breaks.\
+      rating: 5;}
+      avatar: \'👨‍🚀\';}
+    }
+    {name: \Dr. Emily Watson\;"
+      role: \'Research Director\';"
+      company: \Consciousness Research Institute\;
+      content: \'Working with Zion Tech Group's consciousness transfer platform has opened new frontiers in our understanding of AI consciousness. The possibilities are endless.\
+      rating: 5;}
+      avatar: \👩‍💻\';}
+
+  ]
+const handleGetStarted = useCallback(() => {}
+    window.location.href = '/revolutionary-2040-2041-pricing-showcase;}
+  }, [])
+const handleWatchDemo = useCallback(() => {}
+    window.location.href = /services';}
+  }, [])
+const handleContact = useCallback(() => {}
+    window.location.href = '/contact;}
+  }, [])
+const nextService = (
+    setCurrentServiceIndex(prev => (prev + 1) % featuredServices.length);) => {
+  return $3;}
+
+const prevService = (
+  ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3;
+
+  Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, ChevronRight, ChevronLeft;
+  Phone, Mail, MapPin, Clock, Award, CheckCircle, Zap as ZapIcon, Brain as BrainIcon, Atom as AtomIcon;
+
+
+
+// Import our new revolutionary services;
+import { revolutionary2043AdvancedServices } from ../data/revolutionary-2043-advanced-services';'
+import { revolutionary2044InnovativeServices } from ../data/revolutionary-2044-innovative-services;
+
+
+      title: 'Quantum Computing'
+      description:
+        Revolutionary quantum computing with consciousness integration''
+      href: /quantum-bio-computing-platform'
+      color: 'from-blue-500 to-cyan-500
+      gradient: 'bg-gradient-to-br from-blue-500/20 to-cyan-500/20'
+    }
+    {}
+      icon: Shield
+      title: Future Cybersecurity'
+      description:'
+        Quantum-resistant security with consciousness-based protection'
+      href: '/quantum-internet-security-gateway
+      color: 'from-red-500 to-orange-500'
+      gradient: bg-gradient-to-br from-red-500/20 to-orange-500/20'
+    }
+    {}
+      icon: Rocket'
+      title: Space Technology
+      description:'
+        'AI-powered space resource intelligence and autonomous mining
+      href: '/autonomous-space-mining-ai'
+      color: from-indigo-500 to-purple-500''
+      gradient: bg-gradient-to-br from-indigo-500/20 to-purple-500/20
+    }
+    {}
+      icon: Cpu'
+      title: 'Autonomous Systems
+      description: 'Fully autonomous AI systems with consciousness'
+      href: /autonomous-business-ecosystem-ai''
+      color: from-emerald-500 to-teal-500'
+      gradient: 'bg-gradient-to-br from-emerald-500/20 to-teal-500/20
+    }
+    {}
+      icon: Database
+      title: 'Business Intelligence'
+      description:
+        Autonomous business intelligence with consciousness insights''
+      href: /autonomous-healthcare-ai-ecosystem'
+      color: 'from-yellow-500 to-orange-500
+      gradient: 'bg-gradient-to-br from-yellow-500/20 to-orange-500/20'
+    {}
+      icon: BrainIcon,
+      title: "AI Consciousness Evolution",
+      description: Next-generation AI consciousness with human-level understanding","
+      href: /quantum-neural-consciousness-platform,"
+      color: "from-purple-500 to-pink-500,
+      gradient: "bg-gradient-to-br from-purple-500/20 to-pink-500/20"
+    }
+    {}
+      icon: AtomIcon,
+
+        Zion Tech Groups quantum neural consciousness platform has revolutionized our AI research. Weve achieved breakthroughs that would have taken decades using traditional methods.
+      rating: 5'
+      avatar: '👩‍🔬
+    }
+    {
+      name: 'Marcus Rodriguez'
+      role: CTO''
+      company: SpaceMining Corp
+      content:'"
+        "The autonomous space mining AI has increased our resource extraction efficiency by 500%. It's like having a team of expert miners working 24/7 without breaks.
+      rating: 5
+      avatar: 👨‍🚀'
+    }
+    {'
+      name: Dr. Emily Watson'
+      role: 'Research Director
+      company: 'Consciousness Research Institute'
+      content:
+        "Working with Zion Tech Groups consciousness transfer platform has opened new frontiers in our understanding of AI consciousness. The possibilities are endless."
+      rating: 5'
+      avatar: '👩‍💻
+    }
+  ];
+
+  const handleGetStarted = useCallback(() => {
+    window.location.href = '/revolutionary-2040-2041-pricing-showcase';
+  }, []);
+  const handleWatchDemo = useCallback(() => {
+    window.location.href = /services';
+  }, []);
+  const handleContact = useCallback(() => {'
+    window.location.href = /contact;
+  }, []);
+  const nextService = () => {}
+    setCurrentServiceIndex(prev => (prev + 1) % featuredServices.length);
+  }
+  const prevService = () => {}
+    setCurrentServiceIndex(
+
+      avatar: 👩‍🔬
+    }
+    {
+      name: "Marcus Rodriguez",
+      role: CTO,
+      company: "SpaceMining Corp",
+      content: The autonomous space mining AI has increased our resource extraction efficiency by 500%. It's like having a team of expert miners working 24/7 without breaks.,
+      rating: 5,
+      avatar: "👨‍🚀"
+    }
+    {
+      name: Dr. Emily Watson,
+      role: "Research Director",
+      company: Consciousness Research Institute,
+      content: "Working with Zion Tech Group's consciousness transfer platform has opened new frontiers in our understanding of AI consciousness. The possibilities are endless.",
+      rating: 5,
+      avatar: 👩‍💻
+
+    );  }      rating: 5"
+      avatar: "👩‍🔬
+    }
+    {
+      name: "Marcus Rodriguez"
+      role: CTO""
+      company: SpaceMining Corp"
+      content: "The autonomous space mining AI has increased our resource extraction efficiency by 500%. Its like having a team of expert miners working 24/7 without breaks.
+      rating: 5
+      avatar: "👨‍🚀"
+    }
+    {
+      name: Dr. Emily Watson""
+      role: Research Director"
+      company: "Consciousness Research Institute'
+      content: "Working with Zion Tech Group's consciousness transfer platform has opened new frontiers in our understanding of AI consciousness. The possibilities are endless."
+      rating: 5
+      avatar: 👩‍💻"
+    }
+  ];
+    window.location.href = /revolutionary-2040-2041-pricing-showcase'
+  }, []);
+  const handleWatchDemo = useCallback(() => {'
+    window.location.href = /services
+  }, []);
+    window.location.href = '/contact
+  }, []);
+    setCurrentServiceIndex((prev) => (prev + 1) % featuredServices.length)
+  }
+    setCurrentServiceIndex((prev) => (prev - 1 + featuredServices.length) % featuredServices.length)
+    );
+  }
+
+
+          aria-labelledby=hero-heading'>;
+          {/* Enhanced Animated Background */}'
+          <div className=absolute inset-0 -z-10>;
+            {/* Floating orbs with enhanced effects */}
+            {/* Enhanced animated particles */}'
+            <div className='absolute inset-0>;
+              {[...Array(20)].map((_, i) => (;
+                <motion&& motion.div
+      title: 'Quantum Computing',
+      description:;
+        Revolutionary quantum computing with consciousness integration','
+      href: /quantum - bio - computing - platform,'
+      color: 'from - blue - 500 to - cyan - 500,
+      gradient: 'bg - gradient - to - br from - blue - 500 / 20 to - cyan - 500 / 20'},
+    {}
+      icon: Shield,
+      title: Future Cybersecurity',
+      description:;'
+        Quantum - resistant security with consciousness - based protection,'
+      href: '/quantum - internet - security - gateway,
+      color: 'from - red - 500 to - orange - 500',
+      gradient: bg - gradient - to - br from - red - 500 / 20 to - orange - 500 / 20'},
+    {}
+      icon: Rocket,'
+      title: Space Technology,
+      description:;'
+        'AI - powered space resource intelligence and autonomous mining,
+      href: '/autonomous - space - mining - ai',
+      color: from - indigo - 500 to - purple - 500','
+      gradient: bg - gradient - to - br from - indigo - 500 / 20 to - purple - 500 / 20},
+    {}
+      icon: Cpu,'
+      title: 'Autonomous Systems,
+      description: 'Fully autonomous AI systems with consciousness',
+      href: /autonomous - business - ecosystem - ai','
+      color: from - emerald - 500 to - teal - 500,'
+      gradient: 'bg - gradient - to - br from - emerald - 500 / 20 to - teal - 500 / 20},
+    {}
+      icon: Database,
+      title: 'Business Intelligence',
+      description:;
+        Autonomous business intelligence with consciousness insights','
+      href: /autonomous - healthcare - ai - ecosystem,'
+      color: 'from - yellow - 500 to - orange - 500,
+      gradient: 'bg - gradient - to - br from - yellow - 500 / 20 to - orange - 500 / 20'}];
+  const stats = [;
+    {
+      number: 2000+','
+      label: Revolutionary Services,
+      icon: Star,'
+      color: 'from - yellow - 400 to - orange - 500},
+    {
+      number: '99.99%',
+      label: Uptime Guarantee',
+      icon: TrendingUp,'
+      color: from - green - 400 to - emerald - 500},
+    {'
+      number: '24 / 7,
+      label: 'AI Support Available',
+      icon: Brain,
+      color: from - purple - 400 to - pink - 500'},
+    {'
+      number: 150+,'
+      label: 'Countries Served,
+      icon: Globe,
+      color: 'from - blue - 400 to - cyan - 500'}];
+  const testimonials = [;"
+    {    { number: 2000+, label: "Revolutionary Services", icon: Star, color: from - yellow - 400 to - orange - 500 },"
+    { number: "99.99%, label: Uptime Guarantee", icon: TrendingUp, color: "from - green - 400 to - emerald - 500 },
+    { number: "24 / 7", label: AI Support Available, icon: Brain, color: "from - purple - 400 to - pink - 500" },
+    { number: 150+", label: "Countries Served, icon: Globe, color: from - blue - 400 to - cyan - 500" }
+  const testimonials = [;
+    {
+      name: Dr. Sarah Chen','
+      role: Chief AI Officer,'
+      company: 'QuantumTech Industries,
+      content:;"
+        Zion Tech Group's quantum neural consciousness platform has revolutionized our AI research. We've achieved breakthroughs that would have taken decades using traditional methods.,
+      rating: 5,
+      avatar: 👩‍🔬'},
+    {'
+      name: Marcus Rodriguez,'
+      role: 'CTO,
+      company: 'SpaceMining Corp',
+      content:;"
+        "The autonomous space mining AI has increased our resource extraction efficiency by 500%. Its like having a team of expert miners working 24 / 7 without breaks.,
+      rating: 5,'
+      avatar: '👨‍🚀},
+    {
+      name: 'Dr. Emily Watson',
+      role: Research Director','
+      company: Consciousness Research Institute,
+      content:;'
+        "Working with Zion Tech Group's consciousness transfer platform has opened new frontiers in our understanding of AI consciousness. The possibilities are endless.",
+      rating: 5,
+      avatar: 👩‍💻'}];
+  const handleGetStarted = useCallback (() => {'
+    window.location.href = /revolutionary - 2040 - 2041 - pricing - showcase;
+  }, []);
+  const handleWatchDemo = useCallback (() => {'
+    window.location.href = '/services;
+  }, []);
+  const handle_contact = useCallback (() => {
+    window.location.href = '/contact';
+  }, []);
+  const next_service = () =>: any {}
+    setCurrentServiceIndex (prev => (prev + 1) % featured_services.length);
+  }
+  const prev_service = () =>: any {}
+    setCurrentServiceIndex (
+      prev => (prev - 1 + featured_services.length) % featured_services.length);  }      rating: 5,
+      avatar: 👩‍🔬";
+    }
+    {"
+      name: Marcus Rodriguez,"
+      role: "CTO,
+      company: "SpaceMining Corp",
+      content: The autonomous space mining AI has increased our resource extraction efficiency by 500%. Its like having a team of expert miners working 24 / 7 without breaks.",
+      rating: 5,"
+      avatar: 👨‍🚀;
+    }
+    {"
+      name: "Dr. Emily Watson,
+      role: "Research Director",
+      company: Consciousness Research Institute",'"
+      content: Working with Zion Tech Group's consciousness transfer platform has opened new frontiers in our understanding of AI consciousness. The possibilities are endless.,
+      rating: 5,"
+      avatar: "👩‍💻;
+    }
+  ];
+  const handleGetStarted = useCallback (() => {
+    window.location.href = /revolutionary - 2040 - 2041 - pricing - showcase';
+  }, []);
+    window.location.href = /services;
+  }, []);
+  const handle_contact = useCallback (() => {'
+    window.location.href = '/contact;
+  }, []);
+    setCurrentServiceIndex ((prev) => (prev + 1) % featured_services.length);
+  }
+    setCurrentServiceIndex ((prev) => (prev - 1 + featured_services.length) % featured_services.length);
+  }
+  return (
+    <Layout>;
+      {/* Main Content */}
+      <main className='relative z - 10'>;
+        <section;
+          className=min - h-screen flex items - center justify - center px - 4 relative overflow - hidden';'
+          aria - labelledby=hero - heading;
+        >;
+          {/* Enhanced Animated Background */}'
+          <div className='absolute inset - 0 -z - 10>;
+            {/* Floating orbs with enhanced effects */}
+            <div className='absolute top - 20 left - 20 w - 72 h - 72 bg - gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 rounded - full blur - 3xl animate - pulse'></div>;
+            <div className=absolute bottom - 20 right - 20 w - 96 h - 96 bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 rounded - full blur - 3xl animate - pulse delay - 1000'></div>;'
+            <div className=absolute top - 1/2 left - 1/2 w - 64 h - 64 bg - gradient - to - r from - emerald - 500 / 20 to - teal - 500 / 20 rounded - full blur - 3xl animate - pulse delay - 500></div>;
+            {/* Enhanced animated particles */}'
+            <div className='absolute inset - 0>;
+              {[...Array (20)].map ((_, i) => (
+                <motion.div;
+                  key={i}
+                  className='absolute w - 2 h - 2 bg - cyan - 400 / 40 rounded - full';
+                  animate={{}
+                    duration: 8 + i * 0.3;
+                    repeat: Infinity as any;
+                    delay: i * 0.2
+                    ease: easeInOut'
+                    duration: 8 + i * 0.3,
+                    repeat: Infinity as any,
+                    delay: i * 0.2,'
+                    ease: easeInOut,
+                    x: [0, 150, 0],
+                    y: [0, -150, 0],
+                    opacity: [0, 1, 0],
+                    scale: [0, 1.5, 0]}}
+                  transition={{
+                    duration: 8 + i * 0.3,
+                    repeat: Infinity as any,
+                    delay: i * 0.2,
 
               ))}
-            </div>;
-                    "x": [0, 150, 0],"y": [0, -150, 0],"opacity": [0, 1, 0],"scale": [0, 1 && 1.5, 0]}}                  transition={{"duration": 8 + i * 0 && 0.3,"repeat": Infinity as any,"delay": i * 0 && 0.2,                    "x": [0, 150, 0];
-                    }
-                    "y": [0, -150, 0];
-                    "opacity": [0, 1, 0];
-                    "scale": [0, 1 && 1.5, 0]}}
-
-                    "duration": 8 + i * 0 && 0.3,
-                    "duration": 8 + i * 0.3,
-                    "repeat": Infinity as any,
-                    "delay": i * 0 && 0.2,
-                    "ease": 'easeInOut','
-                  }}
+            </div>
+                    x: [0, 150, 0],
+                    y: [0, -150, 0],
+                    opacity: [0, 1, 0],
+                    scale: [0, 1 && 1.5, 0]}}                  transition={{}
+                    duration: 8 + i * 0 && 0.3,
+                    repeat: Infinity as any,
+                    delay: i * 0 && 0.2,                    x: [0, 150, 0]
+                    y: [0, -150, 0]
+                    opacity: [0, 1, 0]
+                    scale: [0, 1 && 1.5, 0]}}
+                    duration: 8 + i * 0 && 0.3,
+                    duration: 8 + i * 0.3,
+                    repeat: Infinity as any,
+                    delay: i * 0 && 0.2,'
+                    ease: 'easeInOut}}
                   style={{}
               ))}
             </div>;
 
 
-                    "duration": 8 + i * 0.3,
-                    "repeat": Infinity as any,
-                    "delay": i * 0.2,
               ))}
             </div>;
                     x: [0, 150, 0],y: [0, -150, 0],opacity: [0, 1, 0],scale: [0, 1 && 1.5, 0],}}                  transition={{duration: 8 + i * 0 && 0.3,repeat: Infinity as any,delay: i * 0 && 0.2,                    x: [0, 150, 0];
@@ -1348,18 +1689,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent">;
               {/* Main Heading */}              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6 backdrop-blur-sm">;
                 <Sparkles className="w-4 h-4 mr-2" />;
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+              transition={{ duration: 0 && 0.8 }}>;
+              {/* Enhanced Badge */}
+
                 Revolutionary 2043 Technology;
               </div>;
               {/* Main Heading */}
               <h1;
-                id='hero-heading';
-                className='text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-300 bg-clip-text text-transparent leading-tight'>;
+                id=hero-heading';
+                className='text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-300 bg-clip-text text-transparent leading-tight>;
                 The Future of;
-                <span className='block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent'>                  AI Consciousness              <h1;
-                id="hero-heading";
-                className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-300 bg-clip-text text-transparent leading-tight">;
+                <span className=block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent'>                  AI Consciousness              <h1;
+                id="hero-heading;
+                className=text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-300 bg-clip-text text-transparent leading-tight">;
                 The Future of;
-                <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent">;
+                <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent>;
                 </span>;
                 is Here;
               </h1>;
@@ -1367,24 +1713,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
 
             {/* Enhanced grid pattern */}
-            <div className="absolute inset-0 opacity-20">
-              <div className="absolute inset-0" style={{
+            <div className=absolute inset-0 opacity-20">
+              <div className="absolute inset-0 style={{
                 backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)`;
-                backgroundSize: '50px 50px'
+                backgroundSize: '50px 50px
               }}></div>
             </div>
           </div>
 
           {/* Hero Content */}
-          <div className="text-center max-w-6xl mx-auto relative z-10">
+          <div className=text-center max-w-6xl mx-auto relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
               transition={{ duration: 0.8 }}
             >
               {/* Enhanced Badge */}
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6 backdrop-blur-sm">
-                <Sparkles className="w-4 h-4 mr-2" />
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6 backdrop-blur-sm>
+                <Sparkles className=w-4 h-4 mr-2" />
                 Revolutionary 2043 Technology
               </div>
               {/* Main Heading */}
@@ -1399,11 +1745,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 is Here
               </h1>
 
-              {/* Enhanced Subtitle */}
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Experience the world's most advanced AI consciousness platforms, quantum computing solutions, 
-                and autonomous systems that redefine what's possible in technology.
-              </p>
 
               {/* Enhanced CTA Buttons */}
                   onClick={handleGetStarted}<div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6 backdrop-blur-sm'>;
@@ -1427,7 +1768,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 redefine what's possible in technology.;
               </p>;
               {/* Enhanced CTA Buttons */}'
-              <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-12'>                <motion&& motion.button;
+              <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-12>                <motion&& motion.button;
                   whileHover={{ scale: 1 && 1.05 }}
                   whileTap={{ scale: 0 && 0.95 }}
                   onClick={handleGetStarted}
@@ -1492,10 +1833,10 @@ className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
                   Watch Demo;
                 </motion.button>;
               </div>;
-                  className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full text-lg flex items-center gap-2 hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl';
+                  className=px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full text-lg flex items-center gap-2 hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl';
                 >;
                   Get Started Today;
-                  <ArrowRight className='w-5 h-5' />;
+                  <ArrowRight className='w-5 h-5 />;
                 </motion && motion.button>                >;
                   Get Started Today;
                   <ArrowRight className="w-5 h-5" />;
@@ -1504,19 +1845,19 @@ className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
                   whileHover={{ scale: 1 && 1.05 }}
                   whileTap={{ scale: 0 && 0.95 }}
                   onClick={handleWatchDemo}
-                  className='px-8 py-4 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-lg flex items-center gap-2 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm'>;
-                  <Play className='w-5 h-5' />                  Watch Demo                  className="px-8 py-4 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-lg flex items-center gap-2 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm";
+                  className=px-8 py-4 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-lg flex items-center gap-2 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm'>;
+                  <Play className='w-5 h-5 />                  Watch Demo                  className=px-8 py-4 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-lg flex items-center gap-2 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm;
                 >;
                   <Play className="w-5 h-5" />;
                   Watch Demo;
                 </motion && motion.button>;
-              </div>;className='px-8 py-4 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-lg flex items-center gap-2 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm';
+              </div>;className=px-8 py-4 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-lg flex items-center gap-2 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm';
                 >;
-                  <Play className='w-5 h-5' />;
+                  <Play className='w-5 h-5 />;
                   Watch Demo;
                 </motion.button>;
               </div>;
-                  className="px-8 py-4 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-lg flex items-center gap-2 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm"
+                  className=px-8 py-4 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-lg flex items-center gap-2 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm
                 >
                   <Play className="w-5 h-5" />
                   Watch Demo
@@ -1543,27 +1884,6 @@ className='px-8 py-4 bg-transparent border-2 border-cyan-500/50 text-cyan-300 fo
                 </motion.button>
               </div>
 
-              {/* Enhanced Stats *
-}
-<div className='grid grid-cols-2 "md":grid-cols-4 gap-6 max-w-4xl mx-auto'>;'
-                {stats.map((stat, index) => (<motion.div;
-                    }
-                    key={stat.label}
-                    initial={{ "opacity": 0, "y": 20 
-}
-animate={{"opacity": isVisible ? 1 : 0,"y": isVisible ? 0 : 20}}
-                    transition={{ "duration": 0.6, "delay": index * 0.1 
-}
-                    className='text-center'>'
-
-                    <div;
-                      className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${stat.color} mb-3`}>`
-                      <stat.icon className='w-8 h-8 text-white' />;'
-                    </div>;
-                    <div className='text-3xl font-bold text-white mb-1'>;'
-                      {stat.number}
-                    </div>
-                    <div className='text-gray-400 text-sm'>{stat.label}</div>'
                   </motion.div>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 ))}
@@ -1622,19 +1942,6 @@ reshaping the future.
         </section>
 
 
-            <div className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8'>'
-              {features.map((feature, index) => (
-                <motion.div
-}
-key={feature.title}
-              className='text-center mb-16'>;'
-              <h2 className='text-4xl "md":text-5xl font-bold text-white mb-6'>;'
-                Revolutionary Technology;
-                <span className='block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>;'
-                  Solutions;
-                </span>;
-              </h2>;
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;'
                 Discover cutting-edge AI consciousness, quantum computing, and;
                 autonomous systems that are transforming industries and;
                 reshaping the future.;
@@ -1707,23 +2014,7 @@ key={feature.title}
 
                     {feature.description}
                   </p>
-                  
-                  <a 
-                    href={feature.href}
-                    <ChevronRight className='w-4 h-4 ml-1 group-hover:ml-2 transition-all duration-300' />                  </a>                  </div>
-                  whileHover={{ y: -10, scale: 1.02 }}
-                  className={`group relative p-8 rounded-2xl ${feature.gradient} border border-white/10 backdrop-blur-sm hover:border-white/20 transition-all duration-300`}
-                >
-                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    {feature.description}
-                  </p>
+                  <a;
 
                     className='inline-flex items-center text-cyan-400 "hover": text-cyan-300 font-semibold group-"hover":gap-3 transition-all duration-300''
                   >
@@ -1920,14 +2211,30 @@ key={feature.title}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Featured
-                <span className='block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>'
-                  Revolutionary Services
+                <span className='block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
+                  Revolutionary Services;
                 </span>
               </h2>
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>'
-                Experience our most advanced AI consciousness and quantum,
-computing platforms that are setting new standards in,
-technology.
+              <p className=text-xl text-gray-300 max-w-3xl mx-auto'>
+                Experience our most advanced AI consciousness and quantum;
+                computing platforms that are setting new standards in;
+                technology.              </p>
+            </motion.div>
+            {/* Enhanced Service Showcase */}'
+            <div className=relative>'
+              <div className='relative overflow-hidden rounded-3xl bg-gradient-to-br from-gray-900/50 to-black/50 border border-white/10 backdrop-blur-sm>
+                <AnimatePresence mode='wait'>                  <motion.div            >
+              className=text-center mb-16"
+            >"
+              <h2 className=text-4xl md:text-5xl font-bold text-white mb-6>
+                Featured"
+                <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent>
+                  Revolutionary Services;
+                </span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience our most advanced AI consciousness and quantum computing platforms;
+                that are setting new standards in technology.
               </p>
             </motion.div>
 
@@ -2023,30 +2330,39 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>'
                     <h3 className='text-3xl font-bold text-white mb-4'>
                       {featuredServices[currentServiceIndex]?.name}
-                    </h3>;
-                    <p className='text-xl text-gray-300 mb-6 max-w-3xl mx-auto'>;'
+                    </h3>
+                    <p className='text-xl text-gray-300 mb-6 max-w-3xl mx-auto'>
                       {featuredServices[currentServiceIndex]?.description}
-                    </p>;
-                    <div className='text-3xl font-bold text-cyan-400 mb-6'>;'
-                      {featuredServices[currentServiceIndex]?.price}
-                      <span className='text-gray-400 text-lg'>;'
+                    </p>
+                    <div className=text-3xl font-bold text-cyan-400 mb-6'>
+                      {featuredServices[currentServiceIndex]?.price}'
+                      <span className=text-gray-400 text-lg>
                         {featuredServices[currentServiceIndex]?.period}
                       </span>
                     </div>
-                    <a,
-href={featuredServices[currentServiceIndex]?.link}
-
-                      className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-full text-lg "hover": from-cyan-700 "hover":to-blue-700 transition-all duration-300''
+                    <a;
+                      href={featuredServices[currentServiceIndex]?.link}
+                      {featuredServices[currentServiceIndex]?.name}
+                    </h3>;
+                    <p className="text-xl text-gray-300 mb-6 max-w-3xl mx-auto">;
+                      {featuredServices[currentServiceIndex]?.description}
+                    </p>;
+                    <div className=text-3xl font-bold text-cyan-400 mb-6">;
+                      {featuredServices[currentServiceIndex]?.price}"
+                      className=inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-full text-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300
+                    >
+                      Get Started"
+                      <ArrowRight className="w-5 h-5 ml-2 />
+                      className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-full text-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300'
                     >
                       Get Started
-                      <ArrowRight className='w-5 h-5 ml-2' />'
+                      <ArrowRight className=w-5 h-5 ml-2 />
+origin/cursor/automate-test-improve-and-merge-code-2533
                     </a>
                   </motion.div>
                 </AnimatePresence>
 
                 {/* Navigation Controls */}
-                <button,
-onClick={prevService}
 
 className='absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -2136,204 +2452,44 @@ index === currentServiceIndex
 }
             >;
               {/* Enhanced Badge */}
-              <div className='inline - flex items - center px - 4 py - 2 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 border border - cyan - 500 / 30 text - cyan - 300 text - sm font - medium mb - 6 backdrop - blur - sm'>;'
-                <Sparkles className='w - 4 h - 4 mr - 2' />                Revolutionary 2043 Technology;'
-              </div>;
-              {/* Main Heading */}              <div className="inline - flex items - center px - 4 py - 2 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 border border - cyan - 500 / 30 text - cyan - 300 text - sm font - medium mb - 6 backdrop - blur - sm">;"
-                <Sparkles className="w - 4 h - 4 mr - 2" />;"
-                Revolutionary 2043 Technology;
-              </div>;
-              {/* Main Heading */}
-              <h1;
-                id='hero - heading';'
-                className='text - 5xl "md":text - 7xl "lg":text - 8xl font - bold mb - 6 bg - gradient - to - r from - white via - cyan - 200 to - blue - 300 bg - clip - text text - transparent leading - tight'>'
 
-                The Future of;
-                <span className='block bg - gradient - to - r from - purple - 400 via - pink - 400 to - red - 400 bg - clip - text text - transparent'>                  AI Consciousness              <h1;'
-                id="hero - heading";"
-                className="text - 5xl "md":text - 7xl "lg":text - 8xl font - bold mb - 6 bg - gradient - to - r from - white via - cyan - 200 to - blue - 300 bg - clip - text text - transparent leading - tight">"
-
-                The Future of;
-                <span className="block bg - gradient - to - r from - purple - 400 via - pink - 400 to - red - 400 bg - clip - text text - transparent">;"
                 </span>;
                 is Here;
               </h1>;
               {/* Enhanced Subtitle */}
-              <p className='text - xl "md":text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto leading - relaxed'>;'
-                Experience the world's most advanced AI consciousness platforms,quantum computing solutions, and autonomous systems that;'
-                redefine what's possible in technology.;'
-              </p>;
-              {/* Enhanced CTA Buttons */}
-              <div className='flex flex - col "sm":flex - row gap - 4 justify - center items - center mb - 12'>                <motion.button;'
-                  while_hover={{ "scale": 1.05 }}
-                  while_tap={{ "scale": 0.95 }}
-                  on_click={handleGetStarte
-}
-                  className='px - 8 py - 4 bg - gradient - to - r from - purple - 600 to - pink - 600 text - white font - semibold rounded - full text - lg flex items - center gap - 2 "hover":from - purple - 700 "hover":to - pink - 700 transition - all duration - 300 shadow - lg "hover":shadow - xl'              <p className="text - xl "md":text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto leading - relaxed">;"
-                Experience the world's most advanced AI consciousness platforms, quantum computing solutions, and autonomous systems that redefine what's possible in technology.;'
-              </p>;
-              {/* Enhanced CTA Buttons */}
-              <div className="flex flex - col "sm":flex - row gap - 4 justify - center items - center mb - 12">;"
-                  while_hover={{ "scale": 1.05 }}
-                  while_tap={{ "scale": 0.95 }}
-                  on_click={handleGetStarte
-}
-                  className='px - 8 py - 4 bg - gradient - to - r from - purple - 600 to - pink - 600 text - white font - semibold rounded - full text - lg flex items - center gap - 2 "hover":from - purple - 700 "hover":to - pink - 700 transition - all duration - 300 shadow - lg "hover":shadow - xl'>'
 
-                  Get Started Today;
-                  <ArrowRight className='w - 5 h - 5' />;'
-                </motion.button>                >;
-                  Get Started Today;
-                  <ArrowRight className="w - 5 h - 5" />;"
-                </motion.button>;
-                <motion.button;
-                  while_hover={{ "scale": 1.05 }}
-                  while_tap={{ "scale": 0.95 }}
-                  on_click={handleWatchDem
-}
-                  className='px - 8 py - 4 bg - transparent border - 2 border - cyan - 500 / 50 text - cyan - 300 font - semibold rounded - full text - lg flex items - center gap - 2 "hover":bg - cyan - 500 / 10 "hover":border - cyan - 400 transition - all duration - 300 backdrop - blur - sm'>'
-
-                  <Play className='w - 5 h - 5' />                  Watch Demo                  className="px - 8 py - 4 bg - transparent border - 2 border - cyan - 500 / 50 text - cyan - 300 font - semibold rounded - full text - lg flex items - center gap - 2 "hover":bg - cyan - 500 / 10 "hover":border - cyan - 400 transition - all duration - 300 backdrop - blur - sm">"
-
-                  <Play className="w - 5 h - 5" />;"
                   Watch Demo;
                 </motion.button>;
               </div>;
               {/* Enhanced Stats */}
-              <div className='grid grid - cols - 2 "md":grid - cols - 4 gap - 6 max - w-4xl mx - auto'>                {stats.map ((stat, index) => (<motion.div;'
-                    }
-                    key={stat.label}
-                    initial={{ "opacity": 0, "coordinate_y": 20 
-}              <div className="grid grid - cols - 2 "md":grid - cols - 4 gap - 6 max - w-4xl mx - auto">;"
-                {stats.map ((stat, index) => (<motion.div;
-                    }
-                    key={stat.label}
-                    initial={{ "opacity": 0, "coordinate_y": 20 
-}
-                    animate={{"opacity": is_visible ? 1 : 0,"coordinate_y": is_visible ? 0 : 20}}
-                    transition={{ "duration": 0.6, "delay": index * 0.1 
-}
-                    className='text - center'>'
 
-                    <div;
-                      className={`inline - flex items - center justify - center w - 16 h - 16 rounded - full bg - gradient - to - r ${stat.color} mb - 3`}>`
-                      <stat.icon className='w - 8 h - 8 text - white' />;'
-                    </div>;
-                    <div className='text - 3xl font - bold text - white mb - 1'>;'
-                      {stat.number}
-                    </div>;
-                    <div className='text - gray - 400 text - sm'>{stat.label}</div>                  </motion.div>                    transition={{ "duration": 0.6, "delay": index * 0.1 }}'
-                    className="text - center">"
-
-                    <div className={`inline - flex items - center justify - center w - 16 h - 16 rounded - full bg - gradient - to - r ${stat.color} mb - 3,`}>
-
-                      <stat.icon className="w - 8 h - 8 text - white" />;"
-                    </div>;
-                    <div className="text - 3xl font - bold text - white mb - 1">{stat.number}</div>;"
-                    <div className="text - gray - 400 text - sm">{stat.label}</div>;"
                   </motion.div>))}
               </div>;
             </motion.div>;
           </div>;
         </section>;
-        {/* Enhanced Features Section */}
-        <section className='py - 20 px - 4 relative'>;'
-          <div className='max - w-7xl mx - auto'>            <motion.div        <section className="py - 20 px - 4 relative">;"
-          <div className="max - w-7xl mx - auto">;"
-            <motion.div;
-              initial={{ "opacity": 0, "coordinate_y": 30 
-}
-              whileInView={{ "opacity": 1, "coordinate_y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true 
-}
-              className='text - center mb - 16'>'
 
-              <h2 className='text - 4xl "md":text - 5xl font - bold text - white mb - 6'>;'
-                Revolutionary Technology;
-                <span className='block bg - gradient - to - r from - cyan - 400 to - blue - 400 bg - clip - text text - transparent'>;'
-                  Solutions;
-                </span>;
-              </h2>;
-              <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;'
                 Discover cutting - edge AI consciousness, quantum computing, and;
                 autonomous systems that are transforming industries and;
                 reshaping the future.;
               </p>;
             </motion.div>;
-            <div className='grid grid - cols - 1 "md":grid - cols - 2 "lg":grid - cols - 3 gap - 8'>              {features.map ((feature, index) => (            >;'
-              <h2 className="text - 4xl "md":text - 5xl font - bold text - white mb - 6">;"
-                }
-                Revolutionary Technology;
-                <span className="block bg - gradient - to - r from - cyan - 400 to - blue - 400 bg - clip - text text - transparent">;"
-                  Solutions;
-                </span>;
-              </h2>;
-              <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;"
-                Discover cutting - edge AI consciousness, quantum computing, and autonomous systems;
-                that are transforming industries and reshaping the future.;
-              </p>;
-            </motion.div>;
-            <div className="grid grid - cols - 1 "md":grid - cols - 2 "lg":grid - cols - 3 gap - 8">;"
-              {features.map ((feature, index) => (<motion.div;
-                  }
-                  key={feature.title}
-                  initial={{ "opacity": 0, "coordinate_y": 30 
-}
-                  whileInView={{ "opacity": 1, "coordinate_y": 0 
-}
-                  transition={{ "duration": 0.6, "delay": index * 0.1 }}
-                  viewport={{ "once": true 
-}
-                  while_hover={{ "coordinate_y": -10, "scale": 1.02 }}
-                  className={`group relative p - 8 rounded - 2xl ${feature.gradient} border border - white / 10 backdrop - blur - sm "hover":border - white / 20 transition - all duration - 300,`}>
 
-                  <div;
-                    className={`inline - flex items - center justify - center w - 16 h - 16 rounded - 2xl bg - gradient - to - r ${feature.color} mb - 6 group - "hover": scale - 110 transition - transform duration - 300,`}>
-
-                    <feature.icon className='w - 8 h - 8 text - white' />;'
-                  </div>;
-                  <h3 className='text - 2xl font - bold text - white mb - 4 group - "hover":text - cyan - 300 transition - colors duration - 300'>;'
-                    {feature.title}
-                  </h3>;
-                  <p className='text - gray - 300 mb - 6 leading - relaxed'>;'
                     {feature.description}
                   </p>;
                   <a;
                     href={feature.href}
-                    className='inline - flex items - center text - cyan - 400 "hover":text - cyan - 300 font - semibold group - "hover":gap - 3 transition - all duration - 300'>'
 
-                    Learn More;
-                    <ChevronRight className='w - 4 h - 4 ml - 1 group - "hover":ml - 2 transition - all duration - 300' />                  </a>                  </div>;'
-                  <h3 className="text - 2xl font - bold text - white mb - 4 group - "hover":text - cyan - 300 transition - colors duration - 300">;"
-                    {feature.title}
-                  </h3>;
-                  <p className="text - gray - 300 mb - 6 leading - relaxed">;"
                     {feature.description}
                   </p>;
                   <a;
                     href={feature.href}
-                    className="inline - flex items - center text - cyan - 400 "hover":text - cyan - 300 font - semibold group - "hover":gap - 3 transition - all duration - 300">"
 
-                    Learn More;
-                    <ChevronRight className="w - 4 h - 4 ml - 1 group - "hover":ml - 2 transition - all duration - 300" />;"
                   </a>;
                 </motion.div>))}
             </div>;
           </div>;
         </section>;
-        {/* Enhanced Featured Services Section */}
-        <section className='py - 20 px - 4 relative bg - gradient - to - b from - black / 50 to - black / 80'>;'
-          <div className='max - w-7xl mx - auto'>            <motion.div        <section className="py - 20 px - 4 relative bg - gradient - to - b from - black / 50 to - black / 80">;"
-          <div className="max - w-7xl mx - auto">;"
-            <motion.div;
-              initial={{ "opacity": 0, "coordinate_y": 30 
-}
-              whileInView={{ "opacity": 1, "coordinate_y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true 
-}
-              className='text - center mb - 16'>'
 
               <h2 className='text - 4xl "md":text - 5xl font - bold text - white mb - 6'>;'
                 Featured;
@@ -2809,6 +2965,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div className='text-gray-400'>;'
                         {testimonials[currentTestimonialIndex].role} at{' '}'
 
+                    "{testimonials[currentTestimonialIndex].content}
+                  </blockquote>'
+                  <div className=flex items-center justify-center gap-4 mb-6>'
+                    <div className='text-4xl>
+                      {testimonials[currentTestimonialIndex].avatar}
+                    </div>;
+                    <div>;
+                      <div className='text-xl font-semibold text-white'>;
+                        {testimonials[currentTestimonialIndex].name}
+                      </div>;
+                      <div className=text-gray-400'>;'
+                        {testimonials[currentTestimonialIndex].role} at{ }
                         {testimonials[currentTestimonialIndex].company}
 
                       </div>
@@ -2956,10 +3124,22 @@ className='px-10 py-5 bg-gradient-to-r from-purple-600 to-pink-600 text-white fo
                 </motion.button>
               </div>
 
-<div className='mt-16 grid grid-cols-1 "md":grid-cols-3 gap-8'>'
-                <div className='text-center'>'
-                  <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 mb-4'>'
-                    <Phone className='w-8 h-8 text-white' />'
+
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={handleContact}
+                >"
+                  <Phone className="w-6 h-6 />
+
+                </motion.button>
+              </div>
+              {/* Contact Information */}
+                  <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
+                  <p className=text-cyan-400">+1 302 464 0950</p>
+                </div>"
+                <div className=text-center>"
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-4>
+                    <Mail className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
                   <p className="text-cyan-400">+1 302 464 0950</p>
@@ -3025,20 +3205,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </h3>
                   <p className='text-cyan-400'>+1 302 464 0950</p>'
                 </div>
-                <div className='text-center'>'
-                  <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-4'>'
-                    <Mail className='w-8 h-8 text-white' />'
+
                   </div>
                   <h3 className='text-xl font-semibold text-white mb-2'>'
                     Email Us
                   </h3>
-                  <p className='text-cyan-400'>kleber@ziontechgroup.com</p>'
-                </div>
-                <div className='text-center'>'
-                  <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 mb-4'>'
-                    <MapPin className='w-8 h-8 text-white' />'
-                  </div>
-                  <h3 className='text-xl font-semibold text-white mb-2'>'
+
                     Visit Us
                   </h3>
                   <p className='text-cyan-400'>'
@@ -3171,16 +3343,6 @@ Math.random () * 100;
 )}Math.random () * 100;
 }%`;`"top": `$ {Math.random () * 100;`}%`;`}/>) )}</div> <motion.div initial= {364 E Main St STE 1008;
                     <br />;
-                    }
-                    Middletown DE 19709;
-                  </p>                </div>                  </div>;
-}initial= {{"opacity": 0, "y": 30;
-}whileInView= {{"opacity": 1, "y": 0;
-}transition= {{}viewport= {{"once": true;
-}whileHover= {{{"opacity": 0, "y": 30;
-}whileInView= {{"opacity": 1, "y": 0;
-}transition = {{}> <h2 className="text-4xl "md":text-5xl font-bold text-white mb-6" > Ready to Experience the <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent" > Future of AI? </span> </h2> <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto" > Join thousands of organizations already transforming their operations with our revolutionary AI consciousness and quantum computing platforms. </p> <div className="flex flex-col "sm":flex-row gap-6 justify-center items-center" > <motion && motion.button > Start Your Journey <ArrowRight className="w-6 h-6" /> </motion && motion.button> <motion && motion.button > <Phone className="w-6 h-6" /> Contact Us </motion && motion.button> </div> <div className="text-center"> <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 mb-4"> <Phone className="w-8 h-8 text-white" /> text-xl font-semibold text-white mb-2">Call Us</h3> <p className=" text-cyan-400">+1 302 464 0950</p> </div> <div className=" text-center"> <div className=" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-4"> <Mail className=" w-8 h-8 text-white" /> </div> <h3 className=" text-xl font-semibold text-white mb-2">Email Us</h3> <p className=" text-cyan-400">kleber@ziontechgroup && ziontechgroup.com</p> </div> <div className=" text-center"> <div className=" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 mb-4"> <MapPin className=" w-8 h-8 text-white" /> </div> <h3 className=" text-xl font-semibold text-white mb-2">Visit Us</h3> <p className=" text-cyan-400" >364 E Main St STE 1008<br />Middletown DE 19709</p> </div> </div> </motion && motion.div> </div> </section> </main> </Layout>;"
-}
 
 export default Homepage2043;
                   <h3 className="text - xl font - semibold text - white mb - 2">Call Us</h3>;"
@@ -3229,8 +3391,9 @@ and autonomous systems that redefine what's possible in technology. </p> > Get S
 ;
 
 
-export default Homepage2043)}export default Homepage2043;;
-        <section className="py-20 px-4 relative">
+
+export default Homepage2043)}export default Homepage2043;
+        <section className=py-20 px-4 relative>
           <div className="max-w-6xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 30}}

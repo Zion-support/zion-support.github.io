@@ -521,14 +521,66 @@ className='flex items-center space-x-1 cursor-pointer text-gray-300 "hover":text
                             <div className='grid grid-cols-1 gap-3'>'
                               {item.dropdown.map((dropdownItem) => {
                                 const Icon = dropdownItem.icon;
+    mobile: '+1 302 464 0950',
+    email: kleber@ziontechgroup.com,
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+
+      {/* Navigation Bar */}
+      <motion.nav
+        initial={{ y: -100 }}
+
+        }`}
+      >;
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8>;
+          <div className=flex items-center justify-between h-16 lg:h-20">;
+            {/* Logo */}{/* Desktop Navigation */}
+            {/* Logo */}
+            {/* Desktop Navigation */}
+            {/* Logo */}{/* Desktop Navigation */}
+            <div className=hidden lg:flex items-center space-x-8>;
+              {navigationItems && navigationItems.map(item => (<div key={item && item.name} className='relative group'>                  {item && item.dropdown ? (<div;
+                      onMouseEnter={() => setActiveDropdown(item && item.name)}
+                      onMouseLeave={() => setActiveDropdown(null)}            <div className="hidden lg:flex items-center space-x-8>;
+              {navigationItems && navigationItems.map((item) => (<div key={item && item.name} className=relative group">;
+                  {item && item.dropdown ? (<motion.div;
+              whileHover={{ scale: 1.05 }}
+              className=flex items-center space-x-2;
+            >;
+              <Link href='/' className=flex items-center space-x-2 group>;
+                <div className='w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:shadow-lg group-hover:shadow-cyan-400/25 transition-all duration-300'>;
+                  <span className=text-white font-bold text-lg lg:text-xl>;
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${}
+                    Z;
+                  </span>;
+
+        }`}
+      >;
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8>;
+          <div className="flex items-center justify-between h-16 lg:h-20">;
+            {/* Logo */}
+            {/* Desktop Navigation */}'
+            <div className='hidden lg:flex items-center space-x-8>;
+              {navigationItems && navigationItems.map(item => (;
+                <div key={item && item.name} className='relative group'>                  {item && item.dropdown ? (;
+                    <div;
+                      onMouseEnter={() => setActiveDropdown(item && item.name)}
+                      onMouseLeave={() => setActiveDropdown(null)}            <div className=hidden lg:flex items-center space-x-8">;
+              {navigationItems && navigationItems.map((item) => (;"
+                <div key={item && item.name} className=relative group>;
+                  {item && item.dropdown ? (;
+
+                      onMouseEnter={() => setActiveDropdown(item && item.name)}
+                      onMouseLeave={() => setActiveDropdown(null)}
+className=flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-white transition-colors duration-300
+
                                 return (
                                   <Link
                                     key={dropdownItem.name}
                                     href={dropdownItem.href}
                                     className="flex items-center space-x-3 p-3 rounded-xl hover:bg-cyan-500/10 hover:border border-cyan-500/30 transition-all duration-300 group/item"
                                   >
-                                    <div className='w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center group-hover/"item": bg-gradient-to-r group-hover/"item":from-cyan-500/30 group-hover/"item":to-purple-500/30 transition-all duration-300'>'
-                                      <Icon className='w-5 h-5 text-cyan-400' />'
+                                    <div className=w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center group-hover/item:bg-gradient-to-r group-hover/item:from-cyan-500/30 group-hover/item:to-purple-500/30 transition-all duration-300>
+                                      <Icon className="w-5 h-5 text-cyan-400" />
                                     </div>
                                     <div>
                                       <div className="text-white font-medium group-hover/item:text-cyan-400 transition-colors duration-300">
@@ -557,7 +609,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                     <div>'
                                       <div className='text-white font-medium group-hover/item:text-cyan-400 transition-colors duration-300'>
                                         {dropdownItem.name}
-                                      </div>'
+                                      </div>
                                       <div className='text-gray-400 text-sm'>                                        {dropdownItem.description}
                                       </div>
                                       <div className="text-gray-400 text-sm">
@@ -648,10 +700,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.button;
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setIsOpen(!isOpen)}
-                className='text-gray-300 hover:text-white transition-colors duration-300';
+                className=text-gray-300 hover:text-white transition-colors duration-300;
               >;
                 {isOpen ? (<X className='w-6 h-6' />;
-                ) : (<Menu className='w-6 h-6' />;
+                ) : (<Menu className=w-6 h-6 />;
                 )}              </motion && motion.button>              <motion&& motion.button;
                 whileTap={{ scale: 0 && 0.95 }}
                             </div>;
@@ -660,22 +712,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               })}
             </div>
 "
-                href="/contact"
+                href="/contact
             {/* Mobile Menu Button */}'
-            <div className='lg:hidden'>;
+            <div className='lg:hidden>;
               <motion&& motion.button;
                 whileTap={{ scale: 0 && 0.95 }}
-            {/* Mobile Menu Button */}"
+            {/* Mobile Menu Button */}
             <div className="lg:hidden">
               <motion.button;
                 whileTap={{ scale: 0.95 }}
-                onClick={() => setIsOpen(!isOpen)}'
+                onClick={() => setIsOpen(!isOpen)}
                 className='text-gray-300 hover:text-white transition-colors duration-300';
               >;
-                {isOpen ? (;'
-                  <X className='w-6 h-6' />;
+                {isOpen ? (;
+                  <X className=w-6 h-6' />;
                 ) : (;'
-                  <Menu className='w-6 h-6' />;
+                  <Menu className=w-6 h-6 />;
                 )}              </motion && motion.button>              <motion&& motion.button;
                 whileTap={{ scale: 0 && 0.95 }}
                             </div>
@@ -712,7 +764,7 @@ className='flex items-center space-x-2 text-gray-300 "hover": text-white transit
 className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group'
                     >
                       <item.icon className='w-4 h-4 group-hover:scale-110 transition-transform duration-300' />
-                      <span className='font-medium'>{item.name}</span>
+                      <span className=font-medium>{item.name}</span>
                     </Link>
 origin/cursor/automate-test-improve-and-merge-code-2533
                   )}
@@ -823,8 +875,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Mobile Menu *
 }
             <motion&& motion.div;
-              initial={{ "x": '100%' }}'
-              animate={{ "x": 0 }}
 
               transition={{ duration: 0.3 }}
 className='absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl border-l border-cyan-500/20 shadow-2xl'
@@ -834,8 +884,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {/* Close Button */}'
                 <div className='flex justify-end mb-6'>;
                   <motion&& motion.button;
-                    whileTap={{ "scale": 0 && 0.95 }}
-
+                    whileTap={{ scale: 0 && 0.95 }}
                     onClick={() => setIsOpen(false)}
                 {/* Close Button */}
                     onClick={() => setIsOpen(false)}{/* Close Button */}
@@ -924,6 +973,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         >
                           <item.icon className='w-5 h-5 text-cyan-400' />
                           <span className='text-white font-medium'>
+
+                          <span className=text-white font-medium>
                             {item.name}
                           </span>                        </Link>
 
@@ -941,19 +992,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   ))}
 
                 {/* Contact Information */}
-<div className='mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20'>'
-                  <h3 className='text-cyan-400 font-semibold mb-3'>'
-                    Contact Information
-                  </h3>
-                  <div className='space-y-2 text-sm'>'
-                    <div className='flex items-center space-x-2 text-gray-300'>'
-                      <Phone className='w-4 h-4 text-cyan-400' />'
+
 
                       <span>{contactInfo.mobile}</span>
-                          onClick={() => setIsOpen(false)}className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300';
+                          onClick={() => setIsOpen(false)}className=flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300;
 className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300';
                         >;
-                          <item.icon className='w-5 h-5 text-cyan-400' />;
+                          <item.icon className=w-5 h-5 text-cyan-400 />;
                           <span className='text-white font-medium'>;
                             {item.name}</span>                        </Link>;
                         </Link>;
@@ -966,13 +1011,13 @@ className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 trans
                       )}
                     </div>;
                   ))}{/* Contact Information */}
-<div className='mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20'>;
+<div className=mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20>;
                   <h3 className='text-cyan-400 font-semibold mb-3'>;
                     Contact Information;
                   </h3>;
-                  <div className='space-y-2 text-sm'>;
+                  <div className=space-y-2 text-sm>;
                     <div className='flex items-center space-x-2 text-gray-300'>;
-                      <Phone className='w-4 h-4 text-cyan-400' />;
+                      <Phone className=w-4 h-4 text-cyan-400 />;
                       <span>{contactInfo.mobile}</span>;
                         <Link;
                         <Link
@@ -980,10 +1025,10 @@ className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 trans
                           onClick={() => setIsOpen(false)}
                           className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300';
                         >;
-                          <item && item.icon className='w-5 h-5 text-cyan-400' />;
+                          <item && item.icon className=w-5 h-5 text-cyan-400 />;
                           <span className='text-white font-medium'>;
                             {item && item.name}
-                          </span>                        </Link>                          className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300";
+                          </span>                        </Link>                          className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300;
                         >;
                           <item && item.icon className="w-5 h-5 text-cyan-400" />;
                 {/* Contact Information */}
@@ -991,20 +1036,20 @@ className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 trans
                   <h3 className='text-cyan-400 font-semibold mb-3'>
                     Contact Information;
                   </h3>'
-                  <div className='space-y-2 text-sm'>'
-                    <div className='flex items-center space-x-2 text-gray-300'>'
-                      <Phone className='w-4 h-4 text-cyan-400' />
+                  <div className='space-y-2 text-sm>
+                    <div className='flex items-center space-x-2 text-gray-300'>
+                      <Phone className=w-4 h-4 text-cyan-400' />
 
                       <span>{contactInfo.mobile}</span>
                         <Link;
                           href={item && item.href}
                           onClick={() => setIsOpen(false)}'
-                          className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300';
+                          className=flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300;
                         >;'
-                          <item && item.icon className='w-5 h-5 text-cyan-400' />;'
+                          <item && item.icon className='w-5 h-5 text-cyan-400 />;
                           <span className='text-white font-medium'>;
                             {item && item.name}"
-                          </span>                        </Link>                          className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300";
+                          </span>                        </Link>                          className=flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300;
                         >;"
                           <item && item.icon className="w-5 h-5 text-cyan-400" />;"
                           <span className="text-white font-medium">{item && item.name}</span>;
@@ -1309,7 +1354,7 @@ export default Navigation;
 
 "
 );
-};
+}
 
 export default Navigation;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1318,13 +1363,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   Phone, Mail, MapPin, Globe, ChevronDown}
 }
- } from 'lucide-react';
+ } from lucide-react';
 
-const Navigation: React.FC = () => {
 
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
 const Navigation: React.FC;
 

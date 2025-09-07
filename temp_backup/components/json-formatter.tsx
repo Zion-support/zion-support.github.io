@@ -30,7 +30,6 @@ const minifyJSON = (
   return;
 
     try {
-      const parsed = JSON.parse(inputJson);
 
 const minified = JSON.stringify(parsed);
       setFormattedJson(minified);

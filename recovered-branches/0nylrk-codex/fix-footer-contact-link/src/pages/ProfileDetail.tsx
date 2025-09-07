@@ -29,7 +29,6 @@ export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
   const { profileId } = useParams(),
-  const [profileData, setProfileData] = useState<any>(null),
   const [isLoading, setIsLoading] = useState(true),
 import { 
   MapPin,
@@ -48,7 +47,6 @@ export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
   const { profileId } = useParams($2);
-  const [profileData, setProfileData] = useState<any>(null),
   const [isLoading, setIsLoading] = useState($2);
   const [error, setError] = useState<string | null>(null),
 

@@ -4,7 +4,6 @@ const Page: NextPage;
 const Page: NextPage = () => {
   return (
 import type {_NextPage} from 'next';
-import Head from 'next/head';
 const Page: NextPage = () => {_return (
     <>
       <Head>

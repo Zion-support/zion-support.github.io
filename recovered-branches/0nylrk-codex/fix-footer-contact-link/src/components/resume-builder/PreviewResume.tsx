@@ -23,7 +23,6 @@ interface PreviewResumeProps {;
   }
   "resume": Resume;
   "onBack": () => void;import { Resume } from "@/types/resume";"
-import {
   }
   PreviewHeader,
   ResumeBasicInfoSection,

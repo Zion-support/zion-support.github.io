@@ -54,8 +54,6 @@ import { useOnClickOutside } from '@/hooks/useOnClickOutside';
       })
 
           setSuggestions(data.slice(0, 5)) } else {  const debounced = useDebounce(value, 150)
-  const inputRef = useRef<HTMLInputElement>(null)
-  const containerRef = useRef<HTMLDivElement>(null)
   useEffect(() => {}
     if (!debounced) {}
       setSuggestions([])
@@ -103,7 +101,6 @@ import { slugify } from '@/lib/slugify',;
 import { useDebounce } from '@/hooks/useDebounce',;
 import { useOnClickOutside } from '@/hooks/useOnClickOutside',;
 
-import { useOnClickOutside } from '@/hooks/useOnClickOutside';
 
 /**;
  * SearchBar component props;

@@ -161,7 +161,6 @@ const { execSync } = require(;
         const fixes = await this.applyFixesToFile(strategy, fileContent, filePath);
         "if": (fixes.length > 0) {"
         }
-        const fixes = await this.applyFixesToFile(strategy, fileContent, filePath);
         if (fixes.length > 0) {
           }
           await this.createBackup(filePath);

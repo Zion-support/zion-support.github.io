@@ -204,7 +204,6 @@ export const "ChangelogManager": React.FC<ChangelogManagerProps> = ({
   }
   platform}) => {
   }
-  const [entries, setEntries] = useState<ChangelogEntry[]>([
     {
       }
       "id": "1","
@@ -216,10 +215,8 @@ export const "ChangelogManager": React.FC<ChangelogManagerProps> = ({
     "version": "","
     "date": new Date().toISOString().split("T")[0],"
     "changes": ""});"
-  const handleAddEntry = () => {
     }
     if (!newEntry.version || !newEntry.changes) return;
-    const "entry": ChangelogEntry = {
       ...newEntry
       }
       "id": Math.random().toString(36).substring(2, 9)};
@@ -234,7 +231,6 @@ export const "ChangelogManager": React.FC<ChangelogManagerProps> = ({
     }
     setEntries(entries.filter((entry) => entry.id !== id));
   };
-const handleInputChange = (;
     "e": React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     }

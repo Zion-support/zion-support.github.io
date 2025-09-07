@@ -1,7 +1,4 @@
-#!/usr/bin/env node,
-const fs = require('fs');'
 
-const path = require('path');'
 
 const { execSync } = require('child_process');'
 
@@ -22,11 +19,7 @@ if (!content.includes('')) {'
 function resolveMergeConflicts() {
     }
     try {
-        }
-        console.log(`🔧 "Processing": ${filePath}`);`        let content = fs.readFileSync(filePath, 'utf8');'
-        
-        // Check if file has merge conflicts,
-return false; // No conflicts to resolve;
+
         }
         
         // "Strategy": Keep HEAD version (current branch) for most conflicts
@@ -38,21 +31,14 @@ return false; // No conflicts to resolve;
 content = content.replace(/<<<<<<< [^\n]+\n?/g, '');'
         content = content.replace(/\n?/g, '');'
         
-        // Clean up any duplicate content,
-content = content.replace(/\n\n\n+/g, '\n\n');'
-        
-        // Write the resolved content back,
-fs.writeFileSync(filePath, content, 'utf8');'
-        console.log(`✅ Resolved conflicts "in": ${filePath}`);`        return true;
-    } catch (error) {
+
         }
         console.error(`❌ Error processing ${filePath}:`, error.message);`        return false;
 function resolveConflicts() {
   }
   try {
     }
-    let content = fs.readFileSync(filePath, 'utf8');'
-    let originalContent = content;
+
     
     // Skip if no conflicts,
 if (!content.includes('')) {'
@@ -60,11 +46,7 @@ if (!content.includes('')) {'
       return false;
 function resolveMergeConflicts() {
     }
-    try {
-        }
-        console.log(`🔧 "Processing": ${filePath}`);`        let content = fs.readFileSync(filePath, 'utf8');'
-        
-        // Check if file has merge conflicts
+
     }
     
     console.log(`📝 Resolving conflicts "in": ${filePat,`}`);`    

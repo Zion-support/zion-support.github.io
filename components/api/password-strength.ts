@@ -97,6 +97,12 @@ if (entropy < 30) feedback.push ('Password is too predictable');'
 interface PasswordStrengthResult {}
   password: string;'
   strength: 'very-weak' | 'weak' | 'medium' | 'strong' | 'very-strong';
+else strength = 'very-strong;
+
+// Generate suggestions import type { NextApiRequest, NextApiResponse } from next';
+interface PasswordStrengthResult {}
+  password: string;'
+  strength: very-weak | 'weak' | medium | 'strong' | very-strong;
   score: number;
   feedback: string[];
   details: {}
@@ -220,32 +226,37 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 return res.status(405).json({ "error": 'Method not allowed',;'
 });
+
+ 
+}
+
+}
+export default async function handler(
+
+
+export default async function handler(
+
+  req: NextApiRequest
+
+  res: NextApiResponse<PasswordStrengthResult | { error: string }>
+) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: Method not allowed });  }    return res.status(405).json({ error: 'Method not allowed' })
   }
   try {
-    }
     const { password } = req.body;
-    if (!password || typeof password !== 'string') {'
-}
-return res.status(400).json({ "error": 'Password is required',;'
-});
-    }
-    // Password analysis,
-const hasSymbols = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password);"
 
-    // Check for common patterns,
-const commonPatterns = [;
-      '123''
-      'abc''
-      'qwe''
-      'password''
-      'admin''
-      'user''
-      'test''
-      '123456''
-      'password123''
-      'admin123''
-      'qwerty''
-      'asdf''
+    if (!password |typeof password !== string) {
+
+      return res.status(400).json({ error: 'Password is required' });
+    }
+    // Password analysis
+
+    const length = password.length;
+    const hasUppercase = /[A-Z]/.test(password);
+    const hasLowercase = /[a-z]/.test(password);
+    const hasNumbers = /\d/.test(password);
+    const hasSymbols = /[!@#$%^&*()_+\-=\[\]{}:"\\|,.<>\/?]/.test(password);
 
     ];
     const hasCommonPatterns = commonPatterns.some(pattern =>;
@@ -254,6 +265,10 @@ const commonPatterns = [;
       (hasLowercase ? 26 : 0) +;
       (hasNumbers ? 10 : 0) +;
       (hasSymbols ? 32 : 0)const entropy =;
+    return res.status(405).json({ error: 'Method not allowed });  }    return res.status(405).json({ error: Method not allowed' })
+  }
+  try {}
+
     const hasCommonPatterns = commonPatterns.some(pattern =>
       password.toLowerCase().includes(pattern)
     );
@@ -266,7 +281,6 @@ const charsetSize =
     const entropy =
       charsetSize > 0 ? Math.log2(Math.pow(charsetSize, length)) : 0;
     // Calculate score;
-    let score = 0;
     score += Math.min(length * 2, 20); // Length contribution (max 20)
     score += hasUppercase ? 10 : 0;
     score += hasLowercase ? 10 : 0;

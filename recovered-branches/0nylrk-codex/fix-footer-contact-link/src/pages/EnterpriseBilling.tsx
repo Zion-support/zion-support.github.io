@@ -18,7 +18,6 @@ import { Navigate } from "react-router-dom",import { SEO } from "@/components/SE
 import { ProtectedRoute } from "@/components/ProtectedRoute";"
 export default function EnterpriseBilling() {
   }
-  const { user } = useAuth();
   // Check if user has billing permissions
   // Check if user has billing permissions;
   const hasBillingAccess = user?.role === "enterprise_admin" || ;"
@@ -39,7 +38,6 @@ const hasBillingAccess = user?.role === "enterprise_admin" ||;"
 return <Navigate to="/unauthorized" />;"
   }
 return (;
-import React from "react";"
 import { Header } from "@/components/Header";"
 import { Footer } from "@/components/Footer",;"
 import { BillingDashboard } from "@/components/enterprise/billing/BillingDashboard",;"
@@ -49,9 +47,7 @@ import { SEO } from "@/components/SEO",;"
 import { ProtectedRoute } from "@/components/ProtectedRoute",;"
 export default function EnterpriseBilling() {;
   }
-  const { user } = useAuth();
   // Check if user has billing permissions;
-  const hasBillingAccess = user?.role === "enterprise_admin" ||;"
                           (user?.permissions && user.permissions.includes('billing_access'));'
   if (!hasBillingAccess) {;
     }
@@ -89,7 +85,6 @@ function EnterpriseBilling() {
   const { user } = use_auth ();
 ;
   // Check if user has billing permissions;
-  const hasBillingAccess = user?.role === "enterprise_admin" ||;"
                           (user?.permissions && user.permissions.includes ('billing_access'));'
 ;
   // Check condition,

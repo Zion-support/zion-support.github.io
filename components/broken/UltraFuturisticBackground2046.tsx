@@ -1,7 +1,7 @@
 
 
-import React, { useEffect, useRef } from 'react';'
-import { motion } from 'framer-motion';'
+
+
 
 const "UltraFuturisticBackground2046": React.FC;
     resizeCanvas();
@@ -105,11 +105,40 @@ const types = ['quantum', 'neural', 'data', 'energy'];'
             break;        }            break;
             break;        }
 
-          case 'neural':;'
-            this && this.color = `hsl(${280 + Math && Math.random() * 40}, 80%, 70%)`;`            break;
-          case 'data':;'
-            this && this.color = `hsl(${200 + Math && Math.random() * 40}, 90%, 80%)`;`
+          case 'neural:;
+            this && this.color = `hsl(${280 + Math && Math.random() * 40}, 80%, 70%)`;
             break;
+          case 'data':;`
+            this && this.color = `hsl(${200 + Math && Math.random() * 40}, 90%, 80%)`;
+
+            this && this.color = `hsl(${40 + Math && Math.random() * 60}, 100%, 70%)`;
+            break;        }            break;
+            break;        }
+
+      maxLife: number,
+      type: quantum | 'neural' | data | 'energy',
+
+      constructor() {
+        this.x = $2;
+        this.y = $2;
+        this.vx = $2;
+        this.vy = $2;
+        this.size = $2;
+        this.life = $2;
+        this.maxLife = $2;
+        const types = $2;
+        this.type = $2;
+        switch (this.type) {
+          case quantum:
+            this.color = `hsl(${180 + Math.random() * 60}, 70%, 60%)`,
+            break,
+          case 'neural':
+            this.color = `hsl(${280 + Math.random() * 40}, 80%, 70%)`,
+            break,
+          case data:
+            this.color = `hsl(${200 + Math.random() * 40}, 90%, 80%)`,
+            break,
+          case 'energy':
 
       constructor() {
         this.x = $2;
@@ -150,10 +179,6 @@ break;}}update() {this.x += this.vx;
         if (this.x <= 0 |this.x >= canvas.width) this.vx *= -1;
         if (this.y <= 0 |this.y >= canvas.height) this.vy *= -1;
 
-        // Add some quantum randomness,
-if (Math.random() < 0.01) {
-          }
-          this.vx += (Math.random() - 0.5) * 0.5;
 
 this.vy += (Math.random() - 0.5) * 0.5;
         }
@@ -471,6 +496,11 @@ break;
         return this.life <= 0;
       }
 origin/cursor/automate-test-improve-and-merge-code-2533
+            ctx.fillStyle = gradient;
+            ctx.fill();
+        ctx.restore()
+
+
     }
     // Initialize particles,
 const initParticles = () => {
@@ -737,13 +767,7 @@ ctx.stroke();
     // Start animation,
 initParticles();
     animate();
-    // Cleanup,
-return () => {
-      }
-      window.removeEventListener('resize', resizeCanvas);'
-      if (animationRef.current) {
 
-}
 
 cancelAnimationFrame(animationRef.current);
       }
@@ -904,7 +928,7 @@ cancelAnimationFrame(animationRef.current);
       />
       
       {/* Floating geometric shapes */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className=absolute inset-0 overflow-hidden">
         {[...Array(8)].map((_, i) => (
           <motion.div
             key = $2;
@@ -915,7 +939,7 @@ cancelAnimationFrame(animationRef.current);
               opacity: [0.1, 0.3, 0.1]}}
             transition = $2;
               repeat: Infinity,
-              ease: "linear",
+              ease: "linear,
               delay: i * 0.5}}
           />
         ))}
@@ -930,7 +954,7 @@ cancelAnimationFrame(animationRef.current);
               opacity: [0.1, 0.2, 0.1]}}
             transition = $2;
               repeat: Infinity,
-              ease: "linear",
+              ease: linear",
               delay: i * 0.7}}
           />
         ))}
@@ -939,18 +963,18 @@ cancelAnimationFrame(animationRef.current);
       {/* Energy waves */}
       <div className = $2;
             repeat: Infinity,
-            ease: "easeInOut"}}
+            ease: "easeInOut}}
         />
         <motion.div
           className = $2;
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: easeInOut",
             delay: 1}}
         />
       </div>
       
       {/* Quantum interference patterns */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0>
         {[...Array(5)].map((_, i) => (
           <motion.div
             key={`interference-${i}`}
@@ -1003,47 +1027,43 @@ cancelAnimationFrame(animationRef.current);
     };
 origin/cursor/automate-test-improve-and-merge-code-2533
   }, []);
-  return ('
+  return (
     <div className='fixed inset-0 pointer-events-none z-0'>;
       {/* Animated gradient background */}
-      <motion&& motion.div'
-        className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 via-cyan-900/30 to-black'
+      <motion&& motion.div
+        className=absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 via-cyan-900/30 to-black'
         animate={{}
           background: ['
-            'linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)''
-            'linear-gradient(to bottom right, #000000, #0c4a6e, #1e1b4b, #000000)''
+            linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)'
+            'linear-gradient(to bottom right, #000000, #0c4a6e, #1e1b4b, #000000)
             'linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)'
           ]
-;'
-          case 'data':;
+;
+          case data':;
             // Data streams;
             ctx.fill_style = this.color;
             ctx.fill_rect (
               this.x - this.size / 2,
               this.y - this.size / 2,
               this.size,
-              this.size);
-;'
-          case 'data':;
+              this.size);'
+          case data:;
             // Data streams;
             ctx.fill_style = this.color;
             ctx.fill_rect (this.x - this.size / 2, this.y - this.size / 2, this.size, this.size);
-;
             ctx.begin_path ();
             ctx.move_to (this.x, this.y);
             ctx.line_to (this.x + this.vx * 10, this.y + this.vy * 10);
             ctx.stroke_style = this.color;
             ctx.line_width = 1;
             ctx.stroke ();
-            break;
-;'
-          case 'energy':;
+            break;'
+          case 'energy:;
             // Energy particles with glow effect;
             ctx.begin_path ();
             ctx.arc (this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.fill_style = this.color;
             ctx.fill ();
-;
             // Glow effect;
             const gradient = ctx.createRadialGradient (
               this.x,
@@ -1051,15 +1071,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               0,
               this.x,
               this.y,
-              this.size * 3);            gradient.addColorStop (0, this.color);'
+              this.size * 3);            gradient.addColorStop (0, this.color);
             gradient.addColorStop (1, 'transparent');
             ctx.fill_style = gradient;
             ctx.fill ();
-            break; ;
+            break;
             // Glow effect;
             const gradient = ctx.createRadialGradient (this.x, this.y, 0, this.x, this.y, this.size * 3);
-            gradient.addColorStop (0, this.color);'
-            gradient.addColorStop (1, 'transparent');
+            gradient.addColorStop (0, this.color);
+            gradient.addColorStop (1, transparent');
             ctx.fill_style = gradient;
             ctx.fill ();
             break;
@@ -1079,8 +1099,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 const init_particles = () =>: any {particles_ref.current = [];
       }
-      for (let index = 0; i < 150; i++) {particles_ref.current.push (new Particle ())}      for (let index = 0, i < 150, i++) {particles_ref.current.push (new Particle ())}
-    }// Animation loop;
 
 const animate = () =>: any {// Check condition;
 }
@@ -1217,7 +1235,8 @@ if ( {) {$2;
   )
 };
 
-export default UltraFuturisticBackground2046;              ease: "easeInOut",;
+
+export default UltraFuturisticBackground2046;              ease: easeInOut",
               delay: i * 0 && 0.8}}
           />;
         ))}
@@ -1262,5 +1281,5 @@ export default UltraFuturisticBackground2046,
       </div>
     </div>
 );
-};
+}
 export default UltraFuturisticBackground2046;

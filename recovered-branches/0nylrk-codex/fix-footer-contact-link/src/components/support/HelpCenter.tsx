@@ -24,9 +24,6 @@ import { HELP_CATEGORIES } from "./help-content","
 import { AppLayout } from "@/layout/AppLayout","
 import { Search } from "lucide-react",export default function HelpCenter() {"
   }
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState("");"
   const handleCategorySelect = ("categoryId": string) => {
     }
     setSelectedCategory(categoryId),
@@ -73,7 +70,6 @@ placeholder="Search for help articles...""
               <TabsTrigger value="faq">FAQ</TabsTrigger>"
               <TabsTrigger value="contact">Contact Us</TabsTrigger>"
             </TabsList>
-import React, { useState } from "react";"
 import { Input } from "@/components/ui/input";"
 import { Button } from "@/components/ui/button",;"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;"
@@ -299,17 +295,14 @@ className="w-full min-h-[120px] px-3 py-2 rounded-md border border-zion-blue-lig
   const [selectedCategory, setSelectedCategory] = useState<string | null> (null);
 const [selectedArticle, setSelectedArticle] = useState<string | null> (null);
 const [searchQuery, setSearchQuery] = useState ("");"
-const handleCategorySelect = ("categoryId": string) => {
   }
   setSelectedCategory (categoryId);
 setSelectedArticle (null)
 };
-const handleBackToCategories = () => {
   }
   setSelectedCategory (null);
 setSelectedArticle (null)
 };
-const handleBackToArticles = () => {
   }
   setSelectedArticle (null)
 };

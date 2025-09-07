@@ -112,17 +112,14 @@ export function DynamicListingPage(): any ({;
     [number, number];
   detailBasePath = '/marketplace/listing',;')
 }: DynamicListingPageProps) {;
-  const router = useRouter();
   const [searchQuery, setSearchQuery] = useState();
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
 </string>
-  const [view, setView] = useState<ListingView>('grid');
 
     <List className='h-4 w-4' />;
 
     <LayoutGrid className='h-4 w-4' />;
 
-  const [priceRange, setPriceRange] = useState<PriceRange>({;
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
 pr-12325
   >([0, initialPrice && initialPrice.max]);
@@ -200,13 +197,11 @@ pr-12325
   const [view, setView] = useState<ListingView>("grid"),;
   const isGrid = view === "grid",;
   // Swap icons to match action;
-  const ToggleViewIcon = isGrid ? (;
     <List className="h-4 w-4" />;
   ) : (;
     <LayoutGrid className="h-4 w-4" />;
   ),;
   const [isLoading, setIsLoading] = useState(false),;
-  const [priceRange, setPriceRange] = useState<PriceRange>({;
     min: 0,;
     max: 10000}),;
   const [selectedRating, setSelectedRating] = useState<number | null>(null),;
@@ -226,10 +221,8 @@ pr-12325
       setCurrentPriceFilter([0, max]);
     }
   }, [allListings]),;
-  const [currentPriceFilter, setCurrentPriceFilter] = useState<;
     [number, number];
   >([0, initialPrice.max]),;
-  const handleSliderChange = (values: number[]) => {;
     const [min, max] = values.map(Number),;
     if (min == null || max == null || isNaN(min) || isNaN(max)) return,;
     setCurrentPriceFilter([min, max]);
@@ -244,10 +237,8 @@ pr-12325
         (listing.tags &&;
           listing.tags.some((tag: string) =>;
             tag.toLowerCase().includes(searchQuery.toLowerCase()))),;
-      const matchesBrand =;
         selectedBrand === "all" ||;
         (listing.brand && listing.brand === selectedBrand),;
-      const matchesSpecs =;
         !specQuery ||;
         (listing.specifications &&;
           listing.specifications.some((s) =>;
@@ -255,17 +246,13 @@ pr-12325
         (listing.tags &&;
           listing.tags.some((tag) =>;
             tag.toLowerCase().includes(specQuery.toLowerCase()))),;
-      const matchesAvailability =;
         selectedAvailability === "all" ||;
         (listing.availability && listing.availability === selectedAvailability),;
-      const matchesCategory =;
         selectedCategories.length === 0 ||;
         selectedCategories.includes(listing.category),;
-      const matchesPrice =;
         listing.price === null ||;
         (listing.price >= currentPriceFilter[0] &&;
           listing.price <= currentPriceFilter[1]),;
-      const matchesRating =;
         selectedRating === null ||;
         (listing.rating !== undefined && listing.rating >= selectedRating),;
       return (;
@@ -340,7 +327,6 @@ pr-12325
 
 
         // Store quote data in sessionStorage for the request-quote page
-        const quoteData = {
           serviceType: categorySlug
           specificItem: {
             id: listing.id
@@ -399,7 +385,6 @@ pr-12325
                         className="ml-2 text-sm text-zion-slate-light cursor-pointer""
                       >
 ;
-  const handleRequestQuote = (listingId:,  string) => {;,
     captureException(error),;
     logErrorToProduction('Listing filter error:', { data: error });
   }
@@ -407,7 +392,6 @@ pr-12325
   const handleRequestQuote = (listingId: string) => {
     setIsLoading(true),
 
-    const listing = allListings.find((item) => item.id === listingId),
 
     setTimeout(() => {
       setIsLoading(false),
@@ -417,7 +401,6 @@ pr-12325
           description: `Your quote request for ${listing.title} has been sent.`}),
 
         // Store quote data in sessionStorage for the request-quote page
-        const quoteData = {
           serviceType: categorySlug,
           specificItem: {
             id: listing.id,
@@ -486,7 +469,6 @@ pr-12325
             category: listing.category,;,
           description: `Your quote request for ${listing.title} has been sent.`}),;
         // Store quote data in sessionStorage for the request-quote page;
-        const quoteData = {;
           serviceType: categorySlug,;
           specificItem: {;
             id: listing.id,;
@@ -1824,7 +1806,6 @@ import { GradientHeading } from '@/components/GradientHeading';
 import { ProductListingCard } from '@/components/ProductListingCard';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import {
   Select;
   SelectValue;

@@ -78,7 +78,6 @@ class ImportFixer {;
         );
       } else {;
         // Create new import statement;
-        const importStatement = `import {;
   ${missingIcons.join(',\n  ')}
 } from 'lucide-react';`;
 ;

@@ -2,36 +2,40 @@
 #!/usr/bin/env node
 #!/usr/bin/env node;
 const fs = require('fs');
+<<<<<<< HEAD
 const path = require('path');
 class QuickSyntaxFixer {;
   constructor() {;
+=======
+const path = require(path');
+class QuickSyntaxFixer {
+  constructor() {
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
     this.fixedFiles = [];
   }
-;
-  log(message) {;
+  log(message) {
     console.log(`[QuickSyntaxFixer] ${message}`);
   }
-;
-  fixFile(filePath) {;
-    try {;
-      if (!fs.existsSync(filePath)) {;
-        this.log(`File not "found": ${filePath}`);
+  fixFile(filePath) {
+    try {
+      if (!fs.existsSync(filePath)) {
+        this.log(`File not "found: ${filePath}`);
         return false;
       }
-;
       const originalContent = fs.readFileSync(filePath, 'utf8');
       const content = originalContent
         // Remove merge conflict markers
 <<<<<<< HEAD
 
 
-        .replace(/^>>>>>>>.*$/gm, '')
-        .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?        .replace(/^>>>>>>>.*$/gm, '')
+        .replace(/^>>>>>>>.*$/gm, ')
+        .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?        .replace(/^>>>>>>>.*$/gm, ')
 
 =======
         .replace(/[\s\S]*?        .replace(/^>>>>>>>.*$/gm, '')
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
         // Fix module.exports
+<<<<<<< HEAD
         .replace(/module\.exports\s*=\s*{;/g, 'module.exports = {')
         // Fix constructor
         .replace(/constructor\s*\(\s*\)\s*{;/g, 'constructor() {')
@@ -42,38 +46,67 @@ class QuickSyntaxFixer {;
         // Fix semicolons before commas
         .replace(/;\s*,/g, ',');
       if (content !== originalContent) {;
+=======
+        .replace(/module\.exports\s*=\s*{/g, module.exports = {')
+
+        // Fix constructor
+        .replace(/constructor\s*\(\s*\)\s*{/g, 'constructor() {)
+
+        // Fix empty lines with semicolons
+        .replace(/^\s*;\s*$/gm, ')
+
+        // Fix multiple semicolons
+        .replace(/;+/g, ';)
+
+        // Fix semicolons before commas
+        .replace(/;\s*,/g, ,');
+      if (content !== originalContent) {
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
         fs.writeFileSync(filePath, content);
         this.fixedFiles.push(filePath);
-        this.log(`"Fixed": ${filePath}`);
+        this.log(`Fixed": ${filePath}`);
         return true;
       }
-;
       return false;
-    } catch (error) {;
+    } catch (error) {
       this.log(`Error fixing ${filePath}: ${error.message}`);
       return false;
     }
   }
+<<<<<<< HEAD
 ;
   async run() {;
     this.log('🚀 Starting Quick Syntax Fixer');
     // Fix critical files first,
   const criticalFiles = [
+=======
+  async run() {
+    this.log('🚀 Starting Quick Syntax Fixer);
+
+    // Fix critical files first
+    const criticalFiles = [
+
+
+
+
+
+
+
+
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
     ];
     let fixedCount = 0;
-    for (const file of criticalFiles) {;
-      if (this.fixFile(file)) {;
+    for (const file of criticalFiles) {
+      if (this.fixFile(file)) {
         fixedCount++;
       }
     }
-;
     this.log(`✅ Fixed ${fixedCount} critical files`);
-    return { "fixedFiles": this.fixedFiles };
+    return { "fixedFiles: this.fixedFiles }
   }
 }
-;
 // Run the fixer;
-if (require.main === module) {;
+if (require.main === module) {
   const fixer = new QuickSyntaxFixer();
   fixer.run().catch(console.error);
 }
@@ -85,6 +118,7 @@ module.exports = QuickSyntaxFixer;
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 #!/usr/bin/env node;
+<<<<<<< HEAD
 const fs = require('fs')
 const path = require('path')
       let content = fs.readFileSync(filePath, 'utf8')
@@ -92,6 +126,12 @@ const path = require('path')
         .replace(/(\w+):\s*([^,]+);\s*}/g, '$"1"
 <<<<<<< HEAD
         .replace(/(\w+):\s*([^,]+);\s*]/g, '$"1"
+=======
+      let content = fs.readFileSync(filePath, utf8')
+        .replace(/(\w+):\s*([^]+),/g, '$1"
+        .replace(/(\w+):\s*([^]+);\s*}/g, '$"1
+        .replace(/(\w+):\s*([^]+);\s*]/g, '$1"
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 ursor/automate-test-improve-and-merge-code-59d5
 
 

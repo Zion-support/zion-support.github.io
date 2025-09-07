@@ -40,9 +40,9 @@ const jobs = (await fs && fs.pathExists(JOBS_FILE));
     return res && res.status(500).json({ error: 'Failed to load jobs' });
   }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
-  if (req && req.method !== "GET") {";
-    res && res.setHeader("Allow", "GET");"
-    return res && res.status(405).json({ error: "Method Not Allowed" })
+  if (req && req.method !== "GET) {;
+    res && res.setHeader("Allow", GET);"
+    return res && res.status(405).json({ error: "Method Not Allowed })
   }
   try {}
 }

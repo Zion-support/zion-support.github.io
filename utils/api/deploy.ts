@@ -406,18 +406,7 @@ function nowIso(): string {;
 ;
 export async function performDeploy("input": DeployInput): Promise<DeployResult> {;
   }
-  const version = "Zion OS v1.0";"
-  const "logs": DeployLogEntry[] = [];
-  const "assets": GeneratedAsset[] = [];
-  const instanceSlug = toSlug(input.instanceName);
-  const baseDir = path.join(process.cwd(), "data", "deployments", instanceSlug),;"
-  const docsDir = path.join(process.cwd(), "docs"),;"
-  const eventsDir = path.join(process.cwd(), "data", "events"),;"
-  const gptDir = path.join(process.cwd(), "data", "zion-gpt"),;"
-  const daoDir = path.join(process.cwd(), "data", "dao"),;"
-  const tokenDir = path.join(process.cwd(), "data", "token"),;"
   ensureDir(baseDir);
-  const configPath = path.join(baseDir, "config.json");"
   writeTextFile(configPath, JSON.stringify({ ...input, instanceSlug, version, "createdAt": nowIso() }, null, 2)),;
   logs.push({ "timestamp": nowIso(), "level": "info", "action": "save_config", "details": { configPath } }),;"
   assets.push({ "kind": "config", "path": configPath, "description": "Deployment config" });"
@@ -425,7 +414,6 @@ export async function performDeploy("input": DeployInput): Promise<DeployResult>
   if (input.modules.gpt) {;
     }
     ensureDir(gptDir);
-    const promptBasePath = path.join(gptDir, `${instanceSlug}-prompt-base.md`);`    const promptBase = `# ZionGPT Prompt Base\n\"nInstance": ${input.instanceName}\"nLanguage": ${input.defaultLanguage}\"nGovernance": ${input.governanceMode}\n\"nBehaviors":\n- Assist with proposals, resumes, and marketplace tasks.\n- Route to domain experts per module.\n`,;`    writeTextFile(promptBasePath, promptBase);
     assets.push({ "kind": "file", "path": promptBasePath, "description": "ZionGPT prompt base" });"
     logs.push({ "timestamp": nowIso(), "level": "info", "action": "zion_gpt_initialized" });"
     } catch (error) {
@@ -439,7 +427,6 @@ export async function performDeploy("input": DeployInput): Promise<DeployResult>
   if (input.modules.dao) {;
     }
     ensureDir(daoDir);
-    const daoConfigPath = path.join(daoDir, `${instanceSlug}-dao.json`);`    writeTextFile(;
       daoConfigPath,;
       JSON.stringify(;
         {;
@@ -464,7 +451,6 @@ export async function performDeploy("input": DeployInput): Promise<DeployResult>
   if (input.modules.token || input.tokenActivation) {;
     }
     ensureDir(tokenDir);
-    const tokenConfigPath = path.join(tokenDir, `${instanceSlug}-token.json`);`    writeTextFile(;
       tokenConfigPath,;
       JSON.stringify(;
         {;
@@ -490,7 +476,6 @@ export async function performDeploy("input": DeployInput): Promise<DeployResult>
 ;
 
   // 3. Publish Assets;
-  const wpPath = path.join(docsDir, `whitepaper-${instanceSlug}.md`);`  const roadmapPath = path.join(docsDir, `roadmap-${instanceSlug}.md`);`  const changelogPath = path.join(docsDir, `changelog-${instanceSlug}.md`);`  const bookPath = path.join(docsDir, `zion-book-${instanceSlug}.md`);`  const trailerScriptPath = path.join(docsDir, `trailer-script-${instanceSlug}.md`);`
   if (input.modules.roadmapWhitepaper) {;
     }
     ensureDir(docsDir);
@@ -802,7 +787,6 @@ if ( {) {
   }
 }
 ;
-  const summary = `Initialized ${input.instanceName} (${instanceSlug}) with "modules": ${Object.entries(input.modules);`    .filter(([ v]) => v);
     .map(([k]) => k);
     .join(", ")}.`,;`  logs.push({ "timestamp": nowIso(), "level": "info", "action": "deploy_complete", "details": { instanceSlug } }),;"
   return {;
@@ -851,7 +835,6 @@ if ( {) {
 
   // Schedule launch stream (/summit);
   ensureDir(eventsDir);
-  const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`);`
 
   writeTextFile(;
 

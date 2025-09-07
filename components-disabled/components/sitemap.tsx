@@ -43,7 +43,6 @@ const links = [;
 
   }
 
-  const links = [;
     { "name": "Home", "href": "/" },;"
     { "name": "Services", "href": "/services" },;"
     {;
@@ -88,7 +87,6 @@ key={l && l.href}
     </div>;
   );
 
-const links = [;
 		{ "name": 'Home', "href": '/' },'
 		{ "name": 'Services', "href": '/services' },'
 		{ "name": 'All Services Showcase', "href": '/comprehensive-services-showcase-2025' },'
@@ -124,7 +122,6 @@ export default /**
  */
 function SitemapPage() {
   }
-  const links = [;
     { "name": "Home", "href": "/" },"
     { "name": "Services", "href": "/services" },"
     {
@@ -141,7 +138,6 @@ function SitemapPage() {
 
     { "name": "Contact", "href": "/contact" },;"
 
-const links = [;
     { "name": "Home", "href": "/" }"
     { "name": "Services", "href": "/services" }"
     {
@@ -156,7 +152,6 @@ const links = [;
     { "name": "Support", "href": "/support" }"
     { "name": "Contact", "href": "/contact" "
 }
-const links = [;
     { "name": "Home", "href": "/" },;"
     { "name": "Services", "href": "/services" },;"
     {;
@@ -236,7 +231,6 @@ export default /**
  */
 function SitemapPage() {
   }
-  const links = [;
     { "name": "Home", "href": "/" },"
     { "name": "Services", "href": "/services" },"
     {
@@ -277,7 +271,6 @@ return (;
         </ul>;
       </div>;
     </div>);
-  const links = [;
     { "name": "Home", "href": "/" },"
     { "name": "Services", "href": "/services" },"
     {

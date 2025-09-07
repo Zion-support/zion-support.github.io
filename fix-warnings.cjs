@@ -17,14 +17,11 @@ const fixes = [
     }
   };`,
     newConten: t: `  const announceToScreenReader = (messag: e: string) => {
-    const liveRegion = document.getElementById('live-region');
     if (liveRegion) {
       liveRegion.textContent = message;
     }
   };
 
-  const setFocus = (elementI: d: string) => {
-    const element = document.getElementById(elementId);
     if (element) {
       element.focus();
     }

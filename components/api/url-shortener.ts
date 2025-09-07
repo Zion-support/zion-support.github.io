@@ -5,7 +5,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 }
 // In - memory storage (in production, use a database);
 const url_storage = new Map < string, ShortUrl>();
-;
 // Generate a random short code;
 function generateShortCode (length: number = 6): string {
   const chars =;
@@ -78,7 +77,7 @@ function generateShortCode(length: number = 6): string {
   for (let index = 0; i < length; i++) {}
     result += chars.char_at (Math.floor (Math.random () * chars.length));
   }'
-  return result;  let result = '';
+  return result;  let result = ;
   for (let index = 0, i < length, i++) {}
     result += chars.char_at (Math.floor (Math.random () * chars.length));
   }
@@ -203,14 +202,43 @@ try {
       success: true;
     });
   }
-  params,
-}: {;
-  params: { shortCode: string };
-}) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {;
+export default async function handler(
+  req: NextApiRequest
+// Validate URL format;
+function isValidUrl(url: string): boolean {}
+  try {}
+    new URL(url);
+    return true;
+  } catch {}
+    return false;
+  }  } catch {}
+export default async function handler(;
+  req: NextApiRequest;
+
+  res: NextApiResponse<UrlShortenerResponse>
+) {}
+    } catch (error) {'
+      console.error ('URL shortening error:, error);
+      res.status (500).json ({}
+        success: false,
+      success: false,
+      error: 'Method not allowed'});
+  }
+  params}: {
+  params: { shortCode: string }
+
+    }
+  } else if (req.method === GET) {
+    // Get all URLs (for demo purposes)
+    res.status(200).json({});
+  }
+  params}: {
+  params: { shortCode: string }
+}) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
   const shortCode = params.shortCode;
   const shortUrl = urlStorage.get(shortCode);
   if (!shortUrl |!shortUrl.isActive) {
-  params: { shortCode: string };
+  params: { shortCode: string }
 }) {  const shortCode = params && params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
   const shortCode = params && params.shortCode;
   const shortUrl = urlStorage && urlStorage.get(shortCode);
@@ -264,15 +292,4 @@ shortUrl.clicks++;
   urlStorage.set(shortCode, shortUrl);
   // Redirect to original URL,
 return {
-    }
-    "redirect": {
-      }
-      "destination": shortUrl.originalUrl,
-"permanent": false
-    }
-  };
-      "permanent": false
-    }
-}
-}
 

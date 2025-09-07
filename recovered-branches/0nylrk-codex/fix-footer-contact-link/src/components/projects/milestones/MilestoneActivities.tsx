@@ -95,7 +95,6 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
       try {;
         }
         setIsLoading(true);
-        const { data, error } = await supabase;
           .from('milestone_activities');'
           .select(`;`            *,;
             "milestone":milestone_id(title),;
@@ -324,7 +323,6 @@ export function MilestoneActivities() {;
         }
         setIsLoading(true),;
         ;
-        const { data, error } = await supabase;
           .from('milestone_activities');'
           .select(`;`            *,;
             "milestone":milestone_id(title),;

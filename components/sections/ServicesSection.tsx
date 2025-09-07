@@ -1,4 +1,12 @@
 
+  Cloud
+  RefreshCw
+  Wifi
+  Shield
+  BarChart3
+  ArrowRight
+  Zap;} from 'lucide-react;import {
+use client',
 
 'use client';'
 import {
@@ -62,9 +70,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   RefreshCw,
   Wifi,
   Shield,
-  BarChart3,;
-  ArrowRight,;'
-  Zap,;} from 'lucide-react';import { ;
+  BarChart3,
+  ArrowRight,
+  Zap} from 'lucide-react';import {
   Brain;
   Cloud;
   RefreshCw;
@@ -393,6 +401,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (
   return ('
     <section className='py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden'>;
+    <section className='py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden>;
       {/* Background Elements */}
 '
       <div className='relative container mx-auto px-4'>        {/* Section Header */}  };
@@ -413,6 +422,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]" />
         <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)]" />
+      {/* Background Elements */}
+      <div className=absolute inset-0">
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)] />
+        <div className=absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)]" />
       </div>
 
 
@@ -795,6 +808,27 @@ className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-
             We deliver cutting-edge technology solutions that drive innovation,;
             efficiency, and growth for businesses across all industries.          </p>          ;"
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">;
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+
+            <span className='text-blue-400 font-medium'>Our Services</span>
+          </motion.div>
+          <h2 className=text-4xl md:text-6xl font-bold text-white mb-6'>
+            Comprehensive Technology'
+            <span className=block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent>
+
+            <span className='text-blue-400 font-medium'>Our Services</span>;
+          </motion && motion.div>;
+          <h2 className=text-4xl md:text-6xl font-bold text-white mb-6'>;
+            Comprehensive Technology;'
+            <span className=block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent>;
+              Solutions;
+            </span>;
+          </h2>;'
+          <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed>;
+            We deliver cutting-edge technology solutions that drive innovation,
+            efficiency, and growth for businesses across all industries.          </p>          ;
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">;
             We deliver cutting-edge technology solutions that drive innovation, efficiency, and growth ;
             for businesses across all industries.;
         </motion && motion.div>;
@@ -885,7 +919,7 @@ className='inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 
           )
 
         </motion.div>;"
-                <div className=\"absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300\"    />
+                <div className=\absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300\    />
               </div>
             </motion && motion.div>
           ))}
@@ -1080,4 +1114,46 @@ export default ServicesSection;
 };
 export default ServicesSection;
 origin/cursor/automate-test-improve-and-merge-code-2533
+              <ArrowRight className="w-5 h-5" />;
+            </Link>;
+          </div>;
+        </motion && motion.div>;
+      </div>;
+    </section>;
+
+                <div className=absolute inset - 0 border - 2 border - transparent rounded - 2xl group - hover:border - blue - 500 / 30 transition - colors duration - 300 />;
+              </div>;
+            </motion.div>))}
+        </motion.div>;
+        {/* Bottom CTA */}
+        <motion.div;
+          initial={{ opacity: 0, coordinate_y: 30 }}
+          whileInView={{ opacity: 1, coordinate_y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+
+            <p className='text - gray - 300 mb - 6'>;
+              Let & apos;s discuss how our technology solutions can drive your;
+              success and accelerate your growth.;
+            </p>;
+
+              <ArrowRight className="w - 5 h - 5" />;
+            </Link>;
+          </div>;
+        </motion.div>;
+      </div>;
+
+    </section>);
+}
+export default ServicesSection);
+}
+export default ServicesSection;
+
+
+export default ServicesSection;
+  );
+
+}
+
+
+
 

@@ -40,6 +40,9 @@ const ContentCard: React.FC<ContentCardProps> = ({
         
         {category && (
           <span className="px-3 py-1 bg-white/10 backdrop-blur-xl rounded-full text-xs text-white/60 border border-white/20">
+  category
+}) => {
+
             {category}
           </span>
         )}

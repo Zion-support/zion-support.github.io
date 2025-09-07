@@ -22,14 +22,11 @@ export default async function handler(
       model: 'gpt-4o-mini'
       messages: [
 {
-          }
-          "role": 'system','
-          "content": 'You are a concise, practical course assistant.','
-        },
-        { "role": 'user', "content": prompt,'
-}
-      ],
-      "temperature": 0.3
+          role: 'system',
+          content: You are a concise, practical course assistant.},
+        { role: 'user', content: prompt }],
+      temperature: 0.3,
+origin/cursor/automate-test-improve-and-merge-code-2533
     });
     const text = completion.choices?.[0]?.message?.content ?? '';
     return res.status (200).json ({ summary: text.trim () });

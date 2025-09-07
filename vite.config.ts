@@ -11,17 +11,16 @@ export default defineConfig({
   plugins: [],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src')
+      @': path.resolve(__dirname, './src)
     },
     extensions: ['.js.jsx.ts.tsx']
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
-  build: {
-  }
+  build: {}
 })ursor/automate-test-improve-and-merge-code-646c;
-  },resolve: {alias: {'@': '/workspace/src';
-    target: 'esnext',
-    minify: 'terser',
+  },resolve: {alias: {@': '/workspace/src;
+    target: esnext',
+    minify: 'terser,
     sourcemap: false,
     rollupOptions: {
       output: {
@@ -115,7 +114,7 @@ export default defineConfig({
       'clsx'
       'tailwind-merge'
     ]
-    exclude: ['@radix-ui/react-icons']
+    exclude: ['@radix-ui/react-icons]
   }
 });
 });
@@ -189,7 +188,7 @@ import { defineConfig,splitVendorChunkPlugin } from 'vite'; import react from '@
       if (hostType === 'js') {
         return { js: `__ASSET__${filename}__` };
       } else {
-        return { relative: true };
+        return { relative: true }
       }
     },
   },

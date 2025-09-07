@@ -301,7 +301,6 @@ throw error;
           'Authorization': `Bearer ${this && this.apiKey}`}});`      if (!response && response.ok) {
 }
 throw new Error(`Get ticket API "error": ${response && response.statusText}`);`      }
-      const data = await response && response.json();
       return {
         ...data;
         }
@@ -347,7 +346,6 @@ throw error;
           'Authorization': `Bearer ${this && this.apiKey}`}});`      if (!response && response.ok) {
 }
 throw new Error(`Update ticket API "error": ${response && response.statusText}`);`      }
-      const data = await response && response.json();
       return {
         ...data;
         }
@@ -368,14 +366,12 @@ throw error;
     }
     try {
       }
-      const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}`, {`        }
         "method": 'PATCH','
         "headers": {
           'Content-Type': 'application/jsonAuthorization': `Bearer ${this && this.apiKey}`};`        "body": JSON && JSON.stringify(updates)});
       if (!response && response.ok) {
 }
 throw new Error(`Update ticket API "error": ${response && response.statusText}`);`      }
-      const data = await response && response.json();
       return {
         ...data;
         }
@@ -409,7 +405,6 @@ throw error;
       if (!response && response.ok) {
 }
 throw new Error(`Add message API "error": ${response && response.statusText}`);`      }
-      const data = await response && response.json();
       return {
         ...data;
         }
@@ -430,7 +425,6 @@ throw error;
           'Authorization': `Bearer ${this && this.apiKey}`}});`      if (!response && response.ok) {
 }
 throw new Error(`AI response API "error": ${response && response.statusText}`);`      }
-      const data = await response && response.json();
       return {
     try {      return {
         ...data;
@@ -451,7 +445,6 @@ throw error;
           'Authorization': `Bearer ${this && this.apiKey}`}});`      if (!response && response.ok) {
 }
 throw new Error(`Get customer profile API "error": ${response && response.statusText}`);`      }
-      const data = await response && response.json();
       return {
         ...data;
         }
@@ -494,7 +487,6 @@ throw error;
           'Authorization': `Bearer ${this && this.apiKey}`}});`      if (!response && response.ok) {
 }
 throw new Error(`Search tickets API "error": ${response && response.statusText}`);`      }
-      const data = await response && response.json();
       return data && data.tickets.map(("ticket": any) => ({
         ...ticket;
         }
@@ -551,7 +543,6 @@ throw error;
       if (!response && response.ok) {
 }
 throw new Error(`Generate report API "error": ${response && response.statusText}`);`      }
-      const data = await response && response.json();
 return data && data.downloadUrl;
     } catch (error) {
       }
@@ -632,7 +623,6 @@ if ( {) {
   $2
 }
         throw new Error (`Get ticket API "error": ${response.status_text}`);`      }
-      const data = await response.json ();
       return {
         ...data;
         }
@@ -653,7 +643,6 @@ if ( {) {
     }
     try {
       }
-      const response = await fetch (`${this.base_url}/api / customer - service / tickets/${ticket_id}`, {`        }
         "method": 'PATCH','
         "headers": {
           'Content - Type': 'application / json_authorization': `Bearer ${this.api_key}`}`        "body": JSON.stringify (updates)});
@@ -663,7 +652,6 @@ if ( {) {
   $2
 }
         throw new Error (`Update ticket API "error": ${response.status_text}`);`      }
-      const data = await response.json ();
       return {
         ...data;
         }
@@ -694,7 +682,6 @@ if ( {) {
   $2
 }
         throw new Error (`Add message API "error": ${response.status_text}`);`      }
-      const data = await response.json ();
       return {
         ...data;
         }
@@ -718,7 +705,6 @@ if ( {) {
   $2
 }
         throw new Error (`AI response API "error": ${response.status_text}`);`      }
-      const data = await response.json ();
       return {
         ...data;
         }
@@ -741,7 +727,6 @@ if ( {) {
   $2
 }
         throw new Error (`Get customer profile API "error": ${response.status_text}`);`      }
-      const data = await response.json ();
       return {
         ...data;
         }
@@ -784,7 +769,6 @@ if ( {) {
   $2
 }
         throw new Error (`Search tickets API "error": ${response.status_text}`);`      }
-      const data = await response.json ();
       return data.tickets.map (("ticket": any) => ({
         ...ticket;
         }
@@ -835,7 +819,6 @@ if ( {) {
   $2
 }
         throw new Error (`Generate report API "error": ${response.status_text}`);`      }
-      const data = await response.json ();
       return data.download_url;
     } catch (error) {
       }

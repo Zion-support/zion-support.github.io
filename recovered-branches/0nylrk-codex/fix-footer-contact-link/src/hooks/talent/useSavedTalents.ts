@@ -21,13 +21,10 @@ import { useAuthStatus } from "@/hooks/talent","
 export function useSavedTalents() {
 }
 const { isAuthenticated, userDetails } = useAuthStatus(),;
-const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),;
-const [savedTalentIds, setSavedTalentIds] = useState<string[]>([]),;
 const [isLoading, setIsLoading] = useState(true),;
   // Fetch saved talents,
 useEffect(() => {
     }
-    const fetchSavedTalents = async () => {
       }
       if (!isAuthenticated || !userDetails.id) {
         }
@@ -37,7 +34,6 @@ return;
   // Fetch saved talents,
 useEffect(() => {
     }
-    const fetchSavedTalents = async () => {
       }
       if (!isAuthenticated |!userDetails.id) {        if (savedError) throw savedError;
         }
@@ -63,7 +59,6 @@ function useSavedTalents() {
   // Fetch saved talents;
   useEffect (() => {
     }
-    const fetchSavedTalents = async () => {
       // Check condition
 }
 if ( {) {
@@ -145,7 +140,6 @@ const { error } = await supabase;
           .delete()      } else {
         // Add to saved_talents
 }
-const { error } = await supabase;
           .from('saved_talents')'
           .insert({
         }

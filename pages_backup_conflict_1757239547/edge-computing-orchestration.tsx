@@ -146,7 +146,6 @@ export default function EdgeComputingPage() {
       ]
       popular: false
     },  ];
-  const benefits = [
     "Reduce latency by 80-90% with edge processing",
     "Cut bandwidth costs by 60% through local data processing",
     "Improve reliability with distributed computing architecture",
@@ -154,7 +153,6 @@ export default function EdgeComputingPage() {
     "Enable real-time AI and machine learning at the edge",
     "Reduce central server load and improve overall performance"
   ],
-  const useCases = [
     {
       industry: "Manufacturing",
       description: "Real-time quality control, predictive maintenance, and production optimization",
@@ -180,7 +178,6 @@ export default function EdgeComputingPage() {
   }
 }
   ],
-  const pricing = [
     {
       plan: "Starter",
       price: "$399",

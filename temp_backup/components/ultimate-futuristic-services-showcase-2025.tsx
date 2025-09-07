@@ -105,7 +105,6 @@ export default function UltimateFuturisticServicesShowcase2025() {
       }
     }
   }
-  const itemVariants = {
     hidden: { y: 20, opacity: 0 }
     visible: {
       y: 0

@@ -97,7 +97,6 @@ export function MicroTestimonial() {_return (
 
 export function TrustBadge() {
   }
-  const colorMap = {
     }
     "Verified":
       'bg-emerald-100 text-emerald-800 "dark":bg-emerald-900/40 "dark":text-emerald-200''

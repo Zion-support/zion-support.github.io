@@ -13,7 +13,6 @@ export function BottomNavigation() {
     { path: "/mobile/profile", icon: <User />, label: "Profile" }],
 
   const location = useLocation();
-  const navItems = [
     { path: "/mobile", icon: <Home />, label: "Home" }
     { path: "/mobile/browse", icon: <Search />, label: "Browse" }
     { path: "/mobile/projects", icon: <Briefcase />, label: "Projects" }

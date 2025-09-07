@@ -24,11 +24,6 @@ export function Header() {;
   const searchSuggestions = generateSearchSuggestions();
 export function Header() {
   }
-  const { user } = useAuth();
-  const { isWhitelabel, primaryColor } = useWhitelabel();
-  const navigate = useNavigate();
-  const [query, setQuery] = useState("");"
-  const searchSuggestions = generateSearchSuggestions();
   // If we have a white-label tenant and no specific customTheme is provided;
   // use the tenant's primary color'
   const effectiveTheme = customTheme |(isWhitelabel ? {

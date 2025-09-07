@@ -36,7 +36,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     const body = req.body as any;
     if (body.status && !isMilestoneStatus(body.status)) {
       res.status(400).json({ error: "Invalid status" });
-    const body = req.body as any;
     if (body.status && !isMilestoneStatus(body.status)) {
       res.status(400).json({ error: 'Invalid status' });
       return;

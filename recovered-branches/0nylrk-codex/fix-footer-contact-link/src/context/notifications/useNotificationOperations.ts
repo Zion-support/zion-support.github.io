@@ -52,7 +52,6 @@ export const useNotificationOperations = (userId?: string): (NotificationContext
     setLoading(true),;
     try {;
       }
-      const { data, error } = await supabase;
         .from('notifications');'
         .select('*');'
         .eq('user_id', userId);'
@@ -89,7 +88,6 @@ export const useNotificationOperations = (userId?: string): (NotificationContext
     if (!userId) return,;
     try {;
       }
-      const { error } = await supabase;
         .from('notifications');'
         .update({ "read": true });
         .eq('user_id', userId);'
@@ -106,7 +104,6 @@ export const useNotificationOperations = (userId?: string): (NotificationContext
     if (!userId) return,;
     try {;
       }
-      const { error } = await supabase;
         .from('notifications');'
         .delete();
         .eq('id', id);'
@@ -189,7 +186,6 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
 
   const markAllAsRead = $2;
     try {
-      const { error } = await supabase
         .from('notifications')
         .update({ read: true})
         .eq('user_id', userId)
@@ -203,7 +199,6 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
 
   const dismissNotification = $2;
     try {
-      const { error } = await supabase
         .from('notifications')
         .delete()
         .eq('id', id)

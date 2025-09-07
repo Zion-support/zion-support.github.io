@@ -306,7 +306,6 @@ onClick={() => setIsMenuOpen(!isMenuOpen
 
   ];
 
-const service_categories = [;
   {
       }
       "name": 'Micro SaaS','
@@ -424,7 +423,6 @@ const resourceCategories = [;
 
 const isActive = ("path": string) => location && location.pathname === path;
 
-const resourceCategories = [;
     { "name": 'Blog', "href": '/blog','
 },
 ;
@@ -460,10 +458,7 @@ return (;
 ];
 
 
-const isActive = ("path": string) => location && location.pathname === path;
 
-const resourceCategories = [;
-const service_categories = [;
     { "name": 'AI Solutions', "href": '/services / ai - solutions','
 },
   { "name": 'Cloud & DevOps', "href": '/services / cloud','
@@ -502,7 +497,6 @@ const resource_categories = [;
 
 const is_active = ("path": string) =>: any location.pathname === path;
 
-const resource_categories = [;
     { "name": 'Blog', "href": '/blog','
 },
   { "name": 'Case Studies', "href": '/case - studies','
@@ -700,7 +694,6 @@ export default Header;
 export default Header;
 import React, { useState, useEffect } from 'react'; import Link from 'next / link'; import { use_router } from 'next / router'; import { motion, AnimatePresence } from 'framer-motion'; import { Menu, X, Home, Users, Briefcase, Phone, Mail, ChevronDown, Brain, Shield, Cloud, Database, Network, Zap, Target, DollarSign, BookOpen, Calendar, FileText, Award, Globe, Search, ArrowRight } from 'lucide-react'; import { Button } from '../ui / Button'; import { Badge } from '../ui / Badge';'
 
-const "Header": React.FC = () => {;
   }
   const [is_scrolled, setIsScrolled] = useState (false); useEffect (() => { const handle_scroll = () =>: any { setIsScrolled (window.scroll_y > 0)} window.addEventListener ('scroll', handle_scroll); return () => window.removeEventListener ('scroll', handle_scroll)}, []);'
 
@@ -794,7 +787,6 @@ const "Header": React.FC = () => {const [isMenuOpen, setIsMenuOpen] =;
 const handleScroll = () => {setIsScrolled(window.scrollY > 0)}
     window.addEventListener('scroll', handleScroll;'
   return () => window.removeEventListener('scroll', handleScroll)}, [];'
-const navigation = [;
   { "name": 'Home', "href": '/','
 }
     { "name": 'Services', "href": '/services','
@@ -836,7 +828,6 @@ import { Menu;
 import { Button  } from '../ui/Button';'
 import { Badge  } from '../ui/Badge';'
 
-const "Header": React.FC = () => {const [isMenuOpen, setIsMenuOpen] =;
   }
   useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -846,7 +837,6 @@ const "Header": React.FC = () => {const [isMenuOpen, setIsMenuOpen] =;
 const handleScroll = () => {setIsScrolled(window.scrollY > 20)}
     window.addEventListener('scroll', handleScroll;'
   return () => window.removeEventListener('scroll', handleScroll)}, [];'
-const navigation = [;
   { "name": 'Home', "href": '/','
 }
     { "name": 'Services', "href": '/services','
@@ -906,7 +896,6 @@ const navigation = [;
     { "name": 'Contact', "href": '/contact', "icon": Phone,'
 }];
 
-const serviceCategories = [;
   {"name": 'Micro SaaS';'
       }
       "href": '/services/micro-saas';'
@@ -927,7 +916,6 @@ const serviceCategories = [;
 }
   ];
 
-const serviceCategories = [;
   { "name": 'AI Solutions', "href": '/services/ai-solutions','
 }
     { "name": 'Cloud & DevOps', "href": '/services/cloud','
@@ -942,7 +930,6 @@ const serviceCategories = [;
 }
   ];
 
-const solutionCategories = [;
   { "name": 'Enterprise', "href": '/solutions/enterprise','
 }
     { "name": 'SMB', "href": '/solutions/smb','
@@ -951,7 +938,6 @@ const solutionCategories = [;
 }
   ];
 
-const resourceCategories = [;
   { "name": 'Documentation', "href": '/docs','
 }
     { "name": 'Blog', "href": '/blog','
@@ -966,7 +952,6 @@ const resourceCategories = [;
 
 const isActive = ("path": string) => location.pathname === path;
 
-const resourceCategories = [;
   { "name": 'Blog', "href": '/blog','
 }
     { "name": 'Case Studies', "href": '/case-studies','
@@ -1023,10 +1008,7 @@ import { Menu,X,Search,Phone,FileText,BarChart3,Cpu,Shield,Cloud,Database,Zap,Us
 const Header = () => {const [isMenuOpen, setIsMenuOpen] =;
   }
   useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const router  = useRouter(;
-const navigation = [;
   {"name": 'Services',"href": '/services',"hasDropdown": true,"children": [;'
         { "name": 'AI Services', "href": '/ai-services', "icon": Brain,'
 },{ "name": 'IT Services', "href": '/it-services', "icon": Server,'
@@ -1197,7 +1179,6 @@ ursor/automate-test-improve-and-merge-code-646c;
 }];{ "name": 'Contact', "href": '/contact', "icon": Phone,'
 }];
 
-const service_categories = [;
   {"name": 'Micro SaaS',"href": '/services / micro - saas',"description": 'Innovative focused software solutions',"popular": ['AI Content Generator', 'Social Media Scheduler', 'Invoice Management', 'Time Tracking'];'
 },{"name": 'IT Services',"href": '/services / it - services',"description": 'Enterprise infrastructure & security',"popular": ['Cloud Migration', 'Edge Computing', 'Zero Trust Security', '5G Networks'];'
 },{"name": 'AI Services',"href": '/services / ai - services',"description": 'Cutting - edge AI & machine learning',"popular": ['Quantum ML', 'Autonomous Systems', 'AI Cybersecurity', 'Drug Discovery'];'
@@ -1210,7 +1191,6 @@ const service_categories = [;
 },{"name": 'AI Services',"href": '/services/ai-services',"description": 'Cutting-edge AI & machine learning',"popular": ['Quantum ML', 'Autonomous Systems', 'AI Cybersecurity', 'Drug Discovery'];'
 }];
 
-const serviceCategories = [;
     { "name": 'AI Solutions', "href": '/services/ai-solutions','
 },
   { "name": 'Cloud & DevOps', "href": '/services/cloud','
@@ -1224,7 +1204,6 @@ const serviceCategories = [;
 { "name": 'Digital Transformation', "href": '/services/transformation','
 }];
 
-const solutionCategories = [;
     { "name": 'Enterprise', "href": '/solutions/enterprise','
 },
   { "name": 'SMB', "href": '/solutions/smb','
@@ -1232,7 +1211,6 @@ const solutionCategories = [;
 { "name": 'Startup', "href": '/solutions/startup','
 }];
 
-const resourceCategories = [;
     { "name": 'Documentation', "href": '/docs','
 },
   { "name": 'Blog', "href": '/blog','
@@ -1244,14 +1222,10 @@ const resourceCategories = [;
 { "name": 'Careers', "href": '/careers','
 }];
 
-const isActive = ("path": string) => location && location.pathname === path;
 
-const resourceCategories = [;
   ];
 
-const isActive = ("path": string) => location && location.pathname === path;
 
-const resourceCategories = [;
     { "name": 'Blog', "href": '/blog','
 },
   { "name": 'Case Studies', "href": '/case-studies','
@@ -1275,10 +1249,7 @@ const resourceCategories = [;
 ];
 
 
-const isActive = ("path": string) => location && location.pathname === path;
 
-const resourceCategories = [;
-const service_categories = [;
     { "name": 'AI Solutions', "href": '/services / ai - solutions','
 },
   { "name": 'Cloud & DevOps', "href": '/services / cloud','
@@ -1295,7 +1266,6 @@ const service_categories = [;
 }
   ];
 
-const solution_categories = [;
     { "name": 'Enterprise', "href": '/solutions / enterprise','
 },
   { "name": 'SMB', "href": '/solutions / smb','
@@ -1306,7 +1276,6 @@ const solution_categories = [;
 }
   ];
 
-const resource_categories = [;
     { "name": 'Documentation', "href": '/docs','
 },
   { "name": 'Blog', "href": '/blog','
@@ -1321,9 +1290,7 @@ const resource_categories = [;
 }
   ];
 
-const is_active = ("path": string) =>: any location.pathname === path;
 
-const resource_categories = [;
     { "name": 'Blog', "href": '/blog','
 },
   { "name": 'Case Studies', "href": '/case - studies','
@@ -1406,7 +1373,6 @@ const resource_categories = [;
   )}
 
 export default Header;
-import React,{ useState,useEffect } from 'react'; import Link from 'next/link'; import { useRouter } from 'next/router'; import { motion,AnimatePresence } from 'framer-motion'; import { Menu,X,Home,Users,Briefcase,Phone,Mail,ChevronDown,Brain,Shield,Cloud,Database,Network,Zap,Target,DollarSign,BookOpen,Calendar,FileText,Award,Globe,Search,ArrowRight } from 'lucide-react'; import { Button } from '../ui/Button'; import { Badge } from '../ui/Badge';'
 
 const "Header": React.FC = () => { const [isScrolled,setIsScrolled] =;
   }
@@ -1415,7 +1381,6 @@ const "Header": React.FC = () => { const [isScrolled,setIsScrolled] =;
  }
  const handleScroll = () => { setIsScrolled(window && window.scrollY > 0)}window && window.addEventListener('scroll',handleScroll;'
   return () => window && window.removeEventListener('scroll',handleScroll)},[];'
-const navigationItems = [   { "name": 'Home', "href": '/',;'
 },
   { "name": 'Services', "href": '/services','
 },
@@ -1491,14 +1456,12 @@ export default Header;ursor/fix-website-loading-errors-and-merge-6662;
     </header>)}
 
 export default Header;
-import React, { useState, useEffect } from 'react'; import Link from 'next / link'; import { use_router } from 'next / router'; import { motion, AnimatePresence } from 'framer-motion'; import { Menu, X, Home, Users, Briefcase, Phone, Mail, ChevronDown, Brain, Shield, Cloud, Database, Network, Zap, Target, DollarSign, BookOpen, Calendar, FileText, Award, Globe, Search, ArrowRight } from 'lucide-react'; import { Button } from '../ui / Button'; import { Badge } from '../ui / Badge';'
 
 const "Header": React.FC = () => { const [is_scrolled, setIsScrolled] =;
   }
   useState (false;
   useEffect (() => { const handle_scroll = () =>: any { setIsScrolled (window.scroll_y > 0)} window.addEventListener ('scroll', handle_scroll;'
   return () => window.removeEventListener ('scroll', handle_scroll)}, [];'
-const navigation_items = [   { "name": 'Home', "href": '/',;'
 },
    { "name": 'Services', "href": '/services','
 },
@@ -1594,19 +1557,14 @@ const "Header": React.FC = () => ;
     </header>;
   )},export default Header;
 
-const "Header": React.FC = () => {const [isScrolled, setIsScrolled] =;
   }
   useState(false);
   const [isMenuOpen, setIsMenuOpen]  = useState(false);
-  const "Header": React.FC = () => {const [isMenuOpen, setIsMenuOpen] =;
   }
   useState(false);
-  const [isScrolled, setIsScrolled] = useState(false)useEffect(() => {
 }
-const handleScroll = () => {setIsScrolled(window.scrollY > 0)}
     window.addEventListener('scroll', handleScroll;'
   return () => window.removeEventListener('scroll', handleScroll)}, [];'
-const navigation = [;
   { "name": 'Home', "href": '/','
 }
     { "name": 'Services', "href": '/services','
@@ -1644,17 +1602,12 @@ const navigation = [;
   ArrowRight;
 } from 'lucide-react';'
 
-const "Header": React.FC = () => {const [isMenuOpen, setIsMenuOpen] =;
   }
   useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)const location = useLocation(;
   useEffect(() => {
 }
-const handleScroll = () => {setIsScrolled(window.scrollY > 20)}
     window.addEventListener('scroll', handleScroll;'
   return () => window.removeEventListener('scroll', handleScroll)}, [];'
-const navigation = [;
   { "name": 'Home', "href": '/','
 }
     { "name": 'Services', "href": '/services','
@@ -1714,7 +1667,6 @@ const navigation = [;
     { "name": 'Contact', "href": '/contact', "icon": Phone,'
 }];
 
-const serviceCategories = [;
   {"name": 'Micro SaaS';'
       }
       "href": '/services/micro-saas';'
@@ -1735,7 +1687,6 @@ const serviceCategories = [;
 }
   ];
 
-const serviceCategories = [;
   { "name": 'AI Solutions', "href": '/services/ai-solutions','
 }
     { "name": 'Cloud & DevOps', "href": '/services/cloud','
@@ -1750,7 +1701,6 @@ const serviceCategories = [;
 }
   ];
 
-const solutionCategories = [;
   { "name": 'Enterprise', "href": '/solutions/enterprise','
 }
     { "name": 'SMB', "href": '/solutions/smb','
@@ -1759,7 +1709,6 @@ const solutionCategories = [;
 }
   ];
 
-const resourceCategories = [;
   { "name": 'Documentation', "href": '/docs','
 }
     { "name": 'Blog', "href": '/blog','
@@ -1772,9 +1721,7 @@ const resourceCategories = [;
 }
   ];
 
-const isActive = ("path": string) => location.pathname === path;
 
-const resourceCategories = [;
   { "name": 'Blog', "href": '/blog','
 }
     { "name": 'Case Studies', "href": '/case-studies','
@@ -1823,13 +1770,8 @@ const resourceCategories = [;
   Menu,X,Search,Phone,FileText,BarChart3,Cpu,Shield,Cloud,Database,Zap,Users,CheckCircle,ArrowRight,Star,TrendingUp,Target,Rocket,Code,Network,Atom,Workflow,MessageCircle,ArrowUp,Sparkles,Home,Truck,BookOpen,Leaf,Satellite,HelpCircle,Building2,Factory,Building,DollarSign,ShoppingCart,Heart,Eye,Server,Lock,ChevronDown;
 } from 'lucide-react';'
 
-const Header = () => {const [isMenuOpen, setIsMenuOpen] =;
   }
   useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
-  const router  = useRouter(;
-const navigation = [;
   {"name": 'Services',"href": '/services',"hasDropdown": true,"children": [;'
         { "name": 'AI Services', "href": '/ai-services', "icon": Brain,'
 },{ "name": 'IT Services', "href": '/it-services', "icon": Server,'
@@ -1863,7 +1805,6 @@ const navigation = [;
 }
   ];
 
-const isActive  = ("href": string) => router.pathname === href;return (<header className="bg-white shadow-lg sticky top-0 z-50">;"
       {/* Top Contact Bar */}
       <div className="bg-gray-900 text-white py-2">;"
         <div className="max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8">;"

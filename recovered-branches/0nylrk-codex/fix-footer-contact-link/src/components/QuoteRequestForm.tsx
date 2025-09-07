@@ -149,7 +149,6 @@ export function QuoteRequestForm() {
 console.log("Submitting form "data":", formData);"
       // Simulate API call  },
   
-  const handleSubmit = async () => {
     }
     setIsSubmitting(true),
     

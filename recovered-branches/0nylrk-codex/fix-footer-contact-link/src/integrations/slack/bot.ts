@@ -90,7 +90,6 @@ async function askZionGPT(prompt: string): Promise<string> {;
 const app = new MockApp($2);
 async function askZionGPT(prompt: string): Promise<string> {
   // Safely log without direct console reference
-  const safeConsole = $2;
   if (safeConsole && safeConsole.log) {
     safeConsole.log(`ZionGPT was asked: ${prompt}`)
   }

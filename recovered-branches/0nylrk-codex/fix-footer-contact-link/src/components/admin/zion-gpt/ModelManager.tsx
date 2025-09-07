@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react','
-import { useState, useEffect } from 'react','
 import { Button } from "@/components/ui/button","
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card","
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table","
@@ -107,7 +106,6 @@ export function ZionGPTModelManager() {;
     try {;
       }
       setIsLoading(true),;
-      const { data, error } = await supabase;
         .from('model_versions');'
         .select('*');'
         .order('createdAt', { "ascending": false }),;      // Also update in the database;'

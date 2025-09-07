@@ -35,9 +35,7 @@ if ( {) {$2;}
 }
         content = JSON.stringify (metadata, null, 2)file_name = `zion - app - metadata-${platform}-${metadata.version}.json`;} else {// Convert object to CSV format;
 
-const headers = ['appTitleshortDescriptionlongDescriptionversionplatform'];
 
-const values = [
   metadata.app_title;
           metadata.short_description;
           metadata.long_description;
@@ -59,9 +57,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
   const handleExport = null;
 interface ExportPanelProps {
 
-const headers = ['appTitleshortDescriptionlongDescriptionversionplatform'];
 
-const values = [
   metadata && metadata.appTitle;
           metadata && metadata.shortDescription;
           metadata && metadata.longDescription;

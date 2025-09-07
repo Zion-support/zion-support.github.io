@@ -24,14 +24,13 @@ function helpText(): string {
         text: `Here is a draft job post for *${role}*:\n\n${data && data.description}`,
       });
       return;
-    if (sub === 'post-job') {const role = rest.join(' ') |'Cloud Engineer';
-      const res = await fetch(`${apiBase}/jobs/generate`, {method: 'POST',headers: { 'content-type': 'application/json', 'x-user-id': userId },body: JSON.stringify({ role }),})const data = (await res.json()) as any;
-      await respond({response_type: 'ephemeral';
+    if (sub === 'post-job) {const role = rest.join( ') |'Cloud Engineer;
+      const res = await fetch(`${apiBase}/jobs/generate`, {method: POST',headers: { 'content-type: application/json', 'x-user-id: userId },body: JSON.stringify({ role })})const data = (await res.json()) as any;
+      await respond({response_type: ephemeral';
         text: `Here is a draft job post for *${role}*:\n\n${data.description}`;
       })return;
     }
 
-const res = await fetch(`${apiBase}/talent/search?q=${encodeURIComponent(q)}`;`        {"headers": { 'x-user-id': userId }'
         }
       
 })return;

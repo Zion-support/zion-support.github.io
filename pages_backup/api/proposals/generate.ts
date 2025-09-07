@@ -33,7 +33,6 @@ export default async function handler(
 language = 'en',
     } = req.body || {};
 
-    const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
     const userPrompt =
       promptAssist ||
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -82,7 +81,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 
-import type { NextApiRequest, NextApiResponse } from 'next';
 
   }
 }

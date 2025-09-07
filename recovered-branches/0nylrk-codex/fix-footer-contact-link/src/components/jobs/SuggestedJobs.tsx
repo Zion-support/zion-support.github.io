@@ -112,12 +112,10 @@ key={match && match.id}
   talentId?: string
 }export function SuggestedJobs() {
   }
-  const {
   }
   user
 }= useAuth ();
 const currentTalentId = talentId || user?.id;
-const {
   }
   isLoading;
 updateJobMatchStatus;
@@ -129,7 +127,6 @@ appliedMatches
 }
 
 }= useJobSuggestions (currentTalentId);
-const handleApply = ("matchId": string, "jobId": string) => {
   }
   updateJobMatchStatus (matchId, 'applied');'
 //In a real app, this might redirect to application form or open a modal

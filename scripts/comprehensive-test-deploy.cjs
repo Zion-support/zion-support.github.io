@@ -1,20 +1,21 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     this.log(`Tests: ${this.results.tests.passed}/${this.results.tests.total} passed`);
     this.log(`Builds: ${this.results.builds.success} successful, ${this.results.builds.failed} failed`);
     this.log(`Errors: ${this.results.errors.length}`);
     
     const recommendations = this.generateRecommendations();
-    this.log('\n💡 Recommendations:');
+    this.log('\n💡 Recommendations:);
     recommendations.forEach((rec, index) => {
       this.log(`  ${index + 1}. ${rec}`);
     });
 
-    this.log('\\n🎉 Comprehensive test & deploy suite completed!');
+    this.log(\\n🎉 Comprehensive test & deploy suite completed!');
   }
 }
 
@@ -33,16 +34,14 @@ suite.runComprehensiveSuite().catch(console.error);
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 #!/usr/bin/env node;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 const fs = require('fs')
-const path = require('path')
+const path = require(path')
 const { execSync } = require('child_process')
+<<<<<<< HEAD
 // console.log(' Comprehensive Test & Deploy Suite')
 console.log('=')
   log(message, type = 'info')
@@ -73,6 +72,23 @@ console.log('=')
 =======
 <<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+// console.log( Comprehensive Test & Deploy Suite')
+console.log('=)
+  log(message, type = info')
+
+      recommendations.push('Fix failing tests before deployment)
+      recommendations.push(Fix build issues before deployment')
+      recommendations.push('Address multiple errors before deployment)
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+    this.log(Starting comprehensive test & deploy suite...')
+    this.log('\\n COMPREHENSIVE SUITE SUMMARY)
+    this.log(===')
+    this.log('\n Recommendations:)
+    this.log(\\n� Comprehensive test & deploy suite completed!')
+
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

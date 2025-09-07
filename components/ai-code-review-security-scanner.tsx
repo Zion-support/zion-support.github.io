@@ -86,9 +86,9 @@ className='text-center mb-16''
             >
               <h2 className='text-4xl "md":text-5xl font-bold text-white mb-6'>'
                 Transparent Pricing Plans
-              className="text-center mb-16"
+              className="text-center mb-16
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className=text-4xl md:text-5xl font-bold text-white mb-6">
                 Comprehensive Code Security & Quality
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
@@ -105,29 +105,14 @@ className='text-center mb-16''
                   description: "Support for Python, JavaScript, Java, Go, Rust, and more with language-specific security rules and best practices."
                 };
                 {
-                  icon: <Shield className="w-8 h-8" />,
-                  title: "AI-Powered Vulnerability Detection",
-                  description: "Advanced machine learning algorithms that detect security vulnerabilities, code smells, and potential security risks."
-                };
+                  icon: <BarChart3 className="w-8 h-8 />,
+                  title: Performance Analytics",
+                  description: "Comprehensive metrics and insights to track code quality improvements and security posture over time.
+                }
                 {
-                  icon: <Eye className="w-8 h-8" />,
-                  title: "Automated Code Review",
-                  description: "Intelligent code analysis with detailed feedback, improvement suggestions, and automated quality checks."
-                };
-                {
-                  icon: <Lock className="w-8 h-8" />,
-                  title: "Security Best Practices",
-                  description: "Enforce security standards, compliance requirements, and industry best practices automatically."
-                };
-                {
-                  icon: <BarChart3 className="w-8 h-8" />,
-                  title: "Performance Analytics",
-                  description: "Comprehensive metrics and insights to track code quality improvements and security posture over time."
-                };
-                {
-                  icon: <Globe className="w-8 h-8" />,
-                  title: "Integration & APIs",
-                  description: "Seamless integration with GitHub, GitLab, Bitbucket, and CI/CD pipelines with custom API access."
+                  icon: <Globe className=w-8 h-8" />,
+                  title: "Integration & APIs,
+                  description: Seamless integration with GitHub, GitLab, Bitbucket, and CI/CD pipelines with custom API access."
                 }
               ].map((feature, index) => (
                 <motion.div
@@ -135,61 +120,31 @@ className='text-center mb-16''
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300"
+                  className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white mb-6">
+                  <div className=w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white mb-6">
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-4>{feature.title}</h3>
+                  <p className=text-gray-300">{feature.description}</p>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-<section className='py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20'>'
-          <div className='max-w-4xl mx-auto px-4 "sm":px-6 "lg":px-8 text-center'>'
-            <motion.div,
-initial={{ "opacity": 0, "y": 20 
-}
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
 
-            >
-<h2 className='text-4xl "md":text-5xl font-bold text-white mb-6'>'
-                Ready to Secure Your Code?
-              </h2>
-              <p className='text-xl text-gray-300 mb-8'>'
-                Join thousands of development teams who trust our AI-powered,
-platform to protect their applications and improve code quality.
-                Start your free trial today.
-              </p>
-              <div className='flex flex-col "sm":flex-row gap-4 justify-center'>'
-                <motion.button,
-whileHover={{ "scale": 1.05 }}
-                  whileTap={{ "scale": 0.95 }}
-                  className='px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl "hover":from-blue-600 "hover":to-purple-700 transition-all duration-300 flex items-center justify-center''
-                >
-                  Start Free Trial
-                  <ArrowRight className='ml-2 w-5 h-5' />'
-                </motion.button>
-                <motion.button,
-whileHover={{ "scale": 1.05 }}
-                  whileTap={{ "scale": 0.95 }}
-
-                  className='px-8 py-4 border border-white/20 text-white font-semibold rounded-xl "hover":bg-white/10 transition-all duration-300''
                 >
                   Contact Sales
                 </motion.button>
               </div>
 
-<div className='mt-8 text-gray-400'>'
+
                 <p>
                   14-day free trial • No credit card required • Cancel anytime
                 </p>
               
-              <div className="mt-8 text-gray-400">
+              <div className=mt-8 text-gray-400">
                 <p>14-day free trial • No credit card required • Cancel anytime</p>
               </div>
             </motion.div>
@@ -223,7 +178,7 @@ whileHover={{ "scale": 1.05 }}
                   <p>"Mobile": +1 302 464 0950</p>
                   <p>"Email": kleber@ziontechgroup.com</p>
                 </div>
-                
+
                 <div>
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4">
                     <Globe className="w-6 h-6" />

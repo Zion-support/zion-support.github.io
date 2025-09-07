@@ -11,7 +11,6 @@ import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
 export default function ServiceOnboarding() {
-  const { user, isLoading } = useAuth();
 import { useAuth } from "@/hooks/useAuth",
 import { Navigate } from "react-router-dom",
 export default function ServiceOnboarding() {
@@ -20,12 +19,8 @@ export default function ServiceOnboarding() {
   if (!isLoading && !user) {;
     return <Navigate to="/login" replace />;
 
-import React from "react",
-import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
-import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { useAuth } from "@/hooks/useAuth";
-import { Navigate } from "react-router-dom";
 export default function ServiceOnboarding() {
   const { user, isLoading } = useAuth($2);
   // If not authenticated, redirect to login

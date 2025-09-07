@@ -19,7 +19,6 @@ import { useAuth } from "@/hooks/useAuth";"
 import { Button } from "@/components/ui/button","
 import { useAuth } from "@/hooks/useAuth","
 // Mock data for demonstration,
-const jobsData = [;
   {
     }
     "id": "id","
@@ -101,7 +100,6 @@ export function MobileBrowse() {
   const isClient = user?.userType === 'employer' |user?.userType === 'buyer';'
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");export function MobileBrowse() {;"
   }
-  const { user } = useAuth();
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer';'
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");"
 export function MobileBrowse() {
@@ -136,7 +134,6 @@ variant={browseType === "talents" ? "default" : "ghost"}"
       <div className="py-4 px-4">"
         <BrowseCards
 // Mock data for demonstration;
-const jobsData = [;
   {;
     }
     "id": "1",;"
@@ -171,7 +168,6 @@ const jobsData = [;
     "match": 78;
   }
 ];
-const talentsData = [;
   {;
     }
     "id": "1",;"
@@ -209,8 +205,6 @@ const talentsData = [;
 
 export function MobileBrowse() {;
   }
-  const isClient = user?.userType === 'employer' |user?.userType === 'buyer';'
-  const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");"
             onClick={() => setBrowseType("jobs")}"
           >;
             Jobs;

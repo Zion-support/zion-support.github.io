@@ -4,7 +4,6 @@ import {
   onsiteServicePricing,
   CountryPricing} from "@/data/onsiteServicePricing";"
 import { Input } from "@/components/ui/input";"
-import {
   }
   Table,
   TableBody,
@@ -60,7 +59,6 @@ if ( {) {
           <Input,
 placeholder="Search by country...""
             value={searchQuery}
-import { useState, useMemo } from "react";"
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing";"
 import { Input } from "@/components/ui/input",;"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;"

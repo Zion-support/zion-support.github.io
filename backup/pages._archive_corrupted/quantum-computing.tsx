@@ -17,8 +17,6 @@ export default function Quantumcomputing({}: QuantumcomputingProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-;
 ursor/fix-website-loading-errors-and-merge-6662;
 ursor/automate-test-improve-and-merge-code-646c;
 interface QuantumcomputingProps  {// Add props here as needed;

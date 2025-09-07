@@ -23,7 +23,6 @@ import { useState } from "react",;
 import { useForm, ControllerRenderProps } from "react-hook-form",;
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import {
   Form;
   FormControl;
   FormField;
@@ -68,7 +67,6 @@ export const ReplyForm = ({ onSubmit, parentId }:,  ReplyFormProps) => {;,
       content: '',;
     },;
   });
-  const handleSubmit = async (values:,  ReplyFormValues) => {;,
     setIsSubmitting(true);    try {;
       await onSubmit(values && values.content);
       form && form.reset();

@@ -299,7 +299,6 @@ export const tokenStore = {
     return wallets[userId];
   },
   setWalletBalance(userId: string, balance: number): Wallet {
-    const wallets = store.getData().wallets;
     wallets[userId] = { userId, balance };
     store.save();
     return wallets[userId];
@@ -430,7 +429,6 @@ export const tokenStore = $2;
     return wallets[userId]
   },
   setWalletBalance(userId: string, balance: number): Wallet {
-    const wallets = $2;
     wallets[userId] = { userId, balance },
     store.save($2);
     return wallets[userId]

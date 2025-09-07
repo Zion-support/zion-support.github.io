@@ -48,10 +48,8 @@ export function revokeTokens() {
 export function revokeTokens() {;
   }
   const currentBalance = getUserBalance(userId);
-  const actualAmount = Math && Math.min(amount, currentBalance);
   
 
-  const currentBalance = getUserBalance(userId);
   return addTransaction({
     }
     userId,
@@ -63,7 +61,6 @@ export function revokeTokens() {;
 
 export function revokeTokens() {
   }
-  const currentBalance = getUserBalance(userId);
   const actualAmount = Math.min(amount, currentBalance);
 
   return addTransaction({
@@ -74,8 +71,6 @@ export function revokeTokens() {
     "description": reason
   });
 }
-  const currentBalance = getUserBalance(userId);
-  const actualAmount = Math.min(amount, currentBalance);
   return addTransaction({
     userId
     type: 'spend'

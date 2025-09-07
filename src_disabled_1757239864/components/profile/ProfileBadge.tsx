@@ -31,8 +31,6 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       text: "Top Rated",
       colors: "bg-purple-500/20 text-purple-400"}},
 
-import React from 'react';
-import { BadgeCheck, Star, Clock, Award } from 'lucide-react';
 
       <span>{text}</span>;
     </div>);
@@ -42,7 +40,6 @@ import { BadgeCheck, Star, Clock, Award } from 'lucide-react';
   verified: {
   const {
 
-import React from 'react';
 import { BadgeCheck, Star, Clock, Award  } from 'lucide-react';
 import { cn  } from '@/lib/utils';
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated';

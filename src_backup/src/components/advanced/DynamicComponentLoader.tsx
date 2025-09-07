@@ -74,7 +74,6 @@ const "EnhancedError": React.FC<{"error": Error;
   </Card>;
 )// Enhanced Error Component;
 }
-const "EnhancedError": React.FC<{"error": Error;
   }
   "retry": () => void;
   "isOnline": boolean;
@@ -131,7 +130,6 @@ const "EnhancedError": React.FC<{"error": Error;
       </div>;
     </CardContent>;
   </Card>)// Enhanced Error Component;
-const "EnhancedError": React.FC<{"error": Error;
   }
   "retry": () => void;
   "is_online": boolean;
@@ -311,7 +309,6 @@ interface DynamicLoaderProps  {"importFn": () => Promise<{ "default": ComponentT
   children?: React.ReactNode;
   ["key": string]: any;
 // Enhanced Loading Component;
-const "EnhancedLoading": React.FC<{progress?: number;
   }
   message?: string;
   showProgress?: boolean;

@@ -58,8 +58,6 @@ export const "LanguageProvider": React.FC<LanguageProviderProps> = ({ ;
 }) => {;
   }
   const { i18n, t } = useTranslation();
-  const { isAuthenticated, user } = authState;
-  const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(;
     (i18n && i18n.language?.substring(0, 2) as SupportedLanguage) || 'en';'
   );
   const [isRTL, setIsRTL] = useState(i18n && i18n.dir() === 'rtl');'
@@ -175,7 +173,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       
       // If user is authenticated, update their profile
       if (isAuthenticated && user?.id) {
-        const { error } = await supabase
           .from('profiles')
     try {;
       }

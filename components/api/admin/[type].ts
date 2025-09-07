@@ -1,17 +1,13 @@
-import type { NextApiRequest, NextApiResponse } from 'next';'
 
-
-import { ADMIN_TYPES, AdminType, ListParams  } from '../../../utils/admin/types';'
-import { v4 as uuidv4  } from 'uuid';'
-import { supabase as client  } from '../../../utils/supabase/client';'
-import { MOCK_DATA } from '../../../utils/admin/mockData';'
-function isSupabaseConfigured() {
-}
-return !!process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_URL !== '"https": //placeholder.supabase.co';'
+    format: (format as any) || undefined}
 }
 
-function parseListParams("req": NextApiRequest): ListParams & { format?: 'csv','
-} {
+  if (!rows.length) return ';
+  const headers = Object.keys(rows[0]);
+  const escape = (v: any) => {
+    if (v === null || v === undefined) return ';
+    const s = typeof v === 'string ? v : JSON.stringify(v);
+    return ' + s.replace(/"/g, '") + '
   }
   const { search, sort, order, page, pageSize, format, ...rest } = req.query as Record<string, string>;
 
@@ -185,10 +181,7 @@ filtered = filtered.filter(r => { return JSON.stringify(r).toLowerCase().include
         }
       }
       if (params.sort) {
-        }
-        filtered.sort(("a": any, "b": any) => {
-      }
-      // Check condition,
+
 if ( {) {
   $2
 }
@@ -197,9 +190,8 @@ if ( {) {
           const av = (a as any)[params.sort!];
           const bv = (b as any)[params.sort!];
           return (
-            (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1));        });          return (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1);
+            (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc ? 1 : -1));        });          return (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === asc' ? 1 : -1);
 
-const bv = (b as any)[params.sort!];
 
 return (;
             (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1)'
@@ -251,55 +243,24 @@ return res.status(200).json({ "item": updated,;
 });
     }
   }
-return res.status(200).json({ "item": updated,;
-});    }
 
-    }
-  }
-
-  if (req.method = == 'DELETE') {'
-   ;
-  }
-  const id = (req.query.id as string) |'';'
-    if (!id) return res.status(400).json({ "error": 'Missing id','
-});
-    if (useSupabase) {
-      }
-      const { error } = await client.from(type).delete().eq('id', id);'
-      if (error) return res.status(500).json({ "error": error.message
-});
-
-return res.status(200).json({ "ok": true,;
-});
     } else {
       }
       const list = MOCK_DATA[type] || [];
       const idx = list.findIndex((r: any) => r.id === id);
-      if (idx === -1) return res.status(404).json({ error: 'Not found' });
-      const updated = { ...list[idx], ...updates, updated_at: new Date().toISOString() };
+      if (idx === -1) return res.status(404).json({ error: Not found' });
+      const updated = { ...list[idx], ...updates, updated_at: new Date().toISOString() }
       list[idx] = updated as any;
       return res.status(200).json({ item: updated })
     }
   }
 
-const idx = list.findIndex(("r": any) => r.id === id);
-      if (idx = == -1);
-return res.status(404).json({ "error": 'Not found',;'
-});
+
       list.splice(idx, 1);
 return res.status(200).json({ "ok": true,;
 });
     }
   }
 
-return res.status(405).json({ "error": 'Method not allowed',;'
-});
-}return res.status (200) .send (toCsv (data || []) );
-}return res.status (200) .send (toCsv (pageItems) );
-    }
-  }
-return res.status(405).json({ "error": 'Method not allowed',;'
-});
-}return res.status (200) .send (toCsv (data |[]) );
-}return res.status (200) .send (toCsv (pageItems) );
+
 }

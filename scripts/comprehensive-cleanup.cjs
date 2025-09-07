@@ -135,7 +135,6 @@ class ComprehensiveCleanup {
     const buildDirs = ['.next', 'out', 'dist', 'build'];
     
     for (const dir of buildDirs) {
-      const dirPath = path.join(this.projectRoot, dir);
       if (fs.existsSync(dirPath)) {
         try {
           execSync(`rm -rf "${dirPath}"`, { cwd: this.projectRoot });
@@ -165,7 +164,6 @@ class ComprehensiveCleanup {
     ];
 
     for (const file of logFiles) {
-      const filePath = path.join(this.projectRoot, file);
       if (fs.existsSync(filePath)) {
         try {
           fs.unlinkSync(filePath);

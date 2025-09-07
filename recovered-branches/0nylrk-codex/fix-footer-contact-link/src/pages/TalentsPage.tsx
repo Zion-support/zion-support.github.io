@@ -11,7 +11,6 @@ const "TALENT_LISTINGS": ProductListing[] = [;
     "price": 150;
     "currency": "$""
     "tags": ["Machine Learning", "TensorFlow", "Python", "Computer Vision"];// Sample talent listings"
-const "TALENT_LISTINGS": ProductListing[] = [;
   {
     }
     "id": "talent-1","
@@ -142,10 +141,7 @@ const TALENT_FILTERS = [;
       categorySlug="talents""
 return (;
     <DynamicListingPage,
-import { DynamicListingPage } from "@/components/DynamicListingPage";"
-import { ProductListing } from "@/types/listings";"
 // Sample talent listings;
-const "TALENT_LISTINGS": ProductListing[] = [;
   {;
     }
     "id": "talent-1",;"
@@ -259,7 +255,6 @@ const "TALENT_LISTINGS": ProductListing[] = [;
     "rating": 4.9,;
     "reviewCount": 21}],;
 // Filter options specific to talents;
-const TALENT_FILTERS = [;
   { "label": 'Engineering', "value": 'engineering' },;'
   { "label": 'Data Science', "value": 'data-science' },;'
   { "label": 'DevOps', "value": 'devops' },;'
@@ -294,7 +289,6 @@ export default function TalentsPage() {;
     "rating": 4.9,
     "review_count": 21}],
 // Filter options specific to talents;
-const TALENT_FILTERS = [;
   { "label": 'Engineering', "value": 'engineering' },'
   { "label": 'Data Science', "value": 'data - science' },'
   { "label": 'DevOps', "value": 'devops' },'

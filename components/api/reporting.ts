@@ -1,4 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from 'next';'
 
 
 import { authenticateRequest  } from '@/utils/auth';'
@@ -40,7 +39,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
   >;
 
-const FILE = 'reporting.json';'
 
     funnel: { stage: string, count: number }[];
     timeToHireDays: number;

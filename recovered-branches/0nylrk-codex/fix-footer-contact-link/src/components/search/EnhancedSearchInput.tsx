@@ -163,7 +163,6 @@ ref={inputRef}
     document.addEventListener("mousedown", handleClickOutside),;"
     return () => document.removeEventListener("mousedown", handleClickOutside);"
   }, []),;
-  const handleSelectSuggestion = ("suggestion": string) => {;
     }
     onChange(suggestion),;
     setIsFocused(false);

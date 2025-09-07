@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
-const path = require('path');
+const path = require(path');
 const { execSync } = require('child_process');
 
-console.log('🔧 Fixing merge conflicts in API files...');
+console.log(🔧 Fixing merge conflicts in API files...');
 
 // Find all files with merge conflicts
 const findConflictedFiles = () => {
@@ -17,23 +17,23 @@ const findConflictedFiles = () => {
   } catch (error) {
     return [];
   }
-};
+}
 
 const fixMergeConflicts = (filePath) => {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath, utf8');
     
     // Remove merge conflict markers and keep the main branch content
     content = content.replace(/\n([\s\S]*?)\n([\s\S]*?)
     
     // Clean up any remaining conflict markers
-    content = content.replace(/\n?/g, '');
-    content = content.replace(/\n?/g, '');
+    content = content.replace(/\n?/g, ');
+    content = content.replace(/\n?/g, ');
     content = content.replace(/
     
     // Fix common syntax issues
-    content = content.replace(/,\s*;/g, ';'); // Remove trailing commas before semicolons
-    content = content.replace(/import\s+([^;]+),\s*;/g, 'import $1;'); // Fix import statements
+    content = content.replace(/,\s*;/g, ';); // Remove trailing commas before semicolons
+    content = content.replace(/import\s+([^;]+),\s*;/g, import $1;'); // Fix import statements
     
     fs.writeFileSync(filePath, content);
     console.log(`✅ Fixed: ${filePath}`);
@@ -42,7 +42,7 @@ const fixMergeConflicts = (filePath) => {
     console.log(`❌ Failed to fix: ${filePath} - ${error.message}`);
     return false;
   }
-};
+}
 
 const main = () => {
   const conflictedFiles = findConflictedFiles();
@@ -63,6 +63,6 @@ const main = () => {
   });
   
   console.log(`\n🎉 Fixed ${fixed}/${conflictedFiles.length} files`);
-};
+}
 
 main();

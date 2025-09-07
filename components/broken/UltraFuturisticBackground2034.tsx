@@ -1,12 +1,7 @@
 
-
-import React, { useEffect, useRef, useState } from 'react';'
-import { motion } from 'framer-motion';'
-
 interface UltraFuturisticBackground2034Props {
   }
   intensity?: number;
-  theme?: 'quantum' | 'cyberpunk' | 'neural' | 'holographic''
 
 }
 
@@ -65,19 +60,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     };
 
 canvas.height = window.innerHeight;
+      canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+origin/cursor/automate-test-improve-and-merge-code-2533
+    }
 
 
 import React, { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from framer-motion;
 interface UltraFuturisticBackground2034Props {
   intensity?: number;
-  theme?: 'quantum' | 'cyberpunk' | 'neural' | 'holographic'
+  theme?: 'quantum' | cyberpunk | 'neural' | holographic
 }
 
     resizeCanvas();
     window && window.addEventListener('resize', resizeCanvas);'
 
-type ParticleType = 'quantum' | 'neural' | 'holographic';'
 
 ;
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
@@ -269,6 +267,56 @@ x: number;
           const targetIndex = Math.floor(Math.random() * neuralNodes.length);
           if (targetIndex !== i && !node.connections.includes(targetIndex)) {
       }
+type ParticleType = quantum | 'neural' | holographic;
+// Particle system;
+const UltraFuturisticBackground2034: React.FC<;
+  UltraFuturisticBackground2034Props;
+
+      coordinate_x: number;
+      coordinate_y: number;
+      vx: number;
+      vy: number;
+      size: number;
+      life: number;
+      max_life: number;
+      type: ParticleType;    }> = [];
+      x1: number;
+
+      y1: number;
+      x2: number;
+      y2: number;
+      strength: number;
+
+      life: number;    }> = [];
+      x: number;
+      y: number;
+      connections: number[];
+      activation: number;    }> = [];
+      vx: number,
+      vy: number,
+      size: number,
+      life: number,
+      y1: number,
+      x2: number,
+      y2: number,
+      strength: number}> = [];
+
+    // Initialize particles
+    const initParticles = () => {
+
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 2,
+          vy: (Math.random() - 0.5) * 2,
+          size: Math.random() * 3 + 1,
+          life: Math.random() * 100,
+          maxLife: 100,
+
+        neuralNodes.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          connections: []}
       // Create connections;
       neuralNodes.forEach((node, i) => {}
         const numConnections = Math.floor(Math.random() * 3) + 1;
@@ -300,7 +348,6 @@ x: number;
         });
       }
     }
-;
     // Initialize neural network;
     const initNeuralNetwork = () =>: any {
       for (let index = 0; i < 20 * intensity; i++) {        neural_nodes.push ({
@@ -313,8 +360,7 @@ x: number;
           coordinate_x: Math.random () * canvas.width,
           coordinate_y: Math.random () * canvas.height,
           connections: [],
-          activation: Math.random (),
-        });          activation: Math.random ();
+          activation: Math.random ()});          activation: Math.random ();
         });
       }
       // Create connections;
@@ -329,7 +375,6 @@ x: number;
           }
         }
       });    }
-;
     // Initialize entanglement lines;
     const initEntanglementLines = () =>: any {
       for (let index = 0; i < 15 * intensity; i++) {        const x1 = Math.random () * canvas.width;
@@ -345,7 +390,6 @@ x: number;
         }
       });
     }
-;
     // Initialize entanglement lines;
     const initEntanglementLines = () =>: any {
       for (let index = 0; i < 15 * intensity; i++) {      for (let index = 0, i < 15 * intensity, i++) {
@@ -533,6 +577,11 @@ entanglementLines.forEach((line, index) => {
         
         ctx.save();
         ctx.globalAlpha = alpha * 0.6;
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+
         }
       });
       // Draw entanglement lines;
@@ -543,8 +592,8 @@ entanglementLines.forEach((line, index) => {
         ctx.save();
         ctx.globalAlpha = alpha * 0.6;`
         ctx.strokeStyle = `rgba(0, 255, 255, ${alpha})`;
-        ctx.lineWidth = 2;'
-        ctx.shadowColor = 'cyan';
+        ctx.lineWidth = 2;
+        ctx.shadowColor = cyan';
         ctx.shadowBlur = 5;
         
         ctx.beginPath();
@@ -553,7 +602,6 @@ entanglementLines.forEach((line, index) => {
         ctx.stroke();
         ctx.restore();
 
-        if (line.life <= 0) {
 
 }
 
@@ -997,18 +1045,19 @@ if ( {) {
             rotate: [0, 180, 360];
           }}
         />
-        <motion.div'
-          className='absolute bottom-32 left-1/3 w-40 h-20 border border-green-400/30''
-          style={{ clipPath: 'polygon(0% 0%, 100% 0%, 80% 100%, 20% 100%)' }}
+        <motion.div
+          className=absolute bottom-32 left-1/3 w-40 h-20 border border-green-400/30''
+          style={{ clipPath: polygon(0% 0%, 100% 0%, 80% 100%, 20% 100%) }}
           animate={{}
             rotate: [0, 180, 360]
-            opacity: [0.2, 0.5, 0.2],          }}
+            opacity: [0.2, 0.5, 0.2]}}
           transition={{}
             duration: 8,
             repeat: -1,'
             ease: 'linear',    }
+            ease: 'linear}
       {/* Framer Motion Geometric Shapes */}
-      <div className="absolute inset-0">;
+      <div className="absolute inset-0>;
         {/* Floating geometric shapes */}
         <motion&& motion.div
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30"
@@ -1345,23 +1394,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;{/* Holographic matrix effect */}<div className='absolute inset-0'>;
         {Array.from({ length: 20 }).map((_, i) => (<motion.div;
             key={i}
-            className='absolute w - px h - full bg - gradient - to - b from - transparent via - cyan - 400 / 20 to - transparent';
+            className="absolute w - px h - full bg - gradient - to - b from - transparent via - cyan - 400 / 20 to - transparent";`
             style={{ left: `${(i * 5) % 100}%` }}
-            animate={{key={i}
-            className="absolute w - px h - full bg - gradient - to - b from - transparent via - cyan - 400 / 20 to - transparent";
-            style={{ left: `${(i * 5) % 100}%` }}
-            animate={{transition={{duration: 3;
+            animate={{}
+            transition={{}
+              duration: 3;
               delay: i * 0.1;
               repeat: -1;
-            transition={{duration: 3,delay: i * 0.1,repeat: -1,ease: 'easeInOut',            }}              ease: "easeInOut";
-              opacity: [0, 1, 0],scaleY: [0, 1, 0],}}
-            transition={{duration: 3,delay: i * 0.1,repeat: -1,ease: 'easeInOut',}}
-          />;
-      <div className='absolute inset-0'>
+            transition={{}
+              duration: 3,
+              delay: i * 0.1,
+              repeat: -1,
+              ease: 'easeInOut'}}              ease: easeInOut"
+              opacity: [0, 1, 0],
+              scaleY: [0, 1, 0]}}
+            transition={{
+              duration: 3,
+              delay: i * 0.1,
+              repeat: -1}}
+          />
+        ))}
+      </div>
 
-<div className='absolute inset-0'>'
-        <motion.div,
-className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]""
 
             transition={{
 
@@ -1388,7 +1442,7 @@ className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transpar
         ))}
       </div>;
       {/* Cyberpunk grid */}
-      <div className='absolute inset - 0'>;'
+      <div className='absolute inset - 0'>;
         <motion.div;
           className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]";
         <motion&& motion.div
@@ -1407,14 +1461,13 @@ className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transpar
       {/* Cyberpunk grid */}
       <div className="absolute inset-0">
         <motion.div
-          className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]"
+          className=absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]
           style={{
             }
             "background_size": '50px 50px','
           }}
           animate={{
 
-            }
 
             "opacity": [0.3, 0.6, 0.3]
           }}
@@ -1434,14 +1487,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           />))}
       </div>;
       {/* Cyberpunk grid */}'
-      <div className='absolute inset - 0'>;
-        <motion.div;'
+      <div className='absolute inset - 0>;
+        <motion.div;
           className='absolute inset - 0 bg-[linear - gradient (rgba (0, 255, 255, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (0, 255, 255, 0.1)_1px, transparent_1px)]';
-          style={{'
-            background_size: '50px 50px',
-          }}
+          style={{
+            background_size: 50px 50px'}}
           animate={{}
-            opacity: [0.3, 0.6, 0.3],          }}
+            opacity: [0.3, 0.6, 0.3]}}
           transition={{}
             duration: 4,
             repeat: -1,'
@@ -1501,18 +1553,19 @@ export default UltraFuturisticBackground2034;}}
             opacity: [0.3, 0.6, 0.3]
 export default UltraFuturisticBackground2034;        <motion.div;"
           className="absolute inset - 0 bg-[linear - gradient (rgba (0, 255, 255, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (0, 255, 255, 0.1)_1px, transparent_1px)]";
+          className=absolute inset - 0 bg-[linear - gradient (rgba (0, 255, 255, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (0, 255, 255, 0.1)_1px, transparent_1px)]";
           style={{'
-            background_size: '50px 50px';
+            background_size: '50px 50px;
           }}
           animate={{}
-};
+}
 
 export default UltraFuturisticBackground2034;        <motion.div"
-          className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]"
+          className=absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]
 export default UltraFuturisticBackground2034;        <motion&& motion.div"
-          className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0 && 0.1)_1px,transparent_1px)]"
+          className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0 && 0.1)_1px,transparent_1px)]
 
-          style={{'
+          style={{
             backgroundSize: '50px 50px'
           }}
           animate={{}
@@ -1526,8 +1579,8 @@ export default UltraFuturisticBackground2034;
           }}
           transition={{}
             duration: 4,
-            repeat: -1,'"
-            ease: 'easeInOut',            ease: "easeInOut"
+            repeat: -1,
+            ease: easeInOut',            ease: "easeInOut"
             opacity: [0.3, 0.6, 0.3],
           }}
           transition={{
@@ -1569,21 +1622,20 @@ export default UltraFuturisticBackground2034;
       </div>
     </div>
 };
+}
 
 export default UltraFuturisticBackground2034;  );
-};
+}
 
-export default UltraFuturisticBackground2034;'"
-            ease: 'easeInOut',            ease: "easeInOut";
+export default UltraFuturisticBackground2034;'
+            ease: 'easeInOut',            ease: easeInOut";
           }}
         />;
       </div>;
     </div>);
 }
-;
 export default UltraFuturisticBackground2034);
 }
-;
 export default UltraFuturisticBackground2034;
 ;
 );

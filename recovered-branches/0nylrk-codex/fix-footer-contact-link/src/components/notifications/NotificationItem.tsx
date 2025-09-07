@@ -100,7 +100,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
 }) => {;
   const navigate = useNavigate();
 
-  const handleClick = () => {;
     if (!notification && notification.read) {;
       onMarkAsRead(notification && notification.id);
     }

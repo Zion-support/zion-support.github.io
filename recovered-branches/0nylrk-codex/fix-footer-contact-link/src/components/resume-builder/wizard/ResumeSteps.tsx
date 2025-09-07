@@ -31,8 +31,6 @@ return (;
     </TabsList>);
 }
 ;
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";"
-import { StepProps } from "./types";"
 ;
 interface ResumeStepsProps {;
   }

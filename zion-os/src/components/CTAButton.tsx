@@ -60,7 +60,6 @@ interface CTAButtonProps {;
 ;
 export function CTAButton() {;
   }
-  const baseClasses = "inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 transform "hover": scale-105 "focus":outline-none "focus":ring-2 "focus":ring-offset-2 "focus":ring-offset-gray-900";"
   const baseClasses = "inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 transform "hover": scale-105 "focus":outline-none "focus":ring-2 "focus":ring-offset-2 "focus":ring-offset-gray-900",;"
   const variantClasses = {;
     }

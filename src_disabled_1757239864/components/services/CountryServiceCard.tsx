@@ -68,48 +68,48 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =    if (!countryName) return "🌐",
     
     const emojiMap: Record<string, string> = {
-      "United States": "🇺🇸";
-      "United Kingdom": "🇬🇧";
-      "Canada": "🇨🇦";
-      "Australia": "🇦🇺";
-      "Germany": "🇩🇪", 
-      "France": "🇫🇷";
-      "Japan": "🇯🇵";
-      "China": "🇨🇳";
-      "Brazil": "🇧🇷";
-      "India": "🇮🇳";
-      "Russia": "🇷🇺";
-      "Singapore": "🇸🇬";
-      "South Korea": "🇰🇷";
-      "South Africa": "🇿🇦";
+      "United States: 🇺🇸";
+      "United Kingdom: 🇬🇧";
+      "Canada: 🇨🇦";
+      "Australia: 🇦🇺";
+      "Germany: 🇩🇪", 
+      "France: 🇫🇷";
+      "Japan: 🇯🇵";
+      "China: 🇨🇳";
+      "Brazil: 🇧🇷";
+      "India: 🇮🇳";
+      "Russia: 🇷🇺";
+      "Singapore: 🇸🇬";
+      "South Korea: 🇰🇷";
+      "South Africa: 🇿🇦";
       // Default if no flag is found
-      "default": "🌐"
-    };
+      "default: 🌐"
+    }
     
-    return emojiMap[countryName] || "🌐"
-  };
+    return emojiMap[countryName] || "🌐
+  }
   
   // Get response time estimate based on country
   const getResponseTime = (countryName: string | undefined): string => {
-    if (!countryName) return "8-24 hours";
+    if (!countryName) return 8-24 hours";
     
-    const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"];
-    const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"];
+    const tier1 = ["United States, United Kingdom", "Germany, Japan", "Singapore, Australia", "Canada, France"];
+    const tier2 = ["China, Brazil", "India, South Korea", "South Africa, Russia"];
     
     if (tier1.includes(countryName)) {
-      return "4 hours"
+      return "4 hours
     } else if (tier2.includes(countryName)) {
-      return "6 hours"
+      return 6 hours"
     } else {
-      return "8-24 hours"
+      return "8-24 hours
     }
-  };
+  }
   
 >  return (
     <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
       isPopular 
-        ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple" 
-        : "bg-zion-blue-dark border-zion-blue-light"
+        ? bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple" 
+        : "bg-zion-blue-dark border-zion-blue-light
     }`}>
       <CardHeader className="pb-2">
         <div className="flex items-center justify-between">
@@ -241,10 +241,10 @@ import {Card,CardContent,CardFooter,CardHeader} from '@/components/ui/card';
         </Button>
         <Button
           asChild
-          variant="ghost"
-          className="w-full text-zion-cyan hover: text-zion-purple"
+          variant=ghost"
+          className="w-full text-zion-cyan hover: text-zion-purple
         >
-          <Link href="/contact">Contact Sales</Link>
+          <Link href=/contact">Contact Sales</Link>
         </Button>
       </CardFooter>
     </Card>

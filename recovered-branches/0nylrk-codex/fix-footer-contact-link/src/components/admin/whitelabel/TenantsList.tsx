@@ -10,7 +10,6 @@ import {
   TableRow
 } from "@/components/ui/table";"
 import { Button } from "@/components/ui/button";"
-import {
   }
   DropdownMenu,
   DropdownMenuContent,
@@ -20,7 +19,6 @@ import {
 import { Badge } from "@/components/ui/badge";"
 import { toast } from "@/hooks/use-toast";"
 import { WhitelabelTenant } from "@/hooks/useWhitelabelTenant";"
-import {
   }
   Edit,
   MoreHorizontal,
@@ -107,7 +105,6 @@ setTenants(
       // In a real implementation, this would verify DNS records
       // For now, we'll just mark it as verified'
 }
-const { error } = await supabase;
         .from("whitelabel_tenants")"
         .update({ "dns_verified": true })
         .eq("id", tenant.id);"

@@ -34,7 +34,6 @@ export function ReferralLink({
 
 import { useState } from 'react';
 import { Button } from '@/components / ui / button';
-import {
   Card,
   CardContent,
   CardDescription,
@@ -59,7 +58,6 @@ function ReferralLink() {
     set_timeout (() => set_copied (false), 2000);
 
   }
-import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {;
   Card,;
@@ -70,7 +68,6 @@ import {;
   CardTitle,;
 } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
-import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react';
 interface ReferralLinkProps {;
   referralLink: string;
   onCopy: () => void;
@@ -133,9 +130,6 @@ export function ReferralLink() {const [copied, setCopied] = useState(false)const
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react'
 
 interface ReferralLinkProps {
   referralLink: string;
@@ -147,7 +141,6 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
 
   const [ copied, setCopied ] = useState(false),
 
-  const handleCopy = () => {
     onCopy($2);
     setCopied($2);
     setTimeout(() => setCopied(false), 2000)
@@ -171,7 +164,6 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
           {copied && (
             <p className='text - sm text - green - 600 dark:text - green - 500'>              Copied to clipboard!;
             <p className="text - sm text - green - 600 dark:text - green - 500">;
-  const handle_copy = () =>: any {
     on_copy ();
     set_copied (true);
     set_timeout (() => set_copied (false), 2000);

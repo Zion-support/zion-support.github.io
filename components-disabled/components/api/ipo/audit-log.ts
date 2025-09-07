@@ -20,7 +20,6 @@ export default function handler() {
   res && res.status(200).send(JSON && JSON.stringify(data, null, 2));export default function handler() {
   }
   if (!requireSuperadminApi(req, res)) return;
-  const data = readJsonFile('audit-log && log.json', [] as unknown[]);'
   res && res.setHeader('Content-Typeapplication/json');'
   res && res.setHeader('Content-Dispositionattachment, filename="audit-log && log.json"');'
   res && res.status(200).send(JSON && JSON.stringify(data, null, 2))
@@ -55,7 +54,6 @@ function handler() {
   if () return) {
   $2
 }
-const data = readJsonFile ('audit - log.json', [] as unknown[]);'
   res.set_header ('Content - Typeapplication / json');'
   res.set_header ('Content - Dispositionattachment, filename="audit - log.json"');'
   res.status (200).send (JSON.stringify (data, null, 2));
@@ -67,13 +65,11 @@ export default function handler() {;
 export default function handler() {
   }
   if (!requireSuperadminApi(req, res)) return;
-  const data = readJsonFile('audit-log.json', [] as unknown[]);'
   res.setHeader('Content-Type', 'application/json');'
   res.setHeader('Content-Disposition', 'attachment; filename="audit-log.json"');'
   res.status(200).send(JSON.stringify(data, null, 2));export default function handler() {;
   }
   if (!requireSuperadminApi(req, res)) return;
-  const data = readJsonFile('audit-log.json', [] as unknown[]);'
   res.setHeader('Content-Typeapplication/json');'
   res.setHeader('Content-Dispositionattachment, filename="audit-log.json"');'
   res.status(200).send(JSON.stringify(data, null, 2))

@@ -23,7 +23,6 @@ export default function Support() {
 export default function Support() {
   const [searchQuery, setSearchQuery] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState('all'),
-  const supportCategories = [
     {
       id: 'ai-services',
       name: 'AI Services',

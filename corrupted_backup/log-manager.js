@@ -57,13 +57,11 @@ class LogManager {
   async rotateLogs() {
     this.log('Rotating log files...', 'INFO');
     try {
-      const logFiles = this.getLogFiles();
       const now = new Date();
       const timestamp = now.toISOString().replace(/[:.]/g, '-');
       let rotatedCount = 0;
       logFiles.forEach(file => {
         try {
-          const stats = fs.statSync(file);
           const fileAge = Date.now() - stats.mtime.getTime();
           const fileAgeDays = fileAge / (1000 * 60 * 60 * 24);
           // Rotate files older than 7 days or larger than 10MB
@@ -101,10 +99,8 @@ class LogManager {
       let spaceFreed = 0;
       backupFiles.forEach(file => {
         try {
-          const stats = fs.statSync(file);
           const fileAge = now - stats.mtime.getTime();
           if (fileAge > maxAge) {
-            const size = stats.size;
             fs.unlinkSync(file);
             cleanedCount++;
             spaceFreed += size;
@@ -122,11 +118,9 @@ class LogManager {
   async compressLogs() {
     this.log('Compressing large log files...', 'INFO');
     try {
-      const logFiles = this.getLogFiles();
       let compressedCount = 0;
       logFiles.forEach(file => {
         try {
-          const stats = fs.statSync(file);
           // Compress files larger than 5MB
           if (stats.size > 5 * 1024 * 1024) {
             const compressedPath = `${file}.gz`;
@@ -146,7 +140,6 @@ class LogManager {
   async checkLogHealth() {
     this.log('Checking log health...', 'INFO');
     try {
-      const logFiles = this.getLogFiles();
       let errorsFound = 0;
       const errorPatterns = [/error/i,/exception/i,/fatal/i;
         /critical/i;
@@ -230,24 +223,18 @@ ${this.logsDir}/*.log {
     walkDir(this.logsDir);
     return files}
   getBackupFiles() {
-    const files = [];
     if (!fs.existsSync(this.backupDir)) return files;
     const items = fs.readdirSync(this.backupDir);
     items.forEach(item => {
       const fullPath = path.join(this.backupDir, item);
-      const stat = fs.statSync(fullPath);
       if (stat.isFile()) {
         files.push(fullPath)}
     });
     return files}
   getCompressedFiles() {
-    const files = [];
     function walkDir(dir) {
       if (!fs.existsSync(dir)) return;
-      const items = fs.readdirSync(dir);
       items.forEach(item => {
-        const fullPath = path.join(dir, item);
-        const stat = fs.statSync(fullPath);
         if (stat.isDirectory() && item !== 'backup') {
           walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) {
           files.push(fullPath)}
@@ -284,7 +271,6 @@ ${this.logsDir}/*.log {
       recommendations.push('High number of errors in logs, investigate application issues')}
     if (this.logStats.filesCleaned === 0) {
       recommendations.push('No old logs were cleaned, check rotation schedule')}
-    const diskSpace = this.getDiskSpace();
     if (diskSpace.available < 1024 * 1024 * 1024) { // Less than 1GB
       recommendations.push('Low disk space, implement more aggressive log management')}
     return recommendations}

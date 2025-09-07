@@ -39,9 +39,6 @@ variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link"
 }
 export function AIEnhancementButton() {
   }
-  const { enhanceContent, isEnhancing } = useAIContentEnhancer();
-  const [showActions, setShowActions] = useState(false);
-  const [generatedContent, setGeneratedContent] = useState<string | null>(null);
   options,
   onEnhanced,
   buttonText = "Enhance with AI","

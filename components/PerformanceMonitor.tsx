@@ -74,8 +74,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
     if (typeof window === 'undefined' || typeof window.performance === 'undefined') return;
 
     const measurePerformance = () => {
-      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = window.performance.getEntriesByType('paint');
+      const navigation = window.performance.getEntriesByType('navigation)[0] as PerformanceNavigationTiming;
+      const paint = window.performance.getEntriesByType(paint');
       
       const performanceData = {
         // Navigation timing
@@ -84,11 +84,11 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
         totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
         
         // Paint timing
-        firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
-        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+        firstPaint: paint.find(entry => entry.name === 'first-paint)?.startTime || 0,
+        firstContentfulPaint: paint.find(entry => entry.name === first-contentful-paint')?.startTime || 0,
         
         // Resource timing
-        resourceCount: window.performance.getEntriesByType('resource').length,
+        resourceCount: window.performance.getEntriesByType('resource).length,
         
         // Memory usage (if available)
         memory: (window.performance as unknown as { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory ? {
@@ -96,7 +96,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
           total: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.totalJSHeapSize,
           limit: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit
         } : null
-      };
+      }
 
       if (onPerformanceData) {
         onPerformanceData(performanceData);
@@ -110,7 +110,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
     };
 
     // Measure performance after page load
-    if (document.readyState === 'complete') {
+    if (document.readyState === complete') {
       measurePerformance();
     } else {
       window.addEventListener('load', measurePerformance);

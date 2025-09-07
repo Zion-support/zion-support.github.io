@@ -56,7 +56,6 @@ interface FavoriteButtonProps  {"itemId": string;
   className?: string;
 export function FavoriteButton() {e.stopPropagation()if (!isAuthenticated) {setLoginOpen(true)return;
     }
-    const wasWishlisted = isWishlisted(itemId)toggle(itemId)// Provide feedback;
     toast({"title": wasWishlisted ? 'Removed from wishlist' : 'Added to wishlist';'
       }
       "description": wasWishlisted;

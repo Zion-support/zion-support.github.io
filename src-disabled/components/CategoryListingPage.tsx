@@ -157,7 +157,6 @@ import { ListingScoreCard } from "@/components/ListingScoreCard",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
-import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react'
 import ListingGridSkeleton from "@/components/skeletons/ListingGridSkeleton",
 import { safeStorage } from "@/utils/safeStorage",
 
@@ -252,7 +251,6 @@ export function CategoryListingPage({;
   useEffect(() => {;
     let mounted = true,;
     setIsLoading(true),;
-    const timeout = setTimeout(() => {;
       if (mounted) setIsLoading(false);
     }, 300),;
     return () => {;
@@ -621,14 +619,10 @@ export function CategoryListingPage({;
     { label: 'Highly Rated', value: 'high-rating' },;
     { label: 'Best AI Match', value: 'best-match' }];
 }: CategoryListingPageProps) {;
-  const [searchQuery, setSearchQuery] = useState(""),;
-  const [selectedSort, setSelectedSort] = useState(;
     () => safeStorage.getItem('category_selected_sort') || sortOptions[0]?.value || 'newest';
   ),;
-  const [selectedFilter, setSelectedFilter] = useState(;
     () => safeStorage.getItem('category_selected_filter') || filterOptions[0]?.value || 'all';
   ),;
-  const [isLoading, setIsLoading] = useState(false),;
   useEffect(() => {;
     safeStorage.setItem('category_selected_sort', selectedSort);
   }, [selectedSort]),;
@@ -636,9 +630,7 @@ export function CategoryListingPage({;
     safeStorage.setItem('category_selected_filter', selectedFilter);
   }, [selectedFilter]),;
   useEffect(() => {;
-    let mounted = true,;
     setIsLoading(true),;
-    const timeout = setTimeout(() => {;
       if (mounted) setIsLoading(false);
     }, 300),;
     return () => {;
@@ -647,10 +639,8 @@ export function CategoryListingPage({;
     }
   }, [searchQuery, selectedSort, selectedFilter]),;
   // Process listings based on filters and search;
-  const processedListings = initialListings;
     .filter(listing => {;
       // Apply search filter;
-      const matchesSearch =;
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         (listing.tags && listing.tags.some(tag =>;

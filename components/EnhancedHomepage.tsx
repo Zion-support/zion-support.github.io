@@ -50,10 +50,9 @@ interface EnhancedHomepageProps {
   className?: string;
 
 }
-
-const "EnhancedHomepage": React.FC<EnhancedHomepageProps> = ({ className    }) => {
-
-
+}
+}
+}
 }
 
 
@@ -131,22 +130,20 @@ export default EnhancedHomepage
 }
 visible: {opacity: 1, transition: {duration: 0.8, stagger_children: 0.1;
 }}}}}
-
-export default EnhancedHomepage;import EnhancedServiceCard from './ui / EnhancedServiceCard';'
+export default EnhancedHomepage;import EnhancedServiceCard from ./ui / EnhancedServiceCard';
 // Import service data;
-import { revolutionary2044AdvancedMicroSaas  } from '../data / revolutionary - 2044 - advanced - micro - saas';'
-import { revolutionary2044ITServices  } from '../data / revolutionary - 2044 - it - services';'
-import { revolutionary2044AIServices  } from '../data / revolutionary - 2044 - ai - services';'
-import { realEnterpriseMicroSaas2025  } from '../data / 2025 - real - enterprise - micro - saas';'
-import { innovativeITServicesExpansion2025V3  } from '../data / 2025 - innovative - it - services - expansion - v3';'
-import { innovativeAIServicesExpansion2025V3  } from '../data / 2025 - innovative - ai - services - expansion - v3';'
-import { innovative2025ITInfrastructureServices  } from '../data / 2025 - innovative - it - infrastructure - services';'
-import { innovative2025AIAutonomousServices  } from '../data / 2025 - innovative - ai - autonomous - services';'
-const "EnhancedHomepage": React.FC = () => {const [is_visible, setIsVisible] = useState (false)const [selected_category, setSelectedCategory] = useState ('all')const [mouse_position, setMousePosition] = useState ({ "coordinate_x": 0, "coordinate_y": 0 }),const [currentServiceIndex, setCurrentServiceIndex] = useState (0)const [color_scheme, setColorScheme] = useState<'cyber' | 'quantum' | 'neon' | 'holographic'>('cyber')const [showPerformanceMonitor, setShowPerformanceMonitor]  = useState (false)useEffect (() => {setIsVisible (true)// Auto - rotate featured services;'
-    }
+import { revolutionary2044AdvancedMicroSaas  } from '../data / revolutionary - 2044 - advanced - micro - saas;
+import { revolutionary2044ITServices  } from ../data / revolutionary - 2044 - it - services';
+import { revolutionary2044AIServices  } from '../data / revolutionary - 2044 - ai - services;
+import { realEnterpriseMicroSaas2025  } from ../data / 2025 - real - enterprise - micro - saas';
+import { innovativeITServicesExpansion2025V3  } from '../data / 2025 - innovative - it - services - expansion - v3;
+import { innovativeAIServicesExpansion2025V3  } from ../data / 2025 - innovative - ai - services - expansion - v3';
+import { innovative2025ITInfrastructureServices  } from '../data / 2025 - innovative - it - infrastructure - services;
+import { innovative2025AIAutonomousServices  } from ../data / 2025 - innovative - ai - autonomous - services';
+const EnhancedHomepage: React.FC = () => {const [is_visible, setIsVisible] = useState (false)const [selected_category, setSelectedCategory] = useState ('all)const [mouse_position, setMousePosition] = useState ({ coordinate_x: 0, coordinate_y: 0 }),const [currentServiceIndex, setCurrentServiceIndex] = useState (0)const [color_scheme, setColorScheme] = useState<cyber' | 'quantum | neon' | 'holographic>(cyber')const [showPerformanceMonitor, setShowPerformanceMonitor]  = useState (false)useEffect (() => {setIsVisible (true)// Auto - rotate featured services;
     const interval = set_interval (() => {setCurrentServiceIndex ((prev) => (prev + 1) % 6)}, 6000)// Track mouse movement for parallax effects;
-    const handleMouseMove = ("e": MouseEvent) =>: any {setMousePosition ({ "coordinate_x": e.client_x, "coordinate_y": e.client_y })}// Show performance monitor after 5 seconds;
-    const performance_timer = set_timeout (() => {setShowPerformanceMonitor (true)}, 5000)window.addEventListener ('mousemove', handleMouseMove)return () => {clear_interval (interval)clear_timeout (performance_timer)window.removeEventListener ('mousemove', handleMouseMove)}'
+    const handleMouseMove = (e: MouseEvent) =>: any {setMousePosition ({ coordinate_x: e.client_x, coordinate_y: e.client_y })}// Show performance monitor after 5 seconds;
+    const performance_timer = set_timeout (() => {setShowPerformanceMonitor (true)}, 5000)window.addEventListener ('mousemove, handleMouseMove)return () => {clear_interval (interval)clear_timeout (performance_timer)window.removeEventListener (mousemove', handleMouseMove)}
   }, [])// Combine all revolutionary services;
   const allRevolutionaryServices = [;
     ...revolutionary2044AdvancedMicroSaas;
@@ -158,7 +155,6 @@ const "EnhancedHomepage": React.FC = () => {const [is_visible, setIsVisible] = u
 
 }
 
-const interval = set_interval (() => {setCurrentServiceIndex ((prev) => (prev + 1) % 6)}, 6000)// Track mouse movement for parallax effects;
 
 const handleMouseMove = ("e": MouseEvent) =>: any {setMousePosition ({ "coordinate_x": e.client_x, "coordinate_y": e.client_y }
 }// Show performance monitor after 5 seconds;
@@ -167,7 +163,6 @@ const performance_timer = set_timeout (() => {setShowPerformanceMonitor (true)},
   return () => {clear_interval (interval)clear_timeout (performance_timer)window.removeEventListener ('mousemove', handleMouseMove)}'
   }, [])// Combine all revolutionary services;
 
-const allRevolutionaryServices = [;
   ...revolutionary2044AdvancedMicroSaas;
     ...revolutionary2044ITServices;
     ...revolutionary2044AIServices;
@@ -178,73 +173,7 @@ const allRevolutionaryServices = [;
   return (<>;
       <Head>;
         <title>Zion Tech Group - Revolutionary 2045 Technology Solutions</title>;
-        <meta name="description" content="Experience the future of technology with Zion Tech Group's revolutionary AI consciousness, quantum computing, and autonomous solutions. Transform your business with cutting-edge innovation." />;"
-        <meta name="keywords" content="AI consciousness, quantum computing, autonomous solutions, space technology, cybersecurity, business intelligence, Zion Tech Group, 2045 technology" />;"
-        <meta property=""og":title" content="Zion Tech Group - Revolutionary 2045 Technology" />;"
-        <meta property=""og":description" content="Pioneering the future of technology with revolutionary AI consciousness and quantum computing solutions." />;"
-        <meta property=""og":url" content=""https"://ziontechgroup && ziontechgroup.com" />;"
-        <meta property=""og":type" content="website" />;"
-        <link rel="canonical" href=""https"://ziontechgroup && ziontechgroup.com" />;{/* Performance and SEO Meta Tags */}"
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />;"
-        <meta name="theme-color" content="#00d4ff" />;"
-        <meta name="robots" content="index, follow" />;"
-        <meta name="author" content="Zion Tech Group" />;{/* Preload critical resources */}"
-        <link rel="preload" href="/fonts/inter-var && var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />;"
-        <link rel="dns-prefetch" href="//fonts && fonts.googleapis.com" />;"
-        <link rel="dns-prefetch" href="//fonts && fonts.gstatic.com" />;"
-      </Head>;{/* Enhanced Navigation */}
-      <EnhancedNavigation />;<UltraFuturisticBackground variant={colorScheme === 'cyber' ? 'cyberpunk' : colorScheme === 'quantum' ? 'quantum' : colorScheme === 'neon' ? 'neural' : 'holographic'} intensity="high">;"
-        {/* Hero Section */}
-        <motion&& motion.section;
-          className="relative min-h-screen flex items-center justify-center px-4 "lg": px-8 pt-20";"
-          variants={heroVariants}
-          initial="hidden";"
-          animate="visible">;"
-          <div className="relative z-10 text-center max-w-6xl mx-auto">;"
-            {/* Main Heading */}
-            <motion.p;
-              className="text-xl "md":text-2xl "lg":text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed";"
-              variants={itemVariants}
-            >;
-              Pioneering the Future of Technology with Revolutionary AI Consciousness;
-              Quantum Computing, and Autonomous Solutions;
-            </motion.p>;
-            <motion&& motion.h1;
-              className="text-5xl "md":text-7xl "lg":text-8xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6";"
-              variants={itemVariants}>;
-              Zion Tech Group;
-            </motion && motion.h1>;
-            <motion&& motion.p;
-              className="text-xl "md":text-2xl "lg":text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed";"
-              variants={itemVariants}>;
-              Pioneering the Future of Technology with Revolutionary AI Consciousness,Quantum Computing, and Autonomous Solutions;
-            </motion && motion.p>;{/* CTA Buttons */}
-            <motion&& motion.div;
-              className="flex flex-col "sm":flex-row gap-4 justify-center items-center mb-12";"
-              variants={itemVariants}>;
-              <Link href="/services">;"
-                <motion&& motion.button;
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl text-lg "hover":from-cyan-600 "hover":to-blue-700 transition-all duration-300 transform "hover":scale-105 "hover":shadow-2xl";"
-          {/* Floating Elements */}
-          <motion&& motion.div;
-            className="absolute top-20 left-10 text-cyan-400/20";"
-            variants={floatingVariants}
-            <motion.div;
-              className="flex flex-wrap justify-center gap-4 mb-12";"
-              variants={itemVariants}
-            >;
-              {categories.map((category) => (<motion.button;
-                  }
-                  key={category.id}
-                  onClick={() => handleCategoryChange(category.id)}
-                  className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 transform "hover":scale-105 ${selectedCategory === category.id;`                      ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-2xl';'
-                      : 'bg-gray-800/50 text-gray-300 "hover":bg-gray-700/50 border border-gray-600';'
-                  }`}`                  whileHover={{ "scale": 1.05 }}
-                  whileTap={{ "scale": 0.95 }}
-                  whileTap={{ "scale": 0.95 
-}
-                >;
-                  <category.icon className="inline-block w-5 h-5 mr-2" />;"
+
                   {category.name}
                 </motion.button>;
               ))}
@@ -274,33 +203,7 @@ const allRevolutionaryServices = [;
           </div>;
         </motion.section>;
         {/* Services Grid */}
-        <motion.section;
-        {/* Services Grid */}
-        <motion.section;
-          className="py-16 px-4 "lg":px-8";"
-          variants={containerVariants}
-          initial="hidden";"
-          animate="visible";"
-        >;
-          animate="visible">"
 
-          <div className="max-w-7xl mx-auto">;"
-            </motion && motion.div>;
-          </div>;
-        </motion && motion.section>;
-        {/* Services Grid */}
-        <motion&& motion.section;
-          className="py-16 px-4 "lg":px-8";"
-          variants={containerVariants}
-          initial="hidden";"
-          animate="visible">;"
-          <div className="max-w-7xl mx-auto">;"
-            <motion&& motion.div;
-            <motion.div;
-              className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8";"
-              variants={containerVariants}>;
-              {getFilteredServices().slice(0, 12).map((service, index) => (<EnhancedServiceCard;
-                  }
                   key={service.id}
                   id={service.id}
                   title={service.name}

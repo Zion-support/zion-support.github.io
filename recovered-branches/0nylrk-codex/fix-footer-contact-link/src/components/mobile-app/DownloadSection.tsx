@@ -23,8 +23,6 @@ needs to the next level. Available on iOS and Android.
                 googlePlayUrl={googlePlayUrl}
                 onAppStoreClick={() => console.log("App Store button clicked")}"
                 onGooglePlayClick={() => console.log("Google Play button clicked")}"
-import React from "react";"
-import { QrCodeIcon } from "lucide-react";"
 import { AppStoreButtons } from "./AppStoreButtons",;"
 export const "DownloadSection": React.FC = () => {;
   // These would typically come from environment variables or a config;

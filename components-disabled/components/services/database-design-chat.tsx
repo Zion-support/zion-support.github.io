@@ -7,13 +7,11 @@ const "DatabaseDesignChat": NextPage = () => ;
   return (<div>;
       <Head>;
 
-const "DatabaseDesignChat": NextPage = () => ;
   return (<div>;
       <Head>;
         <title>DatabaseDesignChat - Zion Tech Solutions</title>;
         <meta name = "description" content="DatabaseDesignChat service" />{" "}"
 ;
-  const "DatabaseDesignChat": NextPage = () => ;
   return (<div>;
       <Head></Head>;<meta name="description" content="DatabaseDesignChat service" />;"
       </Head>;
@@ -39,7 +37,6 @@ return (;
         <title>DatabaseDesignChat - Zion Tech Solutions</title>;
 
 
-const "DatabaseDesignChat": NextPage = () => {
 }
 return (;
     <div>
@@ -51,7 +48,6 @@ return (;
 
         <title>DatabaseDesignChat - Zion Tech Solutions</title>;
 
-const "DatabaseDesignChat": NextPage = () => {
       <main>
         <h1>DatabaseDesignChat</h1>
         <p>Service details coming soon...</p>
@@ -94,7 +90,6 @@ import type { NextPage } from './next';'
 import Head from './next / head';'
 import Link from './next / link';'
 
-const "DatabaseDesignChat": NextPage = () => ;
   return (<div>;
       <Head>;
         <title > DatabaseDesignChat - Zion Tech Solutions</title>;
@@ -122,7 +117,6 @@ export default DatabaseDesignChat;<div />;
     </div>;
   )},export default DatabaseDesignChat;
 
-const "DatabaseDesignChat": NextPage = () => ;
   return (<div>;
       <Head>;
         <title>DatabaseDesignChat - Zion Tech Solutions</title>;
@@ -142,7 +136,6 @@ export default DatabaseDesignChat;<title />DatabaseDesignChat - Zion Tech Soluti
 };
 
 export default DatabaseDesignChat;
-const "DatabaseDesignChat": NextPage = () => {
  ;
 }
 return (;
@@ -165,7 +158,6 @@ export default DatabaseDesignChat;
         <title />DatabaseDesignChat - Zion Tech Solutions</title>
         <title />DatabaseDesignChat - Zion Tech Solutions</title>
 ;
-const "DatabaseDesignChat": NextPage = () => {
  ;
 }
 return (;

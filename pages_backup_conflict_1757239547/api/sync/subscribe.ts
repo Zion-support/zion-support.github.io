@@ -32,10 +32,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     existing.paused = typeof peer.paused === "boolean" ? peer.paused : existing.paused
   } else {
     state.config.peers.push({ id, baseUrl: peer.baseUrl, scope: peer.scope || state.config.scope, paused: false })
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readState, writeState } from "../../../utils/sync/storage";
-import { Peer } from "../../../utils/sync/types";
-import { v4 as uuidv4 } from "uuid";
 export default function handler(req, res) {
   try {
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });

@@ -153,7 +153,6 @@ export const getPerformanceScore = ("metrics": PerformanceMetrics): {
   }
 } => {
   }
-  const thresholds = {
     }
     "fcp": { "good": 1000, "needs_improvement": 2000 },
     "lcp": { "good": 1500, "needs_improvement": 3000 },
@@ -269,9 +268,7 @@ export const logPerformanceMetrics = ("metrics": PerformanceMetrics, label = 'Pe
 // Performance monitoring utilities,
 export const measurePerformance = ("name": string, "fn": () => void) => {
   }
-  const start = performance.now();
   fn();
-  const end = performance.now();
   console.log(`${name} took ${end - start} milliseconds`);`
 };
 

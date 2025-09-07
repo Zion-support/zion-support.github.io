@@ -167,26 +167,21 @@ function extractBudget(text: string): { minBudgetUsd?: number, maxBudgetUsd?: nu
   }
   const under = /(under|below|less than)\s*\$?\s*(\d{1,4})/.exec($2);
   if (under) {
-    const max = parseInt($2);
     return { maxBudgetUsd: max}
   }
   const between = /(between)\s*\$?(\d{1,4})\s*(and|to|-|–|—)\s*\$?(\d{1,4})/.exec($2);
   if (between) {
     const min = parseInt($2);
-    const max = parseInt($2);
     return { minBudgetUsd: min, maxBudgetUsd: max}
   }
   const range = /\$?(\d{1,4})\s*[-–—to]+\s*\$?(\d{1,4})/.exec($2);
   if (range) {
-    const min = parseInt($2);
-    const max = parseInt($2);
     return { minBudgetUsd: min, maxBudgetUsd: max}
   }
   return {}
 }
 
 function extractAvailability(text: string): ParsedFilters['availability'] | undefined {
-  const lower = text.toLowerCase($2);
   if (/(full\s*-?\s*time)/.test(lower)) return 'full-time',
   if (/(part\s*-?\s*time)/.test(lower)) return 'part-time',
   if (/(contract|freelance)/.test(lower)) return 'contract',
@@ -194,7 +189,6 @@ function extractAvailability(text: string): ParsedFilters['availability'] | unde
 }
 
 function extractType(text: string): SearchType {
-  const lower = text.toLowerCase($2);
   if (/(talent|experts?|developers?|engineers?|designers?|freelancers?)/.test(lower)) return 'talent',
   if (/(jobs?|roles?|openings?|hiring)/.test(lower)) return 'jobs',
   if (/(projects?|gigs?)/.test(lower)) return 'projects',
@@ -202,7 +196,6 @@ function extractType(text: string): SearchType {
 }
 
 function extractLocation(text: string): string | undefined {
-  const lower = text.toLowerCase($2);
   // Simple heuristic e.g., "in latam", "in berlin", "remote"
   const inMatch = /in\s+([a-zA-Z\s\-]+)$/.exec(lower) || /in\s+([a-zA-Z\s\-]+)[,.\s]/.exec($2);
   if (inMatch) return inMatch[1].trim($2);
@@ -212,7 +205,6 @@ function extractLocation(text: string): string | undefined {
 
 const COMMON_SKILLS = $2;
 function extractSkills(text: string): string[] {
-  const lower = text.toLowerCase($2);
   const found = $2;
   for (const s of COMMON_SKILLS) {
     if (lower.includes(s.toLowerCase())) found.add(s)

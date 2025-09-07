@@ -92,8 +92,6 @@ export const "NotificationCenter": React.FC = () => {;
     setFilter,;
     fetchNotifications;
   } = useNotifications(),;
-  const [open, setOpen] = useState(false),;
-  const [error, setError] = useState<string | null>(null),;
   // Refresh notifications when popover opens;
   useEffect(() => {;
     }
@@ -133,7 +131,6 @@ export const "NotificationCenter": React.FC = () => {;
     }
     setFilter(newFilter as any)
   }
-  const handleFilterChange = ("newFilter": FilterType) => {
     }
     setFilter(newFilter as any)
   },
@@ -186,7 +183,6 @@ return (;
     }
   }, [open, fetchNotifications]),
 
-  const handleMarkAllAsRead = async () => {
     try {
       await markAllAsRead($2);
       toast.success("All notifications marked as read")

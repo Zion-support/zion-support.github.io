@@ -21,7 +21,6 @@ const REWARDS = [
   { id: 'premium-week', title: 'Premium Week', cost: 1000 }
   { id: 'swag-pack', title: 'Swag Pack', cost: 2000 }
 ]
-const REWARDS = [
   { id: 'coupon5', title: '$5 Coupon', cost: 500 }
   { id: 'premium-week', title: 'Premium Week', cost: 1000 }
   { id: 'swag-pack', title: 'Swag Pack', cost: 2000 }
@@ -47,7 +46,6 @@ const REWARDS = [
   )
 }
 
-const REWARDS = [
   { id: 'coupon5', title: '$5 Coupon', cost: 500 },
   { id: 'premium-week', title: 'Premium Week', cost: 1000 },
   { id: 'swag-pack', title: 'Swag Pack', cost: 2000 }],
@@ -56,12 +54,10 @@ export default function RewardsPage() {
 
 const REWARDS = null;
 export default function RewardsPage() {
-const REWARDS = [
   { id: 'coupon5', title: '$5 Coupon', cost: 500 }
   { id: 'premium-week', title: 'Premium Week', cost: 1000 }
   { id: 'swag-pack', title: 'Swag Pack', cost: 2000 }
 ]
-const REWARDS = [
   { id: 'coupon5', title: '$5 Coupon', cost: 500 }
   { id: 'premium-week', title: 'Premium Week', cost: 1000 }
   { id: 'swag-pack', title: 'Swag Pack', cost: 2000 }
@@ -82,7 +78,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </li>
 
         ))}
-import { Gift } from 'lucide-react'
 
       </ul>
     </div>

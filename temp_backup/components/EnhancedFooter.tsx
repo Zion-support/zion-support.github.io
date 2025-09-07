@@ -127,10 +127,8 @@ const EnhancedFooter: React.FC = () => {const currentYear  = new Date().getFullY
   href: '/comprehensive-2025-services-showcase',}
 }import React from 'react';,import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter  } from 'lucide-react';
 
-const EnhancedFooter: React.FC;
 
 const EnhancedFooter: React.FC = () => {const currentYear = new Date().getFullYear(;
-  const footerSections = [
   {title: 'Services';
       links: [;
           { name: 'AI Business Intelligence'}
@@ -266,14 +264,12 @@ const socialLinks = [
   icon: Linkedin,href: 'https://linkedin.com/company/ziontechgroup',},{name: 'Instagram'}
   icon: Instagram,href: 'https://instagram.com/ziontechgroup',},];
 
-const socialLinks = [
   {name: 'GitHub'}
   href: 'https://github.com/Zion-Holdings', icon: Github,}
 },{name: 'LinkedIn'}
   href: 'https://linkedin.com/company/ziontechgroup',icon: Linkedin,},{name: 'Twitter'}
   href: 'https://twitter.com/ziontechgroup',icon: Twitter,},];
 
-const socialLinks = [
   {name: 'GitHub'}
   href: 'https://github.com/Zion-Holdings', icon: Github,}
 }
@@ -624,7 +620,6 @@ import React from './react';
 export default EnhancedFooter)})}
 
 export default EnhancedFooter;
-import React from './react';
   FileText,HelpCircle} from './lucide-react';
 
 export default /**;
@@ -695,9 +690,7 @@ const current_year = new Date ().getFullYear (,
       { name: "Cookie Policy", href: "/cookies" },
 }
 
-const socialLinks = [];
 
-const footer_links = {}, ";
       { name: "IT Services", href: "/services / it - services",}
 }, ";
       { name: "Micro SaaS", href: "/services / micro - saas",}
@@ -741,7 +734,6 @@ const footer_links = {}, ";
       { name: "Cookie Policy", href: "/cookies" },
 }
 
-const social_links  = [];return (<footer className="bg - gray - 900 text - white" />";
       <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 py - 12" />";
         <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 6 gap - 8" />,{/* comment */}";
           <div className="lg: col - span - 2" />";

@@ -4,8 +4,6 @@ import {WorkExperience} from '@/types/resume';'
 import {format} from 'date-fns';'
 import { WorkExperience  } from '@/types/resume';'
 import { format } from 'date-fns';'
-import {WorkExperience} from '@/types/resume';'
-import {format} from 'date-fns';'
 interface WorkExperienceSectionProps {
   }
   "workExperience": WorkExperience[]
@@ -29,7 +27,6 @@ return dateB.getTime() - dateA.getTime();
     if (typeof date === 'string') {'
       }
       return format(new Date(date), 'MMM yyyy')import { WorkExperience } from '@/types/resume';'
-import { format } from 'date-fns';'
 interface WorkExperienceSectionProps {;
   }
   "workExperience": WorkExperience[];
@@ -38,7 +35,6 @@ interface WorkExperienceSectionProps {;
 export function WorkExperienceSection() {;
   // Sort work experience by date (newest first);
   }
-  const sortedWorkExperience = [...workExperience].sort((a, b) => {;
     }
     if (a.is_current && !b.is_current) return -1,;
     if (!a.is_current && b.is_current) return 1,;

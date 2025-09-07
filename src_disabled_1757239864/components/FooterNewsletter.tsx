@@ -87,9 +87,7 @@ import React, { useState, useRef } from 'react',import { Input } from '@/compone
 
 
 
-import React, { useState, useRef } from 'react';
 import { Input } from '@/components/ui/input';
-import React, { useState } from 'react';
 // import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
@@ -393,11 +391,9 @@ import { use_toast  } from '@/hooks / use - toast';
             Subscribing...;
           </>;
         ) : (export function FooterNewsletter():React.ReactElement {const [email, setEmail] = useState(''),const [honeypot, setHoneypot] = useState(''),const [isSubmitting, setIsSubmitting] = useState(false),const [emailError, setEmailError] = useState(''),const { toast }  = useToast(),const EMAIL_REGEX  = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,const lastSubmit  = useRef(0),const handleSubmit = async (e:React.FormEvent) => {e.preventDefault(),if (honeypot) return, // ignore bots;
-    const now = Date.now(),if (now - lastSubmit.current < 1000) return,lastSubmit.current = now,const trimmedEmail = email.trim(),if (!EMAIL_REGEX.test(trimmedEmail)) {setEmailError("Please enter a valid email address."),return;
     } else {setEmailError("")}setIsSubmitting(true),const uniqueToastIdBase  = `newsletter-toast-${Date.now()}`, // Generate a base for unique ID;try {const res = await fetch('/api/newsletter', {method:'POST',headers:{ 'Content-Type':'application/json' },body:JSON.stringify({ email:trimmedEmail })}),const data  = await res.json().catch(() => ({})), // Ensure data is an object even on parse error;if (res.ok) {if (data.status === 'already_subscribed') {toast.success(data.message || "You're already subscribed!", { id:`${uniqueToastIdBase}-already-subscribed` })} else {toast.success(data.message || 'Successfully subscribed to newsletter!', { id:`${uniqueToastIdBase}-success` })}
         setEmail(''),// setEmailError(''), // Already cleared if regex passed;
       } else {logErrorToProduction('Newsletter subscription failed:', { data:data }),// Use a more specific error message if available from API, otherwise generic;
-        const errorMessage = data.error || 'Subscription failed. Please try again.',toast.error(errorMessage, { id:`${uniqueToastIdBase}-api-error` })}
     } catch (err:any) {logErrorToProduction('Newsletter subscription error:', { data:err }),toast.error('Unable to subscribe right now. Please try again later.', { id:`${uniqueToastIdBase}-catch-error` })} finally {setIsSubmitting(false)}
   },return (<form;
       id="footer-newsletter-form";
@@ -472,7 +468,6 @@ import { use_toast  } from '@/hooks / use - toast';
 
 } ;
 
-import React, { useState, useRef } from 'react';
 import { Input } from '@/components / ui / input';
 import { Button } from '@/components / ui / button';
 import { use_toast } from '@/hooks / use - toast';
@@ -577,7 +572,6 @@ if ( {) {
       } else {
         logErrorToProduction ('Newsletter subscription failed:', { data: data });
         // Use a more specific error message if available from API, otherwise generic;
-        const error_message =;
           data.error || 'Subscription failed. Please try again.';
         toast.error (error_message, { id: `${uniqueToastIdBase}-api - error` });
       }

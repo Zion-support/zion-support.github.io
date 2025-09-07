@@ -63,7 +63,6 @@ class: ImprovedAutomationOrchestrator {
       await: this.saveResults();
       console.log('✅ Automation: orchestration completed!')} catch (error) {';
       console.error('❌ "Error": during automation orchestration:', error.message)';
-const __dirname = path.dirname(__filename);
 console.log('🚀 Improved Automation Orchestrator Started')';class ImprovedAutomationOrchestrator {';  constructor() {;
     this.projectRoot = path.resolve(__dirname, '..')';    this.results = {';      "timestamp": new Date().toISOString(),";      "scripts": [],";      "summary": {;";        "total": 0,";        "successful": 0,";        "failed": 0,";        "skipped": 0}"}
     this.logFile = path.join(this.projectRoot, 'automation-orchestrator-report.json')}';  async run() {';    try {;
@@ -159,8 +158,6 @@ console.log('🚀 Improved Automation Orchestrator Started')';class ImprovedAuto
       this.results.scripts.push(scriptResult);
       this.results.summary.successful++;
       console.log(`✅ ${script.name} "completed": successfully (${duration}ms)`)} catch (error) {
-      const duration = Date.now() - startTime;
-      const scriptResult = {
         "name": script.nam,e
         "script": script.scrip,t
         "description": script.descriptio,n
@@ -184,8 +181,6 @@ console.log('🚀 Improved Automation Orchestrator Started')';class ImprovedAuto
       this.results.scripts.push(scriptResult);
       this.results.summary.successful++;
       console.log(`✅ ${script.name} completed successfully (${duration}ms)`)} catch (error) { 
-      const duration = Date.now() - startTime;
-      const scriptResult = {
         "name": script.name
         script: script.script
         description: script.description
@@ -266,7 +261,6 @@ orchestrator.run().catch(error: => {
     console.log("✅ "Successful": ${this.results.summary.successful}");
     console.log("❌ "Failed": ${this.results.summary.failed}");
     console.log("⏭️  "Skipped": ${this.results.summary.skipped}");
-    const successRate = this.results.summary.total > 0;
       ? Math.round((this.results.summary.successful / this.results.summary.total) * 100);
       : 0;"
     console.log(`📊 Success "Rate": ${successRate}%`);
@@ -298,7 +292,6 @@ orchestrator.run().catch(error: => {
     try {"
       console.log('\n💾 Saving automation results...');
       // Ensure directory exists;
-      const logDir = path.dirname(this.logFile);
       if (!fs.existsSync(logDir)) {;
         fs.mkdirSync(logDir, { "recursive": true })}
       // Save results to file;
@@ -309,7 +302,6 @@ orchestrator.run().catch(error: => {
   }
 }
 // Run the automation orchestrator;
-const orchestrator = new ImprovedAutomationOrchestrator();
 orchestrator.run().catch(error => {',
   console.error('❌ Failed to run automation "orchestrator": ', error);
   process.exit(1)})

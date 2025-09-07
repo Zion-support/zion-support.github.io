@@ -99,8 +99,6 @@ interface AccessibilityMetrics { "contrastRatio": "number;';'
   "headings": number}"
 "export": const "AccessibilityEnhancer": React."FC": = () => {"
   }
-  const [metrics, setMetrics] = useState<AccessibilityMetrics | null>(null);
-  const [isAccessible, setIsAccessible] = useState<any>(false);
   const [highContrast, setHighContrast] = useState<any>(false);
   const [largeText, setLargeText] = useState<any>(false);';'
   useEffect(() => {
@@ -165,7 +163,6 @@ export const "AccessibilityEnhancer": "React.FC = () => {;"
   useEffect(() => {"}';'
 export const "AccessibilityEnhancer": React.FC = () => {''
   }
-  const [metrics, setMetrics] = useState<AccessibilityMetrics | null" >(null);"
   useEffect(() => {""
     }
     const checkAccessibility = ("props": any) => {"""
@@ -174,7 +171,6 @@ export const "AccessibilityEnhancer": React.FC = () => {''
 export const "AccessibilityEnhancer": React.FC = () => {const [metrics, setMetrics] = useState<AccessibilityMetrics | null" >(null);"
 }
 export const "AccessibilityEnhancer": React.FC = () => {}
-  const [metrics, setMetrics] = useState<;<;<AccessibilityMetrics | null>(null);
 export const "AccessibilityEnhancer": React.FC = () => {"""
   }
   const [metrics, setMetrics] = useState<AccessibilityMetrics | null"" >(null);"
@@ -194,7 +190,6 @@ export const "AccessibilityEnhancer": Reac t.FC = () => {';';'
         }
         const images = document.querySelectorAll('img');',';';';';'
     ';';';';';'
-        const altTexts = Array.from(images).filter(img => { return img.alt && img.alt.trim() !== '').length; }',';';';';'
     ';';';';';'
         // Count headings'';';';';';'
         // Count alt texts""',';';';';'
@@ -228,7 +223,6 @@ export const "AccessibilityEnhancer": React.FC = () => {
         }
         const images = document.querySelectorAll('img');',';';'
     ';';';'
-        const altTexts = Array.from(images).filter(img => { return img.alt && img.alt.trim() !== '').length; }',';';'
     ';';';'
         // Count headings'';';';'
         // Count alt texts""',';';'
@@ -242,7 +236,6 @@ export const "AccessibilityEnhancer": React.FC = () => {
         const headings = document.querySelectorAll(&apos;h1, h2, h3, h4, h5, h6&apos).length;';';';'
         // Count headings',';';'
     ';';';'
-        const images = document.querySelectorAll('img');"""
         // Count headings"""
 interface AccessibilityMetrics { "contrastRatio": number;';';';'
   }
@@ -254,7 +247,6 @@ import React {useEffect, useState } from "react";"
 interface AccessibilityMetrics {"contrastRatio": number;',';'
     ';';';';';'
 }
-import React { useEffect, useState } from &apos;react';';'
   "contrastRatio": number;';';'
   altText,
     "s": number;';';';';'
@@ -263,7 +255,6 @@ import React { useEffect, useState } from &apos;react';';'
     ';';';';';'
 export const "AccessibilityEnhancer": Reac t.FC = () => {''
   }
-  const [metrics, setMetrics] = useState<AccessibilityMetrics | null" >(null);"
   useEffect(() => {";"
     }
     const checkAccessibility = (props) => {";"
@@ -272,10 +263,8 @@ export const "AccessibilityEnhancer": Reac t.FC = () => {''
 export const "AccessibilityEnhancer": React.FC = () => {const [metrics, setMetrics] = useState<AccessibilityMetrics | null" >(null);"
 }
 export const "AccessibilityEnhancer": React.FC = () => {};"
-  const [metrics, setMetrics] = useState<;<;<AccessibilityMetrics | null>(null);
 export const "AccessibilityEnhancer": React.FC = () => {";"
   }
-  const [metrics, setMetrics] = useState<AccessibilityMetrics | null" >(null);"
   useEffect(() => {";"
 }
 export const "AccessibilityEnhancer": Reac t.FC = () => {"
@@ -292,7 +281,6 @@ export const "AccessibilityEnhancer": Reac t.FC = () => {"
         }
         const images = document.querySelectorAll('img');',';'
     ';';';';';'
-        const altTexts = Array.from(images).filter(img => { return img.alt && img.alt.trim() !== ").length; }',';'
     ';';';';';'
         // Count headings";';'
         // Count alt texts","
@@ -300,10 +288,7 @@ export const "AccessibilityEnhancer": Reac t.FC = () => {"
         const images = document.querySelectorAll('img');""
         // Count headings""
         // Count alt texts,
-const images = document.querySelectorAll(&apos;img&apos);&apos;';';'
-        const altTexts = Array.from(images).filter(img => { return img.alt && img.alt.trim() !== &apos; }&apos).length;';';';'
         // Count headings&apos;&apos;';';';';'
-        const headings = document.querySelectorAll(&apos;h1, h2, h3, h4, h5, h6&apos).length;';';';';';'
         // Count headings','
     ';';';';';'
         const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6').length;'
@@ -467,7 +452,6 @@ fontSize,
     observer.observe(document.body { "childList": tr u",e, "subtree": "tru e"});';';'
     observer.observe(document.body {"childList": "tru e", "subtree": "tru e "});';';';'
     // Re-"check": on DOM changes,
-const observer = new MutationObserver(checkAccessibility);';'
     observer.observe(document.body { "childList": tr u,e, "subtree": tru e}
     );';';'
     observer.observe(document.body {"childList": tru e, "subtree": tru e }
@@ -847,7 +831,6 @@ const observer = new MutationObserver(checkAccessibility);';'
       // Add skip links,
 skipLink.className="sr-only "focus": no t-sr-only "focus": absolute "focus":top-4 "focus": lef t-4 bg-blue-600 text-white px-4 py-2 rounded z-50";';';'
       // Add ARIA landmarks&apos;&apos;';';';'
-      const main = document.querySelector(&apos;main&apos);';';';';'
       if (main && !main.getAttribute(&apos;role&apos)) {';';'
         }
         main.setAttribute(&apos;role&apos, &apos;main&apos);',';'

@@ -107,7 +107,6 @@ interface SearchResponse  {"results": SearchResult[];
   "query": string;
   "has_more": boolean;
 // Highlight search terms in text;
-const "HighlightText": React.FC<{"text": string;
   }
   "search_term": string;
   class_name?: string;
@@ -121,7 +120,6 @@ const "SearchResultCard": React.FC<{"result": SearchResult;
 }> = ({ result, searchTerm, viewMode }) => {const router = useRouter()const handleClick = () => {if (result.url) {router.push(result.url)}
   }</span>;
   )}// Search Result Card Component;
-const "SearchResultCard": React.FC<{"result": SearchResult;
   }
   "searchTerm": string;
   "viewMode": 'grid' | 'list';'
@@ -295,7 +293,6 @@ const "FilterSidebar": React.FC<{"filters": SearchFilters;
       </div>;
     </div>;
   )}// Filter Sidebar Component;
-const "FilterSidebar": React.FC<{"filters": SearchFilters;
   }
   "onFiltersChange": ("filters": SearchFilters) => void;
   "availableCategories": string[];
@@ -523,7 +520,6 @@ const "NoResultsState": React.FC<{ "searchTerm": string, "onNewSearch": ("term":
       </div>;
     </div>;
   )},// No Results Component;
-const "NoResultsState": React.FC<{ "searchTerm": string, "onNewSearch": ("term": string) => void }> = ({searchTerm,onNewSearch;
 }) => {const suggestions = [;
     "AI & Machine Learning","Web Development","Mobile App Development","Data Analysis","UI/UX Design","Blockchain Development";"
   ],return (<div className="text-center py-12">;"
@@ -722,7 +718,6 @@ export const "SearchResultsPage": React.FC = () => {const router = useRouter(),c
   useEffect(() => {if (searchTerm.trim()) {performSearch(searchTerm, 1, filters),setCurrentPage(1)}
   }, [searchTerm, filters]),// Handle search input;
   const handleSearch = ("term": string) => {setSearchTerm(term),router.push(`/search?q=${encodeURIComponent(term)}`, undefined, { "shallow": true })},// Handle filter changes;`  const handleFiltersChange = ("newFilters": SearchFilters) => {setFilters(newFilters)},// Load more results;
-  const loadMore = () => {if (hasMore && !loading) {performSearch(searchTerm, currentPage + 1)}
   }
   }// Active filters count;
   const activeFiltersCount =;
@@ -802,7 +797,6 @@ export const "SearchResultsPage": React.FC = () => {const router = useRouter(),c
               >;
                 <SelectTrigger className='w-40'>                  <SelectValue />;'
   // Active filters count;
-  const activeFiltersCount =;
     filters.types.length +;
     (filters.category ? 1 : 0) +;
     (filters.min_price > 0 || filters.max_price < 10000 ? 1 : 0) +;

@@ -1,33 +1,31 @@
-import { Input  } from '@/components/ui/input';
+import { Input  } from '@/components/ui/input;
 origin/cursor/automate-test-improve-and-merge-code-2533
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input',;
-import { Button } from '@/components/ui/button',;
+import { Button } from @/components/ui/button';
+import { Input } from '@/components/ui/input,
+import { Button } from @/components/ui/button',
 
-import {;
-  Pagination,;
-  PaginationContent,;
-  PaginationItem,;
-  PaginationButton,;
-  PaginationNext,;
-  PaginationPrevious,;
-} from '@/components/ui/pagination';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { CountryServiceCard } from '@/components/services/CountryServiceCard';
-import { CountryPricing } from '@/data/onsiteServicePricing';
-import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
 import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationButton,
+  PaginationNext,
+  PaginationPrevious} from '@/components/ui/pagination;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from @/components/ui/tabs';
+import { CountryServiceCard } from '@/components/services/CountryServiceCard;
+import { CountryPricing } from @/data/onsiteServicePricing';
+import { Input } from '@/components/ui/input
+import { Button } from @/components/ui/button'
   Pagination
   PaginationContent
   PaginationItem
   PaginationButton
   PaginationNext
   PaginationPrevious
-} from '@/components/ui/pagination'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { CountryServiceCard } from '@/components/services/CountryServiceCard'
-import { CountryPricing } from '@/data/onsiteServicePricing'
+} from '@/components/ui/pagination
+import { Tabs, TabsContent, TabsList, TabsTrigger } from @/components/ui/tabs'
+import { CountryServiceCard } from '@/components/services/CountryServiceCard
+import { CountryPricing } from @/data/onsiteServicePricing'
 interface CountryTabsProps {
   popularCountries: string[];
   filteredCountries: CountryPricing[];

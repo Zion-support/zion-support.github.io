@@ -75,7 +75,6 @@ import { MobileExperienceEnhancer  } from './components/MobileExperienceEnhancer
 // Lazy load pages for better performance - only import existing pages;
 const SolutionsPage = lazy(() => import('./pages/Solutions').then(module => ({ "default": module.default })))// Service Pages;'
 const AISolutions = lazy(() => import('./pages/services/AISolutions').then(module => ({ "default": module.AISolutions })))const QuantumComputing = lazy(() => import('./pages/services/QuantumComputing').then(module => ({ "default": module.QuantumComputing })))const Cybersecurity = lazy(() => import('./pages/services/Cybersecurity').then(module => ({ "default": module.Cybersecurity })))// Loading component;'
-const PageLoader = () => (<div className="flex items-center justify-center min-h-screen bg-gray-900">;"
     <div className="text-center">;"
       <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-cyan-500 mx-auto mb-4"></div>;"
       <p className="text-gray-400">Loading...</p>;"

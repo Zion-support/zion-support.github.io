@@ -7,9 +7,7 @@ import { AuthorBio  } from '@/components/blog/AuthorBio';
 import { SocialShareButtons  } from '@/components/blog/SocialShareButtons';
 import { CommentsSection  } from '@/components/blog/CommentsSection';
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
 import { useRouter } from 'next/router';
-import AdvancedSEO from '@/components/seo/AdvancedSEO';
 import { BLOG_POSTS } from '@/data/blog-posts';
 import { AuthorBio } from '@/components/blog/AuthorBio';
 import { SocialShareButtons } from '@/components/blog/SocialShareButtons';
@@ -166,7 +164,6 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {;
               alt={post.title}
               className="object-cover w-full h-full"
               onError={(e) => {
-                const target = e.currentTarget as HTMLImageElement
                 target.src = '/images/blog-placeholder.svg'
               }}
             />

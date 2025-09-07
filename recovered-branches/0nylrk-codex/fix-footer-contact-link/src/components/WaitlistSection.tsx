@@ -112,11 +112,6 @@ import { Checkbox } from "@/components/ui/checkbox",;"
 export function WaitlistSection() {;
   }
   const [email, setEmail] = useState(""),;"
-  const [name, setName] = useState(""),;"
-  const [role, setRole] = useState(""),;"
-  const [agreeTerms, setAgreeTerms] = useState(false),;
-  const [isSubmitting, setIsSubmitting] = useState(false),;
-  const { toast } = useToast(),;
   const handleSubmit = async ("e": React.FormEvent) => {;
     }
     e.preventDefault(),;

@@ -47,3 +47,14 @@ function MyApp() {
 export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 }
+}
+return <Component {...pageProps} />;
+}
+export default MyApp,
+export default MyApp,
+;
+;
+
+export default MyApp,
+
+export default MyApp;

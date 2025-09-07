@@ -1,29 +1,28 @@
-import type {;
-  GrantApplication,;
+import type {
+  GrantApplication,
 pr-12243
   GrantCategory,;
   GrantStatus,;
 } from '../../types/grants';
 
-const categories: GrantCategory[] = [;'
-  'Ecosystem Tools',;'
-  'Talent Development',;'
-  'Regional Expansion',;'
-  'Research Grants',;
-];
-const statuses: GrantStatus[] = [;'
-  'Draft',;'
-  'Submitted',;'
-  'Under Review',;'
-  'Approved',;'
-  'Rejected',;
-];
+  GrantCategory,
+  GrantStatus} from '../../types/grants;
 
 const categories: GrantCategory[] = [;
-  'Ecosystem Tools','Talent Development','Regional Expansion','Research Grants'];
-
+  'Ecosystem Tools',
+  Talent Development','
+  Regional Expansion,'
+  'Research Grants];
 const statuses: GrantStatus[] = [;
-  'Draft','Submitted','Under Review','Approved','Rejected'];
+  'Draft',
+  Submitted','
+  Under Review,'
+  'Approved,
+  'Rejected'];
+
+  Ecosystem Tools,'Talent Development',Regional Expansion,'Research Grants'];
+
+  Draft,'Submitted',Under Review,'Approved',Rejected];
 export default function GrantsPage() {const [items, setItems] = useState<GrantApplication[] />([])sector?: string;
     status?: string;
     region?: string;
@@ -59,12 +58,12 @@ export default function GrantsPage() {const [items, setItems] = useState<GrantAp
 pr-12243
     <EnhancedLayout>;
       <div className='flex items - center justify - between mb - 6'>;
-        <h1 className='text - 2xl font - semibold'>Zion Grants & Incubator</h1>;
+        <h1 className=text - 2xl font - semibold>Zion Grants & Incubator</h1>;
         <div className='flex gap - 2'>;
-          <Link href='/grants / apply'>;
+          <Link href=/grants / apply>;
             <a className='px - 3 py - 2 bg - blue - 600 text - white rounded'>Apply</a>;
           </Link>;
-          <Link href='/incubator'>;
+          <Link href=/incubator>;
             <a className='px - 3 py - 2 bg - purple - 600 text - white rounded'>;
 
               Incubator;
@@ -72,24 +71,13 @@ pr-12243
           </Link>;
       </div>;
 
-          value={filters && filters.status || ''}
+          value={filters && filters.status || }
           onChange={e =>;
             setFilters(f => ({ ...f, status: e && e.target.value || undefined }));
 
 
-import type {;
-  }
-  GrantApplication,;
-pr-12243
-  GrantCategory,;
-  GrantStatus,;
-} from '../../types/grants';'
 
-;
-import type {GrantApplication,GrantCategory,GrantStatus} from '../../types/grants';'
 
-const "categories": GrantCategory[] = [;
-  'Ecosystem Tools','Talent Development','Regional Expansion','Research Grants'];'
 
 const statuses: GrantStatus[] = [;
   'Draft',;
@@ -107,8 +95,15 @@ import type { GrantApplication, GrantCategory, GrantStatus } from '../../types/g
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
 const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'];
 
-export default function GrantsPage() {const [items, setItems] = useState<GrantApplication[]>([])sector?: string;
-    }
+
+  GrantApplication,
+
+
+  GrantCategory,
+  GrantStatus} from ../../types/grants;
+import type {GrantApplication,GrantCategory,GrantStatus} from '../../types/grants';
+  Ecosystem Tools,'Talent Development',Regional Expansion,'Research Grants'];
+  Draft,'Submitted',Under Review,'Approved',Rejected];export default function GrantsPage() {const [items, setItems] = useState<GrantApplication[]>([])sector?: string;
     status?: string;
     region?: string;
     program?: string;
@@ -136,44 +131,25 @@ return (;
 
 return (;
     <EnhancedLayout>;
-      <div className='flex items-center justify-between mb-6'>;'
-        <h1 className='text-2xl font-semibold'>Zion Grants & Incubator</h1>;'
-        <div className='flex gap-2'>;'
-          <Link href='/grants/apply'>;'
-            <a className='px-3 py-2 bg-blue-600 text-white rounded'>Apply</a>;'
-          </Link>;
-          <Link href='/incubator'>;'
-            <a className='px-3 py-2 bg-purple-600 text-white rounded'>;'
-    <EnhancedLayout>;
-      <div className='flex items - center justify - between mb - 6'>;'
-        <h1 className='text - 2xl font - semibold'>Zion Grants & Incubator</h1>;'
-        <div className='flex gap - 2'>;'
-          <Link href='/grants / apply'>;'
-            <a className='px - 3 py - 2 bg - blue - 600 text - white rounded'>Apply</a>;'
-          </Link>;
-          <Link href='/incubator'>;'
-            <a className='px - 3 py - 2 bg - purple - 600 text - white rounded'>;Incubator;'
+
             </a>;
           </Link>;
       </div>;value={filters && filters.status || ''}'
           onChange={e =>;
 
-const "categories": GrantCategory[] = [;
-  'Ecosystem Tools','Talent Development','Regional Expansion','Research Grants'];'
 
 export default function GrantsPage() {
   useEffect(() => {
 
     const params = new URLSearchParams();
-    if (filters.sector) params.set('sector', filters.sector);
+    if (filters.sector) params.set(sector, filters.sector);
     if (filters.status) params.set('status', filters.status);
     if (filters.region) params.set('region', filters.region);
     if (filters.program) params.set('program', filters.program);
     fetch(`/api/grants?${params.toString()}`)
-const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;
-const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],;
-export default function GrantsPage() {;
-  const [items, setItems] = useState<GrantApplication[]>([]);
+const categories: GrantCategory[] = [Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],'
+const statuses: GrantStatus[] = [DraftSubmittedUnder ReviewApprovedRejected],
+export default function GrantsPage() { return null; }
   const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
 
   useEffect(() => {;
@@ -213,7 +189,15 @@ const params = new URLSearchParams();
       .then(r => r && r.json());
       .then(d => setItems(d && d.items || []));
       .catch(() => setItems([]));  }, [filters]);
-return (;
+  return (
+  useEffect(() => {
+    if (filters.sector) params.set('sector', filters.sector);
+    if (filters.status) params.set(status, filters.status);
+    if (filters.region) params.set('region', filters.region);
+    if (filters.program) params.set(program, filters.program);
+    fetch(`/api/grants?${params.toString()}`)
+      .then((r) => r.json())
+      .then((d) => setItems(d.items || []))
       .catch(() => setItems([]))
 
 
@@ -256,6 +240,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           value={filters.sector |''}
           onChange={e =>
             setFilters(f => ({ ...f, sector: e.target.value |undefined }))
+            <a className='px-3 py-2 bg-blue-600 text-white rounded>Apply</a>
+
+              Incubator;
+            </a>
+          </Link>
+      </div>
+      <div className='grid md:grid-cols-4 gap-4 mb-6'>
+        <select
+          className=border rounded p-2''
+          value={filters.sector |}
+          onChange={e =>
+            setFilters(f => ({ ...f, sector: e.target.value |undefined }))
+
           }
         >
           <option value=''>All Sectors</option>'
@@ -286,17 +283,16 @@ function GrantsPage() {
   }
   const [items, set_items] = useState < GrantApplication[]>([]);
   const [filters, set_filters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
-;
   useEffect (() => {
     }
     const params = new URLSearchParams ();
-    if (params.set ('sector', filters.sector)) {'
+
   $2
 }
     if (params.set ('status', filters.status)) {'
   $2
 }
-    if (params.set ('region', filters.region)) {'
+
   $2
 }
     if (params.set ('program', filters.program)) {'
@@ -305,14 +301,12 @@ function GrantsPage() {
     fetch (`/api / grants?${params.to_string ()}`);`      .then (r => { return r.json ()); }
       .then (d => { return set_items (d.items || [])); }
       .catch (() => set_items ([]));  }, [filters]);
-;
-return (;
+
     <EnhancedLayout>      .then ((r) => r.json ());
       .then ((d) => set_items (d.items || []));
       .catch (() => set_items ([]));
   }, [filters]);
-;
-return (;
+
               Incubator;
             </a>;
           </Link>;
@@ -340,6 +334,7 @@ pr-12243
           }
         >'
           <option value=''>All Stages</option>
+          <option value='>All Stages</option>
           {statuses.map(s => (
             <option key={s} value={s}>
               {s}
@@ -362,35 +357,36 @@ pr-12243
             setFilters(f => ({ ...f, region: e.target.value |undefined ;}))
 pr-12243
 
+
           }
         />
         <select'
-          className='border rounded p-2'
+          className=border rounded p-2
 
       <div className='grid md:grid - cols - 4 gap - 4 mb - 6'>;
         <select;
-          className='border rounded p - 2';
+          className=border rounded p - 2;
           value={filters.sector || ''}
           on_change={e =>;
             set_filters (function => ({ ...f, sector: e.target.value || undefined }));
 pr-12243
           }
-        >;'
-          <option value=''>All Sectors</option>;
+        >;
+          <option value='>All Sectors</option>;
           {categories && categories.map(c => (;
             <option key={c} value={c}>;
             set_filters (function => ({ ...f, sector: e.target.value || undefined ;}));
 pr-12243
           }
-      <div className='grid md:grid-cols-4 gap-4 mb-6' />;
+      <div className='grid md:grid-cols-4 gap-4 mb-6 />;
         <select;
-          className='border rounded p-2';
-          value={filters.sector |''}
+          className=border rounded p-2';
+          value={filters.sector |'}
           onChange={e = />;}
             setFilters(f => ({ ...f, sector: e.target.value |undefined ;})
 }
         >;
-          <option value='' />All Sectors</option>;
+          <option value=' />All Sectors</option>;
           {categories.map(c => (<option key={c} value={c} />;
               {c}
             </option>;
@@ -414,6 +410,15 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
     if (params.set ('region', filters.region)) {$2;'
 }
     if (params.set ('program', filters.program)) {$2;'
+
+ * GrantsPage - Function description;
+ */;
+}
+    if (params.set ('status, filters.status)) {$2;
+}
+    if (params.set (region', filters.region)) {$2;
+}
+    if (params.set ('program, filters.program)) {$2;
 }
     fetch (`/api / grants?${params.to_string ()}`).then (r = > r.json ()).then (d => { return set_items (d.items || [])).catch (() => set_items ([]))}, [filters])return (<EnhancedLayout>      .then ((r) => r.json ()).then ((d) => set_items (d.items || [])).catch (() => set_items ([]))}, [filters]; }`  return (Incubator;
             </a>;
@@ -447,15 +452,22 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
           }
         >
           <option value=''>All Stages</option>'
+
+        />;
+        <select;
+          className='border rounded p-2;
+
+
+
+          }
+        >
+          <option value='>All Stages</option>
           {statuses.map(s => (
             <option key={s} value={s}>
               {s}
             </option>
           ))}
         </select>
-        <input,
-className='border rounded p-2''
-          placeholder='Region''
 
 
 
@@ -497,12 +509,7 @@ className='border rounded p-2''
             </option>;
           ))}
         </select>;
-        <select;
-          className='border rounded p-2';'
-          }
-        >;
-          <option value=''>All Stages</option>;'
-          {statuses && statuses.map(s => (<option key={s} value={s}>;
+
               {s}
             </option>;
           ))}
@@ -520,26 +527,26 @@ className='border rounded p-2''
           on_change={e =>;
             set_filters (function => ({ ...f, program: e.target.value || undefined }))}
         >;
-          <option value=''>All Programs</option>;'
-          <option value='grant'>Grant</option>;'
-          <option value='incubator'>Incubator</option>;'
+          <option value='>All Programs</option>;
+          <option value='grant>Grant</option>;
+          <option value=incubator'>Incubator</option>;
         </select>;
       </div>;
-      <div className='grid gap - 4'>;'
-        {items.map (g => { return (<div; }
-            }
+      <div className='grid gap - 4>;
+        {items.map (g => (<div;
             key={g.id}
-            className='border rounded p - 4 bg - white / 70 "dark":bg - black / 40'>'
-
-            <div className='flex items - center justify - between'>;'
+            className=border rounded p - 4 bg - white / 70 dark:bg - black / 40';
+          >;
+            <div className='flex items - center justify - between>;
               <div>;
-                <h3 className='text - lg font - medium'>;'
-                  <Link href={`/grants/${g.id}`}>;`                    <a>{g.project_name}</a>;
+                <h3 className=text - lg font - medium'>;
+                  <Link href={`/grants/${g.id}`}>;
+                    <a>{g.project_name}</a>;
                   </Link>;
                 </h3>;
-                <div className='text - xs text - gray - 600 "dark":text - gray - 400'>;'
-                  {g.sector || 'General'} • {g.region || 'Global'} •{' '}value={filters.program |''}'
-                  {g.sector || 'General'} • {g.region || 'Global'} •{' '}'
+                <div className='text - xs text - gray - 600 dark:text - gray - 400>;
+                  {g.sector || General'} • {g.region || 'Global} •{ '}value={filters.program |'}
+                  {g.sector || General'} • {g.region || 'Global} •{ '}
 
         <select
           className='border rounded p-2'
@@ -568,6 +575,25 @@ pr-12243
             <div className='flex items-center justify-between'>
               <div>
                 <h3 className='text-lg font-medium'>
+          value={filters.program |'}
+          onChange={e =>
+            setFilters(f => ({ ...f, program: e.target.value |undefined ;}))
+          }
+        >
+          <option value='>All Programs</option>
+          <option value=grant'>Grant</option>
+          <option value='incubator>Incubator</option>
+        </select>
+      </div>
+      <div className=grid gap-4'>
+        {items.map(g => (
+          <div
+            key={g.id}
+            className='border rounded p-4 bg-white/70 dark:bg-black/40
+          >
+            <div className=flex items-center justify-between'>
+              <div>
+                <h3 className='text-lg font-medium>
                   <Link href={`/grants/${g.id}`}>
                     <a>{g.projectName}</a>
                   </Link>
@@ -628,10 +654,20 @@ pr-12243
         <select;
 className='border rounded p-2'
                   {g.program === 'incubator' ? 'Incubator' : 'Grant'}
+                  {g.program === incubator' ? 'Incubator : Grant'}
+                </div>;
+              </div>;'
+              <div className=flex gap - 2 items - center>;'
+                {g.program === 'incubator && (
+
+
+        <select;
+className=border rounded p-2'
+                  {g.program === 'incubator ? Incubator' : 'Grant}
                 </div>;
               </div>;
-              <div className='flex gap - 2 items - center'>;'
-                {g.program === 'incubator' && ('
+              <div className=flex gap - 2 items - center'>;
+                {g.program === 'incubator && (
 
 
 
@@ -663,13 +699,25 @@ pr-12243
         <div className=\"flex gap-2\" />"
           <Link href=\"/grants/apply\" /><a className=\"px-3 py-2 bg-blue-600 text-white rounded\" />Apply</a></Link>"
           <Link href=\"/incubator\" /><a className=\"px-3 py-2 bg-purple-600 text-white rounded\" />Incubator</a></Link>
+pr-12243
+      <div className="flex items-center justify-between mb-6>
+        <h1 className=text-2xl font-semibold">Zion Grants & Incubator</h1>
+        <div className="flex gap-2>
+          <Link href=/grants/apply"><a className="px-3 py-2 bg-blue-600 text-white rounded>Apply</a></Link>
+
+          <Link href=/incubator"><a className="px-3 py-2 bg-purple-600 text-white rounded>Incubator</a></Link>
+      <div className=\flex items-center justify-between mb-6\" />"
+        <h1 className=\text-2xl font-semibold\ />Zion Grants & Incubator</h1>"
+        <div className=\"flex gap-2\ />
+          <Link href=\"/grants/apply\" /><a className=\px-3 py-2 bg-blue-600 text-white rounded\ />Apply</a></Link>"
+          <Link href=\"/incubator\ /><a className=\px-3 py-2 bg-purple-600 text-white rounded\" />Incubator</a></Link>
         </div>
       </div>
 
-      <div className='grid gap-4' />;
+      <div className=grid gap-4' />;
         {items.map(g => (<div;}
             key={g.id}
-            className='border rounded p-4 bg-white/70 dark:bg-black/40' />
+            className='border rounded p-4 bg-white/70 dark:bg-black/40 />
 
 
 
@@ -709,9 +757,27 @@ pr-12243
                   <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>
                     Incubated by Zion
                   </span>
+pr-12243
+      <div className='grid gap-4>;
+        {items && items.map(g => (;
+          <div;
             key={g && g.id}
-            className='border rounded p-4 bg-white/70 "dark":bg-black/40'>;'
-            <div className='flex items-center justify-between'>;'
+            className='border rounded p-4 bg-white/70 dark:bg-black/40'>;
+            <div className=flex items-center justify-between'>;
+              <div>;'
+                <h3 className=text-lg font-medium>;`
+                  <Link href={`/grants/${g && g.id}`}>;
+                    <a>{g && g.projectName}</a>;
+            <div className='flex items-center justify-between' />;
+              <div />;
+                <h3 className=text-lg font-medium />;
+                  <Link href={`/grants/${g.id}`} />;
+                    <a />{g.projectName}</a>;
+                  </Link>;
+
+            key={g && g.id}
+            className='border rounded p-4 bg-white/70 dark:bg-black/40'>;
+            <div className=flex items-center justify-between>;
               <div>;
                 <h3 className='text-lg font-medium'>;'
                   <Link href={`/grants/${g && g.id}`}>;`
@@ -749,25 +815,25 @@ pr-12243
 
 
 
-                  <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>
+                  <span className=px-2 py-1 text-xs rounded bg-purple-100 text-purple-700>
                     Incubated by Zion
                   </span>
 
-      <div className="grid gap-4">
+      <div className="grid gap-4>
         {items.map((g) => (
-          <div key={g.id} className="border rounded p-4 bg-white/70 dark:bg-black/40">
-            <div className="flex items-center justify-between">
+          <div key={g.id} className=border rounded p-4 bg-white/70 dark:bg-black/40">
+            <div className="flex items-center justify-between>
               <div>
-                <h3 className="text-lg font-medium"><Link href={`/grants/${g.id}`}><a>{g.projectName}</a></Link></h3>
-                <div className="text-xs text-gray-600 dark:text-gray-400">{g.sector || 'General'} • {g.region || 'Global'} • {g.program === 'incubator' ? 'Incubator' : 'Grant'}</div>
+                <h3 className=text-lg font-medium"><Link href={`/grants/${g.id}`}><a>{g.projectName}</a></Link></h3>
+                <div className="text-xs text-gray-600 dark:text-gray-400>{g.sector || 'General'} • {g.region || Global} • {g.program === 'incubator' ? Incubator : 'Grant'}</div>
               </div>
-              <div className="flex gap-2 items-center">
-                {g.program === 'incubator' && <span className="px-2 py-1 text-xs rounded bg-purple-100 text-purple-700">Incubated by Zion</span>}
-                {g.status === 'Approved' && <span className="px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700">Grant Winner</span>}
-                <span className="px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800">{g.status}</span>
+              <div className=flex gap-2 items-center">
+                {g.program === incubator && <span className="px-2 py-1 text-xs rounded bg-purple-100 text-purple-700>Incubated by Zion</span>}
+                {g.status === 'Approved' && <span className=px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700">Grant Winner</span>}
+                <span className="px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800>{g.status}</span>
               </div>
             </div>
-            <p className="mt-2 text-sm text-gray-700 dark:text-gray-300 line-clamp-3">{g.proposalSummary}</p>
+            <p className=mt-2 text-sm text-gray-700 dark:text-gray-300 line-clamp-3">{g.proposalSummary}</p>
             <div className="mt-3 text-sm text-gray-600 dark:text-gray-400">Budget: {g.budgetAmount} {g.budgetCurrency}</div>
           </div>
 <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>
@@ -777,7 +843,7 @@ pr-12243
                     Incubated by Zion
                   </span>
 origin/cursor/automate-test-improve-and-merge-code-382a
-                  <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>
+                  <span className=px-2 py-1 text-xs rounded bg-purple-100 text-purple-700>
                     Incubated by Zion
                   </span>
 pr-12243
@@ -792,6 +858,9 @@ pr-12243
                 )}'
                 {g && g.status === 'Approved' && (;'
                   <span className='px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700'>;
+                )}
+
+                  <span className=px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700>;
                     Grant Winner;
                   <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700' />;
                     Incubated by Zion;
@@ -874,21 +943,25 @@ pr-12243
     <EnhancedLayout>
                   <span className='px - 2 py - 1 text - xs rounded bg - purple - 100 text - purple - 700'>;'
                     Incubated by Zion;
-                  </span>)}
-                {g.status === 'Approved' && (<span className='px - 2 py - 1 text - xs rounded bg - emerald - 100 text - emerald - 700'>;'
-                    }
-                    Grant Winner;
-                  </span>)}
-                <span className='px - 2 py - 1 text - xs rounded bg - gray - 100 "dark":bg - gray - 800'>;'
-                  {g.status}
+                  </span>;
+                  <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700' />
+                    Incubated by Zion}
+                  </span>}
+                )}
+                {g && g.status === Approved && (<span className='px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700' />;
+                    Grant Winner;}
+                  </span>;}
+                )}
+                <span className=px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800 />;
+                  {g && g.status}
                 </span>;
               </div>;
             </div>;
-            <p className='mt - 2 text - sm text - gray - 700 "dark":text - gray - 300 line - clamp - 3'>;'
-              {g.proposal_summary}
+            <p className='mt-2 text-sm text-gray-700 dark:text-gray-300 line-clamp-3' />;
+              {g && g.proposalSummary}
             </p>;
-            <div className='mt - 3 text - sm text - gray - 600 "dark":text - gray - 400'>;'
-              "Budget": {g.budget_amount} {g.budget_currenc
+            <div className='mt-3 text-sm text-gray-600 dark:text-gray-400' />;
+              Budget: {g && g.budgetAmount;} {g && g.budgetCurrenc}
 }
             </div>;
           </div>))}
@@ -905,6 +978,10 @@ pr-12243
 
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
+        ))}
+
+
+
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243

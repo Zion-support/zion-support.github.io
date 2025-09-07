@@ -96,7 +96,6 @@ const handleScroll = (setIsScrolled(window && window.scrollY > 20)) => {
 }
   ];
 
-const company = [
   {name: 'About Us'}
   href: '/about', icon: Users, description: 'Learn about our mission and team',}
 },{name: 'Our Work'}
@@ -337,7 +336,6 @@ const EnhancedNavigation: React.FC = () => {const [is_open, setIsOpen] = useStat
   useState < string | null>(null;}
   useEffect (() => {const handle_scroll = () =>: any {setIsScrolled (window.scroll_y > 20)}window.addEventListener ('scroll', handle_scroll;
   return () => window.removeEventListener ('scroll', handle_scroll)}, [];
-  const services = [
   {name: 'All Solutions'}
   href: '/comprehensive - 2025 - services - showcase', icon: Globe, description: 'Complete collection of innovative solutions',}
 },{name: 'AI Business Intelligence'}
@@ -353,7 +351,6 @@ const EnhancedNavigation: React.FC = () => {const [is_open, setIsOpen] = useStat
 }
   ];
 
-const company = [
   {name: 'About Us'}
   href: '/about', icon: Users, description: 'Learn about our mission and team',}
 },{name: 'Our Work'}

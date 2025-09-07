@@ -16,14 +16,21 @@ export {};
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+
+
+
+import React, { useState } from 'react;
+import { motion } from framer-motion';
 import {
   Send,
   CheckCircle,
   AlertCircle,
   User,
   Mail,
-  MessageSquare,
-} from 'lucide-react';
+  MessageSquare} from 'lucide-react';
+
+
+
 
 ;
 // Auto-generated module;
@@ -176,15 +183,7 @@ const ContactFormEnhanced: React.FC = () => {const [formData, setFormData] = use
             </motion.div>;
           )}
 // Auto-generated module
-export {};
-
-        </form>;
-      </motion.div>;
-    </div>;
-  )}export default ContactFormEnhanced;// Auto-generated module;
 export {}
-// Auto-generated module
-export {};
 
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 // Auto-generated module

@@ -1191,6 +1191,15 @@ export default function TermsPage() {
                 Please read these terms carefully before using our services. By using our services, you agree to be bound by these terms.
               </p>
               <p className="text-sm text-gray-400">
+              transition={{ duration: 0.8 }}
+              className="text-center
+            >
+
+              </h1>
+              <p className=text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Please read these terms carefully before using our services. By using our services, you agree to be bound by these terms.
+              </p>
+              <p className="text-sm text-gray-400>
                 Last updated: January 15, 2024
               </p>
             </motion.div>

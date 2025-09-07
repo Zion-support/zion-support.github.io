@@ -44,7 +44,6 @@ function resolveConflicts() {
       // Check if file exists
       if (fs.existsSync(file)) {
         // Read the file content
-        let content = fs.readFileSync(file, 'utf8');
         // Check if it's a modify/delete conflict
         if (conflictMarkers) {
           console.log(`  - Resolving modify/delete conflict in ${file}`);

@@ -6,7 +6,7 @@ export interface ApiResponse<T = any>  {data: T;
 }export interface PaginationParams  {page: number;
   limit: number;
   sortBy?: string;
-  sortOrder?: 'asc' | 'desc';
+  sortOrder?: 'asc | desc';
 }export interface PaginatedResponse<T> extends ApiResponse<T[]>  {pagination: {page: number;
     limit: number;
     total: number;
@@ -23,7 +23,7 @@ export interface PaginationParams {
   page: number;
   limit: number;
   sortBy?: string;
-  sortOrder?: 'asc' | 'desc';}
+  sortOrder?: 'asc | desc';}
 }
 }
 
@@ -37,7 +37,7 @@ export interface User {
   id: string;
   email: string;
   name: string;
-  role: 'admin' | 'user' | 'moderator';
+  role: 'admin | user' | 'moderator;
   createdAt: string;
   updatedAt: string;
 }export interface Service  {id: string;
@@ -56,7 +56,7 @@ export interface Service  {id: string;
     enterprise: number;}
   }features: string[];
   benefits: string[];
-  status: 'active' | 'inactive' | 'beta';
+  status: active' | 'inactive | beta';
 }export interface ContactForm  {name: string;
   email: string;
   company?: string;

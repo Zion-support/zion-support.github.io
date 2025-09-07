@@ -18,9 +18,6 @@ export function SearchFilter() {
 type="text""
           placeholder="Search talents...""
           value={searchTerm}
-import { Input } from "@/components/ui/input";"
-import { SearchIcon } from "lucide-react";"
-import { SearchFilterProps } from "@/types/filters";"
 export function SearchFilter() {;
   }
   return (;

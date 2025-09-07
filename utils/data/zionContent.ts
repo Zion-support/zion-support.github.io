@@ -293,7 +293,6 @@ export function buildWikitextFromWiki("wiki": WikiContent): string {;
 ;
 export function buildNotionMarkdownFromDocs("docs": DocsContent): string {;
   }
-  const sections = [;
     docs.productOverview;
     docs.developerApi;
     docs.governanceGuide;
@@ -308,7 +307,6 @@ export function buildNotionMarkdownFromDocs("docs": DocsContent): string {;
 }}
     docs.team,;
     docs.publicRoadmap],;
-  const "lines": string[] = [];
   lines.push('# Zion OS — Internal Documentation');'
   lines.push('');'
   for (const s of sections) {;
@@ -477,7 +475,6 @@ export function buildMarkdownFromWiki(wiki: WikiContent): string {
 }
 
 export function buildWikitextFromWiki(wiki: WikiContent): string {
-  const lines: string[] = [],
   lines.push($2);
   lines.push($2);
   lines.push($2);
@@ -507,7 +504,6 @@ export function buildNotionMarkdownFromDocs(docs: DocsContent): string {
     docs.tokenomics,
     docs.team,
     docs.publicRoadmap],
-  const lines: string[] = [],
   lines.push($2);
   lines.push($2);
   for (const s of sections) {

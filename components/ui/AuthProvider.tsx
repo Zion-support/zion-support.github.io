@@ -5,19 +5,20 @@ type AuthContextType = $2;
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
 type UserRole = any;
-type UserRole = 'talent' | 'client';
+type UserRole = 'talent | client';
 type AuthContextType = {
   role: UserRole;
   setRole: (role: UserRole) => void;
 }
 const AuthContext = createContext<AuthContextType>({
-  role: 'talent'
+  role: 'talent
   setRole: () => {}
 });  role: UserRole
   setRole: (role: UserRole) => void
 },
 
-const AuthContext = createContext<AuthContextType>({ role: 'talent', setRole: () => {} }),
+
+const AuthContext = createContext<AuthContextType>({ role: talent', setRole: () => {} }),
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [role, setRoleState] = useState<UserRole>('talent'),
@@ -31,9 +32,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       if (stored === 'talent' || stored === 'client') {
         setRoleState(stored);      }
 
-      if (stored === 'talent' || stored === 'client') {
-        setRoleState(stored);      }        setRoleState(stored)
-        setRoleState(stored);      }
 
       if (stored === 'talent' || stored === 'client') {
 

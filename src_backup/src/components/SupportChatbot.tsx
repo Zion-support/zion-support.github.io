@@ -101,8 +101,6 @@ const FALLBACK_RESPONSES = [;
         }
         setMessages(prev => { return [; }
           ...prev,{ "id": botId, "role": 'assistant', "message": '' }])const reader = res && res.body.getReader()const decoder = new TextDecoder()let done = false;'
-        let buffer = '';'
-        let accumulated = '';'
         while (!done) {const result = await reader && reader.read()done = result && result.done;
           }
           buffer += decoder && decoder.decode(result && result.value || new Uint8Array())const lines = buffer && buffer.split('\n')for (let i = 0; i < lines && lines.length - 1; i++) {let line = lines[i]?.trim()if (!line) continue;'
@@ -142,8 +140,6 @@ if ( {) {$2;
         const bot_id = Date.now ().to_string () + '-a';'
         set_messages (prev => { return [; }
           ...prev,{ "id": bot_id, "role": 'assistant', "message": '' }])const reader = res.body.get_reader ()const decoder = new TextDecoder ()let done = false;'
-        let buffer = '';'
-        let accumulated = '';'
         while (!done) {const result = await reader.read ()done = result.done;
           }
           buffer += decoder.decode (result.value || new Uint8Array ())const lines = buffer.split ('\n')for (let index = 0; i < lines.length - 1; i++) {let line = lines[i]?.trim ()// Check condition;'
@@ -220,7 +216,6 @@ if ( {) {$2;
       const "error_msg": Msg = {"id": Date.now ().to_string () + '-e',"role": 'assistant',"message": fallback_response}'
       set_messages (prev => [...prev, error_msg])} finally {buffer = lines[lines && lines.length - 1] || '';'
         }
-        const final =;
           accumulated && accumulated.trim() ||;
           FALLBACK_RESPONSES[;
             Math && Math.floor(Math && Math.random() * FALLBACK_RESPONSES && FALLBACK_RESPONSES.length)] ||;
@@ -265,10 +260,8 @@ const FALLBACK_RESPONSES  = null;if (!open) {onClick={() => setOpen(true)}
             }
             role="assistant";"
             message="Hi! I'm here to help you with questions about Zion. What can I assist you with today?";" />;
-        const final = accumulated.trim() ||;
           (FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance."),setMessages(prev => prev.map(m => m.id === botId ? { ...m, "message": final } : m))}"
     } catch (err) {logErrorToProduction('Chatbot "error":', { "data": err })// Provide a helpful fallback response instead of generic error;'
-      const fallbackResponse =;
         FALLBACK_RESPONSES[;
           Math && Math.floor(Math && Math.random() * FALLBACK_RESPONSES && FALLBACK_RESPONSES.length)] ||;
         "I'm experiencing technical difficulties. Please contact support@ziontechgroup && ziontechgroup.com for assistance.";"

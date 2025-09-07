@@ -92,7 +92,6 @@ if ( {) {
       system_prompt = "You are a professional translator specializing in professional profiles. Translate the content accurately while maintaining the professional tone and highlighting skills appropriately.";"
     }
     // Create translations for each target language;
-    const translations = {}
 ;
     for (const target_lang of target_languages) {
       // Check condition

@@ -38,8 +38,6 @@ const lintCommands = [];
   let lintFailed = 0;
   lintCommands.forEach(cmd => {})
     const result = runCommand(cmd, `Running ${cmd}`);
-  let lintPassed = 0;
-  let lintFailed = 0;
 
     if (result.success) {}
       lintPassed++;
@@ -59,12 +57,9 @@ const typeCheckCommands = [];
   let typeCheckPassed = 0;
   let typeCheckFailed = 0;
   typeCheckCommands.forEach(cmd => {})
-    const result = runCommand(cmd, `Running ${cmd}`);
     if (result.success) {}
   const typeCheckCommands = []
 
-  let typeCheckPassed = 0;
-  let typeCheckFailed = 0;
 
       typeCheckPassed++;
       typeCheckFailed++;
@@ -85,12 +80,9 @@ const qualityCommands = [];
   let qualityPassed = 0;
   let qualityFailed = 0;
   qualityCommands.forEach(cmd => {})
-    const result = runCommand(cmd, `Running ${cmd}`);
     if (result.success) {}
   const qualityCommands = []
 
-  let qualityPassed = 0;
-  let qualityFailed = 0;
 
       qualityPassed++;
       qualityFailed++;
@@ -110,12 +102,9 @@ const coverageCommands = [];
   let coveragePassed = 0;
   let coverageFailed = 0;
   coverageCommands.forEach(cmd => {})
-    const result = runCommand(cmd, `Running ${cmd}`);
     if (result.success) {}
   const coverageCommands = []
 
-  let coveragePassed = 0;
-  let coverageFailed = 0;
 
       coveragePassed++;
       coverageFailed++;

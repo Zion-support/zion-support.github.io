@@ -40,7 +40,6 @@ export const useRecordActivity = () => {;
     if (!user) return null,;
     try {;
       }
-      const { data, error } = await supabase;
         .from('milestone_activities');'
         .insert({;
           }

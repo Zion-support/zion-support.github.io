@@ -4,13 +4,11 @@ export default function handler() {;
   const vendors = listVendors();
   res.status(200).json({ vendors });export default function handler() {;
   }
-  const vendors = listVendors();
   res.status(200).json({ vendors });
 export default function handler() {
 
   }
 
-  const vendors = listVendors();
   res.status(200).json({ vendors });
 import { list_vendors } from '../../../utils / vendor - store';'
 export default /**
@@ -24,7 +22,6 @@ function handler() {
  */
 function handler() {
   }
-  const vendors = list_vendors ();
   res.status (200).json ({ vendors });
 
 import { listVendors } from '../../../utils/vendor-store';'
@@ -33,8 +30,6 @@ export default function handler() {
   const vendors = null;
 export default function handler() {;
   }
-  const vendors = listVendors();
   res.status(200).json({ vendors });export default function handler() {;
   }
-  const vendors = listVendors();
   res.status(200).json({ vendors });

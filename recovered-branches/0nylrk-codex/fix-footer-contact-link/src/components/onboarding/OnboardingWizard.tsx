@@ -247,7 +247,6 @@ return (;
     }
   ];
   // Navigate to the specified URL;
-  const handleAction = () => {;
     }
     if (currentStep < steps && steps.length - 1) {;
       }
@@ -261,7 +260,6 @@ return (;
     }
   };
   // Skip the current step;
-  const handleSkip = () => {;
     }
     if (currentStep < steps && steps.length - 1) {;
       }

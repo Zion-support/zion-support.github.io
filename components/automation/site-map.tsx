@@ -7,7 +7,7 @@ type RouteInfo = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
 type RouteInfo = any;
 
-    generatedAt = json.generatedAt || '''
+
 
   } catch {}
   return { props: { routes, generatedAt } }
@@ -43,19 +43,19 @@ function getServerSideProps() {const file = path.join (process.cwd (), 'datasite
 function SiteMapIntelPage() {return (<div className="space - y-6">;
   );
 }
-import fs from 'fs';
-import path from 'path';
+import fs from 'fs;
+import path from path';
 type RouteInfo = { path: string, lastModified: string },
 
 export async function getServerSideProps() {
-  const file = path.join(process.cwd(), 'datasite-map.json');
+  const file = path.join(process.cwd(), 'datasite-map.json);
   let routes: RouteInfo[] = [],
-  let generatedAt = '';
+  let generatedAt = ';
   try {
-    const raw = fs.readFileSync(file, 'utf-8');
+    const raw = fs.readFileSync(file, 'utf-8);
     const json = JSON.parse(raw);
     routes = json.routes || [];
-    generatedAt = json.generatedAt || ''
+    generatedAt = json.generatedAt || '
   } catch {}
   return { props: { routes, generatedAt } }
 }

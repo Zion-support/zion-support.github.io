@@ -136,6 +136,14 @@ const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(use
         <div className="text-center">
           <div className="text-xl font-semibold">Certificate of Completion</div>
           <div className="text-xs opacity-80">Preview</div>
+
+  return (
+    <div className="border rounded p-4">
+      <div className=text-sm text-gray-600>Zion Certificate</div>
+      <div className="mt-2 h-40 bg-gradient-to-br from-slate-800 to-slate-900 text-white flex items-center justify-center rounded">
+        <div className=text-center>
+          <div className="text-xl font-semibold">Certificate of Completion</div>
+          <div className=text-xs opacity-80>Preview</div>
         </div>
       </div>
       <a

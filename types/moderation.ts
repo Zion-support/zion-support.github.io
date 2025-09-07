@@ -50,6 +50,18 @@ export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | '
 export interface ModerationAction {
 
 export interface ModerationAction {;
+export interface ModerationResult {
+  id: string;
+  content: string;
+  status: 'approved | rejected' | 'pending;
+  reason?: string;
+  moderatedBy?: string;
+
+  moderatedAt: Date;
+export type ModerationStatus = pending' | 'approved | removed' | 'warned | banned';
+export interface ModerationAction {
+
+export interface ModerationAction {
 
 
 
@@ -74,6 +86,16 @@ export interface ModerationAction {
   targetId: string;
   targetType: "post" | "comment" | "user";
   adminId: string;
+  id: string;
+
+  adminId: string;
+  reason?: string;
+
+
+;
+}
+export interface ModerationAction {
+
   reason?: string;
   "createdAt": string;
   "created_at": string;
@@ -90,6 +112,11 @@ export interface ModerationFlag {;
   reporterId: string;
   targetId: string;
   targetType: "post" | "comment" | "user";
+  type: spam" | "inappropriate | harassment" | "other;
+  content: string;
+  reporterId: string;
+  targetId: string;
+  targetType: post" | "comment | user";
   status: ModerationStatus;
   createdAt: string;
   updatedAt: string;
@@ -228,6 +255,52 @@ export interface ModerationFlag {;
   target_type: 'post' | 'comment' | 'user';
   status: ModerationStatus;
 
+
+}
+}
+}'
+
+export interface ModerationRule {}
+  id: string;
+
+}
+}
+export interface ModerationFlag {
+
+export interface ModerationFlag {
+  id: string;
+  type: 'spam | inappropriate' | 'harassment | other';
+  content: string;
+  reporter_id: string;
+  target_id: string;
+  target_type: 'post | comment' | 'user;
+
+
+
+}
+  created_at: string;
+  updated_at: string;
+  admin_notes?: string}
+
+}
+
+
+}
+export interface ModerationFlag {
+
+}
+export interface ModerationFlag {
+}
+
+
+export interface ModerationFlag {
+
+  id: string;
+
+  name: string;
+  pattern: string;
+  action: 'approve' | reject | 'flag';
+  severity: low' | 'medium | high';
 
 }
 }

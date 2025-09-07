@@ -22,9 +22,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readJson, writeJson } from '../../../utils/fsDb';
-import { logSupportEventToOperator } from '../../../utils/operator';
 export default async function handler(req, res) {
   try {
     res.status(200).json({ message: 'API endpoint working' })

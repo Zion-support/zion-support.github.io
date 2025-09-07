@@ -1,11 +1,13 @@
 
-
-import React, { useState } from 'react';'
-import { motion } from 'framer-motion';'
-
-export default function InteractiveSearch() {
-  }
-  const [value, setValue] = useState('');'
+import React, { useState } from 'react;
+import { motion } from framer-motion';
+export default function InteractiveSearch({ placeholder;
+export default function InteractiveSearch({}
+  placeholder = 'Search talent, skills, or jobs...}
+}: {}
+  placeholder?: string;}
+}) {
+  const [value, setValue] = useState(');
     >
       <input
         value={value}
@@ -57,9 +59,7 @@ export default function InteractiveSearch() {const [value, setValue] = useState(
         value={value}
         onChange={e => setValue(e && e.target.value)}
         placeholder={placeholder}
-
-        className="w-full rounded-md border border-gray-300 "dark":border-gray-700 bg-white "dark":bg-gray-900 px-4 py-2 text-sm "focus":outline-none "focus":ring-2 "focus":ring-blue-500""
-      />
+        className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500      />
       {value && (
         <button
 }
@@ -73,4 +73,5 @@ className='absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 "hover":text-
   )
 }
 "
+}
 }

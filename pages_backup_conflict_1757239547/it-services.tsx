@@ -1,8 +1,6 @@
 import Link from 'next/link',
 import Head from 'next/head';
-import Link from 'next/link',
 import React from 'react';
-import Head from 'next/head';
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -634,11 +632,6 @@ export default function ITServicesPage() {
                 <motion.div
                   key={index}
 className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
   Server, 
   Shield, 
   Cloud, 

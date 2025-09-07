@@ -68,7 +68,6 @@ export default function TranslationManager() {
   useEffect(() => {
     if (!searchQuery.trim()) {
       // Get all unique keys across all languages
-      const allKeys = new Set<string>();
       Object.values(translations).forEach(langTranslations => {
         Object.keys(langTranslations).forEach(key => allKeys.add(key))
       });

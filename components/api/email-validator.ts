@@ -3,7 +3,33 @@ isRoleBased: boolean;
   },
 }
 
-export default async function handler() {
+  }      email;
+      isValid: score >= 70;
+      score: Math && Math.max(0, score);
+        hasValidFormat,
+        hasValidDomain,
+        hasValidMX: true, // Simplified for demo;
+        is_disposable,
+        isRoleBased,
+        isFreeProvider}}
+    res.status (200).json (result);
+
+    res.status (500).json ({ error: 'Internal server error });
+  }      email;
+      is_valid: score >= 70;
+      score: Math.max (0, score);
+      suggestions;
+
+        hasValidFormat;
+        hasValidDomain;
+        hasValidMX: true, // Simplified for demo;
+        is_disposable;
+        isRoleBased;
+        isFreeProvider}
+    }
+    res.status (200).json (result);
+
+    res.status(500).json({ error: Internal server error' })
   }
 interface EmailValidationResult {
   email: string;
@@ -166,10 +192,10 @@ const "suggestions": string[] = [];
       suggestions.push('Check email format (should be user@domain.com)')
     }
     if (isDisposable) {
-      suggestions.push('Consider using a permanent email address')
+      suggestions.push('Consider using a permanent email address);
     }
     if (isRoleBased) {
-      suggestions.push('Role-based emails may have delivery issues')
+      suggestions.push(Role-based emails may have delivery issues');
     }
     if (score < 50) {
       suggestions.push('This email may not be suitable for business use')

@@ -27,24 +27,17 @@ export default function JobDetailsPage() {
 
   const router = useRouter();
   const { slug } = router.query as { slug?: string }
-  const { isMobile } = useResponsive();
-  const { notify } = useToast();
-  const [loading, setLoading] = useState(true);
 :pages/jobs/[slug].tsx
 
 import {useRouter} from 'next/router';
 import EnhancedCard from '../../components/ui/EnhancedCard';
 import EnhancedButton from '../../components/ui/EnhancedButton';
 import EnhancedLoading from '../../components/ui/EnhancedLoading';
-import useResponsive from '../../hooks/useResponsive';
 
 import {useToast} from '../../components/ui/NotificationSystem';
-import {useEffect, useState} from 'react';
 export default function JobDetailsPage() {;
-  const router = useRouter();
 
   useEffect(() => {
-    const t = setTimeout(() => setLoading(false), 600);
     return () => clearTimeout(t);
   }, []);
 
@@ -55,31 +48,22 @@ export default function JobDetailsPage() {;
     );
   }
 
-  const onApply = () => {
     notify('Application submitted! We’ll notify you when it’s viewed.success')
 
 useEffect(() => {
 origin/cursor/automate-test-improve-and-merge-code-2533
-    const t = setTimeout(() => setLoading(false), 600);
     return () => clearTimeout(t);
   }, []);
 
-    const t = setTimeout(() => setLoading(false), 600);
     return () => clearTimeout(t);
   }, []);
 
 '
-import {useToast} from '../../components/ui/NotificationSystem';'
-import {useEffect, useState} from 'react';
 
 export default function JobDetailsPage() { return null; }
   const { slug } = router && router.query as { slug?: string };
-  const { isMobile } = useResponsive();
-  const { notify } = useToast();
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {;
-    const t = setTimeout(() => setLoading(false), 600);
     return () => clearTimeout(t);
   }, []);
 

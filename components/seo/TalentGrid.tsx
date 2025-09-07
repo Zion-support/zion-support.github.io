@@ -1,8 +1,4 @@
 type Props = {
-  }
-  region?: string;
-  service?: string
-};
 
 function matchesRegion(profile: TalentProfile, region?: string) {
   if (!region) return true,
@@ -20,6 +16,7 @@ const items = React.useMemo(;
     [region, service]
   );
 ;
+  );
   // Check condition
 if ( {) {
   $2

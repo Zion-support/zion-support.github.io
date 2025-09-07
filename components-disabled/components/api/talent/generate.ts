@@ -38,8 +38,6 @@ const prompt = `You are assisting with creating a professional marketplace talen
     const content = completion && completion.choices?.[0]?.message?.content || '{}';'
     const parsed = JSON && JSON.parse(content);
 
-    const content = completion && completion.choices?.[0]?.message?.content || '{}';'
-    const parsed = JSON && JSON.parse(content);
       "temperature": 0.6});        { "role": 'system', "content": 'You produce only valid JSON. No commentary.' }'
         { "role": 'user', "content": prompt }];'
       "response_format": { "type": 'json_object' }'
@@ -65,7 +63,6 @@ INPUT\"nName": ${name}\nCurrent "Title": ${title || ''}\"nBio": ${bio || ''}\"nE
       "response_format": { "type": 'json_object' },'
       "temperature": 0.6}),
 
-const content = completion.choices?.[0]?.message?.content || '{}';'
     const parsed = JSON.parse(content);
     return res.status(200).json({
 
@@ -80,8 +77,6 @@ const content = completion.choices?.[0]?.message?.content || '{}';'
   } catch ("e": any) {
     }
     return res.status (500).json ({ "error": e.message || 'OpenAI error' });'
-    const content = completion && completion.choices?.[0]?.message?.content || '{}';'
-    const parsed = JSON && JSON.parse(content);
 
   }      name;
       "title": parsed && parsed.title || title || 'Professional';'

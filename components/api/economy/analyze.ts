@@ -159,13 +159,14 @@ return res.status(500).json({ "error": 'Failed to generate analysis',;'
   };
 }
 }
-;
     const analysis =;
       completion.choices?.[0]?.message?.content?.trim () ||;'
 
 
 }
 export type AnalyzeResponse = {analysis: string;}import type { NextApiRequest, NextApiResponse } from 'next';
+}
+export type AnalyzeResponse = {analysis: string;}import type { NextApiRequest, NextApiResponse } from 'next;
 export type AnalyzeRequestBody = {operatorPrompt: string;
   context?: Record<string, unknown>;
 }
@@ -215,5 +216,9 @@ export type AnalyzeRequestBody = {operatorPrompt: string,context?: Record<string
 }
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+      No analysis generated.';
+
+}
+
 
 }

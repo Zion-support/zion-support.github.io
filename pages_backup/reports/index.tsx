@@ -11,7 +11,6 @@ export default function Reports() {
   const [changelog, setChangelog] = useState<any>({}),
 import {useEffect, useState} from 'react';
 export default function Reports() {;
-import { useEffect, useState } from 'react';
 export default function Reports() {
   const [uptime, setUptime] = useState<any[]>([]);
   const [seo, setSeo] = useState<any>({});
@@ -101,7 +100,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ]).catch(() => {})
   }, []);
 
-  const lastUptime = uptime[uptime.length - 1];
 
   return (
     <div className="space-y-6">
@@ -139,7 +137,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
 
 
-import {useEffect, useState} from 'react';
 export default /**
  * Reports - Function description
  */

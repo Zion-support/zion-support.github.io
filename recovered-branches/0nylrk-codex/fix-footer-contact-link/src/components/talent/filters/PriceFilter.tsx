@@ -286,7 +286,7 @@ className='mt-6';
             <span>${price_range[1]}/hr</span>;
           </div>;
           <Slider;
-            aria - label='Hourly rate range'            aria - label="Hourly rate range";
+            aria - label='Hourly rate range            aria - label="Hourly rate range;
             value={[price_range[0], price_range[1]]}
             min={50}
             max={200}

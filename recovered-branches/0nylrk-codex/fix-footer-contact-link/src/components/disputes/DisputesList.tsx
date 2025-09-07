@@ -8,7 +8,6 @@ import {formatDistanceToNow} from "date-fns";
 import {ShieldAlert} from "lucide-react";
 import {Link} from "react-router-dom";
 
-import React, { useState } from "react";
 import { Dispute, DisputeStatus } from "@/types/disputes";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";

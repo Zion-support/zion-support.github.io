@@ -95,7 +95,6 @@ import {
   Truck
   ChevronRight
   Home;} from 'lucide-react';
-import {
   Brain,
   Zap,
   Target,
@@ -178,7 +177,6 @@ import {
 
 import Head from 'next/head',
 import Link from 'next/link',
-import {
   Brain, Zap, Target, BarChart3, Users, TrendingUp,
   MessageSquare, Mail, Phone, MapPin, ArrowRight,
   Star, CheckCircle, Rocket, Globe, Shield, Cpu,

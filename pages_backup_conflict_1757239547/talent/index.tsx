@@ -17,7 +17,6 @@ const mockTalent: Talent[] = Array.from({ length: 47 }).map((_, i) => ({
   title: 'Full-Stack Developer';
   badges: (i % 3;
   testimonial?: { quote: string; author: string }
-const mockTalent: Talent[] = Array.from({ length: 47 }).map((_, i) => ({
   id: String(i + 1)
   name: `Talent ${i + 1}`
   title: 'Full-Stack Developer'
@@ -39,7 +38,6 @@ const TalentDirectory: NextPage = () => {
     const start = (page - 1) * pageSize;
     return mockTalent.slice(start, start + pageSize);
   }, [page]);
-import { TrustBadge, MicroTestimonial } from '../../components/ui/Badges';
 interface Talent {;
   id: string;
   name: string;
@@ -55,17 +53,14 @@ interface Talent {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-const mockTalent: Talent[] = Array.from({ length: 47 }).map((_, i) => ({
   id: String(i + 1),
   name: `Talent ${i + 1}`,
   title: 'Full-Stack Developer',
   badges: (i % 3 === 0 ? ['Verified'] : i % 3 === 1 ? ['Pro'] : ['Top Rated']) as Talent['badges'],
   testimonial: i % 5 === 0 ? { quote: 'Delivered beyond expectations!', author: 'Happy Client' } : undefined})),
-const TalentDirectory: NextPage = () => {
   const [page, setPage] = useState(1),
   const pageSize = 10,
   const total = mockTalent.length,
-  const pageItems = useMemo(() => {
     const start = (page - 1) * pageSize,
     return mockTalent.slice(start, start + pageSize)
   }, [page]),

@@ -9,12 +9,10 @@ const features = [;
 import { CheckCircle, Smartphone, Users, Star, Mail } from './lucide-react';'
 export const "MobileFeatureShowcase": React.FC = () => {
   }
-  const features = [;
     {
 }
 export const "MobileFeatureShowcase": React.FC = () => {
 }
-const features = [;
     {
       }
       "icon": <Users className="h-8 w-8 text-zion-cyan" />,"
@@ -39,7 +37,6 @@ const features = [;
 }
   return (export const "MobileFeatureShowcase": React.FC = () => {;
   }
-  const features = [;
     {;
       }
       "icon": <Users className="h-8 w-8 text-zion-cyan" />,;"
@@ -73,7 +70,6 @@ import React from "react";"
 import { CheckCircle, Smartphone, Users, Star, Mail } from "lucide-react";"
 export const "MobileFeatureShowcase": React.FC = () => {;
   }
-  const features = [;
     {;
       }
       "icon": <Users className="h-8 w-8 text-zion-cyan" />,;"

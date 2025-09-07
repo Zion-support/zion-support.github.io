@@ -60,32 +60,13 @@ import {
   Play, CheckCircle, Award, Users, Clock, Phone, Mail
 } from 'lucide-react',
 
-const contactInfo = $2;
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-},
-
-const features = $2;
-    title: 'AI Consciousness',
-    description: 'Develop genuine AI consciousness and emotional intelligence'
-  },
-  {
-    icon: Atom,
-    title: 'Quantum Computing',
-    description: 'Leverage quantum algorithms for exponential performance'
-  },
+        {/* Main Heading */}
+  }
   {
     icon: Rocket,
     title: 'Space Technology',
-    description: 'Automated space exploration and resource utilization'
-  },
-  {
-    icon: Shield,
-    title: 'Quantum Security',
-    description: 'Unbreakable encryption with quantum key distribution'
+    description: Automated space exploration and resource utilization';
   }
-],
 
 const stats = [;
   { "number": '500+', "label": 'Active Clients', "icon": Users,'
@@ -220,6 +201,28 @@ className='text-5xl md:text-7xl lg:text-8xl font-bold mb-6'
           >
             <span className='bg-gradient-to-r from-purple-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent'>'
               Zion Tech Group
+className=mb-8'
+origin/cursor/automate-test-improve-and-merge-code-2533
+        >
+          <motion.div;
+            initial={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+
+          className='mb-8>          className=mb-8";
+        >;
+          <motion&& motion.div;
+            initial={{ opacity: 0, scale: 0 && 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+
+          </motion.div>
+          <motion.h1;
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >"
+            <span className=bg-gradient-to-r from-purple-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent>
+
             </span>
           </motion.h1>
           <motion.p,
@@ -345,7 +348,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             transition={{ duration: 0.8, delay: 0.8 }}
           >
             Transform your business with cutting-edge micro SAAS solutions, enterprise IT services, and revolutionary AI platforms that define the next decade of technological innovation.
-className='text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto'
+
           >
             Transform your business with cutting-edge micro SAAS solutions
             enterprise IT services, and revolutionary AI platforms that define
@@ -353,7 +356,7 @@ className='text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto'
 origin/cursor/automate-test-improve-and-merge-code-2533
           </motion.p>
         </motion.div>"
-            <span className="text-emerald-400 font-semibold">Space Technology</span>;
+            <span className="text-emerald-400 font-semibold>Space Technology</span>;
 
           <motion&& motion.p;
             initial={{ opacity: 0, y: 30 }}
@@ -687,8 +690,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             >'
               <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300'>'
                 <feature.icon className='w-6 h-6 text-white' />
+                <feature.icon className=w-6 h-6 text-white />
               </div>'
-              <h3 className='text-lg font-semibold text-white mb-2'>
+              <h3 className='text-lg font-semibold text-white mb-2>
                 {feature.title}
               </h3>
               <p className='text-gray-400 text-sm'>{feature.description}</p>
@@ -935,6 +939,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <span className="text-gray-300 text-sm">Visit Us</span>
               <a href={contactInfo.website} className="text-white font-semibold hover:text-emerald-400 transition-colors">
                 {contactInfo.website.replace('https://', '')}
+                {contactInfo.website.replace('https://, ')}
               </a>
             </div>
           </div>
@@ -1166,23 +1171,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
         />
         <motion.div
-          className="absolute bottom-32 left-32 w-3 h-3 bg-cyan-400 rounded-full"
+          className=absolute bottom-32 left-32 w-3 h-3 bg-cyan-400 rounded-full"
           animate={{
             scale: [1, 1.5, 1],
             opacity: [0.3, 0.8, 0.3]}}
           transition = $2;
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: "easeInOut
           }}
         />
         <motion.div
-          className="absolute top-1/2 right-1/4 w-1 h-1 bg-emerald-400 rounded-full"
+          className=absolute top-1/2 right-1/4 w-1 h-1 bg-emerald-400 rounded-full"
           animate={{
             scale: [1, 3, 1],
             opacity: [0.2, 0.6, 0.2]}}
           transition = $2;
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: "easeInOut
           }}
         />
       </div>
@@ -1193,7 +1198,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           transition={{
             duration: 4
             repeat: Infinity
-            ease: 'easeInOut'
+            ease: easeInOut
           }}
         />
         <motion.div
@@ -1205,18 +1210,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           transition={{
             duration: 5
             repeat: Infinity
-            ease: 'easeInOut',          }}
+            ease: easeInOut}}
         />
       </div>
     </section>;
-  );            ease: "easeInOut"
+  );            ease: easeInOut"
           }}
           transition={{duration: 3;}
             repeat: Infinity;}
             ease: 'easeInOut'          }}
            />
         <motion&& motion.div
-          className='absolute bottom-32 left-32 w-3 h-3 bg-cyan-400 rounded-full'
+          className=absolute bottom-32 left-32 w-3 h-3 bg-cyan-400 rounded-full
           animate={{}}
           transition={{duration: 4
             repeat: Infinity;}

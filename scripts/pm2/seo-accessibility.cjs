@@ -41,8 +41,6 @@ const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`;
       const htmlFiles = this.findHTMLFiles();
       
 
-      const seoIssues = [];
-      const htmlFiles = this.findHTMLFiles();
       for (const file of htmlFiles) {}
 
       this.log(`Found ${seoIssues.length} SEO issues`);
@@ -90,7 +88,6 @@ const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`;
     const imgTags = content.match(/<img[^>]*>/g) || [];
       
       const a11yIssues = [];
-      const htmlFiles = this.findHTMLFiles();
       
       for (const file of htmlFiles) {}
         try {}
@@ -115,7 +112,6 @@ const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`;
     };
   };
   analyzeAccessibility(content, filePath) {}
-    const issues = [];
     
     // Check for proper heading hierarchy;
 </img>
@@ -181,7 +177,6 @@ const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`;
         const files = fs.readdirSync(currentDir);
         for (const file of files) {}
           const filePath = path.join(currentDir, file);
-          const stat = fs.statSync(filePath);
           
           if (stat.isDirectory()) {}
             scanDir(filePath);
@@ -201,12 +196,8 @@ const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`;
     const imageFiles = [];
     const extensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'];
     
-    const scanDir = (dir) => {}
       try {}
-        const files = fs.readdirSync(dir);
         for (const file of files) {}
-          const filePath = path.join(dir, file);
-          const stat = fs.statSync(filePath);
           
           if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {}
             scanDir(filePath);

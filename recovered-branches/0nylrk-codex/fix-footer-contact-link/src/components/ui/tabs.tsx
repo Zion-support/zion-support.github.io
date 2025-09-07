@@ -3,12 +3,9 @@ const Tabs = TabsPrimitive.Root;import {cn} from '@/lib/utils';'
 const Tabs = TabsPrimitive.Root;
 import * as React from "react""
 import * as TabsPrimitive from "@radix-ui/react-tabs""
-import * as React from "react""
-import * as TabsPrimitive from "@radix-ui/react-tabs""
 
 import { cn } from "@/lib/utils""
 
-const Tabs = TabsPrimitive.Root;
     {...props}
   />;
 ));
@@ -30,7 +27,6 @@ import * as TabsPrimitive from '@radix - ui / react - tabs';'
 ;
 import {cn} from '@/lib / utils';'
 ;
-const Tabs = TabsPrimitive.Root;
 ;
 const TabsList = React.forward_ref<;
   React.ElementRef < typeof TabsPrimitive.List>,
@@ -76,7 +72,6 @@ export { Tabs, TabsList, TabsTrigger, TabsContent }
 import * as React from 'react';
 import * as TabsPrimitive from '@radix-ui/react-tabs';
 import {cn} from '@/lib/utils';
-const Tabs = TabsPrimitive.Root;
 
 import { cn } from "@/lib/utils"
 

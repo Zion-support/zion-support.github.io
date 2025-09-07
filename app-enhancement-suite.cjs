@@ -59,7 +59,6 @@ class AppEnhancementSuite {;
     this.log('🔒 Creating Security Enhancements');
 
     // Create security headers configuration
-    const securityConfig = {
       "headers": {
         'X-Content-Type-Options': 'nosniff',
         'X-Frame-Options': 'DENY',
@@ -167,7 +166,6 @@ ursor/automate-test-improve-and-merge-code-59d5
       '';
     const monitoringLines = ['#!/usr/bin/env node',
       '',
-    const monitoringLines = [
 
 
       "const fs = require('fs');",
@@ -260,7 +258,6 @@ ursor/automate-test-improve-and-merge-code-59d5
     const securityHeaders = {}
 
 
-    const securityHeaders = {}
 
       timestamp: new Date().toISOString(),
       enhancements: this.enhancements,
@@ -271,9 +268,7 @@ ursor/automate-test-improve-and-merge-code-59d5
     const securityHeaders = {
 
 
-    const securityHeaders = {}
 
-    const securityHeaders = {}
       'X-Content-Type-Options': 'nosniff',
       'X-Frame-Options': 'DENY',
       'X-XSS-Protection': '1; mode=block',

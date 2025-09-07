@@ -79,7 +79,6 @@ const auditResult = execSync('npm audit --json', { });
       
 
       // Check for common security issues;
-      const securityIssues = [];
       // Check for hardcoded secrets;
 const secretPatterns = [];
         /password\s*=\s*['"][^'"]+['"]/gi,
@@ -172,7 +171,6 @@ const scanDir = (dir) => {}
           const filePath = path.join(dir, file)
           const stat = fs.statSync(filePath)
 
-    const scanDir = (dir) => {}
         const files = fs.readdirSync(dir);
         for (const file of files) {}
           const filePath = path.join(dir, file);
@@ -220,7 +218,6 @@ const scanDir = (dir) => {}
                          (report.codeScan.totalIssues || 0) +
                          (report.configScan.totalIssues || 0)
 
-      const totalIssues = (report.dependencyScan.total || 0) +
                          (report.codeScan.totalIssues || 0) +
                          (report.configScan.totalIssues || 0);
       

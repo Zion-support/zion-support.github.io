@@ -234,8 +234,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
         'Kidney disease detection, renal function analysis, transplant assessment'
       accuracy: '98.8%'
     },  ];
-const AIHealthcareDiagnosticsPro: React.FC = () => {
-  const features = [
     {
       icon: Brain,
       title: "Advanced AI Diagnostics",
@@ -277,7 +275,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
   }
 }
   ],
-  const useCases = [
     {
       icon: Microscope,
       title: "Radiology & Imaging",
@@ -307,7 +304,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
   }
 }
   ],
-  const pricingPlans = [
     {
       name: "Starter",
       price: "$4,999",
@@ -366,7 +362,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
   }
 }
   ],
-  const integrations = [
     {
       name: "PACS Systems",
       icon: Database,
@@ -408,7 +403,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
   }
 }
   ],
-  const specialties = [
     {
       icon: Heart,
       name: "Cardiology",

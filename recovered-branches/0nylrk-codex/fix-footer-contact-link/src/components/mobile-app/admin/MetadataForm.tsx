@@ -47,10 +47,8 @@ interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>
 }
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
-  const { control, register, watch, setValue } = form,
   const keywords = watch($2);
   const platform = watch($2);
-  const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" || e.key === ",") {
       e.preventDefault($2);
       const value = e.currentTarget.value.trim($2);

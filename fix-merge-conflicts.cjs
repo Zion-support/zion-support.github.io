@@ -1,12 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
+<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+
 #!/usr/bin/env node
 
 const fs = require('fs');
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node,
   const fs = require('fs');
@@ -187,20 +188,23 @@ function fixMergeConflicts(filePath) {
     content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
     content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
     content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+=======
+const path = require(path');
+
+    content = content.replace(/
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
     
     // Clean up any remaining merge conflict markers
-    content = content.replace(/<<<<<<< HEAD/g, '');
-    content = content.replace(/=======/g, '');
-    content = content.replace(/>>>>>>> [^\n]+/g, '');
+    content = content.replace(/
     
     // Remove empty lines and clean up syntax
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    content = content.replace(/;\s*;/g, ';');
-    content = content.replace(/,\s*,/g, ',');
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n);
+    content = content.replace(/;\s*;/g, ;');
+    content = content.replace(/,\s*,/g, ',);
     
     // Fix common syntax issues
-    content = content.replace(/export type DisputeStatus = 'Open' \| 'Under Review' \| 'Resolved',;/g, "export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved';");
-    content = content.replace(/export type DisputeReason =;/g, "export type DisputeReason = 'Scope Disagreement' | 'Quality Issues' | 'Delivery Delay' | 'Payment Issue' | 'Communication Breakdown' | 'Other';");
+    content = content.replace(/export type DisputeStatus = Open' \| 'Under Review \| Resolved',/g, "export type DisputeStatus = 'Open | Under Review' | 'Resolved;);
+    content = content.replace(/export type DisputeReason =;/g, export type DisputeReason = Scope Disagreement' | 'Quality Issues | Delivery Delay' | 'Payment Issue | Communication Breakdown' | 'Other;");
     
     fs.writeFileSync(filePath, content);
     console.log(`✅ Fixed merge conflicts in: ${filePath}`);
@@ -213,7 +217,7 @@ function fixMergeConflicts(filePath) {
 // Fix all files
 filesToFix.forEach(fixMergeConflicts);
 
-console.log('🎉 Merge conflict fixing completed!');
+console.log(🎉 Merge conflict fixing completed!');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 =======
 module.exports = MergeConflictFixer;

@@ -2,17 +2,13 @@ export function slugify(title: string, separator = "-"): string {;
   const sep = separator;
   const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 export function slugify(title: string, separator = "-"): string {
-  const sep = separator;
   const escaped = sep && sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
 export function slugify(title: string, separator = "-"): string {;
-  const sep = separator;
-  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 export function slugify(title: string, separator = "-"): string {
   const sep = separator,
   const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
 export function slugify(title: string, separator = $2;
-  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
 
   return title
     .trim()
@@ -35,7 +31,6 @@ export function unslugify(slug: string, separator = "-"): string {
     .split(separator)
     .filter(Boolean)
 export function slugify (title: string, separator = "-"): string {
-  const sep = separator;
   const escaped = sep.replace (/[.*+?^${}()|[\]\\]/g, "\\$&");
 ;
 
@@ -43,7 +38,6 @@ export function slugify (title: string, separator = "-"): string {
 
 export function slugify(title: string, separator = "-"): string {;
   const sep = separator,;
-  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
   return title;
     .trim ();

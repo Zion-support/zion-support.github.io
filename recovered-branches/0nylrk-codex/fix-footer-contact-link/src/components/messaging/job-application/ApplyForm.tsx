@@ -29,15 +29,6 @@ interface ApplyFormProps {
 "onClose": () => void,
 onApplySuccess?: ("jobId": string) => Promise<void>
 }
-import React, { useState } from 'react','
-import { Button } from "@/components/ui/button","
-import { Loader2 } from "lucide-react","
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs","
-import { useJobApplications } from "@/hooks/useJobApplications","
-import { useMessaging } from "@/context/MessagingContext","
-import { toast } from "@/hooks/use-toast","
-import { ResumeSelector, ResumeOption } from "../resume-selector","
-import { MessageTab } from "./MessageTab","
 interface ApplyFormProps {
   }
   "job": Job,
@@ -62,21 +53,12 @@ const { createConversation } = useMessaging(),;
 const { applyToJob } = useJobApplications(),;
 const [message, setMessage] = useState(;
     `Hi, I'm interested in your job "${job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`  const { createConversation } = useMessaging();`  const { applyToJob } = useJobApplications();
-  const [message, setMessage] = useState(;
     `Hi, I'm interested in your job "${job && job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`;`  );
   const [proposalLink, setProposalLink] = useState('');'
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [activeTab, setActiveTab] = useState<string>("message");"
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
   const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
-import { Button } from "@/components/ui/button","
-import { Loader2 } from "lucide-react","
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs","
-import { useJobApplications } from "@/hooks/useJobApplications","
-import { useMessaging } from "@/context/MessagingContext","
-import { toast } from "@/hooks/use-toast","
-import { ResumeSelector, ResumeOption } from "../resume-selector","
-import { MessageTab } from "./MessageTab","
 interface ApplyFormProps {
 }
 const [proposalLink, setProposalLink] = useState(''),;'
@@ -88,9 +70,6 @@ const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null),;
     }
     setSelectedResume(resume)
     setSelectedResumeId(resume.id)
-  const [activeTab, setActiveTab] = useState<string>("message");"
-  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
-  const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
   const handleApply = async () => {
     }
     if (!message.trim()) {
@@ -109,7 +88,6 @@ return;
     setSelectedResumeId(resume.id)
   },
   
-  const handleApply = async () => {
     if (!message.trim()) {
       toast($2);
       return
@@ -176,7 +154,6 @@ await createConversation(
         contextData;
       );;
       // Create context data for the conversation;
-      const contextData = {;
         }
         "title": job.title,,
   "description": job.description,;
@@ -257,7 +234,6 @@ return (;
           </TabsTrigger>;
         </TabsList>;
         <TabsContent value="message">;"
-import React, { useState } from 'react';'
 import { Button } from '@/components / ui / button';'
 import { Loader2 } from './lucide-react';'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';'
@@ -457,7 +433,6 @@ onApplySuccess?: ("jobId": string) => Promise<void>
   }
   createConversation
 }= useMessaging ();
-const {
   }
   applyToJob
 }= useJobApplications ();

@@ -42,8 +42,6 @@ import { Badge  } from '@/components/ui/badge';
 import Skeleton from '@/components/ui/skeleton';
 import { EmptyState } from '@/components/ui/empty-state';
 export default function OrdersPage() {;
-  const { user } = useAuth();
-  const { data: orders, isLoading } = useGetOrdersQuery(user?.id);
 
 
   const getStatusBadge = (status: string,) => {;

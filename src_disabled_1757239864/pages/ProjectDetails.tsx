@@ -16,12 +16,10 @@ import {
   CardFooter;
   CardHeader;
   CardTitle} from "@/components/ui/card";
-import {
   Tabs;
   TabsContent;
   TabsList;
   TabsTrigger} from "@/components/ui/tabs";
-import {
   AlertDialog;
   AlertDialogAction;
   AlertDialogCancel;
@@ -109,7 +107,6 @@ function ProjectDetailsContent() {
     setIsSubmittingNote(true);
     
     try {
-      const { data, error } = await supabase
         .from("project_notes")
         .insert({
           project_id: project.id,

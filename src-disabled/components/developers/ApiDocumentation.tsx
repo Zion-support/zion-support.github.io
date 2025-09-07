@@ -600,7 +600,6 @@ const response = await fetch(\`https://api.ziontechgroup.com/v1/jobs/\${jobId}\`
     'Content-Type': 'application/json'
   }
 })
-const data = await response.json ()
 logInfo (data), `
 python: `import requests headers = {'
   'Authorization': 'Bearer YOUR API KEYContent-Type': 'application/json'
@@ -915,7 +914,6 @@ print(data)`;
     'Content-Type': 'application/json'
   }
 })
-const data = await response.json()
 logInfo(data);`
                 python: `import requests
 headers = {
@@ -931,7 +929,6 @@ print(data)`
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
 }),;
-const data = await response.json(),;
 logInfo(data),`,;
                 python: `import requests;
 headers = {;
@@ -1012,7 +1009,6 @@ const response = await fetch(\`https://api.ziontechgroup.com/v1/talent/\${talent
     'Content-Type': 'application/json'
   }
 })
-const data = await response.json()
 logInfo(data);`
                 python: `import requests
 headers = {
@@ -1050,7 +1046,6 @@ const response = await fetch(\`https://api.ziontechgroup.com/v1/talent/\${talent
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json';
   }
 }),;
-const data = await response.json(),;
 logInfo(data),`,;
                 python: `import requests;
 headers = {;
@@ -1216,7 +1211,6 @@ print(data)`;
     requester_email: 'john@example.com'
   })
 })
-const data = await response.json()
 logInfo(data);`
                 python: `import requests
 headers = {
@@ -1256,10 +1250,8 @@ print(data)`
   })
 }),
 
-const data = await response.json(),
 logInfo(data),`,
                 python: `import requests
-import json
 
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
@@ -1342,7 +1334,6 @@ print(data)`;
     'Content-Type': 'application/json'
   }
 })
-const data = await response.json()
 logInfo(data);`
                 python: `import requests
 headers = {
@@ -1357,7 +1348,6 @@ print(data)`
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
 }),;
-const data = await response.json(),;
 logInfo(data),`,;
                 python: `import requests;
 headers = {;
@@ -1883,7 +1873,6 @@ function EndpointSection({
   codeExamples,
   responseExamples
 }: EndpointSectionProps) {
-  const [activeTab, setActiveTab] = useState("curl"),
   return (
     <div className="border border-zinc-800 rounded-md">
       <div className="p-4">
@@ -1931,7 +1920,6 @@ function EndpointSection({;
   codeExamples;
   responseExamples;
 }: EndpointSectionProps) {;
-  const [activeTab, setActiveTab] = useState("curl");
   return (;
     <div className="border border-zinc-800 rounded-md">;
       <div className="p-4">;

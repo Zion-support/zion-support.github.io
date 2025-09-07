@@ -63,7 +63,6 @@ interface PartnerProfile {
   const [commissionRate, setCommissionRate] = useState(25);
   const { user, isAuthenticated } = useAuth();
   const navigate = useNavigate();
-  const navigate = useNavigate();
   useEffect(() => {
     }
     if (!isAuthenticated) {
@@ -237,10 +236,6 @@ interface PartnerProfile {
   const [searchQuery, setSearchQuery] = useState("");"
   const [activeTab, setActiveTab] = useState("pending");"
 const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),;
-  const [isDetailsOpen, setIsDetailsOpen] = useState(false);
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-  const [commissionRate, setCommissionRate] = useState(25);
-  const { user, isAuthenticated } = useAuth();
         setPartners(mockData);
         filterPartners(mockData, activeTab, searchQuery);
       } else {;
@@ -282,7 +277,6 @@ if ( {) {
       }
       setIsLoading (true);
       // In a real application, check admin permissions here;
-      const { data, error } = await supabase;
         .from ('partner_profiles');'
         .select ('*');'
         .order ('created_at', { "ascending": false }),'

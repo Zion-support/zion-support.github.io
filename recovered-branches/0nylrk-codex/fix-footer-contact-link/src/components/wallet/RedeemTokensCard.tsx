@@ -104,7 +104,6 @@ size="sm""
       </CardContent>
     </Card>
   )
-import React, { useState } from "react";"
 import { useWallet } from "@/hooks/useWallet";"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;"
 import { Button } from "@/components/ui/button",;"
@@ -124,7 +123,6 @@ type RewardOption = {;
   "description": string,;
   "cost": number,;
   "type": 'credit' | 'feature' | 'course';'
-const "REWARD_OPTIONS": RewardOption[] = [;
   {;
     }
     "id": 'premium-week',;'

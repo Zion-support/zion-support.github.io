@@ -64,13 +64,11 @@ const main = async () => {}
   
   const report = generateHealthReport(results);
 
-  const report = generateHealthReport(results);
   
   if (report.overall.status === 'HEALTHY') {}
   // Check system health;
   const systemResults = checkSystemHealth();
   // Generate comprehensive report;
-  const results = {}
     system: systemResults;
 
     log('System health check passed: All systems operational');

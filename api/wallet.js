@@ -1,10 +1,10 @@
-const { withErrorLogging } = require('../lib/withErrorLogging.cjs');
+const { withErrorLogging } = require('../lib/withErrorLogging.cjs);
 
 async function handler(req, res) {
-  if (req.method !== 'GET') {
+  if (req.method !== GET') {
     res.statusCode = 405;
-    res.setHeader('Allow', 'GET');
-    res.end('Method Not Allowed');
+    res.setHeader('Allow, GET');
+    res.end('Method Not Allowed);
     return;
   }
 
@@ -32,13 +32,7 @@ async function handler(req, res) {
 }
 ursor/automate-test-improve-and-merge-code-646c;
 
-const { withErrorLogging }  = require('../../utils/withErrorLogging.cjs')async function handler() {if (req.method !== 'GET') {res.statusCode = 405;'
-    }
-    res.setHeader('Allow', 'GET')res.end('Method Not Allowed')return;'
-  }try {// Authentication would normally be checked here;
-    // This is a placeholder implementation;
-}
-ursor/automate-test-improve-and-merge-code-646c;
+
     res.statusCode = 200;
     res.json({"points": 0,"history": [],"message": 'Wallet data retrieved successfully';'
     })} catch (err) {// console.error('Wallet API "error":', err)res.statusCode = 500;'
@@ -116,8 +110,7 @@ const walletData = {
     res.statusCode = 200;
     res.json(walletData);
   } catch (err) {
-    }
-    console.error('Wallet API "error":', err);'
+
     res.statusCode = 500;
     res.json({ "error": err.message || 'Failed to fetch wallet data','
 });

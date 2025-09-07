@@ -22,6 +22,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (!bytecode || !constructorArgs) {
     return res.status(400).json({ error: 'bytecode and constructorArgs are required' })
+  if (req.method !== 'POST) {
+    res.setHeader(Allow', ['POST]);
+    return res.status(405).end(Method Not Allowed');
+  }
+
+
+  const { bytecode, constructorArgs } = req.body || {}
+
+  if (!bytecode || !constructorArgs) {
+    return res.status(400).json({ error: 'bytecode and constructorArgs are required })
   }
 
   try {

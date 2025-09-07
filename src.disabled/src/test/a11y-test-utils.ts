@@ -39,7 +39,6 @@ export const a11yTestUtils = {
         }
         const styles = window && window.getComputedStyle(element);
         const color = styles && styles.color;
-        const backgroundColor = styles && styles.backgroundColor;
         // Simple contrast check (would need more sophisticated implementation)
         if (color && backgroundColor) {
           // Add contrast calculation logic here

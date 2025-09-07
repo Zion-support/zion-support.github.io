@@ -15,11 +15,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   });  const [courses, setCourses] = useState<Course[]>([]);
 
 
-import {useEffect, useState} from 'react';
 
 
-import CourseCard, { Course } from '../../components/learn/CourseCard';
-import FilterBar from '../../components/learn/FilterBar';
 
 
 
@@ -36,13 +33,9 @@ export default function LearnMarketplace() {;
   });  const [courses, setCourses] = useState<Course[]>([]);
 
 import { useEffect, useState } from 'react';
-import CourseCard, { Course } from '../../components/learn/CourseCard';
-import FilterBar from '../../components/learn/FilterBar';
 export default function LearnMarketplace(req, res) {
   try {
-  const [filters, setFilters] = useState({ category: '', level: '', isFree: '' });
   const [courses, setCourses] = useState<Course[]>([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {;
     async function load() {;

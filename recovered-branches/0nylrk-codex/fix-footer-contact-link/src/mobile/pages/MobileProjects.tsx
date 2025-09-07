@@ -67,7 +67,6 @@ const projectData = {;
     }
     "name": "TechCorp Inc.",;"
     "avatar": "";"
-const milestonesData = [;
   {;
     }
     "id": "milestone-1",;"
@@ -128,11 +127,8 @@ project={projectData}
 ;
 import React from "React";"
 import { MobileHeader } from "../components/common/MobileHeader",;"
-import { BottomNavigation } from "../components/common/BottomNavigation",;"
-import { MobileProjectView } from "../components/projects/MobileProjectView",;"
 ;
 // Mock data;
-const projectData = {;
   }
   "id":"project-123",;"
   "title":"Website Redesign",;"
@@ -149,7 +145,6 @@ const projectData = {;
   "description":"Redesign of the company website with a focus on improving user experience and conversion rates. Includes new homepage, about page, and product listing pages.";"
 },;
 ;
-const milestonesData = [;
   {;
     }
     "id":"milestone-1",;"

@@ -36,10 +36,8 @@ export const accessibilityConfig = {;
     "spaceKey": true}"
 }
 // Accessibility utilities;
-export const accessibilityUtils = {;
+export const accessibilityUtils = {
   // Generate unique IDs for ARIA attributes;
-  "generateId": (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2, 9)}`,`  // Check if element is visible;
-  "isVisible": ({;"
 
 }
 
@@ -78,14 +76,7 @@ const focusableElements = element.querySelectorAll(;
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
-const firstElement = focusableElements[0] as HTMLElement;
 
-const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-
-const handleTabKey = ("e": KeyboardEvent) => {
-      }
-      if (e.key === 'Tab') {'
-        }
         if (e.shiftKey) {
           }
           if (document.activeElement === firstElement) {
@@ -102,45 +93,16 @@ const handleTabKey = ("e": KeyboardEvent) => {
           }
         }
       }
-    };
-
-    element.addEventListener('keydown', handleTabKey);'
-    firstElement?.focus();
-
-    return () => element.removeEventListener('keydown', handleTabKey);'
-  },
-
-  // ARIA helpers,
-"announceToScreenReader": ("message": string) => {
     }
-    const announcement = document.createElement('div');'
-    announcement.setAttribute('aria-live', 'polite');'
-    announcement.setAttribute('aria-atomic', 'true');'
-    announcement.className = 'sr-only';'
+
+
     announcement.textContent = message;
     
     document.body.appendChild(announcement);
     setTimeout(() => document.body.removeChild(announcement), 1000);
   },
 
-  // Skip links,
-"createSkipLink": ("targetId": string, "text": string = 'Skip to main content') => {'
-   ;
-  }
-  const skipLink = document.createElement('a');'
-    skipLink.href = `#${targetId}`;`    skipLink.textContent = text;
-    skipLink.className = 'skip-link';'
-    skipLink.style.cssText = ``      "position": absolute;
-      "top": -40px;
-      "left": 6px;
-      "background": #000;
-      "color": #fff;
-      "padding": 8px;
-      text-"decoration": none;
-      z-"index": 1000;
-      "transition": top 0.3s;
-    `;skipLink.addEventListener('focus', () => {skipLink.style.top = '6px';'
-    })skipLink.addEventListener('blur', () => {skipLink.style.top = '-40px';'
+
     })return skipLink;
   }
 }
@@ -148,18 +110,11 @@ const handleTabKey = ("e": KeyboardEvent) => {
 export default accessibilityUtils;
     `;`
     
-    skipLink.addEventListener('focus', () => {'
-      }
-      skipLink.style.top = '6px';'
-    });
-    
-    skipLink.addEventListener('blur', () => {'
-      }
-      skipLink.style.top = '-40px';'
+
     });
     
     return skipLink;
   }
-};
+}
 
 export default accessibilityUtils;

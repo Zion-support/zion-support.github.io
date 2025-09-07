@@ -37,7 +37,6 @@ export function useMessagingOperations(user: UserWithProfile) {
     createConversation
   } = useConversations($2);
   // Messages management
-  const {
     loadMessages;
     sendMessage;
     markAsRead

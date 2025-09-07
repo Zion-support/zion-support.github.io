@@ -1,17 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
-
-
-
-main
-
-=======
-
-
 <<<<<<< HEAD
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+
 
 
 
@@ -22,6 +14,7 @@ main
 
 
 #!/usr/bin/env node;
+<<<<<<< HEAD
 <<<<<<< HEAD
 #!/usr/bin/env node;
 =======
@@ -51,16 +44,11 @@ const status = execSync('git status --porcelain', { "encoding"});
 // console.log('\n Final Automation "Summary")
       console.log('\n "Recommendations")
 <<<<<<< HEAD
-    console.error(' Final automation orchestrator "failed")
-<<<<<<< HEAD
-///usr/bin/env node
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-// console.log(' Final Automation Orchestrator')
 =======
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+    console.error(' Final automation orchestrator "failed")
+
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

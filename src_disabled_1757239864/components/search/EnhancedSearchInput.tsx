@@ -1,14 +1,14 @@
-import React, { useState, useEffect, useRef, useMemo } from "react";
-import { useTranslation } from "react-i18next";
-import { Search, X } from 'lucide-react'
-import { Input } from "@/components/ui/input";
-import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions";
-import { SearchSuggestion } from "@/types/search";
-import { useDebounce } from "@/hooks/useDebounce";
-import { useRouter } from "next/router";
-import { slugify } from "@/lib/slugify";
-import { debounce } from "lodash";
-import { logInfo, logWarn } from '@/utils/productionLogger';
+import React, { useState, useEffect, useRef, useMemo } from "react;
+import { useTranslation } from react-i18next";
+import { Search, X } from 'lucide-react
+import { Input } from "@/components/ui/input;
+import { AutocompleteSuggestions } from @/components/search/AutocompleteSuggestions";
+import { SearchSuggestion } from "@/types/search;
+import { useDebounce } from @/hooks/useDebounce";
+import { useRouter } from "next/router;
+import { slugify } from @/lib/slugify";
+import { debounce } from "lodash;
+import { logInfo, logWarn } from @/utils/productionLogger';
 
 
 interface EnhancedSearchInputProps {
@@ -30,7 +30,7 @@ export function EnhancedSearchInput({
   value;
   onChange;
   onSelectSuggestion;
-  placeholder = "Search...";
+  placeholder = Search...";
   searchSuggestions
 }: EnhancedSearchInputProps) {
   const [isFocused, setIsFocused] = useState(false);
@@ -67,12 +67,12 @@ export function EnhancedSearchInput({
             }
           } else {
             // Silently fail for search suggestions - don't show error toast
-            logWarn('Search suggestions API error:', { data: response.status }),
+            logWarn(Search suggestions API error:, { data: response.status }),
             setApiSuggestions([])
           }
         } catch (error) {
           // Silently fail for search suggestions - don't show error toast
-          logWarn('Search suggestions fetch error:', { data: error }),
+          logWarn('Search suggestions fetch error:, { data: error }),
           setApiSuggestions([])
         } finally {
           setLoading(false)
@@ -86,7 +86,7 @@ export function EnhancedSearchInput({
     if (!debounced) {
       // Show recent suggestions provided via props when no query entered
       setFilteredSuggestions(
-        (searchSuggestions || []).filter(s => s.type === 'recent')
+        (searchSuggestions || []).filter(s => s.type === recent')
       );
       setHighlightedIndex(-1);
       return
@@ -97,7 +97,7 @@ export function EnhancedSearchInput({
       signal: controller.signal
     })
       .then(res => {
-        if (!res.ok) throw new Error('Failed to fetch suggestions');
+        if (!res.ok) throw new Error('Failed to fetch suggestions);
         return res.json()
       })
       .then(data => {
@@ -122,26 +122,26 @@ export function EnhancedSearchInput({
       }
     }
     
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside)
+    document.addEventListener("mousedown, handleClickOutside);
+    return () => document.removeEventListener(mousedown", handleClickOutside)
   }, []);
 
   const router = useRouter();
 
   const handleSelectSuggestion = (suggestionObj: SearchSuggestion) => {
-    logInfo('EnhancedSearchInput handleSelectSuggestion called:', { data: suggestionObj }),
+    logInfo(EnhancedSearchInput handleSelectSuggestion called:', { data: suggestionObj }),
     onChange(suggestionObj.text);
     if (onSelectSuggestion) {
-      logInfo('Calling onSelectSuggestion with:', { data: suggestionObj }),
+      logInfo('Calling onSelectSuggestion with:, { data: suggestionObj }),
       onSelectSuggestion(suggestionObj)
     } else {
       // Provide a sensible default navigation if the parent did not supply a handler
-      logWarn('onSelectSuggestion callback not provided');
+      logWarn(onSelectSuggestion callback not provided');
       if (suggestionObj.id) {
         router.push(`/marketplace/listing/${suggestionObj.id}`)
-      } else if (suggestionObj.type === 'doc' && suggestionObj.slug?.startsWith('/')) {
+      } else if (suggestionObj.type === 'doc && suggestionObj.slug?.startsWith(/')) {
         router.push(suggestionObj.slug)
-      } else if (suggestionObj.type === 'blog' && suggestionObj.slug) {
+      } else if (suggestionObj.type === 'blog && suggestionObj.slug) {
         router.push(`/blog/${suggestionObj.slug}`)
       } else {
         router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`)
@@ -150,30 +150,30 @@ export function EnhancedSearchInput({
     setIsFocused(false);
     inputRef.current?.blur();
     setHighlightedIndex(-1)
-  };
+  }
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     switch (e.key) {
-      case 'ArrowDown':
+      case ArrowDown':
         if (isFocused && filteredSuggestions.length > 0) {
           e.preventDefault();
           setHighlightedIndex(prev => (prev + 1) % filteredSuggestions.length)
         }
         break;
-      case 'ArrowUp':
+      case 'ArrowUp:
         if (isFocused && filteredSuggestions.length > 0) {
           e.preventDefault();
           setHighlightedIndex(prev => (prev - 1 + filteredSuggestions.length) % filteredSuggestions.length)
         }
         break;
-      case 'Enter':
+      case Enter':
         if (isFocused && highlightedIndex !== -1 && filteredSuggestions[highlightedIndex]) {
           e.preventDefault(), // Prevent form submission
           handleSelectSuggestion(filteredSuggestions[highlightedIndex])
         } else if (value.trim()) {
           // Manually trigger search navigation to ensure consistent behavior
           e.preventDefault();
-          logInfo('EnhancedSearchInput manual submit:', { data: value }),
+          logInfo('EnhancedSearchInput manual submit:, { data: value }),
           router.push(`/search?q=${encodeURIComponent(value)}`);
           setIsFocused(false);
           setHighlightedIndex(-1);
@@ -183,7 +183,7 @@ export function EnhancedSearchInput({
           e.preventDefault()
         }
         break;
-      case 'Escape':
+      case Escape':
         e.preventDefault();
         setIsFocused(false);
         setHighlightedIndex(-1);
@@ -195,27 +195,27 @@ export function EnhancedSearchInput({
         setEnterHandledPostFocus(false);
         break
     }
-  };
+  }
   
   return (
     <div
-      className="relative w-full"
+      className="relative w-full
       ref={containerRef}
-      role="combobox"
+      role=combobox"
       aria-expanded={isFocused && filteredSuggestions.length > 0}
-      aria-haspopup="listbox"
-      aria-controls="autocomplete-suggestions-list" // Added aria-controls
+      aria-haspopup="listbox
+      aria-controls=autocomplete-suggestions-list" // Added aria-controls
       onClick={() => inputRef.current?.focus()}
     >
-      <div className="relative flex items-center w-full">
+      <div className="relative flex items-center w-full>
         <Search 
-          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" 
+          className=absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" 
         />
         <Input
           ref={inputRef}
-          type="text"
-          id="enhanced-search-input"
-          name="search"
+          type="text
+          id=enhanced-search-input"
+          name="search
           value={value}
           onChange={(e) => {
             onChange(e.target.value);
@@ -238,19 +238,19 @@ export function EnhancedSearchInput({
             setValueOnFocus(null)
           }}
           onKeyDown={handleKeyDown}
-          aria-label={t('general.search')}
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0"
-          aria-autocomplete="list"
+          aria-label={t('general.search)}
+          className=pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0"
+          aria-autocomplete="list
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
-          autoComplete="off"
+          autoComplete=off"
         />
         {value && (
           <button
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
-            onClick={() => onChange('')}
-            aria-label="Clear search"
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white
+            onClick={() => onChange(')}
+            aria-label=Clear search"
           >
-            <X className="h-4 w-4" />
+            <X className="h-4 w-4 />
           </button>
         )}
       </div>
@@ -261,7 +261,7 @@ export function EnhancedSearchInput({
         onSelectSuggestion={handleSelectSuggestion}
         visible={isFocused}
         highlightedIndex={highlightedIndex} // Pass highlightedIndex
-        listId="autocomplete-suggestions-list" // Pass ID for aria-controls
+        listId=autocomplete-suggestions-list" // Pass ID for aria-controls
       />
     </div>
   )

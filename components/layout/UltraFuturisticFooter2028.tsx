@@ -1,8 +1,4 @@
 
-
-import React from 'react';'
-import Link from 'next/link';'
-
 import { Phone, Mail, MapPin, Globe, Rocket, Brain, Atom;
   }
   Shield, Users, Briefcase, BookOpen, MessageCircle;
@@ -10,8 +6,6 @@ import { Phone, Mail, MapPin, Globe, Rocket, Brain, Atom;
   Cloud, Lock, ShieldCheck, Heart, Leaf, Car;
   GraduationCap, Scale, Building, Factory, Camera;
   Video, Music, Gamepad2, Sun, Moon, Wind, Droplets;
-  Code;
-  } from 'lucide-react';'
 
 const contactInfo = null;
 import {
@@ -68,22 +62,9 @@ import {
   Code
 } from 'lucide-react',
 
-const contactInfo = $2;
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-},
-
-const serviceCategories = $2;
-    services: [
-      { name: 'AI Climate Prediction Platform', href: '/ai-climate-prediction-platform' },
-      { name: 'Quantum Cybersecurity Firewall', href: '/quantum-cybersecurity-firewall' },
-      { name: 'Autonomous Drone Delivery Network', href: '/autonomous-drone-delivery-network' },
-      { name: 'AI Healthcare Diagnosis Platform', href: '/ai-healthcare-diagnosis-platform' }
-    ]
   },
   {
-    title: '🏙️ Smart City & Infrastructure',
+    title: ⚛️ Quantum & Advanced Tech',
     services: [
       { name: 'Smart City Infrastructure Management', href: '/smart-city-infrastructure-management' },
       { name: 'IoT Energy Management System', href: '/iot-energy-management-system' },
@@ -203,37 +184,46 @@ export default function UltraFuturisticFooter2028() {
               <div className='relative' />
                 <div className='w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-600 rounded-xl flex items-center justify-center' />
                   <Rocket className='w-6 h-6 text-white' />
+          {/* Company Info */}
+
+          <div className='lg:col-span-1>
+            <div className=flex items-center space-x-3 mb-6'>
+              <div className='relative>
+                <div className=w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-600 rounded-xl flex items-center justify-center'>
+          <div className='lg:col-span-1 />
+            <div className=flex items-center space-x-3 mb-6' />
+              <div className='relative />
+                <div className=w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-600 rounded-xl flex items-center justify-center' />
+                  <Rocket className='w-6 h-6 text-white />
                 </div>
-                <div className='absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl blur opacity-75 -z-10'></div>'
+                <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl blur opacity-75 -z-10></div>
               </div>
               <div>
-                <h3 className='text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>'
+                <h3 className=text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                   Zion Tech Group
                 </h3>
-                <p className='text-sm text-purple-300'>'
-                  2028 Future Technology
-                </p>
+                <p className="text-sm text-purple-300>2028 Future Technology</p>
               </div>
             </div>
-            <p className='text-purple-200 mb-6 leading-relaxed'>'
-              Leading the future with cutting-edge AI, quantum computing, and,
-innovative technology solutions. Transforming businesses through,
-intelligent automation and next-generation infrastructure.
+            
+            <p className=text-purple-200 mb-6 leading-relaxed">
+              Leading the future with cutting-edge AI, quantum computing, and innovative technology solutions. 
+              Transforming businesses through intelligent automation and next-generation infrastructure.
             </p>
 
             {/* Contact Information */}
-            <div className='space-y-3'>'
-              <div className='flex items-center space-x-3 text-purple-200'>'
-                <Phone className='w-4 h-4 text-purple-400' />'
-                <span className='text-sm'>{contactInfo.mobile}</span>'
+            <div className="space-y-3>
+              <div className=flex items-center space-x-3 text-purple-200">
+                <Phone className="w-4 h-4 text-purple-400 />
+                <span className=text-sm">{contactInfo.mobile}</span>
               </div>
-              <div className='flex items-center space-x-3 text-purple-200'>'
-                <Mail className='w-4 h-4 text-purple-400' />'
-                <span className='text-sm'>{contactInfo.email}</span>'
+              <div className="flex items-center space-x-3 text-purple-200>
+                <Mail className=w-4 h-4 text-purple-400" />
+                <span className="text-sm>{contactInfo.email}</span>
               </div>
-              <div className='flex items-center space-x-3 text-purple-200'>'
-                <MapPin className='w-4 h-4 text-purple-400' />'
-                <span className='text-sm'>{contactInfo.address}</span>'
+              <div className=flex items-center space-x-3 text-purple-200">
+                <MapPin className="w-4 h-4 text-purple-400 />
+                <span className=text-sm">{contactInfo.address}</span>
               </div>
 
               <div className="flex items-center space-x-3 text-purple-200">
@@ -244,6 +234,9 @@ intelligent automation and next-generation infrastructure.
                   href={social && social.href}'
                   target='_blank''
                   rel='noopener noreferrer'
+
+
+
                   {contactInfo.website}
 
                   {contactInfo.website}
@@ -414,18 +407,54 @@ export default function UltraFuturisticFooter2028() {return (<footer className='
 <div className='lg:col-span-2' />;
             <h3 className='text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2' />;
                   <social.icon className='w-5 h-5' />                </a>;
+                </a>
+              </div>
+
+
+          {/* Company Info */}
+            {/* Social Links */}
+              ))}
+
+                  <social.icon className='w-5 h-5 />                </a>
+
+                </a>
+
+              ))}
+            </div>
+          </div>
+
+          {/* Service Categories */}
+          <div className='lg:col-span-2'>
+            <h3 className=text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2'>
+
+              🚀 Our Services;
+            </h3>'
+            <div className=grid grid-cols-1 md:grid-cols-2 gap-8>
+              {serviceCategories.map(category => ('
+                <div key={category.title} className='space-y-3>
+                  <h4 className='font-medium text-purple-300'>
+                    {category.title}
+                  </h4>
+                  <ul className=space-y-2'>
+                    {category.services.map(service => (
+                      <li key={service.name}>'
+          <div className=lg:col-span-2>;'
+            <h3 className='text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2>;
+              🚀 Our Services;
+            </h3>;
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
+              {serviceCategories && serviceCategories.map(category => (;
+                <div key={category && category.title} className=space-y-3'>;'
+                  <h4 className=font-medium text-purple-300>;
+<div className='lg:col-span-2' />;
+            <h3 className=text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2 />;
+                  <social.icon className='w-5 h-5' />                </a>;
                 </a>;
               ))}
             </div>;
           </div>;
           {/* Service Categories */}
-          <div className='"lg":col-span-2'>;'
-            <h3 className='text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2'>;'
-              🚀 Our Services;
-            </h3>;
-            <div className='grid grid-cols-1 "md":grid-cols-2 gap-8'>;'
-              {serviceCategories.map(category => (<div key={category.title} className='space-y-3'>;'
-                  <h4 className='font-medium text-purple-300'>;'
+
                     {category.title}
                   </h4>;
                   <ul className='space-y-2'>;'
@@ -490,42 +519,41 @@ href={service.href}
               Quick Links
 <div className='lg:col-span-1' />
             <h3 className='text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2' />
+          <div className=lg:col-span-2>;
+            <h3 className='text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2'>;
+              🚀 Our Services;
+            </h3>;
+
+                    {category && category.title}
+                  </h4>;
+                  <ul className=space-y-2'>;
+                    {category && category.services.map(service => (;
+                      <li key={service && service.name}>;
+
+                          className='text-sm text-purple-200 hover:text-white transition-colors hover:underline>              🚀 Our Services;
+            </h3>;"
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8>;
+              {serviceCategories && serviceCategories.map((category) => (;
+                <div key={category && category.title} className="space-y-3">;
+                  <h4 className=font-medium text-purple-300">{category && category.title}</h4>;"
+                  <ul className=space-y-2>;
+                    {category && category.services.map((service) => (;
+                      <li key={service && service.name}>;
+                        <Link;
+                          href={service && service.href}"
+                          className="text-sm text-purple-200 hover:text-white transition-colors hover:underline>;
+                          {service && service.name}
+                        </Link>;
+                      </li>;
+
+<div className=lg:col-span-1' />
+            <h3 className='text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2 />
               Quick Links;
             </h3>
             </div>;
           </div>;
 
-          {/* Quick Links */}'
-          <div className='lg:col-span-1'>;'
-            <h3 className='text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2'>;
-              Quick Links;
-            </h3>;
 
-            {/* Company Links */}'
-            <div className='mb-6'>;'
-              <h4 className='font-medium text-purple-300 mb-3'>Company</h4>;'
-              <ul className='space-y-2'>;
-                {companyLinks && companyLinks.map(link => (;
-                  <li key={link && link.name}>;
-                    <Link;
-            {/* Company Links */}"
-            <div className="mb-6">;"
-              <h4 className="font-medium text-purple-300 mb-3">Company</h4>;"
-              <ul className="space-y-2">;
-                {companyLinks && companyLinks.map((link) => (;
-                  <li key={link && link.name}>;
-                    <Link;
-                      href={link && link.href}"
-                      className="text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2">;"
-                      <link && link.icon className="w-4 h-4" />;
-                      <span>{link && link.name}</span>;
-                    </Link>;
-                  </li>;
-                ))}
-            {/* Resource Links */}'
-            <div className='mb-6'>'
-              <h4 className='font-medium text-purple-300 mb-3'>Resources</h4>'
-              <ul className='space-y-2'>
                 {resourceLinks.map(link => (
                   <li key={link.name}>
                     <Link;
@@ -630,49 +658,49 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </li>;
                 ))}
             {/* Resource Links */}
-            <div className='mb-6'>;
-              <h4 className='font-medium text-purple-300 mb-3'>Resources</h4>;
-              <ul className='space-y-2'>;
+            <div className='mb-6>;
+              <h4 className=font-medium text-purple-300 mb-3'>Resources</h4>;
+              <ul className='space-y-2>;
                 {resourceLinks.map(link => (<li key={link.name}>;
                     <Link;
           <div className='lg:col-span-2'>
             <h3 className='text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2'>
               🚀 Our Services
-            </h3>'
+            </h3>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-              {serviceCategories.map(category => ('
-                <div key={category.title} className='space-y-3'>'
-                  <h4 className='font-medium text-purple-300'>
+              {serviceCategories.map(category => (
+                <div key={category.title} className=space-y-3'>'
+                  <h4 className=font-medium text-purple-300>
                     {category.title}
                   </h4>'
-                  <ul className='space-y-2'>
+                  <ul className='space-y-2>
                     {category.services.map(service => (
-                      <li key={service.name}>'
-          <div className='lg:col-span-2'>;'
-            <h3 className='text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2'>
+                      <li key={service.name}>
+          <div className='lg:col-span-2'>;
+            <h3 className=text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2'>
               🚀 Our Services
             </h3>;'
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+            <div className=grid grid-cols-1 md:grid-cols-2 gap-8>
               {serviceCategories && serviceCategories.map(category => (;'
-                <div key={category && category.title} className='space-y-3'>;'
+                <div key={category && category.title} className='space-y-3>;
                   <h4 className='font-medium text-purple-300'>
                     {category && category.title}
-                  </h4>;'
-                  <ul className='space-y-2'>
+                  </h4>;
+                  <ul className=space-y-2'>
                     {category && category.services.map(service => (
                       <li key={service && service.name}>
-                          className='text-sm text-purple-200 hover:text-white transition-colors hover:underline'>              🚀 Our Services
+                          className='text-sm text-purple-200 hover:text-white transition-colors hover:underline>              🚀 Our Services
             </h3>;"
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {serviceCategories && serviceCategories.map((category) => (;"
-                <div key={category && category.title} className="space-y-3">;"
-                  <h4 className="font-medium text-purple-300">{category && category.title}</h4>;"
-                  <ul className="space-y-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8>
+              {serviceCategories && serviceCategories.map((category) => (;
+                <div key={category && category.title} className="space-y-3">;
+                  <h4 className=font-medium text-purple-300">{category && category.title}</h4>;"
+                  <ul className=space-y-2>
                     {category && category.services.map((service) => (
                       <li key={service && service.name}>
                         <Link
                           href={service && service.href}"
-                          className="text-sm text-purple-200 hover:text-white transition-colors hover:underline">
+                          className="text-sm text-purple-200 hover:text-white transition-colors hover:underline>
                           {service && service.name}
                         </Link>
                       </li>
@@ -681,21 +709,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
           {/* Quick Links */}
-          <div className='lg:col-span-1'>
-            <h3 className='text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2'>
+          <div className=lg:col-span-1'>
+            <h3 className='text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2>
               Quick Links
             </h3>
             {/* Company Links */}
-            <div className='mb-6'>
-              <h4 className='font-medium text-purple-300 mb-3'>Company</h4>
-              <ul className='space-y-2'>
+            <div className=mb-6'>
+              <h4 className='font-medium text-purple-300 mb-3>Company</h4>
+              <ul className=space-y-2'>
                 {companyLinks.map(link => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className='text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2'
+                      className='text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2
                     >
-                      <link.icon className='w-4 h-4' />                      <span>{link.name}</span>                  <li key={link.name}>
+                      <link.icon className=w-4 h-4' />                      <span>{link.name}</span>                  <li key={link.name}>
                     ))}
                   </ul>
                 </div>
@@ -704,28 +732,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
 
           {/* Quick Links */}
-          <div className="lg:col-span-1">
-            <h3 className="text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2">
+          <div className=lg:col-span-1">
+            <h3 className="text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2>
               Quick Links
             </h3>
             
             {/* Company Links */}
-            <div className="mb-6">
-              <h4 className="font-medium text-purple-300 mb-3">Company</h4>
-              <ul className="space-y-2">
+            <div className=mb-6">
+              <h4 className="font-medium text-purple-300 mb-3>Company</h4>
+              <ul className=space-y-2">
                 {companyLinks.map((link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2"
+                      className="text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2
                     >
-                      <link.icon className="w-4 h-4" />
+                      <link.icon className=w-4 h-4" />
                       <span>{link.name}</span>
                     </Link>
                   </li>
-                      className='text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2';
+                      className='text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2;
                     >;
-                      <link.icon className='w-4 h-4' />                      <span>{link.name}</span>                  <li key={link.name}>;
+                      <link.icon className=w-4 h-4' />                      <span>{link.name}</span>                  <li key={link.name}>;
                     <Link;
                       href={link.href}
                       className="text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2";
@@ -740,16 +768,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
 
             {/* Resource Links */}
-            <div className="mb-6">
-              <h4 className="font-medium text-purple-300 mb-3">Resources</h4>
-              <ul className="space-y-2">
+            <div className="mb-6>
+              <h4 className=font-medium text-purple-300 mb-3">Resources</h4>
+              <ul className="space-y-2>
                 {resourceLinks.map((link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2"
+                      className=text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2"
                     >
-                      <link.icon className="w-4 h-4" />
+                      <link.icon className="w-4 h-4 />
                       <span>{link.name}</span>
                     </Link>
                   </li>
@@ -778,13 +806,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </div>
 
-      {/* Bottom Bar *
-}
-<div className='border-t border-purple-500/20'>;'
-        <div className='max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8 py-6'>;'
-          <div className='flex flex-col "md":flex-row items-center justify-between space-y-4 "md":space-y-0'>;'
-            {/* Copyright */}
-            <div className='text-sm text-purple-300'>;'
               © 2028 Zion Tech Group. All rights reserved. Leading the future;
               of technology.;
             </div>;
@@ -835,11 +856,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >
 origin/cursor/automate-test-improve-and-merge-code-2533
                 Security
+              >
+origin/cursor/automate-test-improve-and-merge-code-2533
+                Security
+
 
       {/* Bottom Bar */}
-      <div className="border-t border-purple-500/20">
+      <div className=border-t border-purple-500/20>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+          <div className=flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0>
             {/* Copyright */}
             <div className="text-sm text-purple-300">
               © 2028 Zion Tech Group. All rights reserved. Leading the future of technology.
@@ -866,23 +891,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           href="/contact""
           className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center text-white shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-400/40 group"
         >"
-          <MessageCircle className="w-8 h-8 group-hover:rotate-12 transition-transform duration-300" />
+          <MessageCircle className="w-8 h-8 group-hover:rotate-12 transition-transform duration-300 />
         </Link>
-      </div>"
-        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>"
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>"
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full blur-2xl"></div>
+      </div>
+        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
+        <div className=absolute bottom-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>"
+        <div className=absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full blur-2xl></div>
       </div>
     </footer>
 );
-}'
-          className='w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center text-white shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-400/40 group'>;'
-          <MessageCircle className='w-8 h-8 group-hover:rotate-12 transition-transform duration-300' />        </Link>;
+}
+          className='w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center text-white shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-400/40 group'>;
+          <MessageCircle className=w-8 h-8 group-hover:rotate-12 transition-transform duration-300' />        </Link>;
       </div>;
       {/* Background Effects */}        <Link"
-          href="/contact""
-          className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center text-white shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-400/40 group">;"
-          <MessageCircle className="w-8 h-8 group-hover:rotate-12 transition-transform duration-300" />;
+          href="/contact
+          className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center text-white shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-400/40 group">;
+          <MessageCircle className=w-8 h-8 group-hover:rotate-12 transition-transform duration-300" />;
         </Link>;
       </div>;
       {/* Background Effects */}
@@ -890,16 +915,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 }
 }'
-      <div className='absolute inset-0 pointer-events-none'>;'
-        <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'></div>;'
-        <div className='absolute bottom-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl'></div>;'
-        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full blur-2xl'></div>;
+      <div className=absolute inset-0 pointer-events-none>;'
+        <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl></div>;
+        <div className='absolute bottom-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl'></div>;
+        <div className=absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full blur-2xl'></div>;
       </div>;
     </footer>;"
-  );      <div className="absolute inset-0 pointer-events-none">;"
-        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>;"
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>;"
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full blur-2xl"></div>;
+  );      <div className=absolute inset-0 pointer-events-none>;"
+        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl></div>;
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>;
+        <div className=absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full blur-2xl"></div>;
       </div>;
     </footer>;
   );
@@ -907,10 +932,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Background Effects */}
 }
       {/* Floating Action Button */}
-<div className='fixed bottom-6 right-6 z-50'>'
-        <Link,
-href='/contact''
-          className='w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center text-white shadow-2xl "hover":shadow-purple-500/25 transition-all duration-300 transform "hover":shadow-lg "hover":shadow-cyan-400/40 group''
+
         >
           <MessageCircle className='w-8 h-8 group-"hover":rotate-12 transition-transform duration-300' />'
         </Link>
@@ -934,11 +956,6 @@ href='/contact''
     </footer>
       {/* Background Effects */}
 
-}
-}
-}
-      <div className='absolute inset-0 pointer-events-none'>;
-        <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'></div>;
         <div className='absolute bottom-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl'></div>;
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full blur-2xl'></div>;
       </div>;
@@ -958,5 +975,8 @@ href='/contact''
 }
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+
 
 "

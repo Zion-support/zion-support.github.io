@@ -13,6 +13,7 @@
 #!/usr/bin/env node;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ///usr/bin/env node
 =======
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
@@ -34,19 +35,26 @@ const corruptedFiles = ['pages/docs/integration-examples.tsx'];
   'pages/schedule-demo.tsx'
 let content = '';
     if (filePath === 'pages/docs/integration-examples.tsx')
+=======
+
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
       content = "
-    "name"
+    name
     "email"
-    "company"
+    company
     "phone"
-    "service"
+    service
     "message"
+<<<<<<< HEAD
 <<<<<<< HEAD
   const timeSlots = ['"9": 00 AM', '"10": 00 AM', '"11": 00 AM', '"1": 00 PM', '"2": 00 PM', '"3": 00 PM', '"4"]
 <<<<<<< HEAD
 =======
 const timeSlots = ['"9": 00 AM', '"10": 00 AM', '"11": 00 AM', '"1": 00 PM', '"2": 00 PM', '"3": 00 PM', '"4"];
 >>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
+=======
+
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
         <meta name="description" content="
 
 
@@ -54,9 +62,7 @@ const timeSlots = ['"9": 00 AM', '"10": 00 AM', '"11": 00 AM', '"1": 00 PM', '"2
 
 
 
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======

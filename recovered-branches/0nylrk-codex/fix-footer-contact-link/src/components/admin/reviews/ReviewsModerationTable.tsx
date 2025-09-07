@@ -14,7 +14,6 @@ import {
   TableHeader,
   TableRow} from "@/components/ui/table","
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar","
-import {
   }
   Dialog,
   DialogContent,
@@ -22,7 +21,6 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle} from "@/components/ui/dialog","
-import {
   }
   DropdownMenu,
   DropdownMenuContent,
@@ -98,7 +96,6 @@ import {;
   TableHeader,;
   TableRow} from "@/components/ui/table",;"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;"
-import {;
   }
   Dialog,;
   DialogContent,;
@@ -106,7 +103,6 @@ import {;
   DialogFooter,;
   DialogHeader,;
   DialogTitle} from "@/components/ui/dialog",;"
-import {;
   }
   DropdownMenu,;
   DropdownMenuContent,;
@@ -124,8 +120,6 @@ interface ReviewsModerationTableProps {;
 ;
 export function ReviewsModerationTable() {;
   }
-  const [selectedReview, setSelectedReview] = useState<Review | null>(null),;
-  const [viewDetailsOpen, setViewDetailsOpen] = useState(false),;
 ;
   const { "mutate":updateReviewStatus, isPending } = useMutation({;
     }

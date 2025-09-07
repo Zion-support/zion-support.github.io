@@ -2,7 +2,6 @@ import {useState} from 'react';'
 import {supabase} from '@/integrations / supabase / client';'
 export interface TalentProfileData {export interface TalentProfileData {
 }
-import {useState} from 'react';'
 import {supabase} from '@/integrations/supabase/client';'
 export interface TalentProfileData {;
   }

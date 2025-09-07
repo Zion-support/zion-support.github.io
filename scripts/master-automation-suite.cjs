@@ -71,8 +71,6 @@
   generateMasterReport() {
     const reportPath = path.join(this.logDir, `master-automation-report-${this.timestamp}.json`);
     
-    const successCount = this.masterResults.phases.filter(p => p.status === 'success').length;
-    const totalCount = this.masterResults.phases.length;
     const averageDuration = this.masterResults.phases.length > 0 ?
       this.masterResults.phases.reduce((sum, phase) => sum + phase.duration, 0) / this.masterResults.phases.length : 0;
 

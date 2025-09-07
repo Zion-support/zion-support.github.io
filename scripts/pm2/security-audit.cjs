@@ -76,7 +76,6 @@ const result = execSync(`grep -r "${pattern}" . --exclude-dir=node_modules --exc
 });
       if (result.trim()) {}
         log(`Potential secret found: ${pattern}`);
-  let secretsFound = 0;
   secretPatterns.forEach(pattern => {})
 
         secretsFound++;

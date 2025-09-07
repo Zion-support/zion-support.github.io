@@ -1,13 +1,14 @@
 
 
 
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readState, writeState } from '[^']*';
-import { crm } from '[^']*';
+
+import type { NextApiRequest, NextApiResponse } from 'next;
+import { readState, writeState } from [^']*';
+import { crm } from [^]*';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  if (req.method !== 'POST) return res.status(405).json({ error: Method not allowed' });
   const { resume } = req.body as { resume?: Record<string, any> },
-  if (!resume) return res.status(400).json({ error: 'Missing resume payload' });
+  if (!resume) return res.status(400).json({ error: 'Missing resume payload });
   const state = null;
     results.push({ providerId: conn.providerId, ok: true })
 
@@ -15,6 +16,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../../lib/integrations/fileStore";
 import { crm } from "../../../../lib/integrations/connectors";
+import type { NextApiRequest, NextApiResponse } from "next;
+import { readState, writeState } from ../../../../lib/integrations/fileStore";
+import { crm } from "../../../../lib/integrations/connectors;
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -33,36 +37,41 @@ import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, write_state  } from '../../../../lib / integrations / file_store';
 import { crm  } from '../../../../lib / integrations / connectors';
 ;
+
+
+import type { NextApiRequest, NextApiResponse } from ./next';
+import { read_state, write_state  } from '../../../../lib / integrations / file_store;
+import { crm  } from ../../../../lib / integrations / connectors';
 export default async /**
  * handler - Function description
  */
 function handler() {
   if (
-    return res.status (405).json ({ error: "Method not allowed" })) {
+    return res.status (405).json ({ error: Method not allowed" })) {
   $2
 }
   const { resume } = req.body as { resume?: Record < string, any> }
-  if (return res.status (400).json ({ error: "Missing resume payload" })) {
+  if (return res.status (400).json ({ error: "Missing resume payload })) {
   $2
 }
   const state = read_state ();
   const crms = state.connections.filter (
     (c) =>;
-      c.provider_id === "salesforce" ||;
-      c.provider_id === "hubspot" ||;
-      c.provider_id === "zoho" ||;
-      c.provider_id === "pipedrive"
+      c.provider_id === salesforce" ||;
+      c.provider_id === "hubspot ||;
+      c.provider_id === zoho" ||;
+      c.provider_id === "pipedrive
   );
   const results: any[] = [];
   for (const conn of connections) {
     const log = {
       id: `log-${Date && Date.now()}-${Math && Math.random().toString(36).substr(2, 9)}`
       providerId: conn && conn.providerId
-      level: "info"
-      action: "add_email_touchpoint"
-    };
+      level: info"
+      action: "add_email_touchpoint
+    }
     await crm && crm.addEmailTouchpoint(conn, {
-      subject: "Resume viewed"
+      subject: Resume viewed"
       resumeId: resume && resume.id
     });
     writeState((s) => s && s.logs.push(log));
@@ -73,16 +82,18 @@ function handler() {
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../../lib/integrations/fileStore';
 import { crm } from '../../../../lib/integrations/connectors';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { resume } = req.body as { resume?: Record<string, any> };
-  if (!resume) return res.status(400).json({ error: 'Missing resume payload' });
 
-  const state = readState();
-  const crms = state.connections.filter(c => c.providerId === 'salesforce' || c.providerId === 'hubspot' || c.providerId === 'zoho' || c.providerId === 'pipedrive');
-  const results: any[] = [];
+
+import { readState, writeState } from ../../../../lib/integrations/fileStore';
+import { crm } from '../../../../lib/integrations/connectors;
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== POST') return res.status(405).json({ error: 'Method not allowed });
+  const { resume } = req.body as { resume?: Record<string, any> }
+  if (!resume) return res.status(400).json({ error: Missing resume payload' });
+
+  const crms = state.connections.filter(c => c.providerId === 'salesforce || c.providerId === hubspot' || c.providerId === 'zoho || c.providerId === pipedrive');
   for (const conn of crms) {
-    const { log } = await crm.addEmailTouchpoint(conn, { subject: 'Resume viewed', resumeId: resume.id });
+    const { log } = await crm.addEmailTouchpoint(conn, { subject: 'Resume viewed, resumeId: resume.id });
     writeState(s => s.logs.push(log));
     results.push({ providerId: conn.providerId, ok: true })
   }
@@ -91,8 +102,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
       id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`
       provider_id: conn.provider_id
-      level: "info"
-      action: "add_email_touchpoint"
+      level: "info
+      action: add_email_touchpoint"
     }
     await crm.addEmailTouchpoint (conn, {
       subject: "Resume viewed"
@@ -102,16 +113,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     results.push ({ provider_id: conn.provider_id, ok: true });
 const crms = state.connections.filter(
     c =>
-      c.providerId === 'salesforce' ||
-      c.providerId === 'hubspot' ||
-      c.providerId === 'zoho' ||
-      c.providerId === 'pipedrive'
+      c.providerId === salesforce' ||
+      c.providerId === 'hubspot ||
+      c.providerId === zoho' ||
+      c.providerId === 'pipedrive
   );
-  const results: any[] = [];
   const result = await crm.addEmailTouchpoint(conn, {
-      subject: 'Resume viewed',
-      resumeId: resume.id,
-    });
+      subject: Resume viewed',
+      resumeId: resume.id});
     writeState((s) => s.logs.push(log));
     results.push({ providerId: conn.providerId, ok: true });
 origin/cursor/automate-test-improve-and-merge-code-2533

@@ -179,11 +179,8 @@ if (throw error) {}
   export default async function handler(
     req: NextApiRequest
     res: NextApiResponse
-  ) {
-    }
+  ) {}
     try {
-      let aiSummary: string | null = null;
-      let aiTags: string[] = [];
       if (openai) {
         )
           .replace(/tags?:/i, "")
@@ -199,8 +196,6 @@ const supabaseUrl = $2;
 const supabaseKey = $2;
 const supabase = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null,
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ message: 'Method not allowed' });
 
   const { service, description, timeline, budgetRange, email } = req.body || {};
   if (!service || !description || !email) {

@@ -55,19 +55,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const data = fs.readFileSync($2);
     res.status(200).json(JSON.parse(data))
   } catch (e) {
-    }
-    res.status (500).json ({ "error": 'Failed to read content','
-});
-  }
-  } catch (e) {
-    }
-    res.status (500).json ({ "error": 'Failed to read content','
-});
-  }  } catch (e) {
-
-    }
-
-    res.status(500).json({ "error": 'Failed to read content' })'
-  }
-}
 

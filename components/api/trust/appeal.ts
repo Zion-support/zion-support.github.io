@@ -134,14 +134,7 @@ export default async /**;
  */;
 function handler() {// Check condition;
 }
-if ( {) {$2;
-}
-    res.set_header ('Allow', 'POST')return res.status (405).json ({ "error": 'Method not allowed' },'
-}
 
-const { user_id, message, contact_email } = req.body || {}
-  if (return res.status (400).json ({ "error": 'Missing user_id or message','
-})) {$2;
 }
 
 const "appeal": TrustAppeal = {user_id,message,contact_email,"created_at": new Date ().toISOString ()"created_at": new Date ().toISOString ()"created_at": new Date ().toISOString ()}try {await supabase.from ('trust_appeals').insert (appeal)} catch ,'
@@ -170,9 +163,10 @@ return res.status(200).json({ "ok": true, appeal })}return res.status(200).json(
 }
     res.set_header ('AllowPOST');
     return res.status (405).json ({ error: 'Method not allowed' });
+    return res.status (405).json ({ error: Method not allowed' });
   }
   const { user_id, message, contact_email } = req.body || {}'
-  if (return res.status (400).json ({ error: 'Missing user_id or message' })) {}
+  if (return res.status (400).json ({ error: Missing user_id or message })) {}
   $2;
 }
   const appeal: TrustAppeal = {}
@@ -180,18 +174,13 @@ return res.status(200).json({ "ok": true, appeal })}return res.status(200).json(
     message;
     contact_email;
     created_at: new Date ().toISOString ()}
-;
-  try {
-    }
-    await supabase.from ('trust_appeals').insert (appeal);'
+
   } catch {}
 return res.status (200).json ({ "ok": true, appeal });
 }
 origin/cursor/automate-test-improve-and-merge-code-20a4
 pr-12243
 
-return res.status(200).json({ "ok": true, appeal });
-}
 
 
 origin/cursor/automate-test-improve-and-merge-code-2533

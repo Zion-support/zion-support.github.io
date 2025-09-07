@@ -10,7 +10,6 @@ TableHeader;
 import {;
   InfoIcon ;
   } from "lucide-react";
-import {;
   Tooltip;
 TooltipContent;
 TooltipProvider;

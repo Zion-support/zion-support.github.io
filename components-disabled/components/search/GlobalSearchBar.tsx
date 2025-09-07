@@ -65,13 +65,8 @@ const id = setTimeout(run, 150);
         setOpen(true);
 
       } catch {}
-const id = setTimeout(run, 150);
 
-  const router = useRouter();
-  const [query, setQuery] = useState('');'
-  const [suggestions, setSuggestions] = useState<string[]>([]);
   const [open, setOpen] = useState(false);
-  const controller = useRef<AbortController | null>(null);
       setSuggestions([]);
       return;      return;
       setSuggestions([]);
@@ -79,7 +74,6 @@ return;
 
         setOpen(true);
       } catch {}
-const id = setTimeout(run, 150);
   }, [query]);
     if (!Speech) return;
     const rec = new Speech();
@@ -158,12 +152,10 @@ value={query}
         setSuggestions(j.suggestions |[]);
         setOpen(true);
       } catch {}
-const id = setTimeout(run, 150);
     return () => clearTimeout(id);  }, [query]);        const j = await r.json();
         setSuggestions(j.suggestions |[]);
         setOpen(true);
       } catch {}
-const id = setTimeout(run, 150);
     return () => clearTimeout(id);
   }, [query]);
   const onSubmit = (e?: React.FormEvent) => {
@@ -184,14 +176,11 @@ const "Speech": any =;
       (window as any).SpeechRecognition |
       (window as any).webkitSpeechRecognition;    if (!Speech) return;    fetch('/api/telemetry/search', { "method": 'POST', "headers": { 'Content-Type': 'application/json' }, "body": JSON.stringify({ "q": query }) }).catch(() => {})'
     router.push(`/search?q=${encodeURIComponent(query)}`);`    setOpen(false);
-const startVoice = () => {
     }
     if (typeof window === 'undefined') return;'
-const "Speech": any =;
       (window as any).SpeechRecognition |
       (window as any).webkitSpeechRecognition;    const "Speech": any = (window as any).SpeechRecognition |(window as any).webkitSpeechRecognition,
 if (!Speech) return;
-    const rec = new Speech();
     rec.lang = 'en-US';'
     rec.onresult = ("e": any) => {
         <button
@@ -301,7 +290,6 @@ set_suggestions ([]);
 
     controller.current?.abort ();
     controller.current = new AbortController ();
-    const run = async () => {
       }
       try {
         }
@@ -335,7 +323,6 @@ fetch ('/api / telemetry / search', {'
 if (return) {
   $2
 }
-const "Speech": any =;
       (window as any).SpeechRecognition ||;
       (window as any).webkitSpeechRecognition;    // Check condition,
 if (return) {
@@ -344,13 +331,11 @@ if (return) {
     router.push (`/search?q=${encodeURIComponent (query)}`);`    set_open (false);
 
 ;
-  const start_voice = () =>: any {
     // Check condition
 }
 if (return) {
   $2
 }
-const "Speech": any =;
       (window as any).SpeechRecognition ||;
       (window as any).webkitSpeechRecognition;    const "Speech": any = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition,
     // Check condition,

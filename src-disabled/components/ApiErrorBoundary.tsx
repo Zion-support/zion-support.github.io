@@ -10,28 +10,25 @@
           has_error: false,
           error: null,
           error_info: null,
-          is_retrying: false,
-        });
+          is_retrying: false});
       }, 500);
     } catch (retry_error) {
-      logErrorToProduction ('Retry failed:', { data: retry_error });
+      logErrorToProduction ('Retry failed:, { data: retry_error });
       Sentry.capture_exception (retry_error);
       this.set_state ({ is_retrying: false });
     }
-
-;
       }return (}
       return (// Reset error state after a brief delay;
-      this.retryTimeoutId = set_timeout ((, ) => {this.set_state ({has_error: false,error: null,error_info: null,is_retrying: false})}, 500)} catch (retry_error) {logErrorToProduction ('Retry failed:', { data: retry_error })Sentry.capture_exception (retry_error)this.set_state ({ is_retrying: false })}
+      this.retryTimeoutId = set_timeout ((, ) => {this.set_state ({has_error: false,error: null,error_info: null,is_retrying: false})}, 500)} catch (retry_error) {logErrorToProduction (Retry failed:', { data: retry_error })Sentry.capture_exception (retry_error)this.set_state ({ is_retrying: false })}
   }
   render () {// Check condition;
 if ( {) {$2;
 }
       // Check if it's a network - related error;
       const isNetworkError =;
-        this.state.error?.message?.includes ('fetch') ||;
+        this.state.error?.message?.includes (fetch) ||;
         this.state.error?.message?.includes ('network') ||;
-        this.state.error?.message?.includes ('timeout') ||;
+        this.state.error?.message?.includes (timeout) ||;
         !this.state.is_online;
       // Use custom fallback if provided;
       // Check condition;
@@ -41,30 +38,34 @@ if ( {) {$2;
 
       }
       return (<div className='flex min - h-screen items - center justify - center p - 4'>;
-          <div className='w - full max - w-md space - y-4'>;
+          <div className=w - full max - w-md space - y-4>;
             <Alert variant='destructive'>;
-              <div className='flex items - center gap - 2'>;
-                {isNetworkError ? (<WifiOff className='h - 4 w - 4' />) : (<RefreshCw className='h - 4 w - 4' />)}<AlertTitle>{isNetworkError;
+              <div className=flex items - center gap - 2>;
+                {isNetworkError ? (<WifiOff className='h - 4 w - 4' />) : (<RefreshCw className=h - 4 w - 4 />)}<AlertTitle>{isNetworkError;
 
                 <AlertTitle>;
                   {isNetworkError;
                     ? 'Connection Problem';
-                    : 'Something went wrong'}'
+                    : Something went wrong}'
                 </AlertTitle>;
               </div>;</AlertDescription>;
-            </Alert>;<div className="flex min-h-screen items-center justify-center p-4">;
-          <div className="w-full max-w-md space-y-4">;
-            <Alert variant="destructive">;
-              <div className="flex items-center gap-2">;
-                {isNetworkError ? (<WifiOff className="h-4 w-4" />;
-                ) : (<RefreshCw className="h-4 w-4" />;
+            </Alert>;<div className="flex min-h-screen items-center justify-center p-4>;
+          <div className=w-full max-w-md space-y-4">;
+            <Alert variant="destructive>;
+              <div className=flex items-center gap-2">;
+                {isNetworkError ? (<WifiOff className="h-4 w-4 />;
+                ) : (<RefreshCw className=h-4 w-4" />;
                 )}
-                <AlertTitle>{isNetworkError ? 'Connection Problem' : 'Something went wrong'}</AlertTitle>;
+                <AlertTitle>{isNetworkError ? 'Connection Problem : Something went wrong'}</AlertTitle>;
               </div>;
               <AlertDescription className="mt-2">;
                 {isNetworkError ? (!this.state.isOnline ? ('You appear to be offline. Please check your internet connection.';
                   ) : ('Unable to connect to our servers. This might be a temporary network issue.';
                   )) : ('An unexpected error occurred while loading the page.';
+              <AlertDescription className="mt-2>;
+                {isNetworkError ? (!this.state.isOnline ? ('You appear to be offline. Please check your internet connection.;
+                  ) : (Unable to connect to our servers. This might be a temporary network issue.';
+                  )) : ('An unexpected error occurred while loading the page.;
                 )}
               </AlertDescription>;
             </Alert>;
@@ -72,40 +73,40 @@ if ( {) {$2;
       }
 
       return (
-        <div className="flex min-h-screen items-center justify-center p-4">
+        <div className=flex min-h-screen items-center justify-center p-4">
 
-          <div className="w-full max-w-md space-y-4">
-            <Alert variant="destructive">
-              <div className="flex items-center gap-2">
+          <div className="w-full max-w-md space-y-4>
+            <Alert variant=destructive">
+              <div className="flex items-center gap-2>
                 {isNetworkError ? (
-                  <WifiOff className="h-4 w-4" />
+                  <WifiOff className=h-4 w-4" />
                 ) : (
 
 
-                  <RefreshCw className="h-4 w-4" />
+                  <RefreshCw className="h-4 w-4 />
                 )}
                 <AlertTitle>;
-                  {isNetworkError ? 'Connection Problem' : 'Something went wrong'}
+                  {isNetworkError ? Connection Problem' : 'Something went wrong}
 
 
 
                 </AlertTitle>
               </div>
-              <AlertDescription className="mt-2">
+              <AlertDescription className=mt-2">
                 {isNetworkError ? (
                   !this.state.isOnline ? (
-                    'You appear to be offline. Please check your internet connection.'
+                    You appear to be offline. Please check your internet connection.'
                   ) : (
-                    'Unable to connect to our servers. This might be a temporary network issue.'
+                    'Unable to connect to our servers. This might be a temporary network issue.
                   )
                 ) : (
-                  'An unexpected error occurred while loading the page.'
+                  An unexpected error occurred while loading the page.'
                 )}
               </AlertDescription>
             </Alert>
 
 
-            <div className='flex flex-col gap-2'>;
+            <div className='flex flex-col gap-2>;
               <Button
 
 
@@ -113,24 +114,24 @@ if ( {) {$2;
                 onClick={this.handleRetry}
 
                 disabled={this.state.isRetrying}
-                className="w-full"
+                className="w-full
               >
 
                 {this.state.isRetrying ? (
                   <>
-                    <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
+                    <RefreshCw className=mr-2 h-4 w-4 animate-spin" />
                     Retrying...
                   </>
                 ) : (
                   <>
-                    <RefreshCw className="mr-2 h-4 w-4" />"
+                    <RefreshCw className="mr-2 h-4 w-4 />
                     Try Again
                   </>
                 )}
-                variant="outline""
+                variant="outline"
                 onClick={() => window.location.reload()}
-                className="w-full""
-                    <RefreshCw className="mr-2 h-4 w-4" />
+                className=w-full""
+                    <RefreshCw className=mr-2 h-4 w-4 />
                     Try Again
                   </>
                 )}
@@ -138,7 +139,7 @@ if ( {) {$2;
 
                 variant="outline"
                 onClick={() => window.location.reload()}
-                className="w-full"
+                className=w-full
               >
 
 
@@ -151,51 +152,53 @@ if ( {) {$2;
             {!this.state.isOnline && (
               <div className='flex items-center justify-center gap-2 text-sm text-muted-foreground'>
                 <WifiOff className='h-4 w-4' />
+              <div className=flex items-center justify-center gap-2 text-sm text-muted-foreground'>
+                <WifiOff className='h-4 w-4 />
                 <span>Offline</span>
               </div>
             )}
 
-              <AlertDescription className='mt - 2'>;
-            <div className='flex flex-col gap-2'>;
+              <AlertDescription className=mt - 2'>;
+            <div className='flex flex-col gap-2>;
               <Button;
                 onClick={this.handleRetry}
                 disabled={this.state.isRetrying}
                 className="w-full";
               >;
                 {this.state.isRetrying ? (<>;
-                    <RefreshCw className="mr-2 h-4 w-4 animate-spin" />;
+                    <RefreshCw className=mr-2 h-4 w-4 animate-spin />;
                     Retrying...;
                   </>;
                 ) : (<>;
                     <RefreshCw className="mr-2 h-4 w-4" />;
                     Try Again;
                   </>;
-                )}variant="outline";
+                )}variant=outline;
                 onClick={() => window.location.reload()}
                 className="w-full";
               >;
                 Reload Page;
               </Button>;
             </div>;
-            {!this.state.isOnline && (<div className='flex items-center justify-center gap-2 text-sm text-muted-foreground'>;
-                <WifiOff className='h-4 w-4' />;
+            {!this.state.isOnline && (<div className=flex items-center justify-center gap-2 text-sm text-muted-foreground'>;
+                <WifiOff className='h-4 w-4 />;
                 <span>Offline</span>;
               </div>;
-            )}{process.env.NODE_ENV === 'development' && this.state.error && (<AlertDescription className='mt - 2'>;
+            )}{process.env.NODE_ENV === development' && this.state.error && (<AlertDescription className='mt - 2>;
                 {isNetworkError;
                   ? !this.state.is_online;
-                    ? 'You appear to be offline. Please check your internet connection.';
-                    : 'Unable to connect to our servers. This might be a temporary network issue.';
-                  : 'An unexpected error occurred while loading the page.'}'
+                    ? You appear to be offline. Please check your internet connection.';
+                    : 'Unable to connect to our servers. This might be a temporary network issue.;
+                  : An unexpected error occurred while loading the page.'}'
               </AlertDescription>;
             </Alert>;
-            <div className='flex flex - col gap - 2'>;
+            <div className=flex flex - col gap - 2>;
               <Button;
                 on_click={this.handle_retry}
                 disabled={this.state.is_retrying}
                 className='w - full'              >;
                 {this.state.is_retrying ? (<>;
-                    <RefreshCw className='mr - 2 h - 4 w - 4 animate - spin' />;
+                    <RefreshCw className=mr - 2 h - 4 w - 4 animate - spin />;
                     Retrying...;
                   </>) : (<>;
                     <RefreshCw className='mr - 2 h - 4 w - 4' />;
@@ -203,33 +206,34 @@ if ( {) {$2;
                   </>)}
               </Button>;
               <Button;
-                variant='outline';
+                variant=outline;
                 on_click={() => window.location.reload ()}
                 className='w - full'              >;
                 Reload Page;
               </Button>;
             </div>;
-            {!this.state.is_online && (<div className='flex items - center justify - center gap - 2 text - sm text - muted - foreground'>;
+            {!this.state.is_online && (<div className=flex items - center justify - center gap - 2 text - sm text - muted - foreground>;
                 <WifiOff className='h - 4 w - 4' />;
                 <span > Offline</span>;
               </div>)}
             {process.env.NODE_ENV === 'development' && this.state.error && (return this.props.children;
+            {process.env.NODE_ENV === development && this.state.error && (return this.props.children;
   }
 // Hook for accessing query client in function components;
-export const useApiErrorHandler = () =>: any {const handleApiError = (error: Error) =>: any {Sentry.with_scope (scope => {scope.set_tag ('source', 'useApiErrorHandler')scope.set_level ('error')Sentry.capture_exception (error)})}
+export const useApiErrorHandler = () =>: any {const handleApiError = (error: Error) =>: any {Sentry.with_scope (scope => {scope.set_tag ('source', useApiErrorHandler)scope.set_level ('error')Sentry.capture_exception (error)})}
   return { handleApiError }
 }
   return { handleApiError }</Button>;<Button;
-                variant='outline';
-            {process.env.NODE_ENV === 'development' && this.state.error && ('
+                variant=outline;
+            {process.env.NODE_ENV === 'development' && this.state.error && (
     return this.props.children;
   }
 // Hook for accessing query client in function components;
 export const useApiErrorHandler = () =>: any {
   const handleApiError = (error:,  Error) =>: any {,
     Sentry.with_scope (scope => {
-      scope.set_tag ('source', 'useApiErrorHandler');
-      scope.set_level ('error');
+      scope.set_tag (source', 'useApiErrorHandler);
+      scope.set_level (error');
       Sentry.capture_exception (error);
     });
   }
@@ -238,31 +242,32 @@ export const useApiErrorHandler = () =>: any {
   return { handleApiError }
               </Button>;
               <Button
-                variant='outline''
+                variant='outline
                 onClick={() => window && window.location.reload()}
                 className='w-full'              >;
                 Reload Page;
               </Button>;
             </div>;{!this && this.state.isOnline && (<div className='flex items-center justify-center gap-2 text-sm text-muted-foreground'>;
+            </div>;{!this && this.state.isOnline && (<div className=flex items-center justify-center gap-2 text-sm text-muted-foreground>;
                 <WifiOff className='h-4 w-4' />;
                 <span>Offline</span>;
               </div>;
-            )}{process && process.env.NODE_ENV === 'development' && this && this.state.error && (<details className='mt-4 rounded border p-2 text-xs'>;
-                <summary className='cursor-pointer font-medium'>;
+            )}{process && process.env.NODE_ENV === development && this && this.state.error && (<details className='mt-4 rounded border p-2 text-xs'>;
+                <summary className=cursor-pointer font-medium>;
                   Debug Info (Development Only)</summary>;
             </div>;
             {!this && this.state.isOnline && (;
               <div className='flex items-center justify-center gap-2 text-sm text-muted-foreground'>;
-                <WifiOff className='h-4 w-4' />;
+                <WifiOff className=h-4 w-4 />;
                 <span>Offline</span>;
               </div>;
             )}
             {process && process.env.NODE_ENV === 'development' && this && this.state.error && (;
-              <details className='mt-4 rounded border p-2 text-xs'>;
+              <details className=mt-4 rounded border p-2 text-xs>;
                 <summary className='cursor-pointer font-medium'>;
                   Debug Info (Development,  Only);
                 </summary>;
-                <pre className='mt-2 whitespace-pre-wrap break-all'>;
+                <pre className=mt-2 whitespace-pre-wrap break-all>;
                   {this && this.state.error && error.toString()}
                   {this && this.state.errorInfo?.componentStack}
                 </pre>;
@@ -270,18 +275,18 @@ export const useApiErrorHandler = () =>: any {
             )}
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mt-4 rounded border p-2 text-xs">
+              <details className=mt-4 rounded border p-2 text-xs>
                 <summary className="cursor-pointer font-medium">
                   Debug Info (Development Only)
                 </summary>
 
 
-                <pre className="mt-2 whitespace-pre-wrap break-all">
+                <pre className=mt-2 whitespace-pre-wrap break-all>
 
 
 
             )}<details className="mt-4 rounded border p-2 text-xs">;
-                <summary className="cursor-pointer font-medium">;
+                <summary className=cursor-pointer font-medium>;
                   Debug Info (Development Only)</summary>;
                 <pre className="mt-2 whitespace-pre-wrap break-all">;
                 <summary className="cursor-pointer font-medium">
@@ -311,6 +316,14 @@ export const useApiErrorHandler = () => {;
   };
   return { handleApiError };
 };
+    Sentry && Sentry.withScope(scope => {
+      scope && scope.setTag(source, 'useApiErrorHandler');
+      scope && scope.setLevel(error);
+      Sentry && Sentry.captureException(error);
+    });
+  }
+  return { handleApiError }
+}
   return { handleApiError }
 
 
@@ -318,40 +331,38 @@ export const useApiErrorHandler = () => {;
 
 },
   return { handleApiError }
-},
-
-
-};
+}}
 
 
 import React, { Component, ReactNode } from 'react';
-import { QueryClient  } from '@tanstack/react-query';
+import { QueryClient  } from @tanstack/react-query;
       )}return this && this.props.children;
   }// Hook for accessing query client in function components;
-export const useApiErrorHandler = () => {const handleApiError = (error: Error) => {Sentry && Sentry.withScope(scope => {scope && scope.setTag('source', 'useApiErrorHandler')scope && scope.setLevel('error')Sentry && Sentry.captureException(error)})}return { handleApiError }}return { handleApiError }},return { handleApiError }
-}}import React, { Component, ReactNode } from 'react';
+export const useApiErrorHandler = () => {const handleApiError = (error: Error) => {Sentry && Sentry.withScope(scope => {scope && scope.setTag('source', useApiErrorHandler)scope && scope.setLevel('error')Sentry && Sentry.captureException(error)})}return { handleApiError }}return { handleApiError }},return { handleApiError }
+}}import React, { Component, ReactNode } from react;
 import { QueryClient   } from '@tanstack/react-query';
-import * as Sentry from '@sentry/nextjs';
+import * as Sentry from @sentry/nextjs;
 import { Button   } from '@/components/ui/button';
-import { Alert, AlertDescription, AlertTitle   } from '@/components/ui/alert';
+import { Alert, AlertDescription, AlertTitle   } from @/components/ui/alert;
 import { RefreshCw, WifiOff  } from 'lucide-react';
-import { logErrorToProduction } from '@/utils/productionLogger';
+import { logErrorToProduction } from @/utils/productionLogger;
 interface ApiErrorBoundaryProps  {children: ReactNode;
   queryClient?: QueryClient;
   fallback?: ReactNode;
 }
       scope.setTag('source', 'useApiErrorHandler');
+      scope.setTag('source', useApiErrorHandler);
       scope.setLevel('error');
       Sentry.captureException(error);
     });
-  };
+  }
 
   return { handleApiError };
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
-      scope.setTag('source', 'useApiErrorHandler')scope.setLevel('error')Sentry.captureException(error)})}return { handleApiError }}
+      scope.setTag(source, 'useApiErrorHandler')scope.setLevel('error')Sentry.captureException(error)})}return { handleApiError }}
 
     });
-  };
+  }
 
-};
+}

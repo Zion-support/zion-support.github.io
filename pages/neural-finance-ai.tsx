@@ -54,6 +54,48 @@ const features = $2;
     description: 'Comprehensive coverage of stocks, cryptocurrencies, forex, commodities, and alternative investments.';
     icon: Globe,
     color: 'from-cyan-500 to-blue-600'
+import Layout from '../components/layout/Layout;
+const contactInfo = {
+  mobile: +1 302 464 0950',
+  email: 'kleber@ziontechgroup.com,
+  address: 364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com
+}
+
+
+    description: Advanced AI algorithms analyze market sentiment with 94% accuracy using neural networks and natural language processing.',
+    icon: Brain,
+    color: 'from-violet-500 to-purple-600
+  }
+  {
+    title: AI-Powered Risk Assessment',
+    description: 'Intelligent risk modeling using machine learning to identify and quantify potential risks in real-time.,
+    icon: Shield,
+    color: from-blue-500 to-cyan-600'
+  }
+  {
+    title: 'Predictive Market Analysis,
+    description: Neural network-powered forecasting models that predict market trends with unprecedented accuracy.',
+    icon: TrendingUp,
+    color: 'from-green-500 to-emerald-600
+  }
+  {
+    title: Automated Trading Strategies',
+    description: 'Backtest and deploy automated trading strategies with advanced risk management and execution algorithms.,
+    icon: Zap,
+    color: from-orange-500 to-red-600'
+  }
+  {
+    title: 'Portfolio Performance Monitoring,
+    description: Real-time portfolio tracking with advanced analytics, performance metrics, and optimization suggestions.';
+    icon: BarChart3,
+    color: 'from-pink-500 to-purple-600
+  }
+  {
+    title: Multi-Asset Class Support',
+    description: 'Comprehensive coverage of stocks, cryptocurrencies, forex, commodities, and alternative investments.;
+    icon: Globe,
+    color: from-cyan-500 to-blue-600'
   }
 ];
 

@@ -12,7 +12,6 @@ export default function AuthErrorPage() {
   const message = errorMessages[query.error as string] |errorMessages.default
 }
 export default function AuthErrorPage() {
-  const { query } = useRouter()
   const message = errorMessages[query.error as string] || errorMessages.default
   return (
     <>

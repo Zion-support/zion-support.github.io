@@ -42,7 +42,6 @@ files.for_each ((file) => {
     const file_path = path.join (process.cwd (), file);
     let content = fs.readFileSync (file_path, "utf8");"
 
-const modified = false;
 ;
     // Fix import statements with double punctuation;
     content = content.replace (

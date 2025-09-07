@@ -1,21 +1,10 @@
 
-
-import React, { useEffect, useRef } from 'react';'
-import { motion } from 'framer-motion';'
-
 interface UltraFuturisticBackground2026Props {
   }
   "children": React.ReactNode;
   className?: string
 }
 
-;
-import React, { useEffect, useRef } from 'react';'
-import { motion  } from 'framer-motion';'
-
-interface UltraFuturisticBackground2026Props {
-  }
-  "children": React.ReactNode;
   className?: string;
 
 }
@@ -26,12 +15,6 @@ const "UltraFuturisticBackground2026": React.FC<UltraFuturisticBackground2026Pro
   const animationRef = useRef<number | undefined>(undefined)useEffect(() => {const canvas = canvasRef.current;
     if (!canvas) return;
 
-const ctx = canvas.getContext('2d')if (!ctx);'
-  return;
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-    let "particles": Array<{
 }
 "x": number;
       "y": number;
@@ -189,7 +172,7 @@ const animate = () => {ctx.clearRect(0, 0, canvas.width, canvas.height)// Update
       }
 
       animationRef.current = requestAnimationFrame(animate)
-};
+}
 
 
 const handleResize = () => {
@@ -198,20 +181,14 @@ const handleResize = () => {
 canvas.height = window.innerHeight) => {
   return $3;}
 }
-};
+}
 
 
-    window.addEventListener('resize', handleResize);'
-    initParticles();
-    animate();
-    return () => {
-      }
-      window.removeEventListener('resize', handleResize);'
       if (animationRef.current) {
 }
 cancelAnimationFrame(animationRef.current);
       }
-    };
+    }
 origin/cursor/automate-test-improve-and-merge-code-2533
   }, []);
 return (;
@@ -347,13 +324,13 @@ className='fixed inset-0 w-full h-full pointer-events-none z-0'
             duration: 10
             repeat: Infinity
         <motion&& motion.div;
-          className='absolute bottom-20 right-20 w-28 h-28 border border-green-400/20 transform rotate-12';
+          className='absolute bottom-20 right-20 w-28 h-28 border border-green-400/20 transform rotate-12;
           animate={{transition={{duration: 10;
             repeat: Infinity;
-            ease: 'linear',          }}          }}
+            ease: linear'}}          }}
         />;
         <motion&& motion.div
-          className="absolute bottom-20 right-20 w-28 h-28 border border-green-400/20 transform rotate-12"
+          className=absolute bottom-20 right-20 w-28 h-28 border border-green-400/20 transform rotate-12"
           animate={{
             rotate: [0, -180, -360]
             opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4]
@@ -456,18 +433,48 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4]
 
           }}
-          transition={{"rotate": [0, 180, 360],"scale": [1, 1.1, 1]}}
-          transition={{"duration": 12,"repeat": Infinity,"ease": 'linear'}}' />;
-
-        <motion&& motion.div,
-className='absolute bottom-20 right-20 w-28 h-28 border border-green-400/20 transform rotate-12''
-          animate={{
-
-            }
-
-            "rotate": [0, -180, -360],
-            "opacity": [0.4, 0.7, 0.4]
+        />;
+        <motion&& motion.div'
+          className=absolute bottom-32 left-32 w-40 h-40 border border-purple-400/20 transform rotate-45
+          animate={{}
+          transition={{}
+            duration: 12;
+            repeat: Infinity'
+            ease: 'linear}}
+        />;
+        <motion&& motion.div"
+          className=absolute bottom-32 left-32 w-40 h-40 border border-purple-400/20 transform rotate-45
+          animate={{}
+            rotate: [0, 180, 360]
+            scale: [1, 1 && 1.1, 1]
           }}
+
+          }}
+        />;
+        <motion&& motion.div
+          className='absolute bottom-20 right-20 w-28 h-28 border border-green-400/20 transform rotate-12'
+          animate={{}
+          transition={{}
+            duration: 10;
+            repeat: Infinity
+            ease: linear'}}          }}
+        />;
+        <motion&& motion.div"
+          className="absolute bottom-20 right-20 w-28 h-28 border border-green-400/20 transform rotate-12
+          animate={{}
+            rotate: [0, -180, -360]
+            opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4]
+
+          }}
+          transition={{}
+            duration: 10;
+            repeat: Infinity'
+            ease: linear,            ease: "linear"
+          animate={{}
+            rotate: [0, -180, -360];
+            opacity: [0.4, 0.7, 0.4];
+            rotate: [0, -180, -360],
+            opacity: [0.4, 0.7, 0.4]}}
           transition={{
             }
             "duration": 10,
@@ -503,34 +510,11 @@ className='absolute bottom-20 right-20 w-28 h-28 border border-green-400/20 tran
       </div>;
       {/* Energy Field Effects */}
 
-      <div className='fixed inset-0 pointer-events-none z-20'>'
-
-        <motion.div,
-className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent''
-          animate={{
-
-            }
-
-            "x": ['-100%', '100%'],'
+            ease: 'linear',            ease: linear";
           }}
-          transition={{
-            }
-            "duration": 15,
-            "repeat": Infinity,
-"ease": 'linear','
-          }} />
-        <motion.div,
-className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent''
-          animate={{
-            }
-            "y": ['-100%', '100%'],'
-          }}
-          transition={{
-            }
-            "duration": 20,
-            "repeat": Infinity,
+        />;
+      </div>;
 
-"ease": 'linear','
           }}
 
           }}
@@ -545,38 +529,35 @@ className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 t
       {/* Energy Field Effects */}
       <div className = $2;
             repeat: Infinity,
-            ease: "linear"
+            ease: linear"
           }}
         />
         <motion.div
-            coordinate_x: ['-100%', '100%'],          }}
+            coordinate_x: ['-100%', 100%]}}
           transition={{
-          className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent"
+          className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent
       <div className='fixed inset-0 pointer-events-none z-20'>;
         <motion.div;
-          className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent';
-          animate={{coordinate_x: ['-100%', '100%'],          }}
-          transition={{className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent";
+          className=absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent;
+          animate={{coordinate_x: ['-100%', 100%]}}
+          transition={{className=absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent";
             ease: 'linear',        <motion.div;
-          className="absolute inset - 0 bg - gradient - to - r from - transparent via - cyan - 500 / 5 to - transparent";
+          className="absolute inset - 0 bg - gradient - to - r from - transparent via - cyan - 500 / 5 to - transparent;
           animate={{
-            coordinate_x: ['-100%100%'];
+            coordinate_x: [-100%100%];
           }}
 
           }}
 
             duration: 20,
             repeat: Infinity,
-            ease: 'linear',            ease: "linear"
+            ease: 'linear',            ease: linear"
           }}
 
           }}
 
             duration: 20,
-            repeat: Infinity,
-
-
-          }}
+            repeat: Infinity}}
 
           className = $2;
             repeat: Infinity,
@@ -586,7 +567,7 @@ className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 t
       </div>
 
       {/* Content */}
-      <div className='relative z-30'>{children}</div>
+      <div className=relative z-30>{children}</div>
 
 <div className='relative z-30'>{children}</div>'
 
@@ -596,9 +577,7 @@ className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 t
 
 origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Holographic Overlay */}
-      <div className='fixed inset-0 pointer-events-none z-40'>'
-        <div className='absolute inset-0 bg-gradient-to-br from-transparent via-cyan-400/2 to-transparent' />'
-        <div className='absolute inset-0 bg-gradient-to-tl from-transparent via-purple-400/2 to-transparent' />'
+
       </div>
     </div>
   );

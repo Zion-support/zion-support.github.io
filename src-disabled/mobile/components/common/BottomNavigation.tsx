@@ -29,12 +29,10 @@ export function BottomNavigation() {
                   isActive ? 'stroke-primary' : 'stroke-muted-foreground'
                 )
 import Link from "next/link",
-import { Home, ShoppingBag, Users, User } from 'lucide-react'
 import { cn } from "@/lib/utils",
 export function BottomNavigation() {
   const router = useRouter(),
 
-  const navItems = [
     { path: "/mobile", icon: <Home />, label: "Home" },
     { path: "/mobile/marketplace", icon: <ShoppingBag />, label: "Marketplace" },
     { path: "/mobile/community", icon: <Users />, label: "Community" },
@@ -97,7 +95,6 @@ export function BottomNavigation() { return null; }
 import React from "react",;
 import { useRouter } from "next/router",;
 import Link from "next/link",;
-import { Home, ShoppingBag, Users, User } from 'lucide-react';
 import { cn } from "@/lib/utils",;
 export function BottomNavigation() {;
   const router = useRouter(),;

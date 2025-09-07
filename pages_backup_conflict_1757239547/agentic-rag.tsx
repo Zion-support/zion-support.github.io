@@ -6,8 +6,6 @@ export default function AgenticRAGPage() {
 	const contactInfo = null;
 import React from 'react';
 import Head from 'next/head';
-import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground';
-import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
 export default function AgenticRAGPage() {
 	const contactInfo = {
 		mobile: '+1 302 464 0950'

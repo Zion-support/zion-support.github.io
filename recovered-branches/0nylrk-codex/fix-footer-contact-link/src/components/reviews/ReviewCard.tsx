@@ -413,7 +413,6 @@ onClick={handleReport}
 }
 
 };
-const renderStars = (rating?: number) => {
   if (!rating) return null;
 return (<div className="flex" > {
   [1, 2, 3, 4, 5].map ( (star) => (<Star key= {

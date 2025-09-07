@@ -89,6 +89,40 @@ const containerVariants = {}
 }
   const containerVariants = {
     hidden: { opacity: 0 }
+import { educationElearning2025 } from '../../data/education-elearning-2025';
+
+    {
+      title: Cybersecurity & Security,
+      icon: Shield,
+      services: advancedCybersecurity2025,
+      gradient: 'from-red-600 via-orange-600 to-yellow-600'},
+    {
+      title: Blockchain & Web3,
+      icon: Globe,
+      services: blockchainWeb32025,
+      gradient: 'from-green-600 via-teal-600 to-cyan-600'},
+    {
+      title: IoT & Edge Computing,
+      icon: Cloud,
+      services: iotEdgeComputing2025,
+      gradient: 'from-blue-600 via-indigo-600 to-purple-600'},
+    {
+      title: Healthcare & Biotechnology,
+      icon: Target,
+      services: healthcareBiotech2025,
+      gradient: 'from-pink-600 via-rose-600 to-red-600'},
+    {
+      title: Fintech & Financial,
+      icon: DollarSign,
+      services: fintechFinancial2025,
+      gradient: 'from-emerald-600 via-green-600 to-teal-600'},
+    {
+      title: Education & E-Learning,
+      icon: Award,
+      services: educationElearning2025,
+      gradient: 'from-amber-600 via-yellow-600 to-orange-600'}
+  const containerVariants = {
+    hidden: { opacity: 0 }
     visible: {
       opacity: 1,
       transition: {
@@ -145,8 +179,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
   },
 
-return (;
-    <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">;"
+
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+description: Advanced learning and educational technology}];
+    hidden: { opacity: 0 }
+    visible: {
+      opacity: 1
+      transition: {
+staggerChildren: 0.1}}}
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 }
+    visible: {
+      y: 0
+      opacity: 1
+      transition: {
+duration: 0.5}}}
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+  return (
+
+    <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden>;
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
@@ -165,7 +221,7 @@ initial={{ opacity: 0, y: 30 }
 
 className='text-center mb-16''
         >
-          <h2 className='text-4xl "md":text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6'>'
+
             Revolutionary 2025 Services
           </h2>
           <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>'
@@ -308,12 +364,7 @@ className='relative';
                   <p className="text - gray - 400 text - lg">;</h3>;
                   <p className='text-gray-400 text-lg'>;
 
-initial='hidden''
-          whileInView='visible''
-          viewport={{ "once": true 
-}
 
-          className='space-y-16''
         >
           {serviceCategories.map((category, categoryIndex) => (
             <motion.div
@@ -387,11 +438,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <p className='text-gray-400 text-lg'>                    {category.description}
 
                     {category.description}
-                  <p className='text-gray-400 text-lg'>                    {category.description}{category.description}</p>;'
-                </div>;
-              </div>;
-              <div className="flex items-center mb-8">;"
-                <div className={`p-3 rounded-xl bg-gradient-to-r ${category && category.gradient} mr-4`}>`
 
                   <category && category.icon className="w-8 h-8 text-white" />;"
                 </div>;
@@ -421,6 +467,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </p>
                 </div>
               </div>
+              <div className="flex items-center mb-8">;`
+                <div className={`p-3 rounded-xl bg-gradient-to-r ${category && category.gradient} mr-4`}>;
+                  <category && category.icon className=w-8 h-8 text-white" />;
+                </div>;
+                <div>;"
+                  <h3 className=text-3xl font-bold text-white mb-2>;
+                    {category && category.title}
+                  </h3>;"
+                  <p className="text-gray-400 text-lg>;
+                    {category && category.description}
+                  </p>;
+                </div>;
 
               {/* Services Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -449,16 +507,20 @@ className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
                         {service.description}
 
                   >
-                        {service.description}className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30';
+                        {service.description}className=group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30';
                   >;
-                    className="group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30"
+                    className="group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30
                   >
                     {/* Service Header */}
-                    <div className="mb-4">
-                      <h4 className="text-xl font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors">
+                    <div className=mb-4">
+                      <h4 className="text-xl font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors>
                         {service.name}
                       </h4>
-                      <p className='text-gray-400 text-sm leading-relaxed'>                        {service.description}
+                      <p className='text-gray-400 text-sm leading-relaxed>                        {service.description}
+
+
+                        {service.description}
+                      </p>
 
                       </h4>
                       <p className="text-gray-400 text-sm leading-relaxed">
@@ -531,40 +593,40 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <p className="text-gray-400 text-sm leading-relaxed">;
                         {service && service.description}
                       </p>;
-                    </div>;{/* Features */}<p className='text-gray-400 text-sm leading-relaxed'>                        {service.description}{service.description}</p>;'
+                    </div>;{/* Features */}<p className=text-gray-400 text-sm leading-relaxed'>                        {service.description}{service.description}</p>;
                     </div>;
                     {/* Features */}<div className="mb-4">;
-                      <h5 className="text-sm font-medium text-purple-300 mb-2">Key Features:</h5>;
+                      <h5 className=text-sm font-medium text-purple-300 mb-2>Key Features:</h5>;
                       <ul className="space-y-1">;
-                        {service.features?.slice(0, 3).map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-xs text-gray-400">;
+                        {service.features?.slice(0, 3).map((feature, featureIndex) => (<li key={featureIndex} className=flex items-center text-xs text-gray-400>;
                             <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />;
                             {feature}
                           </li>;
-                        ))}{service.features && service.features.length > 3 && (<li className="text-xs text-gray-500 italic">;
-<div className='mb-4'>;
-                      <h5 className='text-sm font-medium text-purple-300 mb-2'>;
+                        ))}{service.features && service.features.length > 3 && (<li className=text-xs text-gray-500 italic>;
+<div className='mb-4>;
+                      <h5 className=text-sm font-medium text-purple-300 mb-2'>;
                         Key Features:;
                       </h5>;
-                      <ul className='space-y-1'>;
+                      <ul className='space-y-1>;
                         {service.features;
                           ?.slice(0, 3).map((feature, featureIndex) => (<li;
                               key={featureIndex}
-                              className='flex items-center text-xs text-gray-400';
+                              className=flex items-center text-xs text-gray-400';
                             >;
                               <CheckCircle className='w-3 h-3 text-green-400 mr-2 flex-shrink-0' />;
                     </div>"
-                    <div className="mb-4">;"
+                    <div className="mb-4>;
                       <h4 className="text-xl font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors">;
                         {service && service.name}
-                      </h4>;"
-                      <p className="text-gray-400 text-sm leading-relaxed">;
+                      </h4>;
+                      <p className=text-gray-400 text-sm leading-relaxed">;
                         {service && service.description}
                       </p>;
                     </div>;
 
                     {/* Features */}
 
-                      <p className='text-gray-400 text-sm leading-relaxed'>                        {service.description}'
+
 
                         {service.description}
 
@@ -606,10 +668,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <h5 className="text-sm font-medium text-purple-300 mb-2">Key Features:</h5>
                       <ul className="space-y-1">
                         {service.features?.slice(0, 3).map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center text-xs text-gray-400">
-                            <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                          <li key={featureIndex} className=flex items-center text-xs text-gray-400">"
+                            <CheckCircle className=w-3 h-3 text-green-400 mr-2 flex-shrink-0 />
+
+
                             {feature}
-                          </li>
+                          </li>;
                         ))}
                         {service.features && service.features.length > 3 && (
                           <li className="text-xs text-gray-500 italic">
@@ -620,25 +684,42 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
 
                     {/* Pricing */}
-"
+
                     <div className="mb-4">
 
-<div className='mb-4'>'
-                      <div className='flex items-center justify-between'>'
-                        <span className='text-sm text-gray-400'>'
-                          Starting "from": </span>
-                        <span className='text-lg font-bold text-green-400'>'
 
-                          {service.price}
-                          {service.perio
-}
-                        </span>;
-                      </div>;
-                      <div className='text-xs text-gray-500 mt-1'>;'
-                        Market "position": {service.marketPositio
-}
+                        </div>;
                       </div>;
                     </div>;
+                    {/* CTA Button */}
+                    <div className='mt-6'>                    <div className=mb-4">;"
+                      <h5 className=text-sm font-medium text-purple-300 mb-2>Perfect for:</h5>;"
+                      <div className="flex flex-wrap gap-1>;
+                        {service && service.useCases?.slice(0, 3).map((useCase, useCaseIndex) => (;
+                    <div className="mb-4">
+                      <h5 className=text-sm font-medium text-purple-300 mb-2">Perfect for:</h5>"
+                      <div className=flex flex-wrap gap-1>
+                        {service.useCases?.slice(0, 3).map((useCase, useCaseIndex) => (
+                          <span;
+                            key={useCaseIndex}"
+                            className="px-2 py-1 bg-slate-700/50 text-xs text-gray-300 rounded-full>;
+                            {useCase}
+                          </span>;
+                        ))}
+<div className=mb-4>
+                      <div className='flex items-center justify-between'>
+                        <span className=text-sm text-gray-400>
+                          Starting from:
+                        </span>
+                        <span className='text-lg font-bold text-green-400'>
+                          {service.price}
+                          {service.period}
+                        </span>
+                      </div>
+                      <div className=text-xs text-gray-500 mt-1>
+                        Market position: {service.marketPosition}
+                      </div>
+                    </div>
                     {/* ROI */}
 <div className='mb-4'>;'
                       <h5 className='text-sm font-medium text-purple-300 mb-2'>;'
@@ -672,6 +753,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               key={useCaseIndex}
                               className='px-2 py-1 bg-slate-700/50 text-xs text-gray-300 rounded-full';
                             >;
+
                               {useCase}
                             </span>
                           ))}

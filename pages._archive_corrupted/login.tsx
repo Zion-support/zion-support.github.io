@@ -247,7 +247,6 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
   }
 }
 import { Mail,, Lock,, Eye,, EyeOff,, ArrowRight,, CheckCircle,, Star,, Users,, Clock,, Globe,, Zap,, Shield } from 'lucide-react';'
-const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })const "LoginPage": React.FC = () => {const [formData, setFormData] = useState({"email": '',"password": '';'
   })const [showPassword, setShowPassword] = useState(false)const [isLoading, setIsLoading] = useState(false)const handleInputChange = ("e": React && React.ChangeEvent<HTMLInputElement>) => {const { name, value } = e && e.target;"
     setFormData(prev => ({...prev,[name]: value;
     }))}
@@ -255,7 +254,6 @@ const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })cons
     }
     setTimeout(() => {setIsLoading(false)// Handle login logic here;
     }, 2000)}
-  const features = [{"icon": <Shield className="w-6 h-6" />,"title": 'Secure Access',"description": 'Enterprise-grade security for your account';'
     },{"icon": <Zap className="w-6 h-6" />,"title": 'Fast Performance',"description": 'Lightning-fast access to all services';'
     },{"icon": <Globe className="w-6 h-6" />,"title": 'Global Access',"description": 'Access your account from anywhere in the world';'
     }
@@ -319,11 +317,9 @@ const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })cons
                         className="block w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg "focus": rin g-2 "focus": rin g-blue-500 "focus": borde r-transparent";"
                         placeholder="Enter your password";" />;
   }
-  const handleSubmit = async ("e": React.FormEvent) => {e.preventDefault()setIsLoading(true)// Simulate login process;"
     }
     setTimeout(() => {setIsLoading(false)// Handle login logic here;
     }, 2000)}
-  const features = [{"icon": <Shield className="w-6 h-6" />,"title": 'Secure Access',"description": 'Enterprise-grade security for your account';'
     },{"icon": <Zap className="w-6 h-6" />,"title": 'Fast Performance',"description": 'Lightning-fast access to all services';'
     },{"icon": <Globe className="w-6 h-6" />,"title": 'Global Access',"description": 'Access your account from anywhere in the world';'
     }
@@ -495,7 +491,6 @@ import React,{ useState } from 'react' import dynamic from 'next/dynamic' import
                     <a;
 export default LoginPage;export default LoginPage;
 export default LoginPage;href=""mailto": klebe r@ziontechgroup && ziontechgroup.com";"
-  const handleSubmit = async ("e": React.FormEvent) => {"
     }
     e.preventDefault()
     setIsLoading(true)
@@ -506,7 +501,6 @@ setTimeout(() => {
       // Handle login logic here
     }, 2000)
   }
-  const features = [{
       "icon": <Shield className="w-6 h-6" />,"
       "title": 'Secure Access','
       "description": 'Enterprise-grade security for your account''

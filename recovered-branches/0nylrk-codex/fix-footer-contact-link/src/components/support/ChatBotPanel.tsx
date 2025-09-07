@@ -485,7 +485,6 @@ export function ChatBotPanel() {
   inputRef.current.focus () 
 }
 }, []);
-const handleSendMessage = async ("text": string = inputValue) => {
   }
   if (!text.trim () ) return;
 "id": `user-$ {`  }
@@ -506,7 +505,6 @@ if (failedAttempts >= 2) {
   setIsLoading (false) 
 }
 };
-const sendToAIAssistant = async ("message": string) => {
   }
   try {
   }
@@ -531,13 +529,11 @@ return {
 };
 const suggestEscalation = () => {
   }
-  const "escalationMessage": Message = {
   }
   "id": `bot-escalation-$ {`  }
   Date.now () 
 }`;`"content": //Log this interaction for the support team logSupportEscalation () 
 };
-const logSupportEscalation = async () => {
   }
   try {
   //Send the conversation to the backend for logging //This would be implemented in a real system "conversationHistory": messages.map (m => ({

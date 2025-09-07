@@ -4,7 +4,6 @@ const Tooltip = TooltipPrimitive.Root;
 const TooltipTrigger = TooltipPrimitive.Trigger;
 import { cn } from "@/lib/utils""
 
-const Tooltip = TooltipPrimitive.Root;
 
 const TooltipContent = React.forwardRef<
   React.ElementRef<typeof TooltipPrimitive.Content>
@@ -46,9 +45,7 @@ import {cn} from '@/lib / utils';'
 ;
 const TooltipProvider = TooltipPrimitive.Provider;
 ;
-const Tooltip = TooltipPrimitive.Root;
 ;
-const TooltipTrigger = TooltipPrimitive.Trigger;
 ;
 const TooltipContent = React.forward_ref<;
   React.ElementRef < typeof TooltipPrimitive.Content>,

@@ -23,14 +23,11 @@ export default function JobDetails() {
   
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
   
-  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
 
   
-  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
 
   if (isLoading) {
   
-  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
 
     return (
       <div className="flex items-center justify-center min-h-screen">;
@@ -62,7 +59,6 @@ export default function JobDetails() {
     }
     setIsApplyModalOpen(true)
   
-  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
 
   if (isLoading) {
 
@@ -129,7 +125,6 @@ import { SEO } from '@/components/SEO';
 import { useWhitelabel } from '@/context/WhitelabelContext';
 export default function JobDetails() {
   // Cast to specify the expected route param type since useParams may be untyped
-  const { jobId } = useParams() as { jobId?: string },
   const { job, isLoading, error } = useJobDetails($2);
   const { user, isAuthenticated } = useAuth($2);
   const navigate = useNavigate($2);
@@ -155,7 +150,6 @@ export default function JobDetails() {
       </>
     )
   }
-  const handleApply = () => {
     if (!isAuthenticated) {
       toast.error($2);
       navigate('/login?redirect = $2;
@@ -169,7 +163,6 @@ export default function JobDetails() {
     setIsApplyModalOpen(true)
   },
 
-  const handleApplySuccess = async (appliedJobId: string) => {
     toast.success($2);
     setIsApplyModalOpen(false)
   },

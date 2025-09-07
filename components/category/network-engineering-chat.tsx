@@ -16,13 +16,13 @@ const NetworkEngineeringChat: NextPage = () => {;
       <Head>;
         <title>NetworkEngineeringChat - Zion Tech Solutions</title>;
         <meta
-          name="description"
-          content="NetworkEngineeringChat blog post"
-        />{" "}
+          name=description"
+          content="NetworkEngineeringChat blog post
+        />{ "}
       <main>
         <h1>NetworkEngineeringChat</h1>
         <p>Blog content coming soon...</p>
-        <a href="/blog">Back to Blog</a>
+        <a href="/blog>Back to Blog</a>
       </main>
     </div>
       </Head>;
@@ -30,7 +30,7 @@ const NetworkEngineeringChat: NextPage = () => {;
       <main>;
         <h1>NetworkEngineeringChat</h1>;
         <p>Blog content coming soon...</p>;
-        <a href="/blog">Back to Blog</a>;
+        <a href=/blog">Back to Blog</a>;
       </main>;
     </div>;
   );

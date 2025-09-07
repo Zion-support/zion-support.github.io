@@ -16,13 +16,13 @@ const CloudMigrationServicesChat: NextPage = () => {;
       <Head>;
         <title>CloudMigrationServicesChat - Zion Tech Solutions</title>;
         <meta
-          name="description"
-          content="CloudMigrationServicesChat service"
-        />{" "}
+          name=description"
+          content="CloudMigrationServicesChat service
+        />{ "}
       <main>
         <h1>CloudMigrationServicesChat</h1>
         <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>
+        <a href="/services>Back to Services</a>
       </main>
     </div>
       </Head>;
@@ -30,7 +30,7 @@ const CloudMigrationServicesChat: NextPage = () => {;
       <main>;
         <h1>CloudMigrationServicesChat</h1>;
         <p>Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;
+        <a href=/services">Back to Services</a>;
       </main>;
     </div>;
   );

@@ -59,16 +59,12 @@ const owner = process.env.GITHUB_OWNER,const repo = process.env.GITHUB_REPO,cons
       "topBadges": Object.values(users).reduce((map, u) => {(u.badges |[]).forEach((b) => { map[b] = (map[b] |0) + 1 };
   return map;
       }, {})}
-    const owner = process.env.GITHUB_OWNER;
-    const repo = process.env.GITHUB_REPO;
     const token = process.env.GITHUB_TOKEN;
     const content = JSON.stringify(summary, null, 2)if (owner && repo && token) {await upsertFile({ owner, repo, path: 'data/learn/insights-weekly.json', content, message: 'chore(automation): weekly learning insights', token })}
 }return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
 
 
-const repo = process.env.GITHUB_REPO;
 
-const token = process.env.GITHUB_TOKEN;
 
 const content = JSON.stringify(summary, null, 2)if (owner && repo && token) {await upsertFile({ owner, repo, "path": 'data/learn/insights-weekly.json', content, "message": 'chore(automation): weekly learning insights', token })}'
 ;
@@ -138,7 +134,6 @@ const courses_path = path.join (process.cwd (), 'datalearncourses.json'),;'
 const users = JSON.parse (fs.readFileSync (users_path, 'utf - 8')),;'
 const courses = JSON.parse (fs.readFileSync (courses_path, 'utf - 8')),;'
    ;
-  const summary = {
       }
       "updated_at": Date.now (),
       "totals": {
@@ -193,9 +188,6 @@ return map;
       }, {})
     }
 
-const owner = process.env.GITHUB_OWNER;
-const repo = process.env.GITHUB_REPO;
-const token = process.env.GITHUB_TOKEN;
    ;
   const content = JSON.stringify(summary, null, 2)
     if (owner && repo && token) {

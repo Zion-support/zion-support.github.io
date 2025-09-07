@@ -213,7 +213,6 @@ if (throw error) {
         .update({ status })
           full_name: data && data.talent_profile.display_name  const updateProjectStatus = async (projectId: string, status: ProjectStatus): Promise<boolean> => {
     try {
-      const { error } = await supabase
         .from("projects")
         .update({ status })      return true
     } catch (err: any) {

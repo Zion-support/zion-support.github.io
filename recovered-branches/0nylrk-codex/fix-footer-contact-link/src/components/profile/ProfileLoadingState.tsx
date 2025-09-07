@@ -10,7 +10,6 @@ return (;
   );
 }
 ;
-import React from "react";"
 export function ProfileLoadingState() {
 }
 return (;

@@ -21,8 +21,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Navigate } from "react-router-dom";"
 export default function WhitelabelManager() {
   }
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("tenants");"
   // Check if user has admin role,
 const isAdmin = user?.role === "admin";"
   if (!isAdmin) {
@@ -30,7 +28,6 @@ const isAdmin = user?.role === "admin";"
 return <Navigate to="/unauthorized" />;"
   }
 return (;
-import React, { useState } from 'react';'
 import { Header } from "@/components/Header";"
 import { Footer } from "@/components/Footer",;"
 import { SEO } from "@/components/SEO",;"
@@ -44,7 +41,6 @@ export default function WhitelabelManager() {;
   const { user } = useAuth(),;
   const [activeTab, setActiveTab] = useState("tenants"),;"
   // Check if user has admin role;
-  const isAdmin = user?.role === "admin";"
   if (!isAdmin) {;;
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;"
             <TabsList className="mb-8">;"

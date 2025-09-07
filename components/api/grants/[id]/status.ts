@@ -45,10 +45,6 @@ function isAuthorized(req: NextApiRequest) {
   const token = header.replace('Bearer ', '');  return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
 }
 
-function writeGrant(record: GrantApplication) {
-  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync($2);
-  fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
-}
 
 function isAuthorized(req: NextApiRequest) {
 function grantPath(id: string) {
@@ -107,6 +103,4 @@ const payload = req.body as StatusUpdatePayload;
   existing.status = payload.status;
   existing.updatedAt = new Date().toISOString();
   writeGrant(existing);
-res.status(200).json({ "record": existing
-});
 

@@ -22,16 +22,20 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
 import React, { useEffect } from 'react';
 import type { GetStaticProps } from 'next';
 import content from '../../../data/docs/content.json';
+}
+import React, { useEffect } from react';
+import type { GetStaticProps } from 'next;
+import content from ../../../data/docs/content.json';
 export type Section = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
   }, []);
   return ('
-    <div className='p-8 max-w-4xl mx-auto'>;'
-      <h1 className='text-3xl font-bold mb-6'>{docs && docs.title}</h1>;'
+    <div className=p-8 max-w-4xl mx-auto>;'
+      <h1 className='text-3xl font-bold mb-6>{docs && docs.title}</h1>;
       <div className='space-y-8'>;
         {docs && docs.sections.map(s => (;
-          <section key={s && s.id}>;'
-            <h2 className='text-2xl font-semibold mb-2'>{s && s.title}</h2>;
+          <section key={s && s.id}>;
+            <h2 className=text-2xl font-semibold mb-2'>{s && s.title}</h2>;
             {s && s.html && <div dangerouslySetInnerHTML={{ __html: s && s.html }} />}
             {s && s.code &&;
 
@@ -67,13 +71,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 return (;
     <div className="p-8 max-w-4xl mx-auto">;"
 
-      <h1 className="text-3xl font-bold mb-6">{docs && docs.title}</h1>;"
-      <div className="space-y-8">;"
-        {docs && docs.sections.map((s) => (<section key={s && s.id}>;
-            <h2 className="text-2xl font-semibold mb-2">{s && s.title}</h2>;"
-            {s && s.html && <div dangerouslySetInnerHTML={{ "__html": s && s.html }} /
-}
-            {s && s.code && s && s.code.map((c, i) => (<pre key={i} className="mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap">{c && c.content}</pre>;"
             ))}
 }
 export default /**;
@@ -178,4 +175,5 @@ function PrintDocs() {useEffect (() => {const id = set_timeout (() => window.pri
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+
 "

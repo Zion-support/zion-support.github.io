@@ -54,7 +54,6 @@
       canPublish: audioOnly ? false : true,;
       canPublishData: true,;
       canSubscribe: true}),;
-    const token = await at.toJwt();
     return res.status(200).json({;
       token;
       url: LIVEKIT_HOST});
@@ -86,7 +85,6 @@
       canPublishData: true
       canSubscribe: true
     });
-    const token = await at.toJwt();
     return res.status(200).json({
       token
       url: LIVEKIT_HOST

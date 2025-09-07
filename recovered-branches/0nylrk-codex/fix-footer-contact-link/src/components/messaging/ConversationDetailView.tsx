@@ -19,7 +19,6 @@ sendMessage
   const messagesEndRef = useRef<HTMLDivElement>(null);
 export function ConversationDetailView() {
   const { user } = useAuth($2);
-  const { 
     activeConversation,
     activeMessages, 
     sendMessage, 

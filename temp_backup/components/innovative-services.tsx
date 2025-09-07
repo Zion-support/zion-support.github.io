@@ -17,7 +17,6 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
 import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
 
-import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
 
 import {
   innovativeMicroSaasServices,
@@ -132,7 +131,6 @@ const [min, max] = price_range;
 if ( {) {$2;}
 }
 
-const [min, max] = price_range;
       .split ('-').map (p = > (p === '+' ? Infinity : parse_int (p)))filtered_services = getInnovativeServicesByPriceRange (min, max;
   const [min, max] = price_range.split ('-').map (p => p === '+' ? Infinity : parse_int (p))filtered_services = getInnovativeServicesByPriceRange (min, max)}
   // Search filter;

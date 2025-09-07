@@ -31,19 +31,12 @@ import { useNavigate } from "react-router-dom","
 export default function SavedTalentsPage() {
 }
 const { user } = useAuth(),;
-const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),;
 const [isLoading, setIsLoading] = useState(true),;
 const navigate = useNavigate(),;
-  const { user } = useAuth();
-const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),;
-  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {;
     }
     const fetchSavedTalents = async () => {;
   }
-  const { user } = useAuth();
-const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),;
-  const [isLoading, setIsLoading] = useState(true);
       setIsLoading(true);
       try {;
         }
@@ -90,7 +83,6 @@ const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),;
           throw error
         }
 
-        const { data, error } = await supabase
           .from("saved_talents")
           .select(
             `
@@ -109,7 +101,6 @@ const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),;
               availability;
             talent_profile (
 
-  const { user } = useAuth();
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
   const [isLoading, setIsLoading] = useState(true);        if (data) {
           // Extract talent profiles and convert to TalentProfile type
@@ -172,7 +163,6 @@ const talent_profiles = data.map (;
 
     fetchSavedTalents()
   }, [user]),
-  const handleViewProfile = ("talentId": string) => {
     }
     navigate(`/talent/${talentId}`)`  },
   const handleRequestHire = ("talent": TalentProfile) => {
@@ -289,7 +279,6 @@ if ( {) {
   $2
 }
         // Remove from saved talents;
-        const { error } = await supabase;
           .from ('saved_talents');'
           .delete ();
           .eq ('user_id', user.id);'
@@ -310,7 +299,6 @@ if ( {) {
       } else {
         // Add to saved talents;
         }
-        const { error } = await supabase;
           .from ('saved_talents');'
           .insert ([{ "user_id": user.id, "talent_id": talent_id }]),
         // Check condition,
@@ -419,7 +407,6 @@ const [isLoading, setIsLoading] = useState (true);
 const navigate = useNavigate ();
 useEffect ( () => {
   }
-  const fetchSavedTalents = async () => {
   }
   setIsLoading (true);
 try {

@@ -1,7 +1,7 @@
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== \"POST\") {}"
-    res.setHeader(\"Allow\", \"POST\");}"
-    return res.status(405).json({ error: \"Method Not Allowed\" })
+  if (req.method !== \"POST\) {}
+    res.setHeader(\"Allow\", \POST\);}"
+    return res.status(405).json({ error: \"Method Not Allowed\ })
 
 
 export default async function handler() {
@@ -69,30 +69,27 @@ const { name, entityType, pointOfContact, useCaseType, brand } = req.body || {};
 }
       return res.status (400).json ({ error: "Missing required fields" });
     }
-    try {
-      const { partner, api_key } = await create_partner ({
+    try {}
+      const { partner, api_key } = await create_partner ({}
         name,
         entity_type,
         pointOfContact,
         useCaseType,
-        brand,
-      });
-      return res.status (201).json ({
-        partner: {
+        brand});
+      return res.status (201).json ({}
+        partner: {}
           id: partner.id,
           name: partner.name,
           status: partner.status,
           entity_type: partner.entity_type,
           useCaseType: partner.useCaseType,
-          created_at: partner.created_at,
-        },
+          created_at: partner.created_at},
         api_key: api_key.key,
-        dashboard_url: `/partners / dashboard?pid=${partner.id}`,
-      });
+        dashboard_url: `/partners / dashboard?pid=${partner.id}`});
     } catch (e) {
-      return res.status (500).json ({ error: "Failed to create partner" });
-    }
-    return res.status (500).json ({ error: "Failed to create partner" });
+      return res.status (500).json ({ error: Failed to create partner" });
+    }"
+    return res.status (500).json ({ error: Failed to create partner });
   }
         createdAt: partner.createdAt},apiKey: apiKey.key;
       dashboardUrl: `/partners/dashboard?pid=${partner.id}`})} catch (e) {return res.status(500).json({ error: "Failed to create partner" })}

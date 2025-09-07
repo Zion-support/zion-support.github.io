@@ -84,7 +84,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
   }
 }
   ];
-  const advancedCapabilities = [
     {
       capability: 'Neural Network Monitoring',
       description: 'Deep learning-based anomaly detection',
@@ -120,7 +119,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
   }
 }
   ];
-  const performanceMetrics = [
     { metric: 'Uptime', value: '99.99%', target: '99.95%', status: 'exceeded' },
     { metric: 'Response Time', value: '23ms', target: '50ms', status: 'exceeded' },
     { metric: 'Throughput', value: '5.2k req/s', target: '2k req/s', status: 'exceeded' },

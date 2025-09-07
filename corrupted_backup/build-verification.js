@@ -15,10 +15,8 @@ try {
   }
   console.log(' Testing component imports...');'
   // Test basic React functionality;
-  const React = require('react');'
   console.log(' React import successful', React.version);'
   // Test framer-motion;
-  const { motion } = require('framer-motion');'
   console.log(' Framer Motion import successful', typeof motion);'
   // Test lucide-react icons;
   const {

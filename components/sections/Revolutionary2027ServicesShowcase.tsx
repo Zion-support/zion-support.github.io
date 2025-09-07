@@ -1,10 +1,4 @@
 
-
-import React from 'react';'
-import { motion  } from 'framer-motion';'
-import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud, Atom, Microscope, Satellite, DollarSign, Factory, Earth, TestTube, Megaphone, Scale, Network  } from 'lucide-react';'
-import Link from 'next/link';'
-
 const Revolutionary2027ServicesShowcase = null;
 
 const containerVariants = {}
@@ -547,12 +541,29 @@ className='text-center mb-20''
           <h2 className='text-5xl "md":text-6xl font-bold text-white mb-8'>'
             <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>'
               2027 Revolutionary Services
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0 && 0.1}}}        staggerChildren: 0 && 0.1;
+
+      }
+    }
+  }
+
+
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0 && 0.8 }}
+          viewport={{ once: true }}
+
+
+            <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent>
+              2027 Revolutionary Services;
             </span>
           </h2>
-          <p className='text-xl "md":text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>'
-            Experience the future of technology with our cutting-edge AI,
-quantum computing, and emerging technology services. Transform your,
-business with solutions that were once science fiction.
+          <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
+
           </p>
         </motion.div>
         <motion.div;
@@ -566,11 +577,12 @@ business with solutions that were once science fiction.
               2027 Revolutionary Services;
             </span>;
           </h2>;
-          <p className='text-xl "md":text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>;'
-            Experience the future of technology with our cutting-edge AI,quantum computing, and emerging technology services. Transform your;
-            business with solutions that were once science fiction.          </p>        >;
-          <h2 className="text-5xl "md":text-6xl font-bold text-white mb-8">;"
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;"
+          <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>;
+            Experience the future of technology with our cutting-edge AI,
+            quantum computing, and emerging technology services. Transform your;
+            business with solutions that were once science fiction.          </p>        >;"
+          <h2 className="text-5xl md:text-6xl font-bold text-white mb-8>;
+            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
               2027 Revolutionary Services;
             </span>;
           </h2>;
@@ -604,6 +616,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </span>;
           </h2>;"
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">;
+          <p className=text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">;
             Experience the future of technology with our cutting-edge AI, quantum computing, and emerging technology services. ;
             Transform your business with solutions that were once science fiction.;
           </p>;
@@ -622,32 +635,13 @@ initial='hidden';
           whileInView="visible";
           viewport={{ once: true }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16";
-          {categories && categories.map((category, index) => (<motion&& motion.div;
+          {categories && categories.map((category, index) => (;
+            <motion&& motion.div;
               key={category && category.name}
               variants={itemVariants}
               className='relative group'>;
               <div;
                 className={`bg-gradient-to-br ${category && category.color} p-6 rounded-2xl text-center transform transition-all duration-300 group-hover:shadow-xl hover:shadow-cyan-500/30 group-hover:shadow-2xl`}>;
-                <div className='w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-white/20 rounded-full backdrop-blur-sm'>;
-                  <category && category.icon className='w-8 h-8 text-white' />;
-                </div>;
-                <h3 className='text-lg font-semibold text-white mb-2'>;
-                  {category && category.name}
-                </h3>;
-                <p className='text-2xl font-bold text-white'>;
-                  {category && category.count}
-                </p>              </div>            >;
-              <div className={`bg-gradient-to-br ${category && category.color} p-6 rounded-2xl text-center transform transition-all duration-300 group-hover:shadow-xl hover:shadow-cyan-500/30 group-hover:shadow-2xl`}>;
-                <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-white/20 rounded-full backdrop-blur-sm">;
-                  <category && category.icon className="w-8 h-8 text-white" />;
-                </div>;
-                <h3 className="text-lg font-semibold text-white mb-2">{category && category.name}</h3>;
-                <p className="text-2xl font-bold text-white">{category && category.count}</p>;
-              </div>;
-            </motion && motion.div>;
-        {/* Featured Services Grid */}
-        <motion&& motion.div;
-          variants={containerVariants}
 
 initial='hidden''
           whileInView='visible''
@@ -690,31 +684,33 @@ className='relative group'>'
                 className={`bg-gradient-to-br ${category && category.color} p-6 rounded-2xl text-center transform transition-all duration-300 group-hover:shadow-xl hover:shadow-cyan-500/30 group-hover:shadow-2xl`}>;'
                 <div className='w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-white/20 rounded-full backdrop-blur-sm'>;'
                   <category && category.icon className='w-8 h-8 text-white' />;
+                <div className=w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-white/20 rounded-full backdrop-blur-sm'>;'
+                  <category && category.icon className=w-8 h-8 text-white />;
                 </div>;'
-                <h3 className='text-lg font-semibold text-white mb-2'>;
+                <h3 className='text-lg font-semibold text-white mb-2>;
                   {category && category.name}
-                </h3>;'
+                </h3>;
                 <p className='text-2xl font-bold text-white'>;
                   {category && category.count}
                 </p>              </div>            >;`
-              <div className={`bg-gradient-to-br ${category && category.color} p-6 rounded-2xl text-center transform transition-all duration-300 group-hover:shadow-xl hover:shadow-cyan-500/30 group-hover:shadow-2xl`}>;"
-                <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-white/20 rounded-full backdrop-blur-sm">;"
-                  <category && category.icon className="w-8 h-8 text-white" />;
+              <div className={`bg-gradient-to-br ${category && category.color} p-6 rounded-2xl text-center transform transition-all duration-300 group-hover:shadow-xl hover:shadow-cyan-500/30 group-hover:shadow-2xl`}>;
+                <div className=w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-white/20 rounded-full backdrop-blur-sm">;"
+                  <category && category.icon className=w-8 h-8 text-white />;
                 </div>;"
-                <h3 className="text-lg font-semibold text-white mb-2">{category && category.name}</h3>;"
+                <h3 className="text-lg font-semibold text-white mb-2>{category && category.name}</h3>;
                 <p className="text-2xl font-bold text-white">{category && category.count}</p>;
               </div>;
             </motion && motion.div>;
         {/* Featured Services Grid */}
         <motion&& motion.div;
-          variants={containerVariants}'
-          initial='hidden''
-          whileInView='visible'
-          viewport={{ once: true }}'"
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>          initial="hidden";"
-          whileInView="visible";
+          variants={containerVariants}
+          initial=hidden''
+          whileInView=visible
+          viewport={{ once: true }}'
+          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16>          initial=hidden";"
+          whileInView=visible;
           viewport={{ once: true }}"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16";
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16;
           {featuredServices && featuredServices.map((service, index) => (;
             <motion&& motion.div;
               key={service && service.id}
@@ -803,12 +799,17 @@ className='group relative''
                   </h3>;
                   <p className='text-gray-300 leading-relaxed'>;'
                     {service.description}
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+
                   </p>;
                   {/* Features */}            >;"
-              <div className="relative bg - gradient - to - br from - gray - 900 / 80 to - gray - 800 / 80 backdrop - blur - xl border border - gray - 700 / 50 rounded - 3xl p - 8 h - full transform transition - all duration - 500 group - hover:shadow - xl hover:shadow - cyan - 500 / 30 group - hover:shadow - 2xl group - hover:shadow - purple - 500 / 20">;
+              <div className=relative bg - gradient - to - br from - gray - 900 / 80 to - gray - 800 / 80 backdrop - blur - xl border border - gray - 700 / 50 rounded - 3xl p - 8 h - full transform transition - all duration - 500 group - hover:shadow - xl hover:shadow - cyan - 500 / 30 group - hover:shadow - 2xl group - hover:shadow - purple - 500 / 20>;
                 {/* Service Icon */}`
                 <div className={`w - 16 h - 16 bg - gradient - to - br ${service.color} rounded - 2xl flex items - center justify - center mb - 6 transform transition - transform duration - 300 group - hover:shadow - lg hover:shadow - cyan - 400 / 40`}>;"
-                  <service.icon className="w - 8 h - 8 text - white" />;
+                  <service.icon className="w - 8 h - 8 text - white />;
                 </div>;
                 {/* Service Content */}"
                 <div className="space - y-4">;"
@@ -834,14 +835,9 @@ className='group relative'
                   <service.icon className='w-8 h-8 text-white' />
                 </div>
                 {/* Service Content */}
-                <div className='space-y-4'>
-                  <h3 className='text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300'>
+                <div className="space - y-4">;
+                  <h3 className=text - 2xl font - bold text - white group - hover:text - transparent group - hover:bg - gradient - to - r group - hover:from - cyan - 400 group - hover:to - purple - 400 group - hover:bg - clip - text transition - all duration - 300">;
                     {service.name}
-                  </h3>
-
-                  <p className='text-gray-300 leading-relaxed'>
-                    {service.description}
-                  </p>
                   {/* Features */}
 <div className='space-y-2'>;
                     {service.features.slice(0, 3).map((feature, idx) => (<div key={idx} className='flex items-center space-x-2'>;
@@ -916,78 +912,26 @@ className='group relative'
                   <div className="pt-4 border-t border-gray-700/50">"
                     <div className="flex justify-between items-center text-sm text-gray-400">
                       <span>Market: {service.marketSize}</span>"
-                      <span className="text-green-400">↑ {service.growthRate}</span>
+                      <span className=text-green-400>↑ {service.growthRate}</span>
                         ↑ {service.growthRate}
                       </span>
                     </div>
                   </div>
                   {/* Price and CTA */}
-<div className='pt-4 flex items-center justify-between'>'
-                    <div className='text-3xl font-bold text-white'>'
-                      {service.price}
-                      <span className='text-lg text-gray-400'>'
-                        {service.perio
-}
+
                       </span>
 origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                   </div>
                   </div>;
 
-                  </div>;
-                  {/* Market Info */}
-<div className='pt-4 border-t border-gray-700/50'>;'
-                    <div className='flex justify-between items-center text-sm text-gray-400'>;'
-                      <span>"Market": {service.marketSiz
-}</span>;
-                      <span className='text-green-400'>;'
-                      </span>                    </div>;
-                  </div>;
-                  {/* Price and CTA */}
-                  <div className='pt-4 flex items-center justify-between'>;'
-                    <div className='text-3xl font-bold text-white'>                  <div className="pt-4 border-t border-gray-700/50">;"
-                    <div className="flex justify-between items-center text-sm text-gray-400">;"
-                      <span>"Market": {service.marketSiz
-}</span>;
-                    ))}
-                  </div>;
-                  {/* Market Info */}
-                  <div className="pt-4 border-t border-gray-700/50">;"
-                    <div className="flex justify-between items-center text-sm text-gray-400">;"
-                      <span>"Market": {service.marketSiz
-}</span>;
-                      <span className="text-green-400">↑ {service.growthRate}</span>;"
-                        ↑ {service.growthRate}
-                      </span>;
-                    </div>;
-                  </div>;
-                  {/* Price and CTA */}
-<div className='pt-4 flex items-center justify-between'>;'
-                    <div className='text-3xl font-bold text-white'>;'
-                      {service.price}
-                      <span className='text-lg text-gray-400'>;'
-                        {service.period}
-                      </span>;
-                    </div>;
-                  </div>;
-                  </div>;{/* Market Info */}
-                  <div className='pt-4 border-t border-gray-700/50'>;'
-                    <div className='flex justify-between items-center text-sm text-gray-400'>;'
-                      <span>"Market": {service && service.marketSiz
-}</span>;
-                      <span className='text-green-400'>;'
+
                         ↑ {service && service.growthRate}
                       </span>                    </div>;
                   </div>;
 
                   {/* Price and CTA */}
-                  <div className='pt-4 flex items-center justify-between'>;'
-                    <div className='text-3xl font-bold text-white'>;'
-                      {service && service.price}
-                      <span className='text-lg text-gray-400'>;'
-                        {service && service.period}
-                      </span>;
-                    </div>;
+
 
                     <Link,
 href={`/services/${service.id}`}`
@@ -1357,7 +1301,7 @@ export default Revolutionary2027ServicesShowcase;
 
 "
 );
-};
+}
 export default Revolutionary2027ServicesShowcase;
 origin/cursor/automate-test-improve-and-merge-code-2533
 '"`

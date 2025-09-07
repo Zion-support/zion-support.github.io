@@ -200,7 +200,6 @@ export interface FigmaNode {
     }
     const designSystem = this.designSystems.get(designSystemId);
     if (!designSystem) return false;
-  const tokens = await buildTokenSet(fileId);
   return {
 
     }
@@ -212,7 +211,6 @@ export interface FigmaNode {
 
   addToken("designSystemId": string, "key": string, "value": any): boolean {
     }
-    const designSystem = this.designSystems.get(designSystemId);
     if (!designSystem) return false;
 
     designSystem.tokens[key] = value;
@@ -222,7 +220,6 @@ export interface FigmaNode {
 
   addAsset("designSystemId": string, "asset": DesignElement): boolean {
     }
-    const designSystem = this.designSystems.get(designSystemId);
     if (!designSystem) return false;
 
     designSystem.assets.push(asset);
@@ -233,7 +230,6 @@ export interface FigmaNode {
   // Figma integration methods,
 importFromFigma("figmaData": FigmaNode[], "designSystemId": string): DesignElement[] {
     }
-    const designSystem = this.designSystems.get(designSystemId);
     if (!designSystem) return [];
 
     const "elements": DesignElement[] = [];
@@ -316,7 +312,6 @@ importFromFigma("figmaData": FigmaNode[], "designSystemId": string): DesignEleme
   // Export methods,
 exportToCode("designSystemId": string, "format": 'react' | 'vue' | 'html' | 'css' = 'react'): string {'
     }
-    const designSystem = this.designSystems.get(designSystemId);
     if (!designSystem) return '';'
 
     switch (format) {
@@ -396,7 +391,6 @@ getAllDesignSystems(): DesignSystem[] {
 }
 export async function buildUIKit("fileId": string, "kind": UIKitKind): Promise<UIKit> {
   }
-  const tokens = await buildTokenSet(fileId);
 export async function buildTokenSet ("file_id": string): Promise < TokenSet> {
   // Placeholder implementation;
   }
@@ -437,7 +431,6 @@ export async function buildUIKit(
   "kind": UIKitKind,
 ): Promise<UIKit> {
   }
-  const tokens = await buildTokenSet(fileId);
 
   return {
     }

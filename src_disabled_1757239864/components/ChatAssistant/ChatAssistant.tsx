@@ -107,7 +107,6 @@ export function ChatAssistant({
       setDisplayGuestMessages(newMessages);
       setStoredGuestMessages(newMessages), // Always update localStorage for guests
     } else {
-      const newMessages =
         valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn;
       setLoggedInMessages(newMessages)
     }
@@ -152,7 +151,6 @@ export function ChatAssistant({
   const handleModalSendConfirm = () => {
     if (!guestMessage) return;
 
-    const newMessage: Message = {
       id: Date.now().toString(),
       role: 'user',
       message: guestMessage,

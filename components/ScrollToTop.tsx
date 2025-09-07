@@ -25,17 +25,17 @@ const ScrollToTop: React.FC = () => {
       } else {
         setIsVisible(false)
       }
-    };
+    }
 
-    window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility)
+    window.addEventListener(scroll', toggleVisibility);
+    return () => window.removeEventListener('scroll, toggleVisibility)
   }, []);
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'})
-  };
+      behavior: smooth'})
+  }
 
 return (;
     <>

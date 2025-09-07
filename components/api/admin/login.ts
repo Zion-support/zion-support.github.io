@@ -20,25 +20,4 @@ const envPass = process.env.ADMIN_PASSWORD || 'Tw2.R5u&2!sDfeW';'
 res.status(200).json({ "ok": true
 });
   } else {
-    }
-    res && res.status(401).json({ "error": 'Invalid credentials','
-});
-  }
-
-  } else {
-    }
-    res.status (401).json ({ "error": 'Invalid credentials','
-});
-  }
-  } else {
-    }
-    res.status (401).json ({ "error": 'Invalid credentials','
-});
-  }  } else {
-
-    }
-
-    res.status(401).json({ "error": 'Invalid credentials' })'
-  }
-}
 

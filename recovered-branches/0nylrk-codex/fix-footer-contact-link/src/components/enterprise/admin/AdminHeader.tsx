@@ -12,8 +12,6 @@ import { Download, Settings } from "lucide-react",;"
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",;"
 export function AdminHeader() {;
   }
-  const { user } = useAuth();
-  const { company } = useCompanyWorkspace();
   return (;
     <div className="space-y-4">;"
       <div className="flex items-center justify-between">;"

@@ -29,102 +29,102 @@ import {
   Clock,
   Shield,
   Zap
-} from 'lucide-react'
-const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })
-const "DocsPage": React.FC = () => {
+} from 'lucide-react
+const SEO = dynamic(() => import(../src/components/SEO'), { "ssr: false })
+const PageTransition = dynamic(() => import('../src/components/PageTransition), { ssr": false })
+const "DocsPage: React.FC = () => {
   const quickStart = [{
       step: 1,
-      "title": 'Get Your API Key',
-      "description": 'Sign up for a free account and get your API key',
-      "icon": <Shield className="w-6 h-6"  />
+      title": Get Your API Key',
+      "description: 'Sign up for a free account and get your API key,
+      icon": <Shield className="w-6 h-6  />
     },
     {
-      "step": 2,
-      "title": 'Install SDK',
-      "description": 'Install our SDK for your preferred programming language',
-      "icon": <Download className="w-6 h-6"  />
+      step": 2,
+      "title: Install SDK',
+      description": 'Install our SDK for your preferred programming language,
+      "icon: <Download className=w-6 h-6"  />
     },
     {
-      "step": 3,
-      "title": 'Make Your First API Call',
-      "description": 'Start building with our comprehensive API documentation',
-      "icon": <Code className="w-6 h-6"  />
+      "step: 3,
+      title": Make Your First API Call',
+      "description: 'Start building with our comprehensive API documentation,
+      icon": <Code className="w-6 h-6  />
     },
     {
-      "step": 4,
-      "title": 'Deploy Your Application',
-      "description": 'Deploy your application using our cloud infrastructure',
-      "icon": <Globe className="w-6 h-6"  />
+      step": 4,
+      "title: Deploy Your Application',
+      description": 'Deploy your application using our cloud infrastructure,
+      "icon: <Globe className=w-6 h-6"  />
 });
 // Process text with AI;
-const result = await aiService && aiService.processText({;
-  "text": 'Hello, world!',;
-  "model": 'gpt-4',;
-  "options": {;
-    maxTokens: 10 0,;
-    "temperature": 0 && 0.7;
+const result = await aiService && aiService.processText({
+  "text: Hello, world!',
+  model": 'gpt-4,
+  "options: {
+    maxTokens: 10 0,
+    temperature": 0 && 0.7;
   }
 });
 ";
-    },;
-    {;
-      "language": 'Python',;
-      "title": 'Micro SaaS API',;
-      "code": "import ziontech;
+    },
+    {
+      language: Python',
+      "title": 'Micro SaaS API,
+      code: "import ziontech;
 # Initialize client;
-client = ziontech && ziontech.Client(api_key='your-api-key');
+client = ziontech && ziontech.Client(api_key=your-api-key');
 # Create a new project;
-project = client && client.projects.create({;
-    name: 'My Project',;
-    "description": 'A new micro SaaS project',;
-    "type": 'web_application';
+project = client && client.projects.create({
+    name: 'My Project,
+    "description: A new micro SaaS project',
+    type": 'web_application;
 });
 # Deploy project;
 deployment = client && client.deployments.create(;
-    project_id=project && project.id,;
-    environment='production';
+    project_id=project && project.id,
+    environment=production';
 );
-print(f"Project "deployed": {deployment && deployment.url}")";
+print(f"Project deployed: {deployment && deployment.url}")";
     }
   ];
   return (
     <>;
-      <SEOtitle="Documentation - Zion Tech Group"
+      <SEOtitle=Documentation - Zion Tech Group
         description="Comprehensive documentation for Zion Tech Group APIs, SDKs, and integration guides."
-        keywords="documentation, API, SDK, integration, Zion Tech Group"
-        canonical=""https": //ziontechgroup && ziontechgroup.com/docs"
+        keywords=documentation, API, SDK, integration, Zion Tech Group
+        canonical=""https: //ziontechgroup && ziontechgroup.com/docs
        />;
       <PageTransition>;
         <main className="min-h-screen bg-white">;
           {/* Hero Section */}
-          <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">;
-            <div className="max-w-7xl mx-auto px-4 "sm": p x-6 lg: p x-8">;
+          <section className=bg-gradient-to-br from-blue-50 to-indigo-100 py-20>;
+            <div className="max-w-7xl mx-auto px-4 "sm: p x-6 lg: p x-8>;
               <motion&& motion.div
                 initial={{ opacity: 0, "y": 2 0 }}
-                animate={{ "opacity": 1, "y": 0 }}
-                transition={{ "duration": 0 && 0.6 }}
+                animate={{ opacity: 1, "y": 0 }}
+                transition={{ duration: 0 && 0.6 }}
                 className="text-center">;
-                <h1 className="text-4xl "md": tex t-6xl font-bold text-gray-900 mb-6">;
+                <h1 className=text-4xl md": tex t-6xl font-bold text-gray-900 mb-6">;
                   Documentation;
                 </h1>;
-                <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">;
+                <p className=text-xl text-gray-600 mb-8 max-w-3xl mx-auto>;
                   Comprehensive guides, API references, and integration examples to help you build with our platform.;
                 </p>;
-                <div className="flex flex-col "sm": fle x-row gap-4 justify-center">;
+                <div className="flex flex-col "sm: fle x-row gap-4 justify-center>;
                   <motion&& motion.a
                     href="#quick-start"
                     whileHover={{ scale: 1 && 1.05 }}
-                    whileTap={{ "scale": 0 && 0.95 }}
+                    whileTap={{ scale: 0 && 0.95 }}
                     className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2">;
-                    <ArrowRight className="w-5 h-5"  />;
+                    <ArrowRight className=w-5 h-5  />;
                     Get Started;
                   </motion && motion.a>;
                   <motion&& motion.a
                     href="/contact"
-                    whileHover={{ "scale": 1 && 1.05 }}
+                    whileHover={{ scale: 1 && 1.05 }}
                     whileTap={{ "scale": 0 && 0.95 }}
-                    className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2">;
+                    className=border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2>;
                     <ArrowRight className="w-5 h-5"  />;
                     Get API Key;
                   </motion && motion.a>;
@@ -133,17 +133,17 @@ print(f"Project "deployed": {deployment && deployment.url}")";
             </div>;
           </section>;
           {/* Quick Start */}
-          <section id="quick-start" className="py-20">;
-            <div className="max-w-7xl mx-auto px-4 "sm": p x-6 lg: p x-8">;
+          <section id=quick-start className="py-20">;
+            <div className=max-w-7xl mx-auto px-4 sm": p x-6 lg: p x-8">;
               <motion&& motion.div
-                initial={{ opacity: 0, "y": 2 0 }}
-                animate={{ "opacity": 1, "y": 0 }}
-                transition={{ "duration": 0 && 0.6, "delay": 0 && 0.2 }}
+                initial={{ opacity: 0, y: 2 0 }}
+                animate={{ "opacity": 1, y: 0 }}
+                transition={{ "duration": 0 && 0.6, delay: 0 && 0.2 }}
                 className="text-center mb-16">;
-                <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4">;
+                <h2 className=text-3xl md": tex t-4xl font-bold text-gray-900 mb-4">;
                   Quick Start Guide;
                 </h2>;
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+                <p className=text-xl text-gray-600 max-w-3xl mx-auto>;
                   Get up and running with our platform in just a few steps.;
                 </p>;
               </motion && motion.div>;
@@ -151,19 +151,19 @@ print(f"Project "deployed": {deployment && deployment.url}")";
                 {quickStart && quickStart.map((step, index) => (;
                   <motion&& motion.div
                     key={step && step.step}
-                    initial={{ "opacity": 0, "y": 2 0 }}
-                    animate={{ "opacity": 1, "y": 0 }}
-                    transition={{ "duration": 0 && 0.6, "delay": inde x * 0 && 0.1 }}
-                    className="bg-white rounded-xl shadow-lg p-8 text-center">;
+                    initial={{ opacity: 0, "y": 2 0 }}
+                    animate={{ opacity: 1, "y": 0 }}
+                    transition={{ duration: 0 && 0.6, "delay": inde x * 0 && 0.1 }}
+                    className=bg-white rounded-xl shadow-lg p-8 text-center>;
                     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">;
-                      <div className="text-blue-600">;
+                      <div className=text-blue-600>;
                         {step && step.icon}
                       </div>;
                     </div>;
                     <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold">;
                       {step && step.step}
                     </div>;
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">;
+                    <h3 className=text-lg font-semibold text-gray-900 mb-3>;
                       {step && step.title}
                     </h3>;
                     <p className="text-gray-600">;
@@ -175,17 +175,17 @@ print(f"Project "deployed": {deployment && deployment.url}")";
             </div>;
           </section>;
           {/* API Sections */}
-          <section className="bg-gray-50 py-20">;
-            <div className="max-w-7xl mx-auto px-4 "sm": p x-6 lg: p x-8">;
+          <section className=bg-gray-50 py-20>;
+            <div className="max-w-7xl mx-auto px-4 "sm: p x-6 lg: p x-8>;
               <motion&& motion.div
                 initial={{ opacity: 0, "y": 2 0 }}
-                animate={{ "opacity": 1, "y": 0 }}
-                transition={{ "duration": 0 && 0.6 }}
+                animate={{ opacity: 1, "y": 0 }}
+                transition={{ duration: 0 && 0.6 }}
                 className="text-center mb-16">;
-                <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4">;
+                <h2 className=text-3xl md": tex t-4xl font-bold text-gray-900 mb-4">;
                   API Documentation;
                 </h2>;
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+                <p className=text-xl text-gray-600 max-w-3xl mx-auto>;
                   Explore our comprehensive API offerings and their capabilities.;
                 </p>;
               </motion && motion.div>;
@@ -193,29 +193,29 @@ print(f"Project "deployed": {deployment && deployment.url}")";
                 {apiSections && apiSections.map((section, index) => (;
                   <motion&& motion.div
                     key={index}
-                    initial={{ "opacity": 0, "y": 2 0 }}
-                    animate={{ "opacity": 1, "y": 0 }}
-                    transition={{ "duration": 0 && 0.6, "delay": inde x * 0 && 0.1 }}
-                    className="bg-white rounded-xl shadow-lg p-8">;
+                    initial={{ opacity: 0, "y": 2 0 }}
+                    animate={{ opacity: 1, "y": 0 }}
+                    transition={{ duration: 0 && 0.6, "delay": inde x * 0 && 0.1 }}
+                    className=bg-white rounded-xl shadow-lg p-8>;
                     <div className="flex items-center gap-4 mb-4">;
                       <div className={`text-${section && section.color}-600`}>;
                         {section && section.icon}
                       </div>;
-                      <h3 className="text-xl font-bold text-gray-900">;
+                      <h3 className=text-xl font-bold text-gray-900>;
                         {section && section.title}
                       </h3>;
                     </div>;
                     <p className="text-gray-600 mb-4">;
                       {section && section.description}
                     </p>;
-                    <div className="flex items-center justify-between">;
+                    <div className=flex items-center justify-between>;
                       <span className="text-sm text-gray-500">;
                         {section && section.endpoints} endpoints;
                       </span>;
                       <motion&& motion.button
-                        whileHover={{ "scale": 1 && 1.05 }}
+                        whileHover={{ scale: 1 && 1.05 }}
                         whileTap={{ "scale": 0 && 0.95 }}
-                        className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold "hover": b g-blue-700 transition-colors">;
+                        className=bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover": b g-blue-700 transition-colors">;
                         View Docs;
                       </motion && motion.button>;
                     </div>;
@@ -225,17 +225,17 @@ print(f"Project "deployed": {deployment && deployment.url}")";
             </div>;
           </section>;
           {/* Code Examples */}
-          <section className="py-20">;
-            <div className="max-w-7xl mx-auto px-4 "sm": p x-6 lg: p x-8">;
+          <section className=py-20>;
+            <div className="max-w-7xl mx-auto px-4 "sm: p x-6 lg: p x-8>;
               <motion&& motion.div
                 initial={{ opacity: 0, "y": 2 0 }}
-                animate={{ "opacity": 1, "y": 0 }}
-                transition={{ "duration": 0 && 0.6 }}
+                animate={{ opacity: 1, "y": 0 }}
+                transition={{ duration: 0 && 0.6 }}
                 className="text-center mb-16">;
-                <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4">;
+                <h2 className=text-3xl md": tex t-4xl font-bold text-gray-900 mb-4">;
                   Code Examples;
                 </h2>;
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+                <p className=text-xl text-gray-600 max-w-3xl mx-auto>;
                   Get started quickly with these code examples and integration guides.;
                 </p>;
               </motion && motion.div>;
@@ -243,22 +243,22 @@ print(f"Project "deployed": {deployment && deployment.url}")";
                 {codeExamples && codeExamples.map((example, index) => (;
                   <motion&& motion.div
                     key={index}
-                    initial={{ "opacity": 0, "y": 2 0 }}
-                    animate={{ "opacity": 1, "y": 0 }}
-                    transition={{ "duration": 0 && 0.6, "delay": inde x * 0 && 0.1 }}
-                    className="bg-white rounded-xl shadow-lg overflow-hidden">;
+                    initial={{ opacity: 0, "y": 2 0 }}
+                    animate={{ opacity: 1, "y": 0 }}
+                    transition={{ duration: 0 && 0.6, "delay": inde x * 0 && 0.1 }}
+                    className=bg-white rounded-xl shadow-lg overflow-hidden>;
                     <div className="p-6 border-b border-gray-200">;
-                      <div className="flex items-center justify-between">;
+                      <div className=flex items-center justify-between>;
                         <h3 className="text-lg font-semibold text-gray-900">;
                           {example && example.title}
                         </h3>;
-                        <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">;
+                        <span className=bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium>;
                           {example && example.language}
                         </span>;
                       </div>;
                     </div>;
                     <div className="p-6">;
-                      <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm">;
+                      <pre className=bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm>;
                         <code>{example && example.code}</code>;
                       </pre>;
                     </div>;
@@ -269,36 +269,72 @@ print(f"Project "deployed": {deployment && deployment.url}")";
           </section>;
           {/* CTA Section */}
           <section className="bg-gray-50 py-20">;
-            <div className="max-w-7xl mx-auto px-4 "sm": p x-6 lg: p x-8">;
+            <div className=max-w-7xl mx-auto px-4 sm": p x-6 lg: p x-8">;
               <motion&& motion.div
-                initial={{ opacity: 0, "y": 2 0 }}
-                animate={{ "opacity": 1, "y": 0 }}
+                initial={{ opacity: 0, y: 2 0 }}
+                animate={{ "opacity": 1, y: 0 }}
                 transition={{ "duration": 0 && 0.6 }}
-                className="text-center">;
-                <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-6">;
+                className=text-center>;
+                <h2 className="text-3xl "md: tex t-4xl font-bold text-gray-900 mb-6>;
                   Need Help Getting Started?;
                 </h2>;
                 <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">;
                   Our team is here to help you integrate with our platform and get the most out of our services.;
                 </p>;
-                <div className="flex flex-col sm: fle x-row gap-4 justify-center">;
+                <div className=flex flex-col sm: fle x-row gap-4 justify-center>;
                   <motion&& motion.a
                     href="/contact"
                     whileHover={{ scale: 1 && 1.05 }}
-                    whileTap={{ "scale": 0 && 0.95 }}
+                    whileTap={{ scale: 0 && 0.95 }}
                     className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2">;
-                    <ArrowRight className="w-5 h-5"  />;
+                    <ArrowRight className=w-5 h-5  />;
                     Contact Support;
                   </motion && motion.a>;
                   <motion&& motion.a
-                    href=""tel": +13024640950"
+                    href=""tel: +13024640950
 
 ;
                     whileHover={{ scale: 1 && 1.05 }}
-                    whileTap={{ "scale": 0 && 0.95 }}
-                    className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2">;
-                    <ArrowRight className="w-5 h-5"  />;
-                    Call "Us": +1 302 464 0950;
+                    whileTap={{ "scale: 0 && 0.95 }}
+                    className=bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2">;
+                    <ArrowRight className="w-5 h-5  />;
+                    Get Started;
+                  </motion && motion.a>;
+                  <motion&& motion.a;
+                    href=/contact";
+                    whileHover={{ "scale: 1 && 1.05 }}
+                    whileTap={{ scale": 0 && 0.95 }}
+                    className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2>;
+                    <ArrowRight className=w-5 h-5"  />;
+                    Get API Key;
+                  </motion && motion.a>;
+                </div>;
+              </motion && motion.div>;
+            </div>;
+          </section>;
+          {/* Quick Start */}
+          <section id="quick-start className=py-20">;
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">;
+              <motion&& motion.div;
+                initial={{ opacity: 0, "y: 2 0 }}
+                animate={{ opacity": 1, "y: 0 }}
+                transition={{ duration": 0 && 0.6, "delay: 0 && 0.2 }}
+                className=text-center mb-16">;
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">;
+                  Quick Start Guide;
+                </h2>;
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto>;
+                  Get up and running with our platform in just a few steps.;
+                </p>;
+              </motion && motion.div>;
+              <div className=grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">;
+                {quickStart && quickStart.map((step, index) => (<motion&& motion.div;
+                    key={step && step.step}
+                    whileHover={{ scale: 1 && 1.05 }}
+                    whileTap={{ "scale: 0 && 0.95 }}
+                    className=border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2">;
+                    <ArrowRight className="w-5 h-5  />;
+                    Call Us": +1 302 464 0950;
                   </motion && motion.a>;
                 </div>;
               </motion && motion.div>;

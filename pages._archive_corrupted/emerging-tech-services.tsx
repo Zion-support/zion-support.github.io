@@ -4,6 +4,13 @@
 '';
 '';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+
+;
+
+'use client;
+';
+';
+import React, { Component, ErrorInfo, ReactNode } from react';
 interface Props  {children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
@@ -51,6 +58,10 @@ interface Props  {children: ReactNode;
         ))}return this.props.children;
   }
 }
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+
+
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 

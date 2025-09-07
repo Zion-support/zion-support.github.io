@@ -104,7 +104,7 @@ const handleMouseMove = ("e": MouseEvent) => {
 }
 
 setMousePosition({ x: e.clientX, y: e.clientY });
-    };
+    }
 
     window.addEventListener('mousemove', handleMouseMove);
     // Initialize particles with different types
@@ -199,7 +199,6 @@ energy: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00'],
         neon: ['#ff0066', '#00ffff', '#ffff00', '#ff00ff'],
       };
 
-      for (let i = 0; i < 150; i++) {
 }
 const type = ['energy', 'data', 'quantum', 'neon'][;'
           Math.floor(Math.random() * 4)
@@ -216,10 +215,23 @@ const type = ['energy', 'data', 'quantum', 'neon'][;'
           life: Math.random() * 100,
           maxLife: 100
         })
+    window.addEventListener('mousemove', handleMouseMove);
+
       }
       
+      for (let i = 0, i < 150, i++) {
+        const type = [energydataquantumneon][Math.floor(Math.random() * 4)] as keyof typeof colors;
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 0.8,
+          vy: (Math.random() - 0.5) * 0.8,
+          size: Math.random() * 4 + 1,
+          opacity: Math.random() * 0.8 + 0.2,
+          color: colors[type][Math.floor(Math.random() * colors[type].length)]}
+      
       particlesRef.current = particles
-    };
+    }
 
     // Initialize energy fields
     const initEnergyFields = () => {
@@ -376,7 +388,7 @@ const fieldColors = [;
             // Neon particles with bright glow;
             ctx.shadowColor = particle.color;
             ctx.shadowBlur = 20;
-            ctx.globalCompositeOperation = 'lighter';'
+            ctx.globalCompositeOperation = 'lighter;
 break;
         }const lifeRatio = particle.life / particle.maxLife;
         const currentOpacity = particle.opacity * lifeRatio;
@@ -440,11 +452,7 @@ const currentOpacity = particle.opacity * lifeRatio;
         const currentOpacity = particle.opacity * lifeRatio;
 ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle =
-          particle.color +
-          Math.floor(currentOpacity * 255)
-            .toString(16)
-            .padStart(2, '0');'
+        ctx.fillStyle = particle.color + Math.floor(currentOpacity * 255).toString(16).padStart(2, 0');
         ctx.fill();
         
         ctx.restore();
@@ -577,7 +585,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       window.removeEventListener('mousemove', handleMouseMove);
       if (animationRef.current) {
 
-}
+    return () => {'
+      window.removeEventListener(resize, resizeCanvas);'
+      window.removeEventListener('mousemove, handleMouseMove);
 
 cancelAnimationFrame(animationRef.current);
       }
@@ -827,10 +837,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       {/* Gradient overlays for depth */}
       <div className='absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none' />;
-      <div className='absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none' />;
+      <div className=absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none />;
 
 
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none" />
+      <div className=absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none />
       <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none" />
       
       {/* Content */}
@@ -876,6 +886,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='relative z-10'>{children}</div>
     </div>
   );      {/* Content */}"
+        {children}
+      </div>;
+
+    </div>);
+
       <div className="relative z-10">
         {children}
       </div>
@@ -889,12 +904,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );      {/* Content */}"
       <div className="relative z-10">
         {children}'"
-            ease: 'easeInOut',            ease: "easeInOut"
+            ease: easeInOut,            ease: easeInOut
           }}
         />
       </div>
       {/* Gradient overlays for depth */}'
-      <div className='absolute inset - 0 bg - gradient - to - br from - transparent via - transparent to - black / 20 pointer - events - none' />;'
+      <div className='absolute inset - 0 bg - gradient - to - br from - transparent via - transparent to - black / 20 pointer - events - none />;
       <div className='absolute inset - 0 bg - gradient - to - tl from - transparent via - transparent to - blue - 900 / 10 pointer - events - none' />
         {children}
       </div>

@@ -37,35 +37,12 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
       toast && toast.error("You must be logged in to apply"),;
       navigate("/login", { state: { returnTo: `/jobs/${job && job.id}` } }),;
       return;import { useState } from "react",
-import { useNavigate } from "react-router-dom",
-import { useJobApplications } from "@/hooks/useJobApplications",
-import { useResume } from "@/hooks/useResume",
-import { useAuth } from "@/hooks/useAuth",
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
-import { Label } from "@/components/ui/label",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { Alert, AlertDescription } from "@/components/ui/alert",
-import { AlertCircle, FileText, Loader2 } from "lucide-react",
-import { formatDistanceToNow } from "date-fns",
 interface ApplyToJobFormProps {
 
   job: Job
 
   onSuccess?: () => void
 }
-import { useState } from "react",
-import { useNavigate } from "react-router-dom",
-import { useJobApplications } from "@/hooks/useJobApplications",
-import { useResume } from "@/hooks/useResume",
-import { useAuth } from "@/hooks/useAuth",
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
-import { Label } from "@/components/ui/label",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { Alert, AlertDescription } from "@/components/ui/alert",
-import { AlertCircle, FileText, Loader2 } from "lucide-react",
-import { formatDistanceToNow } from "date-fns",
 interface ApplyToJobFormProps {
 
   job: Job
@@ -78,14 +55,9 @@ interface ApplyToJobFormProps {;
 }
 
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
-  const { user } = useAuth();
   const { applyToJob } = useJobApplications();
   const navigate = useNavigate();
 
-  const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job && job.title}" position and would like to apply. My skills and experience align well with this role.`);
-  const [selectedResumeId, setSelectedResumeId] = useState<string>("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [error, setError] = useState<string | null>(null);
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
   const { user } = useAuth(),
@@ -98,7 +70,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [error, setError] = useState<string | null>(null),
   
-  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
     
       toast.error("You must be logged in to apply")
@@ -118,11 +89,8 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
   const { resumes, isLoading: isResumesLoading} = useResume($2);
   const navigate = useNavigate($2);
   const [coverLetter, setCoverLetter] = useState($2);
-  const [selectedResumeId, setSelectedResumeId] = useState<string>(""),
   const [isSubmitting, setIsSubmitting] = useState($2);
-  const [error, setError] = useState<string | null>(null),
   
-  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault($2);
     if (!user) {
       toast.error($2);

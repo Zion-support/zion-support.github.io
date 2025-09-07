@@ -16,13 +16,13 @@ const QualityAssuranceTestingChat: NextPage = () => {;
       <Head>;
         <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>;
         <meta
-          name="description"
-          content="QualityAssuranceTestingChat service"
-        />{" "}
+          name=description"
+          content="QualityAssuranceTestingChat service
+        />{ "}
       <main>
         <h1>QualityAssuranceTestingChat</h1>
         <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>
+        <a href="/services>Back to Services</a>
       </main>
     </div>
       </Head>;
@@ -30,7 +30,7 @@ const QualityAssuranceTestingChat: NextPage = () => {;
       <main>;
         <h1>QualityAssuranceTestingChat</h1>;
         <p>Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;
+        <a href=/services">Back to Services</a>;
       </main>;
     </div>;
   );

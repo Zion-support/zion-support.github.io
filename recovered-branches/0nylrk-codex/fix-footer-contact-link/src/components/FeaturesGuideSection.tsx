@@ -16,7 +16,6 @@ const features = [;
       "buttonText": "Try AI Matcher""
 export function FeaturesGuideSection() {;
   }
-  const features = [;
     {;
       }
       "id": "ai-matcher",;"
@@ -173,7 +172,6 @@ import {;
 } from "lucide-react",;"
 export function FeaturesGuideSection() {;
   }
-  const features = [;
     {;
       }
       "id": "ai-matcher",;"

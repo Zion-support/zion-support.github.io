@@ -146,18 +146,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     skills: ['React', 'Node && Node.js', 'TypeScript'],
     summary: 'Experienced developer with expertise in modern web technologies.',
     bio: 'Passionate about creating innovative solutions.',
+    skills: ['React, Node && Node.js', 'TypeScript],
+    summary: Experienced developer with expertise in modern web technologies.',
+    bio: 'Passionate about creating innovative solutions.,
     hourlyRateUsd: 75,
     request_quote: true,
-    availability: 'Open',
+    availability: Open',
     profileImageUrl: null,
     video_url: null,
     portfolio: null,
     verified: false,
-    rating: 0,
-  },
+    rating: 0}];
 ];
-];
-;
 
 
 

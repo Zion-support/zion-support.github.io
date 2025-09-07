@@ -30,12 +30,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
 
 origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
     this.reportFile = path.join(__dirname, '../logs/code-quality-report.json')
     console.log(' Enhancing code quality...')
-    const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx')]
-        const content = fs.readFileSync(file, 'utf8')
 s*(w+)/g, '
   $1'
     enhanced = enhanced.replace(/}s*elses*{/g, '} else {'})

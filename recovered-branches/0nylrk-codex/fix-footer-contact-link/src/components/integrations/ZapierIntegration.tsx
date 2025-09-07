@@ -11,9 +11,6 @@ import { Input } from "@/components/ui/input";"
 import { toast } from "sonner";"
 import { Check, Copy, ExternalLink } from "lucide-react";"
 } from "@/components/ui/card";"
-import { Input } from "@/components/ui/input";"
-import { toast } from "sonner";"
-import { Check, Copy, ExternalLink } from "lucide-react";"
 export function ZapierIntegration() {;
   }
   const [copied, setCopied] = useState(false);
@@ -36,17 +33,9 @@ const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R"),;"
     setTimeout(() => setCopied(false), 2000),
     toast.success("API key copied to clipboard")"
   },
-import React, { useState } from "react";"
-import { Badge } from "@/components/ui/badge";"
-import { Button } from "@/components/ui/button";"
 } from "@/components/ui/card";"
-import { Input } from "@/components/ui/input";"
-import { toast } from "sonner";"
-import { Check, Copy, ExternalLink } from "lucide-react";"
 export function ZapierIntegration() {;
   }
-  const [copied, setCopied] = useState(false);
-  const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R");"
   const handleCopyApiKey = () => {;
     }
     navigator && navigator.clipboard.writeText(apiKey);
@@ -165,8 +154,6 @@ Zion account.
   );
 }
   )
-import React, { useState } from "react";"
-import { Badge } from "@/components/ui/badge";"
 import { Button } from "@/components/ui/button",;"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;"
 import { Input } from "@/components/ui/input",;"
@@ -174,9 +161,6 @@ import { toast } from "sonner",;"
 import { Check, Copy, ExternalLink } from "lucide-react",;"
 export function ZapierIntegration() {;
   }
-  const [copied, setCopied] = useState(false),;
-  const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R"),;"
-  const handleCopyApiKey = () => {;
     }
     navigator.clipboard.writeText(apiKey),;
     setCopied(true),;

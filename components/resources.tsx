@@ -44,37 +44,7 @@ export default function ResourcesPage() {return (class ErrorBoundary extends Rea
 }
 import React from 'react';
 
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import Link from 'next/link';
-  return (
-            {
-              name: 'Support Center'
-              href: '/support'
-              blurb: 'Help, FAQs, and contact options.'
-            }
-            {
-              name: 'Training & Certification'
-              href: '/training'
-              blurb: 'Workshops and curated curricula.'
-            }
-            {
-            { name: 'Services Advertising', href: '/services-advertising', blurb: 'Features, capabilities, and benefits.' };
-            { name: 'Case Studies', href: '/case-studies', blurb: 'Proof of value and outcomes.' },;
-            { name: 'Developer Hub', href: '/developer', blurb: 'APIs, SDKs, and examples.' }
-          ].map((it) => (;
-            <Link key={it && it.href} href={it && it.href} className="p-6 rounded-2xl bg-black/50 border border-gray-800 hover: border-cyan-500/50 transition-colors block">;
-              <div className="text-sm text-gray-400">Resource</div>;
-              <h3 className="text-xl font-semibold text-white">{it && it.name}</h3>;
-              <p className="mt-1 text-gray-300">{it && it.blurb}</p>;
-              <div className="mt-3 text-cyan-300">Open →</div>;
-          ))}
-        </div>;
-      </div>;
-    </UltraFuturisticBackground>;
-  );  )
-};
 
-export default ResourcesPage;
 
               name: 'Market Pricing',
               href: '/market - pricing',
@@ -163,17 +133,17 @@ export default function ResourcesPage() {
 
 export default ResourcesPage;
   [ {
-  name: 'Support Center', href: '/support', blurb: 'Help, FAQs, and contact options.' 
+  name: 'Support Center, href: /support', blurb: 'Help, FAQs, and contact options. 
 }, {
-  name: 'Training & Certification', href: '/training', blurb: 'Workshops and curated curricula.' 
+  name: Training & Certification', href: '/training, blurb: Workshops and curated curricula.' 
 }, {
-  name: 'Market Pricing', href: '/market-pricing', blurb: 'Vendor links and typical budgets.' 
+  name: 'Market Pricing, href: /market-pricing', blurb: 'Vendor links and typical budgets. 
 }, {
-  name: 'Services Advertising', href: '/services-advertising', blurb: 'Features, capabilities, and benefits.' 
+  name: Services Advertising', href: '/services-advertising, blurb: Features, capabilities, and benefits.' 
 }, {
-  name: 'Case Studies', href: '/case-studies', blurb: 'Proof of value and outcomes.' 
+  name: 'Case Studies, href: /case-studies', blurb: 'Proof of value and outcomes. 
 }, {
-  name: 'Developer Hub', href: '/developer', blurb: 'APIs, SDKs, and examples.' 
+  name: Developer Hub', href: '/developer, blurb: APIs, SDKs, and examples.' 
 }].map ( (it) => () ) 
 }</div> </div> </UltraFuturisticBackground>) 
 }

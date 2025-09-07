@@ -26,7 +26,6 @@ import {;
   DialogDescription,;
   DialogHeader,;
 import React from './react';
-import {
   Dialog,
   DialogContent,
   DialogDescription,

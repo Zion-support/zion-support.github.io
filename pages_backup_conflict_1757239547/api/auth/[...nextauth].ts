@@ -28,7 +28,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req, res) {
   try {
   if (req.method !== 'GET' && req.method !== 'POST') {;

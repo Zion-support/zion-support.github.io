@@ -8,6 +8,7 @@ class ExecuteAllScripts {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   async run() {
     console.log('🚀 Executing all automation scripts...');
@@ -153,3 +154,6 @@ module.exports = ExecuteAllScripts;
 const executor = new ExecuteAllScripts();
 executor.run().catch(console.error);
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a

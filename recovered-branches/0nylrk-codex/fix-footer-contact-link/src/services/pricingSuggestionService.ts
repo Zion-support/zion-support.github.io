@@ -49,7 +49,6 @@ const explanation = `Based on market rates for ${category} projects, particularl
     // Generate explanation,
 const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${jobTitle}", we recommend a budget range of $${minRate}-$${maxRate}/hour. This aligns with current market trends for similar projects.`,`    ;
     // Adjust based on job title keywords;
-    const lowercaseTitle = jobTitle.toLowerCase(),;
     if (lowercaseTitle.includes("senior") || lowercaseTitle.includes("lead")) {;"
       }
       minRate += 20,;
@@ -159,7 +158,6 @@ export async function getTalentRateSuggestion ("params": TalentRateParams): Prom
     let base_rate = 25 + (years_experience * 5);
 ;
     // Adjust for in - demand skills;
-    const inDemandSkills = ['reactawsmachine learningblockchainaidevopskubernetes'];'
     const hasInDemandSkills = skills.some (skill =>;
       inDemandSkills.some (demand_skill => { return skill.toLowerCase ().includes (demand_skill))); }
 ;

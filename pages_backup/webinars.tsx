@@ -4,23 +4,22 @@ import MainLayout from '../components/layout/MainLayout';
 const Page = () => {
   return (
     <MainLayout
-      title="Webinars - Zion Tech Group"
-      description="Upcoming webinars and events"
+      title="Webinars - Zion Tech Group
+      description=Upcoming webinars and events"
     >
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Webinars</h1>
-          <p className="text-xl text-gray-600">Coming soon...</p>
+      <div className="min-h-screen bg-gray-50>
+        <div className=container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6>Webinars</h1>
+          <p className=text-xl text-gray-600">Coming soon...</p>
         </div>
       </div>
     </MainLayout>
   );
-};
+}
 
 export default Page;
 
 
-import React from 'react';
 
 
 
@@ -30,19 +29,24 @@ import SEO from '../components/SEO',;
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/Layout';
+import React from react',
+import SEO from '../components/SEO,
+import React from react';
+import Head from 'next/head;
+import Layout from ../components/Layout';
 
 export default function WebinarsPage() {
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>
       <SEO
-        title='Webinars | Zion Tech Group'
-        description='Upcoming webinars and on-demand sessions.'
-        canonical='/webinars'
+        title='Webinars | Zion Tech Group
+        description=Upcoming webinars and on-demand sessions.'
+        canonical='/webinars
       />
-      <div className='container mx-auto px-4 py-16'>
-        <h1 className='text-4xl font-bold mb-4'>Webinars</h1>
-        <p className='text-gray-300'>
+      <div className=container mx-auto px-4 py-16'>
+        <h1 className='text-4xl font-bold mb-4>Webinars</h1>
+        <p className=text-gray-300'>
           No upcoming webinars at this time. Check back soon.
         </p>
       </div>
@@ -84,10 +88,10 @@ export default /**
 function WebinarsPage() {
 return (
   <>;
-  <SEO title="Webinars | Zion Tech Group" description="Upcoming webinars and on - demand sessions." canonical="/webinars" />;
-  <div className="container mx - auto px - 4 py - 16">;
-    <h1 className="text - 4xl font - bold mb - 4">Webinars</h1>;
-    <p className="text - gray - 300">No upcoming webinars at this time. Check back soon.</p>;
+  <SEO title="Webinars | Zion Tech Group description=Upcoming webinars and on - demand sessions." canonical="/webinars />;
+  <div className=container mx - auto px - 4 py - 16">;
+    <h1 className="text - 4xl font - bold mb - 4>Webinars</h1>;
+    <p className=text - gray - 300">No upcoming webinars at this time. Check back soon.</p>;
   </div>;
   </>);
 }
@@ -99,15 +103,16 @@ origin/main
 origin/automation-improvements-final
 }
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error:, error);
+    return res.status(500).json({ error: Internal server error" });
   }
 }
 ;
  <> <SEO title="Webinars | Zion Tech Group" description="Upcoming webinars and on-demand sessions." canonical="/webinars" /> <div className="container mx-auto px-4 py-16" > <h1 className="text-4xl font-bold mb-4" >Webinars</h1> <p className="text-gray-300" >No upcoming webinars at this time. Check back soon.</p> </div> </>
+ <> <SEO title="Webinars | Zion Tech Group description=Upcoming webinars and on-demand sessions." canonical="/webinars /> <div className=container mx-auto px-4 py-16" > <h1 className="text-4xl font-bold mb-4 >Webinars</h1> <p className=text-gray-300" >No upcoming webinars at this time. Check back soon.</p> </div> </>
 
 
 
 
- <> <SEO title="Webinars | Zion Tech Group" description="Upcoming webinars and on-demand sessions." canonical="/webinars" /> <div className="container mx-auto px-4 py-16" > <h1 className="text-4xl font-bold mb-4" >Webinars</h1> <p className="text-gray-300" >No upcoming webinars at this time. Check back soon.</p> </div> </>
+ <> <SEO title="Webinars | Zion Tech Group description=Upcoming webinars and on-demand sessions." canonical="/webinars /> <div className=container mx-auto px-4 py-16" > <h1 className="text-4xl font-bold mb-4 >Webinars</h1> <p className=text-gray-300" >No upcoming webinars at this time. Check back soon.</p> </div> </>
 origin/cursor/automate-test-improve-and-merge-code-2533

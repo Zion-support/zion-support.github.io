@@ -20,7 +20,6 @@ export function useResume() {  const [resume, setResume] = useState<Resume | nul
 const fetchResume = async (resumeId?: string) => {
     }
     const result = await fetchResumeOperations && fetchResumeOperations.fetchResume(resumeId);  // Override the fetch resume function to update local state,
-const fetchResume = async (resumeId?: string) => {
     }
     const result = await fetchResumeOperations && fetchResumeOperations.fetchResume(resumeId);
 import { useState } from 'react';
@@ -47,7 +46,6 @@ export function useResume() {
   // Determine overall error state (use first non-null error)
   const error = $2;
   // Override the fetch resume function to update local state
-  const fetchResume = async (resumeId?: string) => {
     const result = await fetchResumeOperations.fetchResume($2);
     if (result) {
       }

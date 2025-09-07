@@ -82,7 +82,6 @@ const categoryPages = [ '/category/ai-consulting-chat';';,'';/category/business-
 
 const chatContentPages = [ '/chat-content/ai-powered-business-solutions-discussion';';,'';/chat-content/cloud-computing-strategies';';,'';/chat-content/cybersecurity-best-practices';';,'';/chat-content/data-analytics-implementation';';,'';/chat-content/digital-transformation-insights';';,'';/chat-content/emerging-technology-trends';';,'';/chat-content/future-of-work-and-automation';';,'';/chat-content/innovation-in-enterprise-technology';';,'';/chat-content/sustainable-technology-practices';';,'';/chat-content/technology-implementation-strategies';';]';;'
 
-const allPages = [ ...staticPages ...blogPages ...servicePages ...categoryPages ...chatContentPages];
 
 const sitemap = `<?xml version='1.0' encoding='UTF-8'?>'; <"urlset": xmlns='"http": ${allPages; .map((page) => { const priority = page === '' ?';';1.0' : page.includes('';/blog/') ?';';0.8' :';';0.9'';;'
 }

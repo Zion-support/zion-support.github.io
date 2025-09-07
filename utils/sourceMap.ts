@@ -85,7 +85,6 @@ export interface DeployTemplateResult {
 
 export function getSourceMapWithExistence(): SourceNode[] {;
   }
-  const nodes = buildZionSourceMap();
   return nodes.map(markExistenceRecursive);
 }
 

@@ -40,22 +40,46 @@ export default function TryItConsole(): any ({;
   const [baseUrl, setBaseUrl] = useState('https://api && api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',;
   path: string, // full URL or relative;
   requiresAuth: boolean;
+
+  const [baseUrl, setBaseUrl] = useState('https://api.zion.os);
+  path: string, // full URL or relative;}
+requiresAuth: boolean}
 }
+export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
 
-export default function TryItConsole() {
-
-  }
-
-  const [baseUrl, setBaseUrl] = useState('"https": //api.zion.os');'
-
-const [token, setToken] = useState('');'
-
-const [baseUrl, setBaseUrl] = useState('"https": //api.zion.os');'
-  const [body, setBody] = useState('');'
-
-const [response, setResponse] = useState<string>(''),;'
+  path: string, // full URL or relative;
+  requiresAuth: boolean;
+}
+export default function TryItConsole() { return null; }
+}: TryItProps) {
+  const [baseUrl, setBaseUrl] = useState('https://api && api.zion.os');  const [token, setToken] = useState();  method: 'GET' | POST | 'PUT' | PATCH | 'DELETE',
+  path: string, // full URL or relative;
+  requiresAuth: boolean;
+  const [baseUrl, setBaseUrl] = useState(https: //api.zion.os'),
+'
+  const [body, setBody] = useState();'
+  const [response, setResponse] = useState<string>('),
   const [loading, setLoading] = useState(false);
-return baseUrl.replace(/\/$/, '') + path;'
+
+      const headers: Record<string, string> = { 'Content-Type': application/json }'
+      if (requiresAuth && token) headers['Authorization] = `Bearer ${token}`;
+      const res = await fetch(url, {}
+        method;
+        headers;
+        body: method === 'GET' || method === DELETE ? undefined : body || undefined}),
+      const text = await res && res.text();
+      setResponse(text);
+    } catch (e: any) {
+      setResponse(String(e?.message || e));
+    } finally {
+      setLoading(false);
+
+  const [baseUrl, setBaseUrl] = useState('https: //api.zion.os');
+  const [token, setToken] = useState();
+  const [baseUrl, setBaseUrl] = useState('https: //api.zion.os')
+  const [body, setBody] = useState();
+  const [response, setResponse] = useState<string>(''),
+return baseUrl.replace(/\/$/, ) + path;
   }, [baseUrl, path]);
   async function onSend() {
     }
@@ -87,29 +111,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
         <div>
 
-          <label className='block text-sm mb-1'>Base URL</label>'
-          <input,
-className='w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary''
 
             value={baseUrl}
             onChange={e = /> setBaseUrl(e.target.value}
 }
-          />; }
-        </div>;
-        <div>;
-          <label className='block text-sm mb-1'>Auth Token</label>;'
-          <input;
-            className='w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary';'
-            value={token}
-            onChange={e => { return setToken(e.target.value)}
-            placeholder='Optional'; }'
+
           />;
         </div>;
         <div>;
           <label className='block text-sm mb-1'>Method</label>;'
           <input;
-            className='w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary';'
-            value={method}
 
           <label className="block text-sm mb-1" htmlFor="input-Base URL">Base URL</label>
           <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={baseUrl} onChange={(e) => setBaseUrl(e.target.value)} />
@@ -178,12 +189,9 @@ className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border
             value={body}
             on_change={e => set_body (e.target.value)}'
 
-            placeholder='{ }'
-          />)}
-      <button
-        on_click={on_send}
-        className='px - 3 py - 2 rounded bg - high - contrast - accent text - black'
-        disabled={loading}
+            value={body}
+      )}
+
 
         onClick={onSend}'
         className='px-3 py-2 rounded bg-high-contrast-accent text-black''
@@ -231,7 +239,7 @@ className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border
           />)}
       <button;
         on_click={on_send}
-        className='px - 3 py - 2 rounded bg - high - contrast - accent text - black';'
+        className='px - 3 py - 2 rounded bg - high - contrast - accent text - black';
         disabled={loading}
       >;'
         {loading ? 'Sending…' : 'Send Request'}
@@ -253,6 +261,7 @@ className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border
       )}
       <button onClick={onSend} className=&quot;px-3 py-2 rounded bg-high-contrast-accent text-black&quot; disabled={loading}>'
         {loading ? 'Sending…' : 'Send Request'}
+        {loading ? Sending… : 'Send Request'}
 
       </button>
       <div    />
@@ -267,10 +276,10 @@ className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border
     }
   }
   return ('
-    <div className='space-y-2'>'
+    <div className='space-y-2>
       <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
-'
-      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
+
+      {(method === POST' || method === 'PUT || method === PATCH') && (
         <div>
 
   );

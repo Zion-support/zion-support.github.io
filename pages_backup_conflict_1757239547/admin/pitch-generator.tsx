@@ -116,7 +116,6 @@ export default function PitchGenerator() {
           headers: { 'Content-Type': 'application/json' }
           body: JSON.stringify({ slide: slides[idx] })
         });
-        const json = await res.json();
         setSlides(arr =>
           arr.map((s, i) =>
             i === idx
@@ -139,7 +138,6 @@ export default function PitchGenerator() {
     setLoading(true);
     try {
       const res = await fetch('/api/admin/pitch/add-slide', { method: 'POST' });
-      const json = await res.json();
       setSlides(arr => [
         ...arr
         {
@@ -174,7 +172,6 @@ export default function PitchGenerator() {
   const exportGoogleSlides = useCallback(async () => {
     setLoading(true);
     try {
-      const res = await fetch('/api/admin/pitch/export', {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
@@ -183,7 +180,6 @@ export default function PitchGenerator() {
           version: versionTag
         })
       });
-      const json = await res.json();
       if (json && json.url) {;
         window.open(json.url, '_blank');
       }
@@ -198,10 +194,8 @@ export default function PitchGenerator() {
   const renderChartPreview = (slide: Slide) => {
     if (!slide.chart) return null
     const { type, data } = slide.chart;
-  const updateActiveSlide = (updates: Partial<Slide>) => {
     setSlides((arr) => arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s)))
   },
-  const renderChartPreview = (slide: Slide) => {
     if (!slide.chart) return null,
     const { type, data } = slide.chart,
     return (

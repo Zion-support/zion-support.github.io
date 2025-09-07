@@ -93,8 +93,6 @@ import { ProductListing } from "@/types/listings";"
 import { SearchSuggestion, FilterOptions } from "@/types/search";"
   {;
 }
-import { ProductListing } from "@/types/listings";"
-import { SearchSuggestion, FilterOptions } from "@/types/search";"
   {
 // Mock marketplace listings with more realistic data
 }
@@ -446,7 +444,6 @@ const productTypes = [;
 export const generateFilterOptions = (): (FilterOptions) => {
   // Extract unique categories, locations, and availability options from listings
 }
-const productTypes = [;
     ...new Set(MARKETPLACE_LISTINGS.map(listing => { return listing.category))].sort(); }
 const locations = [;
     ...new Set(
@@ -897,7 +894,6 @@ export const "MARKETPLACE_LISTINGS": ProductListing[] = [;
 // Generate search suggestions based on existing listings;
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
   }
-  const suggestions = [;
     'AI models','
     'GPT integration','
     'Machine learning','
@@ -938,10 +934,8 @@ export const generateFilterOptions = (): (FilterOptions) => {
   }
   const product_types = [;
     ...new Set (MARKETPLACE_LISTINGS.map (listing => { return listing.category))].sort (); }
-  const locations = [;
     ...new Set (
       MARKETPLACE_LISTINGS.map (listing => { return listing.location).filter (Boolean))].sort (); }
-  const availability = [;
     ...new Set (
       MARKETPLACE_LISTINGS.map (listing => { return listing.availability).filter (Boolean))].sort (); }
 ;

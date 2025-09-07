@@ -253,3 +253,6 @@ export default MarketPricing
             whileInView={{ opacity: 1, y: 0}}
             transition = $2;
 export default MarketPricing,
+quantum-computing': {
+  marketSize: '$8.7B, growthRate: +45.2%', growthTrend: 'up, description: Quantum computing market is rapidly expanding with breakthroughs in qubit stability and error correction.', competitors: [ {
+

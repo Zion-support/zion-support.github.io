@@ -10,8 +10,7 @@ module.exports = {}interface ErrorReport  {"error": string;"
 module.exports = {};
 module.exports = {};
 interface ErrorReport {
-  "error": string;"
-  }
+  error": string;
   stack?: string;
   componentStack?: string;
   "timestamp": string;

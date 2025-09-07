@@ -103,7 +103,6 @@ export interface ChatAssistantProps  {"isOpen": boolean;
 export function ChatAssistant() {const auth = useContext(AuthContext)const isGuest = !auth?.isAuthenticated;
   // Hooks called unconditionally at the top;
   }
-  const localStorageKey = `chatHistory-${recipient.id}`, // Key is always generated;`  const [storedGuestMessages, setStoredGuestMessages] = useLocalStorage<;
     Message[];
   >(isGuest ? localStorageKey : 'dummy-guest-key', // Use a dummy key if not guest to prevent LS write for logged-in users;'
     [])const [displayGuestMessages, setDisplayGuestMessages] = useState<Message[]>([])const [loggedInMessages, setLoggedInMessages] =;
@@ -186,7 +185,6 @@ if ( {) {$2;
   }
   const handleModalSendConfirm = () => {if (!guestMessage) return;
     }
-    const "newMessage": Message = {"id": Date.now().toString()"role": 'user';'
       }
       "message": guestMessage;
       "timestamp": new Date()}

@@ -100,7 +100,6 @@ function RoleManagement() {}
     Viewer: 'Read - only access to candidates',
 
   }'
-import React from 'react';
 import {;
   Table,;
   TableBody,;
@@ -109,7 +108,6 @@ import {;
   TableHeader,;
 
 import React from "react";
-import {
   Table;
   TableBody;
   TableCell;
@@ -120,7 +118,6 @@ import { Badge } from "@/components/ui/badge",;
 import { Switch } from "@/components/ui/switch";
 import { toast } from "@/hooks/use-toast";
 import { InfoIcon } from 'lucide-react'
-import {
   Tooltip;
   TooltipContent;
   TooltipProvider;
@@ -267,14 +264,12 @@ export function RoleManagement() {
                     onCheckedChange={(checked) =>"
                       handlePermissionChange(member.id, "viewBilling", checked)"
 import React from "react",;
-import {;
   Table,;
   TableBody,;
   TableCell,;
   TableHead,;
 
 import { InfoIcon } from 'lucide-react';
-import {;
   Tooltip,;
   TooltipContent,;
   TooltipProvider,;"

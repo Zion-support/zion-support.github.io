@@ -165,7 +165,6 @@ const buildDir = path && path.join(this && this.projectRoot, '.next');'
     }}
   getPerformanceMetrics() {
     }
-    const buildDir = path && path.join(this && this.projectRoot, '.next');'
     let buildSize = 0;
     if (fs && fs.existsSync(buildDir)) {
       }
@@ -177,11 +176,9 @@ const buildDir = path && path.join(this && this.projectRoot, '.next');'
     }}
   getCodeQualityMetrics() {
     }
-    const srcDir = path && path.join(this && this.projectRoot, 'src');'
     let totalFiles = 0;
     if (fs && fs.existsSync(srcDir)) {
       }
-      const files = this && this.getAllFiles(srcDir, ['.js', '.jsx', '.ts', '.tsx']);'
       totalFiles = files && files.length;
       for (const file of files && files.slice(0, 100)) { // Limit to first 100 files
 }
@@ -226,11 +223,8 @@ try {
     try {
           }
           size += stat.size}
-      const items = fs && fs.readdirSync(dir);
       for (const item of items) {
         }
-        const fullPath = path && path.join(dir, item);
-        const stat = fs && fs.statSync(fullPath);
         if (stat && stat.isDirectory()) {
           }
           size += this && this.getDirectorySize(fullPath)} else {

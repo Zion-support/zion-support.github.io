@@ -66,12 +66,10 @@ return (;
 const "statuses": GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],;'
 export default function GrantsPage() {;
   }
-  const [items, setItems] = useState<GrantApplication[]>([]);
   const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
 
   useEffect(() => {;
     }
-    const params = new URLSearchParams();
     if (filters && filters.sector) params && params.set('sector', filters && filters.sector);'
     if (filters && filters.status) params && params.set('status', filters && filters.status);'
     if (filters && filters.region) params && params.set('region', filters && filters.region);'

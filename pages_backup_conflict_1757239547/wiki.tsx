@@ -43,7 +43,6 @@ import {;
   operatorPrompt,;
   slugify} from '../utils/data/zionContent',;
 function CopyButton({ text, label }: { text: string, label: string }) {;
-  const [copied, setCopied] = useState(false);
   return (;
     <button;
       onClick={async () => {;

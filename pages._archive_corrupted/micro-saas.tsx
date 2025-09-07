@@ -382,7 +382,6 @@ import { Code,Cloud,Zap,Users,BarChart3,Shield,Smartphone,Globe,Database,Setting
   Trash2;} from 'lucide-react';'
 export default function MicroSaaS() {const title = 'Micro SaaS Solutions — Zion Tech Group';'
   }
-  const description = 'Custom micro SaaS applications and software solutions tailored to your business needs. Scalable, secure, and innovative.';'
   const microSaaSServices = [{"title": 'AI-Powered Email Responder',"description": 'Intelligent email automation with sentiment analysis and smart categorization',"icon": MessageSquar e,"features": [;"
         'Automated email responses with personalization','Smart categorization and priority handling','Sentiment analysis and escalation triggers','CRM and helpdesk integration','Multi-language support and compliance','Analytics and performance tracking';'
 }
@@ -440,8 +439,6 @@ ursor/automate-test-improve-and-merge-code-646c;
 import { Code,, Cloud,, Zap,, Users,, BarChart3,, Shield,, Smartphone,, Globe,, Database,, Settings,, CheckCircle,, ArrowRight,, Clock,, Award,, Star,, TrendingUp,, Target,, FileText,, MessageSquare,, Eye,, Brain,, Mail,, Phone,, MapPin,, Monitor,, Server,, Lock,, Cpu,, Network,, Terminal,, Calendar,, Building,, Truck,, GraduationCap,, Utensils,, PieChart,, Home,, ClipboardList,, Trash2 } from 'lucide-react';'
 export default function MicroSaaS() {const title = 'Micro SaaS Solutions — Zion Tech Group';'
   }
-  const description = 'Custom micro SaaS applications and software solutions tailored to your business needs. Scalable, secure, and innovative.';'
-  const microSaaSServices = [{"title": 'AI-Powered Email Responder',"description": 'Intelligent email automation with sentiment analysis and smart categorization',"icon": MessageSquar e,"features": [;"
         'Automated email responses with personalization','Smart categorization and priority handling','Sentiment analysis and escalation triggers','CRM and helpdesk integration','Multi-language support and compliance','Analytics and performance tracking';'
       ],\"pricing\": \'$199 - $799/month\',\"delivery\": \'1-3 weeks\',\"category\": \'Social Media SaaS\';'
     },{\"title\": \'Smart Expense Management System\',\"description\": \'AI-powered expense tracking and approval workflow with receipt processing\',\"icon\": FileTex t,\'Automated receipt scanning and data extraction,AI-powered fraud detection and prevention,Policy compliance checking,Real-time expense categorization,Integration with accounting systems,Mobile app for on-the-go expense tracking\';'
@@ -496,8 +493,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de;
 \'AI-driven optimal posting time detection,Content performance prediction,Multi-platform scheduling and management,Hashtag optimization and trending analysis,Audience engagement analytics,Automated content repurposing\';'
 export default function MicroSaaS() {const title = 'Micro SaaS Solutions — Zion Tech Group';'
   }
-  const description = 'Custom micro SaaS applications and software solutions tailored to your business needs. Scalable, secure, and innovative.';'
-  const microSaaSServices = [{"title": 'AI-Powered Email Responder',"description": 'Intelligent email automation with sentiment analysis and smart categorization',"icon": MessageSquar e,"features": [;"
         'Automated email responses with personalization','Smart categorization and priority handling','Sentiment analysis and escalation triggers','CRM and helpdesk integration','Multi-language support and compliance','Analytics and performance tracking';'
       ],\"pricing\": \'$199 - $799/month\',\"delivery\": \'1-3 weeks\',\"category\": \'Social Media SaaS\';'
     },{\"title\": \'Smart Expense Management System\',\"description\": \'AI-powered expense tracking and approval workflow with receipt processing\',\"icon\": FileTex t,\'Automated receipt scanning and data extraction,AI-powered fraud detection and prevention,Policy compliance checking,Real-time expense categorization,Integration with accounting systems,Mobile app for on-the-go expense tracking\';'
@@ -592,8 +587,6 @@ ursor/automate-test-improve-and-merge-code-646c;
 import {Code,, Cloud,, Zap,, Users,, BarChart3,, Shield,, Smartphone,, Globe,, Database,, Settings,, CheckCircle,, ArrowRight,, Clock,, Award,, Star,, TrendingUp,, Target,, FileText,, MessageSquare,, Eye,, Brain,, Mail,, Phone,, MapPin,, Monitor,, Server,, Lock,, Cpu,, Network,, Terminal,, Calendar,, Building,, Truck,, GraduationCap,, Utensils,, PieChart,, Home,, ClipboardList,, Trash2} from 'lucide-react';'
 export default function MicroSaaS() {;
   }
-  const title = 'Micro SaaS Solutions — Zion Tech Group';'
-  const description = 'Custom micro SaaS applications and software solutions tailored to your business needs. Scalable, secure, and innovative.';'
   const microSaaSServices = [{;
       "title": 'AI-Powered Email Responder',;'
       "description": 'Intelligent email automation with sentiment analysis and smart categorization',;'
@@ -2222,7 +2215,6 @@ ursor/automate-test-improve-and-merge-code-646c;
 ursor/automate-test-improve-and-merge-code-646c;
   const technologies = [{ "name": 'Frontend', "icon": Monito r, "description": 'React, Next && Next.js, Vue && Vue.js, Angular' }{ \"name\": \'Mobile\', \"icon\": Smartphon e, \"description\": \'React Native, Flutter, PWA\' }const technologies = [{ "name": 'Frontend', "icon": Monito r, "description": 'React, Next && Next.js, Vue && Vue.js, Angular' }{ "name": 'Backend', "icon": Serve r, "description": 'Node && Node.js, Python, Go, Java' },{ "name": 'Database', "icon": Databas e, "description": 'PostgreSQL, MongoDB, Redis' },{ "name": 'Cloud', "icon": Clou d, "description": 'AWS, Azure, GCP, DigitalOcean' },{ "name": 'Security', "icon": Shiel d, "description": 'OAuth, JWT, SSL, Encryption' },{ "name": 'Mobile', "icon": Smartphon e, "description": 'React Native, Flutter, PWA' }ursor/automate-test-improve-and-merge-code-646c;'
   ];
-  const benefits = [{\"title\": \'Faster Development\',\"description\": \'Rapid prototyping and deployment\',\"icon\": Za p,\"stat\": \'50%\';'
     },{\"title\": \'Cost Effective\',\"description\": \'Lower development and maintenance costs\',\"icon\": TrendingU p,\"stat\": \'60%\';'
     },{\"title\": \'Scalable Solutions\',\"description\": \'Built to grow with your business\',\"icon\": Targe t,\"stat\": \'Unlimited\';'
     },{\"title\": \'Custom Features\',\"description\": \'Tailored to your specific needs\',\"icon\": Setting s,\"stat\": \'100%\';'

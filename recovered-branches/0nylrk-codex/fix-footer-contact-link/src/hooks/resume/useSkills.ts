@@ -15,7 +15,6 @@ export function useSkills() {
   const [isLoading, setIsLoading] = useState($2);
   const [error, setError] = useState<string | null>(null),
   
-  const addSkill = async (resumeId: string, skill: Skill): Promise<boolean> => {
     if (!user) {
       setError($2);
       return false
@@ -35,7 +34,6 @@ export function useSkills() {
     } finally {
       setIsLoading(false)
       return false    try {
-      const { error } = await supabase
         .from('resume_skills')
         .insert({;
     setIsLoading(true),;
@@ -79,7 +77,6 @@ export function useSkills() {
     setIsLoading($2);
     setError($2);
     try {
-      const { error } = await supabase
         .from('resume_skills')
         .delete()
         .eq($2);

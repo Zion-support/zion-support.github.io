@@ -84,7 +84,6 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
   }
 }
   ];
-  const automationFeatures = [
     {
       feature: 'Self-Healing CI/CD',
       description: 'Automatic detection and resolution of pipeline failures',
@@ -120,7 +119,6 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
   }
 }
   ];
-  const performanceMetrics = [
     { metric: 'Build Time', value: '2.3 min', target: '5 min', status: 'exceeded' },
     { metric: 'Test Coverage', value: '94.7%', target: '90%', status: 'exceeded' },
     { metric: 'Deployment Frequency', value: '12/day', target: '5/day', status: 'exceeded' },

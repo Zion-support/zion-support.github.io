@@ -82,5 +82,4 @@ export function addCertificationsSection(;
     if (cert.issue_date) {;
       }
       const issueDate = formatDate(cert.issue_date),;
-      const expirationText = cert.expiration_date ? ` - ${formatDate(cert.expiration_date)}` : '';'      doc.setFontSize(10);
       doc.text(`${issueDate}${expirationText}`, 20, yPos + 10);

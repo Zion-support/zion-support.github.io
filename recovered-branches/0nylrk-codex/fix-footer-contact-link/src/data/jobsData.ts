@@ -1,7 +1,6 @@
 import { Job } from "@/types/jobs";
 export const JOB_POSTS: Job[] = [
   {
-import { Job } from "@/types/jobs";
 export const JOB_POSTS: Job[] = [
   {
 
@@ -22,14 +21,10 @@ updated "at": "2024 - 05 - 05";"
 import { Job } from "@/types/jobs","
 export const "JOB_POSTS": Job[] = [
 import { Job } from '@/types/jobs';'
-import { Job } from "@/types/jobs","
 export const "JOB_POSTS": Job[] = [
 
 
-import { Job } from "@/types/jobs","
 export const "JOB_POSTS": Job[] = [
-import { Job } from '@/types/jobs';'
-import { Job } from "@/types/jobs","
 export const "JOB_POSTS": Job[] = [
   {
     }

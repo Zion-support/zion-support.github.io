@@ -202,6 +202,7 @@ import Link from 'next / link';
 interface NavigationItem  {name: string;
   href: string;  icon?: React.ReactNode;import { href: string;  icon?: React.ReactNode;import {Menu, ChevronDown, X, Phone, Mail, ArrowRight;Brain, Rocket, Target, Atom, Shield;
 } from 'lucide-react';
+  Github} from lucide-react';
 interface NavigationItem {}
   name: string;
 
@@ -209,15 +210,15 @@ interface NavigationItem {}
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false }
   }
   
   static getDerivedStateFromError(error) {}
-    return { hasError: true };
+    return { hasError: true }
   }
   
   componentDidCatch(error, errorInfo) {'
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error(Error caught by boundary:, error, errorInfo);
   }
   
   render() {}
@@ -228,9 +229,9 @@ class ErrorBoundary extends React.Component {}
     return this.props.children;
   }
 }'
-import React, { useState, useEffect } from 'react';'
-import Link from 'next / link';'
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react;
+import Link from 'next / link';
+import { motion, AnimatePresence } from framer-motion';
 
 import {}
   Menu,
@@ -288,14 +289,13 @@ import {}
   MessageCircle,
   Linkedin,
   Twitter,
-  Github,;
-  Youtube,;
-  MapPin,;'
-} from 'lucide-react';
+  Github,
+  Youtube,
+  MapPin,'
+} from lucide-react;
 
 
 
-import {}
   Menu,
   ChevronDown,
   X,
@@ -351,14 +351,14 @@ import {}
   MessageCircle,
   Linkedin,
   Twitter,
-  Github,;
-  Youtube,;
-  MapPin,;'
-} from 'lucide-react';
+  Github,
+  Youtube,
+  MapPin,'
+} from 'lucide-react;
 interface NavigationItem {}
   name: string;
-  href: string;  icon?: React.ReactNode;import {};
-  href: string;  icon?: React.ReactNode;import { ;
+  href: string;  icon?: React.ReactNode;import {}
+  href: string;  icon?: React.ReactNode;import {
 
   Menu, ChevronDown, X, Phone, Mail, ArrowRight;
 
@@ -507,7 +507,7 @@ interface NavigationItem {
 
   Search, User, Bell, Cog, LogOut, Home, Info, FileText, Users as UsersIcon;
   Bot, MessageCircle, Linkedin, Twitter, Github, Youtube, MapPin
- } from 'lucide-react';'
+
 
 interface NavigationItem {
   }
@@ -537,9 +537,6 @@ interface NavigationItem {
 }
   color?: string;
 
-    "name": 'Home & Core';'
-    "href": '/';'
-    "icon": <Home className;
 
     name: 'Home & Core'
     href: '/'
@@ -752,14 +749,11 @@ const navigation_items: NavigationItem[] = [;
 
 const [activeDropdown, setActiveDropdown] = useState<string | null />(null);
 
-const toggleMenu = () => setIsOpen(!isOpen);
 
-const closeMenu = () => setIsOpen(false);
 
 const handleDropdownToggle = ("name": string) => {
 }
-setActiveDropdown(activeDropdown === name ? null : name)
-};
+
 
   useEffect(() => {
 
@@ -774,7 +768,7 @@ setActiveDropdown(activeDropdown === name ? null : name)
   const handleDropdownToggle = (name: string) => {
 setActiveDropdown(activeDropdown === name ? null : name);
 origin/cursor/automate-test-improve-and-merge-code-2533
-  };
+  }
 
   useEffect(() => {}
     const handleResize = () => {}
@@ -782,7 +776,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         setIsOpen(false);
 setActiveDropdown(null);
       }
-    };
+    }
 
     window.addEventListener('resize', handleResize);
 return () => window.removeEventListener('resize', handleResize);
@@ -989,8 +983,8 @@ className={`p-2 rounded-lg bg-gradient-to-r ${child.color |'from-gray-500 to-sla
                       <div className='space-y-4'>
                         {item.children?.map(child => (
                       transition={{ duration: 0 && 0.2 }}'
-                      className='absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl p-6 z-50'>;'
-                      <div className='space-y-4'>;
+                      className=absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl p-6 z-50>;'
+                      <div className='space-y-4>;
                         {item && item.children?.map(child => (;
                           <Link
                             <div
@@ -1036,18 +1030,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
           {/* Contact Info & CTA */}
 
-<div className='hidden "lg": flex "lg":items-center "lg":space-x-4'>'
-            <div className='flex items-center space-x-4 text-sm text-gray-400'>'
-              <a,
-href={`"tel":${contactInfo.mobile}`}`                className='flex items-center space-x-1 "hover":text-white transition-colors''
-              >
-                <Phone className='w-4 h-4' />                <span>{contactInfo.mobile}</span>
-              </a>
-            </div>
-            <Link          <div className="hidden lg:flex lg:items-center lg:space-x-4">
-            <div className="flex items-center space-x-4 text-sm text-gray-400">
-              <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-1 hover:text-white transition-colors">
-                <Phone className="w-4 h-4" />
 
                 <Phone className='w-4 h-4' />'
                 <span>{contactInfo.mobile}</span>
@@ -1282,7 +1264,75 @@ className='ml-4 mt-2 space-y-1''
 }
 key={child.name}
                             href={child.href}
-                            className='block px-3 py-2 text-sm text-gray-400 "hover":text-white "hover":bg-slate-700/50 rounded-md transition-colors duration-200''
+
+                        ))}
+                      </motion && motion.div>;
+                    )}
+                  </AnimatePresence>;
+                </div>;
+              ))}
+
+              {/* Mobile Contact Info */}'
+              <div className=pt-4 pb-3 border-t border-slate-700/50>;'
+                <div className='px-3 py-2 text-sm text-gray-400>;
+                  <div className='flex items-center space-x-2 mb-2'>;
+                    <Phone className=w-4 h-4' />;'
+                      className=hover:text-white transition-colors>;
+                      {contactInfo && contactInfo.mobile}
+                    </a>;
+                  </div>;
+                  <Link'
+                    href='/contact
+                    className='w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200'
+                    onClick={closeMenu}>;
+                    Get Started;
+                    <ArrowRight className=ml-2 w-4 h-4' />                  </Link>              {/* Mobile Contact Info */}"
+              <div className=pt-4 pb-3 border-t border-slate-700/50>"
+                <div className="px-3 py-2 text-sm text-gray-400>
+                  <div className="flex items-center space-x-2 mb-2">
+                    <Phone className=w-4 h-4" />"`
+                    <a href={`tel:${contactInfo.mobile}`} className=hover:text-white transition-colors>
+                      {contactInfo.mobile}
+                    </a>
+                  </div>"
+                  <div className="flex items-center space-x-2 mb-2>
+                    <Mail className="w-4 h-4" />`
+                    <a href={`mailto:${contactInfo.email}`} className=hover:text-white transition-colors">
+                      {contactInfo.email}
+                    </a>
+                  </div>"
+                  <div className=flex items-center space-x-2>"
+                    <MapPin className="w-4 h-4 />
+                    <span>{contactInfo.address}</span>
+                  </div>
+                </div>
+                <div className="px-3 pt-2">
+              <div className=pt-4 pb-3 border-t border-slate-700/50">;
+                    </a>;
+                  </div>;"
+                  <div className=flex items-center space-x-2 mb-2>;"
+                    <Mail className="w-4 h-4 />;`
+                    <a href={`mailto:${contactInfo && contactInfo.email}`} className="hover:text-white transition-colors">;
+                      {contactInfo && contactInfo.email}
+                    </a>;
+                  </div>;
+                  <div className=flex items-center space-x-2">;"
+                    <MapPin className=w-4 h-4 />;
+                    <span>{contactInfo && contactInfo.address}</span>;
+                  </div>;
+                </div>;
+                      >
+                        {item.children?.map(child => (
+                          <Link;
+                            key={child.name}
+                            href={child.href}
+className='ml-4 mt-2 space-y-1
+                      >
+                        {item.children?.map(child => (
+                          <Link
+                            key={child.name}
+                            href={child.href}
+                            className=block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200'
                             onClick={closeMenu}
 origin/cursor/automate-test-improve-and-merge-code-2533
                           >
@@ -1503,8 +1553,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                     </a>
                   </div>
-                  <div className='flex items-center space-x-2'>'
-                    <MapPin className='w-4 h-4' />'
+
+                  <div className='flex items-center space-x-2'>
+                    <MapPin className=w-4 h-4' />
                     <span>{contactInfo.address}</span>
                   </div>
                 </div>'

@@ -11,7 +11,7 @@ import type { ReviewsSummary } from '../../types/reviews';
 type Props = {
   summary: ReviewsSummary;
 
-const ReviewSummary: React.FC<Props> = ({ summary }) => {;
+const ReviewSummary: React.FC<Props> = ({ summary }) => {
 import StarRating from './StarRating';
 type Props = {
   summary: ReviewsSummary
@@ -26,10 +26,12 @@ const ReviewSummary: React.FC<Props> = ({ summary }) => {
 export default ReviewSummary
         <div className="flex items-center gap-3">
           <span className="text-2xl font-semibold">{summary.averageRating.toFixed(1)}</span>
+        <div className="flex items-center gap-3>
+          <span className=text-2xl font-semibold">{summary.averageRating.toFixed(1)}</span>
           <StarRating value={Math.round(summary.averageRating)} onChange={() => {}} readOnly />
         </div>
-        <div className="text-sm text-gray-600 mt-1">
-          <span className="mr-3">{summary.totalReviews} reviews</span>
+        <div className="text-sm text-gray-600 mt-1>
+          <span className=mr-3">{summary.totalReviews} reviews</span>
           <span>{summary.totalCompletedProjects} completed projects</span>
         </div>
       </div>

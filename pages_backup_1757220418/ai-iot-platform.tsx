@@ -80,7 +80,7 @@ export default function AIIoTPlatformPage() {
             <a href="/contact" className="bg-violet-600 text-white px-6 py-3 rounded-lg hover: bg-violet-700">
               Get Started
             </a>
-            <a href="/about" className="border border-violet-600 text-violet-600 px-6 py-3 rounded-lg hover:bg-violet-50">
+            <a href="/about className=border border-violet-600 text-violet-600 px-6 py-3 rounded-lg hover:bg-violet-50">
               Learn More
             </a>
           </div>
