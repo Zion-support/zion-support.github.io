@@ -135,7 +135,8 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       ]
     },
     {
-      title: 'Company & Resources',
+      title: 'Company',
+      featured: false,
       links: [
         { name: 'About Us', href: '/about' },
         { name: 'Our Team', href: '/team' },

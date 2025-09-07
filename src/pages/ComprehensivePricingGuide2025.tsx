@@ -82,6 +82,8 @@ const ComprehensivePricingGuide2025 = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState('grid');
 
+  const allServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
+  
   const categories = [
     { id: 'all', name: 'All Services', icon: <Grid className="w-4 h-4" /> },
     { id: 'ai', name: 'AI & Machine Learning', icon: <Brain className="w-4 h-4" /> },
@@ -252,6 +254,11 @@ const ComprehensivePricingGuide2025 = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Comprehensive Pricing Guide 2025 - Zion Tech Group"
+        description="Explore our transparent pricing for AI-powered solutions, quantum computing platforms, blockchain services, and innovative micro SAAS products. Find the perfect plan for your business needs."
+      />
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -498,6 +505,68 @@ const ComprehensivePricingGuide2025 = () => {
                 Middletown, DE
               </a>
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Pricing Tiers */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {pricingTiers.map((tier, index) => (
+              <motion.div
+                key={tier.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`relative bg-slate-800/50 border rounded-2xl p-8 ${
+                  tier.popular 
+                    ? 'border-cyan-400/50 shadow-2xl shadow-cyan-400/20' 
+                    : 'border-slate-700/50'
+                }`}
+              >
+                {tier.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                  <p className="text-gray-400 mb-6">{tier.description}</p>
+                  <div className="mb-4">
+                    <span className="text-4xl font-bold text-white">
+                      ${billingCycle === 'monthly' ? tier.price.monthly : tier.price.annual}
+                    </span>
+                    <span className="text-gray-400 ml-2">
+                      /{billingCycle === 'monthly' ? 'month' : 'year'}
+                    </span>
+                  </div>
+                  {billingCycle === 'annual' && (
+                    <p className="text-green-400 text-sm">Save ${tier.price.monthly * 12 - tier.price.annual}/year</p>
+                  )}
+                </div>
+
+                <ul className="space-y-4 mb-8">
+                  {tier.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center space-x-3">
+                      <Check className="w-5 h-5 text-green-400 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Link
+                  to="/request-quote"
+                  className={`w-full bg-gradient-to-r ${tier.color} text-white text-center py-3 px-6 rounded-lg font-semibold hover:opacity-90 transition-all duration-200 block`}
+                >
+                  Get Started
+                </Link>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
