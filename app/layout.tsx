@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 <<<<<<< HEAD
 import { Inter } from 'next/font/google';
 import './globals.css';
+<<<<<<< HEAD
 import Header from './components/Header';
 import Footer from './components/Footer';
 import StructuredData, { organizationStructuredData, websiteStructuredData } from './components/StructuredData';
@@ -91,6 +92,9 @@ export const metadata: Metadata = {
   },
 };
 
+=======
+const inter = Inter({ subsets: ['latin'] });
+>>>>>>> cursor/automate-test-improve-and-merge-code-9862
 export default function RootLayout({
   children
 }: {

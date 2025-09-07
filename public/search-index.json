@@ -14,6 +14,7 @@
 >>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   "pages": [
     {
+<<<<<<< HEAD
       "url": "about",
       "title": "About | Zion Tech Group",
       "description": "Learn about Zion Tech Group\\",
@@ -30946,4 +30947,85 @@
     "version": "1.0.0"
   }
 >>>>>>> cursor/automate-test-improve-and-merge-code-5e91
+=======
+      "url": "/",
+      "title": "Home",
+      "description": "Zion Tech Group - AI and IT Solutions",
+      "keywords": [
+        "home",
+        "zion",
+        "tech",
+        "group",
+        "solutions"
+      ]
+    },
+    {
+      "url": "/about",
+      "title": "About Us",
+      "description": "Learn about Zion Tech Group and our mission",
+      "keywords": [
+        "about",
+        "learn",
+        "zion",
+        "tech",
+        "group",
+        "our",
+        "mission"
+      ]
+    },
+    {
+      "url": "/services",
+      "title": "Services",
+      "description": "Our AI and IT services",
+      "keywords": [
+        "services",
+        "our"
+      ]
+    },
+    {
+      "url": "/solutions",
+      "title": "Solutions",
+      "description": "Technology solutions for your business",
+      "keywords": [
+        "solutions",
+        "technology",
+        "your",
+        "business"
+      ]
+    },
+    {
+      "url": "/products",
+      "title": "Products",
+      "description": "Our technology products",
+      "keywords": [
+        "products",
+        "our",
+        "technology"
+      ]
+    },
+    {
+      "url": "/contact",
+      "title": "Contact",
+      "description": "Get in touch with us",
+      "keywords": [
+        "contact",
+        "get",
+        "touch"
+      ]
+    },
+    {
+      "url": "/blog",
+      "title": "Blog",
+      "description": "Latest news and insights",
+      "keywords": [
+        "blog",
+        "latest",
+        "news",
+        "insights"
+      ]
+    }
+  ],
+  "generated": "2025-09-07T08:47:50.014Z",
+  "total": 7
+>>>>>>> cursor/automate-test-improve-and-merge-code-9862
 }

@@ -2,11 +2,15 @@ const js = require('@eslint/js');
 <<<<<<< HEAD
 const tseslint = require('@typescript-eslint/eslint-plugin');
 const tsparser = require('@typescript-eslint/parser');
+<<<<<<< HEAD
 =======
 const reactHooks = require('eslint-plugin-react-hooks');
 const reactRefresh = require('eslint-plugin-react-refresh');
 const typescriptEslint = require('@typescript-eslint/eslint-plugin');
 >>>>>>> cursor/automate-test-improve-and-merge-code-5e91
+=======
+const jsxA11y = require('eslint-plugin-jsx-a11y');
+>>>>>>> cursor/automate-test-improve-and-merge-code-9862
 
 module.exports = [
   {
@@ -143,12 +147,47 @@ module.exports = [
         exports: 'readonly',
       },
     },
+    plugins: {
+      'jsx-a11y': jsxA11y,
+    },
     rules: {
+<<<<<<< HEAD
       "no-unused-vars": "off",
       "no-console": "off",
       "prefer-const": "warn",
       "no-var": "warn",
       "no-undef": "off"
+=======
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'warn',
+      'jsx-a11y/alt-text': 'warn',
+      'jsx-a11y/aria-role': 'warn',
+      'jsx-a11y/tabindex-no-positive': 'warn',
+    }
+  },
+  {
+    files: ['**/*.cjs'],
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: 'commonjs',
+      globals: {
+        console: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        global: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        exports: 'readonly',
+      },
+    },
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'warn',
+>>>>>>> cursor/automate-test-improve-and-merge-code-9862
     }
 <<<<<<< HEAD
   },
@@ -180,12 +219,16 @@ module.exports = [
     },
     plugins: {
       '@typescript-eslint': tseslint,
+      'jsx-a11y': jsxA11y,
     },
     rules: {
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': 'warn',
       'no-console': 'warn',
       'prefer-const': 'warn',
+      'jsx-a11y/alt-text': 'warn',
+      'jsx-a11y/aria-role': 'warn',
+      'jsx-a11y/tabindex-no-positive': 'warn',
     }
   },
   {

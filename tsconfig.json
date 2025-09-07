@@ -50,6 +50,7 @@
     "baseUrl": ".",
     "paths": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "@/*": ["./src/*"],
       "@/components/*": ["./src/components/*"],
       "@/pages/*": ["./src/pages/*"],
@@ -87,6 +88,59 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+=======
+      "@/*": [
+        "./src/*"
+      ],
+      "@/components/*": [
+        "./src/components/*"
+      ],
+      "@/pages/*": [
+        "./src/pages/*"
+      ],
+      "@/utils/*": [
+        "./src/utils/*"
+      ],
+      "@/hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@/types/*": [
+        "./src/types/*"
+      ],
+      "@/styles/*": [
+        "./src/styles/*"
+      ],
+      "@/assets/*": [
+        "./src/assets/*"
+      ]
+    },
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": true,
+    "declaration": false,
+    "declarationMap": false,
+    "removeComments": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitOverride": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": false,
+    "noFallthroughCasesInSwitch": false,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "vite.config.ts",
+>>>>>>> cursor/automate-test-improve-and-merge-code-9862
     ".next/types/**/*.ts"
   ],
   "exclude": [
@@ -97,6 +151,7 @@
     "dist"
   ]
 }
+<<<<<<< HEAD
 >>>>>>> b1030359e255a9b6ea76da45370d91289a2e9194
 =======
     "apps/**",
@@ -113,3 +168,5 @@
   ]
 }
 >>>>>>> cursor/automate-test-improve-and-merge-code-5e91
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-9862

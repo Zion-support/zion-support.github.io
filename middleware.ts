@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { NextResponse } from 'next/server';'
 import type { NextRequest } from 'next/server';'
 
@@ -70,4 +71,17 @@ export const config = {
     '/((?!api|_next/static|_next/image|favicon.ico).*)'
 >>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   ]
+=======
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
+
+export function middleware(request: NextRequest) {
+  return NextResponse.next();
+}
+
+export const config = {
+  matcher: [
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+  ],
+>>>>>>> cursor/automate-test-improve-and-merge-code-9862
 };

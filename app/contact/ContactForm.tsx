@@ -13,6 +13,7 @@ import {
 =======
 'use client';
 import React, { useState } from 'react';
+<<<<<<< HEAD
 
 interface FormData {
   name: string;
@@ -24,9 +25,20 @@ interface FormData {
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-5e91
+=======
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Clock,
+  CheckCircle,
+  AlertTriangle
+} from 'lucide-react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-9862
 export default function ContactForm() {
   }
   const [formData, setFormData] = useState({
+<<<<<<< HEAD
     }
     "name": '','
     "email": '','
@@ -41,11 +53,25 @@ export default function ContactForm() {
 }
 const { name, value;
 } = e.target;
+=======
+    name: '',
+    email: '',
+    company: '',
+    service: '',
+    budget: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+>>>>>>> cursor/automate-test-improve-and-merge-code-9862
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
   };
+<<<<<<< HEAD
   const handleSubmit = async ("e": React.FormEvent)  => {
     }
     e.preventDefault();
@@ -56,6 +82,15 @@ try {
       }
       await new Promise(resolve => { return setTimeout(resolve, 2000)); }
       setSubmitStatus('success');'
+=======
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    // Simulate form submission
+    try {
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      setSubmitStatus('success');
+>>>>>>> cursor/automate-test-improve-and-merge-code-9862
       setFormData({
         }
         "name": '','
@@ -99,12 +134,19 @@ try {
     } catch (error) {
       setSubmitStatus('error');
     } finally {
+<<<<<<< HEAD
       setIsSubmitting(false)
 >>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     }
   };
 return (;
     <div className="max-w-4xl mx-auto">"
+=======
+      setIsSubmitting(false);
+    };
+  return (
+    <div className="max-w-4xl mx-auto">
+>>>>>>> cursor/automate-test-improve-and-merge-code-9862
       {/* Hero Section */}
       <div className="text-center mb-12">"
         <h1 className="text-4xl font-bold text-gray-900 mb-4">"
@@ -117,12 +159,20 @@ return (;
 s discuss your project and create a custom solution.
 =======
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+<<<<<<< HEAD
           Ready to transform your business with cutting-edge technology? 
           Let's discuss your project and how we can help you succeed.
 >>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         </p>
       </div>
       <div className="grid grid-cols-1 "lg":grid-cols-2 gap-12">"
+=======
+          Ready to transform your business with cutting-edge technology?
+          Let&apos;s discuss your project and create a custom solution.
+        </p>
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+>>>>>>> cursor/automate-test-improve-and-merge-code-9862
         {/* Contact Information */}
 <<<<<<< HEAD
         <div className="space-y-8">"
@@ -134,11 +184,14 @@ s discuss your project and create a custom solution.
               Contact Information
             </h2>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className="space-y-4">"
               <div className="flex items-center space-x-3">"
                 <PhoneIcon className="w-5 h-5 text-blue-600" />"
 =======
             
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-9862
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
 >>>>>>> cursor/automate-test-improve-and-merge-code-5e91
@@ -148,10 +201,13 @@ s discuss your project and create a custom solution.
                 </div>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <div className="flex items-center space-x-3">"
                 <EnvelopeIcon className="w-5 h-5 text-blue-600" />"
 =======
               
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-9862
               <div className="flex items-center space-x-3">
 >>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 <div>
@@ -159,6 +215,7 @@ s discuss your project and create a custom solution.
                   <p className="text-gray-600">kleber@ziontechgroup.com</p>"
                 </div>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className="flex items-center space-x-3">"
                 <MapPinIcon className="w-5 h-5 text-blue-600" />"
@@ -171,13 +228,14 @@ s discuss your project and create a custom solution.
                 <ClockIcon className="w-5 h-5 text-blue-600" />"
 =======
               
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-9862
               <div className="flex items-center space-x-3">
                 <div>
                   <p className="font-medium text-gray-900">Address</p>
                   <p className="text-gray-600">Delaware, United States</p>
                 </div>
               </div>
-              
               <div className="flex items-center space-x-3">
 >>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 <div>
@@ -206,7 +264,11 @@ s discuss your project and create a custom solution.
               <h3 className="font-semibold text-blue-900">Quick Response Guarantee</h3>
 >>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             </div>
+<<<<<<< HEAD
             <p className="text-blue-800">"
+=======
+            <p className="text-blue-800">
+>>>>>>> cursor/automate-test-improve-and-merge-code-9862
               We respond to all inquiries within one business day.
               For urgent matters, call us directly.
             </p>
@@ -223,6 +285,7 @@ s discuss your project and create a custom solution.
               Send us a Message
             </h2>
 <<<<<<< HEAD
+<<<<<<< HEAD
             {submitStatus === 'success' && ('
               <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-md">"
                 <div className="flex items-center">"
@@ -233,6 +296,8 @@ s discuss your project and create a custom solution.
 ll get back to you within one business day.
 =======
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-9862
             {submitStatus === 'success' && (
               <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-md">
                 <div className="flex items-center">
@@ -247,6 +312,7 @@ ll get back to you within one business day.
               </div>
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
             {submitStatus === 'error' && ('
               <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-md">"
                 <div className="flex items-center">"
@@ -255,6 +321,8 @@ ll get back to you within one business day.
                     }
 =======
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-9862
             {submitStatus === 'error' && (
               <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-md">
                 <div className="flex items-center">
@@ -268,6 +336,7 @@ ll get back to you within one business day.
                 </div>
               </div>
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
             <form onSubmit={handleSubmit} className="space-y-6">"
               <div className="grid grid-cols-1 "sm":grid-cols-2 gap-4">"
@@ -310,6 +379,8 @@ type="text""
                   name="company""
 =======
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-9862
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
@@ -343,9 +414,12 @@ type="text""
                   />
                 </div>
               </div>
+<<<<<<< HEAD
             </div>
           </div>
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-9862
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
                   Company
@@ -361,6 +435,9 @@ type="text""
                   placeholder="Your company name"" />
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-9862
               <div>
                 <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">"
                   Service Interest
@@ -403,6 +480,7 @@ id="budget""
                   <option value="discuss">Prefer to discuss</option>"
                 </select>
               </div>
+<<<<<<< HEAD
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">"
                   Project Details *
@@ -467,6 +545,8 @@ type="submit""
                 </div>
               </div>
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-9862
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                   Message *
@@ -482,7 +562,6 @@ type="submit""
                   placeholder="Tell us about your project..."
                 />
               </div>
-
               <button
                 type="submit"
                 disabled={isSubmitting}
