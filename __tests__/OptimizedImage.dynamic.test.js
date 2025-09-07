@@ -77,13 +77,36 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
+<<<<<<< HEAD
+import OptimizedImagedynamic from '../components/OptimizedImage.dynamic';
+
+import React from "react";
+import { render, screen, fireEvent } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import OptimizedImagedynamic from "../components/OptimizedImage.dynamic";
+
+describe("OptimizedImagedynamic", () => {
+  test("renders without crashing", () => {
+    render(<OptimizedImagedynamic />);
+    expect(screen.getByTestId("optimizedimage.dynamic")).toBeInTheDocument();
+=======
 import OptimizedImage from '../components/OptimizedImage';
 
 describe('OptimizedImage', () => {
   test('renders without crashing', () => {
     render(<OptimizedImage />);
     expect(screen.getByTestId('optimizedimage')).toBeInTheDocument();
+>>>>>>> origin/main
   });
+
+});
+
+<<<<<<< HEAD
+
+
+
+
+
   test('displays correct content', () => {
     render(<OptimizedImage />);
     // Add specific content tests based on component

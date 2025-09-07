@@ -148,8 +148,13 @@ import ModernLayout from '../components/ModernLayout';
 describe('ModernLayout', () => {
   test('renders without crashing', () => {
     render(<ModernLayout />);
+<<<<<<< HEAD
+    expect(screen.getByTestId('modernlayout.dynamic')).toBeInTheDocument();
+=======
     expect(screen.getByTestId('modernlayout')).toBeInTheDocument();
+>>>>>>> origin/main
   });
+
   test('displays correct content', () => {
 <<<<<<< HEAD
 <<<<<<< HEAD

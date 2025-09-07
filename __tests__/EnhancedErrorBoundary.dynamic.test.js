@@ -34,7 +34,17 @@ describe('EnhancedErrorBoundary.dynamic.test', () => {
 <<<<<<< HEAD
     render(<EnhancedErrorBoundary />);
     expect(screen.getByTestId('enhancederrorboundary')).toBeInTheDocument();
+>>>>>>> origin/main
   });
+
+});
+
+});
+
+import _React from 'react';  import '@testing-library/jest-dom'; import EnhancedErrorBoundarydynamic from '../components/EnhancedErrorBoundary.dynamic'; describe('EnhancedErrorBoundarydynamic',() => { test('renders without crashing',() => { render(<EnhancedErrorBoundarydynamic />); expect( screen.getByTestId('enhancederrorboundary.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<EnhancedErrorBoundarydynamic />)}); test('handles user interactions',() => { render(<EnhancedErrorBoundarydynamic />)}); test('applies correct styling',() => { render(<EnhancedErrorBoundarydynamic />)})});
+
+});
+});
   test('displays correct content', () => {
     render(<EnhancedErrorBoundary />);
     // Add specific content tests based on component

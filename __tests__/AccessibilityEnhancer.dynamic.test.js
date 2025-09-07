@@ -8,6 +8,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import AccessibilityEnhancerdynamic from '../components/AccessibilityEnhancer.dynamic';
+>>>>>>> origin/main
 describe('AccessibilityEnhancerdynamic', () => {
 =======
 import React from 'react';

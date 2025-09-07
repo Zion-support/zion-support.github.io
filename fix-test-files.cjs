@@ -210,6 +210,7 @@ describe('${fileName}', () => {
 function walkDir(dir) {
   const files = fs.readdirSync(dir);
   let fixedCount = 0;
+>>>>>>> origin/main
   
   for (const file of files) {
     const filePath = path.join(dir, file);

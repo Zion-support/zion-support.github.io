@@ -103,6 +103,7 @@ import '@testing-library/jest-dom';
 import InteractiveElements from '../components/InteractiveElements';
 
 describe('InteractiveElements', () => {
+>>>>>>> origin/main
   test('renders without crashing', () => {
     expect(true).toBe(true);
   });

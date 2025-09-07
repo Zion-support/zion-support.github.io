@@ -48,7 +48,9 @@ describe('App', () => {
 =======
 >>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
     render(<App />);
+
   });
+
   it('handles user interactions', () => {
     render(<App />);
   });

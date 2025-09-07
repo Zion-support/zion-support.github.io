@@ -32,7 +32,17 @@ describe('AnalyticsTracker.dynamic.test', () => {
 <<<<<<< HEAD
     render(<AnalyticsTracker />);
     expect(screen.getByTestId('analyticstracker')).toBeInTheDocument();
+>>>>>>> origin/main
   });
+
+});
+
+});
+
+import _React from 'react';  import '@testing-library/jest-dom'; import AnalyticsTrackerdynamic from '../components/AnalyticsTracker.dynamic'; describe('AnalyticsTrackerdynamic',() => { test('renders without crashing',() => { render(<AnalyticsTrackerdynamic />); expect(screen.getByTestId('analyticstracker.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<AnalyticsTrackerdynamic />)}); test('handles user interactions',() => { render(<AnalyticsTrackerdynamic />)}); test('applies correct styling',() => { render(<AnalyticsTrackerdynamic />)})});
+
+});
+});
   test('displays correct content', () => {
     render(<AnalyticsTracker />);
     // Add specific content tests based on component

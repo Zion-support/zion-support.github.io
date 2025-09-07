@@ -101,6 +101,7 @@ import '@testing-library/jest-dom';
 import ErrorBoundary from '../components/ErrorBoundary';
 
 describe('ErrorBoundary', () => {
+>>>>>>> origin/main
   test('renders without crashing', () => {
     expect(true).toBe(true);
   });

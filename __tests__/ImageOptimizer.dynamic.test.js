@@ -101,6 +101,7 @@ import '@testing-library/jest-dom';
 import ImageOptimizer from '../components/ImageOptimizer';
 
 describe('ImageOptimizer', () => {
+>>>>>>> origin/main
   test('renders without crashing', () => {
     expect(true).toBe(true);
   });

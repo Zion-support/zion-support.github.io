@@ -2,10 +2,6 @@
 <<<<<<< HEAD
 # 🚀 Zion Tech Group - Complete Automation Suite Report
 
-<<<<<<< HEAD
-**Timestamp:** 2025-09-07T03:26:27.171Z
-**Duration:** 628ms
-=======
 **Timestamp:** 2025-09-07T02:53:54.838Z
 **Duration:** 23172ms
 
@@ -331,57 +327,6 @@ SyntaxError: Invalid or unexpected token
 
 Node.js v22.16.0
 
-<<<<<<< HEAD
-- ESLint: Command failed: npm run lint
-npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
-npm warn config `--include=optional` to include them.
-npm warn config
-npm warn config       Default value does install optional deps unless otherwise omitted.
-node:internal/modules/cjs/loader:1404
-  throw err;
-  ^
-
-Error: Cannot find module '/workspace/node_modules/.bin/eslint'
-    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
-    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
-    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
-    at Function._load (node:internal/modules/cjs/loader:1211:37)
-    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
-    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
-    at node:internal/main/run_main_module:36:49 {
-  code: 'MODULE_NOT_FOUND',
-  requireStack: []
-}
-
-Node.js v22.16.0
-
-- TypeScript: Command failed: npm run type-check
-npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
-npm warn config `--include=optional` to include them.
-npm warn config
-npm warn config       Default value does install optional deps unless otherwise omitted.
-node:internal/modules/cjs/loader:1404
-  throw err;
-  ^
-
-Error: Cannot find module '/workspace/node_modules/.bin/tsc'
-    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
-    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
-    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
-    at Function._load (node:internal/modules/cjs/loader:1211:37)
-    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
-    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
-    at node:internal/main/run_main_module:36:49 {
-  code: 'MODULE_NOT_FOUND',
-  requireStack: []
-}
-
-Node.js v22.16.0
-
-- Build: Command failed: npm run build
-=======
 - seo-enhancer.js failed: Command failed: node scripts/seo-enhancer.js
 file:///workspace/scripts/seo-enhancer.js:2
 ursor/automate-test-improve-and-merge-code-646c;
@@ -441,16 +386,10 @@ Node.js v22.16.0
 >>>>>>> origin/main
 >>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
 >>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> origin/main
 npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
 npm warn config `--include=optional` to include them.
 npm warn config
 npm warn config       Default value does install optional deps unless otherwise omitted.
-<<<<<<< HEAD
-sh: 1: next: not found
-
-
-=======
 <<<<<<< HEAD
 node:internal/modules/cjs/loader:1404
   throw err;
@@ -708,7 +647,6 @@ Caused by:
   Import trace for requested module:
 ./app/layout.tsx
 > Build failed because of webpack errors
->>>>>>> origin/main
 ## Warnings
 <<<<<<< HEAD
 - ESLint had issues

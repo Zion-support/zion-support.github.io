@@ -32,7 +32,17 @@ describe('EnhancedSEO.dynamic.test', () => {
 <<<<<<< HEAD
     render(<EnhancedSEO />);
     expect(screen.getByTestId('enhancedseo')).toBeInTheDocument();
+>>>>>>> origin/main
   });
+
+});
+
+});
+
+import _React from 'react';  import '@testing-library/jest-dom'; import EnhancedSEOdynamic from '../components/EnhancedSEO.dynamic'; describe('EnhancedSEOdynamic',() => { test('renders without crashing',() => { render(<EnhancedSEOdynamic />); expect(screen.getByTestId('enhancedseo.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<EnhancedSEOdynamic />)}); test('handles user interactions',() => { render(<EnhancedSEOdynamic />)}); test('applies correct styling',() => { render(<EnhancedSEOdynamic />)})});
+
+});
+});
   test('displays correct content', () => {
     render(<EnhancedSEO />);
     // Add specific content tests based on component

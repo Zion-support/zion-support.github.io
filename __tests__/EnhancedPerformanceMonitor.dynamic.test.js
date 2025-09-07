@@ -34,7 +34,17 @@ describe('EnhancedPerformanceMonitor.dynamic.test', () => {
 <<<<<<< HEAD
     render(<EnhancedPerformanceMonitor />);
     expect(screen.getByTestId('enhancedperformancemonitor')).toBeInTheDocument();
+>>>>>>> origin/main
   });
+
+});
+
+});
+
+import _React from 'react';  import '@testing-library/jest-dom'; import EnhancedPerformanceMonitordynamic from '../components/EnhancedPerformanceMonitor.dynamic'; describe('EnhancedPerformanceMonitordynamic',() => { test('renders without crashing',() => { render(<EnhancedPerformanceMonitordynamic />); expect( screen.getByTestId('enhancedperformancemonitor.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<EnhancedPerformanceMonitordynamic />)}); test('handles user interactions',() => { render(<EnhancedPerformanceMonitordynamic />)}); test('applies correct styling',() => { render(<EnhancedPerformanceMonitordynamic />)})});
+
+});
+});
   test('displays correct content', () => {
     render(<EnhancedPerformanceMonitor />);
     // Add specific content tests based on component

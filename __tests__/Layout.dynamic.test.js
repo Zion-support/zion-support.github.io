@@ -77,13 +77,36 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
+<<<<<<< HEAD
+import Layoutdynamic from '../components/Layout.dynamic';
+
+import React from "react";
+import { render, screen, fireEvent } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import Layoutdynamic from "../components/Layout.dynamic";
+
+describe("Layoutdynamic", () => {
+  test("renders without crashing", () => {
+    render(<Layoutdynamic />);
+    expect(screen.getByTestId("layout.dynamic")).toBeInTheDocument();
+=======
 import Layout from '../components/Layout';
 
 describe('Layout', () => {
   test('renders without crashing', () => {
     render(<Layout />);
     expect(screen.getByTestId('layout')).toBeInTheDocument();
+>>>>>>> origin/main
   });
+
+});
+
+<<<<<<< HEAD
+
+
+
+
+
   test('displays correct content', () => {
     render(<Layout />);
     // Add specific content tests based on component

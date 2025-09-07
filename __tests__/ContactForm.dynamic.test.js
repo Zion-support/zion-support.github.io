@@ -32,7 +32,17 @@ describe('ContactForm.dynamic.test', () => {
 <<<<<<< HEAD
     render(<ContactForm />);
     expect(screen.getByTestId('contactform')).toBeInTheDocument();
+>>>>>>> origin/main
   });
+
+});
+
+});
+
+import _React from 'react';  import '@testing-library/jest-dom'; import ContactFormdynamic from '../components/ContactForm.dynamic'; describe('ContactFormdynamic',() => { test('renders without crashing',() => { render(<ContactFormdynamic />); expect(screen.getByTestId('contactform.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ContactFormdynamic />)}); test('handles user interactions',() => { render(<ContactFormdynamic />)}); test('applies correct styling',() => { render(<ContactFormdynamic />)})});
+
+});
+});
   test('displays correct content', () => {
     render(<ContactForm />);
     // Add specific content tests based on component

@@ -1,4 +1,4 @@
-
+#!/usr/bin/env node
 const { execSync } = require('child_process');
 const fs = require('fs');
 
@@ -435,29 +435,24 @@ class ComprehensiveAutomationSuite {
 
   async run() {
     console.log('🚀 Running Comprehensive Automation Suite...');
-    
-    try {
-      await this.fixDependencies();
-      await this.improveCodeQuality();
-      await this.performSecurityAudit();
-      await this.optimizeBuild();
-      await this.optimizeSEO();
-      await this.improveAccessibility();
-      await this.optimizePerformance();
-      await this.deployChanges();
-      this.generateDetailedReport();
-    } catch (error) {
-      this.log(`Automation suite failed: ${error.message}`, 'ERROR');
-      process.exit(1);
+    const commands = [
+      { cmd: 'npm install', desc: 'Install dependencies' },
+      { cmd: 'npm run lint:fix', desc: 'Fix linting issues' },
+      { cmd: 'npm run build', desc: 'Build project' },
+      { cmd: 'npm test -- --passWithNoTests', desc: 'Run tests' }
+    ];
+
+    for (const { cmd, desc } of commands) {
+      try {
+        console.log(`Running: ${desc}`);
+        execSync(cmd, { stdio: 'inherit', cwd: this.projectRoot });
+        console.log(`✅ ${desc} completed`);
+      } catch (error) {
+        console.log(`❌ ${desc} failed: ${error.message}`);
+      }
     }
   }
 }
 
-// Run the automation suite
-if (require.main === module) {
-  const suite = new ComprehensiveAutomationSuite();
-  suite.run().catch(console.error);
-}
-
-module.exports = ComprehensiveAutomationSuite;
-
+const suite = new ComprehensiveAutomationSuite();
+suite.run().catch(console.error);

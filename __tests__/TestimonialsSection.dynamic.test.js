@@ -158,7 +158,26 @@ describe('TestimonialsSection', () => {
   test('renders without crashing', () => {
     render(<TestimonialsSection />);
     expect(screen.getByTestId('testimonialssection')).toBeInTheDocument();
+>>>>>>> origin/main
   });
+
+  test('displays correct content', () => {
+    render(<TestimonialsSectiondynamic />);
+    // Add specific content tests based on component
+  });
+
+  test('handles user interactions', () => {
+    render(<TestimonialsSectiondynamic />);
+    // Add interaction tests based on component functionality
+  });
+
+  test('applies correct styling', () => {
+    render(<TestimonialsSectiondynamic />);
+    // Add styling tests if needed
+  });
+});
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
   test('displays correct content', () => {
     render(<TestimonialsSection />);
     // Add specific content tests based on component

@@ -24,7 +24,6 @@
   "totalDuration": 33886,
   "successfulTasks": 2,
   "totalTasks": 3,
->>>>>>> origin/main
   "results": {
     "Comprehensive Automation Suite": true,
     "Final Automation Suite": false,
@@ -110,21 +109,6 @@
       {
         "script": "scripts/performance-monitor-enhanced.js",
         "category": "performance-monitoring",
-<<<<<<< HEAD
-        "error": "Command failed: node scripts/performance-monitor-enhanced.js\nfile:///workspace/scripts/performance-monitor-enhanced.js:3\nursor/fix-syntax-push-and-merge-to-main-40de;\n                                        ^^\n\nSyntaxError: Invalid or unexpected token\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n"
-      },
-      {
-        "check": "ESLint",
-        "error": "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnode:internal/modules/cjs/loader:1404\n  throw err;\n  ^\n\nError: Cannot find module '/workspace/node_modules/.bin/eslint'\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)\n    at Function._load (node:internal/modules/cjs/loader:1211:37)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49 {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: []\n}\n\nNode.js v22.16.0\n"
-      },
-      {
-        "check": "TypeScript",
-        "error": "Command failed: npm run type-check\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnode:internal/modules/cjs/loader:1404\n  throw err;\n  ^\n\nError: Cannot find module '/workspace/node_modules/.bin/tsc'\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)\n    at Function._load (node:internal/modules/cjs/loader:1211:37)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49 {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: []\n}\n\nNode.js v22.16.0\n"
-      },
-      {
-        "check": "Build",
-        "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n"
-=======
         "error": "Command failed: node scripts/performance-monitor-enhanced.js\n/workspace/scripts/performance-monitor-enhanced.js:3\nursor/fix-syntax-push-and-merge-to-main-40de;\n                                        ^^\n\nSyntaxError: Invalid or unexpected token\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
 =======
         "script": "scripts/advanced-build-optimizer.js",
@@ -147,7 +131,6 @@
         "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at <unknown> (next.config.js:58:1)\n"
 >>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
 >>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> origin/main
       }
     ],
     warnings": [],

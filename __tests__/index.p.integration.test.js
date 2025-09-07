@@ -167,6 +167,7 @@ describe('IndexIntegration', () => {
   test('displays correct content', () => {
     render(<IndexIntegration />);
     // Add specific content tests based on component
+>>>>>>> origin/main
   });
   test('handles user interactions', () => {
     render(<IndexIntegration />);
