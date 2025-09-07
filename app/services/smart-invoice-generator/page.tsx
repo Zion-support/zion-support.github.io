@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const metadata = {
   title: 'Smart Invoice Generator | Zion Tech Group',
   description: 'Intelligent invoice generation with AI capabilities.',
@@ -43,10 +44,32 @@ export default function ServicePage() {
   )
 }
 
+=======
+import React from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Smart Invoice Generator | Zion Tech Group',
+  description: 'Automate your invoicing process with AI-powered smart invoice generation, payment tracking, and financial analytics.',
+  keywords: 'smart invoice generator, invoice automation, payment tracking, financial analytics',
+  authors: [{ name: 'Zion Tech Group' }],
+  openGraph: {
+    title: 'Smart Invoice Generator | Zion Tech Group',
+    description: 'Automate your invoicing process with AI-powered smart invoice generation.',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Smart Invoice Generator | Zion Tech Group',
+    description: 'Automate your invoicing process with AI-powered smart invoice generation.',
+  },
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
 };
 
 export default function SmartInvoiceGeneratorPage() {
   return (
+<<<<<<< HEAD
     <section className="max-w-6xl mx-auto px-4 py-16">
       <h1 className="text-4xl font-bold text-gray-900 mb-6">Smart Invoice Generator</h1>
       <p className="text-xl text-gray-600 mb-12">Automate your invoicing process with AI-powered generation, intelligent payment tracking, and comprehensive financial analytics.</p>
@@ -80,107 +103,58 @@ export default function SmartInvoiceGeneratorPage() {
           ]}
         />
       </div>
+=======
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Smart Invoice Generator</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Automate your invoicing process with AI-powered smart invoice generation, payment tracking, and financial analytics.
+          </p>
+        </div>
 
-      <div className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-xl p-8 mb-16">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">
-          Transform Your Invoicing Process
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="flex items-start">
-            <span className="text-green-500 mr-3 text-xl">✓</span>
-            <div>
-              <h3 className="font-semibold text-gray-900">
-                Reduce Processing Time by 80%
-              </h3>
-              <p className="text-gray-600">
-                Automate invoice creation, sending, and follow-ups
-              </p>
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Key Features</h3>
+            <p className="text-gray-600 mb-4">
+              Advanced features and capabilities for your business needs.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Professional solutions</li>
+              <li>• 24/7 support</li>
+              <li>• Scalable architecture</li>
+            </ul>
           </div>
-          <div className="flex items-start">
-            <span className="text-green-500 mr-3 text-xl">✓</span>
-            <div>
-              <h3 className="font-semibold text-gray-900">
-                Get Paid 30% Faster
-              </h3>
-              <p className="text-gray-600">
-                Automated reminders and easy payment options increase collection
-                rates
-              </p>
-            </div>
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Benefits</h3>
+            <p className="text-gray-600 mb-4">
+              Transform your business with our cutting-edge solutions.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Increased efficiency</li>
+              <li>• Cost savings</li>
+              <li>• Better results</li>
+            </ul>
           </div>
-          <div className="flex items-start">
-            <span className="text-green-500 mr-3 text-xl">✓</span>
-            <div>
-              <h3 className="font-semibold text-gray-900">
-                Professional Branding
-              </h3>
-              <p className="text-gray-600">
-                Customizable templates that reflect your brand identity
-              </p>
-            </div>
-          </div>
-          <div className="flex items-start">
-            <span className="text-green-500 mr-3 text-xl">✓</span>
-            <div>
-              <h3 className="font-semibold text-gray-900">
-                Compliance & Security
-              </h3>
-              <p className="text-gray-600">
-                GDPR compliant with bank-level security and audit trails
-              </p>
-            </div>
+
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Support</h3>
+            <p className="text-gray-600 mb-4">
+              Comprehensive support and maintenance services.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Expert consultation</li>
+              <li>• Training and documentation</li>
+              <li>• Ongoing maintenance</li>
+            </ul>
           </div>
         </div>
       </div>
-
-      <Pricing />
-
-      <div className="mt-16 text-center">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">
-          Ready to Streamline Your Invoicing?
-        </h2>
-        <p className="text-gray-600 mb-6">
-          Start with a free trial and see how much time and money you can save.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="tel:+13024640950"
-            className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
-          <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-colors"
-          >
-            Email Us
-          </a>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function FeatureCard({
-  title,
-  features,
-}: {
-  title: string;
-  features: string[];
-}) {
-  return (
-    <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-sm">
-      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
-      <ul className="space-y-2 text-gray-600">
-        {features.map((f) => (
-          <li key={f} className="flex items-center">
-            <span className="text-green-500 mr-2">•</span> {f}
-          </li>
-        ))}
-      </ul>
     </div>
   );
+<<<<<<< HEAD
 }
 
 function Pricing() {
@@ -271,3 +245,6 @@ function Plan({
   );
 }
 
+=======
+}
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834

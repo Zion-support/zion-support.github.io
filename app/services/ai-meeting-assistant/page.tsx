@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const metadata = {
   title: 'AI Meeting Assistant | Zion Tech Group',
   description: 'AI meeting assistant for enhanced productivity and collaboration.',
@@ -42,131 +43,51 @@ export default function ServicePage() {
     </div>
   )
 }
+=======
+import React from 'react';
+import { Metadata } from 'next';
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
 
-export const metadata = {
-  title: 'AI Meeting Assistant | Zion Tech Group',
-  description:
-    'Transform your meetings with AI-powered transcription, action items, and intelligent insights. Never miss important details again.',
+export const metadata: Metadata = {
+  title: 'Page | Zion Tech Group',
+  description: 'Professional page solutions for your business needs.',
+  keywords: 'page',
+  authors: [{ name: 'Zion Tech Group' }],
+  openGraph: {
+    title: 'Page | Zion Tech Group',
+    description: 'Professional page solutions for your business needs.',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Page | Zion Tech Group',
+    description: 'Professional page solutions for your business needs.',
+  },
 };
 
+<<<<<<< HEAD
 export default function AIMeetingAssistantPage() {
   return (
 
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       <div className="container mx-auto px-4 py-20">
 
+=======
+export default function ServicePage() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional page solutions for your business needs.
+          </p>
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
         </div>
 
-        <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Pricing</h2>
-          <div className="space-y-6">
-            <PricingCard
-              title="Basic"
-              price="$19"
-              period="per month"
-              description="Perfect for individuals and small teams"
-              features={[
-                'Up to 10 hours/month',
-                'Basic transcription',
-                'Action item extraction',
-                'Meeting summaries',
-                'Email support',
-              ]}
-              popular={false}
-            />
-            <PricingCard
-              title="Professional"
-              price="$49"
-              period="per month"
-              description="Ideal for growing teams and departments"
-              features={[
-                'Up to 50 hours/month',
-                'Advanced AI features',
-                'Meeting analytics',
-                'Custom integrations',
-                'Priority support',
-                'Team collaboration',
-              ]}
-              popular={true}
-            />
-            <PricingCard
-              title="Enterprise"
-              price="$149"
-              period="per month"
-              description="For large organizations with advanced needs"
-              features={[
-                'Unlimited hours',
-                'Custom AI models',
-                'Advanced analytics',
-                '24/7 support',
-                'Custom integrations',
-                'Compliance features',
-              ]}
-              popular={false}
-            />
-          </div>
-        </div>
-      </div>
-
-      <div className="bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
-          Transform Your Meeting Culture
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="text-center">
-            <div className="text-4xl mb-4">⏰</div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">
-              Save 2+ Hours Weekly
-            </h3>
-            <p className="text-gray-600">
-              Reduce meeting prep and follow-up time by 60% with automated
-              summaries and action items
-            </p>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl mb-4">🎯</div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">
-              95% Action Item Accuracy
-            </h3>
-            <p className="text-gray-600">
-              Never miss important tasks with AI-powered action item detection
-              and assignment
-            </p>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl mb-4">📈</div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">
-              40% More Productive
-            </h3>
-            <p className="text-gray-600">
-              Teams report 40% increase in meeting productivity and
-              follow-through
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-          Supported Platforms
-        </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <PlatformCard name="Zoom" icon="📹" />
-          <PlatformCard name="Microsoft Teams" icon="💼" />
-          <PlatformCard name="Google Meet" icon="🎥" />
-          <PlatformCard name="Webex" icon="🌐" />
-          <PlatformCard name="Slack" icon="💬" />
-          <PlatformCard name="In-Person" icon="👥" />
-          <PlatformCard name="Phone Calls" icon="📞" />
-          <PlatformCard name="Custom APIs" icon="🔌" />
-        </div>
-      </div>
-
-      <div className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-          Use Cases
-        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
           <UseCaseCard
             icon="💼"
             title="Executive Meetings"
@@ -267,23 +188,45 @@ function PricingCard({
             <h3 className="text-xl font-semibold mb-3">Real-time Transcription</h3>
             <p className="text-gray-600">
               Get instant, accurate transcription of all your meetings with 95% accuracy in multiple languages.
+=======
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Key Features</h3>
+            <p className="text-gray-600 mb-4">
+              Advanced features and capabilities for your business needs.
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
             </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Professional solutions</li>
+              <li>• 24/7 support</li>
+              <li>• Scalable architecture</li>
+            </ul>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <div className="text-3xl mb-4">📝</div>
-            <h3 className="text-xl font-semibold mb-3">Smart Summaries</h3>
-            <p className="text-gray-600">
-              Automatically generate concise meeting summaries highlighting key decisions and outcomes.
+
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Benefits</h3>
+            <p className="text-gray-600 mb-4">
+              Transform your business with our cutting-edge solutions.
             </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Increased efficiency</li>
+              <li>• Cost savings</li>
+              <li>• Better results</li>
+            </ul>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <div className="text-3xl mb-4">✅</div>
-            <h3 className="text-xl font-semibold mb-3">Action Items</h3>
-            <p className="text-gray-600">
-              Extract and track action items automatically, ensuring nothing falls through the cracks.
+
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Support</h3>
+            <p className="text-gray-600 mb-4">
+              Comprehensive support and maintenance services.
             </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Expert consultation</li>
+              <li>• Training and documentation</li>
+              <li>• Ongoing maintenance</li>
+            </ul>
           </div>
         </div>
+<<<<<<< HEAD
       </section>
 
       {/* CTA Section */}
@@ -355,3 +298,9 @@ function PricingCard({
   );
 }
 
+=======
+      </div>
+    </div>
+  );
+}
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834

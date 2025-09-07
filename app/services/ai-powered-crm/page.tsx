@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const metadata = {
   title: 'AI Powered CRM | Zion Tech Group',
   description: 'AI-powered customer relationship management solutions.',
@@ -37,17 +38,32 @@ export default function ServicePage() {
               Round-the-clock support to ensure your ai-powered-crm solutions run smoothly.
             </p>
 
+=======
+import React from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Page | Zion Tech Group',
+  description: 'Professional page solutions for your business needs.',
+  keywords: 'page',
+  authors: [{ name: 'Zion Tech Group' }],
+  openGraph: {
+    title: 'Page | Zion Tech Group',
+    description: 'Professional page solutions for your business needs.',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Page | Zion Tech Group',
+    description: 'Professional page solutions for your business needs.',
+  },
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
 };
 
-interface FeatureCardProps {
-  icon: string;
-  title: string;
-  description: string;
-  benefits: string[];
-}
-
-function FeatureCard({ icon, title, description, benefits }: FeatureCardProps) {
+export default function ServicePage() {
   return (
+<<<<<<< HEAD
     <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
       <div className="text-3xl mb-4">{icon}</div>
       <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
@@ -169,9 +185,19 @@ export default function AIPoweredCRMPage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Revolutionary AI Features</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Our AI-powered CRM goes beyond traditional customer management to provide intelligent insights and automation.
+=======
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional page solutions for your business needs.
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
           </p>
         </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
           <FeatureCard
             icon="🎯"
             title="AI Lead Scoring"
@@ -247,18 +273,45 @@ export default function AIPoweredCRMPage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Transparent Pricing</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Choose the plan that fits your business size and needs. All plans include our core AI features.
+=======
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Key Features</h3>
+            <p className="text-gray-600 mb-4">
+              Advanced features and capabilities for your business needs.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Professional solutions</li>
+              <li>• 24/7 support</li>
+              <li>• Scalable architecture</li>
+            </ul>
           </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-purple-600 mb-2">35%</div>
-            <div className="text-lg font-semibold text-gray-900 mb-1">Higher Conversion</div>
-            <div className="text-sm text-gray-600">Improvement in lead-to-customer conversion</div>
+
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Benefits</h3>
+            <p className="text-gray-600 mb-4">
+              Transform your business with our cutting-edge solutions.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Increased efficiency</li>
+              <li>• Cost savings</li>
+              <li>• Better results</li>
+            </ul>
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
           </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-orange-600 mb-2">50%</div>
-            <div className="text-lg font-semibold text-gray-900 mb-1">Time Saved</div>
-            <div className="text-sm text-gray-600">Reduction in manual administrative tasks</div>
+
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Support</h3>
+            <p className="text-gray-600 mb-4">
+              Comprehensive support and maintenance services.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Expert consultation</li>
+              <li>• Training and documentation</li>
+              <li>• Ongoing maintenance</li>
+            </ul>
           </div>
         </div>
+<<<<<<< HEAD
       </section>
 
       {/* Pricing */}
@@ -495,4 +548,9 @@ function CaseStudy({ company, industry, result, description, metrics }: {
       </div>
     </div>
   )
+=======
+      </div>
+    </div>
+  );
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
 }

@@ -1,13 +1,38 @@
+<<<<<<< HEAD
 export const metadata = {
   title: 'Data Analytics | Zion Tech Group',
   description: 'Advanced data analytics solutions for business intelligence.',
   keywords: 'data-analytics, services, business, technology'
 }
+=======
+import React from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Page | Zion Tech Group',
+  description: 'Professional page solutions for your business needs.',
+  keywords: 'page',
+  authors: [{ name: 'Zion Tech Group' }],
+  openGraph: {
+    title: 'Page | Zion Tech Group',
+    description: 'Professional page solutions for your business needs.',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Page | Zion Tech Group',
+    description: 'Professional page solutions for your business needs.',
+  },
+};
+
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
 export default function ServicePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
+<<<<<<< HEAD
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Data Analytics
           </h1>
@@ -197,10 +222,14 @@ export default function DataAnalyticsPage() {
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             Data Analytics & BI
           </h1>
+=======
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Advanced data analytics, business intelligence, and machine learning solutions to transform raw data into actionable insights.
+            Professional page solutions for your business needs.
           </p>
         </div>
+<<<<<<< HEAD
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-lg p-6">
@@ -217,9 +246,23 @@ export default function DataAnalyticsPage() {
             <h3 className="text-xl font-semibold mb-4">Real-time Analytics</h3>
             <p className="text-gray-600">Get instant insights with our real-time data processing capabilities.</p>
           </div>
+=======
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Key Features</h3>
+            <p className="text-gray-600 mb-4">
+              Advanced features and capabilities for your business needs.
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
             </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Professional solutions</li>
+              <li>• 24/7 support</li>
+              <li>• Scalable architecture</li>
+            </ul>
           </div>
 
+<<<<<<< HEAD
         </div>
       </section>
 
@@ -453,3 +496,33 @@ function CTASection() {}
   );
 }
 
+=======
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Benefits</h3>
+            <p className="text-gray-600 mb-4">
+              Transform your business with our cutting-edge solutions.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Increased efficiency</li>
+              <li>• Cost savings</li>
+              <li>• Better results</li>
+            </ul>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Support</h3>
+            <p className="text-gray-600 mb-4">
+              Comprehensive support and maintenance services.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Expert consultation</li>
+              <li>• Training and documentation</li>
+              <li>• Ongoing maintenance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834

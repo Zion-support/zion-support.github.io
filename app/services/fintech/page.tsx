@@ -1,157 +1,27 @@
-import Link from "next/link";
+import React from 'react';
+import { Metadata } from 'next';
 
-export const metadata = {
-  title:
-    "FinTech Solutions | Zion Tech Group - Digital Banking & Financial Technology",
-  description:
-    "Complete FinTech solutions including digital banking, payment processing, trading platforms, and financial analytics. Bank-grade security and compliance. Starting from $25,000/project.",
+export const metadata: Metadata = {
+  title: 'FinTech Solutions | Zion Tech Group',
+  description: 'Professional FinTech solutions for your business needs.',
+  keywords: 'FinTech, financial technology, payment solutions, banking technology',
+  authors: [{ name: 'Zion Tech Group' }],
+  openGraph: {
+    title: 'FinTech Solutions | Zion Tech Group',
+    description: 'Professional FinTech solutions for your business needs.',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'FinTech Solutions | Zion Tech Group',
+    description: 'Professional FinTech solutions for your business needs.',
+  },
 };
 
 export default function FinTechPage() {
-  const fintechServices = [
-    {
-      title: "Digital Banking Platform",
-      description:
-        "Complete digital banking solution with account management, transfers, and mobile banking",
-      features: [
-        "Account management",
-        "Money transfers",
-        "Mobile banking",
-        "Bill payments",
-      ],
-      pricing: "$50,000/project",
-      icon: "🏦",
-      category: "Banking",
-    },
-    {
-      title: "Payment Processing System",
-      description:
-        "Secure payment gateway with multiple payment methods and fraud detection",
-      features: [
-        "Multiple payment methods",
-        "Fraud detection",
-        "PCI compliance",
-        "Real-time processing",
-      ],
-      pricing: "$35,000/project",
-      icon: "💳",
-      category: "Payments",
-    },
-    {
-      title: "Trading Platform",
-      description:
-        "Advanced trading platform with real-time data, charts, and order management",
-      features: [
-        "Real-time data",
-        "Trading charts",
-        "Order management",
-        "Risk management",
-      ],
-      pricing: "$75,000/project",
-      icon: "📈",
-      category: "Trading",
-    },
-    {
-      title: "Cryptocurrency Exchange",
-      description:
-        "Secure cryptocurrency exchange with wallet management and trading features",
-      features: [
-        "Multi-coin support",
-        "Wallet management",
-        "Trading pairs",
-        "Security protocols",
-      ],
-      pricing: "$100,000/project",
-      icon: "₿",
-      category: "Crypto",
-    },
-    {
-      title: "Lending Platform",
-      description:
-        "Peer-to-peer lending platform with risk assessment and automated underwriting",
-      features: [
-        "Risk assessment",
-        "Automated underwriting",
-        "Loan management",
-        "Credit scoring",
-      ],
-      pricing: "$60,000/project",
-      icon: "💰",
-      category: "Lending",
-    },
-    {
-      title: "Insurance Technology",
-      description:
-        "InsurTech platform with policy management, claims processing, and risk assessment",
-      features: [
-        "Policy management",
-        "Claims processing",
-        "Risk assessment",
-        "Customer portal",
-      ],
-      pricing: "$45,000/project",
-      icon: "🛡️",
-      category: "Insurance",
-    },
-    {
-      title: "Wealth Management",
-      description:
-        "Digital wealth management platform with portfolio management and robo-advisory",
-      features: [
-        "Portfolio management",
-        "Robo-advisory",
-        "Goal tracking",
-        "Performance analytics",
-      ],
-      pricing: "$55,000/project",
-      icon: "📊",
-      category: "Wealth",
-    },
-    {
-      title: "RegTech Solutions",
-      description:
-        "Regulatory technology for compliance monitoring and reporting automation",
-      features: [
-        "Compliance monitoring",
-        "Automated reporting",
-        "Risk management",
-        "Audit trails",
-      ],
-      pricing: "$40,000/project",
-      icon: "📜",
-      category: "Compliance",
-    },
-    {
-      title: "Blockchain Solutions",
-      description:
-        "Blockchain-based financial solutions with smart contracts and DeFi protocols",
-      features: [
-        "Smart contracts",
-        "DeFi protocols",
-        "Tokenization",
-        "Cross-chain support",
-      ],
-      pricing: "$65,000/project",
-      icon: "⛓️",
-      category: "Blockchain",
-    },
-    {
-      title: "Financial Analytics",
-      description:
-        "Advanced financial analytics with AI-powered insights and predictive modeling",
-      features: [
-        "AI insights",
-        "Predictive modeling",
-        "Risk analytics",
-        "Custom dashboards",
-      ],
-      pricing: "$30,000/project",
-      icon: "📈",
-      category: "Analytics",
-    },
-  ];
-
   return (
+<<<<<<< HEAD
 <div className="animate-fade-in">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-emerald-50 to-blue-100">
@@ -534,13 +404,18 @@ export default function FinTechPage() {
           </div>
           <p className="text-sm text-gray-500 mt-4">
             Address: 364 E Main St STE 1008, Middletown DE 19709
+=======
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">FinTech Solutions</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional FinTech solutions for your business needs.
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
           </p>
         </div>
-      </section>
-    </div>
-  );
-}
 
+<<<<<<< HEAD
 function FinTechServiceCard({
   title,
   description,
@@ -624,106 +499,49 @@ function FinTechServiceCard({
         <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
           FinTech Solutions
         </h2>
+=======
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {fintechServices.map((service, index) => (
-            <FinTechServiceCard key={index} service={service} />
-          ))}
-        </div>
-      </div>
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Key Features</h3>
+            <p className="text-gray-600 mb-4">
+              Advanced features and capabilities for your business needs.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Professional solutions</li>
+              <li>• 24/7 support</li>
+              <li>• Scalable architecture</li>
+            </ul>
+          </div>
 
-      {/* Compliance & Security */}
-      <div className="bg-gray-50 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-          Compliance & Security Standards
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <ComplianceCard
-            title="PCI DSS"
-            description="Payment Card Industry Data Security Standard compliance"
-            icon="💳"
-          />
-          <ComplianceCard
-            title="SOX"
-            description="Sarbanes-Oxley Act compliance for financial reporting"
-            icon="📊"
-          />
-          <ComplianceCard
-            title="GDPR"
-            description="General Data Protection Regulation compliance"
-            icon="🔒"
-          />
-          <ComplianceCard
-            title="ISO 27001"
-            description="Information security management system certification"
-            icon="🛡️"
-          />
-        </div>
-      </div>
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Benefits</h3>
+            <p className="text-gray-600 mb-4">
+              Transform your business with our cutting-edge solutions.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Increased efficiency</li>
+              <li>• Cost savings</li>
+              <li>• Better results</li>
+            </ul>
+          </div>
 
-      {/* Technology Stack */}
-      <div className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-          FinTech Technology Stack
-        </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <TechStackItem
-            name="Java/Spring Boot"
-            description="Backend Development"
-          />
-          <TechStackItem
-            name="React/Angular"
-            description="Frontend Development"
-          />
-          <TechStackItem
-            name="PostgreSQL/Oracle"
-            description="Database Systems"
-          />
-          <TechStackItem
-            name="Redis/Hazelcast"
-            description="Caching & Messaging"
-          />
-          <TechStackItem name="Apache Kafka" description="Event Streaming" />
-          <TechStackItem
-            name="Docker/Kubernetes"
-            description="Containerization"
-          />
-          <TechStackItem name="AWS/Azure" description="Cloud Infrastructure" />
-          <TechStackItem
-            name="Stripe/PayPal"
-            description="Payment Processing"
-          />
-        </div>
-      </div>
-
-      {/* CTA Section */}
-      <div className="text-center bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-xl p-8">
-        <h2 className="text-3xl font-bold mb-4">
-          Ready to Build Your FinTech Solution?
-        </h2>
-        <p className="text-xl mb-6 max-w-2xl mx-auto">
-          Let's discuss your financial technology needs and create a secure,
-          scalable solution.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="tel:+13024640950"
-            className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
-          <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
-          >
-            Email Us
-          </a>
-        </div>
-        <div className="mt-6 text-sm">
-          <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Support</h3>
+            <p className="text-gray-600 mb-4">
+              Comprehensive support and maintenance services.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Expert consultation</li>
+              <li>• Training and documentation</li>
+              <li>• Ongoing maintenance</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 
 function FinTechServiceCard({ service }: { service: any }) {
@@ -811,3 +629,6 @@ function FinTechPricingCard({
     </div>
   );
 }
+=======
+}
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834

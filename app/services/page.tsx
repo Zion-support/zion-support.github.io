@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 export const metadata = {
   title: 'Services | Zion Tech Group',
@@ -646,25 +647,45 @@ import React from 'react';
 import Link from 'next/link';
 
 import { Metadata } from 'next';
+=======
+import React from 'react';
+import { Metadata } from 'next';
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
 
 export const metadata: Metadata = {
-  title: 'Services | Zion Tech Group',
-  description: 'Explore our comprehensive range of AI, micro SaaS, and IT services designed to transform your business.',
+  title: 'Page | Zion Tech Group',
+  description: 'Professional page solutions for your business needs.',
+  keywords: 'page',
+  authors: [{ name: 'Zion Tech Group' }],
+  openGraph: {
+    title: 'Page | Zion Tech Group',
+    description: 'Professional page solutions for your business needs.',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Page | Zion Tech Group',
+    description: 'Professional page solutions for your business needs.',
+  },
 };
 
+<<<<<<< HEAD
 export default function ServicesPage() {
+=======
+export default function ServicePage() {
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      <div className="container mx-auto px-4 py-16">
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Our Services
-          </h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive technology solutions designed to transform your business and drive real results.
+            Professional page solutions for your business needs.
           </p>
         </div>
 
+<<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {serviceCategories.map((service, index) => (
             <Link
@@ -740,96 +761,59 @@ export default function ServicesPage() {
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               From AI-powered automation to complete IT infrastructure, we provide end-to-end solutions for your business needs.
+=======
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Key Features</h3>
+            <p className="text-gray-600 mb-4">
+              Advanced features and capabilities for your business needs.
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
             </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Professional solutions</li>
+              <li>• 24/7 support</li>
+              <li>• Scalable architecture</li>
+            </ul>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow border border-gray-100">
-                <div className="text-4xl mb-6">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{service.name}</h3>
-                <p className="text-gray-600 mb-6">{service.description}</p>
-                
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-600">
-                      <span className="text-green-500 mr-2">✓</span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                
-                <div className="border-t pt-4">
-                  <p className="text-lg font-semibold text-blue-600 mb-4">{service.pricing}</p>
-                  <Link
-                    href={service.href}
-                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
-                  >
-                    Learn More <span className="ml-1">→</span>
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Additional Services */}
-      <section className="py-16 bg-gray-50 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Additional Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {addOns.map((addon, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6 text-center">
-                <div className="text-3xl mb-4">{addon.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{addon.name}</h3>
-                <div className="flex items-baseline justify-center mb-4">
-                  <span className="text-2xl font-bold text-white">{addon.price}</span>
-                  <span className="text-gray-400 ml-1">{addon.period}</span>
-                </div>
-                <p className="text-gray-300 text-sm mb-6">{addon.description}</p>
-                <a
-                  href="/contact"
-                  className="bg-slate-700 text-white hover:bg-slate-600 px-6 py-2 rounded-lg font-semibold text-sm transition-all"
-                >
-                  Learn More
-                </a>
-              </div>
-            ))}
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Benefits</h3>
+            <p className="text-gray-600 mb-4">
+              Transform your business with our cutting-edge solutions.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Increased efficiency</li>
+              <li>• Cost savings</li>
+              <li>• Better results</li>
+            </ul>
           </div>
-        </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="bg-blue-700 text-white py-16 px-4 sm:px-6 lg:px-8 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-            Ready to Get Started?
-          </h2>
-          <p className="text-lg sm:text-xl mb-8 opacity-90">
-            Contact us today to discuss your project requirements and get a customized solution.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
-            <a
-              href="tel:+13024640950"
-              className="bg-white text-blue-700 hover:bg-gray-100 px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105"
-            >
-              Call Us: +1 302 464 0950
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-700 px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105"
-            >
-              Email Us
-            </a>
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Support</h3>
+            <p className="text-gray-600 mb-4">
+              Comprehensive support and maintenance services.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Expert consultation</li>
+              <li>• Training and documentation</li>
+              <li>• Ongoing maintenance</li>
+            </ul>
           </div>
+<<<<<<< HEAD
           <p className="text-sm mt-8 opacity-80">
             364 E Main St STE 1008, Middletown DE 19709
           </p>
 
+=======
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
         </div>
-      </section>
+      </div>
     </div>
+<<<<<<< HEAD
   )
 }
 
+=======
+  );
+}
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834

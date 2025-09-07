@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const metadata = {
   title: 'AI Code Reviewer | Zion Tech Group',
   description: 'Professional AI code reviewer solutions for your business needs.',
@@ -44,9 +45,39 @@ export default function ServicePage() {
 }
             Ai Code Reviewer
           </h1>
+=======
+import React from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'AI Code Reviewer | Zion Tech Group',
+  description: 'Professional AI code reviewer solutions for automated code analysis, quality assurance, and best practices enforcement.',
+  keywords: 'AI code reviewer, code analysis, quality assurance, automated code review, software development',
+  authors: [{ name: 'Zion Tech Group' }],
+  openGraph: {
+    title: 'AI Code Reviewer | Zion Tech Group',
+    description: 'Professional AI code reviewer solutions for automated code analysis and quality assurance.',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AI Code Reviewer | Zion Tech Group',
+    description: 'Professional AI code reviewer solutions for automated code analysis and quality assurance.',
+  },
+};
+
+export default function AICodeReviewerPage() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">AI Code Reviewer</h1>
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Transform your business with our advanced ai code reviewer solutions.
+            Professional AI code reviewer solutions for automated code analysis, quality assurance, and best practices enforcement.
           </p>
+<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center">
               Get Started
@@ -105,9 +136,11 @@ export default function ServicePage() {
               popular={false}
             />
           </div>
+=======
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
         </div>
-      </div>
 
+<<<<<<< HEAD
 <div className="bg-gray-50 rounded-xl p-8 mb-16">
         <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
           How It Works
@@ -175,21 +208,50 @@ export default function ServicePage() {
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
               Contact us today to discuss your ai code reviewer requirements 
               and get a custom solution tailored to your needs.
+=======
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Automated Analysis</h3>
+            <p className="text-gray-600 mb-4">
+              AI-powered code analysis that identifies issues, bugs, and potential improvements.
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
-              >
-                Get Started
-                <ArrowRightIcon className="h-5 w-5 ml-2" />
-              </Link>
-              <Link
-                href="/services"
-                className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors"
-              >
-                View All Services
-              </Link>
-            </div>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Bug detection</li>
+              <li>• Performance optimization</li>
+              <li>• Security vulnerabilities</li>
+            </ul>
           </div>
 
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Quality Assurance</h3>
+            <p className="text-gray-600 mb-4">
+              Ensure code quality and adherence to best practices across your development team.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Code standards enforcement</li>
+              <li>• Best practices recommendations</li>
+              <li>• Documentation requirements</li>
+            </ul>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Integration</h3>
+            <p className="text-gray-600 mb-4">
+              Seamlessly integrate with your existing development workflow and CI/CD pipeline.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• CI/CD integration</li>
+              <li>• IDE plugins</li>
+              <li>• Real-time feedback</li>
+            </ul>
+          </div>
+<<<<<<< HEAD
+
+=======
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834

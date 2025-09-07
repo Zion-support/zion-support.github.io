@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const metadata = {
   title: 'AI Project Management Tool | Zion Tech Group',
   description: 'Streamline your projects with AI-powered project management, automated task assignment, and intelligent resource optimization.',
@@ -24,183 +25,78 @@ export const metadata = {
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Intelligent Project Management</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Our AI-powered platform goes beyond traditional project management with smart automation and predictive insights.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <FeatureCard
-            icon="🎯"
-            title="AI Task Prioritization"
-            description="Automatically prioritize tasks based on deadlines, dependencies, team capacity, and business impact using machine learning."
-            benefits={[
-              "Smart task ranking",
-              "Dependency analysis",
-              "Resource optimization",
-              "Deadline management",
-              "Impact assessment"
-            ]}
-          />
-          <FeatureCard
-            icon="📊"
-            title="Predictive Analytics"
-            description="Forecast project completion dates, identify potential bottlenecks, and predict resource needs with advanced AI models."
-            benefits={[
-              "Completion forecasting",
-              "Bottleneck detection",
-              "Resource prediction",
-              "Risk assessment",
-              "Timeline optimization"
-            ]}
-          />
-          <FeatureCard
-            icon="🤖"
-            title="Smart Automation"
-            description="Automate routine project tasks, status updates, and notifications based on project progress and team behavior patterns."
-            benefits={[
-              "Automated status updates",
-              "Smart notifications",
-              "Task assignment",
-              "Progress tracking",
-              "Workflow automation"
-            ]}
-          />
-          <FeatureCard
-            icon="👥"
-            title="Team Optimization"
-            description="AI-driven team member matching, workload balancing, and skill-based task assignment for maximum efficiency."
-            benefits={[
-              "Skill-based matching",
-              "Workload balancing",
-              "Team performance insights",
-              "Capacity planning",
-              "Collaboration optimization"
-            ]}
-          />
-          <FeatureCard
-            icon="📈"
-            title="Performance Analytics"
-            description="Deep insights into team productivity, project velocity, and individual performance with actionable recommendations."
-            benefits={[
-              "Productivity metrics",
-              "Velocity tracking",
-              "Performance insights",
-              "Improvement suggestions",
-              "ROI analysis"
-            ]}
-          />
-          <FeatureCard
-            icon="🔮"
-            title="Risk Prediction"
-            description="Identify potential project risks, resource conflicts, and timeline issues before they become problems."
-            benefits={[
-              "Risk identification",
-              "Early warning system",
-              "Mitigation strategies",
-              "Resource conflict detection",
-              "Timeline risk analysis"
-            ]}
-          />
-        </div>
-      </section>
+=======
+import React from 'react';
+import { Metadata } from 'next';
 
-      {/* ROI Section */}
-      <section className="py-12 bg-gray-50 rounded-lg">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Proven Results</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Our AI project management platform delivers measurable improvements in team productivity and project success rates.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-green-600 mb-2">45%</div>
-            <div className="text-lg font-semibold text-gray-900 mb-1">Productivity Increase</div>
-            <div className="text-sm text-gray-600">Average improvement in team efficiency</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-blue-600 mb-2">30%</div>
-            <div className="text-lg font-semibold text-gray-900 mb-1">Faster Delivery</div>
-            <div className="text-sm text-gray-600">Reduction in project completion time</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-purple-600 mb-2">60%</div>
-            <div className="text-lg font-semibold text-gray-900 mb-1">Risk Reduction</div>
-            <div className="text-sm text-gray-600">Fewer project delays and overruns</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-orange-600 mb-2">25%</div>
-            <div className="text-lg font-semibold text-gray-900 mb-1">Cost Savings</div>
-            <div className="text-sm text-gray-600">Reduction in project management overhead</div>
-          </div>
-        </div>
-      </section>
+export const metadata: Metadata = {
+  title: 'AI Project Management | Zion Tech Group',
+  description: 'Professional AI project management solutions for your business needs.',
+  keywords: 'AI project management, project automation, team collaboration, project tracking',
+  authors: [{ name: 'Zion Tech Group' }],
+  openGraph: {
+    title: 'AI Project Management | Zion Tech Group',
+    description: 'Professional AI project management solutions for your business needs.',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AI Project Management | Zion Tech Group',
+    description: 'Professional AI project management solutions for your business needs.',
+  },
+};
 
-      {/* Use Cases */}
-      <section className="py-12">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Perfect For</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Our AI project management platform is designed for teams and organizations of all sizes.
+export default function AIProjectManagementPage() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">AI Project Management</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional AI project management solutions for your business needs.
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
           </p>
         </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
-            <div className="text-3xl mb-4">🏢</div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Enterprise Teams</h3>
-            <p className="text-gray-600 mb-4">Large organizations managing complex, multi-team projects with advanced resource allocation needs.</p>
-            <ul className="space-y-2">
-              <li className="text-sm text-gray-600 flex items-center">
-                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                Multi-team coordination
-              </li>
-              <li className="text-sm text-gray-600 flex items-center">
-                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                Advanced resource management
-              </li>
-              <li className="text-sm text-gray-600 flex items-center">
-                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                Enterprise integrations
-              </li>
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Key Features</h3>
+            <p className="text-gray-600 mb-4">
+              Advanced features and capabilities for your business needs.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Professional solutions</li>
+              <li>• 24/7 support</li>
+              <li>• Scalable architecture</li>
             </ul>
           </div>
-          <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
-            <div className="text-3xl mb-4">🚀</div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Startups & SMBs</h3>
-            <p className="text-gray-600 mb-4">Growing companies that need efficient project management without the complexity of enterprise tools.</p>
-            <ul className="space-y-2">
-              <li className="text-sm text-gray-600 flex items-center">
-                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                Quick setup & onboarding
-              </li>
-              <li className="text-sm text-gray-600 flex items-center">
-                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                Cost-effective scaling
-              </li>
-              <li className="text-sm text-gray-600 flex items-center">
-                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                Agile methodologies
-              </li>
+
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Benefits</h3>
+            <p className="text-gray-600 mb-4">
+              Transform your business with our cutting-edge solutions.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Increased efficiency</li>
+              <li>• Cost savings</li>
+              <li>• Better results</li>
             </ul>
           </div>
-          <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
-            <div className="text-3xl mb-4">🎨</div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Creative Agencies</h3>
-            <p className="text-gray-600 mb-4">Marketing and creative agencies managing multiple client projects with varying timelines and requirements.</p>
-            <ul className="space-y-2">
-              <li className="text-sm text-gray-600 flex items-center">
-                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                Client project tracking
-              </li>
-              <li className="text-sm text-gray-600 flex items-center">
-                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                Resource allocation
-              </li>
-              <li className="text-sm text-gray-600 flex items-center">
-                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                Deadline management
-              </li>
+
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Support</h3>
+            <p className="text-gray-600 mb-4">
+              Comprehensive support and maintenance services.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Expert consultation</li>
+              <li>• Training and documentation</li>
+              <li>• Ongoing maintenance</li>
             </ul>
           </div>
         </div>
+<<<<<<< HEAD
       </section>
 
       {/* Pricing */}
@@ -404,3 +300,9 @@ function Plan({ name, price, features, popular = false }: { name: string; price:
     </div>
   );
 }
+=======
+      </div>
+    </div>
+  );
+}
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834

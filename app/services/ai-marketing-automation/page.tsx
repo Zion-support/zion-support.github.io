@@ -1,27 +1,50 @@
+<<<<<<< HEAD
 export const metadata = {
   title: 'AI Marketing Automation | Zion Tech Group',
   description: 'AI-powered marketing automation for better campaign performance.',
   keywords: 'ai-marketing-automation, services, business, technology'
 }
+=======
+import React from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Page | Zion Tech Group',
+  description: 'Professional page solutions for your business needs.',
+  keywords: 'page',
+  authors: [{ name: 'Zion Tech Group' }],
+  openGraph: {
+    title: 'Page | Zion Tech Group',
+    description: 'Professional page solutions for your business needs.',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Page | Zion Tech Group',
+    description: 'Professional page solutions for your business needs.',
+  },
+};
+
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
 export default function ServicePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI Marketing Automation
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            AI-powered marketing automation for better campaign performance.
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional page solutions for your business needs.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
-            <p className="text-gray-300">
-              Tailored ai-marketing-automation solutions designed for your specific business requirements.
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Key Features</h3>
+            <p className="text-gray-600 mb-4">
+              Advanced features and capabilities for your business needs.
             </p>
+<<<<<<< HEAD
           </div>
           
           <div className="bg-gray-800 rounded-lg p-6">
@@ -716,163 +739,44 @@ export default function AIMarketingAutomationPage() {
                 <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
                 A/B testing automation
               </li>
+=======
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Professional solutions</li>
+              <li>• 24/7 support</li>
+              <li>• Scalable architecture</li>
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
             </ul>
           </div>
-          <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
-            <div className="text-3xl mb-4">📱</div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Social Media</h3>
-            <p className="text-gray-600 mb-4">Automated social media management with AI content creation and scheduling.</p>
-            <ul className="space-y-2">
-              <li className="text-sm text-gray-600 flex items-center">
-                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                Content generation
-              </li>
-              <li className="text-sm text-gray-600 flex items-center">
-                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                Optimal posting times
-              </li>
-              <li className="text-sm text-gray-600 flex items-center">
-                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                Engagement optimization
-              </li>
+
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Benefits</h3>
+            <p className="text-gray-600 mb-4">
+              Transform your business with our cutting-edge solutions.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Increased efficiency</li>
+              <li>• Cost savings</li>
+              <li>• Better results</li>
             </ul>
           </div>
-          <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
-            <div className="text-3xl mb-4">💬</div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">SMS Marketing</h3>
-            <p className="text-gray-600 mb-4">Intelligent SMS campaigns with personalization and compliance management.</p>
-            <ul className="space-y-2">
-              <li className="text-sm text-gray-600 flex items-center">
-                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                Personalized messages
-              </li>
-              <li className="text-sm text-gray-600 flex items-center">
-                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                Compliance automation
-              </li>
-              <li className="text-sm text-gray-600 flex items-center">
-                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                Delivery optimization
-              </li>
+
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Support</h3>
+            <p className="text-gray-600 mb-4">
+              Comprehensive support and maintenance services.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Expert consultation</li>
+              <li>• Training and documentation</li>
+              <li>• Ongoing maintenance</li>
             </ul>
           </div>
         </div>
-      </section>
-
-      {/* Pricing */}
-      <section className="py-12">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Pricing Plans</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Choose the plan that fits your marketing needs and team size. All plans include our core AI features.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <PricingTier
-            name="Starter"
-            price="$199"
-            period="month"
-            description="Perfect for small businesses and startups"
-            features={[
-              "Up to 5,000 contacts",
-              "Basic AI automation",
-              "Email marketing",
-              "Social media posting",
-              "Basic analytics",
-              "Email support"
-            ]}
-          />
-          <PricingTier
-            name="Professional"
-            price="$499"
-            period="month"
-            description="Most popular for growing businesses"
-            features={[
-              "Up to 25,000 contacts",
-              "Advanced AI features",
-              "Multi-channel campaigns",
-              "Predictive analytics",
-              "A/B testing",
-              "Priority support",
-              "API access"
-            ]}
-            popular={true}
-          />
-          <PricingTier
-            name="Enterprise"
-            price="$1,299"
-            period="month"
-            description="For large organizations with complex needs"
-            features={[
-              "Unlimited contacts",
-              "Custom AI models",
-              "White-label options",
-              "Dedicated support",
-              "Advanced integrations",
-              "Custom development",
-              "On-premise deployment"
-            ]}
-          />
-        </div>
-      </section>
-
-      {/* Integration Section */}
-      <section className="py-12 bg-gray-50 rounded-lg">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Seamless Integrations</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Connect with your existing marketing tools and platforms for a unified marketing experience.
-          </p>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-          {[
-            { name: "HubSpot", icon: "🟠" },
-            { name: "Salesforce", icon: "☁️" },
-            { name: "Mailchimp", icon: "📬" },
-            { name: "Facebook Ads", icon: "📘" },
-            { name: "Google Ads", icon: "🔍" },
-            { name: "LinkedIn", icon: "💼" },
-            { name: "Twitter", icon: "🐦" },
-            { name: "Instagram", icon: "📷" },
-            { name: "Shopify", icon: "🛍️" },
-            { name: "WooCommerce", icon: "🛒" },
-            { name: "Zapier", icon: "⚡" },
-            { name: "Webhooks", icon: "🔗" }
-          ].map((integration, index) => (
-            <div key={index} className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-200">
-              <div className="text-2xl mb-2">{integration.icon}</div>
-              <h3 className="font-semibold text-gray-900 text-sm">{integration.name}</h3>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Contact CTA */}
-      <section className="py-12 bg-blue-600 rounded-lg text-white text-center">
-        <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Marketing?</h2>
-        <p className="text-xl mb-8 max-w-2xl mx-auto">
-          Join thousands of businesses already using our AI-powered marketing automation platform to boost conversions and grow revenue.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="mailto:kleber@ziontechgroup.com?subject=AI Marketing Automation Inquiry"
-            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-          >
-            Start Free Trial
-          </a>
-          <a
-            href="tel:+13024640950"
-            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
-        </div>
-        <div className="mt-8 text-sm">
-          <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-          <p>📧 kleber@ziontechgroup.com</p>
-        </div>
-      </section>
+      </div>
     </div>
   );
+<<<<<<< HEAD
 
+=======
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
 }

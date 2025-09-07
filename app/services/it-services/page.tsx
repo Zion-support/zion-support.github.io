@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const metadata = {
   title: 'IT Services | Zion Tech Group',
   description: 'Comprehensive IT services for business technology needs.',
@@ -51,10 +52,13 @@ export const metadata = {
   description: 'Service description for the Zion Tech Group service page.',
   keywords: 'service keywords, relevant terms',
 
+=======
+import React from 'react';
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
 import { Metadata } from 'next';
-import Link from 'next/link';
 
 export const metadata: Metadata = {
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 
@@ -92,15 +96,33 @@ export const metadata = {
   title: 'IT Services | Zion Tech Group - Complete IT Solutions',
   description: 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, infrastructure management, and 24/7 support. Transform your IT infrastructure with expert solutions.',
 
+=======
+  title: 'Page | Zion Tech Group',
+  description: 'Professional page solutions for your business needs.',
+  keywords: 'page',
+  authors: [{ name: 'Zion Tech Group' }],
+  openGraph: {
+    title: 'Page | Zion Tech Group',
+    description: 'Professional page solutions for your business needs.',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Page | Zion Tech Group',
+    description: 'Professional page solutions for your business needs.',
+  },
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
 };
 
-export default function ITServicesPage() {
+export default function ServicePage() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">IT Services</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+<<<<<<< HEAD
             Comprehensive IT services including cloud migration, DevOps, cybersecurity, 
             infrastructure management, and digital transformation. Enterprise-grade solutions for modern businesses.
           </p>
@@ -2910,3 +2932,50 @@ function ITServiceCard({ title, description, icon, pricing, features }: {
   );
 }
 
+=======
+            Professional page solutions for your business needs.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Key Features</h3>
+            <p className="text-gray-600 mb-4">
+              Advanced features and capabilities for your business needs.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Professional solutions</li>
+              <li>• 24/7 support</li>
+              <li>• Scalable architecture</li>
+            </ul>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Benefits</h3>
+            <p className="text-gray-600 mb-4">
+              Transform your business with our cutting-edge solutions.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Increased efficiency</li>
+              <li>• Cost savings</li>
+              <li>• Better results</li>
+            </ul>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Support</h3>
+            <p className="text-gray-600 mb-4">
+              Comprehensive support and maintenance services.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Expert consultation</li>
+              <li>• Training and documentation</li>
+              <li>• Ongoing maintenance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834

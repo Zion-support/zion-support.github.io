@@ -27,6 +27,7 @@
     "@fastify/rate-limit": "^10.3.0",
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
+<<<<<<< HEAD
     "@headlessui/react": "^2.2.7",
     "@heroicons/react": "^2.2.0",
     "@hookform/resolvers": "^5.2.1",
@@ -35,6 +36,10 @@
     "@modelcontextprotocol/server-memory": "^2025.8.4",
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
     "@next/bundle-analyzer": "^15.5.2",
+=======
+    "@heroicons/react": "^2.2.0",
+    "@hookform/resolvers": "^5.2.1",
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
     "@next/swc-linux-x64-gnu": "^15.5.2",
     "@radix-ui/react-accordion": "^1.2.1",
     "@radix-ui/react-alert-dialog": "^1.1.2",
@@ -140,7 +145,10 @@
     "@testing-library/jest-dom": "^6.8.0",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
+<<<<<<< HEAD
     "@types/jest": "^29.5.8",
+=======
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
     "@typescript-eslint/eslint-plugin": "^8.42.0",
     "@typescript-eslint/parser": "^8.42.0",
     "autoprefixer": "^10.4.20",
@@ -185,5 +193,14 @@
     "zion-tech-group"
   ],
   "author": "Zion Tech Group",
+<<<<<<< HEAD
   "license": "MIT"
+=======
+  "license": "MIT",
+  "nextConfig": {
+    "compress": true,
+    "poweredByHeader": false,
+    "generateEtags": false
+  }
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
 }
