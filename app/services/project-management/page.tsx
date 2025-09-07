@@ -1,591 +1,73 @@
-<<<<<<< HEAD
-export const metadata = {
-  title: 'Project Management | Zion Tech Group',
-  description: 'Comprehensive project management solutions.',
-  keywords: 'project-management, services, business, technology'
-}
+import React from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Page | Zion Tech Group',
+  description: 'Professional page solutions for your business needs.',
+  keywords: 'page',
+  authors: [{ name: 'Zion Tech Group' }],
+  openGraph: {
+    title: 'Page | Zion Tech Group',
+    description: 'Professional page solutions for your business needs.',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Page | Zion Tech Group',
+    description: 'Professional page solutions for your business needs.',
+  },
+};
+
 export default function ServicePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Project Management
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Comprehensive project management solutions.
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional page solutions for your business needs.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
-            <p className="text-gray-300">
-              Tailored project-management solutions designed for your specific business requirements.
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Key Features</h3>
+            <p className="text-gray-600 mb-4">
+              Advanced features and capabilities for your business needs.
             </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Professional solutions</li>
+              <li>• 24/7 support</li>
+              <li>• Scalable architecture</li>
+            </ul>
           </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
-            <p className="text-gray-300">
-              Cutting-edge technology and best practices to deliver exceptional results.
+
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Benefits</h3>
+            <p className="text-gray-600 mb-4">
+              Transform your business with our cutting-edge solutions.
             </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Increased efficiency</li>
+              <li>• Cost savings</li>
+              <li>• Better results</li>
+            </ul>
           </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
-            <p className="text-gray-300">
-              Round-the-clock support to ensure your project-management solutions run smoothly.
+
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Support</h3>
+            <p className="text-gray-600 mb-4">
+              Comprehensive support and maintenance services.
             </p>
-=======
-<<<<<<< HEAD
-export const metadata = {
-  title: 'Project Management Platform | Zion Tech Group',
-  description: 'Build comprehensive project management tools with task tracking, team collaboration, and reporting. Professional PM solutions starting at $18k.',
-=======
-<<<<<<< HEAD
-export const metadata = {
-  title: "Project Management Platform | Zion Tech Group",
-  description:
-    "Build comprehensive project management tools with task tracking, team collaboration, and reporting. Professional PM solutions starting at $18k.",
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
-};
-
-export default function ProjectManagementPage() {
-  return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
-      <section className="mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Project Management Platform
-        </h1>
-        <p className="text-xl text-gray-600 mb-8">
-          Build comprehensive project management tools with task tracking, team
-          collaboration, time tracking, and advanced reporting.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <Item
-            title="Task Management"
-            details={[
-<<<<<<< HEAD
-              'Kanban boards',
-              'Gantt charts',
-              'Task dependencies',
-              'Priority management',
-              'Custom workflows',
-              'Recurring tasks',
-              'Task templates',
-=======
-              "Kanban boards",
-              "Gantt charts",
-              "Task dependencies",
-              "Priority management",
-              "Custom workflows",
-              "Recurring tasks",
-              "Task templates",
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
-            ]}
-          />
-          <Item
-            title="Team Collaboration"
-            details={[
-<<<<<<< HEAD
-              'Real-time chat',
-              'File sharing',
-              'Comment threads',
-              'Team calendars',
-              'Video meetings',
-              'Notification system',
-              'Activity feeds',
-=======
-              "Real-time chat",
-              "File sharing",
-              "Comment threads",
-              "Team calendars",
-              "Video meetings",
-              "Notification system",
-              "Activity feeds",
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
-            ]}
-          />
-          <Item
-            title="Reporting & Analytics"
-            details={[
-<<<<<<< HEAD
-              'Progress tracking',
-              'Time tracking',
-              'Resource allocation',
-              'Budget management',
-              'Custom dashboards',
-              'Export reports',
-              'Performance metrics',
-=======
-              "Progress tracking",
-              "Time tracking",
-              "Resource allocation",
-              "Budget management",
-              "Custom dashboards",
-              "Export reports",
-              "Performance metrics",
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
-            ]}
-          />
-        </div>
-
-        <div className="bg-gradient-to-r from-orange-50 to-red-50 border border-orange-200 rounded-lg p-6 mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            Platform Capabilities
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">
-                Flexible Workflows
-              </h3>
-              <p className="text-gray-600">
-                Create custom workflows for different project types - agile,
-                waterfall, or hybrid methodologies.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">
-                Resource Management
-              </h3>
-              <p className="text-gray-600">
-                Track team capacity, allocate resources efficiently, and prevent
-                overbooking with smart scheduling.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">
-                Client Portal
-              </h3>
-              <p className="text-gray-600">
-                Give clients visibility into project progress with customizable
-                client dashboards and reports.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">
-                Integration Ready
-              </h3>
-              <p className="text-gray-600">
-                Connect with popular tools like Slack, Google Workspace,
-                Microsoft 365, and more via APIs.
-              </p>
-            </div>
->>>>>>> origin/main
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Expert consultation</li>
+              <li>• Training and documentation</li>
+              <li>• Ongoing maintenance</li>
+            </ul>
           </div>
         </div>
-<<<<<<< HEAD
       </div>
-<<<<<<< HEAD
-    </div>
-  )
-}
-=======
-=======
-export const metadata = {}
-  title: "Project Management Platform | Zion Tech Group",
-  description:"
-    "Build comprehensive project management tools with task tracking, team collaboration, and reporting. Professional PM solutions starting at $18k.",;
-};
-
-export default function ProjectManagementPage() {}
-  return ("
-    <div className="max-w-6xl mx-auto px-4 py-8">"
-      <section className="mb-12">"
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">;
-          Project Management Platform;
-        </h1>"
-        <p className="text-xl text-gray-600 mb-8">
-          Build comprehensive project management tools with task tracking, team;
-          collaboration, time tracking, and advanced reporting.
-        </p>
-"
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <Item"
-            title="Task Management"
-            details={["
-              "Kanban boards","
-              "Gantt charts","
-              "Task dependencies","
-              "Priority management","
-              "Custom workflows","
-              "Recurring tasks","
-              "Task templates",
-            ]}
-          />
-          <Item"
-            title="Team Collaboration"
-            details={["
-              "Real-time chat","
-              "File sharing","
-              "Comment threads","
-              "Team calendars","
-              "Video meetings","
-              "Notification system","
-              "Activity feeds",
-            ]}
-          />
-          <Item"
-            title="Reporting & Analytics"
-            details={["
-              "Progress tracking","
-              "Time tracking","
-              "Resource allocation","
-              "Budget management","
-              "Custom dashboards","
-              "Export reports","
-              "Performance metrics",
-            ]}
-          />
-        </div>
-"
-        <div className="bg-gradient-to-r from-orange-50 to-red-50 border border-orange-200 rounded-lg p-6 mb-8">"
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            Platform Capabilities;
-          </h2>"
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>"
-              <h3 className="font-semibold text-gray-900 mb-2">
-                Flexible Workflows;
-              </h3>"
-              <p className="text-gray-600">
-                Create custom workflows for different project types - agile,
-                waterfall, or hybrid methodologies.
-              </p>
-            </div>
-            <div>"
-              <h3 className="font-semibold text-gray-900 mb-2">
-                Resource Management;
-              </h3>"
-              <p className="text-gray-600">
-                Track team capacity, allocate resources efficiently, and prevent;
-                overbooking with smart scheduling.
-              </p>
-            </div>
-            <div>"
-              <h3 className="font-semibold text-gray-900 mb-2">
-                Client Portal;
-              </h3>"
-              <p className="text-gray-600">
-                Give clients visibility into project progress with customizable;
-                client dashboards and reports.
-              </p>
-            </div>
-            <div>"
-              <h3 className="font-semibold text-gray-900 mb-2">
-                Integration Ready;
-              </h3>"
-              <p className="text-gray-600">
-                Connect with popular tools like Slack, Google Workspace,
-                Microsoft 365, and more via APIs.
-              </p>
-            </div>
-          </div>
-        </div>
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      </section>
-
-      <Pricing />
     </div>
   );
 }
-
-<<<<<<< HEAD
-function Item({ title, details }: { title: string; details: string[] }) {}
-  return ("
-    <div className="border border-gray-200 rounded-xl p-6 bg-white">"
-      <h3 className="text-lg font-semibold text-gray-900 mb-4">{title}</h3>"
-      <ul className="space-y-2">
-        {details.map((detail, index) => ("
-          <li key={index} className="flex items-start">"
-            <span className="text-orange-500 mr-2 mt-1">•</span>"
-=======
-function Item({ title, details }: { title: string; details: string[] }) {
-  return (
-    <div className="border border-gray-200 rounded-xl p-6 bg-white">
-      <h3 className="text-lg font-semibold text-gray-900 mb-4">{title}</h3>
-      <ul className="space-y-2">
-        {details.map((detail, index) => (
-          <li key={index} className="flex items-start">
-            <span className="text-orange-500 mr-2 mt-1">•</span>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-            <span className="text-gray-600">{detail}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-<<<<<<< HEAD
-function Pricing() {}
-  return (
-    <section>"
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-        Project Management Platform Pricing;
-      </h2>"
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Plan"
-          name="Team Platform""
-          price="$18k–$35k""
-          duration="6–10 weeks"
-          features={["
-            "Basic task management","
-            "Team collaboration tools","
-            "Simple reporting","
-            "Mobile app","
-            "Basic integrations","
-            "User management","
-            "Cloud hosting",
-          ]}
-        />
-        <Plan"
-          name="Professional Platform""
-          price="$35k–$70k""
-          duration="8–14 weeks"
-          features={["
-            "Everything in Team","
-            "Advanced workflows","
-            "Time tracking","
-            "Resource management","
-            "Client portal","
-            "Advanced analytics","
-            "Custom integrations",
-          ]}
-        />
-        <Plan"
-          name="Enterprise Platform""
-          price="$70k+""
-          duration="12–20 weeks"
-          features={["
-            "Everything in Professional","
-            "Custom development","
-            "White-label options","
-            "Advanced security","
-            "Dedicated support","
-            "SLA guarantees","
-=======
-function Pricing() {
-  return (
-    <section>
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-        Project Management Platform Pricing
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Plan
-          name="Team Platform"
-          price="$18k–$35k"
-          duration="6–10 weeks"
-          features={[
-<<<<<<< HEAD
-            'Basic task management',
-            'Team collaboration tools',
-            'Simple reporting',
-            'Mobile app',
-            'Basic integrations',
-            'User management',
-            'Cloud hosting',
-=======
-            "Basic task management",
-            "Team collaboration tools",
-            "Simple reporting",
-            "Mobile app",
-            "Basic integrations",
-            "User management",
-            "Cloud hosting",
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
-          ]}
-        />
-        <Plan
-          name="Professional Platform"
-          price="$35k–$70k"
-          duration="8–14 weeks"
-          features={[
-<<<<<<< HEAD
-            'Everything in Team',
-            'Advanced workflows',
-            'Time tracking',
-            'Resource management',
-            'Client portal',
-            'Advanced analytics',
-            'Custom integrations',
-=======
-            "Everything in Team",
-            "Advanced workflows",
-            "Time tracking",
-            "Resource management",
-            "Client portal",
-            "Advanced analytics",
-            "Custom integrations",
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
-          ]}
-        />
-        <Plan
-          name="Enterprise Platform"
-          price="$70k+"
-          duration="12–20 weeks"
-          features={[
-<<<<<<< HEAD
-            'Everything in Professional',
-            'Custom development',
-            'White-label options',
-            'Advanced security',
-            'Dedicated support',
-            'SLA guarantees',
-            'On-premise deployment',
-          ]}
-        />
-      </div>
-
-      <div className="mt-12 text-center">
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Build Your PM Platform?</h3>
-=======
-            "Everything in Professional",
-            "Custom development",
-            "White-label options",
-            "Advanced security",
-            "Dedicated support",
-            "SLA guarantees",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-            "On-premise deployment",
-          ]}
-        />
-      </div>
-<<<<<<< HEAD
-"
-      <div className="mt-12 text-center">"
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">
-          Ready to Build Your PM Platform?
-        </h3>"
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
-        <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-          Let's create a powerful project management platform that streamlines'
-          your team's workflow and boosts productivity.
-        </p>"
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a"
-            href="tel:+13024640950""
-            className="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
-          >
-            Call +1 302 464 0950;
-          </a>
-          <a"
-            href="mailto:kleber@ziontechgroup.com""
-            className="border-2 border-orange-600 text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-600 hover:text-white transition-colors"
-          >
-            Email Us;
-=======
-
-      <div className="mt-12 text-center">
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">
-          Ready to Build Your PM Platform?
-        </h3>
-        <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-          Let's create a powerful project management platform that streamlines
-          your team's workflow and boosts productivity.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="tel:+13024640950"
-            className="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
-          <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-orange-600 text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-600 hover:text-white transition-colors"
-          >
-            Email Us
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-          </a>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-<<<<<<< HEAD
-function Plan({ name, price, duration, features }: {
-=======
-<<<<<<< HEAD
-function Plan({}
-=======
-function Plan({
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  name,
-  price,
-  duration,
-  features,
-<<<<<<< HEAD
-}: {}
-=======
-}: {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
-  name: string;
-  price: string;
-  duration: string;
-  features: string[];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-}) {}
-  return ("
-    <div className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow">"
-      <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>"
-      <div className="text-3xl font-bold text-orange-600 mb-1">{price}</div>"
-      <div className="text-gray-500 mb-6">{duration}</div>"
-      <ul className="space-y-3">
-        {features.map((feature, index) => ("
-          <li key={index} className="flex items-start">"
-            <span className="text-green-500 mr-2 mt-1">✓</span>"
-=======
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
-}) {
-  return (
-    <div className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow">
-      <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
-      <div className="text-3xl font-bold text-orange-600 mb-1">{price}</div>
-      <div className="text-gray-500 mb-6">{duration}</div>
-      <ul className="space-y-3">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-start">
-            <span className="text-green-500 mr-2 mt-1">✓</span>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-            <span className="text-gray-600">{feature}</span>
-          </li>
-        ))}
-      </ul>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      <a"
-        href="mailto:kleber@ziontechgroup.com?subject=Project Management Platform Inquiry""
-        className="block w-full mt-6 bg-orange-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
-      >
-        Get Started;
-      </a>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-    </div>
-  );
-}
-'"
-=======
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
-      <a
-        href="mailto:kleber@ziontechgroup.com?subject=Project Management Platform Inquiry"
-        className="block w-full mt-6 bg-orange-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
-      >
-        Get Started
-      </a>
-    </div>
-  );
-}
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
->>>>>>> origin/main

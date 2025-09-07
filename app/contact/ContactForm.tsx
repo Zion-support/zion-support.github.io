@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 }
 }
@@ -16,7 +15,6 @@
 try {
       await new Promise(resolve => setTimeout(resolve, 2000))
       setSubmitStatus('success')
-=======
 'use client';
 
 import React, { useState } from 'react';
@@ -58,14 +56,12 @@ export default function ContactForm() {
     try {
       await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus('success');
->>>>>>> origin/main
       setFormData({
         name: '',
         email: '',
         company: '',
         service: '',
         budget: '',
-<<<<<<< HEAD
   message: ''}
       }
 })
@@ -73,14 +69,12 @@ export default function ContactForm() {
       setSubmitStatus('error');}
     } finally {}
       setIsSubmitting(false);}
-=======
         message: ''
       });
     } catch {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
->>>>>>> origin/main
     }
   }
   return (
@@ -92,81 +86,60 @@ export default function ContactForm() {
         </h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
           Ready to transform your business with cutting-edge technology? 
-<<<<<<< HEAD
-<<<<<<< HEAD
 Let&apos
 s discuss your project and create a custom solution.
-=======
           Let&apos;s discuss your project and create a custom solution.
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-2d7e
-=======
           Let&apos;s discuss your project and create a custom solution.
->>>>>>> origin/main
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Contact Information */}
         <div className="space-y-8">
-<<<<<<< HEAD
           <div />
-=======
           <div>
->>>>>>> origin/main
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">
               Contact Information
             </h2>
             
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
-<<<<<<< HEAD
                 <PhoneIcon className="w-5 h-5 text-blue-600">
                 <div />
-=======
                 <Phone className="w-5 h-5 text-blue-600" />
                 <div>
->>>>>>> origin/main
                   <p className="font-medium text-gray-900">Phone</p>
                   <p className="text-gray-600">+1 302 464 0950</p>
                 </div>
               </div>
               
               <div className="flex items-center space-x-3">
-<<<<<<< HEAD
                 <EnvelopeIcon className="w-5 h-5 text-blue-600">
                 <div />
-=======
                 <Mail className="w-5 h-5 text-blue-600" />
                 <div>
->>>>>>> origin/main
                   <p className="font-medium text-gray-900">Email</p>
                   <p className="text-gray-600">kleber@ziontechgroup.com</p>
                 </div>
               </div>
               
               <div className="flex items-center space-x-3">
-<<<<<<< HEAD
                 <MapPinIcon className="w-5 h-5 text-blue-600">
                 <div />
                   <p className="font-medium text-gray-900">Address</p>
                   <p className="text-gray-600">364 E Main St STE 1008 < br />Middletown DE 19709</p>
-=======
                 <MapPin className="w-5 h-5 text-blue-600" />
                 <div>
                   <p className="font-medium text-gray-900">Address</p>
                   <p className="text-gray-600">364 E Main St STE 1008 <br />Middletown DE 19709</p>
->>>>>>> origin/main
                 </div>
               </div>
               
               <div className="flex items-center space-x-3">
-<<<<<<< HEAD
                 <ClockIcon className="w-5 h-5 text-blue-600">
                 <div />
-=======
                 <Clock className="w-5 h-5 text-blue-600" />
                 <div>
->>>>>>> origin/main
                   <p className="font-medium text-gray-900">Business Hours</p>
                   <p className="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM EST</p>
                 </div>
@@ -177,11 +150,8 @@ s discuss your project and create a custom solution.
           {/* Quick Response Promise */}
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
             <div className="flex items-center space-x-3 mb-3">
-<<<<<<< HEAD
               <CheckCircleIcon className="w-6 h-6 text-blue-600">
-=======
               <CheckCircle className="w-6 h-6 text-blue-600" />
->>>>>>> origin/main
               <h3 className="font-semibold text-blue-900">Quick Response Guarantee</h3>
             </div>
             <p className="text-blue-800">
@@ -192,11 +162,8 @@ s discuss your project and create a custom solution.
         </div>
 
         {/* Contact Form */}
-<<<<<<< HEAD
         <div />
-=======
         <div>
->>>>>>> origin/main
           <div className="bg-white shadow-lg rounded-lg p-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">
               Send us a Message
@@ -205,20 +172,14 @@ s discuss your project and create a custom solution.
             {submitStatus === 'success' && (
               <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-md">
                 <div className="flex items-center">
-<<<<<<< HEAD
                   <CheckCircleIcon className="w-5 h-5 text-green-600 mr-2">
                   <p className="text-green-800">
-<<<<<<< HEAD
 Thank you! Your message has been sent successfully. We&apos
 ll get back to you within one business day.
-=======
                     Thank you! Your message has been sent successfully. We&apos;ll get back to you within one business day.
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-2d7e
-=======
                   <CheckCircle className="w-5 h-5 text-green-600 mr-2" />
                   <p className="text-green-800">
                     Thank you! Your message has been sent successfully. We&apos;ll get back to you within one business day.
->>>>>>> origin/main
                   </p>
                 </div>
               </div>
@@ -227,11 +188,8 @@ ll get back to you within one business day.
             {submitStatus === 'error' && (
               <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-md">
                 <div className="flex items-center">
-<<<<<<< HEAD
                   <ExclamationTriangleIcon className="w-5 h-5 text-red-600 mr-2">
-=======
                   <AlertTriangle className="w-5 h-5 text-red-600 mr-2" />
->>>>>>> origin/main
                   <p className="text-red-800">
                     Sorry, there was an error sending your message. Please try again or contact us directly.
                   </p>
@@ -241,7 +199,6 @@ ll get back to you within one business day.
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-<<<<<<< HEAD
                 <div />
                   <label htmlFor=\"name\" className="block text-sm font-medium text-gray-700 mb-2">
                     Full Name *
@@ -271,7 +228,6 @@ type=\"email\"
                     required
 className=\"w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500\"
                     placeholder=\"your.email@example.com\"
-=======
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                     Full Name *
@@ -301,12 +257,10 @@ className=\"w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:o
                     required
                     className="form-input"
                     placeholder="your.email@example.com"
->>>>>>> origin/main
                   />
                 </div>
               </div>
 
-<<<<<<< HEAD
               <div />
                 <label htmlFor=\"company\" className="block text-sm font-medium text-gray-700 mb-2">
                   Company Name
@@ -315,7 +269,6 @@ className=\"w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:o
 type=\"text\"
                   id=\"company\"
                   name=\"company\"
-=======
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                   Company Name
@@ -324,7 +277,6 @@ type=\"text\"
                   type="text"
                   id="company"
                   name="company"
->>>>>>> origin/main
                   value={formData.company}
                   onChange={handleInputChange}
                   className="form-input"
@@ -332,7 +284,6 @@ type=\"text\"
                 />
               </div>
 
-<<<<<<< HEAD
               <div />
                 <label htmlFor=\"service\" className="block text-sm font-medium text-gray-700 mb-2">
                   Service Interest
@@ -388,7 +339,6 @@ id=\"message\"
 rows={5}
                   className=\"w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500\"
                   placeholder=\"Tell us about your project, goals, and any specific requirements...\"
-=======
               <div>
                 <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
                   Service Interest
@@ -446,26 +396,22 @@ rows={5}
                   rows={5}
                   className="form-input"
                   placeholder="Tell us about your project, goals, and any specific requirements..."
->>>>>>> origin/main
                 />
               </div>
 
               <button
-<<<<<<< HEAD
 type=\"submit\"
                 disabled={isSubmitting}
                 className={`w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white ${
                   isSubmitting
                     ? 'bg-gray-400 cursor-not-allowed'}
                     : 'bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'}
-=======
                 type="submit"
                 disabled={isSubmitting}
                 className={`w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white ${
                   isSubmitting
                     ? 'bg-gray-400 cursor-not-allowed'
                     : 'btn btn-primary'
->>>>>>> origin/main
                 } transition-colors`}
               >
                 {isSubmitting ? (
