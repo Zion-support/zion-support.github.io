@@ -8,11 +8,7 @@
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
-<<<<<<< HEAD
     "module": "esnext",
-=======
-    "module": "ESNext",
->>>>>>> origin/main
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -36,9 +32,6 @@
     },
     "allowSyntheticDefaultImports": true,
     "strictNullChecks": true,
-    "incremental": true,
-    "module": "esnext",
-    "esModuleInterop": true,
     "tsBuildInfoFile": ".next/tsconfig.tsbuildinfo"
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

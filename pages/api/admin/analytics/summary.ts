@@ -4,6 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import { ensureAdminFromApi } from '../../../../utils/auth';
 
+interface EventRow {
   name: string
   page?: string
   userType?: string
@@ -38,23 +39,45 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
   }
 }
 
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    await ensureAdminFromApi(req);
+  } catch (e: any) {
+    return res.status(e.statusCode || 403).json({ error: 'Forbidden' });
+  }
+
+  if (req.method !== 'GET') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+
+  const { start, end } = req.query;
+  const events = parseLines(start as string, end as string);
+  
+  const byFeature: Record<string, number> = {};
+  const byEvent: Record<string, number> = {};
+  const byDay: Record<string, number> = {};
+
+  for (const event of events) {
+    byFeature[event.page || 'unknown'] = (byFeature[event.page || 'unknown'] || 0) + 1;
+    byEvent[event.name] = (byEvent[event.name] || 0) + 1;
+    const day = event.at.split('T')[0];
+    byDay[day] = (byDay[day] || 0) + 1;
+  }
+
   const pagesMostUsed = Object.entries(byFeature)
     .map(([label, value]) => ({ label, value }))
-    .sort((a, b) => b.value - a.value),
+    .sort((a, b) => b.value - a.value);
 
-  const events = Object.entries(byEvent)
+  const eventsList = Object.entries(byEvent)
     .map(([label, value]) => ({ label, value }))
+    .sort((a, b) => b.value - a.value);
 
-    .sort((a, b) => b.value - a.value),
+  const days = Object.keys(byDay).sort();
+  const line = days.map((d) => ({ date: d, value: byDay[d] }));
 
-  const days = Object.keys(byDay).sort($2);
-  const line = days.map((d) => ({ date: d, value: byDay[d] })),
+  const funnelStages = ['Visit', 'AI Prompt Used', 'Post Created', 'Message Sent'];
+  const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] || 0 }));
 
-  const days = Object.keys(byDay).sort()
-  const line = days.map((d) => ({ date: d, value: byDay[d] }))
-
-  const funnelStages = ['VisitAI Prompt UsedPost CreatedMessage Sent']
-  const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] || 0 }))
-
-  res.status(200).json({ pagesMostUsed, events, line, funnel });
+  res.status(200).json({ pagesMostUsed, events: eventsList, line, funnel });
+}
 
