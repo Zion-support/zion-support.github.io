@@ -1,6 +1,7 @@
 import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -13,25 +14,33 @@ const compat = new FlatCompat({
   recommendedConfig: js.configs.recommended,
 });
 =======
+=======
+>>>>>>> 8728a638150a751be87fc16c540c14de41b00a43
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-// import nextPlugin from '@next/eslint-plugin-next'; // Not needed for Vite project
 import globals from 'globals';
->>>>>>> cursor/expand-services-advertise-and-build-project-e77d
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const compat = new FlatCompat({
+<<<<<<< HEAD
   baseDirectory: import.meta.dirname,
 =======
 >>>>>>> aab6cad50d24864653d33f46d023039adfa50215
+=======
+  baseDirectory: __dirname,
+>>>>>>> 8728a638150a751be87fc16c540c14de41b00a43
   recommendedConfig: js.configs.recommended,
   allConfig: js.configs.all
 });
 
 export default [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -65,12 +74,21 @@ export default [
       '*.spec.tsx'
     ]
 =======
+=======
+>>>>>>> 8728a638150a751be87fc16c540c14de41b00a43
   js.configs.recommended,
+  ...compat.extends(
+    'next/core-web-vitals',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended'
+  ),
   {
-    files: ['**/*.{js,jsx}'],
+    files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
-      ecmaVersion: 2022,
+      ecmaVersion: 'latest',
       sourceType: 'module',
+<<<<<<< HEAD
       parserOptions: {
         ecmaFeatures: {
           jsx: true
@@ -408,23 +426,15 @@ export default [
     files: ['src/**/*.{js,jsx,ts,tsx}', 'app/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
+=======
+>>>>>>> 8728a638150a751be87fc16c540c14de41b00a43
       globals: {
         ...globals.browser,
         ...globals.node,
-        jest: 'readonly',
-        describe: 'readonly',
-        it: 'readonly',
-        test: 'readonly',
-        expect: 'readonly',
-        beforeEach: 'readonly',
-        afterEach: 'readonly',
-        beforeAll: 'readonly',
-        afterAll: 'readonly'
+        ...globals.es2021
       },
       parser: typescriptParser,
       parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
         ecmaFeatures: {
           jsx: true
         }
@@ -433,26 +443,16 @@ export default [
     plugins: {
       '@typescript-eslint': typescript,
       'react': react,
-      'react-hooks': reactHooks,
-      '@next/next': nextPlugin
-      // '@next/next': nextPlugin, // Not needed for Vite project
+      'react-hooks': reactHooks
     },
     rules: {
-      ...typescript.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
-      'react/display-name': 'off',
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+      'react/prop-types': 'off',
+      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
       '@typescript-eslint/no-explicit-any': 'warn',
-      '@typescript-eslint/ban-ts-comment': 'off',
-      'no-unused-vars': 'off',
-      'no-console': ['warn', { allow: ['warn', 'error'] }],
+      'no-console': 'warn',
       'prefer-const': 'error',
-      'no-debugger': 'warn',
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn'
+      'no-var': 'error'
     },
     settings: {
       react: {
@@ -461,24 +461,15 @@ export default [
     }
   },
   {
-    files: ['**/*.js'],
+    files: ['**/*.js', '**/*.jsx'],
     languageOptions: {
       globals: {
-        console: 'readonly',
-        process: 'readonly',
-        Buffer: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly',
-        global: 'readonly',
-        module: 'readonly',
-        require: 'readonly',
-        exports: 'readonly'
+        ...globals.browser,
+        ...globals.node
       }
-    },
-    rules: {
-      'no-console': 'off'
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
       'no-console': 'off'
     }
@@ -488,3 +479,6 @@ export default [
 =======
 ];
 >>>>>>> aab6cad50d24864653d33f46d023039adfa50215
+=======
+];
+>>>>>>> 8728a638150a751be87fc16c540c14de41b00a43

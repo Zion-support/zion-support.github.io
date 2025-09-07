@@ -275,11 +275,15 @@ const categories = [
     icon: <Atom className='w-6 h-6' />,
     color: 'from-violet-500 to-indigo-500',
 <<<<<<< HEAD
+<<<<<<< HEAD
     description: 'Quantum computing solutions'},
 ];
 =======
     description: 'Quantum computing solutions'}];
 >>>>>>> 66636f0649a4af9daff867918bf1282f740567c2
+=======
+    description: 'Quantum computing solutions'}];
+>>>>>>> 8728a638150a751be87fc16c540c14de41b00a43
 
 const getServiceCategory = (service: any) => {
   if (service.category) return service.category;
@@ -352,9 +356,13 @@ return 'Contact for pricing';}const getServiceFeatures = (service: any) => {if (
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 66636f0649a4af9daff867918bf1282f740567c2
+=======
+
+>>>>>>> 8728a638150a751be87fc16c540c14de41b00a43
 const getServicePricing = (service: any) => {
   if (service.price) return `${service.price}${service.period}`;
   if (service.pricing?.starter) return service.pricing.starter;
@@ -425,9 +433,13 @@ ursor/automate-test-improve-and-merge-code-646c;
 };
 export default function AdvancedServicesShowcase() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 66636f0649a4af9daff867918bf1282f740567c2
+=======
+
+>>>>>>> 8728a638150a751be87fc16c540c14de41b00a43
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');

@@ -304,9 +304,13 @@ import { define_config, devices } from '@playwright / test',export default defin
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 66636f0649a4af9daff867918bf1282f740567c2
+=======
+
+>>>>>>> 8728a638150a751be87fc16c540c14de41b00a43
       use: {
 =======
       use: {
