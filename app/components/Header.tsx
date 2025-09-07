@@ -216,20 +216,16 @@ export default function Header() {
             <Link href="/services" className="hover:text-blue-400 transition duration-300">
               Services
             </Link>
-            <Link href="/contact" className="text-gray-700 hover:text-blue-600">
+            <Link href="/solutions" className="hover:text-blue-400 transition duration-300">
+              Solutions
+            </Link>
+            <Link href="/research" className="hover:text-blue-400 transition duration-300">
+              Research
+            </Link>
+            <Link href="/contact" className="hover:text-blue-400 transition duration-300">
               Contact
             </Link>
           </nav>
-          
-          <button
-            className="md:hidden"
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
-          >
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
         </div>
       </div>
     </header>

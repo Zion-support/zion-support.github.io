@@ -1398,6 +1398,10 @@ export interface Testimonial {
   skills: string[];
   linkedin?: string;
   github?: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+  twitter?: string}export interface Testimonial {
+=======
   twitter?: string}
   twitter?: string;
 }
@@ -1916,7 +1920,7 @@ export interface InputProps {
 
   placeholder?: string;
   value?: string;
-  onChange?: ("value": string) => void;"
+  onChange?: ("value": string) => void;
   error?: string;
   required?: boolean}
 // API types;
@@ -1924,16 +1928,21 @@ export interface InputProps {
   data?: any;
   params?: Record<string, any>;
   headers?: Record<string, string>}
-// Environment types;
+// Environment types
+<<<<<<< HEAD
+=======
   required?: boolean;
-}"image": string;
-  "technologies": string[];
+}
+
+=======
+  image: string;
+  technologies: string[];
   liveUrl?: string;
   githubUrl?: string;
 
   expires?: Date}
-export interface BaseComponentProps  {className?: string;
-  }
+export interface BaseComponentProps {
+  className?: string;
   children?: React.ReactNode;
   id?: string;
   disabled?: boolean;
@@ -1949,58 +1958,65 @@ export interface InputProps  {className?: string;
   onClick?: () => void;
 
 }
-export interface CompanyInfo {
-  }
-  "name": string;
-  "href": string;
+
+export interface AnimationState {
+  isLoaded: boolean;
+  hasError: boolean;
 }
-export interface FooterSection {
-  }
-  "title": string;
-  "links": FooterLink[];
+export interface FormData {
+  name: string;
+  email: string;
+  company?: string;
+  phone?: string;
+  service?: string;
+  message: string;
+
+  id: string;
+  name: string;
+  role: string;
+  company: string;
+
+  position: string;
+  content: string;
+  rating: number;
+  avatar?: string;
+  image?: string;
+
+;
+
+  project?: string;
 }
-export interface HeroSection {}}
-export interface FooterSection {
-  }
-  "title": string;
-  "links": FooterLink[];
+export interface BlogPost {
+
+  project?: string;
 }
-export interface HeroSection  {ursor/fix-website-loading-errors-and-merge-6662;
+
+export interface BlogPost {;
+
+  id: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  author: string;
+
+  date: string;
+
+  publishedAt: string;
+  updatedAt: string;
+  published_at: string;
+  updated_at: string;
+  tags: string[];
+  category: string;
+  image: string;
+
+  slug: string;
+  featured?: boolean;
+
+  read_time: number;
+;
 }
-export interface HeroSection  {"title": string;
-  }
-  "subtitle": string;
-  "cta": {"primary": {"text": string;
-      }
-      "href": string;}
-    "secondary": {"text": string;
-      }
-      "href": string;
-    }
-  }}
-    "secondary": {"text": string;
-      }
-      "href": string;
-    }
-export interface CompanyInfo  {"name": string;
-  }
-  "tagline": string;
-  "description": string;
-  "address": {"street": string;
-    }
-    "city": string;
-    "state": string;
-    "zip": string;
-    "country": string;
-  }
-  "contact": {"phone": string;
-    }
-    "email": string;
-    "website": string;
-  }
-  "certifications": string[];
-}}
-  "certifications": string[];
+export interface TeamMember {
+
 }
 export interface Feature {
 =======

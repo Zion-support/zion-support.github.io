@@ -171,6 +171,8 @@ const { withErrorLogging } = require( ./withErrorLogging.cjs')'; async: function
 module.exports = withErrorLogging(handler);
 
     res.json({ error: err.message || 'Quote submission failed' });
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 
 module.exports = withErrorLogging(handler);

@@ -20,6 +20,7 @@ describe('Utils', () => {
 });
 
 =======
+>>>>>>> origin/main
 <<<<<<< HEAD
 describe('Utils', () => {
   test('utility functions work', () => {

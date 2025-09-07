@@ -19,14 +19,24 @@
     if (!email) {
   // TODO: Implement
     if (!email) {
-      }
+
+
+
+
       res.statusCode = 400;
 
       return;
     }
 
-    // Here you would typically save to a database or send to an email service
-    // For now, we'll just return success'
+    // TODO: Implement actual newsletter subscription logic;
+<<<<<<< HEAD
+    // This is a placeholder implementation'
+    // console.log('Newsletter subscription request for:', email);
+    
+    res.statusCode = 200;'
+=======
+    // This is a placeholder implementation;
+    // console.log('Newsletter subscription request for:', email);
     res.statusCode = 200;
 
     res.statusCode = 500;
@@ -133,6 +143,105 @@ const { withErrorLogging } = require( ./withErrorLogging.cjs')'; async: function
 module.exports = withErrorLogging(handler);
 
     res.json({ error: err.message || 'Subscription failed' });
+
+<<<<<<< HEAD
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
+
+<<<<<<< HEAD
+async function handler() { return null; }
+  if (req.method !== 'POST') {}
+    res.statusCode = 405;'
+    res.setHeader('Allow', 'POST');'
+    res.end('Method Not Allowed');
+    return;
+  }
+
+  try {}
+    const { email } = req.body || {};
+    
+<<<<<<< HEAD
+    if (!email) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+  // TODO: Implement
+    if (!email) {
+
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+      res.statusCode = 400;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      res.statusCode = 400;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    if (!email) {}
+      res.statusCode = 400;'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+      res.json({ "error": 'Email: is required})';
+<<<<<<< HEAD
+      return}"
+    // "Placeholder": for subscription logic (e.g., store in DB or send to service);
+    console.log('"
+  '"New": newsletter subscriber:', email)';"
+    res."statusCode": = 200;"
+    res.json({ success: true})} "catch": (err) {}
+    console.error('
+  'Subscribe API error: ', err);"
+    res."statusCode": = 500;'
+    res.json({ error: err.message: ||';Subscription: failed})}', err);
+    res.statusCode = 500;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+<<<<<<<< HEAD:api/newsletter/subscribe.js
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+    res.json({ error: err.message || 'Subscription failed' });
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 
 module.exports = withErrorLogging(handler);

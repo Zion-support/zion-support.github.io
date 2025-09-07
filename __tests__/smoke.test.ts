@@ -26,6 +26,8 @@ describe('smoke',() => { it('true is truthy',() => { expect(true).toBeTruthy()})
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD

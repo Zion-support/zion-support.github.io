@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+module.exports = {
+  displayName: 'Smoke Tests',
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 const nextJest = require('next/jest');
 const createJestConfig = nextJest({
   dir: './',
@@ -56,6 +66,7 @@ const customJestConfig = {
   testMatch: ['**/__tests__/smoke/**/?(*.)+(test).[jt]s?(x)'],
   moduleNameMapping: {
     '^@/(.*)$': '<rootDir>/$1',
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
   },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   collectCoverageFrom: [

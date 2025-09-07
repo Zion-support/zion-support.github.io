@@ -85,6 +85,27 @@ function AboutPage() {
             <ArrowRightIcon className="ml-2 h-5 w-5" />
           </Link>
         </div>
+
+        <div className="bg-white rounded-lg shadow-lg p-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Why Choose Zion Tech Group?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="text-4xl mb-4">🚀</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Fast Delivery</h3>
+              <p className="text-gray-600">We deliver solutions quickly without compromising on quality or security.</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-4">🔒</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Secure & Reliable</h3>
+              <p className="text-gray-600">Bank-grade security and 99.9% uptime guarantee for all our solutions.</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-4">💡</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Innovative Solutions</h3>
+              <p className="text-gray-600">Cutting-edge AI and technology solutions tailored to your business needs.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -392,6 +392,14 @@ Error: Cannot find module '/workspace/node_modules/.bin/eslint'
 
 Node.js v22.16.0
 
+<<<<<<< HEAD
+- TypeScript had issues: Command failed: npm run type-check
+=======
+
+- TypeScript: spawnSync /bin/sh ENOBUFS
+- Build: Command failed: npm run build
+>>>>>>> origin/main
+=======
 - TypeScript: Command failed: npm run type-check
 =======
 

@@ -329,6 +329,8 @@ function createValidReactComponent(filePath) {
   const fileName = path.basename(filePath, path.extname(filePath));
   const componentName = fileName
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -459,6 +461,9 @@ export default function ${componentName}() {}`;
     const items = fs.readdirSync(dirPath);
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 =======
     return false;
   } catch (error) {`;

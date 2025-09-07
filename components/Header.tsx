@@ -299,7 +299,9 @@ export default function Header() {
 <<<<<<< HEAD
 const router = useRouter();
 
-  useEffect(() => {
+  const toggleDropdown = (itemName: string) => {
+    setActiveDropdown(activeDropdown === itemName ? null : itemName);
+  };
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
