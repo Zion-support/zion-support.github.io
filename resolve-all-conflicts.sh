@@ -23,7 +23,7 @@ if npm run build; then
 else
     echo "❌ Build still has issues, checking for remaining conflicts..."
     find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" -o -name "*.json" | while read file; do
-        if grep -q "\|\|>>>>>>> " "$file" 2>/dev/null; then
+        if grep -q "\|\|
             echo "Remaining conflicts in: $file"
         fi
     done

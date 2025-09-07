@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-09-06T09:50:49.593Z",
+  "filesFixed": 5,
+  "errors": 0,
+  "fixedFiles": [
+    "pages/api/proposals/submit.ts",
+    "pages/api/proposals/translate.ts",
+    "pages/api/referrals/track.ts",
+    "pages/api/reports/changelog.ts",
+    "pages/api/reports/deps.ts"
+  ]
+}

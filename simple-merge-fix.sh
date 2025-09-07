@@ -10,13 +10,13 @@ find . -type f \( -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js"
     cp "$file" "${file}.backup"
     
     # Remove merge conflict markers and keep HEAD version
-    sed -i '//,/>>>>>>> /c\
+    sed -i '//,/
 # Resolved merge conflict - kept HEAD version' "$file"
     
     # Clean up any remaining markers
     sed -i '//d' "$file"
     sed -i '//d' "$file"
-    sed -i '/>>>>>>> /d' "$file"
+    sed -i '/
     
     echo "✅ Fixed: $file"
 done

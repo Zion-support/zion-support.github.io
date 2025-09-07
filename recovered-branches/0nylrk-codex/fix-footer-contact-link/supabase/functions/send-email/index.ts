@@ -1,0 +1,46 @@
+
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",""
+import {Resend} from "npm: resend@2 ;""
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"""
+import {Resend} from "npm: resend@2.0.0";"
+const corsHeaders = {"
+  "Access-Control-Allow-Origin": "*"""
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}""
+const resend = new Resend(Deno.env.get("RESEND_API_KEY"));""
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",""
+import { Resend } from "npm: resend@2.0.0",""
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;""
+import {Resend} from "npm: resend@2.0.0";""
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",""
+import { Resend } from "npm: resend@2.0.0","
+const corsHeaders = {"
+  "Access-Control-Allow-Origin": "*",""
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};""
+const resend = new Resend(Deno && Deno.env.get("RESEND_API_KEY"));"
+serve(async (req) => {"
+  if (req && req.method === "OPTIONS") {"
+    return new Response(null, { headers: corsHeaders })
+  }
+  try {
+  // TODO: Implement
+}
+      to: [to];
+      subject;
+      html});
+      status: 500})
+  }
+});
+
+    const { to, subject, html } = await req.json(),
+
+    const emailResponse = await resend.emails.send({"
+      from: "Lovable <onboarding@resend.dev>","
+</onboarding>"
+      from: "Lovable <onboarding@resend.dev>",;"
+</onboarding>"
+      from: "Lovable <onboarding@resend && resend.dev>";"
+</onboarding>"
+      from: "Lovable <onboarding@resend.dev>";"
+</onboarding>"
+      from: "Lovable <onboarding@resend.dev>","
+</onboarding>)"

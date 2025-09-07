@@ -1,0 +1,365 @@
+
+
+import React, { useState, useEffect } from './react';''
+import { Button  } from '@/components / ui / button';''
+import { RadioGroup, RadioGroupItem  } from '@/components / ui / radio - group';''
+import { Label  } from '@/components / ui / label';''
+import { Plus, Loader2  } from './lucide-react';''
+import { use_resume  } from '@/hooks / use_resume';''
+import { exportResumeToPDF  } from '@/utils / pdf_export';''
+import { toast  } from '@/components / ui / use - toast';''
+import { ResumePreviewCard  } from './ResumePreviewCard';''
+import { UploadSection  } from './UploadSection';''
+import { SelectResumeSection  } from './SelectResumeSection';''
+import { ResumeOption, ResumeSelectorProps  } from './types';'
+export function ResumeSelector(): any ({ onResumeSelected }: ResumeSelectorProps) {;
+  const [selectedOption, setSelectedOption] = useState<;'
+    "recent" | "select" | "upload";""
+  >("recent");"
+  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(;
+</ResumeOption>)
+  const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]);
+</ResumeOption>
+
+  const [customFile, setCustomFile] = useState<File | null>(null);
+</File>"
+  const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent'),'
+  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),
+</ResumeOption>
+  const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]),
+</ResumeOption>
+  const [customFile, setCustomFile] = useState<File | null>(null),
+</File>
+  const [selected_option, setSelectedOption] = useState<;'
+    "recent" | "select" | "upload";""
+  >("recent");"
+  const [selected_resume, setSelectedResume] = useState < ResumeOption | null>(
+    null,)
+  );
+  const [resume_options, setResumeOptions] = useState < ResumeOption[]>([]);
+  const [custom_file, setCustomFile] = useState < File | null>(null);
+  const [is_loading, setIsLoading] = useState (false);
+;
+  const { resume, fetch_resume } = use_resume ();
+;
+  // Fetch resume data when component mounts;
+  useEffect (() => {
+    const load_resumes = async () => {
+      setIsLoading (true);
+      try {
+  // TODO: Implement
+}
+        await fetch_resume ();
+      } catch (error) {"
+        console.error ("Error loading resumes:", error);"
+      } finally {
+  // TODO: Implement
+}
+        setIsLoading (false);
+      }
+    }
+;
+    load_resumes ();
+  }, [fetch_resume]);
+;
+  // Update resume options when resume data changes;
+  useEffect (() => {
+    // Check condition;
+if ( {) {
+  $2;
+}
+      const options: ResumeOption[] = [;
+
+        {"
+          id: resume.id |"current"",
+  title: resume.basic_info.title;"
+          type: "ai_resume"",
+  resume: resume;
+        }
+  // Update resume options when resume data changes;
+  useEffect(() => {;
+    if (resume) {;]
+      const options: ResumeOption[] = [;
+        {;"
+          id: resume && resume.id || "current",;"
+          title: resume && resume.basic_info.title,;"
+          type: "ai_resume",;"
+          resume: resume,;
+        },;]
+      ];
+
+
+      // Pre-select the most recent resume;"
+      if (options && options.length > 0 && selectedOption === "recent") {;"
+        setSelectedResume(options[0]);
+        onResumeSelected(options[0]);
+      }
+    }
+  }, [resume, selectedOption, onResumeSelected]);
+
+
+  // Handle radio option change;"
+  const handleOptionChange = (value: "recent" | "select" | "upload") => {;"
+    setSelectedOption(value);
+"
+    if (value === "recent" && resumeOptions && resumeOptions.length > 0) {;"
+        setSelectedResume(options[0]);
+        onResumeSelected(options[0]);
+"
+import React, { useState, useEffect } from 'react',;''
+import { Button } from "@/components/ui/button",;""
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",;""
+import { Label } from "@/components/ui/label",;""
+import { Plus, Loader2 } from 'lucide-react',;''
+import { useResume } from "@/hooks/useResume",;""
+import { exportResumeToPDF } from "@/utils/pdfExport",;""
+import { toast } from "@/components/ui/use-toast",;""
+import { ResumePreviewCard } from './ResumePreviewCard',;''
+import { UploadSection } from './UploadSection',;''
+import { SelectResumeSection } from './SelectResumeSection',;''
+import { ResumeOption, ResumeSelectorProps } from './types',;'
+;
+export function ResumeSelector({ onResumeSelected } ResumeSelectorProps) {;'
+  const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent'),;'
+  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),;
+</ResumeOption>
+  const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]),;
+</ResumeOption>
+  const [customFile, setCustomFile] = useState<File | null>(null),;
+</File>
+  const handleFileUpload = (e:React.ChangeEvent<HTMLInputElement>) => {;
+</HTMLInputElement>
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+</HTMLInputElement>'
+  const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent'),;'
+  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),;
+</ResumeOption>
+  const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]),;
+</ResumeOption>
+  const [customFile, setCustomFile] = useState<File | null>(null),;
+</File>
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+</HTMLInputElement>
+  const handleFileUpload = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
+</HTMLInputElement>
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {;
+</HTMLInputElement>'
+    <div className="space-y-4">;"
+</div>"
+      <h3 className="text-lg font-medium text-white">Attach Resume</h3>;"
+      <RadioGroup;
+        value={selectedOption}
+        onValueChange={(value) =>;
+</RadioGroup>"
+    <div className="space-y-4">;"
+</div>"
+      <h3 className="text-lg font-medium text-white">Attach Resume</h3>;"
+      <RadioGroup;
+        value={selectedOption}
+        onValueChange={(value) =>
+</RadioGroup>"
+    <div className="space-y-4">"
+</div>"
+      <h3 className="text-lg font-medium text-white">Attach Resume</h3>"
+      <RadioGroup;
+        value={selectedOption}
+        onValueChange={(value) =>
+</RadioGroup>
+      <RadioGroup;
+        value={selectedOption} "
+        onValueChange={(value) => handleOptionChange(value as 'recent' | 'select' | 'upload')}'
+</RadioGroup>'
+        <div className="flex items-center space-x-2">"
+</div>"
+          <RadioGroupItem value="recent" id="recent" />"
+</RadioGroupItem>"
+          <Label htmlFor="recent" className="text-white">"
+</Label>
+          </Label>
+        </div>
+
+
+        
+
+"
+        <div className="flex items-center space-x-2">"
+</div>"
+          <RadioGroupItem value="select" id="select" />"
+</RadioGroupItem>"
+          <Label htmlFor="select" className="text-white">"
+</Label>
+          </Label>
+        </div>
+
+
+        
+
+"
+        <div className="flex items-center space-x-2">"
+</div>"
+          <RadioGroupItem value="upload" id="upload" />"
+</RadioGroupItem>"
+          <Label htmlFor="upload" className="text-white">"
+</Label>
+          </Label>
+        </div>
+      </RadioGroup>"
+    <div className="space-y-4">;"
+</div>"
+      <h3 className="text-lg font-medium text-white">Attach Resume</h3>;"
+      <RadioGroup;
+        value={selectedOption} ;"
+        onValueChange={(value) => handleOptionChange(value as 'recent' | 'select' | 'upload')}'
+</RadioGroup>'
+        <div className="flex items-center space-x-2">;"
+</div>"
+          <RadioGroupItem value="recent" id="recent" />;"
+</RadioGroupItem>"
+          <Label htmlFor="recent" className="text-white">;"
+</Label>
+          </Label>;
+        </div>;"
+        <div className="flex items-center space-x-2">;"
+</div>"
+          <RadioGroupItem value="select" id="select" />;"
+</RadioGroupItem>"
+          <Label htmlFor="select" className="text-white">;"
+</Label>
+          </Label>;
+        </div>;"
+        <div className="flex items-center space-x-2">;"
+</div>"
+          <RadioGroupItem value="upload" id="upload" />;"
+</RadioGroupItem>"
+          <Label htmlFor="upload" className="text-white">;"
+</Label>
+          </Label>;
+        </div>;
+      </RadioGroup>;
+        <ResumePreviewCard;
+          resume={resume}
+          onDownload={handleDownloadResume}
+          isLoading={isLoading}
+        />;
+</ResumePreviewCard>
+        <SelectResumeSection;"
+      {selectedOption === "select" && ("
+        <SelectResumeSection;
+;"
+      {selectedOption === 'select' && (;'
+        <SelectResumeSection;
+
+
+        <SelectResumeSection;
+          resumeOptions={resumeOptions}
+          selectedResume={selectedResume}
+          handleResumeSelect={handleResumeSelect}
+          handleDownloadResume={handleDownloadResume}
+          isLoading={isLoading}
+        />;
+</SelectResumeSection>
+        <UploadSection;'
+      {selectedOption === "upload" && ("
+        <UploadSection;
+;"
+      {selectedOption === 'upload' && (;'
+        <UploadSection;
+
+
+          customFile={customFile}
+          onFileUpload={handleFileUpload}
+          customFile={customFile}
+          onFileUpload={handleFileUpload}
+      ;'
+      {selectedOption === 'upload' && (;'
+        <UploadSection;
+          customFile={customFile}          onFileUpload={handleFileUpload}
+        <UploadSection;
+          customFile={customFile}
+          onFileUpload={handleFileUpload}
+        />;
+</UploadSection>'
+      <div className="flex justify-between items-center pt-2">;"
+</div>
+        <Button;"
+          variant="outline""
+          onClick={handleGenerateResume}
+
+      {/* Resume selection options based on radio selection */}"
+      {selected_option === "recent" && resume && ("
+        <ResumePreviewCard;
+          resume={resume}
+          on_download={handleDownloadResume}
+          is_loading={is_loading})
+        />)}
+</Button>
+        <SelectResumeSection;
+          resume_options={resume_options}
+          selected_resume={selected_resume}
+          handleResumeSelect={handleResumeSelect}
+          handleDownloadResume={handleDownloadResume}
+          is_loading={is_loading}
+        />)}
+</SelectResumeSection>
+        <UploadSection;
+          custom_file={custom_file}
+          onFileUpload={handleFileUpload}
+        />)}
+</UploadSection>"
+      <div className="flex justify - between items - center pt - 2">;"
+</div>
+        <Button;"
+          variant="outline";"
+          on_click={handleGenerateResume}"
+          className="text - zion - purple border - zion - purple / 20";"
+        >;
+</Button>"
+          <Plus className="h - 4 w - 4 mr - 2" />;"
+</Plus>
+        </Button>;
+      </div>;
+    </div>);"
+          <Plus className="h-4 w-4 mr-2" />"
+</Plus>
+        </Button>
+      </div>
+    </div>"
+  const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'> ('recent');'
+const [selectedResume, setSelectedResume] = useState<ResumeOption | null> (null);
+</ResumeOption>
+const [resumeOptions, setResumeOptions] = useState<ResumeOption[]> ([]);
+</ResumeOption>
+const [customFile, setCustomFile] = useState<File | null> (null);
+</File>'
+return (<div className="space-y-4" > <h3 className="text-lg font-medium text-white" >Attach Resume</h3> <RadioGroup value= {"
+</div>)"
+}className="space-y-3" flex items-center space-x-2"> <RadioGroupItem value=" recent"id=" recent"/> <Label htmlFor=" recent"className=" text-white">Use most recent AI Resume</Label> </div> <div className=" flex items-center space-x-2"> <RadioGroupItem value=" select"id=" select"/> <Label htmlFor=" select"className=" text-white">Select from saved versions</Label> </div> <div className=" flex items-center space-x-2"> <RadioGroupItem value=" upload"id=" upload"/> <Label htmlFor=" upload"className=" text-white">Upload a custom resume (PDF) </Label> </div> </RadioGroup> {"
+</RadioGroupItem>"
+  selectedOption === 'recent'&& resume && (<ResumePreviewCard resume= {'
+  resume;
+}onDownload= {
+  handleDownloadResume;
+}isLoading= {
+  isLoading;)
+}/>) 
+</ResumePreviewCard>'
+  selectedOption === 'select'&& (<SelectResumeSection resumeOptions= {'
+  resumeOptions;
+}selectedResume= {
+  selectedResume;
+}handleResumeSelect= {
+  handleResumeSelect;
+}handleDownloadResume= {
+  handleDownloadResume;
+}isLoading= {
+  isLoading;)
+}/>) 
+</SelectResumeSection>'
+  selectedOption === 'upload' && (<UploadSection customFile= {'
+  customFile;
+}onFileUpload= {
+  handleFileUpload;)
+}/>) 
+</UploadSection>'
+}> <Plus className=" h-4 w-4 mr-2" /> Generate Resume Now </Button> </div> </div>)"
+</Plus>"

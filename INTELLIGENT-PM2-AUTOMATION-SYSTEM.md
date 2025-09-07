@@ -55,7 +55,7 @@ The Intelligent PM2 Automation System is a comprehensive, AI-powered automation 
 
 ### Prerequisites
 
-- Node.js 16+ 
+- Node.js 16+
 - PM2 (will be installed automatically)
 - Git
 - Bash shell
@@ -63,16 +63,19 @@ The Intelligent PM2 Automation System is a comprehensive, AI-powered automation 
 ### Quick Start
 
 1. **Start the Intelligent PM2 System:**
+
    ```bash
    npm run pm2:intelligent:start
    ```
 
 2. **Check System Status:**
+
    ```bash
    npm run pm2:intelligent:status
    ```
 
 3. **Monitor the System:**
+
    ```bash
    npm run pm2:intelligent:monitor
    ```
@@ -85,11 +88,13 @@ The Intelligent PM2 Automation System is a comprehensive, AI-powered automation 
 ### Manual Setup
 
 1. **Install Dependencies:**
+
    ```bash
    npm install
    ```
 
 2. **Make Scripts Executable:**
+
    ```bash
    chmod +x scripts/start-intelligent-pm2-system.sh
    ```
@@ -348,39 +353,39 @@ cat security-reports/security-scan-$(date +%Y-%m-%d).json | jq '.vulnerabilities
 
 ```javascript
 // Get current health status
-GET /api/health/status
+GET / api / health / status;
 
 // Get health metrics
-GET /api/health/metrics
+GET / api / health / metrics;
 
 // Get health trends
-GET /api/health/trends
+GET / api / health / trends;
 ```
 
 ### Performance API
 
 ```javascript
 // Get performance metrics
-GET /api/performance/metrics
+GET / api / performance / metrics;
 
 // Get optimization recommendations
-GET /api/performance/recommendations
+GET / api / performance / recommendations;
 
 // Trigger optimization
-POST /api/performance/optimize
+POST / api / performance / optimize;
 ```
 
 ### Security API
 
 ```javascript
 // Get security status
-GET /api/security/status
+GET / api / security / status;
 
 // Get vulnerability report
-GET /api/security/vulnerabilities
+GET / api / security / vulnerabilities;
 
 // Trigger security scan
-POST /api/security/scan
+POST / api / security / scan;
 ```
 
 ## 🤝 Contributing

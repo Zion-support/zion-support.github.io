@@ -15,7 +15,7 @@ resolve_file_conflicts() {
     awk '
     /^/ { in_head = 1; next }
     /^/ { in_head = 0; in_other = 1; next }
-    /^>>>>>>> / { in_other = 0; next }
+    /^
     in_head { print }
     !in_head && !in_other { print }
     ' "$file" > "$file.tmp" && mv "$file.tmp" "$file"
