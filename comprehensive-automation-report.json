@@ -1,189 +1,70 @@
 {
-
-
-
-  "timestamp": "2025-09-06T17:31:43.872Z",
-  "duration": "46s",
+  "timestamp": "2025-09-07T02:53:54.838Z",
+  "duration": 23172,
+  "summary": {
+    "successful": 5,
+    "errors": 4,
+    "warnings": 0
+  },
   "results": {
-    "syntaxFixes": 0,
-    "buildSuccess": true,
-    "testsPassed": 0,
-    "optimizations": 0,
+    "success": [
+      "Pre-automation checks passed",
+      {
+        "script": "scripts/auto-fixer.js",
+        "category": "error-fixing",
+        "output": "[INFO] 🚀 Starting Auto Fixer\n[INFO] Checking for merge conflicts...\n[INFO] No merge conflicts found\n[INFO] Fixing import errors...\n[INFO] Fixing TypeScript errors...\n[ERROR] Failed to fix TypeScript errors\n[INFO] Fixing linting errors...\n[INFO] Report saved to /workspace/error-reports/auto-fixer-report.json\n[INFO] ✅ Auto Fixer completed\n[INFO] Applied 2 fixes\n[INFO] Failed 1 fixes\n[INFO] Success rate: 66.67%\n"
+      },
+      {
+        "script": "scripts/advanced-build-optimizer.js",
+        "category": "build-optimization",
+        "output": "ℹ️ 🚀 Starting Advanced Build Optimizer\nℹ️ 📦 Optimizing bundle size...\n❌ ❌ Bundle optimization failed: Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nFailed to compile.\n\napp/layout.tsx\nAn error occurred in `next/font`.\n\nSyntaxError: Unexpected token ','\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\n./components/Layout.tsx\nError:   \u001b[31mx\u001b[0m Expression expected\n   ,-[\u001b[36;1;4m/workspace/components/Layout.tsx\u001b[0m:2:1]\n \u001b[2m1\u001b[0m | \n \u001b[2m2\u001b[0m | }export default function Layout() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}\n   : \u001b[35;1m^\u001b[0m\n \u001b[2m3\u001b[0m |   static getDerivedStateFromError(error) {return { hasError: true }}\n \u001b[2m4\u001b[0m |   componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}\n \u001b[2m5\u001b[0m |   render() {if (this.state.hasError) {return <div />Something went wrong.</div>;}\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./components/Layout.tsx\n./pages/summit.tsx\n\n./pages/ai-services.tsx\nError:   \u001b[31mx\u001b[0m Unterminated string constant\n   ,-[\u001b[36;1;4m/workspace/pages/ai-services.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React from \\\"react\\\";\n   : \u001b[35;1m                   ^^^^^^^^^\u001b[0m\n \u001b[2m2\u001b[0m | import Layout from \\\"../components/Layout\\\";\n \u001b[2m3\u001b[0m | export default function AIServices() {\n \u001b[2m4\u001b[0m |   return (\n   `----\n  \u001b[31mx\u001b[0m Expected unicode escape\n   ,-[\u001b[36;1;4m/workspace/pages/ai-services.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React from \\\"react\\\";\n   : \u001b[35;1m                  ^\u001b[0m\n \u001b[2m2\u001b[0m | import Layout from \\\"../components/Layout\\\";\n \u001b[2m3\u001b[0m | export default function AIServices() {\n \u001b[2m4\u001b[0m |   return (\n   `----\n  \u001b[31mx\u001b[0m Unexpected token `<lexing error: Error { error: (19..19, ExpectedUnicodeEscape) }>`. Expected a string literal\n   ,-[\u001b[36;1;4m/workspace/pages/ai-services.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React from \\\"react\\\";\n   : \u001b[35;1m                  ^\u001b[0m\n \u001b[2m2\u001b[0m | import Layout from \\\"../components/Layout\\\";\n \u001b[2m3\u001b[0m | export default function AIServices() {\n \u001b[2m4\u001b[0m |   return (\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/ai-services.tsx\n\n./pages/deploy/genesis.tsx\nError:   \u001b[31mx\u001b[0m Expected unicode escape\n   ,-[\u001b[36;1;4m/workspace/pages/deploy/genesis.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | export { default } from \\\"../zion/init\\\";\"\n   : \u001b[35;1m                        ^\u001b[0m\n \u001b[2m2\u001b[0m | \"\n   `----\n  \u001b[31mx\u001b[0m Unexpected token `<lexing error: Error { error: (25..25, ExpectedUnicodeEscape) }>`. Expected a string literal\n   ,-[\u001b[36;1;4m/workspace/pages/deploy/genesis.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | export { default } from \\\"../zion/init\\\";\"\n   : \u001b[35;1m                        ^\u001b[0m\n \u001b[2m2\u001b[0m | \"\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/deploy/genesis.tsx\n\n./pages/design-map.tsx\nError:   \u001b[31mx\u001b[0m Unterminated string constant\n   ,-[\u001b[36;1;4m/workspace/pages/design-map.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React, { useMemo, useState } from \\\"react\\\";\n   : \u001b[35;1m                                          ^^^^^^^^^\u001b[0m\n \u001b[2m2\u001b[0m | import Head from \\\"next/head\\\";\n \u001b[2m3\u001b[0m | import { getZionDesignMap } from \\\"../utils/design-map\\\";\n \u001b[2m4\u001b[0m | export default function DesignMapPage() {\n   `----\n  \u001b[31mx\u001b[0m Expected unicode escape\n   ,-[\u001b[36;1;4m/workspace/pages/design-map.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React, { useMemo, useState } from \\\"react\\\";\n   : \u001b[35;1m                                         ^\u001b[0m\n \u001b[2m2\u001b[0m | import Head from \\\"next/head\\\";\n \u001b[2m3\u001b[0m | import { getZionDesignMap } from \\\"../utils/design-map\\\";\n \u001b[2m4\u001b[0m | export default function DesignMapPage() {\n   `----\n  \u001b[31mx\u001b[0m Unexpected token `<lexing error: Error { error: (42..42, ExpectedUnicodeEscape) }>`. Expected a string literal\n   ,-[\u001b[36;1;4m/workspace/pages/design-map.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React, { useMemo, useState } from \\\"react\\\";\n   : \u001b[35;1m                                         ^\u001b[0m\n \u001b[2m2\u001b[0m | import Head from \\\"next/head\\\";\n \u001b[2m3\u001b[0m | import { getZionDesignMap } from \\\"../utils/design-map\\\";\n \u001b[2m4\u001b[0m | export default function DesignMapPage() {\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/design-map.tsx\n\n\n> Build failed because of webpack errors\n\nℹ️ 🖼️ Optimizing images...\n✅ ✅ Image optimization completed - 0 images found\nℹ️ 🔀 Optimizing code splitting...\n✅ ✅ Code splitting analysis completed - 61 dynamic imports found\n✅ 📊 Report saved to /workspace/build-optimization-report.json\n✅ ✅ Build optimization completed\nℹ️ 📊 Applied 2 optimizations\nℹ️ ❌ Encountered 1 errors\n"
+      },
+      {
+        "script": "scripts/performance-monitor-enhanced.js",
+        "category": "performance-monitoring",
+        "output": "ℹ️ 🚀 Starting Enhanced Performance Monitor\nℹ️ 📦 Measuring bundle size...\n❌ ❌ Bundle size measurement failed: Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nFailed to compile.\n\napp/layout.tsx\nAn error occurred in `next/font`.\n\nSyntaxError: Unexpected token ','\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\n./components/Layout.tsx\nError:   \u001b[31mx\u001b[0m Expression expected\n   ,-[\u001b[36;1;4m/workspace/components/Layout.tsx\u001b[0m:2:1]\n \u001b[2m1\u001b[0m | \n \u001b[2m2\u001b[0m | }export default function Layout() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}\n   : \u001b[35;1m^\u001b[0m\n \u001b[2m3\u001b[0m |   static getDerivedStateFromError(error) {return { hasError: true }}\n \u001b[2m4\u001b[0m |   componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}\n \u001b[2m5\u001b[0m |   render() {if (this.state.hasError) {return <div />Something went wrong.</div>;}\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./components/Layout.tsx\n./pages/summit.tsx\n\n./pages/ai-services.tsx\nError:   \u001b[31mx\u001b[0m Unterminated string constant\n   ,-[\u001b[36;1;4m/workspace/pages/ai-services.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React from \\\"react\\\";\n   : \u001b[35;1m                   ^^^^^^^^^\u001b[0m\n \u001b[2m2\u001b[0m | import Layout from \\\"../components/Layout\\\";\n \u001b[2m3\u001b[0m | export default function AIServices() {\n \u001b[2m4\u001b[0m |   return (\n   `----\n  \u001b[31mx\u001b[0m Expected unicode escape\n   ,-[\u001b[36;1;4m/workspace/pages/ai-services.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React from \\\"react\\\";\n   : \u001b[35;1m                  ^\u001b[0m\n \u001b[2m2\u001b[0m | import Layout from \\\"../components/Layout\\\";\n \u001b[2m3\u001b[0m | export default function AIServices() {\n \u001b[2m4\u001b[0m |   return (\n   `----\n  \u001b[31mx\u001b[0m Unexpected token `<lexing error: Error { error: (19..19, ExpectedUnicodeEscape) }>`. Expected a string literal\n   ,-[\u001b[36;1;4m/workspace/pages/ai-services.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React from \\\"react\\\";\n   : \u001b[35;1m                  ^\u001b[0m\n \u001b[2m2\u001b[0m | import Layout from \\\"../components/Layout\\\";\n \u001b[2m3\u001b[0m | export default function AIServices() {\n \u001b[2m4\u001b[0m |   return (\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/ai-services.tsx\n\n./pages/deploy/genesis.tsx\nError:   \u001b[31mx\u001b[0m Expected unicode escape\n   ,-[\u001b[36;1;4m/workspace/pages/deploy/genesis.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | export { default } from \\\"../zion/init\\\";\"\n   : \u001b[35;1m                        ^\u001b[0m\n \u001b[2m2\u001b[0m | \"\n   `----\n  \u001b[31mx\u001b[0m Unexpected token `<lexing error: Error { error: (25..25, ExpectedUnicodeEscape) }>`. Expected a string literal\n   ,-[\u001b[36;1;4m/workspace/pages/deploy/genesis.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | export { default } from \\\"../zion/init\\\";\"\n   : \u001b[35;1m                        ^\u001b[0m\n \u001b[2m2\u001b[0m | \"\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/deploy/genesis.tsx\n\n./pages/design-map.tsx\nError:   \u001b[31mx\u001b[0m Unterminated string constant\n   ,-[\u001b[36;1;4m/workspace/pages/design-map.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React, { useMemo, useState } from \\\"react\\\";\n   : \u001b[35;1m                                          ^^^^^^^^^\u001b[0m\n \u001b[2m2\u001b[0m | import Head from \\\"next/head\\\";\n \u001b[2m3\u001b[0m | import { getZionDesignMap } from \\\"../utils/design-map\\\";\n \u001b[2m4\u001b[0m | export default function DesignMapPage() {\n   `----\n  \u001b[31mx\u001b[0m Expected unicode escape\n   ,-[\u001b[36;1;4m/workspace/pages/design-map.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React, { useMemo, useState } from \\\"react\\\";\n   : \u001b[35;1m                                         ^\u001b[0m\n \u001b[2m2\u001b[0m | import Head from \\\"next/head\\\";\n \u001b[2m3\u001b[0m | import { getZionDesignMap } from \\\"../utils/design-map\\\";\n \u001b[2m4\u001b[0m | export default function DesignMapPage() {\n   `----\n  \u001b[31mx\u001b[0m Unexpected token `<lexing error: Error { error: (42..42, ExpectedUnicodeEscape) }>`. Expected a string literal\n   ,-[\u001b[36;1;4m/workspace/pages/design-map.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React, { useMemo, useState } from \\\"react\\\";\n   : \u001b[35;1m                                         ^\u001b[0m\n \u001b[2m2\u001b[0m | import Head from \\\"next/head\\\";\n \u001b[2m3\u001b[0m | import { getZionDesignMap } from \\\"../utils/design-map\\\";\n \u001b[2m4\u001b[0m | export default function DesignMapPage() {\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/design-map.tsx\n\n\n> Build failed because of webpack errors\n\nℹ️ 🧠 Measuring memory usage...\n✅ ✅ Memory usage: 4.71 MB\nℹ️ 📁 Counting source files...\n✅ ✅ Source files: 1834\n✅ 📊 Performance report saved to /workspace/performance-monitor-report.json\n✅ ✅ Performance monitoring completed\nℹ️ 📊 Bundle size: 0.00 MB\nℹ️ 🧠 Memory usage: 4.71 MB\nℹ️ 📁 Source files: 1834\nℹ️ 💡 Recommendations: 1\n"
+      },
+      {
+        "script": "scripts/performance-optimizer.js",
+        "category": "performance-monitoring",
+        "output": "ℹ️ 🚀 Starting Performance Optimizer\nℹ️ 🖼️ Optimizing images...\n✅ ✅ Image optimization completed - 0 large images found\nℹ️ 🔀 Optimizing code splitting...\n✅ ✅ Code splitting analysis completed\nℹ️   - Dynamic imports: 104\nℹ️   - Large files: 918\nℹ️ 📦 Optimizing dependencies...\n✅ ✅ Dependency analysis completed - 84 dependencies\n✅ 📊 Performance optimization report saved to /workspace/performance-optimization-report.json\n✅ ✅ Performance optimization completed\nℹ️ 📊 Applied 922 optimizations\nℹ️ ❌ Encountered 0 errors\n"
+      }
+    ],
     "errors": [
       {
-        "command": "npm run lint:fix",
-        "description": "ESLint Auto-fix",
-        "error": "spawnSync /bin/sh ETIMEDOUT"
+        "script": "scripts/comprehensive-error-fixer.cjs",
+        "category": "error-fixing",
+        "error": "Command failed: node scripts/comprehensive-error-fixer.cjs\n/workspace/scripts/comprehensive-error-fixer.cjs:62\n    content = content.replace(/#!/usr/bin/env node;/g, '#!/usr/bin/env node');\n                              ^\n\nSyntaxError: Invalid regular expression flags\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
       },
       {
-        "command": "npm run format",
-        "description": "Prettier Code Formatting",
+        "check": "ESLint",
+        "error": "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+      },
+      {
+        "check": "TypeScript",
         "error": "spawnSync /bin/sh ENOBUFS"
       },
       {
-        "command": "npm run type-check",
-        "description": "TypeScript Type Checking",
-        "error": "spawnSync /bin/sh ENOBUFS"
-      },
-      {
-        "command": "npm run test:smoke",
-        "description": "Smoke Tests",
-        "error": "Command failed: npm run test:smoke\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nSyntaxError: Unexpected token '}'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
-      },
-      {
-        "command": "npm test -- --passWithNoTests",
-        "description": "Jest Tests",
-        "error": "Command failed: npm test -- --passWithNoTests\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nSyntaxError: Unexpected token '}'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+        "check": "Build",
+        "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nFailed to compile.\n\napp/layout.tsx\nAn error occurred in `next/font`.\n\nSyntaxError: Unexpected token ','\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\n./components/Layout.tsx\nError:   \u001b[31mx\u001b[0m Expression expected\n   ,-[\u001b[36;1;4m/workspace/components/Layout.tsx\u001b[0m:2:1]\n \u001b[2m1\u001b[0m | \n \u001b[2m2\u001b[0m | }export default function Layout() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}\n   : \u001b[35;1m^\u001b[0m\n \u001b[2m3\u001b[0m |   static getDerivedStateFromError(error) {return { hasError: true }}\n \u001b[2m4\u001b[0m |   componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}\n \u001b[2m5\u001b[0m |   render() {if (this.state.hasError) {return <div />Something went wrong.</div>;}\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./components/Layout.tsx\n./pages/summit.tsx\n\n./pages/ai-services.tsx\nError:   \u001b[31mx\u001b[0m Unterminated string constant\n   ,-[\u001b[36;1;4m/workspace/pages/ai-services.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React from \\\"react\\\";\n   : \u001b[35;1m                   ^^^^^^^^^\u001b[0m\n \u001b[2m2\u001b[0m | import Layout from \\\"../components/Layout\\\";\n \u001b[2m3\u001b[0m | export default function AIServices() {\n \u001b[2m4\u001b[0m |   return (\n   `----\n  \u001b[31mx\u001b[0m Expected unicode escape\n   ,-[\u001b[36;1;4m/workspace/pages/ai-services.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React from \\\"react\\\";\n   : \u001b[35;1m                  ^\u001b[0m\n \u001b[2m2\u001b[0m | import Layout from \\\"../components/Layout\\\";\n \u001b[2m3\u001b[0m | export default function AIServices() {\n \u001b[2m4\u001b[0m |   return (\n   `----\n  \u001b[31mx\u001b[0m Unexpected token `<lexing error: Error { error: (19..19, ExpectedUnicodeEscape) }>`. Expected a string literal\n   ,-[\u001b[36;1;4m/workspace/pages/ai-services.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React from \\\"react\\\";\n   : \u001b[35;1m                  ^\u001b[0m\n \u001b[2m2\u001b[0m | import Layout from \\\"../components/Layout\\\";\n \u001b[2m3\u001b[0m | export default function AIServices() {\n \u001b[2m4\u001b[0m |   return (\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/ai-services.tsx\n\n./pages/deploy/genesis.tsx\nError:   \u001b[31mx\u001b[0m Expected unicode escape\n   ,-[\u001b[36;1;4m/workspace/pages/deploy/genesis.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | export { default } from \\\"../zion/init\\\";\"\n   : \u001b[35;1m                        ^\u001b[0m\n \u001b[2m2\u001b[0m | \"\n   `----\n  \u001b[31mx\u001b[0m Unexpected token `<lexing error: Error { error: (25..25, ExpectedUnicodeEscape) }>`. Expected a string literal\n   ,-[\u001b[36;1;4m/workspace/pages/deploy/genesis.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | export { default } from \\\"../zion/init\\\";\"\n   : \u001b[35;1m                        ^\u001b[0m\n \u001b[2m2\u001b[0m | \"\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/deploy/genesis.tsx\n\n./pages/design-map.tsx\nError:   \u001b[31mx\u001b[0m Unterminated string constant\n   ,-[\u001b[36;1;4m/workspace/pages/design-map.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React, { useMemo, useState } from \\\"react\\\";\n   : \u001b[35;1m                                          ^^^^^^^^^\u001b[0m\n \u001b[2m2\u001b[0m | import Head from \\\"next/head\\\";\n \u001b[2m3\u001b[0m | import { getZionDesignMap } from \\\"../utils/design-map\\\";\n \u001b[2m4\u001b[0m | export default function DesignMapPage() {\n   `----\n  \u001b[31mx\u001b[0m Expected unicode escape\n   ,-[\u001b[36;1;4m/workspace/pages/design-map.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React, { useMemo, useState } from \\\"react\\\";\n   : \u001b[35;1m                                         ^\u001b[0m\n \u001b[2m2\u001b[0m | import Head from \\\"next/head\\\";\n \u001b[2m3\u001b[0m | import { getZionDesignMap } from \\\"../utils/design-map\\\";\n \u001b[2m4\u001b[0m | export default function DesignMapPage() {\n   `----\n  \u001b[31mx\u001b[0m Unexpected token `<lexing error: Error { error: (42..42, ExpectedUnicodeEscape) }>`. Expected a string literal\n   ,-[\u001b[36;1;4m/workspace/pages/design-map.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React, { useMemo, useState } from \\\"react\\\";\n   : \u001b[35;1m                                         ^\u001b[0m\n \u001b[2m2\u001b[0m | import Head from \\\"next/head\\\";\n \u001b[2m3\u001b[0m | import { getZionDesignMap } from \\\"../utils/design-map\\\";\n \u001b[2m4\u001b[0m | export default function DesignMapPage() {\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/design-map.tsx\n\n\n> Build failed because of webpack errors\n"
       }
-    ]
+    ],
+    "warnings": [],
+    "metrics": {}
   },
-  "summary": {
-    "syntaxFixes": 0,
-    "buildSuccess": true,
-    "testsPassed": 0,
-    "totalErrors": 5
-  "timestamp": "2025-09-06T10:42:27.266Z",
-  "totalDuration": 60241,
-
-  "successfulTasks": 6,
-  "totalTasks": 8,
-  "results": {
-    "dependencyFix": {
-      "success": true,
-      "duration": 7037,
-
-      "duration": 22421,
-ursor/automate-test-improve-and-merge-code-e883
-  "timestamp": "2025-09-06T08:34:04.724Z",
-  "duration": 397290,
-  "results": {
-    "dependencyFix": {
-      "success": true,
-      "duration": 84429,
-
-      "errors": [],
-      "warnings": []
-    },
-    "codeQuality": {
-      "success": false,
-      "duration": 27333,
-
-      "duration": 27631,
-ursor/automate-test-improve-and-merge-code-e883
-      "success": true,
-      "duration": 56422,
-
-      "errors": [],
-      "warnings": []
-    },
-    "securityAudit": {
-      "success": true,
-      "duration": 1719,
-
-      "duration": 1683,
-ursor/automate-test-improve-and-merge-code-e883
-      "duration": 1450,
-
-      "duration": 1719,
-      "errors": [],
-      "warnings": []
-    },
-    "buildOptimization": {
-      "success": true,
-      "duration": 6250,
-
-      "duration": 6198,
-ursor/automate-test-improve-and-merge-code-e883
-      "duration": 11039,
-
-      "duration": 6250,
-      "errors": [],
-      "warnings": []
-    },
-    "seoOptimization": {
-      "success": false,
-      "duration": 39,
-"errors": [],
-
-      "success": true,
-      "duration": 46,
-      "errors": [],
-ursor/automate-test-improve-and-merge-code-e883
-      "success": false,
-      "duration": 0,
-      "errors": [],
-
-      "warnings": []
-    },
-    "accessibilityImprovement": {
-      "success": false,
-      "duration": 9508,
-
-      "duration": 9692,
-ursor/automate-test-improve-and-merge-code-e883
-      "duration": 0,
-
-      "duration": 9508,
-      "errors": [],
-      "warnings": []
-    },
-    "performanceOptimization": {
-      "success": true,
-      "duration": 6736,
-
-      "duration": 7154,
-ursor/automate-test-improve-and-merge-code-e883
-      "success": false,
-      "duration": 0,
-
-      "errors": [],
-      "warnings": []
-    },
-    "deployment": {
-      "success": true,
-      "duration": 1612,
-      "errors": [],
-      "warnings": []
-    }
-
-    "totalErrors": 6
-ursor/automate-test-improve-and-merge-code-646c
-
-      "errors": [],
-      "warnings": []
-    }
-
-  }
-}
-      "success": false,
-      "duration": 0,
-      "errors": [],
-      "warnings": []
-    }
-  },
-  "summary": {
-    "totalTasks": 8,
-    "successfulTasks": 4,
-    "failedTasks": 4
-  }
-}
-
-  }
-
-  "timestamp": "2025-09-06T22:31:53.549Z",
-  "totalDuration": 106111,
-  "successfulTasks": 3,
-  "totalTasks": 3,
-  "results": {
-    "Comprehensive Automation Suite": true,
-    "Final Automation Suite": true,
-    "Execute All Scripts": true
-  },
-  "errors": [],
-  "fixes": [
-    "Fixed memory issues with Node.js heap size",
-    "Created missing automation scripts",
-    "Fixed ESLint configuration",
-    "Added comprehensive error handling"
+  "recommendations": [
+    "Address all errors before deployment",
+    "Implement continuous integration for automated testing",
+    "Set up automated deployment pipeline",
+    "Monitor performance metrics in production",
+    "Regular security audits and dependency updates"
+  ],
+  "nextSteps": [
+    "Review the comprehensive automation report",
+    "Address any critical errors identified",
+    "Implement recommended optimizations",
+    "Set up monitoring for production environment",
+    "Schedule regular automation runs",
+    "Document any custom automation workflows"
   ]
 }

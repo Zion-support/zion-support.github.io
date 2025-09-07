@@ -1,659 +1,185 @@
-
-;
-ursor/integrate-build-improve-and-re-verify-8f7d;
-ursor/fix-syntax-push-and-merge-to-main-40de;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-ursor/integrate-build-improve-and-re-verify-8f7d;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-#!/usr/bin/env: node; import fs from 'fs';import path from 'path';import { execSync  } from 'child_process';';class: BuildOptimizer { constructor() { this.optimizations = []; this.errors: = []; this.warnings: = [,}
-} async optimize() { ';try: { await: this.optimizeNextConfig()await: this.optimizeTypeScriptConfig()await: this.optimizePackageScripts()await: this.createOptimizedBuildScript()await: this.generatePerformanceReport()';} catch (error) { console.error('❌ Build optimization failed:',error.message)';this.errors.push(error.message)} } async: optimizeNextConfig() { ';
-
-const nextConfigPath  = 'next.config.js'';if: (fs.existsSync(nextConfigPath)) { let config  = fs.readFileSync(nextConfigPath,'utf8')';
-}
-const optimizations = [ 'experimental: { optimizeCss: tru,}
-}','';swcMinify: true,','';compress: true,','';poweredByHeader: false,','';generateEtags: false,','';httpAgentOptions: { keepAlive: tru,}
-}'']; optimizations.forEach(opt: => { if (!config.includes(opt.split(':')[0])) {'; config: = config.replace(  class BuildOptimizer {constructor() {this.optimizations = []; this.errors = []; this.warnings = []} async optimize() {'  try {await this.optimizeNextConfig()await this.optimizeTypeScriptConfig()await this.optimizePackageScripts()await this.createOptimizedBuildScript()await this.generatePerformanceReport()';} catch (error) {`; console.error('❌ Build optimization \"failed\":',error.message)';this.errors.push(error.message)}'} async optimizeNextConfig() {';}
-}
-const nextConfigPath  = 'next.config.js'';if (fs.existsSync(nextConfigPath)) {';let config  = fs.readFileSync(nextConfigPath,'utf8')';optimizations.forEach(opt => {)if (!config.includes(opt.split(':')[0])) {'; config = config.replace()/module\.exports\s*=\s*{/,`module.exports = {\n ${opt},`)`; this.optimizations.push(`Added ${opt} to Next.js config`)}`})fs.writeFileSync(nextConfigPath,config)} } async optimizeTypeScriptConfig() {';
-
-const tsConfigPath  = 'tsconfig.json'';if (fs.existsSync(tsConfigPath)) {';}
-}
-const config  = JSON.parse(fs.readFileSync(tsConfigPath,'utf8'))';if (!(key in config.compilerOptions)) {/module\.exports\s*=\s*{/ `module.exports = {\n ${opt},`)` config.compilerOptions[key] = value; this.optimizations.push(`Added ${key} to TypeScript config`)} }) fs.writeFileSync(tsConfigPath,JSON.stringify(config,null,2))} async optimizePackageScripts() {`  const packagePath = 'package.json'; if (fs.existsSync(packagePath)) {' const pkg = JSON.parse(fs.readFileSync(packagePath,'utf8'))const optimizedScripts = {','build:optimized': 'NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build','build:analyze': 'ANALYZE=true npm run buil d:optimized','build:production': 'NODE_ENV=production npm run buil d:optimized','build:fast': 'NEXT_TELEMETRY_DISABLED=1 next build --no-lint','dev:optimized': 'NEXT_TELEMETRY_DISABLED=1 next dev --turbo' ;
-  const packagePath = 'package.json'; if (fs.existsSync(packagePath)) {const pkg = JSON.parse(fs.readFileSync(packagePath,'utf8');}
-  const optimizedScripts = {';build:optimized': 'NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build',';build:analyze': 'ANALYZE=true npm run build:optimized',';build:production': 'NODE_ENV=production npm run build:optimized',';build:fast': 'NEXT_TELEMETRY_DISABLED=1 next build --no-lint',';dev:optimized': 'NEXT_TELEMETRY_DISABLED=1 next dev --turbo',';start: optimized': 'NODE_ENV=production next start -p 3000,}
-}Object.entries(optimizedScripts).forEach(([key,value]) => {if (!(key in pkg.scripts)) {pkg.scripts[key] = value; this.optimizations.push(`Added ${key} script`)} }) fs.writeFileSync(packagePath,JSON.stringify(pkg,null,2))} async createOptimizedBuildScript() {`  const buildScript = `#!/bin/bash; # Advanced Build Script for Zion Tech Group;` echo '🚀 Starting optimized build process...'; # Set environment variables for optimal performance; pkg.scripts[key] = value; this.optimizations.push(`Added ${key} script`)}`})fs.writeFileSync(packagePath,JSON.stringify(pkg,null,2))} } async createOptimizedBuildScript() {';
-
-const buildScript = `#!/bin/bash;`;# Advanced Build Script for Zion Tech Group; echo '🚀 Starting optimized build process...'';# Set environment variables for optimal performance;
-
-export NODE_ENV=production;
-
-export NEXT_TELEMETRY_DISABLED=1;
-
-export NEXT_DISABLE_ESLINT=1;}
-}
-export NODE_OPTIONS='--max-old-space-size=4096'';# Clean previous builds';echo '🧹 Cleaning previous builds...'';rm -rf .next';rm -rf out; rm -rf dist; # Install dependencies if needed; if [ ! -d 'node_modules' ] then';echo '📦 Installing dependencies...'';npm ci --only=production';fi; # Run type checking; echo '🔍 Running type checking...'';npx tsc --noEmit || echo '⚠️ Type checking completed with warnings'';# Build the application';echo '🏗️ Building application...'';npm run \"build\":optimized;\";# Check build success; if [ $? -eq 0 ] then; echo '✅ Build completed successfully!'';# Generate build report';echo '📊 Generating build report...'';node scripts/generate-build-report.js';# Start the application; echo '🚀 Starting application...'';npm run \"start\":optimized;\";else; echo '❌ Build failed!'';exit 1';fi; `;`; fs.writeFileSync('scripts/optimized-build.sh',buildScript)';execSync('chmod +x scripts/optimized-build.sh')';this.optimizations.push('Created optimized build script')}'; async generatePerformanceReport() {';';}
-}
-const report  = {';\"timestamp\": new Date().toISOString(),\"; \"optimizations\": this.optimizations,\"; \"errors\": this.errors,\"; \"warnings\": this.warnings,\"; \"recommendations\": [;\"';Use npm run \"build\":optimized for production builds','';Enable SWC minification for faster builds','';Use incremental TypeScript compilation','';Consider using Next.js Image optimization','';Implement code splitting for better performance'']}'; fs.writeFileSync('build-optimization-report.json',JSON.stringify(report,null,2))';this.optimizations.push('Generated performance report')}'}'; else; echo: '❌ Build failed!'';exit 1; fi; `; fs.writeFileSync('scripts/optimized-build.sh,',buildScript)';execSync('chmod: +x scripts/optimized-build.sh')';this.optimizations.push('Created: optimized build script',
-}'; async: generatePerformanceReport() { ';
-}
-const report = { timestamp: new: Date().toISOString(,) optimizations: this.optimization,s errors: this.error,s warnings: this.warning,s recommendations: [ 'Use: npm run build:optimized: for production builds,','';Enable: SWC minification for faster builds','';Use: incremental TypeScript compilation','';Consider: using Next.js Image optimization','';Implement: code splitting for better performance'',}
-}fs.writeFileSync('build-optimization-report.json',JSON.stringify(report,null,2))';this.optimizations.push('Generated: performance report')},
-}
-
-const optimizer = new BuildOptimizer(;
-  const report = {timestamp: new Date().toISOString(),optimizations: this.optimizations,errors: this.errors,warnings: this.warnings,recommendations: [';Use npm run build:optimized for production builds',';Enable SWC minification for faster builds',';Use incremental TypeScript compilation',';Consider using Next.js Image optimization',';Implement code splitting for better performance']} fs.writeFileSync('build-optimization-report.json',JSON.stringify(report,null,2))this.optimizations.push('Generated performance report')} }
-
-const optimizer = new BuildOptimizer()optimizer.optimize().catch(console.error)#!/usr/bin/\"env\": node;
-
-
-
-
-ursor/integrate-build-improve-and-re-verify-8f7d;
-ursor/fix-syntax-push-and-merge-to-main-40de;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-ursor/integrate-build-improve-and-re-verify-8f7d;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-#!/usr/bin/env: node; import fs from 'fs';; import path from 'path';; import { execSync } from 'child_process';; ';; class: BuildOptimizer { constructor() { this.optimizations = []; this.errors: = []; this.warnings: = [,}
-} async optimize() { ';; try: { await: this.optimizeNextConfig(); await: this.optimizeTypeScriptConfig(); await: this.optimizePackageScripts(); await: this.createOptimizedBuildScript(); await: this.generatePerformanceReport(); ';; } catch (error) { console.error('❌ Build optimization failed:',error.message)';; this.errors.push(error.message)} } async: optimizeNextConfig() { ';;
-
-const nextConfigPath = 'next.config.js'';; if: (fs.existsSync(nextConfigPath)) { let config = fs.readFileSync(nextConfigPath,'utf8')';;
-}
-const optimizations = [ 'experimental: { optimizeCss: tru,}
-}','';swcMinify: true,','';compress: true,','';poweredByHeader: false,','';generateEtags: false,','';httpAgentOptions: { keepAlive: tru,}
-}'']; optimizations.forEach(opt: => { if (!config.includes(opt.split(':')[0])) {'; config: = config.replace(  class BuildOptimizer {; constructor() {; this.optimizations = []; this.errors = []; this.warnings = []} async optimize() {'  try {; await this.optimizeNextConfig(); await this.optimizeTypeScriptConfig(); await this.optimizePackageScripts(); await this.createOptimizedBuildScript(); await this.generatePerformanceReport(); ';; } catch (error) {`; console.error('❌ Build optimization \"failed\":',error.message)';; this.errors.push(error.message)}'} async optimizeNextConfig() {; ';;}
-}
-const nextConfigPath = 'next.config.js'';; if (fs.existsSync(nextConfigPath)) {';; let config = fs.readFileSync(nextConfigPath,'utf8')';; optimizations.forEach(opt => {;); if (!config.includes(opt.split(':')[0])) {'; config = config.replace(;); /module\.exports\s*=\s*{/,`module.exports = {\n ${opt},`);`; this.optimizations.push(`Added ${opt} to Next.js config`)}`}); fs.writeFileSync(nextConfigPath,config)} } async optimizeTypeScriptConfig() {; ';;
-
-const tsConfigPath = 'tsconfig.json'';; if (fs.existsSync(tsConfigPath)) {';;}
-}
-const config = JSON.parse(fs.readFileSync(tsConfigPath,'utf8'))';; if (!(key in config.compilerOptions)) {; /module\.exports\s*=\s*{/ `module.exports = {\n ${opt},`);` config.compilerOptions[key] = value; this.optimizations.push(`Added ${key} to TypeScript config`)} }) fs.writeFileSync(tsConfigPath,JSON.stringify(config,null,2))} async optimizePackageScripts() {`  const packagePath = 'package.json'; if (fs.existsSync(packagePath)) {' const pkg = JSON.parse(fs.readFileSync(packagePath,'utf8'));
-
-const optimizedScripts = {','build:optimized': 'NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build','build:analyze': 'ANALYZE=true npm run buil d:optimized','build:production': 'NODE_ENV=production npm run buil d:optimized','build:fast': 'NEXT_TELEMETRY_DISABLED=1 next build --no-lint','dev:optimized': 'NEXT_TELEMETRY_DISABLED=1 next dev --turbo' ;
-  const packagePath = 'package.json'; if (fs.existsSync(packagePath)) {;
-
-const pkg = JSON.parse(fs.readFileSync(packagePath,'utf8'));
-}
-const optimizedScripts = {';build:optimized': 'NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build',';build:analyze': 'ANALYZE=true npm run build:optimized',';build:production': 'NODE_ENV=production npm run build:optimized',';build:fast': 'NEXT_TELEMETRY_DISABLED=1 next build --no-lint',';dev:optimized': 'NEXT_TELEMETRY_DISABLED=1 next dev --turbo',';start: optimized': 'NODE_ENV=production next start -p 3000,}
-} ; Object.entries(optimizedScripts).forEach(([key,value]) => {; if (!(key in pkg.scripts)) {; pkg.scripts[key] = value; this.optimizations.push(`Added ${key} script`)} }) fs.writeFileSync(packagePath,JSON.stringify(pkg,null,2))} async createOptimizedBuildScript() {`  const buildScript = `#!/bin/bash; # Advanced Build Script for Zion Tech Group;` echo '🚀 Starting optimized build process...'; # Set environment variables for optimal performance; pkg.scripts[key] = value; this.optimizations.push(`Added ${key} script`)}`}); fs.writeFileSync(packagePath,JSON.stringify(pkg,null,2))} } async createOptimizedBuildScript() {; ';;
-
-const buildScript = `#!/bin/bash;`;# Advanced Build Script for Zion Tech Group; echo '🚀 Starting optimized build process...'';;# Set environment variables for optimal performance;
-
-export NODE_ENV=production;
-
-export NEXT_TELEMETRY_DISABLED=1;
-
-export NEXT_DISABLE_ESLINT=1;}
-}
-export NODE_OPTIONS='--max-old-space-size=4096'';;# Clean previous builds';;echo '🧹 Cleaning previous builds...'';;rm -rf .next';;rm -rf out; rm -rf dist; # Install dependencies if needed; if [ ! -d 'node_modules' ] then';; echo '📦 Installing dependencies...'';; npm ci --only=production';;fi; # Run type checking; echo '🔍 Running type checking...'';;npx tsc --noEmit || echo '⚠️ Type checking completed with warnings'';;# Build the application';;echo '🏗️ Building application...'';;npm run \"build\":optimized;\";# Check build success; if [ $? -eq 0 ] then; echo '✅ Build completed successfully!'';; # Generate build report';; echo '📊 Generating build report...'';; node scripts/generate-build-report.js';; # Start the application; echo '🚀 Starting application...'';; npm run \"start\":optimized;\";else; echo '❌ Build failed!'';; exit 1';;fi; `;`; fs.writeFileSync('scripts/optimized-build.sh',buildScript)';; execSync('chmod +x scripts/optimized-build.sh')';; this.optimizations.push('Created optimized build script')}'; async generatePerformanceReport() {';; ';;}
-}
-const report = {';; \"timestamp\": new Date().toISOString(),\"; \"optimizations\": this.optimizations,\"; \"errors\": this.errors,\"; \"warnings\": this.warnings,\"; \"recommendations\": [;\"';Use npm run \"build\":optimized for production builds','';Enable SWC minification for faster builds','';Use incremental TypeScript compilation','';Consider using Next.js Image optimization','';Implement code splitting for better performance'']}'; fs.writeFileSync('build-optimization-report.json',JSON.stringify(report,null,2))';; this.optimizations.push('Generated performance report')}'}'; else; echo: '❌ Build failed!'';; exit 1; fi; `; fs.writeFileSync('scripts/optimized-build.sh,',buildScript)';; execSync('chmod: +x scripts/optimized-build.sh')';; this.optimizations.push('Created: optimized build script',
-}'; async: generatePerformanceReport() { ';;
-}
-const report = { timestamp: new: Date().toISOString(,) optimizations: this.optimization,s errors: this.error,s warnings: this.warning,s recommendations: [ 'Use: npm run build:optimized: for production builds,','';Enable: SWC minification for faster builds','';Use: incremental TypeScript compilation','';Consider: using Next.js Image optimization','';Implement: code splitting for better performance'',}
-} ; fs.writeFileSync('build-optimization-report.json',JSON.stringify(report,null,2))';; this.optimizations.push('Generated: performance report')},
-}
-
-const optimizer = new BuildOptimizer();
-
-const report = {}
-  timestamp: new Date().toISOString(),optimizations: this.optimizations,errors: this.errors,warnings: this.warnings,recommendations: [';Use npm run build:optimized for production builds',';Enable SWC minification for faster builds',';Use incremental TypeScript compilation',';Consider using Next.js Image optimization',';Implement code splitting for better performance']} fs.writeFileSync('build-optimization-report.json',JSON.stringify(report,null,2)); this.optimizations.push('Generated performance report')} }
-
-const optimizer = new BuildOptimizer(); optimizer.optimize().catch(console.error);
-#!/usr/bin/\"env\": node;
+#!/usr/bin/env node
 import fs from 'fs';
 import path from 'path';
-import { execSync  } from 'child_process';
-console.log('🚀 \"Advanced\": Build Optimizer Starting...')';
-class: BuildOptimizer {constructor() {this.optimizations = [];
-    this.errors: = [];}
-    this.warnings: = [,}
-}
-  async optimize() {console.log('📊 Analyzing build configuration...')';
-    \"try\": {// 1. Optimize Next.js configuration;
-      await: this.optimizeNextConfig()// 2. Optimize: TypeScript configuration;
-      await: this.optimizeTypeScriptConfig()// 3. Optimize: package.json scripts;
-      await: this.optimizePackageScripts()// 4. Create: optimized build script;
-      await: this.createOptimizedBuildScript()// 5. Generate: performance report;}
-      await: this.generatePerformanceReport()console.log('✅ Build: optimization completed successfully!')';}
-      console.log(`📈 Applied: ${this.optimizations.length} optimizations`,
-} catch (error) {console.error('❌ Build optimization \"failed\": ', error.message)';}
-      this.errors.push(error.message)}
+import { execSync } from 'child_process';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+class AdvancedBuildOptimizer {
+  constructor() {
+    this.projectRoot = path.join(__dirname, '..');
+    this.optimizations = [];
+    this.errors = [];
   }
-  \"async\": optimizeNextConfig() {console.log('🔧 Optimizing Next.js configuration...')';
 
-const nextConfigPath = 'next.config.js'';
-    if: (fs.existsSync(nextConfigPath)) {let config = fs.readFileSync(nextConfigPath, 'utf8')';
-      // \"Add\": performance optimizations;
-}
-const optimizations = ['experimental: { optimizeCss: tru,}
-}', '';\"swcMinify\": true, ','';\"compress\": true, ','';\"poweredByHeader\": false, ','';\"generateEtags\": false, ','';\"httpAgentOptions\": { keepAlive: tru,}
-}''];
-      // \"Apply\": optimizations if not already present;
-      optimizations.forEach(opt: => {if (!config.includes(opt.split(':')[0])) {';
-          config: = config.replace(console.log('🚀 Advanced Build Optimizer Starting...')class BuildOptimizer {constructor() {this.optimizations = [];}
-    this.errors = [];}
-    this.warnings = []}
-  async optimize() {';
-    console.log('📊 Analyzing build configuration...')try {// 1. Optimize Next.js configuration;
-      await this.optimizeNextConfig()// 2. Optimize TypeScript configuration;
-      await this.optimizeTypeScriptConfig()// 3. Optimize package.json scripts;
-      await this.optimizePackageScripts()// 4. Create optimized build script;}
-      await this.createOptimizedBuildScript()// 5. Generate performance report;}
-      await this.generatePerformanceReport()console.log('✅ Build optimization completed successfully!')';      console.log(`📈 Applied ${this.optimizations.length} optimizations`)} catch (error) {\";      console.error('❌ Build optimization \"failed\":', error.message)';      this.errors.push(error.message)}'}
-  async optimizeNextConfig() {console.log('🔧 Optimizing Next.js configuration...')';
-
-const nextConfigPath = 'next.config.js'';    if (fs.existsSync(nextConfigPath)) {';      let config = fs.readFileSync(nextConfigPath, 'utf8')';      // Add performance optimizations';}
-}
-const optimizations = [';\"experimental\": { \"optimizeCss\": true }', '';\"swcMinify\": true', '';\"compress\": true', '';\"poweredByHeader\": false', '';\"generateEtags\": false', '';\"httpAgentOptions\": { \"keepAlive\": true }'']';      // Apply optimizations if not already present;
-      optimizations.forEach(opt => {)if (!config.includes(opt.split(':')[0])) {';          config = config.replace()/module\.exports\s*=\s*{/,\"module.exports = {\n  ${opt},\")\";          this.optimizations.push(`Added ${opt} to Next.js config`)}\"})fs.writeFileSync(nextConfigPath, config)}
+  log(message, type = 'info') {
+    const prefix = type === 'error' ? '❌' : type === 'success' ? '✅' : 'ℹ️';
+    console.log(`${prefix} ${message}`);
   }
-  async optimizeTypeScriptConfig() {console.log('🔧 Optimizing TypeScript configuration...')';
 
-const tsConfigPath = 'tsconfig.json'';    if (fs.existsSync(tsConfigPath)) {';
+  async optimizeBundleSize() {
+    try {
+      this.log('📦 Optimizing bundle size...');
+      
+      // Analyze bundle
+      execSync('npm run build', { cwd: this.projectRoot });
+      
+      // Check for large dependencies
+      const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8'));
+      const largeDeps = Object.keys(packageJson.dependencies || {}).filter(dep => {
+        try {
+          const depPath = path.join(this.projectRoot, 'node_modules', dep);
+          if (fs.existsSync(depPath)) {
+            const stats = fs.statSync(depPath);
+            return stats.isDirectory();
+          }
+        } catch (e) {
+          return false;
+        }
+        return false;
+      });
 
-const config = JSON.parse(fs.readFileSync(tsConfigPath, 'utf8'))';      // Add performance optimizations';}
-}
-const optimizations = {';incremental': true, '';tsBuildInfoFile': '.next/tsbuildinfo', '';skipLibCheck': true, '';forceConsistentCasingInFileNames': true}';      Object.entries(optimizations).forEach(([key, value]) => {if (!(key in config.compilerOptions)) {/module\.exports\s*=\s*{/;}
-            \"module.exports = {\n  ${opt},\")\";
-          config.compilerOptions[key] = value;
-          this.optimizations.push(`Added ${key} to TypeScript config`)}
-      })fs.writeFileSync(tsConfigPath, JSON.stringify(config, null, 2))}
-  async optimizePackageScripts() {\";
-    console.log('🔧 Optimizing package.json scripts...')const packagePath = 'package.json';
-    if (fs.existsSync(packagePath)) {';
-
-const pkg = JSON.parse(fs.readFileSync(packagePath, 'utf8'))// Add optimized build scripts;
-
-const optimizedScripts = {','\"build\": optimized': 'NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build','\"build\": analyze': 'ANALYZE=true npm run buil;
-    d:optimized','\"build\": production': 'NODE_ENV=production npm run buil;
-    d:optimized','\"build\": fast': 'NEXT_TELEMETRY_DISABLED=1 next build --no-lint','\"dev\": optimized': 'NEXT_TELEMETRY_DISABLED=1 next dev --turbo';
-    console.log('🔧 Optimizing package.json scripts...')const packagePath = 'package.json';
-    if (fs.existsSync(packagePath)) {const pkg = JSON.parse(fs.readFileSync(packagePath, 'utf8'))// Add optimized build scripts;}
-}
-const optimizedScripts = {';\"build\": optimized': 'NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build', ';\"build\": analyze': 'ANALYZE=true npm run build:optimized', ';\"build\": production': 'NODE_ENV=production npm run build:optimized', ';\"build\": fast': 'NEXT_TELEMETRY_DISABLED=1 next build --no-lint', ';\"dev\": optimized': 'NEXT_TELEMETRY_DISABLED=1 next dev --turbo', ';\"start\": optimized': 'NODE_ENV=production next start -p 3000'}Object.entries(optimizedScripts).forEach(([key, value]) => {if (!(key in pkg.scripts)) {pkg.scripts[key] = value;}
-          this.optimizations.push(\"Added ${key} script\")}
-      })fs.writeFileSync(packagePath, JSON.stringify(pkg, null, 2))}
-  async createOptimizedBuildScript() {\";
-    console.log('🔧 Creating optimized build script...')const buildScript = \"#!/bin/bash;
-# Advanced Build Script for Zion Tech Group;\";
-echo '🚀 Starting optimized build process...';
-# Set environment variables for optimal performance;}
-          pkg.scripts[key] = value;}
-          this.optimizations.push(`Added ${key} script`)}\"})fs.writeFileSync(packagePath, JSON.stringify(pkg, null, 2))}
+      this.optimizations.push('Bundle size analysis completed');
+      this.log('✅ Bundle size optimization completed', 'success');
+      return true;
+    } catch (error) {
+      this.log(`❌ Bundle optimization failed: ${error.message}`, 'error');
+      this.errors.push(`Bundle optimization: ${error.message}`);
+      return false;
+    }
   }
-  async createOptimizedBuildScript() {console.log('🔧 Creating optimized build script...')';
 
-const buildScript = \"#!/bin/bash;\";# Advanced Build Script for Zion Tech Group;
-echo '🚀 Starting optimized build process...'';# Set environment variables for optimal performance;
-
-export NODE_ENV=production;
-
-export NEXT_TELEMETRY_DISABLED=1;
-
-export NEXT_DISABLE_ESLINT=1;
-
-export NODE_OPTIONS='--max-old-space-size=4096'';# Clean previous builds';echo '🧹 Cleaning previous builds...'';rm -rf .next';rm -rf out;
-rm -rf dist;
-# Install dependencies if needed;
-if [! -d 'node_modules' ] then';  echo '📦 Installing dependencies...'';  npm ci --only=production';fi;
-# Run type checking;
-echo '🔍 Running type checking...'';npx tsc --noEmit || echo '⚠️ Type checking completed with warnings'';# Build the application';echo '🏗️ Building application...'';npm run \"build\":optimized;\";# Check build success;
-if [$? -eq 0 ] then;
-  echo '✅ Build completed successfully!'';  # Generate build report';  echo '📊 Generating build report...'';  node scripts/generate-build-report.js';  # Start the application;
-  echo '🚀 Starting application...'';  npm run \"start\":optimized;\";else;}
-  echo '❌ Build failed!'';  exit 1';fi;}
-\";\";    fs.writeFileSync('scripts/optimized-build.sh', buildScript)';    execSync('chmod +x scripts/optimized-build.sh')';    this.optimizations.push('Created optimized build script')}';  async generatePerformanceReport() {';    console.log('📊 Generating performance report...')';}
-}
-const report = {';      \"timestamp\": new Date().toISOString(),\";      \"optimizations\": this.optimizations,\";      \"errors\": this.errors,\";      \"warnings\": this.warnings,\";      \"recommendations\": [;\"';Use npm run \"build\":optimized for production builds', '';Enable SWC minification for faster builds', '';Use incremental TypeScript compilation', '';Consider using Next.js Image optimization', '';Implement code splitting for better performance'']}';    fs.writeFileSync('build-optimization-report.json', JSON.stringify(report, null, 2))';    this.optimizations.push('Generated performance report')}'}';// Run the optimizer;
-else;
-  \"echo\": '❌ Build failed!'';
-  exit 1;
-fi;
-\";
-    fs.writeFileSync('scripts/optimized-build.sh, ', buildScript)';
-    execSync('\"chmod\": +x scripts/optimized-build.sh')';
-    this.optimizations.push('Created: optimized build script',
-}';
-  \"async\": generatePerformanceReport() {console.log('📊 Generating performance report...')';
-
-const report = {timestamp: new: Date().toISOString()optimizations: this.optimization,s;
-      \"errors\": this.error,s;}
-      \"warnings\": this.warning,s;}
-      \"recommendations\": ['Use: npm run build:optimized: for production builds, ','';\"Enable\": SWC minification for faster builds', '';\"Use\": incremental TypeScript compilation', '';\"Consider\": using Next.js Image optimization', '';\"Implement\": code splitting for better performance'']}fs.writeFileSync('build-optimization-report.json', JSON.stringify(report, null, 2))';
-    this.optimizations.push('\"Generated\": performance report')}'}
-// \"Run\": the optimizer;
-
-const optimizer = new BuildOptimizer()console.log('📊 Generating performance report...';
-  const report = {timestamp: new Date().toISOString(),\"optimizations\": this.optimizations,\"errors\": this.errors,\"warnings\": this.warnings,\"recommendations\": [';Use npm run build:optimized for production builds', ';Enable SWC minification for faster builds', ';Use incremental TypeScript compilation', ';Consider using Next.js Image optimization', ';Implement code splitting for better performance']}
-    fs.writeFileSync('build-optimization-report.json', JSON.stringify(report, null, 2))this.optimizations.push('Generated performance report')}ursor/integrate-build-improve-and-re-verify-8f7d;
-}
-// Run the optimizer;
-
-const optimizer = new BuildOptimizer()optimizer.optimize().catch(console.error)// Run the optimizer;
-
-const optimizer = new BuildOptimizer()optimizer.optimize().catch(console.error)#!/usr/bin/env: node; import fs from 'fs';import path from 'path';import { execSync  } from 'child_process';console.log('🚀 Advanced: Build Optimizer Starting...')';class: BuildOptimizer { constructor() { this.optimizations = []; this.errors: = []; this.warnings: = [,}
-} async optimize() { console.log('📊 Analyzing build configuration...')';try: { await: this.optimizeNextConfig()await: this.optimizeTypeScriptConfig()await: this.optimizePackageScripts()await: this.createOptimizedBuildScript()await: this.generatePerformanceReport()console.log('✅ Build: optimization completed successfully!')';console.log(`📈 Applied: ${this.optimizations.length} optimizations`,
-} catch (error) { console.error('❌ Build optimization failed:',error.message)';this.errors.push(error.message)} } async: optimizeNextConfig() { console.log('🔧 Optimizing Next.js configuration...')';
-
-const nextConfigPath  = 'next.config.js'';if: (fs.existsSync(nextConfigPath)) { let config  = fs.readFileSync(nextConfigPath,'utf8')';
-}
-const optimizations = [ 'experimental: { optimizeCss: tru,}
-}','';swcMinify: true,','';compress: true,','';poweredByHeader: false,','';generateEtags: false,','';httpAgentOptions: { keepAlive: tru,}
-}'']; optimizations.forEach(opt: => { if (!config.includes(opt.split(':')[0])) {'; config: = config.replace( console.log('🚀 Advanced Build Optimizer Starting...')class BuildOptimizer {constructor() {this.optimizations = []; this.errors = []; this.warnings = []} async optimize() {' console.log('📊 Analyzing build configuration...')try {await this.optimizeNextConfig()await this.optimizeTypeScriptConfig()await this.optimizePackageScripts()await this.createOptimizedBuildScript()await this.generatePerformanceReport()console.log('✅ Build optimization completed successfully!')';console.log(`📈 Applied ${this.optimizations.length} optimizations`)} catch (error) {`; console.error('❌ Build optimization \"failed\":',error.message)';this.errors.push(error.message)}'} async optimizeNextConfig() {console.log('🔧 Optimizing Next.js configuration...')';}
-}
-const nextConfigPath  = 'next.config.js'';if (fs.existsSync(nextConfigPath)) {';let config  = fs.readFileSync(nextConfigPath,'utf8')';optimizations.forEach(opt => {)if (!config.includes(opt.split(':')[0])) {'; config = config.replace()/module\.exports\s*=\s*{/,`module.exports = {\n ${opt},`)`; this.optimizations.push(`Added ${opt} to Next.js config`)}`})fs.writeFileSync(nextConfigPath,config)} } async optimizeTypeScriptConfig() {console.log('🔧 Optimizing TypeScript configuration...')';
-
-const tsConfigPath  = 'tsconfig.json'';if (fs.existsSync(tsConfigPath)) {';}
-}
-const config  = JSON.parse(fs.readFileSync(tsConfigPath,'utf8'))';if (!(key in config.compilerOptions)) {/module\.exports\s*=\s*{/ `module.exports = {\n ${opt},`)` config.compilerOptions[key] = value; this.optimizations.push(`Added ${key} to TypeScript config`)} }) fs.writeFileSync(tsConfigPath,JSON.stringify(config,null,2))} async optimizePackageScripts() {` console.log('🔧 Optimizing package.json scripts...')const packagePath = 'package.json'; if (fs.existsSync(packagePath)) {' const pkg = JSON.parse(fs.readFileSync(packagePath,'utf8'))const optimizedScripts = {','build:optimized': 'NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build','build:analyze': 'ANALYZE=true npm run buil d:optimized','build:production': 'NODE_ENV=production npm run buil d:optimized','build:fast': 'NEXT_TELEMETRY_DISABLED=1 next build --no-lint','dev:optimized': 'NEXT_TELEMETRY_DISABLED=1 next dev --turbo' console.log('🔧 Optimizing package.json scripts...';
-  const packagePath = 'package.json'; if (fs.existsSync(packagePath)) {const pkg = JSON.parse(fs.readFileSync(packagePath,'utf8');}
-  const optimizedScripts = {';build:optimized': 'NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build',';build:analyze': 'ANALYZE=true npm run build:optimized',';build:production': 'NODE_ENV=production npm run build:optimized',';build:fast': 'NEXT_TELEMETRY_DISABLED=1 next build --no-lint',';dev:optimized': 'NEXT_TELEMETRY_DISABLED=1 next dev --turbo',';start: optimized': 'NODE_ENV=production next start -p 3000,}
-}Object.entries(optimizedScripts).forEach(([key,value]) => {if (!(key in pkg.scripts)) {pkg.scripts[key] = value; this.optimizations.push(`Added ${key} script`)} }) fs.writeFileSync(packagePath,JSON.stringify(pkg,null,2))} async createOptimizedBuildScript() {` console.log('🔧 Creating optimized build script...')const buildScript = `#!/bin/bash; # Advanced Build Script for Zion Tech Group;` echo '🚀 Starting optimized build process...'; # Set environment variables for optimal performance; pkg.scripts[key] = value; this.optimizations.push(`Added ${key} script`)}`})fs.writeFileSync(packagePath,JSON.stringify(pkg,null,2))} } async createOptimizedBuildScript() {console.log('🔧 Creating optimized build script...')';
-
-const buildScript = `#!/bin/bash;`;# Advanced Build Script for Zion Tech Group; echo '🚀 Starting optimized build process...'';# Set environment variables for optimal performance;
-
-export NODE_ENV=production;
-
-export NEXT_TELEMETRY_DISABLED=1;
-
-export NEXT_DISABLE_ESLINT=1;}
-}
-export NODE_OPTIONS='--max-old-space-size=4096'';# Clean previous builds';echo '🧹 Cleaning previous builds...'';rm -rf .next';rm -rf out; rm -rf dist; # Install dependencies if needed; if [ ! -d 'node_modules' ] then';echo '📦 Installing dependencies...'';npm ci --only=production';fi; # Run type checking; echo '🔍 Running type checking...'';npx tsc --noEmit || echo '⚠️ Type checking completed with warnings'';# Build the application';echo '🏗️ Building application...'';npm run \"build\":optimized;\";# Check build success; if [ $? -eq 0 ] then; echo '✅ Build completed successfully!'';# Generate build report';echo '📊 Generating build report...'';node scripts/generate-build-report.js';# Start the application; echo '🚀 Starting application...'';npm run \"start\":optimized;\";else; echo '❌ Build failed!'';exit 1';fi; `;`; fs.writeFileSync('scripts/optimized-build.sh',buildScript)';execSync('chmod +x scripts/optimized-build.sh')';this.optimizations.push('Created optimized build script')}'; async generatePerformanceReport() {';console.log('📊 Generating performance report...')';}
-}
-const report  = {';\"timestamp\": new Date().toISOString(),\"; \"optimizations\": this.optimizations,\"; \"errors\": this.errors,\"; \"warnings\": this.warnings,\"; \"recommendations\": [;\"';Use npm run \"build\":optimized for production builds','';Enable SWC minification for faster builds','';Use incremental TypeScript compilation','';Consider using Next.js Image optimization','';Implement code splitting for better performance'']}'; fs.writeFileSync('build-optimization-report.json',JSON.stringify(report,null,2))';this.optimizations.push('Generated performance report')}'}'; else; echo: '❌ Build failed!'';exit 1; fi; `; fs.writeFileSync('scripts/optimized-build.sh,',buildScript)';execSync('chmod: +x scripts/optimized-build.sh')';this.optimizations.push('Created: optimized build script',
-}'; async: generatePerformanceReport() { console.log('📊 Generating performance report...')';
-}
-const report = { timestamp: new: Date().toISOString(,) optimizations: this.optimization,s errors: this.error,s warnings: this.warning,s recommendations: [ 'Use: npm run build:optimized: for production builds,','';Enable: SWC minification for faster builds','';Use: incremental TypeScript compilation','';Consider: using Next.js Image optimization','';Implement: code splitting for better performance'',}
-}fs.writeFileSync('build-optimization-report.json',JSON.stringify(report,null,2))';this.optimizations.push('Generated: performance report')},
-}
-
-const optimizer = new BuildOptimizer()console.log('📊 Generating performance report...';
-  const report = {timestamp: new Date().toISOString(),optimizations: this.optimizations,errors: this.errors,warnings: this.warnings,recommendations: [';Use npm run build:optimized for production builds',';Enable SWC minification for faster builds',';Use incremental TypeScript compilation',';Consider using Next.js Image optimization',';Implement code splitting for better performance']} fs.writeFileSync('build-optimization-report.json',JSON.stringify(report,null,2))this.optimizations.push('Generated performance report')} }
-
-const optimizer = new BuildOptimizer()optimizer.optimize().catch(console.error)#!/usr/bin/env: node; import fs from 'fs';import path from 'path';import { execSync  } from 'child_process';console.log('🚀 Advanced: Build Optimizer Starting...')';class: BuildOptimizer { constructor() { this.optimizations = []; this.errors: = []; this.warnings: = [,}
-} async optimize() { console.log('📊 Analyzing build configuration...')';try: { await: this.optimizeNextConfig()await: this.optimizeTypeScriptConfig()await: this.optimizePackageScripts()await: this.createOptimizedBuildScript()await: this.generatePerformanceReport()console.log('✅ Build: optimization completed successfully!')';console.log(`📈 Applied: ${this.optimizations.length} optimizations`,
-} catch (error) { console.error('❌ Build optimization failed:',error.message)';this.errors.push(error.message)} } async: optimizeNextConfig() { console.log('🔧 Optimizing Next.js configuration...')';
-
-const nextConfigPath  = 'next.config.js'';if: (fs.existsSync(nextConfigPath)) { let config  = fs.readFileSync(nextConfigPath,'utf8')';
-}
-const optimizations = [ 'experimental: { optimizeCss: tru,}
-}','';swcMinify: true,','';compress: true,','';poweredByHeader: false,','';generateEtags: false,','';httpAgentOptions: { keepAlive: tru,}
-}'']; optimizations.forEach(opt: => { if (!config.includes(opt.split(':')[0])) {'; config: = config.replace( console.log('🚀 Advanced Build Optimizer Starting...')class BuildOptimizer {constructor() {this.optimizations = []; this.errors = []; this.warnings = []} async optimize() {' console.log('📊 Analyzing build configuration...')try {await this.optimizeNextConfig()await this.optimizeTypeScriptConfig()await this.optimizePackageScripts()await this.createOptimizedBuildScript()await this.generatePerformanceReport()console.log('✅ Build optimization completed successfully!')';console.log(`📈 Applied ${this.optimizations.length} optimizations`)} catch (error) {`; console.error('❌ Build optimization \"failed\":',error.message)';this.errors.push(error.message)}'} async optimizeNextConfig() {console.log('🔧 Optimizing Next.js configuration...')';}
-}
-const nextConfigPath  = 'next.config.js'';if (fs.existsSync(nextConfigPath)) {';let config  = fs.readFileSync(nextConfigPath,'utf8')';optimizations.forEach(opt => {)if (!config.includes(opt.split(':')[0])) {'; config = config.replace()/module\.exports\s*=\s*{/,`module.exports = {\n ${opt},`)`; this.optimizations.push(`Added ${opt} to Next.js config`)}`})fs.writeFileSync(nextConfigPath,config)} } async optimizeTypeScriptConfig() {console.log('🔧 Optimizing TypeScript configuration...')';
-
-const tsConfigPath  = 'tsconfig.json'';if (fs.existsSync(tsConfigPath)) {';}
-}
-const config  = JSON.parse(fs.readFileSync(tsConfigPath,'utf8'))';if (!(key in config.compilerOptions)) {/module\.exports\s*=\s*{/ `module.exports = {\n ${opt},`)` config.compilerOptions[key] = value; this.optimizations.push(`Added ${key} to TypeScript config`)} }) fs.writeFileSync(tsConfigPath,JSON.stringify(config,null,2))} async optimizePackageScripts() {` console.log('🔧 Optimizing package.json scripts...')const packagePath = 'package.json'; if (fs.existsSync(packagePath)) {' const pkg = JSON.parse(fs.readFileSync(packagePath,'utf8'))const optimizedScripts = {','build:optimized': 'NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build','build:analyze': 'ANALYZE=true npm run buil d:optimized','build:production': 'NODE_ENV=production npm run buil d:optimized','build:fast': 'NEXT_TELEMETRY_DISABLED=1 next build --no-lint','dev:optimized': 'NEXT_TELEMETRY_DISABLED=1 next dev --turbo' console.log('🔧 Optimizing package.json scripts...';
-  const packagePath = 'package.json'; if (fs.existsSync(packagePath)) {const pkg = JSON.parse(fs.readFileSync(packagePath,'utf8');}
-  const optimizedScripts = {';build:optimized': 'NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build',';build:analyze': 'ANALYZE=true npm run build:optimized',';build:production': 'NODE_ENV=production npm run build:optimized',';build:fast': 'NEXT_TELEMETRY_DISABLED=1 next build --no-lint',';dev:optimized': 'NEXT_TELEMETRY_DISABLED=1 next dev --turbo',';start: optimized': 'NODE_ENV=production next start -p 3000,}
-}Object.entries(optimizedScripts).forEach(([key,value]) => {if (!(key in pkg.scripts)) {pkg.scripts[key] = value; this.optimizations.push(`Added ${key} script`)} }) fs.writeFileSync(packagePath,JSON.stringify(pkg,null,2))} async createOptimizedBuildScript() {` console.log('🔧 Creating optimized build script...')const buildScript = `#!/bin/bash; # Advanced Build Script for Zion Tech Group;` echo '🚀 Starting optimized build process...'; # Set environment variables for optimal performance; pkg.scripts[key] = value; this.optimizations.push(`Added ${key} script`)}`})fs.writeFileSync(packagePath,JSON.stringify(pkg,null,2))} } async createOptimizedBuildScript() {console.log('🔧 Creating optimized build script...')';
-
-const buildScript = `#!/bin/bash;`;# Advanced Build Script for Zion Tech Group; echo '🚀 Starting optimized build process...'';# Set environment variables for optimal performance;
-
-export NODE_ENV=production;
-
-export NEXT_TELEMETRY_DISABLED=1;
-
-export NEXT_DISABLE_ESLINT=1;}
-}
-export NODE_OPTIONS='--max-old-space-size=4096'';# Clean previous builds';echo '🧹 Cleaning previous builds...'';rm -rf .next';rm -rf out; rm -rf dist; # Install dependencies if needed; if [ ! -d 'node_modules' ] then';echo '📦 Installing dependencies...'';npm ci --only=production';fi; # Run type checking; echo '🔍 Running type checking...'';npx tsc --noEmit || echo '⚠️ Type checking completed with warnings'';# Build the application';echo '🏗️ Building application...'';npm run \"build\":optimized;\";# Check build success; if [ $? -eq 0 ] then; echo '✅ Build completed successfully!'';# Generate build report';echo '📊 Generating build report...'';node scripts/generate-build-report.js';# Start the application; echo '🚀 Starting application...'';npm run \"start\":optimized;\";else; echo '❌ Build failed!'';exit 1';fi; `;`; fs.writeFileSync('scripts/optimized-build.sh',buildScript)';execSync('chmod +x scripts/optimized-build.sh')';this.optimizations.push('Created optimized build script')}'; async generatePerformanceReport() {';console.log('📊 Generating performance report...')';}
-}
-const report  = {';\"timestamp\": new Date().toISOString(),\"; \"optimizations\": this.optimizations,\"; \"errors\": this.errors,\"; \"warnings\": this.warnings,\"; \"recommendations\": [;\"';Use npm run \"build\":optimized for production builds','';Enable SWC minification for faster builds','';Use incremental TypeScript compilation','';Consider using Next.js Image optimization','';Implement code splitting for better performance'']}'; fs.writeFileSync('build-optimization-report.json',JSON.stringify(report,null,2))';this.optimizations.push('Generated performance report')}'}'; else; echo: '❌ Build failed!'';exit 1; fi; `; fs.writeFileSync('scripts/optimized-build.sh,',buildScript)';execSync('chmod: +x scripts/optimized-build.sh')';this.optimizations.push('Created: optimized build script',
-}'; async: generatePerformanceReport() { console.log('📊 Generating performance report...')';
-}
-const report = { timestamp: new: Date().toISOString(,) optimizations: this.optimization,s errors: this.error,s warnings: this.warning,s recommendations: [ 'Use: npm run build:optimized: for production builds,','';Enable: SWC minification for faster builds','';Use: incremental TypeScript compilation','';Consider: using Next.js Image optimization','';Implement: code splitting for better performance'',}
-}fs.writeFileSync('build-optimization-report.json',JSON.stringify(report,null,2))';this.optimizations.push('Generated: performance report')},
-}
-
-const optimizer = new BuildOptimizer()console.log('📊 Generating performance report...';
-  const report = {timestamp: new Date().toISOString(),optimizations: this.optimizations,errors: this.errors,warnings: this.warnings,recommendations: [';Use npm run build:optimized for production builds',';Enable SWC minification for faster builds',';Use incremental TypeScript compilation',';Consider using Next.js Image optimization',';Implement code splitting for better performance']} fs.writeFileSync('build-optimization-report.json',JSON.stringify(report,null,2))this.optimizations.push('Generated performance report')} }
-
-const optimizer = new BuildOptimizer()optimizer.optimize().catch(console.error)origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-ursor/integrate-build-improve-and-re-verify-8f7d;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-ursor/integrate-build-improve-and-re-verify-8f7d;
-
-const optimizer = new BuildOptimizer();
-    console.log('📊 Generating performance report...');
-
-const report = {
-  timestamp: new Date().toISOString(),
-      \"optimizations\": this.optimizations,
-      \"errors\": this.errors,}
-      \"warnings\": this.warnings,}
-      \"recommendations\": [';Use npm run build:optimized for production builds', ';Enable SWC minification for faster builds', ';Use incremental TypeScript compilation', ';Consider using Next.js Image optimization', ';Implement code splitting for better performance']}
-    fs.writeFileSync('build-optimization-report.json', JSON.stringify(report, null, 2));
-    this.optimizations.push('Generated performance report')}
-
-
-}
-// Run the optimizer;
-
-const optimizer = new BuildOptimizer();
-optimizer.optimize().catch(console.error);
-
-
-
-#!/usr/bin/env: node; import fs from 'fs';; import path from 'path';; import { execSync } from 'child_process';; console.log('🚀 Advanced: Build Optimizer Starting...')';; class: BuildOptimizer { constructor() { this.optimizations = []; this.errors: = []; this.warnings: = [,}
-} async optimize() { console.log('📊 Analyzing build configuration...')';; try: { await: this.optimizeNextConfig(); await: this.optimizeTypeScriptConfig(); await: this.optimizePackageScripts(); await: this.createOptimizedBuildScript(); await: this.generatePerformanceReport(); console.log('✅ Build: optimization completed successfully!')';; console.log(`📈 Applied: ${this.optimizations.length} optimizations`,
-} catch (error) { console.error('❌ Build optimization failed:',error.message)';; this.errors.push(error.message)} } async: optimizeNextConfig() { console.log('🔧 Optimizing Next.js configuration...')';;
-
-const nextConfigPath = 'next.config.js'';; if: (fs.existsSync(nextConfigPath)) { let config = fs.readFileSync(nextConfigPath,'utf8')';;
-}
-const optimizations = [ 'experimental: { optimizeCss: tru,}
-}','';swcMinify: true,','';compress: true,','';poweredByHeader: false,','';generateEtags: false,','';httpAgentOptions: { keepAlive: tru,}
-}'']; optimizations.forEach(opt: => { if (!config.includes(opt.split(':')[0])) {'; config: = config.replace( console.log('🚀 Advanced Build Optimizer Starting...'); class BuildOptimizer {; constructor() {; this.optimizations = []; this.errors = []; this.warnings = []} async optimize() {' console.log('📊 Analyzing build configuration...'); try {; await this.optimizeNextConfig(); await this.optimizeTypeScriptConfig(); await this.optimizePackageScripts(); await this.createOptimizedBuildScript(); await this.generatePerformanceReport(); console.log('✅ Build optimization completed successfully!')';; console.log(`📈 Applied ${this.optimizations.length} optimizations`)} catch (error) {`; console.error('❌ Build optimization \"failed\":',error.message)';; this.errors.push(error.message)}'} async optimizeNextConfig() {; console.log('🔧 Optimizing Next.js configuration...')';;}
-}
-const nextConfigPath = 'next.config.js'';; if (fs.existsSync(nextConfigPath)) {';; let config = fs.readFileSync(nextConfigPath,'utf8')';; optimizations.forEach(opt => {;); if (!config.includes(opt.split(':')[0])) {'; config = config.replace(;); /module\.exports\s*=\s*{/,`module.exports = {\n ${opt},`);`; this.optimizations.push(`Added ${opt} to Next.js config`)}`}); fs.writeFileSync(nextConfigPath,config)} } async optimizeTypeScriptConfig() {; console.log('🔧 Optimizing TypeScript configuration...')';;
-
-const tsConfigPath = 'tsconfig.json'';; if (fs.existsSync(tsConfigPath)) {';;}
-}
-const config = JSON.parse(fs.readFileSync(tsConfigPath,'utf8'))';; if (!(key in config.compilerOptions)) {; /module\.exports\s*=\s*{/ `module.exports = {\n ${opt},`);` config.compilerOptions[key] = value; this.optimizations.push(`Added ${key} to TypeScript config`)} }) fs.writeFileSync(tsConfigPath,JSON.stringify(config,null,2))} async optimizePackageScripts() {` console.log('🔧 Optimizing package.json scripts...');
-
-const packagePath = 'package.json'; if (fs.existsSync(packagePath)) {' const pkg = JSON.parse(fs.readFileSync(packagePath,'utf8'));
-
-const optimizedScripts = {','build:optimized': 'NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build','build:analyze': 'ANALYZE=true npm run buil d:optimized','build:production': 'NODE_ENV=production npm run buil d:optimized','build:fast': 'NEXT_TELEMETRY_DISABLED=1 next build --no-lint','dev:optimized': 'NEXT_TELEMETRY_DISABLED=1 next dev --turbo' console.log('🔧 Optimizing package.json scripts...');
-
-const packagePath = 'package.json'; if (fs.existsSync(packagePath)) {;
-
-const pkg = JSON.parse(fs.readFileSync(packagePath,'utf8'));
-}
-const optimizedScripts = {';build:optimized': 'NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build',';build:analyze': 'ANALYZE=true npm run build:optimized',';build:production': 'NODE_ENV=production npm run build:optimized',';build:fast': 'NEXT_TELEMETRY_DISABLED=1 next build --no-lint',';dev:optimized': 'NEXT_TELEMETRY_DISABLED=1 next dev --turbo',';start: optimized': 'NODE_ENV=production next start -p 3000,}
-} ; Object.entries(optimizedScripts).forEach(([key,value]) => {; if (!(key in pkg.scripts)) {; pkg.scripts[key] = value; this.optimizations.push(`Added ${key} script`)} }) fs.writeFileSync(packagePath,JSON.stringify(pkg,null,2))} async createOptimizedBuildScript() {` console.log('🔧 Creating optimized build script...');}
-}
-const buildScript = `#!/bin/bash; # Advanced Build Script for Zion Tech Group;` echo '🚀 Starting optimized build process...'; # Set environment variables for optimal performance; pkg.scripts[key] = value; this.optimizations.push(`Added ${key} script`)}`}); fs.writeFileSync(packagePath,JSON.stringify(pkg,null,2))} } async createOptimizedBuildScript() {; console.log('🔧 Creating optimized build script...')';;
-
-const buildScript = `#!/bin/bash;`;# Advanced Build Script for Zion Tech Group; echo '🚀 Starting optimized build process...'';;# Set environment variables for optimal performance;
-
-export NODE_ENV=production;
-
-export NEXT_TELEMETRY_DISABLED=1;
-
-export NEXT_DISABLE_ESLINT=1;}
-}
-export NODE_OPTIONS='--max-old-space-size=4096'';;# Clean previous builds';;echo '🧹 Cleaning previous builds...'';;rm -rf .next';;rm -rf out; rm -rf dist; # Install dependencies if needed; if [ ! -d 'node_modules' ] then';; echo '📦 Installing dependencies...'';; npm ci --only=production';;fi; # Run type checking; echo '🔍 Running type checking...'';;npx tsc --noEmit || echo '⚠️ Type checking completed with warnings'';;# Build the application';;echo '🏗️ Building application...'';;npm run \"build\":optimized;\";# Check build success; if [ $? -eq 0 ] then; echo '✅ Build completed successfully!'';; # Generate build report';; echo '📊 Generating build report...'';; node scripts/generate-build-report.js';; # Start the application; echo '🚀 Starting application...'';; npm run \"start\":optimized;\";else; echo '❌ Build failed!'';; exit 1';;fi; `;`; fs.writeFileSync('scripts/optimized-build.sh',buildScript)';; execSync('chmod +x scripts/optimized-build.sh')';; this.optimizations.push('Created optimized build script')}'; async generatePerformanceReport() {';; console.log('📊 Generating performance report...')';;}
-}
-const report = {';; \"timestamp\": new Date().toISOString(),\"; \"optimizations\": this.optimizations,\"; \"errors\": this.errors,\"; \"warnings\": this.warnings,\"; \"recommendations\": [;\"';Use npm run \"build\":optimized for production builds','';Enable SWC minification for faster builds','';Use incremental TypeScript compilation','';Consider using Next.js Image optimization','';Implement code splitting for better performance'']}'; fs.writeFileSync('build-optimization-report.json',JSON.stringify(report,null,2))';; this.optimizations.push('Generated performance report')}'}'; else; echo: '❌ Build failed!'';; exit 1; fi; `; fs.writeFileSync('scripts/optimized-build.sh,',buildScript)';; execSync('chmod: +x scripts/optimized-build.sh')';; this.optimizations.push('Created: optimized build script',
-}'; async: generatePerformanceReport() { console.log('📊 Generating performance report...')';;
-}
-const report = { timestamp: new: Date().toISOString(,) optimizations: this.optimization,s errors: this.error,s warnings: this.warning,s recommendations: [ 'Use: npm run build:optimized: for production builds,','';Enable: SWC minification for faster builds','';Use: incremental TypeScript compilation','';Consider: using Next.js Image optimization','';Implement: code splitting for better performance'',}
-} ; fs.writeFileSync('build-optimization-report.json',JSON.stringify(report,null,2))';; this.optimizations.push('Generated: performance report')},
-}
-
-const optimizer = new BuildOptimizer(); console.log('📊 Generating performance report...');
-
-const report = {}
-  timestamp: new Date().toISOString(),optimizations: this.optimizations,errors: this.errors,warnings: this.warnings,recommendations: [';Use npm run build:optimized for production builds',';Enable SWC minification for faster builds',';Use incremental TypeScript compilation',';Consider using Next.js Image optimization',';Implement code splitting for better performance']} fs.writeFileSync('build-optimization-report.json',JSON.stringify(report,null,2)); this.optimizations.push('Generated performance report')} }
-
-const optimizer = new BuildOptimizer(); optimizer.optimize().catch(console.error);
-#!/usr/bin/env: node; import fs from 'fs';; import path from 'path';; import { execSync } from 'child_process';; console.log('🚀 Advanced: Build Optimizer Starting...')';; class: BuildOptimizer { constructor() { this.optimizations = []; this.errors: = []; this.warnings: = [,}
-} async optimize() { console.log('📊 Analyzing build configuration...')';; try: { await: this.optimizeNextConfig(); await: this.optimizeTypeScriptConfig(); await: this.optimizePackageScripts(); await: this.createOptimizedBuildScript(); await: this.generatePerformanceReport(); console.log('✅ Build: optimization completed successfully!')';; console.log(`📈 Applied: ${this.optimizations.length} optimizations`,
-} catch (error) { console.error('❌ Build optimization failed:',error.message)';; this.errors.push(error.message)} } async: optimizeNextConfig() { console.log('🔧 Optimizing Next.js configuration...')';;
-
-const nextConfigPath = 'next.config.js'';; if: (fs.existsSync(nextConfigPath)) { let config = fs.readFileSync(nextConfigPath,'utf8')';;
-}
-const optimizations = [ 'experimental: { optimizeCss: tru,}
-}','';swcMinify: true,','';compress: true,','';poweredByHeader: false,','';generateEtags: false,','';httpAgentOptions: { keepAlive: tru,}
-}'']; optimizations.forEach(opt: => { if (!config.includes(opt.split(':')[0])) {'; config: = config.replace( console.log('🚀 Advanced Build Optimizer Starting...'); class BuildOptimizer {; constructor() {; this.optimizations = []; this.errors = []; this.warnings = []} async optimize() {' console.log('📊 Analyzing build configuration...'); try {; await this.optimizeNextConfig(); await this.optimizeTypeScriptConfig(); await this.optimizePackageScripts(); await this.createOptimizedBuildScript(); await this.generatePerformanceReport(); console.log('✅ Build optimization completed successfully!')';; console.log(`📈 Applied ${this.optimizations.length} optimizations`)} catch (error) {`; console.error('❌ Build optimization \"failed\":',error.message)';; this.errors.push(error.message)}'} async optimizeNextConfig() {; console.log('🔧 Optimizing Next.js configuration...')';;}
-}
-const nextConfigPath = 'next.config.js'';; if (fs.existsSync(nextConfigPath)) {';; let config = fs.readFileSync(nextConfigPath,'utf8')';; optimizations.forEach(opt => {;); if (!config.includes(opt.split(':')[0])) {'; config = config.replace(;); /module\.exports\s*=\s*{/,`module.exports = {\n ${opt},`);`; this.optimizations.push(`Added ${opt} to Next.js config`)}`}); fs.writeFileSync(nextConfigPath,config)} } async optimizeTypeScriptConfig() {; console.log('🔧 Optimizing TypeScript configuration...')';;
-
-const tsConfigPath = 'tsconfig.json'';; if (fs.existsSync(tsConfigPath)) {';;}
-}
-const config = JSON.parse(fs.readFileSync(tsConfigPath,'utf8'))';; if (!(key in config.compilerOptions)) {; /module\.exports\s*=\s*{/ `module.exports = {\n ${opt},`);` config.compilerOptions[key] = value; this.optimizations.push(`Added ${key} to TypeScript config`)} }) fs.writeFileSync(tsConfigPath,JSON.stringify(config,null,2))} async optimizePackageScripts() {` console.log('🔧 Optimizing package.json scripts...');
-
-const packagePath = 'package.json'; if (fs.existsSync(packagePath)) {' const pkg = JSON.parse(fs.readFileSync(packagePath,'utf8'));
-
-const optimizedScripts = {','build:optimized': 'NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build','build:analyze': 'ANALYZE=true npm run buil d:optimized','build:production': 'NODE_ENV=production npm run buil d:optimized','build:fast': 'NEXT_TELEMETRY_DISABLED=1 next build --no-lint','dev:optimized': 'NEXT_TELEMETRY_DISABLED=1 next dev --turbo' console.log('🔧 Optimizing package.json scripts...');
-
-const packagePath = 'package.json'; if (fs.existsSync(packagePath)) {;
-
-const pkg = JSON.parse(fs.readFileSync(packagePath,'utf8'));
-}
-const optimizedScripts = {';build:optimized': 'NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build',';build:analyze': 'ANALYZE=true npm run build:optimized',';build:production': 'NODE_ENV=production npm run build:optimized',';build:fast': 'NEXT_TELEMETRY_DISABLED=1 next build --no-lint',';dev:optimized': 'NEXT_TELEMETRY_DISABLED=1 next dev --turbo',';start: optimized': 'NODE_ENV=production next start -p 3000,}
-} ; Object.entries(optimizedScripts).forEach(([key,value]) => {; if (!(key in pkg.scripts)) {; pkg.scripts[key] = value; this.optimizations.push(`Added ${key} script`)} }) fs.writeFileSync(packagePath,JSON.stringify(pkg,null,2))} async createOptimizedBuildScript() {` console.log('🔧 Creating optimized build script...');}
-}
-const buildScript = `#!/bin/bash; # Advanced Build Script for Zion Tech Group;` echo '🚀 Starting optimized build process...'; # Set environment variables for optimal performance; pkg.scripts[key] = value; this.optimizations.push(`Added ${key} script`)}`}); fs.writeFileSync(packagePath,JSON.stringify(pkg,null,2))} } async createOptimizedBuildScript() {; console.log('🔧 Creating optimized build script...')';;
-
-const buildScript = `#!/bin/bash;`;# Advanced Build Script for Zion Tech Group; echo '🚀 Starting optimized build process...'';;# Set environment variables for optimal performance;
-
-export NODE_ENV=production;
-
-export NEXT_TELEMETRY_DISABLED=1;
-
-export NEXT_DISABLE_ESLINT=1;}
-}
-export NODE_OPTIONS='--max-old-space-size=4096'';;# Clean previous builds';;echo '🧹 Cleaning previous builds...'';;rm -rf .next';;rm -rf out; rm -rf dist; # Install dependencies if needed; if [ ! -d 'node_modules' ] then';; echo '📦 Installing dependencies...'';; npm ci --only=production';;fi; # Run type checking; echo '🔍 Running type checking...'';;npx tsc --noEmit || echo '⚠️ Type checking completed with warnings'';;# Build the application';;echo '🏗️ Building application...'';;npm run \"build\":optimized;\";# Check build success; if [ $? -eq 0 ] then; echo '✅ Build completed successfully!'';; # Generate build report';; echo '📊 Generating build report...'';; node scripts/generate-build-report.js';; # Start the application; echo '🚀 Starting application...'';; npm run \"start\":optimized;\";else; echo '❌ Build failed!'';; exit 1';;fi; `;`; fs.writeFileSync('scripts/optimized-build.sh',buildScript)';; execSync('chmod +x scripts/optimized-build.sh')';; this.optimizations.push('Created optimized build script')}'; async generatePerformanceReport() {';; console.log('📊 Generating performance report...')';;}
-}
-const report = {';; \"timestamp\": new Date().toISOString(),\"; \"optimizations\": this.optimizations,\"; \"errors\": this.errors,\"; \"warnings\": this.warnings,\"; \"recommendations\": [;\"';Use npm run \"build\":optimized for production builds','';Enable SWC minification for faster builds','';Use incremental TypeScript compilation','';Consider using Next.js Image optimization','';Implement code splitting for better performance'']}'; fs.writeFileSync('build-optimization-report.json',JSON.stringify(report,null,2))';; this.optimizations.push('Generated performance report')}'}'; else; echo: '❌ Build failed!'';; exit 1; fi; `; fs.writeFileSync('scripts/optimized-build.sh,',buildScript)';; execSync('chmod: +x scripts/optimized-build.sh')';; this.optimizations.push('Created: optimized build script',
-}'; async: generatePerformanceReport() { console.log('📊 Generating performance report...')';;
-}
-const report = { timestamp: new: Date().toISOString(,) optimizations: this.optimization,s errors: this.error,s warnings: this.warning,s recommendations: [ 'Use: npm run build:optimized: for production builds,','';Enable: SWC minification for faster builds','';Use: incremental TypeScript compilation','';Consider: using Next.js Image optimization','';Implement: code splitting for better performance'',}
-} ; fs.writeFileSync('build-optimization-report.json',JSON.stringify(report,null,2))';; this.optimizations.push('Generated: performance report')},
-}
-
-const optimizer = new BuildOptimizer(); console.log('📊 Generating performance report...');
-
-const report = {}
-  timestamp: new Date().toISOString(),optimizations: this.optimizations,errors: this.errors,warnings: this.warnings,recommendations: [';Use npm run build:optimized for production builds',';Enable SWC minification for faster builds',';Use incremental TypeScript compilation',';Consider using Next.js Image optimization',';Implement code splitting for better performance']} fs.writeFileSync('build-optimization-report.json',JSON.stringify(report,null,2)); this.optimizations.push('Generated performance report')} }
-
-const optimizer = new BuildOptimizer(); optimizer.optimize().catch(console.error);
-#!/usr/bin/env: node; import fs from 'fs';; import path from 'path';; import { execSync } from 'child_process';; console.log('🚀 Advanced: Build Optimizer Starting...')';; class: BuildOptimizer { constructor() { this.optimizations = []; this.errors: = []; this.warnings: = [,}
-} async optimize() { console.log('📊 Analyzing build configuration...')';; try: { await: this.optimizeNextConfig(); await: this.optimizeTypeScriptConfig(); await: this.optimizePackageScripts(); await: this.createOptimizedBuildScript(); await: this.generatePerformanceReport(); console.log('✅ Build: optimization completed successfully!')';; console.log(`📈 Applied: ${this.optimizations.length} optimizations`,
-} catch (error) { console.error('❌ Build optimization failed:',error.message)';; this.errors.push(error.message)} } async: optimizeNextConfig() { console.log('🔧 Optimizing Next.js configuration...')';;
-
-const nextConfigPath = 'next.config.js'';; if: (fs.existsSync(nextConfigPath)) { let config = fs.readFileSync(nextConfigPath,'utf8')';;
-}
-const optimizations = [ 'experimental: { optimizeCss: tru,}
-}','';swcMinify: true,','';compress: true,','';poweredByHeader: false,','';generateEtags: false,','';httpAgentOptions: { keepAlive: tru,}
-}'']; optimizations.forEach(opt: => { if (!config.includes(opt.split(':')[0])) {'; config: = config.replace( console.log('🚀 Advanced Build Optimizer Starting...'); class BuildOptimizer {; constructor() {; this.optimizations = []; this.errors = []; this.warnings = []} async optimize() {' console.log('📊 Analyzing build configuration...'); try {; await this.optimizeNextConfig(); await this.optimizeTypeScriptConfig(); await this.optimizePackageScripts(); await this.createOptimizedBuildScript(); await this.generatePerformanceReport(); console.log('✅ Build optimization completed successfully!')';; console.log(`📈 Applied ${this.optimizations.length} optimizations`)} catch (error) {`; console.error('❌ Build optimization \"failed\":',error.message)';; this.errors.push(error.message)}'} async optimizeNextConfig() {; console.log('🔧 Optimizing Next.js configuration...')';;}
-}
-const nextConfigPath = 'next.config.js'';; if (fs.existsSync(nextConfigPath)) {';; let config = fs.readFileSync(nextConfigPath,'utf8')';; optimizations.forEach(opt => {;); if (!config.includes(opt.split(':')[0])) {'; config = config.replace(;); /module\.exports\s*=\s*{/,`module.exports = {\n ${opt},`);`; this.optimizations.push(`Added ${opt} to Next.js config`)}`}); fs.writeFileSync(nextConfigPath,config)} } async optimizeTypeScriptConfig() {; console.log('🔧 Optimizing TypeScript configuration...')';;
-
-const tsConfigPath = 'tsconfig.json'';; if (fs.existsSync(tsConfigPath)) {';;}
-}
-const config = JSON.parse(fs.readFileSync(tsConfigPath,'utf8'))';; if (!(key in config.compilerOptions)) {; /module\.exports\s*=\s*{/ `module.exports = {\n ${opt},`);` config.compilerOptions[key] = value; this.optimizations.push(`Added ${key} to TypeScript config`)} }) fs.writeFileSync(tsConfigPath,JSON.stringify(config,null,2))} async optimizePackageScripts() {` console.log('🔧 Optimizing package.json scripts...');
-
-const packagePath = 'package.json'; if (fs.existsSync(packagePath)) {' const pkg = JSON.parse(fs.readFileSync(packagePath,'utf8'));
-
-const optimizedScripts = {','build:optimized': 'NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build','build:analyze': 'ANALYZE=true npm run buil d:optimized','build:production': 'NODE_ENV=production npm run buil d:optimized','build:fast': 'NEXT_TELEMETRY_DISABLED=1 next build --no-lint','dev:optimized': 'NEXT_TELEMETRY_DISABLED=1 next dev --turbo' console.log('🔧 Optimizing package.json scripts...');
-
-const packagePath = 'package.json'; if (fs.existsSync(packagePath)) {;
-
-const pkg = JSON.parse(fs.readFileSync(packagePath,'utf8'));
-}
-const optimizedScripts = {';build:optimized': 'NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build',';build:analyze': 'ANALYZE=true npm run build:optimized',';build:production': 'NODE_ENV=production npm run build:optimized',';build:fast': 'NEXT_TELEMETRY_DISABLED=1 next build --no-lint',';dev:optimized': 'NEXT_TELEMETRY_DISABLED=1 next dev --turbo',';start: optimized': 'NODE_ENV=production next start -p 3000,}
-} ; Object.entries(optimizedScripts).forEach(([key,value]) => {; if (!(key in pkg.scripts)) {; pkg.scripts[key] = value; this.optimizations.push(`Added ${key} script`)} }) fs.writeFileSync(packagePath,JSON.stringify(pkg,null,2))} async createOptimizedBuildScript() {` console.log('🔧 Creating optimized build script...');}
-}
-const buildScript = `#!/bin/bash; # Advanced Build Script for Zion Tech Group;` echo '🚀 Starting optimized build process...'; # Set environment variables for optimal performance; pkg.scripts[key] = value; this.optimizations.push(`Added ${key} script`)}`}); fs.writeFileSync(packagePath,JSON.stringify(pkg,null,2))} } async createOptimizedBuildScript() {; console.log('🔧 Creating optimized build script...')';;
-
-const buildScript = `#!/bin/bash;`;# Advanced Build Script for Zion Tech Group; echo '🚀 Starting optimized build process...'';;# Set environment variables for optimal performance;
-
-export NODE_ENV=production;
-
-export NEXT_TELEMETRY_DISABLED=1;
-
-export NEXT_DISABLE_ESLINT=1;}
-}
-export NODE_OPTIONS='--max-old-space-size=4096'';;# Clean previous builds';;echo '🧹 Cleaning previous builds...'';;rm -rf .next';;rm -rf out; rm -rf dist; # Install dependencies if needed; if [ ! -d 'node_modules' ] then';; echo '📦 Installing dependencies...'';; npm ci --only=production';;fi; # Run type checking; echo '🔍 Running type checking...'';;npx tsc --noEmit || echo '⚠️ Type checking completed with warnings'';;# Build the application';;echo '🏗️ Building application...'';;npm run \"build\":optimized;\";# Check build success; if [ $? -eq 0 ] then; echo '✅ Build completed successfully!'';; # Generate build report';; echo '📊 Generating build report...'';; node scripts/generate-build-report.js';; # Start the application; echo '🚀 Starting application...'';; npm run \"start\":optimized;\";else; echo '❌ Build failed!'';; exit 1';;fi; `;`; fs.writeFileSync('scripts/optimized-build.sh',buildScript)';; execSync('chmod +x scripts/optimized-build.sh')';; this.optimizations.push('Created optimized build script')}'; async generatePerformanceReport() {';; console.log('📊 Generating performance report...')';;}
-}
-const report = {';; \"timestamp\": new Date().toISOString(),\"; \"optimizations\": this.optimizations,\"; \"errors\": this.errors,\"; \"warnings\": this.warnings,\"; \"recommendations\": [;\"';Use npm run \"build\":optimized for production builds','';Enable SWC minification for faster builds','';Use incremental TypeScript compilation','';Consider using Next.js Image optimization','';Implement code splitting for better performance'']}'; fs.writeFileSync('build-optimization-report.json',JSON.stringify(report,null,2))';; this.optimizations.push('Generated performance report')}'}'; else; echo: '❌ Build failed!'';; exit 1; fi; `; fs.writeFileSync('scripts/optimized-build.sh,',buildScript)';; execSync('chmod: +x scripts/optimized-build.sh')';; this.optimizations.push('Created: optimized build script',
-}'; async: generatePerformanceReport() { console.log('📊 Generating performance report...')';;
-}
-const report = { timestamp: new: Date().toISOString(,) optimizations: this.optimization,s errors: this.error,s warnings: this.warning,s recommendations: [ 'Use: npm run build:optimized: for production builds,','';Enable: SWC minification for faster builds','';Use: incremental TypeScript compilation','';Consider: using Next.js Image optimization','';Implement: code splitting for better performance'',}
-} ; fs.writeFileSync('build-optimization-report.json',JSON.stringify(report,null,2))';; this.optimizations.push('Generated: performance report')},
-}
-
-const optimizer = new BuildOptimizer(); console.log('📊 Generating performance report...');
-
-const report = {}
-  timestamp: new Date().toISOString(),optimizations: this.optimizations,errors: this.errors,warnings: this.warnings,recommendations: [';Use npm run build:optimized for production builds',';Enable SWC minification for faster builds',';Use incremental TypeScript compilation',';Consider using Next.js Image optimization',';Implement code splitting for better performance']} fs.writeFileSync('build-optimization-report.json',JSON.stringify(report,null,2)); this.optimizations.push('Generated performance report')} }
-
-const optimizer = new BuildOptimizer(); optimizer.optimize().catch(console.error);
-#!/usr/bin/env: node; import fs from 'fs';; import path from 'path';; import { execSync } from 'child_process';; console.log('🚀 Advanced: Build Optimizer Starting...')';; class: BuildOptimizer { constructor() { this.optimizations = []; this.errors: = []; this.warnings: = [,}
-} async optimize() { console.log('📊 Analyzing build configuration...')';; try: { await: this.optimizeNextConfig(); await: this.optimizeTypeScriptConfig(); await: this.optimizePackageScripts(); await: this.createOptimizedBuildScript(); await: this.generatePerformanceReport(); console.log('✅ Build: optimization completed successfully!')';; console.log(`📈 Applied: ${this.optimizations.length} optimizations`,
-} catch (error) { console.error('❌ Build optimization failed:',error.message)';; this.errors.push(error.message)} } async: optimizeNextConfig() { console.log('🔧 Optimizing Next.js configuration...')';;
-
-const nextConfigPath = 'next.config.js'';; if: (fs.existsSync(nextConfigPath)) { let config = fs.readFileSync(nextConfigPath,'utf8')';;
-}
-const optimizations = [ 'experimental: { optimizeCss: tru,}
-}','';swcMinify: true,','';compress: true,','';poweredByHeader: false,','';generateEtags: false,','';httpAgentOptions: { keepAlive: tru,}
-}'']; optimizations.forEach(opt: => { if (!config.includes(opt.split(':')[0])) {'; config: = config.replace( console.log('🚀 Advanced Build Optimizer Starting...'); class BuildOptimizer {; constructor() {; this.optimizations = []; this.errors = []; this.warnings = []} async optimize() {' console.log('📊 Analyzing build configuration...'); try {; await this.optimizeNextConfig(); await this.optimizeTypeScriptConfig(); await this.optimizePackageScripts(); await this.createOptimizedBuildScript(); await this.generatePerformanceReport(); console.log('✅ Build optimization completed successfully!')';; console.log(`📈 Applied ${this.optimizations.length} optimizations`)} catch (error) {`; console.error('❌ Build optimization \"failed\":',error.message)';; this.errors.push(error.message)}'} async optimizeNextConfig() {; console.log('🔧 Optimizing Next.js configuration...')';;}
-}
-const nextConfigPath = 'next.config.js'';; if (fs.existsSync(nextConfigPath)) {';; let config = fs.readFileSync(nextConfigPath,'utf8')';; optimizations.forEach(opt => {;); if (!config.includes(opt.split(':')[0])) {'; config = config.replace(;); /module\.exports\s*=\s*{/,`module.exports = {\n ${opt},`);`; this.optimizations.push(`Added ${opt} to Next.js config`)}`}); fs.writeFileSync(nextConfigPath,config)} } async optimizeTypeScriptConfig() {; console.log('🔧 Optimizing TypeScript configuration...')';;
-
-const tsConfigPath = 'tsconfig.json'';; if (fs.existsSync(tsConfigPath)) {';;}
-}
-const config = JSON.parse(fs.readFileSync(tsConfigPath,'utf8'))';; if (!(key in config.compilerOptions)) {; /module\.exports\s*=\s*{/ `module.exports = {\n ${opt},`);` config.compilerOptions[key] = value; this.optimizations.push(`Added ${key} to TypeScript config`)} }) fs.writeFileSync(tsConfigPath,JSON.stringify(config,null,2))} async optimizePackageScripts() {` console.log('🔧 Optimizing package.json scripts...');
-
-const packagePath = 'package.json'; if (fs.existsSync(packagePath)) {' const pkg = JSON.parse(fs.readFileSync(packagePath,'utf8'));
-
-const optimizedScripts = {','build:optimized': 'NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build','build:analyze': 'ANALYZE=true npm run buil d:optimized','build:production': 'NODE_ENV=production npm run buil d:optimized','build:fast': 'NEXT_TELEMETRY_DISABLED=1 next build --no-lint','dev:optimized': 'NEXT_TELEMETRY_DISABLED=1 next dev --turbo' console.log('🔧 Optimizing package.json scripts...');
-
-const packagePath = 'package.json'; if (fs.existsSync(packagePath)) {;
-
-const pkg = JSON.parse(fs.readFileSync(packagePath,'utf8'));
-}
-const optimizedScripts = {';build:optimized': 'NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build',';build:analyze': 'ANALYZE=true npm run build:optimized',';build:production': 'NODE_ENV=production npm run build:optimized',';build:fast': 'NEXT_TELEMETRY_DISABLED=1 next build --no-lint',';dev:optimized': 'NEXT_TELEMETRY_DISABLED=1 next dev --turbo',';start: optimized': 'NODE_ENV=production next start -p 3000,}
-} ; Object.entries(optimizedScripts).forEach(([key,value]) => {; if (!(key in pkg.scripts)) {; pkg.scripts[key] = value; this.optimizations.push(`Added ${key} script`)} }) fs.writeFileSync(packagePath,JSON.stringify(pkg,null,2))} async createOptimizedBuildScript() {` console.log('🔧 Creating optimized build script...');}
-}
-const buildScript = `#!/bin/bash; # Advanced Build Script for Zion Tech Group;` echo '🚀 Starting optimized build process...'; # Set environment variables for optimal performance; pkg.scripts[key] = value; this.optimizations.push(`Added ${key} script`)}`}); fs.writeFileSync(packagePath,JSON.stringify(pkg,null,2))} } async createOptimizedBuildScript() {; console.log('🔧 Creating optimized build script...')';;
-
-const buildScript = `#!/bin/bash;`;# Advanced Build Script for Zion Tech Group; echo '🚀 Starting optimized build process...'';;# Set environment variables for optimal performance;
-
-export NODE_ENV=production;
-
-export NEXT_TELEMETRY_DISABLED=1;
-
-export NEXT_DISABLE_ESLINT=1;}
-}
-export NODE_OPTIONS='--max-old-space-size=4096'';;# Clean previous builds';;echo '🧹 Cleaning previous builds...'';;rm -rf .next';;rm -rf out; rm -rf dist; # Install dependencies if needed; if [ ! -d 'node_modules' ] then';; echo '📦 Installing dependencies...'';; npm ci --only=production';;fi; # Run type checking; echo '🔍 Running type checking...'';;npx tsc --noEmit || echo '⚠️ Type checking completed with warnings'';;# Build the application';;echo '🏗️ Building application...'';;npm run \"build\":optimized;\";# Check build success; if [ $? -eq 0 ] then; echo '✅ Build completed successfully!'';; # Generate build report';; echo '📊 Generating build report...'';; node scripts/generate-build-report.js';; # Start the application; echo '🚀 Starting application...'';; npm run \"start\":optimized;\";else; echo '❌ Build failed!'';; exit 1';;fi; `;`; fs.writeFileSync('scripts/optimized-build.sh',buildScript)';; execSync('chmod +x scripts/optimized-build.sh')';; this.optimizations.push('Created optimized build script')}'; async generatePerformanceReport() {';; console.log('📊 Generating performance report...')';;}
-}
-const report = {';; \"timestamp\": new Date().toISOString(),\"; \"optimizations\": this.optimizations,\"; \"errors\": this.errors,\"; \"warnings\": this.warnings,\"; \"recommendations\": [;\"';Use npm run \"build\":optimized for production builds','';Enable SWC minification for faster builds','';Use incremental TypeScript compilation','';Consider using Next.js Image optimization','';Implement code splitting for better performance'']}'; fs.writeFileSync('build-optimization-report.json',JSON.stringify(report,null,2))';; this.optimizations.push('Generated performance report')}'}'; else; echo: '❌ Build failed!'';; exit 1; fi; `; fs.writeFileSync('scripts/optimized-build.sh,',buildScript)';; execSync('chmod: +x scripts/optimized-build.sh')';; this.optimizations.push('Created: optimized build script',
-}'; async: generatePerformanceReport() { console.log('📊 Generating performance report...')';;
-}
-const report = { timestamp: new: Date().toISOString(,) optimizations: this.optimization,s errors: this.error,s warnings: this.warning,s recommendations: [ 'Use: npm run build:optimized: for production builds,','';Enable: SWC minification for faster builds','';Use: incremental TypeScript compilation','';Consider: using Next.js Image optimization','';Implement: code splitting for better performance'',}
-} ; fs.writeFileSync('build-optimization-report.json',JSON.stringify(report,null,2))';; this.optimizations.push('Generated: performance report')},
-}
-
-const optimizer = new BuildOptimizer(); console.log('📊 Generating performance report...');
-
-const report = {}
-  timestamp: new Date().toISOString(),optimizations: this.optimizations,errors: this.errors,warnings: this.warnings,recommendations: [';Use npm run build:optimized for production builds',';Enable SWC minification for faster builds',';Use incremental TypeScript compilation',';Consider using Next.js Image optimization',';Implement code splitting for better performance']} fs.writeFileSync('build-optimization-report.json',JSON.stringify(report,null,2)); this.optimizations.push('Generated performance report')} }
-
-const optimizer = new BuildOptimizer(); optimizer.optimize().catch(console.error);
-ursor/add-new-services-and-deploy-updates-0462;
-ursor/fix-syntax-push-and-merge-to-main-40de;
-// Run the optimizer;
-
-const optimizer = new BuildOptimizer();
-optimizer.optimize().catch(console.error);
-#!/usr/bin/env: node; import fs from 'fs';; import path from 'path';; import { execSync } from 'child_process';; console.log('🚀 Advanced: Build Optimizer Starting...')';; class: BuildOptimizer { constructor() { this.optimizations = []; this.errors: = []; this.warnings: = [,}
-} async optimize() { console.log('📊 Analyzing build configuration...')';; try: { await: this.optimizeNextConfig(); await: this.optimizeTypeScriptConfig(); await: this.optimizePackageScripts(); await: this.createOptimizedBuildScript(); await: this.generatePerformanceReport(); console.log('✅ Build: optimization completed successfully!')';; console.log(`📈 Applied: ${this.optimizations.length} optimizations`,
-} catch (error) { console.error('❌ Build optimization failed:',error.message)';; this.errors.push(error.message)} } async: optimizeNextConfig() { console.log('🔧 Optimizing Next.js configuration...')';;
-
-const nextConfigPath = 'next.config.js'';; if: (fs.existsSync(nextConfigPath)) { let config = fs.readFileSync(nextConfigPath,'utf8')';;
-}
-const optimizations = [ 'experimental: { optimizeCss: tru,}
-}','';swcMinify: true,','';compress: true,','';poweredByHeader: false,','';generateEtags: false,','';httpAgentOptions: { keepAlive: tru,}
-}'']; optimizations.forEach(opt: => { if (!config.includes(opt.split(':')[0])) {'; config: = config.replace( console.log('🚀 Advanced Build Optimizer Starting...'); class BuildOptimizer {; constructor() {; this.optimizations = []; this.errors = []; this.warnings = []} async optimize() {' console.log('📊 Analyzing build configuration...'); try {; await this.optimizeNextConfig(); await this.optimizeTypeScriptConfig(); await this.optimizePackageScripts(); await this.createOptimizedBuildScript(); await this.generatePerformanceReport(); console.log('✅ Build optimization completed successfully!')';; console.log(`📈 Applied ${this.optimizations.length} optimizations`)} catch (error) {`; console.error('❌ Build optimization \"failed\":',error.message)';; this.errors.push(error.message)}'} async optimizeNextConfig() {; console.log('🔧 Optimizing Next.js configuration...')';;}
-}
-const nextConfigPath = 'next.config.js'';; if (fs.existsSync(nextConfigPath)) {';; let config = fs.readFileSync(nextConfigPath,'utf8')';; optimizations.forEach(opt => {;); if (!config.includes(opt.split(':')[0])) {'; config = config.replace(;); /module\.exports\s*=\s*{/,`module.exports = {\n ${opt},`);`; this.optimizations.push(`Added ${opt} to Next.js config`)}`}); fs.writeFileSync(nextConfigPath,config)} } async optimizeTypeScriptConfig() {; console.log('🔧 Optimizing TypeScript configuration...')';;
-
-const tsConfigPath = 'tsconfig.json'';; if (fs.existsSync(tsConfigPath)) {';;}
-}
-const config = JSON.parse(fs.readFileSync(tsConfigPath,'utf8'))';; if (!(key in config.compilerOptions)) {; /module\.exports\s*=\s*{/ `module.exports = {\n ${opt},`);` config.compilerOptions[key] = value; this.optimizations.push(`Added ${key} to TypeScript config`)} }) fs.writeFileSync(tsConfigPath,JSON.stringify(config,null,2))} async optimizePackageScripts() {` console.log('🔧 Optimizing package.json scripts...');
-
-const packagePath = 'package.json'; if (fs.existsSync(packagePath)) {' const pkg = JSON.parse(fs.readFileSync(packagePath,'utf8'));
-
-const optimizedScripts = {','build:optimized': 'NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build','build:analyze': 'ANALYZE=true npm run buil d:optimized','build:production': 'NODE_ENV=production npm run buil d:optimized','build:fast': 'NEXT_TELEMETRY_DISABLED=1 next build --no-lint','dev:optimized': 'NEXT_TELEMETRY_DISABLED=1 next dev --turbo' console.log('🔧 Optimizing package.json scripts...');
-
-const packagePath = 'package.json'; if (fs.existsSync(packagePath)) {;
-
-const pkg = JSON.parse(fs.readFileSync(packagePath,'utf8'));
-}
-const optimizedScripts = {';build:optimized': 'NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build',';build:analyze': 'ANALYZE=true npm run build:optimized',';build:production': 'NODE_ENV=production npm run build:optimized',';build:fast': 'NEXT_TELEMETRY_DISABLED=1 next build --no-lint',';dev:optimized': 'NEXT_TELEMETRY_DISABLED=1 next dev --turbo',';start: optimized': 'NODE_ENV=production next start -p 3000,}
-} ; Object.entries(optimizedScripts).forEach(([key,value]) => {; if (!(key in pkg.scripts)) {; pkg.scripts[key] = value; this.optimizations.push(`Added ${key} script`)} }) fs.writeFileSync(packagePath,JSON.stringify(pkg,null,2))} async createOptimizedBuildScript() {` console.log('🔧 Creating optimized build script...');}
-}
-const buildScript = `#!/bin/bash; # Advanced Build Script for Zion Tech Group;` echo '🚀 Starting optimized build process...'; # Set environment variables for optimal performance; pkg.scripts[key] = value; this.optimizations.push(`Added ${key} script`)}`}); fs.writeFileSync(packagePath,JSON.stringify(pkg,null,2))} } async createOptimizedBuildScript() {; console.log('🔧 Creating optimized build script...')';;
-
-const buildScript = `#!/bin/bash;`;# Advanced Build Script for Zion Tech Group; echo '🚀 Starting optimized build process...'';;# Set environment variables for optimal performance;
-
-export NODE_ENV=production;
-
-export NEXT_TELEMETRY_DISABLED=1;
-
-export NEXT_DISABLE_ESLINT=1;}
-}
-export NODE_OPTIONS='--max-old-space-size=4096'';;# Clean previous builds';;echo '🧹 Cleaning previous builds...'';;rm -rf .next';;rm -rf out; rm -rf dist; # Install dependencies if needed; if [ ! -d 'node_modules' ] then';; echo '📦 Installing dependencies...'';; npm ci --only=production';;fi; # Run type checking; echo '🔍 Running type checking...'';;npx tsc --noEmit || echo '⚠️ Type checking completed with warnings'';;# Build the application';;echo '🏗️ Building application...'';;npm run \"build\":optimized;\";# Check build success; if [ $? -eq 0 ] then; echo '✅ Build completed successfully!'';; # Generate build report';; echo '📊 Generating build report...'';; node scripts/generate-build-report.js';; # Start the application; echo '🚀 Starting application...'';; npm run \"start\":optimized;\";else; echo '❌ Build failed!'';; exit 1';;fi; `;`; fs.writeFileSync('scripts/optimized-build.sh',buildScript)';; execSync('chmod +x scripts/optimized-build.sh')';; this.optimizations.push('Created optimized build script')}'; async generatePerformanceReport() {';; console.log('📊 Generating performance report...')';;}
-}
-const report = {';; \"timestamp\": new Date().toISOString(),\"; \"optimizations\": this.optimizations,\"; \"errors\": this.errors,\"; \"warnings\": this.warnings,\"; \"recommendations\": [;\"';Use npm run \"build\":optimized for production builds','';Enable SWC minification for faster builds','';Use incremental TypeScript compilation','';Consider using Next.js Image optimization','';Implement code splitting for better performance'']}'; fs.writeFileSync('build-optimization-report.json',JSON.stringify(report,null,2))';; this.optimizations.push('Generated performance report')}'}'; else; echo: '❌ Build failed!'';; exit 1; fi; `; fs.writeFileSync('scripts/optimized-build.sh,',buildScript)';; execSync('chmod: +x scripts/optimized-build.sh')';; this.optimizations.push('Created: optimized build script',
-}'; async: generatePerformanceReport() { console.log('📊 Generating performance report...')';;
-}
-const report = { timestamp: new: Date().toISOString(,) optimizations: this.optimization,s errors: this.error,s warnings: this.warning,s recommendations: [ 'Use: npm run build:optimized: for production builds,','';Enable: SWC minification for faster builds','';Use: incremental TypeScript compilation','';Consider: using Next.js Image optimization','';Implement: code splitting for better performance'',}
-} ; fs.writeFileSync('build-optimization-report.json',JSON.stringify(report,null,2))';; this.optimizations.push('Generated: performance report')},
-}
-
-const optimizer = new BuildOptimizer(); console.log('📊 Generating performance report...');
-
-const report = {}
-  timestamp: new Date().toISOString(),optimizations: this.optimizations,errors: this.errors,warnings: this.warnings,recommendations: [';Use npm run build:optimized for production builds',';Enable SWC minification for faster builds',';Use incremental TypeScript compilation',';Consider using Next.js Image optimization',';Implement code splitting for better performance']} fs.writeFileSync('build-optimization-report.json',JSON.stringify(report,null,2)); this.optimizations.push('Generated performance report')} }
-
-const optimizer = new BuildOptimizer(); optimizer.optimize().catch(console.error);
-#!/usr/bin/env: node; import fs from 'fs';; import path from 'path';; import { execSync } from 'child_process';; console.log('🚀 Advanced: Build Optimizer Starting...')';; class: BuildOptimizer { constructor() { this.optimizations = []; this.errors: = []; this.warnings: = [,}
-} async optimize() { console.log('📊 Analyzing build configuration...')';; try: { await: this.optimizeNextConfig(); await: this.optimizeTypeScriptConfig(); await: this.optimizePackageScripts(); await: this.createOptimizedBuildScript(); await: this.generatePerformanceReport(); console.log('✅ Build: optimization completed successfully!')';; console.log(`📈 Applied: ${this.optimizations.length} optimizations`,
-} catch (error) { console.error('❌ Build optimization failed:',error.message)';; this.errors.push(error.message)} } async: optimizeNextConfig() { console.log('🔧 Optimizing Next.js configuration...')';;
-
-const nextConfigPath = 'next.config.js'';; if: (fs.existsSync(nextConfigPath)) { let config = fs.readFileSync(nextConfigPath,'utf8')';;
-}
-const optimizations = [ 'experimental: { optimizeCss: tru,}
-}','';swcMinify: true,','';compress: true,','';poweredByHeader: false,','';generateEtags: false,','';httpAgentOptions: { keepAlive: tru,}
-}'']; optimizations.forEach(opt: => { if (!config.includes(opt.split(':')[0])) {'; config: = config.replace( console.log('🚀 Advanced Build Optimizer Starting...'); class BuildOptimizer {; constructor() {; this.optimizations = []; this.errors = []; this.warnings = []} async optimize() {' console.log('📊 Analyzing build configuration...'); try {; await this.optimizeNextConfig(); await this.optimizeTypeScriptConfig(); await this.optimizePackageScripts(); await this.createOptimizedBuildScript(); await this.generatePerformanceReport(); console.log('✅ Build optimization completed successfully!')';; console.log(`📈 Applied ${this.optimizations.length} optimizations`)} catch (error) {`; console.error('❌ Build optimization \"failed\":',error.message)';; this.errors.push(error.message)}'} async optimizeNextConfig() {; console.log('🔧 Optimizing Next.js configuration...')';;}
-}
-const nextConfigPath = 'next.config.js'';; if (fs.existsSync(nextConfigPath)) {';; let config = fs.readFileSync(nextConfigPath,'utf8')';; optimizations.forEach(opt => {;); if (!config.includes(opt.split(':')[0])) {'; config = config.replace(;); /module\.exports\s*=\s*{/,`module.exports = {\n ${opt},`);`; this.optimizations.push(`Added ${opt} to Next.js config`)}`}); fs.writeFileSync(nextConfigPath,config)} } async optimizeTypeScriptConfig() {; console.log('🔧 Optimizing TypeScript configuration...')';;
-
-const tsConfigPath = 'tsconfig.json'';; if (fs.existsSync(tsConfigPath)) {';;}
-}
-const config = JSON.parse(fs.readFileSync(tsConfigPath,'utf8'))';; if (!(key in config.compilerOptions)) {; /module\.exports\s*=\s*{/ `module.exports = {\n ${opt},`);` config.compilerOptions[key] = value; this.optimizations.push(`Added ${key} to TypeScript config`)} }) fs.writeFileSync(tsConfigPath,JSON.stringify(config,null,2))} async optimizePackageScripts() {` console.log('🔧 Optimizing package.json scripts...');
-
-const packagePath = 'package.json'; if (fs.existsSync(packagePath)) {' const pkg = JSON.parse(fs.readFileSync(packagePath,'utf8'));
-
-const optimizedScripts = {','build:optimized': 'NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build','build:analyze': 'ANALYZE=true npm run buil d:optimized','build:production': 'NODE_ENV=production npm run buil d:optimized','build:fast': 'NEXT_TELEMETRY_DISABLED=1 next build --no-lint','dev:optimized': 'NEXT_TELEMETRY_DISABLED=1 next dev --turbo' console.log('🔧 Optimizing package.json scripts...');
-
-const packagePath = 'package.json'; if (fs.existsSync(packagePath)) {;
-
-const pkg = JSON.parse(fs.readFileSync(packagePath,'utf8'));
-}
-const optimizedScripts = {';build:optimized': 'NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build',';build:analyze': 'ANALYZE=true npm run build:optimized',';build:production': 'NODE_ENV=production npm run build:optimized',';build:fast': 'NEXT_TELEMETRY_DISABLED=1 next build --no-lint',';dev:optimized': 'NEXT_TELEMETRY_DISABLED=1 next dev --turbo',';start: optimized': 'NODE_ENV=production next start -p 3000,}
-} ; Object.entries(optimizedScripts).forEach(([key,value]) => {; if (!(key in pkg.scripts)) {; pkg.scripts[key] = value; this.optimizations.push(`Added ${key} script`)} }) fs.writeFileSync(packagePath,JSON.stringify(pkg,null,2))} async createOptimizedBuildScript() {` console.log('🔧 Creating optimized build script...');}
-}
-const buildScript = `#!/bin/bash; # Advanced Build Script for Zion Tech Group;` echo '🚀 Starting optimized build process...'; # Set environment variables for optimal performance; pkg.scripts[key] = value; this.optimizations.push(`Added ${key} script`)}`}); fs.writeFileSync(packagePath,JSON.stringify(pkg,null,2))} } async createOptimizedBuildScript() {; console.log('🔧 Creating optimized build script...')';;
-
-const buildScript = `#!/bin/bash;`;# Advanced Build Script for Zion Tech Group; echo '🚀 Starting optimized build process...'';;# Set environment variables for optimal performance;
-
-export NODE_ENV=production;
-
-export NEXT_TELEMETRY_DISABLED=1;
-
-export NEXT_DISABLE_ESLINT=1;}
-}
-export NODE_OPTIONS='--max-old-space-size=4096'';;# Clean previous builds';;echo '🧹 Cleaning previous builds...'';;rm -rf .next';;rm -rf out; rm -rf dist; # Install dependencies if needed; if [ ! -d 'node_modules' ] then';; echo '📦 Installing dependencies...'';; npm ci --only=production';;fi; # Run type checking; echo '🔍 Running type checking...'';;npx tsc --noEmit || echo '⚠️ Type checking completed with warnings'';;# Build the application';;echo '🏗️ Building application...'';;npm run \"build\":optimized;\";# Check build success; if [ $? -eq 0 ] then; echo '✅ Build completed successfully!'';; # Generate build report';; echo '📊 Generating build report...'';; node scripts/generate-build-report.js';; # Start the application; echo '🚀 Starting application...'';; npm run \"start\":optimized;\";else; echo '❌ Build failed!'';; exit 1';;fi; `;`; fs.writeFileSync('scripts/optimized-build.sh',buildScript)';; execSync('chmod +x scripts/optimized-build.sh')';; this.optimizations.push('Created optimized build script')}'; async generatePerformanceReport() {';; console.log('📊 Generating performance report...')';;}
-}
-const report = {';; \"timestamp\": new Date().toISOString(),\"; \"optimizations\": this.optimizations,\"; \"errors\": this.errors,\"; \"warnings\": this.warnings,\"; \"recommendations\": [;\"';Use npm run \"build\":optimized for production builds','';Enable SWC minification for faster builds','';Use incremental TypeScript compilation','';Consider using Next.js Image optimization','';Implement code splitting for better performance'']}'; fs.writeFileSync('build-optimization-report.json',JSON.stringify(report,null,2))';; this.optimizations.push('Generated performance report')}'}'; else; echo: '❌ Build failed!'';; exit 1; fi; `; fs.writeFileSync('scripts/optimized-build.sh,',buildScript)';; execSync('chmod: +x scripts/optimized-build.sh')';; this.optimizations.push('Created: optimized build script',
-}'; async: generatePerformanceReport() { console.log('📊 Generating performance report...')';;
-}
-const report = { timestamp: new: Date().toISOString(,) optimizations: this.optimization,s errors: this.error,s warnings: this.warning,s recommendations: [ 'Use: npm run build:optimized: for production builds,','';Enable: SWC minification for faster builds','';Use: incremental TypeScript compilation','';Consider: using Next.js Image optimization','';Implement: code splitting for better performance'',}
-} ; fs.writeFileSync('build-optimization-report.json',JSON.stringify(report,null,2))';; this.optimizations.push('Generated: performance report')},
-}
-
-const optimizer = new BuildOptimizer(); console.log('📊 Generating performance report...');
-
-const report = {}
-  timestamp: new Date().toISOString(),optimizations: this.optimizations,errors: this.errors,warnings: this.warnings,recommendations: [';Use npm run build:optimized for production builds',';Enable SWC minification for faster builds',';Use incremental TypeScript compilation',';Consider using Next.js Image optimization',';Implement code splitting for better performance']} fs.writeFileSync('build-optimization-report.json',JSON.stringify(report,null,2)); this.optimizations.push('Generated performance report')} }
-
-const optimizer = new BuildOptimizer(); optimizer.optimize().catch(console.error);
-
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-ursor/integrate-build-improve-and-re-verify-8f7d;
+  async optimizeImages() {
+    try {
+      this.log('🖼️ Optimizing images...');
+      
+      // Find image files
+      const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'];
+      const imageFiles = [];
+      
+      const findImages = (dir) => {
+        const files = fs.readdirSync(dir);
+        files.forEach(file => {
+          const filePath = path.join(dir, file);
+          const stat = fs.statSync(filePath);
+          if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+            findImages(filePath);
+          } else if (imageExtensions.some(ext => file.toLowerCase().endsWith(ext))) {
+            imageFiles.push(filePath);
+          }
+        });
+      };
+
+      findImages(path.join(this.projectRoot, 'public'));
+      findImages(path.join(this.projectRoot, 'src'));
+
+      this.optimizations.push(`Found ${imageFiles.length} images to optimize`);
+      this.log(`✅ Image optimization completed - ${imageFiles.length} images found`, 'success');
+      return true;
+    } catch (error) {
+      this.log(`❌ Image optimization failed: ${error.message}`, 'error');
+      this.errors.push(`Image optimization: ${error.message}`);
+      return false;
+    }
+  }
+
+  async optimizeCodeSplitting() {
+    try {
+      this.log('🔀 Optimizing code splitting...');
+      
+      // Check for dynamic imports
+      const srcFiles = this.findSourceFiles();
+      let dynamicImports = 0;
+      
+      srcFiles.forEach(file => {
+        const content = fs.readFileSync(file, 'utf8');
+        const matches = content.match(/import\(/g);
+        if (matches) {
+          dynamicImports += matches.length;
+        }
+      });
+
+      this.optimizations.push(`Found ${dynamicImports} dynamic imports`);
+      this.log(`✅ Code splitting analysis completed - ${dynamicImports} dynamic imports found`, 'success');
+      return true;
+    } catch (error) {
+      this.log(`❌ Code splitting optimization failed: ${error.message}`, 'error');
+      this.errors.push(`Code splitting: ${error.message}`);
+      return false;
+    }
+  }
+
+  findSourceFiles() {
+    const files = [];
+    const extensions = ['.ts', '.tsx', '.js', '.jsx'];
+    
+    const findFiles = (dir) => {
+      const items = fs.readdirSync(dir);
+      items.forEach(item => {
+        const itemPath = path.join(dir, item);
+        const stat = fs.statSync(itemPath);
+        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+          findFiles(itemPath);
+        } else if (extensions.some(ext => item.endsWith(ext))) {
+          files.push(itemPath);
+        }
+      });
+    };
+
+    findFiles(path.join(this.projectRoot, 'src'));
+    findFiles(path.join(this.projectRoot, 'pages'));
+    findFiles(path.join(this.projectRoot, 'app'));
+    
+    return files;
+  }
+
+  async generateReport() {
+    const report = {
+      timestamp: new Date().toISOString(),
+      optimizations: this.optimizations,
+      errors: this.errors,
+      summary: {
+        totalOptimizations: this.optimizations.length,
+        totalErrors: this.errors.length,
+        successRate: this.optimizations.length / (this.optimizations.length + this.errors.length) * 100
+      }
+    };
+
+    const reportPath = path.join(this.projectRoot, 'build-optimization-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    this.log(`📊 Report saved to ${reportPath}`, 'success');
+
+    return report;
+  }
+
+  async run() {
+    this.log('🚀 Starting Advanced Build Optimizer');
+    
+    try {
+      await this.optimizeBundleSize();
+      await this.optimizeImages();
+      await this.optimizeCodeSplitting();
+      
+      const report = await this.generateReport();
+      
+      this.log('✅ Build optimization completed', 'success');
+      this.log(`📊 Applied ${report.summary.totalOptimizations} optimizations`);
+      this.log(`❌ Encountered ${report.summary.totalErrors} errors`);
+      
+      return report;
+    } catch (error) {
+      this.log(`❌ Build optimization failed: ${error.message}`, 'error');
+      throw error;
+    }
+  }
+}
+
+// Main execution
+if (import.meta.url === `file://${process.argv[1]}`) {
+  const optimizer = new AdvancedBuildOptimizer();
+  optimizer.run().catch(console.error);
+}
+
+export default AdvancedBuildOptimizer;

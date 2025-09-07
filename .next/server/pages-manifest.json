@@ -1,15 +1,16 @@
 {
-  "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/ai-services": "pages/ai-services.js",
-  "/deploy/genesis": "pages/deploy/genesis.js",
-  "/design-map": "pages/design-map.js",
-  "/governance/global-outreach": "pages/governance/global-outreach.js",
-  "/pricing": "pages/pricing.js",
-  "/privacy": "pages/privacy.js",
-  "/summit": "pages/summit.js",
-  "/space-tech": "pages/space-tech.js",
-  "/zion-global-2025": "pages/zion-global-2025.js",
-  "/team": "pages/team.js",
-  "/_document": "pages/_document.js"
+  "/_app": "pages/_app.js",
+  "/ai-services": "pages/ai-services.html",
+  "/deploy/genesis": "pages/deploy/genesis.html",
+  "/design-map": "pages/design-map.html",
+  "/governance/global-outreach": "pages/governance/global-outreach.html",
+  "/pricing": "pages/pricing.html",
+  "/privacy": "pages/privacy.html",
+  "/space-tech": "pages/space-tech.html",
+  "/team": "pages/team.html",
+  "/summit": "pages/summit.html",
+  "/zion-global-2025": "pages/zion-global-2025.html",
+  "/_document": "pages/_document.js",
+  "/404": "pages/404.html"
 }
