@@ -1,0 +1,9 @@
+const AIBiotechDrugDiscovery = ({ className }) => {
+  return ('
+    <div className={className || ''}>'
+</div>
+      <h1>AIBiotechDrugDiscovery</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+};
