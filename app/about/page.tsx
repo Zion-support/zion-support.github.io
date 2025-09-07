@@ -3,7 +3,6 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import { Metadata } from 'next';
-
 export const metadata: Metadata = {
   title: 'About | Zion Tech Group',
   description: 'Learn about Zion Tech Group\'s mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.',
@@ -49,8 +48,8 @@ export const metadata: Metadata = {
   keywords: 'about us, Zion Tech Group, company, mission, values, team, AI services, IT solutions, micro SaaS'
 >>>>>>> origin/chore/fix-lint-and-merge
 };
-
-export default function AboutPage() {
+export default
+function AboutPage() {
   return (
 <<<<<<< HEAD
     <div className="animate-fade-in">
@@ -60,8 +59,8 @@ export default function AboutPage() {
         </h1>
         <div className="prose prose-lg max-w-none">
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            Zion Tech Group is a leading provider of enterprise-grade AI solutions, 
-            micro SaaS development, and comprehensive IT services. We specialize in 
+            Zion Tech Group is a leading provider of enterprise-grade AI solutions,
+            micro SaaS development, and comprehensive IT services. We specialize in
             delivering cutting-edge technology solutions that drive real business results.
 =======
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -509,7 +508,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-    </div>
+    </div>;
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-10ab

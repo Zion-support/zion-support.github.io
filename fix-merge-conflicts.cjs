@@ -44,7 +44,7 @@ console.log(`Fixed ${fixedCount} files with merge conflicts.`);
 class MergeConflictFixer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.fixedFiles = [];
+    this.conflictsFixed = 0;
     this.errors = [];
   }
   log(message) {
@@ -107,8 +107,9 @@ class MergeConflictFixer {
       this.fixedFiles.push(filePath);
       return { success: true, message: 'Conflicts fixed' };
     } catch (error) {
-      this.errors.push({ file: filePath, error: error.message });
-      return { success: false, error: error.message };
+      this.log(`Error fixing ${filePath}: ${error.message}`, 'ERROR');
+      this.errors.push(`${filePath}: ${error.message}`);
+      return false;
     }
   }
   async fixAllConflicts() {

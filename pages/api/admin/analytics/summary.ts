@@ -11,9 +11,7 @@ interface AnalyticsEvent {
   properties?: Record<string, any>
   at: string
 }
-
 const LOG_FILE = path.join(process.cwd(), 'dataanalyticsevents.log.jsonl')
-
 function parseLines(startIso?: string, endIso?: string): EventRow[] {
   try {
     if (!fs.existsSync(LOG_FILE)) return []
@@ -29,11 +27,9 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
         const t = new Date(obj.at)
         if (start && t < start) continue
         if (end && t > end) continue
-
         rows.push(obj)
       } catch {}
     }
-
   } catch {
     return []
   }

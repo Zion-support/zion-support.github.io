@@ -159,8 +159,18 @@ function processDirectory(dirPath) {
       content = content.replace(importRegex, (match) => {
         return match.replace(/,\s*$/, ;);
       });
-      modified = true;
+      
+      const allFiles = stdout.trim().split('\n').filter(f => f && !f.includes('node_modules'));
+      
+      for (const file of allFiles) {
+        if (fs.existsSync(file)) {
+          this.fixFile(file);
+        }
+      }
+    } catch (error) {
+      this.log(`Error scanning files: ${error.message}`, 'ERROR');
     }
+  }
 
     // Fix interface properties with commas instead of semicolons
     const interfaceRegex = /interface\s+\w+\s*\{[^}]*\}/gs;
