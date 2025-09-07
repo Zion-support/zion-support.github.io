@@ -174,6 +174,21 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
         { name: 'AI Data Governance', href: '/services/ai-data-governance' }
       ]
+    },
+    {
+      title: 'Micro SaaS Solutions',
+      icon: ShoppingCart,
+      color: 'from-orange-600 to-red-600',
+      links: [
+        { name: 'Innovative Micro SaaS 2025', href: '/innovative-micro-saas-2025' },
+        { name: 'AI Content Creation', href: '/services/ai-content-creation-platform' },
+        { name: 'AI Video Editing', href: '/services/ai-video-editing-platform' },
+        { name: 'AI Customer Support', href: '/services/ai-customer-support-automation' },
+        { name: 'AI Email Marketing', href: '/services/ai-email-marketing-platform' },
+        { name: 'AI Social Media Management', href: '/services/ai-social-media-management' },
+        { name: 'AI SEO Optimization', href: '/services/ai-seo-optimization-platform' },
+        { name: 'AI Project Management', href: '/services/ai-project-management' }
+      ]
     }
   ];
 
