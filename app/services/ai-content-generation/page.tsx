@@ -1,3 +1,4 @@
+// eslint-disable-next-line react-refresh/only-export-components
 export const metadata = {
   title: 'AI Content Generation Platform | Zion Tech Group',
   description: 'Revolutionary AI content generation platform that creates high-quality articles, marketing copy, social media posts, and more. 10x faster than traditional writing.',

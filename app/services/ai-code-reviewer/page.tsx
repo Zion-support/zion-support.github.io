@@ -1,4 +1,5 @@
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const metadata = {
   title: 'AI Code Reviewer - Zion Tech Group',
   description: 'Professional AI code reviewer solutions for your business needs.'

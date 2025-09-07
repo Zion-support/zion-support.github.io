@@ -1,6 +1,7 @@
 import React from "react";
 import { Metadata } from 'next';
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const metadata: Metadata = {
   title: 'AI Content Generator Pro | Zion Tech Group',
   description: 'Advanced AI-powered content creation platform for blogs, social media, and marketing materials. Generate high-quality, SEO-optimized content at scale.',

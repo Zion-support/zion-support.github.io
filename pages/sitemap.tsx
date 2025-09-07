@@ -47,6 +47,7 @@ function SiteMap() {
   // getServerSideProps will do the heavy lifting
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {
   // We generate the XML sitemap with the posts data
   const sitemap = generateSiteMap();

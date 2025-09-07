@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const metadata = {
   title: 'AI Services | Zion Tech Group',
   description: 'Comprehensive AI services including machine learning, natural language processing, computer vision, and AI consulting to transform your business.',

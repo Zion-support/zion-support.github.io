@@ -1,4 +1,5 @@
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const metadata = {
   title: 'Ai Content Optimizer | Zion Tech Group',
   description: 'Professional ai content optimizer services for your business needs.',
