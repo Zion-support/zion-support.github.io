@@ -173,6 +173,106 @@ const services = [
   }
 ];
 
+// Featured innovative services
+const FEATURED_INNOVATIVE_SERVICES = [
+  {
+    id: "ai-contract-analysis",
+    title: "AI-Powered Contract Analysis Platform",
+    description: "Advanced AI platform that analyzes legal contracts, identifies risks, suggests improvements, and automates contract review processes.",
+    category: "AI & Legal Tech",
+    price: 2999,
+    rating: 4.9,
+    reviewCount: 156,
+    image: "https://ziontechgroup.com/images/ai-contract-analysis.jpg",
+    link: "/services/ai-contract-analysis",
+    features: ["95% accuracy", "80% time reduction", "Risk assessment", "Compliance monitoring"]
+  },
+  {
+    id: "ai-supply-chain-optimization",
+    title: "AI-Powered Supply Chain Optimization",
+    description: "Intelligent supply chain management platform that uses AI to predict demand, optimize inventory, reduce costs, and improve delivery times.",
+    category: "AI & Operations",
+    price: 4499,
+    rating: 4.8,
+    reviewCount: 203,
+    image: "https://ziontechgroup.com/images/ai-supply-chain.jpg",
+    link: "/services/ai-supply-chain-optimization",
+    features: ["35% cost reduction", "60% efficiency improvement", "Demand prediction", "Route optimization"]
+  },
+  {
+    id: "ai-cybersecurity-threat-intelligence",
+    title: "AI-Powered Cybersecurity Threat Intelligence",
+    description: "Advanced threat intelligence platform that uses AI to detect, analyze, and respond to cybersecurity threats in real-time.",
+    category: "Cybersecurity",
+    price: 5999,
+    rating: 4.9,
+    reviewCount: 178,
+    image: "https://ziontechgroup.com/images/ai-cybersecurity.jpg",
+    link: "/services/ai-cybersecurity-threat-intelligence",
+    features: ["99.9% detection accuracy", "90% response time reduction", "Real-time monitoring", "Zero false positives"]
+  },
+  {
+    id: "ai-healthcare-diagnostics",
+    title: "AI-Powered Healthcare Diagnostics",
+    description: "Revolutionary healthcare platform that uses AI to analyze medical images, predict diseases, and assist healthcare professionals in diagnosis.",
+    category: "AI & Healthcare",
+    price: 7999,
+    rating: 4.9,
+    reviewCount: 234,
+    image: "https://ziontechgroup.com/images/ai-healthcare.jpg",
+    link: "/services/ai-healthcare-diagnostics",
+    features: ["85% accuracy improvement", "70% time reduction", "Early detection", "HIPAA compliant"]
+  },
+  {
+    id: "ai-powered-data-analytics-platform",
+    title: "AI-Powered Data Analytics Platform",
+    description: "Transform your business with our AI-powered analytics platform. Real-time insights, predictive analytics, and automated reporting for data-driven decisions.",
+    category: "AI & Analytics",
+    price: 799,
+    rating: 4.8,
+    reviewCount: 94,
+    image: "https://ziontechgroup.com/images/ai-data-analytics.jpg",
+    link: "/services/ai-powered-data-analytics-platform",
+    features: ["Real-time data processing", "Predictive analytics", "Interactive dashboards", "Machine learning algorithms"]
+  },
+  {
+    id: "ai-powered-customer-service-platform",
+    title: "AI-Powered Customer Service Platform",
+    description: "Revolutionize your customer service with our AI-powered platform. 24/7 support, instant responses, and intelligent ticket routing for exceptional customer experiences.",
+    category: "AI & Support",
+    price: 499,
+    rating: 4.8,
+    reviewCount: 87,
+    image: "https://ziontechgroup.com/images/ai-customer-service.jpg",
+    link: "/services/ai-powered-customer-service-platform",
+    features: ["24/7 automated support", "Instant responses", "Intelligent routing", "Multi-language support"]
+  },
+  {
+    id: "ai-powered-marketing-automation-platform",
+    title: "AI-Powered Marketing Automation Platform",
+    description: "Revolutionize your marketing with our AI-powered automation platform. Personalized campaigns, predictive analytics, and multi-channel automation for maximum ROI.",
+    category: "AI & Marketing",
+    price: 799,
+    rating: 4.9,
+    reviewCount: 112,
+    image: "https://ziontechgroup.com/images/ai-marketing.jpg",
+    link: "/services/ai-powered-marketing-automation-platform",
+    features: ["AI-powered segmentation", "Predictive optimization", "Multi-channel automation", "ROI tracking"]
+  },
+  {
+    id: "ai-powered-financial-analytics-platform",
+    title: "AI-Powered Financial Analytics Platform",
+    description: "Transform your financial analysis with our AI-powered platform. Real-time insights, risk assessment, and portfolio optimization for better investment decisions.",
+    category: "AI & Finance",
+    price: 1499,
+    rating: 4.9,
+    reviewCount: 89,
+    image: "https://ziontechgroup.com/images/ai-finance.jpg",
+    link: "/services/ai-powered-financial-analytics-platform",
+    features: ["Real-time market analysis", "AI risk assessment", "Portfolio optimization", "Predictive modeling"]
+  }
+];
+
 export default function Services() {
   return (
     <div className="min-h-screen bg-futuristic">

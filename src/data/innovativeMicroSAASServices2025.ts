@@ -4,7 +4,7 @@ import { ProductListing } from "@/types/listings";
 // Expanding with real, useful, and intelligent micro SAAS solutions
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: ProductListing[] = [
-  // AI-Powered Business Intelligence & Analytics
+  // AI-Powered Contract Analysis & Legal Tech
   {
     id: "ai-business-intelligence-platform",
     name: "AI Business Intelligence Platform",
@@ -104,7 +104,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: ProductListing[] = [
     }
   },
 
-  // AI Customer Support Automation
+  // AI-Powered Healthcare Diagnostics
   {
     id: "ai-customer-support-automation",
     name: "AI Customer Support Automation",
