@@ -880,6 +880,10 @@ export interface AdvancedFintechSolution2025  {id: string,name: string,tagline: 
     rating: 4.5,
     reviews: 52;
   }
+
+];
+
+
 ;
 ];
 ;

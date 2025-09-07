@@ -1,6 +1,10 @@
 [build]
 command = "npm ci && npm run build"
+<<<<<<< HEAD
 publish = ".next"
+=======
+publish = "dist"
+>>>>>>> 79d75ebd63c0929536b7d47cf5dc16d1ef769356
 
 [build.environment]
 NODE_VERSION = "20"

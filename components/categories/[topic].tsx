@@ -46,7 +46,6 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {;
                     '&utm_medium=share&utm_campaign=category'})}).catch(() => {})}
         <meta property='og:description' content={`Articles about ${topic}`} />;
 
-        <meta property='og:image' content='/images / og / topic - default.jpg' />;
 
         <meta property='og:type' content='website' />;
         <meta name='twitter:card' content='summary_large_image' />;
