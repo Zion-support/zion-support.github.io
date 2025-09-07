@@ -36,7 +36,7 @@ import {
   Bookmark,
   Share2
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import SEO from '../../components/SEO';
 
 export default function Resources() {
   const [activeCategory, setActiveCategory] = useState('all');
