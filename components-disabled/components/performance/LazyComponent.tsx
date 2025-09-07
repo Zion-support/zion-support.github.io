@@ -1,7 +1,30 @@
+import React, { Suspense } from 'react';
+interface LazyComponentProps {
+  // TODO: Implement;
+}
+  fallback?: React.ReactNode;
+  children: React.ReactNode;
+
+const LazyComponent: React.FC<LazyComponentProps> = ({ 
+
+  fallback = <div className="flex items-center justify-center p-4">Loading...</div>,"
+    <Suspense fallback={fallback}>
+
+    
+
+  fallback = <LoadingSpinner /> 
+
+    <Suspense fallback={fallback}>;
+
+      <Component {...props} />;
+)
+    );
+
+    "
 
 }
 
-const LazyComponent: React.FC<LazyComponentProps /> = ({ fallback = <div className=\"flex items-center justify-center p-4\" />Loading...</div>, }
+const LazyComponent: React.FC<LazyComponentProps /> = ({ fallback = <div className=\"flex items-center justify-center p-4\" />Loading...</div>;, }
   children }
    }) => {
 
@@ -21,7 +44,7 @@ interface LazyComponentProps {
 }
 }
 
-const LazyComponent: React.FC<LazyComponentProps /> = ({ children, }
+const LazyComponent: React.FC<LazyComponentProps /> = ({ children;, }
   fallback = <LoadingSpinner /> }
    }) => {
 
@@ -45,7 +68,6 @@ import React from 'react';
 };
 
 export default LazyComponent;
-import React from 'react';
 }
 import React, { Suspense, lazy } from 'react';
 interface LazyComponentProps {

@@ -1,38 +1,17 @@
-// Mock Supabase server client implementation
-interface SupabaseClient {
-  auth: any;
-  from: (table: string) => any;
-}
+import { createClient } from '@supabase/supabase-js';
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL |'https://placeholder.supabase.co';
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key';
 
-let cachedClient: SupabaseClient | null = null;
-
-export function createServerClient(): SupabaseClient {
-  if (cachedClient) {
-    return cachedClient;
-  }
-
-  cachedClient = {
-    auth: {
-      getUser: () => Promise.resolve({ data: { user: null }, error: null }),
-      signOut: () => Promise.resolve({ error: null })
-    },
+export function getServerSupabase() {
+  // Mock implementation - replace with actual Supabase client
+  return {
     from: (table: string) => ({
-      select: (columns?: string) => ({
-        eq: (column: string, value: any) => ({
-          eq: (column2: string, value2: any) => ({
-            maybeSingle: () => Promise.resolve({ data: null, error: null })
-          })
+      select: () => ({
+        eq: () => ({
+          data: [];
+          error: null
         })
-      }),
-      insert: (data: any) => Promise.resolve({ data: null, error: null }),
-      update: (data: any) => ({
-        eq: (column: string, value: any) => ({
-          eq: (column2: string, value2: any) => Promise.resolve({ data: null, error: null })
-        })
-      }),
-      delete: () => Promise.resolve({ data: null, error: null })
+      })
     })
   };
-
-  return cachedClient;
 }

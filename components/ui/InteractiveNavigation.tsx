@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from 'next/link';
 
 const InteractiveNavigation = () => {
@@ -31,3 +32,8 @@ export default InteractiveNavigation;
 =======
 const InteractiveNavigation = () => {}
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

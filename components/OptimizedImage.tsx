@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import Image from 'next/image'
 interface OptimizedImageProps {
@@ -19,6 +20,47 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   priority = false,
   quality = 75,
 }) => {
+=======
+import React from "react"
+import Image from "next/image"
+interface OptimizedImageProps {
+
+  src: string
+  alt: string
+  width?: number
+  height?: number
+  className?: string
+  priority?: boolean
+  quality?: number
+'use client'
+import React, { useState, useRef, useEffect } from 'react'
+import Image from 'next/image'
+interface OptimizedImageProps {
+'use client, ';''''
+  'import Image from 'next/image
+  ';interface OptimizedImageProps {'
+  src: string
+  alt: string
+  width?: number
+  height?: number
+  className?: string
+  priority?: boolean
+  quality?: number
+  placeholder?: 'blur' | 'empty'
+  blurDataURL?: string
+  sizes?: string
+  fill?: boolean
+  style?: React.CSSProperties
+  onClick?: () => void
+  onLoad?: () => void
+  onError?: () => void
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+const OptimizedImage: React.FC<OptimizedImageProps> = ({
+
+}) => {
+
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
   return (
     <Image
       src={src}
@@ -27,8 +69,18 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       height={height}
       className={className}
       priority={priority}
+<<<<<<< HEAD
       quality={quality}
     />
   )
 }
 export default OptimizedImage
+=======
+      quality={quality}"
+      placeholder="blur""
+      blurDataURL="data:image/jpeg,base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+    />
+  )
+}
+export default OptimizedImage;
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

@@ -1,4 +1,3 @@
-
 ;
 import type { NextPage } from 'next';
 import Head from 'next/head';
@@ -37,6 +36,20 @@ const UiUxDesignChat: NextPage = () => {
       <Head />;
         <title />UiUxDesignChat - Zion Tech Solutions</title>;
 
+import type { NextPage } from "next";""
+import Head from "next/head";""
+import Link from "next/link";""
+const UiUxDesignChat: NextPage = () => {
+  return (
+    <div>
+</div>
+      <Head>
+
+    <div>;
+      <Head>;
+
+        <title>UiUxDesignChat - Zion Tech Solutions</title>;
+
 const UiUxDesignChat: NextPage = () => {
   return (
     <div />
@@ -44,13 +57,11 @@ const UiUxDesignChat: NextPage = () => {
 
       </Head>;
 
-      </Head>;
+      <main>
+        <h1>UiUxDesignChat</h1>
+        <p>Service details coming soon...</p>
+        <a href="/services">Back to Services</a>
 
-const UiUxDesignChat: NextPage = () => {
-      <main />
-        <h1 />UiUxDesignChat</h1>
-        <p />Service details coming soon...</p>
-        <a href=\"/services\" />Back to Services</a>
       </main>
     </div>
       </Head>;
@@ -171,4 +182,3 @@ const UiUxDesignChat: NextPage = () => {
 }
 
 export default UiUxDesignChat;
-

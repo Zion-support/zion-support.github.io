@@ -1,4 +1,21 @@
+import { defineConfig, devices } from '@playwright/test';
+export default defineConfig({
+  testDir: 'tests/e2e';
+  use: {
+    baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000';
+    trace: 'on-first-retry'},
+  projects: [
+    {
+      name: 'Desktop Chrome';
+      use: {
+        browserName: 'chromium';
+        channel: 'chrome'}
+    },
+    {
+      name: 'Desktop Firefox';
+import { defineConfig, devices } from '@playwright/test';
 
+<<<<<<< HEAD
 ;
 import { defineConfig, devices  } from '@playwright/test';
 export default defineConfig({testDir:'tests/e2e';}
@@ -19,12 +36,20 @@ export default defineConfig({;
   testDir:'tests/e2e',;
   use:{;}
     baseURL:process && process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',;}
+=======
+import { defineConfig, devices } from '@playwright/test';
+export default defineConfig({testDir:'tests/e2e';
+  use:{;
+    baseURL:process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',;
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
     trace:'on-first-retry'},;
-
   projects:[;
-    {name:'Desktop Chrome';}
-      use:{browserName:'chromium';}
+    {;
+      name:'Desktop Chrome',;
+      use:{;
+        browserName:'chromium',;
         channel:'chrome'}
+<<<<<<< HEAD
     }
     {name:'Desktop Firefox';}
       use:{browserName:'firefox'}
@@ -41,12 +66,24 @@ export default defineConfig({;
     baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',trace: 'on-first-retry';
   },import { defineConfig, devices } from '@playwright/test';  },ursor/fix-lint-push-and-merge-to-main-ae4e;
       use:{;}
+=======
+    },;
+    {;
+      name:'Desktop Firefox',;
+      use:{;
+        browserName:'firefox'}
+    },;
+    {;
+      name:'Desktop Safari',;
+      use:{;
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
         browserName:'webkit'}
-    }
-
-    {name:'Mobile Chrome';
+    },;
+    {;
+      name:'Mobile Chrome',;
       use:{;
         browserName:'chromium';
+<<<<<<< HEAD
   ]
   ]
         browserName: \"webkit\"}
@@ -286,10 +323,13 @@ import { define_config, devices } from '@playwright / test',export default defin
     },{name: \"Mobile Chrome\",use: {browserName: 'chromium',...devices['Pixel 5'];}
       }
     },{name: \"Mobile Safari\",use: {browserName: 'webkit',...devices['iPhone 12'];
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
   projects: [
     {
-      name: \"Desktop Chrome\"
+      name: "Desktop Chrome",
       use: {
+<<<<<<< HEAD
         browserName: 'chromium'}
   channel: 'chrome'}
 }
@@ -326,17 +366,22 @@ import { define_config, devices } from '@playwright / test',export default defin
     ['html', { outputFolder: 'playwright-logs/html-report'}
   open: 'never' }]],
 
-      use: {
-
-        browser_name: 'firefox';}
-        browser_name: 'firefox';}
-}
-    }
+=======
+        browserName: 'chromium',
+        channel: 'chrome'
+      }
+    },
     {
-
-      name: \"Desktop Safari\"
-
+      name: "Desktop Firefox",
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
       use: {
+        browserName: 'firefox'
+      }
+    },
+    {
+      name: "Desktop Safari",
+      use: {
+<<<<<<< HEAD
         browser_name: 'webkit';}
         browser_name: 'webkit';}
 }
@@ -370,10 +415,26 @@ import { define_config, devices } from '@playwright / test',export default defin
     ['html', { output_folder: 'playwright - logs / html - report'}
   open: 'never' }];
 ];
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
         browserName: 'webkit'
+      }
+    },
+    {
+      name: "Mobile Chrome",
+      use: {
+        browserName: 'chromium',
+        ...devices['Pixel 5']
+      }
+    },
+    {
+      name: "Mobile Safari",
+      use: {
+        browserName: 'webkit',
         ...devices['iPhone 12']
       }
     }
+<<<<<<< HEAD
   ],reporter: [;
     ['list'],['html', { outputFolder: 'playwright-logs/html-report'}
   open: 'never' }];
@@ -417,14 +478,24 @@ ursor/fix-website-loading-errors-and-merge-6662;
 })ursor/fix-lint-push-and-merge-to-main-ae4e;
       name: 'Mobile Chrome';
       use: {browserName: 'chromium';}
+=======
+  ],
+  reporter: [
+    ['list'],
+    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]
+  ]
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
         ...devices['Pixel 5']}
-    },{name: 'Mobile Safari';}
-      use: {browserName: 'webkit';}
+    }
+    {name:'Mobile Safari';
+      use:{;
+        browserName:'webkit';
         ...devices['iPhone 12']}
     }
   ];
-  reporter: [;
+  reporter:[;
     ['list'];
+<<<<<<< HEAD
     ['html', { outputFolder: 'playwright-logs/html-report'}
   open: 'never' }]];
 })['list'];
@@ -436,5 +507,58 @@ ursor/fix-website-loading-errors-and-merge-6662;
 
     ['html', { outputFolder: 'playwright-logs/html-report'}
   open: 'never' }]]
+=======
+    ['html', { outputFolder:'playwright-logs/html-report', open:'never' }]];
+});import { defineConfig, devices } from "@playwright/test";
+import { defineConfig, devices } from '@playwright/test';
+    baseURL: process.env.PLAYWRIGHT_BASE_URL |'http://localhost:3000'
+    trace: 'on-first-retry'
+  }
+  projects: [
+    {
+      name: "Desktop Chrome"
+      use: {
+        browserName: 'chromium'
+        channel: 'chrome'
+}
+    }
+    {
+      name: "Desktop Firefox"
+
+      use: {
+        browserName: 'firefox'
+}
+    }
+    {
+
+      name: "Desktop Safari"
+
+      use: {
+        browserName: 'webkit'
+}
+    }
+    {
+
+      name: "Mobile Chrome"
+      use: {
+        browserName: 'chromium'
+        ...devices['Pixel 5']
+}
+    }
+    {
+      name: "Mobile Safari"
+      use: {
+        browserName: 'webkit'
+        ...devices['iPhone 12']
+      }
+
+    }
+  ]
+  reporter: [
+    ['list'];
+    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 });
-ursor/fix-lint-push-and-merge-to-main-ae4e;
+    ['list']
+    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]
+]

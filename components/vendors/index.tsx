@@ -1,14 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import Link from 'next/link';
 import type { GetServerSideProps } from 'next';
 import type { Vendor } from '../../utils/vendor-types';
 
 type Props = any;
-
 export default function VendorsPage({ vendors }: Props) {
   return (
+<<<<<<< HEAD
     <div className=\"space-y-6\" />;
 "
       <div className=\"flex items-center justify-between\" />;"
@@ -78,3 +81,10 @@ return { props: { vendors } }
 }</div> <div className="text-center text-xs text-gray-500" >Powered by Zion • Co-brand available</div> </div>) 
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+    <div className='space-y-6'>
+      <div className='flex items-center justify-between'>
+        <h1 className='text-2xl font-semibold'>Vendors</h1>
+        <Link href='/vendors/register'>
+          <a className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'>
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

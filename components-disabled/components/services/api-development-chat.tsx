@@ -1,4 +1,3 @@
-
 ;
 import type { NextPage } from 'next';
 import Head from 'next/head';
@@ -37,6 +36,20 @@ const ApiDevelopmentChat: NextPage = () => {
       <Head />;
         <title />ApiDevelopmentChat - Zion Tech Solutions</title>;
 
+import type { NextPage } from "next";""
+import Head from "next/head";""
+import Link from "next/link";""
+const ApiDevelopmentChat: NextPage = () => {
+  return (
+    <div>
+</div>
+      <Head>
+
+    <div>;
+      <Head>;
+
+        <title>ApiDevelopmentChat - Zion Tech Solutions</title>;
+
 const ApiDevelopmentChat: NextPage = () => {
   return (
     <div />
@@ -44,13 +57,11 @@ const ApiDevelopmentChat: NextPage = () => {
 
       </Head>;
 
-      </Head>;
+      <main>
+        <h1>ApiDevelopmentChat</h1>
+        <p>Service details coming soon...</p>
+        <a href="/services">Back to Services</a>
 
-const ApiDevelopmentChat: NextPage = () => {
-      <main />
-        <h1 />ApiDevelopmentChat</h1>
-        <p />Service details coming soon...</p>
-        <a href=\"/services\" />Back to Services</a>
       </main>
     </div>
       </Head>;
@@ -171,4 +182,3 @@ const ApiDevelopmentChat: NextPage = () => {
 }
 
 export default ApiDevelopmentChat;
-

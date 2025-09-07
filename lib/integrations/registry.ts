@@ -1,70 +1,77 @@
-import { IntegrationProviderMeta } from './types';
-
+import { IntegrationProviderMeta  } from './types';
 export const PROVIDERS: IntegrationProviderMeta[] = [
-  {
-    id: 'salesforce',
-
-    name: 'Salesforce',
-    category: 'crm',
-    description: 'Enterprise CRM',
-    icon: 'salesforce',
-    oauthScopes: ['api', 'refresh_token']
-  },
-  {
-    id: 'hubspot',
-    name: 'HubSpot',
-    category: 'crm',
-    description: 'Marketing & Sales CRM',
-    icon: 'hubspot',
-    oauthScopes: ['contacts', 'content']
-  },
-  {
-    id: 'pipedrive',
-    name: 'PipeDrive',
-    category: 'crm',
-    description: 'Sales pipeline CRM',
-    icon: 'pipedrive',
-    oauthScopes: ['read', 'write']
-  },
-  {
-    id: 'greenhouse',
-    name: 'Greenhouse',
-    category: 'ats',
-    description: 'Applicant Tracking System',
-    icon: 'greenhouse',
-    oauthScopes: ['candidates', 'jobs']
-  },
-  {
-    id: 'lever',
-    name: 'Lever',
-    category: 'ats',
-    description: 'Modern ATS platform',
-    icon: 'lever',
-    oauthScopes: ['read', 'write']
-  },
-  {
-    id: 'workable',
-    name: 'Workable',
-    category: 'ats',
-    description: 'Recruiting software',
-    icon: 'workable',
-    oauthScopes: ['candidates', 'jobs']
-  },
-  {
-    id: 'bamboohr',
-    name: 'BambooHR',
-    category: 'ats',
-    description: 'HR management system',
-    icon: 'bamboohr',
-    oauthScopes: ['employees', 'time_off']
-  }
-];
-
+  { id: 'salesforce', name: 'Salesforce', category: 'crm', description: 'Enterprise CRM' },
+  { id: 'hubspot', name: 'HubSpot', category: 'crm', description: 'Marketing & Sales CRM' },
+  { id: 'zoho', name: 'Zoho CRM', category: 'crm', description: 'All-in-one CRM' },
+  { id: 'pipedrive', name: 'PipeDrive', category: 'crm', description: 'Sales pipeline CRM' },
+  { id: 'greenhouse', name: 'Greenhouse', category: 'ats', description: 'ATS & recruiting' },
+  { id: 'lever', name: 'Lever', category: 'ats', description: 'ATS & CRM' },
+  { id: 'workable', name: 'Workable', category: 'ats', description: 'Recruiting software' },
+  { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }];
 export function getProviderById(id: string): IntegrationProviderMeta | undefined {
-  return PROVIDERS.find(provider => provider.id === id);
+  return PROVIDERS.find(p => p.id === id)
 }
 
-export function getProvidersByCategory(category: string): IntegrationProviderMeta[] {
-  return PROVIDERS.filter(provider => provider.category === category);
+  {
+    id: "salesforce"
+    name: "Salesforce"
+    category: "crm"
 
+    description: "Enterprise CRM"
+  }
+  {"
+    id: "hubspot""
+    name: "HubSpot""
+    category: "crm""
+    description: "Marketing & Sales CRM"
+
+  }
+
+  getConnector(type: string): BaseConnector | undefined {
+    return this.connectors.get(type);
+  }
+
+  createConnector(config: IntegrationConfig): BaseConnector {
+    switch (config.type) {
+      case 'slack':
+        return new SlackConnector(config);
+      case 'webhook':
+        return new WebhookConnector(config);
+      default: throw new Error(`Unknown connector type: ${config.type;}`);
+    }
+  }
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  {
+    id: "pipedrive"
+    name: "PipeDrive"
+    category: "crm"
+
+    description: "Sales pipeline CRM"
+  }
+  {"
+    id: "greenhouse""
+    name: "Greenhouse""
+    category: "ats""
+    description: "ATS & recruiting"
+  }"
+  { id: "lever", name: "Lever", category: "ats", description: "ATS & CRM" }
+  {"
+    id: "workable""
+    name: "Workable""
+    category: "ats""
+    description: "Recruiting software"
+
+  }
+
+    id: "bamboohr"
+    name: "BambooHR"
+    category: "ats"
+    description: "HRIS & ATS";
+  }
+];
+export function getProviderById(
+  id: string
+): IntegrationProviderMeta | undefined {
+  return PROVIDERS.find((p) => p.id === id);
 }

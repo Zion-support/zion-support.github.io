@@ -1,47 +1,22 @@
-export interface Feedback {
+export interface FeedbackRecord {
   id: string;
-  userId: string;
-  content: string;
+  type: string;
+  message: string;
   rating: number;
-  category: string;
+  metadata: Record<string, any>;
   createdAt: string;
-  status: 'pending' | 'reviewed' | 'resolved';
+  ip: string;
 }
-
-export interface FeedbackStore {
-  feedback: Feedback[];
-  addFeedback: (feedback: Omit<Feedback, 'id' | 'createdAt'>) => void;
-  updateFeedback: (id: string, updates: Partial<Feedback>) => void;
-  getFeedback: (id: string) => Feedback | undefined;
-  getAllFeedback: () => Feedback[];
+const feedbackData: FeedbackRecord[] = [];
+export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<void> {
+  feedbackData.push(feedback);
+  console.log('Feedback saved:', feedback.id);
 }
-
-class FeedbackStoreImpl implements FeedbackStore {
-  feedback: Feedback[] = [];
-
-  addFeedback(feedback: Omit<Feedback, 'id' | 'createdAt'>): void {
-    const newFeedback: Feedback = {
-      ...feedback,
-      id: Math.random().toString(36).substr(2, 9),
-      createdAt: new Date().toISOString()
-    };
-    this.feedback.push(newFeedback);
-  }
-
-  updateFeedback(id: string, updates: Partial<Feedback>): void {
-    const index = this.feedback.findIndex(f => f.id === id);
-    if (index !== -1) {
-      this.feedback[index] = { ...this.feedback[index], ...updates };
-    }
-  }
-
-  getFeedback(id: string): Feedback | undefined {
-    return this.feedback.find(f => f.id === id);
-  }
-
-  getAllFeedback(): Feedback[] {
-    return [...this.feedback];
-  }
+export function writeAll(rows: any[]): void {
+  console.log('Writing feedback rows:', rows.length);
+  // Implementation would write to database or file
 }
-
-export const feedbackStore = new FeedbackStoreImpl();
+export function getAllFeedback(): FeedbackRecord[] {
+  return [...feedbackData];
+}
+}

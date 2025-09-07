@@ -1,88 +1,78 @@
+import fs from 'fs';
+import path from 'path';
+import { MultiverseState, InstanceConfig, SyncEvent } from './types';
+const defaultState: SyncState = {
+  config: {
+    instanceId: 'default-instance'
+    peers: []
+    scope: 'global'
+    optIn: false
+    paused: false
+  }
+  lastSyncedAt: new Date().toISOString()
 }
-
-
-export function readState(): SyncState {;}
-  return { ...state };
+let state: SyncState = { ...defaultState }
+export function readState(): SyncState {
+  return { ...state }
 }
-
-
-export function updateState(updates: Partial<SyncState>): void {;
-</SyncState>
-    filters?: Record<string, any>;
-</string>
-    mappings?: Record<string, string>;
-</string>
-  metadata?: Record<string, any>;
-</string>
-    credentials?: Record<string, string>;
-</string>
-    options?: Record<string, any>;
-</string>
-  fieldMappings: Record<string, string>;
-</string>
-  transformations?: Array<{
-    field: string;,
-  type: 'format' | 'convert' | 'calculate' | 'filter';'
-    config: Record<string, any>;
-</string>
-  details?: Record<string, any>;
-</string>
-  private jobs: Map<string, SyncJob> = new Map();
-</string>
-  private connections: Map<string, SyncConnection> = new Map();
-</string>
-  private mappings: Map<string, SyncMapping> = new Map();
-</string>
-  private logs: Map<string, SyncLog> = new Map();
-</string>'
-  async createJob(job: Omit<SyncJob, 'id' | 'createdAt' | 'updatedAt' | 'progress'>): Promise<SyncJob> {'
-</SyncJob>
-  async getJob(id: string): Promise<SyncJob | null> {
-</SyncJob>
-  async updateJob(id: string, updates: Partial<SyncJob>): Promise<SyncJob | null> {
-</SyncJob>
-  async deleteJob(id: string): Promise<boolean> {
-</boolean>'
-  async getJobsByStatus(status: SyncJob['status']): Promise<SyncJob[]> {'
-</SyncJob>'
-  async getJobsByType(type: SyncJob['type']): Promise<SyncJob[]> {'
-</SyncJob>
-  async getAllJobs(): Promise<SyncJob[]> {
-</SyncJob>'
-export async function createJob(job: Omit<SyncJob, 'id' | 'createdAt' | 'updatedAt' | 'progress'>): Promise<SyncJob> {'
-</SyncJob>
-export async function getJob(id: string): Promise<SyncJob | null> {
-</SyncJob>
-export async function updateJob(id: string, updates: Partial<SyncJob>): Promise<SyncJob | null> {
-</SyncJob>
-export async function startJob(id: string): Promise<boolean> {
-</boolean>
-export async function completeJob(id: string, error?: string): Promise<boolean> {
-</boolean>'
-export async function updateJobProgress(id: string, progress: Partial<SyncJob['progress']>): Promise<boolean> {'
-</SyncJob>'
-export async function createConnection(connection: Omit<SyncConnection, 'id' | 'createdAt' | 'updatedAt'>): Promise<SyncConnection> {'
-</SyncConnection>
-export async function getConnection(id: string): Promise<SyncConnection | null> {
-</SyncConnection>
-export async function updateConnection(id: string, updates: Partial<SyncConnection>): Promise<SyncConnection | null> {
-</SyncConnection>'
-export async function createMapping(mapping: Omit<SyncMapping, 'id' | 'createdAt' | 'updatedAt'>): Promise<SyncMapping> {'
-</SyncMapping>
-export async function getMapping(id: string): Promise<SyncMapping | null> {
-</SyncMapping>
-export async function updateMapping(id: string, updates: Partial<SyncMapping>): Promise<SyncMapping | null> {
-</SyncMapping>'
-export async function createLog(log: Omit<SyncLog, 'id' | 'timestamp'>): Promise<SyncLog> {'
-</SyncLog>
-export async function getLogsByJob(jobId: string, limit?: number): Promise<SyncLog[]> {
-</SyncLog>'
-): Omit<SyncJob, 'id' | 'createdAt' | 'updatedAt' | 'progress'> {'
-</SyncJob>'
-): Omit<SyncConnection, 'id' | 'createdAt' | 'updatedAt'> {'
-</SyncConnection>
-  fieldMappings: Record<string, string>
-</string>'
-): Omit<SyncMapping, 'id' | 'createdAt' | 'updatedAt'> {'
-</SyncMapping>'
-
+export function updateState(updates: Partial<SyncState>): void {
+  state = { ...state, ...updates }
+}
+export function upsertEvent(
+  state: MultiverseState
+  event: SyncEvent
+): MultiverseState {;
+  if (state.seenEventIds[event.eventId]) return state;
+  const entityId = getEntityId(event);
+  const currentVersion = state.latestVersionByEntityId[entityId] |0;
+  const isNewer = event.version > currentVersion;
+  if (event.type === 'proposal' && event.merkleRoot && isNewer) {
+    state.proposalMerkleById[entityId] = event.merkleRoot;
+  }
+  if (isNewer) {
+    state.latestVersionByEntityId[entityId] = event.version;
+  }
+  state.events.push(event);
+  state.seenEventIds[event.eventId] = true;
+  state.lastSyncedAt = Math.max(state.lastSyncedAt |0, event.timestamp |0);
+  return state;
+export function getEntityId(event: SyncEvent): string {
+  switch (event.type) {
+    case 'proposal':;
+      return (event.payload as any).proposalId;
+    case 'token_transfer':
+      return (event.payload as any).txId;
+    case 'talent_mobility':
+      return (
+        (event.payload as any).personId + ':' + (event.payload as any).startDate
+      );
+    case 'dao_endorsement':
+      return (event.payload as any).resolutionId;
+    case 'leaderboard_entry':
+      return (
+        (event.payload as any).subjectId + ':' + (event.payload as any).period
+      );
+    default:
+      return (event.payload as any).id |event.eventId;
+  }
+export function filterEventsByScope(
+  events: SyncEvent[]
+  scope: InstanceConfig['scope']
+): SyncEvent[] {;
+  if (scope === 'full') return events;
+  if (scope === 'dao') {
+    return events.filter(
+      e => e.type === 'proposal' |e.type === 'dao_endorsement'
+    );
+  }
+  if (scope === 'marketplace') {
+    return events.filter(
+      e =>
+        e.type === 'token_transfer' |
+        e.type === 'talent_mobility' |
+        e.type === 'leaderboard_entry'
+    );
+  }
+  return events;export function resetState(): void {
+  state = { ...defaultState }
+}

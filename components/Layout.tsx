@@ -1,45 +1,75 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { ReactNode } from 'react';
+=======
+import React from "react";
+import Head from "next/head";
+import Header from "./Header";
+import Footer from "./Footer";
+import React from 'react';
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import Head from 'next/head';
+import Header from './Header';
+import Footer from './Footer';
 
 interface LayoutProps {
-  children: ReactNode;
-  title?: string;
-  description?: string;
-  keywords?: string;
-  ogImage?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogUrl?: string;
-}
-
-export default function Layout({ 
-  children, 
-  title = "Zion Tech Group - Leading AI & Technology Solutions",
-  description = "Transform your business with cutting-edge AI solutions, cloud services, and technology consulting.",
-  keywords = "AI solutions, cloud services, technology consulting, digital transformation",
-  ogImage = "https://ziontechgroup.com/og-image.jpg",
-  ogTitle,
-  ogDescription,
-  ogUrl
-}: LayoutProps) {
+  children: React.ReactNode
+  title?: string
+  description?: string
+class ErrorBoundary extends React.Component<
+  { children: React.ReactNode },
+  { hasError: boolean }
+> {
+  constructor($2) {
+    super(props)
+    this.state = { hasError: false }
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true }
+  componentDidCatch($2) {
+    console.error('Error caught by boundary:', error, errorInfo)
+  render($2) {
+  if($2) {
+      return <div>Something went wrong.</div>
+    return this.props.children
+export default function Layout({ children, title, description }: LayoutProps) {
   return (
-    <>
+    <div className="min-h-screen bg-white">
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
-        <meta property="og:title" content={ogTitle || title} />
-        <meta property="og:description" content={ogDescription || description} />
+        {canonical && <link rel="canonical" href={canonical} />}
+        {noIndex && <meta name="robots" content="noindex,nofollow" />}
+        {/* Open Graph */}
+        <meta property="og:title" content={ogTitle |title} />
+        <meta
+          property="og:description"
+          content={ogDescription |description}
+        />
         <meta property="og:image" content={ogImage} />
-        {ogUrl && <meta property="og:url" content={ogUrl} />}
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta property="og:url" content={canonical} />
+        <meta property="og:type" content="website" />
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={ogTitle |title} />
+        <meta
+          name="twitter:description"
+          content={ogDescription |description}
+        />
+        <meta name="twitter:image" content={ogImage} />
+        {/* JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </Head>
-      {children}
-    </>
+      <Header />
+      <main>{children}</main>
+      <Footer />
+    </div>
   );
 }
+<<<<<<< HEAD
 =======
 import React, { ReactNode } from "react"
 interface LayoutProps {
@@ -55,3 +85,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 }
 export default Layout
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+export default Layout;
+  );
+};
+export default Layout;
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

@@ -1,124 +1,52 @@
-
-import React from "react";"
-
-// This file fixes the ref type issues in sidebar components;
-// Export a placeholder to ensure the file is recognized as a module;
+import React from 'react';
+// This file fixes the ref type issues in sidebar components
+// Export a placeholder to ensure the file is recognized as a module
+export const SIDEBAR_REF_TYPE_FIX = null;
 export const SIDEBAR_REF_TYPE_FIX = true;
-
-// Define a type that makes the ref forwards compatible;
-
+// Define a type that makes the ref forwards compatible
 export type ForwardRefComponent<T, P = {}> = React.ForwardRefExoticComponent<
-</T>
   React.PropsWithoutRef<P> & React.RefAttributes<T>
-</P>
+>;
+// Helper type for component refs
 export type ElementRef<T extends React.ElementType> =
-</T>"
-  React.ComponentPropsWithRef<T>["ref"];"
-</T>
+  React.ComponentPropsWithRef<T>["ref"];
+// Helper type for wrapping refs that fixes the mismatch errors
 export type PolymorphicRef<T extends React.ElementType> = React.Ref<
-</T>
   React.ElementRef<T>
-</T>
+>;
+// Helper for dealing with refs in complex situations
 export type PolymorphicComponentProp<
-  T extends React.ElementType,
-  Props = {},
+  T extends React.ElementType
+  Props = {}
 > = React.PropsWithChildren<Props & { as?: T }>;
-</Props>
-export type SafeRef<T> = React && React.Ref<T>;
-</T>
-
-export type ForwardRefComponent < T, P = {}> = React.ForwardRefExoticComponent<;
-  React.PropsWithoutRef < P> & React.RefAttributes < T>;
->;
-;
-// Helper type for component refs;
-
-export type ElementRef < T extends React.ElementType> =;"
-  React.ComponentPropsWithRef < T>["ref"];"
-
-;
-// Helper type for wrapping refs that fixes the mismatch errors;
-export type PolymorphicRef < T extends React.ElementType> = React.Ref<;
-  React.ElementRef < T>;
->;
-;
-// Helper for dealing with refs in complex situations;
-export type PolymorphicComponentProp<;
-  T extends React.ElementType,
-  Props = {},
-> = React.PropsWithChildren < Props & { as?: T }>;
-;
-// Safe ref casting helper type - this is the key to fixing our issues;"
-// We need to use a type that is compatible with both Slot's ref and React's ref handling;'
-export type SafeRef < T> = React.Ref < T>;
-;
-
-// Sidebar specific types;'
-export type SidebarState = "expanded" | "collapsed";"
-
-;
+// Safe ref casting helper type - this is the key to fixing our issues
+// We need to use a type that is compatible with both Slot's ref and React's ref handling
+export type SafeRef<T> = React.Ref<T>;
+// Sidebar specific types
+export type SidebarState = "expanded" | "collapsed";
 export type SidebarContext = {
-  state: SidebarState;,
+  state: SidebarState;
   open: boolean;
-
-  set_open: (open: boolean) => void;,
-  open_mobile: boolean;
-  setOpenMobile: (open: boolean) => void;,
+  setOpen: (open: boolean) => void;
+  openMobile: boolean;
+  setOpenMobile: (open: boolean) => void;
   isMobile: boolean;
   toggleSidebar: () => void;
-};"
-import React from 'react',;'
-;
-// This file fixes the ref type issues in sidebar components;
-;
-// Export a placeholder to ensure the file is recognized as a module;
-export const SIDEBAR_REF_TYPE_FIX = true,;
-;
-// Define a type that makes the ref forwards compatible;
-export type ForwardRefComponent<T P = {}> = React.ForwardRefExoticComponent<React.PropsWithoutRef<P> & React.RefAttributes<T>>,;
-</T>'
-export type ElementRef<T extends React.ElementType> = React.ComponentPropsWithRef<T>['ref'],;'
-</T>
-export type PolymorphicRef<T extends React.ElementType> = React.Ref<React.ElementRef<T>>,;
-</T>
-export type PolymorphicComponentProp<T extends React.ElementType, Props = {}> = ;
-</T>
-  React.PropsWithChildren<Props & { as?:T }>,;
-</Props>
-export type SafeRef<T> = React.Ref<T>,;
-</T>
-// This file fixes the ref type issues in sidebar components // Export a placeholder to ensure the file is recognized as a module // Define a type that makes the ref forwards compatible export type ForwardRefComponent<T P = {
-  
-}> = React.ForwardRefExoticComponent<React.PropsWithoutRef<P> & React.RefAttributes<T>>;
-</T>'
-// Helper type for component refs export type ElementRef<T extends React.ElementType> = React.ComponentPropsWithRef<T>['ref'];'
-</T>
-// Helper type for wrapping refs that fixes the mismatch errors export type PolymorphicRef<T extends React.ElementType> = React.Ref<React.ElementRef<T>>;
-</T>
-// Helper for dealing with refs in complex situations export type PolymorphicComponentProp<T extends React.ElementType, Props = {
-  '
-}> = // Safe ref casting helper type - this is the key to fixing our issues // We need to use a type that is compatible with both Slot's ref and React's ref handling export type SafeRef<T> = React.Ref<T>;'
-</T>
-export type PolymorphicComponentProp<T extends React.ElementType, Props = {}> = ;
-</T>
-  React.PropsWithChildren<Props & { as?: T }>;
-</Props>
-export type PolymorphicComponentProp<T extends React.ElementType, Props = {}> = 
-</T>
-  React.PropsWithChildren<Props & { as?: T }>,
-</Props>
-export type SafeRef<T> = React.Ref<T>,
-</T>
-export type ForwardRefComponent<T P = {}> = React.ForwardRefExoticComponent<React.PropsWithoutRef<P> & React.RefAttributes<T>>,;
-</T>'
-export type ElementRef<T extends React.ElementType> = React.ComponentPropsWithRef<T>['ref'],;'
-</T>
-export type PolymorphicRef<T extends React.ElementType> = React.Ref<React.ElementRef<T>>,;
-</T>
-export type PolymorphicComponentProp<T extends React.ElementType, Props = {}> =;
-</T>
-  React.PropsWithChildren<Props & { as?: T }>,;
-</Props>
-export type SafeRef<T> = React.Ref<T>,;
-</T>'
+}
 
+// Safe ref casting helper type - this is the key to fixing our issues
+// We need to use a type that is compatible with both Slot's ref and React's ref handling
+export type SafeRef<T> = React.Ref<T>,
+
+// Sidebar specific types
+export type SidebarState = "expanded" | "collapsed",
+
+export type SidebarContext = {;
+  state: SidebarState;
+  open: boolean;
+  setOpen: (open: boolean) => void;
+  openMobile: boolean;
+  setOpenMobile: (open: boolean) => void;
+  isMobile: boolean,
+  toggleSidebar: () => void
+};

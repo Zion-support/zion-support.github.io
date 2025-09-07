@@ -1,8 +1,16 @@
+import React from \'react\'; import Head from \'next/head\';
+}
 
-import React from \'react\'; import Head from \'next/head\'; export default function FutureOfWork() {}; return null} }''
-import _React from 'react'; import Head from 'next/head'; export default function FutureOfWork() {}; return null} }''
-import React from \'react\'; import Head from \'next/head\'; export default function FutureOfWork() {}; return null} }''
-import _React from 'react'; import Head from 'next/head'; export default function FutureOfWork() {}; return null} }''
-import React from \'react\'; import Head from \'next/head\'; export default function FutureOfWork() {}; return null} }''
-import _React from 'react'; import Head from 'next/head'; export default function FutureOfWork() {}; return null} }''
+export default function FutureOfWork() {}; return null} }
+import _React from 'react'; import Head from 'next/head';
+}
 
+export default function FutureOfWork() {}; return null} }
+import React from \'react\'; import Head from \'next/head\';
+}
+
+export default function FutureOfWork() {}; return null} }
+import _React from 'react'; import Head from 'next/head';
+}
+
+export default function FutureOfWork() {}; return null} }

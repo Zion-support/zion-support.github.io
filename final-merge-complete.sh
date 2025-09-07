@@ -12,22 +12,9 @@ git add .
 
 # Step 3: Check for any remaining conflicts
 echo "🔍 Checking for remaining merge conflicts..."
-CONFLICTS=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null | wc -l)
-
-if [ "$CONFLICTS" -gt 0 ]; then
-    echo "⚠️  Found $CONFLICTS files with merge conflicts. Resolving..."
-    
-    # Resolve conflicts by keeping main branch content
-    find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null | while read -r file; do
-        echo "Resolving conflicts in: $file"
-        # Create backup
-        cp "$file" "$file.backup"
-        # Remove conflict markers and keep main branch content
-        sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-        sed -i '/>>>>>>> /d' "$file"
-        sed -i '/^=======$/d' "$file"
+CONFLICTS=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "
+        sed -i '/^$/d' "$file"
     done
-    
     echo "✅ Conflicts resolved"
 else
     echo "✅ No merge conflicts found"

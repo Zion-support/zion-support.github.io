@@ -1,14 +1,4 @@
-
-const SecurityEnhancer = dynamic(() => import(\"./SecurityEnhancer\"),{'; loading: () => <p />Loading...</p,>,}) export: 'default SecurityEnhancer' ,'
-
-</p>'
-</p>'
-</p>'
-
-</p>'
-
-</p>'
-
-</p>'
-</p>'
+const SecurityEnhancer = dynamic(() => import(\"./SecurityEnhancer\"),{\'; loading: () => <p>Loading...</p,>,}) export: \'default SecurityEnhancer\' ,
+const SecurityEnhancer = dynamic(() => import("./SecurityEnhancer"),{"; loading: () => <p>Loading.</p,>,}) export: "default SecurityEnhancer" ,"""
+const SecurityEnhancer = dynamic(() => import("./SecurityEnhancer"),{'; loading: () => <p>Loading...</p,>,}) export: 'default SecurityEnhancer' ,'
 </p>'

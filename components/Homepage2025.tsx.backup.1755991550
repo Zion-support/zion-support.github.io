@@ -1,0 +1,24 @@
+import React, { useEffect, useState, useCallback } from 'react';
+import Layout from './layout/Layout';
+import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
+import { motion } from 'framer-motion';
+import { real2036InnovativeServices } from '../data/real-2036-innovative-services';
+import { real2036ITServices } from '../data/real-2036-it-services';
+import { real2036AIServices } from '../data/real-2036-ai-services';
+
+const Homepage2025: React.FC = () => {
+  const featuredServices = [
+    ...real2036InnovativeServices.filter(s => s.popular).slice(0, 3),
+    ...real2036ITServices.filter(s => s.popular).slice(0, 2),
+    ...real2036AIServices.filter(s => s.popular).slice(0, 1)
+  ];
+
+  return (
+    <Layout>
+      {/* Main Content */}
+  );
+});
+
+Homepage2025.displayName = 'Homepage2025';
+
+export default Homepage2025;

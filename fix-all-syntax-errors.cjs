@@ -4,100 +4,174 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🔧 Fixing all syntax errors...\n');
+console.log('🔧 Starting comprehensive syntax error fixing...\n');
 
-// Function to fix common syntax errors
+// Function to fix common syntax errors in a file
 function fixSyntaxErrors(filePath) {
   try {
+    if (!fs.existsSync(filePath)) {
+      return false;
+    }
+
     let content = fs.readFileSync(filePath, 'utf8');
-    let fixed = false;
+    let modified = false;
 
-    // Fix unterminated strings
-    content = content.replace(/\"[^"]*$/gm, (match) => {
-      if (!match.endsWith('"')) {
-        fixed = true;
-        return match + '"';
+    // Fix import statements with commas instead of semicolons
+    if (content.includes('import {') && content.includes('",')) {
+      content = content.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*,/g, 'import { $1 } from "$2";');
+      modified = true;
+    }
+
+    // Fix object properties with semicolons instead of colons
+    if (content.includes(': \';\'')) {
+      content = content.replace(/:\s*';\s*'/g, ': \'\'');
+      modified = true;
+    }
+
+    // Fix missing commas in arrays
+    if (content.includes('}\n    {')) {
+      content = content.replace(/}\n\s*{/g, '},\n    {');
+      modified = true;
+    }
+
+    // Fix duplicate export default statements
+    const exportDefaultMatches = content.match(/export\s+default\s+/g);
+    if (exportDefaultMatches && exportDefaultMatches.length > 1) {
+      // Keep only the first export default (function declaration)
+      const lines = content.split('\n');
+      let foundFirst = false;
+      const filteredLines = lines.filter(line => {
+        if (line.trim().startsWith('export default')) {
+          if (!foundFirst) {
+            foundFirst = true;
+            return true;
+          }
+          return false;
+        }
+        return true;
+      });
+      content = filteredLines.join('\n');
+      modified = true;
+    }
+
+    // Fix JSX structure issues - remove extra closing divs
+    if (content.includes('</motion.div>\n        </div>\n        </div>')) {
+      content = content.replace('</motion.div>\n        </div>\n        </div>', '</motion.div>\n        </div>');
+      modified = true;
+    }
+
+    // Fix missing imports
+    if (content.includes('motion.') && !content.includes('import { motion')) {
+      const importMatch = content.match(/import\s+React[^;]+;/);
+      if (importMatch) {
+        content = content.replace(importMatch[0], importMatch[0] + '\nimport { motion } from \'framer-motion\';');
+        modified = true;
       }
-      return match;
-    });
+    }
 
-    // Fix trailing commas in objects/arrays
-    content = content.replace(/,(\s*[}\]])/g, '$1');
+    // Fix missing useEffect import
+    if (content.includes('useEffect(') && !content.includes('useEffect')) {
+      const reactImport = content.match(/import\s+React[^;]+;/);
+      if (reactImport) {
+        content = content.replace(reactImport[0], reactImport[0].replace('React', 'React, { useEffect }'));
+        modified = true;
+      }
+    }
 
-    // Fix malformed JSX
-    content = content.replace(/className=\"[^"]*\"\s*\/>/g, (match) => {
-      return match.replace(/\/>$/, '></div>');
-    });
+    // Fix missing useLocation import
+    if (content.includes('useLocation(') && !content.includes('useLocation')) {
+      const routerImport = content.match(/import\s*{\s*[^}]*}\s*from\s*['"]react-router-dom['"]/);
+      if (routerImport) {
+        content = content.replace(routerImport[0], routerImport[0].replace('}', ', useLocation }'));
+        modified = true;
+      }
+    }
 
-    // Fix broken import statements
-    content = content.replace(/import\s+React\s+from\s+"react";/g, 'import React from "react";');
+    // Fix missing AnimatePresence import
+    if (content.includes('AnimatePresence') && !content.includes('AnimatePresence')) {
+      const motionImport = content.match(/import\s*{\s*[^}]*}\s*from\s*['"]framer-motion['"]/);
+      if (motionImport) {
+        content = content.replace(motionImport[0], motionImport[0].replace('}', ', AnimatePresence }'));
+        modified = true;
+      }
+    }
 
-    // Fix broken metadata objects
-    content = content.replace(/export\s+const\s+metadata\s*=\s*\{[^}]*\},?\s*\}/g, (match) => {
-      return match.replace(/,\s*}/g, '}');
-    });
+    // Fix missing Button import
+    if (content.includes('<Button') && !content.includes('import { Button')) {
+      const imports = content.match(/import\s*{[^}]*}\s*from\s*['"][^'"]*['"];?\s*\n/g) || [];
+      const lastImport = imports[imports.length - 1];
+      if (lastImport) {
+        content = content.replace(lastImport, lastImport + 'import { Button } from \'./ui/button\';\n');
+        modified = true;
+      }
+    }
 
-    // Fix broken JSX elements
-    content = content.replace(/<(\w+)\s+className="[^"]*"\s*\/>/g, '<$1 className="$2"></$1>');
+    // Clean up extra empty lines
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    content = content.trim();
 
-    // Fix broken function declarations
-    content = content.replace(/function\s+(\w+)\s*\(\s*\)\s*\{[^}]*\},?\s*\}/g, (match) => {
-      return match.replace(/,\s*}/g, '}');
-    });
-
-    if (fixed) {
-      fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed syntax errors in ${filePath}`);
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
       return true;
     }
+
+    return false;
   } catch (error) {
-    console.log(`❌ Error fixing ${filePath}: ${error.message}`);
+    console.error(`  ❌ Error fixing ${filePath}:`, error.message);
+    return false;
   }
-  return false;
 }
 
-// Function to find and fix all TypeScript/JavaScript files
-function fixAllFiles() {
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    'pages/**/*.tsx',
-    'pages/**/*.ts',
-    'components/**/*.tsx',
-    'components/**/*.ts',
-    'src/**/*.tsx',
-    'src/**/*.ts'
-  ];
-
-  let totalFixed = 0;
-
-  for (const pattern of patterns) {
-    try {
-      const files = execSync(`find . -path "./${pattern}" -type f 2>/dev/null || true`, { 
-        cwd: '/workspace', 
-        encoding: 'utf8' 
-      }).trim().split('\n').filter(f => f);
-
-      for (const file of files) {
-        if (fs.existsSync(file)) {
-          if (fixSyntaxErrors(file)) {
-            totalFixed++;
-          }
-        }
-      }
-    } catch (error) {
-      console.log(`⚠️  Error processing pattern ${pattern}: ${error.message}`);
-    }
+// Function to find all TypeScript/JavaScript files
+function findSourceFiles() {
+  try {
+    const result = execSync('find src -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | head -50', { encoding: 'utf8' });
+    return result.trim().split('\n').filter(file => file.length > 0);
+  } catch (error) {
+    console.error('Error finding source files:', error.message);
+    return [];
   }
-
-  return totalFixed;
 }
 
 // Main execution
-try {
-  const totalFixed = fixAllFiles();
-  console.log(`\n🎉 Fixed syntax errors in ${totalFixed} files`);
-} catch (error) {
-  console.error('💥 Error during syntax fixing:', error.message);
-  process.exit(1);
+async function main() {
+  console.log('🔍 Finding source files...');
+  const sourceFiles = findSourceFiles();
+  
+  if (sourceFiles.length === 0) {
+    console.log('✅ No source files found!');
+    return;
+  }
+
+  console.log(`📋 Found ${sourceFiles.length} source files:\n`);
+
+  let fixedCount = 0;
+  let errorCount = 0;
+
+  for (const file of sourceFiles) {
+    if (fixSyntaxErrors(file)) {
+      console.log(`  ✅ Fixed: ${file}`);
+      fixedCount++;
+    } else {
+      errorCount++;
+    }
+  }
+
+  console.log(`\n📊 Fix Summary:`);
+  console.log(`  ✅ Successfully fixed: ${fixedCount} files`);
+  console.log(`  ❌ Errors: ${errorCount} files`);
+
+  if (fixedCount > 0) {
+    console.log('\n🔄 Adding fixed files to git...');
+    try {
+      execSync('git add .', { stdio: 'inherit' });
+      console.log('✅ All fixed files added to git');
+    } catch (error) {
+      console.error('❌ Error adding files to git:', error.message);
+    }
+  }
+
+  console.log('\n🎉 Syntax error fixing completed!');
 }
+
+main().catch(console.error);

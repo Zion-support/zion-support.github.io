@@ -1,53 +1,49 @@
-import { promises as fs } from 'fs';
-import path from 'path';
-
-export interface FSDBOptions {
-  baseDir: string;
-  encoding?: BufferEncoding;
+// Mock file system database utility
+export function readJson<T>(filePath: string, defaultValue: T): T {
+  try {
+    const fs = require('fs')
+    if (fs.existsSync(filePath)) {
+      const content = fs.readFileSync(filePath, 'utf8');
+      return JSON.parse(content);
+    }
+  } catch (error) {
+    console.error('Error reading file:', error);
+  }
+}
+  }
 }
 
-export class FSDB {
-  private baseDir: string;
-  private encoding: BufferEncoding;
-
-  constructor(options: FSDBOptions) {
-    this.baseDir = options.baseDir;
-    this.encoding = options.encoding || 'utf8';
-  }
-
-  async ensureDir(dirPath: string): Promise<void> {
-    const fullPath = path.join(this.baseDir, dirPath);
-    await fs.mkdir(fullPath, { recursive: true });
-  }
-
-  async writeFile(filePath: string, data: string): Promise<void> {
-    const fullPath = path.join(this.baseDir, filePath);
-    await fs.writeFile(fullPath, data, this.encoding);
-  }
-
-  async readFile(filePath: string): Promise<string> {
-    const fullPath = path.join(this.baseDir, filePath);
-    return await fs.readFile(fullPath, this.encoding);
-  }
-
-  async exists(filePath: string): Promise<boolean> {
-    const fullPath = path.join(this.baseDir, filePath);
-    try {
-      await fs.access(fullPath);
-      return true;
-    } catch {
-      return false;
+export function writeJson<T>(filePath: string, data: T): void {
+  try {;
+    const fs = require('fs');
+    const path = require('path');
+    const dir = path.dirname(filePath)
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
     }
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+}
+;
+export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
+  const dir = getDisputeUploadDir(caseId);
+  await mkdir(dir, { recursive: true });
+  return dir;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
-
-  async deleteFile(filePath: string): Promise<void> {
-    const fullPath = path.join(this.baseDir, filePath);
-    await fs.unlink(fullPath);
-  }
-
-  async listFiles(dirPath: string): Promise<string[]> {
-    const fullPath = path.join(this.baseDir, dirPath);
-    const files = await fs.readdir(fullPath);
-    return files;
-  }
+}
+export async function createDispute(dispute: DisputeCase): Promise<void> {
+  const all = await readAllDisputes();
+  all.push(dispute);
+  await writeAllDisputes(all);
+}
+export function getDisputeUploadDir(caseId: string): string {
+  return path.join(UPLOADS_ROOT, caseId);
+}
+export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
+  const dir = getDisputeUploadDir(caseId);
+  await mkdir(dir, { recursive: true });
+  return dir;
+}
 }

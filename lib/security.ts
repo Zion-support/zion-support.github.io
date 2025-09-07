@@ -41,5 +41,5 @@ export const contentSecurityPolicy = {
     objectSrc: ["'none'"],
     mediaSrc: ["'self'"],
     frameSrc: ["'none'"],
-  },
+  }
 };

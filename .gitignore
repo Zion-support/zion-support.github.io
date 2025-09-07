@@ -108,6 +108,10 @@ automation/data/*.json
 # Test results
 test-results/
 coverage/
+# Test results
+test-results/
+coverage/
+
 
 # Generated reports
 automation-reports/
@@ -167,6 +171,8 @@ security-scan-report.json
 
 # Core files
 core
+
+
 
 # Additional ignores for better project management
 *.log

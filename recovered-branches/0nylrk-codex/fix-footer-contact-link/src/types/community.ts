@@ -1,145 +1,73 @@
 export type ForumCategory =
-
-  | "getting-hired"""
-  | "project-help"""
-  | "ai-tools"""
-  | "feedback"""
-  | "announcements";"
-  id: ForumCategory;,
+  | 'getting-hired'
+  | 'project-help'
+  | 'ai-tools'
+  | 'feedback';
+  | 'announcements';
+export interface ForumCategoryInfo {
+  id: ForumCategory;
   name: string;
-  description: string;,
-
-  adminOnly: boolean;
-  icon: string;
+  description: string;
+  adminOnly: boolean
+  icon: string
 }
-export interface ForumPost {;
-
-
 export interface ForumPost {
-  // TODO: Implement
-}
-export interface ForumPost {;
-export interface ForumPost {
-  // TODO: Implement
-}
-  id: string;,
-
+  id: string;
   title: string;
-  content: string;,
-  author_id: string;
-  author_name: string;
-  author_avatar?: string;
-  author_role?: string;
-  category_id: ForumCategory;,
+  content: string;
+  authorId: string;
+  authorName: string;
+  authorAvatar?: string;
+  authorRole?: string;
+  categoryId: ForumCategory;
   tags: string[];
-  created_at: string;,
-  updated_at: string;
-  upvotes: number;,
+  createdAt: string;
+  updatedAt: string;
+  upvotes: number;
   downvotes: number;
   replyCount: number;
   isAnswered?: boolean;
   isPinned?: boolean;
-  isLocked?: boolean;}
-  isFeatured?: boolean;}
-}
-export interface ForumReply {;
-
-
-export interface ForumReply {
-  // TODO: Implement
-}
-export interface ForumReply {;
+  isLocked?: boolean
+  isFeatured?: boolean
 }
 export interface ForumReply {
-  // TODO: Implement
-}
-  id: string;,
-
-  post_id: string;
+  id: string;
+  postId: string;
   parentReplyId?: string;
-  content: string;,
-  author_id: string;
-  author_name: string;
-  author_avatar?: string;
-  author_role?: string;
-  created_at: string;,
-  updated_at: string;
-
-  upvotes: number;,
-  downvotes: number;
-  isAnswer?: boolean;
-
+  content: string;
+  authorId: string;
+  authorName: string;
+  authorAvatar?: string;
+  authorRole?: string;
+  createdAt: string;
+  updatedAt: string;
+  upvotes: number;
+  downvotes: number
+  isAnswer?: boolean
 }
-export interface Badge {;
-
-
-  id: string;,
-  name: string;
-  description: string;,
-  icon: string;
-  color: string;
-
-}
-  icon: string,
-  color: string;
-}
-export interface UserBadge {
-
-  // TODO: Implement
-}
-  user_id: string;,
-  badge_id: string,
-  awarded_at: string;
-
-}
-export interface CommunityUser {
-  // TODO: Implement
-}
-export interface UserBadge {;
-
-export interface UserBadge {
-  // TODO: Implement
-}
-export interface UserBadge {;
-  userId: string;,
-  badgeId: string;
-  awardedAt: string;
-}
-
-
-export interface CommunityUser {;
-
-export interface CommunityUser {
-  // TODO: Implement
-}
-export interface CommunityUser {;
-
-}
-export interface UserBadge {}
-export interface UserBadge {;}
 export interface Badge {
-
-  // TODO: Implement
-}
-  id: string;,
+  id: string;
   name: string;
   description: string;
-
+  icon: string
+  color: string
+}
+export interface UserBadge {
+  userId: string;
+  badgeId: string
+  awardedAt: string
 }
 export interface CommunityUser {
-  // TODO: Implement
-}
-  id: string;,
+  id: string;
   name: string;
   avatar?: string;
-  role: string;,
+  role: string;
   reputation: number;
+  postCount: number;
+  replyCount: number;
+  badges: Badge[];
+  isVerified: boolean
 
-  post_count: number;,
-  reply_count: number;
-  badges: Badge[];,
-  isVerified: boolean;
-  isModerator: boolean;
+  isModerator: boolean
 }
-"
-

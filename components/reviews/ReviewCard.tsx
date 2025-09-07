@@ -1,52 +1,61 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 type Props = any;
 
 export default ReviewCard;
       <div className='flex items-center justify-between mb-2' />;
         <div className='flex items-center gap-2' />;
           <StarRating;
+=======
+type Props = any
+export default ReviewCard
+      <div className='flex items-center justify-between mb-2'    />
+        <div className='flex items-center gap-2'    />
+          <StarRating
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
             value={review.rating}
-            onChange={() = /> {}}
-            readOnly;
+            onChange={() =    /> {}}
+            readOnly
             size={18}
-          />;
-          <span className='text-sm text-gray-500' />;
+          />
+          <span className='text-sm text-gray-500'    />
             {new Date(review.createdAt).toLocaleDateString()}
-          </span>;
-        </div>;
-        <button;
-          className='text-xs text-red-500 hover:underline';
-          onClick={() = /> onReport && onReport(review.id)}
-        >;
-          Report abuse;
-        </button>;
-      </div>;
-<div className='flex items-center gap-2 mb-3' />;
-        <span className='text-sm font-medium' />{review.authorName}</span>;
-        {review.categories?.wouldWorkWithAgain && (<span className='pill pill-success' />Would work again</span>;}
+          </span>
+        </div>
+        <button
+          className='text-xs text-red-500 hover:underline'
+          onClick={() =    /> onReport && onReport(review.id)}
+        >
+          Report abuse
+        </button>
+      </div>
+<div className='flex items-center gap-2 mb-3'    />
+        <span className='text-sm font-medium'    />{review.authorName}</span>
+        {review.categories?.wouldWorkWithAgain && (<span className='pill pill-success'    />Would work again</span>;}
         )}
-      </div>;
-      <p className='text-sm leading-6' />{review.text}</p>;
-      <div className='flex flex-wrap gap-2 mt-3' />;
-        {typeof review.categories?.communication === 'number' && (<span className='pill' />;}
+      </div>
+      <p className='text-sm leading-6'    />{review.text}</p>
+      <div className='flex flex-wrap gap-2 mt-3'    />
+        {typeof review.categories?.communication === 'number' && (<span className='pill'    />;}
             Communication: {review.categories.communicatio,}
-}★;
-          </span>;
+}★
+          </span>
         )}
-        {typeof review.categories?.qualityOfWork === 'number' && (<span className='pill' />;}
+        {typeof review.categories?.qualityOfWork === 'number' && (<span className='pill'    />;}
             Quality: {review.categories.qualityOfWor,}
-}★;
-          </span>;
+}★
+          </span>
         )}
-        {typeof review.categories?.timeliness === 'number' && (<span className='pill' />;}
+        {typeof review.categories?.timeliness === 'number' && (<span className='pill'    />;}
             Timeliness: {review.categories.timelines,}
-}★;
-          </span>;
+}★
+          </span>
         )}
-      </div>;
-    </div>;
+      </div>
+    </div>
   )}
 
+<<<<<<< HEAD
 export default ReviewCard;
 =======
 > Report abuse </button> </div>) 
@@ -54,3 +63,6 @@ export default ReviewCard;
 }
 export default ReviewCard
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+export default ReviewCard
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

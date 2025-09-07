@@ -1,28 +1,16 @@
-
-;
-ursor/automate-test-improve-and-merge-code-646c;
-import type { NextPage } from \'next\';
-
-const \"Test\": NextPage = () => ;
-  return (<div className=\"min-h-screen bg-gray-900 flex items-center justify-center\" /> <h1 className=\"text-white text-4xl\" />Test Page Working!></div> ></div> ;
+import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {; return (; <div className=\"min-h-screen bg-gray-900 flex items-center justify-center\"> <h1 className=\"text-white text-4xl\">Test Page Working!></div> ></div> );};
 }
 
 export default Test;
-import type { NextPage } from 'next';
-
-const \"Test\": NextPage = () => ;
-  return (<div className=\"min-h-screen bg-gray-900 flex items-center justify-center\" /> <h1 className=\"text-white text-4xl\" />Test Page Working!></div> ></div> ;
+import type { NextPage } from 'next'; const "Test": NextPage = () => {; return (; <div className="min-h-screen bg-gray-900 flex items-center justify-center"> <h1 className="text-white text-4xl">Test Page Working!></div> ></div> )};
 }
 
-export default Test;ursor/automate-test-improve-and-merge-code-646c;
+export default Test;
+import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {; return (; <div className=\"min-h-screen bg-gray-900 flex items-center justify-center\"> <h1 className=\"text-white text-4xl\">Test Page Working!></div> ></div> );};
+}
 
+export default Test;
+import type { NextPage } from 'next'; const "Test": NextPage = () => {; return (; <div className="min-h-screen bg-gray-900 flex items-center justify-center"> <h1 className="text-white text-4xl">Test Page Working!></div> ></div> )};
+}
 
-
-import type { NextPage } from \'next\';
-
-
-import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {; return (; <div className=\"min-h-screen bg-gray-900 flex items-center justify-center\"> <h1 className=\"text-white text-4xl\">Test Page Working!></div> ></div> );}; export default Test;""
-import type { NextPage } from 'next'; const "Test": NextPage = () => {; return (; <div className="min-h-screen bg-gray-900 flex items-center justify-center"> <h1 className="text-white text-4xl">Test Page Working!></div> ></div> )}; export default Test;""
-import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {; return (; <div className=\"min-h-screen bg-gray-900 flex items-center justify-center\"> <h1 className=\"text-white text-4xl\">Test Page Working!></div> ></div> );}; export default Test;""
-import type { NextPage } from 'next'; const "Test": NextPage = () => {; return (; <div className="min-h-screen bg-gray-900 flex items-center justify-center"> <h1 className="text-white text-4xl">Test Page Working!></div> ></div> )}; export default Test;""
-
+export default Test;

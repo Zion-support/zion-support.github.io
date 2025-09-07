@@ -1,0 +1,43 @@
+{
+  "timestamp": "2025-09-07T10:14:30.085Z",
+  "vulnerabilities": [],
+  "recommendations": [
+    {
+      "type": "configuration",
+      "priority": "medium",
+      "message": "Missing security headers in Next.js config",
+      "action": "Add security headers configuration"
+    },
+    {
+      "type": "configuration",
+      "priority": "high",
+      "message": "Missing Content Security Policy",
+      "action": "Implement CSP headers"
+    },
+    {
+      "type": "code_security",
+      "priority": "high",
+      "message": "Use of eval() function detected",
+      "action": "Replace eval() with safer alternatives"
+    },
+    {
+      "type": "code_security",
+      "priority": "medium",
+      "message": "Direct innerHTML assignment detected",
+      "action": "Use textContent or sanitize HTML content"
+    },
+    {
+      "type": "code_security",
+      "priority": "medium",
+      "message": "dangerouslySetInnerHTML usage detected",
+      "action": "Sanitize HTML content before rendering"
+    }
+  ],
+  "summary": {
+    "totalVulnerabilities": 0,
+    "totalRecommendations": 5,
+    "highPriority": 2,
+    "mediumPriority": 3,
+    "lowPriority": 0
+  }
+}

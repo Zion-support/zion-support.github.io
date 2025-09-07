@@ -1,3 +1,20 @@
+'use client'
+}
+}
+} = e.target
+    setFormData(prev => ({
+      ...prev}
+      [name]: value}
+    }))
+  }
+  const handleSubmit = async (e: React.FormEvent)  => {
+
+    e.preventDefault()
+    setIsSubmitting(true)
+    // Simulate form submission
+try {
+      await new Promise(resolve => setTimeout(resolve, 2000))
+      setSubmitStatus('success')
 'use client';
 
 import React, { useState } from 'react';
@@ -45,6 +62,13 @@ export default function ContactForm() {
         company: '',
         service: '',
         budget: '',
+  message: ''}
+      }
+})
+    } catch {}
+      setSubmitStatus('error');}
+    } finally {}
+      setIsSubmitting(false);}
         message: ''
       });
     } catch {
@@ -52,8 +76,7 @@ export default function ContactForm() {
     } finally {
       setIsSubmitting(false);
     }
-  };
-
+  }
   return (
     <div className="max-w-4xl mx-auto">
       {/* Hero Section */}
@@ -63,6 +86,9 @@ export default function ContactForm() {
         </h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
           Ready to transform your business with cutting-edge technology? 
+Let&apos
+s discuss your project and create a custom solution.
+          Let&apos;s discuss your project and create a custom solution.
           Let&apos;s discuss your project and create a custom solution.
         </p>
       </div>
@@ -70,6 +96,7 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Contact Information */}
         <div className="space-y-8">
+          <div />
           <div>
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">
               Contact Information
@@ -77,6 +104,8 @@ export default function ContactForm() {
             
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
+                <PhoneIcon className="w-5 h-5 text-blue-600">
+                <div />
                 <Phone className="w-5 h-5 text-blue-600" />
                 <div>
                   <p className="font-medium text-gray-900">Phone</p>
@@ -85,6 +114,8 @@ export default function ContactForm() {
               </div>
               
               <div className="flex items-center space-x-3">
+                <EnvelopeIcon className="w-5 h-5 text-blue-600">
+                <div />
                 <Mail className="w-5 h-5 text-blue-600" />
                 <div>
                   <p className="font-medium text-gray-900">Email</p>
@@ -93,6 +124,10 @@ export default function ContactForm() {
               </div>
               
               <div className="flex items-center space-x-3">
+                <MapPinIcon className="w-5 h-5 text-blue-600">
+                <div />
+                  <p className="font-medium text-gray-900">Address</p>
+                  <p className="text-gray-600">364 E Main St STE 1008 < br />Middletown DE 19709</p>
                 <MapPin className="w-5 h-5 text-blue-600" />
                 <div>
                   <p className="font-medium text-gray-900">Address</p>
@@ -101,6 +136,8 @@ export default function ContactForm() {
               </div>
               
               <div className="flex items-center space-x-3">
+                <ClockIcon className="w-5 h-5 text-blue-600">
+                <div />
                 <Clock className="w-5 h-5 text-blue-600" />
                 <div>
                   <p className="font-medium text-gray-900">Business Hours</p>
@@ -113,6 +150,7 @@ export default function ContactForm() {
           {/* Quick Response Promise */}
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
             <div className="flex items-center space-x-3 mb-3">
+              <CheckCircleIcon className="w-6 h-6 text-blue-600">
               <CheckCircle className="w-6 h-6 text-blue-600" />
               <h3 className="font-semibold text-blue-900">Quick Response Guarantee</h3>
             </div>
@@ -124,6 +162,7 @@ export default function ContactForm() {
         </div>
 
         {/* Contact Form */}
+        <div />
         <div>
           <div className="bg-white shadow-lg rounded-lg p-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">
@@ -133,6 +172,11 @@ export default function ContactForm() {
             {submitStatus === 'success' && (
               <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-md">
                 <div className="flex items-center">
+                  <CheckCircleIcon className="w-5 h-5 text-green-600 mr-2">
+                  <p className="text-green-800">
+Thank you! Your message has been sent successfully. We&apos
+ll get back to you within one business day.
+                    Thank you! Your message has been sent successfully. We&apos;ll get back to you within one business day.
                   <CheckCircle className="w-5 h-5 text-green-600 mr-2" />
                   <p className="text-green-800">
                     Thank you! Your message has been sent successfully. We&apos;ll get back to you within one business day.
@@ -144,6 +188,7 @@ export default function ContactForm() {
             {submitStatus === 'error' && (
               <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-md">
                 <div className="flex items-center">
+                  <ExclamationTriangleIcon className="w-5 h-5 text-red-600 mr-2">
                   <AlertTriangle className="w-5 h-5 text-red-600 mr-2" />
                   <p className="text-red-800">
                     Sorry, there was an error sending your message. Please try again or contact us directly.
@@ -154,6 +199,35 @@ export default function ContactForm() {
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div />
+                  <label htmlFor=\"name\" className="block text-sm font-medium text-gray-700 mb-2">
+                    Full Name *
+                  </label>
+                  <input
+type=\"text\"
+                    id=\"name\"
+                    name=\"name\"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required
+className=\"w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500\"
+                    placeholder=\"Your full name\"
+                  />
+                </div>
+                
+                <div />
+                  <label htmlFor=\"email\" className="block text-sm font-medium text-gray-700 mb-2">
+                    Email Address *
+                  </label>
+                  <input
+type=\"email\"
+                    id=\"email\"
+                    name=\"email\"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+className=\"w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500\"
+                    placeholder=\"your.email@example.com\"
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                     Full Name *
@@ -165,7 +239,7 @@ export default function ContactForm() {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="form-input"
                     placeholder="Your full name"
                   />
                 </div>
@@ -181,12 +255,20 @@ export default function ContactForm() {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="form-input"
                     placeholder="your.email@example.com"
                   />
                 </div>
               </div>
 
+              <div />
+                <label htmlFor=\"company\" className="block text-sm font-medium text-gray-700 mb-2">
+                  Company Name
+                </label>
+                <input
+type=\"text\"
+                  id=\"company\"
+                  name=\"company\"
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                   Company Name
@@ -197,11 +279,66 @@ export default function ContactForm() {
                   name="company"
                   value={formData.company}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  className="form-input"
                   placeholder="Your company name"
                 />
               </div>
 
+              <div />
+                <label htmlFor=\"service\" className="block text-sm font-medium text-gray-700 mb-2">
+                  Service Interest
+                </label>
+                <select
+id=\"service\"
+                  name=\"service\"
+                  value={formData.service}
+                  onChange={handleInputChange}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                  <option value=\"\" />Select a service</option>
+                  <option value=\"ai-ml\" />AI & Machine Learning</option>
+                  <option value=\"micro-saas\" />Micro SaaS Development</option>
+                  <option value=\"cloud\" />Cloud Infrastructure</option>
+                  <option value=\"cybersecurity\" />Cybersecurity</option>
+                  <option value=\"blockchain\" />Blockchain Solutions</option>
+                  <option value=\"data-analytics\" />Data Analytics</option>
+                  <option value=\"consulting\" />IT Consulting</option>
+                  <option value=\"other\" />Other</option>
+                </select>
+              </div>
+
+              <div />
+                <label htmlFor=\"budget\" className="block text-sm font-medium text-gray-700 mb-2">
+                  Project Budget
+                </label>
+                <select
+id=\"budget\"
+                  name=\"budget\"
+                  value={formData.budget}
+                  onChange={handleInputChange}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                  <option value=\"\" />Select budget range</option>
+                  <option value=\"under-10k\" />Under $10,000</option>
+                  <option value=\"10k-25k\" />$10,000 - $25,000</option>
+                  <option value=\"25k-50k\" />$25,000 - $50,000</option>
+                  <option value=\"50k-100k\" />$50,000 - $100,000</option>
+                  <option value=\"over-100k\" />Over $100,000</option>
+                  <option value=\"discuss\" />Prefer to discuss</option>
+                </select>
+              </div>
+
+              <div />
+                <label htmlFor=\"message\" className="block text-sm font-medium text-gray-700 mb-2">
+                  Project Details *
+                </label>
+                <textarea
+id=\"message\"
+                  name=\"message\"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  required
+rows={5}
+                  className=\"w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500\"
+                  placeholder=\"Tell us about your project, goals, and any specific requirements...\"
               <div>
                 <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
                   Service Interest
@@ -211,7 +348,7 @@ export default function ContactForm() {
                   name="service"
                   value={formData.service}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  className="form-input"
                 >
                   <option value="">Select a service</option>
                   <option value="ai-ml">AI & Machine Learning</option>
@@ -234,7 +371,7 @@ export default function ContactForm() {
                   name="budget"
                   value={formData.budget}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  className="form-input"
                 >
                   <option value="">Select budget range</option>
                   <option value="under-10k">Under $10,000</option>
@@ -257,26 +394,39 @@ export default function ContactForm() {
                   onChange={handleInputChange}
                   required
                   rows={5}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  className="form-input"
                   placeholder="Tell us about your project, goals, and any specific requirements..."
                 />
               </div>
 
               <button
+type=\"submit\"
+                disabled={isSubmitting}
+                className={`w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white ${
+                  isSubmitting
+                    ? 'bg-gray-400 cursor-not-allowed'}
+                    : 'bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'}
                 type="submit"
                 disabled={isSubmitting}
                 className={`w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white ${
                   isSubmitting
                     ? 'bg-gray-400 cursor-not-allowed'
-                    : 'bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'
+                    : 'btn btn-primary'
                 } transition-colors`}
               >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
+                {isSubmitting ? (
+                  <div className="flex items-center">
+                    <div className="spinner w-4 h-4 mr-2"></div>
+                    Sending...
+                  </div>
+                ) : (
+                  'Send Message'
+                )}
               </button>
             </form>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }
