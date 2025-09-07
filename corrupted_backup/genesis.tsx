@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 export { default } from '../zion/init';
 export { default } from '../zion/init';
 import React from 'react';
@@ -11,3 +14,4 @@ export default function Page() {
     </main>
   );
 }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -8,6 +8,8 @@ const UiUxDesignChat: NextPage = () => ;
       <Head />;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 const UiUxDesignChat: NextPage = () => ;
   return (<div />;
       <Head />;
@@ -33,6 +35,7 @@ const UiUxDesignChat: NextPage = () => {
 ;
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (<div>;
       <Head>;
         <title>UiUxDesignChat - Zion Tech Solutions</title>;
@@ -65,7 +68,10 @@ const UiUxDesignChat: NextPage = () => {
     <div />
       <Head />
 ;
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const UiUxDesignChat: NextPage = () => {;
   return (
     <div />;
@@ -73,22 +79,32 @@ const UiUxDesignChat: NextPage = () => {
         <title />UiUxDesignChat - Zion Tech Solutions</title>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 }
 return (;
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import type { NextPage } from "next";""
 import Head from "next/head";""
 import Link from "next/link";""
 const UiUxDesignChat: NextPage = () => {
   return (
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <div>
 </div>
       <Head>
@@ -102,7 +118,10 @@ const UiUxDesignChat: NextPage = () => {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const UiUxDesignChat: NextPage = () => {
   return (
     <div />
@@ -111,9 +130,13 @@ const UiUxDesignChat: NextPage = () => {
       </Head>;
 
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <main>
         <h1>UiUxDesignChat</h1>
         <p>Blog content coming soon...</p>
@@ -152,23 +175,33 @@ import Head from './next / head';
 import Link from './next / link';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (<div>;
       <Head>;
         <title > UiUxDesignChat - Zion Tech Solutions</title>;
         <meta name="description" content="UiUxDesignChat blog post" />{" "}"
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const UiUxDesignChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title  /> UiUxDesignChat - Zion Tech Solutions</title>;
         <meta name=\"description\" content=\"UiUxDesignChat blog post\" />{\" \"}
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </Head>;
       <main />;
         <h1  /> UiUxDesignChat</h1>;
@@ -193,23 +226,33 @@ export default UiUxDesignChat;<div />;
   )},export default UiUxDesignChat;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (<div>;
       <Head>;
         <title>UiUxDesignChat - Zion Tech Solutions</title>;
         <meta name="description" content="UiUxDesignChat blog post" />{" "}"
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const UiUxDesignChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title />UiUxDesignChat - Zion Tech Solutions</title>;
         <meta name=\"description\" content=\"UiUxDesignChat blog post\" />{\" \"}
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </Head>;
       <main />;
         <h1 />UiUxDesignChat</h1>;
@@ -226,6 +269,11 @@ export default UiUxDesignChat;<title />UiUxDesignChat - Zion Tech Solutions</tit
 
 export default UiUxDesignChat;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const UiUxDesignChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
 const UiUxDesignChat: NextPage = () => {
 =======
 <<<<<<< HEAD
@@ -233,6 +281,7 @@ const UiUxDesignChat: NextPage = () => {
 const UiUxDesignChat: NextPage = () => {
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
  ;
   return (
     <div />
@@ -255,6 +304,11 @@ export default UiUxDesignChat;
         <title />UiUxDesignChat - Zion Tech Solutions</title>
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const UiUxDesignChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
 const UiUxDesignChat: NextPage = () => {
 =======
 <<<<<<< HEAD
@@ -262,6 +316,7 @@ const UiUxDesignChat: NextPage = () => {
 const UiUxDesignChat: NextPage = () => {
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
  ;
   return (
     <div />

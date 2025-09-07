@@ -5,7 +5,6 @@ const { execSync } = require('child_process');
 class TypeScriptErrorAutoFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
     this.reportsDir = path.join(this.projectRoot, error-reports');
     this.logsDir = path.join(this.projectRoot, 'automation/logs);
     this.fixInterval = parseInt(process.env.TYPESCRIPT_FIX_INTERVAL) || 600000; // 10 minutes;
@@ -15,17 +14,9 @@ class TypeScriptErrorAutoFixer {}
     [this.reportsDir, this.logsDir].forEach(dir => {})
       if (!fs.existsSync(dir)) {}
         fs.mkdirSync(dir, { "recursive: true })}
-=======
-
-    // Ensure directories exist;
-    [this.reportsDir, this.logsDir].forEach(dir => {})
-      if (!fs.existsSync(dir)) {}
-        fs.mkdirSync(dir, { "recursive": true })};"
->>>>>>> origin/chore/fix-lint-and-merge
     }
 });
     this.fixesApplied = 0;
-<<<<<<< HEAD
     this.filesProcessed = 0}
   log(message, level = 'INFO) {}
     const timestamp = new Date().toISOString();
@@ -44,35 +35,16 @@ class TypeScriptErrorAutoFixer {}
   parseTypeScriptErrors(output) {}
     const errorLines = output.split('\n).filter(line => )
       line.includes(error TS') || line.includes('error": );
-=======
-    this.filesProcessed = 0};"
-  log(message, level = 'INFO') {}
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level}] ${message})};
-  async runTypeScriptCheck() {}
-    try {}
-
-      return { "success": false, errors, "count": errors.length }};"
-  };
-  parseTypeScriptErrors(output) {}"
-    const errorLines = output.split('\n').filter(line => )
-
->>>>>>> origin/chore/fix-lint-and-merge
     );
     const errors = [];
     let currentError = null;
     for (const line of errorLines) {}
-<<<<<<< HEAD
       if (line.includes(error TS') || line.includes('error:)) {}
-=======
-
->>>>>>> origin/chore/fix-lint-and-merge
         const match = line.match(/([^:]+):(\d+):(\d+)/);
         if (match) {}
           if (currentError) {}
             errors.push(currentError)}
           currentError = {}
-<<<<<<< HEAD
             "file: match[1].trim(),
             line": parseInt(match[2]),
             "column: parseInt(match[3]),
@@ -85,15 +57,10 @@ class TypeScriptErrorAutoFixer {}
     if (currentError) {}
       errors.push(currentError)}
     return errors}
-=======
-
-    return errors};
->>>>>>> origin/chore/fix-lint-and-merge
   async fixTypeScriptErrors(errors) {}
     let fixesApplied = 0;
     for (const error of errors) {}
         if (await this.fixSingleError(error)) {}
-<<<<<<< HEAD
           fixesApplied++}
       } catch (error) {}
         this.log(`Failed to fix error in ${error.file}: ${error.message}`, 'ERROR)}
@@ -105,16 +72,6 @@ class TypeScriptErrorAutoFixer {}
     const content = fs.readFileSync(error.file, utf8');
     const lines = content.split('\n);
     
-=======
-          fixesApplied++};
-
-    return fixesApplied};
-  async fixSingleError(error) {}
-    if (!error.file || !fs.existsSync(error.file)) {}
-      return false};
-
-    const lines = content.split('\n');
->>>>>>> origin/chore/fix-lint-and-merge
     // Apply common TypeScript fixes;
     const fixes = [this.fixAnyType.bind(this)]
       this.fixMissingImports.bind(this),
@@ -128,7 +85,6 @@ class TypeScriptErrorAutoFixer {}
     for (const fix of fixes) {}
         const result = fix(lines, error);
         if (result.modified) {}
-<<<<<<< HEAD
           modifiedContent = result.content;
           this.log(`Applied fix to ${error.file}: ${result.description}`, INFO')}
       } catch (fixError) {}
@@ -173,28 +129,10 @@ class TypeScriptErrorAutoFixer {}
           if (lines[i].trim().startsWith('import ')) {}
             lastImportIndex = i}
         }
-=======
-
-    if (modifiedContent !== originalContent) {}
-      fs.writeFileSync(error.file, modifiedContent);
-      return true};
-  fixAnyType(lines, error) {}
-    const lineIndex = error.line - 1;
-    const line = lines[lineIndex];
-    if (line.includes('any') && error.message.includes('any')) {}
-      // Replace 'any' with more specific types;
-      const fixedLine = line;
-
-</any>
-        for (let i = 0; i < lines.length; i++) {}
-          if (lines[i].trim().startsWith('import ')) {}
-            lastImportIndex = i};
->>>>>>> origin/chore/fix-lint-and-merge
         if (lastImportIndex >= 0) {}
           lines.splice(lastImportIndex + 1, 0, importStatement)} else {}
           lines.unshift(importStatement)}
         return {}
-<<<<<<< HEAD
           "modified": true,
           content: lines.join(\n),
           "description": `Added missing import for ${moduleName}
@@ -204,20 +142,10 @@ class TypeScriptErrorAutoFixer {}
   fixTypeAnnotations(lines, error) {}
     
     if (error.message.includes(implicitly has an any type)) {}
-=======
-
-          "description": `Added missing import for ${moduleName}"
-    };"
-    return { "modified": false, "content": lines.join('\n') }};
-  fixTypeAnnotations(lines, error) {}
-
-    if (error.message.includes('implicitly has an any type')) {}
->>>>>>> origin/chore/fix-lint-and-merge
       // Add type annotation;
       const varMatch = line.match(/(const|let|var)\s+(\w+)\s*=/);
       if (varMatch) {}
         const varName = varMatch[2];
-<<<<<<< HEAD
         const fixedLine = line.replace()
           new RegExp(`(${varMatch[1]}\\s+${varName}\\s*)=`),`
           $1": unknown ="
@@ -236,13 +164,6 @@ class TypeScriptErrorAutoFixer {}
   fixInterfaceIssues(lines, error) {}
     if (error.message.includes('Property') && error.message.includes(does not exist on type)) {}
       const propMatch = error.message.match(/Property '([^']+) does not exist on type ([^']+)'/);
-=======
-
-        if (fixedLine !== line) {}
-          lines[lineIndex] = fixedLine;
-            modified: true,"
-
->>>>>>> origin/chore/fix-lint-and-merge
       if (propMatch) {}
         const propName = propMatch[1];
         const typeName = propMatch[2];
@@ -251,7 +172,6 @@ class TypeScriptErrorAutoFixer {}
             // Add the missing property;
             const indent = lines[i].match(/^\s*/)[0];`;
             lines.splice(i + 1, 0, `${indent}  ${propName}?: unknown;`);
-<<<<<<< HEAD
             
             return {}
               modified: true,
@@ -336,21 +256,10 @@ class TypeScriptErrorAutoFixer {}
   async startAutoFixer() {}
     this.log('Starting TypeScript error auto-fixer...');
     
-=======
-
-        "initialErrors": checkResult.errors.length,"
-        fixesApplied,"
-        "remainingErrors": postCheckResult.errors.length,
-        "success": postCheckResult.success;"
-      // Save report;`;
-      const reportPath = path.join(this.reportsDir, `typescript-fix-report-${Date.now()}.json`);
-
->>>>>>> origin/chore/fix-lint-and-merge
     // Run initial fix;
     await this.runAutoFix();
     // Set up periodic fixing;
     setInterval(async () => {}
-<<<<<<< HEAD
       try {}
         await this.runAutoFix()} catch (error) {}
         this.log(`Error in periodic fix: ${error.message}`, ERROR)}
@@ -358,15 +267,10 @@ class TypeScriptErrorAutoFixer {}
 
     this.log(`TypeScript error auto-fixer started. Running every ${this.fixInterval / 1000} seconds.`)}
 }
-=======
-
-    this.log(`TypeScript error auto-fixer started. Running every ${this.fixInterval / 1000} seconds.`)};
->>>>>>> origin/chore/fix-lint-and-merge
 // Main execution;
 if (require.main === module) {}
   const fixer = new TypeScriptErrorAutoFixer();
   // Handle graceful shutdown;
-<<<<<<< HEAD
   process.on('SIGINT', () => {}
     fixer.log(Shutting down TypeScript error auto-fixer...);
     process.exit(0)}
@@ -382,30 +286,8 @@ if (require.main === module) {}
     fixer.log(`Failed to start auto-"fixer": ${error.message}`, 'ERROR');
     process.exit(1)})}
 
-=======
 
-    process.exit(1)})};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-module.exports = TypeScriptErrorAutoFixer;
-module.exports = TypeScriptErrorAutoFixer;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 module.exports = TypeScriptErrorAutoFixer;
 `;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-module.exports = TypeScriptErrorAutoFixer;
-=======
-module.exports = TypeScriptErrorAutoFixer;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

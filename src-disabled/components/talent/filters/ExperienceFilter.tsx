@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src-disabled/components/talent/filters/ExperienceFilter.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 :src/components/talent/filters/ExperienceFilter.tsx
 import { ChevronDown, ChevronUp } from 'lucide-react'
 =======
@@ -116,7 +119,10 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
         onClick={toggleSection}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src-disabled/components/talent/filters/ExperienceFilter.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 <<<<<<< HEAD
 :src/components/talent/filters/ExperienceFilter.tsx
         className='flex w-full items-center justify-between text-white font-medium'      >
@@ -196,6 +202,8 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
             <span>{experienceRange[0]} years</span>
             <span>{experienceRange[1]} years</span>
           </div>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src-disabled/components/talent/filters/ExperienceFilter.tsx
 =======
           <Slider
@@ -203,6 +211,7 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
             aria-label='Experience range'            aria-label="Experience range"
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/talent/filters/ExperienceFilter.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             aria-label="Experience range"
@@ -267,6 +276,8 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
             max={15}
             step={1}
             onValueChange={handleChange}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src-disabled/components/talent/filters/ExperienceFilter.tsx
 =======
 <<<<<<< HEAD
@@ -276,6 +287,7 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
       )};
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/talent/filters/ExperienceFilter.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     </div>;
   );
@@ -308,6 +320,10 @@ ursor/fix-website-loading-errors-and-merge-6662
           />
         </div>
       )}
+<<<<<<< HEAD
+
+;
+=======
 <<<<<<< HEAD:src-disabled/components/talent/filters/ExperienceFilter.tsx
 =======
     </div>
@@ -343,3 +359,4 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:src_backup/components/support/HelpArticleView.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src_backup/components/support/HelpArticleView.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import React, { useState } from 'react;
 import { Button } from @/components/ui/button';
 import { Card } from '@/components/ui/card;
@@ -13,6 +20,11 @@ import { ThumbsUp, ThumbsDown } from 'lucide-react
 import { toast } from @/components/ui/use-toast",
 import { HELP_CATEGORIES } from "./help-content;
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 <<<<<<< HEAD
 import React, { useState } from "react"
@@ -41,14 +53,26 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null)
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/support/HelpArticleView.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 interface HelpArticleViewProps {
   articleId: string
 }
 
   const [feedbackGiven, setFeedbackGiven] = useState<helpful" | "not-helpful | null>(null)
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Find the article in all categories
+=======
+<<<<<<< HEAD
+  // Find the article in all categories
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  // Find the article in all categories
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD:src_backup/components/support/HelpArticleView.tsx
 =======
   let article = null;
@@ -113,6 +137,10 @@ function HelpArticleView() {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   for (const category of HELP_CATEGORIES) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/support/HelpArticleView.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     const found = category.articles.find(a => a.id === articleId),
     if (found) {
       article = found,
@@ -129,6 +157,35 @@ interface HelpArticleViewProps {;
 ;
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {;
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  // Find the article in all categories;
+  let article;
+  for (const category of HELP_CATEGORIES) {;
+    const found = category && category.articles.find(a => a && a.id === articleId);
+    if (found) {;
+      article = found;
+      break;
+    }
+  }
+
+  if (!article) {;
+    return <div>Article not found</div>;
+  }
+
+  const handleFeedback = (type: "helpful" | "not-helpful") => {;
+    setFeedbackGiven(type);
+
+  return new Date(date).toLocaleDateString("en-US", {;
+    year: "numeric",;
+    month: "long",;
+    day: "numeric", });
+}
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
   // Find the article in all categories;
   let article,;
   for (const category of HELP_CATEGORIES) {;
@@ -276,6 +333,10 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {;
 }
 
 <<<<<<< HEAD:src_backup/components/support/HelpArticleView.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
 import React, { useState } from './react';
@@ -312,6 +373,15 @@ if ( {) {
   const handle_feedback = (type: "helpful" | "not - helpful") =>: any {
     setFeedbackGiven (type);
   return new Date (date).toLocaleDateString ("en - US", {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    year: "numeric",
+    month: "long",
+    day: "numeric", });
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
@@ -329,11 +399,20 @@ function formatDate(date: string): string {;
   });
 }
 <<<<<<< HEAD:src_backup/components/support/HelpArticleView.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     const found = null;
     day: "numeric"
   })
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
@@ -344,3 +423,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/support/HelpArticleView.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

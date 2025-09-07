@@ -1,20 +1,10 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ;
 declare module 'vite / client';
 declare module 'react-router-dom';
 ;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 declare module 'aria-query';
 declare module '@babel/core';
 declare module '@babel/generator';
@@ -39,13 +29,8 @@ declare module 'semver';
 declare module 'ws';
 declare module 'vite/client';
 declare module 'react-router-dom';
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
 declare module 'aria-query',;
 declare module '@babel/core',;
 declare module '@babel/generator',;
@@ -70,10 +55,7 @@ declare module 'semver',;
 declare module 'ws',;
 declare module 'vite/client',;
 declare module 'react-router-dom',;
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 declare module 'aria - query';
 declare module '@babel / core';
 declare module '@babel / generator';
@@ -99,9 +81,5 @@ declare module 'semver';
 declare module "ws";
 "
 declare module "vite/client";"
+
 declare module "react-router-dom";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

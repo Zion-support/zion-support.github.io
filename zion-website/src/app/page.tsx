@@ -21,7 +21,11 @@ const features = [
 
   UserGroupIcon
 
-<<<<<<< HEAD
+const features = [
+  {
+
+  UserGroupIcon
+
 } from '@heroicons/react/24/outline';
 
 const features = []
@@ -129,7 +133,6 @@ const features = []
             Join thousands of companies already using our AI-powered solutions to drive innovation and growth.
           </p>
 
-=======
 import React from 'react';'
 import { LightBulbIcon,CpuChipIcon,GlobeAltIcon,ShieldCheckIcon,ChartBarIcon,UserGroupIcon;
  } from '@heroicons/react/24/outline';'
@@ -233,7 +236,6 @@ export default function HomePage() {return (<div className="min-h-screen bg-whit
           </div>;
         </div>;
       </div>;
->>>>>>> merged-prs-20250907-203621
       {/* Features section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -253,7 +255,6 @@ export default function HomePage() {return (<div className="min-h-screen bg-whit
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
                   <feature.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
                   {feature.name}
-<<<<<<< HEAD
                 </dt>
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
                   <p className="flex-auto">{feature.description}</p>
@@ -265,23 +266,10 @@ export default function HomePage() {return (<div className="min-h-screen bg-whit
                 </dd>
               </div>
             ))}
-=======
-                </dt>;
-                <dd className="mt - 4 flex flex - auto flex - col text - base leading - 7 text - gray-300">;"
-                  <p className="flex-auto">{feature.description}</p>;"
-                  <p className="mt-6">;"
-                    <a href="/solutions" className="text - sm font - semibold leading - 6 text - blue - 400 "hover":text - blue - 300 transition - colors duration-200">;"
-                      Learn more <span aria - hidden="true">→</span>;"
-                    </a>;
-                  </p>;
-                </dd>;
-              </div>))}
->>>>>>> merged-prs-20250907-203621
           </dl>;
         </div>;
       </div>;
       {/* Stats section */}
-<<<<<<< HEAD
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-none">
           <div className="text-center">
@@ -380,7 +368,6 @@ export default function HomePage() {return (<div className="min-h-screen bg-whit
                 </div>
               </article>
             ))}
-=======
       <div className="mx - auto mt - 32 max - w-7xl px - 6 "sm":mt - 40 "lg":px-8">;"
         <div className="mx - auto max - w-2xl "lg":max-w-none">;"
           <div className="text-center">;"
@@ -417,10 +404,8 @@ export default function HomePage() {return (<div className="min-h-screen bg-whit
                 }
                 key={solution.name}
                 className="flex flex - col items - start group bg - white / 5 p - 8 rounded - 2xl backdrop - blur - sm "hover":bg - white / 10 transition - all duration - 300 "hover":scale-105">"
->>>>>>> merged-prs-20250907-203621
 
       {/* CTA section */}
-<<<<<<< HEAD
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -443,19 +428,6 @@ export default function HomePage() {return (<div className="min-h-screen bg-whit
 
           </div>
         </div>
-=======
-      <div className="mx-auto mt-32 max-w-7xl px-6 "sm":mt-40 "lg":px-8">;"
-        <div className="mx-auto max-w-2xl text-center">;"
-          <h2 className="text-3xl font-bold tracking-tight text-white "sm":text-4xl">;"
-            Ready to transform your business?          </h2>;
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">;"
-            Join thousands of companies already using our AI-powered solutions to drive innovation and growth.;
-          </p>;
-          <div className="mt-10 flex items-center justify-center gap-x-6">;"
-            <a;
-              href="/contact";"
-              className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm "hover":bg-gray-100 focus-"visible":outline focus-"visible":outline-2 focus-"visible":outline-offset-2 focus-"visible":outline-white transition-all duration-200 "hover":scale-105">"
-
               Get Started;
             </a>;
             <a href="/solutions" className="text-sm font-semibold leading-6 text-white "hover":text-blue-400 transition-colors duration-200">;"
@@ -498,7 +470,6 @@ export default function HomePage() {return (<div className="min-h-screen bg-whit
             </a>;
           </div>;
         </div>;
->>>>>>> merged-prs-20250907-203621
       </div>
     </div>
 
@@ -512,7 +483,6 @@ export default function HomePage() {return (<div className="min-h-screen bg-whit
 
   )
 }
-<<<<<<< HEAD
 
           <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
             Contact Us Today;
@@ -522,7 +492,6 @@ export default function HomePage() {return (<div className="min-h-screen bg-whit
       </div>
     </div>
   );
-=======
                     </a>;
                   </h3>;
                   <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-300">{solution.description}</p>;"
@@ -558,4 +527,3 @@ export default function HomePage() {return (<div className="min-h-screen bg-whit
       </div>;
     </div>;
   )})}
->>>>>>> merged-prs-20250907-203621

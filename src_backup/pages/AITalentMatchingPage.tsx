@@ -93,8 +93,11 @@ function AITalentMatchingPage() {}
   ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       title: 'Scalable Talent Pools',
       description:
@@ -124,7 +127,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
     <ServiceLandingTemplate"
       title="AI Talent Matching""

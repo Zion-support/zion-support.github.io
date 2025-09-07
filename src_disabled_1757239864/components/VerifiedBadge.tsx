@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react';
 
 import React from 'react';
 import React from 'react'
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { CheckCircle } from 'lucide-react'
 
 import React from 'react';
@@ -43,6 +46,8 @@ if (return null) {
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 interface VerifiedBadgeProps {
   verified: boolean;
   size?: 'sm' | 'md' | 'lg';
@@ -60,6 +65,7 @@ interface VerifiedBadgeProps {;
 }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent' }: VerifiedBadgeProps) {
   if (!verified) return null,
@@ -76,6 +82,8 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   
   return (
     <TooltipProvider>
@@ -85,12 +93,16 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
           <span className="inline-flex text-blue-500">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />
           </span>
         </TooltipTrigger>
         <TooltipContent>
           <p>{label}</p>
         </TooltipContent>
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
       </Tooltip>;
     </TooltipProvider>;
@@ -149,6 +161,7 @@ interface VerifiedBadgeProps {;
   label?: string;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/VerifiedBadge.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 
 export function VerifiedBadge(): any ({ verified, size = 'sm', label = 'Verified talent' }: VerifiedBadgeProps) {;
@@ -224,6 +237,11 @@ interface VerifiedBadgeProps  {verified: boolean;
 }
 
     </TooltipProvider>);
+<<<<<<< HEAD
+
+  );
+}
+=======
 <<<<<<< HEAD:src_disabled_1757239864/components/VerifiedBadge.tsx
 
   );
@@ -235,3 +253,4 @@ interface VerifiedBadgeProps  {verified: boolean;
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/VerifiedBadge.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

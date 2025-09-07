@@ -15,7 +15,7 @@ const defaultState: ConsentState = { analytics: false, ads: false},
 const ConsentContext = $2;
   acceptAll: () => {},
   rejectNonEssential: () => {},
-  updateConsent: () => {}}),
+  updateConsent: () => {}),
 
 function loadAnalytics() {
   if (document.getElementById('ga-script')) return,
@@ -56,7 +56,7 @@ export function ConsentProvider({ children }: { children: ReactNode}) {
   const rejectNonEssential = () => setConsent($2);
   const updateConsent = (state: ConsentState) => setConsent($2);
   return (
-    <ConsentContext.Provider value={{ consent, acceptAll, rejectNonEssential, updateConsent }}>
+    <ConsentContext.Provider value={ consent, acceptAll, rejectNonEssential, updateConsent }>
       {children}
     </ConsentContext.Provider>
   )

@@ -1,14 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 import { getVendorBySlug, registerVendor } from '../../../utils/vendor-store';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
-import { getVendorBySlug, register_vendor } from '../../../utils / vendor - store';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/chore/fix-lint-and-merge
 export default /**;
  * handler - Function description;
  */;
@@ -25,13 +18,8 @@ export default function handler() {if (req.method !== 'POST')if (req.method !== 
     servicesOffered;
     teamSize;
     about;
-<<<<<<< HEAD
     verificationDocs;
     caseStudies;
-=======
-    verificationDocs;}
-    caseStudies;}
->>>>>>> origin/chore/fix-lint-and-merge
   } = req.body |{}
   if (!slug |!name)return res.status(400).json({ error: 'Missing required fields' })if (req && req.method !== 'POST')return res && res.status(405).json({ error: 'Method not allowed',}
 })const {slug,name,services_offered,team_size,about,const vendor = registerVendor({slug;
@@ -63,26 +51,7 @@ const vendor = registerVendor({slug;
     })res && res.status(201).json({ vendor })} catch (e: any) {verification_docs,case_studies;
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
-  if (req.method !== 'POST')
-  if (req.method !== 'POST');}
-    return res.status(405).json({ error: 'Method not allowed',}
-});
->>>>>>> origin/chore/fix-lint-and-merge
-
-const {
-    slug;
-name,
-servicesOffered;
-teamSize,
-about;
-verificationDocs,}
-caseStudies}
-=======
 import {getVendorBySlug, register_vendor} from '../../../utils / vendor - store';
 export default /**
  * handler - Function description
@@ -98,8 +67,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST')
   if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const {
     slug
     name
@@ -108,29 +75,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     about
     verificationDocs
     caseStudies
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   } = req.body |{}
   if (!slug |!name)
-<<<<<<< HEAD
     return res.status(400).json({ error: 'Missing required fields' });
-<<<<<<< HEAD
-  } = req.body |{}
-  if (!slug |!name)'
-    return res.status(400).json({ error: 'Missing required fields' });
-pr-12243
-  if (req && req.method !== 'POST')
+
+
+
+  }
 
 
 
 
 
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
   const {
@@ -140,7 +96,6 @@ pr-12243
   const {}
     return res && res.status(405).json({ error: Method not allowed });
   const {}
-=======
     return res.status(400).json({ error: 'Missing required fields',}
 });
   if (req && req.method !== 'POST')
@@ -148,79 +103,18 @@ pr-12243
 });
 
 const {
->>>>>>> origin/chore/fix-lint-and-merge
     slug,
     name,
     services_offered,
     team_size,
     about,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-    const vendor = registerVendor({
-      slug;
-      name;
 
-=======
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       slug,
       name,
       servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [],
       teamSize: Number(teamSize || 0),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      about,  try {
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-      about,  try {
-'
-  if (req.method !== 'POST) return res.status(405).json({ error: Method not allowed' });
-  const { slug, name, servicesOffered, teamSize, about, verificationDocs, caseStudies } = req.body || {}'
-  if (!slug || !name) return res.status(400).json({ error: Missing required fields });'
-  if (getVendorBySlug(slug)) return res.status(409).json({ error: 'Slug already taken' });
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { slug, name, servicesOffered, teamSize, about, verificationDocs, caseStudies } = req.body || {};
-  if (!slug || !name) return res.status(400).json({ error: 'Missing required fields' });
-  if (getVendorBySlug(slug)) return res.status(409).json({ error: 'Slug already taken' });
-<<<<<<< HEAD
-  try {
-    const vendor = registerVendor({
-      slug;
-      name;
-      servicesOffered: Array.isArray(servicesOffered) ? servicesOffered : [];
-      teamSize: Number(teamSize || 0);
-      about;
-      verificationDocs: Array.isArray(verificationDocs) ? verificationDocs : [];
-      caseStudies: Array.isArray(caseStudies) ? caseStudies : []});
-    res.status(201).json({ vendor })
-  } catch (e: any) {
-    res.status(500).json({ error: e.message })
-  }
-}
-=======
-  try {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    const vendor = registerVendor({
-      slug;
-      name;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-=======
 
       about,  try {
 }
@@ -234,12 +128,10 @@ const { slug, name, servicesOffered, teamSize, about, verificationDocs, caseStud
 });
   try {
 
->>>>>>> origin/chore/fix-lint-and-merge
     const vendor = registerVendor({
       slug;
       name;
 
-<<<<<<< HEAD
 
       slug;
       name;
@@ -260,7 +152,6 @@ const { slug, name, servicesOffered, teamSize, about, verificationDocs, caseStud
       slug;
       name;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [];
       teamSize: Number(teamSize || 0);
       about;
@@ -274,69 +165,7 @@ const { slug, name, servicesOffered, teamSize, about, verificationDocs, caseStud
       verificationDocs: Array && Array.isArray(verificationDocs) ? verificationDocs : [],
       caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : []});
     res && res.status(201).json({ vendor })
-<<<<<<< HEAD
-    const vendor = registerVendor({
-      slug;
-      name;
-      verificationDocs: Array.isArray(verificationDocs) ? verificationDocs : []
-      caseStudies: Array.isArray(caseStudies) ? caseStudies : []});
-    res.status(201).json({ vendor })
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12243
-    const vendor = registerVendor({
-      slug;
-      name;
-      servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [];
-      teamSize: Number(teamSize || 0);
-      about;
-      verificationDocs: Array && Array.isArray(verificationDocs) ? verificationDocs : [],
-      caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : []});
 
-    res.status(201).json({ vendor })
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12243
-  } catch (e: any) {
-
-  } catch (e: any) {}
-    res && res.status(500).json({ error: e && e.message });
-      verificationDocs: Array && Array.isArray(verificationDocs) ? verificationDocs : [],}
-      caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : [,}
-
-    res.status(201).json({ vendor })
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12243
-  } catch (e: any) {
-
-  } catch (e: any) {}
-    res && res.status(500).json({ error: e && e.message });
-      verificationDocs: Array && Array.isArray(verificationDocs) ? verificationDocs : []}
-      caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : [}
-});
-    res && res.status(201).json({ vendor })
-
-      servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [];
-      teamSize: Number(teamSize || 0);
-      about;
-      slug;
-      name;
-
-
-      verificationDocs: Array.isArray(verificationDocs) ? verificationDocs : []
-      caseStudies: Array.isArray(caseStudies) ? caseStudies : []});
-    res.status(201).json({ vendor })
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-<<<<<<< HEAD
-  } catch (e: any) {
-    res && res.status(500).json({ error: e && e.message });
-  }
-      verificationDocs: Array && Array.isArray(verificationDocs) ? verificationDocs : [],
-      caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : [],
-    });
-    res && res.status(201).json({ vendor });
-  } catch (e: any) {
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
   } catch (e: any) {
     res && res.status(500).json({ error: e && e.message });
@@ -405,8 +234,7 @@ pr-12243
 }
 
 pr-12243
-=======
-<<<<<<< HEAD
+
 const vendor = registerVendor({
       slug;
       name;
@@ -431,14 +259,9 @@ const vendor = registerVendor({
  }
 }
 
->>>>>>> origin/chore/fix-lint-and-merge
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     verification_docs,
     case_studies;
   } = req.body || {}
-<<<<<<< HEAD
   if (
     return res.status (400).json ({ error: 'Missing required fields' })) {
   $2
@@ -471,17 +294,12 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],c
       case_studies: Array.is_array (case_studies) ? case_studies : []
     })res.status (201).json ({ vendor })} catch (e: any) {res.status (500).json ({ error: e.message })}    res.status (500).json ({ error: e.message })}
 }res.status(500).json({ error: e.message })}    res.status(500).json({ error: e.message })}
-=======
-  if (return res.status (400).json ({ error: 'Missing required fields',}
-})) {$2;}
->>>>>>> origin/chore/fix-lint-and-merge
 }
   if ()) {$2;}
 }
     return res.status (409).json ({ error: 'Slug already taken',}
 })try {const vendor = register_vendor ({slug,name,services_offered: Array.is_array (services_offered) ? services_offered : [],team_size: Number (team_size || 0),about,  try ;
   const vendor = register_vendor ({slug;
-<<<<<<< HEAD
       }
     case_studies} = req.body || {}
 
@@ -490,8 +308,6 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],c
   $2
 }
 
-=======
->>>>>>> origin/chore/fix-lint-and-merge
       name;
       services_offered: Array.is_array (services_offered) ? services_offered : [];}
       team_size: Number (team_size || 0)about;}
@@ -503,7 +319,6 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],c
     })res.status (201).json ({ vendor })} catch (e: any) {res.status (500).json ({ error: e.message })}    res.status (500).json ({ error: e.message })}
 }res.status(500).json({ error: e.message })}    res.status(500).json({ error: e.message })}
 }}
-<<<<<<< HEAD
 
   }
 verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
@@ -512,20 +327,6 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
     res.status (201).json ({ vendor });
   } catch (e: any) {
   res.status (500).json ({ error: e.message}
-=======
-}
-}
-  },
-}
-      team_size: Number (team_size || 0);
-      about;
-      verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
-      case_studies: Array.is_array (case_studies) ? case_studies : [,
-});
-    res.status (201).json ({ vendor });
-  } catch (e) {
-    res.status (500).json ({ error: e.message,}
->>>>>>> origin/chore/fix-lint-and-merge
 });
   }
 verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
@@ -533,62 +334,7 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
    ,
 });
     res.status (201).json ({ vendor });
-<<<<<<< HEAD
-<<<<<<< HEAD
-  } catch ("e": any) {
-    }
-    res.status (500).json ({ "error": e.message
-});
-  }    res.status (500).json ({ "error": e.message
-=======
-  } catch (e) {
-    res.status (500).json ({ error: e.message,}
-});
-  }    res.status (500).json ({ error: e.message,}
->>>>>>> origin/chore/fix-lint-and-merge
-});
-  }
-}
 
-<<<<<<< HEAD
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-}
-  }
-  }
-}
-  }
-}
-
-    res.status(500).json({ "error": e.message
-});
-  }    res.status(500).json({ "error": e.message })
-  }
-}
-
-
-
-
-origin/cursor/automate-test-improve-and-merge-code-20a4
-pr-12243
-
-
-  }
-}
-  }
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12243
-}
-  }
-}
-}
-  }
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12243
-  }}
-=======
     res.status(500).json({ error: e.message,}
 });
   }    res.status(500).json({ error: e.message })
@@ -596,8 +342,6 @@ pr-12243
 }
   },
 }
->>>>>>> origin/chore/fix-lint-and-merge
-=======
   } catch (e: any) {
     res.status (500).json ({ error: e.message });
   }    res.status (500).json ({ error: e.message });
@@ -606,9 +350,4 @@ pr-12243
   }    res.status(500).json({ error: e.message })
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+}

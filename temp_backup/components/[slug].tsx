@@ -1,6 +1,6 @@
 if (!service) {
   return (<UltraAdvancedFuturisticBackground> </div> </div> </UltraAdvancedFuturisticBackground> return (<UltraAdvancedFuturisticBackground> <Head>) ) 
-}</ul> </div> <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) 
+}</ul> </div> <div className='bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit' > <div className='flex items-end justify-between mb-3' > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) 
 }//Static export support: generate root-level pages for service slugs type Svc = typeof enhancedRealMicroSaasServices[number]
 function collectAllServices () : Svc[] {
   return enhancedRealMicroSaasServices .concat (
@@ -44,7 +44,7 @@ function collectAllServices(): any (): Svc[] {;
   )function normalizeSlug(value: string): string {return value;
     .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')function extractRootSlugFromLink(link?: string): string | null {if (!link) return null;
   try {const url = new URL(link;
-  const path = url.pathname.replace(/^\/+|\/+$/g, '')// Accept root-level slugs like "/ai-energy-management", ignore nested like "services/...";
+  const path = url.pathname.replace(/^\/+|\/+$/g, '')// Accept root-level slugs like '/ai-energy-management', ignore nested like 'services/...';
     if (path && !path.includes('/')) return path;}
     return null;}
   } catch {return null;}

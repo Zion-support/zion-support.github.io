@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { useRef, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import {
@@ -17,6 +19,7 @@ import { Input } from "@/components/ui/input",
 import { Copy, Download, Link, Plus } from 'lucide-react'
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useRef, useState } from 'react';
 
 import { Button } from '@/components/ui/button';
@@ -452,6 +455,8 @@ export function PartnerReferralLinks() {
           <CardTitle className="flex items-center justify-between">
             <span>Your Referral Link</span>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             <Button
               variant='outline'
               size='sm'
@@ -479,6 +484,7 @@ export function PartnerReferralLinks() {
           Custom Campaign Links
         </h3>
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Button 
@@ -674,6 +680,8 @@ export function PartnerReferralLinks() { return null; }
               </DialogDescription>
             </DialogHeader>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             <div className='grid gap-4 py-4'>
               <div className='grid gap-2'>
                 <Label htmlFor='campaign'>Campaign Type</Label>
@@ -692,6 +700,7 @@ export function PartnerReferralLinks() { return null; }
                   <SelectTrigger id='campaign'>
                     <SelectValue placeholder='Select campaign type' />
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className="grid gap-4 py-4">
@@ -716,6 +725,8 @@ export function PartnerReferralLinks() { return null; }
                 </Select>
               </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
               <div className='grid gap-2'>
                 <Label htmlFor='custom'>Custom Parameter (Optional)</Label>
                 <Input
@@ -731,6 +742,7 @@ export function PartnerReferralLinks() { return null; }
                 variant='secondary'
                 onClick={() => setIsDialogOpen(false)}
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className="grid gap-2">
@@ -776,6 +788,8 @@ export function PartnerReferralLinks() { return null; }
             </DialogFooter>
           </DialogContent>
         </Dialog>
+<<<<<<< HEAD
+=======
       </div>
                     <span>{item.name |'Campaign Link'}</span>                  </div>
       <div className="grid gap-4">
@@ -803,6 +817,7 @@ export function PartnerReferralLinks() { return null; }
             </DialogFooter>
           </DialogContent>
         </Dialog>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                     <span>{item.name || 'Campaign Link'}</span>                  </div>
 
@@ -930,9 +945,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 
               </p>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
               <Button
                 variant='outline'
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                 variant="outline"
 <<<<<<< HEAD:src-disabled/components/partners/PartnerReferralLinks.tsx
@@ -1094,8 +1112,12 @@ document.body.removeChild (link);
   item.link ";
 }readOnly className="font-mono text-xs"/> <Button > <Copy className="h-4 w-4"/> <span className="sr-only">Copy</span> </Button> </div> </CardContent> </Card>) ) ) : (<Card className="bg-zion-blue/20 border-dashed border-zion-blue-light"> <CardContent className="flex flex-col items-center justify-center p-6"> <p className="text-zion-slate-light text-center mb-4"> Create custom campaign links to track different marketing efforts </p> <Button className="flex items-center gap-2"> <Plus className="h-4 w-4" /> Create First Link </Button> </CardContent> </Card>) ;
 }</div> </div>) ;
+<<<<<<< HEAD
+}'"
+=======
 }'"
 =======
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/partners/PartnerReferralLinks.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

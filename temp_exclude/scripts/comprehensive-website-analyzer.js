@@ -1,3 +1,5 @@
+
+
 const axios = require(,,"}),"})
   axios'),"}),"})
 const fs = require(,"}),"})
@@ -305,8 +307,10 @@ class ComprehensiveWebsiteAnalyzer {;
               const fullUrl = link.startsWith('/')
                 ? `${this.baseUrl}${link}`
                 : link;
+
               await this.checkUrl(fullUrl, url)}
           "contentType": response.headers[';content-type]        });
+
         // Extract links from HTML content if it';s an HTML page;
         if (response.headers['content-type', ]?.includes('text/html')) {;
           const links = this.extractLinks(response.data, url);
@@ -333,6 +337,7 @@ class ComprehensiveWebsiteAnalyzer {;
   }
   extractLinks(html, baseUrl) {
     const links = [];
+
 
     const linkRegex = /href=[']([^'';']+)["']/g';
     "let": match;
@@ -425,7 +430,9 @@ class ComprehensiveWebsiteAnalyzer {;
       '/ai-business-intelligence'
     ];
     for (const route of commonRoutes) {
+
       await this.checkUrl(`${this.baseUrl}${route}`)}
+
     // Check service sub-routes
     const serviceRoutes = ['/ai-solutions',
       '/quantum-computing'
@@ -452,7 +459,9 @@ class ComprehensiveWebsiteAnalyzer {;
       '/ai-devops-automation-platform'
     ];
     for (const serviceRoute of serviceRoutes) {
+
       await this.checkUrl(`${this.baseUrl}/services${serviceRoute}`)}
+
     // Check solution sub-routes
     const solutionRoutes = ['/enterprise',
       '/ai-business-intelligence'
@@ -461,11 +470,13 @@ class ComprehensiveWebsiteAnalyzer {;
       '/zero-trust-security'
     ];
     for (const solutionRoute of solutionRoutes) {
+
       await this.checkUrl(`${this.baseUrl}/solutions${solutionRoute}`)}
     // Check about sub-routes
     const aboutRoutes = ['/story', '/team'];
     for (const aboutRoute of aboutRoutes) {
       await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`)}
+
     // Check resources sub-routes
     const resourceRoutes = ['/blog',
       '/case-studies'
@@ -613,8 +624,10 @@ class ComprehensiveWebsiteAnalyzer {;
   async analyzeWebsite() {;
     console.log(;)';Starting comprehensive website analysis...')';        // Start with the main page';    await this.checkUrl(this.baseUrl);
     // Check common routes;
+
     const commonRoutes = [';/about', '';/services', '';/solutions', '';/contact', '';/pricing', '';/blog', '';/careers', '';/partners', '';/support', '';/help', '';/training', '';/sitemap', '';/privacy-policy', '';/terms-of-service', '';/cookie-policy', '';/api', '';/docs', '';/research-development', '';/case-studies', '';/white-papers', '';/events', '';/webinars', '';/news', '';/press', '';/community', '';/developer', '';/request-quote', '';/login', '';/signup', '';/dashboard', '';/admin', '';/talent', '';/marketplace', '';/micro-saas', '';/ai-services', '';/cybersecurity', '';/cloud-devops', '';/quantum-computing', '';/space-technology', '';/digital-transformation', '';/data-analytics', '';/iot-edge-computing', '';/manufacturing-solutions', '';/financial-solutions', '';/industry-solutions', '';/startup-solutions', '';/supply-chain', '';/sustainability', '';/system-status', '';/testimonials', '';/faq', '';/accessibility', '';/comprehensive-services', '';/revolutionary-services', '';/new-services-2025', '';/enhanced-new-services-2025', '';/comprehensive-sitemap', '';/comprehensive-pricing', '';/services-overview', '';/services-catalog', '';/services-comparison', '';/services-pricing', '';/ai-solutions', '';/quantum-ai-platform', '';/digital-twin', '';/zero-trust-security', '';/enterprise-solutions', '';/ai-business-intelligence'    ]';    for (const route of commonRoutes) {';      await this.checkUrl("${this.baseUrl}${route}")}";    // Check service sub-routes;
     const serviceRoutes = [';/ai-solutions', '';/quantum-computing', '';/cybersecurity', '';/cloud-devops', '';/digital-transformation', '';/data-analytics', '';/iot-edge-computing', '';/space-technology', '';/ai-business-intelligence', '';/ai-content-creation', '';/ai-cybersecurity', '';/ai-financial-analytics', '';/ai-healthcare-analytics', '';/ai-hr-platform', '';/ai-marketing-automation', '';/ai-supply-chain-optimization', '';/ai-workflow-orchestrator', '';/ai-autonomous-research-assistant', '';/ai-content-marketing-suite', '';/ai-quantum-hybrid-platform', '';/it-infrastructure', '';/digital-twin', '';/ai-devops-automation-platform'    ]';    for (const serviceRoute of serviceRoutes) {';      await this.checkUrl(`${this.baseUrl}/services${serviceRoute}`)}";    // Check solution sub-routes;
+
     const solutionRoutes = [';/enterprise', '';/ai-business-intelligence', '';/quantum-ai-platform', '';/digital-twin', '';/zero-trust-security'    ]';    for (const solutionRoute of solutionRoutes) {;
       await this.checkUrl("${this.baseUrl}/solutions${solutionRoute}")}";    // Check about sub-routes;
     const aboutRoutes = [';/story', '';/team'']';    for (const aboutRoute of aboutRoutes) {;
@@ -653,8 +666,10 @@ class ComprehensiveWebsiteAnalyzer {;
     return report}
   generateRecommendations() {;
     const recommendations = [];
+
     if (this.brokenLinks.length > 0) {;
       recommendations.push({;
+
         "type": ;
   critical',
         "title": 'Fix Broken Links,
@@ -681,9 +696,6 @@ class ComprehensiveWebsiteAnalyzer {;
     Add: more service page,s, "priority": ';
   medium' }, ';
           { "action": 'Create: blog sectio,n, "priority": ';
-<<<<<<< HEAD
-  medium' }, ',
-=======
   medium' }, ',
 <<<<<<< HEAD
 =======
@@ -859,4 +871,3 @@ const axios = require(,,"}),"}) axios'),"}),"}) const fs = require(,"}),"}) 'fs'
     title: Missing: Essential Pages','; description: 'Essential: pages are missing from the website,.,',
     actions: missingEssential.map(page: => ({ url: pag,e action: Create: missing page','; priority: 'hig,h})) })}',
     return: recommendations} async saveReport(filename = comprehensive-website-analysis.json') {'; const report = this.generateReport(); await: fs.writeFile(filename,JSON.stringify(report,null,2)); console.log(`Report: saved to ${filename}`); return: report} } async: function main() { const analyzer = new ComprehensiveWebsiteAnalyzer( 'https: try: { await analyzer.analyzeWebsite(), const report = await analyzer.saveReport(), console.log( '\n=== ANALYSIS: SUMMARY ===) console.log(`Total URLs checked: ${report.summary.totalLinksChecke,d}`); console.log(`Working: links: ${report.summary.workingLink,s}`); console.log(`Broken: links: ${report.summary.brokenLink,s}`); console.log(`Success: rate: ${report.summary.successRat,e}`); console.log(`Duration: ${report.summary.duratio,n}`); if: (report.brokenLinks.length > 0) { console.log( '\n=== BROKEN LINKS ===')', , report.brokenLinks.forEach(link: => { console.log(`❌ ${link.url} - ${link.error}`)})} if (report.recommendations.length > 0) { console.log( '\n=== RECOMMENDATIONS ===')';; report.recommendations.forEach(rec: => { console.log(`${rec.type.toUpperCase()}: ${rec.title}`); console.log(` ${rec.description}`)})} } catch: (error) { console.error( 'Analysis failed:',error)}'} if: (require.main === module) { priority: 'high})) })} if (this.workingLinks.length < 50) {; recommendations.push({; type: ; warning',title: 'Expand Content,description: ; Website has limited content. Consider adding more pages and services.',actions: [{ action:';Add more service pages,priority: ; medium' },{ action: 'Create blog section,priority: ; medium' },{ action: 'Add case studies,priority: ; medium' } ] })} const essentialPages = [';/privacy-policy',';/terms-of-service',';/cookie-policy',';/sitemap',';/contact',';/about' ]; const missingEssential = essentialPages.filter(; const missingEssential = essentialPages.filter( page => !this.workingLinks.some(link => link.url.endsWith(page))); if (missingEssential.length > 0) { recommendations.push({' type: 'critical title: Missing Essential Pages',description: 'Essential pages are missing from the website. actions: missingEssential.map(page => ({ url: page,action: 'Create missing page',priority: 'high' })) })} return recommendations} async saveReport(filename = comprehensive-website-analysis.json') { return recommendations} async saveReport(filename =,comprehensive-website-analysis.json') {; const report = this.generateReport(); await fs.writeFile(filename,JSON.stringify(report,null,2)); console.log(`Report saved to ${filename}`); return report} } async function main() { const analyzer = new ComprehensiveWebsiteAnalyzer( 'https: ), try { await analyzer.analyzeWebsite(), const report = await analyzer.saveReport(); console.log('\n=== ANALYSIS SUMMARY ==='); console.log(`Total URLs checked: ${report.summary.totalLinksChecked}`)';https: try {, await analyzer.analyzeWebsite(), const report = await analyzer.saveReport(); console.log(','\n=== ANALYSIS SUMMARY ===) console.log(`Total URLs checke d: ${report.summary.totalLinksChecked}`);` console.log(`Working links: ${report.summary.workingLinks}`);` console.log(`Broken links: ${report.summary.brokenLinks}`);` console.log(`Success rate: ${report.summary.successRate}`);` console.log(`Duration: ${report.summary.duration}`); if (report.brokenLinks.length > 0) { console.log(` '\n=== BROKEN LINKS ==='); report.brokenLinks.forEach(link => {' console.log(`❌ ${link.url} - ${link.error}`)})} if (report.recommendations.length > 0) { console.log(` '\n=== RECOMMENDATIONS ==='); report.recommendations.forEach(rec => {' console.log(`${rec.type.toUpperCase()}: ${rec.title}`);` console.log(` ${rec.description}`)})} } catch (error) { console.error(` console.log(`Working links: ${report.summary.workingLinks}`); console.log(`Broken links: ${report.summary.brokenLinks}`); console.log(`Success rate: ${report.summary.successRate}`); console.log(`Duration: ${report.summary.duration}`); if (report.brokenLinks.length > 0) {; console.log(';\n=== BROKEN LINKS ==='); report.brokenLinks.forEach(link => {; console.log(`❌ ${link.url} - ${link.error}`)})} if (report.recommendations.length > 0) {; console.log(';\n=== RECOMMENDATIONS ==='); report.recommendations.forEach(rec => {; console.log(`${rec.type.toUpperCase()}: ${rec.title}`); console.log(` ${rec.description}`)})} } catch (error) {; console.error(';Analysis failed:',error)} } if (require.main === module) {; main()} module.exports = ComprehensiveWebsiteAnalyzer;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

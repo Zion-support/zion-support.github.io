@@ -8,6 +8,8 @@ const SecurityAuditingChat: NextPage = () => ;
       <Head />;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 const SecurityAuditingChat: NextPage = () => ;
   return (<div />;
       <Head />;
@@ -33,6 +35,7 @@ const SecurityAuditingChat: NextPage = () => {
 ;
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (<div>;
       <Head>;
         <title>SecurityAuditingChat - Zion Tech Solutions</title>;
@@ -65,7 +68,10 @@ const SecurityAuditingChat: NextPage = () => {
     <div />
       <Head />
 ;
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const SecurityAuditingChat: NextPage = () => {;
   return (
     <div />;
@@ -73,22 +79,32 @@ const SecurityAuditingChat: NextPage = () => {
         <title />SecurityAuditingChat - Zion Tech Solutions</title>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 }
 return (;
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import type { NextPage } from "next";""
 import Head from "next/head";""
 import Link from "next/link";""
 const SecurityAuditingChat: NextPage = () => {
   return (
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <div>
 </div>
       <Head>
@@ -102,7 +118,10 @@ const SecurityAuditingChat: NextPage = () => {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const SecurityAuditingChat: NextPage = () => {
   return (
     <div />
@@ -111,9 +130,13 @@ const SecurityAuditingChat: NextPage = () => {
       </Head>;
 
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <main>
         <h1>SecurityAuditingChat</h1>
         <p>Service details coming soon...</p>
@@ -152,23 +175,33 @@ import Head from './next / head';
 import Link from './next / link';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (<div>;
       <Head>;
         <title > SecurityAuditingChat - Zion Tech Solutions</title>;
         <meta name="description" content="SecurityAuditingChat service" />{" "}"
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const SecurityAuditingChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title  /> SecurityAuditingChat - Zion Tech Solutions</title>;
         <meta name=\"description\" content=\"SecurityAuditingChat service\" />{\" \"}
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </Head>;
       <main />;
         <h1  /> SecurityAuditingChat</h1>;
@@ -193,23 +226,33 @@ export default SecurityAuditingChat;<div />;
   )},export default SecurityAuditingChat;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (<div>;
       <Head>;
         <title>SecurityAuditingChat - Zion Tech Solutions</title>;
         <meta name="description" content="SecurityAuditingChat service" />{" "}"
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const SecurityAuditingChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title />SecurityAuditingChat - Zion Tech Solutions</title>;
         <meta name=\"description\" content=\"SecurityAuditingChat service\" />{\" \"}
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </Head>;
       <main />;
         <h1 />SecurityAuditingChat</h1>;
@@ -226,6 +269,11 @@ export default SecurityAuditingChat;<title />SecurityAuditingChat - Zion Tech So
 
 export default SecurityAuditingChat;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const SecurityAuditingChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
 const SecurityAuditingChat: NextPage = () => {
 =======
 <<<<<<< HEAD
@@ -233,6 +281,7 @@ const SecurityAuditingChat: NextPage = () => {
 const SecurityAuditingChat: NextPage = () => {
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
  ;
   return (
     <div />
@@ -255,6 +304,11 @@ export default SecurityAuditingChat;
         <title />SecurityAuditingChat - Zion Tech Solutions</title>
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const SecurityAuditingChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
 const SecurityAuditingChat: NextPage = () => {
 =======
 <<<<<<< HEAD
@@ -262,6 +316,7 @@ const SecurityAuditingChat: NextPage = () => {
 const SecurityAuditingChat: NextPage = () => {
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
  ;
   return (
     <div />

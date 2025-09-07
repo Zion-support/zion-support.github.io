@@ -1,7 +1,11 @@
 // Common type definitions;
 <<<<<<< HEAD
+:src_backup/types/common.ts
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export interface ApiResponse<T = any>  {data: T;
   message: string;
   success: boolean;
@@ -9,7 +13,7 @@ export interface ApiResponse<T = any>  {data: T;
 }export interface PaginationParams  {page: number;
   limit: number;
   sortBy?: string;
-  sortOrder?: 'asc | desc';
+  sortOrder?: 'asc' | 'desc';
 }export interface PaginatedResponse<T> extends ApiResponse<T[]>  {pagination: {page: number;
     limit: number;
     total: number;
@@ -29,8 +33,7 @@ export interface PaginationParams {
   page: number;
   limit: number;
   sortBy?: string;
-  sortOrder?: 'asc | desc';}
-}
+  sortOrder?: 'asc' | 'desc';}
 }
 
 export interface PaginatedResponse<T /> extends ApiResponse<T[] />  {pagination: {page: number;
@@ -43,18 +46,21 @@ export interface User {
   id: string;
   email: string;
   name: string;
-  role: 'admin | user' | 'moderator;
+  role: 'admin' | 'user' | 'moderator';
   createdAt: string;
+<<<<<<< HEAD
+:src_backup/types/common.ts
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   updatedAt: string;
 }export interface Service  {id: string;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
   updatedAt: string;}
-}
 }
 
 export interface Service  {id: string;
@@ -63,8 +69,12 @@ export interface Service  {id: string;
   category: string;
   pricing: {starter: number;
 <<<<<<< HEAD
+:src_backup/types/common.ts
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     professional: number;
     enterprise: number;
 =======
@@ -75,9 +85,13 @@ export interface Service  {id: string;
   }features: string[];
   benefits: string[];
 <<<<<<< HEAD
+  status: 'active' | 'inactive' | 'beta';
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   status: active' | 'inactive | beta';
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }export interface ContactForm  {name: string;
 =======
 >>>>>>> merged-prs-20250907-203621
@@ -95,15 +109,18 @@ export interface ContactForm {
   phone?: string;
   message: string;
 <<<<<<< HEAD
+:src_backup/types/common.ts
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   service?: string;
 }export interface Testimonial  {id: string;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
   service?: string;}
-}
 }
 
 export interface Testimonial {
@@ -115,15 +132,18 @@ export interface Testimonial {
   rating: number;
   service: string;
 <<<<<<< HEAD
+:src_backup/types/common.ts
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   createdAt: string;
 }export interface CaseStudy  {id: string;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
   createdAt: string;}
-}
 }
 
 export interface CaseStudy {
@@ -136,8 +156,12 @@ export interface CaseStudy {
   results: string[];
   timeline: string;
 <<<<<<< HEAD
+:src_backup/types/common.ts
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   service: string;
 }export interface FAQ  {id: string;
   question: string;
@@ -152,7 +176,6 @@ export type DeepPartial<T> = {[P in keyof T]?: T[P] extends object ? DeepPartial
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
   service: string;}
-}
 }
 
 export interface FAQ  {id: string;

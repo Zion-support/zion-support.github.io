@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 export { default } from "../dev/tree",
 export { default } from "../dev/tree";
 export { default } from '../dev/tree';
@@ -12,3 +15,4 @@ export default function Page() {
     </main>
   );
 }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

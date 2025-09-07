@@ -40,7 +40,11 @@ if ( {) {$2;
       toast.error ("Please enter a wallet address for blockchain deployment")return;"
     }
     try {await on_deploy (deployment_options)} catch (error) {logErrorToProduction ('Deployment "error":', { "data": error })}'
+<<<<<<< HEAD
+  }),const handleDeployContract = async () => {if (deploymentOptions.deployToChain && !deploymentOptions.walletAddress) {toast.error("Please enter a wallet address for blockchain deployment"),return;"
+=======
   }}),const handleDeployContract = async () => {if (deploymentOptions.deployToChain && !deploymentOptions.walletAddress) {toast.error("Please enter a wallet address for blockchain deployment"),return;"
+>>>>>>> origin/resolved-merge-conflicts
 }
 import { toast } from "sonner",import {logErrorToProduction} from '@/utils/productionLogger',interface SmartContractDeploymentProps  {"solidityCode": string,"onDeploy": ("options": DeploymentOptions) => Promise<void>,"isDeploying": boolean;'
 }export function SmartContractDeployment() {const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({"network": 'none',"useEscrow": true,"deployToChain": false,"walletAddress": '';'

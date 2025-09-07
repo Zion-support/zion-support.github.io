@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src-disabled/components/ui/menubar.tsx
 =======
 import * as React from "react"
@@ -22,6 +24,7 @@ import { cn } from "@/lib/utils"
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/ui/menubar.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const MenubarMenu = MenubarPrimitive.Menu
 
 const MenubarGroup = MenubarPrimitive.Group
@@ -41,10 +44,13 @@ const Menubar = React.forwardRef<
     ref={ref}
     className={cn(
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       &quot;flex h-10 items-center space-x-1 rounded-md border bg-background p-1&quot;
 ursor/fix-website-loading-errors-and-merge-6662
       &quot;flex h-10 items-center space-x-1 rounded-md border bg-background p-1&quot;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <<<<<<< HEAD:src-disabled/components/ui/menubar.tsx
       "flex h-10 items-center space-x-1 rounded-md border bg-background p-1",
@@ -64,9 +70,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 Menubar.displayName = MenubarPrimitive.Root.displayName;
 const MenubarTrigger = React.forwardRef<;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   React.ElementRef<typeof MenubarPrimitive.Trigger>;
   React.ElementRef<typeof MenubarPrimitive.Trigger>;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <<<<<<< HEAD:src-disabled/components/ui/menubar.tsx
 =======
@@ -104,6 +113,9 @@ MenubarTrigger.displayName = MenubarPrimitive.Trigger.displayName;
 const MenubarSubTrigger = React.forwardRef<;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import * as React from &quot;react & quot;
@@ -153,6 +165,8 @@ const MenubarSubTrigger = React.forward_ref<;
 >(({ className, inset, children, ...props }, ref) => (;
   <MenubarPrimitive.SubTrigger;
     ref={ref}
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD:src-disabled/components/ui/menubar.tsx
 =======
@@ -183,6 +197,7 @@ className={cn(
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
       inset && "pl-8",
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/ui/menubar.tsx
     className={cn(
@@ -202,10 +217,13 @@ className={cn(
   >;
     {children}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <ChevronRight className=&quot;ml-auto h-4 w-4&quot; />
 ursor/fix-website-loading-errors-and-merge-6662
 <ChevronRight className=&quot;ml-auto h-4 w-4&quot; />
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <<<<<<< HEAD:src-disabled/components/ui/menubar.tsx
 =======
@@ -231,10 +249,13 @@ const MenubarSubContent = React.forwardRef<
     ref={ref}
     className={cn(
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       &quot;z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
 ursor/fix-website-loading-errors-and-merge-6662
       &quot;z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       "z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
 
@@ -257,6 +278,8 @@ const MenubarContent = React.forwardRef<
 >(
   (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     { className, align = &quot;start&quot;, alignOffset = -4, sideOffset = 8, ...props }
     { className, align = &quot;start&quot; alignOffset = -4, sideOffset = 8, ...props },
     { className, align = "start", alignOffset = -4, sideOffset = 8, ...props },
@@ -265,6 +288,7 @@ const MenubarContent = React.forwardRef<
     { className, align = &quot;start&quot; alignOffset = -4, sideOffset = 8, ...props },
     { className, align = "start", alignOffset = -4, sideOffset = 8, ...props },
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <<<<<<< HEAD:src-disabled/components/ui/menubar.tsx
 =======
@@ -294,12 +318,15 @@ const MenubarContent = React.forwardRef<
         alignOffset={alignOffset}
         sideOffset={sideOffset}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 className={cn(
           &quot;z-50 min-w-[12rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
 ursor/fix-website-loading-errors-and-merge-6662
 className={cn(
           &quot;z-50 min-w-[12rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <<<<<<< HEAD:src-disabled/components/ui/menubar.tsx
 =======
@@ -325,6 +352,9 @@ MenubarContent.displayName = MenubarPrimitive.Content.displayName;
 const MenubarItem = React.forwardRef<;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <<<<<<< HEAD:src-disabled/components/ui/menubar.tsx
 =======
@@ -383,6 +413,8 @@ const MenubarItem = React.forward_ref<;
 >(({ className, inset, ...props }, ref) => (;
   <MenubarPrimitive.Item;
     ref={ref}
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD:src-disabled/components/ui/menubar.tsx
 =======
@@ -413,6 +445,7 @@ className={cn(
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       inset && "pl-8",
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/ui/menubar.tsx
     className={cn(
@@ -434,9 +467,12 @@ className={cn(
 MenubarItem.displayName = MenubarPrimitive.Item.displayName;
 const MenubarCheckboxItem = React.forwardRef<;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   React.ElementRef<typeof MenubarPrimitive.CheckboxItem>;
   React.ElementRef<typeof MenubarPrimitive.CheckboxItem>;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <<<<<<< HEAD:src-disabled/components/ui/menubar.tsx
 =======
@@ -527,6 +563,8 @@ const MenubarRadioItem = React.forwardRef<;
   <MenubarPrimitive.RadioItem;
     ref={ref}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   React.ElementRef<typeof MenubarPrimitive.RadioItem>;
 >(({ className, children, ...props }, ref) => (;
   <MenubarPrimitive.RadioItem;
@@ -567,6 +605,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     ref={ref}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
@@ -614,6 +653,8 @@ className={cn (
 ));
 MenubarRadioItem.displayName = MenubarPrimitive.RadioItem.displayName;
 const MenubarLabel = React.forwardRef<;
+<<<<<<< HEAD
+=======
   React.ElementRef<typeof MenubarPrimitive.Label>;
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Label> & {inset?: boolean;
   React.ElementRef<typeof MenubarPrimitive.Label>,;
@@ -634,6 +675,7 @@ const MenubarLabel = React.forward_ref<;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/ui/menubar.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   React.ElementRef<typeof MenubarPrimitive.Label>,;
 
@@ -645,6 +687,8 @@ const MenubarLabel = React.forward_ref<;
   <MenubarPrimitive.Label;
     ref={ref}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 className={cn(
       &quot;px-2 py-1.5 text-sm font-semibold&quot;
       inset && &quot;pl-8&quot;
@@ -652,6 +696,7 @@ className={cn(
       "px-2 py-1.5 text-sm font-semibold",
       inset && "pl-8",
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     className={cn(
       "px-2 py-1.5 text-sm font-semibold",
@@ -672,10 +717,13 @@ className={cn(
 MenubarLabel.displayName = MenubarPrimitive.Label.displayName;
 const MenubarSeparator = React.forwardRef<;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   React.ElementRef<typeof MenubarPrimitive.Separator>;
 ursor/fix-website-loading-errors-and-merge-6662
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Separator>;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <<<<<<< HEAD:src-disabled/components/ui/menubar.tsx
 =======
@@ -689,7 +737,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >(({ className, ...props }, ref) => (;
   <MenubarPrimitive.Separator;
     ref={ref}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src-disabled/components/ui/menubar.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     className={cn("-mx-1 my-1 h-px bg-muted", className)}
 
@@ -717,7 +768,10 @@ const MenubarShortcut = ({
   return (
     <span
       className={cn(
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src-disabled/components/ui/menubar.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         "ml-auto text-xs tracking-widest text-muted-foreground",
 
@@ -747,6 +801,8 @@ const MenubarShortcut = ({
   );
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 MenubarShortcut.displayname = &quot;MenubarShortcut&quot;
 export {
   Menubar
@@ -765,6 +821,7 @@ export {
   MenubarGroup
   MenubarSub
   MenubarShortcut}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         className
       )}
@@ -818,6 +875,9 @@ export {
   MenubarRadioItem,
   MenubarPortal,
   MenubarSubContent,
+<<<<<<< HEAD
+  MenubarSubTrigger,
+=======
 <<<<<<< HEAD:src-disabled/components/ui/menubar.tsx
   MenubarSubTrigger,
 =======
@@ -833,3 +893,4 @@ export {
   MenubarGroup,
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/ui/menubar.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

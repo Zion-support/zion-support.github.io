@@ -44,18 +44,21 @@ const { execSync } = require('child_process')
 
 console.log('====')
   log(message, type = 'info')
-    const prefix = type === 'error' ? '' : type === 'success' ? '' : 'ℹ'
+const prefix = type === 'error' ? '' : type === 'success' ? '' : 'ℹ';
         "encoding"
         "stdio"
       this.log(`${description} "failed"`)
-    const lintCommands = [{ "cmd": 'npx eslint . --ext .ts,.tsx,.js,.jsx', "desc"}]
+const lintCommands = [{ "cmd": 'npx eslint . --ext .ts,.tsx,.js,.jsx', "desc"}];
       { "cmd": 'npx tsc --noEmit', "desc"}
       await this.runCommand(cmd, desc, { "stdio"})
-    const buildCommands = [{ "cmd": 'npm run build', "desc"}]
+const buildCommands = [{ "cmd": 'npm run build', "desc"}];
       { "cmd": 'npx next build', "desc"}
-      const result = await this.runCommand(cmd, desc, { "stdio"})
+const result = await this.runCommand(cmd, desc, { "stdio"});
       "recommendations"
     this.log(`Report saved "to"`)
+<<<<<<< HEAD
+      this.log(` Enhanced automation suite "failed"`)
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       this.log(` Enhanced automation suite "failed"`)
@@ -123,3 +126,4 @@ console.log('====)
 =======
       this.log(` Enhanced automation suite "failed"`)
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -227,7 +227,6 @@ return (
       </div>;
       {certifications && certifications.length > 0 && (;
 
-<<<<<<< HEAD:src-disabled/components/resume-builder/forms/certifications/CertificationsForm.tsx
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
@@ -238,14 +237,6 @@ import { useResume } from '@/hooks/useResume';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { format } from 'date-fns';
-=======
-        <CertificationsList
-          certifications={certifications}
-          onEdit={handleEdit}
-          onDelete={handleDelete}        />;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/resume-builder/forms/certifications/CertificationsForm.tsx
 
 
 import { useState  } from 'react';
@@ -261,120 +252,11 @@ import { format  } from 'date-fns';
 import { CertificationsList  } from './CertificationsList';
 import { CertificationFormFields  } from './CertificationFormFields';
 
-<<<<<<< HEAD:src-disabled/components/resume-builder/forms/certifications/CertificationsForm.tsx
 import { CertificationFormValues, certificationSchema } from './types';
 interface CertificationsFormProps {
   resumeId: string;
   certifications: Certification[];
   onComplete: () => void;
-=======
-        <CertificationsList 
-          certifications={certifications} 
-          onEdit={handleEdit} 
-          onDelete={handleDelete} 
-        />
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      )}
-
-      <div className="bg-muted/40 p-6 rounded-lg">
-        <h3 className="text-md font-medium mb-4">
-<<<<<<< HEAD
-
-      <div className="bg-muted/40 p-6 rounded-lg">
-        <h3 className="text-md font-medium mb-4">
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          {editingId ? 'Update Certification' : 'Add Certification'}
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
-            <CertificationFormFields form={form} />
-<<<<<<< HEAD
-          {editingId ? 'Update Certification' : 'Add Certification'}
-        </h3>
-        <Form {...form}>
-          <form
-            onSubmit={form.handleSubmit(handleAddOrUpdate)}
-            className='space-y-4'
-          >
-            <CertificationFormFields form={form} />
-
-
-
-
-            {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-
-            <div className="flex justify-between pt-2">
-
-              <Button
-            <div className='flex justify-between pt-2'>
-            {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-            <div className="flex justify-between pt-2">
-            {error && (
-              <Alert variant='destructive'>
-                <AlertDescription>{error}</AlertDescription>
-              </Alert>
-            )}
-            <div className='flex justify-between pt-2'>
-=======
-
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-            {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-
-            <div className="flex justify-between pt-2">
-<<<<<<< HEAD
-                    setEditingId(null)
-                    setEditingId(null)
-                    form.reset({
-                      name: ''
-                      issuing_organization: ''
-                      issue_date: ''
-                      expiration_date: ''
-                      credential_id: ''
-                      credential_url: ''
-                    })
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-              <Button
-                type='button'
-                variant='outline'
-                onClick={() => {
-                  if (editingId) {
-
-
-                    setEditingId(null),
-                    setEditingId(null),
-
-
-<<<<<<< HEAD
-                    form.reset({
-                    setEditingId(null),
-                    setEditingId(null),
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                    form.reset({
-                      name: '',
-                      issuing_organization: '',
-                      issue_date: '',
-                      expiration_date: '',
-                      credential_id: '',
-<<<<<<< HEAD
-                      credential_url: ''})
-                      credential_url: '',
-                    })
-ursor/fix-website-loading-errors-and-merge-6662
-                  } else {
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/resume-builder/forms/certifications/CertificationsForm.tsx
 
 
                     setEditingId(null),
@@ -432,7 +314,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   }
                 }}
               >
-<<<<<<< HEAD:src-disabled/components/resume-builder/forms/certifications/CertificationsForm.tsx
                 {editingId ? 'Cancel' : 'Back'}'
               </Button>
               <div className="flex gap-2">"
@@ -574,25 +455,6 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
                 {editingId ? 'Cancel' : 'Back'}
               </Button>
 
-=======
-                {editingId ? 'Cancel' : 'Back'}
-<<<<<<< HEAD
-              </Button>
-              <div className='flex gap-2'>
-                <Button type='submit' disabled={isLoading}>
-                  {isLoading && (
-                    <Loader2 className='mr-2 h-4 w-4 animate-spin' />
-                  )}
-                  {editingId ? 'Update' : 'Add'} Certification
-                </Button>
-                <Button type='button' onClick={onComplete}>
-=======
-
-              </Button>
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/resume-builder/forms/certifications/CertificationsForm.tsx
               <div className="flex gap-2">
                 <Button type="submit" disabled={isLoading}>
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
@@ -609,12 +471,6 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       </div>
     </div>
   )
-<<<<<<< HEAD:src-disabled/components/resume-builder/forms/certifications/CertificationsForm.tsx
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/resume-builder/forms/certifications/CertificationsForm.tsx
               </Button>;
               <div className='flex gap-2'>;
                 <Button type='submit' disabled={isLoading}>;
@@ -637,13 +493,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }> {;
   editingId ? 'Cancel' : 'Back' ;
 }</Button> Next </Button> </div> </div> </form> </Form> </div> </div>) ;
-<<<<<<< HEAD:src-disabled/components/resume-builder/forms/certifications/CertificationsForm.tsx
 }'"}"
-=======
-}'"}
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/resume-builder/forms/certifications/CertificationsForm.tsx
       // Check condition
 if ( {) {
   $2
@@ -750,7 +600,6 @@ if ( {) {
       </div>;
     </div>);
 }> {
-<<<<<<< HEAD:src-disabled/components/resume-builder/forms/certifications/CertificationsForm.tsx
   editing_id ? 'Cancel' : 'Back';
 }</Button> Next </Button> </div> </div> </form> </Form> </div> </div>);
 }'"}"
@@ -760,19 +609,3 @@ if ( {) {
 ;
 }'"
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-  editingId ? 'Cancel' : 'Back'
-}</Button> Next </Button> </div> </div> </form> </Form> </div> </div>)
-}'"}
-}
-;
-}
-;
-
-}
-<<<<<<< HEAD
-;
-=======
-;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/resume-builder/forms/certifications/CertificationsForm.tsx

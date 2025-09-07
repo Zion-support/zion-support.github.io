@@ -9,23 +9,33 @@ const PerformanceOptimizationChat: NextPage = () => ;
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (<div>;
 import type { NextPage } from "next";"
 import Head from "next/head";"
 import Link from "next/link";"
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const PerformanceOptimizationChat: NextPage = () => ;
   return (<div />;
 import type { NextPage } from \"next\";
 import Head from \"next/head\";
 import Link from \"next/link\";
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 const PerformanceOptimizationChat: NextPage = () => {;
   return (
@@ -106,8 +116,11 @@ name=\"description\"}
 export default PerformanceOptimizationChat;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (<div>;
       <Head>;
         <title>PerformanceOptimizationChat - Zion Tech Solutions</title>;
@@ -115,7 +128,10 @@ export default PerformanceOptimizationChat;
         <title>PerformanceOptimizationChat - Zion Tech Solutions</title>;
         <title>PerformanceOptimizationChat - Zion Tech Solutions</title>;
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const PerformanceOptimizationChat: NextPage = () => ;
   return (<div />;
       <Head />;
@@ -124,9 +140,13 @@ const PerformanceOptimizationChat: NextPage = () => ;
         <title />PerformanceOptimizationChat - Zion Tech Solutions</title>;
         <title />PerformanceOptimizationChat - Zion Tech Solutions</title>;
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ursor/fix-website-loading-errors-and-merge-6662;
   );
 }
@@ -136,14 +156,20 @@ export default PerformanceOptimizationChat;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 const PerformanceOptimizationChat: NextPage = () => {
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const "PerformanceOptimizationChat": NextPage = () => {
 =======
 const PerformanceOptimizationChat: NextPage = () => {
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
  ;
   return (
     <div />
@@ -157,8 +183,11 @@ import Head from './next / head';
 import Link from './next / link';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (<div>;
 }
 return (;
@@ -166,7 +195,10 @@ return (;
       <Head>;
         <title > PerformanceOptimizationChat - Zion Tech Solutions</title>;
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const PerformanceOptimizationChat: NextPage = () => ;
   return (<div />;
 const PerformanceOptimizationChat: NextPage = () => {
@@ -175,9 +207,13 @@ const PerformanceOptimizationChat: NextPage = () => {
       <Head />;
         <title  /> PerformanceOptimizationChat - Zion Tech Solutions</title>;
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <meta;
           name=\"description\";}
           content=\"PerformanceOptimizationChat service\";}
@@ -206,21 +242,31 @@ export default PerformanceOptimizationChat;<div />;
   )},export default PerformanceOptimizationChat;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (<div>;
       <Head>;
         <title>PerformanceOptimizationChat - Zion Tech Solutions</title>;
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const PerformanceOptimizationChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title />PerformanceOptimizationChat - Zion Tech Solutions</title>;
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <meta;
           name=\"description\";
           content=\"PerformanceOptimizationChat service\";
@@ -245,6 +291,11 @@ export default PerformanceOptimizationChat;<title />PerformanceOptimizationChat 
 ;
 export default PerformanceOptimizationChat;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const PerformanceOptimizationChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
 const PerformanceOptimizationChat: NextPage = () => {
 =======
 <<<<<<< HEAD
@@ -252,6 +303,7 @@ const PerformanceOptimizationChat: NextPage = () => {
 const PerformanceOptimizationChat: NextPage = () => {
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
  ;
   return (
     <div />
@@ -274,6 +326,11 @@ name=\"description\"}
 export default PerformanceOptimizationChat;
 export default PerformanceOptimizationChat;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const PerformanceOptimizationChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
 const PerformanceOptimizationChat: NextPage = () => {
 =======
 <<<<<<< HEAD
@@ -281,6 +338,7 @@ const PerformanceOptimizationChat: NextPage = () => {
 const PerformanceOptimizationChat: NextPage = () => {
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
  ;
   return (
     <div />
@@ -306,6 +364,11 @@ export default PerformanceOptimizationChat;
         <title />PerformanceOptimizationChat - Zion Tech Solutions</title>
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const PerformanceOptimizationChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
 const PerformanceOptimizationChat: NextPage = () => {
 =======
 <<<<<<< HEAD
@@ -313,6 +376,7 @@ const PerformanceOptimizationChat: NextPage = () => {
 const PerformanceOptimizationChat: NextPage = () => {
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
  ;
   return (
     <div />

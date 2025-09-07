@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src-disabled/components/QuoteRequestForm/TimelineStep.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 :src/components/QuoteRequestForm/TimelineStep.tsx
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/QuoteRequestForm/TimelineStep.tsx
@@ -8,7 +11,10 @@ import { Calendar } from '@/components/ui/calendar'
 import { Button } from '@/components/ui/button'
 import { Label } from '@/components/ui/label'
 import { CalendarIcon } from 'lucide-react'
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src-disabled/components/QuoteRequestForm/TimelineStep.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
@@ -26,7 +32,10 @@ import {
 } from '@/components/ui/popover'
 import { cn } from '@/lib/utils'
 import { QuoteFormData } from '@/types/quotes'
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src-disabled/components/QuoteRequestForm/TimelineStep.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
@@ -69,6 +78,8 @@ interface TimelineStepProps {
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
   return (
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src-disabled/components/QuoteRequestForm/TimelineStep.tsx
 =======
 <<<<<<< HEAD
@@ -131,6 +142,7 @@ export function TimelineStep(): any ({ formData, updateFormData }: TimelineStepP
         <div className="space-y-4">
           <div className="flex items-center space-x-4">
             <div 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.timeline === "fixed" 
                   ? "bg-zion-purple/20 border-zion-purple" 
@@ -149,6 +161,8 @@ export function TimelineStep(): any ({ formData, updateFormData }: TimelineStepP
               </p>;
             </div>;
             <div
+<<<<<<< HEAD
+=======
             <div
               onClick={() => updateFormData({ timeline: "fixed" })}
             >
@@ -209,6 +223,7 @@ export function TimelineStep(): any ({ formData, updateFormData }: TimelineStepP
             </div>;
 
             <div
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
               onClick={() => updateFormData({ timeline: "fixed" })}
             >
@@ -764,6 +779,9 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
                       initialFocus
 ;
     </div>
+<<<<<<< HEAD
+  );
+=======
   );
 =======
 ;
@@ -771,3 +789,4 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/QuoteRequestForm/TimelineStep.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

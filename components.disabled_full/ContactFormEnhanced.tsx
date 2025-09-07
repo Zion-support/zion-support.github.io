@@ -1,69 +1,281 @@
-<<<<<<< HEAD
-
+import React, { useState } from 'react';'
+import { motion  } from 'framer-motion';'
 ursor/automate-test-improve-and-merge-code-646c;
 import { Send,CheckCircle,AlertCircle,User,Mail,ursor/automate-test-improve-and-merge-code-646c;
 }
 ursor/fix-syntax-push-and-merge-to-main-40de;
   MessageSquare;
-
+ } from 'lucide-react';'
+const "ContactFormEnhanced": React.FC = () => {const [formData, setFormData] = useState({"name": '',"email": '',"subject": '',"message": '';'
+  })ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+ursor/automate-test-improve-and-merge-code-646c;
+  MessageSquare} from 'lucide-react';'
+const "ContactFormEnhanced": React.FC = () => {const [formData, setFormData] = useState({"name": '',"email": '',"subject": '',"message": ''})const [isSubmitting, setIsSubmitting] = useState(false)const [submitStatus, setSubmitStatus] = useState<;'
+    'idle' | 'success' | 'error';'
+  >('idle')ursor/automate-test-improve-and-merge-code-646c;'
+  const handleSubmit = async ("e": React.FormEvent) => {const handleSubmit = async ("e": React.FormEvent) => {const handleSubmit = async ("e": React.FormEvent) => {ursor/add-new-services-and-deploy-updates-0462;
+}
+ursor/fix-syntax-push-and-merge-to-main-40de;
+ursor/automate-test-improve-and-merge-code-646c;
+  const handleSubmit = async ("e": React.FormEvent) => {e.preventDefault()setIsSubmitting(true)await new Promise(resolve => { return setTimeout(resolve, 2000))setSubmitStatus('success')setIsSubmitting(false)ursor/automate-test-improve-and-merge-code-646c; }'
+    }
+    setFormData({ "name": '', "email": '', "subject": '', "message": '' })setFormData({ "name": '', "email": '', "subject": '', "message": '' })setFormData({ "name": '', "email": '', "subject": '', "message": '' })ursor/add-new-services-and-deploy-updates-0462;'
+ursor/fix-syntax-push-and-merge-to-main-40de;
+ursor/automate-test-improve-and-merge-code-646c;
+    setFormData({ "name": '', "email": '', "subject": '', "message": '' })}return (<div className="max-w-2xl mx-auto p-6">;"
+      {' '}'
+ursor/automate-test-improve-and-merge-code-646c;
+      <div className="bg-white "dark":bg-gray-800 rounded-lg shadow-lg border border-gray-200 "dark":border-gray-700 p-6">;"
+        {' '}'
+        <h2 className="text-2xl font-bold text-gray-900 "dark":text-white mb-6">;"
+      <div className="bg-white "dark":bg-gray-800 rounded-lg shadow-lg border border-gray-200 "dark":border-gray-700 p-6">;"
+        {' '}'
+        <h2 className="text-2xl font-bold text-gray-900 "dark":text-white mb-6">;"
+      <div className="bg-white "dark":bg-gray-800 rounded-lg shadow-lg border border-gray-200 "dark":border-gray-700 p-6">;"
+        {' '}'
+        <h2 className="text-2xl font-bold text-gray-900 "dark":text-white mb-6">;"
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+ursor/automate-test-improve-and-merge-code-646c;
+      <div className="bg-white "dark": bg-gray-800 rounded-lg shadow-lg border border-gray-200 "dark":border-gray-700 p-6">;"
+        {' '}'
+        <h2 className="text-2xl font-bold text-gray-900 "dark": text-white mb-6">;"
+          {' '}'
+          Get in Touch{' '}'
+        </h2>{' '}'
+        <form onSubmit={handleSubmit} className="space-y-4">;"
+          {' '}'
+          <div>;
+            {' '}'
+ursor/automate-test-improve-and-merge-code-646c;
+            <label className="block text-sm font-medium text-gray-700 "dark":text-gray-300 mb-2">;"
+            <label className="block text-sm font-medium text-gray-700 "dark":text-gray-300 mb-2">;"
+            <label className="block text-sm font-medium text-gray-700 "dark":text-gray-300 mb-2">;"
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+ursor/automate-test-improve-and-merge-code-646c;
+            <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300 mb-2">;"
+              {' '}'
+              Name *{' '}'
+            </label>{' '}'
+            <div className="relative">;"
+              {' '}'
+              <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />{' '}'
+              <input;
+                type="text";"
                 value={formData.name}
                 onChange={e =>;
 }
 ursor/automate-test-improve-and-merge-code-646c;
-
+                  setFormData({ ...formData, "name": 'e.target.value' })}'
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark":border-gray-600 rounded-lg "focus":outline-none "focus":ring-2 "focus":ring-blue-500 bg-white "dark":bg-gray-700 text-gray-900 "dark":text-white";"
+                  setFormData({ ...formData, "name": 'e.target.value' })}'
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark":border-gray-600 rounded-lg "focus":outline-none "focus":ring-2 "focus":ring-blue-500 bg-white "dark":bg-gray-700 text-gray-900 "dark":text-white";"
+                  setFormData({ ...formData, "name": 'e.target.value' })}'
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark":border-gray-600 rounded-lg "focus":outline-none "focus":ring-2 "focus":ring-blue-500 bg-white "dark":bg-gray-700 text-gray-900 "dark":text-white";"
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+ursor/automate-test-improve-and-merge-code-646c;
+                  setFormData({ ...formData, "name": 'e.target.value' })}'
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark": border-gray-600 rounded-lg "focus":outline-none "focus":ring-2 "focus":ring-blue-500 bg-white "dark":bg-gray-700 text-gray-900 "dark":text-white";"
+                placeholder="Enter your name";"
+                required;
+              />{' '}'
+            </div>{' '}'
+          </div>{' '}'
+          <div>;
+            {' '}'
+ursor/automate-test-improve-and-merge-code-646c;
+            <label className="block text-sm font-medium text-gray-700 "dark":text-gray-300 mb-2">;"
+            <label className="block text-sm font-medium text-gray-700 "dark":text-gray-300 mb-2">;"
+            <label className="block text-sm font-medium text-gray-700 "dark":text-gray-300 mb-2">;"
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+ursor/automate-test-improve-and-merge-code-646c;
+            <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300 mb-2">;"
+              {' '}'
+              Email *{' '}'
+            </label>{' '}'
+            <div className="relative">;"
+              {' '}'
+              <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />{' '}'
+              <input;
+                type="email";"
                 value={formData.email}
                 onChange={e =>;
 }
 ursor/automate-test-improve-and-merge-code-646c;
-
+                  setFormData({ ...formData, "email": 'e.target.value' })}'
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark":border-gray-600 rounded-lg "focus":outline-none "focus":ring-2 "focus":ring-blue-500 bg-white "dark":bg-gray-700 text-gray-900 "dark":text-white";"
+                  setFormData({ ...formData, "email": 'e.target.value' })}'
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark":border-gray-600 rounded-lg "focus":outline-none "focus":ring-2 "focus":ring-blue-500 bg-white "dark":bg-gray-700 text-gray-900 "dark":text-white";"
+                  setFormData({ ...formData, "email": 'e.target.value' })}'
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark":border-gray-600 rounded-lg "focus":outline-none "focus":ring-2 "focus":ring-blue-500 bg-white "dark":bg-gray-700 text-gray-900 "dark":text-white";"
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+ursor/automate-test-improve-and-merge-code-646c;
+                  setFormData({ ...formData, "email": 'e.target.value' })}'
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark": border-gray-600 rounded-lg "focus":outline-none "focus":ring-2 "focus":ring-blue-500 bg-white "dark":bg-gray-700 text-gray-900 "dark":text-white";"
+                placeholder="Enter your email";"
+                required;
+              />{' '}'
+            </div>{' '}'
+          </div>{' '}'
+          <div>;
+            {' '}'
+ursor/automate-test-improve-and-merge-code-646c;
+            <label className="block text-sm font-medium text-gray-700 "dark":text-gray-300 mb-2">;"
+            <label className="block text-sm font-medium text-gray-700 "dark":text-gray-300 mb-2">;"
+            <label className="block text-sm font-medium text-gray-700 "dark":text-gray-300 mb-2">;"
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+ursor/automate-test-improve-and-merge-code-646c;
+            <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300 mb-2">;"
+              {' '}'
+              Subject *{' '}'
+            </label>{' '}'
+            <input;
+              type="text";"
               value={formData.subject}
               onChange={e =>;
 }
 ursor/automate-test-improve-and-merge-code-646c;
-
+                setFormData({ ...formData, "subject": 'e.target.value' })}'
+              className="w-full px-4 py-2 border border-gray-300 "dark":border-gray-600 rounded-lg "focus":outline-none "focus":ring-2 "focus":ring-blue-500 bg-white "dark":bg-gray-700 text-gray-900 "dark":text-white";"
+                setFormData({ ...formData, "subject": 'e.target.value' })}'
+              className="w-full px-4 py-2 border border-gray-300 "dark":border-gray-600 rounded-lg "focus":outline-none "focus":ring-2 "focus":ring-blue-500 bg-white "dark":bg-gray-700 text-gray-900 "dark":text-white";"
+                setFormData({ ...formData, "subject": 'e.target.value' })}'
+              className="w-full px-4 py-2 border border-gray-300 "dark":border-gray-600 rounded-lg "focus":outline-none "focus":ring-2 "focus":ring-blue-500 bg-white "dark":bg-gray-700 text-gray-900 "dark":text-white";"
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+ursor/automate-test-improve-and-merge-code-646c;
+                setFormData({ ...formData, "subject": 'e.target.value' })}'
+              className="w-full px-4 py-2 border border-gray-300 "dark": border-gray-600 rounded-lg "focus":outline-none "focus":ring-2 "focus":ring-blue-500 bg-white "dark":bg-gray-700 text-gray-900 "dark":text-white";"
+              placeholder="Enter subject";"
+              required;
+            />{' '}'
+          </div>{' '}'
+          <div>;
+            {' '}'
+ursor/automate-test-improve-and-merge-code-646c;
+            <label className="block text-sm font-medium text-gray-700 "dark":text-gray-300 mb-2">;"
+            <label className="block text-sm font-medium text-gray-700 "dark":text-gray-300 mb-2">;"
+            <label className="block text-sm font-medium text-gray-700 "dark":text-gray-300 mb-2">;"
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+ursor/automate-test-improve-and-merge-code-646c;
+            <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300 mb-2">;"
+              {' '}'
+              Message *{' '}'
+            </label>{' '}'
+            <div className="relative">;"
+              {' '}'
+              <MessageSquare className="absolute left-3 top-3 w-4 h-4 text-gray-400" />{' '}'
               <textarea;
                 value={formData.message}
                 onChange={e =>;
 }
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/fix-syntax-push-and-merge-to-main-40de;
-
+                  setFormData({ ...formData, "message": 'e.target.value' })}'
+                rows={6}
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark":border-gray-600 rounded-lg "focus":outline-none "focus":ring-2 "focus":ring-blue-500 bg-white "dark":bg-gray-700 text-gray-900 "dark":text-white resize-none";"
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+ursor/automate-test-improve-and-merge-code-646c;
+                  setFormData({ ...formData, "message": 'e.target.value' })}'
+                rows={6}
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark": border-gray-600 rounded-lg "focus":outline-none "focus":ring-2 "focus":ring-blue-500 bg-white "dark":bg-gray-700 text-gray-900 "dark":text-white resize-none";"
+                placeholder="Enter your message";"
+                required;
+              />{' '}'
+            </div>{' '}'
+          </div>{' '}'
+          <button;
+            type="submit";"
+            disabled={isSubmitting}
+ursor/automate-test-improve-and-merge-code-646c;
+            className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg "hover":bg-blue-700 "disabled":opacity-50 flex items-center justify-center space-x-2";"
+            className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg "hover":bg-blue-700 "disabled":opacity-50 flex items-center justify-center space-x-2";"
+            className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg "hover":bg-blue-700 "disabled":opacity-50 flex items-center justify-center space-x-2";"
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+ursor/automate-test-improve-and-merge-code-646c;
+            className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg "hover": bg-blue-700 "disabled":opacity-50 flex items-center justify-center space-x-2";"
+          >;
+            {' '}'
+            {isSubmitting ? (<>;
+                {' '}'
+                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>{' '}'
+                <span>Sending...</span>{' '}'
+              </>;
+            ) : (<>;
+                {' '}'
+                <Send className="w-4 h-4" /> <span>Send Message</span>{' '}'
+              </>;
+            )}{' '}'
+          </button>{' '}'
+          {submitStatus === 'success' && (ursor/automate-test-improve-and-merge-code-646c;'
+            <div className="p-4 bg-green-100 "dark":bg-green-900/20 text-green-800 "dark":text-green-200 rounded-lg flex items-center space-x-2">;"
+            <div className="p-4 bg-green-100 "dark":bg-green-900/20 text-green-800 "dark":text-green-200 rounded-lg flex items-center space-x-2">;"
+            <div className="p-4 bg-green-100 "dark":bg-green-900/20 text-green-800 "dark":text-green-200 rounded-lg flex items-center space-x-2">;"
+}
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+ursor/automate-test-improve-and-merge-code-646c;
+            <div className="p-4 bg-green-100 "dark": bg-green-900/20 text-green-800 "dark":text-green-200 rounded-lg flex items-center space-x-2">;"
+              {' '}'
+              <CheckCircle className="w-5 h-5" />{' '}'
+              <span>Message sent successfully!</span>{' '}'
+            </div>;
+          )}{' '}'
+        </form>{' '}'
+      </div>{' '}'
+    </div>;
+  )}export default ContactFormEnhanced;
+import React,{ useState } from 'react'; import { motion } from 'framer-motion'; import { Send,CheckCircle,AlertCircle,User,Mail,MessageSquare} from 'lucide-react'; const "ContactFormEnhanced": React.FC = () => { const [formData,setFormData] = useState({ "name": '',"email": '',"subject": '',"message": ''})const [isSubmitting,setIsSubmitting] = useState(false)const [submitStatus,setSubmitStatus] = useState< 'idle' | 'success' | 'error' >('idle')const handleSubmit = async ("e": React.FormEvent) => { e.preventDefault()setIsSubmitting(true)await new Promise(resolve => setTimeout(resolve,2000))setSubmitStatus('success')setIsSubmitting(false)setFormData({ "name": '',"email": '',"subject": '',"message": '' })}return ( <div className="max-w-2xl mx-auto p-6"> {' '} <div className="bg-white "dark":bg-gray-800 rounded-lg shadow-lg border border-gray-200 "dark":border-gray-700 p-6"> {' '} <h2 className="text-2xl font-bold text-gray-900 "dark":text-white mb-6"> {' '} Get in Touch{' '} </h2>{' '} <form onSubmit={handleSubmit} className="space-y-4"> {' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 "dark":text-gray-300 mb-2"> {' '} Name *{' '} </label>{' '} <div className="relative"> {' '} <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />{' '} <input type="text" value={formData.name} onChange={e => setFormData({ ...formData,"name": 'e.target.value' }) } className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark":border-gray-600 rounded-lg "focus":outline-none "focus":ring-2 "focus":ring-blue-500 bg-white "dark":bg-gray-700 text-gray-900 "dark":text-white" placeholder="Enter your name" required />{' '} </div>{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 "dark":text-gray-300 mb-2"> {' '} Email *{' '} </label>{' '} <div className="relative"> {' '} <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />{' '} <input type="email" value={formData.email} onChange={e => setFormData({ ...formData,"email": 'e.target.value' }) } className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark":border-gray-600 rounded-lg "focus":outline-none "focus":ring-2 "focus":ring-blue-500 bg-white "dark":bg-gray-700 text-gray-900 "dark":text-white" placeholder="Enter your email" required />{' '} </div>{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 "dark":text-gray-300 mb-2"> {' '} Subject *{' '} </label>{' '} <input type="text" value={formData.subject} onChange={e => setFormData({ ...formData,"subject": 'e.target.value' }) } className="w-full px-4 py-2 border border-gray-300 "dark":border-gray-600 rounded-lg "focus":outline-none "focus":ring-2 "focus":ring-blue-500 bg-white "dark":bg-gray-700 text-gray-900 "dark":text-white" placeholder="Enter subject" required />{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 "dark":text-gray-300 mb-2"> {' '} Message *{' '} </label>{' '} <div className="relative"> {' '} <MessageSquare className="absolute left-3 top-3 w-4 h-4 text-gray-400" />{' '} <textarea value={formData.message} onChange={e => setFormData({ ...formData,"message": 'e.target.value' }) } rows={6} className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark":border-gray-600 rounded-lg "focus":outline-none "focus":ring-2 "focus":ring-blue-500 bg-white "dark":bg-gray-700 text-gray-900 "dark":text-white resize-none" placeholder="Enter your message" required />{' '} </div>{' '} </div>{' '} <button type="submit" disabled={isSubmitting} className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg "hover":bg-blue-700 "disabled":opacity-50 flex items-center justify-center space-x-2" > {' '} {isSubmitting ? ( <> {' '} <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>{' '} <span>Sending...</span>{' '} </> ) : ( <> {' '} <Send className="w-4 h-4" /> <span>Send Message</span>{' '} </> )}{' '} </button>{' '} {submitStatus === 'success' && ( <div className="p-4 bg-green-100 "dark":bg-green-900/20 text-green-800 "dark":text-green-200 rounded-lg flex items-center space-x-2"> {' '} <CheckCircle className="w-5 h-5" />{' '} <span>Message sent successfully!</span>{' '} </div> )}{' '} </form>{' '} </div>{' '} </div> )}export default ContactFormEnhanced;'
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/automate-test-improve-and-merge-code-646c;
-=======
-import React, { useState } from 'react';
->>>>>>> origin/chore/fix-lint-and-merge
+import { motion } from 'framer-motion';'
 
 import {
-
+  }
   Send,
   CheckCircle,
   AlertCircle,
   User,
   Mail,
-<<<<<<< HEAD
-ursor/fix-syntax-push-and-merge-to-main-40de
-  MessageSquare,
-} from 'lucide-react';
-const ContactFormEnhanced: React.FC = () => {
+
+
+
+
+  MessageSquare} from 'lucide-react';'
+const "ContactFormEnhanced": React.FC = () => {"
+  }
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  });
+    "name": '','
+    "email": '','
+    "subject": '','
+    "message": ''});'
+  const [isSubmitting, setIsSubmitting] = useState(false);
+const [submitStatus, setSubmitStatus] = useState<;
+    'idle' | 'success' | 'error''
+  >('idle');'
 
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  const handleSubmit = async ("e": React.FormEvent) => {"
+    }
+    e.preventDefault();
+    setIsSubmitting(true);
+    await new Promise(resolve => { return setTimeout(resolve, 2000)); }
+    setSubmitStatus('success');'
+    setIsSubmitting(false);
+
   MessageSquare} from 'lucide-react';
 const "ContactFormEnhanced": React.FC = () => {
   const [formData, setFormData] = useState({
@@ -76,44 +288,25 @@ const "ContactFormEnhanced": React.FC = () => {
     'idle' | 'success' | 'error'
   >('idle');
 
-<<<<<<< HEAD
   const handleSubmit = async (e: React.FormEvent) => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const handleSubmit = async (e: React.FormEvent) => {
   const handleSubmit = async (e: React.FormEvent) => {
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
   const handleSubmit = async ("e": React.FormEvent) => {
 
-<<<<<<< HEAD
 
 
-=======
-    e.preventDefault();
-    setIsSubmitting(true);
-    await new Promise(resolve => setTimeout(resolve, 2000));'
-    setSubmitStatus('success');
->>>>>>> origin/chore/fix-lint-and-merge
     setIsSubmitting(false);
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    setFormData({ name: '', email: '', subject: '', message: '' });
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     setFormData({ name: '', email: '', subject: '', message: '' });
     setFormData({ name: '', email: '', subject: '', message: '' });
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
 
                 value={formData.name}
@@ -122,37 +315,99 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 
+
+
+                  setFormData({ ...formData, "name": 'e.target.value' })'
+                }
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark": border-gray-600 rounded-lg "focus":outline-none "focus":ring-2 "focus":ring-blue-500 bg-white "dark":bg-gray-700 text-gray-900 "dark":text-white""
+                placeholder="Enter your name""
+                required
+              />{' '}'
+            </div>{' '}'
+          </div>{' '}'
+          <div>
+            {' '}'
+
+
+
+            <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300 mb-2">"
+              {' '}'
+              Email *{' '}'
+            </label>{' '}'
+            <div className="relative">"
+              {' '}'
+              <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />{' '}'
+              <input,
+type="email""
                 value={formData.email}
                 onChange={e =>
 
 
 
 
+
+
+                  setFormData({ ...formData, "email": 'e.target.value' })'
+                }
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark": border-gray-600 rounded-lg "focus":outline-none "focus":ring-2 "focus":ring-blue-500 bg-white "dark":bg-gray-700 text-gray-900 "dark":text-white""
+                placeholder="Enter your email""
+                required
+              />{' '}'
+            </div>{' '}'
+          </div>{' '}'
+          <div>
+            {' '}'
+
+
+
+            <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300 mb-2">"
+              {' '}'
+              Subject *{' '}'
+            </label>{' '}'
+            <input,
+type="text""
               value={formData.subject}
               onChange={e =>
 
 
 
 
-=======
-=======
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+                setFormData({ ...formData, "subject": 'e.target.value' })'
+              }
+              className="w-full px-4 py-2 border border-gray-300 "dark": border-gray-600 rounded-lg "focus":outline-none "focus":ring-2 "focus":ring-blue-500 bg-white "dark":bg-gray-700 text-gray-900 "dark":text-white""
+              placeholder="Enter subject""
+              required
+            />{' '}'
+          </div>{' '}'
+          <div>
+            {' '}'
+
+
+
+            <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300 mb-2">"
+              {' '}'
+              Message *{' '}'
+            </label>{' '}'
+            <div className="relative">"
+              {' '}'
+              <MessageSquare className="absolute left-3 top-3 w-4 h-4 text-gray-400" />{' '}'
+              <textarea,
+value={formData.message}
+                onChange={e =>
+
+
+
+
+                  }
     setFormData({ "name": '', "email": '', "subject": '', "message": '' });
   };
   return ("
     <div className="max-w-2xl mx-auto p-6">'
       {' '}
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-6">
-        {' '}
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-6">
         {' '}
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
@@ -161,12 +416,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
       <div className="bg-white "dark": bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-6">
         {' '}
         <h2 className="text-2xl font-bold text-gray-900 "dark": text-white mb-6">
@@ -175,21 +426,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           <div>'
             {' '}
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
             <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300 mb-2">
               {' '}
               Name *{' '}
@@ -203,13 +446,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 value={formData.name}
                 onChange={e =>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                  setFormData({ ...formData, name: 'e.target.value' })
-                }
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
                   setFormData({ ...formData, name: 'e.target.value' })
                 }
                 className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
@@ -218,12 +455,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
                   setFormData({ ...formData, "name": 'e.target.value' })
                 }"
                 className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark": border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white""
@@ -235,21 +468,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           <div>'
             {' '}
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
             <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300 mb-2">
               {' '}
               Email *{' '}
@@ -263,13 +488,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 value={formData.email}
                 onChange={e =>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                  setFormData({ ...formData, email: 'e.target.value' })
-                }
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
                   setFormData({ ...formData, email: 'e.target.value' })
                 }
                 className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
@@ -278,12 +497,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
                   setFormData({ ...formData, "email": 'e.target.value' })
                 }"
                 className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark": border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white""
@@ -295,21 +510,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           <div>'
             {' '}
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
             <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300 mb-2">
               {' '}
               Subject *{' '}
@@ -320,13 +527,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               value={formData.subject}
               onChange={e =>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                setFormData({ ...formData, subject: 'e.target.value' })
-              }
-              className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
                 setFormData({ ...formData, subject: 'e.target.value' })
               }
               className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
@@ -335,12 +536,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
                 setFormData({ ...formData, "subject": 'e.target.value' })
               }"
               className="w-full px-4 py-2 border border-gray-300 "dark": border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white""
@@ -351,21 +548,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           <div>'
             {' '}
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
             <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300 mb-2">
               {' '}
               Message *{' '}
@@ -376,60 +565,42 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               <MessageSquare className="absolute left-3 top-3 w-4 h-4 text-gray-400" />{' '}
               <textarea;
                 value={formData.message}
->>>>>>> origin/chore/fix-lint-and-merge
                 onChange={e =>
-<<<<<<< HEAD
-ursor/fix-syntax-push-and-merge-to-main-40de
-                  setFormData({ ...formData, message: 'e.target.value' })
-                }
-                rows={6}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white resize-none"
-
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
             className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 flex items-center justify-center space-x-2"
             className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 flex items-center justify-center space-x-2"
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
-<<<<<<< HEAD
 
 
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                  setFormData({ ...formData, "message": 'e.target.value' })
-                }
-                rows={6}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark": border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white resize-none"
-                placeholder="Enter your message"
-                required
-              />{' '}
-            </div>{' '}
-          </div>{' '}
-          <button
-            type="submit"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
             disabled={isSubmitting}
 
-<<<<<<< HEAD
-            className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 flex items-center justify-center space-x-2"
-            className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 flex items-center justify-center space-x-2"
-            className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 flex items-center justify-center space-x-2"
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-=======
-
-<<<<<<< HEAD
 
 
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+            className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg "hover": bg-blue-700 "disabled":opacity-50 flex items-center justify-center space-x-2""
+          >
+            {' '}'
+            {isSubmitting ? (
+              <>
+                {' '}'
+                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>{' '}'
+                <span>Sending...</span>{' '}'
+              </>
+            ) : (
+              <>
+                {' '}'
+                <Send className="w-4 h-4" /> <span>Send Message</span>{' '}'
+              </>
+            )}{' '}'
+          </button>{' '}'
+          {submitStatus === 'success' && ('
+
+
+
+
             className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg "hover": bg-blue-700 disabled:opacity-50 flex items-center justify-center space-x-2"
           >'
             {' '}
@@ -448,21 +619,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           </button>{' '}'
           {submitStatus === 'success' && (
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            <div className="p-4 bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200 rounded-lg flex items-center space-x-2">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
             <div className="p-4 bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200 rounded-lg flex items-center space-x-2">
             <div className="p-4 bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200 rounded-lg flex items-center space-x-2">
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
             <div className="p-4 bg-green-100 "dark": bg-green-900/20 text-green-800 dark:text-green-200 rounded-lg flex items-center space-x-2">
               {' '}
               <CheckCircle className="w-5 h-5" />{' '}
@@ -473,18 +636,15 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         </form>{' '}'
 
       </div>{' '}
->>>>>>> origin/chore/fix-lint-and-merge
     </div>
   );
 }
 export default ContactFormEnhanced;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
 
 import React,{ useState } from 'react'; import { motion } from 'framer-motion'; import { Send,CheckCircle,AlertCircle,User,Mail,MessageSquare,} from 'lucide-react'; const ContactFormEnhanced: React.FC = () => { const [formData,setFormData] = useState({ name: '',email: '',subject: '',message: '',}); const [isSubmitting,setIsSubmitting] = useState(false); const [submitStatus,setSubmitStatus] = useState< 'idle' | 'success' | 'error' >('idle'); const handleSubmit = async (e: React.FormEvent) => { e.preventDefault(); setIsSubmitting(true); await new Promise(resolve => setTimeout(resolve,2000)); setSubmitStatus('success'); setIsSubmitting(false); setFormData({ name: '',email: '',subject: '',message: '' })}; return ( <div className="max-w-2xl mx-auto p-6"> {' '} <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-6"> {' '} <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6"> {' '} Get in Touch{' '} </h2>{' '} <form onSubmit={handleSubmit} className="space-y-4"> {' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Name *{' '} </label>{' '} <div className="relative"> {' '} <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />{' '} <input type="text" value={formData.name} onChange={e => setFormData({ ...formData,name: 'e.target.value' }) } className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter your name" required />{' '} </div>{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Email *{' '} </label>{' '} <div className="relative"> {' '} <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />{' '} <input type="email" value={formData.email} onChange={e => setFormData({ ...formData,email: 'e.target.value' }) } className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter your email" required />{' '} </div>{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Subject *{' '} </label>{' '} <input type="text" value={formData.subject} onChange={e => setFormData({ ...formData,subject: 'e.target.value' }) } className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter subject" required />{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Message *{' '} </label>{' '} <div className="relative"> {' '} <MessageSquare className="absolute left-3 top-3 w-4 h-4 text-gray-400" />{' '} <textarea value={formData.message} onChange={e => setFormData({ ...formData,message: 'e.target.value' }) } rows={6} className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white resize-none" placeholder="Enter your message" required />{' '} </div>{' '} </div>{' '} <button type="submit" disabled={isSubmitting} className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 flex items-center justify-center space-x-2" > {' '} {isSubmitting ? ( <> {' '} <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>{' '} <span>Sending...</span>{' '} </> ) : ( <> {' '} <Send className="w-4 h-4" /> <span>Send Message</span>{' '} </> )}{' '} </button>{' '} {submitStatus === 'success' && ( <div className="p-4 bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200 rounded-lg flex items-center space-x-2"> {' '} <CheckCircle className="w-5 h-5" />{' '} <span>Message sent successfully!</span>{' '} </div> )}{' '} </form>{' '} </div>{' '} </div> )}; export default ContactFormEnhanced;
-=======
 import React,{ useState } from 'react'; import { motion } from 'framer-motion'; import { Send,CheckCircle,AlertCircle,User,Mail,MessageSquare,} from 'lucide-react'; const ContactFormEnhanced: React.FC = () => { const [formData,setFormData] = useState({ name: '',email: '',subject: '',message: '',}); const [isSubmitting,setIsSubmitting] = useState(false); const [submitStatus,setSubmitStatus] = useState< 'idle' | 'success' | 'error' >('idle'); const handleSubmit = async (e: React.FormEvent) => { e.preventDefault(); setIsSubmitting(true); await new Promise(resolve => setTimeout(resolve,2000)); setSubmitStatus('success'); setIsSubmitting(false); setFormData({ name: '',email: '',subject: '',message: '' })}; return ( <div className="max-w-2xl mx-auto p-6"> {' '} <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-6"> {' '} <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6"> {' '} Get in Touch{' '} </h2>{' '} <form onSubmit={handleSubmit} className="space-y-4"> {' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Name *{' '} </label>{' '} <div className="relative"> {' '} <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />{' '} <input type="text" value={formData.name} onChange={e => setFormData({ ...formData,name: 'e.target.value' }) } className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter your name" required />{' '} </div>{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Email *{' '} </label>{' '} <div className="relative"> {' '} <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />{' '} <input type="email" value={formData.email} onChange={e => setFormData({ ...formData,email: 'e.target.value' }) } className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter your email" required />{' '} </div>{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Subject *{' '} </label>{' '} <input type="text" value={formData.subject} onChange={e => setFormData({ ...formData,subject: 'e.target.value' }) } className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter subject" required />{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Message *{' '} </label>{' '} <div className="relative"> {' '} <MessageSquare className="absolute left-3 top-3 w-4 h-4 text-gray-400" />{' '} <textarea value={formData.message} onChange={e => setFormData({ ...formData,message: 'e.target.value' }) } rows={6} className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white resize-none" placeholder="Enter your message" required />{' '} </div>{' '} </div>{' '} <button type="submit" disabled={isSubmitting} className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 flex items-center justify-center space-x-2" > {' '} {isSubmitting ? ( <> {' '} <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>{' '} <span>Sending...</span>{' '} </> ) : ( <> {' '} <Send className="w-4 h-4" /> <span>Send Message</span>{' '} </> )}{' '} </button>{' '} {submitStatus === 'success' && ( <div className="p-4 bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200 rounded-lg flex items-center space-x-2"> {' '} <CheckCircle className="w-5 h-5" />{' '} <span>Message sent successfully!</span>{' '} </div> )}{' '} </form>{' '} </div>{' '} </div> )}; export default ContactFormEnhanced;
 
 import React,{ useState } from 'react'; import { motion } from 'framer-motion'; import { Send,CheckCircle,AlertCircle,User,Mail,MessageSquare,} from 'lucide-react'; const ContactFormEnhanced: React.FC = () => { const [formData,setFormData] = useState({ name: '',email: '',subject: '',message: '',}); const [isSubmitting,setIsSubmitting] = useState(false); const [submitStatus,setSubmitStatus] = useState< 'idle' | 'success' | 'error' >('idle'); const handleSubmit = async (e: React.FormEvent) => { e.preventDefault(); setIsSubmitting(true); await new Promise(resolve => setTimeout(resolve,2000)); setSubmitStatus('success'); setIsSubmitting(false); setFormData({ name: '',email: '',subject: '',message: '' })}; return ( <div className="max-w-2xl mx-auto p-6"> {' '} <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-6"> {' '} <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6"> {' '} Get in Touch{' '} </h2>{' '} <form onSubmit={handleSubmit} className="space-y-4"> {' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Name *{' '} </label>{' '} <div className="relative"> {' '} <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />{' '} <input type="text" value={formData.name} onChange={e => setFormData({ ...formData,name: 'e.target.value' }) } className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter your name" required />{' '} </div>{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Email *{' '} </label>{' '} <div className="relative"> {' '} <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />{' '} <input type="email" value={formData.email} onChange={e => setFormData({ ...formData,email: 'e.target.value' }) } className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter your email" required />{' '} </div>{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Subject *{' '} </label>{' '} <input type="text" value={formData.subject} onChange={e => setFormData({ ...formData,subject: 'e.target.value' }) } className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter subject" required />{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Message *{' '} </label>{' '} <div className="relative"> {' '} <MessageSquare className="absolute left-3 top-3 w-4 h-4 text-gray-400" />{' '} <textarea value={formData.message} onChange={e => setFormData({ ...formData,message: 'e.target.value' }) } rows={6} className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white resize-none" placeholder="Enter your message" required />{' '} </div>{' '} </div>{' '} <button type="submit" disabled={isSubmitting} className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 flex items-center justify-center space-x-2" > {' '} {isSubmitting ? ( <> {' '} <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>{' '} <span>Sending...</span>{' '} </> ) : ( <> {' '} <Send className="w-4 h-4" /> <span>Send Message</span>{' '} </> )}{' '} </button>{' '} {submitStatus === 'success' && ( <div className="p-4 bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200 rounded-lg flex items-center space-x-2"> {' '} <CheckCircle className="w-5 h-5" />{' '} <span>Message sent successfully!</span>{' '} </div> )}{' '} </form>{' '} </div>{' '} </div> )}; export default ContactFormEnhanced;
@@ -495,15 +655,4 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 '"
 import React,{ useState } from 'react'; import { motion } from 'framer-motion'; import { Send,CheckCircle,AlertCircle,User,Mail,MessageSquare,} from 'lucide-react'; const ContactFormEnhanced: React.FC = () => { const [formData,setFormData] = useState({ name: '',email: '',subject: '',message: '',}); const [isSubmitting,setIsSubmitting] = useState(false); const [submitStatus,setSubmitStatus] = useState< 'idle' | 'success' | 'error' >('idle'); const handleSubmit = async (e: React.FormEvent) => { e.preventDefault(); setIsSubmitting(true); await new Promise(resolve => setTimeout(resolve,2000)); setSubmitStatus('success'); setIsSubmitting(false); setFormData({ name: '',email: '',subject: '',message: '' })}; return ( <div className="max-w-2xl mx-auto p-6"> {' '} <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-6"> {' '} <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6"> {' '} Get in Touch{' '} </h2>{' '} <form onSubmit={handleSubmit} className="space-y-4"> {' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Name *{' '} </label>{' '} <div className="relative"> {' '} <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />{' '} <input type="text" value={formData.name} onChange={e => setFormData({ ...formData,name: 'e.target.value' }) } className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter your name" required />{' '} </div>{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Email *{' '} </label>{' '} <div className="relative"> {' '} <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />{' '} <input type="email" value={formData.email} onChange={e => setFormData({ ...formData,email: 'e.target.value' }) } className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter your email" required />{' '} </div>{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Subject *{' '} </label>{' '} <input type="text" value={formData.subject} onChange={e => setFormData({ ...formData,subject: 'e.target.value' }) } className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter subject" required />{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Message *{' '} </label>{' '} <div className="relative"> {' '} <MessageSquare className="absolute left-3 top-3 w-4 h-4 text-gray-400" />{' '} <textarea value={formData.message} onChange={e => setFormData({ ...formData,message: 'e.target.value' }) } rows={6} className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white resize-none" placeholder="Enter your message" required />{' '} </div>{' '} </div>{' '} <button type="submit" disabled={isSubmitting} className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 flex items-center justify-center space-x-2" > {' '} {isSubmitting ? ( <> {' '} <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>{' '} <span>Sending...</span>{' '} </> ) : ( <> {' '} <Send className="w-4 h-4" /> <span>Send Message</span>{' '} </> )}{' '} </button>{' '} {submitStatus === 'success' && ( <div className="p-4 bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200 rounded-lg flex items-center space-x-2"> {' '} <CheckCircle className="w-5 h-5" />{' '} <span>Message sent successfully!</span>{' '} </div> )}{' '} </form>{' '} </div>{' '} </div> )}; export default ContactFormEnhanced;
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-import React,{ useState } from 'react'; import { motion } from 'framer-motion'; import { Send,CheckCircle,AlertCircle,User,Mail,MessageSquare,} from 'lucide-react'; const ContactFormEnhanced: React.FC = () => { const [formData,setFormData] = useState({ name: '',email: '',subject: '',message: '',}); const [isSubmitting,setIsSubmitting] = useState(false); const [submitStatus,setSubmitStatus] = useState< 'idle' | 'success' | 'error' >('idle'); const handleSubmit = async (e: React.FormEvent) => { e.preventDefault(); setIsSubmitting(true); await new Promise(resolve => setTimeout(resolve,2000)); setSubmitStatus('success'); setIsSubmitting(false); setFormData({ name: '',email: '',subject: '',message: '' })}; return ( <div className="max-w-2xl mx-auto p-6"> {' '} <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-6"> {' '} <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6"> {' '} Get in Touch{' '} </h2>{' '} <form onSubmit={handleSubmit} className="space-y-4"> {' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Name *{' '} </label>{' '} <div className="relative"> {' '} <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />{' '} <input type="text" value={formData.name} onChange={e => setFormData({ ...formData,name: 'e.target.value' }) } className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter your name" required />{' '} </div>{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Email *{' '} </label>{' '} <div className="relative"> {' '} <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />{' '} <input type="email" value={formData.email} onChange={e => setFormData({ ...formData,email: 'e.target.value' }) } className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter your email" required />{' '} </div>{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Subject *{' '} </label>{' '} <input type="text" value={formData.subject} onChange={e => setFormData({ ...formData,subject: 'e.target.value' }) } className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter subject" required />{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Message *{' '} </label>{' '} <div className="relative"> {' '} <MessageSquare className="absolute left-3 top-3 w-4 h-4 text-gray-400" />{' '} <textarea value={formData.message} onChange={e => setFormData({ ...formData,message: 'e.target.value' }) } rows={6} className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white resize-none" placeholder="Enter your message" required />{' '} </div>{' '} </div>{' '} <button type="submit" disabled={isSubmitting} className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 flex items-center justify-center space-x-2" > {' '} {isSubmitting ? ( <> {' '} <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>{' '} <span>Sending...</span>{' '} </> ) : ( <> {' '} <Send className="w-4 h-4" /> <span>Send Message</span>{' '} </> )}{' '} </button>{' '} {submitStatus === 'success' && ( <div className="p-4 bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200 rounded-lg flex items-center space-x-2"> {' '} <CheckCircle className="w-5 h-5" />{' '} <span>Message sent successfully!</span>{' '} </div> )}{' '} </form>{' '} </div>{' '} </div> )}; export default ContactFormEnhanced;
-import React,{ useState } from 'react'; import { motion } from 'framer-motion'; import { Send,CheckCircle,AlertCircle,User,Mail,MessageSquare,} from 'lucide-react'; const ContactFormEnhanced: React.FC = () => { const [formData,setFormData] = useState({ name: '',email: '',subject: '',message: '',}); const [isSubmitting,setIsSubmitting] = useState(false); const [submitStatus,setSubmitStatus] = useState< 'idle' | 'success' | 'error' >('idle'); const handleSubmit = async (e: React.FormEvent) => { e.preventDefault(); setIsSubmitting(true); await new Promise(resolve => setTimeout(resolve,2000)); setSubmitStatus('success'); setIsSubmitting(false); setFormData({ name: '',email: '',subject: '',message: '' })}; return ( <div className="max-w-2xl mx-auto p-6"> {' '} <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-6"> {' '} <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6"> {' '} Get in Touch{' '} </h2>{' '} <form onSubmit={handleSubmit} className="space-y-4"> {' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Name *{' '} </label>{' '} <div className="relative"> {' '} <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />{' '} <input type="text" value={formData.name} onChange={e => setFormData({ ...formData,name: 'e.target.value' }) } className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter your name" required />{' '} </div>{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Email *{' '} </label>{' '} <div className="relative"> {' '} <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />{' '} <input type="email" value={formData.email} onChange={e => setFormData({ ...formData,email: 'e.target.value' }) } className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter your email" required />{' '} </div>{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Subject *{' '} </label>{' '} <input type="text" value={formData.subject} onChange={e => setFormData({ ...formData,subject: 'e.target.value' }) } className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter subject" required />{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Message *{' '} </label>{' '} <div className="relative"> {' '} <MessageSquare className="absolute left-3 top-3 w-4 h-4 text-gray-400" />{' '} <textarea value={formData.message} onChange={e => setFormData({ ...formData,message: 'e.target.value' }) } rows={6} className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white resize-none" placeholder="Enter your message" required />{' '} </div>{' '} </div>{' '} <button type="submit" disabled={isSubmitting} className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 flex items-center justify-center space-x-2" > {' '} {isSubmitting ? ( <> {' '} <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>{' '} <span>Sending...</span>{' '} </> ) : ( <> {' '} <Send className="w-4 h-4" /> <span>Send Message</span>{' '} </> )}{' '} </button>{' '} {submitStatus === 'success' && ( <div className="p-4 bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200 rounded-lg flex items-center space-x-2"> {' '} <CheckCircle className="w-5 h-5" />{' '} <span>Message sent successfully!</span>{' '} </div> )}{' '} </form>{' '} </div>{' '} </div> )}; export default ContactFormEnhanced;
-import React,{ useState } from 'react'; import { motion } from 'framer-motion'; import { Send,CheckCircle,AlertCircle,User,Mail,MessageSquare,} from 'lucide-react'; const ContactFormEnhanced: React.FC = () => { const [formData,setFormData] = useState({ name: '',email: '',subject: '',message: '',}); const [isSubmitting,setIsSubmitting] = useState(false); const [submitStatus,setSubmitStatus] = useState< 'idle' | 'success' | 'error' >('idle'); const handleSubmit = async (e: React.FormEvent) => { e.preventDefault(); setIsSubmitting(true); await new Promise(resolve => setTimeout(resolve,2000)); setSubmitStatus('success'); setIsSubmitting(false); setFormData({ name: '',email: '',subject: '',message: '' })}; return ( <div className="max-w-2xl mx-auto p-6"> {' '} <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-6"> {' '} <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6"> {' '} Get in Touch{' '} </h2>{' '} <form onSubmit={handleSubmit} className="space-y-4"> {' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Name *{' '} </label>{' '} <div className="relative"> {' '} <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />{' '} <input type="text" value={formData.name} onChange={e => setFormData({ ...formData,name: 'e.target.value' }) } className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter your name" required />{' '} </div>{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Email *{' '} </label>{' '} <div className="relative"> {' '} <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />{' '} <input type="email" value={formData.email} onChange={e => setFormData({ ...formData,email: 'e.target.value' }) } className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter your email" required />{' '} </div>{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Subject *{' '} </label>{' '} <input type="text" value={formData.subject} onChange={e => setFormData({ ...formData,subject: 'e.target.value' }) } className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter subject" required />{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Message *{' '} </label>{' '} <div className="relative"> {' '} <MessageSquare className="absolute left-3 top-3 w-4 h-4 text-gray-400" />{' '} <textarea value={formData.message} onChange={e => setFormData({ ...formData,message: 'e.target.value' }) } rows={6} className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white resize-none" placeholder="Enter your message" required />{' '} </div>{' '} </div>{' '} <button type="submit" disabled={isSubmitting} className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 flex items-center justify-center space-x-2" > {' '} {isSubmitting ? ( <> {' '} <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>{' '} <span>Sending...</span>{' '} </> ) : ( <> {' '} <Send className="w-4 h-4" /> <span>Send Message</span>{' '} </> )}{' '} </button>{' '} {submitStatus === 'success' && ( <div className="p-4 bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200 rounded-lg flex items-center space-x-2"> {' '} <CheckCircle className="w-5 h-5" />{' '} <span>Message sent successfully!</span>{' '} </div> )}{' '} </form>{' '} </div>{' '} </div> )}; export default ContactFormEnhanced;
-import React,{ useState } from 'react'; import { motion } from 'framer-motion'; import { Send,CheckCircle,AlertCircle,User,Mail,MessageSquare,} from 'lucide-react'; const ContactFormEnhanced: React.FC = () => { const [formData,setFormData] = useState({ name: '',email: '',subject: '',message: '',}); const [isSubmitting,setIsSubmitting] = useState(false); const [submitStatus,setSubmitStatus] = useState< 'idle' | 'success' | 'error' >('idle'); const handleSubmit = async (e: React.FormEvent) => { e.preventDefault(); setIsSubmitting(true); await new Promise(resolve => setTimeout(resolve,2000)); setSubmitStatus('success'); setIsSubmitting(false); setFormData({ name: '',email: '',subject: '',message: '' })}; return ( <div className="max-w-2xl mx-auto p-6"> {' '} <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-6"> {' '} <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6"> {' '} Get in Touch{' '} </h2>{' '} <form onSubmit={handleSubmit} className="space-y-4"> {' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Name *{' '} </label>{' '} <div className="relative"> {' '} <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />{' '} <input type="text" value={formData.name} onChange={e => setFormData({ ...formData,name: 'e.target.value' }) } className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter your name" required />{' '} </div>{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Email *{' '} </label>{' '} <div className="relative"> {' '} <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />{' '} <input type="email" value={formData.email} onChange={e => setFormData({ ...formData,email: 'e.target.value' }) } className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter your email" required />{' '} </div>{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Subject *{' '} </label>{' '} <input type="text" value={formData.subject} onChange={e => setFormData({ ...formData,subject: 'e.target.value' }) } className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter subject" required />{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Message *{' '} </label>{' '} <div className="relative"> {' '} <MessageSquare className="absolute left-3 top-3 w-4 h-4 text-gray-400" />{' '} <textarea value={formData.message} onChange={e => setFormData({ ...formData,message: 'e.target.value' }) } rows={6} className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white resize-none" placeholder="Enter your message" required />{' '} </div>{' '} </div>{' '} <button type="submit" disabled={isSubmitting} className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 flex items-center justify-center space-x-2" > {' '} {isSubmitting ? ( <> {' '} <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>{' '} <span>Sending...</span>{' '} </> ) : ( <> {' '} <Send className="w-4 h-4" /> <span>Send Message</span>{' '} </> )}{' '} </button>{' '} {submitStatus === 'success' && ( <div className="p-4 bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200 rounded-lg flex items-center space-x-2"> {' '} <CheckCircle className="w-5 h-5" />{' '} <span>Message sent successfully!</span>{' '} </div> )}{' '} </form>{' '} </div>{' '} </div> )}; export default ContactFormEnhanced;
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

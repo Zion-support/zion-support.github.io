@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { ReferralStats as ReferralStatsType } from "@/types/referrals",;
 import { Award, Share, Star, TrendingUp } from 'lucide-react';
@@ -30,47 +29,11 @@ export function ReferralStats({ stats, isLoading } ReferralStatsProps) {;
       value:stats.totalRewards > 0 ? `$${stats.totalRewards.toFixed(2)}` :"-",;
       icon:<Award className="h-5 w-5 text-muted-foreground" />,;
       description:"Credits earned from referrals"}],;
-=======
-import { Award, Share, Star, TrendingUp } from 'lucide-react';
-
-;
-interface ReferralStatsProps {;
-  stats: ReferralStatsType;,;
-  isLoading:boolean;
-}
-export function ReferralStats({ stats, isLoading } ReferralStatsProps) {;
-  const statCards = [;
-    {;
-
-    {;
-      title: "Completed";,;
-      value: stats.completedReferrals;,;
-      icon: <Star className="h-5 w-5 text-muted-foreground" />;,,
-  description: "Signed up & completed onboarding";},;
-    {;
-      title: "Pending";,;
-      value: stats.pendingReferrals;,;
-      icon: <TrendingUp className="h-5 w-5 text-muted-foreground" />;,,
-  description: "Not yet completed onboarding";},;
-    {;
-
->>>>>>> merged-prs-20250907-203621
 ;
   return (;
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">;
       {statCards.map((card, i) => (;
-      title: "Total Referrals";,;"
-      value: stats.totalReferrals;,;"
-      icon: <Share className="h-5 w-5 text-muted-foreground" />;,;"
-"
-      icon: <Star className="h-5 w-5 text-muted-foreground" />;,;"
-      icon: <TrendingUp className="h-5 w-5 text-muted-foreground" />;,;"
-      icon: <Award className="h-5 w-5 text-muted-foreground" />;,;"
-    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">;"
-</div>
-pr-12325
         <Card key={i}>;
-<<<<<<< HEAD
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">;
             <CardTitle className="text-sm font-medium">{card.title}</CardTitle>;
             {card.icon}
@@ -82,23 +45,10 @@ pr-12325
               <>;
                 <div className="text-2xl font-bold">{card.value}</div>;
                 <p className="text-xs text-muted-foreground">{card.description}</p>;
-=======
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">;"
-            <CardTitle className="text-sm font-medium">{card.title};"
-          <CardContent>;
-              <div className="h-6 w-20 bg-muted animate-pulse rounded" />;"
-              <>;"
-                <div className="text-2xl font-bold">{card.value}</div>;""
-                <p className="text-xs text-muted-foreground">{card.description}</p>;"
->>>>>>> merged-prs-20250907-203621
               </>;            )}
-
           </CardContent>;
         </Card>;
       ))}
-<<<<<<< HEAD
-    </div>;
-=======
     </div>;
   ),;}
  import {;
@@ -114,20 +64,4 @@ isLoading: boolean ;
   icon: <Award className="h-5 w-5 text-muted-foreground" />;";"description: "Credits earned from referrals",
 }];
 }</CardContent> </Card>) ) ;
-<<<<<<< HEAD
 }</div>) ;"}'"
-=======
-<<<<<<< HEAD
-:temp_broken_files/referrals/ReferralStats.tsx
-}</div>) ;"}'"
-}</div>) ;
-}'"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/referrals/ReferralStats.tsx
-=======
-
-}</div>) ;
-}'"
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621

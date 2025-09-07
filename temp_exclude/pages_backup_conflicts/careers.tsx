@@ -17,15 +17,15 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-
+interface CareersProps {;
+  // Add props here as needed;
+}
+export default function Careers(): any ({ }: CareersProps) {;
   return (
     <div>;
       <h1>Careers</h1>;
       <p>This component is currently under development.</p>;
     </div>;
-<<<<<<< HEAD
-  );
-=======
   );
 }
 <<<<<<< HEAD
@@ -35,4 +35,3 @@ import React from 'react';
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

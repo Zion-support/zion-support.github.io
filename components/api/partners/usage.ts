@@ -1,20 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-import { authenticateRequest, calculateUsageSummary } from "../../../utils/api/partnerAuth";
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "GET") {
-    res.setHeader($2);
-    return res.status(405).json({ error: "Method Not Allowed" })
-  }
-  const auth = await authenticateRequest($2);
-  if (!auth) {
-    return res.status(401).json({ error: "Unauthorized" })
-  }
-  const summary = await calculateUsageSummary($2);
-  return res.status(200).json({ summary })
-}
-=======
-<<<<<<< HEAD
+
 import type { NextApiRequest, NextApiResponse } from \"next\";"
 import { authenticateRequest, calculateUsageSummary } from \"../../../utils/api/partnerAuth\";
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -25,10 +9,9 @@ import {
   authenticateRequest,;
   calculateUsageSummary,;
 } from '../../../utils/api/partnerAuth';'
-=======
 
 
-<<<<<<< HEAD
+
 import type { NextApiRequest, NextApiResponse } from \'next\';"
 import { authenticateRequest, calculateUsageSummary } from \'../../../utils/api/partnerAuth\';
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -38,10 +21,8 @@ calculateUsageSummary;
   authenticateRequest,;}
   calculateUsageSummary,;}
 } from '../../../utils/api/partnerAuth';
->>>>>>> origin/chore/fix-lint-and-merge
 
-=======
-<<<<<<< HEAD
+
 
 
 
@@ -61,9 +42,6 @@ export default async function handler(
     res.setHeader('Allow', 'GET');
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {"
   if (req && req.method !== \"GET\") {}"
@@ -73,34 +51,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 
 const auth = await authenticateRequest(req);
-<<<<<<< HEAD
 
-<<<<<<< HEAD
+
 }
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  const auth = await authenticateRequest(req);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   if (!auth) {
     return res.status(401).json({ error: 'Unauthorized' });
  
 }
   const summary = await calculateUsageSummary(auth.partner.id);
-=======
   if (!auth) {}"
     return res && res.status(401).json({ error: \"Unauthorized\" })
  
 }
-<<<<<<< HEAD
-=======
 
 const summary = await calculateUsageSummary(auth.partner.id);
->>>>>>> origin/chore/fix-lint-and-merge
   return res.status(200).json({ summary });
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {"
-<<<<<<< HEAD
   if (req.method !== \"GET\) {}
     res.setHeader(\"Allow\", \GET\);}"
     return res.status(405).json({ error: \"Method Not Allowed\ })
@@ -111,16 +78,10 @@ export default async function handler() {
     }
     res.setHeader("Allow", "GET");"
 return res.status(405).json({ "error": "Method Not Allowed" });"
-=======
-  if (req.method !== \"GET\") {}"
-    res.setHeader(\"Allow\", \"GET\");}"
-    return res.status(405).json({ error: \"Method Not Allowed\" })
->>>>>>> origin/chore/fix-lint-and-merge
  
 }
 
 const auth = null;
-<<<<<<< HEAD
   return res.status(200).json({ ok: true });
 }
   return res.status(200).json({ summary })
@@ -128,19 +89,10 @@ const auth = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 '"
 
-=======
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
   return res.status(200).json({ summary })
 }
 
-<<<<<<< HEAD
-"
-=======
-"
->>>>>>> origin/chore/fix-lint-and-merge
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
   authenticate_request,
   calculateUsageSummary,
 } from '../../../utils / api / partner_auth';
@@ -186,7 +138,6 @@ if ( {) {
   const summary = await calculateUsageSummary (auth.partner.id);
   return res.status (200).json ({ summary });
 
-<<<<<<< HEAD
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "GET") {;
@@ -205,13 +156,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 
 }
-=======
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+"

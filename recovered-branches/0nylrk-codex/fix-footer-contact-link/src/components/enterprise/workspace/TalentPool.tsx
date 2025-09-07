@@ -1,16 +1,12 @@
-<<<<<<< HEAD
-=======
 import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 
->>>>>>> merged-prs-20250907-203621
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
 export function TalentPool() {
   // Mock talent data
   const talents = $2;
@@ -19,108 +15,18 @@ export function TalentPool() {
       skills: ["Figma", "Sketch", "User Testing"],
       status: "available",
       match: 95},
-=======
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-import React from "react";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {Button} from "@/components/ui/button";
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 export function TalentPool() {
   // Mock talent data
 
   const talents = [
     {
-<<<<<<< HEAD
-      id: "talent-1"
-      name: "Jessica Lee"
-      role: "UI/UX Designer"
-      skills: ["Figma", "Sketch", "User Testing"];
-      status: "available"
-      match: 95
-    }
-    {
-      id: "talent-2"
-      name: "Marcus Wright"
-      role: "Full Stack Developer"
-      skills: ["React", "Node.js", "MongoDB"];
-      status: "interviewing"
-      match: 92
-    }
-    {
-      id: "talent-3"
-      name: "Aisha Patel"
-      role: "Product Manager"
-      skills: ["Agile", "Roadmapping", "User Research"];
-      status: "available"
-      match: 88
-    }
-  ];
-      id: "talent-1",
-      name: "Jessica Lee",
-      role: "UI/UX Designer",;
-      skills: ["Figma", "Sketch", "User Testing"];
-      role: "UI/UX Designer",
-      skills: ["Figma", "Sketch", "User Testing"],
-      status: "available",
-      match: 95
-    },
->>>>>>> merged-prs-20250907-203621
-    {
-      id: "talent-2",
-      name: "Marcus Wright",
-      role: "Full Stack Developer",
-      skills: ["React", "Node.js", "MongoDB"],
-      status: "interviewing",
-<<<<<<< HEAD
-      match: 92},
-=======
-      match: 92
-    },
->>>>>>> merged-prs-20250907-203621
-    {
-      id: "talent-3",
-      name: "Aisha Patel",
-      role: "Product Manager",
-      skills: ["Agile", "Roadmapping", "User Research"],
-      status: "available",
-<<<<<<< HEAD
-      match: 88}
-  ],
-
-  const getStatusBadge = $2;
-      case "interviewing":
-        return <Badge variant = $2;
-      case "hired":
-        return <Badge variant = $2;
-      default:
-        return <Badge variant = $2;
-  return (
-    <Card>
-      <CardHeader>
-=======
-      match: 88
-    }
-  ],
-
-
-=======
 
 import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -176,7 +82,6 @@ id: "talent-1",
   ];
       id: "talent-1",
       name: "Jessica Lee",
-<<<<<<< HEAD
       role: "UI/UX Designer",;
       skills: ["Figma", "Sketch", "User Testing"];
       role: "UI/UX Designer",
@@ -201,10 +106,6 @@ id: "talent-1",
       match: 88
     }
   ],
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const getStatusBadge = (status: string) => {
     switch (status) {
       case "available": return <Badge className="bg-green-500">Available</Badge>,
@@ -219,47 +120,55 @@ id: "talent-1",
 
   },
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  }
-  },
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   return (
     <Card>
       <CardHeader>"
->>>>>>> merged-prs-20250907-203621
+      role: "UI/UX Designer",;
+      skills: ["Figma", "Sketch", "User Testing"];
+      role: "UI/UX Designer",
+      skills: ["Figma", "Sketch", "User Testing"],
+      status: "available",
+      match: 95
+    },
+    {
+      id: "talent-2",
+      name: "Marcus Wright",
+      role: "Full Stack Developer",
+      skills: ["React", "Node.js", "MongoDB"],
+      status: "interviewing",
+      match: 92
+    },
+    {
+      id: "talent-3",
+      name: "Aisha Patel",
+      role: "Product Manager",
+      skills: ["Agile", "Roadmapping", "User Research"],
+      status: "available",
+      match: 88
+    }
+  ],
+  const getStatusBadge = (status: string) => {
+    switch (status) {
+      case "available": return <Badge className="bg-green-500">Available</Badge>,
+      case "interviewing":
+        return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Interviewing</Badge>,
+      case "hired":
+
+        return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Hired</Badge>
+      default:"
+        return <Badge variant="outline">{status}</Badge>
+    }
+
+  },
+
+
+  return (
+    <Card>
+      <CardHeader>"
         <div className="flex items-center justify-between">
           <div>
             <CardTitle>Dedicated Talent Pool</CardTitle>
             <CardDescription>Candidates matched to your company</CardDescription>
-<<<<<<< HEAD
-          </div>
-          <Button size="sm">View All</Button>
-        </div>
-      </CardHeader>
-      <CardContent className="p-0">
-        <div className="divide-y divide-border">
-          {talents.map((talent) => (
-            <div key={talent.id} className="p-4">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="font-semibold">{talent.name}</p>
-                  <p className="text-sm text-muted-foreground">{talent.role}</p>
-                </div>
-                <div className="flex items-center gap-2">
-                  {getStatusBadge(talent.status)}
-                  <Badge variant="outline" className="bg-purple-100 text-purple-800 border-purple-200">
-                    {talent.match}% Match
-                  </Badge>
-                </div>
-              </div>
-              <div className="mt-2 flex flex-wrap gap-1">
-                {talent.skills.map((skill, index) => (
-=======
           </div>"
           <Button size="sm">View All</Button>
         </div>
@@ -282,25 +191,15 @@ id: "talent-1",
               </div>"
               <div className="mt-2 flex flex-wrap gap-1">
                 {talent.skills.map((skill, index) => (
-<<<<<<< HEAD
-                  <Badge key={index} variant="secondary" className="text-xs">
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <Badge key={index} variant="secondary" className="text-xs">
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
-<<<<<<< HEAD
-;
-=======
 
-<<<<<<< HEAD
 ;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+;
 export function TalentPool() {;
   // Mock talent data;
   const talents = [;
@@ -308,118 +207,38 @@ export function TalentPool() {;
       id: "talent-1",;
       name: "Jessica Lee",;
       role: "UI/UX Designer",;
-<<<<<<< HEAD
-      skills: ["Figma", "Sketch", "User Testing"],;
-      status: "available",;
-      match: 95;
-    },;
-=======
       skills: ["Figma", "Sketch", "User Testing"];
       status: "available",;
       match: 95;
     };
-<<<<<<< HEAD
+
 skills: ["Figma", "Sketch", "User Testing"],;
       status: "available",;
       match: 95;
     },;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     {;
       match: 95
 };    {;
       id: "talent-2",;
       name: "Marcus Wright",;
       role: "Full Stack Developer",;
-<<<<<<< HEAD
-      skills: ["React", "Node.js", "MongoDB"],;
-      status: "interviewing",;
-      match: 92;
-    },;
-=======
       skills: ["React", "Node && Node.js", "MongoDB"];
       status: "interviewing",;
       match: 92;
     };
-<<<<<<< HEAD
+
 skills: ["React", "Node.js", "MongoDB"],;
       status: "interviewing",;
       match: 92;
     },;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     {;
       match: 92
 };    {;
       id: "talent-3",;
       name: "Aisha Patel",;
       role: "Product Manager",;
-<<<<<<< HEAD
-      case "hired":;
-        return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Hired</Badge>,;
-      default:;
-        return <Badge variant="outline">{status}</Badge>;
-    }
-  }
-  return (
-      id:"talent-1",;
-      name:"Jessica Lee",;
-      role:"UI/UX Designer",;
-      skills:["Figma", "Sketch", "User Testing"],;
-      status:"available",;
-      match:95;
-    },;
-    {;
-      id:"talent-2",;
-      name:"Marcus Wright",;
-      role:"Full Stack Developer",;
-      skills:["React", "Node.js", "MongoDB"],;
-      status:"interviewing",;
-      match:92;
-    },;
-    {;
-      id:"talent-3",;
-      name:"Aisha Patel",;
-      role:"Product Manager",;
-      skills:["Agile", "Roadmapping", "User Research"],;
-      status:"available",;
-      match:88;
-    }
-  ],;
-;
-  const getStatusBadge = (status:string) => {;
-    switch (status) {;
-      case "available":return <Badge className="bg-green-500">Available</Badge>,;
-      case "interviewing":;
-        return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Interviewing</Badge>,;
-      case "hired":;
-        return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Hired</Badge>,;
-      default:;
-        return <Badge variant="outline">{status}</Badge>,;
-    }
-  },;
-;
-  return (;
-      skills: ["Agile", "Roadmapping", "User Research"],;
-      status: "available",;
-      match: 88;
-    }
-  ],;
-  const getStatusBadge = (status: string) => {;
-    switch (status) {;
-      case "available": return <Badge className="bg-green-500">Available</Badge>,;
-      case "interviewing":;
-        return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Interviewing</Badge>,;
-      case "hired":;
-        return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Hired</Badge>;
-      default:;
-        return <Badge variant="outline">{status}</Badge>;
-    }
-  };
-  return (;
-=======
       skills: ["Agile", "Roadmapping", "User Research"];
       status: "available",;
       match: 88;
@@ -444,24 +263,16 @@ skills: ["React", "Node.js", "MongoDB"],;
   }
 
   return (
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     <Card>;
       <CardHeader>;"
         <div className="flex items-center justify-between">;
           <div>;
             <CardTitle>Dedicated Talent Pool</CardTitle>;
             <CardDescription>Candidates matched to your company</CardDescription>;
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 import React from './react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
@@ -493,41 +304,12 @@ function TalentPool() {}
       role: "Product Manager","
       skills: ["Agile", "Roadmapping", "User Research"],"
       status: "available",
-<<<<<<< HEAD
 
-=======
-      match: 88;
-    }
-  ];
-;
-  const getStatusBadge = (status: string) =>: any {
-    switch (status) {
-      case "available": return <Badge className="bg - green - 500">Available</Badge>;
-      case "interviewing":;
-        return <Badge variant="outline" className="bg - amber - 100 text - amber - 800 border - amber - 200">Interviewing</Badge>;
-      case "hired":;
-        return <Badge variant="outline" className="bg - blue - 100 text - blue - 800 border - blue - 200">Hired</Badge>,
-      default:;
-        return <Badge variant="outline">{status}</Badge>;
-    }
-  }
-;
-  return (
-    <Card>;
-      <CardHeader>;
-        <div className="flex items - center justify - between">;
-          <div>;
-            <CardTitle > Dedicated Talent Pool</CardTitle>;
-            <CardDescription > Candidates matched to your company</CardDescription>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
           </div>;
           <Button size="sm">View All</Button>;
         </div>;
       </CardHeader>;
-<<<<<<< HEAD
-=======
 
                   <Badge key={index} variant="secondary" className="text-xs">
                     {skill}
@@ -536,21 +318,6 @@ function TalentPool() {}
               </div>;"
               <div className="mt-3 flex gap-2">;"
                 <Button size="sm" variant="outline">View Profile</Button>;"
-                <Button size="sm">Contact</Button>;
-              </div>;
-            </div>;
-          ))}
-
-<<<<<<< HEAD
-      <CardContent className="p-0">;
-=======
-        </div>;
-      </CardContent>;
-    </Card>;
-  );
-}
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <CardContent className="p - 0">;
         <div className="divide - y divide - border">;
           {talents.map ((talent) => (
@@ -587,58 +354,8 @@ function TalentPool() {}
               </div>;
             </div>;
           ))}
-        </div>;
-      </CardContent>;
-    </Card>;
-  ),; export function TalentPool () {
-  //Mock talent data const talents = [ {
-  id: "talent-1";
-name: "Jessica Lee";
-role: "UI/UX Designer";
-skills: ["Figma", "Sketch", "User Testing" ];
-status: "available";
-match: 95 
-};
-{
-  id: "talent-2";
-name: "Marcus Wright";
-role: "Full Stack Developer";
-skills: ["React", "Node.js", "MongoDB" ];
-status: "interviewing";
-match: 92 
-};
-{
-  id: "talent-3";
-name: "Aisha Patel";
-role: "Product Manager";
-skills: ["Agile", "Roadmapping", "User Research" ];
-status: "available";
-match: 88 
-}];
-const getStatusBadge = (status: string) => {
-  switch (status) {
-  case "interviewing": return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Interviewing</Badge>;
-case "hired": return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Hired</Badge>;
-default: return <Badge variant="outline"> {
-  status 
-}</Badge> 
-}
-;
 
-<<<<<<< HEAD
-};
-return (<Card> <CardHeader> <div className="flex items-center justify-between" > <div> <CardTitle>Dedicated Talent Pool</CardTitle> <CardDescription>Candidates matched to your company</CardDescription> </div> <Button size="sm" >View All</Button> </div> </CardHeader> </Badge>) ) 
-}</div> <div className="mt-3 flex gap-2" > <Button size="sm" variant="outline" >View Profile</Button> <Button size="sm" >Contact</Button> </div> </div>) ) 
-}</div> </CardContent> </Card>) 
-}
-                  <Badge variant="outline" className="bg-purple-100 text-purple-800 border-purple-200">
-                    {talent.match}% Match
-                  </Badge>
-                </div>
-              </div>
-              <div className="mt-2 flex flex-wrap gap-1">
-                {talent.skills.map((skill, index) => (
->>>>>>> merged-prs-20250907-203621
+      <CardContent className="p-0">;
                   <Badge key={index} variant="secondary" className="text-xs">
                     {skill}
                   </Badge>
@@ -655,16 +372,4 @@ return (<Card> <CardHeader> <div className="flex items-center justify-between" >
     </Card>
   )
 }
-<<<<<<< HEAD
-=======
-        </div>;
-      </CardContent>;
-    </Card>;
-  );
-}
-;
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+      <CardContent className="p-0">;

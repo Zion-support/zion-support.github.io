@@ -3,9 +3,6 @@
 <<<<<<< HEAD
 =======
 =======
-<<<<<<< HEAD
-=======
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -34,7 +31,6 @@ import React from "react";} from "lucide-react"; export default function Service
 import React from "react";
 import Link from "next/link";
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> merged-prs-20250907-203621
 import { 
 	Award, 
 	Brain, 
@@ -43,13 +39,6 @@ import {
 	ArrowRight, 
 	Cloud, 
 	Shield, 
-<<<<<<< HEAD
-	Code 
-
-
-=======
-export default function Services() {
-=======
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -90,7 +79,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 export default function Services() {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> merged-prs-20250907-203621
 	const title = \"Services — Zion Tech Group\";
 	const description = \"AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.\";
 	return (
@@ -118,9 +106,6 @@ export default function Services() {
 					<div className=\"grid gap-8 lg:grid-cols-2\">
 						{/* AI Autonomous Systems */}
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
 						<div id=\"ai\" className=\"group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-blue-300\">
 							<div className=\"flex items-center gap-x-3 mb-6\">
 								<div className=\"flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hover:bg-blue-700 transition-colors\">
@@ -157,8 +142,6 @@ export default function Services() {
 									<Clock className=\"h-4 w-4\" />
 									<span>2-4 weeks delivery</span>
 								</div>
-<<<<<<< HEAD
-=======
 =======
 
 						<div id=\"ai\" className=\"group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-blue-300\">;
@@ -199,7 +182,6 @@ export default function Services() {
 								</div>;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> merged-prs-20250907-203621
 								<Link
 									href=\"/contact\"
 									className=\"inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors group\"
@@ -259,9 +241,6 @@ export default function Services() {
 						</div>
 						{/* Cybersecurity */}
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
 						<div id=\"cybersecurity\" className=\"group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-purple-300\">
 							<div className=\"flex items-center gap-x-3 mb-6\">
 								<div className=\"flex h-12 w-12 items-center justify-center rounded-lg bg-purple-600 group-hover:bg-purple-700 transition-colors\">
@@ -298,8 +277,6 @@ export default function Services() {
 									<Clock className=\"h-4 w-4\" />
 									<span>3-6 weeks delivery</span>
 								</div>
-<<<<<<< HEAD
-=======
 =======
 
 						<div id=\"cybersecurity\" className=\"group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-purple-300\">;
@@ -340,7 +317,6 @@ export default function Services() {
 								</div>;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> merged-prs-20250907-203621
 								<Link
 									href=\"/contact\"
 									className=\"inline-flex items-center text-sm font-semibold text-purple-600 hover:text-purple-500 transition-colors group\"
@@ -353,9 +329,6 @@ export default function Services() {
 						</div>
 						{/* Micro SaaS */}
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
 						<div id=\"saas\" className=\"group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-orange-300\">
 							<div className=\"flex items-center gap-x-3 mb-6\">
 								<div className=\"flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover:bg-orange-700 transition-colors\">
@@ -367,8 +340,6 @@ export default function Services() {
 								</div>
 							</div>
 							<p className=\"text-gray-600 mb-6\">
-<<<<<<< HEAD
-=======
 =======
 
 						<div id=\"saas\" className=\"group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-orange-300\">;
@@ -384,7 +355,6 @@ export default function Services() {
 							<p className=\"text-gray-600 mb-6\">;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> merged-prs-20250907-203621
 								Custom software solutions tailored to your specific business needs and workflows.;
 							</p>
 							<ul className=\"space-y-3 mb-6\">
@@ -414,9 +384,6 @@ export default function Services() {
 									href=\"/contact\"
 									className=\"inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-500 transition-colors group\"
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
 									aria-label=\"Get started with custom software services\"
 								>
 									Get started with SaaS
@@ -428,8 +395,6 @@ export default function Services() {
 				</div>
 			</section>
 ;
-<<<<<<< HEAD
-=======
 =======
 
 									aria-label=\"Get started with custom software services\">;
@@ -444,7 +409,6 @@ export default function Services() {
 ,;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> merged-prs-20250907-203621
 			{/* Process Section */}
 			<section className=\"py-24 sm:py-32 bg-gray-50\">
 				<div className=\"mx-auto max-w-7xl px-6 lg:px-8\">
@@ -453,9 +417,6 @@ export default function Services() {
 						<p className=\"mt-6 text-lg leading-8 text-gray-600\">
 							We follow a proven methodology that ensures quality, speed, and successful outcomes.;
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
 						</p>
 					</div>
 					<div className=\"grid grid-cols-1 md:grid-cols-4 gap-8\">
@@ -500,8 +461,6 @@ export default function Services() {
 							Let\"s discuss your project requirements and how we can help you achieve your goals.
 						</p>
 						<div className=\"mt-10 flex items-center justify-center gap-x-6\">
-<<<<<<< HEAD
-=======
 =======
 
 						</p>;
@@ -550,7 +509,6 @@ export default function Services() {
 						<div className=\"mt-10 flex items-center justify-center gap-x-6\">;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> merged-prs-20250907-203621
 							<Link
 								href=\"/contact\"
 								className=\"group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-all duration-200 hover:scale-105\"
@@ -572,11 +530,7 @@ export default function Services() {
 				</div>
 			</section>
 		</>
-<<<<<<< HEAD
-	);
-=======
 	);
 
 }
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> merged-prs-20250907-203621

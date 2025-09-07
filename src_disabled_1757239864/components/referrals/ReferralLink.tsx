@@ -1,13 +1,19 @@
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src_disabled_1757239864/components/referrals/ReferralLink.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/referrals/ReferralLink.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import {
@@ -20,6 +26,8 @@ import {
 } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src_disabled_1757239864/components/referrals/ReferralLink.tsx
 =======
 import { useState } from "react",
@@ -29,6 +37,7 @@ import { Input } from "@/components/ui/input",
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/referrals/ReferralLink.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react'
 interface ReferralLinkProps {
   referralLink: string;
@@ -45,11 +54,14 @@ export function ReferralLink({
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   }
   },
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { useState } from 'react';
 import { Button } from '@/components / ui / button';
@@ -105,6 +117,9 @@ export function ReferralLink(): any ({;
     setTimeout(() => setCopied(false), 2000);
   };
   return (
+<<<<<<< HEAD
+
+=======
   }
     <Card className="mt-6">
       <CardHeader>
@@ -132,6 +147,7 @@ export function ReferralLink(): any ({;
   },
 
 <<<<<<< HEAD:src_disabled_1757239864/components/referrals/ReferralLink.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <Card className='mt - 6'>;
 
 import { useState } from "react",import { Button } from "@/components/ui/button",import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
@@ -172,9 +188,12 @@ export function ReferralLink() {const [copied, setCopied] = useState(false)const
 
             <p className='text-sm text-green-600 dark:text-green-500'>              Copied to clipboard!
             <p className="text-sm text-green-600 dark:text-green-500">
+<<<<<<< HEAD
+=======
 =======
   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/referrals/ReferralLink.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -220,6 +239,11 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
             <p className='text-sm text-green-600 dark:text-green-500'>              Copied to clipboard!;
             <p className="text-sm text-green-600 dark:text-green-500">;
 
+<<<<<<< HEAD
+  const handle_copy = () =>: any {on_copy ()set_copied (true)set_timeout (() => set_copied (false), 2000)}
+          {copied && (<p className='text-sm text-green-600 dark:text-green-500'>              Copied to clipboard!;
+            <p className="text-sm text-green-600 dark:text-green-500">;const handleCopy  = null;return (<Card className="mt - 6">;
+=======
 <<<<<<< HEAD:src_disabled_1757239864/components/referrals/ReferralLink.tsx
   const handle_copy = () =>: any {on_copy ()set_copied (true)set_timeout (() => set_copied (false), 2000)}
           {copied && (<p className='text-sm text-green-600 dark:text-green-500'>              Copied to clipboard!;
@@ -247,6 +271,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
 
     <Card className="mt - 6">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/referrals/ReferralLink.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <CardHeader>;
         <CardTitle className="flex items - center gap - 2">;
           <Link className="h - 5 w - 5" />;Your Referral Link;
@@ -254,7 +279,10 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
         <CardDescription>Share this link with others to earn rewards when they join and complete onboarding;
         </CardDescription>;
       </CardHeader>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src_disabled_1757239864/components/referrals/ReferralLink.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <CardContent>;<Input;
               value={referralLink}
               readOnly;
@@ -279,6 +307,8 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
           {copied && ({copied && (<p className="text-sm text-green-600 dark:text-green-500">;
               Copied to clipboard!;
             </p>;
+<<<<<<< HEAD
+=======
 =======
       <CardContent>;
 
@@ -386,10 +416,14 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/referrals/ReferralLink.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           )}
         </div>
       </CardContent>
 
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD:src_disabled_1757239864/components/referrals/ReferralLink.tsx
 
 =======
@@ -412,11 +446,14 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/referrals/ReferralLink.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <CardFooter className="border-t bg-muted/50 p-4">
         <div className="flex flex-col sm:flex-row w-full justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">Share on social media:</p>
           <div className="flex space-x-2">
             <Button 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
               variant="outline" 
               size="sm"
@@ -436,6 +473,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               className="flex items-center gap-2"
               onClick = {() => onShare('facebook'),}
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
               variant="outline" 
 
@@ -443,11 +481,18 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               className="flex items-center gap-2"
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <Button 
               variant="outline" 
               size="sm"
               className="flex items-center gap-2"
+<<<<<<< HEAD
+
+
+=======
 <<<<<<< HEAD
               onClick={() => onShare('facebook')}
               onClick = {() => onShare('facebook'),}
@@ -456,10 +501,16 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             >
               <Facebook className="h-4 w-4" />
               Facebook
             </Button>
+<<<<<<< HEAD
+
+
+
+=======
 <<<<<<< HEAD
             <Button
               variant='outline'
@@ -472,6 +523,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <Button 
               variant="outline" 
               size="sm"
@@ -480,15 +532,23 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
             >
               <Share className="h-4 w-4" />
 <<<<<<< HEAD
+
+
+
+=======
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               LinkedIn
             </Button>
           </div>
         </div>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       </CardFooter>;
     </Card>;
@@ -533,11 +593,62 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
         <div className="flex flex-col space-y-3">;
           <div className="flex space-x-2">;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
               onClick={() => onShare('linkedin')}            >;
               <Share className='h-4 w-4' />              LinkedIn              <Share className="h-4 w-4" />;
         <div className="flex flex - col space - y-3">;
           <div className="flex space - x-2">;
+<<<<<<< HEAD
+            <Input;
+              value={referral_link}
+              read_only;
+              className="font - mono text - sm";
+            />;
+            <Button variant="outline" size="icon" on_click={handle_copy} aria - label="Copy referral link">;
+              <Copy className="h - 4 w - 4" />;
+              <span className="sr - only">Copy</span>;
+            </Button>;
+          </div>;
+          {copied && (<p className="text - sm text - green - 600 dark:text - green - 500">;
+              Copied to clipboard!;
+            </p>)}
+        </div>;
+      </CardContent>;
+      <CardFooter className='border - t bg - muted / 50 p - 4'>;
+        <div className='flex flex - col sm:flex - row w - full justify - between items - center gap - 4'>;
+          <p className='text - sm text - muted - foreground'>;
+            Share on social media:;
+          </p>;
+          <div className='flex space - x-2'>;
+            <Button;
+              variant='outline';
+              size='sm';
+              className='flex items - center gap - 2';
+              on_click={() => on_share ('twitter')}            <Button;
+              variant="outline";
+              size="sm";
+              className="flex items - center gap - 2";
+              on_click = {() => on_share ('twitter') }
+            >;
+              <Twitter className='h - 4 w - 4' />;
+              Twitter;
+            </Button>;
+            <Button;
+              variant='outline';
+              size='sm';
+              className='flex items - center gap - 2'              on_click={() => on_share ('facebook')}
+            <Button;
+              variant="outline";
+              size="sm";
+              className="flex items - center gap - 2";
+              on_click = {() => on_share ('facebook') }
+            >;
+              <Facebook className='h - 4 w - 4' />;
+              Facebook;
+            </Button>;
+            <Button;
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Input;
               value={referralLink}
@@ -601,10 +712,14 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
             >;
               <Share className="h-4 w-4" />;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               variant='outline';
               size='sm';
               className='flex items - center gap - 2';
               on_click={() => on_share ('linkedin')}            >;
+<<<<<<< HEAD
+              <Share className='h - 4 w - 4' />              LinkedIn              <Share className="h - 4 w - 4" />;LinkedIn;
+=======
 <<<<<<< HEAD:src_disabled_1757239864/components/referrals/ReferralLink.tsx
               <Share className='h - 4 w - 4' />              LinkedIn              <Share className="h - 4 w - 4" />;LinkedIn;
 =======
@@ -613,10 +728,15 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               LinkedIn;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/referrals/ReferralLink.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             </Button>;
           </div>;
         </div>;
       </CardFooter>;
+<<<<<<< HEAD
+
+
+=======
 <<<<<<< HEAD
     </Card>;
   );
@@ -627,6 +747,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   );
 }
     </Card>);
@@ -634,7 +755,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
       </CardFooter>
     </Card>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src_disabled_1757239864/components/referrals/ReferralLink.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   )
 
   );
@@ -659,6 +783,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               readOnly
               className="font-mono text-sm"
 
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
   )
@@ -666,3 +792,4 @@ ursor/fix-website-loading-errors-and-merge-6662
   )
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/referrals/ReferralLink.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

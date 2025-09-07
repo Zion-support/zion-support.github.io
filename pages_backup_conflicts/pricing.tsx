@@ -1,34 +1,13 @@
 import React from 'react';
-<<<<<<< HEAD
-
-=======
->>>>>>> merged-prs-20250907-203621
-interface PricingProps {
-  // Add props here as needed
-}
-
-<<<<<<< HEAD
-=======
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> merged-prs-20250907-203621
-export default function Pricing({ }: PricingProps) {
-  return (
-    <div>
-      <h1>Pricing</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-<<<<<<< HEAD
-
-}
-}
-=======
-}
-}
-}
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
 
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> merged-prs-20250907-203621
+  it('renders add to cart button', () => {
+    render(<MockAddToCart productId="test-product" onAddToCart={mockOnAddToCart} />);
+    
+    const button = screen.getByTestId('add-to-cart');
+    expect(button).toBeInTheDocument();
+    expect(button).toHaveTextContent('Add to Cart');
+  });
+
+
+});

@@ -322,6 +322,8 @@ const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 // console.log(' Zion Tech Group - Working Automation Suite')
+<<<<<<< HEAD
+=======
 
 console.log('====')
   log(message, type = 'info')
@@ -381,3 +383,4 @@ const { execSync } = require('child_process')
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

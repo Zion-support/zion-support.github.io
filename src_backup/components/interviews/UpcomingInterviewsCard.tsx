@@ -1,25 +1,4 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { useInterviews } from '@/hooks/useInterviews'
-import { Interview } from '@/types/interview'
-import { format, isPast, parseISO } from 'date-fns'
-import Link from 'next/link'
-import { Calendar, Clock, Video } from 'lucide-react'
-import { Avatar } from "@/components/ui/avatar";
-import {logErrorToProduction} from '@/utils/productionLogger';
-export function UpcomingInterviewsCard() {
 
-  const { fetchInterviews } = useInterviews()
-  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([])
-  const [isLoading, setIsLoading] = useState(true)
-  useEffect((,) => {
-    const loadInterviews = async () => {      setIsLoading(true)
-      try {
-        const interviews = await fetchInterviews()
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Filter for confirmed interviews in the future
 
         const upcoming = interviews
@@ -29,51 +8,15 @@ export function UpcomingInterviewsCard() {
               !isPast(parseISO(interview.scheduled_date))
           )
 
-<<<<<<< HEAD
-import React, { useEffect, useState } from "react",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { useInterviews } from "@/hooks/useInterviews",
-import { Interview } from "@/types/interview",
-import { format, isPast, parseISO } from "date-fns",
-import Link from "next/link",
-import { Calendar, Clock, Video } from 'lucide-react'
-import { Avatar } from "@/components/ui/avatar",
-import {logErrorToProduction} from '@/utils/productionLogger',
-export function UpcomingInterviewsCard() {
 
-  const { fetchInterviews } = useInterviews(),
-  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
-  const [isLoading, setIsLoading] = useState(true),
 
-  useEffect(() => {
-    const loadInterviews = async () => {
-      setIsLoading(true),
-      try {
-        const interviews = await fetchInterviews(),
-        
-        // Filter for confirmed interviews in the future
-        const upcoming = interviews
-          .filter(interview => 
-            interview.status === 'confirmed' && 
-            !isPast(parseISO(interview.scheduled_date))
-          )
-          .sort(
-            (a, b) =>
-              parseISO(a.scheduled_date).getTime() -
-              parseISO(b.scheduled_date).getTime()          )
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           .sort(;
             (a, b) =>;
               parseISO(a.scheduled_date).getTime() -;
               parseISO(b.scheduled_date).getTime()          );
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
           .slice(0, 3); // Take only the next 3 interviews
         setUpcomingInterviews(upcoming)
       } catch (error) {
@@ -98,12 +41,10 @@ export function UpcomingInterviewsCard() {
     loadInterviews()
   }, []),
 
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
   if (isLoading) {
     return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light>
@@ -123,57 +64,7 @@ export function UpcomingInterviewsCard() {
                   <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded></div>
                 </div>
               </div>
-<<<<<<< HEAD
-  }
-import React, { useEffect, useState } from "react",;
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { useInterviews } from "@/hooks/useInterviews",;
-import { Interview } from "@/types/interview",;
-import { format, isPast, parseISO } from "date-fns",;
-import Link from "next/link",;
-import React, { useEffect, useState } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
-import { Button } from '@/components / ui / button';
-import { use_interviews } from '@/hooks / use_interviews';
-import { Interview } from '@/types / interview';
-import { format, is_past, parseISO } from 'date - fns';
-import Link from 'next / link';
-import { Calendar, Clock, Video } from 'lucide-react';
-import { Avatar } from '@/components/ui/ avatar';
-import { logErrorToProduction } from '@/utils/ production_logger';
-export /**
- * UpcomingInterviewsCard - Function description
- */
-function UpcomingInterviewsCard() {
-  const { fetch_interviews } = use_interviews ();
-  const [upcoming_interviews, setUpcomingInterviews] = useState < Interview[]>([]);
-  const [is_loading, setIsLoading] = useState (true);
-  useEffect ((, ) => {
-    const load_interviews = async () => {      setIsLoading (true);
-      try {
-        const interviews = await fetch_interviews ();
-        // Filter for confirmed interviews in the future;
-// Filter for confirmed interviews in the future;
-        const upcoming = interviews;
-          .filter(interview =>;
-              interview.status === 'confirmed' &&;
-              !is_past (parseISO (interview.scheduled_date)));
-          .sort (
-            (a, b) =>;
-              parseISO (a.scheduled_date).get_time () -;
-              parseISO (b.scheduled_date).get_time ()          );
-          .slice (0, 3); // Take only the next 3 interviews;
-        setUpcomingInterviews (upcoming);
-      } catch (error) {
-        logErrorToProduction ('Error loading upcoming interviews:', {
-          data: error,
-        });
-      } finally {
-        setIsLoading (false);
-      }
-    }
-<<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
+
 
 import React, { useEffect, useState } from 'react;
 import { Card, CardContent, CardHeader, CardTitle } from @/components/ui/card';
@@ -186,8 +77,7 @@ import { Calendar, Clock, Video } from lucide-react';
 
 
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/interviews/UpcomingInterviewsCard.tsx
+
 import React, { useEffect, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -247,18 +137,15 @@ if ( {) {
           <CardTitle className='text - lg flex items - center'>;
             <Video className='h - 5 w - 5 mr - 2 text - zion - purple' />;
 
-<<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
-=======
+
             ))}
           </div>
         </CardContent>
       </Card>
     )
   }
-=======
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useEffect, useState } from "react",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -267,7 +154,6 @@ import { Interview } from "@/types/interview",;
 import { format, isPast, parseISO } from "date-fns",;
 import Link from "next/link",;
 import { Calendar, Clock, Video } from 'lucide-react';
-<<<<<<< HEAD
 import { Avatar } from "@/components/ui/avatar",;
 import {logErrorToProduction} from '@/utils/productionLogger',;
 export function UpcomingInterviewsCard() {;
@@ -304,12 +190,11 @@ export function UpcomingInterviewsCard() {;
         <CardHeader>;
           <CardTitle className="text-lg flex items-center">;
             <Video className="h-5 w-5 mr-2 text-zion-purple" />;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/interviews/UpcomingInterviewsCard.tsx
+
             Upcoming Interviews;
           </CardTitle>;
         </CardHeader>;
         <CardContent>;
-=======
 import { Avatar } from '@/components / ui / avatar';
 import { logErrorToProduction } from '@/utils / production_logger';
 export /**
@@ -343,7 +228,6 @@ function UpcomingInterviewsCard() {
         setIsLoading (false);
       }
     }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -353,12 +237,10 @@ function UpcomingInterviewsCard() {
 ursor/fix-website-loading-errors-and-merge-6662
   }
   if (upcomingInterviews.length === 0) {
-<<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
+
+      <Card className='bg-zion-blue-dark/40 border-zion-blue-light'>
     return (
       <Card className='bg-zion-blue-dark/40 border-zion-blue-light>
-=======
-      <Card className='bg-zion-blue-dark/40 border-zion-blue-light'>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/interviews/UpcomingInterviewsCard.tsx
         <CardHeader>
           <CardTitle className=text-lg flex items-center'>
             <Video className='h-5 w-5 mr-2 text-zion-purple />
@@ -389,7 +271,6 @@ ursor/fix-website-loading-errors-and-merge-6662
         <CardHeader>;
           <CardTitle className='text-lg flex items-center'>;
             <Video className='h-5 w-5 mr-2 text-zion-purple' />;
-<<<<<<< HEAD
           <div className="space-y-4">;
             {[1, 2].map(i => (;
               <div key={i} className="flex items-center gap-3 animate-pulse">;
@@ -409,29 +290,10 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Button asChild className="mt-4" variant="outline" size="sm">;
               <Link href="/interviews">Schedule Interview</Link>;
             </Button>;
-=======
-    load_interviews ();
-  }, []);
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <Card className='bg - zion - blue - dark / 40 border - zion - blue - light'>;
-        <CardHeader>;
-          <CardTitle className='text - lg flex items - center'>;
-            <Video className='h - 5 w - 5 mr - 2 text - zion - purple' />;
-            Upcoming Interviews;
-          </CardTitle>;
-        </CardHeader>;
-        <CardContent>;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>;
         </CardContent>;
       </Card>;
     );
-<<<<<<< HEAD
   }
 
   if (upcomingInterviews.length === 0) {
@@ -440,99 +302,25 @@ if ( {) {
         <CardHeader>
           <CardTitle className="text-lg flex items-center">
             <Video className="h-5 w-5 mr-2 text-zion-purple" />
-=======
-
-
-
-  }
-  if (upcomingInterviews.length === 0) {
-    return (
-      <Card className='bg-zion-blue-dark/40 border-zion-blue-light'>
-        <CardHeader>
-          <CardTitle className='text-lg flex items-center'>
-            <Video className='h-5 w-5 mr-2 text-zion-purple' />
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             Upcoming Interviews
           </CardTitle>
         </CardHeader>
         <CardContent>
-<<<<<<< HEAD
           <div className="text-center py-6">
             <Calendar className="h-10 w-10 mx-auto mb-2 text-muted-foreground" />
             <p className="text-sm text-muted-foreground">No upcoming interviews scheduled</p>
             <Button asChild className="mt-4" variant="outline" size="sm">
               <Link href="/interviews">Schedule Interview</Link>
-=======
-          <div className='text-center py-6'>
-            <Calendar className='h-10 w-10 mx-auto mb-2 text-muted-foreground' />
-            <p className='text-sm text-muted-foreground'>
-              No upcoming interviews scheduled
-            </p>
-            <Button asChild className='mt-4' variant='outline' size='sm'>
-              <Link href='/interviews'>Schedule Interview</Link>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </Button>
           </div>
         </CardContent>
       </Card>
     )
-<<<<<<< HEAD
   }
   return (
     <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
       <CardHeader>
-        <CardTitle className="text-lg flex items-center">
-          <Video className="h-5 w-5 mr-2 text-zion-purple" />
-          Upcoming Interviews
-        </CardTitle>
-      </CardHeader>
-      <CardContent>
-        <div className="space-y-4">
-          {upcomingInterviews.map(interview => {
-            const interviewDate = parseISO(interview.scheduled_date)
-            const formattedDate = format(interviewDate, 'EEE, MMM d')
-            const formattedTime = format(interviewDate, 'h:mm a')
-            // Determine if interview is happening soon (within 30 minutes)            const now = new Date()
-            const isStartingSoon = null;
-              interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
-              interviewDate.getTime() > now.getTime()
 
-            return (
-              <div key={interview.id} className='flex items-center gap-3'>
-                <Avatar className='h-10 w-10 bg-zion-purple/10'>
-                  {interview.client_avatar |interview.talent_avatar ? (
-                    <img
-                      src={interview.client_avatar |interview.talent_avatar}
-                      alt={interview.client_name |interview.talent_name}
-                      loading='lazy'                    />
-                  ) : (
-                    <div className='flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium'>
-                      {(
-                        interview.client_name |
-                        interview.talent_name |
-                        'U'
-                      ).charAt(0)}
-                    </div>
-            return (<div key={interview.id} className="flex items-center gap-3">
-                <Avatar className="h-10 w-10 bg-zion-purple/10">
-                  {/* Assuming AvatarImage and AvatarFallback are part of Avatar or imported separately */}
-                  {/* For now, conditional rendering based on available image */}
-                  {interview.client_avatar |interview.talent_avatar ? (
-                    <img
-                      src={interview.client_avatar |interview.talent_avatar |undefined} // Ensure src is string | undefined
-                      alt={interview.client_name |interview.talent_name |"User"} // Ensure alt is string
-                    />
-                  ) : (
-                    <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">
-                      {(interview.client_name |interview.talent_name |"U").charAt(0)}
-                    </div>
-                  )}
-                </Avatar>
-                <div className='flex-1'>
-                  <div className='flex justify-between items-start'>
-                    <p className='font-medium line-clamp-1'>
-                      {interview.title |'Interview'}
-=======
           </div>;
         </CardContent>;
       </Card>;
@@ -563,7 +351,6 @@ if ( {) {
     );
   }
   return (
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -578,13 +365,7 @@ if ( {) {
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
               interviewDate.getTime() > now.getTime(),
             
-<<<<<<< HEAD
-            
-=======
 
-
-
-<<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
 import { Avatar } from '@/components/ui/avatar';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
@@ -596,22 +377,15 @@ export function UpcomingInterviewsCard() {
   useEffect(() => {
     const loadInterviews = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/interviews/UpcomingInterviewsCard.tsx
+
             return (
               <div key={interview.id} className="flex items-center gap-3>
                 <Avatar className=h-10 w-10 bg-zion-purple/10">
                   {interview.client_avatar || interview.talent_avatar ? (
                     <img
                       src={interview.client_avatar || interview.talent_avatar}
-<<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
-                      alt={interview.client_name || interview.talent_name}<div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium>;
-                      {(interview.client_name || interview.talent_name || U").charAt(0)}
-                    </div>;
-=======
+
                       alt={interview.client_name || interview.talent_name}
-<<<<<<< HEAD
                       loading="lazy"
                     />
                   ) : (
@@ -643,14 +417,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       loading="lazy"
                     />
                   ) : (
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">
                       {(interview.client_name || interview.talent_name || "U").charAt(0)}
                     </div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/interviews/UpcomingInterviewsCard.tsx
+                      alt={interview.client_name || interview.talent_name}<div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium>;
+                      {(interview.client_name || interview.talent_name || U").charAt(0)}
+                    </div>;
                   )}
                 </Avatar>
                 <div className="flex-1">
@@ -659,37 +431,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {interview.title || "Interview"}
 
                     </p>
-<<<<<<< HEAD
-                      <span className='text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse'>
-                    </p>
-                    {isStartingSoon && (
-                      <span className="text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">
-                        Soon
-                      </span>
-                  <div className='flex items-center text-sm text-muted-foreground'>
-                    <Clock className='h-3 w-3 mr-1' />
-                    {formattedDate} at {formattedTime}
-                  </div>
-                </div>
-              </div>
-            )
-          })}
-        </div>
-        <div className='mt-4 pt-3 border-t border-zion-blue-light/40'>
-          <Button asChild size='sm' variant='outline' className='w-full'>
-            <Link href='/interviews'>View All Interviews</Link>
-=======
+
                     {isStartingSoon && (
                       <span className=text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse'>
                         Soon
                       </span>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <Card className='bg-zion-blue-dark/40 border-zion-blue-light'>;
       <CardHeader>;
-<<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
+
+    <Card className='bg-zion-blue-dark/40 border-zion-blue-light'>;
+      <CardHeader>;
         <CardTitle className=text-lg flex items-center'>;
           <Video className='h-5 w-5 mr-2 text-zion-purple />;
-=======
         <CardTitle className='text-lg flex items-center'>;
           <Video className='h-5 w-5 mr-2 text-zion-purple' />;
     ),;
@@ -700,12 +453,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <CardHeader>;
         <CardTitle className="text-lg flex items-center">;
           <Video className="h-5 w-5 mr-2 text-zion-purple" />;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/interviews/UpcomingInterviewsCard.tsx
+        <CardTitle className=text-lg flex items-center'>;
+          <Video className='h-5 w-5 mr-2 text-zion-purple />;
           Upcoming Interviews;
         </CardTitle>;
       </CardHeader>;
       <CardContent>;
-<<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
+
         <div className=space-y-4'>;
           {upcomingInterviews && upcomingInterviews.map(interview => {const interviewDate = parseISO(interview && interview.scheduled_date)const formattedDate = format(interviewDate, 'EEE, MMM d)const formattedTime  = format(interviewDate, h:mm a')// Determine if interview is happening soon (within 30 minutes)            const now = new Date()const isStartingSoon =;
               interviewDate && interviewDate.getTime() - now && now.getTime() < 30 * 60 * 1000 &&;
@@ -745,54 +499,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     )}</div>;
                   <div className=flex items-center text-sm text-muted-foreground">;
                     <Clock className="h-3 w-3 mr-1 />;
-=======
-        <div className="space-y-4">;
-          {upcomingInterviews.map(interview => {;
-            const interviewDate = parseISO(interview.scheduled_date),;
-            const formattedDate = format(interviewDate, 'EEE, MMM d'),;
-            const formattedTime = format(interviewDate, 'h:mm a'),;
-            ;
-            // Determine if interview is happening soon (within 30 minutes);
-            const now = new Date(),;
-            const isStartingSoon = ;
-              interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&;
-              interviewDate.getTime() > now.getTime(),;
-            ;
-            return (;
-              <div key={interview.id} className="flex items-center gap-3">;
-                <Avatar className="h-10 w-10 bg-zion-purple/10">;
-                  {interview.client_avatar || interview.talent_avatar ? (;
-                    <img;
-                      src={interview.client_avatar || interview.talent_avatar}
-                      alt={interview.client_name || interview.talent_name}
-                      loading="lazy";
-                    />;
-                  ) :(;
-                    <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">;
-                      {(interview.client_name || interview.talent_name || "U").charAt(0)}
-                    </div>;
-                  )}
-                </Avatar>;
-                <div className="flex-1">;
-                  <div className="flex justify-between items-start">;
-                    <p className="font-medium line-clamp-1">;
-                      {interview.title || "Interview"}
-                    </p>;
-                    {isStartingSoon && (;
-                      <span className="text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">;
-                        Soon;
-                      </span>;
-                    )}
-<<<<<<< HEAD
-=======
 
-                  </div>
-
-                  <div className="flex items-center text-sm text-muted-foreground">
-                    <Clock className="h-3 w-3 mr-1" />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/interviews/UpcomingInterviewsCard.tsx
                     {formattedDate} at {formattedTime}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                  </div>;
+
+                    )}</div>;
+                  <div className=flex items-center text-sm text-muted-foreground">;
+                    <Clock className="h-3 w-3 mr-1 />;
+                    {formattedDate} at {formattedTime}
                   </div>;
                   <div className="flex items-center text-sm text-muted-foreground">;
                     <Clock className="h-3 w-3 mr-1" />;
@@ -818,7 +532,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
+
             )})}
         </div>;<div className='mt-4 pt-3 border-t border-zion-blue-light/40>;
           <Button asChild size=sm' variant='outline className=w-full'>;
@@ -837,10 +551,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 if ( {) {$2;
 }
     return (<Card className='bg - zion - blue - dark / 40 border - zion - blue - light>;
-=======
+
     return (
       <Card className='bg - zion - blue - dark / 40 border - zion - blue - light'>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/interviews/UpcomingInterviewsCard.tsx
         <CardHeader>;
           <CardTitle className=text - lg flex items - center'>;
             <Video className='h - 5 w - 5 mr - 2 text - zion - purple />;
@@ -980,7 +693,7 @@ return (Soon </span>) ;
 }
 }
 
-<<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
+
 ;
 
   );
@@ -989,10 +702,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
   );
-=======
-<<<<<<< HEAD
+
 ;
-=======
-;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/interviews/UpcomingInterviewsCard.tsx

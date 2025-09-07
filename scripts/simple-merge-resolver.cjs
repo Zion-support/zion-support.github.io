@@ -226,10 +226,13 @@ const util = require('util');
     this.projectRoot = path.join(__dirname, '..')
   async log(message, level = 'INFO')
       const { stdout } = await execAsync('git diff --name-only --diff-filter=U')
-      return stdout.trim().split('\n')
+return stdout.trim().split('\n');
       await this.log(`Error finding conflicted "files"`)
       await this.log(`Encountered ${this.errors.length} "errors"`)
     console.log('You can now commit the changes "with": git add . && git commit -m "Resolve merge conflicts")
+<<<<<<< HEAD
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -262,3 +265,4 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 =======
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

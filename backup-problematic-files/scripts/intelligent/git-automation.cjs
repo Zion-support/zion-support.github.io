@@ -1,18 +1,11 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
       if ( {
         ) {
      {}
         await this.performMerge(branchName)} else if ( {
         ) {
      {}
-=======
-"autoMerge"
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-=======
 const { execSync, spawn } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -107,12 +100,10 @@ class IntelligentGitAutomation {
       const hasConflicts = conflictCheck.includes('<<<<<<<') || conflictCheck.includes(;);
 #!/usr/bin/env node;
         await this.performMerge(branchName)} else if ( {)
->>>>>>> origin/chore/fix-lint-and-merge
         await this.handleConflicts(branchName, conflictCheck)}
     } catch (error) {`;
       console.error(`Error analyzing branch ${branch}:`, error)}
   async performMerge(branchName) {
-<<<<<<< HEAD
     try {
 
       // Create backup before merge
@@ -194,33 +185,9 @@ class IntelligentGitAutomation {
       if ( {
         ) {
      {}
-=======
-  // TODO: Implement
-      // Create backup before merge;
-
-      // Record merge;
-      this.mergeHistory.push({
-        "branch": branchName,")"
-        "timestamp": new Date().toISOString(),
-        "strategy": this.config.mergeStrategy,
-        "success": true;"
-      })) {
-     {"
-
-      })}
-      // Clean up branch;
-      await this.cleanupBranch(branchName)} catch (error) {`;
-      console.error(`❌ Failed to merge ${branchName}:`, error);
-      this.mergeHistory.push({"
-
-  // TODO: Implement
-      // Use intelligent conflict resolution;
-      const resolution = await this.intelligentConflictResolution(conflictDetails;);
->>>>>>> origin/chore/fix-lint-and-merge
         await this.performMerge(branchName)} else {
   // TODO: Implement
         await this.notifyManualIntervention(branchName, resolution)}
-<<<<<<< HEAD
       
       this.conflictHistory.push({
         branch": branchName,
@@ -231,9 +198,6 @@ class IntelligentGitAutomation {
       })} catch (error) {
       console.error(`Error handling conflicts for ${branchName}:`, error)}
   }
-=======
-      this.conflictHistory.push({"
->>>>>>> origin/chore/fix-lint-and-merge
 
         "strategy": resolution.strategy;"
       })} catch (error) {`;
@@ -241,7 +205,6 @@ class IntelligentGitAutomation {
   async intelligentConflictResolution(conflictDetails) {
     // Simple conflict resolution strategy;
     const conflicts = this.parseConflicts(conflictDetails;);
-<<<<<<< HEAD
     const resolution = {
       "resolved: false,
       conflicts": conflicts.length,
@@ -249,15 +212,9 @@ class IntelligentGitAutomation {
       actions": []
    }
     
-=======
-    const resolution = {"
-
-      "actions": []"
->>>>>>> origin/chore/fix-lint-and-merge
     for (const conflict of conflicts) {
       // Analyze conflict type and apply resolution strategy;
       const conflictType = this.analyzeConflictType(conflict;);
-<<<<<<< HEAD
       
       switch (conflictType) {
         case 'import:
@@ -270,17 +227,11 @@ class IntelligentGitAutomation {
           resolution.actions.push(resolve_version_conflict');
           break;
         "default: resolution.actions.push('manual_review_required);
-=======
-      switch (conflictType) {"
-
-        "default": resolution.actions.push('manual_review_required');
->>>>>>> origin/chore/fix-lint-and-merge
           resolution.resolved = false;
           return resolution}
     resolution.resolved = true;
   parseConflicts(conflictDetails) {
     const conflicts = [];
-<<<<<<< HEAD
     const lines = conflictDetails.split(\n';);
     
     for (let i = ;0; i < lines.length i++) {
@@ -296,344 +247,14 @@ class IntelligentGitAutomation {
           content": []
        } }
         
-=======
-    const lines = conflictDetails.split('\n';);
-    for (let i = ;0; i < lines.length i++) {
-      if () {
-        const conflict = {
-
-          "content": []"
-          start: i,"
-
-       } };
->>>>>>> origin/chore/fix-lint-and-merge
         i++;
           conflict.content.push(lines[i]);
           i++}
         conflicts.push(conflict)}
     return conflicts}
   extractFileName(line) {
-<<<<<<< HEAD
     // Extract filename from conflict marker
-    const match = line.match(/<<<<<<< (.*);/;);
-    return match ? match[1] : 'unknown}
-
-  analyzeConflictType(conflict) {
-    const content = conflict.content.join(\n';);
-    
-    if (|| content.includes('require)) {
-      return import') {
-    || content.includes('require)) {
-      return import'}} else if (|| content.includes('dependencies)) {
-      return dependency') {
-    || content.includes('dependencies)) {
-      return dependency'}} else if (|| content.includes('v.)) {
-      return version') {
-    || content.includes('v.)) {
-      return version'}} else {
-      return 'unknown}
-  }
-
-    // Check if commit should trigger automatic actions
-    const commitMessage = repoInfo.lastCommit[1].toLowerCase(;);
-    
-    if (|| commitMessage.includes(bug')) {
-      ) {
-    || commitMessage.includes('bug)) {}
-      await this.handleBugFix(repoInfo)} else if (|| commitMessage.includes(add')) {
-      ) {
-    || commitMessage.includes('add)) {}
-      await this.handleFeature(repoInfo)} else if () {
-      ) {
-    ) {}
-      await this.handleRefactor(repoInfo)}
-  }
-
-    // Analyze changes
-    const changes = repoInfo.statu;s;
-    const changeTypes = {
-      "modified: changes.filter(c => c.startsWith(M')).length,
-      added": changes.filter(c => c.startsWith('A)).length,
-      "deleted: changes.filter(c => c.startsWith(D')).length,
-      renamed": changes.filter(c => c.startsWith('R)).length
-   }
-
-    // Auto-commit if configured
-    if () {
-=======
-    // Extract filename from conflict marker;"
-
-  analyzeConflictType(conflict) {
-    const content = conflict.content.join('\n';);
-    if (|| content.includes('require')) {
-      return 'import') {
-    || content.includes('require')) {
-
-  async handleNewCommit(repoInfo) {
-    // Check if commit should trigger automatic actions;
-    const commitMessage = repoInfo.lastCommit[1].toLowerCase(;);
-    if (|| commitMessage.includes('bug')) {
-
-      await this.handleFeature(repoInfo)} else if () {
-      await this.handleRefactor(repoInfo)}
-  async handleUncommittedChanges(repoInfo) {
-    // Analyze changes;
-    const changes = repoInfo.statu;s;
-    const changeTypes = {
-      "modified": changes.filter(c => c.startsWith('M')).length,
-      "added": changes.filter(c => c.startsWith('A')).length,
-      "deleted": changes.filter(c => c.startsWith('D')).length,
-      "renamed": changes.filter(c => c.startsWith('R')).length;
-
-    // Auto-commit if configured;
->>>>>>> origin/chore/fix-lint-and-merge
-      await this.autoCommit(changes)}
-  shouldAutoCommit(changes) {
-    // Auto-commit for certain types of changes;
-    const autoCommitPatterns = [/\.json$/,
-      /\.md$/,
-      /\.txt$/,
-      /package-lock\.json$/,
-      /\.log$/
-    // Auto-commit for certain types of changes;
-    const autoCommitPatterns = [
-      /\.json$/,
-      /\.log$/]
-    }];
-    return changes.some(change => ;)
-      autoCommitPatterns.some(pattern => pattern.test(change))
-    )}
-  async autoCommit(changes) {
-<<<<<<< HEAD
-    try {
-      const timestamp = new Date().toISOString(;);
-      const commitMessage = `Auto-"commit: ${changes.length} files changed at ${timestamp}`;
-      
-      execSync(git add .', { stdio": 'pipe });
-      execSync(`git commit -m "${commitMessage}`, { stdio": pipe' });
-      
-      if ( {
-        execSync('git push origin main, { "stdio: pipe' })}
-      
-      ) {
-     {
-        execSync('git push origin main, { stdio": pipe' })}
-      
-      }} catch (error) {
-      console.error('❌ Auto-commit "failed: , error)}
-  }
-=======
-  // TODO: Implement
->>>>>>> origin/chore/fix-lint-and-merge
-
-  async handleBugFix(repoInfo) {
-    // Implement bug fix handling logic;
-  async handleFeature(repoInfo) {
-    // Implement feature handling logic;
-  async handleRefactor(repoInfo) {
-    // Implement refactor handling logic;
-  async analyzeMergeOpportunities() {
-<<<<<<< HEAD
-    // Analyze potential merge opportunities
-    }
-
-    try {
-      const analysis = {
-        timestamp": new Date().toISOString(),
-        "repositories: this.repositories.length,
-        mergeHistory": this.mergeHistory.length,
-        "conflictHistory: this.conflictHistory.length,
-        recommendations": await this.generateRecommendations()
-     }
-      
-      await this.saveAnalysis(analysis);
-      } catch (error) {
-      console.error(Error in full "analysis: ', error)}
-  }
-=======
-    // Analyze potential merge opportunities;
-  async performFullAnalysis() {
-  // TODO: Implement
-
-        "recommendations": await this.generateRecommendations()"
-      await this.saveAnalysis(analysis);
->>>>>>> origin/chore/fix-lint-and-merge
-
-  async generateRecommendations() {
-    const recommendations = [];
-    // Analyze merge history for patterns;
-      const failedMerges = this.mergeHistory.filter(m => !m.success) {
-      const failedMerges = this.mergeHistory.filter(m => !m.success});
-      if ( {
-        recommendations.push({
-<<<<<<< HEAD
-          type": 'merge_strategy,
-          "priority: high',
-          message": 'High merge failure rate detected. Consider reviewing merge strategy.,
-          "action: Review and update merge strategy'
-        })}
-    }
-    
-    // Analyze conflict patterns
-    if (this.conflictHistory.length > 0) {
-      const unresolvedConflicts = this.conflictHistory.filter(c => !c.resolved) {
-     {
-        recommendations.push({
-          type": 'merge_strategy,
-          "priority: high',
-          message": 'High merge failure rate detected. Consider reviewing merge strategy.,
-          "action: Review and update merge strategy'
-        })}
-    }
-    
-    // Analyze conflict patterns
-    if (this.conflictHistory.length > 0) {
-      const unresolvedConflicts = this.conflictHistory.filter(c => !c.resolved});
-      if ( {
-        recommendations.push({
-          type": 'conflict_resolution,
-          "priority: medium',
-          message": `${unresolvedConflicts.length} unresolved conflicts detected.`,
-          "action: 'Review and resolve pending conflicts
-        })}
-    }
-    
-    return recommendations) {
-     {
-        recommendations.push({
-          type": conflict_resolution',
-          "priority: 'medium,
-          message": `${unresolvedConflicts.length} unresolved conflicts detected.`,
-          "action: Review and resolve pending conflicts'
-        })}
-    }
-    
-    return recommendations}}
-=======
->>>>>>> origin/chore/fix-lint-and-merge
-
-    // Analyze conflict patterns;
-      const unresolvedConflicts = this.conflictHistory.filter(c => !c.resolved});
-
-    return recommendations}}
-  async createBackup(name) {
-<<<<<<< HEAD
-    try {
-      const timestamp = new Date().toISOString().replace(/[:.]/g, '-;);
-      const backupPath = `./backups/${name}-${timestamp}`;
-      
-      execSync(`git stash push -m Backup before ${name}"`, { "stdio: pipe' });
-      execSync(`cp -r . ${backupPath}`, { stdio": 'pipe });
-      
-      } catch (error) {
-      console.error(Error creating "backup: ', error)}
-  }
-
-  async restoreBackup(name) {
-    try {
-      // Find the most recent backup with the given name
-      const backupFiles = await fs.readdir('./backups;);
-=======
-  // TODO: Implement
-
-  async restoreBackup(name) {
-  // TODO: Implement
-
-      // Find the most recent backup with the given name;
-      const backupFiles = await fs.readdir('./backups';);
->>>>>>> origin/chore/fix-lint-and-merge
-      const matchingBackups = backupFiles.filter(file => file.startsWith(name;););
-        const latestBackup = matchingBackups.sort().pop() {
-<<<<<<< HEAD
-     {
-        const latestBackup = matchingBackups.sort().pop(});
-        const backupPath = `./backups/${latestBackup}`;
-        
-        execSync(git reset --hard HEAD", { "stdio: pipe' });
-        execSync(git clean -fd", { "stdio: 'pipe });
-        
-        }
-    } catch (error) {
-      console.error(Error restoring backup": ', error)}
-  }
-
-  async cleanupBranch(branchName) {
-    try {
-      // Delete remote branch
-      execSync(`git push origin --delete ${branchName}`, { "stdio: 'pipe });
-      } catch (error) {
-      console.error(`Error cleaning up branch ${branchName}:`, error)}
-  }
-
-    // Save notification for later review
-    const notification = {
-      branch": branchName,
-      "timestamp: new Date().toISOString(),
-      resolution,
-      status": pending'
-   }
-    
-    await this.saveNotification(notification)}
-=======
-
-  async cleanupBranch(branchName) {
-  // TODO: Implement
-
-      console.error(`Error cleaning up branch ${branchName}:`, error)}
-  async notifyManualIntervention(branchName, resolution) {
-    // Save notification for later review;
-    const notification = {
->>>>>>> origin/chore/fix-lint-and-merge
-
-    await this.saveNotification(notification)}
-  async saveAnalysis(analysis) {
-<<<<<<< HEAD
-    try {
-      const filename = `./logs/git-analysis-${new Date().toISOString().split('T)[0]}.json;`;
-      await fs.writeFile(filename, JSON.stringify(analysis, null, 2))} catch (error) {
-      console.error(Error saving "analysis: ', error)}
-  }
-
-  async saveNotification(notification) {
-    try {
-      const filename = `./logs/git-notifications-${new Date().toISOString().split('T)[0]}.json;`;
-      let notifications = [];
-      
-      try {
-        const existing = await fs.readFile(filename, utf8';);
-        notifications = JSON.parse(existing)} catch (error) {
-        // File doesn't exist, start with empty array
-      }
-      
-      notifications.push(notification);
-      await fs.writeFile(filename, JSON.stringify(notifications, null, 2))} catch (error) {
-      console.error(Error saving notification": , error)}
-  }
-
-  async loadHistory() {
-    try {
-      // Load merge history
-      const mergeHistoryFile = './logs/git-merge-history.json;';
-      try {
-        const data = await fs.readFile(mergeHistoryFile, utf8;);
-        this.mergeHistory = JSON.parse(data)} catch (error) {
-        this.mergeHistory = []}
-      
-      // Load conflict history
-      const conflictHistoryFile = './logs/git-conflict-history.json;';
-      try {
-        const data = await fs.readFile(conflictHistoryFile, utf8;);
-        this.conflictHistory = JSON.parse(data)} catch (error) {
-        this.conflictHistory = []}
-    } catch (error) {
-      console.error('Error loading "history: ', error)}
-  }
-}
-
-// Start the Intelligent Git Automation
-const gitAutomation = new IntelligentGitAutomation;(;);
-gitAutomation.start().catch(console.error);
-<<<<<<< HEAD
+    const match = line.match(/
 
       autoMerge"
       "conflictResolution
@@ -705,31 +326,8 @@ gitAutomation.start().catch(console.error);
       status"
       console.error('Error saving "analysis)
       console.error('Error saving notification")
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
       "autoMerge"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       "conflictResolution"
       "branchProtection"
       "mergeStrategy"
@@ -799,19 +397,9 @@ gitAutomation.start().catch(console.error);
       "status"
       console.error('Error saving "analysis")
       console.error('Error saving "notification")
-<<<<<<< HEAD
       console.error('Error loading "history")
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      console.error('Error loading "history")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       console.error('Error loading "history")
 
-=======
-<<<<<<< HEAD
   // TODO: Implement
 
   async saveNotification(notification) {
@@ -824,38 +412,6 @@ gitAutomation.start().catch(console.error);
   async loadHistory() {
   // TODO: Implement
 
->>>>>>> origin/chore/fix-lint-and-merge
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
+
       console.error('Error loading "history")
       console.error('Error loading "history")
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-      console.error('Error loading "history")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-      console.error('Error loading "history")
-=======
-      console.error('Error loading "history")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

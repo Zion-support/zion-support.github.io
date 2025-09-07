@@ -10,7 +10,7 @@ try {;
 return Promise.resolve () ;
 }
 };
-return (<> <Button > <MessageSquare className="h-5 w-5" /> </Button> {;
+return (<> <Button > <MessageSquare className='h-5 w-5' /> </Button> {;
   isOpen && (<ChatAssistant isOpen= {;
   isOpen ;
 }onClose= {;
@@ -21,6 +21,6 @@ return (<> <Button > <MessageSquare className="h-5 w-5" /> </Button> {;
 }
 }onSendMessage= {;
   handleSendMessage ;
-}/>) ;'"
-}</>) ;'"'"
-}'"'"'"
+}/>) ;''
+}</>) ;''''
+}''''''

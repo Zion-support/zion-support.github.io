@@ -248,7 +248,11 @@ interface Listing  {"id": string,"title": string,"description": string,"category
                 <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>;"
                 <Button;
                   variant="outline";"
+<<<<<<< HEAD
+                  onClick={() => {setSearchQuery(""),setSelectedFilter(filterOptions[0]?.value || 'all')}'
+=======
                   onClick={() => {setSearchQuery(""),setSelectedFilter(filterOptions[0]?.value || 'all')}}'
+>>>>>>> origin/resolved-merge-conflicts
                   className="border-zion-purple text-zion-purple "hover":bg-zion-purple/10";"
   "title": string;
   "description": string;
@@ -259,7 +263,11 @@ interface Listing  {"id": string,"title": string,"description": string,"category
   description;
   "listings": initialListings;
   sortOptions;
+<<<<<<< HEAD
+                    setSelectedFilter(filterOptions[0]?.value || 'all')}'
+=======
                     setSelectedFilter(filterOptions[0]?.value || 'all')}}'
+>>>>>>> origin/resolved-merge-conflicts
                   className="border-zion-purple text-zion-purple "hover":bg-zion-purple/10";"
                 >;
                   Clear all filters;
@@ -270,7 +278,11 @@ interface Listing  {"id": string,"title": string,"description": string,"category
                 <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>;"
                 <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>;"
                 <Button;
+<<<<<<< HEAD
+                  variant="outline";onClick={() => {setSearchQuery('')setSelectedFilter(filterOptions[0]?.value || 'all')}'
+=======
                   variant="outline";onClick={() => {setSearchQuery('')setSelectedFilter(filterOptions[0]?.value || 'all')}}'
+>>>>>>> origin/resolved-merge-conflicts
                   className='border-zion-purple text-zion-purple "hover":bg-zion-purple/10';'
                 >;
                   Clear all filters;
@@ -385,6 +397,15 @@ interface Listing  {"id": string,"title": string,"description": string,"category
               listing={listing}
               onView={() => {// Handle view action;
                 }
+<<<<<<< HEAD
+                console.log('View "listing":', listing.id)}'
+              onEdit={() => {// Handle edit action;
+                }
+                console.log('Edit "listing":', listing.id)}'
+              onDelete={() => {// Handle delete action;
+                }
+                console.log('Delete "listing":', listing.id)}'
+=======
                 console.log('View "listing":', listing.id)}}'
               onEdit={() => {// Handle edit action;
                 }
@@ -392,6 +413,7 @@ interface Listing  {"id": string,"title": string,"description": string,"category
               onDelete={() => {// Handle delete action;
                 }
                 console.log('Delete "listing":', listing.id)}}'
+>>>>>>> origin/resolved-merge-conflicts
             />;
           ))}
         </div>;

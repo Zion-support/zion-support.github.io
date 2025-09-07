@@ -1,4 +1,19 @@
 <<<<<<< HEAD
+import { GradientHeading } from "@/components/GradientHeading";
+import { ProductListingCard } from "@/components/ProductListingCard";
+import { useState, useEffect, useRef, Suspense } from "react";
+import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from 'lucide-react'
+import { MARKETPLACE_LISTINGS } from "@/data/listingData";
+import { ProductListing } from "@/types/listings";
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import { toast } from "@/hooks/use-toast";
+import { NextSeo } from '@/components/NextSeo';
+import { Header } from "@/components/Header";
+import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton';
+import {logErrorToProduction} from '@/utils/productionLogger';
+=======
+<<<<<<< HEAD
 import { GradientHeading } from "@/components/GradientHeading;
 import { ProductListingCard } from @/components/ProductListingCard";
 import { useState, useEffect, useRef, Suspense } from "react;
@@ -12,19 +27,20 @@ import { NextSeo } from @/components/NextSeo';
 import { Header } from "@/components/Header;
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton;
 import {logErrorToProduction} from @/utils/productionLogger';
+>>>>>>> origin/resolved-merge-conflicts
 const AUTO_SERVICE_TITLES = [
-  AI-Powered Customer Support";
-  "Cloud Infrastructure Management;
-  Predictive Analytics Consulting";
-  "Cybersecurity Automation Suite;
-  Robotic Process Automation";
-  "Machine Learning Model Tuning;
-  IoT Device Integration Service";
-  "Blockchain Data Solutions
+  "AI-Powered Customer Support";
+  "Cloud Infrastructure Management";
+  "Predictive Analytics Consulting";
+  "Cybersecurity Automation Suite";
+  "Robotic Process Automation";
+  "Machine Learning Model Tuning";
+  "IoT Device Integration Service";
+  "Blockchain Data Solutions"
 ];
 
 function generateInnovationListing(index: number): ProductListing {
-  const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] || 'AI Service;
+  const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] || 'AI Service';
   const price = Math.floor(Math.random() * 9500) + 500, // $500 - $10,000
   const rating = Math.floor(Math.random() * 2) + 4, // 4-5 stars
   const reviewCount = Math.floor(Math.random() * 50) + 10;
@@ -33,20 +49,20 @@ function generateInnovationListing(index: number): ProductListing {
     id: `innovation-auto-${index}`,
     title;
     description: `Professional ${title} package with expert support and global delivery. Ideal for businesses seeking modern IT and AI solutions at competitive market rates.`,
-    category: Innovation",
+    category: "Innovation",
     price;
-    currency: "$,
-    tags: [innovation", "ai, service"];
+    currency: "$",
+    tags: ["innovation", "ai", "service"];
     author: {
-      name: "AutoGen Solutions,
-      id: autogen"
-    }
-    images: ["https://source.unsplash.com/random/800x500?technology],
+      name: "AutoGen Solutions",
+      id: "autogen"
+    };
+    images: ["https://source.unsplash.com/random/800x500?technology"],
     createdAt: new Date().toISOString(),
     rating;
     reviewCount;
-    location: Global",
-    availability: "Immediate,
+    location: "Global",
+    availability: "Immediate",
     aiScore: Math.floor(Math.random() * 20) + 80
   }
 }
@@ -58,30 +74,88 @@ interface CategoryDetailProps {
 export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps = {}) {
   const router = useRouter();
   // Get slug from Next.js router query params
-  const params = router.query as { slug?: string }
+  const params = router.query as { slug?: string };
   const slug = slugProp ?? params.slug;
 
   // Redirect to categories list if slug is missing
   if (!slug) {
-    router.push(/categories');
+    router.push('/categories');
     return null
   }
   const [isLoading, setIsLoading] = useState(true);
   const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
   const [category, setCategory] = useState<{title: string, description: string, icon: JSX.Element}>({
-    title: ",
-    description: ",
-    icon: <Bot className=w-6 h-6" />
+    title: "",
+    description: "",
+    icon: <Bot className="w-6 h-6" />
   });
   const innovationCounterRef = useRef(0);
 
   // Map of category slugs to their display data
   const categoryData = {
-    'services: {
-      title: "Services,
-      description: On-demand IT support, consulting, development, and more";
-      icon: <Briefcase className="w-6 h-6 />
+    'services': {
+      title: "Services",
+      description: "On-demand IT support, consulting, development, and more";
+      icon: <Briefcase className="w-6 h-6" />
+    };
+    'talents': {
+      title: "Talents",
+      description: "Connect with AI experts, developers, and tech specialists";
+      icon: <Brain className="w-6 h-6" />
+    };
+    'equipment': {
+      title: "Equipment",
+      description: "Rent or buy specialized hardware, servers, and devices";
+      icon: <Code className="w-6 h-6" />
+    };
+    'innovation': {
+      title: "Innovation",
+      description: "Discover cutting-edge solutions and tech breakthroughs",
+      icon: <Bot className="w-6 h-6" />
+    };
+    'ai-models-apis': {
+      title: "AI Models & APIs",
+      description: "Access cutting-edge AI models with easy integration",
+      icon: <Brain className="w-6 h-6" />
+    };
+    'content-creation': {
+      title: "Content Creation",
+      description: "Generate high-quality content for your projects",
+      icon: <PenLine className="w-6 h-6" />
+    };
+    'data-analysis': {
+      title: "Data Analysis",
+      description: "Extract insights from complex datasets",
+      icon: <BarChart className="w-6 h-6" />
+    };
+    'computer-vision': {
+      title: "Computer Vision",
+      description: "Image and video processing solutions",
+      icon: <Eye className="w-6 h-6" />
+    };
+    'virtual-assistants': {
+      title: "Virtual Assistants",
+      description: "Intelligent automation for your workflow",
+      icon: <Bot className="w-6 h-6" />
+    };
+    'voice-speech': {
+      title: "Voice & Speech",
+      description: "Speech recognition and synthesis tools",
+      icon: <Mic className="w-6 h-6" />
+    };
+    'developer-tools': {
+      title: "Developer Tools",
+      description: "AI-powered coding assistance and automation",
+      icon: <Code className="w-6 h-6" />
+    };
+    'business-solutions': {
+      title: "Business Solutions",
+      description: "Enterprise AI integrations and services",
+      icon: <Briefcase className="w-6 h-6" />
     }
+<<<<<<< HEAD
+  };
+=======
     talents': {
       title: Talents",
       description: "Connect with AI experts, developers, and tech specialists;
@@ -300,6 +374,7 @@ function generateInnovationListing (index: number): ProductListing {
     }
   },
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
   useEffect(() => {
     async function load() {
@@ -308,8 +383,13 @@ function generateInnovationListing (index: number): ProductListing {
         // Find the category data based on slug
         const currentCategory = categoryData[slug as keyof typeof categoryData] || {
           title: slug
-            ?.split('-)
+            ?.split('-')
             .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+<<<<<<< HEAD
+            .join(' ') || 'Category';
+          description: 'Explore our collection in this category',
+          icon: <Bot className="w-6 h-6" />},
+=======
 <<<<<<< HEAD
             .join( ') || 'Category;
           description: Explore our collection in this category',
@@ -319,6 +399,7 @@ function generateInnovationListing (index: number): ProductListing {
           description: 'Explore our collection in this category',
           icon: <Bot className="w-6 h-6" />},
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
         setCategory(currentCategory),
         innovationCounterRef.current = 0,
@@ -342,7 +423,11 @@ function generateInnovationListing (index: number): ProductListing {
                   category: currentCategory.title,
                   price: Math.floor(Math.random() * 500) + 50,
 <<<<<<< HEAD
+                  currency: '$',
+=======
+<<<<<<< HEAD
                   currency: $,
+>>>>>>> origin/resolved-merge-conflicts
                   tags: [`${slug}`, 'aitool'];
 =======
                   currency: '$',
@@ -359,8 +444,8 @@ function generateInnovationListing (index: number): ProductListing {
 
         setListings(listingsToShow)
       } catch (err) {
-        logErrorToProduction(Category load error:, { data: err }),
-        toast({ title: 'Error', description: Failed to load category })
+        logErrorToProduction('Category load error:', { data: err }),
+        toast({ title: 'Error', description: 'Failed to load category' })
       } finally {
         setIsLoading(false)
       }
@@ -388,7 +473,7 @@ function generateInnovationListing (index: number): ProductListing {
     
     if (listing) {
       toast({
-        title: Quote Requested",
+        title: "Quote Requested",
         description: `Your quote request for ${listing.title} has been sent.`
       }),
       
@@ -404,6 +489,15 @@ function generateInnovationListing (index: number): ProductListing {
       router.push(`/request-quote?${queryParams.toString()}`)
     }
 <<<<<<< HEAD
+  };
+
+  const seoTitle = category.title
+    ? `${category.title} | Zion Marketplace`
+    : 'Category | Zion Marketplace';
+  const seoDescription =
+    category.description || 'Explore listings in this category.';
+=======
+<<<<<<< HEAD
   }
 
   const seoTitle = category.title
@@ -411,6 +505,7 @@ function generateInnovationListing (index: number): ProductListing {
     : Category | Zion Marketplace;
 =======
   },
+>>>>>>> origin/resolved-merge-conflicts
 
   const seoTitle = category.title
     ? `${category.title} | Zion Marketplace`
@@ -430,24 +525,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <Header />
 <<<<<<< HEAD
       <Suspense fallback={<ListingGridSkeleton />}> 
-        <div className="min-h-screen bg-zion-blue>
-          <div className=container mx-auto px-4 py-12">
-          <div className="mb-4>
-            <Link href=/categories" className="text-zion-cyan hover:text-zion-cyan-light transition-colors inline-flex items-center>
+        <div className="min-h-screen bg-zion-blue">
+          <div className="container mx-auto px-4 py-12">
+          <div className="mb-4">
+            <Link href="/categories" className="text-zion-cyan hover:text-zion-cyan-light transition-colors inline-flex items-center">
               ← Back to Categories
             </Link>
           </div>
           
-          <div className=text-center mb-12">
-            <div className="flex justify-center mb-6>
-              <div className=text-zion-cyan p-4 bg-zion-blue-dark rounded-full">
+          <div className="text-center mb-12">
+            <div className="flex justify-center mb-6">
+              <div className="text-zion-cyan p-4 bg-zion-blue-dark rounded-full">
                 {category.icon}
               </div>
             </div>
-            <GradientHeading className="text-4xl md:text-5xl font-bold mb-4>
+            <GradientHeading className="text-4xl md:text-5xl font-bold mb-4">
               {category.title}
             </GradientHeading>
-            <p className=text-zion-slate-light text-lg max-w-3xl mx-auto">
+            <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
               {category.description}
             </p>
           </div>
@@ -455,13 +550,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {isLoading ? (
             <ListingGridSkeleton />
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {listings.map((listing) => (
                 <ProductListingCard
                   key={listing.id}
                   listing={listing}
                   onRequestQuote={handleRequestQuote}
-                  detailBasePath=/marketplace/listing"
+                  detailBasePath="/marketplace/listing"
                 />
 =======
         <div className="min-h-screen bg-zion-blue">
@@ -525,7 +620,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )
 }
 <<<<<<< HEAD
+;
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 =======
   );
 
@@ -541,4 +642,8 @@ return (<> <NextSeo title= {;
 }'"
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

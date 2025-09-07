@@ -38,22 +38,6 @@ class FinalMergeConflictResolver {
       if (fs.existsSync(filePath)) {
         try {
           let content = fs.readFileSync(filePath, 'utf8');
-<<<<<<< HEAD
-          
-          if (content.includes('            this.log(`Resolving conflicts in ${file}...`);
-            
-            // For JSON files, keep our version
-            if (file.endsWith('.json')) {
-              // Remove conflict markers and keep our version
-              content = content.replace(/            }
-            // For TypeScript files, keep our version
-            else if (file.endsWith('.ts')) {
-              content = content.replace(/            }
-            // For other files, keep our version
-            else {
-              content = content.replace(/            }
-            
-=======
           if (content.includes('') || content.includes('>>>>>>>')) {
             this.log(`Resolving conflicts in ${file}...`);
             // For JSON files, keep our version
@@ -69,7 +53,6 @@ class FinalMergeConflictResolver {
             else {
               content = content.replace(/\n([\s\S]*?)
             }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             fs.writeFileSync(filePath, content);
             this.log(`✅ Resolved conflicts in ${file}`);
             this.conflicts.push(file);

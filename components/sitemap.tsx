@@ -1,169 +1,127 @@
-<<<<<<< HEAD
-return (<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8" > <Head> <title>Sitemap | Zion Tech Group</title> <meta name="description" content="Quick links to the main routes and pages." /> <link rel="canonical" href="https://ziontechgroup.com/sitemap" /> </Head>) ) 
-}</ul> </div> </div>) 
-}
-=======
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-=======
 
 
 
 ];
 
-  return (<div className=\"min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8\"    />;
-      <Head    />;
-        <title    />Sitemap | Zion Tech Group</title>;
+  return (<div className="min-h-screen pt-24 pb-20 px-4 "sm":px-6 "lg":px-8">;"
+      <Head>;
+        <title>Sitemap | Zion Tech Group</title>;
         <meta;
-          name=\'description\';
-          content=\'Quick links to the main routes and pages.\';
-           />;
-        <link rel=\"canonical\" href=\"https://ziontechgroup && ziontechgroup.com/sitemap\"    />;
+          name="description";"
+          content="Quick links to the main routes and pages.";" />;
+        <link rel="canonical" href=""https"://ziontechgroup && ziontechgroup.com/sitemap" />;"
       </Head>;
-      <div className=\"max-w-4xl mx-auto space-y-6\"    />;
-        <h1 className=\"text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent\"    />;
+      <div className="max-w-4xl mx-auto space-y-6">;"
+        <h1 className="text-4xl "md":text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;"
           Sitemap;
         </h1>;
-        <ul className=\"grid sm:grid-cols-2 gap-3\"    />;
-          {links && links.map((l) => (<li;}
+        <ul className="grid "sm":grid-cols-2 gap-3">;"
+          {links && links.map((l) => (<li;
+              }
               key={l && l.href}
-              className=\"p-4 rounded-xl bg-black/40 border border-cyan-500/20\"    />;
-              <a className=\"text-cyan-300\" href={l && l.href}    />;
+              className="p-4 rounded-xl bg-black/40 border border-cyan-500/20">;"
+              <a className="text-cyan-300" href={l && l.href}>;"
                 {l && l.name}
               </a>;
             </li>;
           ))}
         </ul>;
       </div>;
-    </div>;
-  )import React from 'react';
-import Head from 'next/head';
+  )import React from 'react';'
+import Head from 'next/head';'
 
-export default function SitemapPage() {const links = [}
-  { name: \"Home\", href: \"/\",}
+export default function SitemapPage() {const links = [
+  { "name": "Home", "href": "/","
 }
-    { name: \"Services\", href: \"/services\",}
+    { "name": "Services", "href": "/services","
 }
-    {name: \'All Services Showcase\';}
-      href: \'/comprehensive-services-showcase-2025\';}
+    {"name": "All Services Showcase";"
+      }
+      "href": "/comprehensive-services-showcase-2025";"
     }
-    { name: \"Pricing\", href: \"/pricing\",}
+    { "name": "Pricing", "href": "/pricing","
 }
-    { name: \"Market Pricing\", href: \"/market-pricing\",}
+    { "name": "Market Pricing", "href": "/market-pricing","
 }
-    { name: \"Services Advertising\", href: \"/services-advertising\",}
+    { "name": "Services Advertising", "href": "/services-advertising","
 }
-    { name: \"Resources\", href: \"/resources\",}
+    { "name": "Resources", "href": "/resources","
 }
-    { name: \"Support\", href: \"/support\",}
+    { "name": "Support", "href": "/support","
 }
-    { name: \"Contact\", href: \"/contact\" }class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
-  static getDerivedStateFromError(error) {return { hasError: true ,}
+    { "name": "Contact", "href": "/contact" }class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}"
+  static getDerivedStateFromError(error) {return { "hasError": true 
 }
-  componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
-  render() {if (this.state.hasError) ;}
-  return <div    />Something went wrong.</div>;}
+  componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}'
+  render() {if (this.state.hasError) ;
+  }
+  return <div>Something went wrong.</div>;
     }
     return this.props.children;
   }
-}
 
-export default function SitemapPage() {const links = [}
-  { name: \"Home\", href: \"/\",}
-},{ name: \"Services\", href: \"/services\",}
-},{name: \"All Services Showcase\",href: \"/comprehensive-services-showcase-2025,}
-},{ name: \"Pricing\", href: \"/pricing\",}
-},{ name: \"Market Pricing\", href: \"/market-pricing\",}
-},{ name: \"Services Advertising\", href: \"/services-advertising\",}
-},{ name: \"Resources\", href: \"/resources\",}
-},{ name: \"Support\", href: \"/support\",}
-},{ name: \"Contact\", href: \"/contact\",}
+export default function SitemapPage() {const links = [
+  { "name": "Home", "href": "/","
+},{ "name": "Services", "href": "/services","
+},{"name": "All Services Showcase","href": "/comprehensive-services-showcase-2025,"
+},{ "name": "Pricing", "href": "/pricing","
+},{ "name": "Market Pricing", "href": "/market-pricing","
+},{ "name": "Services Advertising", "href": "/services-advertising","
+},{ "name": "Resources", "href": "/resources","
+},{ "name": "Support", "href": "/support","
+},{ "name": "Contact", "href": "/contact","
 }];
-  return (<div className=\"min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8\"    />;
+  return (<div className="min-h-screen pt-24 pb-20 px-4 "sm":px-6 "lg":px-8">;"
   );
 
 
-import React from \'react\';
-import Head from \'next/head\';
+import React from "react";"
+import Head from "next/head";"
 
->>>>>>> origin/chore/fix-lint-and-merge
 export default function SitemapPage() {
 
 
-  const links = [}
-    { name: \"Home\", href: \"/\",}
 }
-    { name: \"Services\", href: \"/services\",}
+
+
+const links = [;
+    { "name": "Home", "href": "/","
+}
+    { "name": "Services", "href": "/services","
 }
     {
 
-<<<<<<< HEAD
  ;
-  const links = [}
-  { name: \"Home\", href: \"/\",}
-},;
-    { name: \"Services\", href: \"/services\",}
-},;
-=======
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
 }
-import React from "react";
-import Head from "next/head";
-export default function SitemapPage() {;
-  const links = [;
-    { name: "Home", href: "/" },;
-    { name: "Services", href: "/services" },;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+const links = [;
+  { "name": "Home", "href": "/","
+},;
+    { "name": "Services", "href": "/services","
+},;
+
     {;
       name: \"All Services Showcase\",;}
       href: \"/comprehensive-services-showcase-2025\",;}
     },;
-<<<<<<< HEAD
-    { name: \"Pricing\", href: \"/pricing\",}
+
+    { "name": "Pricing", "href": "/pricing","
 },;
-    { name: \"Market Pricing\", href: \"/market-pricing\",}
+    { "name": "Market Pricing", "href": "/market-pricing","
 },;
-    { name: \"Services Advertising\", href: \"/services-advertising\",}
+    { "name": "Services Advertising", "href": "/services-advertising","
 },;
-    { name: \"Resources\", href: \"/resources\",}
+    { "name": "Resources", "href": "/resources","
 },;
-    { name: \"Support\", href: \"/support\",}
+    { "name": "Support", "href": "/support","
 },;
-    { name: \"Contact\", href: \"/contact\",}
-},
+    { "name": "Contact", "href": "/contact","
+}
 ];
 
-=======
-    { name: "Pricing", href: "/pricing" },;
-    { name: "Market Pricing", href: "/market-pricing" },;
-    { name: "Services Advertising", href: "/services-advertising" },;
-    { name: "Resources", href: "/resources" },;
-    { name: "Support", href: "/support" },;
-    { name: "Contact", href: "/contact" },;
-  ];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-  return (
-    <div className=\"min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8\"    />;
-      <Head    />;
-        <title    />Sitemap | Zion Tech Group</title>;
+return (;
+    <div className="min-h-screen pt-24 pb-20 px-4 "sm":px-6 "lg":px-8">;"
+      <Head>;
+        <title>Sitemap | Zion Tech Group</title>;
         <meta;
           name=\'description\';
           content=\'Quick links to the main routes and pages.\';
@@ -185,43 +143,37 @@ export default function SitemapPage() {;
           ))}
         </ul>;
       </div>;
-    </div>;
-<<<<<<< HEAD
-  )}
+  );
 
-const links = [
-  { name: \"Home\", href: \"/\",}
-},{ name: \"Services\", href: \"/services\",}
-},{name: \"All Services Showcase\",href: \"/comprehensive-services-showcase-2025,}
-},{ name: \"Pricing\", href: \"/pricing\",}
-},{ name: \"Market Pricing\", href: \"/market-pricing\",}
-},{ name: \"Services Advertising\", href: \"/services-advertising\",}
-},{ name: \"Resources\", href: \"/resources\",}
-},{ name: \"Support\", href: \"/support\",}
-},{ name: \"Contact\", href: \"/contact\",}
+const links = [;
+  { "name": "Home", "href": "/","
+},{ "name": "Services", "href": "/services","
+},{"name": "All Services Showcase","href": "/comprehensive-services-showcase-2025,"
+},{ "name": "Pricing", "href": "/pricing","
+},{ "name": "Market Pricing", "href": "/market-pricing","
+},{ "name": "Services Advertising", "href": "/services-advertising","
+},{ "name": "Resources", "href": "/resources","
+},{ "name": "Support", "href": "/support","
+},{ "name": "Contact", "href": "/contact","
 }];
-  return (<div className=\"min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8\"    />;
-      <Head    />;
-        <title    />Sitemap | Zion Tech Group</title>;
+  return (<div className="min-h-screen pt-24 pb-20 px-4 "sm":px-6 "lg":px-8">;"
+      <Head>;
+        <title>Sitemap | Zion Tech Group</title>;
         <meta;
-          name=\'description\';
-          content=\'Quick links to the main routes and pages.\';
-           />;
-        <link rel=\"canonical\" href=\"https://ziontechgroup && ziontechgroup.com/sitemap\"    />;
+          name="description";"
+          content="Quick links to the main routes and pages.";" />;
+        <link rel="canonical" href=""https"://ziontechgroup && ziontechgroup.com/sitemap" />;"
       </Head>;
-      <div className=\"max-w-4xl mx-auto space-y-6\"    />;
-        <h1 className=\"text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent\"    />;
+      <div className="max-w-4xl mx-auto space-y-6">;"
+        <h1 className="text-4xl "md":text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;"
           Sitemap;
         </h1>;
-        <ul className=\"grid sm:grid-cols-2 gap-3\"    />;
-          {links && links.map((l) => (<li;}
+        <ul className="grid "sm":grid-cols-2 gap-3">;"
+          {links && links.map((l) => (<li;
+              }
               key={l && l.href}
-              className=\"p-4 rounded-xl bg-black/40 border border-cyan-500/20\"    />;
-              <a className=\"text-cyan-300\" href={l && l.href}    />;
-=======
-  );
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+              className="p-4 rounded-xl bg-black/40 border border-cyan-500/20">;"
+              <a className="text-cyan-300" href={l && l.href}>;"
   const links = [;
     { name: "Home", href: "/" },;
     { name: "Services", href: "/services" },;
@@ -235,10 +187,6 @@ const links = [
     { name: "Resources", href: "/resources" },;
     { name: "Support", href: "/support" },;
     { name: "Contact", href: "/contact" },;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   ];
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
@@ -260,134 +208,32 @@ const links = [
               key={l && l.href}
               className="p-4 rounded-xl bg-black/40 border border-cyan-500/20">;
               <a className="text-cyan-300" href={l && l.href}>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                 {l && l.name}
               </a>;
             </li>;
           ))}
         </ul>;
       </div>;
-    </div>;
-<<<<<<< HEAD
-  )}
 
-const links = [
-    { name: 'Home',}
-  href: '/',}
+const links = [;
+    { "name": 'Home', "href": '/','
 },
-  { name: 'Services',}
-  href: '/services',}
+  { "name": 'Services', "href": '/services','
 },
-  { name: 'All Services Showcase',}
-  href: '/comprehensive-services-showcase-2025',}
+  { "name": 'All Services Showcase', "href": '/comprehensive-services-showcase-2025','
 },
-  { name: 'Pricing',}
-  href: '/pricing',}
+  { "name": 'Pricing', "href": '/pricing','
 },
-  { name: 'Market Pricing',}
-  href: '/market-pricing',}
+  { "name": 'Market Pricing', "href": '/market-pricing','
 },
-  { name: 'Services Advertising',}
-  href: '/services-advertising',}
+  { "name": 'Services Advertising', "href": '/services-advertising','
 },
-  { name: 'Resources',}
-  href: '/resources',}
+  { "name": 'Resources', "href": '/resources','
 },
-  { name: 'Support',}
-  href: '/support',}
+  { "name": 'Support', "href": '/support','
 },
-{ name: 'Contact',}
-  href: '/contact',}
+{ "name": 'Contact', "href": '/contact','
 }
-	];
-
-export default function SitemapPage() {const links  = null;return (<div className=\"min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8\"    />;
-			<Head    />;
-				<title    />Sitemap | Zion Tech Group</title>;
-				<meta name=\"description\" content=\"Quick links to the main routes and pages.\"    />;
-				<link rel=\"canonical\" href=\"https://ziontechgroup.com/sitemap\"    />;
-			</Head>;
-			<div className=\"max-w-4xl mx-auto space-y-6\"    />;
-				<h1 className=\"text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent\"    />Sitemap</h1>;}
-				<ul className=\"grid sm:grid-cols-2 gap-3\"    />;}
-					{links.map(l => (<li key={l.href} className=\"p-4 rounded-xl bg-black/40 border border-cyan-500/20\"    /><a className=\"text-cyan-300\" href={l.href}    />{l.name}</a></li>;
-					))}
-				</ul>;
-			</div>;
-		</div>;
-}
-	))}import React from './react';
-import Head from './next / head';
-
-export default /**;
- * SitemapPage - Function description;
- */;
-function SitemapPage() {const links = [}
-  { name: \"Home\", href: \"/\",}
-},{ name: \"Services\", href: \"/services\",}
-},{name: \"All Services Showcase\",href: \'/comprehensive - services - showcase - 2025\';}
-      href: \'/comprehensive - services - showcase - 2025\';}
-    },{ name: \"Pricing\", href: \"/pricing\",}
-},{ name: \"Market Pricing\", href: \"/market - pricing\",}
-},{ name: \"Services Advertising\", href: \"/services - advertising\",}
-},{ name: \"Resources\", href: \"/resources\",}
-},{ name: \"Support\", href: \"/support\",}
-},{ name: \"Contact\", href: \"/contact\",}
-},{ name: \"Contact\", href: \"/contact\",}
-},export default function SitemapPage() {const links = [
-  );}
-}
-}
-
-const links = [
-		  { name: 'Home',}
-  href: '/',}
-},
-
-		  { name: 'Services',}
-  href: '/services',}
-},
-
-		  { name: 'All Services Showcase',}
-  href: '/comprehensive-services-showcase-2025',}
-},
-
-		  { name: 'Pricing',}
-  href: '/pricing',}
-},
-
-		  { name: 'Market Pricing',}
-  href: '/market-pricing',}
-},
-
-		  { name: 'Services Advertising',}
-  href: '/services-advertising',}
-},
-
-		  { name: 'Resources',}
-  href: '/resources',}
-},
-
-		  { name: 'Support',}
-  href: '/support',}
-},
-
-		{ name: 'Contact',}
-  href: '/contact',}
-}
-<<<<<<< HEAD
-
-
-	const links = [
-		{ name: 'Home, href: /' },
-		{ name: 'Services, href: /services' },
-		{ name: 'All Services Showcase, href: /comprehensive-services-showcase-2025' },
-		{ name: 'Pricing, href: /pricing' },
-		{ name: 'Market Pricing, href: /market-pricing' },
-		{ name: 'Services Advertising, href: /services-advertising' },
-		{ name: 'Resources, href: /resources' },
-		{ name: 'Support, href: /support' },
-		{ name: 'Contact, href: /contact' }
 	];
 return (<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8" > <Head> <title>Sitemap | Zion Tech Group</title> <meta name="description" content="Quick links to the main routes and pages." /> <link rel="canonical" href="https://ziontechgroup.com/sitemap" /> </Head>) ) 
 }</ul> </div> </div>) 
@@ -396,12 +242,39 @@ import React from 'react';
 import Head from 'next/head';
 export default function SitemapPage() {
 	const links = null;
-=======
   );
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+}
+
+const links = [;
+		  { "name": 'Home', "href": '/','
+},
+
+		  { "name": 'Services', "href": '/services','
+},
+
+		  { "name": 'All Services Showcase', "href": '/comprehensive-services-showcase-2025','
+},
+
+		  { "name": 'Pricing', "href": '/pricing','
+},
+
+		  { "name": 'Market Pricing', "href": '/market-pricing','
+},
+
+		  { "name": 'Services Advertising', "href": '/services-advertising','
+},
+
+		  { "name": 'Resources', "href": '/resources','
+},
+
+		  { "name": 'Support', "href": '/support','
+},
+
+		{ "name": 'Contact', "href": '/contact','
+}
+
+
 }
 	const links = [
 		{ name: 'Home', href: '/' },
@@ -413,530 +286,17 @@ export default function SitemapPage() {
 		{ name: 'Resources', href: '/resources' },
 		{ name: 'Support', href: '/support' },
 		{ name: 'Contact', href: '/contact' }
-];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-	return (
-		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-			<Head>
-				<title>Sitemap | Zion Tech Group</title>
-				<meta name=description" content="Quick links to the main routes and pages. />
-				<link rel=canonical" href="https://ziontechgroup.com/sitemap />
-			</Head>
-			<div className=max-w-4xl mx-auto space-y-6">
-				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent>Sitemap</h1>
-				<ul className=grid sm:grid-cols-2 gap-3">
-					{links.map(l => (
-<<<<<<< HEAD
-						<li key={l.href} className="p-4 rounded-xl bg-black/40 border border-cyan-500/20><a className=text-cyan-300" href={l.href}>{l.name}</a></li>
-=======
-						<li key={l.href} className="p-4 rounded-xl bg-black/40 border border-cyan-500/20"><a className="text-cyan-300" href={l.href}>{l.name}</a></li>
-	return (
-		<div className=&quot;min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8&quot;>
-			<Head>
-				<title>Sitemap | Zion Tech Group</title>
-				<meta name=&quot;description&quot; content=&quot;Quick links to the main routes and pages.&quot; />
-				<link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/sitemap&quot; />
-			</Head>
-			<div className=&quot;max-w-4xl mx-auto space-y-6&quot;>
-				<h1 className=&quot;text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>Sitemap</h1>
-				<ul className=&quot;grid sm:grid-cols-2 gap-3&quot;>
-					{links.map(l => (
-						<li key={l.href} className=&quot;p-4 rounded-xl bg-black/40 border border-cyan-500/20&quot;><a className=&quot;text-cyan-300&quot; href={l.href}>{l.name}</a></li>
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-					))}
-				</ul>
-			</div>
-		</div>
-<<<<<<< HEAD
-	)
-}
-  );
-
-}
-
-  ];
-=======
 	];
-	return (
-		<div className=\"min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8\"    />
-			<Head><title>Sitemap | Zion Tech Group</title>
-				<meta name=\"description\" content=\"Quick links to the main routes and pages.\"    />
-				<link rel=\"canonical\" href=\"https://ziontechgroup.com/sitemap\"    />
+return (;
+		<div className="min-h-screen pt-24 pb-20 px-4 "sm": px-6 "lg":px-8">"
+			<Head>
+				<title>Sitemap | Zion Tech Group</title>
+				<meta name="description" content="Quick links to the main routes and pages." />"
+				<link rel="canonical" href=""https"://ziontechgroup.com/sitemap" />"
 			</Head>
-			<div className=\"max-w-4xl mx-auto space-y-6\"    />
-				<h1 className=\"text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent\"    />Sitemap</h1>
-				<ul className=\"grid sm:grid-cols-2 gap-3\"    />
-					{links.map(l => (}
-						<li key={l.href} className=\"p-4 rounded-xl bg-black/40 border border-cyan-500/20\"    /><a className=\"text-cyan-300\" href={l.href}    />{l.name}</a></li>
-					),
-}
-				</ul>
-			</div>
-		</div>
-=======
-<<<<<<< HEAD
-);
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-	);
+			<div className="max-w-4xl mx-auto space-y-6">"
+				<h1 className="text-4xl "md":text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Sitemap</h1>"
+				<ul className="grid "sm":grid-cols-2 gap-3">"
+					{links.map(l => (
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-}
-import React from './react';
-
-export default /**
- * SitemapPage - Function description;
- */
-function SitemapPage() {
-  const links = [}
-  { name: \"Home\", href: \"/\",}
-},
-    { name: \"Services\", href: \"/services\",}
-},
-    {
-
-<<<<<<< HEAD
-      name: \"All Services Showcase\",
-      href: \"/comprehensive - services - showcase - 2025\"}
-   ,}
-},
-    { name: \"Pricing\", href: \"/pricing\",}
-},
-    { name: \"Market Pricing\", href: \"/market - pricing\",}
-},
-    { name: \"Services Advertising\", href: \"/services - advertising\",}
-},
-    { name: \"Resources\", href: \"/resources\",}
-},
-    { name: \"Support\", href: \"/support\",}
-},
-=======
-      name: "All Services Showcase",
-      href: "/comprehensive - services - showcase - 2025",
-    },
-    { name: "Pricing", href: "/pricing" },
-    { name: "Market Pricing", href: "/market - pricing" },
-    { name: "Services Advertising", href: "/services - advertising" },
-    { name: "Resources", href: "/resources" },
-    { name: "Support", href: "/support" },
-<<<<<<< HEAD
-    { name: "Contact", href: "/contact" },
-import React from 'react';
-import Head from 'next/head';
-import React from "react";
-import Head from "next/head";
-
-export default function SitemapPage() {
-
-  const links = [
-    { name: "Home", href: "/" }
-    { name: "Services", href: "/services" }
-    {
-      name: "All Services Showcase"
-      href: "/comprehensive-services-showcase-2025"
-    }
-    { name: "Pricing", href: "/pricing" }
-    { name: "Market Pricing", href: "/market-pricing" }
-    { name: "Services Advertising", href: "/services-advertising" }
-    { name: "Resources", href: "/resources" }
-    { name: "Support", href: "/support" }
-    { name: "Contact", href: "/contact" }
-      name: "All Services Showcase",
-      href: "/comprehensive-services-showcase-2025",
-    },
-    { name: "Pricing", href: "/pricing" },
-    { name: "Market Pricing", href: "/market-pricing" },
-    { name: "Services Advertising", href: "/services-advertising" },
-    { name: "Resources", href: "/resources" },
-    { name: "Support", href: "/support" },
-    { name: "Contact", href: "/contact" },;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-
-    { name: \"Contact\", href: \"/contact\",}
-},;
-
-const links = [
-    { name: \"Home\", href: \"/\",}
-}
-    { name: \"Services\", href: \"/services\",}
-}
-    {name: \'All Services Showcase\';}
-      href: \'/comprehensive-services-showcase-2025\';}
-    }
-    { name: \"Pricing\", href: \"/pricing\",}
-}
-    { name: \"Market Pricing\", href: \"/market-pricing\",}
-}
-    { name: \"Services Advertising\", href: \"/services-advertising\",}
-}
-    { name: \"Resources\", href: \"/resources\",}
-}
-    { name: \"Support\", href: \"/support\",}
-}
-    { name: \"Contact\", href: \"/contact\",}
-}
-
-<<<<<<< HEAD
-const links = [
-  { name: \"Home\", href: \"/\",}
-},{ name: \"Services\", href: \"/services\",}
-},{name: \"All Services Showcase\",href: \"/comprehensive-services-showcase-2025,}
-},{ name: \"Pricing\", href: \"/pricing\",}
-},{ name: \"Market Pricing\", href: \"/market-pricing\",}
-},{ name: \"Services Advertising\", href: \"/services-advertising\",}
-},{ name: \"Resources\", href: \"/resources\",}
-},{ name: \"Support\", href: \"/support\",}
-},{ name: \"Contact\", href: \"/contact\",}
-}];
-  return (<div className=\"min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8\"    />;
-      <Head    />;
-        <title    />Sitemap | Zion Tech Group</title>;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  ];
-  return (
-    <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
-      <Head>;
-        <title > Sitemap | Zion Tech Group</title>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-        <meta;
-          name=\'description\';
-          content=\'Quick links to the main routes and pages.\';
-           />;
-        <link rel=\"canonical\" href=\"https://ziontechgroup && ziontechgroup.com/sitemap\"    />;
-      </Head>;
-      <div className=\"max-w-4xl mx-auto space-y-6\"    />;
-        <h1 className=\"text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent\"    />;
-          Sitemap;
-        </h1>;
-        <ul className=\"grid sm:grid-cols-2 gap-3\"    />;
-          {links && links.map((l) => (<li;}
-              key={l && l.href}
-              className=\"p-4 rounded-xl bg-black/40 border border-cyan-500/20\"    />;
-              <a className=\"text-cyan-300\" href={l && l.href}    />;
-                {l && l.name}
-              </a>;
-            </li>;
-          ))}
-        </ul>;
-      </div>;
-    </div>;
-  )const links = [
-  { name: \"Home\", href: \"/\",}
-},{ name: \"Services\", href: \"/services\",}
-},{name: \"All Services Showcase\",href: \"/comprehensive-services-showcase-2025,}
-},{ name: \"Pricing\", href: \"/pricing\",}
-},{ name: \"Market Pricing\", href: \"/market-pricing\",}
-},{ name: \"Services Advertising\", href: \"/services-advertising\",}
-},{ name: \"Resources\", href: \"/resources\",}
-},{ name: \"Support\", href: \"/support\",}
-},{ name: \"Contact\", href: \"/contact\",}
-}];
-  return (<div className=\"min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8\"    />;
-      <Head    />;
-        <title    />Sitemap | Zion Tech Group</title>;
-        <meta;
-          name=\'description\';
-          content=\'Quick links to the main routes and pages.\';
-           />;
-        <link rel=\"canonical\" href=\"https://ziontechgroup && ziontechgroup.com/sitemap\"    />;
-      </Head>;
-      <div className=\"max-w-4xl mx-auto space-y-6\"    />;
-        <h1 className=\"text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent\"    />;
-          Sitemap;
-        </h1>;
-        <ul className=\"grid sm:grid-cols-2 gap-3\"    />;
-          {links && links.map((l) => (<li;}
-              key={l && l.href}
-              className=\"p-4 rounded-xl bg-black/40 border border-cyan-500/20\"    />;
-              <a className=\"text-cyan-300\" href={l && l.href}    />;
-                {l && l.name}
-              </a>;
-            </li>;
-          ))}
-        </ul>;
-      </div>;
-    </div>;
-  )}<div className=\"min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8\"    />;
-      <Head    />;
-        <title    />Sitemap | Zion Tech Group</title>;
-        <meta;
-          name=\'description\';
-          content=\'Quick links to the main routes and pages.\';
-           />;
-        <link rel=\"canonical\" href=\"https://ziontechgroup.com/sitemap\"    />;
-      </Head>;
-      <div className=\"max-w-4xl mx-auto space-y-6\"    />;
-        <h1 className=\"text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent\"    />;
-          Sitemap;
-        </h1>;
-        <ul className=\"grid sm:grid-cols-2 gap-3\"    />;
-          {links.map((l) => (<li;}
-              key={l.href}
-              className=\"p-4 rounded-xl bg-black/40 border border-cyan-500/20\"    />
-
-              <a className=\"text-cyan-300\" href={l.href}    />;
-	)}{l.name}
-              </a>;
-            </li>;
-          ))}
-        </ul>;
-      </div>;
-    </div>;
-  )];
-  return (<div className=\"min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8\"    />;
-      <Head    />;
-        <title    />Sitemap | Zion Tech Group</title>;
-        <meta;
-          name=\'description\';
-          content=\'Quick links to the main routes and pages.\';
-           />;
-        <link rel=\"canonical\" href=\"https://ziontechgroup.com/sitemap\"    />;
-      </Head>;
-      <div className=\"max-w-4xl mx-auto space-y-6\"    />;
-        <h1 className=\"text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent\"    />;
-          Sitemap;
-        </h1>;
-        <ul className=\"grid sm:grid-cols-2 gap-3\"    />;
-          {links.map((l) => (<li;}
-              key={l.href}
-              className=\"p-4 rounded-xl bg-black/40 border border-cyan-500/20\"    />
-
-              <a className=\"text-cyan-300\" href={l.href}    />;
-                {l.name}
-              </a>;
-            </li>;
-          ))}
-        </ul>;
-      </div>;
-    </div>;
-  )}
-
-export default /**;
- * SitemapPage - Function description;
- */;
-function SitemapPage() {const links = [}
-  { name: \"Home\", href: \"/\",}
-},{ name: \"Services\", href: \"/services\",}
-},{name: \"All Services Showcase\",href: \'/comprehensive - services - showcase - 2025\';}
-      href: \'/comprehensive - services - showcase - 2025\';}
-    },{ name: \"Pricing\", href: \"/pricing\",}
-},{ name: \"Market Pricing\", href: \"/market - pricing\",}
-},{ name: \"Services Advertising\", href: \"/services - advertising\",}
-},{ name: \"Resources\", href: \"/resources\",}
-},{ name: \"Support\", href: \"/support\",}
-}
-    { name: \"Support\", href: \"/support\",}
-},{ name: \"Contact\", href: \"/contact\",}
-}];
-  return (<div className=\"min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8\"    />;
-    { name: \"Home\", href: \"/\",}
-},;
-    { name: \"Services\", href: \"/services\",}
-},;
-    {;
-      name: \"All Services Showcase\",;}
-      href: \"/comprehensive-services-showcase-2025\",;}
-    },;
-    { name: \"Pricing\", href: \"/pricing\",}
-},;
-    { name: \"Market Pricing\", href: \"/market-pricing\",}
-},;
-    { name: \"Services Advertising\", href: \"/services-advertising\",}
-},;
-    { name: \"Resources\", href: \"/resources\",}
-},;
-    { name: \"Support\", href: \"/support\",}
-},;
-    { name: \"Contact\", href: \"/contact\",}
-},
-];
-
->>>>>>> origin/chore/fix-lint-and-merge
-  return (
-    <div className=\"min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8\"    />
-      <Head><title>Sitemap | Zion Tech Group</title>
-        <meta;
-name=\"description\"
-          content=\"Quick links to the main routes and pages.\"
-           />
-        <link rel=\"canonical\" href=\"https://ziontechgroup.com/sitemap\"    />
-      </Head>
-      <div className=\"max-w-4xl mx-auto space-y-6\"    />
-        <h1 className=\"text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent\"    />
-          Sitemap;
-        </h1>
-        <ul className=\"grid sm:grid-cols-2 gap-3\"    />
-          {links.map((l) => (}
-            <li;}
-key={l.href}
-              className=\"p-4 rounded-xl bg-black/40 border border-cyan-500/20\"
-                />
-              <a className=\"text-cyan-300\" href={l.href}    />
-                {l.name}
-              </a>
-            </li>
-          ),
-}
-        </ul>
-      </div>
-    </div>
-  )
-];
-
-  return (
-    <div className=\"min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8\"    />
-      <Head><title>Sitemap | Zion Tech Group</title>
-        <meta;
-name=\"description\"
-          content=\"Quick links to the main routes and pages.\"
-           />
-        <link rel=\"canonical\" href=\"https://ziontechgroup.com/sitemap\"    />
-      </Head>
-      <div className=\"max-w-4xl mx-auto space-y-6\"    />
-        <h1 className=\"text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent\"    />
-          Sitemap;
-        </h1>
-        <ul className=\"grid sm:grid-cols-2 gap-3\"    />
-          {links.map((l) => (}
-            <li;}
-key={l.href}
-              className=\"p-4 rounded-xl bg-black/40 border border-cyan-500/20\"
-                />
-              <a className=\"text-cyan-300\" href={l.href}    />
-                {l.name}
-              </a>
-            </li>
-          ),
-}
-        </ul>
-      </div>
-    </div>
-  );
-}
-
-export default /**
- * SitemapPage - Function description;
- */
-function SitemapPage() {
-  const links = [}
-  { name: \"Home\", href: \"/\",}
-},
-    { name: \"Services\", href: \"/services\",}
-},
-    {
-      name: \"All Services Showcase\",
-      href: \"/comprehensive - services - showcase - 2025\"}
-   ,}
-},
-    { name: \"Pricing\", href: \"/pricing\",}
-},
-    { name: \"Market Pricing\", href: \"/market - pricing\",}
-},
-    { name: \"Services Advertising\", href: \"/services - advertising\",}
-},
-    { name: \"Resources\", href: \"/resources\",}
-},
-    { name: \"Support\", href: \"/support\",}
-},
-    { name: \"Contact\", href: \"/contact\",}
-},
-];
-
-  return (
-    <div className=\"min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8\"    />;
-      <Head    />;
-        <title     /> Sitemap | Zion Tech Group</title>;
-        <meta;
-          name=\'description\';
-          content=\'Quick links to the main routes and pages.\';
-           />;
-        <link rel=\"canonical\" href=\"https://ziontechgroup.com / sitemap\"    />;
-      </Head>;
-      <div className=\"max - w-4xl mx - auto space - y-6\"    />;
-        <h1 className=\"text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent\"    />;
-          Sitemap;
-        </h1>;
-        <ul className=\"grid sm:grid - cols - 2 gap - 3\"    />;
-          {links.map ((l) => (<li;}
-              key={l.href}
-              className=\"p - 4 rounded - xl bg - black / 40 border border - cyan - 500 / 20\"    />
-
-              <a className=\"text - cyan - 300\" href={l.href}    />;
-                {l.name}
-              </a>;
-            </li>))}
-        </ul>;
-      </div>;
-    </div>)const links = [
-  { name: \"Home\", href: \"/\",}
-},{ name: \"Services\", href: \"/services\",}
-},{name: \"All Services Showcase\",href: \'/comprehensive - services - showcase - 2025\';}
-      href: \'/comprehensive - services - showcase - 2025\';}
-    },{ name: \"Pricing\", href: \"/pricing\",}
-},{ name: \"Market Pricing\", href: \"/market - pricing\",}
-},{ name: \"Services Advertising\", href: \"/services - advertising\",}
-},{ name: \"Resources\", href: \"/resources\",}
-},{ name: \"Support\", href: \"/support\",}
-},{ name: \"Contact\", href: \"/contact\",}
-}
-    { name: \"Contact\", href: \"/contact\",}
-}
-  ];
-  return (<div className=\"min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8\"    />;
-      <Head    />;
-        <title     /> Sitemap | Zion Tech Group</title>;
-        <meta;
-          name=\'description\';
-          content=\'Quick links to the main routes and pages.\';
-           />;
-        <link rel=\"canonical\" href=\"https://ziontechgroup.com / sitemap\"    />;
-      </Head>;
-      <div className=\"max - w-4xl mx - auto space - y-6\"    />;
-        <h1 className=\"text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent\"    />;
-          Sitemap;
-        </h1>;
-        <ul className=\"grid sm:grid - cols - 2 gap - 3\"    />;
-          {links.map ((l) => (<li;}
-              key={l.href}
-              className=\"p - 4 rounded - xl bg - black / 40 border border - cyan - 500 / 20\"    />
-
-              <a className=\"text - cyan - 300\" href={l.href}    />;
-                {l.name}
-              </a>;
-            </li>))}
-        </ul>;
-      </div>
-    </div>
-  );
-}
-    </div>);
-}
-
-<<<<<<< HEAD
-=======
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-=======
->>>>>>> origin/chore/fix-lint-and-merge
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621

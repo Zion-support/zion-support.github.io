@@ -205,12 +205,15 @@ export function GeneratedDescriptionDisplay({
         <CardTitle className="text-white flex items-center justify-between">
           Generated Description
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           <Button
             variant='outline'
             size='sm'
             onClick={() => setIsEditing(!isEditing)}
             className='border-zion-blue-light text-zion-slate-light hover:text-white'          >
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Button 
@@ -231,6 +234,8 @@ export function GeneratedDescriptionDisplay({
                 Edit
               </>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             )}
           </Button>
         </CardTitle>
@@ -244,6 +249,7 @@ export function GeneratedDescriptionDisplay({
         ) : (
           <div className='bg-zion-blue p-4 rounded-md text-white min-h-[300px] whitespace-pre-wrap'>
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from "react",;
@@ -323,6 +329,8 @@ export function GeneratedDescriptionDisplay({;
             {editedDescription}
           </div>
         )}
+<<<<<<< HEAD
+=======
       </CardContent>
       {isEditing && (
         <CardFooter>
@@ -330,6 +338,7 @@ export function GeneratedDescriptionDisplay({;
             onClick={handleSave}
             className='w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white'          >
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             {editedDescription}
           </div>
@@ -367,6 +376,8 @@ export function GeneratedDescriptionDisplay({;
         </CardFooter>
       )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     </Card>
   )
   isEditing ? (<> <Check className="h-4 w-4 mr-1" /> Done </>) : (<> <Pencil className="h-4 w-4 mr-1" /> Edit </>)
@@ -382,6 +393,7 @@ export function GeneratedDescriptionDisplay({;
 }'"
 }
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <<<<<<< HEAD:src-disabled/components/services/GeneratedDescriptionDisplay.tsx
 };

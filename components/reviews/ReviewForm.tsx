@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+import React, { useState } from 'react';
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import React, { useState } from 'react';
@@ -30,10 +33,11 @@ class ErrorBoundary extends React.Component {
 <<<<<<< HEAD
 type Props = {;
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;};import React, { useState } from 'react';
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import StarRating from './StarRating';
 export type ReviewFormValues = {
   projectId: string,
-  fromRole: client' | 'talent,
+  fromRole: 'client' | 'talent',
   fromId: string,
   rating: number,
   text: string,
@@ -42,13 +46,19 @@ export type ReviewFormValues = {
     qualityOfWork?: number;
     timeliness?: number;
     wouldWorkWithAgain?: boolean
-  }
+  };
   anonymous?: boolean
-}
+};
 
 type Props = {
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>
 };
+<<<<<<< HEAD
+
+import React, { useState } from 'react';
+import StarRating from './StarRating';
+export type ReviewFormValues = any;
+=======
 
 >>>>>>> merged-prs-20250907-203621
 </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {
@@ -72,6 +82,7 @@ export default ReviewForm
 import React, { useState } from 'react';
 export type ReviewFormValues = any;
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const ReviewForm: React.FC<Props> = ({ initial }) => {
 =======
 const ReviewForm: React.FC<Props> = ({ initial ;}) => {
@@ -90,6 +101,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const [message, setMessage] = useState<string | null>(null);
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setSubmitting(true);
@@ -106,6 +120,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           text;
           anonymous;
           categories: {
+<<<<<<< HEAD
+=======
 =======
     wouldWorkWithAgain?: boolean;
   }
@@ -180,11 +196,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
 
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             communication;
             qualityOfWork;
             timeliness;
             wouldWorkWithAgain}})});
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Failed to submit');
       setMessage('Review submitted! Pending admin approval.')
@@ -193,19 +213,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     } finally {
       setSubmitting(false)
     }
-  }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6>
+    <form onSubmit={handleSubmit} className="space-y-6">
       <div>
-        <label className=block text-sm font-medium mb-2">Overall Rating</label>
+        <label className="block text-sm font-medium mb-2">Overall Rating</label>
         <StarRating value={rating} onChange={setRating} />
       </div>
 
       <div>
-        <label className="block text-sm font-medium mb-2>Your Review</label>
+        <label className="block text-sm font-medium mb-2">Your Review</label>
         <textarea
-          className=w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
           rows={5}
           value={text}
           onChange={(e) => setText(e.target.value)}
@@ -247,6 +266,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
           <span className="pill">Optional</span>
         </div>
+<<<<<<< HEAD
+=======
       </div>
 =======
 
@@ -391,11 +412,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <span className='pill'>Optional</span>        </div>;
       </div>;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       <button
         type="submit"
         className="enhanced-button enhanced-button-primary"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         disabled={submitting}
       >
         {submitting ? 'Submitting...' : 'Submit Review'}
@@ -407,6 +432,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 };
 
 export default ReviewForm;
+<<<<<<< HEAD
+=======
 ;
 
       </button>
@@ -459,3 +486,4 @@ export default ReviewForm;
 ;
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

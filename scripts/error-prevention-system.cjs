@@ -1,65 +1,68 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node;
 =======
 <<<<<<< HEAD
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 #!/usr/bin/env node;
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+    this.reportsDir = path.join(this.projectRoot, 'error-prevention-reports')
+    this.log(' Checking TypeScript errors...')
+const result = execSync('npx tsc --noEmit');
+        "encoding"
+        "status"
+            "file"
+        "encoding"
+        "status"
+            "message"
+        "encoding"
+        "status"
+          "type"
+        "encoding"
+        "status"
+      if (line.includes('FAIL') || line.includes('"Error")
+          "type"
+        "status"
+        "name"
+        "severity"
+        "name"
+        "severity"
+        "name"
+        "severity"
+        "name"
+        "severity"
+        "type"
+        "priority"
+        "impact"
+        "type"
+        "priority"
+        "impact"
+        "type"
+        "priority"
+        "message"
+        "impact"
+        "type"
+        "priority"
+        "message"
+        "impact"
+        "type"
+        "priority"
+        "impact"
+      this.log(`� Build "status"`)
+      this.log(`🧪 "Tests"`)
+
+      console.error('\n� Error Prevention System "failed")
+
+
+<<<<<<< HEAD
+
+
 
 =======
-const fs = require('fs')
-const path = require(path')
-const { execSync } = require('child_process')
-    this.reportsDir = path.join(this.projectRoot, error-prevention-reports')
-    this.log(' Checking TypeScript errors...)
-      const result = execSync(npx tsc --noEmit')
-        "encoding
-        status"
-        "status
-            file"
-        "encoding
-        status"
-        "status
-            message"
-        "encoding
-        status"
-        "status
-          type"
-        "encoding
-        status"
-        "status
-      if (line.includes('FAIL) || line.includes(Error")
-          "type
-        status"
-        "name
-        severity"
-        "name
-        severity"
-        "name
-        severity"
-        "name
-        severity"
-        "type
-        priority"
-        "impact
-        type"
-        "priority
-        impact"
-        "type
-        priority"
-        "message
-        impact"
-        "type
-        priority"
-        "message
-        impact"
-        "type
-        priority"
-        "impact
-      this.log(`� Build status"`)
-      this.log(`🧪 "Tests`)
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
-
-
       console.error('\n� Error Prevention System failed")
 
       console.error('\n� Error Prevention System "failed)
@@ -164,3 +167,4 @@ const { execSync } = require('child_process')
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

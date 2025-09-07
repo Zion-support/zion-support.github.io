@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:backup-problematic-files/pages.bak/request-quote.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from \'react\'; import SEOHead from \'../src/components/SEOHead\'; import ContactForm from \'../src/components/ContactForm\'; const RequestQuotePage = () => {; return (; <> <SEOHead title=\"Request a Quote - Zion Tech Group\" description=\"Request a custom quote for your project.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">Request a Quote></div> <p className=\"text-gray-600 mb-8\">Tell us about your project and our team will get back to you with a tailored proposal.></div> <ContactForm /> ></div> ></div> );}; export default RequestQuotePage;
 const React from "react"; import SEOHead from "./src/components/SEOHead"; import ContactForm from "./src/components/ContactForm"; const RequestQuotePage = () => {; return (; <> <SEOHead title="Request a Quote - Zion Tech Group" description="Request a custom quote for your project." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">Request a Quote></div> <p className="text-gray-600 mb-8">Tell us about your project and our team will get back to you with a tailored proposal.></div> <ContactForm /> ></div> ></div> );}; export default RequestQuotePage;'"'"
 import _React from 'react'; import SEOHead from '../src/components/SEOHead'; import ContactForm from '../src/components/ContactForm'; const RequestQuotePage = () => {; return (; <> <SEOHead title="Request a Quote - Zion Tech Group" description="Request a custom quote for your project." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">Request a Quote></div> <p className="text-gray-600 mb-8">Tell us about your project and our team will get back to you with a tailored proposal.></div> <ContactForm /> ></div> ></div> );}; export default RequestQuotePage;
@@ -20,6 +23,8 @@ import React from 'react'; import SEOHead from "./src/components/SEOHead"; impor
 import React from 'react'; import SEOHead from '../src/components/SEOHead'; import ContactForm from '../src/components/ContactForm'; const RequestQuotePage = () => {; return (; <> <SEOHead title="Request a Quote - Zion Tech Group" description="Request a custom quote for your project." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">Request a Quote></div> <p className="text-gray-600 mb-8">Tell us about your project and our team will get back to you with a tailored proposal.></div> <ContactForm /> ></div> ></div> );}; export default RequestQuotePage;"
 pr-12325
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
 =======
 import React from \'react\'; import SEOHead from \'../src/components/SEOHead\'; import ContactForm from \'../src/components/ContactForm\'; const RequestQuotePage = () => {; return (; <> <SEOHead title=\"Request a Quote - Zion Tech Group\" description=\"Request a custom quote for your project.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">Request a Quote></div> <p className=\"text-gray-600 mb-8\">Tell us about your project and our team will get back to you with a tailored proposal.></div> <ContactForm /> ></div> ></div> );}; export default RequestQuotePage;
 const React from "react"; import SEOHead from "./src/components/SEOHead"; import ContactForm from "./src/components/ContactForm"; const RequestQuotePage = () => {; return (; <> <SEOHead title="Request a Quote - Zion Tech Group" description="Request a custom quote for your project." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">Request a Quote></div> <p className="text-gray-600 mb-8">Tell us about your project and our team will get back to you with a tailored proposal.></div> <ContactForm /> ></div> ></div> );}; export default RequestQuotePage;'"'"
@@ -58,3 +63,4 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages.bak/request-quote.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

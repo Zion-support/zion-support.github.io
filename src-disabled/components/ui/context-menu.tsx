@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src-disabled/components/ui/context-menu.tsx
 =======
 import * as React from "react"
@@ -22,6 +24,7 @@ import { cn } from "@/lib/utils"
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/ui/context-menu.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const ContextMenu = ContextMenuPrimitive.Root
 
 const ContextMenuTrigger = ContextMenuPrimitive.Trigger
@@ -59,6 +62,8 @@ const ContextMenuSubTrigger = React.forward_ref<;
   <ContextMenuPrimitive.SubTrigger;
     ref={ref}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 className={cn(
       &quot;flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground&quot;
       inset && &quot;pl-8&quot;
@@ -69,6 +74,7 @@ className={cn(
       &quot;flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground&quot;
       inset && &quot;pl-8&quot;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <<<<<<< HEAD:src-disabled/components/ui/context-menu.tsx
 =======
@@ -90,10 +96,13 @@ className={cn(
   >;
     {children}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <ChevronRight className=&quot;ml-auto h-4 w-4&quot; />
 ursor/fix-website-loading-errors-and-merge-6662
 <ChevronRight className=&quot;ml-auto h-4 w-4&quot; />
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     <ChevronRight className="ml-auto h-4 w-4" />
 
@@ -116,10 +125,13 @@ const ContextMenuSubContent = React.forwardRef<
     ref={ref}
     className={cn(
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       &quot;z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
 ursor/fix-website-loading-errors-and-merge-6662
       &quot;z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <<<<<<< HEAD:src-disabled/components/ui/context-menu.tsx
       "z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
@@ -139,10 +151,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 ContextMenuSubContent.displayName = ContextMenuPrimitive.SubContent.displayName;
 const ContextMenuContent = React.forwardRef<;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   React.ElementRef<typeof ContextMenuPrimitive.Content>;
 ursor/fix-website-loading-errors-and-merge-6662
   React.ElementRef<typeof ContextMenuPrimitive.Content>;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <<<<<<< HEAD:src-disabled/components/ui/context-menu.tsx
 =======
@@ -156,12 +171,15 @@ ursor/fix-website-loading-errors-and-merge-6662
     <ContextMenuPrimitive.Content;
       ref={ref}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 className={cn(
         &quot;z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md animate-in fade-in-80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
 ursor/fix-website-loading-errors-and-merge-6662
 className={cn(
         &quot;z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md animate-in fade-in-80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <<<<<<< HEAD:src-disabled/components/ui/context-menu.tsx
 =======
@@ -186,6 +204,9 @@ ContextMenuContent.displayName = ContextMenuPrimitive.Content.displayName;
 const ContextMenuItem = React.forwardRef<;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 className={cn (
@@ -235,6 +256,8 @@ const ContextMenuItem = React.forward_ref<;
 >(({ className, inset, ...props }, ref) => (;
   <ContextMenuPrimitive.Item;
     ref={ref}
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD:src-disabled/components/ui/context-menu.tsx
 =======
@@ -265,6 +288,7 @@ className={cn(
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       inset && "pl-8",
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/ui/context-menu.tsx
     className={cn(
@@ -286,9 +310,12 @@ className={cn(
 ContextMenuItem.displayName = ContextMenuPrimitive.Item.displayName;
 const ContextMenuCheckboxItem = React.forwardRef<;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   React.ElementRef<typeof ContextMenuPrimitive.CheckboxItem>;
   React.ElementRef<typeof ContextMenuPrimitive.CheckboxItem>;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <<<<<<< HEAD:src-disabled/components/ui/context-menu.tsx
 =======
@@ -381,6 +408,8 @@ const ContextMenuRadioItem = React.forwardRef<;
   <ContextMenuPrimitive.RadioItem;
     ref={ref}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   React.ElementRef<typeof ContextMenuPrimitive.RadioItem>;
 >(({ className, children, ...props }, ref) => (;
   <ContextMenuPrimitive.RadioItem;
@@ -421,6 +450,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     ref={ref}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
@@ -469,6 +499,8 @@ className={cn (
 ));
 ContextMenuRadioItem.displayName = ContextMenuPrimitive.RadioItem.displayName;
 const ContextMenuLabel = React.forwardRef<;
+<<<<<<< HEAD
+=======
   React.ElementRef<typeof ContextMenuPrimitive.Label>;
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Label> & {inset?: boolean;
   React.ElementRef<typeof ContextMenuPrimitive.Label>,;
@@ -489,6 +521,7 @@ const ContextMenuLabel = React.forward_ref<;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/ui/context-menu.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   React.ElementRef<typeof ContextMenuPrimitive.Label>,;
 
@@ -500,6 +533,8 @@ const ContextMenuLabel = React.forward_ref<;
   <ContextMenuPrimitive.Label;
     ref={ref}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 className={cn(
       &quot;px-2 py-1.5 text-sm font-semibold text-foreground&quot;
       inset && &quot;pl-8&quot;
@@ -507,6 +542,7 @@ className={cn(
       "px-2 py-1.5 text-sm font-semibold text-foreground",
       inset && "pl-8",
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     className={cn(
       "px-2 py-1.5 text-sm font-semibold text-foreground",
@@ -527,10 +563,13 @@ className={cn(
 ContextMenuLabel.displayName = ContextMenuPrimitive.Label.displayName;
 const ContextMenuSeparator = React.forwardRef<;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   React.ElementRef<typeof ContextMenuPrimitive.Separator>;
 ursor/fix-website-loading-errors-and-merge-6662
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Separator>;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <<<<<<< HEAD:src-disabled/components/ui/context-menu.tsx
 =======
@@ -544,7 +583,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >(({ className, ...props }, ref) => (;
   <ContextMenuPrimitive.Separator;
     ref={ref}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src-disabled/components/ui/context-menu.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     className={cn("-mx-1 my-1 h-px bg-border", className)}
 
@@ -572,7 +614,10 @@ const ContextMenuShortcut = ({
   return (
     <span
       className={cn(
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src-disabled/components/ui/context-menu.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         "ml-auto text-xs tracking-widest text-muted-foreground",
 
@@ -602,6 +647,8 @@ const ContextMenuShortcut = ({
   );
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 ContextMenuShortcut.displayName = &quot;ContextMenuShortcut&quot;
 export {
   ContextMenu
@@ -619,6 +666,7 @@ export {
   ContextMenuSubContent
   ContextMenuSubTrigger
   ContextMenuRadioGroup}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         className
       )}
@@ -671,6 +719,9 @@ export {
   ContextMenuShortcut,
   ContextMenuGroup,
   ContextMenuPortal,
+<<<<<<< HEAD
+  ContextMenuSub,
+=======
 <<<<<<< HEAD:src-disabled/components/ui/context-menu.tsx
   ContextMenuSub,
 =======
@@ -686,3 +737,4 @@ export {
   ContextMenuSubContent,
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/ui/context-menu.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

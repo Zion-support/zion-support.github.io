@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:src_backup/mobile/components/onboarding/RolePicker.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src_backup/mobile/components/onboarding/RolePicker.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import React, { useState } from 'react;
 import { Button } from @/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card;
@@ -11,6 +18,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Briefcase, Users, Check } from 'lucide-react'
 
 type UserRole = "talent" | "client" | null;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 <<<<<<< HEAD
 import React, { useState } from 'react'
@@ -50,19 +62,35 @@ type UserRole = any;
         <Card
 type UserRole = "talent" | "client" | null,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/mobile/components/onboarding/RolePicker.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 interface RolePickerProps {
   onSelect: (role: UserRole) => void
 }
 
 export function RolePicker({ onSelect }: RolePickerProps) {
+<<<<<<< HEAD
 <<<<<<< HEAD:src_backup/mobile/components/onboarding/RolePicker.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src_backup/mobile/components/onboarding/RolePicker.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   const [selectedRole, setSelectedRole] = useState<UserRole>(null);
 
   const handleSelect = (role: UserRole) => {
     setSelectedRole(role);
     onSelect(role)
   };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
   const [selectedRole, setSelectedRole] = useState<UserRole>(null),
 
@@ -71,6 +99,35 @@ export function RolePicker({ onSelect }: RolePickerProps) {
     onSelect(role)
   },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/mobile/components/onboarding/RolePicker.tsx
+<<<<<<< HEAD
+
+  return (
+    <div className='space-y-4 px-4'>
+      <h2 className='text-xl font-medium'>What brings you to Zion?</h2>
+      <p className='text-muted-foreground'>Choose how you want to use our platform</p>
+
+      <div className='space-y-3 mt-6'>
+        <Card 
+          className={`cursor-pointer transition-all ${
+            selectedRole === 'talent' 
+              ? 'border-primary bg-primary/5' 
+              : 'border-border hover:border-primary/40'
+          }`}
+          onClick={() => handleSelect('talent')}
+        >
+          <CardContent className='p-5'>
+            <div className='flex items-center'>
+              <div className='w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4'>
+                <Briefcase className='h-6 w-6 text-primary' />
+              </div>
+              <div className='flex-1'>
+                <h3 className='font-medium'>I'm offering services</h3>
+                <p className='text-sm text-muted-foreground'>Find work and showcase your skills</p>
+              </div>
+              {selectedRole === 'talent' && (
+                <Check className='h-5 w-5 text-primary' />
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   return (
     <div className="space-y-4 px-4">
@@ -97,10 +154,19 @@ export function RolePicker({ onSelect }: RolePickerProps) {
               </div>
               {selectedRole === 'talent' && (
                 <Check className="h-5 w-5 text-primary" />
+>>>>>>> origin/resolved-merge-conflicts
               )}
             </div>
           </CardContent>
         </Card>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+        <Card 
+          className={`cursor-pointer transition-all ${
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD:src_backup/mobile/components/onboarding/RolePicker.tsx
 
         <Card 
@@ -114,6 +180,26 @@ export function RolePicker({ onSelect }: RolePickerProps) {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 className={`cursor-pointer transition-all ${
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/mobile/components/onboarding/RolePicker.tsx
+<<<<<<< HEAD
+            selectedRole === 'client' 
+              ? 'border-primary bg-primary/5' 
+              : 'border-border hover:border-primary/40'
+          }`}
+          onClick={() => handleSelect('client')}
+        >
+          <CardContent className='p-5'>
+            <div className='flex items-center'>
+              <div className='w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4'>
+                <Users className='h-6 w-6 text-primary' />
+              </div>
+              <div className='flex-1'>
+                <h3 className='font-medium'>I'm hiring</h3>
+                <p className='text-sm text-muted-foreground'>Post jobs and find talented professionals</p>
+              </div>
+              {selectedRole === 'client' && (
+<<<<<<< HEAD:src_backup/mobile/components/onboarding/RolePicker.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             selectedRole === 'client' 
               ? "border-primary bg-primary/5" 
               : "border-border hover:border-primary/40"
@@ -130,7 +216,11 @@ className={`cursor-pointer transition-all ${
                 <p className="text-sm text-muted-foreground">Post jobs and find talented professionals</p>
               </div>
               {selectedRole === 'client' && (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src_backup/mobile/components/onboarding/RolePicker.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 <Check className="h-5 w-5 text-primary" />
               )}
             </div>
@@ -140,6 +230,11 @@ className={`cursor-pointer transition-all ${
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 <<<<<<< HEAD
                 <Check className='h-5 w-5 text-primary' />
@@ -160,7 +255,11 @@ import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Briefcase, Users, Check } from 'lucide-react';
+<<<<<<< HEAD
+type UserRole = 'talent' | 'client' | null,;
+=======
 type UserRole = "talent" | "client" | null,;
+>>>>>>> origin/resolved-merge-conflicts
 interface RolePickerProps {;
   onSelect: (role: UserRole) => void;
 }
@@ -187,6 +286,16 @@ export function RolePicker({ onSelect }: RolePickerProps) {;
           }`}
           onClick={() => handleSelect('talent')}
         >;
+<<<<<<< HEAD
+          <CardContent className='p-5'>;
+            <div className='flex items-center'>;
+              <div className='w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4'>;
+                <Briefcase className='h-6 w-6 text-primary' />;
+              </div>;
+              <div className='flex-1'>;
+                <h3 className='font-medium'>I'm offering services</h3>;
+                <p className='text-sm text-muted-foreground'>Find work and showcase your skills</p>;
+=======
           <CardContent className="p-5">;
             <div className="flex items-center">;
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">;
@@ -195,6 +304,7 @@ export function RolePicker({ onSelect }: RolePickerProps) {;
               <div className="flex-1">;
                 <h3 className="font-medium">I'm offering services</h3>;
                 <p className="text-sm text-muted-foreground">Find work and showcase your skills</p>;
+>>>>>>> origin/resolved-merge-conflicts
               </div>;
               {selectedRole === 'talent' && (;
                 <Check className="h-5 w-5 text-primary" />;
@@ -239,6 +349,10 @@ export function RolePicker({ onSelect }: RolePickerProps) {;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/mobile/components/onboarding/RolePicker.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/ button';
@@ -309,12 +423,24 @@ function RolePicker() {
               {selected_role === 'client' && (
                 <Check className='h - 5 w - 5 text - primary' />)}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             </div>;
           </CardContent>;
         </Card>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
     </div>;
   );
 }
@@ -324,13 +450,24 @@ function RolePicker() {
 }
 ;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
 
     </div>);
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD:src_backup/mobile/components/onboarding/RolePicker.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src_backup/mobile/components/onboarding/RolePicker.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             </div>
           </CardContent>
         </Card>
@@ -338,6 +475,15 @@ function RolePicker() {
     </div>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/mobile/components/onboarding/RolePicker.tsx
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/mobile/components/onboarding/RolePicker.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

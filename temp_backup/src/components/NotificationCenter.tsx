@@ -25,7 +25,7 @@ return (<Popover open= {;
 }> <PopoverTrigger asChild> {';''
   unreadCount > 9 ? '9+' : unreadCount ;
 }</span>) ;
-}</Button> </PopoverTrigger> <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col" > <NotificationHeader unreadCount= {;
+}</Button> </PopoverTrigger> <PopoverContent className='w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col' > <NotificationHeader unreadCount= {;
   unreadCount ;
 }onMarkAllAsRead= {;
   handleMarkAllAsRead ;
@@ -47,6 +47,6 @@ return (<Popover open= {;
   fetchNotifications ;
 }/> <NotificationFooter onClose= {;
   () => setOpen (false) ;
-}/> </PopoverContent> </Popover>) ;'"
-};'"'"
-'"'"'"
+}/> </PopoverContent> </Popover>) ;''
+};''''
+''''''

@@ -36,8 +36,11 @@ const mockUser: User = {id: '1',email, name: 'John Doe',}
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     checkAuth();
   }, []);
 
@@ -102,7 +105,10 @@ const mockUser: User = {id: '1',email, name: 'John Doe',}
     isAdmin: authState.user?.role === 'admin',
   };
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const logout = (setAuthState({user: null, isAuthenticated: false,isLoading: false ) => {
   return $3;}
 })localStorage.removeItem('zion_user')localStorage.removeItem('authToken',
@@ -115,6 +121,8 @@ const mockUser: User = {id: '1', email,name, role: 'user';}
 })localStorage.setItem('zion_user', JSON.stringify(mockUser))localStorage.setItem('authToken', 'dummy-token')return mockUser;
   }return {user: authState.user, loading: authState.isLoading,login, logout,register, isAuthenticated: authState.isAuthenticated,isLoading: authState.isLoading, isAdmin: authState.user?.role === 'admin';}
   }}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 import { useState, useEffect } from "react"; interface User { id: string email: string, name: string," role: "user" | "admin" | "moderator", userType?: string, displayName?: string, avatarUrl? string,;}
 } interface AuthState { user: User | null, isAuthenticated: boolean, isLoading boolean,;}"
@@ -141,6 +149,7 @@ import { useState, useEffect } from "react"; interface User { id: string email: 
 }; return { user: authState.user, loading: authState.isLoading, login, logout, register, isAuthenticated: authState.isAuthenticated, isLoading: authState.isLoading, " isAdmin authState.user?.role = == "admin;}"
 };";
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState, useEffect } from \"react\"; interface User { id: string email: string, name: string,\" role: \"user\" | \"admin\" | \"moderator\", userType?: string, displayName?: string, avatarUrl? string,;,}
 } interface AuthState { user: User | null, isAuthenticated: boolean, isLoading boolean,;,}
 } export function useAuth() { const [authState, setAuthState] = useState<AuthState />({ user: null, isAuthenticated: false, isLoading: true\",;,}
@@ -158,7 +167,10 @@ import { useState, useEffect } from \"react\"; interface User { id: string email
 }); \" localStorage.setItem(\"authToken\", \"dummy-token\"); localStorage.setItem(\"zion_user\", JSON.stringify(mockUser)); return mockUser;,
 }; const logout = ( setAuthState({ user: null, isAuthenticated: false, isLoading false\";,) => {
   return $3;}
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 }); localStorage.removeItem(\"zion_user\");\" localStorage.removeItem(\"authToken\");\";,
 }; const register = async (email: string, password: string, name: string) => { // comment;,}
@@ -167,7 +179,11 @@ import { useState, useEffect } from \"react\"; interface User { id: string email
 }; return { user: authState.user, loading: authState.isLoading, login, logout, register, isAuthenticated: authState.isAuthenticated, isLoading: authState.isLoading, \" isAdmin authState.user?.role = == \"admin;,}
 };\";,
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }

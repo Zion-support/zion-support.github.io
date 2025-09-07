@@ -1,3 +1,5 @@
+
+#!/usr/bin/env node
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -20,6 +22,8 @@ class QuickSyntaxFixer {;
       const originalContent = fs.readFileSync(filePath, 'utf8');
       const content = originalContent
         // Remove merge conflict markers
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -50,6 +54,7 @@ class QuickSyntaxFixer {;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 =======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         // Fix module.exports
         .replace(/module\.exports\s*=\s*{;/g, 'module.exports = {')
         // Fix constructor
@@ -72,7 +77,6 @@ class QuickSyntaxFixer {;
       this.log(`Error fixing ${filePath}: ${error.message}`);
       return false;
     }
-  }
 ;
   async run() {;
     this.log('🚀 Starting Quick Syntax Fixer');
@@ -84,12 +88,10 @@ class QuickSyntaxFixer {;
       if (this.fixFile(file)) {;
         fixedCount++;
       }
-    }
 ;
     this.log(`✅ Fixed ${fixedCount} critical files`);
     return { "fixedFiles": this.fixedFiles };
   }
-}
 ;
 // Run the fixer;
 if (require.main === module) {;
@@ -112,6 +114,9 @@ const path = require('path')
       let content = fs.readFileSync(filePath, 'utf8')
         .replace(/(\w+):\s*([^,]+),/g, '$"1"
         .replace(/(\w+):\s*([^,]+);\s*}/g, '$"1"
+<<<<<<< HEAD
+        .replace(/(\w+):\s*([^,]+);\s*]/g, '$"1"
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
         .replace(/(\w+):\s*([^,]+);\s*]/g, '$"1"
@@ -190,3 +195,4 @@ fixer.run().catch(console.error);
 =======
         .replace(/(\w+):\s*([^,]+);\s*]/g, '$"1"
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

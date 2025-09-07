@@ -47,7 +47,7 @@ export default function PerformanceMonitor() {
   if (!metrics) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-2 rounded-lg text-xs font-mono">
+    <div className='fixed bottom-4 right-4 bg-black/80 text-white p-2 rounded-lg text-xs font-mono'>
       <div>Load: {metrics.loadTime.toFixed(0)}ms</div>
       <div>Memory: {metrics.memoryUsage.toFixed(1)}MB</div>
       <div>Connection: {metrics.connectionType}</div>

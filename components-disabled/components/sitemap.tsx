@@ -35,6 +35,8 @@
     </div>;"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">"
 			<Head>
 
@@ -50,6 +52,7 @@
 
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from "react";"
 import Head from "next/head";"
 
@@ -192,7 +195,10 @@ return (;
       <Head>
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <title>Sitemap | Zion Tech Group</title>
         />
         <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">"
@@ -204,10 +210,13 @@ return (;
             </li>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
     <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;"
 
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export default /**
  * SitemapPage - Function description
  */
@@ -233,7 +242,10 @@ return (;
     <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;"
 
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <title > Sitemap | Zion Tech Group</title>;
           name="description";""
           content="Quick links to the main routes and pages.";"
@@ -247,9 +259,12 @@ return (;
               </a>;)
             </li>))}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
     </div>);"
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         </ul>;
       </div>;
     </div>);
@@ -296,4 +311,7 @@ return (;
 =======
     </div>);"
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

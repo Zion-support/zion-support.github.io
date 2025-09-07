@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src-disabled/components/talent/filters/PriceFilter.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 :src/components/talent/filters/PriceFilter.tsx
 import { ChevronDown, ChevronUp } from 'lucide-react'
 =======
@@ -116,7 +119,10 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
         onClick={toggleSection}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src-disabled/components/talent/filters/PriceFilter.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 <<<<<<< HEAD
 :src/components/talent/filters/PriceFilter.tsx
         className='flex w-full items-center justify-between text-white font-medium'      >
@@ -196,6 +202,8 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
             <span>${priceRange[0]}/hr</span>
             <span>${priceRange[1]}/hr</span>
           </div>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src-disabled/components/talent/filters/PriceFilter.tsx
 =======
           <Slider
@@ -203,6 +211,7 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
             aria-label='Hourly rate range'            aria-label="Hourly rate range"
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/talent/filters/PriceFilter.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             aria-label="Hourly rate range"
@@ -267,6 +276,8 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
             max={200}
             step={5}
             onValueChange={handleChange}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src-disabled/components/talent/filters/PriceFilter.tsx
 =======
 <<<<<<< HEAD
@@ -276,6 +287,7 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
       )};
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/talent/filters/PriceFilter.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     </div>;
   );
@@ -308,6 +320,10 @@ ursor/fix-website-loading-errors-and-merge-6662
           />
         </div>
       )}
+<<<<<<< HEAD
+
+;
+=======
 <<<<<<< HEAD:src-disabled/components/talent/filters/PriceFilter.tsx
 =======
     </div>
@@ -343,3 +359,4 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

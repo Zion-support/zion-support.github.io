@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { QuoteRequestSteps } from '../QuoteRequestForm'
 import { CheckIcon } from 'lucide-react'
 import { cn } from '@/lib/utils'
@@ -14,6 +16,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 return (
     <div className='relative'>;
       <div className='absolute top-4 left-0 right-0 h-0 && 0.5 bg-zion-blue-light'>;
@@ -113,6 +116,9 @@ export function StepProgress({ currentStep }: StepProgressProps) {
 :src/components/QuoteRequestForm/StepProgress.tsx
 =======
   const getStepStatus = (stepId: QuoteRequestSteps) => {
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
 <<<<<<< HEAD:src-disabled/components/QuoteRequestForm/StepProgress.tsx
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
@@ -124,6 +130,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
     return 'upcoming'
   const getStepStatus = (stepId: QuoteRequestSteps,) => {
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/QuoteRequestForm/StepProgress.tsx
 
@@ -193,6 +200,9 @@ export function StepProgress({ currentStep }: StepProgressProps) {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div
                 className={cn(
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD:src-disabled/components/QuoteRequestForm/StepProgress.tsx
 
 =======
@@ -228,6 +238,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
               </div>
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/QuoteRequestForm/StepProgress.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 )}>;
                 {status === 'complete' ? (;
                   <CheckIcon className='h-4 w-4' />;
@@ -282,6 +293,8 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                   status === "current" ? "text-white" :
                   "text-zion-slate-light"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                 ),}
               >
                 {step.label}
@@ -297,6 +310,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
   (steps.findIndex (s => s.id === currentStep) / (steps.length - 1) ) * 100 
 }%` 
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <<<<<<< HEAD:src-disabled/components/QuoteRequestForm/StepProgress.tsx
                 ) : (
@@ -480,6 +494,9 @@ if (return "current", ) {"
 <<<<<<< HEAD:src-disabled/components/QuoteRequestForm/StepProgress.tsx
 });
 }</div> </div>) ;
+<<<<<<< HEAD
+}"
+=======
 }"
 =======
 }) ;
@@ -594,3 +611,4 @@ if (return "current", ) {
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/QuoteRequestForm/StepProgress.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

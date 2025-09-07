@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 {
 <<<<<<< HEAD
+  "pages": [
+=======
+<<<<<<< HEAD
   "version": "1.0",
   "generated": "2025-09-07T11:29:59.276Z",
 =======
@@ -10,6 +13,7 @@
   "pages": [
   "generatedAt": "2025-09-05T23:41:15.563Z",
   "items": [
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     {
       "url": "about",
       "title": "About | Zion Tech Group",
@@ -11688,7 +11692,10 @@
       "title": "Header Component",
       "description": "React component: Header",
       "keywords": [
+<<<<<<< HEAD
+=======
         "name",
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         "href",
         "name",
         "classname",
@@ -11711,9 +11718,12 @@
       "title": "Layout Component",
       "description": "React component: Layout",
       "keywords": [
+<<<<<<< HEAD
+=======
         "error",
         "meta",
         "title",
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         "react",
         "children",
         "string",
@@ -13139,6 +13149,18 @@
       "title": "OptimizedImage Component",
       "description": "React component: OptimizedImage",
       "keywords": [
+<<<<<<< HEAD
+        "width",
+        "string",
+        "height",
+        "priority",
+        "classname",
+        "sizes",
+        "react",
+        "image",
+        "import",
+        "optimizedimageprops",
+=======
         "head",
         "origin",
         "main",
@@ -13149,6 +13171,7 @@
         "sizes",
         "react",
         "image",
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         "component",
         "react"
       ],
@@ -25870,6 +25893,18 @@
       "title": "Card Component",
       "description": "React component: Card",
       "keywords": [
+<<<<<<< HEAD
+        "classname",
+        "react",
+        "props",
+        "htmldivelement",
+        "const",
+        "card",
+        "forwardref",
+        "htmlattributes",
+        "displayname",
+        "text",
+=======
         "react",
         "hover",
         "blue",
@@ -25880,6 +25915,7 @@
         "opacity",
         "cardcontent",
         "style",
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         "component",
         "react"
       ],
@@ -25980,7 +26016,11 @@
       "title": "EnhancedMarketplaceCard Component",
       "description": "React component: EnhancedMarketplaceCard",
       "keywords": [
+<<<<<<< HEAD
+        "classname",
+=======
         "string",
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         "text",
         "gray",
         "title",
@@ -26024,6 +26064,18 @@
       "title": "ErrorBoundary Component",
       "description": "React component: ErrorBoundary",
       "keywords": [
+<<<<<<< HEAD
+        "error",
+        "classname",
+        "text",
+        "state",
+        "props",
+        "haserror",
+        "center",
+        "errorinfo",
+        "public",
+        "return",
+=======
         "text",
         "string",
         "classname",
@@ -26034,6 +26086,7 @@
         "transition",
         "const",
         "opacity",
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         "component",
         "react"
       ],
@@ -26156,12 +26209,25 @@
       "title": "InteractiveNavigation Component",
       "description": "React component: InteractiveNavigation",
       "keywords": [
+<<<<<<< HEAD
+        "link",
+        "text",
+        "classname",
+        "gray",
+        "span",
+        "href",
+        "hover",
+        "transition",
+        "colors",
+        "import",
+=======
         "interface",
         "interactivenavigationprops",
         "items",
         "navitem",
         "classname",
         "string",
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         "component",
         "react"
       ],
@@ -27090,18 +27156,32 @@
       "title": "Zion Tech Group - Home",
       "description": "Zion Tech Group - Leading technology solutions and services",
       "keywords": [
+<<<<<<< HEAD
+        "technology",
+        "solutions",
+        "services",
+        "zion",
+        "tech",
+        "group"
+=======
         "home",
         "ztech",
         "technology",
         "solutions",
         "services"
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       ],
       "type": "page",
       "lastModified": "2025-09-07T10:49:08.343Z"
     },
     {
+<<<<<<< HEAD
+      "url": "/about",
+      "title": "About Zion Tech Group",
+=======
       "url": "https://zion.app/about",
       "title": "About Us",
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       "description": "Learn about Zion Tech Group and our mission to provide innovative technology solutions",
       "keywords": [
         "about",
@@ -27114,6 +27194,17 @@
       "lastModified": "2025-09-07T10:49:08.343Z"
     },
     {
+<<<<<<< HEAD
+      "url": "/services",
+      "title": "Our Services",
+      "description": "Comprehensive technology services and solutions offered by Zion Tech Group",
+      "keywords": [
+        "services",
+        "solutions",
+        "technology",
+        "consulting",
+        "development"
+=======
       "url": "https://zion.app/services",
       "title": "Our Services",
       "description": "Comprehensive technology services including web development, mobile apps, and cloud solutions",
@@ -27123,16 +27214,36 @@
         "mobile apps",
         "cloud",
         "solutions"
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       ],
       "type": "page",
       "lastModified": "2025-09-07T10:49:08.343Z"
     },
     {
+<<<<<<< HEAD
+      "url": "/contact",
+=======
       "url": "https://zion.app/contact",
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       "title": "Contact Us",
       "description": "Get in touch with Zion Tech Group for your technology needs",
       "keywords": [
         "contact",
+<<<<<<< HEAD
+        "support",
+        "help",
+        "inquiry",
+        "reach"
+      ],
+      "type": "page",
+      "lastModified": "2025-09-07T10:49:08.344Z"
+    }
+  ],
+  "metadata": {
+    "generated": "2025-09-07T10:49:08.072Z",
+    "version": "1.0.0"
+  }
+=======
         "get in touch",
         "support",
         "help"
@@ -57135,3 +57246,4 @@
 }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

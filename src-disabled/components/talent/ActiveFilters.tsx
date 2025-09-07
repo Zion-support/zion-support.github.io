@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src-disabled/components/talent/ActiveFilters.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 :src/components/talent/ActiveFilters.tsx
 import React from "react",
 import { ClickableBadge } from "@/components/ui/clickable-badge";
@@ -72,6 +75,8 @@ import { X } from 'lucide-react'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/talent/ActiveFilters.tsx
 
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD:src-disabled/components/talent/ActiveFilters.tsx
 =======
@@ -101,6 +106,7 @@ export function ActiveFilters({
     priceRange[1] !== 200
   if (!hasActiveFilters) return null
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 
@@ -115,6 +121,8 @@ export function ActiveFilters({
     experienceRange[0] !== 0 ||
     experienceRange[1] !== 15 ||
     priceRange[0] !== 50 ||
+<<<<<<< HEAD
+=======
         </ClickableBadge>
       ))}
       {(priceRange[0] !== 50 |priceRange[1] !== 200) && (
@@ -166,6 +174,7 @@ export function ActiveFilters({
         <ClickableBadge
           className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
           onClick={() => setPriceRange([50, 200])}        >
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 =======
   const hasActiveFilters = null;
@@ -660,10 +669,13 @@ export function ActiveFilters({;
   );
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 ;
 ;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { ClickableBadge } from '@/components / ui / clickable - badge';
 import { Button } from '@/components / ui / button';
@@ -735,6 +747,9 @@ function ActiveFilters() {}
         Clear All;
       </Button>;
     </div>);
+<<<<<<< HEAD
+}
+=======
 <<<<<<< HEAD:src-disabled/components/talent/ActiveFilters.tsx
 }
 =======
@@ -745,3 +760,4 @@ function ActiveFilters() {}
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/talent/ActiveFilters.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

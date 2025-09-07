@@ -105,7 +105,7 @@ export function generateZionDocs(): DocsContent {
       id: 'public-roadmap',
       title: 'Public Roadmap',
       paragraphs: [
-        'Milestones: v1 agent registry, incentive-compatible task routing, governance launch, and safety benchmarks publication.']}}
+        'Milestones: v1 agent registry, incentive-compatible task routing, governance launch, and safety benchmarks publication.']}
 }
 
 export function buildMarkdownFromWiki(wiki: WikiContent): string {

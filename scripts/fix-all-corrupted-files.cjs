@@ -25,11 +25,11 @@ const path = require('path')
 >>>>>>> merged-prs-20250907-203621
 // console.log(' Fixing All Corrupted Files...')
 console.log('=====')
-const corruptedFiles = ['pages/docs/api-reference.tsx']
+const corruptedFiles = ['pages/docs/api-reference.tsx'];
   'pages/docs/authentication.tsx'
   'pages/docs/first-steps.tsx'
   'pages/docs/getting-started.tsx'
-    let content = ''
+let content = '';
     if (filePath === 'pages/docs/api-reference.tsx')
       content = "
     "phone"
@@ -37,6 +37,8 @@ const corruptedFiles = ['pages/docs/api-reference.tsx']
     "address"
     "site"
         <meta name="description" content="
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -60,3 +62,4 @@ const corruptedFiles = ['pages/docs/api-reference.tsx']
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

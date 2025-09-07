@@ -1,64 +1,28 @@
-import React from 'react'; const Privacy = () =>: any { return ( <div className="min - h-screen bg - gray - 50"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12"> <div className="text - center mb - 12"> <h1 className="text - 4xl font - bold text - gray - 900 mb - 4"> Privacy Policy </h1> <p className="text - xl text - gray - 600"> How we collect, use, and protect your information. </p> </div> <div className="max - w-3xl mx - auto prose prose - lg"> <h2 > Information We Collect</h2> <p > We collect information you provide directly to us, such as when you create an account, use our services, or contact us for support.</p> <h2 > How We Use Your Information</h2> <p > We use the information we collect to provide, maintain, and improve our services, communicate with you, and ensure the security of our platform.</p> <h2 > Information Sharing</h2> <p > We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy.</p> <h2 > Data Security</h2> <p > We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p> </div> </div> </div> )} export default Privacy;
-import React from 'react'; const Privacy = () => { return ( <div className="min-h-screen bg-gray-50"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> Privacy Policy </h1> <p className="text-xl text-gray-600"> How we collect,use,and protect your information. </p> </div> <div className="max-w-3xl mx-auto prose prose-lg"> <h2>Information We Collect</h2> <p>We collect information you provide directly to us,such as when you create an account,use our services,or contact us for support.</p> <h2>How We Use Your Information</h2> <p>We use the information we collect to provide,maintain,and improve our services,communicate with you,and ensure the security of our platform.</p> <h2>Information Sharing</h2> <p>We do not sell,trade,or otherwise transfer your personal information to third parties without your consent,except as described in this policy.</p> <h2>Data Security</h2> <p>We implement appropriate security measures to protect your personal information against unauthorized access,alteration,disclosure,or destruction.</p> </div> </div> </div> )}; export default Privacy;
-<<<<<<< HEAD
-import React from 'react'; const Privacy = () =>: any { return ( <div className="min - h-screen bg - gray - 50"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12"> <div className="text - center mb - 12"> <h1 className="text - 4xl font - bold text - gray - 900 mb - 4"> Privacy Policy </h1> <p className="text - xl text - gray - 600"> How we collect, use, and protect your information. </p> </div> <div className="max - w-3xl mx - auto prose prose - lg"> <h2 > Information We Collect</h2> <p > We collect information you provide directly to us, such as when you create an account, use our services, or contact us for support.</p> <h2 > How We Use Your Information</h2> <p > We use the information we collect to provide, maintain, and improve our services, communicate with you, and ensure the security of our platform.</p> <h2 > Information Sharing</h2> <p > We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy.</p> <h2 > Data Security</h2> <p > We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p> </div> </div> </div> )} export default Privacy;
-import React from 'react'; const Privacy = () =>: any { return ( <div className="min - h-screen bg - gray - 50"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12"> <div className="text - center mb - 12"> <h1 className="text - 4xl font - bold text - gray - 900 mb - 4"> Privacy Policy </h1> <p className="text - xl text - gray - 600"> How we collect, use, and protect your information. </p> </div> <div className="max - w-3xl mx - auto prose prose - lg"> <h2 > Information We Collect</h2> <p > We collect information you provide directly to us, such as when you create an account, use our services, or contact us for support.</p> <h2 > How We Use Your Information</h2> <p > We use the information we collect to provide, maintain, and improve our services, communicate with you, and ensure the security of our platform.</p> <h2 > Information Sharing</h2> <p > We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy.</p> <h2 > Data Security</h2> <p > We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p> </div> </div> </div> )} export default Privacy;
-import React from "react";
-const Privacy = () => {
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+export default function Privacy() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      {" "}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {" "}
-        <div className="text-center mb-12">
-          {" "}
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            {" "}
-            Privacy Policy{" "}
-          </h1>{" "}
-          <p className="text-xl text-gray-600">
-            {" "}
-            How we collect,use,and protect your information.{" "}
-          </p>{" "}
-        </div>{" "}
-        <div className="max-w-3xl mx-auto prose prose-lg">
-          {" "}
-          <h2>Information We Collect</h2>{" "}
-          <p>
-            We collect information you provide directly to us,such as when you
-            create an account,use our services,or contact us for support.
-          </p>{" "}
-          <h2>How We Use Your Information</h2>{" "}
-          <p>
-            We use the information we collect to provide,maintain,and improve
-            our services,communicate with you,and ensure the security of our
-            platform.
-          </p>{" "}
-          <h2>Information Sharing</h2>{" "}
-          <p>
-            We do not sell,trade,or otherwise transfer your personal information
-            to third parties without your consent,except as described in this
-            policy.
-          </p>{" "}
-          <h2>Data Security</h2>{" "}
-          <p>
-            We implement appropriate security measures to protect your personal
-            information against unauthorized access,alteration,disclosure,or
-            destruction.
-          </p>{" "}
-        </div>{" "}
-      </div>{" "}
-    </div>
+    <>
+      <SEO
+        title="Privacy Policy"
+        description="Learn how Zion Tech Group handles your data and protects your privacy."
+        canonical="https://ziontechgroup.com/privacy"
+      />
+      <Header />
+import React from 'react';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+const Privacy: React.FC = () => {
+  return (
+    <>
+      <SEO 
+        title="Privacy Policy - Zion Tech Group" 
+        description="Learn about how Zion Tech Group collects, uses, and protects your personal information." 
+        keywords="privacy policy, data protection, Zion Tech Group, personal information"
+        canonical="https://ziontechgroup.com/privacy"
+      />
   );
 };
 export default Privacy;
-=======
-
-<<<<<<< HEAD
-import React from 'react'; const Privacy = () =>: any { return ( <div className="min - h-screen bg - gray - 50"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12"> <div className="text - center mb - 12"> <h1 className="text - 4xl font - bold text - gray - 900 mb - 4"> Privacy Policy </h1> <p className="text - xl text - gray - 600"> How we collect, use, and protect your information. </p> </div> <div className="max - w-3xl mx - auto prose prose - lg"> <h2 > Information We Collect</h2> <p > We collect information you provide directly to us, such as when you create an account, use our services, or contact us for support.</p> <h2 > How We Use Your Information</h2> <p > We use the information we collect to provide, maintain, and improve our services, communicate with you, and ensure the security of our platform.</p> <h2 > Information Sharing</h2> <p > We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy.</p> <h2 > Data Security</h2> <p > We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p> </div> </div> </div> )} export default Privacy;
-import React from 'react'; const Privacy = () => { return ( <div className="min-h-screen bg-gray-50"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> Privacy Policy </h1> <p className="text-xl text-gray-600"> How we collect,use,and protect your information. </p> </div> <div className="max-w-3xl mx-auto prose prose-lg"> <h2>Information We Collect</h2> <p>We collect information you provide directly to us,such as when you create an account,use our services,or contact us for support.</p> <h2>How We Use Your Information</h2> <p>We use the information we collect to provide,maintain,and improve our services,communicate with you,and ensure the security of our platform.</p> <h2>Information Sharing</h2> <p>We do not sell,trade,or otherwise transfer your personal information to third parties without your consent,except as described in this policy.</p> <h2>Data Security</h2> <p>We implement appropriate security measures to protect your personal information against unauthorized access,alteration,disclosure,or destruction.</p> </div> </div> </div> )}; export default Privacy;
-import React from 'react'; const Privacy = () =>: any { return ( <div className="min - h-screen bg - gray - 50"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12"> <div className="text - center mb - 12"> <h1 className="text - 4xl font - bold text - gray - 900 mb - 4"> Privacy Policy </h1> <p className="text - xl text - gray - 600"> How we collect, use, and protect your information. </p> </div> <div className="max - w-3xl mx - auto prose prose - lg"> <h2 > Information We Collect</h2> <p > We collect information you provide directly to us, such as when you create an account, use our services, or contact us for support.</p> <h2 > How We Use Your Information</h2> <p > We use the information we collect to provide, maintain, and improve our services, communicate with you, and ensure the security of our platform.</p> <h2 > Information Sharing</h2> <p > We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy.</p> <h2 > Data Security</h2> <p > We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p> </div> </div> </div> )} export default Privacy;
-=======
-import React from 'react'; const Privacy = () =>: any { return ( <div className="min - h-screen bg - gray - 50"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12"> <div className="text - center mb - 12"> <h1 className="text - 4xl font - bold text - gray - 900 mb - 4"> Privacy Policy </h1> <p className="text - xl text - gray - 600"> How we collect, use, and protect your information. </p> </div> <div className="max - w-3xl mx - auto prose prose - lg"> <h2 > Information We Collect</h2> <p > We collect information you provide directly to us, such as when you create an account, use our services, or contact us for support.</p> <h2 > How We Use Your Information</h2> <p > We use the information we collect to provide, maintain, and improve our services, communicate with you, and ensure the security of our platform.</p> <h2 > Information Sharing</h2> <p > We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy.</p> <h2 > Data Security</h2> <p > We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p> </div> </div> </div> )} export default Privacy;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

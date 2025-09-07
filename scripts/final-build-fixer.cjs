@@ -25,7 +25,7 @@ const path = require('path')
 >>>>>>> merged-prs-20250907-203621
 // console.log(' Final Build Fixer')
 console.log('=====')
-      const filesToFix = ['pages/NotFound.tsx','pages/_document.tsx','pages/about.tsx']
+const filesToFix = ['pages/NotFound.tsx','pages/_document.tsx','pages/about.tsx'];
         'pages/ai-services.tsx'
         'pages/api.tsx'
       console.error('Error fixing "files")
@@ -33,6 +33,9 @@ console.log('=====')
           "replacement"
         {"pattern": /content="([^"]*)"\s*\/>/g,"replacement": 'content="$1"}
           "replacement": 'const Layout = dynamic(() => import("../components/Layout"), { "ssr"}
+<<<<<<< HEAD
+          "pattern"
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -71,3 +74,4 @@ console.log('=====')
 =======
           "pattern"
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

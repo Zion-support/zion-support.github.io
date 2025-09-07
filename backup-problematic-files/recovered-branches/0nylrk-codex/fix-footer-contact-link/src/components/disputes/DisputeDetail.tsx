@@ -78,33 +78,8 @@ export function DisputeDetail() {;
 
                           <span>Under review</span>;
                         </li>;
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-                      )}
-                      ;
-                      {dispute.resolved_at && (;
-                        <li className="flex gap-2 items-center">;
-                          <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">;
-                            {dispute.status !== "open" ? "3" :"2"}
-                          </Badge>;
-                          <span>Resolved on {format(new Date(dispute.resolved_at), "MMM d, yyyy 'at' h:mm a")}</span>;
-                        </li>;
-                      )}
-=======
-                      )}
-                      ;
-                      {dispute.resolved_at && (;
-                        <li className="flex gap-2 items-center">;
-                          <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">;
-                            {dispute.status !== "open" ? "3" :"2"}
-                          </Badge>;
-                          <span>Resolved on {format(new Date(dispute.resolved_at), "MMM d, yyyy 'at' h:mm a")}</span>;
-                        </li>;
-                      )}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
                     </ul>;
 
                 <Card>;
@@ -231,7 +206,6 @@ export function DisputeDetail() {;
           </Card>;
         </div>;
       </div>;
-<<<<<<< HEAD
     </div>;
   ),export function DisputeDetail() {//useParams may be untyped in this environment, so avoid passing a //type argument and cast the result instead to prevent TS2347 errors. const {disputeId;
 }= useParams () as {disputeId?: string;
@@ -328,31 +302,3 @@ return (<div className="p-8 text-center"> <div className="w-8 h-8 mx-auto mb-4 a
 }
 }
 }> Add Admin Note </Button> </div> </div> </CardContent> </Card> </TabsContent>)}</Tabs> </div> <div className="space-y-6" > <Card> <CardHeader> <CardTitle>Parties Involved</CardTitle> </CardHeader> </p> </div> </div> <div className="flex justify-center" > <ArrowDown className="h-6 w-6 text-muted-foreground" /> </div> </p> </div> </div> </CardContent> </Card> <Card> <CardHeader> <CardTitle>Case Information</CardTitle> </CardHeader> </div> </CardContent> </Card> </div> </div> </div>)}"
-=======
-
-}` 
-}> <div className= {`;
-  `max-w-[80%] $ {
-  isCurrentUser ? 'bg-primary text-primary-foreground' : 'bg-muted`;
-}p-4 rounded-lg` 
-}> <div className="flex items-center gap-2 mb-2"> <Avatar className="h-6 w-6"> <AvatarImage src= {"
-}/> <AvatarFallback> {
-}  <span className="text-sm font-medium"> {"
-</span>"
-}</span> <span className="text-xs opacity-70"> {"
-}</span> </div> <p className="whitespace-pre-wrap"> {"
-</p>)
-}</p> </div> </div>) "
-}</div>  <CardFooter> <div className="w-full space-y-4" > <Textarea className="min-h-[100px]" disabled= {"
-}/>  </div> </div>    <TabsContent value="attachments"> <Card> <CardHeader> <CardTitle>Attachments <CardDescription>Files related to this dispute  <CardContent> <div className="text-center py-12"> <Download className="mx-auto h-12 w-12 text-muted-foreground mb-2" /> <p className="text-muted-foreground" >No attachments available</p> </div>    <Card> <CardHeader> <CardTitle>Admin Actions <CardDescription>Handle this dispute as an administrator  <CardContent className="space-y-6"> <div> <h3 className="font-medium mb-2">Change Status</h3> <div className="flex gap-2" > <Button > Mark as Open  <Button > Mark as Under Review  <Button > Close Dispute  </div> </div> <h3 className="font-medium mb-2">Resolve Dispute</h3> <div className="space-y-4" > <Textarea placeholder="Enter resolution summary..." value= {"
-  resolution.summary;
-}onChange= {
-  (e) => setResolution ({
-  ...resolution, summary: e.target.value;)
-}) "
-}className="min-h-[100px]" /> <div className="grid grid-cols-2 gap-4"> <div> <label className="text-sm font-medium mb-1 block">Resolution Type</label> <select > <option value="client favor" >In Client's Favor</option> <option value="talent favor" >In Talent's Favor</option> <option value="compromise" >Compromise</option> <option value="dismissed">Dismissed</option> </select> </div> </div> <Button onClick= {"
-  handleResolveDispute;
-}>Resolve Dispute </div> </div>) "
-}<div> <h3 className="font-medium mb-2">Admin Notes</h3> <div className="space-y-4 max-h-[300px] overflow-y-auto p-2"> {"
-  messages .filter (msg => msg.is admin note) .map ( (msg) => (<div key= {
->>>>>>> origin/chore/fix-lint-and-merge

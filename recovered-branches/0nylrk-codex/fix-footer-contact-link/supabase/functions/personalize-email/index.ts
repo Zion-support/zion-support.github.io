@@ -1,108 +1,117 @@
-<<<<<<< HEAD
+
 const corsHeaders = {
-  "Access-Control-Allow-Origin": "*"
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
 
-<<<<<<< HEAD
-import "https: //deno.land/x/xhr@0.1.0/mod.ts";
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
-const openAIApiKey = Deno.env.get($2);
-const corsHeaders = $2;
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
-
-serve(async (req) => {
-  // Handle CORS preflight requests
-  if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders})
-  }
-  try {
-    // Get personalization request data
-    const { 
-      emailType, 
-      userData, 
-      activityData,
-      template = {} 
-    } = await req.json($2);
-    if (!emailType || !userData) {
-      throw new Error("Missing required parameters: emailType and userData")
-    }
-    // Create a prompt based on the email type and user data
-    let systemPrompt = "You are an AI assistant that creates personalized email content for a marketplace platform called Zion AI that connects AI professionals with clients. Create content that is friendly, professional, and encouraging.",
-    let userPrompt = $2;
-    // Subject line context
-    let subjectContext = $2;
-    switch (emailType) {
-      case "welcome_series":
-        userPrompt = $2;
-        break,
-        
-      case "inactivity_reminder":
-        userPrompt = $2;
-        subjectContext = "Make the subject line attention-grabbing but not pushy, focusing on the benefits of returning to the platform.",
-        break,
-        
-      case "job_application":
-        userPrompt = `Create an email encouraging a talent named ${userData.firstName} who hasn't applied to any jobs yet. Their skills are: ${userData.skills ? userData.skills.join(", ") : "AI-related skills"}. Encourage them to complete their profile and apply to relevant positions.`,
-=======
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 const openAIApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
 
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
-const openAIApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
-
-
-<<<<<<< HEAD
-
-
-import "https: //deno.land/x/xhr@0.1.0/mod.ts"
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
-const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
 const corsHeaders = {
-  "Access-Control-Allow-Origin": "*"
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-const corsHeaders = {
-<<<<<<< HEAD
 
   }
-  try {
+;
+  try {;
     // Get personalization request data;
-
     }
+    const {;
+      }
+      emailType,;
+      userData,;
+      activityData,;
+      template = {} ;
+    } = await req.json(),;
+    if (!emailType || !userData) {;
+      }
+      throw new Error("Missing required "parameters": emailType and userData");"
+    }
+;
     // Create a prompt based on the email type and user data;
-
+    let systemPrompt = "You are an AI assistant that creates personalized email content for a marketplace platform called Zion AI that connects AI professionals with clients. Create content that is friendly, professional, and encouraging.",;"
+    let userPrompt = "",;"
+    // Subject line context;
+    let subjectContext = "",;"
+    switch (emailType) {;
+      }
+      case "welcome_series":;"
+        userPrompt = `Create a welcome email for a new ${userData.userType === "talent" ? "talent/professional" : "client/employer"} named ${userData.firstName}. The email should introduce them to the platform and guide them through their next steps.`,;`        break,;
+      case "inactivity_reminder":;"
+        userPrompt = `Create a re-engagement email for a ${userData.userType === "talent" ? "talent/professional" : "client/employer"} named ${userData.firstName} who has been inactive for ${activityData.daysInactive} days. They haven't completed their ${activityData.incompleteAction}.`,;`        subjectContext = "Make the subject line attention-grabbing but not pushy, focusing on the benefits of returning to the platform.",;"
+        break,;
+      case "job_application":;"
+        userPrompt = `Create an email encouraging a talent named ${userData.firstName} who hasn't applied to any jobs yet. Their skills "are": ${userData.skills ? userData.skills.join(", ") : "AI-related skills"}. Encourage them to complete their profile and apply to relevant positions.`,;`        subjectContext = "Create a subject line that emphasizes opportunity and personal growth.",;"
+        break,;
+      case "profile_completion":;"
+        userPrompt = `Create an email for ${userData.firstName} reminding them to complete their profile. They have completed ${userData.profileCompletion || 0}% of their profile. Focus on how a complete profile increases visibility.`,;`        subjectContext = "Create a short, motivational subject line about profile completion.",;"
+        break,;
+      "default":;
+        userPrompt = `Create a re-engagement email for a user named ${userData.firstName} who has been inactive on the Zion AI Marketplace platform. Encourage them to return and continue using the platform.`;`    }
+;
+    // Add subject line request to the prompt;
+    userPrompt += `\n\n${subjectContext || "Create an engaging subject line for this email."}\n\nRespond with JSON in this format "only": { "subject": "The subject line", "greeting": "Personalized greeting", "mainContent": ["paragraph1", "paragraph2"], "callToAction": "Text for the CTA button", "signature": "Email signature text" }`,;`    // Call OpenAI API to generate personalized content;
+    const response = await fetch(""https"://api.openai.com/v1/chat/completions", {;"
+      }
+      "method": "POST",;"
+      "headers": {;
+        "Authorization": `Bearer ${openAIApiKey}`,;`        "Content-Type": "application/json"},;"
+      "body": JSON.stringify({;
+        }
+        "model": "gpt-4o-mini",;"
+        "messages": [;
+          { "role": "system", "content": systemPrompt },;"
+          { "role": "user", "content": userPrompt }"
+        ],;
+        "temperature": 0.7})}),;
+    if (!response.ok) {;
+      }
+      const errorData = await response.json(),;
+      throw new Error(`OpenAI API "error": ${JSON.stringify(errorData)}`);`
     }
-    const data = await response.json(),
-    const generatedContentText = data.choices[0].message.content,
+;
+    const data = await response.json(),;
+    const generatedContentText = data.choices[0].message.content,;
     // Parse the JSON response from OpenAI;
-
+    let generatedContent,;
+    try {;
+      }
+      generatedContent = JSON.parse(generatedContentText);
+    } catch (e) {;
+      }
+      console.error("Failed to parse GPT response as "JSON":", e),;"
+      // // // console.log("Raw "response":", generatedContentText),;"
+      // Try to extract JSON using regex as fallback;
+      const jsonMatch = generatedContentText.match(/\{[\s\S]*\}/),;
+      if (jsonMatch) {;
+        }
+        try {;
+          }
+          generatedContent = JSON.parse(jsonMatch[0]);
+        } catch (e2) {;
+          }
+          throw new Error("Could not parse the generated content as JSON");"
+        }
+      } else {;
+        }
+        throw new Error("Could not extract JSON from the generated content");"
       }
     }
+;
     // Apply the generated content to the template or return it directly;
-
+    return new Response(JSON.stringify(generatedContent), {;
+      }
+      "headers": { ...corsHeaders, "Content-Type": "application/json" });"
+  } catch (error) {;
+    }
+    console.error("Error in personalize-email "function":", error),;"
+    return new Response(JSON.stringify({ "error": error.message }), {;
+      }
+      "status": 500,;
+      "headers": { ...corsHeaders, "Content-Type": "application/json" });"
   }
 });
->>>>>>> merged-prs-20250907-203621
         subjectContext = $2;
         break,
         
-      case profile_completion:
+      case "profile_completion":
         userPrompt = $2;
-=======
-  "Access-Control-Allow-Origin": "*"
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
-const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
 
-<<<<<<< HEAD
 import "https: //deno.land/x/xhr@0.1.0/mod.ts"
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
@@ -115,19 +124,7 @@ const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import "https: //deno.land/x/xhr@0.1.0/mod.ts",
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
-const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),
-import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
-const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
-import "https: //deno.land/x/xhr@0.1.0/mod.ts",
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
-const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
@@ -149,20 +146,18 @@ const corsHeaders = {"
   "Access-Control-Allow-Origin": "*","
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
-<<<<<<< HEAD
+
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
 
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
 serve(async (req) => {
   // Handle CORS preflight requests
-<<<<<<< HEAD
+
 
     return new Response(null, { headers: corsHeaders })
   }
@@ -170,80 +165,22 @@ serve(async (req) => {
     // Get personalization request data;
     const {}
 
-=======
-  if (req.method === "OPTIONS") {
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return new Response(null, { headers: corsHeaders })
   }
   try {
     // Get personalization request data
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     const { 
 
       emailType, 
       userData, 
       activityData,
 
-<<<<<<< HEAD
-    const {
-      emailType
-      userData
-      activityData;
-
-      throw new Error("Missing required parameters: emailType and userData")
-    }
-    // Create a prompt based on the email type and user data
-
-      template = {}
-    } = await req.json();
-    if (!emailType |!userData) {
-    const { 
-      emailType, 
-      userData, 
-      activityData,
-      template = {} 
-    } = await req.json(),
-    
-    if (!emailType || !userData) {
-      throw new Error("Missing required parameters: emailType and userData")
-    }
-    // Create a prompt based on the email type and user data
-    let systemPrompt = "You are an AI assistant that creates personalized email content for a marketplace platform called Zion AI that connects AI professionals with clients. Create content that is friendly, professional, and encouraging.";
-    let userPrompt = "";
-    // Subject line context
-    let subjectContext = "";
-    switch (emailType) {
-      case "welcome_series":
-        userPrompt = `Create a welcome email for a new ${userData.userType === "talent" ? "talent/professional" : "client/employer"} named ${userData.firstName}. The email should introduce them to the platform and guide them through their next steps.`;
-        break;
-      case "inactivity_reminder":
-        userPrompt = `Create a re-engagement email for a ${userData.userType === "talent" ? "talent/professional" : "client/employer"} named ${userData.firstName} who has been inactive for ${activityData.daysInactive} days. They haven't completed their ${activityData.incompleteAction}.`;
-        subjectContext = "Make the subject line attention-grabbing but not pushy, focusing on the benefits of returning to the platform.";
-        break;
-      case "job_application":
-        userPrompt = `Create an email encouraging a talent named ${userData.firstName} who hasn't applied to any jobs yet. Their skills are: ${userData.skills ? userData.skills.join(", ") : "AI-related skills"}. Encourage them to complete their profile and apply to relevant positions.`;
-        subjectContext = "Create a subject line that emphasizes opportunity and personal growth.";
-        break;
-      case "profile_completion":
-        userPrompt = `Create an email for ${userData.firstName} reminding them to complete their profile. They have completed ${userData.profileCompletion |0}% of their profile. Focus on how a complete profile increases visibility.`;
-        subjectContext = "Create a short, motivational subject line about profile completion.";
-        break;
-=======
       template = {} 
     } = await req && req.json();
     if (!emailType || !userData) {
@@ -283,7 +220,7 @@ serve(async (req) => {
     }
     // Create a prompt based on the email type and user data
 
-<<<<<<< HEAD
+
 template = {}
     } = await req.json();
     if (!emailType |!userData) {
@@ -318,9 +255,7 @@ template = {}
         subjectContext = "Create a short, motivational subject line about profile completion.";
         break;
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     let systemPrompt = "You are an AI assistant that creates personalized email content for a marketplace platform called Zion AI that connects AI professionals with clients. Create content that is friendly, professional, and encouraging.",
     let userPrompt = "",
     // Subject line context
@@ -339,56 +274,27 @@ template = {}
         break,
       case "profile_completion":
         userPrompt = `Create an email for ${userData.firstName} reminding them to complete their profile. They have completed ${userData.profileCompletion || 0}% of their profile. Focus on how a complete profile increases visibility.`,
->>>>>>> origin/chore/fix-lint-and-merge
         subjectContext = "Create a short, motivational subject line about profile completion.",
         break,
-<<<<<<< HEAD
+
 
         subjectContext = "Create a short, motivational subject line about profile completion.";
         break;
 
-=======
-        
-<<<<<<< HEAD
-        userPrompt = `Create an email for ${userData && userData.firstName} reminding them to complete their profile. They have completed ${userData && userData.profileCompletion || 0}% of their profile. Focus on how a complete profile increases visibility.`;
-        subjectContext = "Create a short, motivational subject line about profile completion.";
-        break;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       default:
         userPrompt = `Create a re-engagement email for a user named ${userData && userData.firstName} who has been inactive on the Zion AI Marketplace platform. Encourage them to return and continue using the platform.`
     }
     // Add subject line request to the prompt
-<<<<<<< HEAD
-<<<<<<< HEAD
-    userPrompt += `\n\n${subjectContext || Create an engaging subject line for this email.}\n\nRespond with JSON in this format only: { "subject": The subject line, "greeting": Personalized greeting, "mainContent": [paragraph1, "paragraph2"], callToAction: "Text for the CTA button", signature: "Email signature text" }`,
-=======
-=======
-      default:
-        userPrompt = `Create a re-engagement email for a user named ${userData.firstName} who has been inactive on the Zion AI Marketplace platform. Encourage them to return and continue using the platform.`
-    }
-    // Add subject line request to the prompt
-    userPrompt += `\n\n${subjectContext |"Create an engaging subject line for this email."}\n\nRespond with JSON in this format only: { "subject": "The subject line", "greeting": "Personalized greeting", "mainContent": ["paragraph1", "paragraph2"], "callToAction": "Text for the CTA button", "signature": "Email signature text" }`;
-    userPrompt += `\n\n${subjectContext || "Create an engaging subject line for this email."}\n\nRespond with JSON in this format only: { "subject": "The subject line", "greeting": "Personalized greeting", "mainContent": ["paragraph1", "paragraph2"], "callToAction": "Text for the CTA button", "signature": "Email signature text" }`,
 
-    // Call OpenAI API to generate personalized content
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST"
-      headers: {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
     userPrompt += `\n\n${subjectContext |"Create an engaging subject line for this email."}\n\nRespond with JSON in this format only: { "subject": "The subject line", "greeting": "Personalized greeting", "mainContent": ["paragraph1", "paragraph2"], "callToAction": "Text for the CTA button", "signature": "Email signature text" }`;
     userPrompt += `\n\n${subjectContext || "Create an engaging subject line for this email."}\n\nRespond with JSON in this format only: { "subject": "The subject line", "greeting": "Personalized greeting", "mainContent": ["paragraph1", "paragraph2"], "callToAction": "Text for the CTA button", "signature": "Email signature text" }`,
->>>>>>> origin/chore/fix-lint-and-merge
 
     // Call OpenAI API to generate personalized content
     const response = await fetch(https://api.openai.com/v1/chat/completions, {
       method: "POST"
       headers: {
-<<<<<<< HEAD
         Authorization: `Bearer ${openAIApiKey}`;
         "Content-Type": application/json}
       body: JSON.stringify({
@@ -396,50 +302,6 @@ template = {}
         messages: [
           { role: system, content: systemPrompt},
           { role: "user", content: userPrompt}
-=======
-
-    // Call OpenAI API to generate personalized content
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST"
-      headers: {
-
-    userPrompt += `\n\n${subjectContext || "Create an engaging subject line for this email."}\n\nRespond with JSON in this format only: { "subject": "The subject line", "greeting": "Personalized greeting", "mainContent": ["paragraph1", "paragraph2"], "callToAction": "Text for the CTA button", "signature": "Email signature text" }`,
-
-    // Call OpenAI API to generate personalized content
-
-        "Authorization": `Bearer ${openAIApiKey}`,
-        "Content-Type": "application/json"},
-
-      body: JSON.stringify({
-        model: "gpt-4o-mini"
-userPrompt += `\n\n${subjectContext |"Create an engaging subject line for this email."}\n\nRespond with JSON in this format only: { "subject": "The subject line", "greeting": "Personalized greeting", "mainContent": ["paragraph1", "paragraph2"], "callToAction": "Text for the CTA button", "signature": "Email signature text" }`;
-    // Call OpenAI API to generate personalized content
-const corsHeaders = {}
-  \"Access-Control-Allow-Origin\": \"*\"}
-  \"Access-Control-Allow-Headers\": \"authorization, x-client-info, apikey, content-type\"}
-const corsHeaders = {}
-  \"Access-Control-Allow-Origin\": \"*\"}
-  \"Access-Control-Allow-Headers\": \"authorization, x-client-info, apikey, content-type\"}
-import \"https: //deno.land/x/xhr@0.1.0/mod.ts\",;
-import { serve } from \"https: //deno.land/std@0.190.0/http/server.ts\",;
-const openAIApiKey = Deno.env.get(\"OPENAI_API_KEY\"),
-
-const corsHeaders = {}
-  \"Access-Control-Allow-Origin\": \"*\",}
-  \"Access-Control-Allow-Headers\": \"authorization, x-client-info, apikey, content-type\"},
-      default:
-        userPrompt = `Create a re-engagement email for a user named ${userData && userData.firstName} who has been inactive on the Zion AI Marketplace platform. Encourage them to return and continue using the platform.`
-    }
-    // Add subject line request to the prompt;
-userPrompt += `\n\n${subjectContext || \"Create an engaging subject line for this email.\"}\n\nRespond with JSON in this format only: { \"subject\": \"The subject line\", \"greeting\": \"Personalized greeting\", \"mainContent\": [\"paragraph1\", \"paragraph2\"], \"callToAction\": \"Text for the CTA button\", \"signature\": \"Email signature text\" }`,
-
-    // Call OpenAI API to generate personalized content;
-        \"Authorization\": `Bearer ${openAIApiKey}`,
-        \"Content-Type\": \"application/json\"},
-
-      body: JSON.stringify({
-        model: "gpt-4o-mini"
-<<<<<<< HEAD
 
       method: "POST",
       headers: {"`
@@ -452,22 +314,7 @@ userPrompt += `\n\n${subjectContext || \"Create an engaging subject line for thi
 "
 import "https: //deno.land / x/xhr@0.1.0 / mod.ts",';
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';"
-=======
-    userPrompt += `\n\n${subjectContext |"Create an engaging subject line for this email."}\n\nRespond with JSON in this format only: { "subject": "The subject line", "greeting": "Personalized greeting", "mainContent": ["paragraph1", "paragraph2"], "callToAction": "Text for the CTA button", "signature": "Email signature text" }`;
-    // Call OpenAI API to generate personalized content
-    const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        "Authorization": `Bearer ${openAIApiKey}`;
-        "Content-Type": "application/json"};
-      body: JSON && JSON.stringify({
-        model: "gpt-4o-mini",
-        messages: [
-          { role: "system", content: systemPrompt }
-          { role: "user", content: userPrompt }
-import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
-import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 const openAIApiKey = Deno.env.get ("OPENAI_API_KEY");
 ;
 const cors_headers = {"
@@ -492,7 +339,7 @@ if ( {) {}
       template = {}
     } = await req.json ();
 ;
-<<<<<<< HEAD
+
 
       body: JSON.stringify({
         model: "gpt-4o-mini"
@@ -503,111 +350,26 @@ if ( {) {}
           { role: "user", content: userPrompt }
         ];
         temperature: 0.7})});
-=======
-    // Check condition
-if ( {) {
-  $2
-}
-      throw new Error ("Missing required parameters: email_type and user_data");
-    }
-    // Create a prompt based on the email type and user data;
-    let system_prompt = "You are an AI assistant that creates personalized email content for a marketplace platform called Zion AI that connects AI professionals with clients. Create content that is friendly, professional, and encouraging.";
-    let user_prompt = "";
-;
-    // Subject line context;
-    let subject_context = "";
-;
-    switch (email_type) {
-      case "welcome_series":;
-        user_prompt = `Create a welcome email for a new ${user_data.user_type === "talent" ? "talent / professional" : "client / employer"} named ${user_data.first_name}. The email should introduce them to the platform and guide them through their next steps.`;
-        break;
-;
-      case "inactivity_reminder":;
-        user_prompt = `Create a re - engagement email for a ${user_data.user_type === "talent" ? "talent / professional" : "client / employer"} named ${user_data.first_name} who has been inactive for ${activity_data.days_inactive} days. They haven't completed their ${activity_data.incomplete_action}.`;
-        subject_context = "Make the subject line attention - grabbing but not pushy, focusing on the benefits of returning to the platform.";
-        break;
-;
-      case "job_application":;
-        user_prompt = `Create an email encouraging a talent named ${user_data.first_name} who hasn't applied to any jobs yet. Their skills are: ${user_data.skills ? user_data.skills.join (", ") : "AI - related skills"}. Encourage them to complete their profile and apply to relevant positions.`;
-        subject_context = "Create a subject line that emphasizes opportunity and personal growth.";
-        break;
-;
-      case "profile_completion":;
-        user_prompt = `Create an email for ${user_data.first_name} reminding them to complete their profile. They have completed ${user_data.profile_completion || 0}% of their profile. Focus on how a complete profile increases visibility.`;
-        subject_context = "Create a short, motivational subject line about profile completion.";
-        break;
-;
-      default:;
-        user_prompt = `Create a re - engagement email for a user named ${user_data.first_name} who has been inactive on the Zion AI Marketplace platform. Encourage them to return and continue using the platform.`;
-    }
-    // Add subject line request to the prompt;
-    user_prompt += `\n\n${subject_context || "Create an engaging subject line for this email."}\n\n_respond with JSON in this format only: { "subject": "The subject line", "greeting": "Personalized greeting", "main_content": ["paragraph1", "paragraph2"], "callToAction": "Text for the CTA button", "signature": "Email signature text" }`;
-;
-    // Call OpenAI API to generate personalized content;
-    const response = await fetch ("https://api.openai.com / v1 / chat / completions", {
-      method: "POST",
-      headers: {
-        "Authorization": `Bearer ${openAIApiKey}`;
-        "Content - Type": "application / json"}
-      body: JSON.stringify ({
-        model: "gpt - 4o - mini",
-        messages: [;
-          { role: "system", content: system_prompt }
-          { role: "user", content: user_prompt }
-        "Authorization": `Bearer ${openAIApiKey}`;
-        "Content-Type": "application/json"}
-        "Authorization": `Bearer ${openAIApiKey}`,
-        "Content-Type": "application/json"},
-      body: JSON.stringify({
-        model: "gpt-4o-mini"
-        messages: [
-          { role: "system", content: systemPrompt }
-          { role: "user", content: userPrompt }
-        ];
-<<<<<<< HEAD
-        temperature: 0.7})});
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           { role: "system", content: systemPrompt },
 
           { role: "user", content: userPrompt }
->>>>>>> origin/chore/fix-lint-and-merge
         ],
         temperature: 0.7})}),
 
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-        temperature: 0 && 0.7})});
-
-
-
-        ];
-        temperature: 0 && 0.7})});
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     if (!response.ok) {
-      const errorData = await response.json();
+      const errorData = await response.json($2);
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
     }
 
-        temperature: 0 && 0.7})});
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    const data = await response.json($2);
+    const generatedContentText = $2;
     if (!response && response.ok) {
       const errorData = await response && response.json();
 
       throw new Error(`OpenAI API error: ${JSON && JSON.stringify(errorData)}`)
     }
-<<<<<<< HEAD
-    const data = await response && response.json();
-    const generatedContentText = data && data.choices[0].message && message.content;
-=======
 
     const data = await response && response.json();
     const generatedContentText = data && data.choices[0].message && message.content;
@@ -624,11 +386,8 @@ if ( {) {
         try {}
           generatedContent = JSON && JSON.parse(jsonMatch[0])
 
-<<<<<<< HEAD
+
         ];
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     // Parse the JSON response from OpenAI
     let generatedContent;
     try {
@@ -640,20 +399,7 @@ if ( {) {
       const jsonMatch = generatedContentText && generatedContentText.match(/\{[\s\S]*\}/);
       if (jsonMatch) {
         try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-          generatedContent = JSON.parse(jsonMatch[0])
-        } catch (e2) {
-          throw new Error(Could not parse the generated content as JSON)
-=======
-          generatedContent = JSON && JSON.parse(jsonMatch[0])
-=======
-          generatedContent = JSON && JSON.parse(jsonMatch[0])
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 ;
     // Check condition
 if ( {) {
@@ -668,58 +414,17 @@ if ( {) {
 ;
     // Parse the JSON response from OpenAI;
     let generated_content;
-<<<<<<< HEAD
 
-=======
-    try {
-      generated_content = JSON.parse (generatedContentText);
-    } catch (e) {
-      console.error ("Failed to parse GPT response as JSON:", e);
-      console.log ("Raw response:", generatedContentText);
-      // Try to extract JSON using regex as fallback;
-      const json_match = generatedContentText.match (/\{[\s\S]*\}/);
-      // Check condition
-if ( {) {
-  $2
-}
-        try {
-          generated_content = JSON.parse (json_match[0]);
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        } catch (e2) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
           throw new Error ("Could not parse the generated content as JSON");
->>>>>>> origin/chore/fix-lint-and-merge
         }
       } else {"
         throw new Error ("Could not extract JSON from the generated content");
       }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // Apply the generated content to the template or return it directly
-    return new Response(JSON.stringify(generatedContent), {
-      headers: { ...corsHeaders, Content-Type: "application/json" }})
-  } catch (error) {
-    console.error($2);
-    return new Response(JSON.stringify({ error: error.message }), {
-=======
-    console && console.error("Error in personalize-email function:", error);
-    return new Response(JSON && JSON.stringify({ error: error && error.message }), {
-      status: 500,
-      headers: { ...corsHeaders, "Content-Type": "application/json" }})
-  }
-});
-=======
 
-    console && console.error("Error in personalize-email function:", error);
-    return new Response(JSON && JSON.stringify({ error: error && error.message }), {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       status: 500,
       headers: { ...corsHeaders, Content-Type: "application/json" }})
-=======
 
 "
     console && console.error("Error in personalize-email function:", error);
@@ -728,71 +433,30 @@ if ( {) {
 "
       headers: { ...corsHeaders, "Content-Type": "application/json" }})
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Apply the generated content to the template or return it directly;
     return new Response (JSON.stringify (generated_content), {"
       headers: { ...cors_headers, "Content - Type": "application / json" }});
-<<<<<<< HEAD
-  } catch (error) {"
-=======
-  } catch (error) {
-<<<<<<< HEAD
-    if (!response.ok) {
-      const errorData = await response.json(),
-      throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
-    }
-    const data = await response.json();
-    const generatedContentText = data.choices[0].message.content;
 
-    const data = await response.json(),
-    const generatedContentText = data.choices[0].message.content,
-    
-    // Parse the JSON response from OpenAI
-    let generatedContent,
-    try {
-      generatedContent = JSON.parse(generatedContentText)
-    } catch (e) {
-      console.error("Failed to parse GPT response as JSON:", e),
-      // // // console.log("Raw response:", generatedContentText),
-      // Try to extract JSON using regex as fallback
-      const jsonMatch = generatedContentText.match(/\{[\s\S]*\}/),
-      if (jsonMatch) {
-        try {
-          generatedContent = JSON.parse(jsonMatch[0])
-        } catch (e2) {
           throw new Error("Could not parse the generated content as JSON")
         }
-      } else {
-        throw new Error("Could not extract JSON from the generated content")
+      } else {"
+        throw new Error ("Could not extract JSON from the generated content");
       }
     }
     // Apply the generated content to the template or return it directly
     return new Response(JSON.stringify(generatedContent), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" }})
+      headers: { ...corsHeaders, "Content-Type": "application/json" })
   } catch (error) {
-    console.error("Error in personalize-email function:", error),
+    console.error($2);
     return new Response(JSON.stringify({ error: error.message }), {
-      status: 500
-      headers: { ...corsHeaders, "Content-Type": "application/json" }})
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+  } catch (error) {"
     console.error ("Error in personalize - email function:", error);
     return new Response (JSON.stringify ({ error: error.message }), {}
       status: 500,"
       headers: { ...cors_headers, "Content - Type": "application / json" }});
 
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-  }
-});
-
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
@@ -812,7 +476,6 @@ serve(async (req) => {;
   // Handle CORS preflight requests;"
   if (req.method === "OPTIONS") {;
     return new Response(null, { headers: corsHeaders });
->>>>>>> origin/chore/fix-lint-and-merge
   }
 ;
   // Handle CORS preflight requests;}
@@ -1015,270 +678,11 @@ if ( {) {
     console && console.error("Error in personalize-email function:", error);"
     return new Response(JSON && JSON.stringify({ error: error && error.message }), {
       status: 500,
-      headers: { ...corsHeaders, "Content-Type": "application/json" }})"
-    // Apply the generated content to the template or return it directly;
-    return new Response (JSON.stringify (generated_content), {"
-      headers: { ...cors_headers, "Content - Type": "application / json" }});"
-  } catch (error) {"
-    console.error ("Error in personalize - email function:", error);"
-    return new Response (JSON.stringify ({ error: error.message }), {
-      status: 500,"
-      headers: { ...cors_headers, "Content - Type": "application / json" }});""
-import "https: //deno.land/x/xhr@0.1.0/mod.ts",;""
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;""
-const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),;"
-const corsHeaders = {;"
-  "Access-Control-Allow-Origin": "*",;""
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;"
-serve(async (req) => {;
-  // Handle CORS preflight requests;"
-  if (req.method === "OPTIONS") {;"
-
-    return new Response(null, { headers: corsHeaders });
-pr-12325
-  try {;
-    // Get personalization request data;
-    const {;
-      emailType,;
-      userData,;}
-      activityData,;}
-      template = {} ;
-    } = await req.json(),;
-    if (!emailType || !userData) {;"
-      throw new Error("Missing required parameters: emailType and userData");
-    }
-;
-    // Create a prompt based on the email type and user data;"
-    let systemPrompt = "You are an AI assistant that creates personalized email content for a marketplace platform called Zion AI that connects AI professionals with clients. Create content that is friendly, professional, and encouraging.",;"
-    let userPrompt = "",;
-    // Subject line context;"
-    let subjectContext = "",;
-    switch (emailType) {;"
-      case "welcome_series":;"`
-        userPrompt = `Create a welcome email for a new ${userData.userType === "talent" ? "talent/professional" : "client/employer"} named ${userData.firstName}. The email should introduce them to the platform and guide them through their next steps.`,;
-        break,;"
-      case "inactivity_reminder":;'"`
-        userPrompt = `Create a re-engagement email for a ${userData.userType === "talent" ? "talent/professional" : "client/employer"} named ${userData.firstName} who has been inactive for ${activityData.daysInactive} days. They haven't completed their ${activityData.incompleteAction}.`,;"
-        subjectContext = "Make the subject line attention-grabbing but not pushy, focusing on the benefits of returning to the platform.",;
-        break,;"
-      case "job_application":;'"`
-        userPrompt = `Create an email encouraging a talent named ${userData.firstName} who hasn't applied to any jobs yet. Their skills are: ${userData.skills ? userData.skills.join(", ") : "AI-related skills"}. Encourage them to complete their profile and apply to relevant positions.`,;"
-        subjectContext = "Create a subject line that emphasizes opportunity and personal growth.",;
-        break,;"
-      case "profile_completion":;`
-        userPrompt = `Create an email for ${userData.firstName} reminding them to complete their profile. They have completed ${userData.profileCompletion || 0}% of their profile. Focus on how a complete profile increases visibility.`,;"
-        subjectContext = "Create a short, motivational subject line about profile completion.",;
-
-    if (!emailType || !userData) {;"
-      throw new Error("Missing required parameters: emailType and userData");"
-    }
-;
-    // Create a prompt based on the email type and user data;"
-    let systemPrompt = "You are an AI assistant that creates personalized email content for a marketplace platform called Zion AI that connects AI professionals with clients. Create content that is friendly, professional, and encouraging.",;""
-    let userPrompt = "",;"
-    // Subject line context;"
-    let subjectContext = "",;"
-    switch (emailType) {;"
-      case "welcome_series":;""
-        userPrompt = `Create a welcome email for a new ${userData.userType === "talent" ? "talent/professional" : "client/employer"} named ${userData.firstName}. The email should introduce them to the platform and guide them through their next steps.`,;"
-        break,;"
-      case "inactivity_reminder":;""
-        userPrompt = `Create a re-engagement email for a ${userData.userType === "talent" ? "talent/professional" : "client/employer"} named ${userData.firstName} who has been inactive for ${activityData.daysInactive} days. They haven't completed their ${activityData.incompleteAction}.`,;''
-        subjectContext = "Make the subject line attention-grabbing but not pushy, focusing on the benefits of returning to the platform.",;"
-        break,;"
-      case "job_application":;""
-        userPrompt = `Create an email encouraging a talent named ${userData.firstName} who hasn't applied to any jobs yet. Their skills are: ${userData.skills ? userData.skills.join(", ") : "AI-related skills"}. Encourage them to complete their profile and apply to relevant positions.`,;""
-        subjectContext = "Create a subject line that emphasizes opportunity and personal growth.",;"
-        break,;"
-      case "profile_completion":;"
-        userPrompt = `Create an email for ${userData.firstName} reminding them to complete their profile. They have completed ${userData.profileCompletion || 0}% of their profile. Focus on how a complete profile increases visibility.`,;"
-        subjectContext = "Create a short, motivational subject line about profile completion.",;"
-
-        break,;
-      default:;`
-        userPrompt = `Create a re-engagement email for a user named ${userData.firstName} who has been inactive on the Zion AI Marketplace platform. Encourage them to return and continue using the platform.`;
-    }
-;
-    // Add subject line request to the prompt;"`
-    userPrompt += `\n\n${subjectContext || "Create an engaging subject line for this email."}\n\nRespond with JSON in this format only: { "subject": "The subject line", "greeting": "Personalized greeting", "mainContent": ["paragraph1", "paragraph2"], "callToAction": "Text for the CTA button", "signature": "Email signature text" }`,;
-    // Call OpenAI API to generate personalized content;"
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {;"
-      method: "POST",;
-      headers: {;"`
-        "Authorization": `Bearer ${openAIApiKey}`,;"
-        "Content-Type": "application/json"},;
-      body: JSON.stringify({;"
-        model: "gpt-4o-mini",;
-        messages: [;"
-          { role: "system", content: systemPrompt },;"
-          { role: "user", content: userPrompt }
-        ],;
-
-    // Add subject line request to the prompt;"
-    userPrompt += `\n\n${subjectContext || "Create an engaging subject line for this email."}\n\nRespond with JSON in this format only: { "subject": "The subject line", "greeting": "Personalized greeting", "mainContent": ["paragraph1", "paragraph2"], "callToAction": "Text for the CTA button", "signature": "Email signature text" }`,;"
-    // Call OpenAI API to generate personalized content;"
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {;""
-      method: "POST",;"
-      headers: {;"
-        "Authorization": `Bearer ${openAIApiKey}`,;""
-        "Content-Type": "application/json"},;"
-      body: JSON.stringify({;,"
-  model: "gpt-4o-mini",;"
-        messages: [;"
-          { role: "system", content: systemPrompt },;""
-          { role: "user", content: userPrompt }"]
-        ],;)
-
-        temperature: 0.7})}),;
-
-      throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`);
-    }
-;
-    if (!emailType || !userData) {;"
-      throw new Error("Missing required parameters: emailType and userData");"
-    // Create a prompt based on the email type and user data;"
-    let systemPrompt = "You are an AI assistant that creates personalized email content for a marketplace platform called Zion AI that connects AI professionals with clients. Create content that is friendly, professional, and encouraging.",;""
-    let userPrompt = "",;"
-    // Subject line context;"
-    let subjectContext = "",;"
-    switch (emailType) {;"
-        userPrompt = `Create a welcome email for a new ${userData.userType === "talent" ? "talent/professional" : "client/employer"} named ${userData.firstName}. The email should introduce them to the platform and guide them through their next steps.`,;"
-        break,;"
-        userPrompt = `Create a re-engagement email for a ${userData.userType === "talent" ? "talent/professional" : "client/employer"} named ${userData.firstName} who has been inactive for ${activityData.daysInactive} days. They haven't completed their ${activityData.incompleteAction}.`,;
-        subjectContext = "Make the subject line attention-grabbing but not pushy, focusing on the benefits of returning to the platform.",;"
-        userPrompt = `Create an email encouraging a talent named ${userData.firstName} who hasn't applied to any jobs yet. Their skills are: ${userData.skills ? userData.skills.join(", ") : "AI-related skills"}. Encourage them to complete their profile and apply to relevant positions.`,;""
-        subjectContext = "Create a subject line that emphasizes opportunity and personal growth.",;"
-        userPrompt = `Create an email for ${userData.firstName} reminding them to complete their profile. They have completed ${userData.profileCompletion || 0}% of their profile. Focus on how a complete profile increases visibility.`,;"
-        subjectContext = "Create a short, motivational subject line about profile completion.",;"
-        break,;
-        userPrompt = `Create a re-engagement email for a user named ${userData.firstName} who has been inactive on the Zion AI Marketplace platform. Encourage them to return and continue using the platform.`;
-    // Add subject line request to the prompt;"`;
-    userPrompt += `\n\n${subjectContext || "Create an engaging subject line for this email."}\n\nRespond with JSON in this format only: { "subject": "The subject line", "greeting": "Personalized greeting", "mainContent": ["paragraph1", "paragraph2"], "callToAction": "Text for the CTA button", "signature": "Email signature text" }`,;"
-    // Call OpenAI API to generate personalized content;"
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {;""
-      method: "POST",;"
-      headers: {;"`;
-        "Authorization": `Bearer ${openAIApiKey}`,;""
-        "Content-Type": "application/json"},;"
-      body: JSON.stringify({;,"
-  model: "gpt-4o-mini",;"
-          { role: "system", content: systemPrompt },;""
-          { role: "user", content: userPrompt }"]
-        ],;)
-        temperature: 0.7})}),;
-    if (!response.ok) {;
-      const errorData = await response.json(),;`;
-      throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`);
-pr-12325
-    const data = await response.json(),;
-    const generatedContentText = data.choices[0].message.content,;
-    // Parse the JSON response from OpenAI;
-    let generatedContent,;
-
-    try {;
-      generatedContent = JSON.parse(generatedContentText);
-    } catch (e) {;"
-      console.error("Failed to parse GPT response as JSON:", e),;"
-      // // // console.log("Raw response:", generatedContentText),;
-      // Try to extract JSON using regex as fallback;
-      const jsonMatch = generatedContentText.match(/\{[\s\S]*\}/),;
-      if (jsonMatch) {;
-        try {;
-          generatedContent = JSON.parse(jsonMatch[0]);
-        } catch (e2) {;"
-          throw new Error("Could not parse the generated content as JSON");
-        }
-      } else {;"
-        throw new Error("Could not extract JSON from the generated content");
-      }
-    }
-;
-    // Apply the generated content to the template or return it directly;
-    return new Response(JSON.stringify(generatedContent), {;"
-      headers: { ...corsHeaders, "Content-Type": "application/json" }});
-  } catch (error) {;"
-    console.error("Error in personalize-email function:", error),;
-    return new Response(JSON.stringify({ error: error.message }), {;
-      status: 500,;"
-      headers: { ...corsHeaders, "Content-Type": "application/json" }});
-
-      }
-    }
-;
-    // Apply the generated content to the template or return it directly;
-    return new Response(JSON.stringify(generatedContent), {;
-      headers:{ ...corsHeaders, "Content-Type":"application/json" }}),;
-  } catch (error) {;
-    console.error("Error in personalize-email function:", error),;
-    return new Response(JSON.stringify({ error:error.message }), {;
-      status:500,;
-      headers:{ ...corsHeaders, "Content-Type":"application/json" }}),;  }
-}),;
- serve (async (req) => {
-  //Handle CORS preflight requests if (req.method === "OPTIONS") {
-  
-}try {
-  //Get personalization request data const {
-  break;
-case "inactivity reminder" : userPrompt = `Create a re-engagement email for a $ {
-  userData.userType === "talent" ? "talent/professional" : "client/employer" 
-}named $ {
-  userData.firstName 
-}who has been inactive for $ {
-  activityData.daysInactive 
-}days. They haven't completed their $ {
-  activityData.incompleteAction 
-}.`;
-subjectContext = "Make the subject line attention-grabbing but not pushy, focusing on the benefits of returning to the platform.";
-break;
-case "job application" : userPrompt = `Create an email encouraging a talent named $ {
-  userData.firstName 
-}who hasn't applied to any jobs yet. Their skills are: $ {
-  userData.skills ? userData.skills.join (", ") : "AI-related skills" 
-}. Encourage them to complete their profile and apply to relevant positions.`;
-subjectContext = "Create a subject line that emphasizes opportunity and personal growth.";
-break;
-case "profile completion" : userPrompt = `Create an email for $ {
-  userData.firstName 
-}reminding them to complete their profile. They have completed $ {
-  userData.profileCompletion || 0 
-}% of their profile. Focus on how a complete profile increases visibility.`;
-subjectContext = "Create a short, motivational subject line about profile completion.";
-break;
-  method: "POST";
-headers: {
-  "Authorization" : `Bearer $ {
-  openAIApiKey 
-}`;
-"Content-Type" : "application/json" 
-};
-body: JSON.stringify ({
-  model: "gpt-4o-mini";
-messages: [ {
-  role: "system", content: systemPrompt 
-};
-{
-  role: "user", content: userPrompt 
-}temperature: 0.7 
-}) 
-});
-//Try to extract JSON using regex as fallback const jsonMatch = generatedContentText.match (/\ {
-  [\s\S]*\ 
-}/);
-if (jsonMatch) {
-  try {
-  generatedContent = JSON.parse (jsonMatch[0]) 
-}catch (e2) {
-  
-}
-}// Apply the generated content to the template or return it directly return new Response (JSON.stringify (generatedContent), {
-  
-}
-});
+      headers: { ...corsHeaders, "Content-Type": "application/json" })
   }
+
 });
 
-<<<<<<< HEAD
 ;
       generatedContent = JSON.parse(generatedContentText);
 
@@ -1305,25 +709,7 @@ const corsHeaders = {;"
 serve(async (req) => {;
   // Handle CORS preflight requests;"
   if (req.method === "OPTIONS") {;"
-=======
-  }
-});
-;
-<<<<<<< HEAD
 
-import "https://deno.land/x/xhr@0.1.0/mod.ts",;
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
-;
-const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),;
-;
-const corsHeaders = {;
-  "Access-Control-Allow-Origin":"*",;
-  "Access-Control-Allow-Headers":"authorization, x-client-info, apikey, content-type"},;
-;
-serve(async (req) => {;
-  // Handle CORS preflight requests;
-  if (req.method === "OPTIONS") {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     return new Response(null, { headers:corsHeaders }),;
   }
 ;
@@ -1336,7 +722,7 @@ serve(async (req) => {;
       template = {} ;
     } = await req.json(),;
     ;
-<<<<<<< HEAD
+
     if (!emailType || !userData) {;"
       throw new Error("Missing required parameters:emailType and userData");"
     }
@@ -1366,44 +752,14 @@ serve(async (req) => {;
       case "profile_completion":;"
         userPrompt = `Create an email for ${userData.firstName} reminding them to complete their profile. They have completed ${userData.profileCompletion || 0}% of their profile. Focus on how a complete profile increases visibility.`,;"
         subjectContext = "Create a short, motivational subject line about profile completion.",;"
-=======
-    if (!emailType || !userData) {;
-      throw new Error("Missing required parameters:emailType and userData");
-    }
-    ;
-    // Create a prompt based on the email type and user data;
-    let systemPrompt = "You are an AI assistant that creates personalized email content for a marketplace platform called Zion AI that connects AI professionals with clients. Create content that is friendly, professional, and encouraging.",;
-    let userPrompt = "",;
-    ;
-    // Subject line context;
-    let subjectContext = "",;
-    ;
-    switch (emailType) {;
-      case "welcome_series":;
-        userPrompt = `Create a welcome email for a new ${userData.userType === "talent" ? "talent/professional" :"client/employer"} named ${userData.firstName}. The email should introduce them to the platform and guide them through their next steps.`,;
-        break,;
-        ;
-      case "inactivity_reminder":;
-        userPrompt = `Create a re-engagement email for a ${userData.userType === "talent" ? "talent/professional" :"client/employer"} named ${userData.firstName} who has been inactive for ${activityData.daysInactive} days. They haven't completed their ${activityData.incompleteAction}.`,;
-        subjectContext = "Make the subject line attention-grabbing but not pushy, focusing on the benefits of returning to the platform.",;
-        break,;
-        ;
-      case "job_application":;
-        userPrompt = `Create an email encouraging a talent named ${userData.firstName} who hasn't applied to any jobs yet. Their skills are:${userData.skills ? userData.skills.join(", ") :"AI-related skills"}. Encourage them to complete their profile and apply to relevant positions.`,;
-        subjectContext = "Create a subject line that emphasizes opportunity and personal growth.",;
-        break,;
-        ;
-      case "profile_completion":;
-        userPrompt = `Create an email for ${userData.firstName} reminding them to complete their profile. They have completed ${userData.profileCompletion || 0}% of their profile. Focus on how a complete profile increases visibility.`,;
-        subjectContext = "Create a short, motivational subject line about profile completion.",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
         break,;
         ;
       default:;
         userPrompt = `Create a re-engagement email for a user named ${userData.firstName} who has been inactive on the Zion AI Marketplace platform. Encourage them to return and continue using the platform.`,;
     }
     ;
-<<<<<<< HEAD
+
     // Add subject line request to the prompt;"
     userPrompt += `\n\n${subjectContext || "Create an engaging subject line for this email."}\n\nRespond with JSON in this format only:{ "subject":"The subject line", "greeting":"Personalized greeting", "mainContent":["paragraph1", "paragraph2"], "callToAction":"Text for the CTA button", "signature":"Email signature text" }`,;"
 ;
@@ -1419,23 +775,7 @@ serve(async (req) => {;
           { role:"system", content:systemPrompt },;""
           { role:"user", content:userPrompt }"]
         ],;)
-=======
-    // Add subject line request to the prompt;
-    userPrompt += `\n\n${subjectContext || "Create an engaging subject line for this email."}\n\nRespond with JSON in this format only:{ "subject":"The subject line", "greeting":"Personalized greeting", "mainContent":["paragraph1", "paragraph2"], "callToAction":"Text for the CTA button", "signature":"Email signature text" }`,;
-;
-    // Call OpenAI API to generate personalized content;
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {;
-      method:"POST",;
-      headers:{;
-        "Authorization":`Bearer ${openAIApiKey}`,;
-        "Content-Type":"application/json"},;
-      body:JSON.stringify({;
-        model:"gpt-4o-mini",;
-        messages:[;
-          { role:"system", content:systemPrompt },;
-          { role:"user", content:userPrompt }
-        ],;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
         temperature:0.7})}),;
 ;
     if (!response.ok) {;
@@ -1450,7 +790,7 @@ serve(async (req) => {;
     let generatedContent,;
     try {;
       generatedContent = JSON.parse(generatedContentText),;
-<<<<<<< HEAD
+
     } catch (e) {;"
       console.error("Failed to parse GPT response as JSON:", e),;""
       // // // console.log("Raw response:", generatedContentText),;"
@@ -1560,102 +900,11 @@ messages: [ {,"
 }// Apply the generated content to the template or return it directly return new Response (JSON.stringify (generatedContent), {
 "`;
 pr-12325
-=======
-    } catch (e) {;
-      console.error("Failed to parse GPT response as JSON:", e),;
-      // // // console.log("Raw response:", generatedContentText),;
-      // Try to extract JSON using regex as fallback;
-      const jsonMatch = generatedContentText.match(/\{[\s\S]*\}/),;
-      if (jsonMatch) {;
-        try {;
-          generatedContent = JSON.parse(jsonMatch[0]),;
-        } catch (e2) {;
-          throw new Error("Could not parse the generated content as JSON"),;
-        }
-      } else {;
-        throw new Error("Could not extract JSON from the generated content"),;
-      }
-    }
-;
-    // Apply the generated content to the template or return it directly;
-    return new Response(JSON.stringify(generatedContent), {;
-      headers:{ ...corsHeaders, "Content-Type":"application/json" }}),;
-  } catch (error) {;
-    console.error("Error in personalize-email function:", error),;
-    return new Response(JSON.stringify({ error:error.message }), {;
-      status:500,;
-      headers:{ ...corsHeaders, "Content-Type":"application/json" }}),;  }
-}),;
- serve (async (req) => {
-  //Handle CORS preflight requests if (req.method === "OPTIONS") {
-  
-}try {
-  //Get personalization request data const {
-  break;
-case "inactivity reminder" : userPrompt = `Create a re-engagement email for a $ {
-  userData.userType === "talent" ? "talent/professional" : "client/employer" 
-}named $ {
-  userData.firstName 
-}who has been inactive for $ {
-  activityData.daysInactive 
-}days. They haven't completed their $ {
-  activityData.incompleteAction 
-}.`;
-subjectContext = "Make the subject line attention-grabbing but not pushy, focusing on the benefits of returning to the platform.";
-break;
-case "job application" : userPrompt = `Create an email encouraging a talent named $ {
-  userData.firstName 
-}who hasn't applied to any jobs yet. Their skills are: $ {
-  userData.skills ? userData.skills.join (", ") : "AI-related skills" 
-}. Encourage them to complete their profile and apply to relevant positions.`;
-subjectContext = "Create a subject line that emphasizes opportunity and personal growth.";
-break;
-case "profile completion" : userPrompt = `Create an email for $ {
-  userData.firstName 
-}reminding them to complete their profile. They have completed $ {
-  userData.profileCompletion || 0 
-}% of their profile. Focus on how a complete profile increases visibility.`;
-subjectContext = "Create a short, motivational subject line about profile completion.";
-break;
-  method: "POST";
-headers: {
-  "Authorization" : `Bearer $ {
-  openAIApiKey 
-}`;
-"Content-Type" : "application/json" 
-};
-body: JSON.stringify ({
-  model: "gpt-4o-mini";
-messages: [ {
-  role: "system", content: systemPrompt 
-};
-{
-  role: "user", content: userPrompt 
-}temperature: 0.7 
-}) 
-});
-//Try to extract JSON using regex as fallback const jsonMatch = generatedContentText.match (/\ {
-  [\s\S]*\ 
-}/);
-if (jsonMatch) {
-  try {
-  generatedContent = JSON.parse (jsonMatch[0]) 
-}catch (e2) {
-  
-}
-}// Apply the generated content to the template or return it directly return new Response (JSON.stringify (generatedContent), {
-  
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 }
 });
   }
 });
   }
-<<<<<<< HEAD
+
 });
-=======
-});
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

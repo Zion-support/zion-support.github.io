@@ -1,4 +1,4 @@
-const ModernLayout = dynamic(() => import("./ModernLayout"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default ModernLayout' ,'
+const ModernLayout = dynamic(() => import('./ModernLayout'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default ModernLayout' ,'
 
 </p>'
 </p>'
@@ -23,8 +23,8 @@ const ModernLayout = dynamic(() => import("./ModernLayout"),{'; "loading": () =>
 </p>'
 
 ursor/integrate-build-improve-and-re-verify-8f7d
-const ModernLayout = dynamic(() => import(\"./ModernLayout\"),{\'; \"loading\": () => <p />Loading...</p,>}) \"export\": \'default ModernLayout\' ,const ModernLayout = dynamic(() => import(\"./ModernLayout\"),{\"; loading: () => <p />Loading.</p,>}) export: \"default ModernLayout\" ,\"\"\";
-const ModernLayout = dynamic(() => import(\"./ModernLayout\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default ModernLayout' ,';
+const ModernLayout = dynamic(() => import(\'./ModernLayout\'),{\'; \'loading\': () => <p />Loading...</p,>}) \'export\': \'default ModernLayout\' ,const ModernLayout = dynamic(() => import(\'./ModernLayout\'),{\'; loading: () => <p />Loading.</p,>}) export: \'default ModernLayout\' ,\'\'\';
+const ModernLayout = dynamic(() => import(\'./ModernLayout\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default ModernLayout' ,';
 </p>';
 </p>';
 </p>';
@@ -60,7 +60,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 </p>';
 </p>';
 </p>'</p>';
-const ModernLayout = dynamic(() => import(\"./ModernLayout\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default ModernLayout' ,'
+const ModernLayout = dynamic(() => import(\'./ModernLayout\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default ModernLayout' ,'
 </p>'
 </p>'
 </p>'

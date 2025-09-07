@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src_disabled_1757239864/layout/AppHeader.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const showTagline = router.pathname === '/
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [loginOpen, setLoginOpen] = useState(false)
@@ -26,6 +29,11 @@ import { useSelector } from 'react-redux;
 import type { RootState } from @/store';
 import { cn } from '@/lib/utils, // Import cn utility
 import { useRouter } from next/router';
+<<<<<<< HEAD
+export function AppHeader() {
+
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+=======
 =======
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
@@ -37,6 +45,7 @@ import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 <<<<<<< HEAD:src_disabled_1757239864/layout/AppHeader.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const [loginOpen, setLoginOpen] = useState(false);
   const isMobile = useIsMobile();
   const { t } = useTranslation();
@@ -44,6 +53,12 @@ export function AppHeader() {
   const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn),
   const router = useRouter();
   const showTagline = router.pathname === '/;
+<<<<<<< HEAD
+
+  // Messaging context (unread message count)
+  const { unreadCount } = useMessaging();
+
+=======
 =======
   const [searchQuery, setSearchQuery] = useState('');
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
@@ -57,12 +72,19 @@ export function AppHeader() {
     };
 
 <<<<<<< HEAD:src_disabled_1757239864/layout/AppHeader.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const openLoginModal = (returnToPath?: string) => {
     // The actual returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu)
     // using router.push with shallow:true before this function is called.
     // This functions main job is just to open the modal.
     // If a returnToPath is passed, we could potentially use it for other logic here if needed in the future.
     setLoginOpen(true)
+<<<<<<< HEAD
+  };
+  
+  return (
+    <>
+=======
 =======
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -113,6 +135,7 @@ export function AppHeader() {
   return (
     <>
 <<<<<<< HEAD:src_disabled_1757239864/layout/AppHeader.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <header
         style={{ "--nav-height: 64px" } as React.CSSProperties}
         className={cn(
@@ -153,6 +176,24 @@ export function AppHeader() {
           <PointsBadge />
           {!isLoggedIn && (
             <div className="ml-4 relative z-10 flex items-center>
+<<<<<<< HEAD
+              <Link
+                href="/auth/login"
+                className="text-sm font-medium text-foreground/70 hover:text-foreground"
+                aria-label={t('auth.login')}
+                data-testid="login-link"
+                onClick={(e) => {
+                  e.preventDefault();
+                  // For the main login link, we might not have a specific returnTo beyond current page;
+                  // or we could default to dashboard.
+                  // For consistency with how sub-menus now set it:
+                  router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true }),
+                  openLoginModal(router.asPath)
+                }}
+              >
+                {t('auth.login')}
+              </Link>
+=======
 =======
       <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         scrolled 
@@ -298,11 +339,18 @@ export function AppHeader() {
                 Get Started
               </Link>
 <<<<<<< HEAD:src_disabled_1757239864/layout/AppHeader.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               <Link
                 href=/signup"
                 className="ml-2 text-sm font-medium text-foreground/70 hover:text-foreground
                 aria-label={t(auth.signup)}
                 data-testid=signup-nav-link"
+<<<<<<< HEAD
+              >
+                {t('auth.signup')}
+              </Link>
+            </div>
+=======
 =======
 
               {/* Mobile menu button */}
@@ -315,6 +363,7 @@ export function AppHeader() {
               </button>
             </div>
 <<<<<<< HEAD:src_disabled_1757239864/layout/AppHeader.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           )}
           {/* User avatar menu */}
           {isLoggedIn && (
@@ -339,6 +388,17 @@ export function AppHeader() {
               onClose={() => setMobileMenuOpen(false)}
               openLoginModal={openLoginModal}
             />
+<<<<<<< HEAD
+          </div>
+        </div>
+      )}
+
+      {/* Mobile Bottom Navigation */}
+      {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
+      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
+    </>
+  )
+=======
 =======
 >>>>>>> origin/main:src/layout/AppHeader.tsx
           </div>
@@ -451,4 +511,5 @@ export function AppHeader() {
       </AnimatePresence>
     </header>
   );
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }

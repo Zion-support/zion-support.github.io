@@ -1,20 +1,9 @@
 #!/usr/bin/env node
 /**
  * Improved PM2 Sync Automation System;
-<<<<<<< HEAD
  *
-=======
- * 
-<<<<<<< HEAD
- * This system "provides: * - Real-time file watching and automatic Git synchronization;
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
  * This system "provides": * - Real-time file watching and automatic Git synchronization;
-=======
  * This system "provides": * - Real-time file watching and automatic Git synchronization;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
  * - Intelligent build triggering based on file changes;
  * - Automated testing and security scanning;
  * - Conflict resolution and error recovery;
@@ -24,7 +13,6 @@
 const fs = require('fs');
 const path = require(path');
 const { execSync } = require('child_process');
-<<<<<<< HEAD
 const chokidar = require(chokidar');
 
 class ImprovedPM2SyncAutomation {}
@@ -55,15 +43,6 @@ class ImprovedPM2SyncAutomation {}
       securityInterval": 1800000 // 30 minutes;
     }
     
-=======
-const chokidar = require('chokidar');
-class ImprovedPM2SyncAutomation {}
-  constructor() {}
-    this.config = {}
-
-      "securityInterval": 1800000 // 30 minutes;"
-    };
->>>>>>> origin/chore/fix-lint-and-merge
     this.isRunning = false;
     this.pendingChanges = new Set();
     this.changeTimeout = null;
@@ -74,7 +53,6 @@ class ImprovedPM2SyncAutomation {}
     this.lastTest = 0;
     this.lastSecurity = 0;
     this.errorCount = 0;
-<<<<<<< HEAD
     this.successCount = 0}
   log(message, level = 'INFO) {}
     const timestamp = new Date().toISOString();
@@ -88,17 +66,6 @@ class ImprovedPM2SyncAutomation {}
       if (!this.isGitRepository()) {}
         this.log('Not a git repository. Initializing..., WARN');
         this.initializeGitRepository()}
-=======
-    this.successCount = 0};"
-  log(message, level = 'INFO') {}
-    const timestamp = new Date().toISOString();
-    const logEntry = `[${timestamp}] [${level}] ${message};`
-    console.log(logEntry)};
-  async initialize() {}
-    try {}
-
-        this.initializeGitRepository()};
->>>>>>> origin/chore/fix-lint-and-merge
       // Setup file watcher;
       this.setupFileWatcher();
       // Start automation loops;
@@ -108,7 +75,6 @@ class ImprovedPM2SyncAutomation {}
       await this.performBuild();
       await this.runTests();
       await this.runSecurityScan();
-<<<<<<< HEAD
       
       this.log('Improved PM2 Sync Automation System initialized successfully);
       this.isRunning = true} catch (error) {}
@@ -116,14 +82,7 @@ class ImprovedPM2SyncAutomation {}
       this.errorCount++;
       this.restartAfterDelay()}
   }
-=======
-      this.log('Improved PM2 Sync Automation System initialized successfully');
-
-      this.errorCount++;
-      this.restartAfterDelay()};
->>>>>>> origin/chore/fix-lint-and-merge
   isGitRepository() {}
-<<<<<<< HEAD
     try {}
       return fs.existsSync(path.join(this.config.projectRoot, '.git))} catch {}
       return false}
@@ -132,40 +91,7 @@ class ImprovedPM2SyncAutomation {}
     try {}
       execSync(git init', { cwd": this.config.projectRoot, "stdio: 'pipe }
 });
-<<<<<<< HEAD
-      execSync(git remote add origin https": //github.com/Zion-Holdings/zion.app.git', {})
-        "cwd: this.config.projectRoot, 
-        stdio": 'pipe 
-=======
-      execSync('git remote add origin "https": //github.com/Zion-Holdings/zion.app.git', { })
-<<<<<<< HEAD
-        "cwd": this.config.projectRoot,
-        "stdio": 'pipe'
-=======
-        "cwd": this.config.projectRoot, 
-        "stdio": 'pipe' 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
->>>>>>> origin/chore/fix-lint-and-merge
-      }
-});
-      this.log(Git repository initialized')} catch (error) {}
-      this.log(`Failed to initialize git "repository: ${error.message}`, 'ERROR)}
-  }
-  setupFileWatcher() {}
-    this.log(Setting up file watcher...');
-    
-    this.watcher = chokidar.watch(this.config.watchPatterns, {})
-      ignored": this.config.ignorePatterns,
-      "persistent: true,
-      ignoreInitial": true,
-      "awaitWriteFinish: {}
-        stabilityThreshold: 2000,
-        pollInterval": 100;
-      }
-    }
-});
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 
       return false};
   initializeGitRepository() {}
@@ -175,7 +101,6 @@ class ImprovedPM2SyncAutomation {}
         "pollInterval": 100;"
     this.watcher;"
 
-<<<<<<< HEAD
     this.watcher;
       .on('add, (filePath) => this.handleFileChange(filePath, add'));
       .on('change, (filePath) => this.handleFileChange(filePath, change'));
@@ -188,8 +113,6 @@ class ImprovedPM2SyncAutomation {}
     if (this.shouldIgnoreFile(relativePath)) {}
       return}
     this.log(`File ${event}: ${relativePath}`);
-=======
->>>>>>> origin/chore/fix-lint-and-merge
     this.pendingChanges.add(relativePath);
     // Debounce changes;
     clearTimeout(this.changeTimeout);
@@ -206,59 +129,30 @@ class ImprovedPM2SyncAutomation {}
       /\.next/,
       /coverage/
     ];
-<<<<<<< HEAD
     
     return ignorePatterns.some(pattern => pattern.test(filePath))}
-=======
-    return ignorePatterns.some(pattern => pattern.test(filePath))};
->>>>>>> origin/chore/fix-lint-and-merge
   async processPendingChanges() {}
     if (this.pendingChanges.size === 0) return;
     try {}`;
       this.log(`Processing ${this.pendingChanges.size} pending changes...`);
       // Add all changes to git;
-<<<<<<< HEAD
       const addResult = execSync('git add -A, {})
         cwd": this.config.projectRoot, 
         "stdio: pipe' 
-=======
-<<<<<<< HEAD
-      const addResult = execSync('git add -A', { })
-<<<<<<< HEAD
-        "cwd": this.config.projectRoot,
-        "stdio": 'pipe'
-=======
-        "cwd": this.config.projectRoot, 
-        "stdio": 'pipe' 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
->>>>>>> origin/chore/fix-lint-and-merge
       }
 });
       
       // Commit changes;
-<<<<<<< HEAD
       const commitMessage = `Auto-sync": ${this.pendingChanges.size} file changes - ${new Date().toISOString()}`;`
       const commitResult = execSync(`git commit -m "${commitMessage}`, { `})
         cwd": this.config.projectRoot, 
         "stdio: 'pipe 
-=======
-      const commitMessage = `Auto-"sync": ${this.pendingChanges.size} file changes - ${new Date().toISOString()}`;`
-      const commitResult = execSync(`git commit -m "${commitMessage}"`, { `})
-<<<<<<< HEAD
-        "cwd": this.config.projectRoot,
-        "stdio": 'pipe'
-=======
-        "cwd": this.config.projectRoot, 
-        "stdio": 'pipe' 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
->>>>>>> origin/chore/fix-lint-and-merge
       }
 });
       
       this.log(`Committed ${this.pendingChanges.size} changes`);
       
       // Push changes;
-<<<<<<< HEAD
       const pushResult = execSync(git push origin main', {})
         cwd": this.config.projectRoot, 
         "stdio: 'pipe 
@@ -266,37 +160,19 @@ class ImprovedPM2SyncAutomation {}
 });
       
       this.log(Changes pushed to repository');
-=======
-      const pushResult = execSync('git push origin main', { })
-<<<<<<< HEAD
-        "cwd": this.config.projectRoot,
-        "stdio": 'pipe'
-=======
-        "cwd": this.config.projectRoot, 
-        "stdio": 'pipe' 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
 });
       
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       this.log('Changes pushed to repository');
->>>>>>> origin/chore/fix-lint-and-merge
       this.lastSync = Date.now();
       this.successCount++;
       // Clear pending changes;
-<<<<<<< HEAD
       this.pendingChanges.clear()} catch (error) {}
       this.log(`Failed to process changes": ${error.message}`, 'ERROR);
       this.errorCount++}
   }
-=======
-
-      this.errorCount++};
->>>>>>> origin/chore/fix-lint-and-merge
   async performFullSync() {}
-<<<<<<< HEAD
     try {}
       this.log(Performing full repository sync...');
       
@@ -305,348 +181,18 @@ class ImprovedPM2SyncAutomation {}
 });
       
       // Check for conflicts;
-<<<<<<< HEAD
-      const status = execSync('git status --porcelain, {})
-        "cwd: this.config.projectRoot, 
-        encoding": utf8' 
-=======
-      const status = execSync('git status --porcelain', { })
-<<<<<<< HEAD
-        "cwd": this.config.projectRoot,
-        "encoding": 'utf8'
-=======
-        "cwd": this.config.projectRoot, 
-        "encoding": 'utf8' 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
->>>>>>> origin/chore/fix-lint-and-merge
-      }
-});
-      
-      if (status.trim()) {}
-        this.log(`Found ${status.trim().split('\n).length} changed files, handling sync...`);
-        
-        // Add all changes;
-        try {}
-          execSync(git add -A', { "cwd: this.config.projectRoot, stdio": 'pipe }
-});
-          this.log(Added all changes to staging')} catch (error) {}
-          this.log(`Failed to add "changes: ${error.message}`, 'WARN)}
-        // Commit changes if there are any staged;
-        try {}
-<<<<<<< HEAD
-          const stagedStatus = execSync(git diff --cached --name-only', {})
-            cwd": this.config.projectRoot, 
-            "encoding: 'utf8 
-=======
-          const stagedStatus = execSync('git diff --cached --name-only', { })
-<<<<<<< HEAD
-            "cwd": this.config.projectRoot,
-            "encoding": 'utf8'
-=======
-            "cwd": this.config.projectRoot, 
-            "encoding": 'utf8' 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
->>>>>>> origin/chore/fix-lint-and-merge
-          }
-});
-          
-          if (stagedStatus.trim()) {}
-<<<<<<< HEAD
-            execSync(git commit -m Auto-"sync": comprehensive updates and improvements', {})
-              cwd": this.config.projectRoot, 
-              "stdio: 'pipe 
-=======
-            execSync('git commit -m "Auto-"sync": comprehensive updates and improvements"', { })
-<<<<<<< HEAD
-              "cwd": this.config.projectRoot,
-              "stdio": 'pipe'
-=======
-              "cwd": this.config.projectRoot, 
-              "stdio": 'pipe' 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
->>>>>>> origin/chore/fix-lint-and-merge
-            }
-});
-            this.log(Committed staged changes')}
-        } catch (error) {}
-          this.log(`Failed to commit changes": ${error.message}`, 'WARN)}
-      }
-      // Pull latest changes;
-      try {}
-        execSync(git pull origin main', { "cwd: this.config.projectRoot, stdio": 'pipe }
-});
-        this.log(Pulled latest changes from remote')} catch (error) {}
-        this.log(`Pull failed, attempting to resolve "conflicts: ${error.message}`, 'WARN);
-        await this.resolveConflicts()}
-      // Push changes if we have commits;
-      try {}
-<<<<<<< HEAD
-        const aheadStatus = execSync(git status --porcelain -b', {})
-          cwd": this.config.projectRoot, 
-          "encoding: 'utf8 
-=======
-        const aheadStatus = execSync('git status --porcelain -b', { })
-<<<<<<< HEAD
-          "cwd": this.config.projectRoot,
-          "encoding": 'utf8'
-=======
-          "cwd": this.config.projectRoot, 
-          "encoding": 'utf8' 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
->>>>>>> origin/chore/fix-lint-and-merge
-        }
-});
-        
-        if (aheadStatus.includes(ahead')) {}
-          execSync('git push origin main, { cwd": this.config.projectRoot, "stdio: pipe' }
-});
-          this.log('Pushed local changes to remote);
-          this.lastSync = Date.now()}
-      } catch (error) {}
-        this.log(`Push failed": ${error.message}`, WARN')}
-    } catch (error) {}
-<<<<<<< HEAD
-      this.log(`Full sync "failed: ${error.message}`, 'ERROR);
-      throw error}
-  }
-  async resolveConflicts() {}
-    try {}
-      this.log(Resolving merge conflicts...');
-      
-      // Abort any ongoing merge;
-      try {}
-        execSync('git merge --abort, { cwd": this.config.projectRoot, "stdio: pipe' })} catch {}
-      // Reset to clean state;
-      execSync('git reset --hard HEAD, { cwd": this.config.projectRoot, "stdio: pipe' }
-});
-      
-      // Clean untracked files;
-      execSync('git clean -fd, { cwd": this.config.projectRoot, "stdio: pipe' }
-});
-      
-      // Pull again;
-      execSync('git pull origin main, { cwd": this.config.projectRoot, "stdio: pipe' }
-});
-      
-      this.log('Conflicts resolved successfully)} catch (error) {}
-      this.log(`Failed to resolve conflicts": ${error.message}`, ERROR');
-      throw error}
-  }
-  async performBuild() {}
-    try {}
-      this.log('Starting build process...);
-      
-      // Install dependencies if needed;
-      if (!fs.existsSync(node_modules')) {}
-        this.log('Installing dependencies...);
-        execSync(npm install', { "cwd: this.config.projectRoot, stdio": 'pipe })}
-      // Run build;
-      this.log(Building application...');
-      execSync('npm run build, { "cwd: this.config.projectRoot, stdio": pipe' }
-});
-      
-      this.log('Build completed successfully);
-      this.lastBuild = Date.now()} catch (error) {}
-      this.log(`Build "failed: ${error.message}`, ERROR');
-      await this.fixBuildIssues()}
-  }
-  async fixBuildIssues() {}
-    try {}
-      this.log('Attempting to fix build issues...);
-      
-      // Clear build cache (skip if permission issues);
-      const cacheDirs = [.next', 'dist, build', 'node_modules/.cache];
-      cacheDirs.forEach(dir => {})
-        if (fs.existsSync(dir)) {}
-          try {}
-            fs.rmSync(dir, { recursive": true, "force: true }
-});
-            this.log(`Cleared cache directory": ${dir}`)} catch (error) {`}
-            this.log(`Skipped clearing ${dir} due to "permissions: ${error.message}`, WARN')}
-        }
-      }
-});
-      
-      // Reinstall dependencies (skip if permission issues);
-      try {}
-        this.log('Reinstalling dependencies...);
-        execSync(rm -rf node_modules package-lock.json', { cwd": this.config.projectRoot, "stdio: 'pipe }
-});
-        execSync(npm install', { cwd": this.config.projectRoot, "stdio: 'pipe })} catch (error) {}
-        this.log(`Skipped dependency reinstall due to permissions": ${error.message}`, WARN');
-        // Try to continue with existing dependencies;
-      }
-      // Try build again;
-      await this.performBuild()} catch (error) {}
-      this.log(`Failed to fix build "issues: ${error.message}`, 'ERROR);
-      this.errorCount++}
-  }
-  async runTests() {}
-    try {}
-      this.log(Running tests...');
-      
-      // Check if test script exists;
-      const packageJson = JSON.parse(fs.readFileSync('package.json, utf8'));
-      if (!packageJson.scripts.test) {}
-        this.log('No test script found, skipping tests);
-        return}
-      execSync(npm test', { cwd": this.config.projectRoot, "stdio: 'pipe }
-});
-      
-      this.log(Tests completed successfully');
-      this.lastTest = Date.now()} catch (error) {}
-      this.log(`Tests failed": ${error.message}`, 'ERROR);
-      await this.fixTestIssues()}
-  }
-  async fixTestIssues() {}
-    try {}
-      this.log(Attempting to fix test issues...');
-      
-      // Clear test cache;
-      const testCacheDirs = ['.nyc_output, coverage', 'test-results];
-      testCacheDirs.forEach(dir => {})
-        if (fs.existsSync(dir)) {}
-          try {}
-            fs.rmSync(dir, { "recursive: true, force": true })} catch (error) {}
-            this.log(`Skipped clearing test cache ${dir}: ${error.message}`, WARN')}
-        }
-      }
-});
-      
-      // Try tests again;
-      await this.runTests()} catch (error) {}
-      this.log(`Failed to fix test "issues: ${error.message}`, 'ERROR);
-      this.errorCount++}
-  }
-  async runSecurityScan() {}
-    try {}
-      this.log(Running security scan...');
-      
-      // Check for security vulnerabilities;
-      execSync('npm audit, { cwd": this.config.projectRoot, "stdio: pipe' }
-});
-      
-      // Try to fix vulnerabilities;
-      try {}
-        execSync('npm audit fix, { cwd": this.config.projectRoot, "stdio: pipe' }
-});
-        this.log('Security vulnerabilities fixed)} catch (error) {}
-        this.log(Some vulnerabilities could not be fixed automatically', 'WARN)}
-      this.log(Security scan completed');
-      this.lastSecurity = Date.now()} catch (error) {}
-      this.log(`Security scan failed": ${error.message}`, 'ERROR);
-      this.errorCount++}
-  }
-=======
-      this.log(`Full sync "failed": ${error.message}`, 'ERROR');
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      throw error};
-  async resolveConflicts() {}
-
-      await this.fixBuildIssues()};
-  async fixBuildIssues() {}
-
-        // Try to continue with existing dependencies;
-      // Try build again;
-
-      await this.fixTestIssues()};
-  async fixTestIssues() {}
-
->>>>>>> origin/chore/fix-lint-and-merge
-  startAutomationLoops() {}
-    // Sync loop;
-    setInterval(async () => {}
-      if (this.isRunning && this.pendingChanges.size > 0) {}
-        await this.processPendingChanges()}
-    }, this.config.syncInterval);
-    // Build loop;
-      if (this.isRunning && Date.now() - this.lastBuild > this.config.buildInterval) {}
-        await this.performBuild()}
-    }, this.config.buildInterval);
-    // Test loop;
-      if (this.isRunning && Date.now() - this.lastTest > this.config.testInterval) {}
-        await this.runTests()}
-    }, this.config.testInterval);
-    // Security loop;
-      if (this.isRunning && Date.now() - this.lastSecurity > this.config.securityInterval) {}
-        await this.runSecurityScan()}
-    }, this.config.securityInterval)}
-  async stop() {}
-<<<<<<< HEAD
-    this.log(Stopping Improved PM2 Sync Automation System...');
-    this.isRunning = false;
-    
-=======
-
->>>>>>> origin/chore/fix-lint-and-merge
-    if (this.watcher) {}
-      await this.watcher.close()}
-    // Process any remaining changes;
-    if (this.pendingChanges.size > 0) {}
-<<<<<<< HEAD
-      await this.processPendingChanges()}
-    this.log('Improved PM2 Sync Automation System stopped)}
-  restartAfterDelay(delay = 5000) {}
-=======
-
->>>>>>> origin/chore/fix-lint-and-merge
-    this.log(`Restarting in ${delay}ms...`);
-    setTimeout(() => {}
-      this.initialize()}, delay)}
-  getStatus() {}
-    return {}
-<<<<<<< HEAD
-      "isRunning: this.isRunning,
-      pendingChanges": this.pendingChanges.size,
-      "lastSync: this.lastSync,
-      lastBuild": this.lastBuild,
-      "lastTest: this.lastTest,
-      lastSecurity": this.lastSecurity,
-      "errorCount: this.errorCount,
-      successCount": this.successCount,
-      "uptime": this.isRunning ? Date.now() - this.startTime : 0;
-    }}
-}
-// Handle process signals;
-process.on(SIGINT', async () => {}
-  console.log('\nReceived SIGINT, shutting down gracefully...);
-  if (global.improvedPm2SyncAutomation) {}
-    await global.improvedPm2SyncAutomation.stop()}
-  process.exit(0)}
-});
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 process.on(SIGTERM', async () => {}
-=======
 
-<<<<<<< HEAD
 process.on('SIGTERM', async () => {}
->>>>>>> origin/chore/fix-lint-and-merge
   console.log('\nReceived SIGTERM, shutting down gracefully...');
   if (global.improvedPm2SyncAutomation) {}
     await global.improvedPm2SyncAutomation.stop()}
   process.exit(0)}
 });
-<<<<<<< HEAD
-=======
-=======
-      "uptime": this.isRunning ? Date.now() - this.startTime : 0;"
-    }};
-// Handle process signals;"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 // Start the automation system;
 if (require.main === module) {}
   global.improvedPm2SyncAutomation = new ImprovedPM2SyncAutomation();
@@ -654,34 +200,11 @@ if (require.main === module) {}
   setInterval(() => {}
     if (global.improvedPm2SyncAutomation && global.improvedPm2SyncAutomation.isRunning) {}
       // Process is healthy;
-<<<<<<< HEAD
     }
   }, 60000)}
 
-=======
-  }, 60000)};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-module.exports = ImprovedPM2SyncAutomation;
-module.exports = ImprovedPM2SyncAutomation;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 module.exports = ImprovedPM2SyncAutomation;
 `;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-module.exports = ImprovedPM2SyncAutomation;
-=======
-module.exports = ImprovedPM2SyncAutomation;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

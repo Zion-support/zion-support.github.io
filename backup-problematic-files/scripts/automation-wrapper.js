@@ -13,43 +13,24 @@ const path = // // require('path');
 // Logging utility
 function log(message, level = 'info') {
   const timestamp = new Date().toISOString();
-  const logMessage = `[${timestamp}] [${level && level.toUpperCase()}] ${message}`;
-  console && console.log(logMessage);
+  const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
+  console.log(logMessage);
   // Also log to file
 
   fs.appendFileSync(logFile, logMessage + '\n')}
-  const logFile = path && path.join(__dirname, '..', 'automation', 'logs', 'automation && automation.log');
-  fs && fs.appendFileSync(logFile, logMessage + '\n');
-}
-  fs && fs.appendFileSync(logFile, logMessage + '\n');
-}
-  fs && fs.appendFileSync(logFile, logMessage + '\n');
-}
-  fs && fs.appendFileSync(logFile, logMessage + '\n');
-}
-  fs && fs.appendFileSync(logFile, logMessage + '\n')}
 // Error handling utility
 function handleError(error, context) {
-  log(`Error in ${context}: ${error && error.message}`, 'error');
+  log(`Error in ${context}: ${error.message}`, 'error');
   // Log detailed error
-  const errorLogFile = path && path.join(__dirname, '..', 'automation', 'logs', 'automation-errors && errors.log');
+  const errorLogFile = path.join(__dirname, '..', 'automation', 'logs', 'automation-errors.log');
   const errorDetails = {
     "timestamp": new Date().toISOString(),
     context,
-    "error": error && error.message,
-    "stack": error && error.stack
+    "error": error.message,
+    "stack": error.stack
   };
 
   fs.appendFileSync(errorLogFile, JSON.stringify(errorDetails, null, 2) + '\n')}
-  fs && fs.appendFileSync(errorLogFile, JSON && JSON.stringify(errorDetails, null, 2) + '\n');
-}
-  fs && fs.appendFileSync(errorLogFile, JSON && JSON.stringify(errorDetails, null, 2) + '\n');
-}
-  fs && fs.appendFileSync(errorLogFile, JSON && JSON.stringify(errorDetails, null, 2) + '\n');
-}
-  fs && fs.appendFileSync(errorLogFile, JSON && JSON.stringify(errorDetails, null, 2) + '\n');
-}
-  fs && fs.appendFileSync(errorLogFile, JSON && JSON.stringify(errorDetails, null, 2) + '\n')}
 // Automation functions
 const automations = {
   "fix": async () => {
@@ -60,16 +41,6 @@ const automations = {
       try {
 
         execSync('npm run lint -- --fix', { "stdio": 'pipe', "cwd": process.cwd() });
-        execSync('npm run lint -- --fix', { stdio: 'pipe', cwd: process && process.cwd() });
-        log('ESLint fixes completed successfully');
-      } catch (eslintError) {
-        execSync('npm run lint -- --fix', { stdio: 'pipe', cwd: process && process.cwd() });
-        log('ESLint fixes completed successfully');
-      } catch (eslintError) {
-        execSync('npm run lint -- --fix', { stdio: 'pipe', cwd: process && process.cwd() });
-        log('ESLint fixes completed successfully');
-      } catch (eslintError) {
-        execSync('npm run lint -- --fix', { "stdio": 'pipe', "cwd": process && process.cwd() });
         log('ESLint fixes completed successfully')} catch (eslintError) {
         log('ESLint found issues, attempting to fix critical ones...', 'warn');
         // Fix critical syntax errors
@@ -79,7 +50,7 @@ const automations = {
       // Fix TypeScript errors
       log('Checking TypeScript errors...');
       try {
-<<<<<<< HEAD
+
         execSync('npm run type-check', { stdio: 'pipe', cwd: process.cwd() });
 // Logging utility;
 function log(message, level = 'info') {
@@ -129,8 +100,7 @@ const automations = {
       // Fix TypeScript errors;
       log('Checking TypeScript errors...');
   // TODO: Implement
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
         execSync('npm run type-check', { stdio: 'pipe', cwd: process && process.cwd() });
         log('TypeScript check passed');
       } catch (tsError) {
@@ -149,7 +119,7 @@ const automations = {
       // Fix TypeScript errors
       log('Checking TypeScript errors...');
       try {
-        execSync('npm run type-check', { "stdio": 'pipe', "cwd": process && process.cwd() });
+        execSync('npm run type-check', { "stdio": 'pipe', "cwd": process.cwd() });
         log('TypeScript check passed')} catch (tsError) {
         log('TypeScript errors found, attempting auto-fixes...', 'warn');
         await fixTypeScriptErrors()}
@@ -215,7 +185,7 @@ const automations = {
       try {
 
         execSync('npm run build', { stdio: 'pipe', cwd: process.cwd() });
-<<<<<<< HEAD
+
   // TODO: Implement
       // Check internal links;
       log('Checking internal links...');
@@ -253,8 +223,7 @@ const automations = {
       log('Attempting project build...');
   // TODO: Implement
         execSync('npm run build', { stdio: 'pipe', cwd: process.cwd() });
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
         execSync('npm run build', { stdio: 'pipe', cwd: process && process.cwd() });
         log('Build successful');
       } catch (buildError) {
@@ -264,7 +233,7 @@ const automations = {
       // Run tests
       log('Running tests...');
       try {
-        execSync('npm test -- --passWithNoTests', { stdio: 'pipe', cwd: process && process.cwd() });
+        execSync('npm test -- --passWithNoTests', { stdio: 'pipe', cwd: process.cwd() });
         log('Tests passed');
       } catch (testError) {
         log('Tests failed, reviewing issues...', 'warn');
@@ -275,14 +244,13 @@ const automations = {
     }
 
         execSync('npm run build', { "stdio": 'pipe', "cwd": process.cwd() });
-        execSync('npm run build', { "stdio": 'pipe', "cwd": process && process.cwd() });
         log('Build successful')} catch (buildError) {
         log('Build failed, attempting fixes...', 'warn');
         await fixBuildErrors()}
       // Run tests
       log('Running tests...');
       try {
-<<<<<<< HEAD
+
         execSync('npm test -- --passWithNoTests', { "stdio": 'pipe', "cwd": process.cwd() });
       // Run tests;
       log('Running tests...');
@@ -300,9 +268,7 @@ const automations = {
       // Run tests;
   // TODO: Implement
         execSync('npm test -- --passWithNoTests', { "stdio": 'pipe', "cwd": process && process.cwd() });""
-=======
-        execSync('npm test -- --passWithNoTests', { "stdio": 'pipe', "cwd": process && process.cwd() });
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
         log('Tests passed')} catch (testError) {
         log('Tests failed, reviewing issues...', 'warn')}
       log('Build and test automation completed')} catch (error) {
@@ -316,7 +282,7 @@ const automations = {
       try {
 
         execSync('npm audit --audit-level moderate', { stdio: 'pipe', cwd: process.cwd() });
-<<<<<<< HEAD
+
   "security": async () => {""
     log('Starting security audit automation');
   // TODO: Implement
@@ -324,8 +290,7 @@ const automations = {
       log('Running security audit...');
   // TODO: Implement
         execSync('npm audit --audit-level moderate', { stdio: 'pipe', cwd: process.cwd() });
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
         execSync('npm audit --audit-level moderate', { stdio: 'pipe', cwd: process && process.cwd() });
         log('No security issues found');
       } catch (auditError) {
@@ -338,7 +303,6 @@ const automations = {
     }
 
         execSync('npm audit --audit-level moderate', { "stdio": 'pipe', "cwd": process.cwd() });
-        execSync('npm audit --audit-level moderate', { "stdio": 'pipe', "cwd": process && process.cwd() });
         log('No security issues found')} catch (auditError) {
         log('Security issues found, attempting fixes...', 'warn');
         await fixSecurityIssues()}
@@ -370,7 +334,7 @@ const automations = {
         "metrics": {
           buildTime: null,
           "bundleSize": null,
-          "memoryUsage": process && process.memoryUsage()
+          "memoryUsage": process.memoryUsage()
         }
       };
       // Save performance report
@@ -438,7 +402,6 @@ const automations = {
       try {
 
         execSync('npm run sitemap', { stdio: 'pipe', cwd: process.cwd() });
-        execSync('npm run sitemap', { stdio: 'pipe', cwd: process && process.cwd() });
         log('Sitemap generated successfully');
       } catch (sitemapError) {
         log('Sitemap generation failed, using fallback...', 'warn');
@@ -449,7 +412,7 @@ const automations = {
     }
 
         execSync('npm run sitemap', { "stdio": 'pipe', "cwd": process.cwd() });
-<<<<<<< HEAD
+
       log('Security audit completed');
       handleError(error, 'security-audit');
         execSync('npm audit --audit-level moderate', { "stdio": 'pipe', "cwd": process.cwd() });""
@@ -529,9 +492,7 @@ const automations = {
       handleError(error, 'sitemap-runner');
         execSync('npm run sitemap', { "stdio": 'pipe', "cwd": process.cwd() });""
         execSync('npm run sitemap', { "stdio": 'pipe', "cwd": process && process.cwd() });""
-=======
-        execSync('npm run sitemap', { "stdio": 'pipe', "cwd": process && process.cwd() });
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
         log('Sitemap generated successfully')} catch (sitemapError) {
         log('Sitemap generation failed, using fallback...', 'warn')}
       log('Sitemap automation completed')} catch (error) {
@@ -542,8 +503,8 @@ const automations = {
 async function fixCriticalSyntaxErrors() {
   log('Fixing critical syntax errors...');
   // Fix common syntax issues
-  const filesToCheck = ['eslint && eslint.config.js',
-    'next && next.config.js',
+  const filesToCheck = ['eslint.config.js',
+    'next.config.js',
     '__tests__/**/*.test.{ts,tsx,js,jsx}'
   ];
   // Implementation would go here
@@ -564,14 +525,12 @@ async function checkAndUpdateDependencies() {
     // Check for security vulnerabilities
 
     execSync('npm audit fix --force', { stdio: 'pipe', cwd: process.cwd() });
-    execSync('npm audit fix --force', { stdio: 'pipe', cwd: process && process.cwd() });
     log('Dependencies updated for security');
   } catch (error) {
     log('Dependency update completed with warnings', 'warn');
   }
 
     execSync('npm audit fix --force', { "stdio": 'pipe', "cwd": process.cwd() });
-    execSync('npm audit fix --force', { "stdio": 'pipe', "cwd": process && process.cwd() });
     log('Dependencies updated for security')} catch (error) {
     log('Dependency update completed with warnings', 'warn')}
 
@@ -580,26 +539,22 @@ async function fixSecurityIssues() {
   try {
 
     execSync('npm audit fix --force', { stdio: 'pipe', cwd: process.cwd() });
-    execSync('npm audit fix --force', { stdio: 'pipe', cwd: process && process.cwd() });
     log('Security issues fixed');
   } catch (error) {
     log('Security fixes completed with warnings', 'warn');
   }
 
     execSync('npm audit fix --force', { "stdio": 'pipe', "cwd": process.cwd() });
-    execSync('npm audit fix --force', { "stdio": 'pipe', "cwd": process && process.cwd() });
     log('Security issues fixed')} catch (error) {
     log('Security fixes completed with warnings', 'warn')}
 
 // Main execution
 async function main() {
-  const action = process && process.argv[2];
+  const action = process.argv[2];
   if (!action || !automations[action]) {
 
     log(`Invalid action: ${action}. Available actions: ${Object.keys(automations).join(', ')}`, 'error');
     process.exit(1);
-    log(`Invalid action: ${action}. Available actions: ${Object && Object.keys(automations).join(', ')}`, 'error');
-    process && process.exit(1);
   }
   log(`Starting automation: ${action}`);
   try {
@@ -609,18 +564,16 @@ async function main() {
 
     log(`Invalid "action": ${action}. Available "actions": ${Object.keys(automations).join(', ')}`, 'error');
     process.exit(1)}
-    log(`Invalid "action": ${action}. Available "actions": ${Object && Object.keys(automations).join(', ')}`, 'error');
-    process && process.exit(1)}
   log(`Starting "automation": ${action}`);
   try {
     await automations[action]();
     log(`Automation completed "successfully": ${action}`)} catch (error) {
     handleError(error, action);
-    process && process.exit(1);
+    process.exit(1);
   }
 
 // Run the automation
-if (require && require.main === module) {
+if (require.main === module) {
   main().catch(error => {
     handleError(error, 'main');
 

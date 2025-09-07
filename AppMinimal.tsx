@@ -7,14 +7,14 @@ interface AppMinimalProps {
 }
 
 const AppMinimal: React.FC<AppMinimalProps> = ({ 
-  className = ', 
+  className = '', 
   children 
 }) => {
   return (
     <main 
       className={`app-minimal ${className}`}
-      role="main
-      data-testid=app-minimal"
+      role="main"
+      data-testid="app-minimal"
     >
       {children || (
         <div className="minimal-content">
@@ -28,8 +28,11 @@ const AppMinimal: React.FC<AppMinimalProps> = ({
 
 export default AppMinimal;
 }
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export default function AppMinimal(): React.JSX.Element {
   return (
     <main>
@@ -37,9 +40,12 @@ export default function AppMinimal(): React.JSX.Element {
       <p>Building the future with innovative technology solutions</p>
 <<<<<<< HEAD
     </main>)
+<<<<<<< HEAD
+=======
 
 =======
     </main>
   );
 }
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

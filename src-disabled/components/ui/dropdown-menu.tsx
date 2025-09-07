@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src-disabled/components/ui/dropdown-menu.tsx
 =======
 import * as React from "react"
@@ -22,6 +24,7 @@ import { cn } from "@/lib/utils"
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/ui/dropdown-menu.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const DropdownMenu = DropdownMenuPrimitive.Root
 
 const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger
@@ -59,6 +62,8 @@ const DropdownMenuSubTrigger = React.forward_ref<;
   <DropdownMenuPrimitive.SubTrigger;
     ref={ref}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 className={cn(
       &quot;flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent data-[state=open]:bg-accent&quot;
       inset && &quot;pl-8&quot;
@@ -69,6 +74,7 @@ className={cn(
       &quot;flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent data-[state=open]:bg-accent&quot;
       inset && &quot;pl-8&quot;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <<<<<<< HEAD:src-disabled/components/ui/dropdown-menu.tsx
 =======
@@ -90,10 +96,13 @@ className={cn(
   >;
     {children}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <ChevronRight className=&quot;ml-auto h-4 w-4&quot; />
 ursor/fix-website-loading-errors-and-merge-6662
 <ChevronRight className=&quot;ml-auto h-4 w-4&quot; />
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <<<<<<< HEAD:src-disabled/components/ui/dropdown-menu.tsx
 =======
@@ -116,10 +125,13 @@ const DropdownMenuSubContent = React.forwardRef<
     ref={ref}
     className={cn(
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       &quot;z-50 min-w-[8rem] overflow-hidden rounded-md border border-border bg-popover p-1 text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
 ursor/fix-website-loading-errors-and-merge-6662
       &quot;z-50 min-w-[8rem] overflow-hidden rounded-md border border-border bg-popover p-1 text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <<<<<<< HEAD:src-disabled/components/ui/dropdown-menu.tsx
       "z-50 min-w-[8rem] overflow-hidden rounded-md border border-border bg-popover p-1 text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
@@ -140,10 +152,13 @@ DropdownMenuSubContent.displayName =;
   DropdownMenuPrimitive.SubContent.displayName;
 const DropdownMenuContent = React.forwardRef<;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   React.ElementRef<typeof DropdownMenuPrimitive.Content>;
 ursor/fix-website-loading-errors-and-merge-6662
   React.ElementRef<typeof DropdownMenuPrimitive.Content>;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <<<<<<< HEAD:src-disabled/components/ui/dropdown-menu.tsx
 =======
@@ -158,12 +173,15 @@ ursor/fix-website-loading-errors-and-merge-6662
       ref={ref}
       sideOffset={sideOffset}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 className={cn(
         &quot;z-50 min-w-[8rem] overflow-hidden rounded-md border border-border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
 ursor/fix-website-loading-errors-and-merge-6662
 className={cn(
         &quot;z-50 min-w-[8rem] overflow-hidden rounded-md border border-border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <<<<<<< HEAD:src-disabled/components/ui/dropdown-menu.tsx
 =======
@@ -188,6 +206,9 @@ DropdownMenuContent.displayName = DropdownMenuPrimitive.Content.displayName;
 const DropdownMenuItem = React.forwardRef<;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 className={cn (
@@ -240,6 +261,8 @@ const DropdownMenuItem = React.forward_ref<;
 >(({ className, inset, ...props }, ref) => (;
   <DropdownMenuPrimitive.Item;
     ref={ref}
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD:src-disabled/components/ui/dropdown-menu.tsx
 =======
@@ -270,6 +293,7 @@ className={cn(
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       inset && "pl-8",
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/ui/dropdown-menu.tsx
     className={cn(
@@ -291,9 +315,12 @@ className={cn(
 DropdownMenuItem.displayName = DropdownMenuPrimitive.Item.displayName;
 const DropdownMenuCheckboxItem = React.forwardRef<;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   React.ElementRef<typeof DropdownMenuPrimitive.CheckboxItem>;
   React.ElementRef<typeof DropdownMenuPrimitive.CheckboxItem>;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <<<<<<< HEAD:src-disabled/components/ui/dropdown-menu.tsx
 =======
@@ -386,6 +413,8 @@ const DropdownMenuRadioItem = React.forwardRef<;
   <DropdownMenuPrimitive.RadioItem;
     ref={ref}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   React.ElementRef<typeof DropdownMenuPrimitive.RadioItem>;
 >(({ className, children, ...props }, ref) => (;
   <DropdownMenuPrimitive.RadioItem;
@@ -426,6 +455,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     ref={ref}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
@@ -474,6 +504,8 @@ className={cn (
 ));
 DropdownMenuRadioItem.displayName = DropdownMenuPrimitive.RadioItem.displayName;
 const DropdownMenuLabel = React.forwardRef<;
+<<<<<<< HEAD
+=======
   React.ElementRef<typeof DropdownMenuPrimitive.Label>;
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Label> & {inset?: boolean;
   React.ElementRef<typeof DropdownMenuPrimitive.Label>,;
@@ -494,6 +526,7 @@ const DropdownMenuLabel = React.forward_ref<;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/ui/dropdown-menu.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   React.ElementRef<typeof DropdownMenuPrimitive.Label>,;
 
@@ -505,6 +538,8 @@ const DropdownMenuLabel = React.forward_ref<;
   <DropdownMenuPrimitive.Label;
     ref={ref}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 className={cn(
       &quot;px-2 py-1.5 text-sm font-semibold&quot;
       inset && &quot;pl-8&quot;
@@ -512,6 +547,7 @@ className={cn(
       "px-2 py-1.5 text-sm font-semibold",
       inset && "pl-8",
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     className={cn(
       "px-2 py-1.5 text-sm font-semibold",
@@ -532,10 +568,13 @@ className={cn(
 DropdownMenuLabel.displayName = DropdownMenuPrimitive.Label.displayName;
 const DropdownMenuSeparator = React.forwardRef<;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   React.ElementRef<typeof DropdownMenuPrimitive.Separator>;
 ursor/fix-website-loading-errors-and-merge-6662
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator>;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <<<<<<< HEAD:src-disabled/components/ui/dropdown-menu.tsx
 =======
@@ -549,7 +588,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >(({ className, ...props }, ref) => (;
   <DropdownMenuPrimitive.Separator;
     ref={ref}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src-disabled/components/ui/dropdown-menu.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     className={cn("-mx-1 my-1 h-px bg-muted", className)}
 
@@ -565,11 +607,17 @@ DropdownMenuSeparator.displayName = DropdownMenuPrimitive.Separator.displayName
 }: React.HTMLAttributes<HTMLSpanElement>) => {
   return (
     <span
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       className={cn("ml-auto text-xs tracking-widest opacity-60", className)}
       {...props}
     />;
   );
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD:src-disabled/components/ui/dropdown-menu.tsx
 =======
@@ -622,6 +670,7 @@ export {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 DropdownMenuShortcut.display_name = &quot;DropdownMenuShortcut & quot;
 ;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 DropdownMenuShortcut.displayName = "DropdownMenuShortcut"
 
@@ -642,6 +691,9 @@ export {
   DropdownMenuShortcut,
   DropdownMenuGroup,
   DropdownMenuPortal,
+<<<<<<< HEAD
+  DropdownMenuSub,
+=======
 <<<<<<< HEAD:src-disabled/components/ui/dropdown-menu.tsx
   DropdownMenuSub,
 =======
@@ -652,3 +704,4 @@ export {
   DropdownMenuSubContent,
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/ui/dropdown-menu.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

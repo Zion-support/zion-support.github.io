@@ -1,4 +1,4 @@
-const PerformanceOptimizer = dynamic(() => import("./PerformanceOptimizer"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default PerformanceOptimizer' ,'
+const PerformanceOptimizer = dynamic(() => import('./PerformanceOptimizer'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default PerformanceOptimizer' ,'
 </p>'
 </p>'
 </p>'
@@ -23,8 +23,8 @@ const PerformanceOptimizer = dynamic(() => import("./PerformanceOptimizer"),{'; 
 </p>'
 
 ursor/integrate-build-improve-and-re-verify-8f7d
-const PerformanceOptimizer = dynamic(() => import(\"./PerformanceOptimizer\"),{\'; \"loading\": () => <p />Loading...</p,>}) \"export\": \'default PerformanceOptimizer\' ,const PerformanceOptimizer = dynamic(() => import(\"./PerformanceOptimizer\"),{\"; loading: () => <p />Loading.</p,>}) export: \"default PerformanceOptimizer\" ,\"\"\";
-const PerformanceOptimizer = dynamic(() => import(\"./PerformanceOptimizer\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default PerformanceOptimizer' ,';
+const PerformanceOptimizer = dynamic(() => import(\'./PerformanceOptimizer\'),{\'; \'loading\': () => <p />Loading...</p,>}) \'export\': \'default PerformanceOptimizer\' ,const PerformanceOptimizer = dynamic(() => import(\'./PerformanceOptimizer\'),{\'; loading: () => <p />Loading.</p,>}) export: \'default PerformanceOptimizer\' ,\'\'\';
+const PerformanceOptimizer = dynamic(() => import(\'./PerformanceOptimizer\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default PerformanceOptimizer' ,';
 </p>';
 </p>';
 </p>';
@@ -60,7 +60,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 </p>';
 </p>';
 </p>'</p>';
-const PerformanceOptimizer = dynamic(() => import(\"./PerformanceOptimizer\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default PerformanceOptimizer' ,'
+const PerformanceOptimizer = dynamic(() => import(\'./PerformanceOptimizer\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default PerformanceOptimizer' ,'
 </p>'
 </p>'
 </p>'

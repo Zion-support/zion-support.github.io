@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 import dynamic from 'next/dynamic',;
 const BookBuilder = dynamic(() => import('../components/book/BookBuilder'), { ssr: false });
 export default function BookBuilderPage() {;
@@ -20,4 +23,5 @@ export default function Page() {
       </section>
     </main>
   );
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }

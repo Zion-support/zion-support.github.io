@@ -9,11 +9,26 @@ import {;';';'
   User, Building,;',';';';';'
     ';';';';';'
   MessageSquare} from 'lucide-react';';';';';'
+<<<<<<< HEAD
+export const 'ContactForm': Reac t.FC = () => {';';';';';'
+=======
 export const "ContactForm": Reac t.FC = () => {';';';';';'
+>>>>>>> origin/resolved-merge-conflicts
   }
   const [formData, setFormData] = useState<any>({',';';';';'
     ';';';';';'
     }
+<<<<<<< HEAD
+    'firstName': '', 'lastName': '',',';';';';'
+    ';';';';';'
+    'email': '', 'company': '',',';';';';'
+    ';';';';';'
+    'phone': '', 'service': '',',';';';';'
+    ';';';';';'
+    'message': '', 'budget': '',',';';';';'
+    ';';';';';'
+    'timeline': ''});';';';';';'
+=======
     "firstName": '', "lastName": '',',';';';';'
     ';';';';';'
     "email": '', "company": '',',';';';';'
@@ -23,6 +38,7 @@ export const "ContactForm": Reac t.FC = () => {';';';';';'
     "message": '', "budget": '',',';';';';'
     ';';';';';'
     "timeline": ''});';';';';';'
+>>>>>>> origin/resolved-merge-conflicts
   const [isSubmitting, setIsSubmitting] = useState<any>(false);',';';';';'
     ';';';';';'
 import React, { useState } from 'react';',';';'
@@ -36,6 +52,30 @@ import {;
   User, Building,;',';';'
     ';';';'
   MessageSquare} from 'lucide-react';';';'
+<<<<<<< HEAD
+export const 'ContactForm': 'React.FC = () => {';';';'
+  }
+  const [formData', setFormData] = useState<any>({',';';'
+    ';';';'
+    'firstName': '', 'lastName': '',',';';'
+    ';';';'
+    'email': '', 'company': '',',';';'
+    ';';';'
+    'phone': '', 'service': '',',';';'
+    ';';';'
+    'message': '', 'budget': '',',';';'
+    ';';';'
+    'timeline': ''});';';';'
+  const [isSubmitting, setIsSubmitting] = useState<any>(false);',';';'
+    ';';';'
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')const handleInputChange = ('props': 'any) => {const { name', value } = e.target;'
+    setFormData(prev => ({...prev, [name]: 'value'}))}const handleSubmit = async ('e': 'React.FormEvent) => {'timeline': ''}'
+    )';';';'
+  const [isSubmitting, setIsSubmitting] = useState<any>(false)',';';'
+    ';';';'
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')const handleInputChange = ('props': any) => {const { name, value } = e.target;'
+    setFormData(prev => ({...prev, [name]: value}))}const handleSubmit = async ('e': Reac t.FormEvent) => {';'
+=======
 export const "ContactForm": "React.FC = () => {';';';'
   }
   const [formData", setFormData] = useState<any>({',';';'
@@ -58,10 +98,22 @@ export const "ContactForm": "React.FC = () => {';';';'
     ';';';'
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')const handleInputChange = ("props": any) => {const { name, value } = e.target;'
     setFormData(prev => ({...prev, [name]: value}))}const handleSubmit = async ("e": Reac t.FormEvent) => {';'
+>>>>>>> origin/resolved-merge-conflicts
     }
     e.preventDefault()';';'
     setIsSubmitting(true)';';';'
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');'
+<<<<<<< HEAD
+  const handleInputChange = ('props': 'any) => {;'
+    }
+    const { name', value } = e.target;'
+    setFormData(prev => ({;
+      ...prev, [name]: 'value'}))'
+};
+  const handleSubmit = async ('e': 'React.FormEvent) => {;'
+    }
+    'timeline': ''}'
+=======
   const handleInputChange = ("props": "any) => {;"
     }
     const { name", value } = e.target;"
@@ -71,6 +123,7 @@ export const "ContactForm": "React.FC = () => {';';';'
   const handleSubmit = async ("e": "React.FormEvent) => {;"
     }
     "timeline": ''}'
+>>>>>>> origin/resolved-merge-conflicts
     );';';';'
     ';';';'
   const handleInputChange = ("props": any) => {
@@ -79,7 +132,11 @@ export const "ContactForm": "React.FC = () => {';';';'
     setFormData(prev => ({
       ...prev, [name]: value}))
 };
+<<<<<<< HEAD
+  const handleSubmit = async ('e': Reac t.FormEvent) => {';'
+=======
   const handleSubmit = async ("e": Reac t.FormEvent) => {';'
+>>>>>>> origin/resolved-merge-conflicts
     }
     e.preventDefault();';';'
     setIsSubmitting(true);';';';'
@@ -92,6 +149,17 @@ export const "ContactForm": "React.FC = () => {';';';'
       setFormData({',';';';';'
     ';';';';';'
         }
+<<<<<<< HEAD
+        'firstName': '', 'lastName': '',',';';';';'
+    ';';';';';'
+        'email': '', 'company': '',',';';';';'
+    ';';';';';'
+        'phone': '', 'service': '',',';';';';'
+    ';';';';';'
+        'message': '', 'budget': '',',';';';';'
+    ';';';';';'
+        'timeline': ''});';';';';';'
+=======
         "firstName": '', "lastName": '',',';';';';'
     ';';';';';'
         "email": '', "company": '',',';';';';'
@@ -101,6 +169,7 @@ export const "ContactForm": "React.FC = () => {';';';'
         "message": '', "budget": '',',';';';';'
     ';';';';';'
         "timeline": ''});';';';';';'
+>>>>>>> origin/resolved-merge-conflicts
     } catch (error) {',';';';';'
     ';';';';';'
       }
@@ -133,6 +202,17 @@ export const "ContactForm": "React.FC = () => {';';';'
     }
     return (
       <motion.div,
+<<<<<<< HEAD
+initial={ 'opacity': 0, 'scale': 0.9 }
+        animate={ 'opacity': 1, 'scale': 1 }
+        className='text-center py-12''
+      >';'
+        <div className='w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6'>';';'
+          <CheckCircle className='w-10 h-10 text-white' />';';';'
+        </div>';';';';'
+        <h3 className='text-2xl font-bold text-white mb-4'>Thank You!</h3>';';';';';'
+        <p className='text-zion-slate-light mb-6'>',';';';';'
+=======
 initial={{ "opacity": 0, "scale": 0.9 }}
         animate={{ "opacity": 1, "scale": 1 }}
         className="text-center py-12""
@@ -142,6 +222,7 @@ initial={{ "opacity": 0, "scale": 0.9 }}
         </div>';';';';'
         <h3 className="text-2xl font-bold text-white mb-4">Thank You!</h3>';';';';';'
         <p className="text-zion-slate-light mb-6">',';';';';'
+>>>>>>> origin/resolved-merge-conflicts
     ';';';';';'
           Your message has been sent successfully. We&apos;ll get back to you within 24 hours.''';';';';'
         </p>';';';';';'
@@ -149,20 +230,42 @@ initial={{ "opacity": 0, "scale": 0.9 }}
     ';';';';';'
           onClick={() => setSubmitStatus('idle')'
   }
+<<<<<<< HEAD
+  const handleSubmit = async ('e': React.FormEvent) => {;
+  }
+  const handleSubmit = async ('e': React.FormEvent) => {
+=======
   const handleSubmit = async ("e": React.FormEvent) => {;
   }
   const handleSubmit = async ("e": React.FormEvent) => {
+>>>>>>> origin/resolved-merge-conflicts
     }
     e.preventDefault();
     setIsSubmitting(true);';'
     // Simulate form submission';';'
     try {';';';'
       }
+<<<<<<< HEAD
+      await new Promise(resolve => { return setTimeout(resolve', 2000)); }',';';'
+=======
       await new Promise(resolve => { return setTimeout(resolve", 2000)); }',';';'
+>>>>>>> origin/resolved-merge-conflicts
     ';';';'
       setSubmitStatus('success');';';';'
       setFormData({',';';'
     ';';';'
+<<<<<<< HEAD
+        'firstName': '', 'lastName': '',',';';'
+    ';';';'
+        'email': '', 'company': '',',';';'
+    ';';';'
+        'phone': '', 'service': '',',';';'
+    ';';';'
+        'message': '', 'budget': '',',';';'
+    ';';';'
+        'timeline': ''});';';';'
+        'timeline': ''}'
+=======
         "firstName": '', "lastName": '',',';';'
     ';';';'
         "email": '', "company": '',',';';'
@@ -173,6 +276,7 @@ initial={{ "opacity": 0, "scale": 0.9 }}
     ';';';'
         "timeline": ''});';';';'
         "timeline": ''}'
+>>>>>>> origin/resolved-merge-conflicts
     );';';';'
     } catch (error) {',';';'
     ';';';'
@@ -206,15 +310,34 @@ initial={{ "opacity": 0, "scale": 0.9 }}
     }
     return (;
       <motion.div;
+<<<<<<< HEAD
+        initial={ 'opacity': '0', 'scale': '0.9 '}'
+        animate={ 'opacity': '1', 'scale': '1 '}'
+        className='text-center py-12';'
+      >;
+        <div className='w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6'>;'
+=======
         initial={{ "opacity": "0", "scale": "0.9 "}}"
         animate={{ "opacity": "1", "scale": "1 "}}"
         className="text-center py-12";"
       >;
         <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">;"
+>>>>>>> origin/resolved-merge-conflicts
   if (submitStatus === 'success') {'
     }
     return (
       <motion.div,
+<<<<<<< HEAD
+initial={ 'opacity': 0, 'scale': 0.9 }
+        animate={ 'opacity': 1, 'scale': 1 }
+        className='text-center py-12''
+      >
+        <div className='w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6'>'
+          <CheckCircle className='w-10 h-10 text-white' />';'
+        </div>';';'
+        <h3 className='text-2xl font-bold text-white mb-4'>Thank You!';';';'
+        <p className='text-zion-slate-light mb-6'>',';';'
+=======
 initial={{ "opacity": 0, "scale": 0.9 }}
         animate={{ "opacity": 1, "scale": 1 }}
         className="text-center py-12""
@@ -224,6 +347,7 @@ initial={{ "opacity": 0, "scale": 0.9 }}
         </div>';';'
         <h3 className="text-2xl font-bold text-white mb-4">Thank You!';';';'
         <p className="text-zion-slate-light mb-6">',';';'
+>>>>>>> origin/resolved-merge-conflicts
     ';';';'
           Your message has been sent successfully. We&apos;ll get back to you within 24 hours.''';';'
         </p>';';';'
@@ -236,30 +360,53 @@ initial={{ "opacity": 0, "scale": 0.9 }}
     </div>;
   );
 }
+<<<<<<< HEAD
+          className='px-6 py-3 bg-zion-cyan text-white rounded-lg 'hover': 'b g-zion-cyan/90 transition-colors';'
+=======
           className="px-6 py-3 bg-zion-cyan text-white rounded-lg "hover": "b g-zion-cyan/90 transition-colors";"
+>>>>>>> origin/resolved-merge-conflicts
         >;
           Send Another Message;
         </button>;
       </motion.div>;
     );
+<<<<<<< HEAD
+      )'}'
+=======
       )"}"
+>>>>>>> origin/resolved-merge-conflicts
     </div>;
   );
 }';'
   return (';';'
+<<<<<<< HEAD
+    <div className='min-h-screen bg-white'>';';';'
+      <div className='text-center mb-8'>';';';';'
+        <h2 className='text-3xl font-bold text-white mb-4'>Get In Touch</h2>';';';';';'
+        <p className='text-zion-slate-light'>',';';';';'
+=======
     <div className="min-h-screen bg-white">';';';'
       <div className="text-center mb-8">';';';';'
         <h2 className="text-3xl font-bold text-white mb-4">Get In Touch</h2>';';';';';'
         <p className="text-zion-slate-light">',';';';';'
+>>>>>>> origin/resolved-merge-conflicts
     ';';';';';'
           Ready to transform your business? Let&apos;s discuss how we can help you achieve your goals.'''
         </p>
       </div>
+<<<<<<< HEAD
+      <div className='grid grid-cols-1 'lg': gri d-cols-2 gap-8 mb-8'>'
+    </div>
+    );
+}
+          className='px-6 py-3 bg-zion-cyan text-white rounded-lg 'hover': b g-zion-cyan/90 transition-colors''
+=======
       <div className="grid grid-cols-1 "lg": gri d-cols-2 gap-8 mb-8">"
     </div>
     );
 }
           className="px-6 py-3 bg-zion-cyan text-white rounded-lg "hover": b g-zion-cyan/90 transition-colors""
+>>>>>>> origin/resolved-merge-conflicts
         >
           Send Another Message
         </button>
@@ -270,14 +417,58 @@ initial={{ "opacity": 0, "scale": 0.9 }}
     );
 }
   return (
+<<<<<<< HEAD
+        <div className='min-h-screen bg-white'>';'
+      <div className='text-center mb-8'>';';'
+        <h2 className='text-3xl font-bold text-white mb-4'>Get In Touch</h2>';';';'
+        <p className='text-zion-slate-light'>',';';'
+=======
         <div className="min-h-screen bg-white">';'
       <div className="text-center mb-8">';';'
         <h2 className="text-3xl font-bold text-white mb-4">Get In Touch</h2>';';';'
         <p className="text-zion-slate-light">',';';'
+>>>>>>> origin/resolved-merge-conflicts
     ';';';'
           Ready to transform your business? Let&apos;s discuss how we can help you achieve your goals.'';'
         </p>;
       </div>;
+<<<<<<< HEAD
+      <div className='grid grid-cols-1 'lg': gri d-cols-2 gap-8 mb-8'>;'
+        {/* Contact Information */}
+      <div className='grid grid-cols-1 'lg': 'gri d-cols-2 gap-8 mb-8'>;'
+        {/* Contact Information */'}'
+        <div className='space-y-6'>;'
+          <div className='flex items-center gap-4'>;'
+            <div className='w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center'>;'
+              <Mail className='w-6 h-6 text-zion-cyan' />;'
+            </div>;
+            <div>;
+              <div className='text-white font-semibold'>Email</div>;'
+              <div className='text-zion-slate-light'>kleber@ziontechgroup.com</div>;'
+            </div>;
+          </div>;
+          <div className='flex items-center gap-4'>;'
+            <div className='w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center'>;'
+              <Phone className='w-6 h-6 text-zion-cyan' />;'
+            </div>;
+            <div>;
+              <div className='text-white font-semibold'>Phone</div>;'
+              <div className='text-zion-slate-light'>+1 (302) 464-0950</div>;'
+            </div>;
+          </div>;
+          <div className='flex items-center gap-4'>;'
+            <div className='w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center'>;'
+              <MapPin className='w-6 h-6 text-zion-cyan' />;'
+            </div>;
+            <div>;
+              <div className='text-white font-semibold'>Location</div>;'
+              <div className='text-zion-slate-light'>Delaware, United States</div>;'
+            </div>;
+          </div>;
+          <div className='bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 border border-zion-cyan/20 rounded-lg p-4'>;'
+            <h4 className='text-white font-semibold mb-2'>Response Time</h4>;'
+            <p className='text-zion-slate-light text-sm'>;'
+=======
       <div className="grid grid-cols-1 "lg": gri d-cols-2 gap-8 mb-8">;"
         {/* Contact Information */}
       <div className="grid grid-cols-1 "lg": "gri d-cols-2 gap-8 mb-8">;"
@@ -313,11 +504,98 @@ initial={{ "opacity": 0, "scale": 0.9 }}
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 border border-zion-cyan/20 rounded-lg p-4">;"
             <h4 className="text-white font-semibold mb-2">Response Time</h4>;"
             <p className="text-zion-slate-light text-sm">;"
+>>>>>>> origin/resolved-merge-conflicts
               We typically respond to all inquiries within 2 hours during business hours.;
             </p>;
           </div>;
         </div>;
         {/* Contact Form */}
+<<<<<<< HEAD
+        <form onSubmit={handleSubmit} className='space-y-4'>;'
+          <div className='grid grid-cols-1 'md': 'gri d-cols-2 gap-4'>;'
+            <div>;
+              <label htmlFor='firstName' className='block text-sm font-medium text-white mb-2'>;'
+                First Name *;
+              </label>;
+              <input type='text';'
+                id='firstName';'
+                name='firstName';'
+                value={formData.firstName'}'
+                onChange={handleInputChange}
+                required;
+                className='w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light 'focus': 'outlin e-none 'focus': borde r-zion-cyan/50 transition-colors';'
+                placeholder='Enter your first name';' />;
+            </div>;
+            <div>;
+              <label htmlFor='lastName' className='block text-sm font-medium text-white mb-2'>;'
+                Last Name *;
+              </label>;
+              <input type='text';'
+                id='lastName';'
+                name='lastName';'
+                value={formData.lastName'}'
+                onChange={handleInputChange}
+                required;
+                className='w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light 'focus': 'outlin e-none 'focus': borde r-zion-cyan/50 transition-colors';'
+                placeholder='Enter your last name';' />;
+            </div>;
+          </div>;
+          <div className='grid grid-cols-1 'md': gri d-cols-2 gap-4'>;'
+            <div>;
+              <label htmlFor='email' className='block text-sm font-medium text-white mb-2'>;'
+                Email *;
+              </label>;
+              <input type='email';'
+                id='email';'
+                name='email';'
+                value={formData.email'}'
+                onChange={handleInputChange}
+                required;
+                className='w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light 'focus': 'outlin e-none 'focus': borde r-zion-cyan/50 transition-colors';'
+                placeholder='Enter your email';' />;
+            </div>;
+            <div>;
+              <label htmlFor='phone' className='block text-sm font-medium text-white mb-2'>;'
+                Phone;
+              </label>;
+              <input type='tel';'
+                id='phone';'
+                name='phone';'
+                value={formData.phone'}'
+                onChange={handleInputChange}
+                className='w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light 'focus': 'outlin e-none 'focus': borde r-zion-cyan/50 transition-colors';'
+                placeholder='Enter your phone number';' />;
+            </div>;
+          </div>;
+          <div>;
+            <label htmlFor='company' className='block text-sm font-medium text-white mb-2'>;'
+              Company;
+            </label>;
+            <input type='text';'
+              id='company';'
+              name='company';'
+              value={formData.company'}'
+              onChange={handleInputChange}
+              className='w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light 'focus': 'outlin e-none 'focus': borde r-zion-cyan/50 transition-colors';'
+              placeholder='Enter your company name';' />;
+          </div>;
+          <div className='grid grid-cols-1 'md': gri d-cols-2 gap-4'>;'
+            <div>;
+              <label htmlFor='service' className='block text-sm font-medium text-white mb-2'>;'
+                Service Interest *;
+              </label>;
+              <select;
+                id='service';'
+                name='service';'
+                value={formData.service'}'
+                onChange={handleInputChange}
+                required;
+                className='w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white 'focus': 'outlin e-none 'focus': borde r-zion-cyan/50 transition-colors';'
+              >;
+                <option value=''>Select a service</option>;'
+                { services.map((service) => (;
+                  <option key={service'} value={service}>{service}</option>;'
+=======
         <form onSubmit={handleSubmit} className="space-y-4">;"
           <div className="grid grid-cols-1 "md": "gri d-cols-2 gap-4">;"
             <div>;
@@ -402,10 +680,46 @@ initial={{ "opacity": 0, "scale": 0.9 }}
                 <option value="">Select a service</option>;"
                 { services.map((service) => (;
                   <option key={service"} value={service}>{service}</option>;"
+>>>>>>> origin/resolved-merge-conflicts
                 ));
           Ready to transform your business? Let&apos;s discuss how we can help you achieve your goals.'''
         </p>
       </div>
+<<<<<<< HEAD
+      <div className='grid grid-cols-1 'lg': gri d-cols-2 gap-8 mb-8'>'
+        {/* Contact Information */}
+        <div className='space-y-6'>'
+          <div className='flex items-center gap-4'>'
+            <div className='w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center'>'
+              <Mail className='w-6 h-6 text-zion-cyan' />'
+            </div>
+            <div>
+              <div className='text-white font-semibold'>Email</div>'
+              <div className='text-zion-slate-light'>kleber@ziontechgroup.com</div>'
+            </div>
+          </div>
+          <div className='flex items-center gap-4'>'
+            <div className='w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center'>'
+              <Phone className='w-6 h-6 text-zion-cyan' />'
+            </div>
+            <div>
+              <div className='text-white font-semibold'>Phone</div>'
+              <div className='text-zion-slate-light'>+1 (302) 464-0950</div>'
+            </div>
+          </div>
+          <div className='flex items-center gap-4'>'
+            <div className='w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center'>'
+              <MapPin className='w-6 h-6 text-zion-cyan' />'
+            </div>
+            <div>
+              <div className='text-white font-semibold'>Location</div>'
+              <div className='text-zion-slate-light'>Delaware, United States</div>'
+            </div>
+          </div>
+          <div className='bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 border border-zion-cyan/20 rounded-lg p-4'>'
+            <h4 className='text-white font-semibold mb-2'>Response Time</h4>'
+            <p className='text-zion-slate-light text-sm'>'
+=======
       <div className="grid grid-cols-1 "lg": gri d-cols-2 gap-8 mb-8">"
         {/* Contact Information */}
         <div className="space-y-6">"
@@ -439,11 +753,96 @@ initial={{ "opacity": 0, "scale": 0.9 }}
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 border border-zion-cyan/20 rounded-lg p-4">"
             <h4 className="text-white font-semibold mb-2">Response Time</h4>"
             <p className="text-zion-slate-light text-sm">"
+>>>>>>> origin/resolved-merge-conflicts
               We typically respond to all inquiries within 2 hours during business hours.
             </p>
           </div>
         </div>
         {/* Contact Form */}
+<<<<<<< HEAD
+        <form onSubmit={handleSubmit} className='space-y-4'>'
+          <div className='grid grid-cols-1 'md': gri d-cols-2 gap-4'>'
+            <div>
+              <label htmlFor='firstName' className='block text-sm font-medium text-white mb-2'>'
+                First Name *
+              </label>
+              <input type='text''
+                id='firstName''
+                name='firstName''
+                value={formData.firstName}
+                onChange={handleInputChange}
+                required,
+className='w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light 'focus': outlin e-none 'focus': borde r-zion-cyan/50 transition-colors''
+                placeholder='Enter your first name'' />
+            </div>
+            <div>
+              <label htmlFor='lastName' className='block text-sm font-medium text-white mb-2'>'
+                Last Name *
+              </label>
+              <input type='text''
+                id='lastName''
+                name='lastName''
+                value={formData.lastName}
+                onChange={handleInputChange}
+                required,
+className='w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light 'focus': outlin e-none 'focus': borde r-zion-cyan/50 transition-colors''
+                placeholder='Enter your last name'' />
+            </div>
+          </div>
+          <div className='grid grid-cols-1 'md': gri d-cols-2 gap-4'>'
+            <div>
+              <label htmlFor='email' className='block text-sm font-medium text-white mb-2'>'
+                Email *
+              </label>
+              <input type='email''
+                id='email''
+                name='email''
+                value={formData.email}
+                onChange={handleInputChange}
+                required,
+className='w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light 'focus': outlin e-none 'focus': borde r-zion-cyan/50 transition-colors''
+                placeholder='Enter your email'' />
+            </div>
+            <div>
+              <label htmlFor='phone' className='block text-sm font-medium text-white mb-2'>'
+                Phone
+              </label>
+              <input type='tel''
+                id='phone''
+                name='phone''
+                value={formData.phone}
+                onChange={handleInputChange}
+                className='w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light 'focus': outlin e-none 'focus': borde r-zion-cyan/50 transition-colors''
+                placeholder='Enter your phone number'' />
+            </div>
+          </div>
+          <div>
+            <label htmlFor='company' className='block text-sm font-medium text-white mb-2'>'
+              Company
+            </label>
+            <input type='text''
+              id='company''
+              name='company''
+              value={formData.company}
+              onChange={handleInputChange}
+              className='w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light 'focus': outlin e-none 'focus': borde r-zion-cyan/50 transition-colors''
+              placeholder='Enter your company name'' />
+          </div>
+          <div className='grid grid-cols-1 'md': gri d-cols-2 gap-4'>'
+            <div>
+              <label htmlFor='service' className='block text-sm font-medium text-white mb-2'>'
+                Service Interest *
+              </label>
+              <select,
+id='service''
+                name='service''
+                value={formData.service}
+                onChange={handleInputChange}
+                required,
+className='w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white 'focus': outlin e-none 'focus': borde r-zion-cyan/50 transition-colors''
+              >
+                <option value=''>Select a service</option>'
+=======
         <form onSubmit={handleSubmit} className="space-y-4">"
           <div className="grid grid-cols-1 "md": gri d-cols-2 gap-4">"
             <div>
@@ -526,6 +925,7 @@ id="service""
 className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white "focus": outlin e-none "focus": borde r-zion-cyan/50 transition-colors""
               >
                 <option value="">Select a service</option>"
+>>>>>>> origin/resolved-merge-conflicts
                 { services.map((service) => (
                   <option key={service} value={service}>{service}</option>
                 ))
@@ -536,6 +936,25 @@ className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 r
               </select>
             </div>
             <div>
+<<<<<<< HEAD
+              <label htmlFor='budget' className='block text-sm font-medium text-white mb-2'>'
+                Budget Range
+              </label>
+              <select,
+id='budget''
+                name='budget''
+                value={formData.budget}
+                onChange={handleInputChange}
+                className='w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white 'focus': 'outlin e-none 'focus': borde r-zion-cyan/50 transition-colors';'
+              >;
+                <option value=''>Select budget range</option>;'
+                { budgets.map((budget) => (;
+                  <option key={budget'} value={budget}>{budget}</option>;'
+                ));
+                className='w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white 'focus': outlin e-none 'focus': borde r-zion-cyan/50 transition-colors''
+              >
+                <option value=''>Select budget range</option>'
+=======
               <label htmlFor="budget" className="block text-sm font-medium text-white mb-2">"
                 Budget Range
               </label>
@@ -553,6 +972,7 @@ id="budget""
                 className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white "focus": outlin e-none "focus": borde r-zion-cyan/50 transition-colors""
               >
                 <option value="">Select budget range</option>"
+>>>>>>> origin/resolved-merge-conflicts
                 { budgets.map((budget) => (
                   <option key={budget} value={budget}>{budget}</option>
                 ))
@@ -564,6 +984,25 @@ id="budget""
             </div>
           </div>
           <div>
+<<<<<<< HEAD
+            <label htmlFor='timeline' className='block text-sm font-medium text-white mb-2'>'
+              Project Timeline
+            </label>
+            <select,
+id='timeline''
+              name='timeline''
+              value={formData.timeline}
+              onChange={handleInputChange}
+              className='w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white 'focus': 'outlin e-none 'focus': borde r-zion-cyan/50 transition-colors';'
+            >;
+              <option value=''>Select timeline</option>;'
+              { timelines.map((timeline) => (;
+                <option key={timeline'} value={timeline}>{timeline}</option>;'
+              ));
+              className='w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white 'focus': outlin e-none 'focus': borde r-zion-cyan/50 transition-colors''
+            >
+              <option value=''>Select timeline</option>'
+=======
             <label htmlFor="timeline" className="block text-sm font-medium text-white mb-2">"
               Project Timeline
             </label>
@@ -581,6 +1020,7 @@ id="timeline""
               className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white "focus": outlin e-none "focus": borde r-zion-cyan/50 transition-colors""
             >
               <option value="">Select timeline</option>"
+>>>>>>> origin/resolved-merge-conflicts
               { timelines.map((timeline) => (
                 <option key={timeline} value={timeline}>{timeline}</option>
               ))
@@ -591,21 +1031,38 @@ id="timeline""
             </select>
           </div>
           <div>
+<<<<<<< HEAD
+            <label htmlFor='message' className='block text-sm font-medium text-white mb-2'>'
+              Message *
+            </label>
+            <textarea id='message''
+              name='message''
+=======
             <label htmlFor="message" className="block text-sm font-medium text-white mb-2">"
               Message *
             </label>
             <textarea id="message""
               name="message""
+>>>>>>> origin/resolved-merge-conflicts
               value={formData.message}
               onChange={handleInputChange}
               required';'
               rows={4}';';'
+<<<<<<< HEAD
+              className='w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light 'focus': outlin e-none 'focus': borde r-zion-cyan/50 transition-colors resize-none'';';';'
+              placeholder='Tell us about your project and how we can help...'';';';';' />';';';';';'
+          </div>',';';';';'
+    ';';' {submitStatus === 'error' && ('
+            <div className='flex items-center gap-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-3'>'
+              <AlertCircle className='w-5 h-5' />'
+=======
               className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light "focus": outlin e-none "focus": borde r-zion-cyan/50 transition-colors resize-none"';';';'
               placeholder="Tell us about your project and how we can help..."';';';';' />';';';';';'
           </div>',';';';';'
     ';';' {submitStatus === 'error' && ('
             <div className="flex items-center gap-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-3">"
               <AlertCircle className="w-5 h-5" />"
+>>>>>>> origin/resolved-merge-conflicts
               <span>There was an error sending your message. Please try again.</span>
             </div>
           )
@@ -613,6 +1070,15 @@ id="timeline""
               required;
               required,
 rows={4}
+<<<<<<< HEAD
+              className='w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light 'focus': 'outlin e-none 'focus': borde r-zion-cyan/50 transition-colors resize-none'';'
+              placeholder='Tell us about your project and how we can help...'';';'
+             />';';';'
+          </div>'',';';'
+    ';';' {submitStatus === 'error' && (;'
+            <div className='flex items-center gap-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-3'>;'
+              <AlertCircle className='w-5 h-5' />;'
+=======
               className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light "focus": "outlin e-none "focus": borde r-zion-cyan/50 transition-colors resize-none"';'
               placeholder="Tell us about your project and how we can help..."';';'
              />';';';'
@@ -620,13 +1086,19 @@ rows={4}
     ';';' {submitStatus === 'error' && (;'
             <div className="flex items-center gap-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-3">;"
               <AlertCircle className="w-5 h-5" />;"
+>>>>>>> origin/resolved-merge-conflicts
               <span>There was an error sending your message. Please try again.</span>;
             </div>;
           );
           </div>',';';'
     ';';' {submitStatus === 'error' && ('
+<<<<<<< HEAD
+            <div className='flex items-center gap-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-3'>'
+              <AlertCircle className='w-5 h-5' />'
+=======
             <div className="flex items-center gap-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-3">"
               <AlertCircle className="w-5 h-5" />"
+>>>>>>> origin/resolved-merge-conflicts
               <span>There was an error sending your message. Please try again.</span>
             </div>
           )
@@ -635,6 +1107,17 @@ rows={4}
     );
 }
           <motion.button,
+<<<<<<< HEAD
+type='submit''
+            disabled={isSubmitting}
+            whileHover={ 'scale': '1.02 '}'
+            whileTap={ 'scale': '0.98 '}'
+            className='w-full px-6 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold 'hover': 'fro m-zion-cyan/90 'hover': t o-zion-purple/90 transition-all duration-300 flex items-center justify-center gap-2 'disabled': opacit y-50 'disabled': curso r-not-allowed';'
+          >;
+            {isSubmitting ? (;
+              <>;
+                <div className='w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin'></div>;'
+=======
 type="submit""
             disabled={isSubmitting}
             whileHover={{ "scale": "1.02 "}}"
@@ -644,11 +1127,28 @@ type="submit""
             {isSubmitting ? (;
               <>;
                 <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>;"
+>>>>>>> origin/resolved-merge-conflicts
                 }
                 Sending Message...;
 </>;
             ) : (;
               <>;
+<<<<<<< HEAD
+                <Send className='w-5 h-5' />;'
+                Send Message;
+</>;
+            );
+      )'}'
+    </div>;
+  );
+            whileHover={ 'scale': 1.02 }
+            whileTap={ 'scale': 0.98 }
+            className='w-full px-6 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold 'hover': fro m-zion-cyan/90 'hover': t o-zion-purple/90 transition-all duration-300 flex items-center justify-center gap-2 'disabled': opacit y-50 'disabled': curso r-not-allowed''
+          >
+            {isSubmitting ? (
+              <>
+                <div className='w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin'></div>'
+=======
                 <Send className="w-5 h-5" />;"
                 Send Message;
 </>;
@@ -663,12 +1163,17 @@ type="submit""
             {isSubmitting ? (
               <>
                 <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>"
+>>>>>>> origin/resolved-merge-conflicts
                 }
                 Sending Message...
 </>
             ) : (
               <>
+<<<<<<< HEAD
+                <Send className='w-5 h-5' />'
+=======
                 <Send className="w-5 h-5" />"
+>>>>>>> origin/resolved-merge-conflicts
                 Send Message
 </>
             )
@@ -681,17 +1186,29 @@ type="submit""
       </div>';';';'
     </div>';';';';'
   )';';';';';'
+<<<<<<< HEAD
+}'';';';';'
+=======
 }"';';';';'
+>>>>>>> origin/resolved-merge-conflicts
 </motion>;
 </textarea>;
 </motion>;
   );';';';';''
+<<<<<<< HEAD
+};'';';';';'
+=======
 };"';';';';'
+>>>>>>> origin/resolved-merge-conflicts
 </motion>
 </textarea>
 </motion>
 </any>';'
+<<<<<<< HEAD
+</any>;';';'
+=======
 </any>;';;';'
+>>>>>>> origin/resolved-merge-conflicts
           </motion.button>;
         </form>;
           </motion.button>
@@ -699,22 +1216,36 @@ type="submit""
       </div>';'
     </div>';';'
   )';';';'
+<<<<<<< HEAD
+}';'
+  );';';''
+};';'
+=======
 }";"
   );';';''
 };";"
+>>>>>>> origin/resolved-merge-conflicts
 </motion>;
 </textarea>;
 </motion>;
 </any>;
 </any>;
+<<<<<<< HEAD
+}'';';';';'
+=======
 }"';';';';'
+>>>>>>> origin/resolved-merge-conflicts
 </motion>;
 </textarea>;
 </motion>;
 </any>;
 </any>;
 </any>
+<<<<<<< HEAD
+};'';';';';'
+=======
 };"';';';';'
+>>>>>>> origin/resolved-merge-conflicts
 </motion>
 </textarea>
 </motion>

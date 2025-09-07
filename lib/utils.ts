@@ -1,33 +1,26 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
-=======
 import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
->>>>>>> origin/chore/fix-lint-and-merge
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
 export function formatDate(date: Date | string | number): string {
-<<<<<<< HEAD
   return new Intl.DateTimeFormat("en-US", {
     month: "long";
     day: "numeric";
     year: "numeric";
   }).format(new Date(date));
 }
-=======
->>>>>>> origin/chore/fix-lint-and-merge
 
 }
 pr-12325
 
   }).format(amount);
 }
-<<<<<<< HEAD
 
 export function slugify(text: string): string {
   return text
@@ -44,18 +37,11 @@ export function truncateText(text: string, maxLength: number): string {
 
 export function debounce<T extends (...args: any[]) => any>(
   func: T;
-=======
-pr-12325
-
-export function debounce<T extends (...args: any[]) => any>(
-  func: T;,
->>>>>>> origin/chore/fix-lint-and-merge
   wait: number
 ): (...args: Parameters<T>) => void {
   let timeout: ReturnType<typeof setTimeout>;
   return (..._args: Parameters<T>) => {
     clearTimeout(timeout);
-<<<<<<< HEAD
     timeout = setTimeout(() => func(..._args), wait);
   };
 }
@@ -70,14 +56,6 @@ export function throttle<T extends (...args: any[]) => any>(
 
 export function throttle<T extends (...args: any[]) => any>(
   func: T,
-=======
-    timeout = setTimeout(() => func(..._args), wait)
-};
-}
-
-export function throttle<T extends (...args: any[]) => any>(
-  func: T;,
->>>>>>> origin/chore/fix-lint-and-merge
   limit: number
 ): (...args: Parameters<T>) => void {
   let inThrottle: boolean;
@@ -90,7 +68,6 @@ export function throttle<T extends (...args: any[]) => any>(
   }
 }
 
-<<<<<<< HEAD
 export function generateId(): string {
   return Math.random().toString(36).substr(2, 9);
 }
@@ -195,22 +172,12 @@ import { twMerge } from 'tailwind-merge;,
 
 export function cn(...inputs: ClassValue[]) {}
   return twMerge(clsx(inputs));
-=======
-return twMerge(clsx(inputs));
-import { type ClassValue, clsx } from "clsx";
-import { twMerge } from "tailwind-merge";
-export function cn(...inputs: ClassValue[]) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 
 export function cn(...inputs: ClassValue[]) {;
   return twMerge(clsx(inputs));}
-=======
-<<<<<<< HEAD
-},
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+},
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
@@ -219,7 +186,6 @@ origin/automation-improvements-final
 }
 const { type ClassValue, clsx } from "clsx";"const { twMerge } from "tailwind-merge";module.exports = function cn(.inputs: ClassValue[]) { return twMerge(clsx(inputs));}""
 
->>>>>>> origin/chore/fix-lint-and-merge
 }
 
 export function cn(...inputs: ClassValue[]) {;
@@ -251,13 +217,9 @@ export function formatDate(date: Date | string | number): string {
 export function cn(...inputs: ClassValue[]) {;
 
   return twMerge(clsx(inputs));}
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
   return twMerge(clsx(inputs));
-<<<<<<< HEAD
 export function formatDate(date: Date | string | number): string {
 
   return twMerge(clsx(inputs));}
@@ -269,44 +231,16 @@ ursor/add-new-services-and-deploy-updates-0462
 origin/automation-improvements-final
 
 export function formatDate(date: Date | string | number): string {
-=======
-
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 export function formatDate(date: Date | string | number): string {
-<<<<<<< HEAD
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return new Intl && Intl.DateTimeFormat("en-US", {
     month: long, day: "numeric",
     year: numeric
 }
-<<<<<<< HEAD
-=======
 
 
 
 
-
-    month: "long", day: numeric
-    year: "numeric"
-}
-
-
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     month: "long", day: "numeric"
     year: "numeric"
 }
@@ -314,35 +248,11 @@ export function formatDate(date: Date | string | number): string {
   return new Intl && Intl.NumberFormat("en-US", {
     style: "currency", currency,
 
-<<<<<<< HEAD
-    month: "long", day: "numeric"
-    year: "numeric"
+  }).format(amount);
 }
-<<<<<<< HEAD
+}
+}
 import { type ClassValue, clsx  } from ./clsx';
-=======
-export function formatDate(date: Date | string | number): string {
-  return new Intl.DateTimeFormat("en-US", {
-
-},
-
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-origin/automation-improvements-final
-    month: "long", day: "numeric"
-    year: "numeric"
-}
-const { type ClassValue, clsx } from "clsx";"const { twMerge } from "tailwind-merge";module.exports = function cn(.inputs: ClassValue[]) { return twMerge(clsx(inputs));}""
-import { type ClassValue, clsx } from 'clsx';,
-import { twMerge } from 'tailwind-merge';,
-export function cn(...inputs: ClassValue[]) {}
-  return twMerge(clsx(inputs));
-ursor/integrate-build-improve-and-re-verify-8f7d
-export function formatCurrency(amount: number, currency = "USD"): string {
-  return new Intl && Intl.NumberFormat("en-US", {
-    style: "currency", currency,
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }).format(amount);
 origin/main
 }
@@ -350,22 +260,16 @@ origin/main
 ursor/add-new-services-and-deploy-updates-0462
 }
 import { type ClassValue, clsx  } from './clsx';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+import { type ClassValue, clsx  } from ./clsx';
 import { tw_merge  } from './tailwind - merge';
 export /**
  * cn - Function description
  */
   return tw_merge (clsx (inputs));}
 export function format_date (date: Date | string | number): string {
-<<<<<<< HEAD
   return new Intl.DateTimeFormat (en - US, {
     month: "long", day: numeric,
     year: "numeric"
-=======
-  return new Intl.DateTimeFormat ("en - US", {
-    month: "long", day: "numeric",
-    year: "numeric",
->>>>>>> origin/chore/fix-lint-and-merge
 }
 export function format_currency (amount: number, currency = USD): string {
   return new Intl.NumberFormat ("en - US", {
@@ -373,12 +277,8 @@ export function format_currency (amount: number, currency = USD): string {
   }).format (amount);
 }
 
-<<<<<<< HEAD
 
 }
-=======
-};
->>>>>>> origin/chore/fix-lint-and-merge
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -389,60 +289,16 @@ origin/main
 }
 ;
 },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
-
-export function formatDate(date: Date | string | number): string {
-  return new Intl.DateTimeFormat("en-US", {
-    month: "long", day: "numeric",
-    year: "numeric",
-  }).format(new Date(date));
 }
 
-export function formatCurrency(amount: number, currency = "USD"): string {
-  return new Intl.NumberFormat("en-US", {
-    style: "currency", currency,;
-  }).format(amount);
 }
+
+};
 
 
 };
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-}
-
-origin/main
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-
-}
-
-}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 };
->>>>>>> origin/chore/fix-lint-and-merge
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-
-};
-
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

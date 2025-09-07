@@ -1,200 +1,22 @@
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import { jsPDF  } from 'jspdf';
 import { PortfolioProject  } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';
 export function addPortfolioSection(
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
 import {jsPDF} from 'jspdf';
 import {PortfolioProject} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addPortfolioSection(;
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   doc: jsPDF;
 
   projects: PortfolioProject[];
   colors: PdfThemeColors;
   startY: number;
 
-<<<<<<< HEAD
-=======
-  maxProjects: number = 2
-): number {
-<<<<<<< HEAD
-  yPos += 8;
-  // Limit the number of projects shown based on maxProjects parameter
-  const displayProjects = projects && projects.slice(0, maxProjects);
-  for (const project of displayProjects) {
-    // Check if we need to add a new page
-    if (yPos > 260) {
-      doc && doc.addPage();
-      yPos = 20
-    }
-    doc && doc.setFontSize(14);
-    doc && doc.setTextColor(colors && colors.subheading);
-    doc && doc.text(project && project.title, 20, yPos);
-    yPos += 6;
-    if (project && project.technologies && project && project.technologies.length > 0) {
-      doc && doc.setFontSize(10);
-      doc && doc.setTextColor(colors && colors.text);
-      doc && doc.text(`Technologies: ${project && project.technologies.join()}`, 20, yPos);
-      yPos += 5
-    }
-    if (project && project.description) {
-      doc && doc.setFontSize(10);
-      const descriptionLines = doc && doc.splitTextToSize(project && project.description, 170);
-      doc && doc.text(descriptionLines, 20, yPos);
-      yPos += (descriptionLines && descriptionLines.length * 5)
-    }
-    // Add links if available
-    if (project && project.github_url || project && project.demo_url) {
-      yPos += 5;
-      doc && doc.setFontSize(9);
-      doc && doc.setTextColor(colors && colors.accent);
-      if (project && project.github_url) {
-        doc && doc.text(`GitHub: ${project && project.github_url}`, 20, yPos);
-        yPos += 4
-      }
-      if (project && project.demo_url) {
-        doc && doc.text(`Demo: ${project && project.demo_url}`, 20, yPos);
-        yPos += 4
 
-  if (projects.length === 0) return startY;
-  let yPos = startY;
-  // Check if we need to add a new page
-  if (yPos > 250) {
-    doc.addPage()
-    yPos = 20
-  }
-  doc.setFontSize(16);
-  doc.setTextColor(colors.heading);
-  doc.text('Portfolio Projects', 20, yPos);
-  yPos += 8;
-  doc.setDrawColor(colors.accent);
-  doc.line(20, yPos, 100, yPos);
-  yPos += 8;
-  // Limit the number of projects shown based on maxProjects parameter
-  const displayProjects = projects.slice(0, maxProjects);
-  for (const project of displayProjects) {
-    // Check if we need to add a new page
-    if (yPos > 260) {
-      doc.addPage();
-      yPos = 20
-    }
-    doc.setFontSize(14);
-    doc.setTextColor(colors.subheading);
-    doc.text(project.title, 20, yPos);
-    yPos += 6;
-    if (project.technologies && project.technologies.length > 0) {
-      doc.setFontSize(10);
-      doc.setTextColor(colors.text);
-      doc.text(`Technologies: ${project.technologies.join()}`, 20, yPos);
-      yPos += 5
-    }
-    if (project.description) {
-      doc.setFontSize(10);
-      const descriptionLines = doc.splitTextToSize(project.description, 170);
-      doc.text(descriptionLines, 20, yPos);
-      yPos += (descriptionLines.length * 5)
-    }
-    // Add links if available
-    if (project.github_url |project.demo_url) {
-      yPos += 5;
-      doc.setFontSize(9);
-      doc.setTextColor(colors.accent);
-      if (project.github_url) {
-        doc.text(`GitHub: ${project.github_url}`, 20, yPos);
-        yPos += 4
-      }
-      if (project.demo_url) {
-        doc.text(`Demo: ${project.demo_url}`, 20, yPos);
-        yPos += 4
-import { jsPDF } from 'jspdf',;
-import { PortfolioProject } from '@/types/resume',;
-import { PdfThemeColors } from '../themeConfig',;
-export function addPortfolioSection(;
-  doc: jsPDF,;
-  projects: PortfolioProject[],;
-  colors: PdfThemeColors,;
-  startY: number,;
-  maxProjects: number = 2;
-): number {;
-  if (projects.length === 0) return startY,;
-  let yPos = startY,;
-  // Check if we need to add a new page;
-  if (yPos > 250) {;
-    doc.addPage(),;
-    yPos = 20;
-  }
-;
-  doc.setFontSize(16),;
-  doc.setTextColor(colors.heading),;
-  doc.text('Portfolio Projects', 20, yPos),;
-  yPos += 8,;
-  doc.setDrawColor(colors.accent),;
-  doc.line(20, yPos, 100, yPos),;
-  yPos += 8,;
-  // Limit the number of projects shown based on maxProjects parameter;
-  const displayProjects = projects.slice(0, maxProjects),;
-  for (const project of displayProjects) {;
-    // Check if we need to add a new page;
-    if (yPos > 260) {;
-      doc.addPage(),;
-      yPos = 20;
-    }
-;
-    doc.setFontSize(14),;
-    doc.setTextColor(colors.subheading),;
-    doc.text(project.title, 20, yPos),;
-    yPos += 6,;
-    if (project.technologies && project.technologies.length > 0) {;
-      doc.setFontSize(10),;
-      doc.setTextColor(colors.text),;
-      doc.text(`Technologies: ${project.technologies.join()}`, 20, yPos),;
-      yPos += 5;
-    }
-;
-    if (project.description) {;
-      doc.setFontSize(10),;
-      const descriptionLines = doc.splitTextToSize(project.description, 170),;
-      doc.text(descriptionLines, 20, yPos),;
-      yPos += (descriptionLines.length * 5);
-    }
-;
-    // Add links if available;
-    if (project.github_url || project.demo_url) {;
-      yPos += 5,;
-      doc.setFontSize(9),;
-      doc.setTextColor(colors.accent),;
-      if (project.github_url) {;
-        doc.text(`GitHub: ${project.github_url}`, 20, yPos),;
-        yPos += 4;
-      }
-;
-      if (project.demo_url) {;
-        doc.text(`Demo: ${project.demo_url}`, 20, yPos),;
-        yPos += 4;
-
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   if (projects && projects.length === 0) return startY;
 
   let yPos = startY;
@@ -240,7 +62,7 @@ export function addPortfolioSection(;
         yPos += 4
       }
 
-<<<<<<< HEAD
+
   yPos += 8;
   // Limit the number of projects shown based on maxProjects parameter
   const displayProjects = projects && projects.slice(0, maxProjects);
@@ -352,18 +174,12 @@ export function addPortfolioSection(;
       yPos = 20;
     }
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       }
     }
     yPos += 10, // Add space between projects;
   }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
   if (projects && projects.length > maxProjects) {}
     doc && doc.setFontSize(10);
     doc && doc.setTextColor(colors && colors.text);
@@ -377,25 +193,7 @@ export function addPortfolioSection(;
 '
 import {jsPDF} from 'jspdf';'
 import {PortfolioProject} from '@/types / resume';'
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-  
-
-
-  // If there are more projects than we're displaying
-
-  // If there are more projects than we're displaying
-  if (projects && projects.length > maxProjects) {
-    doc && doc.setFontSize(10);
-    doc && doc.setTextColor(colors && colors.text);
-    doc && doc.text(`+ ${projects && projects.length - maxProjects} more projects not shown`, 20, yPos);
-    yPos += 6
-  }
-  return yPos + 5
-import {jsPDF} from 'jspdf';
-import {PortfolioProject} from '@/types / resume';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import {PdfThemeColors} from '../theme_config';
 export function addPortfolioSection (;
   doc: jsPDF;
@@ -417,25 +215,7 @@ if ( {) {}
     doc.add_page (),
     y_pos = 20;
 
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-  
-  // If there are more projects than we're displaying
-  if (projects.length > maxProjects) {
-    doc.setFontSize(10);
-    doc.setTextColor(colors.text);
-    doc.text(`+ ${projects.length - maxProjects} more projects not shown`, 20, yPos);
-
-    yPos += 6
-  }
-  return yPos + 5
-}
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ;
 
   // If there are more projects than we're displaying;
@@ -445,10 +225,7 @@ if ( {) {}
     doc.text(`+ ${projects.length - maxProjects} more projects not shown`, 20, yPos);
     yPos += 6;
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   }
   doc.setFontSize (16);
   doc.setTextColor (colors.heading);'
@@ -533,22 +310,13 @@ if ( {) {
     y_pos += 6;
   }
   return y_pos + 5;
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 
-import { jsPDF } from 'jspdf',;
-import { PortfolioProject } from '@/types/resume',;
-import { PdfThemeColors } from '../themeConfig',;
-;
-export function addPortfolioSection(;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   doc:jsPDF,;
   projects:PortfolioProject[],;
   colors:PdfThemeColors,;
   startY:number,;
-<<<<<<< HEAD
+
   maxProjects:number = 2;)
 ):number {;
   // Check if we need to add a new page;
@@ -579,8 +347,7 @@ if (project.github url) {`;
 }return yPos + 5;
   return yPos + 5;
 }
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
+
 import { jsPDF } from 'jspdf';
 import { PortfolioProject } from '@/types/resume';
 export function addPortfolioSection(
@@ -662,14 +429,8 @@ export function addPortfolioSection(
   
   return yPos + 5
 }
-<<<<<<< HEAD
+
 ;
-=======
-;
-=======
-;
->>>>>>> origin/chore/fix-lint-and-merge
-=======
   maxProjects:number = 2;
 ):number {;
   if (projects.length === 0) return startY,;
@@ -776,9 +537,6 @@ yPos += 4
   return yPos + 5;
 }
 ;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+;
+;

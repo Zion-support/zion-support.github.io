@@ -12,8 +12,13 @@ interface SafeImageProps {
         return (
       <div
         className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
+<<<<<<< HEAD
+        style={ width, height }
+        role='img'
+=======
         style={{ width, height }}
         role="img"
+>>>>>>> origin/resolved-merge-conflicts
         aria-label = {alt,}
       >
         <ImageIcon className='w-6 h-6' />      </div>
@@ -115,8 +120,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         return (
       <div
         className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
+<<<<<<< HEAD
+        style={ width, height }
+        role='img'
+=======
         style={{ width, height }}
         role="img"
+>>>>>>> origin/resolved-merge-conflicts
 
   quality?: number
 }
@@ -155,12 +165,21 @@ export function SafeImage({
       <div;
 
         className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
+<<<<<<< HEAD
+        style={ width, height }
+        role='img'
+        aria-label={alt}
+
+      >
+        <ImageIcon className='w-6 h-6' />
+=======
         style={{ width, height }}
         role="img"
         aria-label={alt}
 
       >
         <ImageIcon className="w-6 h-6" />
+>>>>>>> origin/resolved-merge-conflicts
       </div>
     )
   }
@@ -204,7 +223,7 @@ export function SafeImage({
       onError = {handleError}
       priority = {priority}
       // Add unoptimized as fallback for problematic images;
-      unoptimized = {hasError}}
+      unoptimized = {hasError}
     />;
   );  return (
 

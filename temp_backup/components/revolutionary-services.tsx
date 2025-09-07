@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }static getDerivedStateFromError(error) {return {hasError: true }
+=======
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return {hasError: true }
+>>>>>>> origin/resolved-merge-conflicts
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
   render() {if (this.state.hasError) ;}
   return <div />Something went wrong.</div>;}
@@ -143,7 +147,11 @@ const enhanced_categories = [
         'AI platforms for autonomous vehicles and smart transportation',icon: <CarIcon className='w - 6 h - 6' />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Autonomous Vehicles & Smart Transportation').length,color: 'from - emerald - 500 to - green - 600',},{name: 'Smart Energy & Renewable Energy'}
   description:;}
         'AI platforms for smart energy grids and renewable energy optimization',icon: <LeafIcon className='w - 6 h - 6' />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Smart Energy & Renewable Energy').length,color: 'from - yellow - 500 to - orange - 600',},  ];      description: 'AI platforms for smart energy grids and renewable energy optimization',
+<<<<<<< HEAD
+  icon: <LeafIcon className='w - 6 h - 6' />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Smart Energy & Renewable Energy').length,color: 'from - yellow - 500 to - orange - 600';
+=======
   icon: <LeafIcon className="w - 6 h - 6" />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Smart Energy & Renewable Energy').length,color: 'from - yellow - 500 to - orange - 600';
+>>>>>>> origin/resolved-merge-conflicts
     }
 
 const container_variants = {}
@@ -237,12 +245,21 @@ rel='canonical'
   {
   scale: 0.95 
 }
+<<<<<<< HEAD
+                animate={ opacity: 1, y: 0 }
+                transition={duration: 0.8 }
+}
+}> <UltraFuturisticCard </div>) ) 
+}</div> <div className=' text-center'> <Button > Learn More <ExternalLink className=' ml-2 w-4 h-4'/> </Button> </div> </UltraFuturisticCard> </motion.div>) ) 
+}</motion.div> </div> </section> > <div className=' flex flex-col lg:flex-row gap-6 items-center justify-between'> <div className=' flex flex-wrap gap-4'> <select) ) 
+=======
                 animate={{ opacity: 1, y: 0 }}
                 transition={{duration: 0.8 }
 }
 }> <UltraFuturisticCard </div>) ) 
 }</div> <div className=" text-center"> <Button > Learn More <ExternalLink className=" ml-2 w-4 h-4"/> </Button> </div> </UltraFuturisticCard> </motion.div>) ) 
 }</motion.div> </div> </section> > <div className=" flex flex-col lg:flex-row gap-6 items-center justify-between"> <div className=" flex flex-wrap gap-4"> <select) ) 
+>>>>>>> origin/resolved-merge-conflicts
 }</select> <select > {
   priceRanges.map (range => (<option key= {
   range.value 
@@ -259,19 +276,31 @@ rel='canonical'
 }> {
   option.label 
 }</option>) ) 
+<<<<<<< HEAD
+}</select> </div> <div className=' flex items-center gap-4'> <div className=' relative'> <Search className=' absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400'/> <input /> </div> <div className=' flex border border-gray-600 rounded-lg overflow-hidden'> <button onClick= {
+=======
 }</select> </div> <div className=" flex items-center gap-4"> <div className=" relative"> <Search className=" absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"/> <input /> </div> <div className=" flex border border-gray-600 rounded-lg overflow-hidden"> <button onClick= {
+>>>>>>> origin/resolved-merge-conflicts
   () => setViewMode ('grid') 
 }className= {
   `px-3 py-2 $ {
   viewMode === 'grid'? 'bg-cyan-500 text-white': 'bg-slate-800 text-gray-400' 
 }` 
+<<<<<<< HEAD
+}> <Grid className=' w-4 h-4'/> </button> <button onClick= {
+=======
 }> <Grid className=" w-4 h-4"/> </button> <button onClick= {
+>>>>>>> origin/resolved-merge-conflicts
   () => setViewMode ('list') 
 }className= {
   `px-3 py-2 $ {
   viewMode === 'list'? 'bg-cyan-500 text-white': 'bg-slate-800 text-gray-400' 
 }` 
+<<<<<<< HEAD
+}> <List className=' w-4 h-4'/> </button> </div> </div> </div> </motion.div> {
+=======
 }> <List className=" w-4 h-4"/> </button> </div> </div> </div> </motion.div> {
+>>>>>>> origin/resolved-merge-conflicts
   /* Services Display */ 
 }<motion.div > {
   filteredServices.map ( (service, index) => (<motion.div key= {
@@ -282,9 +311,9 @@ rel='canonical'
   {
   y: -5 
 }
-                animate={{ opacity: 1, y: 0 ,}
+                animate={ opacity: 1, y: 0 ,}
 }
-                transition={{ duration: 0.8, delay: 0.2 ,}
+                transition={ duration: 0.8, delay: 0.2 ,}
 }
                />
 
@@ -295,11 +324,11 @@ SaaS platform. Quantum AI, autonomous systems, space technology,
               {/* Service Count Stats */}
               <motion.div;
 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
-                initial={{ opacity: 0, y: 20 ,}
+                initial={ opacity: 0, y: 20 ,}
 }
-                animate={{ opacity: 1, y: 0 ,}
+                animate={ opacity: 1, y: 0 ,}
 }
-                transition={{ duration: 0.8, delay: 0.4 }}
+                transition={ duration: 0.8, delay: 0.4 }
                />
 
 <div className='text-center' />
@@ -332,11 +361,11 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
 }
 <motion.div;
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center';
-                initial={{ opacity: 0, y: 20 ,}
+                initial={ opacity: 0, y: 20 ,}
 }
-                animate={{ opacity: 1, y: 0 ,}
+                animate={ opacity: 1, y: 0 ,}
 }
-                transition={{ duration: 0.8, delay: 0.6 }}
+                transition={ duration: 0.8, delay: 0.6 }
 
                />
 <Button;
@@ -397,14 +426,23 @@ variant='futuristic'
               initial='hidden'
               whileInView='visible'
 
+<<<<<<< HEAD
+              viewport={once: true }
+=======
               viewport={{once: true }
+>>>>>>> origin/resolved-merge-conflicts
 }
              />;
               {enhancedCategories.map((category, index) => (<motion.div;}
                   key={category.name}
                   variants={itemVariants}
+<<<<<<< HEAD
+                  whileHover={ scale: 1 && 1.05 }
+                  whileTap={scale: 0 && 0.95 }
+=======
                   whileHover={{ scale: 1 && 1.05 }}
                   whileTap={{scale: 0 && 0.95 }
+>>>>>>> origin/resolved-merge-conflicts
 } />;
 
                   <UltraFuturisticCard;
@@ -445,11 +483,11 @@ className={`w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-br ${category.col
           <div className='container mx-auto px-4' />
             <motion.div;
 className='text-center mb-12'
-              initial={{ opacity: 0, y: 20 ,}
+              initial={ opacity: 0, y: 20 ,}
 }
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              whileInView={ opacity: 1, y: 0 }
+              viewport={ once: true }
+              transition={ duration: 0.6 }
              />
 
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-4' />
@@ -471,13 +509,21 @@ className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
 }
               initial='hidden';
               whileInView='visible';
+<<<<<<< HEAD
+              viewport={once: true }
+=======
               viewport={{once: true }
+>>>>>>> origin/resolved-merge-conflicts
 }
              />;
               {popularServices.slice(0, 6).map((service, index) => (<motion.div;}
                   key={service.id}
                   variants={itemVariants}
+<<<<<<< HEAD
+                  whileHover={y: -10 }
+=======
                   whileHover={{y: -10 }
+>>>>>>> origin/resolved-merge-conflicts
 }
                  />;
                   <UltraFuturisticCard;
@@ -537,11 +583,11 @@ size='large';
             {/* Filters and Controls */}
             <motion.div;
               className='mb-8';
-              initial={{ opacity: 0, y: 20 ,}
+              initial={ opacity: 0, y: 20 ,}
 }
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              whileInView={ opacity: 1, y: 0 }
+              viewport={ once: true }
+              transition={ duration: 0.6 }
 
              />
 <div className='flex flex-col lg:flex-row gap-6 items-center justify-between' />
@@ -595,14 +641,22 @@ type='text'
 
               initial='hidden'
               whileInView='visible'
+<<<<<<< HEAD
+              viewport={once: true }
+=======
               viewport={{once: true }
+>>>>>>> origin/resolved-merge-conflicts
 }
              />
               {filteredServices.map((service, index) => (}
                 <motion.div;}
 key={service.id}
                   variants={itemVariants}
+<<<<<<< HEAD
+                  whileHover={y: -5 }
+=======
                   whileHover={{y: -5 }
+>>>>>>> origin/resolved-merge-conflicts
 } />;
                   <UltraFuturisticCard;
                     variant={service && service.variant as any}
@@ -748,9 +802,15 @@ key={service.id}
 <motion.div;
 className='text-center py-16'}
 }
+<<<<<<< HEAD
+                initial={ opacity: 0 }
+                animate={ opacity: 1 }
+                transition={duration: 0.6 }
+=======
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{duration: 0.6 }
+>>>>>>> origin/resolved-merge-conflicts
 }
                />;
 <div className='text-6xl mb-4' />🔍</div>;
@@ -762,12 +822,12 @@ className='text-center py-16'}
                 </p>;
                 <Button;
                   variant='primary';
-                  onClick={() = /> {setSearchQuery('')setSelectedCategory('All')setPriceRange('All')}}
+                  onClick={() = /> {setSearchQuery('')setSelectedCategory('All')setPriceRange('All')}
                 >;
                   Clear Filters;
                 </Button>;
               </motion.div>;
-                             setPriceRange('All')}}
+                             setPriceRange('All')}
                          >;
                            Clear Filters;
                          </Button>;
@@ -780,9 +840,9 @@ className='text-center py-16'}
           {selectedService && (
             <motion.div;}
 className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+              initial={ opacity: 0 }
+              animate={ opacity: 1 }
+              exit={ opacity: 0 }
               onClick={() = /> setSelectedService(null,}
 }
 
@@ -790,11 +850,11 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
               <motion.div;
 className='bg-slate-900 rounded-2xl border border-cyan-400/30 max-w-4xl w-full max-h-[90vh] overflow-y-auto'
 
-                initial={{ scale: 0.9, opacity: 0 ,}
+                initial={ scale: 0.9, opacity: 0 ,}
 }
-                animate={{ scale: 1, opacity: 1 ,}
+                animate={ scale: 1, opacity: 1 ,}
 }
-                exit={{ scale: 0.9, opacity: 0 }}
+                exit={ scale: 0.9, opacity: 0 }
                 onClick={e = /> e.stopPropagation(,}
 }
               >;
@@ -995,11 +1055,17 @@ variant='futuristic'
           <div className='container mx-auto px-4 text-center' />
             <motion.div;
 className='max-w-4xl mx-auto'
-              initial={{ opacity: 0, y: 20 ,}
+              initial={ opacity: 0, y: 20 ,}
 }
+<<<<<<< HEAD
+              whileInView={ opacity: 1, y: 0 }
+              viewport={ once: true }
+              transition={duration: 0.8 }
+=======
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{duration: 0.8 }
+>>>>>>> origin/resolved-merge-conflicts
 }
              />
 

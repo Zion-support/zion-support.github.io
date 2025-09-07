@@ -34,6 +34,7 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+<<<<<<< HEAD
     setSubmitStatus('idle');
 
     try {
@@ -68,6 +69,35 @@ export default function ContactForm() {
       {/* Hero Section */}
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
+=======
+    // Simulate form submission,
+try {
+      }
+      await new Promise(resolve => { return setTimeout(resolve, 2000)); }
+      setSubmitStatus('success');'
+      setFormData({
+        }
+        "name": '','
+        "email": '','
+        "company": '','
+        "service": '','
+        "budget": '','
+        "message": '''
+});
+    } catch {
+      }
+      setSubmitStatus('error');'
+    } finally {
+      }
+      setIsSubmitting(false);
+    }
+  };
+return (;
+    <div className="max-w-4xl mx-auto">"
+      {/* Hero Section */}
+      <div className="text-center mb-12">"
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">"
+>>>>>>> origin/resolved-merge-conflicts
           Get in Touch
         </h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -83,37 +113,61 @@ export default function ContactForm() {
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">
               Contact Information
             </h2>
+<<<<<<< HEAD
             
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
+=======
+            <div className="space-y-4">"
+              <div className="flex items-center space-x-3">"
+                <PhoneIcon className="w-5 h-5 text-blue-600" />"
+>>>>>>> origin/resolved-merge-conflicts
                 <div>
                   <p className="font-medium text-gray-900">Phone</p>
                   <p className="text-gray-600">+1 302 464 0950</p>
                 </div>
+<<<<<<< HEAD
               </div>
               
               <div className="flex items-center space-x-3">
+=======
+              <div className="flex items-center space-x-3">"
+                <EnvelopeIcon className="w-5 h-5 text-blue-600" />"
+>>>>>>> origin/resolved-merge-conflicts
                 <div>
                   <p className="font-medium text-gray-900">Email</p>
                   <p className="text-gray-600">kleber@ziontechgroup.com</p>
                 </div>
+<<<<<<< HEAD
               </div>
               
               <div className="flex items-center space-x-3">
+=======
+              <div className="flex items-center space-x-3">"
+                <MapPinIcon className="w-5 h-5 text-blue-600" />"
+>>>>>>> origin/resolved-merge-conflicts
                 <div>
                   <p className="font-medium text-gray-900">Address</p>
                   <p className="text-gray-600">Delaware, United States</p>
                 </div>
+<<<<<<< HEAD
               </div>
               
               <div className="flex items-center space-x-3">
+=======
+              <div className="flex items-center space-x-3">"
+                <ClockIcon className="w-5 h-5 text-blue-600" />"
+>>>>>>> origin/resolved-merge-conflicts
                 <div>
                   <p className="font-medium text-gray-900">Business Hours</p>
                   <p className="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM EST</p>
                 </div>
+<<<<<<< HEAD
               </div>
             </div>
 
+=======
+>>>>>>> origin/resolved-merge-conflicts
           {/* Quick Response Promise */}
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
             <div className="flex items-center space-x-3 mb-3">
@@ -124,6 +178,7 @@ export default function ContactForm() {
               </div>
               <h3 className="font-semibold text-blue-900">Quick Response Guarantee</h3>
             </div>
+<<<<<<< HEAD
 
             <div>
               <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
@@ -170,6 +225,13 @@ export default function ContactForm() {
           </form>
         </div>
 
+=======
+            <p className="text-blue-800">"
+              We respond to all inquiries within one business day.
+              For urgent matters, call us directly.
+            </p>
+          </div>
+>>>>>>> origin/resolved-merge-conflicts
         {/* Contact Form */}
         <div>
           <div className="bg-white shadow-lg rounded-lg p-8">
@@ -187,7 +249,6 @@ export default function ContactForm() {
                     Thank you! Your message has been sent successfully. We'll get back to you soon.
                   </p>
                 </div>
-              </div>
             )}
 
             {submitStatus === 'error' && (
@@ -200,7 +261,6 @@ export default function ContactForm() {
                     Sorry, there was an error sending your message. Please try again or contact us directly.
                   </p>
                 </div>
-              </div>
             )}
 
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -235,10 +295,13 @@ export default function ContactForm() {
                     placeholder="your.email@example.com"
                   />
                 </div>
+<<<<<<< HEAD
               </div>
             </div>
           </div>
 
+=======
+>>>>>>> origin/resolved-merge-conflicts
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
                   Company
@@ -330,8 +393,5 @@ export default function ContactForm() {
               </button>
             </form>
           </div>
-        </div>
-      </div>
-    </div>
-  );
+  )
 }

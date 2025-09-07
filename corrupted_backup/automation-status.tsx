@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+
+const AutomationStatus: React.FC = () => {
+  return (
+    <div>
+      <Head>
+
+      <main>
+        <h1>Automation Status</h1>
+        <p>This page is under construction.</p>
+      </main>
+    </div>
+=======
 <<<<<<< HEAD:corrupted_backup/automation-status.tsx
 import type { NextPage } from 'next';
 import Head from 'next/head';
@@ -62,10 +77,13 @@ export default AutomationStatus,;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/admin/automation-status.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   );
 };
 
 export default AutomationStatus;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:corrupted_backup/automation-status.tsx
 =======
 
@@ -74,3 +92,4 @@ export default AutomationStatus;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/admin/automation-status.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

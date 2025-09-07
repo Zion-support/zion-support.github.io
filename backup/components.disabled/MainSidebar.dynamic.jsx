@@ -1,4 +1,4 @@
-const MainSidebar = dynamic(() => import("./MainSidebar"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default MainSidebar' ,'
+const MainSidebar = dynamic(() => import('./MainSidebar'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default MainSidebar' ,'
 
 <<<<<<< HEAD:backup/components.disabled/MainSidebar.dynamic.jsx
 </p>'

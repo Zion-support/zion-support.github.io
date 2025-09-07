@@ -1,6 +1,17 @@
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+  "timestamp": "2025-09-07T03:26:27.171Z",
+  "duration": 628,
+  "summary": {
+    "successful": 1,
+    "errors": 7,
+    "warnings": 0
+  },
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
+<<<<<<< HEAD
   "timestamp: 2025-09-07T02:53:54.838Z",
   "duration: 23172,
   summary": {
@@ -323,6 +334,15 @@ ursor/automate-test-improve-and-merge-code-646c
     "Fixed ESLint configuration",
     "Added comprehensive error handling"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  ]
+}
+  ]
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 <<<<<<< HEAD
   "recommendations": [
     "Review and fix code quality issues",
@@ -341,3 +361,7 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

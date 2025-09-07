@@ -1,40 +1,4 @@
-<<<<<<< HEAD
 
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
-import { Configuration, OpenAIApi } from "npm: openai@4.28.0";
-const corsHeaders = $2;
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
-
-serve(async (req) => {
-  if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders})
-  }
-  try {
-    const { title, keyFeatures, targetAudience } = await req.json($2);
-    if (!title) {
-      return new Response($2);
-        { 
-          status: 400, 
-          headers: { ...corsHeaders, "Content-Type": "application/json" } 
-        }
-      )
-    }
-
-    const configuration = $2;
-    const openai = new OpenAIApi($2);
-    const prompt = $2;
-    const completion = await openai.chat.completions.create($2);
-    const generatedDescription = $2;
-    return new Response($2);
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import {Configuration, OpenAIApi} from "npm: openai@4 ;
 
 "
@@ -52,7 +16,6 @@ import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts","
 import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
 
-<<<<<<< HEAD
 
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
@@ -70,35 +33,11 @@ import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
 
-=======
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*"
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
-import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
-import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
-
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 serve(async (req) => {
 
 import {Configuration, OpenAIApi} from "npm: openai@4 ;
@@ -122,49 +61,15 @@ serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  if (req.method === "OPTIONS") {;"
-    }
-    return new Response(null, { "headers": corsHeaders });
-  }
-;
-  try {;
-    }
-    if (!title) {;
-      }
-      return new Response(;
-        JSON.stringify({;
-          }
-          "error": "Missing required "field": title";"
-        }),;
-        {;
-          }
-          "status": 400,;
-          "headers": { ...corsHeaders, "Content-Type": "application/json" } ;"
-    const { title, keyFeatures, targetAudience } = await req && req.json();
 
-=======
-  try {
-    const { title, keyFeatures, targetAudience } = await req.json();
->>>>>>> origin/chore/fix-lint-and-merge
-    if (!title) {
-      return new Response(
-=======
-  try {
-    const { title, keyFeatures, targetAudience } = await req.json();
-    if (!title) {
-      return new Response(
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         JSON.stringify({
           error: "Missing required field: title"
         });
         {
           status: 400
 
+
           headers: { ...corsHeaders, "Content-Type": "application/json" }
-<<<<<<< HEAD
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",""
 import {Configuration, OpenAIApi} from "npm: openai@4 ;"
@@ -240,28 +145,27 @@ pr-12325
           headers: { ...corsHeaders, "Content-Type": "application/json" }
 
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,'
-=======
-    const { title, keyFeatures, targetAudience } = await req.json(),
-
-    if (!title) {
-      return new Response(
-        JSON.stringify({ 
-          error: "Missing required field: title" 
-        }),
-        { 
-          status: 400, 
-          headers: { ...corsHeaders, "Content-Type": "application/json" } 
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
-import { Configuration, OpenAIApi } from "npm: openai@4.28.0",;
-const corsHeaders = {;
-  "Access-Control-Allow-Origin": "*",;
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
-serve(async (req) => {;
-  if (req.method === "OPTIONS") {;
-    return new Response(null, { headers: corsHeaders });
   }
 ;
   try {;
+    }
+;
+    if (!title) {;
+      return new Response(;
+        JSON.stringify({ ;
+          error:"Missing required field:title" ;
+        }),;
+        { ;
+          status:400, ;
+          headers:{ ...corsHeaders, "Content-Type":"application/json" } ;
+
+        JSON.stringify({ ;"
+          error:"Missing required field:title" ;")
+        }),;
+        { ;
+          status:400, ;"
+          headers:{ ...corsHeaders, "Content-Type":"application/json" } ;"
+
     const { title, keyFeatures, targetAudience } = await req.json(),;
     if (!title) {;
       return new Response(;
@@ -277,21 +181,14 @@ serve(async (req) => {;
       return new Response(
         JSON && JSON.stringify({ 
           error: "Missing required field: title" 
-=======
         JSON && JSON.stringify({ 
           error: "Missing required field: title" 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         });
         {
           status: 400
           headers: { ...corsHeaders, "Content-Type": "application/json" }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import { Configuration, OpenAIApi } from 'npm: openai@4.28.0';
 const cors_headers = {"
   "Access - Control - Allow - Origin": "*","
@@ -330,13 +227,6 @@ if ( {) {}
           status: 400, "
           headers: { ...corsHeaders, "Content-Type": "application/json" } 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         }
       )
     }
@@ -358,58 +248,19 @@ Title: ${title}
 Key Features: ${keyFeatures |"Not specified"}
 Target Audience: ${targetAudience |"General users"}
 
-<<<<<<< HEAD
-=======
-    
-
-<<<<<<< HEAD
-        }
-      )
-    }
-
-    const configuration = new Configuration({
-      apiKey: Deno.env.get('OPENAI_API_KEY')});
-    const openai = new OpenAIApi(configuration);
-    const prompt = `Create a professional and detailed service description for the following service:
-Title: ${title}
-Key Features: ${keyFeatures |"Not specified"}
-Target Audience: ${targetAudience |"General users"}
-    
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ;
+
     const configuration = new Configuration({;'
       apiKey: Deno.env.get('OPENAI_API_KEY')}),;
-<<<<<<< HEAD
-=======
-    const openai = new OpenAIApi(configuration),;
-    const prompt = `Create a professional and detailed service description for the following service:;
 
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 Title: ${title}
 Key Features: ${keyFeatures || "Not specified"}
 Target Audience: ${targetAudience || "General users"}
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 The description should: 1. Be approximately 200-300 words
 2. Highlight the key benefits and unique selling points
 3. Use professional language suitable for a marketplace listing
 4. Speak directly to the target audience
-<<<<<<< HEAD
 5. Include a compelling opening and closing statement`;
     const completion = await openai.chat.completions.create({
       model: "gpt-4o-mini"
@@ -436,17 +287,6 @@ The description should: 1. Be approximately 200-300 words
     )
   }
 });
-=======
-
-The description should: 1. Be approximately 200-300 words;
-2. Highlight the key benefits and unique selling points;
-3. Use professional language suitable for a marketplace listing;
-4. Speak directly to the target audience;
-      });
-  } catch (error) {}
-      });
-
-Target Audience: ${targetAudience || "General users"}
 ;
 The description should: 1. Be approximately 200-300 words;
 2. Highlight the key benefits and unique selling points;
@@ -456,155 +296,19 @@ The description should: 1. Be approximately 200-300 words;
       temperature: 0.7}),;
     const generatedDescription = completion.choices[0].message.content,;
     return new Response(;
-      JSON.stringify({ description: generatedDescription }),;
-
-    );
-  } catch (error) {;"
-    console.error("Error in generate-service-description:", error),;
-    return new Response(;
-      JSON.stringify({;"
-        error: "Failed to generate service description",;
-        details: error.message;
-
-      }),;
-      {;
-        status: 500,;"
-        headers: { ...corsHeaders, "Content-Type": "application/json" } ;
-      });
-
-    );
-`
-5. Include a compelling opening and closing statement`,
-
-    const completion = await openai.chat.completions.create({"
-      model: "gpt-4o-mini","
-      messages: [{ role: "user", content: prompt }],
-
-    const configuration = new Configuration({;)
-      apiKey: Deno.env.get('OPENAI_API_KEY')}),;
-    const openai = new OpenAIApi(configuration),;`;
-}
-    return new Response (null, { headers: cors_headers });
-  }
-  try {
-  // TODO: Implement
-}
-    const { title, key_features, target_audience } = await req.json ();
-;
-    // Check condition;
-if ( {) {
-  $2;
-}
-      return new Response (
-        JSON.stringify ({"
-          error: "Missing required field: title";")
-        });
-        {
-          status: 400,"
-          headers: { ...cors_headers, "Content - Type": "application / json" }"
-    const { title, keyFeatures, targetAudience } = await req.json(),
-
-    if (!title) {
-      return new Response(
-        JSON.stringify({ "
-          error: "Missing required field: title"")
-        }),
-        { 
-          status: 400, "
-          headers: { ...corsHeaders, "Content-Type": "application/json" }"
-        }
-      )
-    }
-
-        });
-    }
-
-    const configuration = new Configuration({)"
-      apiKey: Deno && Deno.env.get('OPENAI_API_KEY')});'
-
-    const openai = new OpenAIApi(configuration);
-    const prompt = `Create a professional and detailed service description for the following service:
-;
-
-    const configuration = new Configuration({;)'
-      apiKey: Deno.env.get('OPENAI_API_KEY')}),;'
-    const openai = new OpenAIApi(configuration),;
-    const prompt = `Create a professional and detailed service description for the following service: ;,
-  Title: ${title}
-Key Features: ${keyFeatures || "Not specified"}""
-Target Audience: ${targetAudience || "General users"}"
-The description should: 1. Be approximately 200-300 words;
-2. Highlight the key benefits and unique selling points;
-3. Use professional language suitable for a marketplace listing;
-4. Speak directly to the target audience;
-  } catch (error) {
-        status: 500;,"
-    console.error ("Error in generate - service - description:", error);"
-        error: "Failed to generate service description","
-        details: error.message;)
-        status: 500,"
-        headers: { ...cors_headers, "Content - Type": "application / json" }""
-4. Speak directly to the target audience;`;
-5. Include a compelling opening and closing statement`,;
-    const completion = await openai.chat.completions.create({;"
-      model: "gpt-4o-mini",;""
-      messages: [{ role: "user", content: prompt }],;")
-      temperature: 0.7}),;
-    const generatedDescription = completion.choices[0].message.content,;
-    return new Response(;)
-      JSON.stringify({ description: generatedDescription }),;
-      {;"
-  } catch (error) {;"
-    console.error("Error in generate-service-description:", error),;"
-        error: "Failed to generate service description",;"
-        status: 500,;"
-
-    const completion = await openai && openai.chat.completions && completions.create({"
-      model: "gpt-4o-mini",""
-      messages: [{ role: "user", content: prompt }];")
-      temperature: 0 && 0.7});
-
-    const generatedDescription = completion && completion.choices[0].message && message.content;
-    return new Response()
-      JSON && JSON.stringify({ description: generatedDescription });
-      { "
-    const configuration = new Configuration ({)"
-      api_key: Deno.env.get ('OPENAI_API_KEY')});
-    const openai = new OpenAIApi (configuration);
-;`;
-Key Features: ${key_features || "Not specified"}""
-Target Audience: ${target_audience || "General users"}"
-The description should: 1. Be approximately 200 - 300 words;
-5. Include a compelling opening and closing statement`;
-    const completion = await openai.chat.completions.create ({"
-      model: "gpt - 4o - mini",""
-      temperature: 0.7});
-    const generated_description = completion.choices[0].message.content;
-    return new Response ()
-      JSON.stringify ({ description: generated_description });
-      {"
-"
-`;
-    console.error ("Error in generate - service - description:", error);"
-;
-    return new Response (
-      JSON.stringify ({"
-        error: "Failed to generate service description","
-        details: error.message;)
-      });
-      {
-<<<<<<< HEAD
-        status: 500,"
-        headers: { ...cors_headers, "Content - Type": "application / json" }"
-      });
-=======
-        status: 500,
-        headers: { ...cors_headers, "Content - Type": "application / json" }
-
+      JSON.stringify({ description:generatedDescription }),;
+      { ;
+        headers:{ ...corsHeaders, "Content-Type":"application/json" } ;
       }
-    );
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    ),;
+  } catch (error) {;
+    console.error("Error in generate-service-description:", error),;
+    ;
+    return new Response(;
+      JSON.stringify({ ;
+        error:"Failed to generate service description",;
+        details:error.message ;
+      }),;
 
 5. Include a compelling opening and closing statement`,
 
@@ -617,13 +321,11 @@ The description should: 1. Be approximately 200 - 300 words;
     
     return new Response(
       JSON.stringify({ description: generatedDescription }),
->>>>>>> merged-prs-20250907-203621
       { 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
       }
     )
   } catch (error) {
-<<<<<<< HEAD
     console.error($2);
     return new Response($2);
       { 
@@ -631,106 +333,6 @@ The description should: 1. Be approximately 200 - 300 words;
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
       }
     )
-=======
-    console.error("Error in generate-service-description:", error),
-    
-    return new Response(
-      JSON.stringify({ 
-        error: "Failed to generate service description",
-        details: error.message 
-      }),
-      { 
-        status: 500, 
-        headers: { ...corsHeaders, "Content-Type": "application/json" } 
-<<<<<<< HEAD
-      }
-    )
-Key Features: ${keyFeatures || "Not specified"}
-Target Audience: ${targetAudience || "General users"}
-;
-The description should: 1. Be approximately 200-300 words;
-2. Highlight the key benefits and unique selling points;
-3. Use professional language suitable for a marketplace listing;
-4. Speak directly to the target audience;
-5. Include a compelling opening and closing statement`,;
-    const completion = await openai.chat.completions.create({;
-      model: "gpt-4o-mini",;
-      messages: [{ role: "user", content: prompt }],;
-      temperature: 0.7}),;
-    const generatedDescription = completion.choices[0].message.content,;
-    return new Response(;
-      JSON.stringify({ description: generatedDescription }),;
-      {;
-        headers: { ...corsHeaders, "Content-Type": "application/json" } ;
-      }
-    );
-  } catch (error) {;
-    console.error("Error in generate-service-description:", error),;
-    return new Response(;
-      JSON.stringify({;
-        error: "Failed to generate service description",;
-        details: error.message;
-      }),;
-      {;
-        status: 500,;
-        headers: { ...corsHeaders, "Content-Type": "application/json" } ;
-      }
-    );
-
-
-        }
-      );
-    }
-    const completion = await openai && openai.chat.completions && completions.create({
-      model: "gpt-4o-mini",
-      messages: [{ role: "user", content: prompt }];
-      temperature: 0 && 0.7});
-    const generatedDescription = completion && completion.choices[0].message && message.content;
-    return new Response(
-      JSON && JSON.stringify({ description: generatedDescription });
-      { 
-        headers: { ...corsHeaders, "Content-Type": "application/json" } 
-    const configuration = new Configuration ({
-      api_key: Deno.env.get ('OPENAI_API_KEY')});
-    const openai = new OpenAIApi (configuration);
-;
-    const prompt = `Create a professional and detailed service description for the following service:;
-Title: ${title}
-Key Features: ${key_features || "Not specified"}
-Target Audience: ${target_audience || "General users"}
-The description should: 1. Be approximately 200 - 300 words;
-2. Highlight the key benefits and unique selling points;
-3. Use professional language suitable for a marketplace listing;
-4. Speak directly to the target audience;
-5. Include a compelling opening and closing statement`;
-;
-    const completion = await openai.chat.completions.create ({
-      model: "gpt - 4o - mini",
-      messages: [{ role: "user", content: prompt }];
-      temperature: 0.7});
-;
-    const generated_description = completion.choices[0].message.content;
-;
-    return new Response (
-      JSON.stringify ({ description: generated_description });
-      {
-        headers: { ...cors_headers, "Content - Type": "application / json" }
-      }
-    );
-  } catch (error) {
-    console.error ("Error in generate - service - description:", error);
-;
-    return new Response (
-      JSON.stringify ({
-        error: "Failed to generate service description",
-        details: error.message;
-      });
-      {
-        status: 500,
-        headers: { ...cors_headers, "Content - Type": "application / json" }
-      }
-    );
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 5. Include a compelling opening and closing statement`,
 
@@ -757,316 +359,11 @@ pr-12325
         status: 500, "
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
 
-<<<<<<< HEAD
-=======
-  }
-});
-;
 
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
-import { Configuration, OpenAIApi } from "npm:openai@4.28.0",;
-;
-const corsHeaders = {;
-  "Access-Control-Allow-Origin":"*",;
-  "Access-Control-Allow-Headers":"authorization, x-client-info, apikey, content-type"},;
-;
-serve(async (req) => {;
-  if (req.method === "OPTIONS") {;
-    return new Response(null, { headers:corsHeaders }),;
-  }
-;
-  try {;
-    const { title, keyFeatures, targetAudience } = await req.json(),;
-;
-    if (!title) {;
-      return new Response(;
-        JSON.stringify({ ;
-          error:"Missing required field:title" ;
-        }),;
-        { ;
-          status:400, ;
-          headers:{ ...corsHeaders, "Content-Type":"application/json" } ;
-        }
-      ),;
-    }
-;
-    const configuration = new Configuration({;
-      apiKey:Deno.env.get('OPENAI_API_KEY')}),;
-    const openai = new OpenAIApi(configuration),;
-;
-    const prompt = `Create a professional and detailed service description for the following service:;
-    ;
-Title:${title}
-Key Features:${keyFeatures || "Not specified"}
-Target Audience:${targetAudience || "General users"}
-;
-The description should:1. Be approximately 200-300 words;
-2. Highlight the key benefits and unique selling points;
-3. Use professional language suitable for a marketplace listing;
-4. Speak directly to the target audience;
-5. Include a compelling opening and closing statement`,;
-;
-    const completion = await openai.chat.completions.create({;
-      model:"gpt-4o-mini",;
-      messages:[{ role:"user", content:prompt }],;
-      temperature:0.7}),;
-;
-    const generatedDescription = completion.choices[0].message.content,;
-    ;
-    return new Response(;
-      JSON.stringify({ description:generatedDescription }),;
-      { ;
-        headers:{ ...corsHeaders, "Content-Type":"application/json" } ;
-      }
-    ),;
-  } catch (error) {;
-    console.error("Error in generate-service-description:", error),;
-    ;
-    return new Response(;
-      JSON.stringify({ ;
-        error:"Failed to generate service description",;
-        details:error.message ;
-      }),;
-      { ;
-        status:500, ;
-        headers:{ ...corsHeaders, "Content-Type":"application/json" } ;
-      }
-    ),;  }
-}),;
- 
-}try {
-  const {
-  title, keyFeatures, targetAudience 
-}= await req.json ();
-return new Response (JSON.stringify ({
-  
-}) 
-}const prompt = `Create a professional and detailed service description for the following service: The description should: 1. Be approximately 200-300 words 2. Highlight the key benefits and unique selling points 3. Use professional language suitable for a marketplace listing 4. Speak directly to the target audience 5. Include a compelling opening and closing statement`;
-temperature: 0.7 
-});
-  error: "Failed to generate service description";
-details: error.message 
-});
-{
-  status: 500;
-headers: {
-  ...corsHeaders, "Content-Type" : "application/json" 
-}
-}) 
-}
-});
-  }
-});
-  }
-});
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   }
 });
 
 ;
 
-<<<<<<< HEAD
-}
-});
-;
-
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
-import { Configuration, OpenAIApi } from "npm:openai@4.28.0",;
-;
-const corsHeaders = {;
-  "Access-Control-Allow-Origin":"*",;
-  "Access-Control-Allow-Headers":"authorization, x-client-info, apikey, content-type"},;
-;
-serve(async (req) => {;
-  if (req.method === "OPTIONS") {;
-
->>>>>>> merged-prs-20250907-203621
-  }
-});
-;
-"
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;""
-import { Configuration, OpenAIApi } from "npm:openai@4.28.0",;"
-;
-<<<<<<< HEAD
-import { serve } from ""https"://deno.land/std@0.190.0/http/server.ts",;"
-import { Configuration, OpenAIApi } from ""npm":openai@4.28.0",;"
-;
-  "Access-Control-Allow-Origin":"*",;"
-=======
-const corsHeaders = {;"
-  "Access-Control-Allow-Origin":"*",;""
->>>>>>> origin/chore/fix-lint-and-merge
-  "Access-Control-Allow-Headers":"authorization, x-client-info, apikey, content-type"},;"
-;
-serve(async (req) => {;"
-  if (req.method === "OPTIONS") {;"
-
-    return new Response(null, { headers:corsHeaders }),;
-  }
-;
-<<<<<<< HEAD
-  try {;
-    }
-=======
-  try {;}
-    const { title, keyFeatures, targetAudience } = await req.json(),;
->>>>>>> origin/chore/fix-lint-and-merge
-;
-    if (!title) {;
-      return new Response(;
-        JSON.stringify({ ;
-          error:"Missing required field:title" ;
-        }),;
-        { ;
-          status:400, ;
-          headers:{ ...corsHeaders, "Content-Type":"application/json" } ;
-
-        JSON.stringify({ ;"
-          error:"Missing required field:title" ;")
-        }),;
-        { ;
-          status:400, ;"
-          headers:{ ...corsHeaders, "Content-Type":"application/json" } ;"
-
-        }
-      ),;
-    }
-;
-<<<<<<< HEAD
-      }
-      "apiKey":Deno.env.get('OPENAI_API_KEY')}),;'
-=======
-    const configuration = new Configuration({;
-      apiKey:Deno.env.get('OPENAI_API_KEY')}),;
-
-    const configuration = new Configuration({;)"
-      apiKey:Deno.env.get('OPENAI_API_KEY')}),;'
-
-    const openai = new OpenAIApi(configuration),;
->>>>>>> origin/chore/fix-lint-and-merge
-;
-    const prompt = `Create a professional and detailed service description for the following service:;
-    ;
-Title:${title}
-Key Features:${keyFeatures || "Not specified"}
-Target Audience:${targetAudience || "General users"}
-
-Title:${title}'
-Key Features:${keyFeatures || "Not specified"}""
-Target Audience:${targetAudience || "General users"}"
-
-;
-The description should:1. Be approximately 200-300 words;
-2. Highlight the key benefits and unique selling points;
-3. Use professional language suitable for a marketplace listing;
-4. Speak directly to the target audience;
-5. Include a compelling opening and closing statement`,;
-;
-    const completion = await openai.chat.completions.create({;
-      model:"gpt-4o-mini",;
-      messages:[{ role:"user", content:prompt }],;
-
-    const completion = await openai.chat.completions.create({;"
-      model:"gpt-4o-mini",;""
-      messages:[{ role:"user", content:prompt }],;")
-
-      temperature:0.7}),;
-;
-    ;
-    return new Response(;
-      JSON.stringify({ description:generatedDescription }),;
-      { ;
-        headers:{ ...corsHeaders, "Content-Type":"application/json" } ;
-      }
-    ),;
-  } catch (error) {;
-    console.error("Error in generate-service-description:", error),;
-    ;
-    return new Response(;
-      JSON.stringify({ ;
-        error:"Failed to generate service description",;
-        details:error.message ;
-      }),;
-      { ;
-        status:500, ;
-        headers:{ ...corsHeaders, "Content-Type":"application/json" } ;
-    return new Response(;)
-      JSON.stringify({ description:generatedDescription }),;
-
-      { ;"
-        headers:{ ...corsHeaders, "Content-Type":"application/json" } ;"
-      }
-    ),;
-  } catch (error) {;"
-    console.error("Error in generate-service-description:", error),;"
-    ;
-    return new Response(;
-      JSON.stringify({ ;"
-        error:"Failed to generate service description",;"
-        details:error.message ;)
-      }),;
-      { ;
-        status:500, ;"
-        headers:{ ...corsHeaders, "Content-Type":"application/json" } ;"
-
-      }
-    ),;  }
-}),;
-}try {
-  const {
-  title, keyFeatures, targetAudience 
-}= await req.json ();
-return new Response (JSON.stringify ({
-}) 
-}const prompt = `Create a professional and detailed service description for the following service: The description should: 1. Be approximately 200-300 words 2. Highlight the key benefits and unique selling points 3. Use professional language suitable for a marketplace listing 4. Speak directly to the target audience 5. Include a compelling opening and closing statement`;
-temperature: 0.7 
-});
-  error: "Failed to generate service description";
-details: error.message 
-});
-{
-  status: 500;
-headers: {
-  ...corsHeaders, "Content-Type" : "application/json" 
-
-  // TODO: Implement
-}
-  const {
-  // TODO: Implement
-}
-  title, keyFeatures, targetAudience;
-}= await req.json ();
-return new Response (JSON.stringify ({
-  )
-}) 
-}const prompt = `Create a professional and detailed service description for the following service: The description should: 1. Be approximately 200-300 words 2. Highlight the key benefits and unique selling points 3. Use professional language suitable for a marketplace listing 4. Speak directly to the target audience 5. Include a compelling opening and closing statement`;,
-  temperature: 0.7;
-});"
-  error: "Failed to generate service description";",
-  details: error.message;
-});
-{
-  status: 500;,
-  headers: {"
-  ...corsHeaders, "Content-Type" : "application/json""
-
-}
-}) 
-}
-});
-  }
-});
-  }
-});
-
-      });
-  }
 
 });
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

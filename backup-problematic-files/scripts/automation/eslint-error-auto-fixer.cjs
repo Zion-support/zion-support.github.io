@@ -5,7 +5,6 @@ const { execSync } = require('child_process');
 class ESLintErrorAutoFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
     this.reportsDir = path.join(this.projectRoot, error-reports');
     this.logsDir = path.join(this.projectRoot, 'automation/logs);
     this.fixInterval = parseInt(process.env.ESLINT_FIX_INTERVAL) || 300000; // 5 minutes;
@@ -15,17 +14,9 @@ class ESLintErrorAutoFixer {}
     [this.reportsDir, this.logsDir].forEach(dir => {})
       if (!fs.existsSync(dir)) {}
         fs.mkdirSync(dir, { "recursive: true })}
-=======
-
-    // Ensure directories exist;
-    [this.reportsDir, this.logsDir].forEach(dir => {})
-      if (!fs.existsSync(dir)) {}
-        fs.mkdirSync(dir, { "recursive": true })};"
->>>>>>> origin/chore/fix-lint-and-merge
     }
 });
     this.fixesApplied = 0;
-<<<<<<< HEAD
     this.filesProcessed = 0}
   log(message, level = 'INFO) {}
     const timestamp = new Date().toISOString();
@@ -53,39 +44,16 @@ class ESLintErrorAutoFixer {}
   parseESLintErrors(output) {}
     const errorLines = output.split('\n).filter(line => )
       line.includes(error') || line.includes('Error": );
-=======
-    this.filesProcessed = 0};"
-  log(message, level = 'INFO') {}
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level}] ${message})};
-  async runESLintCheck() {}
-    try {}
-
-      return { "success": false, errors, "count": errors.length }};"
-  };
-  async runESLintFix() {}
-    try {}"
-
-      return { "success": false, "fixed": false }};"
-  parseESLintErrors(output) {}"
-    const errorLines = output.split('\n').filter(line => )
-
->>>>>>> origin/chore/fix-lint-and-merge
     );
     const errors = [];
     let currentError = null;
     for (const line of errorLines) {}
-<<<<<<< HEAD
       if (line.includes(error') || line.includes('Error:)) {}
-=======
-
->>>>>>> origin/chore/fix-lint-and-merge
         const match = line.match(/([^:]+):(\d+):(\d+)/);
         if (match) {}
           if (currentError) {}
             errors.push(currentError)}
           currentError = {}
-<<<<<<< HEAD
             "file: match[1].trim(),
             line": parseInt(match[2]),
             "column: parseInt(match[3]),
@@ -98,15 +66,10 @@ class ESLintErrorAutoFixer {}
     if (currentError) {}
       errors.push(currentError)}
     return errors}
-=======
-
-    return errors};
->>>>>>> origin/chore/fix-lint-and-merge
   async fixESLintErrors(errors) {}
     let fixesApplied = 0;
     for (const error of errors) {}
         if (await this.fixSingleESLintError(error)) {}
-<<<<<<< HEAD
           fixesApplied++}
       } catch (error) {}
         this.log(`Failed to fix ESLint error in ${error.file}: ${error.message}`, 'ERROR)}
@@ -118,16 +81,6 @@ class ESLintErrorAutoFixer {}
     const content = fs.readFileSync(error.file, utf8');
     const lines = content.split('\n);
     
-=======
-          fixesApplied++};
-
-    return fixesApplied};
-  async fixSingleESLintError(error) {}
-    if (!error.file || !fs.existsSync(error.file)) {}
-      return false};
-
-    const lines = content.split('\n');
->>>>>>> origin/chore/fix-lint-and-merge
     // Apply common ESLint fixes;
     const fixes = [this.fixUnusedVariables.bind(this)]
       this.fixMissingSemicolons.bind(this),
@@ -142,7 +95,6 @@ class ESLintErrorAutoFixer {}
     for (const fix of fixes) {}
         const result = fix(lines, error);
         if (result.modified) {}
-<<<<<<< HEAD
           modifiedContent = result.content;
           this.log(`Applied ESLint fix to ${error.file}: ${result.description}`, INFO')}
       } catch (fixError) {}
@@ -155,9 +107,6 @@ class ESLintErrorAutoFixer {}
   fixUnusedVariables(lines, error) {}
     if (error.message.includes(is assigned a value but never used')) {}
       const varMatch = error.message.match(/'([^]+) is assigned a value but never used/);
-=======
-
->>>>>>> origin/chore/fix-lint-and-merge
       if (varMatch) {}
         const varName = varMatch[1];
         const lineIndex = error.line - 1;
@@ -166,7 +115,6 @@ class ESLintErrorAutoFixer {}
         if (line.includes(varName)) {}`;
           lines[lineIndex] = `// ${line} // eslint-disable-line no-unused-vars`;`
           return {}
-<<<<<<< HEAD
             modified": true,
             "content: lines.join('\n'),
             description": `Commented out unused variable ${varName}
@@ -306,24 +254,10 @@ class ESLintErrorAutoFixer {}
   async startAutoFixer() {}
     this.log('Starting ESLint error auto-fixer...');
     
-=======
-
-            "description": `Commented out unused variable ${varName}"
-    };"
-    return { "modified": false, "content": lines.join('\n') }};
-  fixMissingSemicolons(lines, error) {}
-    if (error.message.includes('Missing semicolon')) {}
-
-        "success": postCheckResult.success;"
-      // Save report;`;
-      const reportPath = path.join(this.reportsDir, `eslint-fix-report-${Date.now()}.json`);
-
->>>>>>> origin/chore/fix-lint-and-merge
     // Run initial fix;
     await this.runAutoFix();
     // Set up periodic fixing;
     setInterval(async () => {}
-<<<<<<< HEAD
       try {}
         await this.runAutoFix()} catch (error) {}
         this.log(`Error in periodic fix": ${error.message}`, ERROR)}
@@ -331,15 +265,10 @@ class ESLintErrorAutoFixer {}
 
     this.log(`ESLint error auto-fixer started. Running every ${this.fixInterval / 1000} seconds.`)}
 }
-=======
-
-    this.log(`ESLint error auto-fixer started. Running every ${this.fixInterval / 1000} seconds.`)};
->>>>>>> origin/chore/fix-lint-and-merge
 // Main execution;
 if (require.main === module) {}
   const fixer = new ESLintErrorAutoFixer();
   // Handle graceful shutdown;
-<<<<<<< HEAD
   process.on('SIGINT', () => {}
     fixer.log(Shutting down ESLint error auto-fixer...);
     process.exit(0)}
@@ -355,30 +284,8 @@ if (require.main === module) {}
     fixer.log(`Failed to start auto-"fixer": ${error.message}`, 'ERROR');
     process.exit(1)})}
 
-=======
 
-    process.exit(1)})};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-module.exports = ESLintErrorAutoFixer;
-module.exports = ESLintErrorAutoFixer;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 module.exports = ESLintErrorAutoFixer;
 `;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-module.exports = ESLintErrorAutoFixer;
-=======
-module.exports = ESLintErrorAutoFixer;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

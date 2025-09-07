@@ -1,10 +1,15 @@
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src-disabled/components/services/ITServicePricingTable.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { useState, useMemo } from "react",;
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
 import { Input } from "@/components/ui/input",;
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+<<<<<<< HEAD
+=======
 import { Globe, Search, ArrowUpDown } from 'lucide-react'
 import { Button } from "@/components/ui/button";
 export function ITServicePricingTable() {
@@ -24,11 +29,14 @@ import { Input } from '@/components/ui/input'
   TableHeader
   TableRow
 } from '@/components/ui/table'
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Globe, Search, ArrowUpDown } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 export function ITServicePricingTable() {
   const [searchQuery, setSearchQuery] = useState('')
   const [sortConfig, setSortConfig] = useState<{
+<<<<<<< HEAD
+=======
     key: keyof CountryPricing
     direction: 'ascending' | 'descending'
   }>({
@@ -37,6 +45,7 @@ export function ITServicePricingTable() {
   })
   const sortedData = useMemo(() => {
     let filteredData = [...onsiteServicePricing]
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <<<<<<< HEAD
 
@@ -234,6 +243,8 @@ export function ITServicePricingTable() {
         <div className="relative flex-1">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
           <Input
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src-disabled/components/services/ITServicePricingTable.tsx
 =======
 <<<<<<< HEAD
@@ -272,6 +283,7 @@ export function ITServicePricingTable() {
               <TableHead className='text-zion-cyan font-medium'>;
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             placeholder="Search by country..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
@@ -318,6 +330,8 @@ export function ITServicePricingTable() {
                   <ArrowUpDown className="h-4 w-4" />
                 </Button>
               </TableHead>
+<<<<<<< HEAD
+=======
               <TableHead className="text-right text-zion-cyan font-medium">
                 <Button 
                   variant="ghost" 
@@ -328,6 +342,7 @@ export function ITServicePricingTable() {
 =======
 
                   className='hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light'                >
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               <TableHead className="text-right text-zion-cyan font-medium">
                 <Button 
                   variant="ghost" 
@@ -393,6 +408,11 @@ export function ITServicePricingTable() {
                   No countries match your search
                 </TableCell>
               </TableRow>
+<<<<<<< HEAD
+<<<<<<< HEAD
+:src/components/services/ITServicePricingTable.tsx
+=======
+=======
 <<<<<<< HEAD:src-disabled/components/services/ITServicePricingTable.tsx
 <<<<<<< HEAD
 :src/components/services/ITServicePricingTable.tsx
@@ -411,6 +431,7 @@ export function ITServicePricingTable() {
 };
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/services/ITServicePricingTable.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState, useMemo } from "react",;
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
 import { Input } from "@/components/ui/input",;

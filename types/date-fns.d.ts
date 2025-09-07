@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 declare module "date-fns" {;
 
 declare module "date-fns" {;
@@ -34,12 +33,6 @@ declare module "date-fns" {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
-
-declare module 'date-fns' {export function format("date": Date | number, "formatStr": string): string;'
-
-}
-
 export function parseISO("dateString": string): Date;
 
 export function isValid("date": any): boolean;
@@ -55,4 +48,3 @@ export function differenceInDays("dateLeft": Date | number, "dateRight": Date | 
 export function format("date": Date | number, "formatStr": string): string;
   } catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" },"
 }
->>>>>>> merged-prs-20250907-203621

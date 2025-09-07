@@ -134,7 +134,11 @@ function OnboardingTracker() {
         <div;
           className="h - 2 bg - gradient - to - r from - zion - purple to - zion - cyan rounded - full transition - all duration - 500 ease - out";
 
+<<<<<<< HEAD
+          style={ width: `${progress}%` }
+=======
           style={{ width: `${progress}%` }}
+>>>>>>> origin/resolved-merge-conflicts
         ></div>;
       </div>;
       {/* Steps list */}

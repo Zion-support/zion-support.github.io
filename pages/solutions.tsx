@@ -1,1648 +1,426 @@
-
-
-<<<<<<< HEAD
-
-
-=======
 import React from 'react';
-import Layout from '../components/layout/Layout';
-import SEO from '../components/SEO';
+import Head from 'next/head';
 import { motion } from 'framer-motion';
-import {
-  Target, Brain, Rocket, Shield, Zap, Atom, Cpu
-  Lock, Cloud, Settings, Eye, Award, Clock, Heart
-  Lightbulb, Search, Grid, List, TrendingUp
-  User, ShoppingCart, Bell, HelpCircle, FileText
-  Video, Headphones, Code, Database, Network, Server
-  Monitor, Smartphone, Camera, Gamepad2, Palette
-  Music, Film, BookOpenCheck, Building, MessageCircle
-  Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
-} from 'lucide-react'
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-import React from 'react',;
-import Layout from '../components/layout/Layout',;
-import SEO from '../components/SEO',;
-import { motion } from 'framer-motion',;
 import { 
-  Target, Brain, Rocket, Shield, Zap, Atom, Cpu, 
-  Lock, Cloud, Settings, Eye, Award, Clock, Heart, 
-  Lightbulb, Search, Grid, List, TrendingUp, 
-  User, ShoppingCart, Bell, HelpCircle, FileText, 
-  Video, Headphones, Code, Database, Network, Server, 
-  Monitor, Smartphone, Camera, Gamepad2, Palette, 
-  Music, Film, BookOpenCheck, Building, MessageCircle, 
-
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import React from 'react',
-import Layout from '../components / layout / Layout',
-import SEO from '../components / SEO',
-import React from 'react',;
-import Layout from '../components/layout/Layout',;
-import SEO from '../components/SEO',;
-import { motion } from 'framer-motion',;
-import { 
-  Target, Brain, Rocket, Shield, Zap, Atom, Cpu, 
-  Lock, Cloud, Settings, Eye, Award, Clock, Heart, 
-  Lightbulb, Search, Grid, List, TrendingUp, 
-  User, ShoppingCart, Bell, HelpCircle, FileText, 
-  Video, Headphones, Code, Database, Network, Server, 
-  Monitor, Smartphone, Camera, Gamepad2, Palette, 
-  Music, Film, BookOpenCheck, Building, MessageCircle, 
-import React from 'react',
-import Layout from '../components/layout/Layout',
-import SEO from '../components/SEO',
-import { motion } from 'framer-motion',
-import {
-  Target, Brain, Rocket, Shield, Zap, Atom, Cpu,
-  Lock, Cloud, Settings, Eye, Award, Clock, Heart,
-  Lightbulb, Search, Grid, List, TrendingUp,
-  User, ShoppingCart, Bell, HelpCircle, FileText,
-  Video, Headphones, Code, Database, Network, Server,
-  Monitor, Smartphone, Camera, Gamepad2, Palette,
-  Music, Film, BookOpenCheck, Building, MessageCircle,
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-
-  Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
-} from 'lucide-react',;
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
-import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services',;
-
-const Solutions: NextPage = () => {
-  const industry_solutions = [;
-    {
-
-
-<<<<<<< HEAD
-=======
-      id: 'healthcare',
-      name: 'Healthcare Solutions',
-      description: 'AI - powered healthcare technology solutions',
-      features: ['Patient Care OptimizationDiagnostic AIHealthcare AnalyticsCompliance Management'],
-      price: '$3, 999',
-      period: 'month',
-      popular: true,
-      icon: <Heart className="w-8 h-8" />
-    },
-    {
-      id: 'financial',
-      name: 'Financial Solutions',
-      description: 'Advanced financial technology and services',
-      features: ['Risk ManagementFraud DetectionTrading SystemsCompliance Automation'],
-      price: '$2,999',
-      period: 'month',
-      popular: false,
-      icon: <TrendingUp className="w-8 h-8" />
-    },
-    {
-      id: 'manufacturing',
-      name: 'Manufacturing Solutions',
-      description: 'Smart manufacturing and Industry 4.0',
-      features: ['Predictive MaintenanceQuality ControlSupply Chain OptimizationIoT Integration'],
-      price: '$2,799',
-      period: 'month',
-      popular: false,
-      icon: <Settings className="w-8 h-8" />
-    },
-    {
-      id: 'retail',
-      name: 'Retail Solutions',
-      description: 'Digital transformation for retail businesses',
-      features: ['E-commerce PlatformsCustomer AnalyticsInventory ManagementOmnichannel Solutions'],
-      price: '$2,499',
-      period: 'month',
-      popular: false,
-      icon: <ShoppingCart className="w-8 h-8" />
-    },
-    {
-      id: 'government',
-      name: 'Government Solutions',
-      description: 'Technology solutions for public sector',
-      features: ['Digital ServicesSecurity & ComplianceData ManagementCitizen Engagement'],
-      price: '$3,499',
-      period: 'month',
-      popular: false,
-      icon: <Building className="w-8 h-8" />
-    },
-    {
-      id: 'education',
-      name: 'Education Solutions',
-      description: 'Innovative educational technology',
-      features: ['Learning PlatformsStudent AnalyticsAdministrative SystemsVirtual Classrooms'],
-      price: '$1,999',
-      period: 'month',
-      popular: false,
-      icon: <BookOpenCheck className="w-8 h-8" />
-
-  ],
-  const solutionCapabilities = [
-    {
-      title: 'Industry Expertise',
-      description: 'Deep domain knowledge across sectors',
-      icon: <Briefcase className="w-6 h-6" />
-    },
-    {
-      title: 'Custom Development',
-      description: 'Tailored solutions for unique needs',
-      icon: <Code className="w-6 h-6" />
-    },
-    {
-      title: 'Integration Services',
-      description: 'Seamless system integration',
-      icon: <Network className="w-6 h-6" />
-    },
-    {
-      title: 'AI & Automation',
-      description: 'Intelligent automation solutions',
-      icon: <Brain className="w-6 h-6" />
-    },
-    {
-      title: 'Cloud & Security',
-      description: 'Secure cloud infrastructure',
-      icon: <Shield className="w-6 h-6" />
-    },
-    {
-      title: 'Analytics & Insights',
-      description: 'Data-driven decision making',
-      icon: <BarChart3 className="w-6 h-6" />
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-  ],
-  const caseStudies = [
-    {
-      title: "Healthcare Provider Digital Transformation",
-      industry: "Healthcare",
-      description: "Implemented a comprehensive EHR system for a regional hospital network, improving patient care and operational efficiency.",
-<<<<<<< HEAD
-      icon: <Heart className="w - 8 h - 8" />;
-  Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
-} from 'lucide-react'
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
-  Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
-} from 'lucide-react',;
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
-import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services',;
-const Solutions: NextPage = () => {
+  Building, Car, Heart, DollarSign, GraduationCap, 
+  Shield, Factory, Globe, Brain, Atom, Rocket,
+  ArrowRight, CheckCircle, Star, Users, Zap
+} from 'lucide-react';
+export default function SolutionsPage() {
   const industrySolutions = [
     {
-      id: 'healthcare'
-      name: 'Healthcare Solutions'
-      description: 'AI-powered healthcare technology solutions'
-      features: ['Patient Care OptimizationDiagnostic AIHealthcare AnalyticsCompliance Management']
-      price: '$3,999'
-      period: 'month'
-      popular: true
-      icon: <Heart className="w-8 h-8" />
-    }
-    {
-      id: 'financial'
-      name: 'Financial Solutions'
-      description: 'Advanced financial technology and services'
-      features: ['Risk ManagementFraud DetectionTrading SystemsCompliance Automation']
-      price: '$2,999'
-      period: 'month'
-      popular: false
-      icon: <TrendingUp className="w-8 h-8" />
-    }
-    {
-      id: 'manufacturing'
-      name: 'Manufacturing Solutions'
-      description: 'Smart manufacturing and Industry 4.0'
-      features: ['Predictive MaintenanceQuality ControlSupply Chain OptimizationIoT Integration']
-      price: '$2,799'
-      period: 'month'
-      popular: false
-      icon: <Settings className="w-8 h-8" />
-    }
-    {
-      id: 'retail'
-      name: 'Retail Solutions'
-      description: 'Digital transformation for retail businesses'
-      features: ['E-commerce PlatformsCustomer AnalyticsInventory ManagementOmnichannel Solutions']
-      price: '$2,499'
-      period: 'month'
-      popular: false
-      icon: <ShoppingCart className="w-8 h-8" />
-    }
-    {
-      id: 'government'
-      name: 'Government Solutions'
-      description: 'Technology solutions for public sector'
-      features: ['Digital ServicesSecurity & ComplianceData ManagementCitizen Engagement']
-      price: '$3,499'
-      period: 'month'
-      popular: false
-      icon: <Building className="w-8 h-8" />
-    }
-    {
-      id: 'education'
-      name: 'Education Solutions'
-      description: 'Innovative educational technology'
-      features: ['Learning PlatformsStudent AnalyticsAdministrative SystemsVirtual Classrooms']
-      price: '$1,999'
-      period: 'month'
-      popular: false
-      icon: <BookOpenCheck className="w-8 h-8" />
-    }
-  ]
-  const solutionCapabilities = [
-    {
-      title: 'Industry Expertise'
-      description: 'Deep domain knowledge across sectors'
-      icon: <Briefcase className="w-6 h-6" />
-    }
-    {
-      title: 'Custom Development'
-      description: 'Tailored solutions for unique needs'
-      icon: <Code className="w-6 h-6" />
-    }
-    {
-      title: 'Integration Services'
-      description: 'Seamless system integration'
-      icon: <Network className="w-6 h-6" />
-    }
-    {
-      title: 'AI & Automation'
-      description: 'Intelligent automation solutions'
-      icon: <Brain className="w-6 h-6" />
-    }
-    {
-      title: 'Cloud & Security'
-      description: 'Secure cloud infrastructure'
-      icon: <Shield className="w-6 h-6" />
-    }
-    {
-      title: 'Analytics & Insights'
-      description: 'Data-driven decision making'
-      icon: <BarChart3 className="w-6 h-6" />
-    }
-  ]
-  const caseStudies = [
-    {
-      title: "Healthcare Provider Digital Transformation"
-      industry: "Healthcare"
-      description: "Implemented a comprehensive EHR system for a regional hospital network, improving patient care and operational efficiency."
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      results: [
-        "30% reduction in administrative overhead",
-        "Improved patient satisfaction scores",
-        "Enhanced data security and compliance"
-      ],
-      technologies: ["React", "Node.js", "PostgreSQL", "AWS"]
+      name: 'Enterprise',
+      description: 'Scalable solutions for large organizations with complex requirements',
+      icon: Building2,
+      color: 'from-blue-400 to-cyan-500',
+      solutions: [
+        'Digital Transformation',
+        'Enterprise AI Platform',
+        'Cloud Migration',
+        'Legacy System Modernization'
+      ]
     },
     {
-      title: "E-commerce Platform Modernization",
-      industry: "Retail",
-      description: "Redesigned and modernized an existing e-commerce platform, resulting in significant improvements in user experience and sales.",
-      results: [
-        "45% increase in conversion rates",
-        "60% improvement in page load times",
-        "Enhanced mobile user experience"
-      ],
-      technologies: ["Next.js", "TypeScript", "MongoDB", "Vercel"]
+      name: 'Manufacturing',
+      description: 'Smart manufacturing solutions for Industry 4.0 and beyond',
+      icon: Factory,
+      color: 'from-orange-400 to-red-500',
+      solutions: [
+        'Predictive Maintenance',
+        'Quality Control AI',
+        'Supply Chain Optimization',
+        'Smart Factory Management'
+      ]
     },
     {
-      title: "Manufacturing IoT Integration",
-      industry: "Manufacturing",
-      description: "Implemented IoT sensors and predictive maintenance systems for a manufacturing facility, reducing downtime and improving efficiency.",
-      results: [
-        "25% reduction in unplanned downtime",
-        "15% improvement in production efficiency",
-        "Predictive maintenance cost savings"
-      ],
-      technologies: ["Python", "TensorFlow", "AWS IoT", "React Native"]
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-  ],
-
+      name: 'Automotive',
+      description: 'Next-generation automotive technology and mobility solutions',
+      icon: Car,
+      color: 'from-gray-400 to-slate-500',
+      solutions: [
+        'Connected Vehicle Platform',
+        'Autonomous Driving Systems',
+        'Fleet Management',
+        'EV Infrastructure'
+      ]
+    },
+    {
+      name: 'Healthcare',
+      description: 'AI-powered healthcare solutions for better patient outcomes',
+      icon: Heart,
+      color: 'from-red-400 to-pink-500',
+      solutions: [
+        'Medical AI Diagnostics',
+        'Patient Care Automation',
+        'Healthcare Analytics',
+        'Telemedicine Platform'
+      ]
+    },
+    {
+      name: 'Education',
+      description: 'Innovative educational technology for modern learning',
+      icon: GraduationCap,
+      color: 'from-green-400 to-emerald-500',
+      solutions: [
+        'Learning Management System',
+        'AI Tutoring Platform',
+        'Virtual Reality Learning',
+        'Student Analytics'
+      ]
+    },
+    {
+      name: 'Financial Services',
+      description: 'Secure and intelligent financial technology solutions',
+      icon: Shield,
+      color: 'from-yellow-400 to-orange-500',
+      solutions: [
+        'Fraud Detection AI',
+        'Risk Management',
+        'Trading Algorithms',
+        'Regulatory Compliance'
+      ]
+    }
+  ];
+  const technologySolutions = [
+    {
+      name: 'AI & Machine Learning',
+      description: 'Comprehensive AI solutions for business automation and intelligence',
+      icon: Brain,
+      color: 'from-purple-400 to-pink-500',
+      features: [
+        'Natural Language Processing',
+        'Computer Vision',
+        'Predictive Analytics',
+        'Automated Decision Making'
+      ]
+    },
+    {
+      name: 'Quantum Computing',
+      description: 'Quantum solutions for complex optimization and simulation problems',
+      icon: Zap,
+      color: 'from-cyan-400 to-blue-500',
+      features: [
+        'Quantum Optimization',
+        'Quantum Machine Learning',
+        'Quantum Cryptography',
+        'Quantum Simulation'
+      ]
+    },
+    {
+      name: 'Cloud & DevOps',
+      description: 'Modern cloud infrastructure and development operations',
+      icon: Cloud,
+      color: 'from-green-400 to-emerald-500',
+      features: [
+        'Multi-Cloud Management',
+        'Container Orchestration',
+        'CI/CD Automation',
+        'Infrastructure as Code'
+      ]
+    },
+    {
+      name: 'Cybersecurity',
+      description: 'Advanced security solutions for modern threat landscapes',
+      icon: Shield,
+      color: 'from-red-400 to-pink-500',
+      features: [
+        'Zero-Trust Security',
+        'Threat Intelligence',
+        'Incident Response',
+        'Compliance Management'
+      ]
+    }
+  ];
+  const useCaseSolutions = [
+    {
+      title: 'Digital Transformation',
+      description: 'Complete digital transformation solutions for modern businesses',
+      icon: Rocket,
+      color: 'from-purple-400 to-pink-500',
+      benefits: [
+        'Increased operational efficiency',
+        'Improved customer experience',
+        'Reduced operational costs',
+        'Enhanced data insights'
+      ]
+    },
+    {
+      title: 'Process Automation',
+      description: 'Intelligent automation solutions for repetitive business processes',
+      icon: Zap,
+      color: 'from-cyan-400 to-blue-500',
+      benefits: [
+        'Faster process execution',
+        'Reduced human error',
+        '24/7 operation capability',
+        'Scalable automation'
+      ]
+    },
+    {
+      title: 'Data Analytics',
+      description: 'Comprehensive data analytics and business intelligence solutions',
+      icon: BarChart3,
+      color: 'from-green-400 to-emerald-500',
+      benefits: [
+        'Real-time insights',
+        'Predictive analytics',
+        'Data-driven decisions',
+        'Performance optimization'
+      ]
+    },
+    {
+      title: 'Customer Experience',
+      description: 'AI-powered customer experience and engagement solutions',
+      icon: Users,
+      color: 'from-orange-400 to-red-500',
+      benefits: [
+        'Personalized experiences',
+        'Improved satisfaction',
+        'Increased retention',
+        'Better engagement'
+      ]
+    }
+  ];
   return (
-    <UltraAdvancedFuturisticBackground>
-      <div className="min-h-screen">
-        <Head>
-          <title>Solutions - Zion Tech Group | Revolutionary AI, Quantum Computing & Emerging Technology Solutions</title>
-          <meta name="description" content="Discover Zion Tech Group's comprehensive solutions portfolio including Micro SaaS platforms, AI-powered tools, Business Intelligence, Process Automation, and Cloud platforms." />
-        </Head>
-
-<<<<<<< HEAD
-    }
-  ]
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      id: 'healthcare',
-      name: 'Healthcare Solutions',
-      description: 'AI-powered healthcare technology solutions',
-      features: ['Patient Care OptimizationDiagnostic AIHealthcare AnalyticsCompliance Management'],
-      price: '$3,999',
-      period: 'month',
-      popular: true,
-      icon: <Heart className="w-8 h-8" />
-    },
-    {
-      id: 'financial',
-      name: 'Financial Solutions',
-      description: 'Advanced financial technology and services',
-      features: ['Risk ManagementFraud DetectionTrading SystemsCompliance Automation'],
-      price: '$2,999',
-      period: 'month',
-      popular: false,
-      icon: <TrendingUp className="w-8 h-8" />
-    },
-    {
-      id: 'manufacturing',
-      name: 'Manufacturing Solutions',
-      description: 'Smart manufacturing and Industry 4.0',
-      features: ['Predictive MaintenanceQuality ControlSupply Chain OptimizationIoT Integration'],
-      price: '$2,799',
-      period: 'month',
-      popular: false,
-      icon: <Settings className="w-8 h-8" />
-    },
-    {
-      id: 'retail',
-      name: 'Retail Solutions',
-      description: 'Digital transformation for retail businesses',
-      features: ['E-commerce PlatformsCustomer AnalyticsInventory ManagementOmnichannel Solutions'],
-      price: '$2,499',
-      period: 'month',
-      popular: false,
-      icon: <ShoppingCart className="w-8 h-8" />
-    },
-    {
-      id: 'government',
-      name: 'Government Solutions',
-      description: 'Technology solutions for public sector',
-      features: ['Digital ServicesSecurity & ComplianceData ManagementCitizen Engagement'],
-      price: '$3,499',
-      period: 'month',
-      popular: false,
-      icon: <Building className="w-8 h-8" />
-    },
-    {
-      id: 'education',
-      name: 'Education Solutions',
-      description: 'Innovative educational technology',
-      features: ['Learning PlatformsStudent AnalyticsAdministrative SystemsVirtual Classrooms'],
-      price: '$1,999',
-      period: 'month',
-      popular: false,
-      icon: <BookOpenCheck className="w-8 h-8" />
-    }
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],
-  const solutionCapabilities = [
-    {
-      title: 'Industry Expertise',
-      description: 'Deep domain knowledge across sectors',
-      icon: <Briefcase className="w-6 h-6" />
-    },
-    {
-      title: 'Custom Development',
-      description: 'Tailored solutions for unique needs',
-      icon: <Code className="w-6 h-6" />
-    },
-    {
-      title: 'Integration Services',
-      description: 'Seamless system integration',
-      icon: <Network className="w-6 h-6" />
-    },
-    {
-      title: 'AI & Automation',
-      description: 'Intelligent automation solutions',
-      icon: <Brain className="w-6 h-6" />
-    },
-    {
-      title: 'Cloud & Security',
-      description: 'Secure cloud infrastructure',
-      icon: <Shield className="w-6 h-6" />
-    },
-    {
-      title: 'Analytics & Insights',
-      description: 'Data-driven decision making',
-      icon: <BarChart3 className="w-6 h-6" />
-    }
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],
-  const caseStudies = [
-    {
-      title: "Healthcare Provider Digital Transformation",
-      industry: "Healthcare",
-      description: "Implemented a comprehensive EHR system for a regional hospital network, improving patient care and operational efficiency.",
-      results: [
-        "30% reduction in administrative overhead",
-        "Improved patient satisfaction scores",
-        "Enhanced data security and compliance"
-      ],
-      technologies: ["React", "Node.js", "PostgreSQL", "AWS"]
-    },
-    {
-      title: "E-commerce Platform Modernization",
-      industry: "Retail",
-      description: "Redesigned and modernized an existing e-commerce platform, resulting in significant improvements in user experience and sales.",
-      results: [
-        "45% increase in conversion rates",
-        "60% improvement in page load times",
-        "Enhanced mobile user experience"
-      ],
-      technologies: ["Next.js", "TypeScript", "MongoDB", "Vercel"]
-    },
-    {
-      title: "Manufacturing IoT Integration",
-      industry: "Manufacturing",
-      description: "Implemented IoT sensors and predictive maintenance systems for a manufacturing facility, reducing downtime and improving efficiency.",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      results: [;
-        "25% reduction in unplanned downtime",
-        "15% improvement in production efficiency",
-        "Predictive maintenance cost savings";
-      ],
-      technologies: ["Python", "TensorFlow", "AWS IoT", "React Native"];
-    }
-  ],
-  return (
-    <UltraAdvancedFuturisticBackground>;
-      <div className="min - h-screen">;
-        <Head>;
-          <title > Solutions - Zion Tech Group | Revolutionary AI, Quantum Computing & Emerging Technology Solutions</title>;
-          <meta name="description" content="Discover Zion Tech Group's comprehensive solutions portfolio including Micro SaaS platforms, AI - powered tools, Business Intelligence, Process Automation, and Cloud platforms." />;
-        </Head>;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    <>
+      <Head>
+        <title>Solutions - Zion Tech Group</title>
+        <meta name="description" content="Discover Zion Tech Group's comprehensive technology solutions for various industries including AI, quantum computing, cloud, and cybersecurity." />
+        <meta property="og:title" content="Solutions - Zion Tech Group" />
+        <meta property="og:description" content="Discover Zion Tech Group's comprehensive technology solutions for various industries including AI, quantum computing, cloud, and cybersecurity." />
+        <link rel="canonical" href="https://ziontechgroup.com/solutions" />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         {/* Hero Section */}
-        <section className="min - h-[60vh] flex items - center justify - center px - 4 py - 20">;
-          <div className="text - center max - w-4xl mx - auto">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
+        <section className="relative overflow-hidden py-20">
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10" />
+          <div className="relative z-10 container mx-auto px-6 text-center">
+            <motion.h1 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-=======
-
-
-        {/* Hero Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-        <section className="min-h-[60vh] flex items-center justify-center px-4 py-20">
-          <div className="text-center max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent"
             >
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 bg-clip-text text-transparent">
-                Industry Solutions
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Tailored technology solutions designed for your industry's unique challenges and opportunities
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-
-                <a
-                  href="/contact"
-
-
-
-                  className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
-                >
-                  Schedule Demo
-                </a>
-              </div>
+              Technology Solutions
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-xl text-white/80 max-w-4xl mx-auto mb-8"
+            >
+              Comprehensive technology solutions designed to transform your business operations, 
+              drive innovation, and deliver measurable results across all industries.
+            </motion.p>
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="flex flex-wrap justify-center gap-4"
+            >
+              <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 rounded-lg text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25">
+                Get Started
+              </a>
+              <a href="/case-studies" className="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-300 hover:border-cyan-400/50">
+                View Case Studies
+              </a>
             </motion.div>
           </div>
         </section>
-
-            >;
-              <h1 className="text - 5xl md:text - 7xl font - bold mb - 6 bg - gradient - to - r from - orange - 400 via - red - 500 to - pink - 600 bg - clip - text text - transparent">;
-                Industry Solutions;
-              </h1>;
-              <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-3xl mx - auto">;
-                Tailored technology solutions designed for your industry's unique challenges and opportunities;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <a;
-                  href="/contact";
-                  className="px - 8 py - 4 bg - gradient - to - r from - orange - 500 to - red - 600 text - white font - semibold rounded - lg hover:from - orange - 600 hover:to - red - 700 transition - all duration - 300 transform hover:scale - 105";
-                >;
-                  Get Started;
-                </a>;
-                <a;
-                  href="/contact";
-                  className="px - 8 py - 4 border - 2 border - orange - 400 text - orange - 400 font - semibold rounded - lg hover:bg - orange - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105";
-                >;
-                  Schedule Demo;
-                </a>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        {/* Solution Capabilities */}
-        <section className="py - 20 px - 4 bg - gradient - to - b from - black to - gray - 900">;
-          <div className="max - w-6xl mx - auto">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-
-
-        {/* Solution Capabilities */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
-                Solution Capabilities
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive capabilities to deliver industry-specific technology solutions
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {solutionCapabilities.map((capability, index) => (
-                <motion.div
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-              className="text - center mb - 16";
-            >;
-              <h2 className="text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - orange - 400 to - red - 500 bg - clip - text text - transparent">;
-                Solution Capabilities;
-              </h2>;
-              <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
-                Comprehensive capabilities to deliver industry - specific technology solutions;
-              </p>;
-            </motion.div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-              {solution_capabilities.map ((capability, index) => (
-                <motion.div;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                  key={capability.title}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg - gradient - to - br from - gray - 800 to - gray - 900 p - 6 rounded - xl border border - gray - 700 hover:border - orange - 500 transition - all duration - 300";
-                >;
-                  <div className="flex items - center mb - 4">;
-                    <div className="p - 2 bg - orange - 500 / 20 rounded - lg mr - 3">;
-                      {capability.icon}
-<<<<<<< HEAD
-=======
-
-
-                  key={capability.title  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-                  className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 hover:border-orange-500 transition-all duration-300"
-                >
-                  <div className="flex items-center mb-4">
-                    <div className="p-2 bg-orange-500/20 rounded-lg mr-3">
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                      {capability.icon  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-                    </div>
-                    <h3 className="text-xl font-semibold text-white">{capability.title}</h3>
-                  </div>
-                  <p className="text-gray-300">{capability.description}</p>
-                </motion.div>
-
-                    </div>;
-                    <h3 className="text - xl font - semibold text - white">{capability.title}</h3>;
-                  </div>;
-                  <p className="text - gray - 300">{capability.description}</p>;
-                </motion.div>))}
-            </div>;
-          </div>;
-        </section>;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Industry Solutions */}
-        <section className="py - 20 px - 4">;
-          <div className="max - w-6xl mx - auto">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
+        <section className="py-20">
+          <div className="container mx-auto px-6">
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-
-
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </div>;
-          </div>;
-        </section>;
-        {/* Industry Solutions */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <section className="py-20 px-4">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-16"
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 Industry Solutions
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose from our comprehensive suite of industry-specific solutions
+              <p className="text-xl text-white/80 max-w-3xl mx-auto">
+                Tailored technology solutions designed specifically for your industry's unique challenges and opportunities.
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {industrySolutions.map((solution, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {industrySolutions.map((industry, index) => (
                 <motion.div
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-              className="text - center mb - 16";
-            >;
-              <h2 className="text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - orange - 400 to - red - 500 bg - clip - text text - transparent">;
-                Industry Solutions;
-              </h2>;
-              <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
-                Choose from our comprehensive suite of industry - specific solutions;
-              </p>;
-            </motion.div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-              {industry_solutions.map ((solution, index) => (
-                <motion.div;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                  key={solution.id}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  key={industry.name}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                  className={`relative bg - gradient - to - br from - gray - 800 to - gray - 900 p - 6 rounded - xl border transition - all duration - 300 hover:scale - 105 ${
-                    solution.popular;
-                      ? 'border - orange - 500 shadow - lg shadow - orange - 500 / 25';
-                      : 'border - gray - 700 hover:border - orange - 500';
-<<<<<<< HEAD
-                  }`}
-                >;
-=======
-
-                  }`}
-                >;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-                  key={solution.id  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  className={`relative bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border transition-all duration-300 hover:scale-105 ${;
-                    solution.popular;
-                      ? 'border-orange-500 shadow-lg shadow-orange-500/25';
-                      : 'border-gray-700 hover:border-orange-500';
-                  }`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
+                  className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-cyan-400/30 transition-all duration-300"
                 >
-                  {solution.popular && (
-
-                    <div className="absolute -top - 3 left - 1/2 transform -translate - x-1 / 2">;
-                      <span className="bg - gradient - to - r from - orange - 500 to - red - 600 text - white px - 4 py - 1 rounded - full text - sm font - semibold">;
-                        Most Popular;
-                      </span>;
-                    </div>)}
-                  <div className="text - center mb - 6">;
-                    <div className="inline - flex p - 3 bg - orange - 500 / 20 rounded - full mb - 4">;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                      {solution.icon}
-                    </div>;
-                    <h3 className="text - 2xl font - bold text - white mb - 2">{solution.name}</h3>;
-                    <p className="text - gray - 300 mb - 4">{solution.description}</p>;
-                    <div className="text - 3xl font - bold text - orange - 400 mb - 2">;
-                      {solution.price}
-<<<<<<< HEAD
-=======
-
-
-                  )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  <div className="text-center mb-6">
-                    <div className="inline-flex p-3 bg-orange-500/20 rounded-full mb-4">
-                      {solution.icon  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{solution.name}</h3>
-                    <p className="text-gray-300 mb-4">{solution.description}</p>
-                    <div className="text-3xl font-bold text-orange-400 mb-2">
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                      {solution.price  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-                      <span className="text-lg text-gray-400">/{solution.period}</span>
-                    </div>
+                  <div className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-r ${industry.color} rounded-xl flex items-center justify-center`}>
+                    <industry.icon className="w-8 h-8 text-white" />
                   </div>
-                  <ul className="space-y-3 mb-6">
-                    {solution.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />
-
-
-                  </ul>
-                  <a 
-                    href="/contact" 
-
-                        {feature  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      </li>;
-                    ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-                  </ul>
-                  <a
-                    href="/contact"
-
-
-                    className="w-full block text-center px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300"
-                  >
-                    Get Started
-                  </a>
+                  <h3 className="text-xl font-semibold mb-3 text-white text-center">{industry.name}</h3>
+                  <p className="text-white/70 mb-4 text-center">{industry.description}</p>
+                  <div className="mb-4">
+                    <h4 className="text-white font-semibold mb-2">Solutions:</h4>
+                    <ul className="space-y-1">
+                      {industry.solutions.map((solution, idx) => (
+                        <li key={idx} className="text-sm text-white/70 flex items-center">
+                          <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2" />
+                          {solution}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="text-center">
+                    <a href="/contact" className="inline-flex items-center px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-300 hover:border-cyan-400/50">
+                      Learn More
+                    </a>
+                  </div>
                 </motion.div>
               ))}
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Industry Solutions
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Tailored technology solutions designed specifically for your industry's unique challenges and opportunities.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-green-500/25 transition-all duration-300"
-              >
-                Get Started
-                <ArrowRight className="inline-block ml-2 w-5 h-5" />
-              </Link>
-              <Link
-                href="/demo"
-                className="border border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 backdrop-blur-md hover:bg-white/10"
-              >
-                Request Demo
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-                      <span className="text - lg text - gray - 400">/{solution.period}</span>;
-                    </div>;
-                  </div>;
-                  <ul className="space - y-3 mb - 6">;
-                    {solution.features.map ((feature, feature_index) => (
-                      <li key={feature_index} className="flex items - center text - gray - 300">;
-                        <CheckCircle className="w - 5 h - 5 text - orange - 400 mr - 3 flex - shrink - 0" />;
-                        {feature}
-                      </li>))}
-                  </ul>;
-                  <a;
-                    href="/contact";
-                    className="w - full block text - center px - 6 py - 3 bg - gradient - to - r from - orange - 500 to - red - 600 text - white font - semibold rounded - lg hover:from - orange - 600 hover:to - red - 700 transition - all duration - 300";
-                  >;
-                    Get Started;
-                  </a>;
-                </motion.div>))}
-            </div>;
-            <h1 className="text - 5xl md:text - 6xl font - bold text - white mb - 6">;
-              Industry Solutions;
-            </h1>;
-            <p className="text - xl md:text - 2xl text - gray - 300 max - w-3xl mx - auto mb - 8">;
-              Tailored technology solutions designed specifically for your industry's unique challenges and opportunities.;
-            </p>;
-            <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-              <Link;
-                href="/contact";
-                className="bg - gradient - to - r from - green - 500 to - emerald - 600 text - white px - 8 py - 4 rounded - full text - lg font - semibold hover:shadow - 2xl hover:shadow - green - 500 / 25 transition - all duration - 300";
-              >;
-                Get Started;
-                <ArrowRight className="inline - block ml - 2 w - 5 h - 5" />;
-              </Link>;
-              <Link;
-                href="/demo";
-                className="border border - white / 30 hover:border - white / 50 text - white px - 8 py - 4 rounded - full text - lg font - semibold transition - all duration - 300 backdrop - blur - md hover:bg - white / 10";
-              >;
-                Request Demo;
-              </Link>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        {/* CTA Section */}
-        <section className="py - 20 px - 4 bg - gradient - to - b from - gray - 900 to - black">;
-          <div className="max - w-4xl mx - auto text - center">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
+          </div>
+        </section>
+        {/* Technology Solutions */}
+        <section className="py-20">
+          <div className="container mx-auto px-6">
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-
-
-        {/* CTA Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-        <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              className="text-center mb-16"
             >
-              <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
-                Ready for Industry Transformation?
+              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Technology Solutions
               </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Partner with us to build industry-specific solutions that drive your business forward
+              <p className="text-xl text-white/80 max-w-3xl mx-auto">
+                Cutting-edge technology solutions that power modern businesses and drive innovation.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-
-                <a
-                  href="/contact"
-
-
-
-                  className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
+            </motion.div>
+            <div className="grid lg:grid-cols-2 gap-8">
+              {technologySolutions.map((tech, index) => (
+                <motion.div
+                  key={tech.name}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-cyan-400/30 transition-all duration-300"
                 >
-                  Schedule Consultation
+                  <div className="flex items-center mb-6">
+                    <div className={`w-16 h-16 bg-gradient-to-r ${tech.color} rounded-xl flex items-center justify-center mr-4`}>
+                      <tech.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-semibold text-white">{tech.name}</h3>
+                      <p className="text-white/70">{tech.description}</p>
+                    </div>
+                  </div>
+                  <div className="mb-6">
+                    <h4 className="text-white font-semibold mb-3">Key Features:</h4>
+                    <ul className="space-y-2">
+                      {tech.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center text-white/70">
+                          <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="text-center">
+                    <a href="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 rounded-lg text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25">
+                      Explore Solution
+                    </a>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* Use Case Solutions */}
+        <section className="py-20">
+          <div className="container mx-auto px-6">
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Use Case Solutions
+              </h2>
+              <p className="text-xl text-white/80 max-w-3xl mx-auto">
+                Proven solutions for common business challenges and opportunities.
+              </p>
+            </motion.div>
+            <div className="grid md:grid-cols-2 gap-8">
+              {useCaseSolutions.map((useCase, index) => (
+                <motion.div
+                  key={useCase.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-cyan-400/30 transition-all duration-300"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className={`w-12 h-12 bg-gradient-to-r ${useCase.color} rounded-xl flex items-center justify-center mr-4`}>
+                      <useCase.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-white">{useCase.title}</h3>
+                      <p className="text-white/70">{useCase.description}</p>
+                    </div>
+                  </div>
+                  <div className="mb-4">
+                    <h4 className="text-white font-semibold mb-2">Benefits:</h4>
+                    <ul className="space-y-1">
+                      {useCase.benefits.map((benefit, idx) => (
+                        <li key={idx} className="text-sm text-white/70 flex items-center">
+                          <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="text-center">
+                    <a href="/contact" className="inline-flex items-center px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-300 hover:border-cyan-400/50">
+                      Get Solution
+                    </a>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* CTA Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-6 text-center">
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
+                Let us help you implement the right technology solutions to achieve your business goals.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 rounded-lg text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25">
+                  Start Your Journey
+                </a>
+                <a href="/case-studies" className="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-300 hover:border-cyan-400/50">
+                  View Success Stories
                 </a>
               </div>
             </motion.div>
           </div>
         </section>
       </div>
-    </UltraAdvancedFuturisticBackground>
-  )
-
-};
-
-
-<<<<<<< HEAD
-export default Solutions;
-
-};
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-export default Solutions;
-            >;
-              <h2 className="text - 4xl md: text - 5xl font - bold mb - 6 bg - gradient - to - r from - orange - 400 to - red - 500 bg - clip - text text - transparent">;
-                Ready for Industry Transformation?;
-              </h2>;
-              <p className="text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto">;
-                Partner with us to build industry - specific solutions that drive your business forward;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <a;
-                  href="/contact";
-                  className="px - 8 py - 4 bg - gradient - to - r from - orange - 500 to - red - 600 text - white font - semibold rounded - lg hover:from - orange - 600 hover:to - red - 700 transition - all duration - 300 transform hover:scale - 105";
-                >;
-                  Start Your Transformation;
-                </a>;
-                <a;
-                  href="/contact";
-                  className="px - 8 py - 4 border - 2 border - orange - 400 text - orange - 400 font - semibold rounded - lg hover:bg - orange - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105";
-                >;
-                  Schedule Consultation;
-                </a>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </UltraAdvancedFuturisticBackground>);
-},
-export default Solutions,
-;
-<<<<<<< HEAD
-
-},
-
-            <motion.div
-              initial={_{ opacity: 0, _y: 20}}
-              animate={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.8}}
-            >
-              <h1 className=&quot;text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 bg-clip-text text-transparent&quot;>
-                Industry Solutions
-              </h1>
-              <p className=&quot;text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto&quot;>
-                Tailored technology solutions designed for your industry's unique challenges and opportunities
-              </p>
-              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
-                <a 
-                  href=&quot;/contact&quot; 
-                  className=&quot;px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105&quot;
-                >
-                  Get Started
-                </Link>
-                <a 
-                  href=&quot;/contact&quot; 
-                  className=&quot;px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105&quot;
-                >
-                  Schedule Demo
-                </Link>
-      results: [
-        "25% reduction in unplanned downtime",
-        "15% improvement in production efficiency",
-        "Predictive maintenance cost savings"
-      ],
-      technologies: ["Python", "TensorFlow", "AWS IoT", "React Native"]
-    }
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],
-  return (
-    <UltraAdvancedFuturisticBackground>
-      <div className="min-h-screen">
-        <Head>
-          <title>Solutions - Zion Tech Group | Revolutionary AI, Quantum Computing & Emerging Technology Solutions</title>
-          <meta name="description" content="Discover Zion Tech Group's comprehensive solutions portfolio including Micro SaaS platforms, AI-powered tools, Business Intelligence, Process Automation, and Cloud platforms." />
-        </Head>
-        {/* Hero Section */}
-        {/* Hero Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <section className="min-h-[60vh] flex items-center justify-center px-4 py-20">
-          <div className="text-center max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            >
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 bg-clip-text text-transparent">
-                Industry Solutions
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Tailored technology solutions designed for your industry's unique challenges and opportunities
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                <a 
-                  href="/contact" 
-                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  Get Started
-                </a>
-                <a 
-                  href="/contact" 
-                <a
-                  href="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  Get Started
-                </Link>
-                <a
-                  href="/contact"
-                  className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
-                >
-                  Schedule Demo
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-        {/* Solution Capabilities */}
-        <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-        {/* Solution Capabilities */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
-                Solution Capabilities
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive capabilities to deliver industry-specific technology solutions
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {solutionCapabilities.map((capability, index) => (
-                <motion.div
-                  key={capability.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  key={capability.title  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 hover:border-orange-500 transition-all duration-300"
-                >
-                  <div className="flex items-center mb-4">
-                    <div className="p-2 bg-orange-500/20 rounded-lg mr-3">
-                      {capability.icon}
-                      {capability.icon  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    </div>
-                    <h3 className="text-xl font-semibold text-white">{capability.title}</h3>
-                  </div>
-                  <p className="text-gray-300">{capability.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* Industry Solutions */}
-        <section className="py-20 px-4">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </div>;
-          </div>;
-        </section>;
-        {/* Industry Solutions */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <section className="py-20 px-4">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
-                Industry Solutions
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose from our comprehensive suite of industry-specific solutions
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {industrySolutions.map((solution, index) => (
-                <motion.div
-                  key={solution.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className={`relative bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border transition-all duration-300 hover:scale-105 ${
-                    solution.popular
-                      ? 'border-orange-500 shadow-lg shadow-orange-500/25'
-                      : 'border-gray-700 hover:border-orange-500'
-                  }`}
-                  key={solution.id  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  className={`relative bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border transition-all duration-300 hover:scale-105 ${;
-                    solution.popular;
-                      ? 'border-orange-500 shadow-lg shadow-orange-500/25';
-                      : 'border-gray-700 hover:border-orange-500';
-                  }`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                >
-                  {solution.popular && (
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  <div className="text-center mb-6">
-                    <div className="inline-flex p-3 bg-orange-500/20 rounded-full mb-4">
-                      {solution.icon}
-                  )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  <div className="text-center mb-6">
-                    <div className="inline-flex p-3 bg-orange-500/20 rounded-full mb-4">
-                      {solution.icon  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{solution.name}</h3>
-                    <p className="text-gray-300 mb-4">{solution.description}</p>
-                    <div className="text-3xl font-bold text-orange-400 mb-2">
-                      {solution.price}
-                      {solution.price  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      <span className="text-lg text-gray-400">/{solution.period}</span>
-                    </div>
-                  </div>
-                  <ul className="space-y-3 mb-6">
-                    {solution.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <a 
-                    href="/contact" 
-                        {feature  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      </li>;
-                    ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  </ul>
-                  <a
-                    href="/contact"
-                    className="w-full block text-center px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300"
-                  >
-                    Get Started
-                  </a>
-                </motion.div>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Industry Solutions
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Tailored technology solutions designed specifically for your industry's unique challenges and opportunities.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-green-500/25 transition-all duration-300"
-              >
-                Get Started
-                <ArrowRight className="inline-block ml-2 w-5 h-5" />
-              </Link>
-              <Link
-                href="/demo"
-                className="border border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 backdrop-blur-md hover:bg-white/10"
-              >
-                Request Demo
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-        {/* CTA Section */}
-        {/* CTA Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            >
-              <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
-                Ready for Industry Transformation?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Partner with us to build industry-specific solutions that drive your business forward
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                <a 
-                  href="/contact" 
-                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  Start Your Transformation
-                </a>
-                <a 
-                  href="/contact" 
-                <a
-                  href="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  Start Your Transformation
-                </Link>
-                <a
-                  href="/contact"
-                  className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
-                >
-                  Schedule Consultation
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </UltraAdvancedFuturisticBackground>
-  )
-}
-export default Solutions;
-
-},
-
-export default Solutions,;
-;
-export default Solutions,
-            >;
-              <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">;
-                Ready for Industry Transformation?;
-              </h2>;
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
-                Partner with us to build industry-specific solutions that drive your business forward;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <a;
-                  href="/contact";
-                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105";
-                >;
-                  Start Your Transformation;
-                </a>;
-                <a;
-                  href="/contact";
-                  className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105";
-                >;
-                  Schedule Consultation;
-                </a>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </UltraAdvancedFuturisticBackground>;
+    </>
   );
-},;
-export default Solutions;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-},
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+}

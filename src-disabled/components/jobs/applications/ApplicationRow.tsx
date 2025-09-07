@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src-disabled/components/jobs/applications/ApplicationRow.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 :src/components/jobs/applications/ApplicationRow.tsx
 import { formatDistanceToNow } from 'date-fns'
 import { Calendar, User, FileText, BarChart } from 'lucide-react'
@@ -250,6 +253,8 @@ export function ApplicationRow({
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/jobs/applications/ApplicationRow.tsx
               <Image
+<<<<<<< HEAD
+=======
                 src={application.talent_profile.profile_picture_url}
                 alt={talentName}
                 width={36} // Corresponds to h-9 w-9 (9 * 4px = 36px)
@@ -260,6 +265,7 @@ export function ApplicationRow({
 ursor/fix-website-loading-errors-and-merge-6662
   const talentName = application.talent_profile?.full_name |'Unknown'
   const talentName = application.talent_profile?.full_name |'Unknown'
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   const talentName = application.talent_profile?.full_name || 'Unknown'
 
@@ -338,6 +344,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       </TableCell>
       <TableCell>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         <div className='flex items-center gap-1'>
           <Calendar className='h-4 w-4 text-muted-foreground' />
           <span>
@@ -346,6 +354,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             })}
           </span>
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <<<<<<< HEAD:src-disabled/components/jobs/applications/ApplicationRow.tsx
 =======
@@ -364,6 +373,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       </TableCell>
       <TableCell>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         <div className="flex items-center gap-1">
           <Calendar className="h-4 w-4 text-muted-foreground" />
           <span>{formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}</span>
@@ -380,6 +391,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           className='flex items-center gap-1'        >
           <BarChart className='h-4 w-4 mr-1' />
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <Button 
@@ -404,6 +416,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       <TableCell>
         {application.resume ? (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           <Button variant='ghost' size='sm' asChild>
             <a
               href={application.resume.file_url |'#'}
@@ -413,6 +427,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <FileText className='h-4 w-4 mr-1' /> View
             </a>
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Button variant="ghost" size="sm" asChild>
@@ -433,6 +448,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       </TableCell>
       <TableCell className="text-right">
         <ApplicationActions
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
           </AvatarPrimitive>;
@@ -460,6 +477,7 @@ interface ApplicationRowProps {
 };
 }
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { formatDistanceToNow } from "date-fns",;
@@ -739,6 +757,9 @@ export function ApplicationRow({;
         />
       </TableCell>
     </TableRow>
+<<<<<<< HEAD
+  );
+=======
   );
 =======
 <<<<<<< HEAD
@@ -747,3 +768,4 @@ export function ApplicationRow({;
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/jobs/applications/ApplicationRow.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

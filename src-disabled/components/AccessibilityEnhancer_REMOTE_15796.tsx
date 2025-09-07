@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import React from 'react';
+}''
+=======
 <<<<<<< HEAD:src-disabled/components/AccessibilityEnhancer_REMOTE_15796.tsx
 import React from 'react';
 }''
@@ -38,3 +42,4 @@ import React from 'react';
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/layout/MainLayout.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

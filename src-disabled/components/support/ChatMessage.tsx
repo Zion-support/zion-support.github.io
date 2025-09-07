@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+import { useTheme } from "@/hooks/useTheme";
+
+  message: string;
+  isUser: boolean;
+=======
+<<<<<<< HEAD
 import React, { useMemo } from 'react'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { cn } from '@/lib/utils'
@@ -33,6 +39,7 @@ import { format } from "date-fns";
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useTheme } from "@/hooks/useTheme";
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   message: string;
   isUser: boolean;
@@ -142,6 +149,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
         )}
       >
+<<<<<<< HEAD
+=======
         <div dangerouslySetInnerHTML={sanitizedHtml} />
         <div
           className={cn(
@@ -156,6 +165,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           {format(timestamp, 'h:mm a')}
       
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         )}
       >
@@ -199,7 +209,11 @@ ursor/fix-website-loading-errors-and-merge-6662
     </div>
   )
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 },
 
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy
@@ -226,6 +240,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 function escapeHtml(unsafe: string): string {
   return unsafe
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
@@ -250,6 +266,7 @@ function formatMessageWithLinks(message: string): string {
   return formattedMessage; return formattedMessage
 }
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <<<<<<< HEAD:src-disabled/components/support/ChatMessage.tsx
 =======
@@ -547,6 +564,9 @@ function formatMessageWithLinks (message: string): string {
 export const ChatMessage: React.FC<ChatMessageProps> = ({
   );
 
+<<<<<<< HEAD
+  return formattedMessage;
+=======
   return formattedMessage;
 =======
     '<a href="/help/$1" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
@@ -556,3 +576,4 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/support/ChatMessage.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

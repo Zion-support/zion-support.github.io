@@ -2,20 +2,12 @@ import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
 import { z } from 'zod',;
 import { format } from 'date-fns',;
-<<<<<<< HEAD
 import { Loader2 } from 'lucide-react';
-=======
-
->>>>>>> merged-prs-20250907-203621
 import { Button } from '@/components/ui/button',;
 import { Textarea } from '@/components/ui/textarea',;
 import { Input } from '@/components/ui/input',;
 import { Checkbox } from '@/components/ui/checkbox',;
 import { Alert, AlertDescription } from '@/components/ui/alert',;
-<<<<<<< HEAD
-=======
-
->>>>>>> merged-prs-20250907-203621
 import {;
   Form,;
   FormControl,;
@@ -23,7 +15,6 @@ import {;
   FormItem,;
   FormLabel,;
   FormMessage} from '@/components/ui/form',;
-<<<<<<< HEAD
 import { useState } from 'react',;
 import { EducationFormFieldsProps } from './types',;
 import { Education } from '@/types/resume',;
@@ -36,20 +27,10 @@ const educationSchema = z.object({;
   start_date:z.string().min(1, 'Start date is required'),;
   end_date:z.string().optional(),;
   is_current:z.boolean().default(false),;
-=======
-import { useState } from 'react';
-import { EducationFormFieldsProps } from './types';
-import { Education } from '@/types/resume';
-;
-// Define schema for form validation;
-
->>>>>>> merged-prs-20250907-203621
   description:z.string().optional(),;
   location:z.string().optional()}),;
 ;
-
 type EducationFormValues = z.infer<typeof educationSchema>,;
-<<<<<<< HEAD
 ;
 export function EducationFormFields({ ;
   isEditing, ;
@@ -57,13 +38,9 @@ export function EducationFormFields({ ;
   onCancel ;
 } EducationFormFieldsProps) {;
   const [isLoading, setIsLoading] = useState(false),;
-=======
-</typeof>
->>>>>>> merged-prs-20250907-203621
   const [error, setError] = useState<string | null>(null),;
-</string>
+;
   const form = useForm<EducationFormValues>({;
-<<<<<<< HEAD
     resolver:zodResolver(educationSchema),;
     defaultValues:{;
       institution:'',;
@@ -73,13 +50,6 @@ export function EducationFormFields({ ;
       is_current:false,;
       description:'',;
       location:''}}),;
-=======
-    resolver: zodResolver(educationSchema);,;
-    defaultValues:{;
-
-      location:''}}),;
-
->>>>>>> merged-prs-20250907-203621
 ;
   const handleSubmit = async (data:EducationFormValues) => {;
     setIsLoading(true),;
@@ -94,10 +64,7 @@ export function EducationFormFields({ ;
   },;
 ;
   return (;
-
-pr-12325
     <Form {...form}>;
-<<<<<<< HEAD
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">;
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
           <FormField;
@@ -153,28 +120,12 @@ pr-12325
                     type="date" ;
                     {...field}
                     value={field.value || ''} ;
-=======
-)
-      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">;"
-</form>"
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;"
-</div>
-          <FormField;
-
-                <FormControl>;
-"
-                  <Input placeholder="University of California, MIT, etc." {...field} />;"
-
-                <FormMessage />;
-
->>>>>>> merged-prs-20250907-203621
                   />;
                 </FormControl>;
                 <FormMessage />;
               </FormItem>;
             )}
           />;
-
 ;
           <div className="space-y-4">;
             <FormField;
@@ -186,10 +137,6 @@ pr-12325
                     <Checkbox;
                       checked={field.value}
                       onCheckedChange={field.onChange}
-<<<<<<< HEAD
-=======
-
->>>>>>> merged-prs-20250907-203621
                     />;
                   </FormControl>;
                   <div className="space-y-1 leading-none">;
@@ -198,7 +145,6 @@ pr-12325
                 </FormItem>;
               )}
             />;
-
 ;
             {!form.watch('is_current') && (;
               <FormField;
@@ -216,12 +162,10 @@ pr-12325
                     </FormControl>;
                     <FormMessage />;
                   </FormItem>;                )}
-
               />;
             )}
           </div>;
         </div>;
-
 ;
         <FormField;
           control={form.control}
@@ -246,15 +190,10 @@ pr-12325
                 <Textarea;
                   placeholder="Notable achievements, courses, activities...";
                   className="min-h-[100px]";
-<<<<<<< HEAD
-=======
-
->>>>>>> merged-prs-20250907-203621
                   {...field}
                 />;
               </FormControl>;
               <FormMessage />;
-
             </FormItem>;
           )}
         />;
@@ -273,21 +212,12 @@ pr-12325
           <Button type="submit" disabled={isLoading}>;
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
             {isEditing ? 'Update' :'Add'} Education;
-<<<<<<< HEAD
-=======
-
->>>>>>> merged-prs-20250907-203621
           </Button>;
         </div>;
       </form>;
     </Form>;
-
   ),;}
-
  type EducationFormValues = z.infer<typeof educationSchema>;
-<<<<<<< HEAD
- <FormMessage /> ) ;
-=======
 </FormControl> <FormMessage /> </FormItem>) ;
 }/> <FormField </FormControl> <FormMessage /> </FormItem>) ;
 }/> </div> <FormField </FormControl> <FormMessage /> </FormItem>) ;
@@ -301,27 +231,4 @@ pr-12325
 }/>) ;
 }</div> </div> <FormField </FormControl> <FormMessage /> </FormItem>) ;"}/> <FormField <FormItem> <FormLabel>Description (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ";"}/> <div className="flex justify-between pt-2" > <Button >{';
   isEditing ? 'Cancel' : 'Back' ;
-<<<<<<< HEAD
 }</Button> </Button> </div> </form> </Form>) ;"}'"
-=======
-<<<<<<< HEAD
-:temp_broken_files/resume-builder/forms/education/EducationFormFields.tsx
-}</Button> </Button> </div> </form> </Form>) ;"}'"
-}</Button> </Button> </div> </form> </Form>) ;
-}'"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/forms/education/EducationFormFields.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-
-}/> <FormField  <FormMessage /> ) ;
-
-<<<<<<< HEAD
-}/> </div> <FormField  <FormMessage /> ) ;
-}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Start Date <FormControl> <Input />  <FormMessage /> ) ";"}/> <div className="space-y-4" > <FormField <FormControl> <Checkbox checked= {;"
-</div>"
-}onCheckedChange= {;"  field.onChange ";"}/>  <div className="space-y-1 leading-none" > <FormLabel>I am currently studying here </div> ) ;""
-  !form.watch ('is current') && (<FormField control= {;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621

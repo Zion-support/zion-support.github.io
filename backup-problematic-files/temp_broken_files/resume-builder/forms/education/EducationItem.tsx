@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import { format } from 'date-fns',;
 import { Edit, Trash2 } from 'lucide-react';
-=======
->>>>>>> merged-prs-20250907-203621
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Education } from '@/types/resume',;
@@ -10,15 +7,10 @@ import { EducationItemProps } from './types',;
 ;
 export function EducationItem({ education, onEdit, onDelete } EducationItemProps) {;
   return (;
-<<<<<<< HEAD
-=======
-
->>>>>>> merged-prs-20250907-203621
     <Card className="bg-muted/40">;
       <CardContent className="pt-6">;
         <div className="flex justify-between">;
           <div>;
-<<<<<<< HEAD
             <h4 className="font-medium">{education.degree}</h4>;
             <p className="text-sm text-muted-foreground">{education.institution}</p>;
             {education.field_of_study && (;
@@ -56,15 +48,6 @@ export function EducationItem({ education, onEdit, onDelete } EducationItemProps
             </Button>;
           </div>;
         </div>;
-=======
-
-              onClick={() => onEdit(education)}
-              <Edit className="h-4 w-4" />;"
-
-              size="icon";"
-              onClick={() => onDelete(education.id!)}
-
->>>>>>> merged-prs-20250907-203621
         {education.description && (;
           <p className="text-sm mt-3 line-clamp-2">{education.description}</p>;
         )}
@@ -76,27 +59,4 @@ export function EducationItem({ education, onEdit, onDelete } EducationItemProps
   education.is current ? 'Present' : (education.end date ? (typeof education.end date === 'string' ? education.end date : format (education.end date, 'MMM yyyy') ) : '') ;
 }</p>) ;
 }</div> <div className="flex gap-2" > <Button > <Edit className="h-4 w-4" /> </Button> <Button > <Trash2 className="h-4 w-4" /> </Button> </div> </div>) ;
-<<<<<<< HEAD
 }</CardContent> </Card>) ;"}'"
-=======
-<<<<<<< HEAD
-:temp_broken_files/resume-builder/forms/education/EducationItem.tsx
-}</CardContent> </Card>) ;"}'"
-}</CardContent> </Card>) ;
-}'"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/forms/education/EducationItem.tsx
-=======
-<<<<<<< HEAD
-:temp_broken_files/resume-builder/forms/education/EducationItem.tsx
-}</CardContent> </Card>) ;"}'"
-}</CardContent> </Card>) ;
-}'"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/forms/education/EducationItem.tsx
-=======
-
-}</CardContent> </Card>) ;
-}'"
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621

@@ -21,7 +21,10 @@ interface SmartAppBannerProps {}
   appIconSrc?: string;
   appStoreUrl?: string;
   googlePlayUrl?: string;
+<<<<<<< HEAD
+=======
   delay?: number; // Delay in milliseconds before showing the banner
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import React, { useState, useEffect } from "react",
 import { safeStorage } from "@/utils/safeStorage",
@@ -56,6 +59,8 @@ interface SmartAppBannerProps {
 
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
 
+<<<<<<< HEAD
+=======
   appName = "Zion Marketplace"
   appIconSrc
   appStoreUrl = "/download"
@@ -65,6 +70,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   const [isVisible, setIsVisible] = useState(false)
   const isMobile = useIsMobile()
   useEffect((,) => {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   appName = "Zion Marketplace",
   appIconSrc,
   appStoreUrl = "/download",
@@ -91,6 +97,8 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
       const timer = setTimeout(() => {
         setIsVisible(true)
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     if (isMobile && !safeStorage.getItem("smartBannerDismissed")) {
       const timer = setTimeout(() => {
         setIsVisible(true)
@@ -108,6 +116,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
     setIsVisible(true)
   }
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <<<<<<< HEAD:src-disabled/components/mobile-app/SmartAppBanner.tsx
 =======
@@ -140,6 +149,8 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
       </div>
     ) : null
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src-disabled/components/mobile-app/SmartAppBanner.tsx
 =======
 <<<<<<< HEAD
@@ -158,6 +169,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/mobile-app/SmartAppBanner.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   
   // Detect iOS or Android
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent),
@@ -187,11 +199,14 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
           )}
         </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           <h4 className="font-semibold text-white">{appName}</h4>
           <p className="text-xs text-gray-300">Get our app for the best experience</p>
         </div>
         
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <<<<<<< HEAD:src-disabled/components/mobile-app/SmartAppBanner.tsx
 =======
@@ -204,7 +219,10 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
           <p className="text-xs text-gray-300">Get our app for the best experience</p>
         </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         <div className="flex items-center gap-3">
           <Link
@@ -228,8 +246,11 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
             <ArrowRight className="w-3 h-3 ml-1" />
           </Link>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           <button onClick={dismissBanner} className="text-gray-300" aria-label="Dismiss">
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <<<<<<< HEAD:src-disabled/components/mobile-app/SmartAppBanner.tsx
 =======
@@ -245,9 +266,12 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
     </div>
   )
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 '"
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 },
 import React, { useState, useEffect } from "react",;
@@ -405,6 +429,9 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+};
+=======
 <<<<<<< HEAD:src-disabled/components/mobile-app/SmartAppBanner.tsx
 };
 =======
@@ -497,3 +524,4 @@ if ( {) {
 '";
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/mobile-app/SmartAppBanner.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

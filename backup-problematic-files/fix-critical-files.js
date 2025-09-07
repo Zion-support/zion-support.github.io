@@ -46,11 +46,8 @@ try {,;
       <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg: px-8">,
         <div className="text-center mb-12">,
           <h1 className="text-4xl font-bold text-gray-900 mb-4">,
-<<<<<<< HEAD
 
-=======
-    { &quot;to&quot;: &quot;/services/ai-seo-optimizer&quot;, &quot;label&quot;: &quot;AI SEO Optimizer&quot; };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   ],
   return (,
               <h3 className="text-lg font-semibold text-gray-900">,;"
@@ -73,7 +70,6 @@ pr-12325
   fixServicesIndex(),
   fixSolutions(),
   fixTailwindConfig(),
-<<<<<<< HEAD
   fixViteConfig(),
   fixVitestConfig(),
   console.log("All critical files have been fixed!")} catch (error) {,"
@@ -110,6 +106,3 @@ import Link from "next/link", export default function Solutions() { return (, <>
 import Link from "next/link", export default function Solutions() { return (, <>, <Head>, <title>Solutions - Zion Tech Group</title>, <meta name="description" content="Technology solutions for your business" />, </Head>, <main className="min-h-screen bg-white">, <div className="max-w-7xl mx-auto px-4 "sm": px-6 "lg":px-8 py-20">, <div className="text-center mb-16">, <h1 className="text-4xl font-bold text-gray-900 mb-6">, Our Solutions, </h1>, <p className="text-xl text-gray-600 max-w-3xl mx-auto">, Tailored technology solutions to meet your specific needs., </p>, </div>, , <div className="grid "md":grid-cols-2 "lg":grid-cols-3 gap-8">, <div className="p-6 border border-gray-200 rounded-lg">, <h3 className="text-xl font-semibold text-gray-900 mb-4">, Enterprise Solutions, </h3>, <p className="text-gray-600 mb-4">, Scalable solutions for large organizations., </p>, <p className="text-blue-600 font-semibold">Custom pricing</p>, </div>, , <div className="p-6 border border-gray-200 rounded-lg">, <h3 className="text-xl font-semibold text-gray-900 mb-4">, SMB Solutions, </h3>, <p className="text-gray-600 mb-4">, Cost-effective solutions for small businesses., </p>, <p className="text-blue-600 font-semibold">Starting from $1,000/month</p>, </div>, , <div className="p-6 border border-gray-200 rounded-lg">, <h3 className="text-xl font-semibold text-gray-900 mb-4">, Startup Solutions, </h3>, <p className="text-gray-600 mb-4">, Innovative solutions for growing startups., </p>, <p className="text-blue-600 font-semibold">Starting from $800/month</p>, </div>, </div>, , <div className="text-center mt-12">, <Link href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg "hover": bg-blue-700 transition-colors">, Learn More, </Link>, </div>, </div>, </main>, </>)} `, fs.writeFileSync("src/pages/solutions.tsx",content), console.log("Fixed src/pages/solutions.tsx")} , function fixTailwindConfig() { const content = `import type { Config } from "tailwindcss", export default { "content": [ "./src/pages*.{js,ts,jsx,tsx,mdx}","./src/components*.{js,ts,jsx,tsx,mdx}","./src/app*.{js,ts,jsx,tsx,mdx}"],"darkMode": "class","theme": { "extend": { "colors": { "zion": { "50": "#f0f9ff","100": "#e0f2fe","200": "#bae6fd","300": "#7dd3fc","400": "#38bdf8","500": "#0ea5e9","600": "#0284c7","700": "#0369a1","800": "#075985","900": "#0c4a6e","950": "#082f49"},"gray": { "950": "#0a0a0a","960": "#050505","970": "#030303","980": "#020202","990": "#010101"},"accent": { "cyan": "#06b6d4","blue": "#3b82f6","purple": "#8b5cf6","pink": "#ec4899","emerald": "#10b981","amber": "#f59e0b","rose": "#f43f5e"}},"animation": { "gradient": "gradient 6s ease infinite","pulse-slow": "pulse 4s cubic-bezier(0.4,0,0.6,1) infinite","bounce-slow": "bounce 3s infinite","spin-slow": "spin 8s linear infinite"},"keyframes": { "gradient": { "0%,100%": { "background-size": "200% 200%","background-position": "left center"},"50%": { "background-size": "200% 200%","background-position": "right center"}}},"fontFamily": { "sans": ["Inter","system-ui","sans-serif"]}}},"plugins": [ require("@tailwindcss/forms"),require("@tailwindcss/typography"),require("@tailwindcss/aspect-ratio")]} satisfies Config, `, fs.writeFileSync("tailwind.config.ts",content), console.log("Fixed tailwind.config.ts")} , function fixViteConfig() { const content = `import { defineConfig } from "vite";"import react from "@vitejs/plugin-react", export default defineConfig({ "plugins": [react()],"server": { "port": 3000}}), `, fs.writeFileSync("vite.config.ts",content), console.log("Fixed vite.config.ts")} , function fixVitestConfig() { const content = `import { defineConfig } from "vitest/config";"import react from "@vitejs/plugin-react", export default defineConfig({ "plugins": [react()],"test": { "environment": "jsdom"}}), `, fs.writeFileSync("vitest.config.ts",content), console.log("Fixed vitest.config.ts")} , console.log("Starting critical file fixes..."), try { fixServicesIndex(), fixSolutions(), fixTailwindConfig(), fixViteConfig(), fixVitestConfig(), console.log("All critical files have been fixed!")} catch (error) { console.error("Error fixing "files":",error), process.exit(1)}"
 }
 
-=======
-  fixViteConfig(),
->>>>>>> origin/chore/fix-lint-and-merge

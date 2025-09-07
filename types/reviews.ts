@@ -10,7 +10,6 @@ export type Project = {;
 export type ReviewRole = 'client' | 'talent',;
 export type ReviewCategoryScores = {;
 
-<<<<<<< HEAD
 export type ProjectStatus = 'InProgress' | 'Completed';
 
   id: string;
@@ -21,11 +20,6 @@ export type ProjectStatus = 'InProgress' | 'Completed';
   completedAt?: string, // ISO string;
 };
 export type ReviewRole = 'client' | 'talent';
-=======
-export interface Review {
-  }
-  export type ProjectStatus = 'InProgress' | 'Completed';'
-
 export type Project = {"id": string;
   }
   "userId": string;
@@ -34,14 +28,31 @@ export type Project = {"id": string;
   "comment": string;
   "createdAt": Date;
   "updatedAt": Date;
->>>>>>> merged-prs-20250907-203621
 
-  communication?: number, // 1-5 optional;
+export type PublicReview = Omit<Review, 'fromId'> & { authorName: string},
+
+export type ReviewRole = 'client' | 'talent';'
+
+export type ReviewCategoryScores = {communication?: number; // 1-5 optional;
+  }
+  qualityOfWork?: number; // 1-5 optional;
+  timeliness?: number; // 1-5 optional;
+  wouldWorkWithAgain?: boolean; // optional;
+}
+  "clientId": string, // slug for client/user;
+  "talentSlug": string, // slug from TALENT_PROFILES;
+  "title": string;
+  "status": ProjectStatus,completedAt?: string, // ISO string;
+}
+
+export type ReviewRole = 'client' | 'talent';'
+
+export type ReviewCategoryScores = {communication?: number, // 1-5 optional;
+  }
   qualityOfWork?: number, // 1-5 optional;
   timeliness?: number, // 1-5 optional;
   wouldWorkWithAgain?: boolean, // optional;
 
-<<<<<<< HEAD
 export type Review = {
   id: string;
   projectId: string;
@@ -96,31 +107,10 @@ export type Project = {;
 export type ReviewRole = 'client' | 'talent';
 export type ReviewCategoryScores = {;
   communication?: number, // 1-5 optional;
-=======
-export type ReviewRole = 'client' | 'talent';'
-
-export type ReviewCategoryScores = {communication?: number; // 1-5 optional;
-  }
-  qualityOfWork?: number; // 1-5 optional;
-  timeliness?: number; // 1-5 optional;
-  wouldWorkWithAgain?: boolean; // optional;
-}
-  "clientId": string, // slug for client/user;
-  "talentSlug": string, // slug from TALENT_PROFILES;
-  "title": string;
-  "status": ProjectStatus,completedAt?: string, // ISO string;
-}
-
-export type ReviewRole = 'client' | 'talent';'
-
-export type ReviewCategoryScores = {communication?: number, // 1-5 optional;
-  }
->>>>>>> merged-prs-20250907-203621
   qualityOfWork?: number, // 1-5 optional;
   timeliness?: number, // 1-5 optional;
   wouldWorkWithAgain?: boolean, // optional;
 
-<<<<<<< HEAD
 },;
 export type Review = {;
   id: string,;
@@ -139,7 +129,6 @@ export type Review = {
     4: number;
     5: number;
   };
-=======
 export type Review = {"id": string;
   }
   "projectId": string;
@@ -160,7 +149,7 @@ export type Review = {"id": string;
     "3": number;
     "4": number;
     "5": number;
-  }}"totalCompletedProjects": number;
+  }"totalCompletedProjects": number;
   "mostRecent": PublicReview[];
 
 export type ProjectStatus = 'InProgress' | 'Completed',export type Project = {"id": string,"client_id": string, // slug for client / user;'
@@ -181,5 +170,4 @@ export type ProjectStatus = 'InProgress' | 'Completed',export type Project = {"i
 }[],removed?: boolean,"created_at": string, // ISO;
 },export type PublicReview = Omit < Review 'from_id'> & { "author_name": string,'
 },export type ReviewsSummary = {"average_rating": number,"total_reviews": number,"totalCompletedProjects": number,"most_recent": PublicReview[];}
->>>>>>> merged-prs-20250907-203621
 }

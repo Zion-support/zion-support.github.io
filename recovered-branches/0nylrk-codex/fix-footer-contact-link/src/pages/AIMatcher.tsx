@@ -1,230 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-import {useState} from "react";
-import {useNavigate} from "react-router-dom";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {GradientHeading} from "@/components/GradientHeading";
-import {AIMatchmaker} from "@/components/AIMatchmaker";
-import {Select, SelectValue, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
-import {toast} from "@/hooks/use-toast";
-import {MatchResult} from "@/lib/ai-matchmaking";
-export default function AIMatcherPage() {;
-  const navigate = useNavigate();
-  const [selectedCategory, setSelectedCategory] = useState<string>("all");
->>>>>>> merged-prs-20250907-203621
-import { useState } from "react",
-import { useNavigate } from "react-router-dom",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { GradientHeading } from "@/components/GradientHeading",
-import { AIMatchmaker } from "@/components/AIMatchmaker",
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
-import { toast } from "@/hooks/use-toast";
-import { MatchResult } from "@/lib/ai-matchmaking";
-export default function AIMatcherPage() {
-<<<<<<< HEAD
-  const navigate = useNavigate($2);
-  const [selectedCategory, setSelectedCategory] = useState<string>("all"),
-  
-  const handleMatchSelect = $2;
-    const category = match.item.category.toLowerCase($2);
-    if (category.includes("talent") || category === "engineering" || 
-        category === "data science" || category === "development") {
-      itemType = "talent"
-    } else if (category.includes("equipment") || category === "hardware") {
-      itemType = "equipment"
-    }
-    
-    toast($2);
-=======
-
-  const navigate = useNavigate();
-  const [selectedCategory, setSelectedCategory] = useState<string>("all");
-  const handleMatchSelect = (match: MatchResult) => {
-    // Get the item type from the category
-    let itemType = "service";
-    const category = match.item.category.toLowerCase()
-    if (category.includes("talent") |category === "engineering" |
-        category === "data science" |category === "development") {
-import { toast } from "@/hooks/use-toast",
-import { MatchResult } from "@/lib/ai-matchmaking",
-export default function AIMatcherPage() {
-  const navigate = useNavigate(),
-  const [selectedCategory, setSelectedCategory] = useState<string>("all"),
-  
-  const handleMatchSelect = (match: MatchResult) => {
-    // Get the item type from the category
-    let itemType = "service",
-    const category = match.item.category.toLowerCase(),
-    
-    if (category.includes("talent") || category === "engineering" || 
-        category === "data science" || category === "development") {
-
-
-
-=======
-
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      itemType = "talent"
-    } else if (category.includes("equipment") |category === "hardware") {
-      itemType = "equipment"
-    }
-    toast({
-      title: "Match Selected"
-      description: `You've selected ${match.item.title}`})
-    // Navigate to the quote request page with the selected item
-    navigate("/request-quote", {
-      state: {
-        serviceType: itemType
-        specificItem: match.item
-      }
-    })
-
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  },
-  
-
-
-<<<<<<< HEAD
-  }
-
-  },
-  
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  return (
-    <>
-      <Header />
-      <div className="min-h-screen bg-zion-blue py-12 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <GradientHeading>AI Matchmaker</GradientHeading>
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-              Describe your needs and our AI will match you with the perfect services, talents, or equipment.
-            </p>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <div className="mb-8">
-              <label className="block text-sm font-medium text-zion-slate-light mb-2">
-                I'm looking for:
-              </label>
-              <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-                <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
-                  <SelectValue placeholder="All Categories" />
-                </SelectTrigger>
-                <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
-                  <SelectItem value="all" className="text-white">All Categories</SelectItem>
-                  <SelectItem value="service" className="text-white">Services</SelectItem>
-                  <SelectItem value="talent" className="text-white">Talent</SelectItem>
-                  <SelectItem value="equipment" className="text-white">Equipment</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-<<<<<<< HEAD
-            <AIMatchmaker
-              serviceType={selectedCategory === "all" ? "" : selectedCategory}
-              onMatchSelect={handleMatchSelect}
-            />
-          </div>
-        </div>
-      </div>
-      <Footer />
-    </>
-  )
-}
-            
-            <AIMatchmaker 
-            <AIMatchmaker 
-              serviceType={selectedCategory === "all" ? "" : selectedCategory}
-import { useState } from "react",;
-import { useNavigate } from "react-router-dom",;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { GradientHeading } from "@/components/GradientHeading",;
-import { AIMatchmaker } from "@/components/AIMatchmaker",;
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",;
-import { toast } from "@/hooks/use-toast",;
-import { MatchResult } from "@/lib/ai-matchmaking",;
-
-import { useState } from "react",;
-import { useNavigate } from "react-router-dom",;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { GradientHeading } from "@/components/GradientHeading",;
-import { AIMatchmaker } from "@/components/AIMatchmaker",;
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",;
-import { toast } from "@/hooks/use-toast",;
-import { MatchResult } from "@/lib/ai-matchmaking",;
-;
-export default function AIMatcherPage() {;
-  const navigate = useNavigate(),;
-  const [selectedCategory, setSelectedCategory] = useState<string>("all"),;
-  ;
-  const handleMatchSelect = (match:MatchResult) => {;
-    // Get the item type from the category;
-    let itemType = "service",;
-    const category = match.item.category.toLowerCase(),;
-    ;
-    if (category.includes("talent") || category === "engineering" || ;
-        category === "data science" || category === "development") {;
-      itemType = "talent";
-    } else if (category.includes("equipment") || category === "hardware") {;
-      itemType = "equipment",;
-    }
-    ;
-    toast({;
-      title:"Match Selected",;
-      description:`You've selected ${match.item.title}`}),;
-    ;
-    // Navigate to the quote request page with the selected item;
-    navigate("/request-quote", {;
-      state:{ ;
-        serviceType:itemType,;
-        specificItem:match.item;
-      }
-    }),;
-  },;
-  ;
-  return (;
-export default function AIMatcherPage() {;
-  const navigate = useNavigate(),;
-  const [selectedCategory, setSelectedCategory] = useState<string>("all"),;
-  const handleMatchSelect = (match: MatchResult) => {;
-    // Get the item type from the category;
-    let itemType = "service",;
-    const category = match.item.category.toLowerCase(),;
-    if (category.includes("talent") || category === "engineering" ||;
-        category === "data science" || category === "development") {;
-      itemType = "talent";
-    } else if (category.includes("equipment") || category === "hardware") {;
-      itemType = "equipment";
-    }
-;
-    toast({;
-      title: "Match Selected",;
-      description: `You've selected ${match.item.title}`}),;
-    // Navigate to the quote request page with the selected item;
-    navigate("/request-quote", {;
-      state: {;
-        serviceType: itemType;
-        specificItem: match.item;
-      }
-    });
-  };
-  return (;
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {Header} from "@/components/Header";
@@ -274,7 +48,6 @@ export default function AIMatcherPage() {};
 import { toast } from "@/hooks/use-toast",
 import { MatchResult } from "@/lib/ai-matchmaking",
 export default function AIMatcherPage() {
-<<<<<<< HEAD
 }
 const navigate = useNavigate(),;
 const [selectedCategory, setSelectedCategory] = useState<string>("all"),;"
@@ -289,19 +62,10 @@ const category = match.item.category.toLowerCase(),;
     } else if (category.includes("equipment") |category === "hardware") {"
       }
       itemType = "equipment""
-=======
-  const navigate = useNavigate(),
-  const [selectedCategory, setSelectedCategory] = useState<string>("all"),
-
-      itemType = "talent"
-    } else if (category.includes("equipment") |category === "hardware") {
-      itemType = "equipment"
->>>>>>> origin/chore/fix-lint-and-merge
     }
     toast({
       title: "Match Selected"
       description: `You've selected ${match.item.title}`})
->>>>>>> merged-prs-20250907-203621
     // Navigate to the quote request page with the selected item
     navigate("/request-quote", {
       state: {
@@ -330,10 +94,9 @@ const category = match.item.category.toLowerCase(),;
   },
 
   return (
-<<<<<<< HEAD
+
 
     <>
-<<<<<<< HEAD
       <Header />
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
@@ -360,17 +123,6 @@ const category = match.item.category.toLowerCase(),;
                 </SelectContent>
               </Select>
             </div>
-=======
-      <Header />"
-      <div className="min-h-screen bg-zion-blue py-12 px-4">"
-        <div className="container mx-auto">"
-          <div className="text-center mb-12">
-            <GradientHeading>AI Matchmaker</GradientHeading>"
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-              Describe your needs and our AI will match you with the perfect;
-              services, talents, or equipment.
-            </p>
-          </div>
 "
           <div className="max-w-4xl mx-auto">"
             <div className="mb-8">"
@@ -401,7 +153,6 @@ const category = match.item.category.toLowerCase(),;
               </Select>
             </div>
 
->>>>>>> merged-prs-20250907-203621
             <AIMatchmaker
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
               onMatchSelect={handleMatchSelect}
@@ -413,9 +164,6 @@ const category = match.item.category.toLowerCase(),;
     </>
   )
 }
-<<<<<<< HEAD
-;
-=======
             
             <AIMatchmaker 
 
@@ -456,9 +204,7 @@ const category = match.item.category.toLowerCase(),;
         specificItem:match.item;
       }
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue py-12 px-4">;
@@ -469,11 +215,7 @@ const category = match.item.category.toLowerCase(),;
               Describe your needs and our AI will match you with the perfect services, talents, or equipment.;
             </p>;
           </div>;
-<<<<<<< HEAD
-          ;
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="max-w-4xl mx-auto">;
             <div className="mb-8">;
               <label className="block text-sm font-medium text-zion-slate-light mb-2">;
@@ -499,33 +241,8 @@ const category = match.item.category.toLowerCase(),;
 
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
               onMatchSelect={handleMatchSelect}
-<<<<<<< HEAD
 
-=======
-import { useState } from './react';
-import { use_navigate } from './react-router-dom';
-import { Header } from '@/components / Header';
-import { Footer } from '@/components / Footer';
-import { GradientHeading } from '@/components / GradientHeading';
-import { AIMatchmaker } from '@/components / AIMatchmaker';
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from '@/components / ui / select';
-import { toast } from '@/hooks / use - toast';
-import { MatchResult } from '@/lib / ai - matchmaking';
-export default /**
- * AIMatcherPage - Function description
- */
-function AIMatcherPage() {
-  const navigate = use_navigate ();
-  const [selected_category, setSelectedCategory] = useState < string>("all");
-;
-  const handleMatchSelect = (match: MatchResult) =>: any {
-    // Get the item type from the category;
-    let item_type = "service";
-    const category = match.item.category.toLowerCase (),
-    // Check condition
-if (|| category === "engineering" ||) {
-  $2
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 }
         category === "data science" || category === "development") {
 
@@ -678,28 +395,15 @@ pr-12325
             <AIMatchmaker ;
               serviceType={selectedCategory === "all" ? "" :selectedCategory}
               onMatchSelect={handleMatchSelect}
-<<<<<<< HEAD
+
             <AIMatchmaker;
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
               onMatchSelect={handleMatchSelect}
 
-=======
-<<<<<<< HEAD
-            ;
-            <AIMatchmaker ;
-              serviceType={selectedCategory === "all" ? "" :selectedCategory}
-              onMatchSelect={handleMatchSelect}
-            <AIMatchmaker;
-              serviceType={selectedCategory === "all" ? "" : selectedCategory}
-              onMatchSelect={handleMatchSelect}
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
             />;
 
       <Footer />;
-<<<<<<< HEAD
     </>;
   ),; const handleMatchSelect = (match: MatchResult) => {
   //Get the item type from the category //Navigate to the quote request page with the selected item navigate ("/request-quote", {
@@ -718,23 +422,10 @@ min-h-screen bg-zion-blue py-12 px-4"> <div className=" container mx-auto"> <div
 }
 ;
 ;
-=======
-
-<<<<<<< HEAD
     </>;
   ),; const handleMatchSelect = (match: MatchResult) => {"
   //Get the item type from the category //Navigate to the quote request page with the selected item navigate ("/request-quote", {}
   state: {}
   serviceType: itemType;
+
 specificItem: match.item;
-=======
-    </>);
-}
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621

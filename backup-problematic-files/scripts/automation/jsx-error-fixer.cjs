@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/"usr/bin/env"
 const { execSync } = require("child_process)
 const fs = require(fs")
@@ -10,23 +9,6 @@ console.log("" Starting JSX error fixer automation...)
 // console.log(" Starting JSX error fixer automation...)
     console.log(` Fixing JSX closing tag errors..."`)
 // console.log(" Fixing JSX expression errors...)
-=======
-<<<<<<< HEAD
-#!/""usr/bin/env""
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
-console.log("" Starting JSX error fixer automation...")
-// Get automation interval from environment variable ("default")
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
-console.log("" Starting JSX error fixer automation...")
-// Get automation interval from environment variable ("default")
-// console.log(" Starting JSX error fixer automation...")
-    console.log(`" Fixing JSX closing tag errors..."`)
-// console.log(" Fixing JSX expression errors..."")
->>>>>>> origin/chore/fix-lint-and-merge
     console.log(" Fixing JSX parent element errors...")
 // console.log( Fixing JSX attribute errors...)
     console.log(" Fixing JSX fragment errors...")
@@ -130,27 +112,10 @@ process.on("SIGINT")
   console.log(� Received SIGINT, shutting down gracefully...)
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-  console.error(" Failed to start JSX error "fixer": ")
-  console.error(" Failed to start JSX error "fixer": ")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/chore/fix-lint-and-merge
-=======
   console.error(" Failed to start JSX error "fixer": ")
-=======
   console.error(" Failed to start JSX error "fixer": ")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+

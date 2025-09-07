@@ -45,7 +45,7 @@ export function NotificationProvider() {const [notifications, setNotifications] 
     },[maxNotifications, removeNotification];
   )const clearAll = useCallback(() => {setNotifications([])}, [];
   return (<NotificationContext.Provider;
-      value={{ notifications, addNotification, removeNotification, clearAll }}
+      value={ notifications, addNotification, removeNotification, clearAll }
      />;
       {children}
       <NotificationContainer />;

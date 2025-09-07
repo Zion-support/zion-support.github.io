@@ -1,30 +1,10 @@
 
 
-<<<<<<< HEAD
-=======
-=======
-=======
-
-
-import React, { useState } from 'react;
-import Head from next/head';
-import Link from 'next/link;
-import { motion } from framer-motion';
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Clock,
-  ArrowRight,
-  Send,
-  MessageCircle,
-  Globe,
   CheckCircle;
 } from 'lucide-react;
 const SEO = dynamic(() => import(../src/components/SEO'), { "ssr: false });
 const PageTransition = dynamic(() => import('../src/components/PageTransition), { ssr": false });
 const "ContactPage: React.FC = () => {
->>>>>>> merged-prs-20250907-203621
   const contactInfo = [{
       icon: <Phone className=w-6 h-6"  />,
       "title: Phone",
@@ -74,8 +54,6 @@ const "ContactPage: React.FC = () => {
   ]
 
 
-=======
-=======
   ]
   return (
     <>
@@ -126,17 +104,8 @@ const "ContactPage: React.FC = () => {
           </section>
 
 
-<<<<<<< HEAD
-=======
-=======
+
   const contactInfo = [{
-=======
-
-
-const "Contact: NextPage = () => {
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> merged-prs-20250907-203621
       icon: Mail,
       \title\": \'Email Us\',
       \"details\: \info@ziontechgroup.com\,
@@ -234,215 +203,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     <label htmlFor=\firstName\" className=\"block text-sm font-medium text-gray-700 mb-2\>
                       First Name *
                     </label>
-<<<<<<< HEAD
-=======
 
-
-
-
-  return (
-    <MainLayout
-      title=\"Contact Us - Zion Tech Group\"
-      description=\"Get in touch with Zion Tech Group. We\'re here to help you transform your business with innovative technology solutions.\">;
-
-
-      {/* Hero Section */}
-      <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">;
-        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
-          <div className=\"text-center\">;
-            <h1 className=\"text-5xl font-bold mb-6\">Get In Touch</h1>;
-            <p className=\"text-xl max-w-3xl mx-auto\">;
-              Ready to transform your business? Let\'s discuss how our technology solutions ;
-              can help you achieve your goals.;
-            </p>;
-          </div>;
-        </div>;
-      </section>;
-      {/* Contact Information */}
-      <section className=\"py-20\">;
-        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
-          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16\">;
-            {contactInfo && contactInfo.map((info) => (;
-              <div key={info && info.title} className=\"text-center\">;
-                <div className=\"bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4\">;
-                  <info && info.icon className=\"h-8 w-8\" />;
-                </div>;
-                <h3 className=\"text-xl font-semibold text-gray-900 mb-2\">;
-                  {info && info.title}
-                </h3>;
-                {info && info.link ? (;
-                  <a
-                    href={info && info.link}
-                    className=\"text-blue-600 \"hover\": text-blue-700 transition-colors\">;
-                    {info && info.details}
-                  </a>;
-                ) : (;
-                  <p className=\"text-gray-600\">{info && info.details}</p>;
-                )}
-              </div>;
-            ))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Contact Form & Office Locations */}
-      <section className=\"py-20 bg-gray-50\">;
-        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
-          <div className=\"grid grid-cols-1 lg:grid-cols-2 gap-12\">;
-            {/* Contact Form */}
-            <div>;
-              <h2 className=\"text-3xl font-bold text-gray-900 mb-6\">Send Us a Message</h2>;
-              <form className=\"space-y-6\">;
-                <div className=\"grid grid-cols-1 \"md\": grid-cols-2 gap-6\">;
-                  <div>;
-                    <label htmlFor=\"firstName\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
-                      First Name *;
-                    </label>;
->>>>>>> merged-prs-20250907-203621
-                    <input
-                      type=\"text\"
-                      id=\"firstName\"
-                      name=\"firstName\"
-                      required
-                      className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor=\"lastName\" className=\"block text-sm font-medium text-gray-700 mb-2\">
-                      Last Name *
-                    </label>
-                    <input
-                      type=\"text\"
-                      id=\"lastName\"
-                      name=\"lastName\"
-                      required
-                      className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-700 mb-2\">
-                    Email Address *
-                  </label>
-                  <input
-                    type=\"email\"
-                    id=\"email\"
-                    name=\"email\"
-                    required
-                    className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
-                  />
-                </div>
-                <div>
-                  <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-700 mb-2\">
-                    Company
-                  </label>
-                  <input
-                    type=\"text\"
-                    id=\"company\"
-                    name=\"company\"
-                    className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
-                  />
-                </div>
-                <div>
-                  <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">
-                    Phone Number
-                  </label>
-                  <input
-                    type=\"tel\"
-                    id=\"phone\"
-                    name=\"phone\"
-                    className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
-                  />
-                </div>
-                <div>
-                  <label htmlFor=\"service\" className=\"block text-sm font-medium text-gray-700 mb-2\">
-                    Service of Interest
-                  </label>
-                  <select
-                    id=\"service\"
-                    name=\"service\"
-                    className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
-                  >
-                    <option value=\"">Select a service</option>
-                    <option value=\"ai-development\">AI Development</option>
-                    <option value=\"cloud-solutions\">Cloud Solutions</option>
-                    <option value=\"web-development\">Web Development</option>
-                    <option value=\"mobile-development\">Mobile Development</option>
-                    <option value=\"blockchain\">Blockchain Solutions</option>
-                    <option value=\"iot-platforms\">IoT Platforms</option>
-                    <option value=\"data-analytics\">Data Analytics</option>
-                    <option value=\"cybersecurity\">Cybersecurity</option>
-                    <option value=\"consulting\">Technology Consulting</option>
-                  </select>
-                </div>
-                <div>
-                  <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">
-                    Message *
-                  </label>
-                  <textarea
-                    id=\"message\"
-                    name=\"message\"
-                    rows={6}
-                    required
-                    className=\"w-full px-4 py-3 border border-gray-300 rounded-lg \"focus\": ring-2 focus:ring-blue-500 focus:border-transparent\"
-                    placeholder=\"Tell us about your project or how we can help you...\"
-                  ></textarea>
-                </div>
-                <button
-                  type=\"submit\"
-                  className=\"w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center\"
-                >
-                  <Send className=\"mr-2 h-5 w-5\" />
-                  Send Message
-                </button>
-              </form>
-            </div>
-            {/* Office Locations */}
-            <div>
-              <h2 className=\"text-3xl font-bold text-gray-900 mb-6\">Our Offices</h2>
-              <div className=\"space-y-6\">
-                {offices.map((office) => (
-                  <div key={office.city} className=\"bg-white rounded-lg shadow-lg p-6\">
-                    <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">
-                      {office.city}
-                    </h3>
-                    <div className=\"space-y-2 text-gray-600\">
-                      <div className=\"flex items-start\">
-                        <MapPin className=\"h-5 w-5 mr-2 mt-0.5 text-blue-600\" />
-                        <span>{office.address}</span>
-                      </div>
-                      <div className=\"flex items-center\">
-                        <Phone className=\"h-5 w-5 mr-2 text-blue-600\" />
-                        <a href={`\"tel\": ${office.phone}`} className=\""hover\": text-blue-600\">
-                          {office.phone}
-                        </a>
-                      </div>
-                      <div className=\"flex items-center\">
-                        <Mail className=\"h-5 w-5 mr-2 text-blue-600\" />
-                        <a href={`\"mailto\": ${office.email}`} className=\""hover\": text-blue-600\">
-                          {office.email}
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* FAQ Section */}
-      <section className=\"py-20\">
-        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
-          <div className=\"text-center mb-16\">
-            <h2 className=\"text-4xl font-bold text-gray-900 mb-4\">Frequently Asked Questions</h2>
-            <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">
-              Get answers to common questions about our services and process
-            </p>
-          </div>
-
-
-=======
-=======
                 What is your typical project timeline?
               </h3>
               <p className=\"text-gray-600\">
@@ -453,8 +214,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>
 
 
-=======
-=======
+
                 Do you provide ongoing support?
               </h3>
               <p className=\"text-gray-600\">
@@ -465,8 +225,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>
 
 
-=======
-=======
+
                 What technologies do you specialize in?
               </h3>
               <p className=\"text-gray-600\">
@@ -477,8 +236,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>
 
 
-=======
-=======
+
                 How do you ensure project quality?
               </h3>
               <p className=\"text-gray-600\">
@@ -487,8 +245,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 to ensure high-quality deliverables.
               </p>
             </div>
-          </div>
-        </div>
+
       </section>
     </MainLayout>
   );
@@ -497,9 +254,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           <section className=\"py-20\">
             <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
               <motion.div
-                initial={{ opacity: 0, \"y\": 20 }}
-                animate={{ \"opacity\": 1, \"y\": 0 }}
-                transition={{ \"duration\": 0.6, \"delay\": 0.2 }}
+                initial={ opacity: 0, \"y\": 20 }
+                animate={ \"opacity\": 1, \"y\": 0 }
+                transition={ \"duration\": 0.6, \"delay\": 0.2 }
                 className=\"text-center mb-16\"
               >
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">
@@ -511,13 +268,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               </motion.div>
 
 
-=======
                 {contactInfo.map((info, index) => (
                   <motion.div
                     key={index}
-                    initial={{ \"opacity\": 0, \"y\": 20 }}
-                    animate={{ \"opacity\": 1, \"y\": 0 }}
-                    transition={{ \"duration\": 0.6, \"delay\": index * 0.1 }}
+                    initial={ \"opacity\": 0, \"y\": 20 }
+                    animate={ \"opacity\": 1, \"y\": 0 }
+                    transition={ \"duration\": 0.6, \"delay\": index * 0.1 }
                     className=\"bg-white rounded-xl p-8 shadow-lg \"hover\": shado w-xl transition-shadow duration-300 text-center\"
                   >
                     <div className=\"text-blue-600 mb-4 flex justify-center\">
@@ -547,9 +303,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           <section className=\"bg-gray-50 py-20\">
             <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
               <motion.div
-                initial={{ opacity: 0, \"y\": 20 }}
-                animate={{ \"opacity\": 1, \"y\": 0 }}
-                transition={{ \"duration\": 0.6 }}
+                initial={ opacity: 0, \"y\": 20 }
+                animate={ \"opacity\": 1, \"y\": 0 }
+                transition={ \"duration\": 0.6 }
                 className=\"text-center mb-16\"
               >
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">
@@ -561,11 +317,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               </motion.div>
 
 
-=======
                 <motion.form
-                  initial={{ opacity: 0, \"y\": 20 }}
-                  animate={{ \"opacity\": 1, \"y\": 0 }}
-                  transition={{ \"duration\": 0.6, \"delay\": 0.2 }}
+                  initial={ opacity: 0, \"y\": 20 }
+                  animate={ \"opacity\": 1, \"y\": 0 }
+                  transition={ \"duration\": 0.6, \"delay\": 0.2 }
                   className=\"bg-white rounded-xl shadow-lg p-8\"
                 >
                   <div className=\"grid grid-cols-1 \"md\": gri d-cols-2 gap-6 mb-6\">
@@ -574,10 +329,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         Full Name *
                       </label>
                       <input type=\"text\"
-<<<<<<< HEAD
                         id=\"name\"
                         name=\"name\"
-=======
 
       <section className=\"py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
@@ -649,11 +402,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           <section className=\"py-20\">;
             <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
               <motion&& motion.div
-                initial={{ opacity: 0, \"y\": 20 }}
-                animate={{ \"opacity\": 1, \"y\": 0 }}
+                initial={ opacity: 0, \"y\": 20 }
+                animate={ \"opacity\": 1, \"y\": 0 }
 
 
-                transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}
+                transition={ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }
                 className=\"text-center mb-16\">;
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">;
                   Contact Information;
@@ -727,7 +480,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       <inputtype=\text\"
                         id=\"name\
                         name=\name\"
->>>>>>> merged-prs-20250907-203621
                         required
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\
                         placeholder=\Your full name\"
@@ -745,23 +497,21 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         placeholder=\"your.email@example.com\
                        />
                     </div>
-                  </div>
 
-
-=======
+                        className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
+                        placeholder=\"your.email@example.com\"
+                       />
+                    </div>
                     <div>
                       <label htmlFor=\phone\" className=\"block text-sm font-medium text-gray-700 mb-2\>
                         Phone Number
                       </label>
                       <input type=\"tel\"
-<<<<<<< HEAD
+
                         id=\"phone\"
                         name=\"phone\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
                         placeholder=\"+1 (555) 123-4567\"
-=======
-
->>>>>>> merged-prs-20250907-203621
                        />
                     </div>
                     <div>
@@ -778,8 +528,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   </div>
 
 
-=======
-=======
                       Service Interest
                     </label>
                     <select
@@ -797,33 +545,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   </div>
 
 
-=======
-=======
                       Message *
                     </label>
-<<<<<<< HEAD
-                    <textarea
-                      id=\"message\"
-                      name=\"message\"
-                      rows={6}
-                      required
-                      className=\"w-full px-4 py-3 border border-gray-300 rounded-lg \"focus\": rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
-                      placeholder=\"Tell us about your project requirements...\"
-                    ></textarea>
-                  </div>
-                  <motion.button
-                    type=\"submit\"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ \"scale\": 0.98 }}
-                    className=\"w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 \"hover\": b g-blue-700 transition-colors\"
-                  >
-                    <Send className=\"w-5 h-5\"  />
-                    Send Message
-                  </motion.button>
-                </motion.form>
 
-
-=======
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">
           <div className=\"max-w-7xl mx-auto\">
@@ -844,10 +568,24 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               {/* Contact Form */}
 
 
-=======
-=======
-=======
 
+                    whileHover={{ scale: 1 && 1.02 }}
+                    whileTap={{ \"scale\": 0 && 0.98 }}
+                    className=\"w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 \"hover\": b g-blue-700 transition-colors\">;
+                    <Send className=\"w-5 h-5\"  />;
+                    Send Message;
+                  </motion && motion.button>;
+                </motion && motion.form>;
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+
+
+
+
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
@@ -880,7 +618,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 
->>>>>>> merged-prs-20250907-203621
                 {isSubmitted ? (
                   <div className=\text-center py-12\">
                     <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\ />
@@ -929,13 +666,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     </div>
 
 
-=======
                       <div>
                         <label htmlFor=\"company\ className=\block text-sm font-medium text-gray-300 mb-2\">
                           Company
                         </label>
-<<<<<<< HEAD
-=======
+
+:pages.disabled/pages/contact.tsx
 
                           placeholder=\"your@email && email.com\"
                         />;
@@ -949,7 +685,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         </label>;
 
 
->>>>>>> merged-prs-20250907-203621
+
+
                         <input
                           type=\"text\"
                           id=\"company\"
@@ -1037,7 +774,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 </div>
 
 
-=======
                   {contactInfo.map((info, index) => (
                     <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">
                       <div className=\"w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0\">
@@ -1055,26 +791,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>
 
 
-<<<<<<< HEAD
-=======
-=======
-          </div>
-        </section>
-      </div>
-    </>
-  );
-}
-
-
-=======
-=======
           {/* Services Overview */}
           <section className="py-20">;
             <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">;
               <motion&& motion.div
-                initial={{ opacity: 0, "y": 20 }}
-                animate={{ "opacity": 1, "y": 0 }}
-                transition={{ "duration": 0 && 0.6 }}
+                initial={ opacity: 0, "y": 20 }
+                animate={ "opacity": 1, "y": 0 }
+                transition={ "duration": 0 && 0.6 }
                 className="text-center mb-16">;
                 <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4">;
                   Our Services;
@@ -1087,9 +810,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 {services && services.map((service, index) => (;
                   <motion&& motion.div
                     key={index}
-                    initial={{ "opacity": 0, "y": 20 }}
-                    animate={{ "opacity": 1, "y": 0 }}
-                    transition={{ "duration": 0 && 0.6, "delay": inde x * 0 && 0.1 }}
+                    initial={ "opacity": 0, "y": 20 }
+                    animate={ "opacity": 1, "y": 0 }
+                    transition={ "duration": 0 && 0.6, "delay": inde x * 0 && 0.1 }
                     className="bg-white rounded-xl p-6 shadow-lg "hover": shado w-xl transition-shadow duration-300 text-center">;
                     <h3 className="text-lg font-semibold text-gray-900">;
                       {service}
@@ -1110,4 +833,3 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
->>>>>>> merged-prs-20250907-203621

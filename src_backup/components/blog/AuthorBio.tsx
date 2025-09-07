@@ -1,23 +1,36 @@
 <<<<<<< HEAD
+import React from 'react';
+import type { BlogAuthor } from '@/types/blog';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 import React from 'react',;
 import type { BlogAuthor } from '@/types/blog',;
 interface AuthorBioProps {;
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from 'react';
 import type { BlogAuthor } from '@/types/blog';
 import React from 'react;
 import type { BlogAuthor } from @/types/blog';
+>>>>>>> origin/resolved-merge-conflicts
 interface AuthorBioProps {
 =======
 import React from 'react',;
 import type { BlogAuthor } from '@/types/blog',;
 interface AuthorBioProps {;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   author: BlogAuthor;
 }
 
+import React from 'react';
+import type { BlogAuthor } from '@/types/blog';
 interface AuthorBioProps {
   author: BlogAuthor;
 
@@ -29,62 +42,90 @@ export function AuthorBio({ author }: AuthorBioProps) {
 
         src={author.avatarUrl}
         alt={author.name}
-        className="w-16 h-16 rounded-full mr-4 mb-4 md: mb-0
+        className='w-16 h-16 rounded-full mr-4 mb-4 md: mb-0'
         onError={(e) => {
 
-          target.src = '/images/blog-placeholder.svg
-        }}
+          target.src = '/images/blog-placeholder.svg'
+        }
       />
       <div>
 
 ;
 <<<<<<< HEAD
+import React from 'react',import type { BlogAuthor } from '@/types/blog',interface AuthorBioProps  {author: BlogAuthor;
+}import React from 'react';
+import type { BlogAuthor } from '@/types/blog';
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from react',import type { BlogAuthor } from '@/types/blog,interface AuthorBioProps  {author: BlogAuthor;
 }import React from react';
 import type { BlogAuthor } from '@/types/blog;
+>>>>>>> origin/resolved-merge-conflicts
 interface AuthorBioProps  {author: BlogAuthor;export function AuthorBio() {if (!author.bio) return null,return (<img;
         src={author.avatarUrl}
         alt={author.name}
-        className=w-16 h-16 rounded-full mr-4 mb-4 md: mb-0";
-        onError={(e) => {const target = e.currentTarget as HTMLImageElement,target.src = /images/blog-placeholder.svg';
-        }}
+        className='w-16 h-16 rounded-full mr-4 mb-4 md: mb-0';
+        onError={(e) => {const target = e.currentTarget as HTMLImageElement,target.src = '/images/blog-placeholder.svg';
+        }
       />;
       <div>;
-        <p className="font-medium text-lg>{author.name}</p>;
-        {author.title && <p className=text-sm text-muted-foreground mb-2">{author.title}</p>}
+        <p className='font-medium text-lg'>{author.name}</p>;
+        {author.title && <p className='text-sm text-muted-foreground mb-2'>{author.title}</p>}
         <p>{author.bio}</p>;
       </div>;
     </div>;
   )interface AuthorBioProps  {author: BlogAuthor;
 export function AuthorBio(): any ({ author }: AuthorBioProps) {if (!author && author.bio) return null;
-  return (<div className='mt-12 flex flex-col md:flex-row bg-zion-blue-light dark:bg-zion-blue-dark border border-zion-blue rounded-lg p-6>interface AuthorBioProps  {author: BlogAuthor;
+  return (<div className='mt-12 flex flex-col md:flex-row bg-zion-blue-light dark:bg-zion-blue-dark border border-zion-blue rounded-lg p-6'>interface AuthorBioProps  {author: BlogAuthor;
 }
 interface AuthorBioProps  {author: BlogAuthor;
 }export function AuthorBio(): any ({ author }: AuthorBioProps) {if (!author && author.bio) return null;
-  return (<div className=mt-12 flex flex-col md:flex-row bg-zion-blue-light dark:bg-zion-blue-dark border border-zion-blue rounded-lg p-6'>;
+  return (<div className='mt-12 flex flex-col md:flex-row bg-zion-blue-light dark:bg-zion-blue-dark border border-zion-blue rounded-lg p-6'>;
       <img;
         src={author && author.avatarUrl}
         alt={author && author.name}
-        className='w-16 h-16 rounded-full mr-4 mb-4 md:mb-0;
+        className='w-16 h-16 rounded-full mr-4 mb-4 md:mb-0';
         onError={e => {const target = e && e.currentTarget as HTMLImageElement;
-          target && target.src = /images/blog-placeholder && placeholder.svg';        }}author.title;
+          target && target.src = '/images/blog-placeholder && placeholder.svg';        }author.title;
 }</p>;
 }<p> {author.bio ;
 }</p>;
+<<<<<<< HEAD
+}''}export function AuthorBio() {if (!author.bio) return null;
+  return (<div className='mt-12 flex flex-col md:flex-row bg-zion-blue-light dark:bg-zion-blue-dark border border-zion-blue rounded-lg p-6'>;
+      <img;
+        src={author.avatarUrl}
+        alt={author.name}
+        className='w-16 h-16 rounded-full mr-4 mb-4 md: mb-0';
+        onError={(e) => {const target = e.currentTarget as HTMLImageElement;
+          target.src = '/images/blog-placeholder.svg';
+        }
+        }import type { BlogAuthor } from '@/types / blog';
+=======
 }'"}export function AuthorBio() {if (!author.bio) return null;
   return (<div className=mt-12 flex flex-col md:flex-row bg-zion-blue-light dark:bg-zion-blue-dark border border-zion-blue rounded-lg p-6>;
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function AuthorBio({ author }: AuthorBioProps) {;
   if (!author.bio) return null;
   return (;
     <div className="mt-12 flex flex-col md:flex-row bg-zion-blue-light dark:bg-zion-blue-dark border border-zion-blue rounded-lg p-6">;
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <img;
         src={author.avatarUrl}
         alt={author.name}
@@ -94,9 +135,13 @@ export function AuthorBio({ author }: AuthorBioProps) {;
           target.src = '/images/blog-placeholder.svg';
         }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         }}import type { BlogAuthor } from '@/types / blog';
+>>>>>>> origin/resolved-merge-conflicts
 interface AuthorBioProps  {author: BlogAuthor;
 export /**;
  * AuthorBio - Function description;
@@ -104,7 +149,7 @@ export /**;
 function AuthorBio() {// Check condition;
 if (return null) {$2;
 }
-  return (<div className=mt - 12 flex flex - col md:flex - row bg - zion - blue - light dark:bg - zion - blue - dark border border - zion - blue rounded - lg p - 6>interface AuthorBioProps  {author: BlogAuthor;
+  return (<div className='mt - 12 flex flex - col md:flex - row bg - zion - blue - light dark:bg - zion - blue - dark border border - zion - blue rounded - lg p - 6'>interface AuthorBioProps  {author: BlogAuthor;
 }
 export function AuthorBio() {if (!author.bio) return null;
   return (<div className;
@@ -113,6 +158,7 @@ interface AuthorBioProps  {author: BlogAuthor;
 export /**;
  * AuthorBio - Function description;
  */;
+function AuthorBio() {// Check condition;
 if (return null) {$2;
 }
 interface AuthorBioProps  {author: BlogAuthor;
@@ -122,29 +168,41 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {if (!author && au
 interface AuthorBioProps  {author: BlogAuthor;
 }
 export function AuthorBio(): any ({ author }: AuthorBioProps) {if (!author && author.bio) return null;
-  return (<div className=mt-12 flex flex-col md:flex-row bg-zion-blue-light dark:bg-zion-blue-dark border border-zion-blue rounded-lg p-6>;/>;
+  return (<div className='mt-12 flex flex-col md:flex-row bg-zion-blue-light dark:bg-zion-blue-dark border border-zion-blue rounded-lg p-6'>;/>;
       <div>;
         <p className='font-medium text-lg'>{author && author.name}</p>;
-        {author && author.title && (<p className=text-sm text-muted-foreground mb-2>{author && author.title}</p>;
+        {author && author.title && (<p className='text-sm text-muted-foreground mb-2'>{author && author.title}</p>;
         )}        <p>{author && author.bio}</p>;
       </div>;
     </div>;
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
         <p className='font-medium text-lg'>{author && author.name}</p>;
         {author && author.title && (;
-          <p className=text-sm text-muted-foreground mb-2>{author && author.title}</p>;
+          <p className='text-sm text-muted-foreground mb-2'>{author && author.title}</p>;
         )}        <p>{author && author.bio}</p>;
       </div>;
     </div>;
   );
-        <p className=font-medium text-lg>{author && author.name}</p>;
-        {author && author.title && <p className="text-sm text-muted-foreground mb-2">{author && author.title}</p>}
+        <p className='font-medium text-lg'>{author && author.name}</p>;
+        {author && author.title && <p className='text-sm text-muted-foreground mb-2'>{author && author.title}</p>}
 
       <img
 <<<<<<< HEAD
+  )<p className='font-medium text-lg'>{author && author.name}</p>;
+        {author && author.title && <p className='text-sm text-muted-foreground mb-2'>{author && author.title}</p>}<img;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
         src={author && author.avatarUrl}
         alt={author && author.name}
@@ -153,12 +211,14 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {if (!author && au
           const target = e && e.currentTarget as HTMLImageElement;
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   )<p className=font-medium text-lg>{author && author.name}</p>;
         {author && author.title && <p className="text-sm text-muted-foreground mb-2">{author && author.title}</p>}<img;
+>>>>>>> origin/resolved-merge-conflicts
 
         src={author && author.avatarUrl}
         alt={author && author.name}
-        className=w-16 h-16 rounded-full mr-4 mb-4 md: mb-0;
+        className='w-16 h-16 rounded-full mr-4 mb-4 md: mb-0';
         onError={(e) => {const target = e && e.currentTarget as HTMLImageElement;
 =======
 
@@ -168,110 +228,130 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {if (!author && au
         onError={(e) => {;
           const target = e && e.currentTarget as HTMLImageElement;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           target && target.src = '/images/blog-placeholder && placeholder.svg';
-        }}
+        }
       />;
       <div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <div></div>;
     </div>;
-  )}<p className="font-medium text-lg">{author && author.name}</p>;
-        {author && author.title && <p className=text-sm text-muted-foreground mb-2>{author && author.title}</p>}
+  )}<p className='font-medium text-lg'>{author && author.name}</p>;
+        {author && author.title && <p className='text-sm text-muted-foreground mb-2'>{author && author.title}</p>}
         <p>{author && author.bio}</p>;
       </div>;
     </div>;
   )}
-  return (<div className=mt - 12 flex flex - col md:flex - row bg - zion - blue - light dark:bg - zion - blue - dark border border - zion - blue rounded - lg p - 6>;
+  return (<div className='mt - 12 flex flex - col md:flex - row bg - zion - blue - light dark:bg - zion - blue - dark border border - zion - blue rounded - lg p - 6'>;
       <img;
         src={author.avatar_url}
         alt={author.name}
         className='w - 16 h - 16 rounded - full mr - 4 mb - 4 md:mb - 0';
         on_error={e => {const target = e.current_target as HTMLImageElement;
-          target.src = /images / blog - placeholder.svg }}
+          target.src = '/images / blog - placeholder.svg' }
       />;
       <div>;
         <p className='font - medium text - lg'>{author.name}</p>;
-        {author.title && (<p className=text - sm text - muted - foreground mb - 2>{author.title}</p>)}        <p>{author.bio}</p>;
+        {author.title && (<p className='text - sm text - muted - foreground mb - 2'>{author.title}</p>)}        <p>{author.bio}</p>;
       </div>;
-    </div>)<p className="font - medium text - lg">{author.name}</p>;
-        {author.title && <p className=text - sm text - muted - foreground mb - 2>{author.title}</p>}
+    </div>)<p className='font - medium text - lg'>{author.name}</p>;
+        {author.title && <p className='text - sm text - muted - foreground mb - 2'>{author.title}</p>}
       <img;
         src={author.avatar_url}
         alt={author.name}
-        className="w - 16 h - 16 rounded - full mr - 4 mb - 4 md: mb - 0";
+        className='w - 16 h - 16 rounded - full mr - 4 mb - 4 md: mb - 0';
         on_error={(e) => {const target = e.current_target as HTMLImageElement;
           target.src = '/images / blog - placeholder.svg';
-        }}
+        }
       />;
       <div>;
-        <p className=font - medium text - lg>{author.name}</p>;
-        {author.title && <p className="text - sm text - muted - foreground mb - 2">{author.title}</p>}
+        <p className='font - medium text - lg'>{author.name}</p>;
+        {author.title && <p className='text - sm text - muted - foreground mb - 2'>{author.title}</p>}
         <p>{author.bio}</p>;
       </div>;
-    </div>)}/> <div> <p className=font - medium text - lg > {author.name;
-}</p> {";
-  author.title && <p className="text - sm text - muted - foreground mb - 2 > {author.title;
+    </div>)}/> <div> <p className='font - medium text - lg' > {author.name;
+}</p> {';
+  author.title && <p className='text - sm text - muted - foreground mb - 2' > {author.title;
 }</p>;
 }<p> {author.bio;
 }</p>;
+<<<<<<< HEAD
+}''}
+=======
 }'"}
+>>>>>>> origin/resolved-merge-conflicts
 }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 }
   return (
-    <div className=mt - 12 flex flex - col md:flex - row bg - zion - blue - light dark:bg - zion - blue - dark border border - zion - blue rounded - lg p - 6'>;
+    <div className='mt - 12 flex flex - col md:flex - row bg - zion - blue - light dark:bg - zion - blue - dark border border - zion - blue rounded - lg p - 6'>;
       <img;
         src={author.avatar_url}
         alt={author.name}
-        className='w - 16 h - 16 rounded - full mr - 4 mb - 4 md:mb - 0;
+        className='w - 16 h - 16 rounded - full mr - 4 mb - 4 md:mb - 0';
         on_error={e => {
           const target = e.current_target as HTMLImageElement;
-          target.src = /images / blog - placeholder.svg' }}
+          target.src = '/images / blog - placeholder.svg' }
       />;
       <div>;
-        <p className='font - medium text - lg>{author.name}</p>;
+        <p className='font - medium text - lg'>{author.name}</p>;
         {author.title && (
-          <p className=text - sm text - muted - foreground mb - 2'>{author.title}</p>)}        <p>{author.bio}</p>;
+          <p className='text - sm text - muted - foreground mb - 2'>{author.title}</p>)}        <p>{author.bio}</p>;
       </div>;
     </div>);
-        <p className="font - medium text - lg">{author.name}</p>;
-        {author.title && <p className=text - sm text - muted - foreground mb - 2>{author.title}</p>}
+        <p className='font - medium text - lg'>{author.name}</p>;
+        {author.title && <p className='text - sm text - muted - foreground mb - 2'>{author.title}</p>}
       <img;
         src={author.avatar_url}
         alt={author.name}
-        className="w - 16 h - 16 rounded - full mr - 4 mb - 4 md: mb - 0";
+        className='w - 16 h - 16 rounded - full mr - 4 mb - 4 md: mb - 0';
         on_error={(e) => {
-          target.src = '/images / blog - placeholder.svg;
-        }}
+          const target = e.current_target as HTMLImageElement;
+          target.src = '/images / blog - placeholder.svg';
+        }
       />;
       <div>;
-        <p className=font - medium text - lg>{author.name}</p>;
-        {author.title && <p className="text - sm text - muted - foreground mb - 2">{author.title}</p>}
+        <p className='font - medium text - lg'>{author.name}</p>;
+        {author.title && <p className='text - sm text - muted - foreground mb - 2'>{author.title}</p>}
         <p>{author.bio}</p>;
       </div>;
     </div>);
-}/> <div> <p className=font - medium text - lg > {
+}/> <div> <p className='font - medium text - lg' > {
   author.name;
-}</p> {";
-  author.title && <p className="text - sm text - muted - foreground mb - 2 > {
+}</p> {';
+  author.title && <p className='text - sm text - muted - foreground mb - 2' > {
   author.title;
 }</p>;
 }<p> {
   author.bio;
 }</p>;
-}}
+}''}
 
 }
+;
 
 <div className='mt-12 flex flex-col md:flex-row bg-zion-blue-light dark:bg-zion-blue-dark border border-zion-blue rounded-lg p-6'>
       <img
 <<<<<<< HEAD
+}<div className='mt-12 flex flex-col md:flex-row bg-zion-blue-light dark:bg-zion-blue-dark border border-zion-blue rounded-lg p-6'>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
         src={author.avatarUrl}
         alt={author.name}
         className='w-16 h-16 rounded-full mr-4 mb-4 md:mb-0'
@@ -287,22 +367,29 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {if (!author && au
         )}
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }<div className=mt-12 flex flex-col md:flex-row bg-zion-blue-light dark:bg-zion-blue-dark border border-zion-blue rounded-lg p-6>;
+>>>>>>> origin/resolved-merge-conflicts
       <img;
         src={author.avatarUrl}
         alt={author.name}
         className='w-16 h-16 rounded-full mr-4 mb-4 md:mb-0';
         onError={e => {const target = e.currentTarget as HTMLImageElement;
-          target.src = /images/blog-placeholder.svg;
-        }}
+          target.src = '/images/blog-placeholder.svg';
+        }
       />;
       <div>;
         <p className='font-medium text-lg'>{author.name}</p>;
-        {author.title && (<p className=text-sm text-muted-foreground mb-2>{author.title}</p>;
+        {author.title && (<p className='text-sm text-muted-foreground mb-2'>{author.title}</p>;
         )}
         <p>{author.bio}</p>;
       </div>;
     </div>;
+<<<<<<< HEAD
+  )}/> <div> <p className='font-medium text-lg' > {author.name ;
+}</p> {';
+  author.title && <p className='text-sm text-muted-foreground mb-2' > {author.title ;
+=======
   )}/> <div> <p className="font-medium text-lg" > {author.name ;
 }</p> {;
   author.title && <p className=text-sm text-muted-foreground mb-2" > {author.title ;
@@ -320,7 +407,10 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {if (!author && au
         {author.title && (
           <p className='text-sm text-muted-foreground mb-2'>{author.title}</p>
         )}
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <p>{author.bio}</p>
       </div>
     </div>
@@ -331,11 +421,21 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {if (!author && au
   author.title && <p className="text-sm text-muted-foreground mb-2" > {;
   author.title ;
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }</p> ;
 }<p> {;
   author.bio ;
 }</p> ;
+<<<<<<< HEAD
+}'';
+}''
+=======
 }'"
+>>>>>>> origin/resolved-merge-conflicts

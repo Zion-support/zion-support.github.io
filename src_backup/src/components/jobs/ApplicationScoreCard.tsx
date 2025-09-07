@@ -330,7 +330,11 @@ if ( {) {$2;
             </Button>;
           </div>)}
       </CardContent>;
+<<<<<<< HEAD
+    </Card>)}</CardContent>;
+=======
     </Card>)}}</CardContent>;
+>>>>>>> origin/resolved-merge-conflicts
     </Card>;
   )}";"
 //Render the score result or button to score return (<Card className="overflow-hidden" > <CardHeader className="pb-3" > <CardTitle className="text-lg font-medium flex items-center justify-between" > Resume Match Score </Badge> </CardTitle> </CardHeader> <CardContent> {hasScore ? (<div> {/* Score */ ";"

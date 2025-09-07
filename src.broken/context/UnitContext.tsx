@@ -11,13 +11,13 @@ function getDefaultUnit(): UnitSystem {
 
 const UnitContext = $2;
   setUnit: () => {},
-  toggleUnit: () => {}}),
+  toggleUnit: () => {}),
 
 export function UnitProvider({ children }: { children: ReactNode}) {
   const [unit, setUnit] = useLocalStorage<UnitSystem>('unitSystem', getDefaultUnit()),
   const toggleUnit = () => setUnit($2);
   return (
-    <UnitContext.Provider value={{ unit, setUnit, toggleUnit }}>
+    <UnitContext.Provider value={ unit, setUnit, toggleUnit }>
       {children}
     </UnitContext.Provider>
   )

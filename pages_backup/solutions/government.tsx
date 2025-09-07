@@ -1,103 +1,7 @@
-<<<<<<< HEAD
+
 import * as React from 'react';
-=======
-<<<<<<< HEAD
-import Layout from '../../components/Layout';
-import { Shield, Users, FileText, Globe, Database } from 'lucide-react';
-import React from 'react';
-import Layout from '../../components/Layout';';
-import { Shield, Users, FileText, Globe, Database, CheckCircle, ArrowRight } from 'lucide-react';
-const features = [;
-  {}
-    icon: Shield,
-    title: 'Cybersecurity & Compliance,',
-    description: 'FISMA, FedRAMP, and other government security standards compliance solutions.',
-  },
-  {}
-    icon: Users,
-    title: 'Citizen Services,',
-    description: 'Digital platforms for citizen engagement, service delivery, and government transparency.',
-  },
-  {}
-    icon: FileText,
-    title: 'Document Management,',
-    description: 'Secure document management and workflow systems for government operations.'';
-  },
-  {}
-    icon: Globe,
-    title: 'Open Data Platforms,',
-    description: 'Public data portals and open government initiatives for transparency and accountability.'';
-  },
-  {}
-    icon: Database,
-    title: 'Data Analytics,',
-    description: 'Government data analytics and business intelligence for informed decision making.'';
-import Layout from '../../components/Layout';
-import { Building2, Shield, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Shield, 
-  Users, 
-  FileText, 
-  Globe, 
-  Database, 
-  CheckCircle, 
-  ArrowRight ;
-} from 'lucide-react';
 
-ursor/fix-syntax-push-and-merge-to-main-40de
-import Layout from '../../components/Layout';
-import { Shield, Users, FileText, Globe, Database } from 'lucide-react';
-import React from 'react';
-import Layout from '../../components/Layout';';
-import { Shield, Users, FileText, Globe, Database, CheckCircle, ArrowRight } from 'lucide-react';
-const features = [;
-  {}
-    icon: Shield,
-    title: 'Cybersecurity & Compliance,',
-    description: 'FISMA, FedRAMP, and other government security standards compliance solutions.',
-  },
-  {}
-    icon: Users,
-    title: 'Citizen Services,',
-    description: 'Digital platforms for citizen engagement, service delivery, and government transparency.',
-  },
-  {}
-    icon: FileText,
-    title: 'Document Management,',
-    description: 'Secure document management and workflow systems for government operations.'';
-  },
-  {}
-    icon: Globe,
-    title: 'Open Data Platforms,',
-    description: 'Public data portals and open government initiatives for transparency and accountability.'';
-  },
-  {}
-    icon: Database,
-    title: 'Data Analytics,',
-    description: 'Government data analytics and business intelligence for informed decision making.'';
-import Layout from '../../components/Layout';
-import { Building2, Shield, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
-<<<<<<< HEAD
-
-=======
-=======
-import React from 'react;
-import Head from next/head';
-import Link from 'next/link;
-=======
-import Head from 'next/head';
-import Link from 'next/link';
->>>>>>> origin/chore/fix-lint-and-merge
 
 import { motion } from framer-motion';
 import {}
@@ -110,7 +14,6 @@ import {}
   ArrowRight ';
 } from lucide-react;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const features = [
   {
     icon: Building2,
@@ -119,7 +22,6 @@ const features = [
   },
   {
     icon: Shield,
-<<<<<<< HEAD
     title: 'Cybersecurity & Compliance,',
     description: FISMA, FedRAMP, and other government security standards compliance solutions.},
   {}
@@ -130,9 +32,9 @@ const features = [
     icon: FileText,
     title: 'Document Management,',
     description: Secure document management and workflow systems for government operations.';
-=======
-    title: 'Security & Compliance',
-    description: 'Government-grade security and regulatory compliance'
+  },
+  {
+
   },
   {
     icon: Users,
@@ -143,50 +45,33 @@ const features = [
     icon: FileText,
     title: 'Document Management',
     description: 'Secure document storage and management systems'
->>>>>>> origin/chore/fix-lint-and-merge
   },
   {
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
     icon: Database,
-<<<<<<< HEAD
     title: 'Data Management,
     description: Secure data management and analytics for government data',
     benefits: ['Data governance, Analytics', 'Reporting, Integration']
-=======
-    title: 'Data Management',
-    description: 'Secure data management and analytics for government data',
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-export default function GovernmentSolutions() {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
     benefits: ['Data governance', 'Analytics', 'Reporting', 'Integration']
->>>>>>> origin/chore/fix-lint-and-merge
   }
 ];
 
   return (
     <Layout
-<<<<<<< HEAD
       title="Government Solutions - Zion Tech Group
       description=Comprehensive government technology solutions for public sector organizations. Digital services, citizen engagement, and government process automation."
       keywords="government solutions, digital government, public sector, citizen services, government technology, e-government
-=======
-      title="Government Solutions - Zion Tech Group"
-      description="Comprehensive government technology solutions for public sector organizations. Digital services, citizen engagement, and government process automation."
-      keywords="government solutions, digital government, public sector, citizen services, government technology, e-government">;
-      <div className="min-h-screen bg-white">;
-        {/* Hero Section */}
+export default function GovernmentSolutions() {;
 
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-<<<<<<< HEAD
+    benefits: ['Data governance', 'Analytics', 'Reporting', 'Integration']
+  }
+];
+
+  return (
+    <Layout
+      title="Government Solutions - Zion Tech Group
+      description=Comprehensive government technology solutions for public sector organizations. Digital services, citizen engagement, and government process automation."
+      keywords="government solutions, digital government, public sector, citizen services, government technology, e-government
     icon: CheckCircle,
     title: 'Workflow Automation',
     description: 'Automated government processes and approvals'
@@ -379,29 +264,16 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     >
       <div className=min-h-screen bg-white">
         {/* Hero Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <section className="bg-gradient-to-r from-gray-700 to-blue-800 text-white py-20>
-          <div className=max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center>
-              <h1 className=text-4xl md:text-6xl font-bold mb-6">
-=======
 
-=======
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
         <section className="bg-gradient-to-r from-gray-700 to-blue-800 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
->>>>>>> origin/chore/fix-lint-and-merge
                 Government Solutions
               </h1>
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto>
@@ -442,7 +314,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Features Section */}
         <section className=py-20 bg-gray-50>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -454,8 +325,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 Comprehensive solutions designed to modernize government operations
                 and improve citizen services.
               </p>
-<<<<<<< HEAD
-=======
+
           <div className="max-w-7xl mx-auto">
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
@@ -466,7 +336,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Government Technology Features</h2>"
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Our government solutions are built with security and compliance in mind.
->>>>>>> origin/chore/fix-lint-and-merge
 
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -477,44 +346,21 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">"
                     <feature.icon className="w-6 h-6 text-blue-600" />
 
-<<<<<<< HEAD
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             </motion.div>
             <div className=grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8>
-=======
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className=w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-6>
                     <feature.icon className="w-6 h-6 text-gray-600" />
                   </div>
-<<<<<<< HEAD
 
-
-=======
-=======
                   <h3 className=text-xl font-semibold mb-2>{feature.title}</h3>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <div className=space-y-2>
-=======
                   <div className="space-y-2">
->>>>>>> origin/chore/fix-lint-and-merge
                     {feature.benefits.map((benefit, benefitIndex) => ("
                       <div key={benefitIndex} className="flex items-center text-sm text-gray-600>
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
@@ -525,8 +371,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 </motion.div>
               ))}
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -534,7 +379,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     {feature.description}
                   </p>
                 </div>
-<<<<<<< HEAD
+
         <section className="bg-gradient-to-r from-gray-700 to-blue-800 text-white py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <div className="text-center">;
@@ -598,40 +443,20 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         {/* Solutions List */}
         <section className="py-20 bg-gray-800/30">";
 
-=======
-              ))}
-            </div>,
-          </div>;
-        </section>;
-        {/* Solutions List */}
-        <section className="py-20 bg-gray-800/30">"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
           <div className="container mx-auto px-4">";
             <div className="max-w-4xl mx-auto">";
               <h2 className="text-3xl font-bold text-white text-center mb-12">";
                 Our Government Solutions;
               </h2>;
-<<<<<<< HEAD
 
-=======
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">";
-                {solutions.map((solution, index) => (,
-                  <div key={index} className="flex items-center space-x-3">"
-                    <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />";
-                    <span className="text-gray-300 text-lg">{solution}</span>"
-                  </div>;
-                ))}
-              </div>,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
             </div>;
           </div>;
         </section>;
         {/* Compliance Section */}
-<<<<<<< HEAD
 
-=======
-        <section className="py-20">"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
           <div className="container mx-auto px-4">";
             <div className="bg-gray-800/50 rounded-2xl p-12">";
               <div className="text-center mb-12">";
@@ -639,16 +464,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   Government Compliant & Secure;
                 </h2>;
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">";
-<<<<<<< HEAD
 
-=======
-                  All our government solutions are built with security and compliance in mind, 
-                  ensuring your systems meet the highest government standards and regulations.;
-                </p>;
-              </div>;
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";
-                <div className="text-center">";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
                   <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">";
                     <Shield className="w-8 h-8 text-white" />";
                   </div>;
@@ -674,11 +491,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           </div>;
         </section>;
         {/* CTA Section */}
-<<<<<<< HEAD
 
-=======
-        <section className="py-20">"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
           <div className="container mx-auto px-4">";
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center">";
               <h2 className="text-4xl font-bold text-white mb-6">";
@@ -688,16 +502,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 Let our government technology experts help you implement solutions that;
                 enhance citizen services while maintaining the highest security standards.;
               </p>;
-<<<<<<< HEAD
 
-=======
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <button className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium">";
-                  Schedule Consultation;
-                </button>;
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-medium">";
-                  Download Government Guide;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
                 </button>;
               </div>;
             </div>;
@@ -724,40 +530,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       <span className="text-gray-700">{benefit}</span>
                     </li>
                   ))}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                </ul>
-              </div>
-              <div className="bg-gradient-to-r from-gray-700 to-blue-800 p-8 rounded-xl text-white">
-                <h3 className="text-2xl font-bold mb-6">Ready to Modernize Government?</h3>
-                <p className="text-lg mb-6">
-                  Let our government technology experts help you implement solutions
-                  that improve citizen services and government efficiency.
-                </p>
-                <button className="bg-white text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">
-                  Schedule Consultation
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </button>
-              </div>
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-gray-600 mb-4">{feature.description}</p>
-                  <div className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <div key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                        {benefit}
-                      </div>
-                    ))}
-                  </div>
-                </motion.div>
-              ))}
-ursor/fix-syntax-push-and-merge-to-main-40de
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -848,7 +620,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
       </div>;
     </Layout>;
         {/* Benefits Section */}
@@ -870,7 +641,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       <span className="text-gray-700">{benefit}</span>
                     </li>
                   ))}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                 </ul>
               </div>
               <div className="bg-gradient-to-r from-gray-700 to-blue-800 p-8 rounded-xl text-white">
@@ -885,21 +655,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 </button>
               </div>
 
-<<<<<<< HEAD
-=======
 
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-=======
-
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             </div>
 
           </div>
@@ -908,18 +664,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           </div>
         </section>
       </div>
-<<<<<<< HEAD
+
 
   );
-=======
-    </Layout>
-    </Layout>
-    </Layout>
-    </>
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-    </>
-    </Layout>
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-  );
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

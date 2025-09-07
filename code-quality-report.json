@@ -8,6 +8,11 @@
     "comments": 5
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
   ]
 }
   ]
@@ -21,6 +26,10 @@ ursor/automate-test-improve-and-merge-code-646c
     "failed": 2,
     "warnings": 0
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   },
   "issues": [
     {
@@ -45,8 +54,16 @@ ursor/automate-test-improve-and-merge-code-646c
   ]
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 }
+=======
+<<<<<<< HEAD
+=======
+=======
+}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   "timestamp": "2025-09-07T10:14:30.109Z",
   "issues": [
     {
@@ -62,6 +79,13 @@ ursor/automate-test-improve-and-merge-code-646c
       "recommendation: Replace with proper logging"
     }
   ],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  "summary": {
+    "totalIssues": 2
+=======
+>>>>>>> origin/resolved-merge-conflicts
   "summary: {
     totalIssues": 2
 =======
@@ -1096,6 +1120,10 @@ ursor/automate-test-improve-and-merge-code-646c
     "todos": 3,
     "anyTypes": 193
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   }
 }
   ]

@@ -1,250 +1,190 @@
-import React from 'react';
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-const AboutPage: React.FC = () => {
+import { AppLayout } from "@/layout/AppLayout";
+    }
+  ];
+  const milestones = [
+    {
+      year: "2025",
+      title: "Global Expansion",
+      description: "Expanded operations to serve clients across North America, Europe, and Asia-Pacific regions."
+    },
+    {
+      year: "2024",
+      title: "AI Breakthrough",
+      description: "Launched revolutionary AI autonomous business platform, transforming how companies operate."
+    },
+    {
+      year: "2023",
+      title: "Quantum Innovation",
+      description: "Developed cutting-edge quantum computing solutions for enterprise applications."
+    },
+    {
+      year: "2022",
+      title: "Company Founded",
+      description: "Zion Tech Group was established with a vision to revolutionize technology solutions."
+    }
+  ];
+  const stats = [
+    { number: "500+", label: "Projects Completed", icon: Target },
+    { number: "50+", label: "Team Members", icon: Users },
+    { number: "25+", label: "Countries Served", icon: Globe },
+    { number: "99%", label: "Client Satisfaction", icon: Award }
+  ];
   return (
-    <div className="p-8">
-      <h1 className="text-3xl font-bold text-gray-900">About Us</h1>
-      <p className="mt-4 text-lg text-gray-700">Learn more about Zion Tech Group.</p>
-=======
-const About: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 py-20">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 text-center">
-            About <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Zion Tech Group</span>
-          </h1>
-          
-          <div className="prose prose-lg prose-invert max-w-none">
-            <p className="text-xl text-gray-300 mb-8 text-center">
-              Empowering businesses with cutting-edge technology solutions and innovative digital strategies.
-            </p>
-            
-            <div className="grid md:grid-cols-2 gap-12 mb-16">
-              <div>
-                <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
-                <p className="text-gray-300 mb-6">
-                  We are dedicated to transforming businesses through innovative technology solutions. 
-                  Our mission is to bridge the gap between complex technology and practical business needs, 
-                  delivering solutions that drive growth and efficiency.
-                </p>
-                <p className="text-gray-300">
-                  From AI-powered applications to comprehensive IT services, we provide the tools and 
-                  expertise your business needs to thrive in the digital age.
-                </p>
-              </div>
-              
-              <div>
-                <h2 className="text-3xl font-bold text-white mb-6">Our Vision</h2>
-                <p className="text-gray-300 mb-6">
-                  To be the leading technology partner for businesses worldwide, known for our 
-                  innovative solutions, exceptional service, and commitment to client success.
-                </p>
-                <p className="text-gray-300">
-                  We envision a future where technology seamlessly integrates with business operations, 
-                  creating opportunities for growth and innovation across all industries.
-                </p>
-              </div>
-            </div>
-            
-            <div className="bg-gray-800/50 rounded-lg p-8 mb-16">
-              <h2 className="text-3xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h2>
-              <div className="grid md:grid-cols-3 gap-8">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Innovation</h3>
-                  <p className="text-gray-300">Cutting-edge solutions that keep you ahead of the competition</p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Reliability</h3>
-                  <p className="text-gray-300">Proven track record of delivering successful projects on time</p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Expertise</h3>
-                  <p className="text-gray-300">Experienced team with deep knowledge across multiple technologies</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="text-center">
-              <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
-              <p className="text-gray-300 mb-8">
-                Let&apos;s discuss how we can help transform your business with our technology solutions.
-              </p>
-              <a 
-                href="/contact" 
-                className="inline-block bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-500 hover:to-blue-600 transition-all duration-300"
-              >
-                Contact Us Today
-              </a>
-            </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      {/* Hero Section */}
           </div>
-        </div>
-      </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
-    </div>
-  );
-};
-
-<<<<<<< HEAD
-export default AboutPage;
-=======
-export function About() {
-  return (
-    <div className="min-h-screen bg-background">
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-            About Zion Tech Group
-          </h1>
-          <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
-            We are a leading technology company dedicated to delivering innovative solutions 
-            that drive digital transformation and business growth.
-          </p>
-        </div>
-
-        {/* Mission & Vision */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-          <div className="bg-card p-8 rounded-xl border">
-            <h2 className="text-3xl font-bold text-foreground mb-6">Our Mission</h2>
-            <p className="text-foreground/80 leading-relaxed text-lg">
-              To empower businesses with cutting-edge technology solutions that drive innovation, 
-              efficiency, and growth. We believe in the transformative power of technology and 
-              its ability to solve complex business challenges.
-            </p>
-          </div>
-          
-          <div className="bg-card p-8 rounded-xl border">
-            <h2 className="text-3xl font-bold text-foreground mb-6">Our Vision</h2>
-            <p className="text-foreground/80 leading-relaxed text-lg">
-              To be the global leader in technology solutions, recognized for our innovation, 
-              reliability, and commitment to client success. We envision a future where technology 
-              seamlessly integrates with business operations.
-            </p>
-          </div>
-        </div>
-
-        {/* Values */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center text-foreground mb-12">Our Values</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-4xl">💡</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Innovation</h3>
-              <p className="text-foreground/70">
-                We constantly push the boundaries of what's possible with technology.
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-4xl">🤝</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Collaboration</h3>
-              <p className="text-foreground/70">
-                We work closely with our clients to understand their unique needs.
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-4xl">⭐</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Excellence</h3>
-              <p className="text-foreground/70">
-                We deliver high-quality solutions that exceed expectations.
-              </p>
-            </div>
-          </div>
-        </div>
+        </section>
 
         {/* Team Section */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center text-foreground mb-12">Meet Our Team</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-card p-6 rounded-xl border text-center">
-              <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">👨‍💼</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">John Smith</h3>
-              <p className="text-primary mb-2">CEO & Founder</p>
-              <p className="text-foreground/70 text-sm">
-                Technology visionary with 15+ years of experience in enterprise solutions.
+        <section className="py-20 bg-white dark:bg-gray-800">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                Meet Our Leadership Team
+              </h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                Visionary leaders and industry experts driving innovation and transformation
               </p>
-            </div>
-            
-            <div className="bg-card p-6 rounded-xl border text-center">
-              <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">👩‍💻</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Sarah Johnson</h3>
-              <p className="text-primary mb-2">CTO</p>
-              <p className="text-foreground/70 text-sm">
-                AI and machine learning expert leading our technical innovation.
-              </p>
-            </div>
-            
-            <div className="bg-card p-6 rounded-xl border text-center">
-              <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">👨‍🔬</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Mike Chen</h3>
-              <p className="text-primary mb-2">Lead Developer</p>
-              <p className="text-foreground/70 text-sm">
-                Full-stack developer specializing in scalable cloud architectures.
-              </p>
-            </div>
-          </div>
-        </div>
+            </motion.div>
 
-        {/* Company Stats */}
-        <div className="bg-primary/5 rounded-xl p-12">
-          <h2 className="text-3xl font-bold text-center text-foreground mb-12">Company at a Glance</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-bold text-primary mb-2">2018</div>
-              <div className="text-foreground/70">Founded</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-primary mb-2">50+</div>
-              <div className="text-foreground/70">Team Members</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-primary mb-2">25+</div>
-              <div className="text-foreground/70">Countries Served</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-primary mb-2">500+</div>
-              <div className="text-foreground/70">Projects Delivered</div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {teamMembers.map((member, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-center p-6 rounded-xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-600 hover:shadow-xl transition-all duration-300"
+                >
+                  <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
+                    <Users className="w-12 h-12 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                    {member.name}
+                  </h3>
+                  <div className="text-blue-600 dark:text-blue-400 font-medium mb-3">
+                    {member.role}
+                  </div>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4">
+                    {member.bio}
+                  </p>
+                  <div className="flex flex-wrap justify-center gap-2">
+                    {member.expertise.map((skill, skillIndex) => (
+                      <span
+                        key={skillIndex}
+                        className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
-        </div>
+        </section>
+
+        {/* Milestones Section */}
+        <section className="py-20 bg-gray-50 dark:bg-gray-900">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                Our Journey
+              </h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                Key milestones that shaped our company and continue to drive our future
+              </p>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto">
+              {milestones.map((milestone, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className={`flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
+                >
+                  <div className="flex-1 text-center">
+                    <div className="text-6xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+                      {milestone.year}
+                    </div>
+                    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">
+                      {milestone.title}
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-300">
+                      {milestone.description}
+                    </p>
+                  </div>
+                  <div className="w-4 h-4 bg-blue-600 rounded-full mx-8" />
+                  <div className="flex-1" />
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Join hundreds of companies already leveraging our AI-powered solutions to drive growth and innovation
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+                  to="/contact"
+                  className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+                >
+                  Start Your Journey
+                </Link>
+                <Link
+                  to="/services"
+                  className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
+                >
+                  Explore Services
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
       </div>
-    </div>
+    </>
   );
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-=======
+};
+// Icon components
+const Innovation = ({ className }: { className?: string }) => (
+  <Lightbulb className={className} />
+);
+const Excellence = ({ className }: { className?: string }) => (
+  <Award className={className} />
+);
+const Collaboration = ({ className }: { className?: string }) => (
+  <Users className={className} />
+);
+const Integrity = ({ className }: { className?: string }) => (
+  <Shield className={className} />
+);
 export default About;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef

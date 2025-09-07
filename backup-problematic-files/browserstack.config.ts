@@ -48,6 +48,9 @@ export default defineConfig({
   testDir: "tests/e2e",
   use: {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',
     trace: 'on-first-retry'
     baseURL: process.env.PLAYWRIGHT_BASE_URL || "http://localhost:3000",
@@ -55,6 +58,8 @@ export default defineConfig({
 
   },
   projects: [
+<<<<<<< HEAD
+=======
 import { define_config, devices } from '@playwright / test';
 import { define_config, devices } from '@playwright / test',
 ;
@@ -108,6 +113,7 @@ import { define_config, devices } from '@playwright / test';
 =======
   projects: [
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     {
       name: "Desktop Chrome",
       use: {

@@ -2,7 +2,6 @@ import { Certification } from '@/types/resume',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
 import { Edit, Trash2 } from 'lucide-react';
-<<<<<<< HEAD
 import { format } from 'date-fns',;
 ;
 interface CertificationsListProps {;
@@ -11,22 +10,12 @@ interface CertificationsListProps {;
   onDelete:(id:string) => void;
 }
 ;
-=======
-
-import { format } from 'date-fns',;
-
-;
-interface CertificationsListProps {;
-  certifications: Certification[];,;
-  onEdit: (cert:Certification) => void;,;
-  onDelete:(id:string) => void;
-}
->>>>>>> merged-prs-20250907-203621
 export function CertificationsList({ certifications, onEdit, onDelete } CertificationsListProps) {;
   if (certifications.length === 0) {;
     return null,;
+  }
+;
   return (;
-<<<<<<< HEAD
     <div className="space-y-4">;
       <h3 className="text-md font-medium">Added Certifications</h3>;
       {certifications.map((cert) => (;
@@ -44,27 +33,10 @@ export function CertificationsList({ certifications, onEdit, onDelete } Certific
                     <> · Expires:{typeof cert.expiration_date === 'string' ;
                       ? cert.expiration_date ;
                       :format(cert.expiration_date, 'MMM yyyy')}
-=======
-    <div className="space-y-4">;"
-</div>"
-      <h3 className="text-md font-medium">Added Certifications</h3>;""
-        <Card key={cert.id} className="bg-muted/40">;"
-"
-          <CardContent className="pt-6">;"
-            <div className="flex justify-between">;"
-</div>
-              <div>;
-
-                    <>  Expires:{typeof cert.expiration_date === 'string' ;
-                      ? cert.expiration_date ;)
-                      :format(cert.expiration_date, 'MMM yyyy')}
-
->>>>>>> merged-prs-20250907-203621
                     </>;
                   )}
                 </p>;
               </div>;
-<<<<<<< HEAD
               <div className="flex gap-2">;
                 <Button;
                   variant="ghost";
@@ -91,32 +63,14 @@ export function CertificationsList({ certifications, onEdit, onDelete } Certific
                   target="_blank" ;
                   rel="noopener noreferrer";
                   className="text-primary hover:underline";
-=======
-
-                  onClick={() => onEdit(cert)}
-                  <Edit className="h-4 w-4" />;"
-
-                  onClick={() => onDelete(cert.id!)}
-
-            {cert.credential_url && (;
-              <p className="text-xs mt-2">;
-
-                <a ;
-                  href={cert.credential_url} ;"
-                  target="_blank" ;""
-                  rel="noopener noreferrer";""
-                  className="text-primary hover:underline";"
->>>>>>> merged-prs-20250907-203621
                 >;
-</a>
+                  View credential;
                 </a>;
               </p>;            )}
-
           </CardContent>;
         </Card>;
       ))}
     </div>;
-<<<<<<< HEAD
   ),;}
  ? cert.issue date : format (cert.issue date, 'MMM yyyy') ) : 'N/A' ;
 }{;
@@ -124,26 +78,5 @@ export function CertificationsList({ certifications, onEdit, onDelete } Certific
   typeof cert.expiration date === 'string' ? cert.expiration date : format (cert.expiration date, 'MMM yyyy') ;
 }</>) ;
 }</p> </div> <div className="flex gap-2" > <Button > <Edit className="h-4 w-4" /> </Button> <Button > <Trash2 className="h-4 w-4" /> </Button> </div> </div> <a href= {;"  cert.credential url ";"}target="blank" rel="noopener noreferrer" className="text-primary hover:underline" > View credential </Link> </p>) ;
-=======
-
-  typeof cert.expiration date === 'string' ? cert.expiration date : format (cert.expiration date, 'MMM yyyy') ;
-}</>) ;
-}</p> </div> <div className="flex gap-2" > <Button > <Edit className="h-4 w-4" /> </Button> <Button > <Trash2 className="h-4 w-4" /> </Button> </div> </div> <a href= {;"  cert.credential url ";"}target="blank" rel="noopener noreferrer" className="text-primary hover:underline" > View credential </Link> </p>) ;
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
 }</CardContent> </Card>) ) ;
-=======
-}</CardContent> </Card>) ) ;
-<<<<<<< HEAD
-:temp_broken_files/resume-builder/forms/certifications/CertificationsList.tsx
 }</div>) ;"}'"
-}</div>) ;
-}'"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/forms/certifications/CertificationsList.tsx
-=======
-
-}</div>) ;
-}'"
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

@@ -14,8 +14,7 @@ const Login.test: React.FC<Login.testProps> = ({ className }) => {
 };
 pr-12325
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 interface Login.testProps {
   }
   className?: string;
@@ -24,15 +23,8 @@ interface Login.testProps {
 }
 return (;
     <div className={className || ''}>'
-=======
     <div className={className || }>
 </div>
->>>>>>> origin/chore/fix-lint-and-merge
       <h1>Login.test</h1>
+
       <p>This component is under development.</p>
-=======
-export default Login.test;
-=======
-export default Login.test;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

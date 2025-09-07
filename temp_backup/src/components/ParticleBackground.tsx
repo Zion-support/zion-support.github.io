@@ -68,11 +68,11 @@ const distance  = Math.sqrt(dx * dx + dy * dy)if (distance < 100) {ctx.beginPath
 const animate = (updateParticles()drawParticles()animationRef.current = requestAnimationFrame(animate)) => {
   return $3;}
 }resizeCanvas()initParticles()animate()window.addEventListener('resize', () => {resizeCanvas()initParticles()})return () => {if (animationRef.current) {cancelAnimationFrame(animationRef.current)}
-      window.removeEventListener('resize', resizeCanvas)}}, [particleCount];
+      window.removeEventListener('resize', resizeCanvas)}, [particleCount];
   return (<canvas;
       ref={canvasRef}
       className={`fixed inset-0 pointer-events-none z-0 ${className}`}
-      style={{background: 'transparent' }
+      style={background: 'transparent' }
 }
     />;
   )}

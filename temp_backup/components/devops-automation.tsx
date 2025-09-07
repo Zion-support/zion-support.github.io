@@ -18,7 +18,7 @@ export default function DevOpsAutomationPage() {
 }
    ,}
 }
-    {icon: <Zap className="w-6 h-6" />;
+    {icon: <Zap className='w-6 h-6' />;
       title: 'Infrastructure as Code';
       description: 'Terraform, CloudFormation, and Kubernetes automation';}
       color: 'bg-gradient-to-br from-green-500 to-emerald-600';}
@@ -350,11 +350,11 @@ className={`w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mx-a
             </div>;
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8' />              {pricingPlans && pricingPlans.map((plan, index) => (                Simple, Transparent Pricing;
               </h2>;
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto" />;
+              <p className='text-xl text-gray-400 max-w-3xl mx-auto' />;
                 Choose the plan that fits your DevOps needs. All plans include a 14-day free trial.;
               </p>;
             </div>;
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8" />;}
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8' />;}
               {pricingPlans && pricingPlans.map((plan, index) => (<Card;}
                   key={index}
                   className={`relative p-8 ${plan && plan.color} transition-all duration-300 hover:scale-105 ${plan && plan.popular ? 'ring-2 ring-blue-500' : '';}
@@ -364,8 +364,8 @@ className={`w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mx-a
                       <span className='bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium' />                        Most Popular;
                       </span>;}
                     </div>;}
-                  )}                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2" />;
-                      <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium" />;
+                  )}                    <div className='absolute -top-4 left-1/2 transform -translate-x-1/2' />;
+                      <span className='bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium' />;
                         Most Popular;
                       </span>;
                     </div>;
@@ -386,20 +386,20 @@ className={`w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mx-a
                           key={featureIndex}
                           className='flex items-center text-gray-300' />;
                           <Check className='w-5 h-5 text-blue-400 mr-3 flex-shrink-0' />                          {feature}                    </div>;
-                    <p className="text-gray-300 mb-8" />{plan && plan.description}</p>;
-                    <ul className="text-left space-y-3 mb-8" />;
-                      {plan && plan.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-gray-300" />;
-                          <Check className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />;{/* Pricing Section */}
-        <section id="pricing" className="py-24 bg-gray-900" />;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" />;
-            <div className="text-center mb-20" />;
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8" />;
+                    <p className='text-gray-300 mb-8' />{plan && plan.description}</p>;
+                    <ul className='text-left space-y-3 mb-8' />;
+                      {plan && plan.features.map((feature, featureIndex) => (<li key={featureIndex} className='flex items-center text-gray-300' />;
+                          <Check className='w-5 h-5 text-blue-400 mr-3 flex-shrink-0' />;{/* Pricing Section */}
+        <section id='pricing' className='py-24 bg-gray-900' />;
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8' />;
+            <div className='text-center mb-20' />;
+              <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8' />;
         {/* Pricing Section */}
 
-        <section id="pricing" className="py-24 bg-gray-900" />
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8" />
-            <div className="text-center mb-20" />
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8" />
+        <section id='pricing' className='py-24 bg-gray-900' />
+          <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8' />
+            <div className='text-center mb-20' />
+              <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8' />
 
         {/* Pricing Section *,}
 }
@@ -465,8 +465,8 @@ size='lg'
                       </span>
     </div>}
   );}
-}                    <div className="absolute -top - 4 left-1/2 transform -translate-x-1 / 2" />;
-                      <span className="bg - blue - 500 text - white px - 4 py - 2 rounded - full text-sm font-medium" />;
+}                    <div className='absolute -top - 4 left-1/2 transform -translate-x-1 / 2' />;
+                      <span className='bg - blue - 500 text - white px - 4 py - 2 rounded - full text-sm font-medium' />;
                         Most Popular;
                       </span>
     </div>
@@ -489,10 +489,10 @@ size='lg'
                           className='flex items - center text - gray - 300' />
 
                           <Check className='w - 5 h - 5 text - blue - 400 mr - 3 flex - shrink - 0' />                          {feature}                    </div>;
-                    <p className="text - gray-300 mb-8" />{plan.description}</p>;
-                    <ul className="text - left space-y-3 mb-8" />;
-                      {plan.features.map ((feature, feature_index) => (<li key={feature_index} className="flex items - center text-gray-300" />;
-                          <Check className="w - 5 h - 5 text - blue - 400 mr - 3 flex-shrink-0" />;
+                    <p className='text - gray-300 mb-8' />{plan.description}</p>;
+                    <ul className='text - left space-y-3 mb-8' />;
+                      {plan.features.map ((feature, feature_index) => (<li key={feature_index} className='flex items - center text-gray-300' />;
+                          <Check className='w - 5 h - 5 text - blue - 400 mr - 3 flex-shrink-0' />;
                           {feature}
                         </li>))}
                     </ul>;
@@ -525,18 +525,18 @@ size='lg'
             <div className='text-center mb-20' />;
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8' />;
         {/* Market Comparison Section */}
-        <section className="py-24 bg-gray-800" />;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" />;
-            <div className="text-center mb-20" />;
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8" />;
+        <section className='py-24 bg-gray-800' />;
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8' />;
+            <div className='text-center mb-20' />;
+              <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8' />;
                 How We Compare to the Competition;
               </h2>;
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto" />;
+              <p className='text-xl text-gray-400 max-w-3xl mx-auto' />;
                 See why Zion DevOps is the smart choice for automation.;
               </p>;
             </div>;
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8" />;
-              {marketComparison.map((competitor, index) => (<Card key={index} className="p-6" />;
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8' />;
+              {marketComparison.map((competitor, index) => (<Card key={index} className='p-6' />;
                     </Button>;
                   </div>;
                 </Card>;
@@ -642,16 +642,16 @@ key={i}
                       />;
                     ))}</h2>;
             </div>;
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8" />;
-              {testimonials.map((testimonial, index) => (<Card key={index} className="p-6" />;
-                  <div className="flex items-center mb-4" />;
-                    {[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />;
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8' />;
+              {testimonials.map((testimonial, index) => (<Card key={index} className='p-6' />;
+                  <div className='flex items-center mb-4' />;
+                    {[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className='w-5 h-5 text-yellow-400 fill-current' />;
                     ))}
 
 
                   </div>
                   <p className='text-gray-300 mb-6 italic' />
-                    "{testimonial.content}"
+                    '{testimonial.content}'
                   </p>
                   <div />
                     <p className='font-semibold text-white' />

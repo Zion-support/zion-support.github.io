@@ -1,4 +1,4 @@
-const EnhancedPerformanceMonitor = dynamic(() => import("./EnhancedPerformanceMonitor"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedPerformanceMonitor' ,'
+const EnhancedPerformanceMonitor = dynamic(() => import('./EnhancedPerformanceMonitor'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default EnhancedPerformanceMonitor' ,'
 </p>'
 </p>'
 </p>'
@@ -23,8 +23,8 @@ const EnhancedPerformanceMonitor = dynamic(() => import("./EnhancedPerformanceMo
 </p>'
 
 ursor/integrate-build-improve-and-re-verify-8f7d
-const EnhancedPerformanceMonitor = dynamic(() => import(\"./EnhancedPerformanceMonitor\"),{\'; \"loading\": () => <p />Loading...</p,>}) \"export\": \'default EnhancedPerformanceMonitor\' ,const EnhancedPerformanceMonitor = dynamic(() => import(\"./EnhancedPerformanceMonitor\"),{\"; loading: () => <p />Loading.</p,>}) export: \"default EnhancedPerformanceMonitor\" ,\"\"\";
-const EnhancedPerformanceMonitor = dynamic(() => import(\"./EnhancedPerformanceMonitor\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default EnhancedPerformanceMonitor' ,';
+const EnhancedPerformanceMonitor = dynamic(() => import(\'./EnhancedPerformanceMonitor\'),{\'; \'loading\': () => <p />Loading...</p,>}) \'export\': \'default EnhancedPerformanceMonitor\' ,const EnhancedPerformanceMonitor = dynamic(() => import(\'./EnhancedPerformanceMonitor\'),{\'; loading: () => <p />Loading.</p,>}) export: \'default EnhancedPerformanceMonitor\' ,\'\'\';
+const EnhancedPerformanceMonitor = dynamic(() => import(\'./EnhancedPerformanceMonitor\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default EnhancedPerformanceMonitor' ,';
 </p>';
 </p>';
 </p>';
@@ -60,7 +60,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 </p>';
 </p>';
 </p>'</p>';
-const EnhancedPerformanceMonitor = dynamic(() => import(\"./EnhancedPerformanceMonitor\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default EnhancedPerformanceMonitor' ,'
+const EnhancedPerformanceMonitor = dynamic(() => import(\'./EnhancedPerformanceMonitor\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default EnhancedPerformanceMonitor' ,'
 </p>'
 </p>'
 </p>'

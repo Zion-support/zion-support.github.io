@@ -2,6 +2,11 @@
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
 =======
   const values = [{
       title: \'Innovation\',
@@ -67,6 +72,10 @@
 =======
 const \"About\": NextPage = () => {
 const \"About\": NextPage = () => {
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 const \"About\": NextPage = () => {
 
 class ErrorBoundary extends React.Component {
@@ -90,7 +99,14 @@ class ErrorBoundary extends React.Component {
     
     return this.props.children;
   }
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 const \"About\": NextPage = () => {;
 import React from 'react';
 import Link from 'next/link';
@@ -132,9 +148,18 @@ export default function AboutPage() {return (<main>;
     { \"number\": \'50+\', \"label\": \'Happy Clients\' },
     { \"number\": \'5+\', \"label\": \'Years Experience\' },
     { \"number\": \'24/7\', \"label\": \'Support Available\' }
+<<<<<<< HEAD
     { \number\": \'50+\, \"label\: \Happy Clients\' },
     { \number\": \'5+\, \"label\: \Years Experience\' },
     { \number\": \'24/7\, \"label\: \Support Available\' }
+=======
+<<<<<<< HEAD
+=======
+    { \number\": \'50+\, \"label\: \Happy Clients\' },
+    { \number\": \'5+\, \"label\: \Years Experience\' },
+    { \number\": \'24/7\, \"label\: \Support Available\' }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   ];
 export default function AboutPage() {
   return (
@@ -176,7 +201,14 @@ export default function AboutPage() {
               <div key={v.title} className="bg-white rounded-lg p-8 shadow text-center">
                 <h3 className="text-xl font-semibold mb-3">{v.title}</h3>
                 <p className="text-gray-600">{v.desc}</p>
+<<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     <MainLayout
       title=\"About Us - Zion Tech Group\
       description=\Learn about Zion Tech Group\'s mission, values, and the team behind our innovative technology solutions.\"
@@ -233,24 +265,44 @@ export default function AboutPage() {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+  ];
+  const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' },
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
 =======
 =======
   ];
   const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' },
   ];
   const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' },
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     { \"number\": \'50+\', \"label\": \'Happy Clients\' },
     { \"number\": \'5+\', \"label\": \'Years Experience\' },
   const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' };
     { \"number\": \'50+\', \"label\": \'Happy Clients\' },;
     { \"number\": \'5+\', \"label\": \'Years Experience\' },;
     { \"number\": \'24/7\', \"label\": \'Support Available\' }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
     { \"number\: \50+\, \label\": \'Happy Clients\' },
     { \"number\: \5+\, \label\": \'Years Experience\' },
   const stats = [{ \"number\: \150+\, \label\": \'Projects Completed\' }
     { \"number\: \50+\, \label\": \'Happy Clients\' },
     { \"number\: \5+\, \label\": \'Years Experience\' },
     { \"number\: \24/7\, \label\": \'Support Available\' }
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   ];
 export default function AboutPage() {
   return (
@@ -516,7 +568,14 @@ ursor/automate-test-improve-and-merge-code-646c;
                 <div className="text-gray-600">{stat.label}</div>
               </div>
                 <div className="text-gray-600">{stat.label}</div>
+<<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               </div>
             ))}
           </div>
@@ -526,8 +585,17 @@ ursor/automate-test-improve-and-merge-code-646c;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 =======
 =======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     </main>
 
 
@@ -538,16 +606,40 @@ ursor/automate-test-improve-and-merge-code-646c;
           <div className=\"text-center mb-16\">
             <h2 className=\"text-4xl font-bold text-gray-900 mb-4\">Our Values</h2>
             <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
       <section className=\"py-20\>
         <div className=\max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\>
           <div className=\text-center mb-16\">
             <h2 className=\"text-4xl font-bold text-gray-900 mb-4\>Our Values</h2>
             <p className=\text-xl text-gray-600 max-w-3xl mx-auto\">
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               The principles that guide everything we do and shape our company culture
             </p>
           </div>
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {values.map((value) => (
+              <div key={value.title} className=\"text-center\">
+                <div className=\"bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4\">
+                  <value.icon className=\"h-8 w-8\" />
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 =======
             {values.map((value) => (
@@ -582,6 +674,10 @@ ursor/automate-test-improve-and-merge-code-646c;
               <div key={value.title} className=\"text-center\>
                 <div className=\bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4\">
                   <value.icon className=\"h-8 w-8\ />
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 </div>
                 <h3 className=\text-xl font-semibold text-gray-900 mb-3\">
                   {value.title}
@@ -593,7 +689,14 @@ ursor/automate-test-improve-and-merge-code-646c;
 
             ))}
           </div>
+<<<<<<< HEAD
         </div>
+=======
+<<<<<<< HEAD
+=======
+        </div>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       </section>
       {/* Team Section */}
       <section className=\"py-20 bg-gray-50\" id=\"team\">
@@ -608,8 +711,17 @@ ursor/automate-test-improve-and-merge-code-646c;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       <section className=\"py-20 bg-gray-50\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
           <div className=\"grid grid-cols-2 md:grid-cols-4 gap-8\">;
@@ -682,6 +794,17 @@ ursor/automate-test-improve-and-merge-code-646c;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
           <div className=\grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8>
           <div className=\grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
@@ -698,6 +821,10 @@ ursor/automate-test-improve-and-merge-code-646c;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             {team.map((member) => (
               <div key={member.name} className=\bg-white rounded-lg shadow-lg overflow-hidden\">
                 <div className=\"h-48 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center\>
@@ -716,7 +843,14 @@ ursor/automate-test-improve-and-merge-code-646c;
 
             ))}
           </div>
+<<<<<<< HEAD
         </div>
+=======
+<<<<<<< HEAD
+=======
+        </div>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       </section>
       {/* Story Section */}
       <section className=\"py-20\>
@@ -787,8 +921,17 @@ ursor/automate-test-improve-and-merge-code-646c;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         {/* Hero Section */}
         <section className=\relative py-20 px-4\">
           <div className=\"max-w-7xl mx-auto\>
@@ -923,6 +1066,11 @@ ursor/automate-test-improve-and-merge-code-646c;
 
 
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 }
 <<<<<<< HEAD
 =======
@@ -958,12 +1106,27 @@ ursor/automate-test-improve-and-merge-code-646c;
                 About <span className=\"bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent\">Zion Tech Group</span>;
               </h1>;
               <p className=\"text-xl text-gray-300 max-w-3xl mx-auto mb-8\">;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       <Helmet>;
         <title>About Us - Zion Tech Group | Leading Technology Solutions Provider</title>;
         <meta name=\"description\ content=\Learn about Zion Tech Group, a leading provider of AI, cybersecurity, cloud infrastructure, and emerging technology solutions. Discover our mission, values, and team.\" />;
         <meta name=\"keywords\ content=\about zion tech group, technology company, AI solutions, cybersecurity, cloud services\" />;
         <link rel=\"canonical\ href=\"https\": //ziontechgroup && ziontechgroup.com/about\ />;
       </Helmet>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+=======
+>>>>>>> origin/resolved-merge-conflicts
       <div className=\min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>;
       <div className=\min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
@@ -971,6 +1134,10 @@ ursor/automate-test-improve-and-merge-code-646c;
       <div className=\min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>;
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     <>;
       <Helmet>;
         <title>About Us - Zion Tech Group | Leading Technology Solutions Provider</title>;
@@ -978,11 +1145,24 @@ ursor/automate-test-improve-and-merge-code-646c;
         <meta name=\keywords\" content=\"about zion tech group, technology company, AI solutions, cybersecurity, cloud services\ />;
         <link rel=\canonical\" href=\"https\: //ziontechgroup.com/about\" />;
       </Helmet>;
+<<<<<<< HEAD
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\>;
       <div className=min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
 ursor/automate-test-improve-and-merge-code-646c;
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\>;
       <div className=min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+=======
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+ursor/automate-test-improve-and-merge-code-646c;
+<<<<<<< HEAD
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+=======
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\>;
+      <div className=min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\>;
           <div className=\max-w-7xl mx-auto\">;
@@ -1017,8 +1197,16 @@ ursor/automate-test-improve-and-merge-code-646c;
                     <Heart className=\"w-5 h-5\" />;
                     <span className=\"font-semibold\">Client-Focused</span>;
                   </div>;
+<<<<<<< HEAD
                 </div>;
               </div>;
+=======
+<<<<<<< HEAD
+=======
+                </div>;
+              </div>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               <div className=\"bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl p-8 border border-cyan-500/30\">;
                 <div className=\"grid grid-cols-2 gap-6\">;
                   {stats && stats.map((stat, index) => (<div key={index} className=\"text-center\">;
@@ -1110,7 +1298,7 @@ ursor/automate-test-improve-and-merge-code-646c;
         </section>;
       </div>;
     </>;
-  )}}origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+  )}origin/cursor/integrate-build-improve-and-re-verify-c7b5;
   );
 
 
@@ -1120,9 +1308,17 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 }
-}}}ursor/automate-test-improve-and-merge-code-646c;
+}}ursor/automate-test-improve-and-merge-code-646c;
 }
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 }
+<<<<<<< HEAD
 }
 >>>>>>> merged-prs-20250907-203621
+=======
+<<<<<<< HEAD
+=======
+}
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

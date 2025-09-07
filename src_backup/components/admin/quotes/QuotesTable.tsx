@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 :src/components/admin/quotes/QuotesTable.tsx
-import React from "react;
-import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react
+import React from "react";
+import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'
 import { 
   Table;
   TableBody;
@@ -9,16 +9,17 @@ import {
   TableHead;
   TableHeader;
   TableRow 
-} from @/components/ui/table",
-import { Button } from "@/components/ui/button;
+} from "@/components/ui/table",
+import { Button } from "@/components/ui/button";
+import { 
   DropdownMenu;
   DropdownMenuContent;
   DropdownMenuItem;
   DropdownMenuTrigger 
-} from @/components/ui/dropdown-menu",
-import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge;
-import type { QuoteRequest, QuoteStatus } from @/types/quotes";
-import { formatDate } from "@/utils/dateUtils;
+} from "@/components/ui/dropdown-menu",
+import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
+import { formatDate } from "@/utils/dateUtils";
 interface QuotesTableProps {
   quotes: QuoteRequest[];
   isArchived?: boolean;
@@ -29,22 +30,23 @@ interface QuotesTableProps {
   onViewDetails: (quote: QuoteRequest) => void
   quotes
   isArchived = false
-import React from react"
-import { Eye, MoreHorizontal, Archive, Trash2 } from lucide-react'import {
+import React from "react"
+import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'import {
   Table
   TableBody
   TableCell
   TableHead
   TableHeader
   TableRow
-} from "@/components/ui/table; import { Button } from @/components/ui/button"
+} from "@/components/ui/table"; import { Button } from "@/components/ui/button"
+import {
   DropdownMenu
   DropdownMenuContent
   DropdownMenuItem
   DropdownMenuTrigger
-} from "@/components/ui/dropdown-menu; import { QuoteStatusBadge } from @/components/quotes/QuoteStatusBadge"
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes
-import {formatDate} from @/utils/dateUtils"
+} from "@/components/ui/dropdown-menu"; import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge"
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes"
+import {formatDate} from "@/utils/dateUtils"
 interface QuotesTableProps {
   quotes: QuoteRequest[]
   isArchived?: boolean
@@ -53,23 +55,26 @@ interface QuotesTableProps {
   toggleArchive: (id: string, isArchived: boolean,) => void
   deleteQuote: (id: string,) => void
   onViewDetails: (quote: QuoteRequest,) => void
-import React from "react,
+import React from "react",
+import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'
+import { 
   Table,
   TableBody, 
   TableCell, 
   TableHead, 
   TableHeader, 
   TableRow 
-} from @/components/ui/table",
-import { Button } from "@/components/ui/button,
+} from "@/components/ui/table",
+import { Button } from "@/components/ui/button",
+import { 
   DropdownMenu,
   DropdownMenuContent, 
   DropdownMenuItem, 
   DropdownMenuTrigger 
-} from @/components/ui/dropdown-menu",
-import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge,
-import type { QuoteRequest, QuoteStatus } from @/types/quotes",
-import { formatDate } from "@/utils/dateUtils,
+} from "@/components/ui/dropdown-menu",
+import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
+import { formatDate } from "@/utils/dateUtils",
 interface QuotesTableProps {
   quotes: QuoteRequest[],
   isArchived?: boolean,
@@ -101,31 +106,31 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({  quotes
   deleteQuote,
 
   return (
-    <div className=overflow-x-auto">
+    <div className="overflow-x-auto">
       <Table>
         <TableHeader>"
-          <TableRow className=border-zion-blue-light hover:bg-zion-blue>"
-            <TableHead className="text-zion-slate-light>Talent</TableHead>
-            <TableHead className="text-zion-slate-light">Requester</TableHead>
-            <TableHead className=text-zion-slate-light">Project</TableHead>"
-            <TableHead className=text-zion-slate-light>Budget</TableHead>"
-            <TableHead className="text-zion-slate-light>Date</TableHead>
-            <TableHead className="text-zion-slate-light">Status</TableHead>
-            <TableHead className=text-zion-slate-light">Actions</TableHead>
+          <TableRow className="border-zion-blue-light hover:bg-zion-blue">"
+            <TableHead className="text-zion-slate-light">Talent</TableHead>"
+            <TableHead className="text-zion-slate-light">Requester</TableHead>"
+            <TableHead className="text-zion-slate-light">Project</TableHead>"
+            <TableHead className="text-zion-slate-light">Budget</TableHead>"
+            <TableHead className="text-zion-slate-light">Date</TableHead>"
+            <TableHead className="text-zion-slate-light">Status</TableHead>"
+            <TableHead className="text-zion-slate-light">Actions</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {isLoading ? (
             <TableRow>"
-              <TableCell colSpan={7} className=text-center py-10 text-zion-slate-light>
+              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">
                 Loading quote requests...
               </TableCell>
             </TableRow>
           ) : quotes.length === 0 ? (
             <TableRow>"
-              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light>
+              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">
 
-                  : No quote requests found."}
+                  : "No quote requests found."}
               </TableCell>
             </TableRow>
           ) : (
@@ -133,38 +138,42 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({  quotes
 <<<<<<< HEAD
 :src/components/admin/quotes/QuotesTable.tsx
               <TableRow
+<<<<<<< HEAD
+                key = {quote.id,}
+=======
                 key = {quote.id}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
-                className="border-zion-blue-light hover:bg-zion-blue
+                className="border-zion-blue-light hover:bg-zion-blue"
 
               >
-                <TableCell className=text-white">
-                  {quote.talent_name || Unknown Talent'}
+                <TableCell className="text-white">
+                  {quote.talent_name || 'Unknown Talent'}
                 </TableCell>
 
                 <TableCell className="text-white">
 
   quotes;
   is_archived = false;'
-import React from ./react;'
-import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-reactimport {}
+import React from './react';'
+import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'import {};
   Table;
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-  TableRow;
-} from '@/components / ui / table'; import { Button  } from @/components / ui / button;
-import {}
+  TableRow;'
+} from '@/components / ui / table'; import { Button  } from '@/components / ui / button';
+import {};
   DropdownMenu;
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger;'
-} from '@/components / ui / dropdown - menu; import { QuoteStatusBadge  } from @/components / quotes / QuoteStatusBadge';
+} from '@/components / ui / dropdown - menu'; import { QuoteStatusBadge  } from '@/components / quotes / QuoteStatusBadge';"
 import type { QuoteRequest, QuoteStatus } from "@/types / quotes";'
-import { format_date } from @/utils / date_utils;
+import { format_date } from '@/utils / date_utils';
 interface QuotesTableProps {}
   quotes: QuoteRequest[],
   is_archived?: boolean;
@@ -174,7 +183,7 @@ interface QuotesTableProps {}
   delete_quote: (id: string, ) => void,
   onViewDetails: (quote: QuoteRequest, ) => void;
 }
-export const QuotesTable: React.FC < QuotesTableProps> = ({}
+export const QuotesTable: React.FC < QuotesTableProps> = ({};
   quotes;
   is_archived = false;
   is_loading;
@@ -188,7 +197,7 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({}
         <TableBody>;
           {is_loading ? (
 
-                  : No quote requests found.}
+                  : "No quote requests found."}
               </TableCell>;
             </TableRow>) : (
             quotes.map (quote => (
@@ -203,7 +212,7 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({}
 :src/components/admin/quotes/QuotesTable.tsx
                   </div>
                 </TableCell>
-                <TableCell className=text-white>
+                <TableCell className="text-white">
                   {quote.budget_display |
                   (quote.budget_min && quote.budget_max
                    ? `$${quote.budget_min} - $${quote.budget_max}`
@@ -218,14 +227,14 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({}
                   <QuoteStatusBadge status={quote.status} />
                 </TableCell>
                 <TableCell>
-                  <div className=flex items-center gap-2>
+                  <div className="flex items-center gap-2">
                     <Button
                       variant="ghost"
-                      size=icon
-                      onClick = {() => onViewDetails(quote)}
+                      size="icon"
+                      onClick = {() => onViewDetails(quote),}
                     >
                       <Eye className="h-4 w-4" />
-                      <span className=sr-only>View Details</span>
+                      <span className="sr-only">View Details</span>
                     </Button>
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -233,7 +242,7 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({}
                     <Button 
                       variant="ghost" 
 
-                      size=icon 
+                      size="icon" 
                       onClick={() => onViewDetails(quote)}
 
                       <span className="sr-only">View Details</span>
@@ -242,99 +251,125 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({}
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                     
 
 
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     {isArchived ? (
 
                       <>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+                          variant="ghost"
+=======
+                          variant=ghost
+=======
+=======
 =======
 <<<<<<< HEAD
 
                           variant=ghost
 =======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                           variant="ghost"
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
   quotes;
   isArchived = false;"
+import React from "react";'
+import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'import { ;
   Table;
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow ;
-} from "@/components/ui/table";import { Button } from @/components/ui/button;
+  TableBody, ;
+  TableCell, ;
+  TableHead, ;
+  TableHeader, ;
+  TableRow ;"
+} from "@/components/ui/table";import { Button } from "@/components/ui/button";
+import { ;
   DropdownMenu;
-  DropdownMenuContent,
-  DropdownMenuItem,
+  DropdownMenuContent, ;
+  DropdownMenuItem, ;
 
                           size="icon"
 
-                          className=text-red-500
+                          className="text-red-500"
                           onClick={() => {'
-                            if (window.confirm(Are you sure you want to delete this quote request? This action cannot be undone.)) {}
+                            if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {}
                               deleteQuote(quote.id)
                             }
-                          }}
+                          }
                         >"
-                          <Trash2 className="h-4 w-4 />
+                          <Trash2 className="h-4 w-4" />"
                           <span className="sr-only">Delete</span>
                         </Button>
                       </>
                     ) : (
                       <DropdownMenu>
-                        <DropdownMenuTrigger asChild>
-                          <Button variant=ghost" size="icon aria-label=More actions">"
-                            <MoreHorizontal className=h-4 w-4 />"
-                            <span className="sr-only>Actions</span>
+                        <DropdownMenuTrigger asChild>"
+                          <Button variant="ghost" size="icon" aria-label="More actions">"
+                            <MoreHorizontal className="h-4 w-4" />"
+                            <span className="sr-only">Actions</span>
                           </Button>
-                        </DropdownMenuTrigger>
+                        </DropdownMenuTrigger>"
                         <DropdownMenuContent align="end">'
-                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'new)}>
+                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'new')}>
                             Mark as New;
-                          </DropdownMenuItem>
+                          </DropdownMenuItem>'
                           <DropdownMenuItem onClick={() => updateStatus(quote.id, 'in_review')}>
                             Mark as In Review;
-                          </DropdownMenuItem>
-                          <DropdownMenuItem onClick={() => updateStatus(quote.id, responded')}>
+                          </DropdownMenuItem>'
+                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'responded')}>
                             Mark as Responded;
                           </DropdownMenuItem>'
-                          <DropdownMenuItem onClick={() => updateStatus(quote.id, accepted)}>
+                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'accepted')}>
                             Mark as Accepted;
                           </DropdownMenuItem>'
-                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'closed)}>
+                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'closed')}>
                             Mark as Closed;
                           </DropdownMenuItem>
-                          <DropdownMenuItem onClick={() => toggleArchive(quote.id, true)}>
-                            <Archive className=h-4 w-4 mr-2" />
+                          <DropdownMenuItem onClick={() => toggleArchive(quote.id, true)}>"
+                            <Archive className="h-4 w-4 mr-2" />
                             Archive;
                           </DropdownMenuItem>
 <<<<<<< HEAD
 :src/components/admin/quotes/QuotesTable.tsx
                           <DropdownMenuItem
                             onClick = {() => {
-                              if (window.confirm(Are you sure you want to delete this quote request? This action cannot be undone.')) {
+                              if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
                                 deleteQuote(quote.id)
+<<<<<<< HEAD
+                              } }
+=======
                               } }}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
                           <DropdownMenuItem 
 
                             onClick={() => {
-                              if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.)) {
+                              if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
                                 deleteQuote(quote.id)
 
-                            className="text-red-500
-                          >
+                            className="text-red-500"
+                          >"
                             <Trash2 className="h-4 w-4 mr-2" />
                             Delete;
                           </DropdownMenuItem>
@@ -353,42 +388,59 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({}
     </div>
   )
 }
+<<<<<<< HEAD
+'"
+=======
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
-
-import React from react",
+import React from "react",;
 
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react';
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
+import {;
+  Table,;
+  TableBody,;
+  TableCell,;
+  TableHead,;
+  TableHeader,;
   TableRow;"
-} from @/components/ui/table,"
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger;
-} from "@/components/ui/dropdown-menu",
-import { QuoteStatusBadge } from @/components/quotes/QuoteStatusBadge","
-import type { QuoteRequest, QuoteStatus } from @/types/quotes,"
-interface QuotesTableProps {
-  quotes: QuoteRequest[],
-  isArchived?: boolean,
-  isLoading: boolean,
-  updateStatus: (id: string, status: QuoteStatus) => void,
-  toggleArchive: (id: string, isArchived: boolean) => void,
-  deleteQuote: (id: string) => void,
+} from "@/components/ui/table",;"
+import { Button } from "@/components/ui/button",;
+import {;
+  DropdownMenu,;
+  DropdownMenuContent,;
+  DropdownMenuItem,;
+  DropdownMenuTrigger;"
+} from "@/components/ui/dropdown-menu",;"
+import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",;"
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes",;"
+import { formatDate } from "@/utils/dateUtils",;
+interface QuotesTableProps {;
+  quotes: QuoteRequest[],;
+  isArchived?: boolean,;
+  isLoading: boolean,;
+  updateStatus: (id: string, status: QuoteStatus) => void,;
+  toggleArchive: (id: string, isArchived: boolean) => void,;
+  deleteQuote: (id: string) => void,;
   onViewDetails: (quote: QuoteRequest) => void;
 }
 <<<<<<< HEAD
+;
+export const QuotesTable: React.FC<QuotesTableProps> = ({;
+
+;
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export const QuotesTable: React.FC<QuotesTableProps> = ({
+>>>>>>> origin/resolved-merge-conflicts
   isLoading: boolean,updateStatus: (id: string, status: QuoteStatus) => void,toggleArchive: (id: string, isArchived: boolean) => void,deleteQuote: (id: string) => void,onViewDetails: (quote: QuoteRequest) => void;
-}}
+}
 export const QuotesTable: React.FC<QuotesTableProps> = ({}
 export const QuotesTable: React.FC<QuotesTableProps> = ({quotes;
   isArchived = false;
@@ -396,6 +448,9 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({quotes;
   updateStatus;
   toggleArchive;
   quotes,isArchived = false,isLoading,updateStatus,toggleArchive,deleteQuote,onViewDetails;
+<<<<<<< HEAD
+},) => {return (<div className="overflow-x-auto">;
+=======
 },) => {return (<div className=overflow-x-auto">;
   quotes,
   isArchived = false,
@@ -403,40 +458,47 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({quotes;
   updateStatus,
   toggleArchive,
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ;
 export const QuotesTable: React.FC<QuotesTableProps> = ({;
+>>>>>>> origin/resolved-merge-conflicts
   quotes,;
   isArchived = false,;
   isLoading,;
   updateStatus,;
   toggleArchive,;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
   deleteQuote;
   onViewDetails;
 
-    <div className="overflow-x-auto>;
+    <div className="overflow-x-auto">;
       <Table>;
-        <TableHeader>;
-          <TableRow className="border-zion-blue-light hover:bg-zion-blue">;
-            <TableHead className=text-zion-slate-light">Talent</TableHead>;"
-            <TableHead className=text-zion-slate-light>Requester</TableHead>;"
-            <TableHead className="text-zion-slate-light>Project</TableHead>;
-            <TableHead className="text-zion-slate-light">Budget</TableHead>;
-            <TableHead className=text-zion-slate-light">Date</TableHead>;"
-            <TableHead className=text-zion-slate-light>Status</TableHead>;"
-            <TableHead className="text-zion-slate-light>Actions</TableHead>;
+        <TableHeader>;"
+          <TableRow className="border-zion-blue-light hover:bg-zion-blue">;"
+            <TableHead className="text-zion-slate-light">Talent</TableHead>;"
+            <TableHead className="text-zion-slate-light">Requester</TableHead>;"
+            <TableHead className="text-zion-slate-light">Project</TableHead>;"
+            <TableHead className="text-zion-slate-light">Budget</TableHead>;"
+            <TableHead className="text-zion-slate-light">Date</TableHead>;"
+            <TableHead className="text-zion-slate-light">Status</TableHead>;"
+            <TableHead className="text-zion-slate-light">Actions</TableHead>;
           </TableRow>;
         </TableHeader>;
         <TableBody>;
           {isLoading ? (;
-            <TableRow>;
+            <TableRow>;"
               <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">;
                 Loading quote requests...;
               </TableCell>;
             </TableRow>;
 
-                  : No quote requests found.}
+                  : "No quote requests found."}
               </TableCell>;
             </TableRow>;
           ) : (;
@@ -444,96 +506,106 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                   <div className="text-sm text-zion-slate-light truncate max-w-[200px]">;
                     {quote.project_summary}
                   </div>;
-                </TableCell>;
-                <TableCell className=text-white">;
-
-                     : Not specified)}
                 </TableCell>;"
-                <TableCell className=text-white>;
+                <TableCell className="text-white">;
+
+                     : 'Not specified')}
+                </TableCell>;"
+                <TableCell className="text-white">;
                   {formatDate(quote.created_at)}
                 </TableCell>;
                 <TableCell>;
                   <QuoteStatusBadge status={quote.status} />;
                 </TableCell>;
                 <TableCell>;"
-                  <div className="flex items-center gap-2>;
+                  <div className="flex items-center gap-2">;
 
                       <span className="sr-only">View Details</span>;
                     </Button>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                         >;
-                          <Archive className="h-4 w-4 />;
-                          <span className=sr-only">Unarchive</span>;
+                          <Archive className="h-4 w-4" />;
+                          <span className="sr-only">Unarchive</span>;
                         </Button>;
                         <Button
-                          variant="ghost 
-                          size=icon"
-                          className="text-red-500
-                          onClick = {() => {
-                            if (window && window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
+                          variant="ghost" 
+                          size="icon"
+                          className="text-red-500"
+                          onClick = {() => {;
+                            if (window && window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {;
                               deleteQuote(quote && quote.id);
-                            }
-                          }}
+                            ,}
+                          }
 
                         >;
                     </Button>;{isArchived ? (<>;
                         <Button;
-                          variant=ghost";
-                          size="icon;
+                          variant="ghost";
+                          size="icon";
                           onClick = {(,) => toggleArchive(quote && quote.id, false)}>;
-                          <Archive className=h-4 w-4" />;
-                          <span className="sr-only>Unarchive</span>;
+                          <Archive className="h-4 w-4" />;
+                          <span className="sr-only">Unarchive</span>;
                         </Button>;<Button;
-                          variant=ghost";
-                          size="icon;
-                          className=text-red-500";
-                          onClick = {() => {if (window && window.confirm(Are you sure you want to delete this quote request? This action cannot be undone.)) {deleteQuote(quote && quote.id)}
-                          }}>;
-                          <Trash2 className="h-4 w-4 />;
-                          <span className=sr-only">Delete</span>;
+                          variant="ghost";
+                          size="icon";
+                          className="text-red-500";
+                          onClick = {() => {if (window && window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {deleteQuote(quote && quote.id)}
+                          }>;
+                          <Trash2 className="h-4 w-4" />;
+                          <span className="sr-only">Delete</span>;
                         </Button>;
                       </>;
                     ) : (<DropdownMenu>;
                         <DropdownMenuTrigger asChild>;
-                          <Button variant="ghost size=icon" aria-label="More actions>;
-                            <MoreHorizontal className=h-4 w-4" />;
-                            <span className="sr-only>Actions</span>;
+                          <Button variant="ghost" size="icon" aria-label="More actions">;
+                            <MoreHorizontal className="h-4 w-4" />;
+                            <span className="sr-only">Actions</span>;
                           </Button>;
                         </DropdownMenuTrigger>;
-                        <DropdownMenuContent align=end">;
+                        <DropdownMenuContent align="end">;
                           <DropdownMenuItem onClick={(,) => updateStatus(quote && quote.id, 'new')}>;
                             Mark as New;
                           </DropdownMenuItem>;
-                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, in_review)}>;
+                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'in_review')}>;
                             Mark as In Review;
                           </DropdownMenuItem>;
                           <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'responded')}>;
                             Mark as Responded;
                           </DropdownMenuItem>;
-                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, accepted)}>;
+                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'accepted')}>;
                             Mark as Accepted;
                           </DropdownMenuItem>;
                           <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'closed')}>;
                             Mark as Closed;
                           </DropdownMenuItem>;
                           <DropdownMenuItem onClick={() => toggleArchive(quote && quote.id, true)}>;
+<<<<<<< HEAD
+                          }
+=======
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                           }}
+>>>>>>> origin/resolved-merge-conflicts
 
-                          <span className="sr-only>Delete</span>;
+                          <span className="sr-only">Delete</span>;
                         </Button>;
                       </>;
                     ) : (;
                       <DropdownMenu>;
-                        <DropdownMenuTrigger asChild>;
-                          <Button variant="ghost" size=icon aria-label="More actions">;
-                            <MoreHorizontal className=h-4 w-4" />;"
-                            <span className=sr-only>Actions</span>;
+                        <DropdownMenuTrigger asChild>;"
+                          <Button variant="ghost" size="icon" aria-label="More actions">;"
+                            <MoreHorizontal className="h-4 w-4" />;"
+                            <span className="sr-only">Actions</span>;
                           </Button>;
 
                             <Archive className="h-4 w-4 mr-2" />;
@@ -541,27 +613,37 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                           </DropdownMenuItem>;
                           <DropdownMenuItem;
 
-                            className=text-red-500;
+                            className="text-red-500";
                           >;"
-                            <Trash2 className="h-4 w-4 mr-2 />;
+                            <Trash2 className="h-4 w-4 mr-2" />;
                             Delete;
                           </DropdownMenuItem>;
                         </DropdownMenuContent>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     )}
                       </DropdownMenu>;)}
                   </div>;
                 </TableCell>;
               </TableRow>;
-            )))})};</TableBody>;
+            )))})}'";</TableBody>;
       </Table>;
     </div>;
+<<<<<<< HEAD
+  )}'";
+=======
   )}";
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                       </DropdownMenu>;
 
                     )}
@@ -572,7 +654,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
             ));
           )}
 
-}
+};
 
 '";
 
@@ -580,9 +662,9 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
       </Table>;
     </div>;
   )
-}
-'
-
+};
+'"
+'"
 
                   </div>;
 
@@ -590,7 +672,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                   (quote.budget_min && quote.budget_max;`
                   ? `$${quote.budget_min} - $${quote.budget_max}`;
                   : quote.budget_min;`
-                    ? `$${quote.budget_min}`;
+                    ? `$${quote.budget_min}`;'
                     : 'Not specified')}
 
                   {format_date (quote.created_at)}
@@ -603,31 +685,36 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                     {is_archived ? (
                       <>;
                         <Button;"
-                          variant="ghost;
+                          variant="ghost";"
                           size="icon";
-                          on_click = {(, ) => toggle_archive (quote.id, false)}
+                          on_click = {(, ) => toggle_archive (quote.id, false), }
 
 }
+<<<<<<< HEAD
+                              delete_quote (quote.id) }
+                          }
+=======
                               delete_quote (quote.id);
                             , }
                           }}
+>>>>>>> origin/resolved-merge-conflicts
 
                           </Button>;
-                        </DropdownMenuTrigger>;
-                        <DropdownMenuContent align=end">;
-                          <DropdownMenuItem on_click={(, ) => update_status (quote.id, new')}>;
+                        </DropdownMenuTrigger>;"
+                        <DropdownMenuContent align="end">;'
+                          <DropdownMenuItem on_click={(, ) => update_status (quote.id, 'new')}>;
                             Mark as New;
                           </DropdownMenuItem>;'
-                          <DropdownMenuItem on_click={() => update_status (quote.id, in_review)}>;
+                          <DropdownMenuItem on_click={() => update_status (quote.id, 'in_review')}>;
                             Mark as In Review;
                           </DropdownMenuItem>;'
-                          <DropdownMenuItem on_click={() => update_status (quote.id, 'responded)}>;
+                          <DropdownMenuItem on_click={() => update_status (quote.id, 'responded')}>;
                             Mark as Responded;
-                          </DropdownMenuItem>;
+                          </DropdownMenuItem>;'
                           <DropdownMenuItem on_click={() => update_status (quote.id, 'accepted')}>;
                             Mark as Accepted;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem on_click={() => update_status (quote.id, closed')}>;
+                          </DropdownMenuItem>;'
+                          <DropdownMenuItem on_click={() => update_status (quote.id, 'closed')}>;
                             Mark as Closed;
                           </DropdownMenuItem>;
 
@@ -651,21 +738,24 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
         </TableBody>;
       </Table>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </div>)}'";Table;
   TableBody;
   TableCell;
   TableHead;
   TableHeader;
   TableRow;
-} from @/components/ui/table,import { Button  } from @/components/ui/button;
+} from "@/components/ui/table",import { Button  } from '@/components/ui/button';
   DropdownMenu;
   DropdownMenuContent;
   DropdownMenuItem;
   DropdownMenuTrigger;
 } from "@/components/ui/dropdown-menu",import { QuoteStatusBadge  } from '@/components/quotes/QuoteStatusBadge';
-import { formatDate  } from @/utils/dateUtils;
+import { formatDate  } from '@/utils/dateUtils';
 interface QuotesTableProps  {quotes: QuoteRequest[];
   isArchived?: boolean;
   isLoading: boolean;
@@ -681,12 +771,12 @@ interface QuotesTableProps  {quotes: QuoteRequest[];
   TableHead;
   TableHeader;
   TableRow;
-} from @/components/ui/table; import { Button  } from '@/components/ui/button';
+} from "@/components/ui/table"; import { Button  } from '@/components/ui/button';
   DropdownMenu;
   DropdownMenuContent;
   DropdownMenuItem;
   DropdownMenuTrigger;
-} from "@/components/ui/dropdown-menu"; import { QuoteStatusBadge  } from @/components/quotes/QuoteStatusBadge;
+} from "@/components/ui/dropdown-menu"; import { QuoteStatusBadge  } from '@/components/quotes/QuoteStatusBadge';
 interface QuotesTableProps  {quotes: QuoteRequest[];
   isArchived?: boolean;
   isLoading: boolean;
@@ -699,28 +789,38 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
 origin/cursor/automate-test-improve-and-merge-code-2533
 export const QuotesTable: React.FC<QuotesTableProps> = ({
 
+<<<<<<< HEAD
+'";
+=======
 ';
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
-import React from react";
+import React from "react";
+import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'
+import { 
   Table;
   TableBody;
   TableCell;
   TableHead;
   TableHeader;
   TableRow 
-} from "@/components/ui/table,
-import { Button } from @/components/ui/button";
+} from "@/components/ui/table",
+import { Button } from "@/components/ui/button";
+import { 
   DropdownMenu;
   DropdownMenuContent;
   DropdownMenuItem;
   DropdownMenuTrigger 
-} from "@/components/ui/dropdown-menu,
-import { QuoteStatusBadge } from @/components/quotes/QuoteStatusBadge";
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes;
-import { formatDate } from @/utils/dateUtils";
+} from "@/components/ui/dropdown-menu",
+import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
+import { formatDate } from "@/utils/dateUtils";
 interface QuotesTableProps {
   quotes: QuoteRequest[];
   isArchived?: boolean;
@@ -731,20 +831,22 @@ interface QuotesTableProps {
   onViewDetails: (quote: QuoteRequest) => void
   quotes
   isArchived = false
-import React from "react
+import React from "react"
+import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'import {
   Table
   TableBody
   TableCell
   TableHead
   TableHeader
   TableRow
-} from @/components/ui/table"; import { Button } from "@/components/ui/button
+} from "@/components/ui/table"; import { Button } from "@/components/ui/button"
+import {
   DropdownMenu
   DropdownMenuContent
   DropdownMenuItem
   DropdownMenuTrigger
-} from @/components/ui/dropdown-menu"; import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge
-import type { QuoteRequest, QuoteStatus } from @/types/quotes"
+} from "@/components/ui/dropdown-menu"; import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge"
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes"
 import {formatDate} from "@/utils/dateUtils"
 interface QuotesTableProps {
   quotes: QuoteRequest[]

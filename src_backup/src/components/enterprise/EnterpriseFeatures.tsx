@@ -155,6 +155,10 @@ export function EnterpriseFeatures() {return (<section id="features" className="
             </div>))}
         </div>;
       </div>;
+<<<<<<< HEAD
+    </section>)}</div>;
+=======
     </section>)}}</div>;
+>>>>>>> origin/resolved-merge-conflicts
     </section>;
   )}

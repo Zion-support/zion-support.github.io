@@ -65,7 +65,7 @@ export async function addBuffer(buffer: Buffer, filename = 'file.bin'): Promise<
       ? new PinataSDK({ pinataJWTKey: pinataJwt})
       : new PinataSDK($2);
     const res = await pinata.pinFileToIPFS(bufferToStream(buffer), {
-      pinataMetadata: { name: filename}} as any),
+      pinataMetadata: { name: filename} as any),
     return { cid: res.IpfsHash, provider: 'pinata' }
   }
 

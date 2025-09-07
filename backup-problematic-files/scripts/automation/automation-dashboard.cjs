@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/"usr/bin/env"
 const pm2 = require("pm2)
 const chalk = require(chalk")
@@ -16,18 +15,6 @@ const Table = require(cli-table3")
       "online": this.processes.filter(p => p.pm2_env.status === online)
       "errored": this.processes.filter(p => p.pm2_env.status === errored)
       "stopped": this.processes.filter(p => p.pm2_env.status === stopped)
-=======
-<<<<<<< HEAD
-#!/""usr/bin/env""
-const pm2 = require("pm2")
-const chalk = require("chalk")
-const ora = require("ora")
-const Table = require("cli-table3")
-  "total"
-      "online"
-      "errored"
-      "stopped"
->>>>>>> origin/chore/fix-lint-and-merge
       "totalMemory"
       totalCPU
 // console.log(""\n + =")
@@ -90,7 +77,6 @@ const Table = require("cli-table3")
     const minutes = Math.floor(seconds / 60);
     const hours = Math.floor(minutes / 60);
     const days = Math.floor(hours / 24);"
-<<<<<<< HEAD
   console.log("\n + chalk.blue.bold(� Available "Commands": )
       chalk.gray(  restart <process>  - Restart a specific process")
 // console.log(chalk.gray("  stop <process>     - Stop a specific process)
@@ -100,38 +86,13 @@ const Table = require("cli-table3")
     console.log(chalk.gray("  help               - Show this help)
   console.error(chalk.red( Dashboard "error": ")
 
-=======
-  console.log("\n" + chalk.blue.bold("� Available "Commands": ")
-      chalk.gray("  restart <process>  - Restart a specific process")
-// console.log(chalk.gray("  stop <process>     - Stop a specific process")
-    console.log(chalk.gray("  start <process>    - Start a specific process")
-// console.log(chalk.gray("  refresh            - Refresh process list")
-    console.log(chalk.gray("  quit               - Exit dashboard")
-    console.log(chalk.gray("  help               - Show this help")
-  console.error(chalk.red(" Dashboard "error": ")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
   console.error(chalk.red(" Dashboard "error": ")
   console.error(chalk.red(" Dashboard "error": ")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
       chalk.gray("  restart <process>  - Restart a specific process")"
 </process>"
 // console.log(chalk.gray("  stop <process>     - Stop a specific process")"
     console.log(chalk.gray("  start <process>    - Start a specific process")"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-  console.error(chalk.red(" Dashboard "error": ")
-=======
-  console.error(chalk.red(" Dashboard "error": ")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

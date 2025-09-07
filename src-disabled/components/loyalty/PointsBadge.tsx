@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src-disabled/components/loyalty/PointsBadge.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
   }
     } catch (error) {
@@ -71,6 +74,8 @@ if ( {) {
     if (!isAuthenticated) return;
     setIsRefreshing(true);    try {}
       await fetchLedger()
+<<<<<<< HEAD
+=======
 =======
   const handleRefresh = async (e: React.MouseEvent<HTMLButtonElement>) => {;
     e.preventDefault();
@@ -88,6 +93,7 @@ if ( {) {
 import React, { useState } from 'react',;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/loyalty/PointsBadge.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Gift, RefreshCw } from 'lucide-react';
@@ -221,6 +227,8 @@ export function PointsBadge() {
       <div className="flex items-center gap-1">
         <Tooltip>
           <TooltipTrigger asChild>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src-disabled/components/loyalty/PointsBadge.tsx
 =======
             <Link
@@ -237,6 +245,7 @@ export function PointsBadge() {
               <Gift className='h-4 w-4' aria-hidden='true' />
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/loyalty/PointsBadge.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               href={isAuthenticated ? "/points" : "#"}
@@ -370,6 +379,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             <TooltipTrigger asChild>
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         
         {isAuthenticated && (
           <Tooltip>
@@ -386,6 +397,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   aria-hidden='true'
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 variant="ghost"
 
                 size="sm"
@@ -419,6 +431,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Tooltip>
         )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 ;
 
       </div>;
@@ -439,6 +453,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 ;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ;
 
@@ -474,6 +489,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 
     </TooltipProvider>
   );
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 <<<<<<< HEAD
@@ -482,3 +500,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/loyalty/PointsBadge.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

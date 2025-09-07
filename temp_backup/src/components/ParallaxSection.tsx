@@ -45,7 +45,7 @@ const rate  = scrolled * -speed;switch (direction) {case 'up':;
   }return (<div;
       ref={elementRef}
       className={className}
-      style={{transform: getTransform()}}
+      style={transform: getTransform()}
      />;
       {children}
     </div>;

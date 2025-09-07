@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 import { format } from "date-fns";
+<<<<<<< HEAD
+=======
 
 import { format } from "date-fns";
 import { format } from 'date-fns'
@@ -53,6 +55,7 @@ interface ProjectDetailsFieldsProps {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { format } from "date-fns";
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
@@ -251,6 +254,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         )}
       />
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <FormField
         control={form.control}
         name='scopeSummary'
@@ -270,6 +275,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         )}
       />
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           field: ControllerRenderProps<ContractFormValues, 'projectName'>;
@@ -649,6 +655,8 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
         <FormField
           control={form.control}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           name='startDate'
           render={({
             field,
@@ -667,6 +675,7 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
             <FormItem className="flex flex-col">
               <FormLabel>Start Date</FormLabel>
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           name="startDate"
           render={({ field }: { field: ControllerRenderProps<ContractFormValues "startDate"> }) => (
@@ -684,6 +693,8 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                   <FormControl>
                     <Button
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
@@ -696,6 +707,7 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
                     >
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                       variant={"outline"}
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
@@ -759,6 +771,8 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                 </PopoverTrigger>
                 <PopoverContent className="w-auto p-0" align="start">
                   <Calendar
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src-disabled/components/contracts/components/ProjectDetailsFields.tsx
 =======
 <<<<<<< HEAD
@@ -785,6 +799,7 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/contracts/components/ProjectDetailsFields.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     mode="single"
       />;
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
@@ -955,6 +970,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <FormControl>
                     <Button
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
@@ -964,6 +981,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       variant={'outline'}
                       className={`w-full pl-3 text-left font-normal ${!field.value && 'text-muted-foreground'}`}
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       variant={"outline"}
@@ -1144,6 +1162,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </PopoverTrigger>
                 <PopoverContent className='w-auto p-0' align='start'>
                   <Calendar
+<<<<<<< HEAD
+
+=======
                     mode='single'
                     selected={field.value |undefined}
                     onSelect={field.onChange}
@@ -1262,6 +1283,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     disabled={(date) => date < form.getValues("startDate")}
                     initialFocus;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/contracts/components/ProjectDetailsFields.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   />;
                 </PopoverContent>;
               </Popover>;

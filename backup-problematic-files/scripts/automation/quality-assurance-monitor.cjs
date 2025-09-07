@@ -10,7 +10,6 @@ class QualityAssuranceMonitor {}
     this.startTime = Date.now()}
   log(message, type = info') {}
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
     console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`)}
   async runCommand(command, options = {}) {}
     try {}
@@ -80,46 +79,8 @@ if (require.main === module) {}
   const monitor = new QualityAssuranceMonitor();
   monitor.run().catch(console.error)}
 
-=======
-    console.log(`[${timestamp}] [${type.toUpperCase()}] ${message})};
-  async runCommand(command, options = {}) {}
-    try {}
-      const result = execSync(command, {})
 
-        "details": eslintResult.output.substring(0, 500);"
-    // Check for security vulnerabilities;"
 
-        "details": auditResult.output.substring(0, 500);"
-      })};`;
-    this.log(`Quality assurance check completed. Found ${this.issuesFound.length} issues.`);
-    return this.issuesFound};
-  async run() {}"
-
-      return { "success": false, "error": error.message }};"
-if (require.main === module) {}
-  const monitor = new QualityAssuranceMonitor();
-  monitor.run().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-module.exports = QualityAssuranceMonitor;
-module.exports = QualityAssuranceMonitor;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 module.exports = QualityAssuranceMonitor;
 "`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-module.exports = QualityAssuranceMonitor;
-=======
-module.exports = QualityAssuranceMonitor;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

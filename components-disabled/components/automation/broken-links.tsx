@@ -2,6 +2,8 @@
 
   return (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 :backup-problematic-files/components/automation/broken-links.tsx
     <div className="py-10">
       <h1 className="text-2xl font-semibold text-white">Broken Links Report</h1>
@@ -12,6 +14,7 @@
 }
 =======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     <div className="py-10">"
 </div>"
@@ -21,5 +24,9 @@
 <<<<<<< HEAD
     </div>)"
 =======
+<<<<<<< HEAD
+    </div>)"
+=======
     </div>)"
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

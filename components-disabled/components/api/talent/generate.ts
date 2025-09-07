@@ -35,11 +35,14 @@ INPUT\nName: ${name}\nCurrent Title: ${title || }\nBio: ${bio || }\nExperience: 
     const parsed = JSON && JSON.parse(content);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
       temperature: 0.6});        { role: 'system', content: 'You produce only valid JSON. No commentary.' }
       response_format: { type: 'json_object' }
       temperature: 0.6});
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       "temperature": 0.6});        { "role": 'system', "content": 'You produce only valid JSON. No commentary.' }'
         { "role": 'user', "content": prompt }];'
       "response_format": { "type": 'json_object' }'
@@ -49,7 +52,10 @@ INPUT\nName: ${name}\nCurrent Title: ${title || }\nBio: ${bio || }\nExperience: 
       response_format: { type: 'json_object' }
       temperature: 0.6});
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ;
     const content = completion.choices?.[0]?.message?.content || '{}';
     const parsed = JSON.parse (content);
@@ -66,6 +72,11 @@ INPUT\nName: ${name}\nCurrent Title: ${title || }\nBio: ${bio || }\nExperience: 
       temperature: 0.6}),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    const content = completion.choices?.[0]?.message?.content || '{}
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
     const content = completion.choices?.[0]?.message?.content || '{}
 =======
 <<<<<<< HEAD
@@ -73,13 +84,17 @@ INPUT\nName: ${name}\nCurrent Title: ${title || }\nBio: ${bio || }\nExperience: 
     const content = completion.choices?.[0]?.message?.content || '{}
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     const parsed = JSON.parse(content);
     return res.status(200).json({
 
       name,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       "title": parsed.title || title || 'Professional','
       "category": parsed.category || null,
       "summary": parsed.summary || '','
@@ -89,7 +104,10 @@ INPUT\nName: ${name}\nCurrent Title: ${title || }\nBio: ${bio || }\nExperience: 
     }
     return res.status (500).json ({ "error": e.message || 'OpenAI error' });'
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       title: parsed.title || title || 'Professional',
       category: parsed.category || null,
       summary: parsed.summary || ,')
@@ -97,9 +115,13 @@ skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : [],
   } catch (e: any) {
     return res.status (500).json ({ error: e.message || 'OpenAI error' });
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   }      name;
       title: parsed && parsed.title || title || 'Professional';',
