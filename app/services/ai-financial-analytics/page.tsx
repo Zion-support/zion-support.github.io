@@ -3,41 +3,41 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'AI Financial Analytics | Zion Tech Group',
-  description: 'AI-powered financial analytics and forecasting solutions for better financial decision making.',
-  keywords: 'AI financial analytics, financial forecasting, risk analysis, investment insights, financial modeling'
+  title: 'Ai Financial Analytics | Zion Tech Group',
+  description: 'Professional ai financial analytics services for your business needs.',
+  keywords: 'ai, financial, analytics'
 };
 
-export default function AIFinancialAnalyticsPage() {
+export default function AifinancialanalyticsPage() {
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            AI Financial Analytics
+            Ai Financial Analytics
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            AI-powered financial analytics and forecasting solutions for better financial decision making.
+            Professional ai financial analytics services for your business needs.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           <div className="bg-gray-50 p-6 rounded-lg">
-            <h3 className="text-lg font-semibold text-gray-900 mb-3">Risk Assessment</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Professional Service</h3>
             <p className="text-gray-600">
-              Advanced risk modeling and assessment using AI to identify potential financial risks.
+              Expert aifinancialanalytics solutions tailored to your business needs.
             </p>
           </div>
           <div className="bg-gray-50 p-6 rounded-lg">
-            <h3 className="text-lg font-semibold text-gray-900 mb-3">Forecasting</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Custom Solutions</h3>
             <p className="text-gray-600">
-              Accurate financial forecasting and trend analysis using machine learning algorithms.
+              Personalized approach to meet your specific requirements and goals.
             </p>
           </div>
           <div className="bg-gray-50 p-6 rounded-lg">
-            <h3 className="text-lg font-semibold text-gray-900 mb-3">Portfolio Optimization</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Expert Support</h3>
             <p className="text-gray-600">
-              AI-driven portfolio optimization and investment strategy recommendations.
+              Dedicated support team to ensure your success and satisfaction.
             </p>
           </div>
         </div>

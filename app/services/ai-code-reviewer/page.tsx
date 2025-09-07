@@ -3,41 +3,41 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'AI Code Reviewer | Zion Tech Group',
-  description: 'Automated code review and quality assurance powered by AI to improve code quality and reduce bugs.',
-  keywords: 'AI code review, code quality, automated testing, code analysis, software development'
+  title: 'Ai Code Reviewer | Zion Tech Group',
+  description: 'Professional ai code reviewer services for your business needs.',
+  keywords: 'ai, code, reviewer'
 };
 
-export default function AICodeReviewerPage() {
+export default function AicodereviewerPage() {
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            AI Code Reviewer
+            Ai Code Reviewer
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Automated code review and quality assurance powered by AI to improve code quality and reduce bugs.
+            Professional ai code reviewer services for your business needs.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           <div className="bg-gray-50 p-6 rounded-lg">
-            <h3 className="text-lg font-semibold text-gray-900 mb-3">Automated Analysis</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Professional Service</h3>
             <p className="text-gray-600">
-              AI-powered code analysis that identifies potential issues, security vulnerabilities, and performance bottlenecks.
+              Expert aicodereviewer solutions tailored to your business needs.
             </p>
           </div>
           <div className="bg-gray-50 p-6 rounded-lg">
-            <h3 className="text-lg font-semibold text-gray-900 mb-3">Quality Assurance</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Custom Solutions</h3>
             <p className="text-gray-600">
-              Comprehensive quality checks including code style, best practices, and maintainability scoring.
+              Personalized approach to meet your specific requirements and goals.
             </p>
           </div>
           <div className="bg-gray-50 p-6 rounded-lg">
-            <h3 className="text-lg font-semibold text-gray-900 mb-3">Real-time Feedback</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Expert Support</h3>
             <p className="text-gray-600">
-              Instant feedback during development with suggestions for improvements and refactoring opportunities.
+              Dedicated support team to ensure your success and satisfaction.
             </p>
           </div>
         </div>

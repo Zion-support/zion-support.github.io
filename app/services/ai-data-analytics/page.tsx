@@ -3,41 +3,41 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'AI Data Analytics | Zion Tech Group',
-  description: 'Advanced AI-powered data analytics solutions to extract insights and drive data-driven decisions.',
-  keywords: 'AI data analytics, machine learning, business intelligence, data insights, predictive analytics'
+  title: 'Ai Data Analytics | Zion Tech Group',
+  description: 'Professional ai data analytics services for your business needs.',
+  keywords: 'ai, data, analytics'
 };
 
-export default function AIDataAnalyticsPage() {
+export default function AidataanalyticsPage() {
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            AI Data Analytics
+            Ai Data Analytics
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Advanced AI-powered data analytics solutions to extract insights and drive data-driven decisions.
+            Professional ai data analytics services for your business needs.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           <div className="bg-gray-50 p-6 rounded-lg">
-            <h3 className="text-lg font-semibold text-gray-900 mb-3">Predictive Analytics</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Professional Service</h3>
             <p className="text-gray-600">
-              Machine learning models to predict trends, customer behavior, and business outcomes.
+              Expert aidataanalytics solutions tailored to your business needs.
             </p>
           </div>
           <div className="bg-gray-50 p-6 rounded-lg">
-            <h3 className="text-lg font-semibold text-gray-900 mb-3">Real-time Processing</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Custom Solutions</h3>
             <p className="text-gray-600">
-              Process and analyze data in real-time for immediate insights and decision making.
+              Personalized approach to meet your specific requirements and goals.
             </p>
           </div>
           <div className="bg-gray-50 p-6 rounded-lg">
-            <h3 className="text-lg font-semibold text-gray-900 mb-3">Visual Dashboards</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Expert Support</h3>
             <p className="text-gray-600">
-              Interactive dashboards and visualizations to make complex data easily understandable.
+              Dedicated support team to ensure your success and satisfaction.
             </p>
           </div>
         </div>
