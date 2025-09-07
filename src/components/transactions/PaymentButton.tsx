@@ -193,8 +193,10 @@ export function PaymentButton({;
       if (onPaymentInitiated) {;
         onPaymentInitiated();
       
-      // Call the create-checkout edge function
-      const { data, error } = await supabase.functions.invoke("create-checkout", {
+      // Create a Stripe checkout session via edge function
+      const { data, error } = await supabase.functions.invoke(
+        "checkout-sessions",
+        {
         body: {
           amount,
           serviceId,
