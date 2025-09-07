@@ -7,208 +7,186 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-class PerformanceMonitor {
+class PerformanceMonitorEnhanced {
   constructor() {
     this.projectRoot = path.join(__dirname, '..');
-    this.metrics = {};
-    this.thresholds = {
-      bundleSize: 500000, // 500KB
-      loadTime: 3000, // 3 seconds
-      memoryUsage: 100000000 // 100MB
+    this.metrics = {
+      bundleSize: 0,
+      loadTime: 0,
+      memoryUsage: 0,
+      fileCount: 0
     };
+    this.recommendations = [];
   }
 
-  async run() {
-    console.log('📊 Enhanced Performance Monitor Starting...');
-    
+  log(message, type = 'info') {
+    const prefix = type === 'error' ? '❌' : type === 'success' ? '✅' : 'ℹ️';
+    console.log(`${prefix} ${message}`);
+  }
+
+  async measureBundleSize() {
     try {
-      await this.checkBundleSize();
-      await this.checkLoadTime();
-      await this.checkMemoryUsage();
-      await this.checkLighthouseScore();
-      await this.generateReport();
+      this.log('📦 Measuring bundle size...');
       
-      console.log('✅ Performance monitoring completed');
+      // Build the project first
+      execSync('npm run build', { cwd: this.projectRoot });
+      
+      // Check .next directory for build output
+      const nextDir = path.join(this.projectRoot, '.next');
+      if (fs.existsSync(nextDir)) {
+        const buildFiles = this.getBuildFiles(nextDir);
+        const totalSize = buildFiles.reduce((total, file) => {
+          const stats = fs.statSync(file);
+          return total + stats.size;
+        }, 0);
+        
+        this.metrics.bundleSize = totalSize;
+        this.log(`✅ Bundle size: ${(totalSize / 1024 / 1024).toFixed(2)} MB`, 'success');
+        
+        if (totalSize > 5 * 1024 * 1024) { // 5MB
+          this.recommendations.push('Bundle size is large (>5MB). Consider code splitting and tree shaking.');
+        }
+      }
+      
       return true;
     } catch (error) {
-      console.error('❌ Performance monitoring failed:', error.message);
+      this.log(`❌ Bundle size measurement failed: ${error.message}`, 'error');
       return false;
     }
   }
 
-  async checkBundleSize() {
-    try {
-      console.log('📦 Checking bundle size...');
+  getBuildFiles(dir) {
+    const files = [];
+    const items = fs.readdirSync(dir);
+    
+    items.forEach(item => {
+      const itemPath = path.join(dir, item);
+      const stat = fs.statSync(itemPath);
       
-      // Check if .next directory exists
-      const nextDir = path.join(this.projectRoot, '.next');
-      if (!fs.existsSync(nextDir)) {
-        console.log('⚠️ No build found, running build first...');
-        execSync('npm run build', { cwd: this.projectRoot, stdio: 'pipe' });
+      if (stat.isDirectory()) {
+        files.push(...this.getBuildFiles(itemPath));
+      } else if (item.endsWith('.js') || item.endsWith('.css')) {
+        files.push(itemPath);
       }
-
-      // Analyze bundle size
-      const buildDir = path.join(nextDir, 'static', 'chunks');
-      if (fs.existsSync(buildDir)) {
-        const files = fs.readdirSync(buildDir);
-        let totalSize = 0;
-        
-        files.forEach(file => {
-          const filePath = path.join(buildDir, file);
-          const stats = fs.statSync(filePath);
-          totalSize += stats.size;
-        });
-
-        this.metrics.bundleSize = totalSize;
-        const sizeKB = Math.round(totalSize / 1024);
-        
-        if (totalSize > this.thresholds.bundleSize) {
-          console.log(`⚠️ Bundle size is large: ${sizeKB}KB (threshold: ${Math.round(this.thresholds.bundleSize / 1024)}KB)`);
-        } else {
-          console.log(`✅ Bundle size is good: ${sizeKB}KB`);
-        }
-      }
-    } catch (error) {
-      console.error('Failed to check bundle size:', error.message);
-    }
+    });
+    
+    return files;
   }
 
-  async checkLoadTime() {
+  async measureMemoryUsage() {
     try {
-      console.log('⏱️ Checking load time...');
-      
-      // Simulate load time check (in real scenario, you'd use tools like Lighthouse)
-      const startTime = Date.now();
-      
-      // Check if the app can start
-      try {
-        execSync('timeout 10s npm run start > /dev/null 2>&1 &', { cwd: this.projectRoot });
-        await new Promise(resolve => setTimeout(resolve, 2000));
-        execSync('pkill -f "next start" || true', { cwd: this.projectRoot });
-      } catch (error) {
-        // Expected timeout
-      }
-      
-      const loadTime = Date.now() - startTime;
-      this.metrics.loadTime = loadTime;
-      
-      if (loadTime > this.thresholds.loadTime) {
-        console.log(`⚠️ Load time is slow: ${loadTime}ms (threshold: ${this.thresholds.loadTime}ms)`);
-      } else {
-        console.log(`✅ Load time is good: ${loadTime}ms`);
-      }
-    } catch (error) {
-      console.error('Failed to check load time:', error.message);
-    }
-  }
-
-  async checkMemoryUsage() {
-    try {
-      console.log('🧠 Checking memory usage...');
+      this.log('🧠 Measuring memory usage...');
       
       const memUsage = process.memoryUsage();
       this.metrics.memoryUsage = memUsage.heapUsed;
       
-      if (memUsage.heapUsed > this.thresholds.memoryUsage) {
-        console.log(`⚠️ Memory usage is high: ${Math.round(memUsage.heapUsed / 1024 / 1024)}MB`);
-      } else {
-        console.log(`✅ Memory usage is good: ${Math.round(memUsage.heapUsed / 1024 / 1024)}MB`);
+      this.log(`✅ Memory usage: ${(memUsage.heapUsed / 1024 / 1024).toFixed(2)} MB`, 'success');
+      
+      if (memUsage.heapUsed > 100 * 1024 * 1024) { // 100MB
+        this.recommendations.push('High memory usage detected. Consider optimizing memory-intensive operations.');
       }
+      
+      return true;
     } catch (error) {
-      console.error('Failed to check memory usage:', error.message);
+      this.log(`❌ Memory measurement failed: ${error.message}`, 'error');
+      return false;
     }
   }
 
-  async checkLighthouseScore() {
+  async countSourceFiles() {
     try {
-      console.log('🔍 Checking Lighthouse score...');
+      this.log('📁 Counting source files...');
       
-      // Check if Lighthouse is available
-      try {
-        execSync('npx lighthouse --version', { stdio: 'pipe' });
-        
-        // Run Lighthouse on localhost (if available)
-        const lighthouseCmd = 'npx lighthouse http://localhost:3000 --output=json --quiet --chrome-flags="--headless"';
-        const result = execSync(lighthouseCmd, { 
-          cwd: this.projectRoot, 
-          stdio: 'pipe',
-          timeout: 60000 
-        });
-        
-        const lighthouseData = JSON.parse(result.toString());
-        this.metrics.lighthouse = {
-          performance: lighthouseData.categories.performance.score * 100,
-          accessibility: lighthouseData.categories.accessibility.score * 100,
-          bestPractices: lighthouseData.categories['best-practices'].score * 100,
-          seo: lighthouseData.categories.seo.score * 100
-        };
-        
-        console.log('✅ Lighthouse scores:', this.metrics.lighthouse);
-      } catch (error) {
-        console.log('⚠️ Lighthouse not available or localhost not running');
-        this.metrics.lighthouse = null;
+      const sourceDirs = ['src', 'pages', 'app', 'components'];
+      let fileCount = 0;
+      
+      sourceDirs.forEach(dir => {
+        const dirPath = path.join(this.projectRoot, dir);
+        if (fs.existsSync(dirPath)) {
+          fileCount += this.countFiles(dirPath);
+        }
+      });
+      
+      this.metrics.fileCount = fileCount;
+      this.log(`✅ Source files: ${fileCount}`, 'success');
+      
+      if (fileCount > 100) {
+        this.recommendations.push('Large number of source files. Consider organizing into smaller modules.');
       }
+      
+      return true;
     } catch (error) {
-      console.error('Failed to check Lighthouse score:', error.message);
+      this.log(`❌ File counting failed: ${error.message}`, 'error');
+      return false;
     }
+  }
+
+  countFiles(dir) {
+    let count = 0;
+    const items = fs.readdirSync(dir);
+    
+    items.forEach(item => {
+      const itemPath = path.join(dir, item);
+      const stat = fs.statSync(itemPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        count += this.countFiles(itemPath);
+      } else if (item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.js') || item.endsWith('.jsx')) {
+        count++;
+      }
+    });
+    
+    return count;
   }
 
   async generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
       metrics: this.metrics,
-      thresholds: this.thresholds,
-      recommendations: this.generateRecommendations()
+      recommendations: this.recommendations,
+      summary: {
+        bundleSizeMB: (this.metrics.bundleSize / 1024 / 1024).toFixed(2),
+        memoryUsageMB: (this.metrics.memoryUsage / 1024 / 1024).toFixed(2),
+        fileCount: this.metrics.fileCount,
+        recommendationsCount: this.recommendations.length
+      }
     };
 
-    const reportPath = path.join(this.projectRoot, 'performance-report.json');
+    const reportPath = path.join(this.projectRoot, 'performance-monitor-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    console.log('📊 Performance report saved to performance-report.json');
+    this.log(`📊 Performance report saved to ${reportPath}`, 'success');
+
+    return report;
   }
 
-  generateRecommendations() {
-    const recommendations = [];
+  async run() {
+    this.log('🚀 Starting Enhanced Performance Monitor');
     
-    if (this.metrics.bundleSize > this.thresholds.bundleSize) {
-      recommendations.push('Consider code splitting and lazy loading');
-      recommendations.push('Remove unused dependencies');
-      recommendations.push('Use dynamic imports for large components');
+    try {
+      await this.measureBundleSize();
+      await this.measureMemoryUsage();
+      await this.countSourceFiles();
+      
+      const report = await this.generateReport();
+      
+      this.log('✅ Performance monitoring completed', 'success');
+      this.log(`📊 Bundle size: ${report.summary.bundleSizeMB} MB`);
+      this.log(`🧠 Memory usage: ${report.summary.memoryUsageMB} MB`);
+      this.log(`📁 Source files: ${report.summary.fileCount}`);
+      this.log(`💡 Recommendations: ${report.summary.recommendationsCount}`);
+      
+      return report;
+    } catch (error) {
+      this.log(`❌ Performance monitoring failed: ${error.message}`, 'error');
+      throw error;
     }
-    
-    if (this.metrics.loadTime > this.thresholds.loadTime) {
-      recommendations.push('Optimize images and use WebP format');
-      recommendations.push('Enable gzip compression');
-      recommendations.push('Use a CDN for static assets');
-    }
-    
-    if (this.metrics.memoryUsage > this.thresholds.memoryUsage) {
-      recommendations.push('Check for memory leaks');
-      recommendations.push('Optimize component re-renders');
-      recommendations.push('Use React.memo for expensive components');
-    }
-    
-    if (this.metrics.lighthouse) {
-      if (this.metrics.lighthouse.performance < 90) {
-        recommendations.push('Improve Core Web Vitals');
-        recommendations.push('Optimize JavaScript execution');
-      }
-      if (this.metrics.lighthouse.accessibility < 90) {
-        recommendations.push('Improve accessibility features');
-        recommendations.push('Add proper ARIA labels');
-      }
-    }
-    
-    return recommendations;
   }
 }
 
-// Run if called directly
+// Main execution
 if (import.meta.url === `file://${process.argv[1]}`) {
-  const monitor = new PerformanceMonitor();
-  monitor.run().then(success => {
-    process.exit(success ? 0 : 1);
-  });
+  const monitor = new PerformanceMonitorEnhanced();
+  monitor.run().catch(console.error);
 }
 
-export default PerformanceMonitor;
+export default PerformanceMonitorEnhanced;

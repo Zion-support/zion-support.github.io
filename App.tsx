@@ -29,111 +29,81 @@ const services = [
     link: '/it-services'
   },
   {
+    title: 'Web Development',
+    description: 'Modern, responsive web applications built with the latest technologies. From concept to deployment.',
+    icon: '🌐',
+    features: ['React/Next.js', 'Node.js', 'Database Design', 'API Development']
+  },
+  {
+    title: 'Mobile Apps',
+    description: 'Native and cross-platform mobile applications for iOS and Android. Delivering exceptional user experiences.',
+    icon: '📱',
+    features: ['React Native', 'Flutter', 'iOS Development', 'Android Development']
+  },
+  {
     title: 'Cloud Solutions',
-    description: 'Scalable cloud infrastructure and migration services. Modernize your infrastructure with our cloud expertise.',
+    description: 'Scalable cloud infrastructure and migration services. Optimize your business with cloud technology.',
     icon: '☁️',
-    features: ['AWS/Azure/GCP', 'DevOps', 'Containerization', 'Auto-scaling'],
-    pricing: 'Starting at $3,000/month',
-    link: '/cloud-solutions'
+    features: ['AWS', 'Azure', 'Google Cloud', 'DevOps']
   },
   {
-    title: 'Cybersecurity',
-    description: 'Advanced security solutions to protect your business from evolving threats and ensure compliance.',
-    icon: '🔒',
-    features: ['Threat Detection', 'Compliance', 'Penetration Testing', 'Security Audits'],
-    pricing: 'Starting at $4,000/month',
-    link: '/cybersecurity'
-  },
-  {
-    title: 'Data Analytics',
-    description: 'Transform your data into actionable insights with our advanced analytics and business intelligence solutions.',
-    icon: '📊',
-    features: ['Data Visualization', 'Business Intelligence', 'Real-time Analytics', 'Custom Dashboards'],
-    pricing: 'Starting at $3,500/month',
-    link: '/data-analytics'
-  },
-  {
-    title: 'Digital Transformation',
-    description: 'Complete digital transformation services to modernize your business processes and improve efficiency.',
-    icon: '🚀',
-    features: ['Process Automation', 'Workflow Optimization', 'Digital Strategy', 'Change Management'],
-    pricing: 'Starting at $6,000/month',
-    link: '/digital-transformation'
+    title: 'Consulting',
+    description: 'Strategic technology consulting to help your business grow and innovate in the digital age.',
+    icon: '💡',
+    features: ['Digital Strategy', 'Technology Assessment', 'Process Optimization', 'Training']
   }
 ];
 
-export default function App(): React.JSX.Element {
+export default function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-      <ParticleBackground />
-      <Header />
-      
-      <main className="relative">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 text-center">
-          <div className="container mx-auto max-w-6xl">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Welcome to Zion Tech
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Your trusted partner for AI and IT solutions. We help businesses transform through
-              cutting-edge technology and innovative solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors">
-                Get Started
-              </button>
-              <button className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors">
-                Learn More
-              </button>
+    <div className="min-h-screen bg-gray-50">
+      <header className="bg-white shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center py-6">
+            <div className="flex items-center">
+              <h1 className="text-3xl font-bold text-gray-900">Zion Tech Group</h1>
             </div>
+            <nav className="hidden md:flex space-x-8">
+              <a href="#services" className="text-gray-500 hover:text-gray-900">Services</a>
+              <a href="#about" className="text-gray-500 hover:text-gray-900">About</a>
+              <a href="#contact" className="text-gray-500 hover:text-gray-900">Contact</a>
+            </nav>
           </div>
-        </section>
+        </div>
+      </header>
 
-        {/* Services Section */}
-        <section className="py-16 px-4 bg-white">
-          <div className="container mx-auto max-w-6xl">
-            <h2 className="text-4xl font-bold text-center mb-12">Our Services</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <ServiceCard
-                  key={index}
-                  title={service.title}
-                  description={service.description}
-                  icon={service.icon}
-                  features={service.features}
-                  pricing={service.pricing}
-                  link={service.link}
-                />
-              ))}
-            </div>
-          </div>
-        </section>
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Our Services
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            We provide comprehensive technology solutions to help your business
+            thrive in the digital age. From AI and machine learning to web
+            development and cloud solutions.
+          </p>
+        </div>
 
-        {/* Benefits Section */}
-        <BenefitsSection />
-
-        {/* How It Works Section */}
-        <HowItWorksSection />
-
-        {/* Testimonials Section */}
-        <section className="py-16 px-4 bg-gray-50">
-          <div className="container mx-auto max-w-6xl">
-            <h2 className="text-4xl font-bold text-center mb-12">What Our Clients Say</h2>
-            <TestimonialCarousel />
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <FaqSection />
-
-        {/* Contact Section */}
-        <ContactSection />
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <ServiceCard key={index} service={service} />
+          ))}
+        </div>
       </main>
 
-      <Footer />
-      <ChatAssistant />
-      <ScrollToTop />
+      <footer className="bg-gray-800 text-white py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
+            <p className="text-gray-300 mb-4">
+              Leading technology solutions for the modern world
+            </p>
+            <p className="text-gray-400">
+              © 2024 Zion Tech Group. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

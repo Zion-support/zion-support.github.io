@@ -69,6 +69,34 @@ const nextConfig = {
       },
     ];
   },
+  
+  // Redirects
+  async redirects() {
+    return [
+      {
+        source: '/home',
+        destination: '/',
+        permanent: true,
+      },
+    ];
+  },
+  
+  
+  // Experimental features
+  experimental: {
+    // optimizeCss: true, // Temporarily disabled due to build issues
+  },
+  
+  // Output configuration
+  output: 'standalone',
+  
+  // Trailing slash
+  trailingSlash: false,
+  
+  // Environment variables
+  env: {
+    CUSTOM_KEY: process.env.CUSTOM_KEY,
+  },
 };
 
 export default nextConfig;

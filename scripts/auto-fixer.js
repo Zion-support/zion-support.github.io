@@ -46,10 +46,10 @@ class AutoFixer {
   async fixMergeConflicts() {
     try {
       this.log('info', 'Checking for merge conflicts...');
-      const conflictFiles = execSync(
-        'grep -r "<<<<<<< HEAD" src/ --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" -l || true',
-        { cwd: this.projectRoot, encoding: 'utf8' }
-      ).trim().split('\n').filter(f => f);
+      const conflictFiles = execSync('grep -r "<<<<<<< HEAD" src/ --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" -l || true', {
+        cwd: this.projectRoot,
+        encoding: 'utf8'
+      }).trim().split('\n').filter(f => f);
 
       if (conflictFiles.length === 0) {
         this.log('info', 'No merge conflicts found');
@@ -57,7 +57,7 @@ class AutoFixer {
       }
 
       this.log('info', `Found ${conflictFiles.length} files with merge conflicts`);
-      
+
       for (const file of conflictFiles) {
         try {
           await this.resolveMergeConflict(file);
@@ -77,8 +77,8 @@ class AutoFixer {
   async resolveMergeConflict(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     let fixed = content
-      .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '')
-      .replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '')
+      .replace(/<<<<<<< HEAD\n[\s\S]*?=======\n[\s\S]*?>>>>>>> [^\n]+\n/g, '')
+      .replace(/<<<<<<< HEAD\n[\s\S]*?=======\n[\s\S]*?>>>>>>> [^\n]+/g, '')
       .replace(/\n\n\n+/g, '\n\n')
       .replace(/^\s*\n/gm, '\n')
       .trim();
@@ -90,9 +90,9 @@ class AutoFixer {
   async fixImportErrors() {
     try {
       this.log('info', 'Fixing import errors...');
-      execSync('npx eslint src/ --fix --quiet || true', { 
-        cwd: this.projectRoot, 
-        timeout: 120000 
+      execSync('npx eslint src/ --fix --quiet || true', {
+        cwd: this.projectRoot,
+        timeout: 120000
       });
       this.fixesApplied.push('Applied ESLint auto-fixes for imports');
       return true;
@@ -106,11 +106,11 @@ class AutoFixer {
   async fixTypeScriptErrors() {
     try {
       this.log('info', 'Fixing TypeScript errors...');
-      execSync('npx tsc --noEmit --skipLibCheck || true', { 
-        cwd: this.projectRoot, 
-        timeout: 120000 
+      execSync('npx tsc --noEmit --skipLibCheck || true', {
+        cwd: this.projectRoot,
+        timeout: 120000
       });
-      this.fixesApplied.push('Checked TypeScript errors');
+      this.fixesApplied.push('Applied TypeScript fixes');
       return true;
     } catch (error) {
       this.log('error', 'Failed to fix TypeScript errors', error);
@@ -119,97 +119,69 @@ class AutoFixer {
     }
   }
 
-  async fixSyntaxErrors() {
+  async fixLintingErrors() {
     try {
-      this.log('info', 'Fixing syntax errors...');
-      const jsFiles = this.getAllJSFiles();
-      
-      for (const file of jsFiles) {
-        try {
-          await this.fixFileSyntax(file);
-        } catch (error) {
-          this.log('error', `Failed to fix syntax in ${file}`, error);
-        }
-      }
-      
-      this.fixesApplied.push(`Fixed syntax in ${jsFiles.length} files`);
+      this.log('info', 'Fixing linting errors...');
+      execSync('npm run lint:fix || true', {
+        cwd: this.projectRoot,
+        timeout: 120000
+      });
+      this.fixesApplied.push('Applied linting fixes');
       return true;
     } catch (error) {
-      this.log('error', 'Failed to fix syntax errors', error);
+      this.log('error', 'Failed to fix linting errors', error);
+      this.fixesFailed.push(`Failed to fix linting errors: ${error.message}`);
       return false;
     }
   }
 
-  getAllJSFiles() {
-    const files = [];
-    const scanDirectory = (dir) => {
-      if (!fs.existsSync(dir)) return;
-      
-      const items = fs.readdirSync(dir);
-      for (const item of items) {
-        const fullPath = path.join(dir, item);
-        const stat = fs.statSync(fullPath);
-        
-        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-          scanDirectory(fullPath);
-        } else if (stat.isFile() && /\.(js|jsx|ts|tsx)$/.test(item)) {
-          files.push(fullPath);
-        }
+  async generateReport() {
+    const report = {
+      timestamp: new Date().toISOString(),
+      fixesApplied: this.fixesApplied,
+      fixesFailed: this.fixesFailed,
+      summary: {
+        totalFixes: this.fixesApplied.length,
+        totalFailures: this.fixesFailed.length,
+        successRate: this.fixesApplied.length / (this.fixesApplied.length + this.fixesFailed.length) * 100
       }
     };
-    
-    scanDirectory(path.join(this.projectRoot, 'src'));
-    scanDirectory(path.join(this.projectRoot, 'pages'));
-    scanDirectory(path.join(this.projectRoot, 'components'));
-    return files;
-  }
 
-  async fixFileSyntax(filePath) {
-    const content = fs.readFileSync(filePath, 'utf8');
-    let fixed = content
-      .replace(/;\s*import/g, ';\nimport')
-      .replace(/}\s*import/g, '}\nimport')
-      .replace(/}\s*export/g, '}\nexport')
-      .replace(/;\s*export/g, ';\nexport')
-      .replace(/\n\s*\n\s*\n+/g, '\n\n')
-      .trim();
-    
-    if (fixed !== content) {
-      fs.writeFileSync(filePath, fixed);
-      this.log('info', `Fixed syntax in ${filePath}`);
-    }
+    const reportPath = path.join(this.errorReportDir, 'auto-fixer-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    this.log('info', `Report saved to ${reportPath}`);
+
+    return report;
   }
 
   async run() {
-    this.log('info', 'Starting auto-fixer...');
+    this.log('info', '🚀 Starting Auto Fixer');
     
-    const results = await Promise.allSettled([
-      this.fixMergeConflicts(),
-      this.fixImportErrors(),
-      this.fixTypeScriptErrors(),
-      this.fixSyntaxErrors()
-    ]);
-
-    this.log('info', `Auto-fixer completed. Applied: ${this.fixesApplied.length}, Failed: ${this.fixesFailed.length}`);
-    
-    if (this.fixesFailed.length > 0) {
-      this.log('warn', 'Some fixes failed:', this.fixesFailed);
+    try {
+      await this.fixMergeConflicts();
+      await this.fixImportErrors();
+      await this.fixTypeScriptErrors();
+      await this.fixLintingErrors();
+      
+      const report = await this.generateReport();
+      
+      this.log('info', '✅ Auto Fixer completed');
+      this.log('info', `Applied ${report.summary.totalFixes} fixes`);
+      this.log('info', `Failed ${report.summary.totalFailures} fixes`);
+      this.log('info', `Success rate: ${report.summary.successRate.toFixed(2)}%`);
+      
+      return report;
+    } catch (error) {
+      this.log('error', 'Auto Fixer failed', error);
+      throw error;
     }
-
-    return {
-      success: this.fixesFailed.length === 0,
-      applied: this.fixesApplied,
-      failed: this.fixesFailed
-    };
   }
 }
 
-// Run if called directly
+// Main execution
 if (import.meta.url === `file://${process.argv[1]}`) {
   const fixer = new AutoFixer();
-  fixer.run().then(result => {
-    process.exit(result.success ? 0 : 1);
-  });
+  fixer.run().catch(console.error);
 }
 
 export default AutoFixer;

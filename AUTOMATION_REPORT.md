@@ -1,22 +1,47 @@
 # Automation Report
 
-**Timestamp:** 2025-09-07T03:32:54.596Z
-**Duration:** 695ms
+<<<<<<< HEAD
+**Timestamp:** 2025-09-07T02:53:54.838Z
+**Duration:** 23172ms
+
+## Summary
+- ✅ Successful: 5
+- ❌ Errors: 4
+=======
+**Timestamp:** 2025-09-07T02:51:20.034Z
+**Duration:** 9764ms
 
 ## Summary
 - ✅ Successful: 1
-- ❌ Errors: 7
+- ❌ Errors: 8
+>>>>>>> fc9e555998eb59b8e7a598af5aaae6093b04ae4e
 - ⚠️ Warnings: 0
 
 ## Successful Operations
 - Operation
 <<<<<<< HEAD
-- ESLint
-- Build
-=======
-- scripts/performance-monitor-enhanced.js
 - scripts/auto-fixer.js
->>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
+- scripts/advanced-build-optimizer.js
+- scripts/performance-monitor-enhanced.js
+- scripts/performance-optimizer.js
+
+## Errors
+- scripts/comprehensive-error-fixer.cjs: Command failed: node scripts/comprehensive-error-fixer.cjs
+/workspace/scripts/comprehensive-error-fixer.cjs:62
+    content = content.replace(/#!/usr/bin/env node;/g, '#!/usr/bin/env node');
+                              ^
+
+SyntaxError: Invalid regular expression flags
+    at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+    at Module._compile (node:internal/modules/cjs/loader:1704:20)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+=======
 
 ## Errors
 - scripts/comprehensive-error-fixer.cjs: Command failed: node scripts/comprehensive-error-fixer.cjs
@@ -259,6 +284,21 @@ SyntaxError: Invalid or unexpected token
     at #translate (node:internal/modules/esm/loader:534:12)
     at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)
     at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)
+
+Node.js v22.16.0
+
+- scripts/performance-optimizer.js: Command failed: node scripts/performance-optimizer.js
+file:///workspace/scripts/performance-optimizer.js:2
+const fs = require('fs');
+           ^
+
+ReferenceError: require is not defined in ES module scope, you can use import instead
+This file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///workspace/scripts/performance-optimizer.js:2:12
+    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+>>>>>>> fc9e555998eb59b8e7a598af5aaae6093b04ae4e
 
 Node.js v22.16.0
 
