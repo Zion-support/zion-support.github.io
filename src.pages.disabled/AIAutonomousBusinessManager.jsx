@@ -30,7 +30,6 @@ import React from 'react';
 interface AIAutonomousBusinessManagerProps {
   // Add props here as needed
 
-
 }
 
 export default function AIAutonomousBusinessManager({ }: AIAutonomousBusinessManagerProps) {
@@ -40,27 +39,7 @@ export default function AIAutonomousBusinessManager({ }: AIAutonomousBusinessMan
       <p>This component is currently under development.</p>
     </div>
   );
-
-
-}
-
-}
-:src.pages.disabled/AIAutonomousBusinessManager.jsx
 }
 }
 }
 }
-}
-
-
-
-
-
-
-:src.pages.disabled/AIAutonomousBusinessManager.jsx
-}
-}
-}
-}
-}
-:temp_exclude/src.pages.disabled/AIAutonomousBusinessManager.jsx;

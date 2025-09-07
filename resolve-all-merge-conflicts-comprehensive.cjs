@@ -1,5 +1,5 @@
 const fs = require('fs');
-const path = require(path');
+const path = require('path');
 const { execSync } = require('child_process');
 
 class ComprehensiveMergeConflictResolver {
@@ -9,7 +9,7 @@ class ComprehensiveMergeConflictResolver {
     this.errors = [];
   }
 
-  log(message, level = INFO') {
+  log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] [${level}] ${message}`);
   }
@@ -18,12 +18,12 @@ class ComprehensiveMergeConflictResolver {
     const files = [];
     
     const searchDirectories = [
-      'scripts,
-      automation',
-      'src,
-      app',
-      'pages,
-      components'
+      'scripts',
+      'automation',
+      'src',
+      'app',
+      'pages',
+      'components'
     ];
 
     searchDirectories.forEach(dir => {
@@ -35,7 +35,7 @@ class ComprehensiveMergeConflictResolver {
 
     // Also check root files
     const rootFiles = fs.readdirSync(this.projectRoot)
-      .filter(file => file.endsWith('.cjs) || file.endsWith(.js') || file.endsWith('.ts) || file.endsWith(.tsx') || file.endsWith('.jsx) || file.endsWith(.json'));
+      .filter(file => file.endsWith('.cjs') || file.endsWith('.js') || file.endsWith('.ts') || file.endsWith('.tsx') || file.endsWith('.jsx') || file.endsWith('.json'));
     
     rootFiles.forEach(file => {
       const filePath = path.join(this.projectRoot, file);
@@ -58,7 +58,7 @@ class ComprehensiveMergeConflictResolver {
       
       if (stat.isDirectory()) {
         this.findConflictsInDirectory(fullPath, files);
-      } else if (stat.isFile() && (item.endsWith('.cjs) || item.endsWith(.js') || item.endsWith('.ts) || item.endsWith(.tsx') || item.endsWith('.jsx) || item.endsWith(.json'))) {
+      } else if (stat.isFile() && (item.endsWith('.cjs') || item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.jsx') || item.endsWith('.json'))) {
         if (this.hasMergeConflicts(fullPath)) {
           files.push(fullPath);
         }
@@ -69,15 +69,15 @@ class ComprehensiveMergeConflictResolver {
   hasMergeConflicts(filePath) {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
-      return content.includes(') || content.includes('
+      return content.includes('') || content.includes('
         // Extract the part after 
-        const parts = match.split();
+        const parts = match.split('');
         if (parts.length > 1) {
           // Get the part after  and before >>>>>>>
           const incomingPart = parts[1].split('>>>>>>>')[0];
           return incomingPart.trim();
         }
-        return ;
+        return '';
       });
 
       // Clean up any remaining conflict markers
@@ -89,7 +89,7 @@ class ComprehensiveMergeConflictResolver {
       content = content.replace(/
 
       // Clean up extra whitespace
-      content = content.replace(/\n\s*\n\s*\n/g, \n\n);
+      content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
       content = content.trim();
 
       if (content !== originalContent) {
@@ -102,7 +102,7 @@ class ComprehensiveMergeConflictResolver {
       return false;
     } catch (error) {
       this.errors.push({ file: filePath, error: error.message });
-      this.log(`❌ Error fixing ${filePath}: ${error.message}`, ERROR);
+      this.log(`❌ Error fixing ${filePath}: ${error.message}`, 'ERROR');
       return false;
     }
   }
@@ -114,7 +114,7 @@ class ComprehensiveMergeConflictResolver {
     this.log(`Found ${conflictedFiles.length} files with merge conflicts`);
 
     if (conflictedFiles.length === 0) {
-      this.log(✅ No merge conflicts found!);
+      this.log('✅ No merge conflicts found!');
       return;
     }
 
@@ -129,7 +129,7 @@ class ComprehensiveMergeConflictResolver {
     this.log(`❌ Errors: ${this.errors.length} files`);
 
     if (this.errors.length > 0) {
-      this.log(\n❌ Files with errors:);
+      this.log('\n❌ Files with errors:');
       this.errors.forEach(({ file, error }) => {
         this.log(`  - ${file}: ${error}`);
       });
@@ -147,7 +147,7 @@ class ComprehensiveMergeConflictResolver {
 // Run the resolver
 const resolver = new ComprehensiveMergeConflictResolver();
 resolver.resolveAllConflicts().then(() => {
-  console.log(\n🎉 Merge conflict resolution completed!);
+  console.log('\n🎉 Merge conflict resolution completed!');
 }).catch(error => {
   console.error('❌ Error during merge conflict resolution:', error);
   process.exit(1);

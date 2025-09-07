@@ -8,10 +8,12 @@ function containsSuspiciousHost(text: string): boolean {
 }
 
 function containsSuspiciousPhrase(text: string): string[] {
+  const lower = text.toLowerCase($2);
   return suspiciousPhrases.filter((p) => lower.includes(p))
 }
 
 function containsVagueJobClaims(text: string): string[] {
+  const lower = text.toLowerCase($2);
   const reasons: string[] = [],
   for (const pattern of vagueScammyJobPhrases) {
     const re = new RegExp($2);
@@ -25,6 +27,7 @@ export interface HeuristicDeps {
 }
 
 export async function evaluateHeuristics(event: FraudEvent, deps: HeuristicDeps): Promise<HeuristicEvaluation> {
+  const reasons: string[] = [],
   let severity: HeuristicEvaluation['severity'] = 'low',
 
   if (event.source === 'signup' && event.ipAddress) {

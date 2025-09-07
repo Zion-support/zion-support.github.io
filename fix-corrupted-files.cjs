@@ -122,6 +122,8 @@ export default function AboutPage() {
 
   fixApiDocsHub() {
     const filePath = path.join(this.projectRoot, 'src/pages/ApiDocsHub.tsx');
+    const cleanContent = `import React from 'react';
+import Link from 'next/link';
 import {
   ArrowRight,
   BookOpen,

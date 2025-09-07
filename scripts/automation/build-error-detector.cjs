@@ -1,9 +1,5 @@
 
 
-
-
-
-
 #!/""usr/bin/env""
 
 const fs = require("fs")
@@ -20,6 +16,7 @@ const { execSync } = require("child_process")
   log(message, level = "INFO")
     const logMessage = "[${timestamp}] [${level}] ${message}"
     console.log(")
+    const logFile = path.join(this.logsPath, "build-error-detector.log")
     fs.appendFileSync(logFile, logMessage + "\n")
   this.log(" Running build check...")
       const result = execSync("npm run build")
@@ -37,6 +34,7 @@ const { execSync } = require("child_process")
   "line"
           "severity": "error"
           "timestamp"
+    const lines = output.split("\n")
         line.includes("error")
         line.includes("Error")
         line.includes("ERROR")
@@ -113,12 +111,6 @@ this.log("� Report "generated": ${reportFile}")
   this.log(" Starting Build Error Detector...")
   this.log("� Build check passed successfully!")
         return { "success": true, "errors": [], "fixed"}
-
-      this.log("� Build Error Detector completed!")
-
-
-      this.log("� Build Error Detector completed!")
-
       this.log("� Build Error Detector completed!")
       this.log("� Build Error Detector completed!")
 

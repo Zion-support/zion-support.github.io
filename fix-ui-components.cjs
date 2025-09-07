@@ -46,6 +46,7 @@ export function Button({
 
 // Create a clean Input component
 const inputComponent = `import React from 'react';
+import { cn } from '../../utils/cn';
 
 export function Input({ className = '', type = 'text', ...props }) {
   return (
@@ -62,6 +63,7 @@ export function Input({ className = '', type = 'text', ...props }) {
 
 // Create a clean Textarea component
 const textareaComponent = `import React from 'react';
+import { cn } from '../../utils/cn';
 
 export function Textarea({ className = '', ...props }) {
   return (
@@ -77,6 +79,7 @@ export function Textarea({ className = '', ...props }) {
 
 // Create a clean Card component
 const cardComponent = `import React from 'react';
+import { cn } from '../../utils/cn';
 
 export function Card({ className = '', children, ...props }) {
   return (
@@ -94,6 +97,7 @@ export function Card({ className = '', children, ...props }) {
 
 // Create a clean Tooltip components
 const tooltipComponent = `import React, { useState } from 'react';
+import { cn } from '../../utils/cn';
 
 export function Tooltip({ children, content, ...props }) {
   const [isVisible, setIsVisible] = useState(false);

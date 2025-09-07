@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
-const path = require(path');
+const path = require('path');
 const { execSync } = require('child_process');
 
-console.log(🚀 Starting comprehensive conflict resolution...\n');
+console.log('🚀 Starting comprehensive conflict resolution...\n');
 
 // Function to resolve merge conflicts in a file
 function resolveMergeConflicts(filePath) {
@@ -16,7 +16,7 @@ function resolveMergeConflicts(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
-    if (!content.includes(') || !content.includes(') || !content.includes(>>>>>>>')) {
+    if (!content.includes('') || !content.includes('') || !content.includes('>>>>>>>')) {
       return false;
     }
 
@@ -27,14 +27,14 @@ function resolveMergeConflicts(filePath) {
 
     // Remove conflict markers and keep HEAD version
     resolvedContent = resolvedContent.replace(
-      /\n([\s\S]*?)\n\n([\s\S]*?)\n      '$1
+      /\n([\s\S]*?)\n\n([\s\S]*?)\n      '$1'
     );
 
     // Clean up any remaining conflict markers
-    resolvedContent = resolvedContent.replace(/\n?/g, ');
-    resolvedContent = resolvedContent.replace(/\n?/g, ');
+    resolvedContent = resolvedContent.replace(/\n?/g, '');
+    resolvedContent = resolvedContent.replace(/\n?/g, '');
     resolvedContent = resolvedContent.replace(/    // Write resolved content
-    fs.writeFileSync(filePath, resolvedContent, utf8');
+    fs.writeFileSync(filePath, resolvedContent, 'utf8');
     return true;
   } catch (error) {
     console.error(`❌ Error resolving ${filePath}:`, error.message);
@@ -55,18 +55,18 @@ function findConflictedFiles(dir) {
       
       if (stat.isDirectory()) {
         // Skip node_modules, .git, dist, build directories
-        if (!['node_modules, .git', 'dist, build', '.next].includes(item)) {
+        if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
           scanDirectory(fullPath);
         }
       } else if (stat.isFile()) {
         // Check if file has merge conflicts
         try {
-          const content = fs.readFileSync(fullPath, utf8');
-          if (content.includes(') && content.includes(') && content.includes('>>>>>>>)) {
+          const content = fs.readFileSync(fullPath, 'utf8');
+          if (content.includes('') && content.includes('') && content.includes('>>>>>>>')) {
             conflictedFiles.push(fullPath);
           }
         } catch (error) {
-          // Skip files that cant be read
+          // Skip files that can't be read
         }
       }
     }
@@ -79,7 +79,7 @@ function findConflictedFiles(dir) {
 // Main execution
 try {
   console.log('🔍 Scanning for conflicted files...');
-  const conflictedFiles = findConflictedFiles(.);
+  const conflictedFiles = findConflictedFiles('.');
   
   console.log(`📊 Found ${conflictedFiles.length} files with merge conflicts\n`);
 
@@ -100,11 +100,11 @@ try {
 
   // Add all resolved files to git
   console.log('\n📝 Adding resolved files to git...');
-  execSync(git add ., { stdio: 'inherit' });
+  execSync('git add .', { stdio: 'inherit' });
 
   // Commit the resolved conflicts
-  console.log(\n💾 Committing resolved conflicts...);
-  execSync('git commit -m "Resolve all merge conflicts automatically - keep HEAD version"', { stdio: inherit });
+  console.log('\n💾 Committing resolved conflicts...');
+  execSync('git commit -m "Resolve all merge conflicts automatically - keep HEAD version"', { stdio: 'inherit' });
 
   console.log('\n🎉 All conflicts resolved and committed!');
 

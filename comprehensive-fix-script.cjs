@@ -187,6 +187,7 @@ class ComprehensiveFixScript {
     try {
       // Create a comprehensive test script
       const testScript = `#!/usr/bin/env node
+const { execSync } = require('child_process');
 
 class ComprehensiveTester {
   constructor() {
@@ -234,6 +235,8 @@ tester.runAllTests();
 
       // Create a performance monitor
       const perfScript = `#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
 
 class PerformanceMonitor {
   constructor() {
@@ -294,6 +297,8 @@ monitor.generateReport();
 
       // Create a health check script
       const healthScript = `#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
 
 class HealthChecker {
   constructor() {
@@ -343,6 +348,7 @@ class HealthChecker {
     const passed = this.checks.filter(c => c.status === 'PASS').length;
     const total = this.checks.length;
     
+    const report = {
       timestamp: new Date().toISOString(),
       summary: {
         total,
@@ -423,6 +429,7 @@ checker.generateReport();
     }
 
     // Save report
+    const report = {
       timestamp: new Date().toISOString(),
       duration,
       fixedFiles: this.fixedFiles,

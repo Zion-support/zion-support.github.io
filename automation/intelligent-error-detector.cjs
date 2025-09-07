@@ -98,17 +98,20 @@ class IntelligentErrorDetector {
       );
       return [];
     } catch (error) {
+      const lines = (error.stdout || error.stderr || '').split('\n');
       return lines.filter(line => this.errorPatterns.import.test(line));
     }
   }
 
   async detectBuildErrors() {
     try {
+      const result = execSync('npm run build', {
         stdio: 'pipe',
         cwd: process.cwd(),
       });
       return [];
     } catch (error) {
+      const lines = (error.stdout || error.stderr || '').split('\n');
       return lines.filter(line => this.errorPatterns.build.test(line));
     }
   }

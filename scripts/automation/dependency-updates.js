@@ -399,8 +399,11 @@ async function runDependencyUpdates() {
     // // // // // // // console.log(',
       '🔍 Checking for major version updates...');
     try {;
+      const outdated = JSON.parse(outdatedOutput);
+      const majorUpdates = Object.entries(outdated).filter(([pkg, info]) => {
         const current = info.current.split('
   '.')[0];
+        const latest = info.latest.split(
   ".")[0];
         return current !== latest})
       if (majorUpdates.length > 0) {

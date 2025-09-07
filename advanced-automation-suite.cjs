@@ -10,6 +10,8 @@ console.log('🚀 Starting Advanced Automation Suite...');
 function createSEOOptimizer() {
   const script = `#!/usr/bin/env node
 
+const fs = require('fs');
+const path = require('path');
 
 console.log('🔍 SEO Optimizer Started...');
 
@@ -96,7 +98,10 @@ optimizeSEO();
 
 // Function to create accessibility checker
 function createAccessibilityChecker() {
+  const script = `#!/usr/bin/env node
 
+const fs = require('fs');
+const path = require('path');
 
 console.log('♿ Accessibility Checker Started...');
 
@@ -106,10 +111,14 @@ function checkAccessibility() {
   const recommendations = [];
   
   // Check for accessibility issues
+  const pagesDir = '/workspace/pages_minimal';
   if (fs.existsSync(pagesDir)) {
+    const files = fs.readdirSync(pagesDir);
     
     files.forEach(file => {
       if (file.endsWith('.tsx') || file.endsWith('.jsx')) {
+        const filePath = path.join(pagesDir, file);
+        const content = fs.readFileSync(filePath, 'utf8');
         
         // Check for missing alt attributes on images
         if (content.includes('<img') && !content.includes('alt=')) {
@@ -159,6 +168,7 @@ function checkAccessibility() {
   }
   
   // Generate accessibility report
+  const report = {
     timestamp: new Date().toISOString(),
     issues,
     recommendations: [
@@ -194,12 +204,17 @@ checkAccessibility();
 
 // Function to create performance optimizer
 function createPerformanceOptimizer() {
+  const script = `#!/usr/bin/env node
 
+const fs = require('fs');
+const path = require('path');
 
 console.log('⚡ Performance Optimizer Started...');
 
 // Optimize application performance
 function optimizePerformance() {
+  const optimizations = [];
+  const issues = [];
   
   // Check bundle size
   const nextDir = '/workspace/.next';
@@ -229,10 +244,14 @@ function optimizePerformance() {
   }
   
   // Check for performance issues in code
+  const pagesDir = '/workspace/pages_minimal';
   if (fs.existsSync(pagesDir)) {
+    const files = fs.readdirSync(pagesDir);
     
     files.forEach(file => {
       if (file.endsWith('.tsx') || file.endsWith('.jsx')) {
+        const filePath = path.join(pagesDir, file);
+        const content = fs.readFileSync(filePath, 'utf8');
         
         // Check for large components
         const lines = content.split('\\n').length;
@@ -267,6 +286,7 @@ function optimizePerformance() {
   }
   
   // Generate performance report
+  const report = {
     timestamp: new Date().toISOString(),
     issues,
     optimizations,
@@ -299,7 +319,10 @@ optimizePerformance();
 
 // Function to create deployment automation
 function createDeploymentAutomation() {
+  const script = `#!/usr/bin/env node
 
+const fs = require('fs');
+const { execSync } = require('child_process');
 
 console.log('🚀 Deployment Automation Started...');
 
@@ -378,6 +401,7 @@ function deployApplication() {
     }
     
     // Generate deployment report
+    const report = {
       timestamp: new Date().toISOString(),
       status: errors.length === 0 ? 'success' : 'partial',
       steps: deploymentSteps,
@@ -421,7 +445,10 @@ deployApplication();
 
 // Function to create monitoring dashboard
 function createMonitoringDashboard() {
+  const script = `#!/usr/bin/env node
 
+const fs = require('fs');
+const path = require('path');
 
 console.log('📊 Monitoring Dashboard Started...');
 
@@ -581,6 +608,7 @@ async function main() {
     // Run the new scripts
     console.log('🔄 Running advanced automation scripts...');
     
+    const { execSync } = require('child_process');
     
     try {
       execSync('node seo-optimizer.cjs', { stdio: 'inherit', cwd: '/workspace' });

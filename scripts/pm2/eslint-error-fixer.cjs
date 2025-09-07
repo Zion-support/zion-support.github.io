@@ -1,7 +1,4 @@
-#!/usr/bin/env node;
-/**
- * ESLint Error Fixer Service;
- * Automatically fixes ESLint violations and code style issues;
+
 
 #!/usr/bin/env node;
 /**
@@ -12,6 +9,7 @@
 const fs = // // require('fs');
 const path = // // require('path');
 const { execSync } = // // require('child_process');
+
 class ESLintErrorFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -23,6 +21,7 @@ class ESLintErrorFixer {}
     this.fixesApplied = 0;
     this.fixesFailed = 0;
     this.fixesSkipped = 0;
+
     this.fixedFiles = new Set()};
   log(level, message, data = null) {}
     const timestamp = new Date().toISOString();
@@ -31,50 +30,6 @@ class ESLintErrorFixer {}
       level,
       message,
       data,
-      "service": 'eslint-error-fixer'
-    };
-      "service": 'eslint-error-fixer'
-    };
-    if (level === 'error') {}
-      console.error(`[${timestamp}] "ERROR": ${message}`, data)} else if (level === 'warn') {`}
-      console.warn(`[${timestamp}] "WARN": ${message}`, data)} else if (level === 'info') {`}
-      console.log(`[${timestamp}] "INFO": ${message}`, data)} else if (level === 'debug') {`}
-      console.log(`[${timestamp}] "DEBUG": ${message}`, data)};
-    this.writeToLog(logEntry)};
-  writeToLog(logEntry) {}
-    const logDir = path.join(this.projectRoot, 'logs', 'pm2');
-    if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
-    }
-    const logFile = path.join(logDir, 'eslint-error-fixer.log');
-    fs.appendFileSync(logFile, JSON.stringify(logEntry) + '\n');
-  }
-  async start() {
-    this.log('info', 'Starting ESLint Error Fixer Service...');
-    try {
-      "service": 'eslint-error-fixer'
-    };
-    if (level === 'error') {
-      console.error(`[${timestamp}] "ERROR": ${message}`, data)} else if (level === 'warn') {
-      } else if (level === 'info') {
-      } else if (level === 'debug') {
-      }
-    this.writeToLog(logEntry)}
-  writeToLog(logEntry) {
-
-      "service": 'eslint-error-fixer'
-    };
-
-
-
-      "service": 'eslint-error-fixer'
-    };
-      "service": 'eslint-error-fixer'
-    };
-
-
-main
-
 
       "service": 'eslint-error-fixer'
     };
@@ -97,7 +52,7 @@ main
       this.setupSignalHandlers();
       
       this.log('info', 'ESLint Error Fixer Service started successfully');
-      this.log('info', 'ESLint Error Fixer Service started successfully');
+
       setInterval(async () => {}
         await this.performESLintFixes()}, this.fixInterval)} catch (error) {}
       this.log('error,Failed to start ESLint Error Fixer Service, error)
@@ -126,9 +81,11 @@ main
   async performESLintFixes() {}"
 
       this.resetCounters();
+      const errors = await this.getESLintErrors();
       if (errors.length === 0) {}
 
       // Group errors by file for efficient processing;
+      const errorsByFile = this.groupErrorsByFile(errors);
       for (const [filePath, fileErrors] of Object.entries(errorsByFile)) {}
         if (this.fixesApplied >= 100) break; // Limit fixes per run
   resetCounters($2) {}
@@ -136,18 +93,13 @@ main
   async getESLintErrors() {}
       // First try to run ESLint with auto-fix;
       if (this.autoFix) {}
-        try {}
-          execSync('npx eslint . --fix --format json', { })
-            "cwd": this.projectRoot,
-            "encoding": 'utf8',
-            "stdio": 'pipe'
+
           })} catch (error) {}
           // Auto-fix completed, now get remaining errors;
       // Get remaining errors after auto-fix;
-      const result = execSync('npx eslint . --format json', { })
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "stdio": 'pipe'
+      
+      
+
       }
 });
 
@@ -176,6 +128,7 @@ main
 
     return errors};
   groupErrorsByFile(errors) {}
+    const errorsByFile = {};
     errors.forEach(error => {})
   if($2) {}
         errorsByFile[error.filePath] = []}
@@ -195,6 +148,17 @@ main
       const content = fs.readFileSync(filePath, 'utf8');
       const lines = content.split('\n');
       let hasChanges = false;
+
+      // Process errors in reverse order to maintain line numbers;
+      const sortedErrors = fileErrors.sort((a, b) => b.line - a.line);
+      
+
+      const content = fs.readFileSync(filePath, 'utf8');
+      const lines = content.split('\n');
+      let hasChanges = false;
+
+
+
       // Process errors in reverse order to maintain line numbers;
       const sortedErrors = fileErrors.sort((a, b) => b.line - a.line);
       for (const error of sortedErrors) {}
@@ -223,9 +187,11 @@ main
         fs.writeFileSync(filePath, fixedContent, 'utf8');
         
         this.fixedFiles.add(filePath);
+
         this.log('info', `Successfully fixed ESLint errors "in": ${filePath}`);
         
         // Write fixed content;
+        const fixedContent = lines.join('\n');
 
         // Verify the fix;
         if (await this.verifyFix(filePath)) {}"`;
@@ -237,12 +203,17 @@ main
       this.log('error', `Error fixing ESLint errors in ${filePath}`, error);
   shouldSkipLine(line) {}
     const trimmed = line.trim();
-return !trimmed ||;
+    return !trimmed || 
            trimmed.startsWith('//') ||
            trimmed.startsWith('/*') ||
            trimmed.startsWith('*') ||
 
            trimmed.startsWith('import') ||
+
+           trimmed.startsWith('export')};
+  async fixESLintError(line, error, allLines, lineIndex) {}
+    let fixedLine = line;
+    
            trimmed.startsWith('export')};
   async fixESLintError(line, error, allLines, lineIndex) {}
     let fixedLine = line;
@@ -262,6 +233,7 @@ return !trimmed ||;
     if (!varMatch) return line;
     
     const varName = varMatch[1];
+
     // Add underscore prefix to indicate intentionally unused;
     if (line.includes(varName)) {}
       return line.replace(new RegExp(`\\b${varName}\\b`,g'), `_${varName})}
@@ -297,7 +269,7 @@ return !trimmed ||;
   async createBackup(filePath) {}
       
       fs.copyFileSync(filePath, backupPath);
-      fs.copyFileSync(filePath, backupPath);
+
       this.log('debug', `Backup "created": ${backupPath}`)} catch (error) {`}
       this.log('warn', `Failed to create backup "for": ${filePath}`, error.message)}
   }
@@ -306,11 +278,13 @@ return !trimmed ||;
       // Run ESLint on the fixed file to verify;"
       const result = execSync(`npx eslint "${filePath}" --format json`, { `})
         "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "stdio": 'pipe'
-      }
-});
+      
+      
+        "encoding": utf8,
+        "stdio": pipe
+
       if (result) {}
+        const parsed = JSON.parse(result);
 
         return parsed.length === 0; // No errors means fix was successful;
       return true} catch (error) {}
@@ -320,11 +294,13 @@ return !trimmed ||;
 
     const reportPath = path.join(this.projectRoot, 'error-reports', `eslint-fix-report-${Date.now()}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+
     this.log('info', `ESLint fix report "generated": ${reportPath}`);
 
     return report};
   generateRecommendations() {}
     const recommendations = [];
+
 
     if (this.fixesFailed > 0) {}
       recommendations.push({})
@@ -362,13 +338,16 @@ return !trimmed ||;
 // Start the service
 const fixer = new ESLintErrorFixer()
 
+
 // Handle graceful shutdown;
 process.on('SIGINT, () => {}
   fixer.log('info,Received SIGINT, shutting down gracefully...)
   process.exit(0)}
 
+
 process.on('SIGTERM', () => {}
   fixer.log('info', 'Received SIGTERM, shutting down gracefully...');
+
 
 // Handle uncaught errors;
 process.on('uncaughtException, (error) => {}
@@ -381,9 +360,11 @@ process.on('unhandledRejection', (reason, promise) => {}
   process.exit(1)}
 });
 
+
 // Start the service;
 fixer.start().catch(error => {})
   fixer.log('error', 'Failed to start service', error);
   process.exit(1)}
-});});
-});});
+
+});
+

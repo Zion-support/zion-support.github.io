@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# Deployment script for production
-set -e
-
-# Deployment script for production
-set -e
-
 echo "🚀 Starting deployment process..."
 
 # Check if we're in the right directory

@@ -333,6 +333,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
 export default SearchBar;`,
 
   'components/Sidebar.tsx': `import React from 'react';
+import Link from 'next/link';
 import { Home, Settings, User, LogOut } from 'lucide-react';
 
 interface SidebarProps {
@@ -420,6 +421,7 @@ const SimpleLayout: React.FC<SimpleLayoutProps> = ({ children, title }) => {
 export default SimpleLayout;`,
 
   'components/layout/Footer.tsx': `import React from 'react';
+import Link from 'next/link';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -496,6 +498,7 @@ interface LayoutProps {
   children: ReactNode;
 }
 
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className=" min-h-screen flex flex-col">
       <Header />
@@ -510,6 +513,8 @@ interface LayoutProps {
 export default Layout;`,
 
   'components/layout/MainLayout.tsx': `import React, { ReactNode } from 'react';
+import Header from '../Header';
+import Footer from './Footer';
 import SEOHead from '../SEOHead';
 
 interface MainLayoutProps {
@@ -657,6 +662,7 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
 export default EnhancedMarketplaceCard;`,
 
   'components/ui/InteractiveNavigation.tsx': `import React, { useState } from 'react';
+import Link from 'next/link';
 import { ChevronDown, Menu, X } from 'lucide-react';
 
 interface NavItem {
@@ -671,6 +677,7 @@ interface InteractiveNavigationProps {
 }
 
 const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, className = '' }) => {
+  const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -989,6 +996,7 @@ interface PerformanceMetrics {
 }
 
 export function usePerformanceMonitor(): PerformanceMetrics | null {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
 
   useEffect(() => {
     if (typeof window === 'undefined' || !('performance' in window)) {

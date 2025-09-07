@@ -52,6 +52,7 @@ rootTestFiles.forEach(fileName => {
   const filePath = path.join(process.cwd(), fileName)
   if (fs.existsSync(filePath)) {
     console.log(`\n📄 Processing root test file: ${fileName}`)
+    const testName = getTestName(filePath)
     if (createJestTest(filePath, testName)) {
       createdCount++
 })

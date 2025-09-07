@@ -37498,11 +37498,6 @@
       "recommendation": "Add lazy loading to images"
     }
   ],
-    "totalIssues": 5972,
-    "missingMeta": 5276,
-    "headingIssues": 544,
-    "imageIssues": 0,
-    "improvements": 2
   "content": [
     {
       "file": "/workspace/pages/2025-advanced-services-showcase.tsx",
@@ -40685,8 +40680,6 @@
     "Implement internal linking strategy",
     "Add canonical URLs to prevent duplicate content",
     "Optimize page loading speed",
-  "status": "completed"
-}
     "Implement mobile-first responsive design",
     "Add XML sitemap and robots.txt",
     "Monitor Core Web Vitals",

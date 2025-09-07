@@ -1,22 +1,22 @@
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
-const fs = require(fs');
+const fs = require('fs');
 const path = require('path');
 
-console.log(🔧 Resolving remaining merge conflicts...\n');
+console.log('🔧 Resolving remaining merge conflicts...\n');
 
 // Get list of conflicted files
 let conflictedFiles = [];
 try {
-  const statusOutput = execSync('git status --porcelain, { encoding: utf8' });
+  const statusOutput = execSync('git status --porcelain', { encoding: 'utf8' });
   conflictedFiles = statusOutput
-    .split('\n)
-    .filter(line => line.includes(UU') || line.includes('AA) || line.includes(DD'))
+    .split('\n')
+    .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD'))
     .map(line => line.substring(3).trim())
-    .filter(file => file && !file.includes('node_modules) && !file.includes(.git'));
+    .filter(file => file && !file.includes('node_modules') && !file.includes('.git'));
 } catch (error) {
-  console.log('No conflicted files found or error getting status);
+  console.log('No conflicted files found or error getting status');
 }
 
 console.log(`Found ${conflictedFiles.length} conflicted files to resolve`);
@@ -34,7 +34,7 @@ for (const file of conflictedFiles) {
     console.log(`Resolving conflicts in: ${file}`);
     
     // Read the file content
-    let content = fs.readFileSync(file, utf8');
+    let content = fs.readFileSync(file, 'utf8');
     
     // Remove all merge conflict markers and keep our version (HEAD)
     content = content
@@ -43,7 +43,7 @@ for (const file of conflictedFiles) {
     fs.writeFileSync(file, content);
     
     // Add the file to git
-    execSync(`git add "${file}"`, { stdio: 'pipe });
+    execSync(`git add "${file}"`, { stdio: 'pipe' });
     
     console.log(`✅ Resolved: ${file}`);
     resolvedCount++;
@@ -56,8 +56,8 @@ for (const file of conflictedFiles) {
 
 // Handle any remaining unmerged files by adding them
 try {
-  execSync(git add .', { stdio: 'pipe });
-  console.log(✅ Added all remaining files');
+  execSync('git add .', { stdio: 'pipe' });
+  console.log('✅ Added all remaining files');
 } catch (error) {
   console.log(`⚠️  Warning adding files: ${error.message}`);
 }

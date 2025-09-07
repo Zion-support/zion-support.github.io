@@ -1,13 +1,3 @@
-const fs = require('fs')
-const path = require('path')
-        console.log('⚡ Optimizing loading performance...')
-        this.improvements.push('Loading optimization completed')
-        console.log('♿ Optimizing accessibility...')
-        this.improvements.push('Accessibility improvements completed')
-        console.log('� Optimizing mobile experience...')
-        this.improvements.push('Mobile optimization completed')
-            "recommendations"
-
 #!/usr/bin/env node
 
 /**
@@ -37,14 +27,6 @@ if (!fs.existsSync(config.outputDir)) {
   fs.mkdirSync(config.outputDir, { recursive: true });
 }
 
-        console.log('⚡ Optimizing loading performance...')
-        this.improvements.push('Loading optimization completed')
-        console.log('♿ Optimizing accessibility...')
-        this.improvements.push('Accessibility improvements completed')
-        console.log('� Optimizing mobile experience...')
-        this.improvements.push('Mobile optimization completed')
-            "recommendations"
-main
 // Check responsive design
 function checkResponsiveDesign(dir) {
   const issues = [];
@@ -69,8 +51,11 @@ function checkResponsiveDesign(dir) {
 
 // Check loading states
 function checkLoadingStates(dir) {
+  const issues = [];
+  const files = getAllFiles(dir, ['.jsx', '.tsx', '.js', '.ts']);
   
   files.forEach(file => {
+    const content = fs.readFileSync(file, 'utf8');
     
     // Check for async operations without loading states
     if (content.includes('fetch(') || content.includes('axios.') || content.includes('useEffect')) {
@@ -90,8 +75,11 @@ function checkLoadingStates(dir) {
 
 // Check error handling
 function checkErrorHandling(dir) {
+  const issues = [];
+  const files = getAllFiles(dir, ['.jsx', '.tsx', '.js', '.ts']);
   
   files.forEach(file => {
+    const content = fs.readFileSync(file, 'utf8');
     
     // Check for try-catch blocks
     if (content.includes('fetch(') || content.includes('axios.') || content.includes('async')) {

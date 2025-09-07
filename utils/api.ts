@@ -72,6 +72,7 @@ class ApiClient {
         success: false;
       };
     }
+  }
 
   async get<T>(endpoint: string, options?: RequestOptions): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, { ...options, method: 'GET' });
@@ -96,6 +97,7 @@ class ApiClient {
   async delete<T>(endpoint: string, options?: RequestOptions): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, { ...options, method: 'DELETE' });
   }
+}
 
 export const apiClient = new ApiClient();
 export type { ApiResponse, RequestOptions };

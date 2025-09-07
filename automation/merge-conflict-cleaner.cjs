@@ -181,6 +181,7 @@ class MergeConflictCleaner {
     for (const file of jsFiles) {
       try {
         let content = fs.readFileSync(file, 'utf8');
+        const originalContent = content;
         
         // Fix common issues
         content = content.replace(/,\s*}/g, '}');
@@ -198,13 +199,19 @@ class MergeConflictCleaner {
   }
 
   async findFilesByExtension(extensions) {
+    const files = [];
     const extArray = Array.isArray(extensions) ? extensions : [extensions];
     
+    const searchDir = (dir) => {
+      const items = fs.readdirSync(dir);
       for (const item of items) {
+        const fullPath = path.join(dir, item);
+        const stat = fs.statSync(fullPath);
         
         if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
           searchDir(fullPath);
         } else if (stat.isFile()) {
+          const ext = path.extname(item);
           if (extArray.includes(ext)) {
             files.push(fullPath);
           }

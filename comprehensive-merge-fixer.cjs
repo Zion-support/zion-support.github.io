@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 const fs = require('fs');
-const path = require(path');
+const path = require('path');
 const { execSync } = require('child_process');
 
-console.log(🔧 Starting comprehensive merge conflict resolution...');
+console.log('🔧 Starting comprehensive merge conflict resolution...');
 
 // Function to find files with merge conflicts
 function findMergeConflictFiles() {
   const files = [];
-  const extensions = ['.ts, .tsx', '.js, .jsx'];
+  const extensions = ['.ts', '.tsx', '.js', '.jsx'];
   
   function scanDirectory(dir) {
     try {
@@ -17,12 +17,12 @@ function findMergeConflictFiles() {
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
         
-        if (stat.isDirectory() && !item.startsWith('.) && item !== node_modules') {
+        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
           scanDirectory(fullPath);
         } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
           try {
             const content = fs.readFileSync(fullPath, 'utf8');
-            if (content.includes(              files.push(fullPath);
+            if (content.includes('              files.push(fullPath);
             }
           } catch (error) {
             // Skip files that can't be read
@@ -34,7 +34,7 @@ function findMergeConflictFiles() {
     }
   }
   
-  scanDirectory(/workspace);
+  scanDirectory('/workspace');
   return files;
 }
 
@@ -46,13 +46,13 @@ function resolveMergeConflicts(filePath) {
     
     // Remove merge conflict markers and keep the HEAD version (first part)
     content = content.replace(/    // Clean up any remaining conflict markers
-    content = content.replace(/    content = content.replace(/=======\n?/g, );
+    content = content.replace(/    content = content.replace(/=======\n?/g, '');
     content = content.replace(/    
     // Clean up extra newlines
-    content = content.replace(/\n{3}/g, '\n\n');
+    content = content.replace(/\n{3,}/g, '\n\n');
     
     // Clean up trailing whitespace
-    content = content.replace(/[ \t]+$/gm, );
+    content = content.replace(/[ \t]+$/gm, '');
     
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content);
@@ -86,7 +86,7 @@ const report = {
   totalFiles: conflictFiles.length,
   fixedFiles: fixedCount,
   files: conflictFiles
-}
+};
 
 fs.writeFileSync('comprehensive-merge-fix-report.json', JSON.stringify(report, null, 2));
 console.log('📊 Comprehensive merge conflict fix report saved to: comprehensive-merge-fix-report.json');

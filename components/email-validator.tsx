@@ -152,6 +152,7 @@ export default function EmailValidatorPage() {
               <Mail className="w-4 h-4 mr-2" />
               Email Validation & Verification
             </div>
+          </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
             Email Validator
           </h1>
@@ -191,6 +192,7 @@ export default function EmailValidatorPage() {
                     className="w-4 h-4 text-blue-600 bg-gray-700 border-gray-600 rounded focus:ring-blue-500 focus:ring-2"
                   />
                 </div>
+              </div>
 
               <div className="space-y-6">
                 {bulkMode ? (
@@ -257,6 +259,7 @@ export default function EmailValidatorPage() {
                   <p>• Detects common typos and mistakes</p>
                   <p>• Provides deliverability score</p>
                 </div>
+              </div>
             </Card>
 
             {/* Validation Results */}
@@ -300,6 +303,8 @@ export default function EmailValidatorPage() {
                         {stats.avgScore.toFixed(0)}
                       </span>
                     </div>
+                  </div>
+                </div>
               )}
 
               {validationResults.length > 0 ? (
@@ -369,6 +374,7 @@ export default function EmailValidatorPage() {
               )}
             </Card>
           </div>
+        </div>
       </section>
 
       {/* Features */}
@@ -432,6 +438,7 @@ export default function EmailValidatorPage() {
               </p>
             </Card>
           </div>
+        </div>
       </section>
 
       {/* Use Cases */}
@@ -499,6 +506,7 @@ export default function EmailValidatorPage() {
               </ul>
             </Card>
           </div>
+        </div>
       </section>
 
       {/* CTA Section */}
@@ -528,6 +536,7 @@ export default function EmailValidatorPage() {
               View Pricing
             </Button>
           </div>
+        </div>
       </section>
     </>
   )

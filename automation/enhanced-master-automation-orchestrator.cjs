@@ -226,6 +226,7 @@ if (require.main === module) {
   }
 }
 
+const orchestrator = new EnhancedMasterAutomationOrchestrator();
 orchestrator.run().catch(console.error);
     this.log('
 

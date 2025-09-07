@@ -30,7 +30,6 @@ import React from 'react';
 interface QuantumComputingProps {
   // Add props here as needed
 
-
 }
 
 export default function QuantumComputing({ }: QuantumComputingProps) {
@@ -40,27 +39,7 @@ export default function QuantumComputing({ }: QuantumComputingProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-
-}
-
-}
-:src.pages.disabled/QuantumComputing.jsx
 }
 }
 }
 }
-}
-
-
-
-
-
-
-:src.pages.disabled/QuantumComputing.jsx
-}
-}
-}
-}
-}
-:temp_exclude/src.pages.disabled/QuantumComputing.jsx;

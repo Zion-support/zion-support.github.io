@@ -9,10 +9,8 @@ export default function UltraAdvancedNavigation() {
 }
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
-
 export default function UltraAdvancedNavigation() {
   return null;
 }
 
-
-
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a

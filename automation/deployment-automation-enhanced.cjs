@@ -41,6 +41,7 @@ class DeploymentAutomationEnhanced {
       this.log(`✅ Completed: ${description} (${duration}ms)`);
       return { success: true, output: result, duration };
     } catch (error) {
+      const duration = Date.now() - startTime;
       this.log(`❌ Failed: ${description} - ${error.message} (${duration}ms)`);
       return { success: false, error: error.message, duration };
     }

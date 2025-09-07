@@ -1,9 +1,4 @@
 
-
-
-main
-
-
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -46,26 +41,11 @@ class MasterAutomationOrchestrator {
       'WARNING': '⚠️',
       'PROGRESS': '🔄'
     }[type] || 'ℹ️';
-    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-    this.logFile = path.join(this.reportsDir, 'master-automation.log');
-    this.ensureDirectories();
-  }
-
-  ensureDirectories() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
-  }
-
-  log(message) {
-    const logMessage = `[${timestamp}] ${message}`;
     const logMessage = `${prefix} [${timestamp}] ${message}`;
     console.log(logMessage);
     fs.appendFileSync(this.logFile, logMessage + '\n');
   }
 
-  async runCommand(command, description, options = {}) {
-    this.log(`Running: ${description}`);
   async runCommand(command, description, options = {}) {
     this.log(`Running: ${description}`);
     try {
@@ -164,7 +144,9 @@ class MasterAutomationOrchestrator {
       },
     ];
 
+    const results = [];
     for (const script of testingScripts) {
+      const result = await this.runAutomationScript(
         script.script,
         script.description
       );
@@ -184,7 +166,9 @@ class MasterAutomationOrchestrator {
       },
     ];
 
+    const results = [];
     for (const script of performanceScripts) {
+      const result = await this.runAutomationScript(
         script.script,
         script.description
       );
@@ -204,7 +188,9 @@ class MasterAutomationOrchestrator {
       },
     ];
 
+    const results = [];
     for (const script of buildScripts) {
+      const result = await this.runAutomationScript(
         script.script,
         script.description
       );
@@ -236,6 +222,7 @@ class MasterAutomationOrchestrator {
       },
     ];
 
+    const results = [];
     for (const script of additionalScripts) {
       const result = await this.runCommand(script.command, script.description);
       results.push({ ...script, ...result });
@@ -489,6 +476,7 @@ class MasterAutomationOrchestrator {
     }
 
     // Save comprehensive report
+    const report = {
       timestamp: new Date().toISOString(),
       duration,
       results: this.results,
@@ -536,9 +524,6 @@ if (require.main === module) {
       console.log('❌ Master automation orchestration failed');
       process.exit(1);
     }
->origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/master-automation-orchestrator.cjs
-main
-
 >origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/master-automation-orchestrator.cjs
 main
 

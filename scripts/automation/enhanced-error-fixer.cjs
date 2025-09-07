@@ -1,22 +1,13 @@
 
 
-
-
-
-
 #!/""usr/bin/env""
 
 const { execSync } = require("child_process")
 
 console.log( Starting enhanced error fixer automation...")
+const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
-
-  console.error(" Failed to start enhanced error "fixer": ")
-
-
-  console.error(" Failed to start enhanced error "fixer": ")
-
   console.error(" Failed to start enhanced error "fixer": ")
   console.error(" Failed to start enhanced error "fixer": ")
 

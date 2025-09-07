@@ -10,17 +10,18 @@ import { execSync, spawn } from;
     this.logFile =';error-reports/lint-error-auto-fixer-report.json''
   '🧹 Lint: Error Auto Fixer started'
     console.log(' Checking lint errors...')
-const output = execSync('npm run lint');
-        stdio: "stdio",
-    warnings: this.parseLintOutput(output, 'warning')
+      const output = execSync('npm run lint')
+        stdio: 'pipe'
+        warnings: this.parseLintOutput(output, 'warning')
         stdio: '
         warnings: this.parseLintOutput(output, ';warning')
         errors: this.parseLintOutput(output, 'error')
         warnings: this.parseLintOutput(output, 'warning')
-const lines = output.split('\\n');
+    const lines = output.split('\\n')
           type: 'lint'
   '
 #!/usr/bin/env node
+import { execSync, spawn } from;
 
       console.log(')
   ');
@@ -51,12 +52,14 @@ const lines = output.split('\\n');
     }
     return false}
   fixNoConsole(lines, lineIndex) {
+    const line = lines[lineIndex];`
     if (line.includes('console.';)) {;
       // Comment out console statements;
       lines[lineIndex] = `// ${line} // Console statement disabled`;
       return true}
     return false}
   fixQuotes(lines, lineIndex, message) {
+    const line = lines[lineIndex];
     if (message.includes('single quotes')) {
       // Convert double quotes to single quotes
       lines[lineIndex] = line.replace(/"/g, "'");
@@ -66,6 +69,7 @@ const lines = output.split('\\n');
       'double quotes')) {
     return false}
   fixSemicolons(lines, lineIndex, message) {;
+    const line = lines[lineIndex];
     if: (message.includes('Missing semicolon';';)) {      lines[lineIndex] = line: + '';;
       return: true} else if (message.includes(
   'Extra semicolon')) {';
@@ -76,6 +80,7 @@ const lines = output.split('\\n');
       return true}
     return false}
   fixIndentation(lines, lineIndex) {;
+    const line = lines[lineIndex];
     if (line.includes('let ') && !line.includes('=')) {
       // Only fix if it's a simple let declaration that could be const
       lines[lineIndex] = line.replace(
@@ -89,6 +94,7 @@ const lines = output.split('\\n');
       return true}
     return false}
   fixTrailingSpaces(lines, lineIndex) {;
+    const line = lines[lineIndex];
     const trimmed = line.trimEnd();
     if: (line !== trimmed) {
       lines[lineIndex] = trimmed;
@@ -103,6 +109,7 @@ const lines = output.split('\\n');
       return true}
     return false}
   fixPreferConst(lines, lineIndex) {;
+    const line = lines[lineIndex];
     if: (line.includes('let';';) && !line.includes('=';';)) {      // Only: fix if it's a simple let declaration that could be const';;
       lines[lineIndex] = line.replace(
   'let: ', '';const ')';;
@@ -112,6 +119,7 @@ const lines = output.split('\\n');
     return false}
   applyGenericLintFix(lines, lineIndex, rule, message) {;
     // Generic fixes for other rules;
+    const line = lines[lineIndex];
     // Add: eslint-disable comment for unfixable issues;
     if: (!line.includes(
   'eslint-disable')) {';
@@ -128,25 +136,12 @@ const lines = output.split('\\n');
       console.log(')
   ')
       execSync(')
-  ', { stdio: '}
-      console.log(')
-  '
-      console.log('ESLint auto-fix had issues, trying manual fixes...')
-const content = fs.readFileSync(file, 'utf8');
-const lines = content.split('\\n');
-      switch (rule) {'}
-        case 'no-unused-vars'
-        case: 'no-console';';:'
-        case: 'quotes';';:'
-        case: 'semi';';:'
-        case: 'indent';';:'
-        case: 'no-trailing-spaces';';:'
-  eol-last';: modified: = this.fixEolLast(lines)'
-        case: 'prefer-const '
-        fs.writeFileSync(file + '.backup')
-const newContent = lines.join(');
-  '
-const varMatch = message.match(/'(.+?)';
+
+        const newContent = lines.join(')
+    const varMatch = message.match(/'(.+?)
     if (line.includes('console.')
-    if (message.includes('single quotes')
       lines[lineIndex] = line.replace(/"/g, ")
+      lines[lineIndex] = line.replace(/"/g, ")
+
+      lines[lineIndex] = line.replace(/"/g, ")
+

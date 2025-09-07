@@ -41,6 +41,7 @@ class AIIntelligentCodeAnalyzer {;
   }
 
   saveLearningData() {
+    const learningFile = path.join(
       this.projectRoot,
 
 
@@ -189,9 +190,11 @@ class AIIntelligentCodeAnalyzer {;
     console.log('🚨 Detecting anti-patterns...');
 ;
     const antiPatterns = [];
+    const jsFiles = this.findFiles(['.js', '.jsx', '.ts', '.tsx']);
 ;
     for (const file of jsFiles.slice(0, 30)) {;
       try {;
+        const content = fs.readFileSync(file, 'utf8');
         const patterns = this.detectFileAntiPatterns(content, file);
         antiPatterns.push(...patterns);
       } catch (error) {;
@@ -204,6 +207,7 @@ class AIIntelligentCodeAnalyzer {;
 ;
   detectFileAntiPatterns(content, filePath) {;
     const patterns = [];
+    const lines = content.split('\n');
 ;
     lines.forEach((line, index) => {;
       // Detect console.log in production code;
@@ -258,9 +262,11 @@ class AIIntelligentCodeAnalyzer {;
     console.log('⚡ Analyzing performance patterns...');
 ;
     const performanceIssues = [];
+    const jsFiles = this.findFiles(['.js', '.jsx', '.ts', '.tsx']);
 ;
     for (const file of jsFiles.slice(0, 20)) {;
       try {;
+        const content = fs.readFileSync(file, 'utf8');
         const issues = this.detectPerformanceIssues(content, file);
         performanceIssues.push(...issues);
       } catch (error) {;
@@ -276,6 +282,7 @@ class AIIntelligentCodeAnalyzer {;
 ;
   detectPerformanceIssues(content, filePath) {;
     const issues = [];
+    const lines = content.split('\n');
 ;
     lines.forEach((line, index) => {;
       // Detect inefficient loops;

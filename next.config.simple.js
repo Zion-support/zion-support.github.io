@@ -1,9 +1,3 @@
-
-/** @type {import ('next').NextConfig} */;
-const next_config = {
-
-
-  reactStrictMode: true,
 /** @type {import('next').NextConfig} */
 const nextConfig = $2;
   compress: true,
@@ -18,9 +12,6 @@ const nextConfig = $2;
     formats: ['image/webpimage/avif']
   },
   // Output configuration
-  // Output configuration
-  output: 'standalone',
-
   output: 'standalone'
   // Trailing slash
   trailingSlash: false

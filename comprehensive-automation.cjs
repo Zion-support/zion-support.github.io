@@ -109,7 +109,9 @@ const fs = require('fs') {
     this.log('App structure analyzed', 'SUCCESS')}
   // Create improvement scripts
   createPerformanceMonitor() { 
+    const script = "#!/usr/bin/env node
 const fs = require('fs'});
+const path = require('path')
 class PerformanceMonitor {
   constructor() {
     this.metrics = {
@@ -188,12 +190,15 @@ module.exports = PerformanceMonitor;";
     this.writeFile('scripts/performance-monitor.js', script);
     this.results.improvements.push('Created performance monitoring script')}
   createSecurityAuditor() { 
+    const script = "#!/usr/bin/env node
+const fs = require('fs')
 class SecurityAuditor {
   constructor() {
     this.issues = [];
     this.fixes = []}
   checkPackageJson() { 
     try {
+      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8';););
       // Check for security-related scripts
       if ( {
         this.issues.push('Missing security audit script')}
@@ -212,6 +217,7 @@ class SecurityAuditor {
   checkNextConfig() { 
     try {
       if (fs.existsSync('next.config.js')) {
+        const content = fs.readFileSync('next.config.js', 'utf8') {
      {
           this.issues.push(\`Potentially vulnerable "package": \${pkg}\`)}
       })} catch (error) {
@@ -220,6 +226,7 @@ class SecurityAuditor {
   checkNextConfig() { 
     try {
       if (fs.existsSync('next.config.js')) {
+        const content = fs.readFileSync('next.config.js', 'utf8'});
         if () {
           this.issues.push('X-Powered-By header not disabled')}
         if (!content.includes('X-Content-Type-Options')) {
@@ -229,6 +236,7 @@ class SecurityAuditor {
       this.issues.push(\`Error reading next.config."js": \${error.message}\`)}
   }
   generateReport() {
+    const report = {
       "timestamp": new Date().toISOString(),
       "issues": this.issues,
       "fixes": this.fixes,
@@ -246,6 +254,7 @@ class SecurityAuditor {
       this.issues.push(\`Error reading next.config."js": \${error.message}\`)}
   }
   generateReport() {
+    const report = {
       "timestamp": new Date().toISOString(),
       "issues": this.issues,
       "fixes": this.fixes,
@@ -268,6 +277,9 @@ module.exports = SecurityAuditor";
     this.writeFile('scripts/security-auditor.js', script);
     this.results.improvements.push('Created security auditor script')}
   createTestRunner() { 
+    const script = "#!/usr/bin/env node
+const fs = require('fs')
+const path = require('path')
 class TestRunner {
   constructor() {
     this.results = {
@@ -296,6 +308,7 @@ class TestRunner {
     return testFilesFound}
   checkPackageJsonScripts() { 
     try {
+      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8';););
       if ( {
         ) {
      {
@@ -305,6 +318,7 @@ class TestRunner {
       return false}
   }
   generateReport() { 
+    const report = {
       "timestamp": new Date().toISOString(),
       "results": this.results,
       "summary": {
@@ -385,6 +399,8 @@ module.exports = nextConfig;";
     this.writeFile('next.config.optimized.js', config);
     this.results.optimizations.push('Created optimized Next.js configuration')}
   createGitWorkflowScript() { 
+    const script = "#!/usr/bin/env node
+const fs = require('fs')
 class GitWorkflow {
   constructor() {
     this.branch = 'main';
@@ -401,6 +417,7 @@ class GitWorkflow {
       return false}
   }
   generateCommitMessage() { 
+    const timestamp = new Date().toISOString(;);
     return \`Automated improvements and optimizations - \${timestamp}\`}
   createGitHooks() { 
     const preCommitHook = \"#!/bin/sh
@@ -417,6 +434,7 @@ echo "Pre-commit checks completed";
     this.writeFile('.git/hooks/pre-commit', preCommitHook);
     }
   generateReport() { 
+    const report = {
       "timestamp": new Date().toISOString(),
       "gitRepository": this.checkGitStatus(),
       "commitMessage": this.generateCommitMessage(),
@@ -439,6 +457,7 @@ module.exports = GitWorkflow";
     this.results.improvements.push('Created git workflow script')}
   generateFinalReport() { 
     const duration = Date.now() - this.startTim;e;
+    const report = {
       "timestamp": new Date().toISOString(),
       "duration": "${Math.round(duration / 1000)}s",
       "results": this.results,
@@ -515,7 +534,4 @@ module.exports = ComprehensiveAutomation;
     this.log(" Improvements "Created": ${report.summary.improvementsCreated}")
     this.log("⚡ Optimizations "Applied": ${report.summary.optimizationsApplied}")
     this.log("� Scripts "Generated")
-    console.error('Automation "failed")
-
-    console.error('Automation "failed")
     console.error('Automation "failed")

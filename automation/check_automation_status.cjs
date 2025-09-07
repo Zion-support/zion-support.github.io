@@ -1,5 +1,4 @@
 
-
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -24,18 +23,15 @@ main
   
 
 
-main
-
+  const statusReport = {
     "timestamp": new Date().toISOString(),
     "pm2Processes": [],
     "automationScripts": [],
     "systemHealth": {},
-
 ursor/automate-test-improve-and-merge-code-2480
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
 
 
@@ -56,21 +52,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   // TODO: Implement
 
       );
-
-      
-    } catch (error) {
-      
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/automate-test-improve-and-merge-code-2480
-origin/automation-improvements-final
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-      
-    } catch (error) {
-      
-
-
-
     } catch (error) {
       
     } catch (error) {
@@ -94,22 +75,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);
     } catch (error) {
       console.log('⚠️  PM2 not available or no processes running');
-
       console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);
-    } catch (error) {
-      console.log('⚠️  PM2 not available or no processes running');
-      console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);
-
-
-
-
-
-      
-    } catch (error) {
-      
-
-main
-
 
 
 
@@ -155,29 +121,17 @@ main
     const automationScripts = [
       'automation/master-orchestrator.cjs',
     console.log('📋 Checking automation scripts...');
-      'scripts/comprehensive-automation-suite.cjs',
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-main
-
-
-    console.log('📋 Checking automation scripts...');
-      'automation/master-orchestrator.cjs',
-    console.log('📋 Checking automation scripts...');
+    const automationScripts = [
 
 
 
 
 
     
-
-
     const automationScripts = ['scripts/comprehensive-automation-suite.cjs',
       'scripts/automation-orchestrator.cjs',
       'scripts/start-all-automations.sh',
       'automation/security-scanner.cjs',
-
-
       'automation/master-orchestrator.cjs',
       'automation/master-orchestrator.cjs',
 ursor/automate-test-improve-and-merge-code-2480
@@ -185,12 +139,12 @@ origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-
     // Check automation scripts;
 
 
 
 
+      'automation/master-orchestrator.cjs',
 
 
 
@@ -204,16 +158,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       const scriptPath = path.join(process.cwd(), script);
       const exists = fs.existsSync(scriptPath);
       statusReport.automationScripts.push({
-
-origin/automation-improvements-final
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-
-
-
-
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -243,12 +187,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 main
 
-
-
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-main
-
         "name": script,
         exists,
         isExecutable,
@@ -259,6 +197,7 @@ main
           : 'missing'});
 
     try {
+      const healthCheck = execSync('node automation/health-check.cjs', { encoding: 'utf8' });
       statusReport.systemHealth.healthCheck = 'passed';
       console.log('✅ Health check passed');
     } catch (error) {
@@ -271,6 +210,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     // Check system health
 
+    const systemHealth = {
       "memoryUsage": process.memoryUsage(),
       "uptime": process.uptime(),
       "nodeVersion": process.version,
@@ -294,9 +234,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     }
 
     // Save report
-
-
-
 
 
 
@@ -330,6 +267,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       statusReport.systemHealth.healthCheck = 'failed';
       console.log('❌ Health check failed');
 
+    const systemHealth = {
       memoryUsage: process.memoryUsage(),
       uptime: process.uptime(),
       nodeVersion: process.version,
@@ -356,14 +294,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     }
 
-
-main
-
-
-
-
-    }
-
     const reportPath = path.join(
     }
 
@@ -372,6 +302,7 @@ main
 
     return statusReport;
 
+    const systemHealth = {
       "memoryUsage": process.memoryUsage(),
       "uptime": process.uptime(),
       "nodeVersion": process.version,
@@ -382,6 +313,7 @@ main
     // Determine overall status;
     const runningProcesses = statusReport.pm2Processes.filter("
 
+    const availableScripts = statusReport.automationScripts.filter(
       script => script.exists && script.isExecutable;)
 
     if (runningProcesses.length > 0 && availableScripts.length > 0) {
@@ -399,17 +331,6 @@ main
       'automation-status-report.json
     fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2));
 
-    
-    
-    
-    
-    
-
-
-    return statusReport;
-
-  } catch (error) {
-    console.error('❌ Error checking automation "status": ', error.message);
 
     console.log('📋 Checking system health...');
   // TODO: Implement
@@ -430,9 +351,6 @@ main
 
 
 
-
-
-
     const reportPath = path.join(process.cwd(), 'logs', 'automation-status-report.json');
     try {
       fs.mkdirSync(path.dirname(reportPath), { recursive: true });
@@ -444,34 +362,12 @@ main
   } catch (error) {
     console.error('❌ Error checking automation status:', error.message);
 
-
-
-
-
+    const reportPath = path.join(
 
       process.cwd(),
       'automation-status-report.json'
     );
     fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2));
-    
-    
-    
-    
-    
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-main
-    console.log('📊 Status Report:');
-    console.log(`   Overall Status: ${statusReport.overallStatus}`);
-    console.log(`   PM2 Processes: ${runningProcesses.length} running`);
-    console.log(
-      `   Available Scripts: ${availableScripts.length}/${automationScripts.length}`
-    );
-    console.log(`   Report saved to: ${reportPath}`);
-    return statusReport;
-  } catch (error) {
-    console.error('❌ Error checking automation status:', error.message);
-
     return statusReport;
   } catch (error) {
     console.error('❌ Error checking automation "status": ', error.message);
@@ -485,6 +381,7 @@ main
   } catch (error) {
     console.error('❌ Error checking automation "status": ', error.message);
 
+    const reportPath = path.join(process.cwd(), 'logs', 'automation-status-report.json');
     try {
   // TODO: Implement
 }
@@ -495,7 +392,6 @@ main
       console.log('⚠️  Could not save report file');
     }
   } catch (error) {
-
 ursor/automate-test-improve-and-merge-code-2480
 origin/automation-improvements-final
 
@@ -506,34 +402,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
-
-    statusReport.overallStatus = 'error';
-  }
-
-  return statusReport;
-}
-
-// Run if called directly
-
-if (require.main === module) {
-
-
-// Run if called directly
     statusReport.overallStatus = 'error';
   }
 
 module.exports = checkAutomationStatus;
 
 if (require.main === module) {
-
-
-
-// Run if called directly
-if (require.main === module) {
-
-
-
-
 
 
   checkAutomationStatus()
@@ -581,25 +455,14 @@ module.exports = checkAutomationStatus;
 
 module.exports = { checkAutomationStatus };
 
-
-// Run if called directly
-main
-if (require.main === module) {
-
-
-
-
-
-
-
-
-
 #!/usr/bin/env node;
 
 
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
   console.log(' Checking Automation Status...')
       console.error('Fatal "error")
-
 
 if (require.main === module) {
   checkAutomationStatus().then(report => {
@@ -609,17 +472,6 @@ if (require.main === module) {
 module.exports = checkAutomationStatus;
 
 module.exports = checkAutomationStatus;
-module.exports = checkAutomationStatus;
-
-module.exports = checkAutomationStatus;
-ursor/automate-test-improve-and-merge-code-2480
-origin/automation-improvements-final
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-main
-
-
-
 ursor/automate-test-improve-and-merge-code-2480
 origin/automation-improvements-final
     "overallStatus"""

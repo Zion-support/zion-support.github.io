@@ -1,8 +1,3 @@
-
-import { motion  } from 'framer-motion';
-import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network  } from 'lucide-react';
-import { motion } from 'framer-motion';
-import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react';
@@ -20,9 +15,6 @@ export default function QuantumSecureCloudInfrastructure() {
 				"NIST PQC roadmap alignment]}
 			]}
 			industries={["Financial Services", "Healthcare", "Government"]}
-  />);
-}
-  />)}
 			url="https: //ziontechgroup.com/quantum-secure-cloud-infrastructure"
 		/>
 	)

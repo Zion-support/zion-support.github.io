@@ -1,25 +1,22 @@
-const fs = require("fs");
-const path = require("path");
-const { exec } = require("child_process");
-const { promisify } = require("util");
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+const { promisify } = require('util');
+const { exec } = require('child_process');
 
 const execAsync = promisify(exec);
 
 class MasterAutomation {
   constructor() {
-    this.logsDir = path.join(__dirname, '../logs');
+    this.logFile = path.join(__dirname, "logs", "master-automation.log");
+    this.pm2Processes = ["error-monitor", "lint-fixer", "build-monitor", "git-automation"];
     this.ensureLogsDir();
-    this.status = {
-      running: false,
-      lastRun: null,
-      errors: [],
-      successes: []
-    };
   }
 
   ensureLogsDir() {
-    if (!fs.existsSync(this.logsDir)) {
-      fs.mkdirSync(this.logsDir, { recursive: true });
+    const logsDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logsDir)) {
+      fs.mkdirSync(logsDir, { recursive: true });
     }
   }
 
@@ -27,131 +24,304 @@ class MasterAutomation {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
     console.log(logMessage);
-    
-    const logFile = path.join(this.logsDir, 'master-automation.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
+    fs.appendFileSync(this.logFile, logMessage + '\n');
   }
 
-  async runScript(scriptPath, args = []) {
+  async runCommand(command, description, options = {}) {
     try {
-      this.log(`Running script: ${scriptPath} ${args.join(' ')}`);
-      const { stdout, stderr } = await execAsync(`node ${scriptPath} ${args.join(' ')}`);
-      
-      if (stdout) {
-        this.log(`Output: ${stdout}`, 'info');
-      }
-      if (stderr) {
-        this.log(`Error: ${stderr}`, 'warn');
-      }
-      
+      this.log(`Running: ${description}`);
+      const { stdout, stderr } = await execAsync(command, {
+        cwd: process.cwd(),
+        timeout: 30000,
+        ...options
+      });
+      this.log(`✅ ${description} completed successfully`);
       return { success: true, stdout, stderr };
     } catch (error) {
-      this.log(`Failed to run ${scriptPath}: ${error.message}`, 'error');
-      this.status.errors.push({
-        script: scriptPath,
-        error: error.message,
-        timestamp: new Date().toISOString()
-      });
-      return { success: false, error: error.message };
+      this.log(`❌ ${description} failed: ${error.message}`, 'error');
+      return { 
+        success: false, 
+        stdout: error.stdout || "", 
+        stderr: error.stderr || "",
+        error: error.message
+      };
     }
+  }
+
+  async checkPM2Status() {
+    try {
+      const { stdout } = await this.runCommand("pm2 list --format json", "PM2 Status Check");
+      const processes = JSON.parse(stdout);
+      return processes.filter(p => p.status === "online").length > 0;
+    } catch (error) {
+      this.log(`PM2 status check failed: ${error.message}`, 'error');
+      return false;
+    }
+  }
+
+  async getPM2Processes() {
+    try {
+      const { stdout } = await this.runCommand("pm2 list --format json", "Get PM2 Processes");
+      return JSON.parse(stdout);
+    } catch (error) {
+      this.log(`Failed to get PM2 processes: ${error.message}`, 'error');
+      return [];
+    }
+  }
+
+  async startPM2Processes() {
+    this.log("Starting PM2 processes...");
+    for (const process of this.pm2Processes) {
+      try {
+        await this.runCommand(`pm2 start ecosystem.config.cjs --only ${process}`, `Start ${process}`);
+      } catch (error) {
+        this.log(`Failed to start ${process}: ${error.message}`, 'error');
+      }
+    }
+  }
+
+  async stopPM2Processes() {
+    this.log("Stopping PM2 processes...");
+    for (const process of this.pm2Processes) {
+      try {
+        await this.runCommand(`pm2 stop ${process}`, `Stop ${process}`);
+      } catch (error) {
+        this.log(`Failed to stop ${process}: ${error.message}`, 'error');
+      }
+    }
+  }
+
+  async restartPM2Processes() {
+    this.log("Restarting PM2 processes...");
+    await this.stopPM2Processes();
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    await this.startPM2Processes();
+  }
+
+  async getPM2Logs(processName, lines = 50) {
+    try {
+      const { stdout } = await this.runCommand(`pm2 logs ${processName} --lines ${lines} --nostream`, `Get logs for ${processName}`);
+      return stdout;
+    } catch (error) {
+      this.log(`Failed to get logs for ${processName}: ${error.message}`, 'error');
+      return "";
+    }
+  }
+
+  async performHealthCheck() {
+    this.log("Performing health check...");
+    
+    // Check if PM2 is running
+    const pm2Status = await this.checkPM2Status();
+    if (!pm2Status) {
+      this.log("PM2 is not running, attempting to start processes.");
+      await this.startPM2Processes();
+      return;
+    }
+
+    // Check individual processes
+    const processes = await this.getPM2Processes();
+    const expectedProcesses = this.pm2Processes.length;
+    const runningProcesses = processes.length;
+
+    if (runningProcesses < expectedProcesses) {
+      this.log(`Only ${runningProcesses}/${expectedProcesses} processes running, restarting.`);
+      await this.restartPM2Processes();
+    }
+
+    this.log("Health check completed.");
+  }
+
+  async runBuildProcess() {
+    this.log('🚀 Starting build process...');
+
+    const steps = [
+      { command: 'npm install', description: 'Installing dependencies' },
+      { command: 'npm run build', description: 'Building application' },
+      { command: 'npm run test:smoke', description: 'Running smoke tests' },
+    ];
+
+    const results = [];
+    for (const step of steps) {
+      const result = await this.runCommand(step.command, step.description);
+      results.push({ ...step, result });
+
+      if (!result.success) {
+        this.log(`❌ Build process failed at: ${step.description}`, 'error');
+        return { success: false, results };
+      }
+    }
+
+    this.log('✅ Build process completed successfully');
+    return { success: true, results };
+  }
+
+  async runQualityChecks() {
+    this.log('🔍 Running quality checks...');
+
+    const checks = [
+      { command: 'npm run lint', description: 'Linting check' },
+      { command: 'npm run type-check', description: 'TypeScript type check' },
+    ];
+
+    const results = [];
+    for (const check of checks) {
+      const result = await this.runCommand(check.command, check.description);
+      results.push({ ...check, result });
+    }
+
+    this.log('✅ Quality checks completed');
+    return { success: true, results };
+  }
+
+  async runAutomationScripts() {
+    this.log('🤖 Running automation scripts...');
+
+    const scripts = [
+      {
+        command: 'node automation/ai-intelligent-code-analyzer.cjs',
+        description: 'AI Code Analyzer',
+      },
+      {
+        command: 'node automation/intelligent-git-workflow.cjs',
+        description: 'Git Workflow Automation',
+      },
+      {
+        command: 'node automation/advanced-performance-optimizer.cjs',
+        description: 'Performance Optimizer',
+      },
+    ];
+
+    const results = [];
+    for (const script of scripts) {
+      const result = await this.runCommand(script.command, script.description);
+      results.push({ ...script, result });
+    }
+
+    this.log('✅ Automation scripts completed');
+    return { success: true, results };
+  }
+
+  async generateReport() {
+    this.log('📊 Generating automation report...');
+
+    const report = {
+      timestamp: new Date().toISOString(),
+      build: await this.runBuildProcess(),
+      quality: await this.runQualityChecks(),
+      automation: await this.runAutomationScripts(),
+      summary: {
+        totalScripts: 3,
+        successfulScripts: 0,
+        failedScripts: 0,
+      },
+    };
+
+    // Calculate summary
+    if (report.build.success) report.summary.successfulScripts++;
+    else report.summary.failedScripts++;
+
+    if (report.quality.success) report.summary.successfulScripts++;
+    else report.summary.failedScripts++;
+
+    if (report.automation.success) report.summary.successfulScripts++;
+    else report.summary.failedScripts++;
+
+    // Save report
+    const reportFile = path.join(
+      path.dirname(this.logFile),
+      `automation-report-${Date.now()}.json`
+    );
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+
+    this.log(`📄 Report saved to: ${reportFile}`);
+    return report;
   }
 
   async start() {
-    this.log('Starting Master Automation System...');
-    this.status.running = true;
-    this.status.lastRun = new Date().toISOString();
-
-    const scripts = [
-      'comprehensive-automation-runner.cjs',
-      'comprehensive-syntax-fixer.cjs',
-      'comprehensive-test-runner.cjs',
-      'performance-optimizer.cjs',
-      'security-scanner.cjs',
-      'code-quality-monitor.cjs'
-    ];
-
-    for (const script of scripts) {
-      const scriptPath = path.join(__dirname, script);
-      if (fs.existsSync(scriptPath)) {
-        const result = await this.runScript(scriptPath);
-        if (result.success) {
-          this.status.successes.push({
-            script: script,
-            timestamp: new Date().toISOString()
-          });
-        }
-      } else {
-        this.log(`Script not found: ${scriptPath}`, 'warn');
-      }
-    }
-
-    this.status.running = false;
-    this.log('Master Automation System completed');
-    return this.status;
+    this.log('🎯 Starting Master Automation System...');
+    const report = await this.generateReport();
+    this.log('🏁 Master Automation completed');
+    return report;
   }
 
-  async stop() {
-    this.log('Stopping Master Automation System...');
-    this.status.running = false;
-    return this.status;
-  }
+  async status() {
+    this.log('📊 Checking automation status...');
 
-  getStatus() {
-    return this.status;
-  }
-
-  async report() {
-    const report = {
+    const status = {
       timestamp: new Date().toISOString(),
-      status: this.status,
-      summary: {
-        totalScripts: this.status.successes.length + this.status.errors.length,
-        successful: this.status.successes.length,
-        failed: this.status.errors.length,
-        successRate: this.status.successes.length / (this.status.successes.length + this.status.errors.length) * 100
-      }
+      buildStatus: 'unknown',
+      gitStatus: 'unknown',
+      dependenciesStatus: 'unknown',
     };
 
-    const reportFile = path.join(this.logsDir, 'master-automation-report.json');
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    
-    this.log(`Report generated: ${reportFile}`);
-    return report;
+    // Check build status
+    try {
+      const buildResult = await this.runCommand('npm run build', 'Build check');
+      status.buildStatus = buildResult.success ? 'healthy' : 'failed';
+    } catch (_error) {
+      status.buildStatus = 'error';
+    }
+
+    // Check git status
+    try {
+      const gitResult = await this.runCommand(
+
+
+      );
+      status.gitStatus = gitResult.success ? 'clean' : 'dirty';
+    } catch (_error) {
+      status.gitStatus = 'error';
+    }
+
+    // Check dependencies
+    try {
+      const depsResult = await this.runCommand(
+
+
+      );
+      status.dependenciesStatus = depsResult.success ? 'installed' : 'missing';
+    } catch (_error) {
+      status.dependenciesStatus = 'error';
+    }
+
+    this.log('📊 Status check completed');
+    return status;
   }
 }
 
-// CLI Interface
+// CLI interface
 if (require.main === module) {
   const automation = new MasterAutomation();
   const command = process.argv[2];
 
   switch (command) {
     case 'start':
-      automation.start().then(() => {
-        console.log('Automation started successfully');
-        process.exit(0);
-      }).catch(error => {
-        console.error('Failed to start automation:', error);
-        process.exit(1);
-      });
-      break;
-    case 'stop':
-      automation.stop().then(() => {
-        console.log('Automation stopped');
-        process.exit(0);
-      });
+      automation
+        .start()
+        .then(report => {
+          console.log('Automation completed:', report.summary);
+          process.exit(0);
+        })
+        .catch(error => {
+          console.error('Automation failed:', error);
+          process.exit(1);
+        });
       break;
     case 'status':
-      console.log(JSON.stringify(automation.getStatus(), null, 2));
-      break;
-    case 'report':
-      automation.report().then(report => {
-        console.log(JSON.stringify(report, null, 2));
-        process.exit(0);
-      });
+      automation
+        .status()
+        .then(status => {
+          console.log('Status:', status);
+          process.exit(0);
+        })
+        .catch(error => {
+          console.error('Status check failed:', error);
+          process.exit(1);
+        });
       break;
     default:
-      console.log('Usage: node master-automation.cjs [start|stop|status|report]');
+      console.log('Usage: node master-automation.cjs [start|status]');
       process.exit(1);
   }
 }

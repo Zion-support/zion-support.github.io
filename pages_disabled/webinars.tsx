@@ -7,6 +7,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
+import {
   Calendar, 
   Clock, 
   User, 
@@ -132,6 +133,7 @@ const webinars = [
     image: "/images/webinars/devops.jpg",
     tags: ["DevOps", "CI/CD", "Automation"],
     description: "Master DevOps practices and tools to streamline your software development process. Learn about CI/CD pipelines, automation, monitoring, and how to build a culture of continuous improvement."
+import { 
   Calendar, 
   Clock, 
   User, 
@@ -693,6 +695,7 @@ export default function WebinarsPage() {
             {activeTab === 'past' && (
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredPast.map((webinar, index) => {
+                  const IconComponent = webinar.icon;
                   
                     >
                       <div className="h-48 bg-gradient-to-r from-gray-500 to-gray-600 flex items-center justify-center relative">

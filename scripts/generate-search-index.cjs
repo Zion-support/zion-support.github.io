@@ -51,6 +51,8 @@ class SearchIndexGenerator {
         const route = relativePath.replace(/\/page\.(js|tsx|ts)$/, '') || '/';
         await this.indexPage(fullPath, route);
       }
+    }
+  }
 
   async scanPagesDirectory(dir, basePath) {
     const items = fs.readdirSync(dir, { withFileTypes: true });
@@ -71,6 +73,9 @@ class SearchIndexGenerator {
         } else {
           await this.indexPage(fullPath, '/');
         }
+      }
+    }
+  }
 
   async scanComponentsDirectory(dir) {
     const items = fs.readdirSync(dir, { withFileTypes: true });
@@ -83,6 +88,8 @@ class SearchIndexGenerator {
       } else if (item.name.endsWith('.js') || item.name.endsWith('.tsx') || item.name.endsWith('.ts')) {
         await this.indexComponent(fullPath, item.name);
       }
+    }
+  }
 
   async indexPage(filePath, route) {
     try {
@@ -103,6 +110,7 @@ class SearchIndexGenerator {
     } catch (error) {
       console.warn(`Warning: Could not index page ${filePath}:`, error.message);
     }
+  }
 
   async indexComponent(filePath, fileName) {
     try {
@@ -123,6 +131,7 @@ class SearchIndexGenerator {
     } catch (error) {
       console.warn(`Warning: Could not index component ${filePath}:`, error.message);
     }
+  }
 
   extractTitle(content, route) {
     // Try to extract title from various sources
@@ -217,6 +226,8 @@ class SearchIndexGenerator {
           lastModified: new Date().toISOString()
         });
       }
+    }
+  }
 
   async generate() {
     console.log('🔍 Generating search index...');
@@ -242,6 +253,8 @@ class SearchIndexGenerator {
         error: error.message
       };
     }
+  }
+}
 
 // Run the search index generator
 if (require.main === module) {
