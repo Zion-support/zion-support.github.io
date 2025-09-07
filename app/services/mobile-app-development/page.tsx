@@ -2,7 +2,6 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-<<<<<<< HEAD
   title: 'Service | Zion Tech Group',
   description: 'Professional services for your business needs.',
   keywords: 'services, business, technology',
@@ -14,17 +13,10 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'Zion Tech Group',
   },
-=======
-  title: 'Mobile App Development - Zion Tech Group',
-  description: 'Professional mobile app development services to help your business grow and succeed.',
-  keywords: 'mobile app development, business solutions, professional services'
-
->>>>>>> origin/main
 };
 
 export default function ServicePage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50">
       <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -58,34 +50,3 @@ export default function ServicePage() {
     </div>
   );
 }
-=======
-    <div className="max-w-6xl mx-auto px-4 py-12">
-      <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Mobile App Development
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Professional mobile app development services to help your business grow and succeed.
-        </p>
-      </div>
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
-          Coming Soon
-        </h2>
-        <p className="text-lg text-gray-600 text-center">
-          This service is currently under development. Please contact us for more information.
-        </p>
-      </div>
-      <div className="text-center">
-        <a
-          href="mailto:kleber@ziontechgroup.com?subject=Mobile App Development Inquiry"
-          className="inline-block px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-        >
-          Contact Us
-        </a>
-      </div>
-    </div>
-  );
-}
-
->>>>>>> origin/main

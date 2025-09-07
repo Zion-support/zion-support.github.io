@@ -11,11 +11,7 @@ export default function ContactPage() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-<<<<<<< HEAD
   const [submitStatus, setSubmitStatus] = useState('');
-=======
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
->>>>>>> origin/main
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -222,8 +218,4 @@ export default function ContactPage() {
       </section>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/main
