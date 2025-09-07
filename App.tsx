@@ -1,6 +1,6 @@
 import React, { JSX } from 'react';
 import { motion } from 'framer-motion';
-import AccessibilityProvider from './components/AccessibilityProvider';
+import { AccessibilityProvider } from './components/AccessibilityProvider';
 import SEOHead from './components/SEOHead';
 import Analytics from './components/Analytics';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
@@ -26,39 +26,42 @@ export default function App(): JSX.Element {
           <section className="py-20 px-4 text-center relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-green-600/20 animate-pulse" />
             <div className="relative z-10 max-w-6xl mx-auto">
-              <motion.h1 
+              <motion.div 
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-6xl md:text-7xl font-extrabold tracking-tight mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-green-400 bg-clip-text text-transparent"
               >
-                Zion Tech Group
-              </motion.h1>
-              <motion.p 
+                <h1 className="text-6xl md:text-7xl font-extrabold tracking-tight mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-green-400 bg-clip-text text-transparent">
+                  Zion Tech Group
+                </h1>
+              </motion.div>
+              <motion.div 
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-2xl md:text-3xl text-slate-300 mb-8"
               >
-                Innovative Micro SaaS, AI Services & IT Solutions
-              </motion.p>
-              <motion.p 
+                <p className="text-2xl md:text-3xl text-slate-300 mb-8">
+                  Innovative Micro SaaS, AI Services & IT Solutions
+                </p>
+              </motion.div>
+              <motion.div 
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-lg text-slate-400 mb-12 max-w-4xl mx-auto leading-relaxed"
               >
-                Transform your business with our cutting-edge technology solutions. 
-                From AI-powered automation to cloud infrastructure, we deliver 
-                enterprise-grade solutions that drive growth and innovation.
-              </motion.p>
+                <p className="text-lg text-slate-400 mb-12 max-w-4xl mx-auto leading-relaxed">
+                  Transform your business with our cutting-edge technology solutions. 
+                  From AI-powered automation to cloud infrastructure, we deliver 
+                  enterprise-grade solutions that drive growth and innovation.
+                </p>
+              </motion.div>
               
               <motion.div 
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                className="flex flex-col sm:flex-row items-center justify-center gap-4"
               >
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a 
                   href="/contact" 
                   className="group px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2"
@@ -77,6 +80,7 @@ export default function App(): JSX.Element {
                   </svg>
                   Explore Services
                 </a>
+                </div>
               </motion.div>
             </div>
           </section>
@@ -88,8 +92,8 @@ export default function App(): JSX.Element {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
               >
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 {[
                   { number: "67+", label: "Services" },
                   { number: "500+", label: "Clients" },
@@ -103,6 +107,7 @@ export default function App(): JSX.Element {
                     <div className="text-slate-300">{stat.label}</div>
                   </div>
                 ))}
+                </div>
               </motion.div>
             </div>
           </section>
@@ -114,14 +119,15 @@ export default function App(): JSX.Element {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-center mb-16"
               >
+                <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6">
                   Our Services
                 </h2>
                 <p className="text-xl text-slate-400 max-w-3xl mx-auto">
                   Comprehensive technology solutions designed to accelerate your business growth
                 </p>
+                </div>
               </motion.div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -162,11 +168,12 @@ export default function App(): JSX.Element {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
-                    className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300 hover:scale-105"
                   >
+                    <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300 hover:scale-105">
                     <div className="text-4xl mb-4">{service.icon}</div>
                     <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
                     <p className="text-slate-400">{service.description}</p>
+                    </div>
                   </motion.div>
                 ))}
               </div>
