@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 import React from 'react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-=======
-import type { Metadata } from 'next';
-import React from 'react';
->>>>>>> 1b0ff75f26ae1bc706319f2d3337325807103eaa
 import './globals.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -80,13 +77,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-<<<<<<< HEAD
       <body className={inter.className}>
-=======
-      <body>
->>>>>>> 1b0ff75f26ae1bc706319f2d3337325807103eaa
-        <div className="min-h-screen bg-white">
-          {children}
+        <div className="min-h-screen bg-white flex flex-col">
+          <Header />
+          <main className="flex-grow">
+            {children}
+          </main>
+          <Footer />
         </div>
       </body>
     </html>

@@ -10,11 +10,20 @@ const nextConfig = {
   images: {
     domains: ['ziontechgroup.com', 'images.unsplash.com', 'via.placeholder.com'],
     formats: ['image/webp', 'image/avif'],
-    unoptimized: true
+    unoptimized: true,
+    minimumCacheTTL: 60,
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production'
   },
+  experimental: {
+    optimizePackageImports: ['@heroicons/react'],
+  },
+  poweredByHeader: false,
+  generateEtags: false,
+  compress: true,
   webpack: (config, { dev, isServer }) => {
     // Exclude problematic directories from webpack compilation
     config.watchOptions = {

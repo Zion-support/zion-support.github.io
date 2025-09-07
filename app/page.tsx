@@ -1,38 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function HomePage() {
-  return (
-    <div className="min-h-screen bg-white">
-      <main className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">
-          Welcome to Zion Tech Group
-        </h1>
-        <p className="text-lg text-gray-600 mb-8">
-          Leading provider of AI solutions, micro SaaS development, and enterprise IT services.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-gray-50 p-6 rounded-lg">
-            <h2 className="text-xl font-semibold mb-4">AI Solutions</h2>
-            <p className="text-gray-600">
-              Cutting-edge artificial intelligence solutions to transform your business.
-            </p>
-          </div>
-          <div className="bg-gray-50 p-6 rounded-lg">
-            <h2 className="text-xl font-semibold mb-4">Micro SaaS</h2>
-            <p className="text-gray-600">
-              Scalable micro SaaS applications built for modern businesses.
-            </p>
-          </div>
-          <div className="bg-gray-50 p-6 rounded-lg">
-            <h2 className="text-xl font-semibold mb-4">Enterprise IT</h2>
-            <p className="text-gray-600">
-              Comprehensive IT services and infrastructure solutions.
-            </p>
-          </div>
-        </div>
-      </main>
-=======
 import React from "react";
 import Link from "next/link";
 import { Metadata } from 'next';
@@ -110,6 +75,26 @@ function ServiceCard({
   );
 }
 
+function ContactCard({ icon, title, content, description, href }: {
+  icon: string;
+  title: string;
+  content: string;
+  description: string;
+  href: string;
+}) {
+  return (
+    <a
+      href={href}
+      className="group p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-blue-300 text-center"
+    >
+      <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">{icon}</div>
+      <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">{title}</h3>
+      <p className="text-lg font-medium text-gray-700 mb-2 group-hover:text-gray-900 transition-colors duration-300">{content}</p>
+      <p className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">{description}</p>
+    </a>
+  );
+}
+
 export default function HomePage() {
   return (
     <div className="space-y-16">
@@ -177,7 +162,7 @@ export default function HomePage() {
           />
           <ServiceCard
             title="AI & Machine Learning"
-            href="/services/ai-ml"
+            href="/services/ai-services"
             description="Intelligent automation, predictive analytics, and custom AI models tailored to your business needs."
             bullets={[
               "Custom AI models",
@@ -190,7 +175,7 @@ export default function HomePage() {
           />
           <ServiceCard
             title="Cloud Infrastructure"
-            href="/services/cloud"
+            href="/services/it-services"
             description="Scalable cloud solutions, DevOps, and infrastructure management for enterprise applications."
             bullets={[
               "AWS/Azure/GCP migration",
@@ -216,7 +201,7 @@ export default function HomePage() {
           />
           <ServiceCard
             title="Data Analytics"
-            href="/services/analytics"
+            href="/services/data-analytics"
             description="Transform raw data into actionable insights with advanced analytics and visualization tools."
             bullets={[
               "Data warehousing",
@@ -229,7 +214,7 @@ export default function HomePage() {
           />
           <ServiceCard
             title="Cybersecurity"
-            href="/services/security"
+            href="/services/cybersecurity"
             description="Comprehensive security solutions to protect your digital assets and ensure compliance."
             bullets={[
               "Security audits",
@@ -305,7 +290,7 @@ export default function HomePage() {
         </div>
       </section>
 
-          {/* Contact Information Section */}
+      {/* Contact Information Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 rounded-2xl relative overflow-hidden" aria-labelledby="contact-heading">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-l from-blue-100 to-transparent rounded-full filter blur-2xl opacity-30"></div>
@@ -408,62 +393,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Contact Information Section */}
-      <section className="py-16 bg-gray-50 rounded-lg" aria-labelledby="contact-heading">
-        <div className="text-center mb-12">
-          <h2 id="contact-heading" className="text-3xl font-bold text-gray-900 mb-4">
-            Get In Touch
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Ready to start your next project? Contact our team of experts for a free consultation.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          <ContactCard
-            icon="📞"
-            title="Phone"
-            content="+1 302 464 0950"
-            description="Call us for immediate assistance"
-            href="tel:+13024640950"
-          />
-          <ContactCard
-            icon="📧"
-            title="Email"
-            content="kleber@ziontechgroup.com"
-            description="Send us your project details"
-            href="mailto:kleber@ziontechgroup.com"
-          />
-          <ContactCard
-            icon="📍"
-            title="Address"
-            content="364 E Main St STE 1008"
-            description="Middletown, DE 19709"
-            href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
-          />
-        </div>
-      </section>
->>>>>>> 1b0ff75f26ae1bc706319f2d3337325807103eaa
     </div>
-  );
-}
-
-function ContactCard({ icon, title, content, description, href }: {
-  icon: string;
-  title: string;
-  content: string;
-  description: string;
-  href: string;
-}) {
-  return (
-    <a
-      href={href}
-      className="group p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-blue-300 text-center"
-    >
-      <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">{icon}</div>
-      <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">{title}</h3>
-      <p className="text-lg font-medium text-gray-700 mb-2 group-hover:text-gray-900 transition-colors duration-300">{content}</p>
-      <p className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">{description}</p>
-    </a>
   );
 }

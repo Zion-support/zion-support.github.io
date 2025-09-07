@@ -1,14 +1,11 @@
 import React from 'react';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
-=======
 
 export const metadata = {
   title: "Solutions | Zion Tech Group",
   description: "Comprehensive AI and technology solutions designed to transform your business operations.",
 };
->>>>>>> 1b0ff75f26ae1bc706319f2d3337325807103eaa
 
 export default function SolutionsPage() {
   const solutions = [
@@ -63,7 +60,6 @@ export default function SolutionsPage() {
           </p>
         </div>
 
-<<<<<<< HEAD
         <div className="max-w-6xl mx-auto">
           {/* Solutions Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -156,14 +152,6 @@ export default function SolutionsPage() {
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
               Let's discuss your specific needs and create a custom solution
               that drives real business value.
-=======
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          <div className="bg-gray-800 rounded-lg p-6 text-center">
-            <div className="text-4xl font-bold text-blue-400 mb-2">01</div>
-            <h3 className="text-xl font-bold text-white mb-4">Discovery & Assessment</h3>
-            <p className="text-gray-300">
-              We analyze your current systems, identify opportunities, and develop a comprehensive AI strategy.
->>>>>>> 1b0ff75f26ae1bc706319f2d3337325807103eaa
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -181,54 +169,6 @@ export default function SolutionsPage() {
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
-=======
-
-          <div className="bg-gray-800 rounded-lg p-6 text-center">
-            <div className="text-4xl font-bold text-blue-400 mb-2">02</div>
-            <h3 className="text-xl font-bold text-white mb-4">Solution Design</h3>
-            <p className="text-gray-300">
-              Our experts design custom AI solutions tailored to your specific business needs and objectives.
-            </p>
-          </div>
-
-          <div className="bg-gray-800 rounded-lg p-6 text-center">
-            <div className="text-4xl font-bold text-blue-400 mb-2">03</div>
-            <h3 className="text-xl font-bold text-white mb-4">Development & Testing</h3>
-            <p className="text-gray-300">
-              We develop and rigorously test your AI solution to ensure optimal performance and reliability.
-            </p>
-          </div>
-
-          <div className="bg-gray-800 rounded-lg p-6 text-center">
-            <div className="text-4xl font-bold text-blue-400 mb-2">04</div>
-            <h3 className="text-xl font-bold text-white mb-4">Deployment & Training</h3>
-            <p className="text-gray-300">
-              Seamless deployment with comprehensive training for your team to maximize solution adoption.
-            </p>
-          </div>
-        </div>
-
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let&apos;s discuss your project and discover how our solutions can accelerate your business growth.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact"
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-            >
-              Get Started
-            </a>
-            <a
-              href="/services"
-              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors"
-            >
-              View Services
-            </a>
-          </div>
->>>>>>> 1b0ff75f26ae1bc706319f2d3337325807103eaa
         </div>
       </div>
     </div>
