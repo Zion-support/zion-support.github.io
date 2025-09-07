@@ -155,7 +155,130 @@ export function AppHeader() {
                 ) : (
                   <Menu className="block h-6 w-6" aria-hidden="true" />
                 )}
-              </button>
+
+                {/* Services Mega Menu */}
+                {item.name === 'Services' && (
+                  <AnimatePresence>
+                    {servicesDropdownOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        transition={{ duration: 0.2 }}
+                        className="absolute top-full left-0 mt-2 w-screen max-w-7xl bg-gray-900/95 backdrop-blur-md border border-cyan-400/20 rounded-2xl shadow-2xl shadow-cyan-500/20 overflow-hidden"
+                        onMouseEnter={() => setServicesDropdownOpen(true)}
+                        onMouseLeave={() => setServicesDropdownOpen(false)}
+                      >
+                        <div className="p-8">
+                          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+                            {servicesCategories.map((category, index) => (
+                              <motion.div
+                                key={category.title}
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.3, delay: index * 0.1 }}
+                                className="group"
+                              >
+                                <div className="flex items-center space-x-3 mb-4">
+                                  <div className={`w-10 h-10 bg-gradient-to-r ${category.color} rounded-lg flex items-center justify-center`}>
+                                    <category.icon className="w-5 h-5 text-white" />
+                                  </div>
+                                  <div>
+                                    <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                                      {category.title}
+                                    </h3>
+                                    <p className="text-sm text-gray-400">{category.description}</p>
+                                  </div>
+                                </div>
+                                
+                                <div className="space-y-2">
+                                  {category.services.slice(0, 4).map((service) => (
+                                    <Link
+                                      key={service.name}
+                                      to={service.href}
+                                      className="block p-3 rounded-lg hover:bg-white/5 transition-colors group"
+                                    >
+                                      <div className="flex items-center justify-between">
+                                        <div className="flex-1">
+                                          <h4 className="text-sm font-medium text-white group-hover:text-cyan-400 transition-colors">
+                                            {service.name}
+                                          </h4>
+                                          <p className="text-xs text-gray-400 line-clamp-1">
+                                            {service.description}
+                                          </p>
+                                        </div>
+                                        <div className="text-right ml-3">
+                                          <div className="text-sm font-semibold text-cyan-400">
+                                            {service.price}
+                                          </div>
+                                          <div className="flex items-center text-xs text-gray-400">
+                                            <Star className="w-3 h-3 text-yellow-400 fill-current mr-1" />
+                                            {service.rating}
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </Link>
+                                  ))}
+                                  
+                                  {category.services.length > 4 && (
+                                    <Link
+                                      to="/comprehensive-services-showcase-2025"
+                                      className="block text-center p-2 text-sm text-cyan-400 hover:text-cyan-300 transition-colors"
+                                    >
+                                      View all {category.services.length} services →
+                                    </Link>
+                                  )}
+                                </div>
+                              </motion.div>
+                            ))}
+                          </div>
+                          
+                          {/* Quick Actions */}
+                          <div className="mt-8 pt-6 border-t border-white/10">
+                            <div className="flex items-center justify-between">
+                              <div className="flex items-center space-x-6">
+                                {quickLinks.slice(0, 3).map((link) => (
+                                  <Link
+                                    key={link.name}
+                                    to={link.href}
+                                    className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors"
+                                  >
+                                    <link.icon className="w-4 h-4" />
+                                    <span className="text-sm">{link.name}</span>
+                                  </Link>
+                                ))}
+                              </div>
+                              <Link
+                                to="/comprehensive-services-showcase-2025"
+                                className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
+                              >
+                                View All Services
+                              </Link>
+                            </div>
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                )}
+              </div>
+            ))}
+          </nav>
+
+          {/* Right side actions */}
+          <div className="flex items-center space-x-4">
+            {/* Search */}
+            <div className="hidden md:block">
+              <form onSubmit={handleSearch} className="relative">
+                <input
+                  type="text"
+                  placeholder="Search services..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-64 px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                />
+                <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+              </form>
             </div>
             <ModeToggle />
           </div>
