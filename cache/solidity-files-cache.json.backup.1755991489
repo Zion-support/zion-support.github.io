@@ -13,10 +13,10 @@
           "optimizer": {
             "enabled": false,
             "runs": 200
-
+          },
           "outputSelection": {
           },          "outputSelection": {
-
+          },          "outputSelection": {
             "*": {
               "*": [
                 "abi",
@@ -54,10 +54,10 @@
           "optimizer": {
             "enabled": false,
             "runs": 200
-
+          },
           "outputSelection": {
           },          "outputSelection": {
-
+          },          "outputSelection": {
             "*": {
               "*": [
                 "abi",
@@ -96,10 +96,10 @@
           "optimizer": {
             "enabled": false,
             "runs": 200
-
+          },
           "outputSelection": {
           },          "outputSelection": {
-
+          },          "outputSelection": {
             "*": {
               "*": [
                 "abi",
@@ -169,10 +169,10 @@
           "optimizer": {
             "enabled": false,
             "runs": 200
-
+          },
           "outputSelection": {
           },          "outputSelection": {
-
+          },          "outputSelection": {
             "*": {
               "*": [
                 "abi",
@@ -209,10 +209,10 @@
           "optimizer": {
             "enabled": false,
             "runs": 200
-
+          },
           "outputSelection": {
           },          "outputSelection": {
-
+          },          "outputSelection": {
             "*": {
               "*": [
                 "abi",
@@ -235,10 +235,10 @@
       ],
       "artifacts": [
         "IZkBallotView",
-
+        "ZkTreasury"
       ]
         "ZkTreasury"      ]
-
+        "ZkTreasury"      ]
     }
   }
 }

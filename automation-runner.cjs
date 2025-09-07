@@ -81,7 +81,6 @@ class AutomationRunner {
 
   async runLinting() {
     this.log('Running linting...', 'PROGRESS');
-    
     const lintResult = await this.runCommand(
       'npm run lint',
       'ESLint check',
@@ -106,7 +105,6 @@ class AutomationRunner {
 
   async runBuild() {
     this.log('Building application...', 'PROGRESS');
-    
     const buildResult = await this.runCommand(
       'npm run build',
       'Next.js build',
@@ -123,7 +121,6 @@ class AutomationRunner {
 
   async runSecurityAudit() {
     this.log('Running security audit...', 'PROGRESS');
-    
     const auditResult = await this.runCommand(
       'npm audit --audit-level=moderate',
       'Security audit',
@@ -218,7 +215,6 @@ console.log('Performance report generated:', reportPath);
 
   async runAllAutomations() {
     this.log('🚀 Starting comprehensive automation...', 'PROGRESS');
-    
     try {
       await this.runTests();
       await this.runLinting();

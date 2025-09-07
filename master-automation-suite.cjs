@@ -1,27 +1,19 @@
 #!/usr/bin/env node
-
+const { execSync } = require("child_process");
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
 class MasterAutomationSuite {
   constructor() {
-    this.startTime = Date.now();
+    this.projectRoot = process.cwd();
+    this.startTime = new Date();
     this.results = {
-      builds: { success: 0, failed: 0 },
-      tests: { passed: 0, failed: 0 },
-      optimizations: { applied: 0, errors: 0 },
-      security: { issues: 0, fixed: 0 },
-      improvements: []
+      suites: [],
+      totalDuration: 0,
+      successCount: 0,
+      errorCount: 0,
+      reports: []
     };
-    this.logDir = path.join(__dirname, 'automation', 'logs');
-    this.ensureLogDir();
-  }
-
-  ensureLogDir() {
-    if (!fs.existsSync(this.logDir)) {
-      fs.mkdirSync(this.logDir, { recursive: true });
-    }
   }
 
   log(message, type = 'INFO') {
@@ -36,14 +28,16 @@ class MasterAutomationSuite {
     console.log(`${prefix} [${timestamp}] ${message}`);
   }
 
-  async runCommand(command, description, timeout = 30000) {
+  async runCommand(command, description, options = {}) {
     this.log(`Running: ${description}`, 'PROGRESS');
     try {
-      const result = execSync(command, { 
-        encoding: 'utf8', 
+      const result = execSync(command, {
+        cwd: this.projectRoot,
         stdio: 'pipe',
-        timeout: timeout,
-        cwd: process.cwd()
+        encoding: 'utf8',
+        timeout: 600000, // 10 minutes timeout
+        maxBuffer: 1024 * 1024 * 10,
+        ...options,
       });
       this.log(`${description} completed successfully`, 'SUCCESS');
       return { success: true, output: result };
@@ -53,290 +47,169 @@ class MasterAutomationSuite {
     }
   }
 
-  async runBuildProcess() {
-    this.log('🏗️ Starting build process...', 'PROGRESS');
-    
-    const buildResult = await this.runCommand('npm run build', 'Application Build', 120000);
-    if (buildResult.success) {
-      this.results.builds.success++;
-      this.log('Build completed successfully', 'SUCCESS');
-    } else {
-      this.results.builds.failed++;
-      this.log('Build failed', 'ERROR');
-    }
-    
-    return buildResult.success;
-  }
-
-  async runSecurityAudit() {
-    this.log('🔒 Running security audit...', 'PROGRESS');
-    
-    const auditResult = await this.runCommand('npm audit --audit-level=moderate', 'Security Audit', 30000);
-    if (auditResult.success) {
-      this.log('No security issues found', 'SUCCESS');
-    } else {
-      this.results.security.issues++;
-      
-      // Try to fix automatically
-      const fixResult = await this.runCommand('npm audit fix', 'Security Fix', 30000);
-      if (fixResult.success) {
-        this.results.security.fixed++;
-        this.log('Security issues fixed automatically', 'SUCCESS');
-      }
-    }
-  }
-
-  async optimizePerformance() {
-    this.log('⚡ Optimizing performance...', 'PROGRESS');
+  async runSuite(suiteName, command) {
+    this.log(`🚀 Starting ${suiteName}...`, 'PROGRESS');
+    const suiteStartTime = Date.now();
     
     try {
-      // Create performance optimization config
-      const perfConfig = {
-        bundleAnalysis: true,
-        codeSplitting: true,
-        imageOptimization: true,
-        caching: true,
-        compression: true
+      const result = await this.runCommand(command, suiteName);
+      const suiteDuration = Date.now() - suiteStartTime;
+      
+      const suiteResult = {
+        name: suiteName,
+        success: result.success,
+        duration: suiteDuration,
+        error: result.error || null
       };
       
-      fs.writeFileSync('performance-config.json', JSON.stringify(perfConfig, null, 2));
-      this.results.optimizations.applied++;
-      this.log('Performance configuration created', 'SUCCESS');
+      this.results.suites.push(suiteResult);
       
-      // Create service worker for caching
-      const serviceWorker = `
-// Service Worker for caching
-const CACHE_NAME = 'zion-tech-v1';
-const urlsToCache = [
-  '/',
-  '/static/js/bundle.js',
-  '/static/css/main.css'
-];
-
-self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then((cache) => cache.addAll(urlsToCache))
-  );
-});
-
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request)
-      .then((response) => {
-        return response || fetch(event.request);
-      })
-  );
-});
-`;
+      if (result.success) {
+        this.results.successCount++;
+        this.log(`✅ ${suiteName} completed successfully in ${suiteDuration}ms`, 'SUCCESS');
+      } else {
+        this.results.errorCount++;
+        this.log(`❌ ${suiteName} failed: ${result.error}`, 'ERROR');
+      }
       
-      fs.writeFileSync('public/sw.js', serviceWorker);
-      this.results.optimizations.applied++;
-      this.log('Service worker created', 'SUCCESS');
-      
+      return suiteResult;
     } catch (error) {
-      this.results.optimizations.errors++;
-      this.log(`Performance optimization error: ${error.message}`, 'ERROR');
+      const suiteDuration = Date.now() - suiteStartTime;
+      this.results.errorCount++;
+      this.log(`❌ ${suiteName} failed with exception: ${error.message}`, 'ERROR');
+      
+      const suiteResult = {
+        name: suiteName,
+        success: false,
+        duration: suiteDuration,
+        error: error.message
+      };
+      
+      this.results.suites.push(suiteResult);
+      return suiteResult;
     }
   }
 
-  async createImprovements() {
-    this.log('🚀 Creating improvements...', 'PROGRESS');
+  async runAllSuites() {
+    this.log("🎯 Starting Master Automation Suite...", 'PROGRESS');
     
-    const improvements = [
+    const suites = [
       {
-        name: 'Error Boundary Component',
-        file: 'src/components/ErrorBoundary.tsx',
-        content: `import React from 'react';
-
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error?: Error;
-}
-
-interface ErrorBoundaryProps {
-  children: React.ReactNode;
-  fallback?: React.ComponentType<{ error?: Error }>;
-}
-
-class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      const FallbackComponent = this.props.fallback;
-      return FallbackComponent ? <FallbackComponent error={this.state.error} /> : (
-        <div className="error-boundary">
-          <h2>Something went wrong.</h2>
-          <p>Please refresh the page and try again.</p>
-        </div>
-      );
-    }
-
-    return this.props.children;
-  }
-}
-
-export default ErrorBoundary;`
+        name: "Comprehensive Automation Suite",
+        command: "node comprehensive-automation-suite.cjs"
       },
       {
-        name: 'Performance Monitor Hook',
-        file: 'src/hooks/usePerformanceMonitor.ts',
-        content: `import { useEffect, useState } from 'react';
-
-interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-}
-
-export const usePerformanceMonitor = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-
-  useEffect(() => {
-    const measurePerformance = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-      
-      const renderTime = performance.now();
-      
-      const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0;
-
-      setMetrics({
-        loadTime,
-        renderTime,
-        memoryUsage
-      });
-    };
-
-    if (typeof window !== 'undefined') {
-      measurePerformance();
-    }
-  }, []);
-
-  return metrics;
-};`
+        name: "Performance Optimization Suite",
+        command: "node performance-optimization-suite.cjs"
       },
       {
-        name: 'SEO Meta Component',
-        file: 'src/components/SEOMeta.tsx',
-        content: `import React from 'react';
-
-interface SEOMetaProps {
-  title: string;
-  description: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-}
-
-const SEOMeta: React.FC<SEOMetaProps> = ({
-  title,
-  description,
-  keywords,
-  image,
-  url
-}) => {
-  return (
-    <>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      {image && <meta property="og:image" content={image} />}
-      {url && <meta property="og:url" content={url} />}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      {image && <meta name="twitter:image" content={image} />}
-    </>
-  );
-};
-
-export default SEOMeta;`
+        name: "Security Enhancement Suite",
+        command: "node security-enhancement-suite.cjs"
+      },
+      {
+        name: "SEO Optimization Suite",
+        command: "node seo-optimization-suite.cjs"
+      },
+      {
+        name: "Accessibility Enhancement Suite",
+        command: "node accessibility-enhancement-suite.cjs"
+      },
+      {
+        name: "Final Automation Suite",
+        command: "node final-automation-suite-fixed.cjs"
       }
     ];
 
-    for (const improvement of improvements) {
-      try {
-        const dir = path.dirname(improvement.file);
-        if (!fs.existsSync(dir)) {
-          fs.mkdirSync(dir, { recursive: true });
+    for (const suite of suites) {
+      await this.runSuite(suite.name, suite.command);
+    }
+  }
+
+  async collectReports() {
+    this.log("📊 Collecting all reports...", 'PROGRESS');
+    
+    const reportFiles = [
+      'automation-report.json',
+      'performance-optimization-report.json',
+      'security-enhancement-report.json',
+      'seo-optimization-report.json',
+      'accessibility-enhancement-report.json'
+    ];
+
+    for (const reportFile of reportFiles) {
+      if (fs.existsSync(reportFile)) {
+        try {
+          const reportContent = fs.readFileSync(reportFile, 'utf8');
+          const report = JSON.parse(reportContent);
+          this.results.reports.push({
+            file: reportFile,
+            data: report
+          });
+          this.log(`✅ Collected report: ${reportFile}`, 'SUCCESS');
+        } catch (error) {
+          this.log(`❌ Failed to collect report ${reportFile}: ${error.message}`, 'ERROR');
         }
-        
-        fs.writeFileSync(improvement.file, improvement.content);
-        this.results.improvements.push(improvement.name);
-        this.log(`Created: ${improvement.name}`, 'SUCCESS');
-      } catch (error) {
-        this.log(`Failed to create ${improvement.name}: ${error.message}`, 'ERROR');
       }
     }
   }
 
-  async runAllAutomations() {
-    this.log('🚀 Starting Master Automation Suite...', 'PROGRESS');
+  async generateMasterReport() {
+    this.log("📊 Generating master report...", 'PROGRESS');
     
+    this.results.totalDuration = Date.now() - this.startTime;
+    
+    const masterReport = {
+      timestamp: new Date().toISOString(),
+      totalDuration: `${this.results.totalDuration}ms`,
+      summary: {
+        totalSuites: this.results.suites.length,
+        successfulSuites: this.results.successCount,
+        failedSuites: this.results.errorCount,
+        successRate: this.results.suites.length > 0 ? 
+          ((this.results.successCount / this.results.suites.length) * 100).toFixed(2) + '%' : '0%'
+      },
+      suites: this.results.suites,
+      reports: this.results.reports,
+      recommendations: [
+        "All automation suites have been executed",
+        "Review individual reports for detailed insights",
+        "Address any failed suites before deployment",
+        "Monitor performance metrics regularly",
+        "Keep security configurations up to date",
+        "Maintain SEO optimizations",
+        "Ensure accessibility compliance",
+        "Schedule regular automation runs"
+      ]
+    };
+    
+    fs.writeFileSync('master-automation-report.json', JSON.stringify(masterReport, null, 2));
+    this.log("📊 Master report saved to master-automation-report.json", 'SUCCESS');
+  }
+
+  async run() {
     try {
-      await this.runBuildProcess();
-      await this.runSecurityAudit();
-      await this.optimizePerformance();
-      await this.createImprovements();
+      await this.runAllSuites();
+      await this.collectReports();
+      await this.generateMasterReport();
       
-      this.generateFinalReport();
+      this.log("🎉 Master Automation Suite completed successfully!", 'SUCCESS');
+      this.log(`📊 Summary: ${this.results.successCount}/${this.results.suites.length} suites successful`, 'INFO');
+      
+      if (this.results.errorCount > 0) {
+        this.log(`⚠️ ${this.results.errorCount} suites failed - check individual reports for details`, 'WARNING');
+      }
+      
     } catch (error) {
-      this.log(`Automation suite failed: ${error.message}`, 'ERROR');
+      this.log(`❌ Master Automation Suite failed: ${error.message}`, 'ERROR');
+      await this.generateMasterReport();
       process.exit(1);
     }
   }
-
-  generateFinalReport() {
-    const duration = Date.now() - this.startTime;
-    const report = {
-      timestamp: new Date().toISOString(),
-      duration: `${Math.round(duration / 1000)}s`,
-      results: this.results,
-      summary: {
-        buildsSuccessful: this.results.builds.success,
-        buildsFailed: this.results.builds.failed,
-        optimizationsApplied: this.results.optimizations.applied,
-        securityIssuesFixed: this.results.security.fixed,
-        improvementsCreated: this.results.improvements.length,
-        totalDuration: `${Math.round(duration / 1000)}s`
-      }
-    };
-
-    const reportPath = path.join(process.cwd(), 'master-automation-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    this.log('📊 Master Automation Suite Completed', 'SUCCESS');
-    this.log(`✅ Builds Successful: ${report.summary.buildsSuccessful}`);
-    this.log(`❌ Builds Failed: ${report.summary.buildsFailed}`);
-    this.log(`⚡ Optimizations Applied: ${report.summary.optimizationsApplied}`);
-    this.log(`🔒 Security Issues Fixed: ${report.summary.securityIssuesFixed}`);
-    this.log(`🚀 Improvements Created: ${report.summary.improvementsCreated}`);
-    this.log(`⏱️ Total Duration: ${report.summary.totalDuration}`);
-  }
 }
 
-// Run if called directly
 if (require.main === module) {
   const suite = new MasterAutomationSuite();
-  suite.runAllAutomations().catch(error => {
-    console.error('Master automation suite failed:', error);
-    process.exit(1);
-  });
+  suite.run().catch(console.error);
 }
 
 module.exports = MasterAutomationSuite;

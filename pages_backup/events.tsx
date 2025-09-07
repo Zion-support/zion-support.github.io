@@ -1,16 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
->>>>>>> pr-12243
-}
-=======
 }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react',
 import SEO from '../components / SEO',
 export default /**
@@ -27,7 +17,6 @@ return (
   </>);
 }
 
-
 		<>
 			<SEO title=&quot;Events | Zion Tech Group&quot; description=&quot;Upcoming events and conferences.&quot; canonical=&quot;/events&quot; />
 			<div className=&quot;container mx-auto px-4 py-16&quot;>
@@ -36,50 +25,20 @@ return (
 			</div>
 		</>
 	)
-}
-	);}
+});}
 
 import React from 'react';
 import SEO from '../components/SEO';
 export default function EventsPage() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-	return (
-		<>
-			<SEO title="Events | Zion Tech Group" description="Upcoming events and conferences." canonical="/events" />
-			<div className="container mx-auto px-4 py-16">
-				<h1 className="text-4xl font-bold mb-4">Events</h1>
-				<p className="text-gray-300">No upcoming events at this time. Check back soon.</p>
-			</div>
-		</>
-	)
-}
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
-=======
 
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
@@ -97,10 +56,6 @@ export default function EventsPage() {
         </p>
       </div>
     </>
-  );
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> pr-12243
-=======
+
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+  );

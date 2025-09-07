@@ -1,9 +1,8 @@
+#!/usr/bin/env node
 const { execSync } = require('child_process');
 const fs = require('fs');
-
 console.log('🚀 Master Automation System Starting...');
-
-const automationScripts = [
+const automationScripts = [;
   {
     name: 'Health Check',
     script: 'node scripts/health-check.cjs',
@@ -30,17 +29,13 @@ const automationScripts = [
     critical: true
   }
 ];
-
 let passed = 0;
 let failed = 0;
 let criticalFailed = 0;
-
 console.log('\n📋 Running Automation Scripts...');
-
 automationScripts.forEach(({ name, script, critical }) => {
   console.log(`\n🔧 Running: ${name}`);
   console.log(`   Command: ${script}`);
-  
   try {
     execSync(script, { stdio: 'inherit' });
     console.log(`✅ ${name} completed successfully`);
@@ -53,12 +48,10 @@ automationScripts.forEach(({ name, script, critical }) => {
     }
   }
 });
-
 console.log('\n📊 Automation Summary');
 console.log(`✅ Passed: ${passed}`);
 console.log(`❌ Failed: ${failed}`);
 console.log(`🚨 Critical Failed: ${criticalFailed}`);
-
 if (criticalFailed > 0) {
   console.log('\n⚠️  Critical automation scripts failed. Please fix issues before proceeding.');
   process.exit(1);
@@ -67,6 +60,5 @@ if (criticalFailed > 0) {
 } else {
   console.log('\n🎉 All automation scripts completed successfully!');
 }
-
 console.log('\n📁 Logs and reports available in automation-reports/ directory');
 console.log('🔍 Check individual script outputs for detailed information');

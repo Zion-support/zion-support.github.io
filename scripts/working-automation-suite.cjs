@@ -1,24 +1,12 @@
-
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
-=======
-
-
-
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+#!/usr/bin/env node;
+### Successful Operations
+${report.results.success.map(item => `- ${item}`).join("\n")}
+### Errors
+${report.results.errors.map(item => `- ${item}`).join("\n")}
+### Warnings
+${report.results.warnings.map(item => `- ${item}`).join("\n")}
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 // console.log(' Zion Tech Group - Working Automation Suite')
-

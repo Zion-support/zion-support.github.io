@@ -1,112 +1,20 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<<< HEAD:scripts/master-automation-orchestrator.cjs
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/master-automation-orchestrator.cjs
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-<<<<<<< HEAD
-=======
-<<<<<<<< HEAD:scripts/master-automation-orchestrator.cjs
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/master-automation-orchestrator.cjs
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
-
-
-<<<<<<< HEAD
 main
 
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
-<<<<<<< HEAD
-
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 #!/usr/bin/env node;
-
-<>#!/usr/bin/env node;
-
-
-<:scripts/master-automation-orchestrator.cjs
->#!/usr/bin/env node;
-
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 // console.log(' Starting Master Automation Orchestrator...')
 console.log('=====')
-<<<<<<< HEAD
-    "status"
-      "encoding"
-      "stdio"
-const metricsResult = runCommand('Metrics Generation', 'echo "Generating final metrics...")
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   console.log('\n "Recommendations")
-<<<<<<< HEAD
-
-    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-    this.logFile = path.join(this.reportsDir, 'master-automation.log');
-=======
-=======
 #!/usr/bin/env node
->>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 class MasterAutomationOrchestrator {
   constructor() {
     this.projectRoot = process.cwd();
@@ -120,7 +28,6 @@ class MasterAutomationOrchestrator {
       improvements: [],
       errors: []
     };
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     this.ensureDirectories();
   }
 
@@ -130,11 +37,6 @@ class MasterAutomationOrchestrator {
     }
   }
 
-<<<<<<< HEAD
-  log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}`;
-=======
   log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
     const prefix = {
@@ -144,22 +46,29 @@ class MasterAutomationOrchestrator {
       'WARNING': '⚠️',
       'PROGRESS': '🔄'
     }[type] || 'ℹ️';
+    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
+    this.logFile = path.join(this.reportsDir, 'master-automation.log');
+    this.ensureDirectories();
+  }
+
+  ensureDirectories() {
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+    }
+  }
+
+  log(message) {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}`;
     const logMessage = `${prefix} [${timestamp}] ${message}`;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     console.log(logMessage);
     fs.appendFileSync(this.logFile, logMessage + '\n');
   }
 
-<<<<<<< HEAD
-  async runCommand(command, description) {
-    this.log(`🚀 Starting: ${description}`);
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
   async runCommand(command, description, options = {}) {
     this.log(`Running: ${description}`);
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  async runCommand(command, description, options = {}) {
+    this.log(`Running: ${description}`);
     try {
       const result = execSync(command, {
         cwd: this.projectRoot,
@@ -167,13 +76,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
         encoding: 'utf8',
         ...options,
       });
-<<<<<<< HEAD
-<<<<<<< HEAD
-      this.log(`✅ Completed: ${description}`);
-      return { success: true, output: result };
-    } catch (error) {
-      this.log(`❌ Failed: ${description} - ${error.message}`);
-=======
       this.log(`✅ ${description} completed successfully`, 'SUCCESS');
       return { success: true, output: result };
     } catch (error) {
@@ -211,7 +113,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     } catch (error) {
       this.log(`❌ Error running ${description}: ${error.message}`, 'ERROR');
       this.results.errors.push(`${description}: ${error.message}`);
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       return { success: false, error: error.message };
     }
   }
@@ -438,13 +339,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       return { success, report, failedAutomations };
     } catch (error) {
       this.log(`❌ Master automation orchestration failed: ${error.message}`);
-<<<<<<< HEAD
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return { success: false, error: error.message };
     }
   }
@@ -639,64 +534,29 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Run the automation
-if (require.main === module) {
-  const automation = new MasterAutomationOrchestrator();
-  automation.run().then(result => {
-    if (result.success) {
-=======
 // Run the master automation orchestrator
 if (require.main === module) {
   const orchestrator = new MasterAutomationOrchestrator();
   orchestrator.run().then(result => {
     if (result && result.success) {
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       console.log('✅ Master automation orchestration completed successfully');
       process.exit(0);
     } else {
       console.log('❌ Master automation orchestration failed');
       process.exit(1);
     }
-<<<<<<< HEAD
-  });
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-}
-
-module.exports = MasterAutomationOrchestrator;
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/master-automation-orchestrator.cjs
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 >origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/master-automation-orchestrator.cjs
 main
 
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
+>origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/master-automation-orchestrator.cjs
+main
+
   console.log('\n "Recommendations")
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
   }).catch(console.error);
 }
 
 module.exports = MasterAutomationOrchestrator;
->>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 }
 
@@ -707,4 +567,3 @@ module.exports = MasterAutomationOrchestrator;
 
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,144 +1,97 @@
 #!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 
-// Common fixes for service pages
-function fixServicePage(content, filePath) {
-  let fixed = content;
-  let changes = 0;
+const servicesDir = path.join(process.cwd(), 'app', 'services');
 
-  // Fix malformed metadata exports
-  if (fixed.includes('title:') && !fixed.includes('export const metadata')) {
-    // Find the title line and wrap it in metadata export
-    const titleMatch = fixed.match(/title:\s*['"`]([^'"`]+)['"`]/);
-    const descMatch = fixed.match(/description:\s*['"`]([^'"`]+)['"`]/);
-    const keywordsMatch = fixed.match(/keywords:\s*['"`]([^'"`]+)['"`]/);
-    if (titleMatch) {
-      const title = titleMatch[1];
-      const description = descMatch ? descMatch[1] : 'Professional services for your business needs.';
-      const keywords = keywordsMatch ? keywordsMatch[1] : 'services, business, technology';
-      // Remove the malformed metadata lines
-      fixed = fixed.replace(/title:\s*['"`][^'"`]+['"`][,\s]*/g, '');
-      fixed = fixed.replace(/description:\s*['"`][^'"`]+['"`][,\s]*/g, '');
-      fixed = fixed.replace(/keywords:\s*['"`][^'"`]+['"`][,\s]*/g, '');
-      // Add proper metadata export at the top
-      const metadataExport = `export const metadata = {
-  title: '${title}',
-  description: '${description}',
-  keywords: '${keywords}'
-};
+// Get all service directories
+const serviceDirs = fs.readdirSync(servicesDir, { withFileTypes: true })
+  .filter(dirent => dirent.isDirectory())
+  .map(dirent => dirent.name);
 
-`;
-      // Insert after imports
-      const importEnd = fixed.lastIndexOf('import');
-      if (importEnd !== -1) {
-        const nextLine = fixed.indexOf('\n', importEnd);
-        fixed = fixed.slice(0, nextLine + 1) + metadataExport + fixed.slice(nextLine + 1);
-        changes++;
-      }
-    }
-  }
+console.log(`Found ${serviceDirs.length} service directories`);
 
-  // Fix duplicate imports
-  const importLines = fixed.split('\n').filter(line => line.trim().startsWith('import'));
-  const uniqueImports = [...new Set(importLines)];
-  if (importLines.length !== uniqueImports.length) {
-    // Remove all import lines and add unique ones
-    fixed = fixed.replace(/import\s+.*?from\s+['"`][^'"`]+['"`];?\s*\n/g, '');
-    fixed = uniqueImports.join('\n') + '\n\n' + fixed;
-    changes++;
-  }
+// Template for a clean service page
+const createServicePage = (serviceName, title) => `import React from 'react'
+import { Metadata } from 'next'
 
-  // Fix extra closing braces
-  const openBraces = (fixed.match(/\{/g) || []).length;
-  const closeBraces = (fixed.match(/\}/g) || []).length;
-  if (closeBraces > openBraces) {
-    const extraBraces = closeBraces - openBraces;
-    // Remove extra closing braces at the end
-    for (let i = 0; i < extraBraces; i++) {
-      fixed = fixed.replace(/\}\s*$/, '');
-    }
-    changes++;
-  }
-
-  // Fix merge conflict markers
-  if (fixed.includes('<<<<<<<') || fixed.includes('') || fixed.includes('>>>>>>>')) {
-    // Remove merge conflict markers and keep the HEAD version
-    fixed = fixed.replace(/
-    changes++;
-  }
-
-  // Fix malformed function declarations
-  if (fixed.includes('export default function') && fixed.includes('return (')) {
-    // Check if there are duplicate function declarations
-    const functionMatches = fixed.match(/export default function/g);
-    if (functionMatches && functionMatches.length > 1) {
-      // Keep only the first function declaration
-      const firstFunction = fixed.indexOf('export default function');
-      const secondFunction = fixed.indexOf('export default function', firstFunction + 1);
-      if (secondFunction !== -1) {
-        fixed = fixed.slice(0, secondFunction);
-        changes++;
-      }
-    }
-  }
-
-  // Fix JSX structure issues
-  if (fixed.includes('</div>') && fixed.includes('function FeatureItem')) {
-    // Move function declarations outside of JSX
-    const functionMatch = fixed.match(/function FeatureItem\([^)]*\)\s*\{[^}]*\}/s);
-    if (functionMatch) {
-      const functionCode = functionMatch[0];
-      fixed = fixed.replace(functionCode, '');
-      // Add function before the main component
-      const componentStart = fixed.indexOf('export default function');
-      if (componentStart !== -1) {
-        fixed = fixed.slice(0, componentStart) + functionCode + '\n\n' + fixed.slice(componentStart);
-        changes++;
-      }
-    }
-  }
-
-  return { content: fixed, changes };
+export const metadata: Metadata = {
+  title: '${title} | Zion Tech Group',
+  description: 'Professional ${serviceName} services for your business needs.',
+  keywords: '${serviceName}, services, business, technology'
 }
 
-// Process all service pages
-function processServicePages() {
-  const servicesDir = path.join(__dirname, 'app', 'services');
-  const files = [];
-  function findServicePages(dir) {
-    const items = fs.readdirSync(dir);
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      if (stat.isDirectory()) {
-        findServicePages(fullPath);
-      } else if (item === 'page.tsx') {
-        files.push(fullPath);
-      }
-    }
-  }
-  findServicePages(servicesDir);
-  console.log(`Found ${files.length} service pages to process...`);
-  let totalChanges = 0;
-  let processedFiles = 0;
-  for (const filePath of files) {
+export default function ServicePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            ${title}
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Professional ${serviceName} services for your business needs.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">🚀</div>
+            <h3 className="text-xl font-bold text-white mb-4">Fast & Reliable</h3>
+            <p className="text-gray-300">
+              High-performance solutions that deliver results quickly and consistently.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">🔧</div>
+            <h3 className="text-xl font-bold text-white mb-4">Easy Integration</h3>
+            <p className="text-gray-300">
+              Seamlessly integrate with your existing systems and workflows.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">📈</div>
+            <h3 className="text-xl font-bold text-white mb-4">Scalable Solutions</h3>
+            <p className="text-gray-300">
+              Grow with your business with our flexible and scalable platform.
+            </p>
+          </div>
+        </div>
+
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-lg text-gray-300 mb-8">
+            Contact us today to learn how our ${serviceName} services can transform your business.
+          </p>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-200">
+            Contact Sales
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+}`;
+
+// Fix each service page
+serviceDirs.forEach(serviceDir => {
+  const pagePath = path.join(servicesDir, serviceDir, 'page.tsx');
+  
+  if (fs.existsSync(pagePath)) {
     try {
-      const content = fs.readFileSync(filePath, 'utf8');
-      const result = fixServicePage(content, filePath);
-      if (result.changes > 0) {
-        fs.writeFileSync(filePath, result.content);
-        console.log(`Fixed ${result.changes} issues in ${path.relative(__dirname, filePath)}`);
-        totalChanges += result.changes;
-      }
-      processedFiles++;
+      const serviceName = serviceDir.replace(/-/g, ' ');
+      const title = serviceName.split(' ').map(word => 
+        word.charAt(0).toUpperCase() + word.slice(1)
+      ).join(' ');
+      
+      const cleanContent = createServicePage(serviceName, title);
+      fs.writeFileSync(pagePath, cleanContent);
+      console.log(`✅ Fixed: ${serviceDir}/page.tsx`);
     } catch (error) {
-      console.error(`Error processing ${filePath}:`, error.message);
+      console.error(`❌ Error fixing ${serviceDir}:`, error.message);
     }
   }
-  console.log(`\nProcessed ${processedFiles} files with ${totalChanges} total changes.`);
-}
+});
 
-// Run the fixer
-processServicePages();
+console.log('🎉 Service pages fixed successfully!');

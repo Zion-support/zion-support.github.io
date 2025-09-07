@@ -21,6 +21,31 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+name: Agent of Agents Trigger
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: agent-of-agents-trigger
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    env:
+      NETLIFY_BASE_URL: ${{ secrets.NETLIFY_BASE_URL }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
 
       - name: Setup Node.js
         uses: actions/setup-node@v4

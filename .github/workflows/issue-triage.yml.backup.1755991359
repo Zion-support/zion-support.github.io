@@ -8,6 +8,19 @@ on:
 
 permissions:
   issues: write
+name: AI Issue & PR Triage
+
+on:
+  issues:
+    types: [opened, edited, reopened]
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
 
 jobs:
   triage:
@@ -27,6 +40,5 @@ jobs:
             if (title.includes('dependency') || title.includes('bump')) labels.push('dependencies');
             if (labels.length > 0) {
               await github.rest.issues.addLabels({ owner, repo, issue_number: issue.number, labels });
-
             }
             }

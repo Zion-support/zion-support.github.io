@@ -1,82 +1,30 @@
 {
   "compilerOptions": {
-<<<<<<< HEAD
     "target": "ES2017",
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
     "lib": [
       "dom",
       "dom.iterable",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      "es6",
-      "es2017",
-      "es2018",
-      "es2019",
-      "es2020",
-      "es2021",
-      "es2022"
-<<<<<<< HEAD
-=======
-      "esnext"
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+      "es6"
     ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "module": "esnext",
-    "moduleResolution": "bundler",
-=======
-    "module": "ESNext",
-    "moduleResolution": "node",
->>>>>>> pr-12243
-=======
-    "module": "ESNext",
-    "moduleResolution": "node",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-=======
-      "esnext"
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": false,
+    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "incremental": true,
     "module": "esnext",
     "esModuleInterop": true,
     "moduleResolution": "node",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-<<<<<<< HEAD
-    "incremental": true,
-<<<<<<< HEAD
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     "plugins": [
       {
         "name": "next"
       }
-<<<<<<< HEAD
     ],
     "baseUrl": ".",
     "paths": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    "baseUrl": ".",
-    "paths": {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       "@/*": ["./src/*"],
       "@/components/*": ["./src/components/*"],
       "@/pages/*": ["./src/pages/*"],
@@ -84,153 +32,12 @@
       "@/hooks/*": ["./src/hooks/*"],
       "@/types/*": ["./src/types/*"],
       "@/styles/*": ["./src/styles/*"],
-      "@/assets/*": ["./src/assets/*"]
-    },
-    "allowSyntheticDefaultImports": true
-<<<<<<< HEAD
-  },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
-=======
-      "@/*": ["./*"],
-      "@/components/*": ["./components/*"],
-      "@/pages/*": ["./pages/*"],
+      "@/assets/*": ["./src/assets/*"],
+      "@/app/*": ["./app/*"],
       "@/styles/*": ["./styles/*"],
-      "@/utils/*": ["./utils/*"],
-      "@/types/*": ["./types/*"]
+      "@/public/*": ["./public/*"]
     },
     "allowSyntheticDefaultImports": true
-=======
-      "@/*": ["./*"],
-      "@/components/*": ["./components/*"],
-      "@/utils/*": ["./utils/*"],
-      "@/types/*": ["./types/*"],
-      "@/lib/*": ["./lib/*"],
-      "@/hooks/*": ["./hooks/*"],
-      "@/styles/*": ["./styles/*"]
-    },
-    "target": "es5",
-    "forceConsistentCasingInFileNames": true,
-    "allowSyntheticDefaultImports": true,
-    "sourceMap": true,
-    "declaration": false,
-    "declarationMap": false,
-    "removeComments": true,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "exactOptionalPropertyTypes": false,
-    "noImplicitOverride": false,
-    "noPropertyAccessFromIndexSignature": false,
-    "noUncheckedIndexedAccess": false,
-    "noFallthroughCasesInSwitch": false
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-  },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-=======
-=======
-<<<<<<< HEAD
-    ]
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
-  },
-  "include": [
-    "next-env.d.ts",
-    ".next/types/**/*.ts",
-    "**/*.ts",
-<<<<<<< HEAD
-    "**/*.tsx",
-    "next-env.d.ts"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  ],
-  "exclude": [
-    "node_modules",
-    ".next",
-    "out",
-    "dist",
-    "build",
-    "pages_backup*",
-    "pages.*",
-    "pages-*",
-    "pages_disabled*",
-    "pages.disabled*",
-    "pages.broken*",
-    "pages.corrupted*",
-    "pages.old*",
-    "pages._*",
-    "pages.__*",
-    "backup-pages",
-    "src.pages.disabled",
-    "lib_backup*",
-    "src_backup*",
-    "corrupted-files-backup*",
-    "performance-reports*",
-    "log-analysis-reports*",
-    "link-reports*",
-    "lint-target*",
-    "monitoring*",
-    "pm2-automation*",
-    "automation/logs*",
-    "automation/backup*",
-    "api-backup",
-    "contracts",
-    "hardhat"
-  ]
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> pr-12243
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-}
-=======
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules",
-    "src_backup/**",
-    "recovered-branches/**",
-    "temp_backup/**",
-    "api.disabled/**",
-    "lib/analytics.ts"
-=======
-    ],
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@/components/*": [
-        "./src/components/*"
-      ],
-      "@/pages/*": [
-        "./src/pages/*"
-      ],
-      "@/utils/*": [
-        "./src/utils/*"
-      ],
-      "@/hooks/*": [
-        "./src/hooks/*"
-      ],
-      "@/types/*": [
-        "./src/types/*"
-      ],
-      "@/styles/*": [
-        "./src/styles/*"
-      ],
-      "@/assets/*": [
-        "./src/assets/*"
-      ]
-    },
-    "allowSyntheticDefaultImports": true,
-    "target": "ES2017",
-    "strictNullChecks": true
   },
   "include": [
     "next-env.d.ts",
@@ -242,30 +49,6 @@
     "node_modules",
     ".next",
     "out",
-    "dist",
-    "api-backup",
-    "pages.disabled",
-    "backup-pages",
-    "automation/backups",
-    "automation_backup",
-    "broken_files_backup",
-    "contracts",
-    "cypress",
-    "temp_working",
-    "supabase/functions",
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "**/*.spec.ts",
-    "**/*.spec.tsx",
-    "**/*.backup",
-    "**/*.disabled",
-    "src",
-    "src.pages.disabled",
-    "src.pages.disabled.auto",
-    "components.disabled",
-    "src.disabled",
-    "src.pages.disabled"
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+    "dist"
   ]
 }
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910

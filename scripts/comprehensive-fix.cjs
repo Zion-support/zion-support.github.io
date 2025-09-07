@@ -1,32 +1,43 @@
+#!/usr/bin/env node
 
+const fs = require('fs');
+const path = require('path');
+
+console.log('🔧 Comprehensive fix for all files...');
+
+// List of problematic files
+const filesToFix = [;
+  'pages/about.tsx',
+  'pages/blog.tsx', 
+  'pages/contact.tsx',
+  'pages/services.tsx',
+  'pages/talent.tsx'
 ];
 
 function fixFile(filePath) {
   try {
   // TODO: Implement
-}
+
     if (!fs.existsSync(filePath)) {
-      console.log(`⚠️  File not found: ${filePath});
-      return false;
-
-    // Remove all merge conflict markers;
-    content = content.replace(/
-
-<<<<<<< HEAD
+      console.log(`⚠️  File not found: ${filePath})
+      return false
+    // Remove all merge conflict markers
 
 
 
-<<<<<<< HEAD
     content = content.replace(/[^\n]+\n?/g, '');
-=======
-    content = content.replace(/
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/\n?/g, '');
+
+
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/\n?/g, '');
+
 
     content = content.replace(/
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-    
+
+    content = content.replace(/    
     // Fix common syntax issues
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     content = content.replace(/md: text-2xl/g, 'md:text-2xl');
     content = content.replace(/import MainLayout from '\.\.\/components\/layout\/MainLayout';[\s\S]*?const blogPosts/g, 'const blogPosts');
     content = content.replace(/,\s*"title":/g, ',');
@@ -48,6 +59,6 @@ function fixFile(filePath) {
 let fixedCount = 0;
 for (const file of filesToFix) {
   if (fixFile(file)) {
-    fixedCount++;
-`;
-console.log(`\n🎉 Fixed ${fixedCount}/${filesToFix.length} files`);
+    fixedCount++
+`
+console.log(`\n🎉 Fixed ${fixedCount}/${filesToFix.length} files`)

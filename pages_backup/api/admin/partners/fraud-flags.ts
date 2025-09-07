@@ -1,16 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',;
-=======
->>>>>>> pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next';
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-main
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
 import { getServerSupabase } from '../../../../utils/supabase/server',;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const code = (req.query.code as string)?.toLowerCase()
@@ -37,14 +26,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       .from('referral_events')
       .select('ip_address, created_at')
       .eq('partner_code', code)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
 .gte(
         'created_at',
         new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString()
@@ -57,28 +39,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 counts.set(key, (counts.get(key) || 0) + 1);
 origin/cursor/automate-test-improve-and-merge-code-2533
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      .gte('created_at', new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString()),
-    if (error) return res.status(500).json({ error: error.message }),
 
-
-    const flags: any[] = [],
-=======
->>>>>>> pr-12243
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       .gte('created_at', new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString())
     if (error) return res.status(500).json({ error: error.message })
 
-
-
     const flags: any[] = []
-<<<<<<< HEAD
-=======
-main
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
     counts.forEach((count, ip) => {
       if (count > 30 && ip !== 'unknown') {
 flags.push({

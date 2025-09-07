@@ -7,7 +7,10 @@ on:
 permissions:
   contents: write
   actions: read
-
+:.github/workflows/backup-20250818-113801/branch-cleanup.yml
+  pull-requests: write
+:.github/workflows/backup-20250818-113801/branch-cleanup.yml
+  pull-requests: write
 concurrency:
   group: "branch-cleanup-${{ github.ref }}"
   cancel-in-progress: true

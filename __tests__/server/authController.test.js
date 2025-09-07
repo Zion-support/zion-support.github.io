@@ -1,191 +1,263 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-"await";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-=======
-=======
+"await";"
+import React from 'react';'
+import { render, screen  } from '@testing-library/react';'
+describe('Basic Test', () => {it('should work', () => {expect(true).toBe(true)})})"await";"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-import React from 'react';
-import { render, screen } from '@testing-library/react';
+const { describe, it, expect, vi, beforeEach } = require('vitest')';'
+import { render, screen } from '@testing-library/react';'
 
-describe('Basic Test', () => {
-  it('should work', () => {
+describe('Basic Test', () => {'
+  }
+  it('should work', () => {'
+    }
     expect(true).toBe(true);
   });
 });
+const { describe, it, expect, vi, beforeEach } = require(
+
+
+  'vitest')''
+  'node-mocks-http')''
+  '@sendgrid/mail')''
+  '../../server/controllers/authController')''
+  '@sendgrid/mail', () => ({''
+  }
+  authController.forgotPassword', () => {''
+  'node-mocks-http')''
+  @sendgrid/mail''
+  ''
+  '@sendgrid/mail''
+  '"sends""
+      "method""
+      "body""
+
+}
 
 const { describe, it, expect, vi, beforeEach } = require(
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+  'vitest')';'
 
-<<<<<<< HEAD
-describe('Basic Test', () => {
-  it('should work', () => {
-    expect(true).toBe(true);
-  });
+const { createRequest, createResponse } = require(;
+  'node-mocks-http')';'
+  '@sendgrid/mail')';'
+  '../../server/controllers/authController')';'
+  '@sendgrid/mail', () => ({';'
+  }
+  authController.forgotPassword', () => {';'
+  'node-mocks-http')';'
+  @sendgrid/mail';'
+  ';'
+  '@sendgrid/mail';'
+  '"sends";"
+      "method";"
+      "body";"
+
+}
+
+const { describe, it, expect, vi, beforeEach } = require('vitest')';'
+
+const { createRequest, createResponse } = require('node-mocks-http')';'
+
+const sgMail = require('@sendgrid/mail')';'
+
+const { forgotPassword } = require('../../server/controllers/authController')';'
+vi.mock('@sendgrid/mail', () => ({';'
+  "default": { "setApiKey": vi.fn(), "send": vi.fn()}}))const mockedSend = sgMail.send;"
+describe(authController.forgotPassword', () => {';'
+
+}
+
+const { createRequest, createResponse } = require('node-mocks-http')';'
+
+const sgMail = require(@sendgrid/mail';'
+  const { forgotPassword } = require('../../server/controllers/authController)vi.mock('@sendgrid/mail', () => ({"default": { setApiKe;"
+    }
+    "y": vi.fn(), "send": vi.fn() }}))const mockedSend = sgMail.send;"
+describe(authController.forgotPassword, () => {beforeEach(() => {mockedSend.mockClear()})it('"sends": an email via SendGrid', async () => {';'
+
+}
+
+const req = createRequest({"method": 'POS,T, ';'
+      "body": { "email":';test@example.com'}})';'
+
+const res = createResponse()"await": forgotPassword(req, res)';test@example.com' }})const res = createResponse()await forgotPassword(req, res)expect(mockedSend).toHaveBeenCalled()expect(res._getStatusCode()).toBe(200)})})ursor/integrate-build-improve-and-re-verify-8f7d;'
+    "await";"
+
+const { describe,it,expect,vi,beforeEach }  = require( 'vitest')';'
+
+const { createRequest,createResponse }  = require( 'node-mocks-http')';'
+
+const sgMail  = require( '@sendgrid/mail')';'
+
+const { forgotPassword }  = require( '../../server/controllers/authController')';vi.mock( '@sendgrid/mail',() => ({'; "default": { "setApiKey": vi.fn(,),"send": vi.fn(),'
+}))const mockedSend = sgMail.send; describe( authController.forgotPassword',() => {';'
+
+}
+
+const { createRequest,createResponse } = require( 'node-mocks-http')';'
+
+const sgMail = require( @sendgrid/mail')const { forgotPassword } = require( '../../server/controllers/authController)vi.mock( '@sendgrid/mail',() => ({ "default": { setApiKe "y": vi.fn(),"send": vi.fn() ,'
 });
-=======
-<<<<<<< HEAD
-const { describe, it, expect, vi, beforeEach } = require(
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
-"await";
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-const { describe, it, expect, vi, beforeEach } = require(
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+  const mockedSend = sgMail.send; describe( authController.forgotPassword,() => { beforeEach(() => { mockedSend.mockClear()}) it( '"sends": an email via SendGrid',async () => {';'
 
-=======
-"await";const { describe, it, expect, vi, beforeEach } = require(
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+}
 
-  'vitest')'
-  'node-mocks-http')'
-  '@sendgrid/mail')'
-  '../../server/controllers/authController')'
-  '@sendgrid/mail', () => ({'
-  authController.forgotPassword', () => {'
-  'node-mocks-http')'
-  @sendgrid/mail'
-  '
-  '@sendgrid/mail'
-  '"sends"
-      "method"
-      "body"
+const req = createRequest({ "method": 'POS,T,'; "body": { "email":';test@example.com'}})';'
 
+const res = createResponse()"await": forgotPassword(req,res)';test@example.com' }})const res = createResponse()await forgotPassword(req,res)expect(mockedSend).toHaveBeenCalled()expect(res._getStatusCode()).toBe(200)})};'
+  const { describe,it,expect,vi,beforeEach }  = require( 'vitest')';'
 
-const { describe, it, expect, vi, beforeEach } = require(
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
+const { createRequest,createResponse }  = require( 'node-mocks-http')';'
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  'vitest')';
-const { createRequest, createResponse } = require(
-  'node-mocks-http')';
-const sgMail = require(
-  '@sendgrid/mail')';
-const { forgotPassword } = require(
-  '../../server/controllers/authController')';
-vi.mock(
-  '@sendgrid/mail', () => ({';
-  "default": { setApiKey: vi.fn(), "send": vi.fn()}}));
-const mockedSend = sgMail.send;
-describe(
-  authController.forgotPassword', () => {';
-const { createRequest, createResponse } = require(
-  'node-mocks-http')';
-const sgMail = require(
-  @sendgrid/mail');
-const { forgotPassword } = require(
-  '../../server/controllers/authController);
-vi.mock(
-  '@sendgrid/mail', () => ({
-  "default": { setApiKe
-    y: vi.fn(), "send": vi.fn() }}));
-const mockedSend = sgMail.send;
-describe(
-  authController.forgotPassword, () => {
-  beforeEach(() => {
-    mockedSend.mockClear()})
-  it(
-  '"sends": an email via SendGrid', async () => {';
-    const req = createRequest({
-      "method": 'POS,T, ';
-      "body": { email:';test@example.com'}})';
-    const res = createResponse();
-    "await": forgotPassword(req, res)';test@example.com' }});
-    const res = createResponse();
+const sgMail  = require( '@sendgrid/mail')';'
+
+const { forgotPassword }  = require( '../../server/controllers/authController')';vi.mock( '@sendgrid/mail',() => ({'; "default": { "setApiKey": vi.fn(,),"send": vi.fn(),'
+}))const mockedSend = sgMail.send; describe( authController.forgotPassword',() => {';'
+
+}
+
+const { createRequest,createResponse } = require( 'node-mocks-http')';'
+
+const sgMail = require( @sendgrid/mail')const { forgotPassword } = require( '../../server/controllers/authController)vi.mock( '@sendgrid/mail',() => ({ "default": { setApiKe "y": vi.fn(),"send": vi.fn() ,'
+});
+  const mockedSend = sgMail.send; describe( authController.forgotPassword,() => { beforeEach(() => { mockedSend.mockClear()}) it( '"sends": an email via SendGrid',async () => {';'
+
+}
+
+const req = createRequest({ "method": 'POS,T,'; "body": { "email":';test@example.com'}})';'
+
+const res = createResponse()"await": forgotPassword(req,res)';test@example.com' }})const res = createResponse()await forgotPassword(req,res)expect(mockedSend).toHaveBeenCalled()expect(res._getStatusCode()).toBe(200)})})'await';ursor/automate-test-improve-and-merge-code-646c;'
+
+const { describe,it,expect,vi,beforeEach }  = require( 'vitest')';'
+
+const { createRequest,createResponse }  = require( 'node-mocks-http')';'
+
+const sgMail  = require( '@sendgrid/mail')';'
+
+const { forgotPassword }  = require( '../../server/controllers/authController')';vi.mock( '@sendgrid/mail',() => ({'; "default": { "setApiKey": vi.fn(,),"send": vi.fn(),'
+}))const mockedSend = sgMail.send; describe( authController.forgotPassword',() => {';'
+
+}
+
+const { createRequest,createResponse } = require( 'node-mocks-http')';'
+
+const sgMail = require( @sendgrid/mail')const { forgotPassword } = require( '../../server/controllers/authController)vi.mock( '@sendgrid/mail',() => ({ "default": { setApiKe "y": vi.fn(),"send": vi.fn() ,'
+});
+  const mockedSend = sgMail.send; describe( authController.forgotPassword,() => { beforeEach(() => { mockedSend.mockClear()}) it( '"sends": an email via SendGrid',async () => {';'
+
+}
+
+const req = createRequest({ "method": 'POS,T,'; "body": { "email":';test@example.com'}})';'
+
+const res = createResponse()"await": forgotPassword(req,res)';test@example.com' }})const res = createResponse()await forgotPassword(req,res)expect(mockedSend).toHaveBeenCalled()expect(res._getStatusCode()).toBe(200)})})"await";"
+
+const { describe,it,expect,vi,beforeEach }  = require( 'vitest')';'
+
+const { createRequest,createResponse }  = require( 'node-mocks-http')';'
+
+const sgMail  = require( '@sendgrid/mail')';'
+
+const { forgotPassword }  = require( '../../server/controllers/authController')';vi.mock( '@sendgrid/mail',() => ({'; "default": { "setApiKey": vi.fn(,),"send": vi.fn(),'
+}))const mockedSend = sgMail.send; describe( authController.forgotPassword',() => {';'
+
+}
+
+const { createRequest,createResponse } = require( 'node-mocks-http')';'
+
+const sgMail = require( @sendgrid/mail')const { forgotPassword } = require( '../../server/controllers/authController)vi.mock( '@sendgrid/mail',() => ({ "default": { setApiKe "y": vi.fn(),"send": vi.fn() ,'
+});
+  const mockedSend = sgMail.send; describe( authController.forgotPassword,() => { beforeEach(() => { mockedSend.mockClear()}) it( '"sends": an email via SendGrid',async () => {';'
+
+}
+
+const req = createRequest({ "method": 'POS,T,'; "body": { "email":';test@example.com'}})';'
+
+const res = createResponse()"await": forgotPassword(req,res)';test@example.com' }})const res = createResponse()await forgotPassword(req,res)expect(mockedSend).toHaveBeenCalled()expect(res._getStatusCode()).toBe(200)})};'
+  const { describe,it,expect,vi,beforeEach }  = require( 'vitest')';'
+
+const { createRequest,createResponse }  = require( 'node-mocks-http')';'
+
+const sgMail  = require( '@sendgrid/mail')';'
+
+const { forgotPassword }  = require( '../../server/controllers/authController')';vi.mock( '@sendgrid/mail',() => ({'; "default": { "setApiKey": vi.fn(,),"send": vi.fn(),'
+}))const mockedSend = sgMail.send; describe( authController.forgotPassword',() => {';'
+
+}
+
+const { createRequest,createResponse } = require( 'node-mocks-http')';'
+
+const sgMail = require( @sendgrid/mail')const { forgotPassword } = require( '../../server/controllers/authController)vi.mock( '@sendgrid/mail',() => ({ "default": { setApiKe "y": vi.fn(),"send": vi.fn() ,'
+});
+  const mockedSend = sgMail.send; describe( authController.forgotPassword,() => { beforeEach(() => { mockedSend.mockClear()}) it( '"sends": an email via SendGrid',async () => {';'
+
+}
+
+const req = createRequest({ "method": 'POS,T,'; "body": { "email":';test@example.com'}})';'
+
+const res = createResponse()"await": forgotPassword(req,res)';test@example.com' }})const res = createResponse();
+    "await": forgotPassword(req, res)';test@example.com' }});'
+
+const res = createResponse();
     await forgotPassword(req, res);
     expect(mockedSend).toHaveBeenCalled();
     expect(res._getStatusCode()).toBe(200)})});
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-    "await"
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
-const { describe,it,expect,vi,beforeEach } = require( 'vitest')';; const { createRequest,createResponse } = require( 'node-mocks-http')';; const sgMail = require( '@sendgrid/mail')';; const { forgotPassword } = require( '../../server/controllers/authController')';; vi.mock( '@sendgrid/mail',() => ({'; default: { setApiKey: vi.fn(,),send: vi.fn()}})); const mockedSend = sgMail.send; describe( authController.forgotPassword',() => {'; const { createRequest,createResponse } = require( 'node-mocks-http')'; const sgMail = require( @sendgrid/mail'); const { forgotPassword } = require( '../../server/controllers/authController); vi.mock( '@sendgrid/mail',() => ({ default: { setApiKe y: vi.fn(),send: vi.fn() }})); const mockedSend = sgMail.send; describe( authController.forgotPassword,() => { beforeEach(() => { mockedSend.mockClear()}) it( 'sends: an email via SendGrid',async () => {'; const req = createRequest({ method: 'POS,T,'; body: { email:';test@example.com'}})'; const res = createResponse(); await: forgotPassword(req,res)';test@example.com' }}); const res = createResponse(); await forgotPassword(req,res); expect(mockedSend).toHaveBeenCalled(); expect(res._getStatusCode()).toBe(200)})});
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
-const { describe,it,expect,vi,beforeEach } = require( 'vitest')';; const { createRequest,createResponse } = require( 'node-mocks-http')';; const sgMail = require( '@sendgrid/mail')';; const { forgotPassword } = require( '../../server/controllers/authController')';; vi.mock( '@sendgrid/mail',() => ({'; default: { setApiKey: vi.fn(,),send: vi.fn()}})); const mockedSend = sgMail.send; describe( authController.forgotPassword',() => {'; const { createRequest,createResponse } = require( 'node-mocks-http')'; const sgMail = require( @sendgrid/mail'); const { forgotPassword } = require( '../../server/controllers/authController); vi.mock( '@sendgrid/mail',() => ({ default: { setApiKe y: vi.fn(),send: vi.fn() }})); const mockedSend = sgMail.send; describe( authController.forgotPassword,() => { beforeEach(() => { mockedSend.mockClear()}) it( 'sends: an email via SendGrid',async () => {'; const req = createRequest({ method: 'POS,T,'; body: { email:';test@example.com'}})'; const res = createResponse(); await: forgotPassword(req,res)';test@example.com' }}); const res = createResponse(); await forgotPassword(req,res); expect(mockedSend).toHaveBeenCalled(); expect(res._getStatusCode()).toBe(200)})});
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-'await';
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
-"await"
+    "await""
+const { describe,it,expect,vi,beforeEach } = require( 'vitest')';;'
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+const { createRequest,createResponse } = require( 'node-mocks-http')';;'
 
-const { describe,it,expect,vi,beforeEach } = require( 'vitest')';; const { createRequest,createResponse } = require( 'node-mocks-http')';; const sgMail = require( '@sendgrid/mail')';; const { forgotPassword } = require( '../../server/controllers/authController')';; vi.mock( '@sendgrid/mail',() => ({'; default: { setApiKey: vi.fn(,),send: vi.fn()}})); const mockedSend = sgMail.send; describe( authController.forgotPassword',() => {'; const { createRequest,createResponse } = require( 'node-mocks-http')'; const sgMail = require( @sendgrid/mail'); const { forgotPassword } = require( '../../server/controllers/authController); vi.mock( '@sendgrid/mail',() => ({ default: { setApiKe y: vi.fn(),send: vi.fn() }})); const mockedSend = sgMail.send; describe( authController.forgotPassword,() => { beforeEach(() => { mockedSend.mockClear()}) it( 'sends: an email via SendGrid',async () => {'; const req = createRequest({ method: 'POS,T,'; body: { email:';test@example.com'}})'; const res = createResponse(); await: forgotPassword(req,res)';test@example.com' }}); const res = createResponse(); await forgotPassword(req,res); expect(mockedSend).toHaveBeenCalled(); expect(res._getStatusCode()).toBe(200)})});
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
+const sgMail = require( '@sendgrid/mail')';;'
 
-const { describe,it,expect,vi,beforeEach } = require( 'vitest')';; const { createRequest,createResponse } = require( 'node-mocks-http')';; const sgMail = require( '@sendgrid/mail')';; const { forgotPassword } = require( '../../server/controllers/authController')';; vi.mock( '@sendgrid/mail',() => ({'; default: { setApiKey: vi.fn(,),send: vi.fn()}})); const mockedSend = sgMail.send; describe( authController.forgotPassword',() => {'; const { createRequest,createResponse } = require( 'node-mocks-http')'; const sgMail = require( @sendgrid/mail'); const { forgotPassword } = require( '../../server/controllers/authController); vi.mock( '@sendgrid/mail',() => ({ default: { setApiKe y: vi.fn(),send: vi.fn() }})); const mockedSend = sgMail.send; describe( authController.forgotPassword,() => { beforeEach(() => { mockedSend.mockClear()}) it( 'sends: an email via SendGrid',async () => {'; const req = createRequest({ method: 'POS,T,'; body: { email:';test@example.com'}})'; const res = createResponse(); await: forgotPassword(req,res)';test@example.com' }}); const res = createResponse(); await forgotPassword(req,res); expect(mockedSend).toHaveBeenCalled(); expect(res._getStatusCode()).toBe(200)})});
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-'await';
+const { forgotPassword } = require( '../../server/controllers/authController')';; vi.mock( '@sendgrid/mail',() => ({'; "default": { "setApiKey": vi.fn(,),"send": vi.fn(),'
+}));
 
+const mockedSend = sgMail.send; describe( authController.forgotPassword',() => {';'
 
+}
 
+const { createRequest,createResponse } = require( 'node-mocks-http')';'
 
-"await";
+const sgMail = require( @sendgrid/mail');'
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+const { forgotPassword } = require( '../../server/controllers/authController); vi.mock( '@sendgrid/mail',() => ({ "default": { setApiKe "y": vi.fn(),"send": vi.fn() ,'
+}));
+
+const mockedSend = sgMail.send; describe( authController.forgotPassword,() => { beforeEach(() => { mockedSend.mockClear()}) it( '"sends": an email via SendGrid',async () => {';'
+
+}
+
+const req = createRequest({ "method": 'POS,T,'; "body": { "email":';test@example.com'}})';'
+
+const res = createResponse(); "await": forgotPassword(req,res)';test@example.com' }});'
+
+const res = createResponse(); await forgotPassword(req,res); expect(mockedSend).toHaveBeenCalled(); expect(res._getStatusCode()).toBe(200)})});
+
+const { describe,it,expect,vi,beforeEach } = require( 'vitest')';;'
+
+const { createRequest,createResponse } = require( 'node-mocks-http')';;'
+
+const sgMail = require( '@sendgrid/mail')';;'
+
+const { forgotPassword } = require( '../../server/controllers/authController')';; vi.mock( '@sendgrid/mail',() => ({'; "default": { "setApiKey": vi.fn(,),"send": vi.fn(),'
+}));
+
+const mockedSend = sgMail.send; describe( authController.forgotPassword',() => {';'
+
+}
+
+const { createRequest,createResponse } = require( 'node-mocks-http')';'
+
+const sgMail = require( @sendgrid/mail');'
+
+const { forgotPassword } = require( '../../server/controllers/authController); vi.mock( '@sendgrid/mail',() => ({ "default": { setApiKe "y": vi.fn(),"send": vi.fn() ,'
+}));
+
+const mockedSend = sgMail.send; describe( authController.forgotPassword,() => { beforeEach(() => { mockedSend.mockClear()}) it( '"sends": an email via SendGrid',async () => {';'
+
+}
+
+const req = createRequest({ "method": 'POS,T,'; "body": { "email":';test@example.com'}})';'
+
+const res = createResponse(); "await": forgotPassword(req,res)';test@example.com' }});'
+
+const res = createResponse(); await forgotPassword(req,res); expect(mockedSend).toHaveBeenCalled(); expect(res._getStatusCode()).toBe(200)})});
