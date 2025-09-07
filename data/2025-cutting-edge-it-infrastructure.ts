@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -27,6 +28,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import { ServiceVariant  } from '../types/service-variants';
 export interface CuttingEdgeITInfrastructureService  {id: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+import { ServiceVariant } from '../types/service-variants';
+export interface CuttingEdgeITInfrastructureService {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string;
   name: string;
   tagline: string;
@@ -57,6 +64,7 @@ export interface CuttingEdgeITInfrastructureService  {id: string;
     email: string;
 <<<<<<< HEAD
     address: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -703,6 +711,9 @@ export interface CuttingEdgeITInfrastructureService  {id: string,name: string,ta
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -723,26 +734,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-        'AI-powered code review and testing',
-    // Autonomous DevOps Platform;
-    {
-      id: 'autonomous - devops - platform',
-      name: 'Autonomous DevOps Platform',
-      tagline:;
-        'Self - managing DevOps with AI - powered automation and intelligent deployment optimization',
-      price: '$1, 999',
-      period: '/month',
-      description:;
-        'Revolutionary DevOps platform that autonomously manages software development, testing, deployment, and operations using advanced AI and machine learning algorithms.',
-      features: [;
-        'AI - powered code review and testing',
 
+<<<<<<< HEAD
         'Autonomous deployment optimization',
         'Intelligent monitoring and alerting',
         'Automated incident response',
@@ -802,6 +804,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -815,6 +819,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       rating: 4 && 4.7,
       reviews: 25
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -897,6 +902,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -910,6 +919,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       rating: 4 && 4.8,
       reviews: 12
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -930,6 +940,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       id: 'quantum - networking - platform',
       name: 'Quantum Networking Platform',
       tagline:;
@@ -952,6 +966,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         '24 / 7 network monitoring'
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1014,6 +1029,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       customers: 6,
       rating: 4 && 4.9,
       reviews: 4
@@ -1021,6 +1040,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     },;
   ];    features: [
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1039,6 +1059,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export interface CuttingEdgeITInfrastructureService {
   id: string, name: string,
   tagline: string, price: string,
@@ -1061,6 +1085,10 @@ export interface CuttingEdgeITInfrastructureService {
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     website: string
   },
   realImplementation: boolean;
@@ -1068,7 +1096,10 @@ export interface CuttingEdgeITInfrastructureService {
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   reviews: number
 }
 export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [
@@ -1087,6 +1118,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1097,6 +1129,11 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       id: 'quantum-networking-platform'
       name: 'Quantum Networking Platform'
+=======
+      id: 'quantum-networking-platform'
+      name: 'Quantum Networking Platform'
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     ],
     popular: true;
     icon: '☁️';
@@ -1570,7 +1607,10 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     {
       id: 'quantum-networking-platform',
       name: 'Quantum Networking Platform',
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       tagline:
         'Next-generation networking with quantum encryption and AI-powered optimization',
       price: '$5,999',
@@ -1607,6 +1647,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ],
       integrations: ['Cisco, Juniper, Arista, VMware, OpenStack, Kubernetes'],
       useCases: [
+<<<<<<< HEAD
         'Government communications, Defense networks, Financial trading, Healthcare systems, Research networks'
       ]
       roi: 'Organizations report 1000% ROI through improved security and network performance.'
@@ -1622,6 +1663,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       growthRate: '32% annual growth',
       variant: 'quantum-networking-enterprise',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       contactInfo: {
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -1630,6 +1673,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       },
       realImplementation: true,
       implementationDetails:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1675,6 +1719,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       integrations: ['Cisco, Juniper, Arista, VMware, OpenStack, Kubernetes']
       useCases: [
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Quantum networking platform with quantum encryption, AI optimization, and autonomous network management for ultra-secure communications.'
       launchDate: '2025-02-01'
       customers: 6
@@ -1683,17 +1730,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Quantum networking platform with quantum encryption, AI optimization, and autonomous network management for ultra-secure communications.',
       launchDate: '2025-02-01',
       customers: 6,
       rating: 4.9,
       reviews: 4,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     },;
@@ -1705,6 +1756,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   ];    features: [
       'Quantum encryption protocolsAI-powered traffic optimizationAutonomous network managementZero-latency routingQuantum key distributionReal-time security monitoringGlobal network optimizationAPI for network integration';
       'Performance analytics24/7 network monitoring'
+=======
+    },;
+  ];    features: [
+      'Quantum encryption protocolsAI-powered traffic optimizationAutonomous network managementZero-latency routingQuantum key distributionReal-time security monitoringGlobal network optimizationAPI for network integration';
+      'Performance analytics24/7 network monitoring'
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     ];
     popular: true, icon: '☁️',
     color: 'from-blue-600 to-indigo-600', textColor: 'text-blue-400',
@@ -1743,16 +1801,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1781,11 +1845,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     technology: ['Quantum APIs, Python, Go, Rust, AI/ML, Network protocols, Quantum hardware'];
     integrations: ['Cisco, Juniper, Arista, VMware, OpenStack, Kubernetes'];
     useCases: ['Government communications, Defense networks, Financial trading, Healthcare systems, Research networks'];
     roi: 'Organizations report 1000% ROI through improved security and network performance.'
     competitors: ['Cisco, Juniper, Arista, Huawei'];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1797,6 +1865,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { ServiceVariant } from '../types/service-variants',;
 export interface CuttingEdgeITInfrastructureService {;
   id: string,;
@@ -2058,6 +2130,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     launchDate: '2025-02-01',;
     customers: 6,;
     rating: 4.9;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2093,6 +2166,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    reviews: 4
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     real_implementation: true,
     implementation_details: 'Quantum networking platform with quantum encryption, AI optimization, and autonomous network management for ultra - secure communications.',
@@ -2101,14 +2178,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 4;
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 ];
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   }
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -2121,6 +2201,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+];
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 import { ServiceVariant } from '../types/service-variants',;
 =======
@@ -2171,6 +2255,7 @@ export interface CuttingEdgeITInfrastructureService {;
   rating: number,;
   reviews: number;
 }
+
 ;
 export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [;
   // Quantum-Secure Cloud Infrastructure;
@@ -2392,6 +2477,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     customers: 6,;
     rating: 4.9;
     reviews: 4;
+<<<<<<< HEAD
 ];
   }
 <<<<<<< HEAD
@@ -2707,3 +2793,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+  }
+];
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -1,9 +1,12 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import FeatureCard from '@/components/FeatureCard';
 import PricingTier from '@/components/PricingTier';
 import TestimonialCard from '@/components/TestimonialCard';
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import Link from 'next/link';
 import FeatureCard from '../../components/FeatureCard';
 import PricingTier from '../../components/PricingTier';

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -6,6 +7,9 @@
 =======
 >>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import React from 'react';
 import type { NextPage } from 'next';
 import Link from 'next/link';
@@ -320,6 +324,7 @@ const ExpandedServicesPage: NextPage = () => {
 
 export default ExpandedServicesPage;
 <<<<<<< HEAD
+<<<<<<< HEAD
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
@@ -608,3 +613,5 @@ const ExpandedServicesPage: NextPage = () => {const micro = getServicesByCategor
   )}export default ExpandedServicesPage;
 >>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

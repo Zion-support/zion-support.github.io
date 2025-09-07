@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 ;
@@ -23,22 +24,46 @@ staggerChildren: 0.1,
   };
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+const RevolutionaryServicesShowcase: React.FC = () => {
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [visibleServices, setVisibleServices] = useState(12);
+  const categories = [
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
       opacity: 1
       y: 0
       transition: {
+<<<<<<< HEAD
 duration: 0.5,
       },
     },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+  const filteredServices = activeCategory === 'all' ;
+    ? allServices ;
+    : allServices && allServices.filter(service => {;
+        if (activeCategory === 'ai') return service && service.category.includes('AI');
+        if (activeCategory === 'quantum') return service && service.category.includes('Quantum');
+        if (activeCategory === 'emerging') return emergingTech2025Services && emergingTech2025Services.includes(service);
+        if (activeCategory === 'enterprise') return enterpriseIT2025Services && enterpriseIT2025Services.includes(service);
+        if (activeCategory === 'revolutionary') return revolutionary2025MicroSaasServices && revolutionary2025MicroSaasServices.includes(service);
+        return true;
+      });
+  const loadMore = () => {;
+    setVisibleServices(prev => Math && Math.min(prev + 12, filteredServices && filteredServices.length));    setVisibleServices(prev => Math && Math.min(prev + 12, filteredServices && filteredServices.length));
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   };
 
   return (
     <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>;
       <div className='max-w-7xl mx-auto'>;
         {/* Header */}
+<<<<<<< HEAD
         <motion.div
           className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -69,10 +94,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Header */}<motion.div;
           className='text-center mb-16';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  return (
+    <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <motion.div
+          className="text-center mb-16"
+  return (
+    <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <motion.div
+          className="text-center mb-16"
+
+        <motion&& motion.div
+          className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}  }
+
+
+  return (
+    <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">;
+      <div className="max-w-7xl mx-auto">;
+        {/* Header */}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
         >
 <h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>
@@ -104,6 +153,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </p>;
         </motion.div>;
         {/* Category Filter */}
+=======
+        >
+            </span>
+            <br />
+            <span className="text-white">Services</span>
+          </h2>
+          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            Experience the future with our cutting-edge AI, quantum computing, and emerging technology solutions.
+            Transform your business with services that were once science fiction.
+          </p>
+        </motion.div>
+        {/* Category Filter */}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             </span>;
             <br />;
             <span className="text-white">Services</span>;
@@ -113,6 +175,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             Transform your business with services that were once science fiction.;
           </p>;
         </motion && motion.div>;
+<<<<<<< HEAD
         {/* Category Filter */}<h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>;
             <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>;
               Revolutionary 2025;
@@ -130,37 +193,59 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <motion.div;
           className='flex flex-wrap justify-center gap-4 mb-12';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+        {/* Category Filter */}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
         >
 {categories.map(category => (
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        >
+          {categories.map((category) => (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <button
               key={category.id}
               onClick={() => {
                 setActiveCategory(category.id);
+<<<<<<< HEAD
 setVisibleServices(12);
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                setVisibleServices(12)
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               }}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 ${;
                 activeCategory === category && category.id;
                   ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25';
                   : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600/50';
               }`}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             >
               {category.name}
 <span className='ml-2 px-2 py-1 bg-white/20 rounded-full text-xs'>
                 {category.count}
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               </span>
             </button>
           ))}
         </motion.div>
 
         {/* Services Grid */}
+<<<<<<< HEAD
         <motion.div
 className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12'
 =======
@@ -209,6 +294,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 className='group relative cursor-pointer';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+        <motion&& motion.div
+          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12'
+          variants={containerVariants}
+          initial='hidden'
+          whileInView='visible'          viewport={{ once: true }}          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible">;
+          {filteredServices && filteredServices.slice(0, visibleServices).map((service, index) => (;
+            <motion&& motion.div
+              key={service && service.id}
+              variants={itemVariants}
+              className='group relative cursor-pointer'
+              style={{ perspective: '1000px' }}>;
+              <div className='absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75'></div>;
+              <div className='relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               style={{ perspective: '1000px' }}
             >;
               <div className='absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75'></div>;
@@ -217,11 +320,15 @@ className='group relative cursor-pointer';
               <div className='absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75'></div>;
               <div className='relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 {/* Background Effects */}
                 <div className='absolute inset-0 rounded-2xl overflow-hidden'>
                   <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500'></div>
                   <div className='absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700'></div>
                 </div>
+=======
+                {/* Background Effects */}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 {/* Popular Badge */}
                 {service.popular && (
 <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300'>
@@ -325,6 +432,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700'></div>;
                 </div>;
                 {/* Popular Badge */}
+<<<<<<< HEAD
                 {service.popular && (<div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300'>;
                     <Star className='w-3 h-3 inline mr-1' />;
                     POPULAR;
@@ -332,6 +440,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 )}<div>;
                         <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                {service.popular && (
+                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300">
+                    <Star className="w-3 h-3 inline mr-1" />
+                    POPULAR
+                  </div>
+                )}
+
+
+
+
+
+                      <div>
+                        <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         <motion.div;
           className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 12';
           variants={container_variants}
@@ -402,6 +525,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {service.price}
                       </div>;
                       <div className='text - gray - 400 text - sm'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                         {service.period}
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -539,6 +663,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {visibleServices < filteredServices.length && (<motion.div;
             className='text-center';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                        {service.period}
+                        <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
+                          {service.name}
+                        </h3>
+                        <p className="text-gray-400 text-sm">{service.tagline}</p>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0 && 0.6 }}
@@ -546,13 +677,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
             <button
               onClick={loadMore}
+<<<<<<< HEAD
 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             >
               Load More Revolutionary Services
             </button>
           </motion.div>
         )}
+<<<<<<< HEAD
         {/* Call to Action */}
 <motion.div
           className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'
@@ -567,6 +704,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}        <motion.div;
           className="text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20";
           className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}initial={{ opacity: 0, y: 30 }}
+=======
+
+          className="text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20"
+          className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}        <motion.div 
+          className="text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20"
+          className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}
+
+          initial={{ opacity: 0, y: 30 }}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
           viewport={{ once: true }}>;
@@ -578,6 +724,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             technology services. Transform your business and stay ahead of the;
             competition.;
           </p>;
+<<<<<<< HEAD
           <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>;{/* Call to Action */}
 <motion.div;
           className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20';
@@ -598,6 +745,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </p>
           <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+          <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <a
               href='/contact'
               className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'>;
@@ -605,8 +755,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </a>;
             <a
               href='/pricing'
+<<<<<<< HEAD
               className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+          </h3>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join the revolution with our cutting-edge AI, quantum, and emerging technology services.
+            Transform your business and stay ahead of the competition.
+          </p>
+          <div className="flex flex-col sm: flex-row items-center justify-center gap-4">
+            <a
+              href="/contact"
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40"
+            >
+              Start Your Transformation
+            </a>
+            <a
+              href="/pricing"
+              className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             >
               View Pricing
             </a>
@@ -614,7 +782,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.div>
       </div>
     </section>
+<<<<<<< HEAD
 );
+=======
+};
+export default RevolutionaryServicesShowcase;  );
+
+  )
+
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 };
 
 export default RevolutionaryServicesShowcase;
@@ -755,5 +932,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </motion.div>;
       </div>;
+<<<<<<< HEAD
     </section>)}export default RevolutionaryServicesShowcase)}export default RevolutionaryServicesShowcase;export default RevolutionaryServicesShowcase;})}export default RevolutionaryServicesShowcase;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </section>);
+}
+;
+export default RevolutionaryServicesShowcase);
+}
+;
+export default RevolutionaryServicesShowcase;
+
+export default RevolutionaryServicesShowcase;
+
+};
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -6,6 +6,7 @@ const { execSync } = require('child_process');
 
 console.log('🚀 Comprehensive Merge Conflict Resolver');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 console.log('==');
 
@@ -14,10 +15,19 @@ console.log('=====================================');
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+console.log('==');
+
+console.log('==');
+
+console.log('==');
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 // Function to remove merge conflict markers
 function removeMergeConflictMarkers(content) {
   return content
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     .replace(/
@@ -27,10 +37,23 @@ function removeMergeConflictMarkers(content) {
     .replace(/
 }
 =======
+=======
+
+
+
+
+
+
+
+    .replace(/
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
     .replace(//g, '')
     .replace(/}
 
+<<<<<<< HEAD
 
 
 
@@ -45,6 +68,8 @@ function removeMergeConflictMarkers(content) {
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 // Function to fix common syntax errors
 function fixSyntaxErrors(content) {
@@ -125,18 +150,26 @@ function processFile(filePath) {
     // Check for merge conflict markers
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (content.includes('
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
 
 
 
+<<<<<<< HEAD
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             files.push(fullPath);
           }
         } catch (error) {
@@ -156,7 +189,10 @@ main
         this.resolvedFiles.push(filePath)
         this.log(`✅ Resolved conflicts in ${filePath}`),,
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     } catch (error) {
       this.errors.push({ file: filePath, error: error.message })
       this.log(`❌ Error resolving ${filePath}: ${error.message}`),,
@@ -181,10 +217,14 @@ main
         this.log(`⚠️ Could not remove ${artifact}: ${error.message}`),,
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 // Main execution
 async function main() {

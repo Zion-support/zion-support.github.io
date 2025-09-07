@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -12,6 +13,10 @@
 ;
 export interface InnovativeAIService  {id: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export interface InnovativeAIService {
 id: string;
   name: string;
@@ -59,6 +64,7 @@ id: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -73,6 +79,11 @@ id: string;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     website: string
   },
@@ -83,7 +94,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   rating: number;
   reviews: number
 }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   {
 
@@ -91,6 +106,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     features: [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     id: 'autonomous - vehicle - ai - platform',
     name: 'Autonomous Vehicle AI Platform',
     tagline: 'Complete self - driving AI system for commercial fleets',
@@ -707,6 +725,7 @@ export const innovativeAIServices: InnovativeAIService[] = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -766,6 +785,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -780,6 +802,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 12
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -810,6 +833,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'AI drug discovery algorithms',
       'Genetic sequence analysis',
       'Protein folding prediction',
@@ -822,6 +849,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Multi - omics data analysis'
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -885,6 +913,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -899,6 +931,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 23
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -929,6 +962,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Quantum AI trading algorithms',
       'Nanosecond execution speed',
       'Real - time market analysis',
@@ -941,6 +978,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'API for integration'
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1004,6 +1042,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1018,6 +1060,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 9
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1048,6 +1091,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Satellite mission planning',
       'Orbital mechanics calculations',
       'Real - time satellite tracking',
@@ -1060,6 +1107,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Multi - satellite operations'
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1123,6 +1171,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1141,23 +1193,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      'AI-powered world generation',
-    id: 'metaverse - ai - development - platform',
-    name: 'Metaverse AI Development Platform',
-    tagline: 'AI - powered metaverse creation and management',
-    price: '$2, 499',
-    period: '/month',
-    description:;
-      'Complete AI - powered metaverse development platform with virtual world creation, AI NPCs, and immersive experiences. Build the next generation of digital worlds.',
-    features: [;
-      'AI - powered world generation',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1169,6 +1215,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Intelligent NPCs and avatars',
       '3D environment creation',
       'Virtual economy systems',
@@ -1180,6 +1228,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Cross - platform support'
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1243,6 +1292,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1257,6 +1310,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 42
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1287,6 +1341,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Quantum AI decision making',
       'Precision robotics control',
       'Industrial automation',
@@ -1299,6 +1357,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Integration APIs'
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1358,6 +1417,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1376,23 +1439,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      'Quantum-resistant encryption',
-    id: 'quantum - cybersecurity - platform',
-    name: 'Quantum Cybersecurity Platform',
-    tagline: 'Quantum - resistant security with AI threat detection',
-    price: '$2, 999',
-    period: '/month',
-    description:;
-      'Next - generation quantum - resistant cybersecurity platform with AI - powered threat detection, quantum encryption, and advanced security analytics.',
-    features: [;
-      'Quantum - resistant encryption',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1404,6 +1461,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'AI threat detection',
       'Real - time monitoring',
       'Incident response',
@@ -1415,6 +1474,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Integration APIs'
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1478,6 +1538,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1492,6 +1556,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 48
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1522,6 +1587,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Quantum key distribution',
       'Quantum networks',
       'Ultra - secure communications',
@@ -1534,6 +1603,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       '24 / 7 support'
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1597,6 +1667,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1615,6 +1689,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1622,6 +1697,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Quantum AI logistics platform with supply chain optimization and real-time analytics capabilities.'
     launchDate: '2024-08-01'
     customers: 67
@@ -1635,6 +1714,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 34
   },;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1653,6 +1733,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     id: 'quantum - logistics - platform',
     name: 'Quantum Logistics Platform',
     tagline: 'Quantum AI - powered supply chain optimization',
@@ -1680,6 +1763,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1694,6 +1778,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     color: 'from - blue - 600 to - indigo - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / quantum - logistics',
@@ -1755,6 +1843,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1770,6 +1859,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -1859,11 +1952,14 @@ export const innovativeAIServices: InnovativeAIService[] = [
     period: '/month', description: 'World\'s first quantum-enhanced AI with human-like reasoning capabilities. Achieve breakthrough discoveries with 1000% ROI within 6 months. Advanced neural signal processing with quantum encryption.',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     features: [
       'Quantum neural signal processing',
       'Real-time brain activity monitoring',
@@ -2070,6 +2166,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -2092,11 +2189,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
 ];
 
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2107,6 +2207,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Quantum neural signal processingReal-time brain activity monitoringAI-powered cognitive enhancementNeural pattern recognitionSecure quantum encryptionMulti-modal interface supportAdvanced analytics dashboardAPI for research integration';
       'Compliance with medical standards24/7 quantum AI support'
     ];
@@ -2531,6 +2635,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -2539,3 +2644,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -52,7 +52,11 @@ const { execSync } = require('child_process')
       this.log(`🧪 "Tests"`)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       console.error('\n� Error Prevention System "failed")
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      console.error('\n� Error Prevention System "failed")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

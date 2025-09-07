@@ -1,4 +1,5 @@
 <<<<<<< HEAD:src_backup/components/admin/quotes/QuotesTable.tsx
+<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesTable.tsx
 }
 export const QuotesTable: React.FC<QuotesTableProps> = ({
 
@@ -6,6 +7,17 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
 
 
 
+=======
+  isLoading: boolean,
+  updateStatus: (id: string, status: QuoteStatus) => void,
+  toggleArchive: (id: string, isArchived: boolean) => void,
+  deleteQuote: (id: string) => void,
+  onViewDetails: (quote: QuoteRequest) => void
+}
+
+}
+export const QuotesTable: React.FC<QuotesTableProps> = ({
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/quotes/QuotesTable.tsx
   quotes
   isArchived = false
   isLoading
@@ -57,6 +69,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
             </TableRow>
           ) : (
             quotes.map(quote => (
+<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesTable.tsx
 
 
               <TableRow 
@@ -64,12 +77,18 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/quotes/QuotesTable.tsx
                 className="border-zion-blue-light hover:bg-zion-blue"
               >
                 <TableCell className="text-white">
                   {quote.talent_name |'Unknown Talent'}
                 </TableCell>
                 <TableCell className="text-white">
+<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesTable.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/quotes/QuotesTable.tsx
   quotes;
   is_archived = false;
 import React from './react';
@@ -158,17 +177,23 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                       onClick={() => onViewDetails(quote)}
 
 
+<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesTable.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/quotes/QuotesTable.tsx
                     >
                       <Eye className="h-4 w-4" />
                       <span className="sr-only">View Details</span>
                     </Button>
 
 
+<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesTable.tsx
                     
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/quotes/QuotesTable.tsx
                     {isArchived ? (
                       <>
                         <Button
@@ -181,6 +206,10 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                         </Button>
                         <Button
                           variant="ghost"
+<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesTable.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/quotes/QuotesTable.tsx
 
 
   quotes;
@@ -202,7 +231,10 @@ import { ;
 } from "@/components/ui/dropdown-menu";import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 import {formatDate} from "@/utils/dateUtils";
+<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesTable.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/quotes/QuotesTable.tsx
                           size="icon"
                           className="text-red-500"
                           onClick={() => {
@@ -243,8 +275,11 @@ import {formatDate} from "@/utils/dateUtils";
                             <Archive className="h-4 w-4 mr-2" />
                             Archive
                           </DropdownMenuItem>
+<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesTable.tsx
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/quotes/QuotesTable.tsx
                           <DropdownMenuItem 
                             onClick={() => {
                               if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
@@ -258,8 +293,11 @@ import {formatDate} from "@/utils/dateUtils";
                           </DropdownMenuItem>
                         </DropdownMenuContent>
                       </DropdownMenu>
+<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesTable.tsx
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/quotes/QuotesTable.tsx
 import React from "react",;
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react';
 import {;
@@ -543,6 +581,10 @@ import React from "react",import { Eye, MoreHorizontal, Archive, Trash2  } from 
                       <span className="sr-only">View Details</span>;
 <<<<<<< HEAD:src_backup/components/admin/quotes/QuotesTable.tsx
                     </Button>;
+<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesTable.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/quotes/QuotesTable.tsx
 
                     {isArchived ? (;
                       <>;
@@ -550,11 +592,15 @@ import React from "react",import { Eye, MoreHorizontal, Archive, Trash2  } from 
                           variant="ghost" 
                           size="icon"
                           onClick = {(,) => toggleArchive(quote && quote.id, false),}
+<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesTable.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/quotes/QuotesTable.tsx
                         >;
                           <Archive className="h-4 w-4" />;
                           <span className="sr-only">Unarchive</span>;
                         </Button>;
+<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesTable.tsx
                         <Button
                           variant="ghost" 
                           size="icon"
@@ -624,6 +670,8 @@ import React from "react",import { Eye, MoreHorizontal, Archive, Trash2  } from 
                       </DropdownMenu>;
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/quotes/QuotesTable.tsx
                     )}
 =======
                       </DropdownMenu>;)}
@@ -728,6 +776,7 @@ import React from "react",import { Eye, MoreHorizontal, Archive, Trash2  } from 
 <<<<<<< HEAD:src_backup/components/admin/quotes/QuotesTable.tsx
     </div>);
 }
+<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesTable.tsx
 '";
 
 
@@ -785,3 +834,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 export const QuotesTable: React.FC<QuotesTableProps> = ({
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/admin/quotes/QuotesTable.tsx
+=======
+
+'";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/quotes/QuotesTable.tsx

@@ -10,6 +10,7 @@ export default function ServiceDetailPage() {
 export default function ServiceDetailPage() {;
 
 export default function ServiceDetailPage() {
+<<<<<<< HEAD
 if (!id || typeof id !== 'string') {
     return (
       <div className='min-h-screen bg-black flex items-center justify-center'>
@@ -60,6 +61,18 @@ import { getServiceById   } from '../../data/micro-saas-services';
 import ServiceDetail from '../../components/sections/ServiceDetail',import Button from '../../components/ui/Button';
 export default function ServiceDetailPage() {export default function ServiceDetailPage() {export default function ServiceDetailPage() {const router = useRouter()const { id }  = router.query;import { ArrowLeft, ExternalLink } from 'lucide-react';
 export default function ServiceDetailPage() {if (!id || typeof id !== 'string') {return (<div className='min-h-screen bg-black flex items-center justify-center'>;
+=======
+  const router = useRouter();
+  const { id } = router.query;
+
+import {ArrowLeft, ExternalLink} from 'lucide-react';
+export default function ServiceDetailPage() {
+
+  if (!id || typeof id !== 'string') {;
+
+    return (
+      <div className='min-h-screen bg-black flex items-center justify-center'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         <div className='text-center'>;
           <h1 className='text-2xl font-bold text-white mb-4'>;
             Service Not Found;
@@ -77,6 +90,7 @@ export default function ServiceDetailPage() {if (!id || typeof id !== 'string') 
           </Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
     )}
   const service  = getServiceById(id)if (!service) {return (if (!id || typeof id !== 'string') {return (<div className='min-h-screen bg-black flex items-center justify-center'>;
         <div className='text-center'>;
@@ -127,14 +141,32 @@ export default function ServiceDetailPage() {if (!id || typeof id !== 'string') 
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='flex items-center justify-between h-16'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    );
+  }
+  const service = getServiceById(id);
+
+  if (!service) {;
+    return (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               <Button
                 href='/services'
                 variant='ghost'
                 size='sm'
+<<<<<<< HEAD
                 className='text-gray-400 hover:text-white'
               >
                 <ArrowLeft className='w-4 h-4 mr-2' />
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              <Button
+                href="/services"
+                variant="ghost"
+                size="sm"
+                className="text-gray-400 hover:text-white"
+              >
+                <ArrowLeft className="w-4 h-4 mr-2" />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 Back to Services
               </Button>
               <Button
@@ -227,9 +259,15 @@ variant='primary';
 href='/contact'
                 variant='outline'
                 size='lg'
+<<<<<<< HEAD
                 className='border-white/20 text-white hover:border-white/40'
               >
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+                className='border-white/20 text-white hover:border-white/40'
+              >
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 Get Custom Solution
 =======
 <section className='py-16 bg-gray-900/50'>;
@@ -264,8 +302,13 @@ href='/contact';
       </div>;
     </>;
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  );
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 =======
   )}<Button;
@@ -421,5 +464,11 @@ if ( {) {$2;
           </div>;
         </section>;
       </div>;
+<<<<<<< HEAD
     </>)}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </>);
+
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

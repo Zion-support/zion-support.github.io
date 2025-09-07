@@ -1,7 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+import React from 'react';
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export default function FuturisticBackground() {
 
 class ErrorBoundary extends React.Component {
@@ -38,6 +45,7 @@ export default function FuturisticBackground() {return (<div className='pointer-
       <div className='absolute top-10 left-1/4 w-80 h-80 rounded-full bg-cyan-400/20 blur-3xl animate-float' />
       <div className='absolute bottom-10 right-1/5 w-96 h-96 rounded-full bg-fuchsia-500/20 blur-3xl animate-float [animation-delay:1.2s]' />
       <div className='absolute -top-16 right-1/3 w-72 h-72 rounded-full bg-violet-500/20 blur-3xl animate-float [animation-delay:2.1s]' />
+<<<<<<< HEAD
     </div>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -45,6 +53,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='absolute top-10 left-1/4 w-80 h-80 rounded-full bg-cyan-400/20 blur-3xl animate-float' />;
       <div className='absolute bottom-10 right-1/5 w-96 h-96 rounded-full bg-fuchsia-500/20 blur-3xl animate-float [animation-delay:1.2s]' />;
       <div className='absolute -top-16 right-1/3 w-72 h-72 rounded-full bg-violet-500/20 blur-3xl animate-float [animation-delay:2.1s]' />;
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     </div>;
   )export default function FuturisticBackground() {return (<div className="pointer-events-none absolute inset-0 overflow-hidden">;
       {/* Animated gradient background */}
@@ -72,9 +83,17 @@ function FuturisticBackground() {return (<div className="pointer - events - none
       <div className="absolute top - 10 left - 1/4 w - 80 h - 80 rounded - full bg - cyan - 400 / 20 blur-3xl animate-float" />;
       <div className="absolute bottom - 10 right - 1/5 w - 96 h - 96 rounded - full bg - fuchsia - 500 / 20 blur - 3xl animate-float [animation-delay: 1.2s]" />;
       <div className="absolute -top - 16 right - 1/3 w - 72 h - 72 rounded - full bg - violet - 500 / 20 blur - 3xl animate-float [animation-delay:2.1s]" />;
+<<<<<<< HEAD
     </div>)<div className="absolute top-10 left-1/4 w-80 h-80 rounded-full bg-cyan-400/20 blur-3xl animate-float" />;
       <div className="absolute bottom-10 right-1/5 w-96 h-96 rounded-full bg-fuchsia-500/20 blur-3xl animate-float [animation-delay: 1.2s]" />;
       <div className="absolute -top-16 right-1/3 w-72 h-72 rounded-full bg-violet-500/20 blur-3xl animate-float [animation-delay:2.1s]" />;
     </div>;
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </div>);
+      <div className="absolute top-10 left-1/4 w-80 h-80 rounded-full bg-cyan-400/20 blur-3xl animate-float" />
+      <div className="absolute bottom-10 right-1/5 w-96 h-96 rounded-full bg-fuchsia-500/20 blur-3xl animate-float [animation-delay: 1.2s]" />
+      <div className="absolute -top-16 right-1/3 w-72 h-72 rounded-full bg-violet-500/20 blur-3xl animate-float [animation-delay:2.1s]" />
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -22,10 +23,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 export type Real2036InnovativeService = {id: string, name: string,tagline: string, description: string,category: string, price: string,export type Real2036InnovativeService = {id: string;export type Real2036InnovativeService = {id: string;
 export type Real2036InnovativeService = any;name: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export type Real2036InnovativeService = {
   id: string, name: string,
   tagline: string, description: string,
   category: string, price: string,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -63,12 +70,22 @@ export type Real2036InnovativeService = {
   id: string;
 export type Real2036InnovativeService = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+export type Real2036InnovativeService = {
+  id: string;
+
+export type Real2036InnovativeService = any;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   name: string;
   tagline: string;
   description: string;
   category: string;
   price: string;
   period?: string;
+<<<<<<< HEAD
   features: string[];
   features: string[], link: string,launchDate?: string;
   rating?: number;
@@ -850,16 +867,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  features: string[], link: string,
+  launchDate?: string;
+  rating?: number;
+
+
+
+
+
+  link: string;
+  launchDate?: string;
+  rating?: number;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   marketSize?: string;
   targetAudience?: string;
   competitiveAdvantage?: string;
   integration?: string[];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   useCases?: string[]
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       'Advanced AI-powered business intelligence platform that automatically analyzes data patterns, generates predictive insights, and creates interactive dashboards for strategic decision-making.',
@@ -885,6 +920,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     category: 'AI & Data',
     price: '$299',
     period: '/month',
@@ -898,6 +940,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Mobile - responsive interface'
     ],
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -928,6 +971,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     link: 'https://ziontechgroup.com / services / ai - business - intelligence - platform - pro',
     launch_date: '2036 - 01 - 20',
     rating: 4.8,
@@ -963,6 +1017,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -980,6 +1035,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+    features: [;
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Quantum key distribution (QKD)',
       'End - to - end quantum encryption',
       'Multi - party secure communication',
@@ -993,12 +1055,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       'AI-powered incident detection',
+=======
+      'AI-powered incident detection',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     link: 'https://ziontechgroup.com / services / quantum - secure - communication - enterprise',
     launch_date: '2036 - 01 - 25',
     rating: 4.9,
@@ -1037,11 +1104,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Automated problem resolution',
       'Self - healing infrastructure',
       'Predictive maintenance',
@@ -1054,11 +1124,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     link: 'https://ziontechgroup.com / services / autonomous - devops - platform - enterprise',
     launch_date: '2036 - 01 - 30',
     rating: 4.7,
@@ -1094,6 +1170,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     period: '/month',
     features: [;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1102,6 +1179,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Satellite performance analytics',
       'Orbital mechanics calculations',
       'Space weather monitoring',
@@ -1115,12 +1194,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       'AI-powered threat detection',
+=======
+      'AI-powered threat detection',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     link: 'https://ziontechgroup.com / services / space - technology - analytics - platform',
     launch_date: '2036 - 02 - 05',
     rating: 4.6,
@@ -1157,11 +1241,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Behavioral analysis',
       'Automated incident response',
       'Threat intelligence feeds',
@@ -1174,11 +1261,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     link: 'https://ziontechgroup.com / services / ai - cybersecurity - suite - enterprise',
     launch_date: '2036 - 02 - 10',
     rating: 4.8,
@@ -1212,6 +1305,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     period: '/month',
     features: [;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1220,6 +1314,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Quantum algorithm optimization',
       'Hybrid quantum - classical ML',
       'Quantum neural networks',
@@ -1233,11 +1329,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     link: 'https://ziontechgroup.com / services / quantum - machine - learning - platform',
     launch_date: '2036 - 02 - 15',
     rating: 4.9,
@@ -1272,6 +1374,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     period: '/month',
     features: [;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1280,6 +1383,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Intelligent workload distribution',
       'Real - time optimization',
       'Multi - edge coordination',
@@ -1293,12 +1398,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       'AI-powered personalization',
+=======
+      'AI-powered personalization',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     link: 'https://ziontechgroup.com / services / edge - computing - orchestration - enterprise',
     launch_date: '2036 - 02 - 20',
     rating: 4.7,
@@ -1336,11 +1446,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Omnichannel experience management',
       'Predictive customer behavior',
       'Automated customer service',
@@ -1353,12 +1466,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       'Multi-chain support',
+=======
+      'Multi-chain support',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     link: 'https://ziontechgroup.com / services / ai - customer - experience - platform',
     launch_date: '2036 - 02 - 25',
     rating: 4.8,
@@ -1397,11 +1515,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Smart contract development',
       'Deployment automation',
       'Security auditing',
@@ -1414,12 +1535,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       'AI-powered quality control',
+=======
+      'AI-powered quality control',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     link: 'https://ziontechgroup.com / services / blockchain - infrastructure - enterprise',
     launch_date: '2036 - 03 - 01',
     rating: 4.6,
@@ -1457,11 +1583,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Predictive maintenance',
       'Autonomous robotics',
       'Production optimization',
@@ -1474,11 +1603,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     link: 'https://ziontechgroup.com / services / autonomous - manufacturing - platform',
     launch_date: '2036 - 03 - 05',
     rating: 4.7,
@@ -1512,6 +1647,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     period: '/month',
     features: [;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1520,6 +1656,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Quantum encryption protocols',
       'Quantum - resistant algorithms',
       'Real - time threat detection',
@@ -1533,12 +1671,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       'AI-powered image analysis',
+=======
+      'AI-powered image analysis',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     link: 'https://ziontechgroup.com / services / quantum - internet - security - gateway',
     launch_date: '2036 - 03 - 10',
     rating: 4.9,
@@ -1576,11 +1719,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Symptom assessment',
       'Treatment recommendations',
       'Patient data integration',
@@ -1593,11 +1739,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     link: 'https://ziontechgroup.com / services / ai - healthcare - diagnostics - platform',
     launch_date: '2036 - 03 - 15',
     rating: 4.8,
@@ -1629,6 +1781,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     period: '/month',
     features: [;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1637,6 +1790,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Resource mapping algorithms',
       'Mining operation management',
       'Robotic control systems',
@@ -1650,11 +1805,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     link: 'https://ziontechgroup.com / services / space - resource - mining - platform',
     launch_date: '2036 - 03 - 20',
     rating: 4.7,
@@ -1686,6 +1847,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     period: '/month',
     features: [;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1694,6 +1856,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Quantum market analysis',
       'High - frequency trading',
       'Risk management',
@@ -1707,11 +1871,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     link: 'https://ziontechgroup.com / services / quantum - financial - trading - platform',
     launch_date: '2036 - 03 - 25',
     rating: 4.9,
@@ -1745,12 +1915,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Demand forecasting',
       'Inventory optimization',
       'Route optimization',
@@ -1761,6 +1934,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
       'Custom workflows',
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1776,6 +1950,16 @@ useCases?: string[];
 };
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+  useCases?: string[];};  useCases?: string[]
+}
+
+useCases?: string[];
+};
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export const real2036InnovativeServices: Real2036InnovativeService[] = [
   // AI-Powered Business Intelligence
   {
@@ -2361,6 +2545,7 @@ id: 'ai-business-intelligence-platform-pro',
   // AI-Powered Supply Chain Optimization
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -2372,6 +2557,9 @@ id: 'ai-business-intelligence-platform-pro',
     ],
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     id: 'ai-supply-chain-optimization-platform'
     name: 'AI Supply Chain Optimization Platform'
     tagline: 'Intelligent supply chain management and optimization'
@@ -2408,6 +2596,7 @@ id: 'ai-business-intelligence-platform-pro',
     useCases: [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ];      'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentReal-time trackingPerformance analyticsCustom workflows'
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2441,6 +2630,13 @@ id: 'ai-business-intelligence-platform-pro',
     link: 'https://ziontechgroup.com/services/ai-supply-chain-optimization-platform';
     launchDate: '2036-03-30';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+];      'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentReal-time trackingPerformance analyticsCustom workflows'
+    ];
+    link: 'https://ziontechgroup.com/services/ai-supply-chain-optimization-platform';
+    launchDate: '2036-03-30';
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     ];
     link: 'https://ziontechgroup.com/services/quantum-financial-trading-platform', launchDate: '2036-03-25',
@@ -2470,6 +2666,7 @@ id: 'ai-business-intelligence-platform-pro',
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
     launchDate: '2036-03-30';
@@ -2493,6 +2690,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     use_cases: [;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Demand planning',
       'Inventory management',
       'Logistics optimization',
@@ -2502,11 +2701,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       'Risk management'
     ]
   }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ];      'Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_real - time tracking_performance analytics_custom workflows';
     ];
     link: 'https://ziontechgroup.com / services / ai - supply - chain - optimization - platform';
@@ -2562,6 +2764,7 @@ export type Real2036InnovativeService = {features: [;'Quantum key distribution (
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 <<<<<<< HEAD
@@ -2570,12 +2773,16 @@ export type Real2036InnovativeService = {features: [;'Quantum key distribution (
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     rating: 4.7;
     marketSize: '$28.4B'
     targetAudience: 'Manufacturing companies, Retail businesses, Logistics providers';
     competitiveAdvantage: 'AI optimization, Real-time insights, Comprehensive coverage';
     integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services']
     useCases: ['Demand planningInventory managementLogistics optimizationRisk management']
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2594,6 +2801,12 @@ export type Real2036InnovativeService = {;
 export type Real2036InnovativeService = {
     features: [;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  }
+];
+
+export type Real2036InnovativeService = {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
       'Quantum key distribution (QKD)',
       'End - to - end quantum encryption',
@@ -2752,6 +2965,7 @@ ursor/fix-website-loading-errors-and-merge-6662;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2769,6 +2983,12 @@ ursor/fix-website-loading-errors-and-merge-6662;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 export type Real2036InnovativeService = {;
   id: string,;
@@ -3110,6 +3330,7 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -3124,9 +3345,15 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export type Real2036InnovativeService = {;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-  }
+
+
+
+
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3149,3 +3376,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

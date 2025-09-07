@@ -1,10 +1,18 @@
+<<<<<<< HEAD:src_backup/components/referrals/RewardsCard.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/referrals/RewardsCard.tsx
 
 <<<<<<< HEAD:src_backup/components/referrals/RewardsCard.tsx
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { ReferralReward } from "@/types/referrals";
 import { formatDate } from "@/utils/referralUtils";
 import { BadgeDollarSign, Badge } from 'lucide-react'
+<<<<<<< HEAD:src_backup/components/referrals/RewardsCard.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/referrals/RewardsCard.tsx
 interface RewardsCardProps {
   rewards: ReferralReward[];
   is_loading: boolean;
@@ -50,13 +58,20 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 
 
 interface RewardsCardProps {
+<<<<<<< HEAD:src_backup/components/referrals/RewardsCard.tsx
   rewards: ReferralReward[];
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+  rewards: ReferralReward[]
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/referrals/RewardsCard.tsx
   isLoading: boolean
 }
 
 
     return (
+<<<<<<< HEAD:src_backup/components/referrals/RewardsCard.tsx
       <Card>
         <CardHeader>
 <CardTitle className='flex items-center gap-2'>
@@ -75,14 +90,48 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </Card>
     );
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+          <CardTitle className="flex items-center gap-2">
+            <BadgeDollarSign className="h-5 w-5" />
+
+          <CardTitle className="flex items-center gap-2">
+            <BadgeDollarSign className="h-5 w-5" />
+
+
+            Your Rewards
+          </CardTitle>
+          <CardDescription>Rewards earned from successful referrals</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="flex items-center justify-center p-4">
+            <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />
+          </div>
+        </CardContent>
+      </Card>
+
+
+
+
+    )
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/referrals/RewardsCard.tsx
   }
   if (rewards.length === 0) {
     return (
       <Card>
         <CardHeader>
+<<<<<<< HEAD:src_backup/components/referrals/RewardsCard.tsx
 <CardTitle className='flex items-center gap-2'>
             <BadgeDollarSign className='h-5 w-5' />
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+          <CardTitle className="flex items-center gap-2">
+            <BadgeDollarSign className="h-5 w-5" />
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/referrals/RewardsCard.tsx
             Your Rewards
           </CardTitle>
           <CardDescription>
@@ -90,24 +139,56 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </CardDescription>
         </CardHeader>
         <CardContent>
+<<<<<<< HEAD:src_backup/components/referrals/RewardsCard.tsx
           <div className='flex flex-col items-center justify-center p-4 text-center'>
             <p className='text-muted-foreground'>No rewards yet</p>
             <p className='text-sm text-muted-foreground mt-1'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+          <CardTitle className="flex items-center gap-2">
+            <BadgeDollarSign className="h-5 w-5" />
+            Your Rewards
+
+          </CardTitle>
+          <CardDescription>Rewards earned from successful referrals</CardDescription>
+        </CardHeader>
+        <CardContent>
+
+
+          <div className="flex flex-col items-center justify-center p-4 text-center">
+            <p className="text-muted-foreground">No rewards yet</p>
+            <p className="text-sm text-muted-foreground mt-1">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/referrals/RewardsCard.tsx
               Refer users to earn rewards once they complete onboarding
             </p>
           </div>
         </CardContent>
       </Card>
+<<<<<<< HEAD:src_backup/components/referrals/RewardsCard.tsx
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+    )
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/referrals/RewardsCard.tsx
   }
   return (
     <Card>
       <CardHeader>
+<<<<<<< HEAD:src_backup/components/referrals/RewardsCard.tsx
 <CardTitle className='flex items-center gap-2'>
           <BadgeDollarSign className='h-5 w-5' />
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+        <CardTitle className="flex items-center gap-2">
+          <BadgeDollarSign className="h-5 w-5" />
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/referrals/RewardsCard.tsx
           Your Rewards
         </CardTitle>
         <CardDescription>Rewards earned from successful referrals</CardDescription>
@@ -282,6 +363,7 @@ if ( {) {$2;
     )
 
   }
+<<<<<<< HEAD:src_backup/components/referrals/RewardsCard.tsx
 ;
   if (rewards.length === 0) {;
     return (;
@@ -291,6 +373,25 @@ if ( {) {$2;
             <BadgeDollarSign className="h-5 w-5" />;
             Your Rewards;
 
+=======
+
+  if (rewards && rewards.length === 0) {;
+    return (
+      <Card>;
+        <CardHeader>;
+          <CardTitle className='flex items-center gap-2'>;
+            <BadgeDollarSign className='h-5 w-5' />;
+            Your Rewards;
+          </CardTitle>;
+          <CardDescription>;
+            Rewards earned from successful referrals;
+          </CardDescription>;
+        </CardHeader>;
+        <CardContent>;
+          <div className='flex flex-col items-center justify-center p-4 text-center'>;
+            <p className='text-muted-foreground'>No rewards yet</p>;
+            <p className='text-sm text-muted-foreground mt-1'>              Refer users to earn rewards once they complete onboarding            Your Rewards;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/referrals/RewardsCard.tsx
           </CardTitle>;
 =======
         <CardContent>;)}if (rewards && rewards.length === 0) {return (<Card>;
@@ -393,22 +494,36 @@ if ( {) {$2;
                   ) : (
                     <Badge className="h-4 w-4 text-blue-600" />
                   )}
+<<<<<<< HEAD:src_backup/components/referrals/RewardsCard.tsx
                   <p className='font-medium'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                  <p className="font-medium">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/referrals/RewardsCard.tsx
                     {reward.reward_type === 'credit'
                       ? `$${reward.amount?.toFixed(2)} Credit`
                       : 'Visibility Boost'}
                   </p>
                 </div>
+<<<<<<< HEAD:src_backup/components/referrals/RewardsCard.tsx
                 </p>;
                 {reward.expires_at && (;
                   <p className="text-xs text-muted-foreground">;
+=======
+                <p className="text-xs text-muted-foreground mt-1">
+                  Earned on {formatDate(reward.created_at)}
+
+                </p>
+                {reward.expires_at && (
+                  <p className="text-xs text-muted-foreground">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/referrals/RewardsCard.tsx
 
 <p className='text-xs text-muted-foreground mt-1'>
                   Earned on {formatDate(reward.created_at)}
                 </p>
                 {reward.expires_at && (
                   <p className='text-xs text-muted-foreground'>
+<<<<<<< HEAD:src_backup/components/referrals/RewardsCard.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
             >;
@@ -432,6 +547,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>;
                 {reward.expires_at && (<p className='text-xs text-muted-foreground'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/referrals/RewardsCard.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/referrals/RewardsCard.tsx
                     Expires on {formatDate(reward.expires_at)}
                   </p>;
                 )}
@@ -439,9 +556,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
 <<<<<<< HEAD:src_backup/components/referrals/RewardsCard.tsx
           ))}
+<<<<<<< HEAD:src_backup/components/referrals/RewardsCard.tsx
         </div>
       </CardContent>
     </Card>
+=======
+
+        </div>;
+      </CardContent>;
+    </Card>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/referrals/RewardsCard.tsx
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -478,8 +602,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>))}
         </div>;
       </CardContent>;
+<<<<<<< HEAD:src_backup/components/referrals/RewardsCard.tsx
     </Card>)}</div>;
       </CardContent>;
     </Card>;
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/referrals/RewardsCard.tsx
+=======
+    </Card>);
+}
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/referrals/RewardsCard.tsx

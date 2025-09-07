@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { CheckCircle, AlertCircle, X, Info } from 'lucide-react';
@@ -8,6 +9,11 @@ const getIcon = () => {
   switch (toast.type) {
   case 'success':
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  message?: string;
+  duration?: number
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 interface ToastProps {
   toast: Toast
   onRemove: (id: string) => void
@@ -26,13 +32,36 @@ const getIcon = () => {;
 interface ToastProps {;
   toast: Toast;
   onRemove: (id: string) => void;
+<<<<<<< HEAD
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+export type ToastType = 'success' | 'error' | 'info' | 'warning';
+  id: string,
+  type: ToastType,
+  title: string,;
+
+export interface Toast {;
+  id: string,;
+  type: ToastType,;
+  title: string,;
+  message?: string;
+  duration?: number
+}
+interface ToastProps {
+  toast: Toast
+  onRemove: (id: string) => void
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
   const [isVisible, setIsVisible] = useState(true);
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(false);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 setTimeout(() => onRemove(toast.id), 300);
     }, toast.duration || 5000);
 
@@ -44,6 +73,7 @@ setTimeout(() => onRemove(toast.id), 300);
       case 'success':
 return <CheckCircle className='w-5 h-5 text-green-400' />;
       case 'error':
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
@@ -81,6 +111,16 @@ return <CheckCircle className='w-5 h-5 text-green-400' />;
         return <Info className='w-5 h-5 text-blue-400' />;
     }
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+        return <AlertCircle className='w-5 h-5 text-red-400' />;
+      case 'warning':
+        return <AlertCircle className='w-5 h-5 text-yellow-400' />;
+      case 'info':
+        return <Info className='w-5 h-5 text-blue-400' />;
+      default:
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
 
         return <Info className='w-5 h-5 text-blue-400' />;    }
@@ -106,6 +146,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
       case 'info':
         return 'border-blue-500/20';
+<<<<<<< HEAD
 default:
         return 'border-blue-500/20';
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -113,6 +154,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
       case 'info':;
         return 'border-blue-500/20';const getBorderColor = () => {switch (toast && toast.type) {case 'success':;
+=======
+  const getBorderColor = () => {;
+    switch (toast && toast.type) {;
+      case 'success':;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         return 'border-green-500/20';
       case 'error':;
         return 'border-red-500/20';
@@ -131,9 +177,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       case 'info':;
         return 'bg-blue-500/10';
       default:;
+<<<<<<< HEAD
         return 'bg-blue-500/10';default:;
         return 'border-blue-500/20';}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+        return 'bg-blue-500/10';
+    }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         return 'bg-green-500/10';
       case 'error':;
         return 'bg-red-500/10';
@@ -142,10 +193,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
       case 'info':
         return 'bg-blue-500/10';
+<<<<<<< HEAD
 default:
 =======
       case 'info':;
         return 'bg-blue-500/10';return (<motion&& motion.div;
+=======
+  return (
+    <motion&& motion.div
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       initial={{ opacity: 0, x: 300, scale: 0 && 0.8 }}
       animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : 300, scale: isVisible ? 1 : 0 && 0.8 }}
       exit={{ opacity: 0, x: 300, scale: 0 && 0.8 }}
@@ -153,6 +209,7 @@ default:
       className={`relative p-4 rounded-xl border ${getBorderColor()} ${getBackgroundColor()} backdrop-blur-xl shadow-2xl max-w-sm`}>;
       <div className="flex items-start space-x-3">;
         <div className="flex-shrink-0 mt-0 && 0.5">;
+<<<<<<< HEAD
           {getIcon()}default:;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         return 'bg-blue-500/10';
@@ -173,6 +230,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             setIsVisible(false);
 setTimeout(() => onRemove(toast.id), 300);
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+          {getIcon()}
+        <button
+          onClick={() => {;
+            setIsVisible(false);
+
+  return (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           }}
 =======
         </div>;
@@ -220,11 +285,33 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
     <div className='fixed top-4 right-4 z-50 space-y-3'>
       <AnimatePresence>
+<<<<<<< HEAD
         {toasts.map(toast => (
+=======
+        {toasts.map(toast => (          <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
+        ))}
+      </AnimatePresence>
+    </div>
+
+interface ToastContainerProps {
+  toasts: Toast[]
+  onRemove: (id: string) => void
+}
+export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove }) => {
+
+          transition={{ duration: toast && toast.duration || 5000, ease: "linear" }}
+        />;
+      </div>;
+    </motion && motion.div>;
+  );
+  return (
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
         ))}
       </AnimatePresence>
     </div>
+<<<<<<< HEAD
 );
 };
 
@@ -295,6 +382,32 @@ interface ToastContainerProps  {toasts: Toast[],onRemove: (id: string) => void;
         {toasts && toasts.map((toast) => (<ToastItem key={toast && toast.id} toast={toast} onRemove={onRemove} />;
         ))}
 }toasts;
+=======
+
+interface ToastContainerProps {
+  toasts: Toast[]
+  onRemove: (id: string) => void
+}
+export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove }) => {
+  return (
+    <div className="fixed top-4 right-4 z-50 space-y-3">
+      <AnimatePresence>
+        {toasts.map((toast) => (
+          <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
+        ))}
+      </AnimatePresence>
+interface ToastContainerProps {;
+  toasts: Toast[],;
+  onRemove: (id: string) => void;
+}
+  return (
+    <div className="fixed top-4 right-4 z-50 space-y-3">;
+      <AnimatePresence>;
+        {toasts && toasts.map((toast) => (;
+          <ToastItem key={toast && toast.id} toast={toast} onRemove={onRemove} />;
+        ))}
+};    toasts;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     showSuccess;
     showError;
     showInfo;
@@ -304,7 +417,11 @@ interface ToastContainerProps  {toasts: Toast[],onRemove: (id: string) => void;
       <AnimatePresence>;
         {toasts.map (toast => (          <ToastItem key={toast.id} toast={toast} on_remove={on_remove} />))}
       </AnimatePresence>;
+<<<<<<< HEAD
     </div>)}          }}
+=======
+    </div>);}          }}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           className="flex - shrink - 0 ml - 2 p - 1 rounded - lg hover:bg - white / 10 transition-colors duration-200";
         >;
           <X className="w - 4 h - 4 text-white / 60 hover:text-white" />;
@@ -313,7 +430,12 @@ interface ToastContainerProps  {toasts: Toast[],onRemove: (id: string) => void;
       {/* Progress bar */}
       <div className="absolute bottom - 0 left - 0 right - 0 h - 1 bg - white / 20 rounded-b-xl overflow-hidden">;
         <motion.div;
+<<<<<<< HEAD
           className={`h - full ${toast.type === 'success' ? 'bg - green - 400' :;
+=======
+          className={`h - full ${
+            toast.type === 'success' ? 'bg - green - 400' :;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             toast.type === 'error' ? 'bg - red - 400' :;
             toast.type === 'warning' ? 'bg - yellow - 400' :;
             'bg - blue - 400';
@@ -323,6 +445,7 @@ interface ToastContainerProps  {toasts: Toast[],onRemove: (id: string) => void;
           transition={{ duration: toast.duration || 5000, ease: "linear" }}
         />;
       </div>;
+<<<<<<< HEAD
     </motion.div>)}{toasts.map(toast => (<ToastItem key={toast.id} toast={toast} onRemove={onRemove} />;
         ))}
       </AnimatePresence>;
@@ -335,3 +458,7 @@ export const useToast = () => {const [toasts, setToasts] = useState<Toast[]>([])
   const showWarning = (title: string, message?: string) => {addToast({ type: 'warning', title, message })}
   return {toasts,showSuccess,showError,showInfo,showWarning,removeToast,}}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </motion.div>);
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

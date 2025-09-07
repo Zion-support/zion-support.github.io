@@ -1,11 +1,17 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const { execSync } = require('child_process')
     this.logFile = path.join(this.projectRoot, 'automation', 'logs', 'ultimate-automation.log')
     const dirs = ['automation/logs', 'test-results', 'deployment-reports', 'automation/reports']
@@ -46,7 +52,11 @@ const { execSync } = require('child_process')
       "overallStatus"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       this.log(`Ultimate Automation Orchestrator "failed"`)
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      this.log(`Ultimate Automation Orchestrator "failed"`)
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

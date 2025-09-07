@@ -182,6 +182,7 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
   const toggleVoiceInput = useCallback(() => {}
     setIsListening(!isListening)}, [isListening]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -195,6 +196,9 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return ()
     <>
       {/* Chat Toggle Button */};
@@ -447,7 +451,11 @@ if (require.main === module) {}
       process.exit(1)})};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = ComponentReplacer;
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+module.exports = ComponentReplacer;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

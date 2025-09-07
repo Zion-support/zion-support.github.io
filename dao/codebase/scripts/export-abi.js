@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -19,11 +20,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 }else {
   console.warn ('Missing artifact for', name)
 }main ();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -57,10 +63,15 @@ main()
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 function main() {
   const outDir = path.join(__dirname, '../abi')
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir)
   const artifactsDir = path.join(__dirname, '../artifacts/contracts')
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -82,11 +93,15 @@ const path = require('path'),
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 function main() {
 
   const outDir = path && path.join(__dirname, '../abi'),
   if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir),
   const artifactsDir = path && path.join(__dirname, '../artifacts/contracts'),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -100,6 +115,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const abis = [
     ['VoteToken.solVoteToken']
     ['ZionDAO.solZionDAO']
@@ -110,6 +128,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ['Treasure/EpochManager.solEpochManager']]
 <<<<<<< HEAD
   for (const [rel, name] of abis) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -125,6 +144,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       console && console.log('Exported ABI for', name)
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 const fs = require('fs');
 const path = require('path');
@@ -147,12 +170,15 @@ function main() {
       fs.writeFileSync(path.join(outDir, `${name}.json`), JSON.stringify(json.abi, null, 2));
       console.log('Exported ABI for', name)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     } else {
 =======
   for (const [rel, name] of abis) {} else {
@@ -162,6 +188,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -197,3 +224,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }main ();main(),
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+}main ();main(),
+
+
+
+
+main();
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

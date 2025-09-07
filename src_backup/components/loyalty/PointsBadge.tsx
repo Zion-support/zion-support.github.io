@@ -1,4 +1,5 @@
 <<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
+<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
 { purchase: 0, post: 0, referral: 0 }
   );
   const handle_click = (e: React.MouseEvent < HTMLAnchorElement>, ) =>: any {
@@ -29,6 +30,14 @@ if ( {) {$2;
     } finally {
 
 
+=======
+    }
+  }
+    } catch (error) {
+      logErrorToProduction ('Failed to refresh points:', { data: error });
+    } finally {
+import React, { useState } from 'react',;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/loyalty/PointsBadge.tsx
 import { Gift, RefreshCw } from 'lucide-react';
 import { usePoints } from '@/hooks/usePoints',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -69,6 +78,7 @@ export function PointsBadge() {;
       logErrorToProduction('Failed to refresh points:', { data: error });
     } finally {;
       setIsRefreshing(false);
+<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
 
     }
   },
@@ -90,6 +100,11 @@ export function PointsBadge() {
   const [isRefreshing, setIsRefreshing] = useState(false);
   const points = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    }
+  },
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/loyalty/PointsBadge.tsx
   return (
     <TooltipProvider>;
 
@@ -145,7 +160,10 @@ export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledg
 
 
 
+<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/loyalty/PointsBadge.tsx
   return (
     <TooltipProvider>
       <div className="flex items-center gap-1">
@@ -154,6 +172,10 @@ export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledg
             <Link
 
 
+<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/loyalty/PointsBadge.tsx
               href={isAuthenticated ? "/points" : "#"}
               onClick={handleClick}
               title={isAuthenticated ? "View points" : "Earn points by participating"}
@@ -193,6 +215,7 @@ export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledg
                 <p className='text-sm font-medium'>Zion Rewards Program</p>;
 <<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
                 <p className='text-xs mt-1 text-muted-foreground'>;
+<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
             {is_authenticated ? (
               <>;
 =======
@@ -216,6 +239,9 @@ export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledg
 <<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
                   • Sign up: 50 pts;
 
+=======
+                   Sign up: 50 pts;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/loyalty/PointsBadge.tsx
                   <br />;
 =======
                   • Sign up: 50 pts;<br />;
@@ -235,10 +261,38 @@ export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledg
 <<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
 
 
+<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
         
 
 
 
+=======
+                <ul className="text-xs mt-1 space-y-0.5">
+                  <li>Purchases: {breakdown.purchase}</li>
+                  <li>Posts: {breakdown.post}</li>
+                  <li>Referrals: {breakdown.referral}</li>
+                </ul>
+                <p className="text-xs mt-2 text-muted-foreground border-t pt-1">
+                  Click to view full rewards program
+                </p>
+              </>
+            ) : (
+              <>
+                <p className="text-sm font-medium">Zion Rewards Program</p>
+                <p className="text-xs mt-1 text-muted-foreground">
+                  • Sign up: 50 pts<br/>
+                  • First purchase: 100 pts<br/>
+                  • Community posts: 25 pts each<br/>
+                  • Refer friends: 200 pts each
+                </p>
+                <p className="text-xs mt-2 text-muted-foreground border-t pt-1">
+                  Click to learn more and join!
+                </p>
+              </>
+            )}
+          </TooltipContent>
+        </Tooltip>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/loyalty/PointsBadge.tsx
         {isAuthenticated && (
           <Tooltip>
             <TooltipTrigger asChild>
@@ -264,6 +318,10 @@ export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledg
             <TooltipTrigger asChild>;
 <<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
               <Button
+<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/loyalty/PointsBadge.tsx
 
 =======
           </TooltipContent>;
@@ -317,10 +375,13 @@ export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledg
                 className="p-1 h-6 w-6 text-muted-foreground hover:text-foreground"
                 aria-label="Refresh points"
               >
+<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
 
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/loyalty/PointsBadge.tsx
                 <RefreshCw
                   className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}
                   aria-hidden="true"
@@ -340,6 +401,7 @@ export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledg
       {!isAuthenticated && (;
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
       )}
+<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
 
 }
 
@@ -374,3 +436,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</TooltipProvider>;
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/loyalty/PointsBadge.tsx
+=======
+    </TooltipProvider>;
+  );
+}
+
+
+    </TooltipProvider>
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/loyalty/PointsBadge.tsx

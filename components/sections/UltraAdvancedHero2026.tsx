@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 ;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import React from 'react';
 import { motion   } from 'framer-motion';
 import Link from 'next/link';
@@ -31,7 +35,11 @@ import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-d
 export default function UltraAdvancedHero2026() {
   const totalServices = null;
 import {
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   ArrowRight
   Star
   TrendingUp
@@ -60,6 +68,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
+<<<<<<< HEAD
 export default function UltraAdvancedHero2026() {
   const totalServices =
     aiAutonomousServices2026.length +
@@ -72,6 +81,20 @@ export default function UltraAdvancedHero2026() {
   };
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
+import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
+export default function UltraAdvancedHero2026() {
+  const totalServices = aiAutonomousServices2026.length + quantumSpaceTechServices2026.length + metaverseDigitalRealityServices2026.length;
+  const contactInfo = {
+    phone: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+
+  };
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const containerVariants = {
     hidden: { opacity: 0 }
 import {motion} from 'framer-motion';
@@ -123,18 +146,26 @@ function UltraAdvancedHero2026() {
     visible: {
       opacity: 1
       transition: {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 staggerChildren: 0.1,
       },
     },
   };
 
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const itemVariants = {
     hidden: { opacity: 0, y: 30 }
     visible: {
       opacity: 1
       y: 0
       transition: {
+<<<<<<< HEAD
 duration: 0.8,
       },
     },
@@ -198,6 +229,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
         <motion.div;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           variants={containerVariants}
           initial='hidden';
           animate='visible';
@@ -236,6 +270,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
           <motion&& motion.div
             variants={itemVariants}
+<<<<<<< HEAD
             className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
           >
             <div className='text-center p-4 bg-gradient-to-br from-purple-800/20 to-purple-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl'>
@@ -243,6 +278,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
           <motion&& motion.div;
             variants={itemVariants}stagger_children: 0.1,},},  }        stagger_children: 0.1;
+=======
+
+        stagger_children: 0.1,
+      },
+    },  }        stagger_children: 0.1;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       }
     }
   }const item_variants = {hidden: { opacity: 0, coordinate_y: 30 },visible: {opacity: 1,coordinate_y: 0,transition: {duration: 0.8,},},}return (<section className='relative min - h-screen flex items - center justify - center overflow - hidden'>;
@@ -323,6 +364,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           initial="hidden";
           animate="visible";
           className="space-y-8">;
+<<<<<<< HEAD
           {/* Badge */}className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto';
           >;
             <div className='text-center p-4 bg-gradient-to-br from-purple-800/20 to-purple-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl'>;
@@ -369,11 +411,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 1000% ROI Guaranteed
               </span>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+          {/* Badge */}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             </div>
             <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-xl border border-green-500/20 rounded-xl'>
               <CheckCircle className='w-6 h-6 text-green-400 flex-shrink-0' />
               <span className='text-gray-200 font-medium'>
                 24/7 Autonomous Operation
+<<<<<<< HEAD
               </span>
             </div>
           </motion.div>
@@ -396,6 +442,40 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <Zap className='w-6 h-6 mr-3' />
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              </span>            </div>
+          </motion.div>
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto"
+          >
+            <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-xl border border-blue-500/20 rounded-xl">
+              <CheckCircle className="w-6 h-6 text-blue-400 flex-shrink-0" />
+              <span className="text-gray-200 font-medium">First-to-Market Technology</span>
+            </div>
+            <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-xl border border-purple-500/20 rounded-xl">
+              <CheckCircle className="w-6 h-6 text-purple-400 flex-shrink-0" />
+              <span className="text-gray-200 font-medium">1000% ROI Guaranteed</span>
+            </div>
+            <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-xl border border-green-500/20 rounded-xl">
+              <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+              <span className="text-gray-200 font-medium">24/7 Autonomous Operation</span>
+            </div>
+          </motion.div>
+            className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6"
+          >
+            <Link
+              href="/services"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 text-white font-bold text-lg rounded-2xl hover:from-purple-700 hover:via-pink-700 hover:to-cyan-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl"
+            >
+              <Rocket className="w-6 h-6 mr-3" />
+              Explore All Services
+              <ArrowRight className="w-6 h-6 ml-3" />
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center px-8 py-4 border-2 border-purple-500/50 text-purple-300 font-bold text-lg rounded-2xl hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
+            >
+              <Zap className="w-6 h-6 mr-3" />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               Get Started Today
             </Link>
           </motion.div>
@@ -494,6 +574,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </motion && motion.div>;
 
           {/* Contact Information */}
+<<<<<<< HEAD
 <motion.div
 =======
           </motion && motion.div>;{/* Contact Information */}className="mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl max-w-4xl mx-auto";
@@ -563,6 +644,37 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
                   </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            className="mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl max-w-4xl mx-auto"
+          >
+            <h3 className="text-2xl font-bold text-white mb-6">Ready to Transform Your Business?</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="flex items-center space-x-3">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
+                  <Phone className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <div className="text-white font-semibold">Call Us</div>
+                  <div className="text-purple-300">{contactInfo.phone}</div>
+                </div>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-cyan-500 rounded-xl flex items-center justify-center">
+                  <Mail className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <div className="text-white font-semibold">Email Us</div>
+                  <div className="text-cyan-300">{contactInfo.email}</div>
+                </div>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center">
+                  <MapPin className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <div className="text-white font-semibold">Visit Us</div>
+                  <div className="text-purple-300 text-sm">{contactInfo.address}</div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 </div>
               </div>
             </div>
@@ -638,6 +750,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </motion && motion.div>;
 
           {/* Trust Indicators */}
+<<<<<<< HEAD
 <motion.div
             variants={itemVariants}
             className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-gray-400'
@@ -652,15 +765,32 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='flex items-center space-x-2'>
               <Zap className='w-5 h-5 text-purple-400' />
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              <Zap className="w-5 h-5 text-purple-400" />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               <span>24/7 Support</span>
             </div>
           </motion.div>
         </motion.div>
       </div>
+<<<<<<< HEAD
       {/* Floating Elements */}
 <div className='absolute inset-0 pointer-events-none'>
         <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+          }}
+          transition={{
+            duration: 6
+            repeat: Infinity
+            ease: 'easeInOut'
+          }}
+          className='absolute top - 20 right - 20 text - 6xl opacity - 20';
+        >;
+          🚀;
+        </motion.div>;
+        <motion.div;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           animate={{
             coordinate_y: [0, 20, 0],
             rotate: [0, -5, 0],
@@ -741,6 +871,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           transition={{
             duration: 6
             repeat: Infinity
+<<<<<<< HEAD
             ease: 'easeInOut'
           }}
           className='absolute top-20 right-20 text-6xl opacity-20'
@@ -751,11 +882,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           animate={{
             y: [0, 20, 0]
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            ease: "easeInOut"
+          }}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             rotate: [0, -5, 0]
           }}
           transition={{
             duration: 8
             repeat: Infinity
+<<<<<<< HEAD
             ease: 'easeInOut'
           }}
           className='absolute bottom-20 left-20 text-6xl opacity-20'
@@ -766,11 +902,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           animate={{
             y: [0, -15, 0]
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            ease: "easeInOut"
+          }}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             rotate: [0, 3, 0]
           }}
           transition={{
             duration: 7
             repeat: Infinity
+<<<<<<< HEAD
             ease: 'easeInOut'
           }}
           className='absolute top-1/3 left-10 text-5xl opacity-20'
@@ -781,15 +922,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           animate={{
             y: [0, 15, 0]
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            ease: "easeInOut"
+          }}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             rotate: [0, -3, 0]
           }}
           transition={{
             duration: 9
             repeat: Infinity
+<<<<<<< HEAD
             ease: 'easeInOut'
 =======
           className='absolute bottom-1/3 right-10 text-5xl opacity-20'>        <motion&& motion.div;
           animate={{y: [0, -20, 0];
+=======
+
+}
+          className='absolute bottom - 1/3 right - 10 text - 5xl opacity - 20'        >        <motion.div;
+          animate={{
+            coordinate_y: [0, -20, 0];
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             rotate: [0, 5, 0];
           }}
           transition={{duration: 6;
@@ -875,6 +1028,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           🌐;
         </motion.div>;
       </div>;
+<<<<<<< HEAD
     </section>))})ease: 'easeInOut';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           }}
@@ -899,3 +1053,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </section>;
 )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </section>));
+}
+
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

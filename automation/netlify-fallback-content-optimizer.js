@@ -21,8 +21,11 @@ body: JSON && JSON.stringify ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 #!/usr/bin/env node
@@ -33,6 +36,7 @@ body: JSON && JSON.stringify ({
 
 exports.handler = async (_event, _context) => {
     // // // console.log('content-optimizer fallback executed locally'),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -58,6 +62,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+};
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     try {
         // Basic fallback logic
         const result = {
@@ -66,8 +80,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
                 message: 'content-optimizer executed locally as fallback'
                 timestamp: new Date().toISOString()
@@ -113,6 +130,7 @@ exports.handler = async (_event, _context) => {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -139,6 +157,8 @@ exports.handler = async (_event, _context) => {
                 error: 'Fallback execution failed';
                 message: error.message
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             })
 
             status_code: 200,
@@ -168,6 +188,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -186,6 +207,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node;
 // Netlify Function Fallback: content-optimizer;
 // This is a local fallback when the main function is unavailable;
@@ -223,6 +250,7 @@ exports.handler = async (_event, _context) => {// // // console.log('content-opt
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -250,3 +278,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 },ursor/fix-website-loading-errors-and-merge-6662;
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+};
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

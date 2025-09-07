@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -30,6 +29,7 @@ const CloudMigrationServicesChat: NextPage = () => {;
     </div>
       </Head>;
 
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <main>;
@@ -64,6 +64,17 @@ export default CloudMigrationServicesChat;
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+
+
+
+import type { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 const CloudMigrationServicesChat: NextPage = () => {
   return (
@@ -76,6 +87,7 @@ const CloudMigrationServicesChat: NextPage = () => {
 
         <title>CloudMigrationServicesChat - Zion Tech Solutions</title>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -99,6 +111,13 @@ const CloudMigrationServicesChat: NextPage = () => {
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -153,6 +172,7 @@ export default CloudMigrationServicesChat;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -180,29 +200,13 @@ export default CloudMigrationServicesChat;
 },
 
 export default CloudMigrationServicesChat
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
-const CloudMigrationServicesChat: NextPage = () => {
-  return (
-    <div>
-      <Head>
-        <title>CloudMigrationServicesChat - Zion Tech Solutions</title>
-        <meta
-          name="description"
-          content="CloudMigrationServicesChat service"
-        />{" "}
-      </Head>
-      <main>
-        <h1>CloudMigrationServicesChat</h1>
-        <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>
-      </main>
-    </div>
-  );
-}
-export default CloudMigrationServicesChat;
 
+<<<<<<< HEAD
         <title>CloudMigrationServicesChat - Zion Tech Solutions</title>
         <title>CloudMigrationServicesChat - Zion Tech Solutions</title>
 <<<<<<< HEAD
@@ -224,3 +228,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

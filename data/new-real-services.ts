@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -19,6 +20,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
       'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.',    features: [;
       'Prompt and response tracingCost and token analyticsAutomatic PII redactionOffline and online evalsGuardrail policy engineDrift and performance alertsSDKs for JS, Python, GoGrafana and Datadog exporters';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export const newRealServices: EnhancedRealMicroSaasService[] = [
   {
     name: 'LLM Observability Suite',
@@ -28,6 +31,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     description:;
       'Production - grade observability for LLM apps: trace collection, cost attribution, evals, guardrails, and regression detection. Works with OpenAI - compatible and open - source models.',
     features: [;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -47,6 +51,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Prompt and response tracing',
       'Cost and token analytics',
       'Automatic PII redaction',
@@ -62,6 +69,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -69,6 +77,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     marketPosition:
       'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.',    features: [
       'Prompt and response tracingCost and token analyticsAutomatic PII redactionOffline and online evalsGuardrail policy engineDrift and performance alertsSDKs for JS, Python, GoGrafana and Datadog exporters'
@@ -80,6 +92,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     marketPosition: 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.','Grafana and Datadog exporters';
     ],popular: true,icon: '📈',targetAudience: 'AI product teams, platform engineers, data teams';
     textColor: 'text-cyan-400';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -102,6 +115,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     targetAudience: 'AI product teams, platform engineers, data teams';
     trialDays: 21;
     setupTime: '1 day';
@@ -129,12 +145,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    rating: 4 && 4.8,
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -148,6 +167,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     reviews: 22
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 400',
@@ -203,15 +224,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    link: 'https://ziontechgroup && ziontechgroup.com/ai-sales-email-copilot';
-    marketPosition: 'Lower cost with better personalization vs. Jasper and constant-contact tools.',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -223,6 +246,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     targetAudience: 'B2B startups, agencies, SDR teams';
     trialDays: 14;
     setupTime: '2 hours';
@@ -250,12 +275,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    rating: 4 && 4.7,
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -269,6 +297,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     reviews: 58
     period: '/month',
     description: 'Automate prospect research, write context - aware messages, and schedule follow - ups across email and LinkedIn. Built - in A / B testing and domain warmup best practices.';
@@ -325,15 +355,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    link: 'https://ziontechgroup && ziontechgroup.com/security-posture-as-code';
-    marketPosition: 'Brings policy-as-code and compliance automation into one product.',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -345,6 +377,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     targetAudience: 'Platform teams, security engineers, compliance leads';
     trialDays: 21;
     setupTime: '1–3 days';
@@ -393,12 +427,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    rating: 4 && 4.6,
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -412,6 +449,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     reviews: 14
     rating: 4.6,
     reviews: 14;
@@ -425,15 +464,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    link: 'https://ziontechgroup && ziontechgroup.com/etl-observability-starter';
-    marketPosition: 'Simpler and faster to adopt vs. enterprise data observability tools.',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -445,6 +486,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     targetAudience: 'Analytics engineers, data teams';
     trialDays: 14;
     setupTime: '1 day';
@@ -492,12 +535,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    rating: 4 && 4.5,
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -511,6 +557,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     reviews: 12
   }
   {
@@ -541,15 +589,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    link: 'https://ziontechgroup && ziontechgroup.com/api-performance-shield';
-    marketPosition: 'Unified performance and security at SMB-friendly pricing.',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -561,6 +611,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     targetAudience: 'API-first startups, SaaS, marketplaces';
     trialDays: 14;
     setupTime: 'Same day';
@@ -616,12 +668,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    rating: 4 && 4.7,
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -635,6 +690,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     reviews: 9
   }
   {
@@ -657,15 +714,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    link: 'https://ziontechgroup && ziontechgroup.com/ai-product-analytics';
-    marketPosition: 'Brings AI querying and anomaly detection without vendor lock-in.',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -677,6 +736,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     targetAudience: 'Product teams, founders, analysts';
     trialDays: 14;
     setupTime: '1 day';
@@ -741,12 +802,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    rating: 4 && 4.6,
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -760,6 +824,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     reviews: 20
   }
   {
@@ -782,15 +848,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    link: 'https://ziontechgroup && ziontechgroup.com/ai-support-deflection';
-    marketPosition: 'Faster time-to-value vs. enterprise chatbot suites.',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -802,6 +870,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     targetAudience: 'Support teams, SMB SaaS, marketplaces';
     trialDays: 14;
     setupTime: 'Same day';
@@ -866,12 +936,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    rating: 4 && 4.7,
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -885,6 +958,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     reviews: 48
   }
   {
@@ -915,12 +990,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    link: 'https://ziontechgroup && ziontechgroup.com/cloud-cost-autopilot',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -934,6 +1012,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     marketPosition: 'Actionable savings, not just dashboards.';
     targetAudience: 'FinOps teams, platform and SRE';
     trialDays: 21;
@@ -991,12 +1071,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    rating: 4 && 4.5,
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -1010,6 +1093,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     reviews: 11
     rating: 4.5,
     reviews: 11;
@@ -1023,15 +1108,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    link: 'https://ziontechgroup && ziontechgroup.com/privacy-vault';
-    marketPosition: 'Developer-first alternative to heavy enterprise privacy suites.',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1043,6 +1130,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     targetAudience: 'Developers, privacy and legal teams';
     trialDays: 14;
     setupTime: '1–3 days';
@@ -1084,12 +1173,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    rating: 4 && 4.6,
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -1103,6 +1195,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     reviews: 7
     rating: 4.6,
     reviews: 7;
@@ -1124,16 +1218,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🧠';
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    link: 'https://ziontechgroup && ziontechgroup.com/ai-fraud-detection-lite';
-    marketPosition: 'Accessible alternative to enterprise fraud stacks.',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1145,6 +1241,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     targetAudience: 'Marketplaces, fintech, e-commerce';
     trialDays: 14;
     setupTime: '2–5 days';
@@ -1185,12 +1283,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    rating: 4 && 4.5,
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -1204,6 +1305,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     reviews: 8
   }
   {
@@ -1234,15 +1337,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    link: 'https://ziontechgroup && ziontechgroup.com/managed-postgres-ha';
-    marketPosition: 'Hands-on SRE support at a fraction of DBaaS enterprise tiers.',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1254,6 +1359,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     targetAudience: 'Startups, SMBs, data teams';
     trialDays: 14;
     setupTime: '1–2 days';
@@ -1309,12 +1416,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    rating: 4 && 4.6,
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -1328,6 +1438,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     reviews: 5
   }
   {
@@ -1358,12 +1470,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    link: 'https://ziontechgroup && ziontechgroup.com/browser-performance-monitor',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -1377,6 +1492,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     marketPosition: 'Lightweight, privacy-friendly RUM for modern teams.';
     targetAudience: 'Frontend, growth, product';
     trialDays: 14;
@@ -1433,12 +1550,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    rating: 4 && 4.5,
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -1452,6 +1572,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     reviews: 6
   }
   {
@@ -1477,16 +1599,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🔎';
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    link: 'https://ziontechgroup && ziontechgroup.com/seo-automation';
-    marketPosition: 'Builder-focused alternative to heavy SEO suites.',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1498,6 +1622,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     targetAudience: 'Growth, content, agencies';
     trialDays: 14;
     setupTime: 'Same day';
@@ -1538,12 +1664,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    rating: 4 && 4.4,
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -1557,6 +1686,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     reviews: 4
     contact_info: contact;
     real_implementation: true,
@@ -1583,16 +1714,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🔁';
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    link: 'https://ziontechgroup && ziontechgroup.com/webhook-relay-replay';
-    marketPosition: 'Production safety net for integrations.',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1604,6 +1737,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     targetAudience: 'Developers, platforms';
     trialDays: 14;
     setupTime: '1 hour';
@@ -1648,12 +1783,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    rating: 4 && 4.6,
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -1667,6 +1805,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     reviews: 3
     rating: 4.6,
     reviews: 3;
@@ -1680,15 +1820,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    link: 'https://ziontechgroup && ziontechgroup.com/pdf-render-api';
-    marketPosition: 'Secure alternative to self-hosting headless browsers.',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1700,6 +1842,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     targetAudience: 'SaaS, finance, ops';
     trialDays: 14;
     setupTime: '30 minutes';
@@ -1739,12 +1883,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    rating: 4 && 4.6,
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -1758,6 +1905,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     reviews: 10
   }
   {
@@ -1780,15 +1929,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    link: 'https://ziontechgroup && ziontechgroup.com/api-observability-starter';
-    marketPosition: 'Developer-first observability starter kit.',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1800,6 +1951,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     targetAudience: 'Backend teams, SRE';
     trialDays: 14;
     setupTime: '1 day';
@@ -1858,12 +2011,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    rating: 4 && 4.5,
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -1877,6 +2033,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     reviews: 4
   }
   {
@@ -1917,6 +2075,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1949,6 +2108,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '2–5 days';category: 'Security & Compliance';
     popular: true;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     category: 'Security & Compliance';
     real_service: true;
     technology: ['KeycloakAuth gateways'];
@@ -1976,12 +2139,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    rating: 4 && 4.7,
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -1995,6 +2161,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     reviews: 3
     rating: 4.7,
     reviews: 3;
@@ -2011,6 +2179,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ];
 <<<<<<< HEAD
     popular: false;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2046,6 +2215,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '1–3 days';category: 'IT Operations';
     popular: false;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     category: 'IT Operations';
     real_service: true;
     technology: ['nmapSNMPGo'];
@@ -2074,12 +2247,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    rating: 4 && 4.4,
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -2093,6 +2269,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     reviews: 2
   }
   {
@@ -2123,16 +2301,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '📋';
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    link: 'https://ziontechgroup && ziontechgroup.com/vendor-risk-automation';
-    marketPosition: 'Faster and lighter than legacy GRC.',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -2144,6 +2324,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     targetAudience: 'Security, procurement';
     trialDays: 14;
     setupTime: '1–3 days';
@@ -2623,6 +2805,7 @@ import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-service
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -2642,6 +2825,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     rating: 4.5,
     reviews: 3;
 
@@ -2651,6 +2838,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     trial_days: 21,
     setup_time: '1 day',
     category: 'AI & Machine Learning',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2695,11 +2883,16 @@ const contact = null;
     integrations: [
       'OpenAI-compatible',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'LangChain',
       'LlamaIndex',
       'Datadog',
       'Grafana',
     ],
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -2708,6 +2901,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    use_cases: ['LLM app monitoring', 'Cost control', 'Policy compliance'],
+    roi: 'Cut LLM cost 20–45% while improving reliability',
+    competitors: ['Langfuse', 'Arize', 'Weights & Biases'],
+    market_size: '$5B+ AI Ops and Observability',
+    growth_rate: 'Rapid growth with LLM adoption',
+    variant: 'quantum - holographic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Agent SDKs, tracing collectors, and dashboards ready to deploy.',
     launch_date: '2025 - 01 - 10',
     customers: 32,
@@ -2715,6 +2921,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 22
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2745,6 +2952,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Prospect enrichment via public sources',
       'Personalized email generation',
       'Sequence and follow - up scheduling',
@@ -2757,31 +2967,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '✉️',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    color: 'from - violet - 600 to - fuchsia - 700',
-    text_color: 'text - violet - 400',
-    link: 'https://ziontechgroup.com / ai - sales - email - copilot',
-    market_position:;
-      'Lower cost with better personalization vs. Jasper and constant - contact tools.',
-    target_audience: 'B2B startups, agencies, SDR teams',
-    trial_days: 14,
-    setup_time: '2 hours',
-    category: 'Sales & Marketing',
-    real_service: true,
-    technology: ['Next.js', 'Workers', 'PostgreSQL'],
-    integrations: ['HubSpot', 'Salesforce', 'Apollo', 'Lemlist'],
-    use_cases: ['Outbound sequences', 'Upsell campaigns', 'Reactivation'],
-    roi: 'Increase replies 2–5x with hyper - personalization',
-    competitors: ['Copy.ai', 'Lavender', 'Instantly'],
-    market_size: '$15B Sales Engagement',
-    growth_rate: 'Strong growth',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -2793,6 +2990,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     variant: 'holographic',
     contact_info: contact,
     real_implementation: true,
@@ -2819,6 +3018,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   {
@@ -2833,12 +3033,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Kubernetes and cloud posture',
       'Auto - remediation PRs',
       'Evidence collection and reports',
       'SOC2 / ISO 27001 export'
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2863,6 +3067,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 400',
     link: 'https://ziontechgroup.com / security - posture - as - code',
@@ -2896,6 +3104,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -2922,12 +3131,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Freshness and volume checks',
       'Schema drift detection',
       'SLA and SLO tracking',
       'Incident routing to Slack / Teams'
     ],
     popular: false,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2972,6 +3186,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Light agents and metadata collectors with warehouse connectors.',
     launch_date: '2025 - 01 - 12',
     customers: 25,
@@ -2979,6 +3197,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 12
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3009,6 +3228,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Global CDN edge caching',
       'Dynamic rate limiting',
       'Anomaly and abuse detection',
@@ -3019,21 +3242,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🛰️',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    color: 'from - cyan - 600 to - sky - 700',
-    text_color: 'text - cyan - 400',
-    link: 'https://ziontechgroup.com / api - performance - shield',
-    market_position: 'Unified performance and security at SMB - friendly pricing.',
-    target_audience: 'API - first startups, SaaS, marketplaces',
-    trial_days: 14,
-    setup_time: 'Same day',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -3045,6 +3265,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     category: 'DevOps & Automation',
     real_service: true,
     technology: ['Workers', 'Rust', 'Redis'],
@@ -3081,6 +3303,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   {
@@ -3095,11 +3318,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'LLM query interface',
       'Retention and churn signals',
       'Anomaly alerts to Slack / Teams'
     ],
     popular: false,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3110,19 +3336,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '📊',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    color: 'from - purple - 600 to - indigo - 700',
-    text_color: 'text - purple - 400',
-    link: 'https://ziontechgroup.com / ai - product - analytics',
-    market_position:;
-      'Brings AI querying and anomaly detection without vendor lock - in.',
-    target_audience: 'Product teams, founders, analysts',
-    trial_days: 14,
-    setup_time: '1 day',
-    category: 'Analytics & Business Intelligence',
-    real_service: true,
-    technology: ['Next.js', 'PostHog', 'ClickHouse'],
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -3134,6 +3352,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     integrations: ['Segment', 'RudderStack', 'Snowplow'],
     use_cases: ['Growth analytics', 'Retention', 'Experimentation'],
     roi: 'Find growth levers 2x faster',
@@ -3165,6 +3385,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   {
@@ -3179,11 +3400,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Grounded answers with citations',
       'Secure human handoff',
       'Analytics and CSAT tracking'
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3194,18 +3418,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '💬',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    color: 'from - rose - 600 to - orange - 700',
-    text_color: 'text - rose - 400',
-    link: 'https://ziontechgroup.com / ai - support - deflection',
-    market_position: 'Faster time - to - value vs. enterprise chatbot suites.',
-    target_audience: 'Support teams, SMB SaaS, marketplaces',
-    trial_days: 14,
-    setup_time: 'Same day',
-    category: 'Customer Support & Success',
-    real_service: true,
-    technology: ['RAG', 'Vector DB', 'Next.js'],
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -3217,6 +3434,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     integrations: ['Zendesk', 'Intercom', 'Freshdesk'],
     use_cases: ['Self - serve support', 'Ticket reduction', 'CSAT improvement'],
     roi: 'Reduce tickets 30–50%',
@@ -3233,6 +3452,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 48
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3263,6 +3483,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Rightsizing recommendations',
       'Anomaly detection',
       'Savings plan / RIs planning',
@@ -3273,21 +3497,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '💸',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    color: 'from - amber - 600 to - yellow - 700',
-    text_color: 'text - amber - 400',
-    link: 'https://ziontechgroup.com / cloud - cost - autopilot',
-    market_position: 'Actionable savings, not just dashboards.',
-    target_audience: 'FinOps teams, platform and SRE',
-    trial_days: 21,
-    setup_time: '2–5 days',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -3299,6 +3520,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     category: 'Cloud & Infrastructure',
     real_service: true,
     technology: ['AWS Cost Explorer', 'Azure Cost', 'GCP Billing'],
@@ -3333,6 +3556,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   {
@@ -3347,11 +3571,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Tokenization APIs',
       'Consent enforcement',
       'Audit trail and reporting'
     ],
     popular: false,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3362,16 +3589,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🔏',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    color: 'from - slate - 600 to - gray - 700',
-    text_color: 'text - slate - 300',
-    link: 'https://ziontechgroup.com / privacy - vault',
-    market_position:;
-      'Developer - first alternative to heavy enterprise privacy suites.',
-    target_audience: 'Developers, privacy and legal teams',
-    trial_days: 14,
-    setup_time: '1–3 days',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -3383,6 +3605,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     category: 'Security & Compliance',
     real_service: true,
     technology: ['KMS', 'HSM', 'PostgreSQL'],
@@ -3417,6 +3641,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   {
@@ -3431,11 +3656,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Explainability reports',
       'Risk scoring API',
       'Workflow actions and webhooks'
     ],
     popular: false,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3446,15 +3674,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🧠',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    color: 'from - pink - 600 to - rose - 700',
-    text_color: 'text - pink - 400',
-    link: 'https://ziontechgroup.com / ai - fraud - detection - lite',
-    market_position: 'Accessible alternative to enterprise fraud stacks.',
-    target_audience: 'Marketplaces, fintech, e - commerce',
-    trial_days: 14,
-    setup_time: '2–5 days',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -3466,6 +3690,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     category: 'Financial Technology',
     real_service: true,
     technology: ['Graph DB', 'Python', 'Kafka'],
@@ -3486,6 +3712,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 8
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3516,6 +3743,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'HA with automatic failover',
       'Continuous backups and PITR',
       'Slow query insights and indexing',
@@ -3526,22 +3757,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🗃️',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    color: 'from - blue - 600 to - indigo - 700',
-    text_color: 'text - blue - 400',
-    link: 'https://ziontechgroup.com / managed - postgres - ha',
-    market_position:;
-      'Hands - on SRE support at a fraction of DBaaS enterprise tiers.',
-    target_audience: 'Startups, SMBs, data teams',
-    trial_days: 14,
-    setup_time: '1–2 days',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -3553,6 +3780,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     category: 'Observability',
     real_service: true,
     technology: ['PostgreSQL', 'Patroni', 'Wal - G'],
@@ -3572,6 +3801,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 5
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3602,6 +3832,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Core Web Vitals dashboards',
       'Session replay and heatmaps',
       'Error tracking and sourcemaps',
@@ -3612,21 +3846,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '⚡',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    color: 'from - amber - 600 to - yellow - 700',
-    text_color: 'text - amber - 300',
-    link: 'https://ziontechgroup.com / browser - performance - monitor',
-    market_position: 'Lightweight, privacy - friendly RUM for modern teams.',
-    target_audience: 'Frontend, growth, product',
-    trial_days: 14,
-    setup_time: '30 minutes',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -3638,6 +3869,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     category: 'Quality & Monitoring',
     real_service: true,
     technology: ['JS SDK', 'ClickHouse'],
@@ -3657,6 +3890,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 6
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3687,6 +3921,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Site audits and fixes',
       'Schema and sitemaps',
       'Programmatic pages',
@@ -3697,24 +3935,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🔎',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    color: 'from - emerald - 600 to - teal - 700',
-    text_color: 'text - emerald - 300',
-    link: 'https://ziontechgroup.com / seo - automation',
-    market_position: 'Builder - focused alternative to heavy SEO suites.',
-    target_audience: 'Growth, content, agencies',
-    trial_days: 14,
-    setup_time: 'Same day',
-    category: 'Developer Tools',
-    real_service: true,
-    technology: ['Node.js', 'Headless Chrome'],
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -3726,6 +3958,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     integrations: ['Search Console'],
     use_cases: ['Traffic growth', 'Tech SEO'],
     roi: 'Increase organic traffic 20–100%',
@@ -3742,6 +3976,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 4
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3772,6 +4007,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'DLQ and retry policies',
       'Inspector and redaction',
       'Signature verification',
@@ -3782,24 +4021,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🔁',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    color: 'from - cyan - 600 to - sky - 700',
-    text_color: 'text - cyan - 300',
-    link: 'https://ziontechgroup.com / webhook - relay - replay',
-    market_position: 'Production safety net for integrations.',
-    target_audience: 'Developers, platforms',
-    trial_days: 14,
-    setup_time: '1 hour',
-    category: 'Developer Tools',
-    real_service: true,
-    technology: ['Kafka', 'S3', 'Node.js'],
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -3811,6 +4044,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     integrations: ['Stripe', 'Shopify', 'GitHub'],
     use_cases: ['Webhook reliability', 'Debugging'],
     roi: 'Reduce integration incidents 50%+',
@@ -3827,6 +4062,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 3
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3857,6 +4093,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Serverless scale',
       'Template gallery',
       'Brand - safe fonts',
@@ -3867,21 +4107,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '📄',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    color: 'from - slate - 600 to - gray - 700',
-    text_color: 'text - slate - 300',
-    link: 'https://ziontechgroup.com / pdf - render - api',
-    market_position: 'Secure alternative to self - hosting headless browsers.',
-    target_audience: 'SaaS, finance, ops',
-    trial_days: 14,
-    setup_time: '30 minutes',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -3893,6 +4130,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     category: 'Developer Tools',
     real_service: true,
     technology: ['Workers', 'Headless Chrome'],
@@ -3927,6 +4166,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   {
@@ -3941,11 +4181,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'RED dashboards',
       'Error analytics',
       'Exporters to APMs'
     ],
     popular: false,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3956,15 +4199,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🛰️',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    color: 'from - purple - 600 to - indigo - 700',
-    text_color: 'text - purple - 300',
-    link: 'https://ziontechgroup.com / api - observability - starter',
-    market_position: 'Developer - first observability starter kit.',
-    target_audience: 'Backend teams, SRE',
-    trial_days: 14,
-    setup_time: '1 day',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -3976,6 +4215,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     category: 'Observability',
     real_service: true,
     technology: ['OpenTelemetry', 'Grafana'],
@@ -3995,6 +4236,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 4
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4025,6 +4267,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'SAML and OIDC',
       'SCIM and JIT provisioning',
       'Branding and mapping',
@@ -4035,21 +4281,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🔐',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    color: 'from - emerald - 600 to - teal - 700',
-    text_color: 'text - emerald - 300',
-    link: 'https://ziontechgroup.com / sso - in - a-box',
-    market_position: 'Ship enterprise features in days.',
-    target_audience: 'SaaS teams',
-    trial_days: 14,
-    setup_time: '2–5 days',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -4061,6 +4304,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     category: 'Security & Compliance',
     real_service: true,
     technology: ['Keycloak', 'Auth gateways'],
@@ -4080,6 +4325,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 3
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4110,6 +4356,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Network scans and SNMP',
       'Software inventory',
       'Change tracking',
@@ -4120,21 +4370,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🛰️',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    color: 'from - sky - 600 to - blue - 700',
-    text_color: 'text - sky - 300',
-    link: 'https://ziontechgroup.com / it - asset - discovery - agent',
-    market_position: 'Modern take on asset discovery.',
-    target_audience: 'IT and security ops',
-    trial_days: 14,
-    setup_time: '1–3 days',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -4146,6 +4393,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     category: 'IT Operations',
     real_service: true,
     technology: ['nmap', 'SNMP', 'Go'],
@@ -4165,6 +4414,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 2
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4195,6 +4445,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Questionnaire templates',
       'Evidence collection portal',
       'Continuous monitoring',
@@ -4205,24 +4459,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '📋',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    color: 'from - rose - 600 to - orange - 700',
-    text_color: 'text - rose - 300',
-    link: 'https://ziontechgroup.com / vendor - risk - automation',
-    market_position: 'Faster and lighter than legacy GRC.',
-    target_audience: 'Security, procurement',
-    trial_days: 14,
-    setup_time: '1–3 days',
-    category: 'Security & Compliance',
-    real_service: true,
-    technology: ['Node.js', 'React'],
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -4234,6 +4482,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     integrations: ['SecurityScorecard'],
     use_cases: ['Vendor due diligence'],
     roi: 'Cut cycle time by 50%+',
@@ -4253,6 +4503,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -4271,6 +4522,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     id: 'llm-observability-suite', name: 'LLM Observability Suite',
     tagline: 'Track latency, cost, quality and drift across all prompts',
     price: '$199', period: '/month',
@@ -4294,6 +4549,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.8,
     reviews: 22
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     useCases: ['LLM app monitoring', 'Cost control', 'Policy compliance'],
     roi: 'Cut LLM cost 20–45% while improving reliability',
     competitors: ['Langfuse', 'Arize', 'Weights & Biases'],
@@ -4309,7 +4568,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.8,
     reviews: 22,
   },
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   {
     id: 'ai-sales-email-copilot',
     name: 'AI Sales Email Copilot',
@@ -4319,6 +4582,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     description:
       'Automate prospect research, write context-aware messages, and schedule follow-ups across email and LinkedIn. Built-in A/B testing and domain warmup best practices.',
     features: [
+<<<<<<< HEAD
       'Prospect enrichment via public sources',
       'Personalized email generation',
       'Sequence and follow-up scheduling',
@@ -4356,6 +4620,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 58,
   },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    reviews: 58
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   {
     id: 'security-posture-as-code',
     name: 'Security Posture as Code',
@@ -4365,6 +4633,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     description:
       'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps-friendly with automatic fix PRs and evidence collection for audits.',
     features: [
+<<<<<<< HEAD
       'Policy packs for CIS/NIST',
       'Kubernetes and cloud posture',
       'Auto-remediation PRs',
@@ -4401,6 +4670,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 14,
   },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    reviews: 14
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   {
     id: 'etl-observability-starter',
     name: 'ETL Observability Starter',
@@ -4410,6 +4683,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     description:
       'Monitor data pipelines end-to-end: freshness, volume, schema drift, and SLA adherence. Lightweight agent and connectors for common warehouses.',
     features: [
+<<<<<<< HEAD
       'Freshness and volume checks',
       'Schema drift detection',
       'SLA and SLO tracking',
@@ -4445,6 +4719,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 12,
   },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    reviews: 12
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   {
     id: 'api-performance-shield',
     name: 'API Performance Shield',
@@ -4454,6 +4732,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     description:
       'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero-downtime via traffic shadowing.',
     features: [
+<<<<<<< HEAD
       'Global CDN edge caching',
       'Dynamic rate limiting',
       'Anomaly and abuse detection',
@@ -4488,6 +4767,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 9,
   },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    reviews: 9
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   {
     id: 'ai-product-analytics',
     name: 'AI Product Analytics',
@@ -4498,6 +4781,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     description:
       'Turn product usage into insights with automatic funnel detection, LLM-based querying, and anomaly alerts. Works alongside Amplitude/GA4.',
     features: [
+<<<<<<< HEAD
       'Auto-segmentation and cohorts',
       'LLM query interface',
       'Retention and churn signals',
@@ -4532,6 +4816,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 20,
   },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    reviews: 20
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   {
     id: 'ai-support-deflection',
     name: 'AI Support Deflection',
@@ -4541,6 +4829,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     description:
       'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi-channel widgets with brand controls.',
     features: [
+<<<<<<< HEAD
       'Multi-channel widgets',
       'Grounded answers with citations',
       'Secure human handoff',
@@ -4574,6 +4863,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 48,
   },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    reviews: 48
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   {
     id: 'cloud-cost-autopilot',
     name: 'Cloud Cost Autopilot',
@@ -4583,6 +4876,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     description:
       'Proactive optimization for AWS/Azure/GCP: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.',
     features: [
+<<<<<<< HEAD
       'Rightsizing recommendations',
       'Anomaly detection',
       'Savings plan/RIs planning',
@@ -4616,6 +4910,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 11,
   },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    reviews: 11
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   {
     id: 'privacy-vault',
     name: 'Privacy Vault',
@@ -4625,6 +4923,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     description:
       'Centralize PII with field-level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.',
     features: [
+<<<<<<< HEAD
       'Field-level encryption',
       'Tokenization APIs',
       'Consent enforcement',
@@ -4659,6 +4958,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 7,
   },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    reviews: 7
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   {
     id: 'ai-fraud-detection-lite',
     name: 'AI Fraud Detection Lite',
@@ -4668,6 +4971,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     description:
       'Detect fraud across transactions with graph analytics and explainable decisions. Quick to integrate via event stream or batch.',
     features: [
+<<<<<<< HEAD
       'Graph-based anomaly detection',
       'Explainability reports',
       'Risk scoring API',
@@ -4702,6 +5006,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 8,
   },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    reviews: 8
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   {
     id: 'managed-postgres-ha-pro',
     name: 'Managed Postgres HA Pro',
@@ -4711,6 +5019,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     description:
       'Production-grade PostgreSQL with high availability, automated backups, point-in-time recovery, and performance tuning insights.',
     features: [
+<<<<<<< HEAD
       'HA with automatic failover',
       'Continuous backups and PITR',
       'Slow query insights and indexing',
@@ -4745,6 +5054,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 5,
   },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    reviews: 5
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   {
     id: 'browser-performance-monitor-pro',
     name: 'Browser Performance Monitor Pro',
@@ -4754,6 +5067,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     description:
       'Real-user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.',
     features: [
+<<<<<<< HEAD
       'Core Web Vitals dashboards',
       'Session replay and heatmaps',
       'Error tracking and sourcemaps',
@@ -4787,6 +5101,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 6,
   },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    reviews: 6
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   {
     id: 'seo-automation-studio',
     name: 'SEO Automation Studio',
@@ -4796,6 +5114,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     description:
       'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.',
     features: [
+<<<<<<< HEAD
       'Site audits and fixes',
       'Schema and sitemaps',
       'Programmatic pages',
@@ -4829,6 +5148,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 4,
   },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    reviews: 4
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   {
     id: 'webhook-relay-replay-pro',
     name: 'Webhook Relay & Replay Pro',
@@ -4840,10 +5163,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     features: [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ];
 
-<<<<<<< HEAD
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -4873,6 +5199,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
   mobile: '+1 302 464 0950',;
@@ -5589,6 +5922,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -5599,6 +5933,11 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
       'DLQ and retry policies',
       'Inspector and redaction',
@@ -5839,6 +6178,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -5847,3 +6187,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -2,10 +2,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 ;
 origin/main;
@@ -107,6 +110,7 @@ console.log(`Fixed ${fixedCount} files`);
 <<<<<<< HEAD
 #!/usr/bin/env node
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -130,6 +134,11 @@ console.log('🔧 Fixing remaining syntax errors...');
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+console.log('🔧 Fixing remaining syntax errors...');
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 =======
@@ -497,6 +506,7 @@ main().catch(console.error);
 <<<<<<< HEAD
 <<<<<<< HEAD
 console.log(`Fixed ${fixedCount} files`);
+<<<<<<< HEAD
 =======
 =======
 origin/cursor/automate-test-improve-and-merge-code-646c
@@ -587,3 +597,5 @@ origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

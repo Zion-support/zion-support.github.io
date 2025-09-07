@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import React from 'react',
 import SEO from '../components/SEO';
 =======
@@ -17,7 +21,11 @@ export default function RAGEvaluationLabPage() {return (<>;
 						))}
 <<<<<<< HEAD
 					</div>
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   return (
     <>;
@@ -43,6 +51,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <h3 className='text-lg font-semibold text-white'>{f && f.title}</h3>;
                 <p className='mt-2 text-sm text-gray-300'>{f && f.desc}</p>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             ))}
           </div>
@@ -95,6 +104,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 			</section>;
 		</>;
 	)}
+=======
+            ))}
+
+                    /mo;
+                  </span>;
+                </p>;
+              </div>;
+						<Link href="/contact" className="px-5 py-3 rounded-lg bg-cyan-400 text-black font-semibold">Start Evaluating</Link>
+						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>
+						<span className="text-gray-400">Call: +1 302 464 0950</span>
+					</div>
+				</div>
+			</section>
+		</>
+	)
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           <div className='mt - 12 flex flex - wrap items - center gap - 4'>;
             <Link;
               href='/contact';
@@ -112,13 +138,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
     </>)<div className="mt - 12 flex flex - wrap items-center gap-4">;
+=======
+    </>);					<div className="mt - 12 flex flex - wrap items-center gap-4">;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <Link href="/contact" className="px - 5 py - 3 rounded - lg bg - cyan - 400 text-black font-semibold">Start Evaluating</Link>;
       <a href="mailto:kleber@ziontechgroup.com" className="px - 5 py - 3 rounded-lg border border-white / 20">Email: kleber@ziontechgroup.com</a>;
       <span className="text-gray-400">Call: +1 302 464 0950</span>;
     </div>;
     </div>;
   </section>;
+<<<<<<< HEAD
   </>)}</div>;
           <div className='mt-12'>;
             <h2 className='text-2xl font-semibold'>Pricing</h2>;
@@ -240,3 +271,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>;
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  </>);
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

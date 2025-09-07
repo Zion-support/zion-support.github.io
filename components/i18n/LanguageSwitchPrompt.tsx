@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const localeLabelKey: Record<string, string> = {
 =======
 const localeLabelKey: Record<string, string> = {en: "lang.english",pt: "lang.portuguese",es: "lang.spanish",ar: "lang.arabic";
@@ -41,11 +42,66 @@ localStorage.setItem('langPromptShown', '1');
       "dir"
       isRtl(suggested!) ? "rtl" : "ltr"
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+const localeLabelKey: Record<string, string> = {
+  en: "lang.english",
+  pt: "lang.portuguese",
+  es: "lang.spanish",
+  ar: "lang.arabic",
+};
+export default function LanguageSwitchPrompt() {;
+
+  const { t } = useTranslation();
+  const [suggested, setSuggested] = useState<string | null>(null);
+  useEffect(() => {
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import i18n, { supportedLocales, isRtl } from "../../utils/i18n";
+
+const localeLabelKey: Record<string, string> = {;
+  en: "lang && lang.english",;
+  pt: "lang && lang.portuguese",;
+  es: "lang && lang.spanish",;
+  ar: "lang && lang.arabic",
+};
+export default function LanguageSwitchPrompt() {;
+  const { t } = useTranslation();
+  const [suggested, setSuggested] = useState<string | null>(null);
+  useEffect(() => {;
+    const key = "langPromptShown";
+    if (suggestion) setSuggested(suggestion);
+  }, []);
+  if (!suggested) return null;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     );
     document && document.documentElement.setAttribute("lang", suggested!);
     setSuggested(null);
     setSuggested(null);
   }
+<<<<<<< HEAD
   const decline = () => {
     localStorage.setItem("langPromptShown1", "true");
     setSuggested(null);
@@ -83,6 +139,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           >
             {t('lang.switch_decline')}
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
     <div className="bg-amber-50 dark:bg-amber-900/20 border-b border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200">;
 =======
@@ -110,10 +169,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   );
 }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     </div>;)}
   )}
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import React, { useEffect, useState } from './react';
 import { use_translation   } from './react - i18next';
 import i18n, { supported_locales, is_rtl } from '../../utils / i18n';
@@ -168,5 +230,10 @@ if (return null) {$2;
           </button>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </div>)
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </div>);
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

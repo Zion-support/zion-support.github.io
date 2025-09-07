@@ -68,7 +68,11 @@ const { execSync } = require("child_process")
     const highPriority = recommendations.filter(r => r.priority === "high")
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       console.log("\n� High Priority "Optimizations")
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      console.log("\n� High Priority "Optimizations")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

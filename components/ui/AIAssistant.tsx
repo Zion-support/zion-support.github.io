@@ -1,7 +1,33 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 export type AIAssistantProps = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+  buttonLabel?: string;
+  title?: string;
+  defaultPrompt: string;
+  systemPrompt?: string;
+  onAccept: (markdown: string) => void;
+  authorizationToken?: string;
+  buttonLabel = "Generate with AI"
+  title = "AI Writing Assistant"
+  defaultPrompt
+  systemPrompt
+  onAccept
+  authorizationToken
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }: AIAssistantProps) {
 
   buttonLabel = "Generate with AI",
@@ -17,6 +43,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const [loading, setLoading] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   useEffect(() => {
 setPrompt(defaultPrompt);
   }, [defaultPrompt]);
@@ -66,13 +96,18 @@ type='button';
         onClick={onOpen}
 <<<<<<< HEAD
         className='inline-flex items-center gap-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-1.5 text-sm hover:bg-gray-50 dark:hover:bg-gray-800'
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
     <>;
       <button
         type="button"
         onClick={onOpen}
       {isOpen && (
+<<<<<<< HEAD
 <div className='fixed inset-0 z-50 flex items-center justify-center'>
           <div className='absolute inset-0 bg-black/50' onClick={onClose} />
           <div className='relative z-10 w-full max-w-2xl rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black shadow-xl'>
@@ -86,6 +121,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         type="button";
         onClick={onOpen}
       {isOpen && (<div className="fixed inset-0 z-50 flex items-center justify-center">;
+=======
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+          <div className="absolute inset-0 bg-black/50" onClick={onClose} />
+          <div className="relative z-10 w-full max-w-2xl rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black shadow-xl">
+            <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800">
+              <h3 className="text-base font-semibold">{title}</h3>
+      {isOpen && (;
+        <div className="fixed inset-0 z-50 flex items-center justify-center">;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           <div className="absolute inset-0 bg-black/50" onClick={onClose} />;
           <div className="relative z-10 w-full max-w-2xl rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black shadow-xl">;
             <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800">;
@@ -139,6 +183,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
               {error && <div className="text-red-600 text-sm">{error}</div>}
               <div>;
+<<<<<<< HEAD
 <div className='fixed inset-0 z-50 flex items-center justify-center'>;
           <div className='absolute inset-0 bg-black/50' onClick={onClose} />;
           <div className='relative z-10 w-full max-w-2xl rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black shadow-xl'>;
@@ -206,6 +251,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               <div>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 <label
                   className="block text-xs font-medium mb-1"
                   Output (markdown);
@@ -213,6 +260,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {isEditing ? (;
                   <textarea
                     value={output}
+<<<<<<< HEAD
 =======
                   className='ml-auto rounded-md bg-green-600 text-white px-3 py-1.5 text-sm disabled:opacity-60';
                 >;
@@ -225,6 +273,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Output (markdown)</label>;
                 {isEditing ? (<textarea;
                     value={output}
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                     onChange={(e) => setOutput(e && e.target.value)}
                     rows={12}
                 )}
@@ -234,6 +284,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       )}
     </>;
+<<<<<<< HEAD
   )}
                   <pre className="w-full rounded-md border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap">{output || 'No content yet. Click Generate.'}</pre>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -264,3 +315,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>;
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  );
+}
+                  <pre className="w-full rounded-md border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap">{output || 'No content yet. Click Generate.'}</pre>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+
+
+  );
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

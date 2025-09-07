@@ -4,6 +4,7 @@ const path = require('path');
 function fixMergeConflicts(filePath) {
   try {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     // Check if file has merge conflict markers
     if (
@@ -40,21 +41,33 @@ ursor/fix-lint-push-and-merge-to-main-28da
         if (line.includes('
 ursor/fix-lint-push-and-merge-to-main-28da
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    const content = fs.readFileSync(filePath, 'utf8');
+    
+    // Check if file has merge conflict markers
+    if (
+
+      content.includes('
+      content.includes('') ||
+      content.includes('>>>>>>>')
+
+    ) {
+      console.log(`Fixing merge conflicts: in: ${filePath}`);
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           inConflict = true;
           keepContent = false;
           continue;
         }
 
-<<<<<<< HEAD
-=======
-        if (line.includes('')) {
-          keepContent = true;
-          continue;
-        }
 
+<<<<<<< HEAD
         if (line.includes('>>>>>>>')) {
 ursor/fix-lint-push-and-merge-to-main-28da
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           inConflict = false;
           keepContent = false;
           continue;

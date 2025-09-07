@@ -1,10 +1,18 @@
 <<<<<<< HEAD:src_backup/components/enterprise/EnterpriseTrustBadges.tsx
+<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseTrustBadges.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/EnterpriseTrustBadges.tsx
 import React from 'react';
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react';
 
 import React from "react";
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
+<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseTrustBadges.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/EnterpriseTrustBadges.tsx
 export function EnterpriseTrustBadges() {
   return (
     <section className='py-10 px-4 md:px-6 border-t border-b border-border'>
@@ -32,6 +40,7 @@ export function EnterpriseTrustBadges() {
           </div>
           <div className='flex items-center justify-center gap-2 p-4 rounded-lg border border-border'>
             <CheckCircle className='h-5 w-5 text-primary' />
+<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseTrustBadges.tsx
 
 import React from "react";
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
@@ -40,6 +49,13 @@ import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
 
 
 
+=======
+            <span className='font-medium'>HIPAA Compliant</span>          </div>
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/EnterpriseTrustBadges.tsx
 export function EnterpriseTrustBadges() {
   return (
     <section className="py-10 px-4 md: px-6 border-t border-b border-border">
@@ -64,6 +80,7 @@ export function EnterpriseTrustBadges() {
           <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">
             <CheckCircle className="h-5 w-5 text-primary" />
             <span className="font-medium">HIPAA Compliant</span>
+<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseTrustBadges.tsx
             <span className='font-medium'>HIPAA Compliant</span>
 origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
@@ -171,6 +188,18 @@ export function EnterpriseTrustBadges() {return (<section className='py-10 px-4 
           <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">;
             <CheckCircle className="h-5 w-5 text-primary" />;
             <span className="font-medium">HIPAA Compliant</span>;export function EnterpriseTrustBadges() {return (<section className="py-10 px-4 md: px-6 border-t border-b border-border">;
+=======
+
+            <span className='font-medium'>HIPAA Compliant</span>
+          </div>
+        </div>
+      </div>
+import React from "react";
+import { Shield, Lock, Award, CheckCircle } from 'lucide-react';
+export function EnterpriseTrustBadges() {;
+  return (;
+    <section className="py-10 px-4 md: px-6 border-t border-b border-border">;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/EnterpriseTrustBadges.tsx
       <div className="container mx-auto max-w-6xl">;
         <div className="text-center mb-8">;
           <h3 className="text-xl font-medium mb-2">Enterprise-Grade Security & Compliance</h3>;
@@ -196,6 +225,7 @@ export function EnterpriseTrustBadges() {return (<section className='py-10 px-4 
         </div>;
       </div>;
     </section>;
+<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseTrustBadges.tsx
   )}
   )}
 export /**;
@@ -203,6 +233,21 @@ export /**;
  */;
 function EnterpriseTrustBadges() {return (<section className='py - 10 px - 4 md:px - 6 border - t border - b border - border'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/enterprise/EnterpriseTrustBadges.tsx
+=======
+  );
+
+}
+  );
+}
+import React from 'react';
+import { Shield, Lock, Award, CheckCircle } from 'lucide-react';
+export /**
+ * EnterpriseTrustBadges - Function description
+ */
+function EnterpriseTrustBadges() {
+  return (
+    <section className='py - 10 px - 4 md:px - 6 border - t border - b border - border'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/EnterpriseTrustBadges.tsx
       <div className='container mx - auto max - w-6xl'>;
         <div className='text - center mb - 8'>;
           <h3 className='text - xl font - medium mb - 2'>;
@@ -263,9 +308,12 @@ function EnterpriseTrustBadges() {return (<section className="py - 10 px - 4 md:
     </section>);
 }
 
+<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseTrustBadges.tsx
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     </section>)})}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/enterprise/EnterpriseTrustBadges.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/EnterpriseTrustBadges.tsx

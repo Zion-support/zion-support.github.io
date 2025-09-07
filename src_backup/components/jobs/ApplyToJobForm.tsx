@@ -1,7 +1,20 @@
 <<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
+<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
 import { Job } from "@/types/jobs",
 import { toast } from "sonner",
 
+=======
+import { useJobApplications } from "@/hooks/useJobApplications",
+import { useResume } from "@/hooks/useResume",
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { Textarea } from "@/components/ui/textarea",
+import { Label } from "@/components/ui/label",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { Alert, AlertDescription } from "@/components/ui/alert",
+import { AlertCircle, FileText, Loader2 } from 'lucide-react'
+import { formatDistanceToNow } from "date-fns",
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/ApplyToJobForm.tsx
 
 
 interface ApplyToJobFormProps {
@@ -103,12 +116,16 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
     } catch (err: any) {
       setError(err.message |"Failed to submit application")
       toast.error("Failed to submit application")
+<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/ApplyToJobForm.tsx
     import { use_router } from 'next / router';
 import { useJobApplications  } from '@/hooks / useJobApplications';
 import { use_resume  } from '@/hooks / use_resume';
@@ -199,6 +216,7 @@ if ( {) {
   },
   
 
+<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
 
 import { useState } from 'react';
 import { useRouter } from 'next/router';
@@ -234,6 +252,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
 
+=======
+  return (
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/ApplyToJobForm.tsx
       
 
 
@@ -379,10 +403,13 @@ interface ApplyToJobFormProps  {job: Job,onSuccess?: () => void;
             rows = {6,}
 
 
+<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
         
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/ApplyToJobForm.tsx
         <div>
           <Label htmlFor="resume">Select Resume (Optional)</Label>
           {isResumesLoading ? (
@@ -533,6 +560,7 @@ interface ApplyToJobFormProps  {job: Job,onSuccess?: () => void;
 
 
       <div className="flex justify-end gap-2">
+<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
             onChange = {(e,) => setResumeFile(e && e.target.files?.[0] || null),}
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/jobs/ApplyToJobForm.tsx
@@ -542,10 +570,16 @@ interface ApplyToJobFormProps  {job: Job,onSuccess?: () => void;
       <div className="flex justify-end gap-2">;
 <<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/ApplyToJobForm.tsx
         <Button
           type="button"
           variant="outline"
 
+<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/ApplyToJobForm.tsx
           onClick={() => {;
             if (onSuccess) onSuccess();
 
@@ -554,7 +588,10 @@ interface ApplyToJobFormProps  {job: Job,onSuccess?: () => void;
           onClick={() => {;
             if (onSuccess) onSuccess();
 
+<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/ApplyToJobForm.tsx
           }}
 =======
             onChange = {(e,) => setResumeFile(e && e.target.files?.[0] || null)}
@@ -578,6 +615,7 @@ interface ApplyToJobFormProps  {job: Job,onSuccess?: () => void;
           ) : (;
             "Submit Application";
           )}
+<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
                     return (
                       <SelectItem key={resume.id} value={resume.id}>;
 =======
@@ -662,6 +700,28 @@ handle_submit;
 }"}
 }
 ;
+=======
+
+
+}</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application") ;
+}</Button> </div> </form>) ;
+}"};
+
+
+        </Button>;
+      </div>;
+    </form>;
+  );
+
+
+
+                {resumes.map ((resume, ) => {
+                  // Check condition
+if ( {) {
+  $2
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/ApplyToJobForm.tsx
 
         </Button>
       </div>
@@ -691,6 +751,7 @@ handleSubmit ;
 }</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application") ;
 }</Button> </div> </form>) ;
 }"
+<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 }<div className="space - y-4" > <div> <Label html_for="cover_letter" >Cover Letter</Label> <Textarea className="mt - 1" /> <p className="text - xs text - muted - foreground mt - 1" > Provide a brief introduction and highlight your relevant skills and experience. </p> </div> <div> <div className="flex items - center gap - 2 mt - 2"> <Loader2 className="h - 4 w - 4 animate - spin" /> <span > Loading your resumes...</span> </div>) : resumes && resumes.length > 0 ? (<Select value= {selectedResumeId;
@@ -710,3 +771,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 })}</SelectContent> </Select> > Create Resume </Button> </div>) ";
 }</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application")}</Button> </div> </form>)}";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/jobs/ApplyToJobForm.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/ApplyToJobForm.tsx

@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -95,6 +96,9 @@ ursor/automate-test-improve-and-merge-code-646c
   "timestamp": "2025-09-06T10:56:47.356Z",
   "totalDuration": 7910,
   "timestamp": "2025-09-06T22:41:57.033Z",
+=======
+  "timestamp": "2025-09-06T23:55:31.040Z",
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   "optimizations": [
     {
       "type": "bundle-analysis",
@@ -17381,19 +17385,19 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/AIListingGenerator.tsx",
-      "size": 35085,
+      "size": 27299,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/AIMatchingResults.tsx",
-      "size": 19038,
+      "size": 15694,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/AIMatchmaker.tsx",
-      "size": 17488,
+      "size": 10390,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -17412,12 +17416,6 @@ ursor/automate-test-improve-and-merge-code-646c
       "type": "large-component",
       "file": "/workspace/src/components/Accessibility.js.jsx",
       "size": 14483,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/AccessibilityEnhancer.tsx",
-      "size": 20886,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -17458,26 +17456,20 @@ ursor/automate-test-improve-and-merge-code-646c
     },
     {
       "type": "large-component",
-      "file": "/workspace/src/components/ApiErrorBoundary.tsx",
-      "size": 9440,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
       "file": "/workspace/src/components/AuthButtons.tsx",
-      "size": 13170,
+      "size": 9642,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/AuthGuard.tsx",
-      "size": 8344,
+      "size": 7670,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/BenefitsSection.tsx",
-      "size": 13433,
+      "size": 9809,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -17513,31 +17505,31 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/CategoriesSection.tsx",
-      "size": 33843,
+      "size": 21839,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/CategoryListingPage.tsx",
-      "size": 29627,
+      "size": 24072,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/ChatAssistant/ChatAssistant.tsx",
-      "size": 36866,
+      "size": 22965,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/ChatAssistant/ChatInput.tsx",
-      "size": 8060,
+      "size": 5956,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/ChatAssistantTrigger.tsx",
-      "size": 8636,
+      "size": 6406,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -17573,13 +17565,13 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/CommunityDiscussion.tsx",
-      "size": 28981,
+      "size": 17246,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/ComparisonSection.tsx",
-      "size": 23033,
+      "size": 13934,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -17615,7 +17607,7 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/ContactSection.tsx",
-      "size": 12608,
+      "size": 11582,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -17627,7 +17619,7 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/DynamicListingPage.tsx",
-      "size": 81323,
+      "size": 56291,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -17669,7 +17661,7 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/EnhancedNewsletterForm.tsx",
-      "size": 18491,
+      "size": 9582,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -17705,31 +17697,31 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/EquipmentErrorBoundary.tsx",
-      "size": 8156,
+      "size": 6665,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/FaqSection.tsx",
-      "size": 24825,
+      "size": 16650,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/FavoriteButton.tsx",
-      "size": 11087,
+      "size": 8374,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/FeaturesGuideSection.tsx",
-      "size": 75975,
+      "size": 68062,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/FloatingCTA.tsx",
-      "size": 14452,
+      "size": 7332,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -17741,13 +17733,13 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/FooterNewsletter.tsx",
-      "size": 20172,
+      "size": 15910,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/FuturisticFooter.tsx",
-      "size": 25206,
+      "size": 14787,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -17771,7 +17763,7 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/GlobalErrorHandler.tsx",
-      "size": 22891,
+      "size": 6047,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -17789,7 +17781,7 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/GlobalServiceSection.tsx",
-      "size": 15384,
+      "size": 9104,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -17807,7 +17799,7 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/HowItWorksSection.tsx",
-      "size": 30168,
+      "size": 27207,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -17825,7 +17817,7 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/InstallPrompt.tsx",
-      "size": 12317,
+      "size": 6975,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -17849,13 +17841,13 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/ListingCard.tsx",
-      "size": 12749,
+      "size": 5474,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/ListingScoreCard.tsx",
-      "size": 16575,
+      "size": 13188,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -17873,7 +17865,7 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/MarketplaceErrorBoundary.tsx",
-      "size": 16144,
+      "size": 10175,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -17885,7 +17877,7 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/ModeToggle.tsx",
-      "size": 24778,
+      "size": 18680,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -17903,43 +17895,31 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/NotificationCenter.tsx",
-      "size": 10302,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/OfflineIndicator.tsx",
-      "size": 5674,
+      "size": 8135,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/PageErrorBoundary.tsx",
-      "size": 21122,
+      "size": 14390,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/PerformanceDashboard.tsx",
-      "size": 30559,
+      "size": 16370,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/PerformanceOptimized.tsx",
-      "size": 22687,
+      "size": 16091,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/PerformanceOptimizedHero.js.jsx",
       "size": 12837,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/PerformanceOptimizer.tsx",
-      "size": 7143,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -17957,19 +17937,19 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/ProductCard.tsx",
-      "size": 10281,
+      "size": 9015,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/ProductListingCard.tsx",
-      "size": 44200,
+      "size": 30312,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/ProductSubmissionForm.tsx",
-      "size": 65302,
+      "size": 42887,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -17980,32 +17960,20 @@ ursor/automate-test-improve-and-merge-code-646c
     },
     {
       "type": "large-component",
-      "file": "/workspace/src/components/PwaInstallButton.tsx",
-      "size": 5576,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
       "file": "/workspace/src/components/QuoteRequestForm/ServiceTypeStep.tsx",
-      "size": 18020,
+      "size": 11793,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/QuoteRequestForm/StepProgress.tsx",
-      "size": 13509,
+      "size": 7373,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/QuoteRequestForm/TimelineStep.tsx",
-      "size": 16953,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/QuoteRequestForm.tsx",
-      "size": 13177,
+      "size": 11056,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -18023,7 +17991,7 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/SEO.tsx",
-      "size": 19118,
+      "size": 17246,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -18041,7 +18009,7 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/SearchBar.tsx",
-      "size": 38525,
+      "size": 18606,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -18077,7 +18045,7 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/ServiceQuoteModal.tsx",
-      "size": 25131,
+      "size": 21188,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -18143,13 +18111,13 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/SitemapPage.tsx",
-      "size": 22254,
+      "size": 14639,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/SocialShareSection.tsx",
-      "size": 9031,
+      "size": 5063,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -18161,7 +18129,7 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/SupportChatbot.tsx",
-      "size": 28922,
+      "size": 25494,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -18191,13 +18159,7 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/TestimonialCarousel.tsx",
-      "size": 27413,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/VerifiedBadge.tsx",
-      "size": 5286,
+      "size": 17248,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -18209,73 +18171,55 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/admin/HealthDashboard.tsx",
-      "size": 49829,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/admin/fraud-detection/ActionButtons.tsx",
-      "size": 6635,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/admin/fraud-detection/EmptyFraudState.tsx",
-      "size": 5336,
+      "size": 21012,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/admin/fraud-detection/FraudFilters.tsx",
-      "size": 11985,
+      "size": 11098,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/admin/fraud-detection/FraudStatsCards.tsx",
-      "size": 8981,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/admin/fraud-detection/FraudTabContent.tsx",
-      "size": 6191,
+      "size": 5399,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/admin/performance-dashboard.tsx",
-      "size": 45710,
+      "size": 26752,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/admin/quotes/QuotesFilter.tsx",
-      "size": 15971,
+      "size": 10724,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/admin/quotes/QuotesTable.tsx",
-      "size": 25411,
+      "size": 19400,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/admin/reviews/ReviewsModerationTable.tsx",
-      "size": 54560,
+      "size": 23635,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/admin/whitelabel/TenantsList.tsx",
-      "size": 6833,
+      "size": 6569,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/admin/zion-gpt/ModelManager.tsx",
-      "size": 15045,
+      "size": 12353,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -18287,55 +18231,49 @@ ursor/automate-test-improve-and-merge-code-646c
         "Split vendor libraries into separate chunks"
       ]
       "file": "/workspace/src/components/advanced/DynamicComponentLoader.tsx",
-      "dynamicImports": 8,
+      "dynamicImports": 3,
       "status": "good"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/advanced/DynamicComponentLoader.tsx",
-      "size": 26738,
+      "size": 8582,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/ai-enhancement/AIEnhancementButton.tsx",
-      "size": 11785,
+      "size": 7644,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/ai-enhancement/AIEnhancementPanel.tsx",
-      "size": 15294,
+      "size": 10395,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/auth/AuthConfigurationError.tsx",
-      "size": 45459,
+      "size": 29248,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/auth/SignupForm.tsx",
-      "size": 9897,
+      "size": 5437,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/auth/login/LoginForm.tsx",
-      "size": 44140,
+      "size": 26865,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/auth/login/SocialLogin.tsx",
-      "size": 15321,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/auth/login/Web3Login.tsx",
-      "size": 7286,
+      "size": 11716,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -18347,37 +18285,25 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/blog/AuthorBio.tsx",
-      "size": 7935,
+      "size": 5016,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/blog/SocialShareButtons.tsx",
-      "size": 8209,
+      "size": 7142,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/cart/GuestCheckoutModal.tsx",
-      "size": 12747,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/community/EmptyState.tsx",
-      "size": 7160,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/community/ForumCategories.tsx",
-      "size": 7731,
+      "size": 5435,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/community/PostCard.tsx",
-      "size": 6599,
+      "size": 5294,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -18389,25 +18315,7 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/community/ReplyCard.tsx",
-      "size": 8362,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/community/ReplyForm.tsx",
-      "size": 6762,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/community/ReputationDisplay.tsx",
-      "size": 7442,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/community/UserBadges.tsx",
-      "size": 6141,
+      "size": 7241,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -18419,91 +18327,91 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/contracts/ContractBuilder.tsx",
-      "size": 10355,
+      "size": 8138,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/contracts/SmartContractBuilder.tsx",
-      "size": 65034,
+      "size": 29946,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/contracts/blockchain/SmartContractDeployment.tsx",
-      "size": 25599,
+      "size": 12155,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/contracts/components/ContractForm.tsx",
-      "size": 6622,
+      "size": 5172,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/contracts/components/ProjectDetailsFields.tsx",
-      "size": 25362,
+      "size": 18238,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/contracts/page/ContractTypeCards.tsx",
-      "size": 12561,
+      "size": 6649,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/contracts/templates/TemplateList.tsx",
-      "size": 31237,
+      "size": 19859,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/contracts/templates/TemplateSaveForm.tsx",
-      "size": 13177,
+      "size": 8337,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/creator/CreatorSidebar.tsx",
-      "size": 9563,
+      "size": 8882,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/developers/ApiDocsLayout.tsx",
-      "size": 13648,
+      "size": 10036,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/developers/ApiDocumentation.tsx",
-      "size": 111139,
+      "size": 81028,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/developers/ApiKeysManager.tsx",
-      "size": 67517,
+      "size": 38261,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/developers/ApiLogs.tsx",
-      "size": 10369,
+      "size": 9315,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/developers/ApiPlayground.tsx",
-      "size": 12621,
+      "size": 8411,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/developers/WebhooksManager.tsx",
-      "size": 121378,
+      "size": 79224,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -18527,133 +18435,121 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/disputes/DisputeDetail.tsx",
-      "size": 94700,
+      "size": 64325,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/disputes/DisputeForm.tsx",
-      "size": 24287,
+      "size": 16437,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/disputes/DisputesList.tsx",
-      "size": 32984,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/disputes/RaiseDisputeButton.tsx",
-      "size": 6957,
+      "size": 22060,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/enterprise/EnterpriseCTA.tsx",
-      "size": 21057,
+      "size": 16862,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/enterprise/EnterpriseFeatures.tsx",
-      "size": 11560,
+      "size": 8798,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/enterprise/EnterprisePricingTable.tsx",
-      "size": 27059,
+      "size": 11341,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/enterprise/EnterpriseStickyNav.tsx",
-      "size": 9182,
+      "size": 6518,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/enterprise/EnterpriseTestimonials.tsx",
-      "size": 17633,
+      "size": 7863,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/enterprise/EnterpriseTrustBadges.tsx",
-      "size": 11301,
+      "size": 8782,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/enterprise/admin/AdminHeader.tsx",
-      "size": 16307,
+      "size": 10358,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/enterprise/admin/RoleManagement.tsx",
-      "size": 37063,
+      "size": 27731,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/enterprise/admin/TeamActivity.tsx",
-      "size": 15030,
+      "size": 13713,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/enterprise/admin/TeamManagement.tsx",
-      "size": 25436,
+      "size": 6803,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/enterprise/admin/UsageStats.tsx",
-      "size": 15663,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/enterprise/billing/BillingHeader.tsx",
-      "size": 7078,
+      "size": 13096,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/enterprise/billing/InvoiceHistory.tsx",
-      "size": 10462,
+      "size": 9904,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/enterprise/billing/PaymentMethods.tsx",
-      "size": 14178,
+      "size": 5363,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/enterprise/workspace/QuickActions.tsx",
-      "size": 8510,
+      "size": 7222,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/enterprise/workspace/WorkspaceHeader.tsx",
-      "size": 14837,
+      "size": 6710,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/errors/GlobalErrorBoundary.tsx",
-      "size": 61945,
+      "size": 35301,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/forms/ValidatedFormField.tsx",
-      "size": 23751,
+      "size": 18323,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -18665,13 +18561,7 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/gallery/ProductGallery.tsx",
-      "size": 10916,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/gamification/badgeConfig.ts",
-      "size": 5379,
+      "size": 6839,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -18689,7 +18579,7 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/header/MobileBottomNav.tsx",
-      "size": 13510,
+      "size": 8349,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -18701,7 +18591,7 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/hiring-tracker/CandidateCard.tsx",
-      "size": 34221,
+      "size": 19261,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -18749,7 +18639,7 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/home/FeatureCTAs.tsx",
-      "size": 27884,
+      "size": 18632,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -18761,7 +18651,7 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/home/FeatureHighlights.tsx",
-      "size": 20719,
+      "size": 5827,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -18773,13 +18663,13 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/home/ITServiceRequestHero.tsx",
-      "size": 33923,
+      "size": 29693,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/home/InteractiveFeatures.tsx",
-      "size": 9127,
+      "size": 5606,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -18797,7 +18687,7 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/home/QuickAccess.tsx",
-      "size": 25520,
+      "size": 22564,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -18809,79 +18699,79 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/icons/index.tsx",
-      "size": 141216,
+      "size": 132167,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/integrations/IntegrationCards.tsx",
-      "size": 16560,
+      "size": 7949,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/integrations/WebhookManager.tsx",
-      "size": 51657,
+      "size": 39662,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/integrations/ZapierIntegration.tsx",
-      "size": 16446,
+      "size": 12660,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/interviews/InterviewCard.tsx",
-      "size": 6665,
+      "size": 6509,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/interviews/InterviewRequestForm.tsx",
-      "size": 43834,
+      "size": 33218,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/interviews/UpcomingInterviewsCard.tsx",
-      "size": 21311,
+      "size": 6535,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/jobs/ApplicationScoreCard.tsx",
-      "size": 25996,
+      "size": 15034,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/jobs/ApplyToJobForm.tsx",
-      "size": 25597,
+      "size": 20331,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/jobs/JobMatchesCard.tsx",
-      "size": 13463,
+      "size": 12303,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/jobs/JobsList.tsx",
-      "size": 16817,
+      "size": 15588,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/jobs/MyApplications.tsx",
-      "size": 11783,
+      "size": 6276,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/jobs/SuggestedJobs.tsx",
-      "size": 12886,
+      "size": 10438,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -18893,31 +18783,31 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/jobs/applications/ApplicationActions.tsx",
-      "size": 9873,
+      "size": 7376,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/jobs/applications/ApplicationCard.tsx",
-      "size": 31862,
+      "size": 24893,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/jobs/applications/ApplicationProgress.tsx",
-      "size": 9003,
+      "size": 6864,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/jobs/applications/ApplicationRow.tsx",
-      "size": 15279,
+      "size": 11469,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/jobs/applications/ApplicationsTable.tsx",
-      "size": 22655,
+      "size": 15787,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -18935,103 +18825,73 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/layout/Header.tsx",
-      "size": 25508,
+      "size": 5037,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/layout/Sidebar.tsx",
-      "size": 25841,
+      "size": 24324,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/listing/AIListingForm.tsx",
-      "size": 18362,
+      "size": 13374,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/listing/AIListingGenerator.tsx",
-      "size": 15365,
+      "size": 8949,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/listing/GeneratedContentDisplay.tsx",
-      "size": 13275,
+      "size": 5571,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/loyalty/PointsBadge.tsx",
-      "size": 10853,
+      "size": 7453,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/marketplace/EmptyState.tsx",
-      "size": 15782,
+      "size": 11787,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/messaging/ConversationDetailView.tsx",
-      "size": 12025,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/messaging/ConversationsList.tsx",
-      "size": 6701,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/messaging/MessageBubble.tsx",
-      "size": 5785,
+      "size": 11012,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/messaging/job-application/ApplyForm.tsx",
-      "size": 14980,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/messaging/resume-selector/ResumePreviewCard.tsx",
-      "size": 5546,
+      "size": 9633,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/messaging/resume-selector/ResumeSelector.tsx",
-      "size": 15312,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/messaging/resume-selector/SelectResumeSection.tsx",
-      "size": 5710,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/messaging/resume-selector/UploadSection.tsx",
-      "size": 5381,
+      "size": 14996,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/mobile-app/AppFeatures.tsx",
-      "size": 9676,
+      "size": 8167,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/mobile-app/AppScreenshots.tsx",
-      "size": 11072,
+      "size": 9931,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -19042,38 +18902,26 @@ ursor/automate-test-improve-and-merge-code-646c
     },
     {
       "type": "large-component",
-      "file": "/workspace/src/components/mobile-app/AppStoreBanner.tsx",
-      "size": 6166,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
       "file": "/workspace/src/components/mobile-app/AppStoreButtons.tsx",
-      "size": 15871,
+      "size": 11515,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/mobile-app/AppTestimonials.tsx",
-      "size": 12512,
+      "size": 10702,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/mobile-app/CommunityTrust.tsx",
-      "size": 13352,
+      "size": 7930,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/mobile-app/DownloadSection.tsx",
-      "size": 7745,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/mobile-app/MobileAppHero.tsx",
-      "size": 7099,
+      "size": 5307,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -19085,49 +18933,43 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/mobile-app/MobileFeatureShowcase.tsx",
-      "size": 9052,
+      "size": 6789,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/mobile-app/MobileLaunchHero.tsx",
-      "size": 15587,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/mobile-app/QrCodeDownload.tsx",
-      "size": 8095,
+      "size": 10847,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/mobile-app/SmartAppBanner.tsx",
-      "size": 9451,
+      "size": 9146,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/mobile-app/admin/ChangelogManager.tsx",
-      "size": 13020,
+      "size": 8431,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/mobile-app/admin/ExportPanel.tsx",
-      "size": 7360,
+      "size": 6159,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/mobile-app/admin/MetadataForm.tsx",
-      "size": 14289,
+      "size": 7968,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/mobile-app/admin/ScreenshotManager.tsx",
-      "size": 9080,
+      "size": 8504,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -19139,313 +18981,265 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/notifications/NotificationItem.tsx",
-      "size": 12845,
+      "size": 8719,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/notifications/NotificationList.tsx",
-      "size": 14081,
+      "size": 8869,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/onboarding/OnboardingTracker.tsx",
-      "size": 9142,
+      "size": 6421,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/onboarding/OnboardingWizard.tsx",
-      "size": 15697,
+      "size": 13129,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/onboarding/ProfileSetup.tsx",
-      "size": 19331,
+      "size": 9211,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/onboarding/UserTypeSelection.tsx",
-      "size": 10377,
+      "size": 9479,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/partners/PartnerDashboard.tsx",
-      "size": 10915,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/partners/PartnerLeaderboard.tsx",
-      "size": 10043,
+      "size": 7387,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/partners/PartnerReferralLinks.tsx",
-      "size": 31044,
+      "size": 21656,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/partners/PartnerResources.tsx",
-      "size": 22774,
+      "size": 16733,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/pricing/PricingSuggestionBox.tsx",
-      "size": 20505,
+      "size": 11776,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/profile/ContactPublisherModal.tsx",
-      "size": 20200,
+      "size": 14519,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/profile/ProfileAvailability.tsx",
-      "size": 15951,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/profile/ProfileExperience.tsx",
-      "size": 5479,
+      "size": 14011,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/profile/ProfileHero.tsx",
-      "size": 9772,
+      "size": 7202,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/profile/ProfileProjects.tsx",
-      "size": 12272,
+      "size": 11583,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/profile/ServiceProviderRegistrationForm.tsx",
-      "size": 84713,
+      "size": 82485,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/profile/TalentCard.tsx",
-      "size": 17035,
+      "size": 10429,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/profile/TalentProfile.tsx",
-      "size": 19107,
+      "size": 13332,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/profile/TalentRegistrationForm.tsx",
-      "size": 120275,
+      "size": 110542,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/profile/hire-request/HireRequestForm.tsx",
-      "size": 11745,
+      "size": 8288,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/projects/ActiveProjectsCard.tsx",
-      "size": 19519,
+      "size": 15366,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/projects/ProjectOfferBanner.tsx",
-      "size": 12386,
+      "size": 9787,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/projects/milestones/AIMilestoneGenerator.tsx",
-      "size": 17340,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/projects/milestones/AddMilestoneForm.tsx",
-      "size": 22070,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/projects/milestones/MilestoneCard.tsx",
-      "size": 16727,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/projects/milestones/MilestoneSuggestions.tsx",
-      "size": 21659,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/projects/milestones/MilestonesList.tsx",
-      "size": 6621,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/projects/reviews/ProjectReviewSection.tsx",
-      "size": 12422,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/quotes/ExportToCSV.tsx",
-      "size": 12627,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/quotes/QuoteDetails.tsx",
-      "size": 14277,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/referrals/ReferralLeaderboard.tsx",
-      "size": 9236,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/referrals/ReferralLink.tsx",
-      "size": 12323,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/referrals/ReferralStats.tsx",
-      "size": 10998,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/referrals/RewardsCard.tsx",
-      "size": 16962,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/resume-builder/forms/WorkExperienceForm.tsx",
-      "size": 17628,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/resume-builder/forms/WorkExperienceItemForm.tsx",
-      "size": 40068,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/resume-builder/forms/certifications/CertificationsForm.tsx",
-      "size": 10768,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/resume-builder/forms/certifications/CertificationsList.tsx",
-      "size": 9100,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/resume-builder/forms/education/EducationFormFields.tsx",
       "size": 15525,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
-      "file": "/workspace/src/components/resume-builder/forms/education/EducationItem.tsx",
-      "size": 7415,
+      "file": "/workspace/src/components/projects/milestones/AddMilestoneForm.tsx",
+      "size": 16254,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
-      "file": "/workspace/src/components/resume-builder/forms/skills/BulkAddSkills.tsx",
-      "size": 5321,
+      "file": "/workspace/src/components/projects/milestones/MilestoneCard.tsx",
+      "size": 12522,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
-      "file": "/workspace/src/components/resume-builder/forms/skills/SkillItem.tsx",
-      "size": 5208,
+      "file": "/workspace/src/components/projects/milestones/MilestoneSuggestions.tsx",
+      "size": 18422,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/projects/reviews/ProjectReviewSection.tsx",
+      "size": 10209,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/quotes/ExportToCSV.tsx",
+      "size": 11138,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/quotes/QuoteDetails.tsx",
+      "size": 14107,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/referrals/ReferralLeaderboard.tsx",
+      "size": 7740,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/referrals/ReferralLink.tsx",
+      "size": 9976,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/referrals/ReferralStats.tsx",
+      "size": 9212,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/referrals/RewardsCard.tsx",
+      "size": 14506,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/resume-builder/forms/WorkExperienceForm.tsx",
+      "size": 15012,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/resume-builder/forms/WorkExperienceItemForm.tsx",
+      "size": 34324,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/resume-builder/forms/certifications/CertificationsList.tsx",
+      "size": 6885,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/resume-builder/forms/education/EducationFormFields.tsx",
+      "size": 13243,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/resume-builder/portfolio/PortfolioBuilder.tsx",
-      "size": 11378,
+      "size": 9098,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/resume-builder/portfolio/ProjectCard.tsx",
-      "size": 19180,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/resume-builder/portfolio/ProjectForm.tsx",
-      "size": 14858,
+      "size": 16160,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/resume-builder/wizard/CreateResumeForm.tsx",
-      "size": 9346,
+      "size": 8138,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/resume-builder/wizard/ResumeWizard.tsx",
-      "size": 8884,
+      "size": 6218,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/reviews/ReviewCard.tsx",
-      "size": 33151,
+      "size": 24688,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/reviews/ReviewStats.tsx",
-      "size": 8417,
+      "size": 6127,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/search/ActiveFiltersBar.tsx",
-      "size": 11836,
+      "size": 11092,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/search/AdvancedSearchResults.tsx",
-      "size": 63379,
+      "size": 54374,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -19457,13 +19251,13 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/search/EnhancedSearchInput.tsx",
-      "size": 42742,
+      "size": 35229,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/search/SearchResultsPage.tsx",
-      "size": 63331,
+      "size": 54330,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -19475,31 +19269,19 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/services/CountrySelector.tsx",
-      "size": 12502,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/services/CountryServiceCard.tsx",
-      "size": 10799,
+      "size": 10461,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/services/GeneratedDescriptionDisplay.tsx",
-      "size": 8551,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/services/ITServicePricingTable.tsx",
-      "size": 7952,
+      "size": 6335,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/services/PageSections/CountryTabs.tsx",
-      "size": 16951,
+      "size": 9272,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -19511,7 +19293,7 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/services/PageSections/PageHero.tsx",
-      "size": 13752,
+      "size": 12995,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -19523,25 +19305,25 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/services/PageSections/ServiceIncludes.tsx",
-      "size": 16260,
+      "size": 15040,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/services/ServiceDescriptionForm.tsx",
-      "size": 11768,
+      "size": 6302,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/services/ServiceDetails.tsx",
-      "size": 26327,
+      "size": 14108,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/services/ServiceLandingTemplate.tsx",
-      "size": 19015,
+      "size": 12115,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -19553,43 +19335,43 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/support/ChatMessage.tsx",
-      "size": 12379,
+      "size": 11935,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/support/HelpCenter.tsx",
-      "size": 29210,
+      "size": 26310,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/support/SupportWidget.tsx",
-      "size": 7240,
+      "size": 5196,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/support/help-content.tsx",
-      "size": 34896,
+      "size": 34448,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/talent/ActiveFilters.tsx",
-      "size": 11851,
+      "size": 10537,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/talent/FilterSidebar.tsx",
-      "size": 17987,
+      "size": 15779,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/talent/TalentCard.tsx",
-      "size": 15010,
+      "size": 14880,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -19601,43 +19383,19 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/talent/filters/AvailabilityFilter.tsx",
-      "size": 10978,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/talent/filters/ExperienceFilter.tsx",
-      "size": 6931,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/talent/filters/PriceFilter.tsx",
-      "size": 6663,
+      "size": 9381,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/talent/filters/RegionFilter.tsx",
-      "size": 11032,
+      "size": 9252,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/talent/filters/SkillsFilter.tsx",
-      "size": 7342,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/transactions/TransactionHistory.tsx",
-      "size": 6879,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/ui/EmptyState.tsx",
-      "size": 5871,
+      "size": 6635,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -19650,12 +19408,6 @@ ursor/automate-test-improve-and-merge-code-646c
       "type": "large-component",
       "file": "/workspace/src/components/ui/FuturisticServicesShowcase.jsx",
       "size": 16018,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/ui/ImageWithRetry.tsx",
-      "size": 8658,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -19685,19 +19437,13 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/ui/breadcrumb.tsx",
-      "size": 8420,
+      "size": 6100,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/ui/bundle-analyzer.tsx",
-      "size": 23370,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/ui/button.jsx",
-      "size": 7055,
+      "size": 19327,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -19727,7 +19473,7 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/ui/enhanced-loading-states.tsx",
-      "size": 31819,
+      "size": 13532,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -19751,37 +19497,25 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/components/ui/optimized-image.tsx",
-      "size": 33677,
+      "size": 22492,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/ui/quick-actions.tsx",
-      "size": 23717,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/ui/safe-image.tsx",
-      "size": 7620,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
-      "file": "/workspace/src/components/ui/sidebar/sidebar-menu.tsx",
-      "size": 5089,
+      "size": 17924,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/ui/steps.tsx",
-      "size": 11228,
+      "size": 6074,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/components/ui/toast.tsx",
-      "size": 19021,
+      "size": 14325,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -19810,12 +19544,6 @@ ursor/automate-test-improve-and-merge-code-646c
     },
     {
       "type": "large-component",
-      "file": "/workspace/src/components/wallet/TokenDisplay.tsx",
-      "size": 6167,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
       "file": "/workspace/src/contexts/ToastContext.tsx",
       "size": 6101,
       "recommendation": "Consider splitting this component"
@@ -19828,12 +19556,6 @@ ursor/automate-test-improve-and-merge-code-646c
     },
     {
       "type": "large-component",
-      "file": "/workspace/src/layout/AppHeader.tsx",
-      "size": 73563,
-      "recommendation": "Consider splitting this component"
-    },
-    {
-      "type": "large-component",
       "file": "/workspace/src/layout/Footer.tsx",
       "size": 8105,
       "recommendation": "Consider splitting this component"
@@ -19841,85 +19563,85 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/layout/MainNavigation.tsx",
-      "size": 44849,
+      "size": 43786,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/layout/PrimaryNav.tsx",
-      "size": 38696,
+      "size": 33736,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/mobile/components/browse/BrowseCards.tsx",
-      "size": 23708,
+      "size": 19894,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/mobile/components/browse/BrowseFilters.tsx",
-      "size": 19966,
+      "size": 19545,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/mobile/components/common/MobileHeader.tsx",
-      "size": 7667,
+      "size": 6153,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/mobile/components/dashboard/ClientDashboard.tsx",
-      "size": 26000,
+      "size": 23526,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/mobile/components/dashboard/TalentDashboard.tsx",
-      "size": 26595,
+      "size": 23447,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/mobile/components/messaging/MobileChatView.tsx",
-      "size": 19181,
+      "size": 17775,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/mobile/components/messaging/MobileConversationList.tsx",
-      "size": 11931,
+      "size": 9797,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/mobile/components/onboarding/LanguageThemeSelector.tsx",
-      "size": 13691,
+      "size": 10348,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/mobile/components/onboarding/RolePicker.tsx",
-      "size": 6414,
+      "size": 5951,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/mobile/components/onboarding/SignUpForm.tsx",
-      "size": 23167,
+      "size": 19077,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/mobile/components/projects/MobileProjectView.tsx",
-      "size": 26572,
+      "size": 18426,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/mobile/components/resume/MobileResumeBuilder.tsx",
-      "size": 14146,
+      "size": 13388,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -19955,7 +19677,7 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/utils/chunkErrorHandler.ts",
-      "size": 17921,
+      "size": 15613,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -19973,25 +19695,25 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/src/utils/env-polyfill.ts",
-      "size": 7077,
+      "size": 6485,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/utils/imageOptimization.tsx",
-      "size": 12830,
+      "size": 11184,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/utils/sentry-mock.ts",
-      "size": 15745,
+      "size": 14012,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/src/utils/serverless-polyfill.ts",
-      "size": 21803,
+      "size": 20112,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -20015,7 +19737,7 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/app/services/ai-code-reviewer/page.tsx",
-      "size": 7542,
+      "size": 7460,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -20039,13 +19761,13 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/app/services/ai-meeting-assistant/page.tsx",
-      "size": 5894,
+      "size": 6327,
       "recommendation": "Consider splitting this component"
     },
     {
       "type": "large-component",
       "file": "/workspace/app/services/ai-powered-crm/page.tsx",
-      "size": 8912,
+      "size": 10613,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -20057,7 +19779,7 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/app/services/ai-services/page.tsx",
-      "size": 10042,
+      "size": 9759,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -20087,7 +19809,7 @@ ursor/automate-test-improve-and-merge-code-646c
     {
       "type": "large-component",
       "file": "/workspace/app/services/micro-saas/page.tsx",
-      "size": 8928,
+      "size": 8645,
       "recommendation": "Consider splitting this component"
     },
     {
@@ -20191,7 +19913,7 @@ ursor/automate-test-improve-and-merge-code-646c
     "Use resource hints (preload, prefetch)"
   ],
   "recommendations": [
-    "Consider splitting 448 large components",
+    "Consider splitting 401 large components",
     "Good: Found 8 files with dynamic imports"
   ],
   "categories": {
@@ -20217,10 +19939,10 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   "timestamp": "2025-09-06T00:06:24.470Z",
   "metrics": {
-    "totalOptimizations": 456,
+    "totalOptimizations": 409,
     "imageOptimizations": 0,
     "codeSplitting": 8,
-    "largeComponents": 448
+    "largeComponents": 401
   }
   }
 

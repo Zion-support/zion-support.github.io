@@ -8,7 +8,11 @@ const { execSync } = require('child_process')
         "criticalIssues"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         "highIssues"
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+        "highIssues"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

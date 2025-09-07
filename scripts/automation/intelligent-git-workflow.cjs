@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -12,6 +13,11 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node;
 ;#!/usr/bin/env node;
 /**
@@ -38,6 +44,7 @@ const path = require('path')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -46,6 +53,9 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           conflictType = 'separator';
           continue;
         } else if (line.startsWith('>>>>>>')) {
@@ -485,6 +495,7 @@ class IntelligentGitWorkflow {
           resolvedLines.push(line);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 ;
@@ -496,6 +507,12 @@ class IntelligentGitWorkflow {
 
       console.log(`✅ Resolved conflict in ${filePath}`);
 
+=======
+        }
+        // Skip their version
+      }
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
@@ -510,9 +527,14 @@ class IntelligentGitWorkflow {
       return { resolved: true, method: 'auto_merge' };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       
+=======
+      
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ;
       // Write resolved content;
       fs.writeFileSync(filePath, resolvedLines.join('\n'));
@@ -521,6 +543,7 @@ class IntelligentGitWorkflow {
       execSync(`git add ${filePath}`, { stdio: 'inherit' });
 
       console.log(`✅ Resolved conflict in ${filePath}`);
+<<<<<<< HEAD
 
 main
 
@@ -528,6 +551,8 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     } catch (error) {
       console.log(
         `❌ Failed to resolve conflict in ${filePath}:`,
@@ -536,6 +561,7 @@ main
     }
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -580,6 +606,8 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   async createPullRequest(sourceBranch, targetBranch = 'main', title = null, description = null) {
     this.log(`📝 Creating pull request from ${sourceBranch} to ${targetBranch}...`);
     
@@ -899,8 +927,12 @@ main
       process.exit(1);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   updateWorkflowData() {
     this.workflowData.lastUpdated = new Date().toISOString();
 
@@ -938,6 +970,7 @@ main
       // Start fresh if file is corrupted;
     } catch (e) {
       // Start fresh if file is corrupted
+<<<<<<< HEAD
 
 main
 
@@ -945,6 +978,8 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
 
     errors.push(errorLog);
@@ -953,12 +988,18 @@ main
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 ;
 // Run the workflow;      await fs.mkdir(path.join(this.projectRoot, 'logs')
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -1026,11 +1067,14 @@ class IntelligentGitWorkflow {
         // Determine if auto-commit should happen
         if (this.shouldAutoCommit(changes)) {
           await this.intelligentCommit(changes);
+<<<<<<< HEAD
 ursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         }
       }
 
@@ -1382,6 +1426,7 @@ ursor/automate-test-improve-and-merge-code-59d5
           conflictType = 'ours';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         } else if (line.startsWith('')) {
@@ -1390,6 +1435,11 @@ ursor/fix-lint-push-and-merge-to-main-28da
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+        } else if (line.startsWith('')) {
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           conflictType = 'theirs';
           inConflict = false;
           conflictType = '';
@@ -1461,6 +1511,7 @@ ursor/fix-lint-push-and-merge-to-main-28da
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       await fs.mkdir(path.join(this.projectRoot, 'logs')
 =======
 
@@ -1475,6 +1526,25 @@ main
       await fs.mkdir(path.join(this.projectRoot, 'logs')
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+=======
+
+// Run the git workflow
+if (require.main === module) {
+  const gitWorkflow = new IntelligentGitWorkflow();
+  gitWorkflow.run();
+}
+
+module.exports = IntelligentGitWorkflow;
+
+
+
+
+      await fs.mkdir(path.join(this.projectRoot, 'logs')
+
+;
+// Run the workflow;      await fs.mkdir(path.join(this.projectRoot, 'logs')
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       console.log('Logs directory already exists')
   log(message, level = 'INFO')
     fs.appendFile(this.logFile, logMessage + '\n')
@@ -1495,14 +1565,14 @@ main
       const userEmail = await this.runGitCommand('git config user.email').catch(() => ''
         await this.runGitCommand('git config user.name "AI Git Workflow")
         await this.runGitCommand('git config user.email "ai-workflow@example.com")
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
+
 // Run the workflow
 const workflow = new IntelligentGitWorkflow();
 workflow.runWorkflow().catch(console.error);
         await this.runGitCommand('git config user.email "ai-workflow@example.com")
 
+<<<<<<< HEAD
 // Run the workflow
 const workflow = new IntelligentGitWorkflow();
 workflow.runWorkflow().catch(console.error);
@@ -1518,3 +1588,5 @@ main
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

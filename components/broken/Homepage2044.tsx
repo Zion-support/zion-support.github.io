@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import React, { useEffect, useState, useCallback, useMemo } from 'react',
 import Layout from './layout/Layout';
 import { motion } from 'framer-motion';
@@ -28,7 +32,11 @@ import { innovativeMicroSaasSolutions2025  } from '../data/2025-innovative-micro
 const ServiceCard = null;
 <<<<<<< HEAD
 </div>);
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 //Memoize expensive computations const allRevolutionaryServices = useMemo ( () => [ ...revolutionary2044AdvancedMicroSaas;
 =======
 </div>)//Memoize expensive computations const allRevolutionaryServices = useMemo ( () => [ ...revolutionary2044AdvancedMicroSaas;
@@ -119,6 +127,7 @@ top: `$ {Math.random () * 100;
   duration: 0.8;
 }viewport= {
   {
+<<<<<<< HEAD
   once: true 
 
 }> <h2 className="text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto" > Join thousands of forward-thinking companies already leveraging our revolutionary 2044 technology solutions </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center" > <button > <span className="flex items-center" > Start Your Journey <Rocket className="w-7 h-7 ml-4 group-hover:translate-x-1 transition-transform duration-300" /> </span> </button> <button > <span className="flex items-center" > Schedule Demo <Play className="w-7 h-7 ml-4" /> </span> </button> </div> </div> </section> </main> </Layout> </>) 
@@ -136,3 +145,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }> <h2 className="text - 5xl font - bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text - xl text - gray - 400 mb - 12 max-w-3xl mx-auto" > Join thousands of forward - thinking companies already leveraging our revolutionary 2044 technology solutions </p> <div className="flex flex - col sm:flex - row gap - 6 justify-center items-center" > <button > <span className="flex items-center" > Start Your Journey <Rocket className="w - 7 h - 7 ml - 4 group - hover:translate - x-1 transition-transform duration-300" /> </span> </button> <button > <span className="flex items-center" > Schedule Demo <Play className="w - 7 h-7 ml-4" /> </span> </button> </div> </div> </section> </main> </Layout> </>)}once: true;
 }> <h2 className="text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto" > Join thousands of forward-thinking companies already leveraging our revolutionary 2044 technology solutions </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center" > <button > <span className="flex items-center" > Start Your Journey <Rocket className="w-7 h-7 ml-4 group-hover:translate-x-1 transition-transform duration-300" /> </span> </button> <button > <span className="flex items-center" > Schedule Demo <Play className="w-7 h-7 ml-4" /> </span> </button> </div> </div> </section> </main> </Layout> </>)}export default Homepage2044;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+  once: true;
+}> <h2 className="text - 5xl font - bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text - xl text - gray - 400 mb - 12 max-w-3xl mx-auto" > Join thousands of forward - thinking companies already leveraging our revolutionary 2044 technology solutions </p> <div className="flex flex - col sm:flex - row gap - 6 justify-center items-center" > <button > <span className="flex items-center" > Start Your Journey <Rocket className="w - 7 h - 7 ml - 4 group - hover:translate - x-1 transition-transform duration-300" /> </span> </button> <button > <span className="flex items-center" > Schedule Demo <Play className="w - 7 h-7 ml-4" /> </span> </button> </div> </div> </section> </main> </Layout> </>);
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -6,6 +6,7 @@ import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
 
 export default function IAMAccessReviewPage() {
+<<<<<<< HEAD
   );
   if (!service) return null;
   return (
@@ -14,6 +15,26 @@ export default function IAMAccessReviewPage() {
         <title>{service.name} - Zion Tech Group</title>
 <meta name='description' content={service.description} />
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+  const service = extraServices.find(s =>
+    s.link.endsWith('/iam-access-review')
+  );  if (!service) return null;export default function IAMAccessReviewPage() {
+  const service = extraServices.find(s => s.link.endsWith('/iam-access-review'));
+
+export default function IAMAccessReviewPage() {;
+  const service = extraServices && extraServices.find(s =>;
+    s && s.link.endsWith('/iam-access-review');
+  );  if (!service) return null;export default function IAMAccessReviewPage() {;
+  const service = extraServices && extraServices.find(s => s && s.link.endsWith('/iam-access-review'));
+  if (!service) return null;
+
+  return (
+    <UltraAdvancedFuturisticBackground>;
+      <Head>;
+        <title>{service && service.name} - Zion Tech Group</title>;
+        <meta name='description' content={service && service.description} />;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         <link
           rel='canonical'
           href='https://ziontechgroup && ziontechgroup.com/iam-access-review'
@@ -83,6 +104,7 @@ export default function IAMAccessReviewPage() {const service = extraServices.fin
                 href='/contact'
                 variant='quantum'
                 size='lg'
+<<<<<<< HEAD
                 className='w-full'
               >
                 Start Trial
@@ -117,6 +139,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 href='/contact';
                 variant='quantum';
                 size='lg';
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 className='w-full'>;
                 Start Trial;
                 <ArrowRight className='w-5 h-5 ml-2' />;
@@ -235,6 +259,7 @@ if (return null) {$2;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
   const service = extraServices.find(s => s.link.endsWith('/iam-access-review'))if (!service) return null;return (<UltraAdvancedFuturisticBackground>;
       <Head>;
         <title>{service.name} - Zion Tech Group</title>;
@@ -269,3 +294,27 @@ if (return null) {$2;
 }
 }</UltraAdvancedFuturisticBackground>)})}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  const service = extraServices.find(s => s.link.endsWith('/iam-access-review'));
+  if (!service) return null;
+
+  return (
+    <UltraAdvancedFuturisticBackground>
+      <Head>
+        <title>{service.name} - Zion Tech Group</title>
+              <div className="mt-6 space-y-3 text-sm text-slate-300">
+                <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
+                <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
+                <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </UltraAdvancedFuturisticBackground>
+}
+}
+
+    </UltraAdvancedFuturisticBackground>);
+}
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

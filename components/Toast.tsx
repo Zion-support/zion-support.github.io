@@ -61,6 +61,12 @@ const ToastItem: React.FC<ToastItemProps> = ({ toast, onRemove }) => {
     if (isVisible) {
       return `${baseStyles} translate-x-0 opacity-100`;
     }
+<<<<<<< HEAD
+=======
+    
+    return `${baseStyles} translate-x-full opacity-0`
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   const getIconAndColor = () => {
     switch (toast.type) {
@@ -172,6 +178,7 @@ export const useToastNotifications = () => {
   const { addToast } = useToast();
 
   return {
+<<<<<<< HEAD
 =======
             >;
               <span className="sr-only">Close</span>;
@@ -199,3 +206,15 @@ export const useToastNotifications = () => {const { addToast }  = useToast()retu
       addToast({ type: "warning", title, message, ...options }),info: (title: string, message?: string, options?: Partial<Toast>) =>;
       addToast({ type: "info", title, message, ...options }),}}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    success: (title: string, message?: string, options?: Partial<Toast>) => 
+      addToast({ type: 'success', title, message, ...options }),
+    error: (title: string, message?: string, options?: Partial<Toast>) => 
+      addToast({ type: 'error', title, message, ...options }),
+    warning: (title: string, message?: string, options?: Partial<Toast>) => 
+      addToast({ type: 'warning', title, message, ...options }),
+    info: (title: string, message?: string, options?: Partial<Toast>) => 
+      addToast({ type: 'info', title, message, ...options }),
+  }
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

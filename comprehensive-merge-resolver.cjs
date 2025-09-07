@@ -8,12 +8,15 @@ const fs = require('fs')
 const path = require('path')
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 console.log('🔧 Starting comprehensive merge conflict resolution...');
 
@@ -105,12 +108,15 @@ const fs = require('fs')
 const path = require('path')
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> main
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 const { execSync } = require('child_process')
 console.log('� Starting Comprehensive Merge Conflict Resolver...')
@@ -131,8 +137,11 @@ console.log('� Starting Comprehensive Merge Conflict Resolver...')
       console.log('\n Failed to merge "branches")
   console.error(' Merge conflict resolution "failed")
 cursor/fix-lint-push-and-merge-to-main-f3c1;
+<<<<<<< HEAD
 ursor/automate-test-improve-and-merge-code-646c
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 
 console.log(`Found ${conflictFiles.length} files with merge conflicts`);
@@ -205,6 +214,7 @@ console.log('\n🚀 Ready to proceed with improvements!');
 module.exports = { resolveConflicts, commitMerge, pushChanges };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -212,4 +222,6 @@ main
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 

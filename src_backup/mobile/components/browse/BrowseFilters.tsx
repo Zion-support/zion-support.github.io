@@ -1,6 +1,9 @@
 <<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
+<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/browse/BrowseFilters.tsx
 return (
     <div className='space-y-3'>;
 =======
@@ -195,6 +198,7 @@ import { X, Filter } from 'lucide-react'
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
 import { Badge } from "@/components/ui/badge",
 import { Label } from "@/components/ui/label",
+<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -202,6 +206,8 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger
 import { Badge } from "@/components/ui/badge",
 import { Label } from "@/components/ui/label";
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/browse/BrowseFilters.tsx
 interface BrowseFiltersProps {
 
   return (
@@ -476,6 +482,7 @@ interface BrowseFiltersProps {
               />
             </Badge>
           ))}
+<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
         </div>
       </div>
     </div>
@@ -487,6 +494,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 onClick={() => removeFilter(filter)}/>;
             </Badge>;
           ))}</div>;
+=======
+
+        </div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/browse/BrowseFilters.tsx
       </div>;
     </div>;
   )}{active_filters.map (filter => (<Badge;
@@ -501,8 +512,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Badge>))}
         </div>;
       </div>;
+<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
     </div>)}</div>;
       </div>;
     </div>;
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/mobile/components/browse/BrowseFilters.tsx
+=======
+    </div>);
+}
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/browse/BrowseFilters.tsx

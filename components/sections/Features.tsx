@@ -1,8 +1,14 @@
 import Card from '../ui/Card';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Zap } from 'lucide-react';
 interface Feature {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import { Zap } from 'lucide-react';
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   icon: React.ReactNode;
 
 class ErrorBoundary extends React.Component {
@@ -37,9 +43,13 @@ import React from 'react';
   description: string;
   color: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   gradient: string;
   delay?: number
 }
+=======
+  gradient: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 interface FeaturesProps {
   title: string;
@@ -61,12 +71,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>;
             {title}
           </h2>;
+<<<<<<< HEAD
           <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>            {subtitle}          <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;delay?: number;
 }interface FeaturesProps  {title: string;
   subtitle: string;
   features: Feature[];
           <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+          <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>            {subtitle}          <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             {subtitle}
           </p>;
         </div>;{/* Features Grid */}
@@ -75,14 +89,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {features && features.map((feature, index) => (;
             <Card
               key={index}
+<<<<<<< HEAD
 className='text-center group bg-gray-900/50 border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
 =======
           {features && features.map((feature, index) => (<Card;
               key={index}}export default Features;  )}export default Features;
+=======
+};
+
+export default Features;  );
+};
+
+export default Features;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               </p>;
             </Card>))}
         </div>;
       </div>;
+<<<<<<< HEAD
     </section>)}export default Features)}export default Features;className='text-center group bg-gray-900/50 border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               style={{ animationDelay: `${index * 0.1 + 0.2}s` }}
@@ -118,3 +142,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </section>;
 )}export default Features;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </section>);
+}
+;
+export default Features);
+}
+;
+export default Features;
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

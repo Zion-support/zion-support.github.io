@@ -3,12 +3,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   memory: {
     used: number
     total: number
     limit: number
   } | null;
 }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -25,6 +29,13 @@ import React, { useEffect } from 'react';
 interface PerformanceMonitorProps  {onPerformanceData?: (data: any) => void;
 }
 interface Performance  {getEntriesByType (type: string): PerformanceEntry[];
+=======
+interface PerformanceMonitorProps {
+  onPerformanceData?: (data: any) => void;
+}
+interface Performance {
+  getEntriesByType (type: string): PerformanceEntry[];
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   now (): number;
 }
 <<<<<<< HEAD
@@ -42,6 +53,7 @@ interface PerformanceData {;
     total: number,;
     limit: number,;
   } | null;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -54,6 +66,8 @@ import React, { useEffect, useState } from 'react' from 'react'';interface Perfo
   cls?: number
   ttfb?: number
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 
 interface PerformanceMonitorProps {;
@@ -161,6 +175,7 @@ interface PerformanceNavigationTiming extends PerformanceEntry  {readonly connec
   readonly unloadEventStart: number;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
   useEffect(() => {
       const navigationEntries = window.performance.getEntriesByType('navigation');
@@ -178,6 +193,28 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
         resourceCount: window.performance.getEntriesByType('resource').length
 // Memory usage (if available)
 ursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
+  useEffect(() => {
+
+// Only run on client side
+    if (typeof window === 'undefined' |typeof window.performance === 'undefined') return;
+    const measurePerformance = () => {
+
+      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paint = window.performance.getEntriesByType('paint');
+      
+      const performanceData = null;
+        // Memory usage (if available)
+        memory: (window.performance as unknown as { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory ? {
+          used: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.usedJSHeapSize;
+          total: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.totalJSHeapSize;
+          limit: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit
+        } : null
+      };
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         memory: (window.performance as Performance & { memory?: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory ? {
           used: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.usedJSHeapSize
           total: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.totalJSHeapSize
@@ -194,7 +231,10 @@ ursor/fix-syntax-push-and-merge-to-main-7db5
     }
     // Measure performance after page load
     if (document.readyState === 'complete') {
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       measurePerformance();
     } else {;
       window && window.addEventListener('load', measurePerformance);
@@ -416,6 +456,7 @@ interface PerformanceMetrics {fcp?: number;
           </div>;
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       </div>;
       <div className="mt-3 pt-2 border-t border-gray-200">;
@@ -519,6 +560,9 @@ interface PerformanceMonitorProps {
   onPerformanceData?: (data: any) => void;
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
   useEffect(() => {
@@ -526,6 +570,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
     if (typeof window === 'undefined' || typeof performance === 'undefined') {
       return;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     if (typeof window === 'undefined') return
     // Only show in development or for admin users
     const isDev = process.env.NODE_ENV === 'development'
@@ -566,9 +614,13 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
       observer.observe({ entryTypes: [
         'paint', 'largest-contentful-paint'
       ] })
+<<<<<<< HEAD
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
 
     const measurePerformance = () => {
@@ -598,9 +650,13 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
@@ -609,12 +665,24 @@ interface PerformanceMetrics {
   memoryUsage: number;
 }
 
+<<<<<<< HEAD
 
 
+=======
+interface PerformanceMetrics {
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  fcp?: number;
+  ttfb?: number;
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
 
   useEffect(() => {
+<<<<<<< HEAD
       const metrics: PerformanceMetrics = {};
 
       // Monitor Largest Contentful Paint (LCP)
@@ -856,6 +924,24 @@ if (value <= thresholds.good) return 'text-green-600'
     </div>
   )
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const navigationEntry = entries.find(entry => entry.entryType === 'navigation');
+        
+        if (navigationEntry) {
+          setMetrics({
+            loadTime: navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
+            renderTime: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
+            memoryUsage: (window.performance as any).memory?.usedJSHeapSize || 0
+          });
+        }
+      });
+
+      observer.observe({ entryTypes: ['navigation'] });
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 }, []);
   // Check condition
@@ -903,6 +989,7 @@ if (return 'Needs Improvement) {
 <div className="mt - 3 pt - 2 border - t border - gray - 200>        <button"          on_click={() => setIsVisible (false)}
           className="text - xs text - gray - 500 hover: text - gray - 700        >"          Hide</button>;
       </div>;
+<<<<<<< HEAD
       window.removeEventListener('load', measurePerformance);
     };
   }, [onPerformanceData]);
@@ -914,6 +1001,15 @@ if (return 'Needs Improvement) {
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       return () => observer.disconnect();
+=======
+
+      window.removeEventListener('load', measurePerformance);
+    };
+  }, [onPerformanceData]);
+
+      return () => observer.disconnect();
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       // Monitor Cumulative Layout Shift (CLS)
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
@@ -965,6 +1061,7 @@ if (return 'Needs Improvement) {
         clsObserver.disconnect();
         fcpObserver.disconnect();
       };
+<<<<<<< HEAD
 origin/cursor/analyze-improve-and-deploy-application-347d
     }
   }, []);
@@ -985,6 +1082,12 @@ origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
       window.removeEventListener('load', measurePerformance);
     };
   }, [onPerformanceData]);
+=======
+
+    }
+  }, []);
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   if (!metrics) return null;
 
@@ -998,4 +1101,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
 };
 
 export default PerformanceMonitor;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

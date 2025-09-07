@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -61,6 +62,38 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     'Reduce financial planning costs by 60%';
     'Gain professional-grade financial insights';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  DollarSign,
+  TrendingUp,
+  Shield,
+  Zap,
+  Target,
+  BarChart3,
+  CheckCircle,
+  Star,
+  Globe,
+  Lock,
+  Smartphone,
+  Monitor,
+  Award,
+  MessageCircle,;
+  Calculator,;} from 'lucide-react';import {
+  MessageCircle,
+  Calculator,;} from 'lucide-react';import { 
+
+  DollarSign, TrendingUp, Shield, Zap, Target, BarChart3, 
+  CheckCircle, Star, Globe, Lock, Smartphone, Monitor, 
+  Award, MessageCircle, Calculator
+export default function AIFinancialPlanningPlatform() {
+  const features = [
+    {
+
+
+        'Live financial data, market analysis, and personalized recommendations updated in real-time.',;
+    },;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   ];
   <div className='mt-12'>;
     <h2 className='text-2xl font-semibold'>Pricing</h2>;
@@ -114,6 +147,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         className='underline hover:text-cyan-300'
         href='https://pigment && pigment.com/pricing'
         target='_blank'
+<<<<<<< HEAD
         rel='noreferrer'
       >
         Pigment
@@ -158,6 +192,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         className='underline hover:text-cyan-300';
         href='https://pigment && pigment.com/pricing';
         target='_blank';
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         rel='noreferrer'>;
 import React from 'react';
 import Head from 'next / head';
@@ -242,6 +278,7 @@ function AIFinancialPlanningPlatform() {const features = [;
                 Intelligent financial planning and wealth management with AI.;
                 Get personalized plans, portfolio optimization, and risk;
                 management that drives financial success.;
+<<<<<<< HEAD
               </p>;rel='noreferrer';
       >;
         Pigment;
@@ -355,6 +392,9 @@ className='text-center mb-16';
 <<<<<<< HEAD
 className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-yellow-500/30 transition-all duration-300 group'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              </p>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 >
                   <div className='w-14 h-14 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300'>
                     <div className='text-yellow-400'>{feature.icon}</div>
@@ -364,8 +404,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </h3>
                   <p className='text-gray-400 leading-relaxed'>
                     {feature.description}
+<<<<<<< HEAD
                   </p>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                  </p>                </motion.div>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 </motion.div>
 
 =======
@@ -400,14 +445,30 @@ className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl bo
               </p>;
               ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Benefits Section */}
 <section className='py-20 bg-black'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        {/* Benefits Section */}
+        <section className='py-20 bg-black'>;
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+
+
+        {/* Benefits Section */}
+        <section className="py-20 bg-black">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -422,6 +483,17 @@ className='text-center mb-16'
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Transform Your Financial Future
+              </h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                Experience dramatic improvements in financial planning efficiency, investment returns, and
+                goal achievement with our AI-powered financial planning platform.
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               {benefits.map((benefit, index) => (
                 <motion.div
 =======
@@ -484,6 +556,7 @@ className='text-center mb-16';
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
 className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-xl p-6 hover:border-yellow-500/30 transition-all duration-300 group'
@@ -503,10 +576,35 @@ className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl bo
 <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                  whileInView={{ opacity: 1, y: 0 }}
+
+            </div>;
+          </div>;
+        </section>;
+
+
+
+
+
+        {/* Use Cases Section */}
+        <section className='py-20 bg-gradient-to-b from-black to-gray-900'>;
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+
+
+        {/* Use Cases Section */}
+        <section className="py-20 bg-gradient-to-b from-black to-gray-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -521,6 +619,17 @@ className='text-center mb-16'
 
             <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Comprehensive Financial Planning Solutions
+              </h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                From retirement planning to investment management, our platform provides AI-powered
+                solutions for every aspect of your financial life.
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               {useCases.map((useCase, index) => (
                 <motion.div
 =======
@@ -598,6 +707,7 @@ className='text-center mb-16';
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   transition={{ duration: 0.8, delay: index * 0.1 }}
 className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-xl p-6 hover:border-yellow-500/30 transition-all duration-300 group text-center'
                 >
@@ -608,6 +718,14 @@ className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl bo
                     {useCase}
                   </span>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                >
+                  <div className="w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <Calculator className="w-6 h-6 text-yellow-400" />
+                  </div>
+                  <span className="text-white font-medium text-sm">{useCase}</span>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 </motion.div>
 =======
                   transition={{ duration: 0.8, delay: index * 0.1 }}>;
@@ -639,6 +757,7 @@ className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl bo
         {/* CTA Section */}<section className="py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20">;
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
         {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <section className='py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -685,14 +804,47 @@ className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl bo
 <<<<<<< HEAD
                   className='px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-600 hover:to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        <section className="py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+
+        {/* CTA Section */}
+        <section className='py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20'>
+          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion.div
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Join thousands of individuals that have already revolutionized their financial planning
+                with AI automation. Start your free trial today.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-600 hover:to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 >
                   Get Started Now
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
 className='px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover:bg-yellow-500/10 transition-all duration-200'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+className='px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover:bg-yellow-500/10 transition-all duration-200'
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 >
                   Contact Sales
                 </motion.button>
@@ -702,6 +854,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>
       </div>
     </>
+<<<<<<< HEAD
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
@@ -722,6 +875,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>;
       </div>;
     </>;
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               transition={{ duration: 0 && 0.8 }}>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Ready to Transform Your Financial Planning?;
@@ -789,5 +946,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </section>;
       </div>;
+<<<<<<< HEAD
     </>))}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </>);
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

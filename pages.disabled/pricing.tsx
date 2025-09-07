@@ -1,9 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -355,6 +359,7 @@ export default function Pricing() {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
@@ -602,3 +607,5 @@ export default function Pricing() {const plans = [;
   )}
 >>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

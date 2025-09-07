@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default async function handler(
   req: NextApiRequest
@@ -31,6 +32,10 @@ function handler() {
     const profile = await buildIdentityProfile(address);
     return res.status(200).json(profile);
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { buildIdentityProfile } from "@/utils/offworld/identity";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   } catch (e: any) {
     return res.status (500).json ({ error: e.message });
   }
@@ -39,6 +44,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const profile = await buildIdentityProfile(address);
     return res.status(200).json(profile);
   } catch (e: any) {
+<<<<<<< HEAD
     return res.status(500).json({ error: e.message });
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -55,3 +61,8 @@ function handler() {try {const { address } = req.query as { address?: string }
   try {const { address } = req.query as { address?: string }const profile = await buildIdentityProfile(address)return res.status(200).json(profile)} catch (e: any) {const { address } = req.query as { address?: string }
     const profile = await buildIdentityProfile(address)return res.status(200).json(profile)} catch (e: any) {return res.status(500).json({ error: e.message })}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+    return res.status(500).json({ error: e.message });
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

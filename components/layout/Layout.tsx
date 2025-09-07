@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 <<<<<<< HEAD
@@ -30,6 +31,27 @@ import Header from 'react'
   './Footer'
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
+=======
+import React from 'react';
+
+import React, { ReactNode } from 'react';
+
+import Header from '../Header';
+import Footer from '../Footer';
+
+import React, { ReactNode } from 'react';
+import Header from './Header';
+import Footer from './Footer';
+import Header from '../Header';
+import Footer from '../Footer';
+
+
+
+
+
+
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import React from 'react';
 import Head from 'next/head';
 import React, { ReactNode } from 'react';
@@ -126,6 +148,7 @@ interface LayoutProps  {children: React.ReactNode;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -141,12 +164,17 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
   description?: string;
-<<<<<<< HEAD
 }
 
 export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
@@ -164,6 +192,7 @@ export default function Layout({ children, title = "Zion Tech Group", descriptio
     </>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -187,23 +216,13 @@ export default function Layout({
 import React, { ReactNode } from 'react';
 import Header from '../Header';
 import Footer from './Footer';
+=======
 
-interface LayoutProps {
-  children: ReactNode;
-}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
-  return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <main className="flex-1">
-        {children}
-      </main>
-      <Footer />
-    </div>
-  );
-};
 
+
+<<<<<<< HEAD
 export default Layout;
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -226,3 +245,5 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Brain, Star  } from 'lucide-react';
@@ -16,6 +17,15 @@ import {
   Brain
   Star;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  Phone,
+  Mail,
+  MapPin,
+  Check,
+  ArrowRight,
+  Brain,;
+  Star,;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
@@ -23,6 +33,7 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 
 export default function QuantumAIBCIPage() {
 export default function QuantumAIBCIPage() {
+<<<<<<< HEAD
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/quantum-ai-brain-computer-interface')
   );
@@ -115,10 +126,17 @@ export default function QuantumAIBCIPage() {const service = enhancedRealMicroSaa
                 </div>
               </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  );  if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Button from '../components/ui/Button';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+export default function QuantumAIBCIPage() {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               <Button
                 href='/contact'
                 variant='quantum'
                 size='lg'
+<<<<<<< HEAD
                 className='w-full'
               >
                 Book a Demo
@@ -138,6 +156,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <span className='text-xs'>{service.contactInfo.address}</span>
                 </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              <div className="mt-6 space-y-3 text-sm text-slate-300">
+                <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
+                <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
+                <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               </div>
             </div>
           </div>
@@ -147,6 +171,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   );
 }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                 </div>;
@@ -184,6 +209,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
     </UltraAdvancedFuturisticBackground>;
   )}return (<UltraAdvancedFuturisticBackground>;
+=======
+  return (
+    <UltraAdvancedFuturisticBackground>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <Head>;
         <title>{service.name} - Zion Tech Group</title>;
         <meta name='description' content={service.description} />;
@@ -265,5 +294,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </UltraAdvancedFuturisticBackground>)}}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </UltraAdvancedFuturisticBackground>);
+}
+
+}
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

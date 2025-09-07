@@ -1,9 +1,18 @@
 <<<<<<< HEAD:src_backup/components/creator/CreatorSidebar.tsx
+<<<<<<< HEAD:src_backup/components/creator/CreatorSidebar.tsx
   Sidebar;
   SidebarContent;
   SidebarGroup;
   SidebarMenuItem;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+} from 'lucide-react'; import {
+  Sidebar
+  SidebarContent
+  SidebarGroup
+  SidebarMenuItem
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/creator/CreatorSidebar.tsx
   // SidebarMenu, // Removed
   // SidebarMenuButton, // Removed
   // SidebarGroupLabel, // Not needed
@@ -20,21 +29,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   // SidebarGroupLabel, // Not needed
   // SidebarGroupContent, // Not needed
 } from "@/components/ui/sidebar"
+<<<<<<< HEAD:src_backup/components/creator/CreatorSidebar.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/creator/CreatorSidebar.tsx
 
 } from "@/components/ui/sidebar";
 
 
+<<<<<<< HEAD:src_backup/components/creator/CreatorSidebar.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/creator/CreatorSidebar.tsx
 export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarContent>
+<<<<<<< HEAD:src_backup/components/creator/CreatorSidebar.tsx
 
         <SidebarGroup title="Dashboard">
           <SidebarMenuItem href="/creator-dashboard" icon={<Home size={16} />}>
             <span>Home</span>
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/creator/CreatorSidebar.tsx
           </SidebarMenuItem>
           <SidebarMenuItem href="/messaging" icon={<Mail size={16} />}>
             <span>Messages</span>
@@ -56,6 +75,10 @@ export function AppSidebar() {
             <span>Profile</span>
           </SidebarMenuItem>
           <SidebarMenuItem href="/settings" icon={<Settings size={16} />}>
+<<<<<<< HEAD:src_backup/components/creator/CreatorSidebar.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/creator/CreatorSidebar.tsx
 <SidebarGroup title='Dashboard'>
           <SidebarMenuItem href='/creator-dashboard' icon={<Home size={16} />}>
             <span>Home</span>
@@ -80,11 +103,15 @@ export function AppSidebar() {
             <span>Profile</span>
           </SidebarMenuItem>
           <SidebarMenuItem href='/settings' icon={<Settings size={16} />}>
+<<<<<<< HEAD:src_backup/components/creator/CreatorSidebar.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/creator/CreatorSidebar.tsx
             <span>Settings</span>
           </SidebarMenuItem>
         </SidebarGroup>
       </SidebarContent>
+<<<<<<< HEAD:src_backup/components/creator/CreatorSidebar.tsx
 }
 <<<<<<< HEAD
   );
@@ -93,6 +120,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   SidebarContent,
   SidebarGroup,
   SidebarMenuItem,
+=======
+
+
+import {;
+  Bell,;
+  FileText,;
+  Home,;
+  Mail,;
+  Search,;
+  Settings,;
+  Users,;
+} from 'lucide-react';import {;
+  Sidebar,;
+  SidebarContent,;
+  SidebarGroup,;
+  SidebarMenuItem,;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/creator/CreatorSidebar.tsx
   // SidebarMenu, // Removed;
 =======
 
@@ -312,6 +356,7 @@ function AppSidebar() {return (<Sidebar>;
       </SidebarContent>;
 <<<<<<< HEAD:src_backup/components/creator/CreatorSidebar.tsx
     </Sidebar>);
+<<<<<<< HEAD:src_backup/components/creator/CreatorSidebar.tsx
 <<<<<<< HEAD
 =======
 }
@@ -328,3 +373,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </Sidebar>)}</Sidebar>;
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/creator/CreatorSidebar.tsx
+=======
+
+    </Sidebar>
+  );
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/creator/CreatorSidebar.tsx

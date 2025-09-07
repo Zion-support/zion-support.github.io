@@ -27,7 +27,11 @@ const { execSync } = require('child_process')
       "performance"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       console.error('\n� App Health Monitor "failed")
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      console.error('\n� App Health Monitor "failed")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

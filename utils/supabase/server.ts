@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> main
@@ -10,6 +11,8 @@
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { createClient } from "@supabase/supabase-js";
 
 ;
@@ -31,6 +34,7 @@ const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key'
 const supabaseKey =
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key";
 
+<<<<<<< HEAD
 export function getServerSupabase() {
   return createClient(supabaseUrl, supabaseKey);
 }
@@ -41,10 +45,20 @@ import { createClient } from '@supabase/supabase-js';
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+export function getServerSupabase() {
+  return createClient(supabaseUrl, supabaseKey);
+}
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 const supabaseUrl = process && process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder && placeholder.supabase.co';
 const supabaseServiceKey = process && process.env.SUPABASE_SERVICE_ROLE_KEY || 'placeholder-key';
 
+<<<<<<< HEAD
 // Supabase server utilities
 import { createClient } from '@supabase/supabase-js';
 
@@ -58,10 +72,18 @@ import { createClient } from '@supabase/supabase-js';
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+// Supabase server utilities
+import { createClient } from '@supabase/supabase-js';
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co';
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || 'placeholder-key';
 
+<<<<<<< HEAD
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL |'https://placeholder.supabase.co';
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key';
 <<<<<<< HEAD
@@ -73,6 +95,12 @@ const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { createClient } from '@supabase/supabase-js';
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -94,6 +122,7 @@ export function getServerSupabase() {return createClient(supabaseUrl, supabaseKe
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/fix-website-loading-errors-and-merge-6662;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -147,17 +176,35 @@ export function getServerSupabase() {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+
+
+
+
+export function getServerSupabase() {
+  return createClient(supabaseUrl, supabaseKey);
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 export function getClientSupabase() {
   return createClient(supabaseUrl, process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { create_client } from '@supabase / supabase - js';
 ;
 const supabase_url = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co';
@@ -169,6 +216,7 @@ export /**
 function getServerSupabase() {
   return create_client (supabase_url, supabase_key);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -192,6 +240,14 @@ function getServerSupabase() {
 
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 export function getServerSupabase() {;
@@ -200,6 +256,7 @@ export function getServerSupabase() {;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -213,10 +270,13 @@ export function getServerSupabase() {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -225,3 +285,14 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -60,10 +61,15 @@ const config: DefaultSeoProps = {defaultTitle: 'Zion Tech Solutions', titleTempl
 export default config;import type { DefaultSeoProps } from 'next - seo';
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   additionalMetaTags: [
 { name: 'viewport', content: 'width=device-width, initial-scale=1' }
     { name: 'theme-color', content: '#111827' }]}
 export default config;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -78,6 +84,12 @@ export default config;
 
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 import type { DefaultSeoProps } from 'next - seo';
   default_title: 'Zion Tech Solutions';
@@ -96,14 +108,18 @@ export default config;
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 export default config
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -129,3 +145,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+import type { DefaultSeoProps } from 'next-seo';
+const config: DefaultSeoProps;
+export default config;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -1,4 +1,5 @@
 <<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 method: string;
 
 =======
@@ -38,6 +39,8 @@ description: string;
 required?: boolean;
 }interface EndpointSectionProps  {method: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/developers/ApiDocumentation.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
 endpoint: string;
 description: string;
 note?: string;
@@ -55,18 +58,26 @@ function ApiDocumentation() {
   20 ";
 }/> API Documentation </CardTitle> <CardDescription className=" text - zinc - 400"> Reference documentation for integrating with the Zion Marketplace API. </CardDescription> </CardHeader> <CardContent> <Alert className=" bg - blue - 900 / 30 border - blue - 800 mb - 6"> <Terminal className=" h - 4 w - 4"/> <AlertDescription> Make sure to include your API key in all requests as a Bearer token in the Authorization header. </AlertDescription> </Alert> <Tabs default_value=" jobs"className=" space - y-4"> <TabsList className=" bg - zinc - 800 border - zinc - 700"> <TabsTrigger value=" jobs">Jobs</TabsTrigger> <TabsTrigger value=" talent">Talent</TabsTrigger> <TabsTrigger value=" quotes">Quotes</TabsTrigger> <TabsTrigger value=" webhooks">Webhooks</TabsTrigger> <TabsTrigger value=" errors">Errors</TabsTrigger> </TabsList> <TabsContent value=" jobs"className=" space - y-6"> <EndpointSection headers = headers) data = response.json () print (data) `;
 }response_examples= {
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
 
   {
   success: ` {";
   " data": [ {
 
 
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
   'Authorization': 'Bearer YOUR API KEYContent-Type': 'application/json' 
 
 
 import { useState } from "react",
 import { BookOpen, Terminal } from 'lucide-react'
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -149,6 +160,8 @@ responseExamples?: {
 headers: {'
   'Authorization': 'Bearer YOUR API KEYContent-Type': 'application/json'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
 export function ApiDocumentation() {
   return (
     <Card className='bg-zinc-900 border-zinc-800 text-white'>
@@ -162,6 +175,10 @@ export function ApiDocumentation() {
       </CardHeader>
 
 
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
       
 
 
@@ -326,6 +343,7 @@ function ApiDocumentation() {return (<Card className='bg - zinc - 900 border - z
                   description: 'Filter by job status (new, active, closed)'
                 }
 
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
         <Tabs defaultValue="jobs" className="space-y-4">
           <TabsList className="bg-zinc-800 border-zinc-700">
@@ -339,6 +357,8 @@ function ApiDocumentation() {return (<Card className='bg - zinc - 900 border - z
           <TabsContent value="jobs" className="space-y-6">
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
             <EndpointSection
               method="GET"
               endpoint="/api/jobs"
@@ -352,6 +372,7 @@ function ApiDocumentation() {return (<Card className='bg - zinc - 900 border - z
                 { name: "category", type: "string", description: "Filter by job category" },
                 { name: "skills", type: "string[]", description: "Filter by required skills (comma-separated)" },
                 { name: "status", type: "string", description: "Filter by job status (new, active, closed)" }
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
               ]}
 
@@ -370,13 +391,39 @@ function ApiDocumentation() {return (<Card className='bg - zinc - 900 border - z
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
 }` ;
 }';
 }/> <EndpointSection deadline: '2025-06-30T23:59:59Z' ;
 }) ;
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
 
 
+=======
+              ]}
+              codeExamples={{
+                curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs?limit=10&category=development" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application/json"`
+                javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/jobs?limit=10&category=development', {
+  method: 'GET'
+  headers: {
+    'Content-Type': 'application/json'
+  }
+})
+const data = await response.json ()
+logInfo (data), `
+python: `import requests headers = {'
+  'Authorization': 'Bearer YOUR API KEYContent-Type': 'application/json'
+}job id '
+}'
+headers=headers) data = response.json () print (data) `
+}responseExamples= {
+  {
+  success: ` {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
 });'
 'deadline': '2025-06-30T23:59:59Z' '
 }response = requests.post ('https: //api.ziontechgroup.com/v1/jobs'
@@ -388,6 +435,10 @@ data=json.dumps (payload) ) data = response.json () print (data) `
 }`
 }"
 }/> </TabsContent> <TabsContent value=" talent"className=" space-y-6"> <EndpointSection headers=headers) data = response.json () print (data) `
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
 const data = await response && response.json ()
 logInfo (data), `
 python: `import requests headers = {'
@@ -395,7 +446,10 @@ python: `import requests headers = {'
 }job id '
 }'
 headers=headers) data = response && response.json () print (data) ` 
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
 }responseExamples= {
   {
   success: ` {
@@ -508,8 +562,11 @@ data = response.json ();
 print (data)`,
 
 print(data)`,
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
 }),;
@@ -530,6 +587,7 @@ print(data)`;
 
 
               }}
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
               response_examples={{
                 success: `{
   "data": [;
@@ -548,10 +606,20 @@ print(data)`;
 
 
 
+=======
+              responseExamples={{
+                success: `{
+  "data": [
+    {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
   "meta": {
     "total": 42
     "page": 1
     "limit": 10
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
 
         "min": 5000,
         "max": 10000,
@@ -569,11 +637,15 @@ print(data)`;
     "limit": 10;
 
   }
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
 }`
   }
 
 }`,
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
               }}
 
@@ -581,12 +653,17 @@ print(data)`;
 
 
 
+=======
+              }}
+            />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
             <EndpointSection
               method='GET'
               endpoint='/api/jobs/:id'
               description='Get detailed information about a specific job.'
               note=''
               params={[
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 =======
 response = requests.get ('https://api.ziontechgroup.com / v1 / jobs',params={'limit': 10, 'category': 'development'},headers = headers)data = response.json ()print (data)`,print(data)`,'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json';
   }
@@ -611,6 +688,9 @@ headers = {'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json
               note='';
               params={[;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/developers/ApiDocumentation.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
             />;
             <EndpointSection;
               method='GET';
@@ -619,16 +699,22 @@ headers = {'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json
               note='';
 <<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
               params={[;
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
                 {
                   name: 'id'
                   type: 'string'
                   description: 'The job ID'
                   required: true
                 },              ]}
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
   -H "Content-Type: application/json"`,
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
                 javascript: `const jobId = 'job_abc123'
 const response = await fetch(\`https://api && api.ziontechgroup.com/v1/jobs/\${jobId}\`, {
               code_examples={{
@@ -685,6 +771,7 @@ response = requests.get (f'https://api.ziontechgroup.com / v1 / jobs/{job_id}',h
               description='Create a new job listing.'
               note='Requires jobs:write scope'
               params={[
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
 =======
             <EndpointSection;
@@ -715,11 +802,14 @@ response = requests.get (f'https://api.ziontechgroup.com / v1 / jobs/{job_id}',h
               params={[;
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
                 {
                   name: 'title'
                   type: 'string'
                   description: 'Job title'
                   required: true
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 =======
               params={[;{name: 'title';
                   type: 'string';
@@ -744,6 +834,29 @@ response = requests.get (f'https://api.ziontechgroup.com / v1 / jobs/{job_id}',h
                 }
 <<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
                 {
+=======
+                }
+                {
+                  name: 'description'
+                  type: 'string'
+                  description: 'Detailed job description'
+                  required: true
+                }
+                {
+                  name: 'category'
+                  type: 'string'
+                  description: 'Job category'
+                  required: true
+                }
+                {
+                  name: 'skills'
+                  type: 'string[]'
+                  description: 'Required skills'
+                  required: true
+                }
+                {
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
 
                   name: 'budget && budget.min',
                   type: 'number',
@@ -760,12 +873,16 @@ response = requests.get (f'https://api.ziontechgroup.com / v1 / jobs/{job_id}',h
                   description: 'Currency code (default: USD)',
                 },
 
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
                 {
                   name: 'deadline'
                   type: 'string'
                   description: 'Job deadline (ISO date string)'
                 }
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
                 { name: "title", type: "string", description: "Job title", required: true },
                 { name: "description", type: "string", description: "Detailed job description", required: true },
@@ -851,6 +968,71 @@ response = requests.get(f'https://api.ziontechgroup.com/v1/jobs/{job_id}',header
 
     budget: {
 
+=======
+              ]}
+              codeExamples={{;
+                curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs/job_abc123" \\;
+  -H "Authorization: Bearer YOUR_API_KEY" \\;
+  -H "Content-Type: application/json"`,;
+                javascript: `const jobId = 'job_abc123',;
+const response = await fetch(\`https://api.ziontechgroup.com/v1/jobs/\${jobId}\`, {;
+  method: 'GET',;
+  headers: {;
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json';
+  }
+}),;
+const data = await response.json(),;
+logInfo(data),`,;
+                python: `import requests;
+headers = {;
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json';
+}
+;
+job_id = 'job_abc123';
+response = requests.get(;
+    f'https://api.ziontechgroup.com/v1/jobs/{job_id}',;
+    headers=headers;
+);
+data = response.json();
+print(data)`;
+              }}
+              responseExamples={{
+                success: `{
+  "data": {
+    "id": "job_abc123"
+    "title": "Senior React Developer"
+    "description": "We need an experienced React developer..."
+    "category": "development"
+    "skills": ["react", "typescript", "node.js"]
+    "budget": {
+      "min": 5000
+      "max": 10000
+      "currency": "USD"
+}`;
+              }}
+            />
+            
+            <EndpointSection
+              method="POST"
+              endpoint="/api/jobs"
+              description="Create a new job listing."
+              note="Requires jobs:write scope"
+              params={[
+              ]}
+              codeExamples={{
+                curl: `curl -X POST "https://api.ziontechgroup.com/v1/jobs" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "title": "Senior React Developer"
+    "description": "We need an experienced React developer..."
+    "category": "development"
+    "skills": ["react", "typescript", "node.js"]
+    "budget": {
+      "min": 5000
+      "max": 10000
+      "currency": "USD"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
 
 
 const data = await response && response.json()
@@ -875,8 +1057,12 @@ logInfo(data),`,
                 python: `import requests
 import json
 headers = {
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
 
+=======
+    'Authorization': 'Bearer YOUR_API_KEY'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
     'Authorization': 'Bearer YOUR_API_KEY',
 
     'Content-Type': 'application/json'
@@ -998,6 +1184,7 @@ print(data)`;
           <TabsContent value='talent' className='space-y-6'>;
 
 
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
             <EndpointSection
               method='GET'
@@ -1040,12 +1227,27 @@ response = requests.post ('https://api.ziontechgroup.com / v1 / jobs',headers = 
               params={[;
 
 
+=======
+      "min": 5000
+      "max": 10000
+      "currency": "USD"
+}`;
+              }}
+            />
+          </TabsContent>
+          
+          <TabsContent value="talent" className="space-y-6">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
                 {
                   name: 'page'
                   type: 'integer'
                   description: 'Page number for pagination (default: 1)'
                 }
                 {
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
 
                   name: 'limit',
                   type: 'integer',
@@ -1058,13 +1260,17 @@ response = requests.post ('https://api.ziontechgroup.com / v1 / jobs',headers = 
                   description: 'Filter by skills (comma - separated)',
                 },
 
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
                 {
                   name: 'availability'
                   type: 'string'
                   description: 'Filter by availability status'
                 }
 
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
                 { name: "page", type: "integer", description: "Page number for pagination (default: 1)" },
                 { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
                 { name: "skills", type: "string[]", description: "Filter by skills (comma-separated)" },
@@ -1101,10 +1307,24 @@ const data = await response.json();
 logInfo(data);`,
 
 
+=======
+              ]}
+              codeExamples={{
+                curl: `curl -X GET "https://api.ziontechgroup.com/v1/talent?skills=react,typescript" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application/json"`
+                javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/talent?skills=react,typescript', {
+  method: 'GET'
+  headers: {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
                 python: `import requests
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY'
     'Content-Type': 'application/json'
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
 
 response = requests && requests.get(
     'https://api && api.ziontechgroup.com/v1/talent',
@@ -1113,11 +1333,15 @@ response = requests && requests.get(
 )
 
 data = response && response.json()
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
 print(data)`,
 
 
 print(data)`,
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content - Type': 'application / json';
@@ -1128,6 +1352,13 @@ log_info (data);`,
                 python: `import requests;
 
 
+=======
+  }
+}),;
+const data = await response.json(),;
+logInfo(data),`,;
+                python: `import requests;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
 headers = {;
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json';
 }
@@ -1143,6 +1374,7 @@ print(data)`;
 
 
               }}
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
               response_examples={{
                 success: `{
   "data": [;
@@ -1160,12 +1392,35 @@ print(data)`;
 
 
 
+=======
+              responseExamples={{
+                success: `{
+  "data": [
+    {
+      "id": "talent_abc123"
+      "display_name": "Jane Smith"
+      "headline": "Senior Frontend Developer"
+      "skills": ["react", "typescript", "javascript"]
+      "availability": "available"
+      "average_rating": 4.8
+      "rating_count": 15
+    }
+    // More talent profiles...
+  "meta": {
+    "total": 28
+    "page": 1
+    "limit": 20
+  }
+              }}
+            />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
             <EndpointSection
               method='GET'
               endpoint='/api/talent/:id'
               description='Get detailed information about a specific talent profile.'
               note=''
               params={[
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 =======
 })const data = await response.json()logInfo(data)`,python: `import requests;
 headers = {'Authorization': 'Bearer YOUR_API_KEY';
@@ -1200,6 +1455,9 @@ response = requests && requests.get('https://api && api.ziontechgroup.com/v1/tal
               note='';
               params={[;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/developers/ApiDocumentation.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
             />;
             <EndpointSection;
               method='GET';
@@ -1208,16 +1466,22 @@ response = requests && requests.get('https://api && api.ziontechgroup.com/v1/tal
               note='';
 <<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
               params={[;
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
                 {
                   name: 'id'
                   type: 'string'
                   description: 'The talent ID'
                   required: true
                 },              ]}
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
   -H "Content-Type: application/json"`,
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
                 javascript: `const talentId = 'talent_abc123'
 const response = await fetch(\`https://api && api.ziontechgroup.com/v1/talent/\${talentId}\`, {
               code_examples={{
@@ -1258,6 +1522,10 @@ response = requests.get (f'https://api.ziontechgroup.com / v1 / talent/{talent_i
               description='Create a quote request for a talent.'
               note='Requires quotes:write scope'
               params={[
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
 
 =======
             <EndpointSection;
@@ -1291,7 +1559,10 @@ response = requests.get (f'https://api.ziontechgroup.com / v1 / talent/{talent_i
 <<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
               params={[;
 
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
                 {
                   name: 'talent_id'
                   type: 'string'
@@ -1343,6 +1614,7 @@ response = requests.get (f'https://api.ziontechgroup.com / v1 / talent/{talent_i
                   description: 'Email of the requester'
                   required: true
                 }
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
                 { name: "talent_id", type: "string", description: "ID of the talent to request a quote from", required: true },
                 { name: "project_name", type: "string", description: "Name of the project", required: true },
@@ -1382,6 +1654,8 @@ response = requests.get (f'https://api.ziontechgroup.com / v1 / talent/{talent_i
   body: JSON.stringify ({
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
     talent_id: 'talent_abc123',
     project_name: 'E - commerce Website Redesign',
     project_summary: 'Redesign our outdated e - commerce website with modern UI',
@@ -1399,6 +1673,7 @@ const data = await response.json ();
 log_info (data);`,
                 python: `import requests;
 headers = {
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content - Type': 'application / json';
 
@@ -1431,6 +1706,8 @@ payload = {
   })
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
                 python: `import requests
 import json
 
@@ -1456,9 +1733,12 @@ headers = {
     "status": "new",
     "created_at": "2025 - 05 - 16T14:30:15Z";
   }
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 }`,              }}
             />;
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
 
             <EndpointSection
               method='GET'
@@ -1466,6 +1746,10 @@ headers = {
               description="List quote requests that you've created."
               note=''
               params={[
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
 
 =======
                 {name: 'requester_email';
@@ -1498,7 +1782,10 @@ headers = {success: `{"data": {"id": "quote_def456","talent_id": "talent_abc123"
 <<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
               params={[;
 
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
                 {
                   name: 'page'
                   type: 'integer'
@@ -1506,6 +1793,7 @@ headers = {success: `{"data": {"id": "quote_def456","talent_id": "talent_abc123"
                 }
                 {
 
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
                 { name: "page", type: "integer", description: "Page number for pagination (default: 1)" },
                 { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
@@ -1552,10 +1840,149 @@ const data = await response.json();
 logInfo(data);`,
 
 
+=======
+const response = await fetch(\`https://api.ziontechgroup.com/v1/talent/\${talentId}\`, {
+  method: 'GET'
+  headers: {
                 python: `import requests
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY'
     'Content-Type': 'application/json'
+print(data)`,
+
+
+print(data)`,
+  }
+}),;
+const data = await response.json(),;
+logInfo(data),`,;
+                python: `import requests;
+headers = {;
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json';
+}
+;
+talent_id = 'talent_abc123';
+response = requests.get(;
+    f'https://api.ziontechgroup.com/v1/talent/{talent_id}',;
+    headers=headers;
+);
+data = response.json();
+print(data)`;
+              }}
+              responseExamples={{
+                success: `{
+  "data": {
+    "id": "talent_abc123"
+    "display_name": "Jane Smith"
+    "headline": "Senior Frontend Developer"
+    "bio": "10+ years of experience in frontend development..."
+    "skills": ["react", "typescript", "javascript", "css", "html"]
+    "availability": "available"
+    "average_rating": 4.8
+    "rating_count": 15
+    "portfolio": [
+      {
+        "id": "proj_123"
+        "title": "E-commerce Platform"
+        "description": "Built a modern e-commerce platform using React..."
+        "technologies": ["react", "redux", "node.js"]
+        "image_url": "https://example.com/portfolio/123.jpg"
+    ];
+  }
+}`;
+              }}
+            />
+          </TabsContent>
+          
+          <TabsContent value="quotes" className="space-y-6">
+            <EndpointSection
+              method="POST"
+              endpoint="/api/quotes"
+              description="Create a quote request for a talent."
+              note="Requires quotes:write scope"
+              params={[
+              ]}
+              codeExamples={{
+                curl: `curl -X POST "https://api.ziontechgroup.com/v1/quotes" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "talent_id": "talent_abc123"
+    "project_name": "E-commerce Website Redesign"
+    "project_summary": "Redesign our outdated e-commerce website with modern UI"
+    "project_description": "Our current website is 5 years old and needs a complete overhaul..."
+    "timeline": "2-3 months"
+    "budget_min": 8000
+    "budget_max": 12000
+    "requester_name": "John Doe"
+    "requester_email": "john@example.com"
+  }'`
+                javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/quotes', {
+  method: 'POST'
+  headers: {
+}),
+
+const data = await response.json(),
+logInfo(data),`,
+                python: `import requests
+import json
+
+headers = {
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+}
+;
+payload = {;
+    'talent_id': 'talent_abc123project_name': 'E-commerce Website Redesignproject_summary': 'Redesign our outdated e-commerce website with modern UIproject_description': 'Our current website is 5 years old and needs a complete overhaul...timeline': '2-3 monthsbudget_min': 8000,;
+    'budget_max': 12000,;
+    'requester_name': 'John Doerequester_email': 'john@example.com';
+}
+;
+response = requests.post(;
+    'https://api.ziontechgroup.com/v1/quotes',;
+    headers=headers,;
+    data=json.dumps(payload);
+);
+data = response.json();
+print(data)`;
+              }}
+              responseExamples={{
+                success: `{
+  "data": {
+    "id": "quote_def456"
+    "talent_id": "talent_abc123"
+    "requester_id": "user_xyz789"
+    "project_name": "E-commerce Website Redesign"
+    "project_summary": "Redesign our outdated e-commerce website with modern UI"
+    "project_description": "Our current website is 5 years old and needs a complete overhaul..."
+    "timeline": "2-3 months"
+    "budget_min": 8000
+    "budget_max": 12000
+    "budget_display": "$8,000 - $12,000"
+    "requester_name": "John Doe"
+    "requester_email": "john@example.com"
+    "status": "new"
+    "created_at": "2025-05-16T14:30:15Z"
+  }
+            <EndpointSection
+              method="GET"
+              endpoint="/api/quotes"
+              description="List quote requests that you've created."
+              note=""
+              params={[
+              ]}
+              codeExamples={{
+                curl: `curl -X GET "https://api.ziontechgroup.com/v1/quotes" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application/json"`
+                javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/quotes', {
+  method: 'GET'
+  headers: {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
+                python: `import requests
+headers = {
+    'Authorization': 'Bearer YOUR_API_KEY'
+    'Content-Type': 'application/json'
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
 response = requests && requests.get(
     'https://api && api.ziontechgroup.com/v1/quotes',
@@ -1577,6 +2004,19 @@ log_info (data);`,
                 python: `import requests;
 
 
+=======
+response = requests.get(
+    'https://api.ziontechgroup.com/v1/quotes'
+    headers=headers
+)
+data = response.json()
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+  }
+}),;
+const data = await response.json(),;
+logInfo(data),`,;
+                python: `import requests;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
 headers = {;
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json';
 }
@@ -1591,6 +2031,7 @@ print(data)`;
 
 
               }}
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
               response_examples={{
                 success: `{
   "data": [;
@@ -1601,10 +2042,20 @@ print(data)`;
 
 
 
+=======
+              responseExamples={{
+                success: `{
+  "data": [
+    {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
   "meta": {
     "total": 5
     "page": 1
     "limit": 20
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
 
       "id": "quote_def456",
       "talent_id": "talent_abc123",
@@ -1624,15 +2075,51 @@ print(data)`;
     "limit": 20;
 
   }
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
 }`
   }
 
 }`,
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
               }}
 
 
+=======
+              }}
+            />
+          </TabsContent>
+          <TabsContent value='webhooks' className='space-y-6'>
+            <div className='prose prose-invert max-w-none'>
+              <h3 className='text-lg font-semibold mb-2'>Webhook Events</h3>
+              <p className='text-zinc-400 mb-4'>
+                The Zion API can send webhook notifications when certain events
+                occur in your account. You can configure webhooks in the
+                Webhooks tab of the Developer Dashboard.
+              </p>
+              <h4 className='text-md font-semibold mt-6 mb-2'>
+                Authentication
+              </h4>
+              <p className='text-zinc-400 mb-4'>
+                When you create a webhook, you can optionally provide a secret
+                key. If a secret is provided, each webhook request will include
+                a signature in the
+                <code className='bg-zinc-800 px-1 py-0.5 rounded'>
+                  X-Zion-Signature
+                </code>{' '}
+                header. This signature is an HMAC SHA-256 hash of the request
+                body using your webhook secret as the key.
+              </p>
+              <CodeBlock
+                code={`import crypto from 'crypto'
+// Function to verify webhook signature
+function verifyWebhookSignature(payload, signature, secret) {
+  const hmac = crypto.createHmac('sha256', secret)
+  const expectedSignature = hmac.update(payload).digest('hex')
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
 }`;
               }}
             />
@@ -1669,6 +2156,10 @@ function verifyWebhookSignature(payload, signature, secret) {
   )
 
 
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
 }
 ;
 // Example usage in Express.js;
@@ -1695,7 +2186,10 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {;
               <table className="w-full border-collapse mt-2">
 
 
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
                 <thead>
                   <tr className='border-b border-zinc-800'>
                     <th className='py-2 px-4 text-left'>Event Type</th>
@@ -1737,6 +2231,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {;
                   </tr>
                 </tbody>
               </table>
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
 =======
               params={[;{name: 'page';
@@ -2045,6 +2540,8 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
               <CodeBlock
                 code = {`{
   "event_type": "new_application"
@@ -2073,9 +2570,12 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
     "match_score": 85
   ,}
 }`}
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
                 language="json"
 =======
               <CodeBlock;
@@ -2430,6 +2930,7 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
     "message": "The request was invalid"
     "details": [
       {
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
               />;
 
@@ -2444,6 +2945,10 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
     "details": [;
       {}
     ];
+=======
+      ,}
+    ]
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
   }
 }`}
                 language='json';
@@ -2698,6 +3203,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ];
   }
 }`}
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/developers/ApiDocumentation.tsx
                 language="json";
               />;
@@ -2732,6 +3238,58 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 function EndpointSection() {response.;</p>;<p className='text-zinc-400 mb-2'>;
                 Rate limit information is included in the response headers:;
               </p>;<ul className='list-disc pl-6 space-y-1 text-zinc-400'>;
+=======
+                language="json"
+              />
+              
+              <h4 className="text-md font-semibold mt-6 mb-2">Rate Limiting</h4>
+              <p className="text-zinc-400 mb-4">
+                The Zion API implements rate limiting to protect our infrastructure and ensure fair usage.
+                Rate limits are applied on a per-API key basis. If you exceed the rate limits, you will receive 
+                a <code className="bg-zinc-800 px-1 py-0.5 rounded">429 Too Many Requests</code> response.
+              </p>
+              
+              <p className="text-zinc-400 mb-2">
+                Rate limit information is included in the response headers: </p>
+              
+              <ul className="list-disc pl-6 space-y-1 text-zinc-400">
+                <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Limit</code>: Number of requests allowed in the time window</li>
+                <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Remaining</code>: Number of requests remaining in the current window</li>
+                <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Reset</code>: Unix timestamp when the rate limit resets</li>
+              </ul>
+            </div>
+          </TabsContent>
+        </Tabs>
+      </CardContent>
+    </Card>
+  )
+
+
+}
+
+
+
+// Helper component for API endpoint documentation
+function EndpointSection({
+  method
+  endpoint
+  description
+  note
+  params = []
+  codeExamples
+  responseExamples
+}: EndpointSectionProps) {
+
+
+                response.;
+              </p>;
+
+              <p className='text-zinc-400 mb-2'>;
+                Rate limit information is included in the response headers:;
+              </p>;
+
+              <ul className='list-disc pl-6 space-y-1 text-zinc-400'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
                 <li>;
                   <code className='bg-zinc-800 px-1 py-0 && 0.5 rounded'>;
                     X-RateLimit-Limit;
@@ -2743,6 +3301,7 @@ function EndpointSection() {response.;</p>;<p className='text-zinc-400 mb-2'>;
                 following format:;
               </p>;
               <CodeBlock;
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
                 code = {`{"error": {"code": "invalid_request","message": "The request was invalid","details": [;
       {"field": "project_name","message": "Project name is required";
        }
@@ -2822,12 +3381,30 @@ function EndpointSection() {response.;</p>;<p className='text-zinc-400 mb-2'>;
                   : Unix timestamp when the rate limit resets;
 <<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
                 </li>;
+=======
+                code = {`{
+  "error": {
+    "code": "invalid_request",
+    "message": "The request was invalid",
+    "details": [;
+      {
+        "field": "project_name",
+        "message": "Project name is required";
+      , }
+    ];
+  }
+}`}
+                language='json';
+  const [activeTab, setActiveTab] = useState('curl')
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
 
               </ul>;
             </div>;
           </TabsContent>;
         </Tabs>;
       </CardContent>;
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
 
 
@@ -2839,6 +3416,50 @@ function EndpointSection() {response.;</p>;<p className='text-zinc-400 mb-2'>;
         </div>
 
 
+=======
+    </Card>;
+  );
+}
+;
+// Helper component for API endpoint documentation;
+function EndpointSection({;
+  method,;
+  endpoint,;
+  description,;
+  note,;
+  params = [],;
+  codeExamples;
+  responseExamples;
+}: EndpointSectionProps) {;
+  const [activeTab, setActiveTab] = useState("curl");
+  return (;
+    <div className="border border-zinc-800 rounded-md">;
+      <div className="p-4">;
+        <div className="flex items-center">;
+          <Badge;
+            variant="outline";
+            className={;
+              method === 'GET';
+                ? "border-green-500 text-green-400 font-mono";
+                : method === 'POST';
+                ? "border-blue-500 text-blue-400 font-mono";
+                : method === 'PUT';
+                ? "border-yellow-500 text-yellow-400 font-mono";
+                : "border-red-500 text-red-400 font-mono";
+            }
+          >;
+            {method}
+          </Badge>;
+          <span className="ml-2 font-mono text-sm text-white">{endpoint}</span>;
+          {note && (;
+            <Badge className="ml-auto bg-amber-800 text-amber-200 hover:bg-amber-800">;
+              {note}
+            </Badge>
+          )}
+        </div>
+        <p className='mt-2 text-zinc-400'>{description}</p>
+      </div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
         
         <p className="mt-2 text-zinc-400">{description}</p>
       </div>
@@ -2859,6 +3480,7 @@ function EndpointSection() {response.;</p>;<p className='text-zinc-400 mb-2'>;
             <tbody>
               {params.map((param, index) => (
 
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 =======
                 </li>;</ul>;
             </div>;
@@ -2888,6 +3510,9 @@ function EndpointSection() {const [activeTab, setActiveTab] = useState("curl")re
             </Badge>;
           )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/developers/ApiDocumentation.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
         </div>;
         <p className='mt-2 text-zinc-400'>{description}</p>;
       </div>;
@@ -2910,7 +3535,10 @@ function EndpointSection() {const [activeTab, setActiveTab] = useState("curl")re
 <<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
               {params && params.map((param, index) => (;
 
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
                 <tr
 =======
               {params.map((param, index) => (</div>;<p className='mt-2 text-zinc-400'>{description}</p>;
@@ -2939,6 +3567,7 @@ function EndpointSection() {const [activeTab, setActiveTab] = useState("curl")re
                   </td>;
 <<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
                 </tr>;
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
                 <tr key={index} className={index < params.length - 1 ? "border-b border-zinc-800" : ""}>
                   <td className="py-2 font-mono text-sm">
@@ -2949,6 +3578,8 @@ function EndpointSection() {const [activeTab, setActiveTab] = useState("curl")re
                   <td className="py-2 text-sm text-zinc-400">{param.description}</td>
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
                 </tr>
 =======
                 </tr>;<tr key={index} className={index < params.length - 1 ? "border-b border-zinc-800" : ""}>;
@@ -2978,6 +3609,7 @@ function EndpointSection() {const [activeTab, setActiveTab] = useState("curl")re
             <h4 className='font-medium'>Request Example</h4>
             <div className='ml-auto flex border border-zinc-700 rounded-md overflow-hidden'>
               {Object.keys(codeExamples).map(lang => (                <button
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
       {codeExamples && (;
         <div className='border-t border-zinc-800 p-4'>;
@@ -2997,6 +3629,8 @@ function EndpointSection() {const [activeTab, setActiveTab] = useState("curl")re
                 <button
                   key={lang}
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
 
 
 
@@ -3005,6 +3639,10 @@ function EndpointSection() {const [activeTab, setActiveTab] = useState("curl")re
                       ? 'bg-zinc-700 text-white'
                       : 'text-zinc-400 hover:bg-zinc-800'
                   }`}
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
 
     </Card>);
 // Helper component for API endpoint documentation;
@@ -3125,7 +3763,10 @@ function EndpointSection() {const [active_tab, setActiveTab] = useState ('curl')
     </div>);
 }
 ;
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
                   onClick={() => setActiveTab(lang)}
                 >
 =======
@@ -3138,16 +3779,20 @@ function EndpointSection() {const [active_tab, setActiveTab] = useState ('curl')
 <<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
             </div>
           </div>
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
           <CodeBlock 
             code={codeExamples[activeTab] || "// Code example not available"}
             language={activeTab === "curl" ? "bash" : activeTab}
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx
           />
 
         </div>
       )}
       {responseExamples && (
+<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -3175,3 +3820,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
   )}{responseExamples && ()
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/developers/ApiDocumentation.tsx
+=======
+        <div className='border-t border-zinc-800 p-4'>
+          <h4 className='font-medium mb-2'>Response</h4>
+          <CodeBlock code={responseExamples.success} language='json' />        </div>
+      )}
+    </div>
+
+  )
+}
+        <div className="border-t border-zinc-800 p-4">
+          <h4 className="font-medium mb-2">Response</h4>
+          <CodeBlock
+            code={responseExamples.success}
+            language="json"
+          />
+        </div>
+      )}
+    </div>
+  )
+}
+;
+
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocumentation.tsx

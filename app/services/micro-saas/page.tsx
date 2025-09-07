@@ -1,7 +1,20 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 
+<<<<<<< HEAD
 export const metadata: Metadata = {
+=======
+
+// Simple ServiceCard component
+const ServiceCard = ({ title, description, icon }) => (
+  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+    <div className="text-3xl mb-4">{icon}</div>
+    <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
+    <p className="text-gray-600">{description}</p>
+  </div>
+);
+export const metadata = { 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   title: 'Micro SaaS Development | Zion Tech Group',
   description: 'Complete micro SaaS development services including AI-powered tools, productivity apps, marketing automation, and business intelligence solutions.',
   keywords: 'micro SaaS development, SaaS products, AI tools, productivity apps, marketing automation, business intelligence'
@@ -346,6 +359,7 @@ export default function MicroSaaSPage() {
   );
 }
 
+<<<<<<< HEAD
 function PricingTier({ name, price, period, description, features, popular = false, cta }: PricingTierProps) {
   return (
       <p className="text-gray-600 mb-4">{description}</p>
@@ -377,6 +391,8 @@ function Item({ title, details }: { title: string; details: string[] }) {
     </div>
   );
 }
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 function Pricing() {
   return (

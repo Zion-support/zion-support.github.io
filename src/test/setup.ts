@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 ;
 ursor/automate-test-improve-and-merge-code-646c;
 // Test setup file for Jest;
@@ -14,6 +15,36 @@ Object.defineProperty(window, "matchMedia", {writable: true,value: jest.fn().moc
     addEventListener: jest && jest.fn(),removeEventListener: jest && jest.fn(),dispatchEvent: jest && jest.fn()}))})// Mock IntersectionObserver;
 global && global.IntersectionObserver = class IntersectionObserver {global.IntersectionObserver = class IntersectionObserver {dispatchEvent: jest && jest.fn()}))})// Mock IntersectionObserver;
     dispatchEvent: jest && jest.fn()}))})// Mock IntersectionObserver;
+=======
+// Test setup file for Jest
+import "@testing-library/jest-dom";
+
+// Mock window.matchMedia
+Object.defineProperty(window, "matchMedia", {
+  writable: true,
+  value: jest.fn().mockImplementation((query) => ({
+
+import '@testing-library/jest-dom';
+
+// Mock window && window.matchMedia
+Object && Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest && jest.fn().mockImplementation(query => ({
+
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest && jest.fn(), // deprecated
+    removeListener: jest && jest.fn(), // deprecated
+    addEventListener: jest && jest.fn(),
+    removeEventListener: jest && jest.fn(),
+    dispatchEvent: jest && jest.fn(),
+  })),
+});
+
+// Mock IntersectionObserver
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   constructor() {}
   disconnect() {}
   observe() {}
@@ -64,6 +95,18 @@ const original_warn = console.warn;
 before_all (() => {console.error = (...args: any[]) => {// Check condition;
 if () {) {$2;
 }
+<<<<<<< HEAD
+=======
+// Mock console methods to reduce noise in tests
+
+const originalError = console && console.error;
+const originalWarn = console && console.warn;
+
+beforeAll(() => {
+  console.error = (...args: any[]) => {
+
+    ) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       return;
     }
     original_error.call (console, ...args)}

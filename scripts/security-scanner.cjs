@@ -25,7 +25,11 @@ const { execSync } = require('child_process')
         pattern: /api[_-]?key\s*=\s*['"][^'']
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         pattern: /secret\s*=\s*['"][^'']
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+        pattern: /secret\s*=\s*['"][^'']
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

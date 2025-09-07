@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -249,6 +250,10 @@ id: 'ai-governance-compliance-hub',name: 'AI Governance & Compliance Hub',catego
   }
 ];;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export const real2026Q2Additions = [
   {
 
@@ -269,6 +274,7 @@ export const real2026Q2Additions = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -276,11 +282,16 @@ export const real2026Q2Additions = [
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export const real2026Q2Additions = [
   {
     id: 'ai-governance-compliance-hub'
     name: 'AI Governance & Compliance Hub'
     category: 'AI & Data'
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -288,6 +299,8 @@ id: 'ai-governance-compliance-hub',
     name: 'AI Governance & Compliance Hub',
     category: 'AI & Data',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     tagline:
       'Policy, risk, and model governance with automated evidence and audit trails.'
     description:
@@ -324,6 +337,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     link: 'https://ziontechgroup.com/services/ai-governance-compliance-hub',
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -367,6 +381,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+export const real2026Q2Additions = [
+  {
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     id: 'ai - synthetic - data - factory',
     name: 'AI Synthetic Data Factory',
     category: 'AI & Data',
@@ -413,6 +435,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -446,6 +469,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'DTC brands returns automation',
       'Marketplace return SLAs',
       'Reduce WISMO support'
@@ -462,14 +489,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    link: 'https://ziontechgroup.com / services / ecommerce - returns - orchestrator',
 
+<<<<<<< HEAD
   },
   {
 
@@ -506,6 +536,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'OpenAI',
       'Azure OpenAI',
       'Vertex AI',
@@ -524,14 +556,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    link: 'https://ziontechgroup.com / services / ai - analytics - observability - kit',
 
+<<<<<<< HEAD
   },
   {
 
@@ -562,6 +597,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'FinOps guardrails',
       'Cost regression prevention',
       'Unit economics tracking'
@@ -578,14 +615,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    link: 'https://ziontechgroup.com / services / cloud - cost - anomaly - guard',
 
+<<<<<<< HEAD
   },
   {
 
@@ -615,6 +655,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Contract workflows',
       'Internal approvals',
       'Customer onboarding'
@@ -627,18 +669,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    trial_days: 14,
-    setup_time: 'Fast',
-    market_position: 'SMB to mid - market developer teams',
-    roi: 'Accelerate time - to - sign by 50% and cut manual errors by 70%',
-    link: 'https://ziontechgroup.com / services / secure - pdf - signing - api',
 
+<<<<<<< HEAD
   },
   {
 
@@ -669,6 +710,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Public trust for SaaS',
       'B2B vendor requirements',
       'Platform reliability communications'
@@ -685,14 +728,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    link: 'https://ziontechgroup.com / services / status - slo - plus',
 
+<<<<<<< HEAD
   },
   {
 
@@ -725,6 +771,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Sales security reviews',
       'Procurement diligence'
     ],
@@ -740,14 +788,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    link: 'https://ziontechgroup.com / services / vendor - risk - automation - pro',
 
+<<<<<<< HEAD
   },
   {
 
@@ -777,6 +828,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Developer portals',
       'Internal knowledge bases',
       'Customer docs'
@@ -789,18 +842,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    trial_days: 14,
-    setup_time: 'Fast',
-    market_position: 'High adoption for self - serve docs',
-    roi: 'Reduce tickets by 30% and improve time - to - answer',
-    link: 'https://ziontechgroup.com / services / ai - docs - search - answers',
 
+<<<<<<< HEAD
   },
   {
 
@@ -1070,11 +1122,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [
       'Windows/macOS/Linux agent and lightweight mode',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Patch automation and health policies',
       'Remote scripts and secure sessions',
       'Inventory, software metering, and alerts',
       'Ticketing and customer portals',
     ],
+<<<<<<< HEAD
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -1089,6 +1144,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    use_cases: [;
+
+
+
+    useCases: [
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'MSPs and IT providers',
       'Internal IT for SMBs',
       'BYOD governance'
@@ -1098,6 +1161,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     price: '$4',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',;
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops',;
@@ -1107,11 +1173,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     id: 'ai-governance-compliance-hub', name: 'AI Governance & Compliance Hub',
     category: 'AI & Data',
     tagline: 'Policy, risk, and model governance with automated evidence and audit trails.',
@@ -1119,6 +1188,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [
       'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI ActAutomated risk and impact assessments with mitigationsDataset lineage, consent tracking, and PII classificationPrompt and output red-teaming with evidence loggingHuman-in-the-loop approvals and audit workflowsRealtime controls dashboard and drift alertsExport auditor-ready reports (SOC2, ISO, HIPAA add-ons)'
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     period: '/device / month',
     trial_days: 14,
     setup_time: 'Fast',
@@ -1127,6 +1200,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com / services / msp - remote - device - ops'
   }
 ];      'Windows / macOS / Linux agent and lightweight mode_patch automation and health policies_remote scripts and secure sessions_inventory, software metering, and alerts_ticketing and customer portals';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1148,6 +1222,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     ];
     use_cases: ['MSPs and IT providers_internal IT for SMBsBYOD governance'];
     integrations: ['Azure ADOktaSlackServiceNow'];
@@ -1157,6 +1236,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     period: '/device/month';
     trialDays: 14;
     setupTime: 'Fast';
@@ -1166,6 +1248,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1188,6 +1271,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export const real2026Q2Additions = [;
   {;
     id: 'ai-governance-compliance-hub',;
@@ -1392,6 +1477,7 @@ export const real2026Q2Additions = [;
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops';
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1462,6 +1548,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ];
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+
+  }
+];
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 export const real2026Q2Additions = [;
   {;
@@ -1667,8 +1762,14 @@ export const real2026Q2Additions = [;
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
 ];
   }
@@ -1936,6 +2037,7 @@ export const real2026Q2Additions = [;
 ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1950,6 +2052,9 @@ export const real2026Q2Additions = [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     period: '/device/month',
     trialDays: 14,
     setupTime: 'Fast',
@@ -1959,6 +2064,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },;
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -1967,3 +2073,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-06T22:41:56.609Z",
+  "timestamp": "2025-09-06T23:55:30.611Z",
   "metrics": {
     "memoryUsage": {
       "rss": 47800320,
@@ -8,9 +8,11 @@
       "external": 1553495,
       "arrayBuffers": 10515
     },
-    "uptime": 0.014383072,
+    "uptime": 0.015065163,
     "platform": "linux",
     "nodeVersion": "v22.16.0",
+    "buildTime": 18297,
+    "bundleSize": 102,
     "pageCount": 93
   },
   "recommendations": [

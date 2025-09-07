@@ -32,11 +32,17 @@ function fixFile(filePath) {
 
     let content = fs.readFileSync(filePath, 'utf8');
     // Remove all merge conflict markers
+<<<<<<< HEAD
     content = content.replace(/[^\n]+\n?/g, '');
 =======
 
     content = content.replace(/
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     
     // Fix common syntax issues
     content = content.replace(/md: text-2xl/g, 'md:text-2xl');

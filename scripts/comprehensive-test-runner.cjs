@@ -10,7 +10,11 @@ console.log('🧪 Starting Comprehensive Test Runner...')
     addTest('Python Unit Tests', 'skipped', 0, { "reason"})
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 console.log('\n Test Results "Summary")
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+console.log('\n Test Results "Summary")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -1,11 +1,33 @@
 import React, { useMemo, useState } from 'react';
+<<<<<<< HEAD
+=======
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+
+import { Download, Image as ImageIcon, FileType, BookOpen, Settings, Wand2 } from 'lucide-react';
+import { buildPrintableHtml } from '../../utils/export/buildHtml';
+import type { BookProject, BookChapter, VisualAsset } from '../../utils/book/bookTypes';
+import { defaultChapters } from '../../utils/book/defaultOutline';
+const initialProject: BookProject = {
+  meta: {
+    title: 'Zion OS: Building the Civilization Protocol'
+    subtitle: 'AI. Talent. Trust.'
+    author: 'Founder Name'
+    isbn: ''
+    publisher: 'Zion Tech Solutions'}
+  chapters: defaultChapters
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { Download, Image as ImageIcon, FileType, BookOpen, Settings, Wand2  } from 'lucide-react';
 import { buildPrintableHtml  } from '../../utils/export/buildHtml';
 import type { BookProject, BookChapter, VisualAsset } from '../../utils/book/bookTypes';
 <<<<<<< HEAD
 import { defaultChapters } from '../../utils/book/defaultOutline';
 const initialProject: BookProject;
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   visuals: {
     timelineImages: []
     daoVoteCharts: []
@@ -64,10 +86,16 @@ reader.readAsDataURL(file)})export default function BookBuilder() {return (<div 
 <<<<<<< HEAD
           </div>
           {project.meta.isbn ? (
+<<<<<<< HEAD
+=======
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <div className='pt-4'>
               <img
                 alt='ISBN barcode'
                 className='h-16'
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
 =======
           </div>;
@@ -76,6 +104,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
                 alt='ISBN barcode';
                 className='h-16';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 src={`/api/barcode/isbn?code=${encodeURIComponent(project.meta.isbn)}`}
               />;
             </div>;
@@ -105,6 +136,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
           >
             <Wand2 className='w-4 h-4 mr-1' /> AI Assist
           </button>
+<<<<<<< HEAD
+=======
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           <select
             className='border rounded px-2 py-1 text-sm'
             value={pageSize}
@@ -112,7 +148,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
           >
             <option value='LETTER'>8.5x11 Letter</option>
             <option value='A4'>A4</option>
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           </select>
           <button
             className='btn btn-sm btn-primary'
@@ -121,6 +161,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
           >
             <Download className='w-4 h-4 mr-1' /> PDF
           </button>
+<<<<<<< HEAD
+=======
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           <button
             className='btn btn-sm btn-secondary'
             onClick={handleExportEpub}
@@ -128,7 +173,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
           >
             <FileType className='w-4 h-4 mr-1' /> EPUB
           </button>
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         </div>
       </div>
 
@@ -137,6 +186,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
           <h2 className='font-semibold flex items-center gap-2'>
             <BookOpen className='w-4 h-4' /> Cover & Branding
           </h2>
+<<<<<<< HEAD
+=======
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+            <label className=&quot;space-y-1&quot;>
+              <div className=&quot;text-xs uppercase opacity-60&quot;>Subtitle</div>
+              <input,
+className=&quot;w-full border rounded px-3 py-2&quot;
+            <label className=&quot;space-y-1&quot;>
+              <div className=&quot;text-xs uppercase opacity-60&quot;>Author</div>
+              <input,
+className=&quot;w-full border rounded px-3 py-2&quot;
+            <label className=&quot;space-y-1&quot;>
+              <div className=&quot;text-xs uppercase opacity-60&quot;>ISBN (optional)</div>
+              <input,
+className=&quot;w-full border rounded px-3 py-2&quot;
+                placeholder=&quot;9781234567897&quot;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
             <label className='space-y-1'>
               <div className='text-xs uppercase opacity-60'>Title</div>
@@ -225,7 +292,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
               <input
                 className='w-full border rounded px-3 py-2'
                 placeholder='9781234567897'
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 value={project.meta.isbn}
                 onChange={e =>
                   setProject({
@@ -236,13 +307,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
               />
             </label>
           </div>
+<<<<<<< HEAD
+=======
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           <div className='pt-2'>{coverPreview}</div>
         </div>
 
         <div className='space-y-4'>
           <h2 className='font-semibold flex items-center gap-2'>
             <Settings className='w-4 h-4' /> Visual Elements
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           </h2>
           <div className='space-y-3'>
             <label className='block'>
@@ -278,6 +358,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
                 }
               />
             </label>
+<<<<<<< HEAD
+=======
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+            <div className="grid grid-cols-3 gap-2">
+              {project.visuals.timelineImages.concat(project.visuals.daoVoteCharts).concat(project.visuals.uiScreens).slice(0, 6).map((src, i) => (
+              ))}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <div className='grid grid-cols-3 gap-2'>
               {project.visuals.timelineImages
                 .concat(project.visuals.daoVoteCharts)
@@ -355,7 +443,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
                     />
                   </div>
                 ))}
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             </div>
           </div>
         </div>
@@ -365,6 +457,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
         <h2 className='font-semibold'>Chapters</h2>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
           {project.chapters.map((ch, idx) => (
+<<<<<<< HEAD
+=======
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+            <div key={idx} className=&quot;border rounded-lg p-4 space-y-2&quot;>
+              <div className=&quot;font-medium&quot;>{ch.title}</div>
+              <textarea,
+className=&quot;w-full min-h-[160px] border rounded p-2&quot;
+                value={ch.content}
+                onChange={(e) => {
+                  const chapters: BookChapter[] = [...project.chapters],
+                  chapters[idx] = { ...chapters[idx], content: e.target.value },
+                  setProject({ ...project, chapters })                }}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <div key={idx} className='border rounded-lg p-4 space-y-2'>
               <div className='font-medium'>{ch.title}</div>
               <textarea
@@ -375,7 +481,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
                   chapters[idx] = { ...chapters[idx], content: e.target.value };
                   setProject({ ...project, chapters });
                 }}
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               />
             </div>
           ))}
@@ -386,10 +496,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
         <h2 className='font-semibold'>Quote Callouts</h2>
         <div className='space-y-2'>
           {project.visuals.quoteCallouts.map((q, i) => (
+<<<<<<< HEAD
             <div key={i} className='grid grid-cols-1 md:grid-cols-3 gap-2'>
               <input
                 className='border rounded px-2 py-1'
 origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
+=======
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+
+            <div key={i} className='grid grid-cols-1 md:grid-cols-3 gap-2'>
+              <input
+                className='border rounded px-2 py-1'
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 value={q.text}
                 onChange={e => {
                   const quoteCallouts = [...project.visuals.quoteCallouts];
@@ -403,6 +522,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
                   });
                 }}
               />
+<<<<<<< HEAD
+=======
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+                value={q.attribution ?? ''}
+                onChange={(e) => {
+                  const quoteCallouts = [...project.visuals.quoteCallouts],
+                  quoteCallouts[i] = { ...quoteCallouts[i], attribution: e.target.value },
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               <input
                 className='border rounded px-2 py-1'
                 value={q.attribution ?? ''}
@@ -421,7 +549,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
                   setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } })
                 }}
                 placeholder="Attribution"
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               />
               <div />
             </div>
@@ -429,6 +561,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
@@ -487,3 +620,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
     </div>;
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+
+  );
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

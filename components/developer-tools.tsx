@@ -1,6 +1,7 @@
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Code;
 =======
 import { import Head from 'next / head';
@@ -15,11 +16,45 @@ import {Code,GitBranch,Database,Cloud,Shield,Zap,Star,ExternalLink,CheckCircle,T
   Zap;
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+import {
+import Head from 'next / head';
+import Card from '../components / ui / Card';
+import Button from '../components / ui / Button';
+import {
+  Code,
+  GitBranch,
+  Database,
+  Cloud,
+  Shield,
+  Zap,
+  Star,
+  ExternalLink,
+  CheckCircle,
+  TrendingUp,
+  Code;
+  GitBranch
+  Database
+  Cloud
+  Shield
+  Zap
+
+
+
+  Code;
+  GitBranch,
+  Database,
+  Cloud,
+  Shield,
+  Zap,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   Star;
   ExternalLink;
   CheckCircle;
   TrendingUp;
   Cpu;
+<<<<<<< HEAD
   Globe
  } from 'lucide-react';
 export default function DeveloperToolsPage() {
@@ -156,6 +191,61 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 description: 'Global developer tools market size',
     },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+      pricing: '$10 / month',
+      market_price: '$10 - 20 / month',
+      website: 'https://github.com / features / copilot',
+      color: 'bg - gradient - to - br from - gray - 500 to - black',
+      text_color: 'text - gray - 400',
+      gradient: 'from - gray - 400 to - black',
+      popular: true,
+      ];
+      pricing: '$4 / month',
+      market_price: '$4 / month',
+      website: 'https://github.com / pricing',
+      color: 'bg - gradient - to - br from - green - 500 to - emerald - 600',
+      text_color: 'text - green - 400',
+      gradient: 'from - green - 400 to - emerald - 500',
+      popular: true,
+      ];
+      pricing: '$9 / month',
+      market_price: '$9 - 57 / month',
+      website: 'https://www.mongodb.com / atlas',
+      color: 'bg - gradient - to - br from - green - 500 to - blue - 600',
+      text_color: 'text - green - 400',
+      gradient: 'from - green - 400 to - blue - 500',
+      popular: false,
+      ];
+      pricing: '$20 / month',
+      market_price: '$20 / month',
+      website: 'https://vercel.com / pricing',
+      color: 'bg - gradient - to - br from - black to - gray - 600',
+      text_color: 'text - gray - 400',
+      gradient: 'from - black to - gray - 500',
+      popular: false,
+      ];
+      pricing: '$25 / month',
+      market_price: '$25 - 100 / month',
+      website: 'https://snyk.io / pricing',
+      color: 'bg - gradient - to - br from - red - 500 to - pink - 600',
+      text_color: 'text - red - 400',
+      gradient: 'from - red - 400 to - pink - 500',
+      popular: false,
+      ];
+      pricing: '$12 / month',
+      market_price: '$12 - 99 / month',
+      website: 'https://www.postman.com / pricing',
+      color: 'bg - gradient - to - br from - orange - 500 to - red - 600',
+      text_color: 'text - orange - 400',
+      gradient: 'from - orange - 400 to - red - 500',
+      popular: false,
+  ];
+    {
+      description: 'Average productivity improvement'
+    },  ];      description: 'Global developer tools market size'
+    }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     {
       title: 'AI Code Tools',
       value: '$2.1B',
@@ -176,6 +266,7 @@ description: 'Average productivity improvement',
     },
   ];
   const devCategories = [
+<<<<<<< HEAD
     {
       name: 'Code Generation',
       description: 'AI-powered coding assistants and code completion tools',
@@ -274,10 +365,56 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
             Each tool has been tested and verified to provide real value for
             developers and development teams.
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      description: 'AI - powered development tools market',
+    },    {
+      title: 'Cloud Dev Tools',
+      value: '$4.8B',
+      growth: '+32% YoY',
+      description: 'Cloud - based development platforms',
+    },    {
+      title: 'Dev Productivity',
+      value: '35%',
+      growth: '+18% YoY',
+      description: 'Average productivity improvement',
+    },  ];      description: 'Global developer tools market size';
+    }
+    {
+      title: 'AI Code Tools',
+      value: '$2.1B',
+      growth: '+45% YoY',
+    }
+  ];
+;
+  return (
+    <>;
+      <Head>;
+        <title>;
+          Developer Tools & Services | Zion Tech Group - Real Dev Tools with;
+          Pricing;
+        </title>;
+      {/* Hero Section */}
+      <section className="relative section-padding bg-gradient-cursor overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0.06),transparent_50%)]" />
+        <div className="absolute inset-0 bg-grid opacity-10" />
+        <div className="relative z-10 container-cursor text-center">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6">
+            <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" />
+            Developer Tools & Services
+          </div>
+          <h1 className="text-responsive-xl font-black mb-8 gradient-text text-shadow-lg">
+            Professional Developer Tools That Actually Work
+          </h1>
+          <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed">
+            Curated developer tools and services that professionals use daily. Each tool has been tested and verified
+            to provide real value for developers and development teams.
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           </p>
         </div>
       </section>
       {/* Developer Market Statistics */}
+<<<<<<< HEAD
 <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
@@ -403,10 +540,13 @@ export default function DeveloperToolsPage() {const developerTools = null;
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
             </h2>;
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               Understanding the developer tools landscape helps you make;
               informed decisions about your development stack.;
             </p>;
           </div>;
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16'>;
             {devMarketStats.map((stat, index) => (<Card;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -433,6 +573,11 @@ export default function DeveloperToolsPage() {const developerTools = null;
         </div>
       </section>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       {/* Developer Tools Grid */}
 <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -441,6 +586,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               Curated Developer Tools & Services
             </h2>
+<<<<<<< HEAD
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Each tool has been carefully selected based on performance
               reliability, and real-world developer usage.
@@ -449,6 +595,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              Each tool has been carefully selected based on performance, reliability, and real-world developer usage.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             {developerTools.map((tool, index) => (
 =======
           </div>;
@@ -496,6 +649,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className={`card-hover group border-gradient-blue relative ${
                   tool && tool.popular ? 'ring-2 ring-cursor-blue ring-opacity-50' : ''
                 }`}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {tool.popular && (
@@ -575,11 +732,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </ul>
 
 <div className='flex items-center justify-between'>
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                       <Button
                         href={tool && tool.website}
                         variant='primary'
                         size='sm'
+<<<<<<< HEAD
                         className='bg-cursor-blue hover:bg-cursor-blue-dark'
                       >
                         Try Tool
@@ -595,6 +757,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         href={tool && tool.website}
                         variant='primary';
                         size='sm';
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                         className='bg-cursor-blue hover:bg-cursor-blue-dark'>;
                         Try Tool;
                         <ExternalLink className='w-4 h-4 ml-2' />;
@@ -618,6 +783,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
               </Card>;className='bg-cursor-blue hover:bg-cursor-blue-dark';
                       >;
                         Try Tool;
@@ -640,6 +806,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              </Card>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       {/* Developer Workflow */}
 <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
@@ -658,6 +827,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {devWorkflow.map((phase, index) => (
+<<<<<<< HEAD
               <Card
 =======
           </div>;
@@ -671,6 +841,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Complete Developer Workflow;
             </h2>;
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               Build a complete development pipeline with these essential tools;
               that work together seamlessly.;
             </p>;
@@ -700,6 +872,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <h3 className="text-xl font-semibold text-white mb-3">{phase && phase.phase}</h3>;
                   <p className="text-gray-400 mb-4">{phase && phase.description}</p>;
                   <div className="space-y-1">;
+<<<<<<< HEAD
                     {phase && phase.tools.map((tool, toolIndex) => (<div key={toolIndex} className="text-sm text-cursor-blue font-medium">;<Card;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 key={index}
@@ -725,6 +898,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         className='text-sm text-cursor-blue font-medium';
                       >;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                    {phase && phase.tools.map((tool, toolIndex) => (;
+                      <div key={toolIndex} className="text-sm text-cursor-blue font-medium">;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                         {tool}
                       </div>;
                     ))}
@@ -797,8 +974,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </span>
                     <span className='text-cursor-blue font-semibold'>
                       {category.avgPrice}
+<<<<<<< HEAD
                     </span>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                    </span>                  </div>                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-white mb-3">{category.name}</h3>
+                  <p className="text-gray-400 mb-4">{category.description}</p>
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-gray-500">Tools Available: <span className="text-white">{category.tools}</span></span>
+                    <span className="text-cursor-blue font-semibold">{category.avgPrice}</span>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   </div>
                 </div>
               </Card>
@@ -843,15 +1029,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               href='/ai-tools'
               variant='primary'
               size='lg'
+<<<<<<< HEAD
               className='bg-cursor-blue hover:bg-cursor-blue-dark'
             >
               Explore AI Tools
             </Button>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              className='bg-cursor-blue hover:bg-cursor-blue-dark'>;
+              Explore AI Tools;
+            </Button>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <Button
 href='/contact'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
               className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'
             >
               Get Dev Consultation
@@ -909,3 +1102,17 @@ href='/contact';
     </>;
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              Get Dev Consultation
+            </Button>;
+          </div>;
+        </div>;
+      </section>;
+              className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'            >              href="/ai-tools"
+              variant="primary"
+              size="lg"
+              className="bg-cursor-blue hover:bg-cursor-blue-dark"
+              Explore AI Tools
+            </Button>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

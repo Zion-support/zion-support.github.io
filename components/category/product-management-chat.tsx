@@ -3,6 +3,7 @@ import type { NextPage } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,11 +14,16 @@ import type { NextPage } from 'next';
 import Seo from '../../components/seo/Seo';
 const ProductManagementChat: NextPage = () => {return (return (<div>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -30,10 +36,13 @@ import Seo from '../../components/seo/Seo';
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 const ProductManagementChat: NextPage = () => {
   return (
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -57,6 +66,11 @@ import Seo from '../../components/seo/Seo';
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+  return (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     <div>
       <Seo title="Product Management" description="Product management strategy and insights by Zion." openGraph={{ title: 'Product Management', description: 'Product management strategy and insights by Zion.' }} />
       <main>
@@ -71,6 +85,7 @@ import Seo from '../../components/seo/Seo';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -94,6 +109,12 @@ import Seo from '../../components/seo/Seo';
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     <div>;
       <Seo title="Product Management" description="Product management strategy and insights by Zion." openGraph={{ title: 'Product Management', description: 'Product management strategy and insights by Zion.' }} />;
       <main>;
@@ -118,6 +139,7 @@ export default ProductManagementChat;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -127,6 +149,11 @@ export default ProductManagementChat;
 
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 import Link from 'next / link';
 import Seo from '../../components / seo / Seo';
@@ -153,6 +180,7 @@ const ProductManagementChat: NextPage;
 ;
 export default ProductManagementChat;
 ;
+<<<<<<< HEAD
 export default ProductManagementChat;
 
 
@@ -162,6 +190,9 @@ export default ProductManagementChat;
 =======
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export default ProductManagementChat;
 
       <main>
@@ -177,6 +208,7 @@ export default ProductManagementChat
 
 export default ProductManagementChat;
 export default ProductManagementChat;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -198,3 +230,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+const ProductManagementChat: NextPage;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

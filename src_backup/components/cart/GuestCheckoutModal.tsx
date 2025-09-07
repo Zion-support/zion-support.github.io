@@ -1,4 +1,5 @@
 <<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
+<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
 try {
       on_submit ({ email, address });
     } finally {
@@ -18,6 +19,13 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 
+=======
+import { useState } from 'react',;
+import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input',;
+import { Label } from '@/components/ui/label',;
+import { Textarea } from '@/components/ui/textarea',;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/cart/GuestCheckoutModal.tsx
 import {;
   Dialog,;
   DialogContent,;
@@ -30,8 +38,12 @@ import { User, Mail, MapPin, CreditCard } from 'lucide-react';
 import { isProdDomain } from '@/utils/getStripe';
 
 interface GuestCheckoutModalProps {;
+<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/cart/GuestCheckoutModal.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/cart/GuestCheckoutModal.tsx
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
@@ -67,7 +79,10 @@ import {
 import { User, Mail, MapPin, CreditCard } from 'lucide-react'
 import { isProdDomain } from '@/utils/getStripe';
 interface GuestCheckoutModalProps {
+<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/cart/GuestCheckoutModal.tsx
   open: boolean;
   onOpenChange: (open: boolean) => void;
   onSubmit: (details: { email: string; address: string }) => void;
@@ -80,15 +95,31 @@ export default function GuestCheckoutModal(): any ({;
   const [address, setAddress] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
     }
   }
 
 
+=======
+  const handleSubmit = async (e: React && React.FormEvent) => {;
+    e && e.preventDefault();
+    if (!email || !address) {;
+      alert('Please fill in all required fields');
+      return;
+    }
+
+    setIsSubmitting(true);
+    try {;
+      onSubmit({ email, address });
+    } finally {;
+      setIsSubmitting(false);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/cart/GuestCheckoutModal.tsx
     }
   },
 
 
 
+<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
   const handleSubmit = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
@@ -145,6 +176,27 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
 
             <Label
 
+=======
+
+  const handleSubmit = null;
+  return (
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      <DialogContent className="bg-zion-blue border-zion-cyan/20 max-w-md">
+        <DialogHeader>
+          <DialogTitle className="text-white flex items-center gap-2">
+            <User className="h-5 w-5 text-zion-cyan" />
+            Guest Checkout
+          </DialogTitle>
+          <DialogDescription className="text-zion-slate-light">
+            Enter your details to complete your purchase as a guest.
+          </DialogDescription>
+        </DialogHeader>
+        {!isProdDomain() && (
+          <div className="rounded-md bg-amber-500/20 p-2 text-center text-amber-400">
+            Pay with test data – use card 4242 4242 4242 4242 and any future date.
+          </div>
+        )}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/cart/GuestCheckoutModal.tsx
               htmlFor='guest-email'
 =======
         )}<form onSubmit={handleSubmit} className='space-y-4'>;
@@ -159,11 +211,14 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
             <Input
               id='guest-email'
               type='email'
+<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
 
 =======
             <Input;
               id='guest-email';
               type='email';
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/cart/GuestCheckoutModal.tsx
               value={email || ''}
               onChange={(e) => setEmail(e.target.value || '')}
               placeholder="your.email@example.com";
@@ -195,6 +250,7 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
             <Button;
               type="submit";
               disabled={isSubmitting || !email || !address}
+<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
               className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue";
             >;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/cart/GuestCheckoutModal.tsx
@@ -286,6 +342,10 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
 
 
 
+=======
+              className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue"
+            >
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/cart/GuestCheckoutModal.tsx
               {isSubmitting ? (
                 'Processing...'
               ) : (
@@ -295,6 +355,7 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
                 </>
               )}
 
+<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
 
           <DialogFooter className='space - x-2'>;
 =======
@@ -336,10 +397,26 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
 <<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
                 </>)}
 
+=======
+              disabled={isSubmitting || !email || !address}
+              className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'>;
+              {isSubmitting ? (;
+                'Processing...';
+              ) : (;
+                <>;
+                  <CreditCard className='h-4 w-4 mr-2' />;
+                  Continue to Payment;
+                </>;
+              )}
+
+};
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/cart/GuestCheckoutModal.tsx
             </Button>;
           </DialogFooter>;
         </form>;
       </DialogContent>;
+<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
 
 }
 
@@ -349,12 +426,20 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
 }
 ;
 
+=======
+    </Dialog>;
+  );
+}
+;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/cart/GuestCheckoutModal.tsx
             </Button>
           </DialogFooter>
         </form>
       </DialogContent>
     </Dialog>
   );
+<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                 </>)}</Button>;
@@ -369,3 +454,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </Dialog>;
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/cart/GuestCheckoutModal.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/cart/GuestCheckoutModal.tsx

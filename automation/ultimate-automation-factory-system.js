@@ -321,6 +321,7 @@ export default UltimateAutomationFactory;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
@@ -342,6 +343,11 @@ class UltimateAutomationFactory {constructor() {; this.logsDir = path.join(proce
 =======
 if (import.meta.url = = = `file: //${process.argv[1]}`) {const factory = new UltimateAutomationFactory(); factory.start().then(report = > {; console.log('Ultimate Automation Factory completed: ', report.summary); process.exit(0)}).catch(error = > {console.error('Ultimate Automation Factory failed: ', error); process.exit(1)})}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export default UltimateAutomationFactory;
 ;
 class UltimateAutomationFactory {; constructor() {; this.logsDir = path.join(process.cwd(), 'logs'); this.ensureLogsDir()};
@@ -418,6 +424,7 @@ export default UltimateAutomationFactory;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 =======
@@ -444,3 +451,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+if (import.meta.url = = = `file: //${process.argv[1]}`) {; const factory = new UltimateAutomationFactory(); factory.start().then(report = > {; console.log('Ultimate Automation Factory completed: ', report.summary); process.exit(0)}).catch(error = > {; console.error('Ultimate Automation Factory failed: ', error); process.exit(1)})};
+;
+export default UltimateAutomationFactory;
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src_backup/components/mobile-app/admin/ChangelogManager.tsx
 
 <<<<<<< HEAD:src_backup/components/mobile-app/admin/ChangelogManager.tsx
   id: string;
@@ -6,6 +7,13 @@
   changes: string,
 
 
+=======
+interface ChangelogManagerProps {
+  platform: AppPlatform
+}
+
+type ChangelogEntry = {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/admin/ChangelogManager.tsx
 }
     })
   }
@@ -50,8 +58,15 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
     })
   },
   
+<<<<<<< HEAD:src_backup/components/mobile-app/admin/ChangelogManager.tsx
 
 
+=======
+  const handleRemoveEntry = (id: string) => {
+    setEntries(entries.filter(entry => entry.id !== id))
+  }
+  )
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/admin/ChangelogManager.tsx
   const handleRemoveEntry = (id: string) => {
     setEntries(entries.filter(entry => entry.id !== id)),
   };
@@ -64,9 +79,15 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
     const { name, value } = e.target
     setNewEntry(prev => ({ ...prev, [name]: value }))
   }
+<<<<<<< HEAD:src_backup/components/mobile-app/admin/ChangelogManager.tsx
 
 import { Plus, Trash2 } from 'lucide-react'import { AppPlatform } from "./MetadataManager";
 
+=======
+
+
+import { Plus, Trash2 } from 'lucide-react'import { AppPlatform } from "./MetadataManager";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/admin/ChangelogManager.tsx
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
@@ -79,12 +100,15 @@ import { Plus, Trash2 } from 'lucide-react'import { AppPlatform } from "./Metada
               <Input
                 placeholder="Version (e.g. 1.0.1)"
                 name="version"
+<<<<<<< HEAD:src_backup/components/mobile-app/admin/ChangelogManager.tsx
 
                 value={newEntry.version}
                 onChange={handleInputChange}
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/admin/ChangelogManager.tsx
               />
               <Input
                 type="date"
@@ -103,6 +127,7 @@ import { AppPlatform } from "./MetadataManager",;
 interface ChangelogManagerProps {;
   platform: AppPlatform;
 }
+<<<<<<< HEAD:src_backup/components/mobile-app/admin/ChangelogManager.tsx
 ;
 type ChangelogEntry = {;
   id: string,;
@@ -147,6 +172,8 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 
   return (
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/admin/ChangelogManager.tsx
     <Card className="bg-zion-blue border-zion-purple/30">;
 =======
 interface ChangelogManagerProps  {platform: AppPlatform;
@@ -173,6 +200,10 @@ interface ChangelogManagerProps  {platform: AppPlatform;
         <div className="space-y-4">;
           <div className="flex flex-col md:flex-row gap-3">;
             <div className="flex-1 grid grid-cols-2 gap-3">;
+<<<<<<< HEAD:src_backup/components/mobile-app/admin/ChangelogManager.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/admin/ChangelogManager.tsx
               <Input;
                 placeholder="Version (e.g. 1.0.1)";
                 name="version";
@@ -181,10 +212,13 @@ interface ChangelogManagerProps  {platform: AppPlatform;
                 onChange={handleInputChange}
               />;
 
+<<<<<<< HEAD:src_backup/components/mobile-app/admin/ChangelogManager.tsx
 
 =======
                 onChange={handleInputChange}/>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/mobile-app/admin/ChangelogManager.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/admin/ChangelogManager.tsx
               <Input;
                 type="date";
                 name="date";
@@ -227,6 +261,7 @@ import { AppPlatform } from "./MetadataManager",interface ChangelogManagerProps 
               Add
             </Button>
           </div>
+<<<<<<< HEAD:src_backup/components/mobile-app/admin/ChangelogManager.tsx
               />;
             </div>;
             <Button
@@ -261,6 +296,8 @@ import { AppPlatform } from "./MetadataManager",interface ChangelogManagerProps 
               <div 
                 key={entry.id}
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/admin/ChangelogManager.tsx
 
 
                 className="p-3 rounded border border-zion-purple/20 bg-zion-blue-dark"
@@ -270,8 +307,12 @@ import { AppPlatform } from "./MetadataManager",interface ChangelogManagerProps 
                     <span className="text-zion-cyan font-semibold">v{entry.version}</span>
                     <span className="text-sm text-gray-400">{entry.date}</span>
                   </div>
+<<<<<<< HEAD:src_backup/components/mobile-app/admin/ChangelogManager.tsx
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/mobile-app/admin/ChangelogManager.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/admin/ChangelogManager.tsx
           />;
           <div className="border-t border-zion-purple/20 pt-4 space-y-4">;
             {entries.map((entry) => (<div;
@@ -300,7 +341,10 @@ import { AppPlatform } from "./MetadataManager",interface ChangelogManagerProps 
                     onClick={() => handleRemoveEntry(entry.id)}
 
 
+<<<<<<< HEAD:src_backup/components/mobile-app/admin/ChangelogManager.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/admin/ChangelogManager.tsx
                     className="text-gray-400 hover:text-red-400 p-1 h-auto"
                   >
                     <Trash2 className="h-4 w-4" />
@@ -309,6 +353,7 @@ import { AppPlatform } from "./MetadataManager",interface ChangelogManagerProps 
                 <p className="text-sm whitespace-pre-wrap">{entry.changes}</p>
               </div>
             ))}
+<<<<<<< HEAD:src_backup/components/mobile-app/admin/ChangelogManager.tsx
 
 
             {entries && entries.length === 0 && (;
@@ -319,11 +364,18 @@ import { AppPlatform } from "./MetadataManager",interface ChangelogManagerProps 
 
 
 
+=======
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/admin/ChangelogManager.tsx
           </div>;
         </div>;
       </CardContent>;
     </Card>;
   );
+<<<<<<< HEAD:src_backup/components/mobile-app/admin/ChangelogManager.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/admin/ChangelogManager.tsx
 
 
   const handleRemoveEntry = (id: string) =>: any {
@@ -423,6 +475,7 @@ import { AppPlatform } from "./MetadataManager",interface ChangelogManagerProps 
 },
 ;
 };
+<<<<<<< HEAD:src_backup/components/mobile-app/admin/ChangelogManager.tsx
 
 import React, { useState } from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
@@ -469,3 +522,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }> <Plus className=" mr-2 h-4 w-4"/> Add </Button> </div> <Textarea key= {entry.id ";
 }className=" p-3 rounded border border-zion-purple/20 bg-zion-blue-dark"> > <Trash2 className=" h-4 w-4" /> </Button> </div>)}</div> </div> </CardContent> </Card>)}'";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/mobile-app/admin/ChangelogManager.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/admin/ChangelogManager.tsx

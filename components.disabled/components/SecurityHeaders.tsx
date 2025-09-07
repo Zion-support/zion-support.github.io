@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 <<<<<<< HEAD
@@ -23,17 +24,13 @@ const SecurityHeaders: React.FC = () => {useEffect(() => {// Add security header
         document.head.appendChild(meta);
       });
     };
+=======
 
-    // Add Content Security Policy for inline styles
-    const addCSPForInlineStyles = () => {
-      const style = document.createElement('style');
-      style.setAttribute(
-        'nonce',
-        'csp-nonce-' + Math.random().toString(36).substr(2, 9)
-      );
-      document.head.appendChild(style);
-    };
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+<<<<<<< HEAD
     // Initialize security headers
     addSecurityHeaders();
     addCSPForInlineStyles();
@@ -60,3 +57,5 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }export default SecurityHeaders;
 >>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

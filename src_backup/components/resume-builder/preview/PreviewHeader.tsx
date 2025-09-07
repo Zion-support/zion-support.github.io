@@ -1,14 +1,36 @@
 <<<<<<< HEAD:src_backup/components/resume-builder/preview/PreviewHeader.tsx
+<<<<<<< HEAD:src_backup/components/resume-builder/preview/PreviewHeader.tsx
         .no-print {
 
+=======
+import { PdfExportButton } from '../PdfExportButton';
+import { Resume } from '@/types/resume';
+import { useState } from 'react';
+import { useIsMobile } from '@/hooks/use-mobile';
+
+
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+
+
+        }
+        .no - print {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/resume-builder/preview/PreviewHeader.tsx
           display: none !important }
       }
 
 
         }
+<<<<<<< HEAD:src_backup/components/resume-builder/preview/PreviewHeader.tsx
         .print-section, .print-section * {
           visibility: visible
 
+=======
+        .print - section, .print - section * {
+          visibility: visible;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/resume-builder/preview/PreviewHeader.tsx
         }
 
         .print-section {;
@@ -57,6 +79,10 @@ import { useIsMobile  } from '@/hooks/use-mobile';
 <<<<<<< HEAD:src_backup/components/resume-builder/preview/PreviewHeader.tsx
         <PdfExportButton resume={resume} />;
 
+<<<<<<< HEAD:src_backup/components/resume-builder/preview/PreviewHeader.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/resume-builder/preview/PreviewHeader.tsx
   const [isPrinting, setIsPrinting] = useState(false);
   const isMobile = null;
   return (
@@ -73,12 +99,16 @@ import { useIsMobile  } from '@/hooks/use-mobile';
         className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}
       >
         <PdfExportButton resume={resume} />
+<<<<<<< HEAD:src_backup/components/resume-builder/preview/PreviewHeader.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/resume-builder/preview/PreviewHeader.tsx
 
         <Button
           variant='outline'
           onClick={handleBrowserPrint}
           disabled={isPrinting}
+<<<<<<< HEAD:src_backup/components/resume-builder/preview/PreviewHeader.tsx
           className='gap-2'
         >
           <FileText className='h-4 w-4' />
@@ -88,6 +118,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <Button variant='outline' className='gap-2'>
           <Link className='h-4 w-4' />
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+        <Button variant="outline" className="gap-2">
+          <Link className="h-4 w-4" />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/resume-builder/preview/PreviewHeader.tsx
           Add to Profile
         </Button>
       </div>
@@ -173,6 +209,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
     </div>
+<<<<<<< HEAD:src_backup/components/resume-builder/preview/PreviewHeader.tsx
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -180,3 +217,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>)}</div>;
   ))}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/resume-builder/preview/PreviewHeader.tsx
+=======
+  )
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/resume-builder/preview/PreviewHeader.tsx

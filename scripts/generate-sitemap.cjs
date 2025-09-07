@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node
 const fs = require('fs');
@@ -12,6 +13,10 @@ const path = require('path');
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -113,15 +118,17 @@ if (require.main === module) {}
   generateSitemap()};
 module.exports = { generateSitemap };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = {};
 
 #!/usr/bin/env node
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-const fs = require('fs');
-const path = require('path');
 
+<<<<<<< HEAD
 /**
  * Generate sitemap for the website
  */
@@ -210,6 +217,8 @@ if (require.main === module) {
 module.exports = SitemapGenerator;
 ursor/automate-test-improve-and-merge-code-59d5
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -218,6 +227,7 @@ console.log('🗺️  Generating sitemap...');
 console.log('✅ Sitemap generation completed');
 
 module.exports = {};
+<<<<<<< HEAD
 
 main
 
@@ -225,3 +235,5 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

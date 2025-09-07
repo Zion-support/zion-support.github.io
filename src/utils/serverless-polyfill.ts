@@ -14,6 +14,7 @@ declare global {
 }
 
 // CRITICAL: Self polyfill - must be first
+<<<<<<< HEAD
 // Auto-verify in development
 if (process.env.NODE_ENV === 'development') {
   setTimeout((,) => verifyPolyfills(), 100)
@@ -38,6 +39,13 @@ declare global {var webpackChunk_N_E: any[];
 }// CRITICAL: Self polyfill - must be first;
 if (typeof self === 'undefined') {if (typeof global !== 'undefined') {(global as any).self = global;
     if (typeof globalThis !== 'undefined') {(globalThis as any).self = global;
+=======
+if (typeof self === 'undefined') {
+  if (typeof global !== 'undefined') {
+    (global as any).self = global
+    if (typeof globalThis !== 'undefined') {
+      (globalThis as any).self = global
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   var __awaiter: any;
 // CRITICAL: Self polyfill - must be first;
 // Check condition;
@@ -342,6 +350,7 @@ if ([helper] === 'undefined') {) {$2;
 export const verify_polyfills = () =>: any {const checks = {self_defined: typeof self !== 'undefined',webpackChunkDefined:;
       typeof webpackChunk_N_E !== 'undefined' ||;
       (typeof self !== 'undefined' &&;
+<<<<<<< HEAD
         typeof self.webpackChunk_N_E !== 'undefined'),tsHelpersDefined:;typeof __extends !== 'undefined' && typeof __assign !== 'undefined',errorHandlersSet: typeof window !== 'undefined' && window && window.onerror !== null}typeof __extends !== 'undefined' && typeof __assign !== 'undefined';
     errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null;
   }
@@ -436,3 +445,37 @@ if (typeof window !== 'undefined') {
 
 export {};
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+        typeof self.webpackChunk_N_E !== 'undefined'),
+    tsHelpersDefined:;
+
+      typeof __extends !== 'undefined' && typeof __assign !== 'undefined',
+    errorHandlersSet: typeof window !== 'undefined' && window && window.onerror !== null,
+  };
+
+      typeof __extends !== 'undefined' && typeof __assign !== 'undefined'
+    errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null
+  }
+  console.log('Serverless polyfill verification:', checks)
+  return Object.values(checks).every(Boolean)
+}
+
+export default {}; // Ensure this can be imported as a module
+
+}, // Ensure this can be imported as a module'"
+
+// Auto-verify in development
+
+if (process && process.env.NODE_ENV === 'development') {
+  setTimeout((,) => verifyPolyfills(), 100)
+
+}
+
+export default {}, // Ensure this can be imported as a module
+
+//Inject TypeScript helpers into global scope //Error prevention for common webpack issues try {';
+  //Prevent webpack chunk loading errors if (selfRef.webpackChunk N E && typeof selfRef.webpackChunk N E.push === 'function') {;
+export default {}; // Ensure this can be imported as a module
+  
+}, // Ensure this can be imported as a module'"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -3,6 +3,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,6 +28,10 @@ function handler() {const { id, metric } = req.query;
 }
   if ()) {$2;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -41,6 +46,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const post = incrementMetric(id, metric as 'views' | 'likes' | 'shares');
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -70,6 +76,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const { id, metric } = req.query;
   if (req.method !== 'POST') return res.status(405).end();
   if (typeof id !== 'string' |typeof metric !== 'string') return res.status(400).json({ error: 'Invalid params' });
@@ -78,6 +88,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const post = null;
   return res.status(200).json({ ok: true, metrics: post.metrics })
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -96,6 +107,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   if (!post) return res && res.status(404).json({ error: 'Not found' });
   return res && res.status(200).json({ ok: true, metrics: post && post.metrics });export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id, metric } = req && req.query;
@@ -106,8 +121,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (!post) return res && res.status(404).json({ error: 'Not found' });
   return res && res.status(200).json({ ok: true, metrics: post && post.metrics })
 }
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -128,6 +143,10 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { increment_metric } from '@/utils / data / blog_store';
 export default /**
  * handler - Function description
@@ -165,6 +184,7 @@ function handler() {const { id, metric } = req.query;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -178,11 +198,18 @@ function handler() {const { id, metric } = req.query;
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+}
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 }
 
 
 
+<<<<<<< HEAD
 }
 }
 
@@ -197,12 +224,18 @@ function handler() {const { id, metric } = req.query;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 
 }
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -213,11 +246,17 @@ function handler() {const { id, metric } = req.query;
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return res.status(200).json({ ok: true, metrics: post.metrics });
   if (!['viewslikesshares'].includes(metric)) return res.status(400).json({ error: 'Invalid metric' });
   const post = null;
   return res.status(200).json({ ok: true, metrics: post.metrics })
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -240,3 +279,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

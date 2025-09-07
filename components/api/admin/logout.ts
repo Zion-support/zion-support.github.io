@@ -29,6 +29,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   res.status(200).json({ ok: true })
 }
 =======
@@ -58,14 +59,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
   res.status(200).json({ ok: true })
 }
+=======
+  res.status(200).json({ ok: true })
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   res.status(200).json({ ok: true })
 }
 
+<<<<<<< HEAD
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { clearSessionCookie } from '../../../utils / admin_auth';
 export default /**
  * handler - Function description
@@ -79,6 +87,7 @@ function handler() {
   clearSessionCookie (res);
   res.status (200).json ({ ok: true });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -100,6 +109,12 @@ function handler() {
 
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 import { clearSessionCookie } from '../../../utils/adminAuth';
@@ -112,6 +127,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 }
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -133,3 +149,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+  res.status(200).json({ ok: true });
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

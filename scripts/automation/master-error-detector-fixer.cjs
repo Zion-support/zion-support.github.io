@@ -176,7 +176,11 @@ const { promisify } = require("util")
   const interval = parseInt(args.find(arg => arg.startsWith("--interval="))?.split("=")
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error(""Error": ")
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  console.error(""Error": ")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

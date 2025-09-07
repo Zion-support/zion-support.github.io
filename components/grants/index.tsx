@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,10 +10,15 @@
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 import type {;
   GrantApplication,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -26,6 +32,8 @@ import type {;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   GrantCategory,;
   GrantStatus,;
 } from '../../types/grants';
@@ -45,12 +53,17 @@ const statuses: GrantStatus[] = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
       .catch(() => setItems([]));  }, [filters]);
@@ -79,6 +92,7 @@ const statuses: GrantStatus[] = [;
           </Link>;
           <Link href='/incubator'>;
             <a className='px-3 py-2 bg-purple-600 text-white rounded'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -128,6 +142,8 @@ import type { GrantApplication, GrantCategory, GrantStatus } from '../../types/g
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
 const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'];
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import type {
   GrantApplication
   GrantCategory
@@ -161,8 +177,13 @@ const statuses: GrantStatus[] = [
   'Approved'
   'Rejected'
 ];
+<<<<<<< HEAD
 export default function GrantsPage() {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+export default function GrantsPage() {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [filters, setFilters] = useState<{
     sector?: string;
@@ -172,8 +193,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }>({});
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+      .catch(() => setItems([]));  }, [filters]);
+  return (
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       .then((r) => r.json())
       .then((d) => setItems(d.items || []))
 
@@ -185,6 +212,7 @@ const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],
 export default function GrantsPage() {;
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -217,6 +245,8 @@ export default function GrantsPage() {const categories: GrantCategory[] = ['Ecos
           <Link href='/incubator'>;
             <a className='px-3 py-2 bg-purple-600 text-white rounded'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   useEffect(() => {
 
     const params = new URLSearchParams();
@@ -249,15 +279,22 @@ export default function GrantsPage() {;
       .catch(() => setItems([]));
   }, [filters]);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   useEffect(() => {
 .then(r => r.json())
       .then(d => setItems(d.items || []))
       .catch(() => setItems([]));
   }, [filters]);
   return (
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     <EnhancedLayout>
       <div className='flex items-center justify-between mb-6'>
         <h1 className='text-2xl font-semibold'>Zion Grants & Incubator</h1>
@@ -277,7 +314,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           value={filters.sector |''}
           onChange={e =>
             setFilters(f => ({ ...f, sector: e.target.value |undefined }))
-<<<<<<< HEAD
           }
         >
           <option value=''>All Sectors</option>
@@ -292,6 +328,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           value={filters.status |''}
           onChange={e =>
             setFilters(f => ({ ...f, status: e.target.value |undefined }))
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default /**
@@ -398,6 +435,10 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
         <select;
           className='border rounded p-2';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           }
         >
           <option value=''>All Stages</option>
@@ -414,6 +455,7 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -421,11 +463,16 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
           value={filters && filters.region || ''}
           onChange={e =>;
             setFilters(f => ({ ...f, region: e && e.target.value || undefined }));
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -448,10 +495,15 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           }
         />
         <select
           className='border rounded p-2'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -463,6 +515,10 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
       <div className='grid md:grid - cols - 4 gap - 4 mb - 6'>;
         <select;
@@ -471,6 +527,7 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
           on_change={e =>;
             set_filters (function => ({ ...f, sector: e.target.value || undefined }))}
             set_filters (function => ({ ...f, sector: e.target.value || undefined }));
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -484,6 +541,8 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           }
         >;
           <option value=''>All Sectors</option>;
@@ -509,6 +568,7 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
         />;<select;
           className='border rounded p-2';
         />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -590,11 +650,20 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+        <select
+          className='border rounded p-2'
+
+        <select
+          className='border rounded p-2'
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   {g.program === 'incubator' ? 'Incubator' : 'Grant'}
                 </div>;
               </div>;
               <div className='flex gap - 2 items - center'>;
                 {g.program === 'incubator' && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -606,6 +675,10 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
           value={filters && filters.program || ''}
           onChange={e =>;
@@ -616,9 +689,12 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
           <option value='incubator'>Incubator</option>;
         </select>;
       </div>;
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-semibold">Zion Grants & Incubator</h1>
         <div className="flex gap-2">
@@ -628,6 +704,7 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
       </div>
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -642,6 +719,10 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <div className='grid gap-4'>;
         {items.map(g => (<div;
             key={g.id}
@@ -703,6 +784,7 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
                   <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>;
                     Incubated by Zion;
                   </span>;
+<<<<<<< HEAD
                   <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>;
                     Incubated by Zion;
                   </span>;
@@ -740,6 +822,13 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
                     Incubated by Zion
                   </span>
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 )}
                 {g && g.status === 'Approved' && (<span className='px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700'>;
                     Grant Winner;
@@ -776,18 +865,27 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       </div>
     </EnhancedLayout>
 );
       </div>;
     </EnhancedLayout>;
   );
+=======
+
+
+      </div>
+    </EnhancedLayout>
+);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 
 
   return (
     <EnhancedLayout>
     <EnhancedLayout>
+<<<<<<< HEAD
 =======
 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -844,3 +942,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+  );
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

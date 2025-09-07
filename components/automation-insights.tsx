@@ -1,8 +1,50 @@
 import Head from 'next/head';
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
   const automationTrends = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+export default function AutomationInsightsPage() {
+
+  const automationTrends = [
+    {
+      id: 'ai-automation-2025'
+      title: 'AI Automation Trends 2025'
+      description:
+        'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends',
+      readTime: '8 min read',
+export default function AutomationInsightsPage() {;
+  const automationTrends = [;
+    {;
+      id: 'ai-automation-2025',;
+      title: 'AI Automation Trends 2025',,
+  description:;
+        'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends',;
+      readTime: '8 min read',;
+      featured: true;
+    {
+      id: 'ai - automation - 2025',
+      title: 'AI Automation Trends 2025',
+    };
+    {
+      id: 'autonomous-systems'
+      title: 'Building Autonomous Systems'
+      description: 'Learn how to design and implement truly autonomous systems that operate independently.'
+      category: 'Implementation'
+      readTime: '12 min read'
+      featured: false
+    }
+    {
+      id: 'automation-roi'
+      title: 'Calculating Automation ROI'
+      description: 'A comprehensive guide to measuring and maximizing return on investment for automation projects.'
+      category: 'Business'
+      readTime: '10 min read'
+      featured: false
+    },      featured: false
+    }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   ];
 
   const automationTools = [;
@@ -15,6 +57,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       complexity: 'Advanced',      type: 'Framework',;
       complexity: 'Advanced';
     {
+<<<<<<< HEAD
       id: 'automation-framework',
       title: 'Zion Automation Framework',
 description:
@@ -38,6 +81,35 @@ description:
 complexity: 'Beginner',
     },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      id: 'automation - framework',
+      title: 'Zion Automation Framework',
+    };
+    {;
+      id: 'performance-monitor',;
+      title: 'Performance Monitoring Suite',,
+  description: 'Comprehensive tools for monitoring and optimizing automation performance.',;
+      type: 'Tool',;
+      complexity: 'Intermediate',;
+    },;
+    {;
+      id: 'performance-monitor',;
+      title: 'Performance Monitoring Suite',,
+  description:;
+        'Comprehensive tools for monitoring and optimizing automation performance.',;
+      type: 'Tool',;
+      complexity: 'Intermediate',;
+    },    {      complexity: 'Intermediate'
+};
+    {;
+      id: 'deployment-automation',;
+      title: 'Deployment Automation',,
+  description: 'Streamlined deployment processes for automation systems.',;
+      type: 'Process',;
+      complexity: 'Beginner',;
+    },  ];      complexity: 'Beginner';
+    }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   ];
 
   const successMetrics = [;
@@ -54,14 +126,68 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       label: 'Uptime',,
   description: 'Reliable automation performance';
     {
+<<<<<<< HEAD
       metric: '227',
       label: 'Active Automations',
 description: 'Successfully deployed and running',
+=======
+      id: 'deployment - automation',
+      title: 'Deployment Automation',
+      description: 'Streamlined deployment processes for automation systems.',
+      type: 'Process',
+    }
+  ];
+;
+  const success_metrics = [;
+    {
+      metric: '227',
+      label: 'Active Automations',
+    };
+    {;
+      metric: '40%',;
+      label: 'Efficiency Gain',;
+      label: 'Average improvement across projects'
+};
+    {;
+      metric: '2,960+';
+      label: 'Pages Generated',,
+  description: 'Content created autonomously',;
+    },;
+    {;
+      metric: '40%',;
+      label: 'Efficiency Gain',;
+      label: 'Average improvement across projects',;
+    },;
+    {;
+      metric: '2,960+',;
+      label: 'Pages Generated',,
+  description: 'Content created autonomously',;
+    },  ],
+  description: 'Content created autonomously',
+  description: 'Successfully deployed and running',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     },
     {
       metric: '99.9%',
       label: 'Uptime',
+<<<<<<< HEAD
       description: 'Reliable automation performance',
+=======
+      description: 'Reliable automation performance',    {
+      metric: '99.9%',
+      label: 'Uptime',
+      description: 'Reliable automation performance';
+    }
+    {
+      metric: '40%',
+      label: 'Efficiency Gain',
+      label: 'Average improvement across projects';
+    }
+    {
+      metric: '2, 960+';
+      label: 'Pages Generated',
+      description: 'Content created autonomously',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     },
     {
       metric: '40%',
@@ -69,6 +195,7 @@ description: 'Successfully deployed and running',
       label: 'Average improvement across projects',
     },
     {
+<<<<<<< HEAD
       metric: '2,960+',
       label: 'Pages Generated',
       description: 'Content created autonomously',
@@ -179,6 +306,23 @@ export default function AutomationInsightsPage() {const automationTrends = [;
           content='Expert insights on AI automation, autonomous systems, and industry trends.';
         />;
         <meta name='twitter:card' content='summary_large_image' />;
+=======
+      metric: '2, 960+',
+      label: 'Pages Generated',
+      description: 'Content created autonomously',
+    },  ],
+  description: 'Content created autonomously';
+    }
+  ];
+;
+  return (
+    <>;
+      <Head>;
+        <title>;
+          Automation Insights | Zion Tech Group - AI Automation Expertise;
+        </title>;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>;
         <main className='container mx-auto px-6 py-12'>;
           <section className='text-center mb-16'>;
@@ -190,6 +334,7 @@ export default function AutomationInsightsPage() {const automationTrends = [;
               future of intelligent technology;
             </p>;
           </section>;
+<<<<<<< HEAD
           <section className='mx-auto max-w-7xl'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             {/* Success Metrics */}
@@ -215,6 +360,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>;
                   </div>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 ))}
               </div>;
             </div>;{/* Automation Trends */}{/* Automation Trends */}
@@ -245,12 +392,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </h3>;
                     <p className='text-white/70 mb-4'>{trend && trend.description}</p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <Link
                       href={`/blog/${trend.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
                     >
                       Read More <span className='ml-1'>→</span>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                    <Link
+                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full">{trend.category}</span>
+                      <span className="text-white/60 text-sm">{trend.readTime}</span>
+                    </div>
+                    <h3 className="text-xl font-bold mb-3 text-white">{trend.title}</h3>
+                    <p className="text-white/70 mb-4">{trend.description}</p>
+                    <Link
+                      href={`/blog/${trend.id}`}
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                    >
+                      Read More <span className="ml-1">→</span>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                     </Link>
                       Read More <span className='ml-1'>→</span>                    </Link>
 
@@ -382,6 +545,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Get Started;
                 </Link>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Link
                   href='/case-studies'
                   className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'
@@ -431,3 +595,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>;
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                <Link
+                  href='/case-studies'
+                <Link
+                  href="/contact"
+                  className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
+                >
+                  Get Started
+                </Link>
+                <Link
+                  href="/case-studies"
+                  View Case Studies;
+                </Link>;
+              </div>;
+            </div>;
+          </section>;
+        </main>;
+      </div>;
+  );
+}
+    </>;
+  );
+}
+  );
+}
+    </>);
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

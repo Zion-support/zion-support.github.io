@@ -1,10 +1,18 @@
 <<<<<<< HEAD:src_backup/components/projects/ActiveProjectsCard.tsx
+<<<<<<< HEAD:src_backup/components/projects/ActiveProjectsCard.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/projects/ActiveProjectsCard.tsx
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { useProjects } from "@/hooks/useProjects";
 import { Project } from "@/types/projects";
+<<<<<<< HEAD:src_backup/components/projects/ActiveProjectsCard.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/projects/ActiveProjectsCard.tsx
 export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects();
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
@@ -50,16 +58,23 @@ export function ActiveProjectsCard() {;
 
   if (isLoading) {;
     return (
+<<<<<<< HEAD:src_backup/components/projects/ActiveProjectsCard.tsx
       <Card>
         <CardHeader>
 <CardTitle className='flex items-center gap-2'>
             <BriefcaseIcon className='h-5 w-5 text-primary' />
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+            <BriefcaseIcon className="h-5 w-5 text-primary" />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/projects/ActiveProjectsCard.tsx
             <span>Active Projects</span>
           </CardTitle>
           <CardDescription>Your ongoing work</CardDescription>
         </CardHeader>
         <CardContent>
+<<<<<<< HEAD:src_backup/components/projects/ActiveProjectsCard.tsx
 <div className='space-y-2'>
             {[1, 2].map(idx => (
               <div
@@ -82,6 +97,11 @@ export function ActiveProjectsCard() {const { projects, isLoading } = useProject
         </CardHeader>;
         <CardContent>;
           <div className="space-y-2">;
+=======
+          <div className="space-y-2">
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/projects/ActiveProjectsCard.tsx
                 className='h-16 animate-pulse bg-muted rounded'></div>            ))}
           </div>;
         </CardContent>;
@@ -106,6 +126,7 @@ import { useEffect, useState } from "react",import Link from "next/link",import 
           </div>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD:src_backup/components/projects/ActiveProjectsCard.tsx
     )}
     )<div className='space-y-2'>;
             {[1, 2].map(idx => (<div;
@@ -120,6 +141,13 @@ import { useEffect, useState } from "react",import Link from "next/link",import 
       </Card>
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    );
+
+
+  }
+    );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/projects/ActiveProjectsCard.tsx
   }
 
 
@@ -131,13 +159,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return (
       <Card>
         <CardHeader>
+<<<<<<< HEAD:src_backup/components/projects/ActiveProjectsCard.tsx
 <CardTitle className='flex items-center gap-2'>
             <BriefcaseIcon className='h-5 w-5 text-primary' />
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+          <CardTitle className="flex items-center gap-2">
+
+
+
+            <BriefcaseIcon className="h-5 w-5 text-primary" />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/projects/ActiveProjectsCard.tsx
             <span>Active Projects</span>
           </CardTitle>
           <CardDescription>Your ongoing work</CardDescription>
         </CardHeader>
+<<<<<<< HEAD:src_backup/components/projects/ActiveProjectsCard.tsx
 <CardContent className='text-center py-6'>
           <p className='text-muted-foreground mb-2'>
             You don't have any active projects at the moment.
@@ -201,6 +239,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ))}
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/projects/ActiveProjectsCard.tsx
 
 }
 
@@ -265,6 +305,7 @@ if ( {) {
             <Link href="/jobs">Find Opportunities</Link>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD:src_backup/components/projects/ActiveProjectsCard.tsx
     )<CardContent className="text-center py-6">;
           <p className="text-muted-foreground mb-2">You don't have any active projects at the moment.</p>;
           <Button variant="outline" asChild>;
@@ -281,13 +322,47 @@ if ( {) {
       </Card>;
     )}return (}
   return (<Card>;
+=======
+    );
+
+
+        <CardContent className="text-center py-6">
+          <p className="text-muted-foreground mb-2">You don't have any active projects at the moment.</p>
+          <Button variant="outline" asChild>
+            <Link href="/jobs">Find Opportunities</Link>
+          </Button>
+
+
+        </CardContent>
+      </Card>
+    )
+  }
+
+
+
+  return (
+  }
+  return (
+
+
+    <Card>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/projects/ActiveProjectsCard.tsx
       <CardHeader>;
         <CardTitle className='flex items-center gap-2'>;
           <BriefcaseIcon className='h-5 w-5 text-primary' />          <span>Active Projects</span>;
         </CardTitle>;
         <CardDescription>Your ongoing work</CardDescription>;
       </CardHeader>;
+<<<<<<< HEAD:src_backup/components/projects/ActiveProjectsCard.tsx
       <CardContent className='space-y-4'>  ;return (<Card>;
+=======
+      <CardContent className='space-y-4'>  ;
+
+
+  return (
+
+    <Card>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/projects/ActiveProjectsCard.tsx
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
           <BriefcaseIcon className="h-5 w-5 text-primary" />;
@@ -297,6 +372,7 @@ if ( {) {
       <CardContent className='space-y-4'>;
         {activeProjects && activeProjects.map(project => (<div key={project && project.id} className='border rounded-md p-3'>;
             <div className='flex justify-between items-start mb-2'>;
+<<<<<<< HEAD:src_backup/components/projects/ActiveProjectsCard.tsx
               <h3 className='font-medium text-sm'>{project && project.job?.title}</h3>;<Card>;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
@@ -324,6 +400,25 @@ return (<Card>;
                     ? 'bg-blue-100 text-blue-800 hover:bg-blue-100';
                     : '';
                   : 'In Progress'}</Badge>;
+=======
+              <h3 className='font-medium text-sm'>{project && project.job?.title}</h3>;
+        {activeProjects.map(project => (
+          <div key={project.id} className='border rounded-md p-3'>
+            <div className='flex justify-between items-start mb-2'>
+              <h3 className='font-medium text-sm'>{project.job?.title}</h3>
+              <Badge
+                variant={
+                  project.status === 'in_progress' ? 'default' : 'outline'
+                }
+                className={
+                  project.status === 'in_progress'
+                    ? 'bg-blue-100 text-blue-800 hover:bg-blue-100'
+                    : ''
+
+
+                  : 'In Progress'}
+              </Badge>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/projects/ActiveProjectsCard.tsx
             </div>;
             <div className='flex items-center text-xs text-muted-foreground gap-2'>;
               <Clock className='h-3 w-3' />;
@@ -341,6 +436,7 @@ return (<Card>;
             <Link href='/projects'>View All Projects</Link>          </Button>          <Button variant="ghost" className="w-full" asChild>;
             <Link href="/projects">View All Projects</Link>;
           </Button>;
+<<<<<<< HEAD:src_backup/components/projects/ActiveProjectsCard.tsx
         </CardFooter>;)}</Badge>;
             </div>;
             <div className='flex items-center text-xs text-muted-foreground gap-2'>;
@@ -364,6 +460,43 @@ export /**;
 function ActiveProjectsCard() {const { projects, is_loading } = use_projects ()const [active_projects, setActiveProjects] = useState < Project[]>([])useEffect (() => {    // Check condition;
 if ( {) {$2;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/projects/ActiveProjectsCard.tsx
+=======
+        </CardFooter>;
+
+      )}
+
+              <Link href={`/project/${project.id}`}>View Project</Link>
+            </Button>
+          </div>
+        ))}
+
+}
+
+import { useEffect, useState } from 'react';
+import Link from 'next / link';
+import { BriefcaseIcon, Clock } from 'lucide-react';
+import { Button } from '@/components / ui / button';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components / ui / card';
+import { Badge } from '@/components / ui / badge';
+import { use_projects } from '@/hooks / use_projects';
+import { Project } from '@/types / projects';
+export /**
+ * ActiveProjectsCard - Function description
+ */
+function ActiveProjectsCard() {
+  const { projects, is_loading } = use_projects ();
+  const [active_projects, setActiveProjects] = useState < Project[]>([]);
+  useEffect (() => {    // Check condition
+if ( {) {
+  $2
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/projects/ActiveProjectsCard.tsx
 }
       const active = projects;
         .filter (p => ['offer_accepted', 'in_progress'].includes (p.status)).slice (0, 3)// Limit to 3 most recent projects;
@@ -483,6 +616,7 @@ if ( {'") {
 }
 
 ;
+<<<<<<< HEAD:src_backup/components/projects/ActiveProjectsCard.tsx
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -521,3 +655,5 @@ if ( {'") {$2;
   return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <BriefcaseIcon className="h-5 w-5 text-primary" /> <span>Active Projects</span> </CardTitle> <CardDescription>Your ongoing work</CardDescription> </CardHeader> <CardContent className="text-center py-6" > <p className="text-muted-foreground mb-2" >You don't have any active projects at the moment.</p> <Button variant="outline" asChild> <Link href="/jobs" >Find Opportunities</Link> </Button> </CardContent> </Card> return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <BriefcaseIcon className="h-5 w-5 text-primary" /> <span>Active Projects</span> </CardTitle> <CardDescription>Your ongoing work</CardDescription> </CardHeader> </Button> </div>) )}</CardContent> {";
   activeProjects.length > 2 && (<CardFooter> <Button variant="ghost" className="w-full" asChild> <Link href="/projects">View All Projects</Link> </Button> </CardFooter>)}</Card>)}'";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/projects/ActiveProjectsCard.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/projects/ActiveProjectsCard.tsx

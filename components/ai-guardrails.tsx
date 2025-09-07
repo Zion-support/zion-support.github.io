@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head';
 import { Check, Shield, ShieldAlert, Lock, Phone, Mail, MapPin, ExternalLink  } from 'lucide-react';
@@ -25,6 +26,14 @@ import {
   MapPin
   ExternalLink;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  Check,
+  Shield,
+  ShieldAlert,
+  Lock,
+  Phone,
+  Mail,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 } from 'lucide-react';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -107,6 +116,7 @@ import React from 'react';
         <meta
           name='description'
           content='Production-grade safety and governance for AI apps: policy enforcement, jailbreak detection, PII/PHI controls and audit logs with SDKs and proxies.'
+<<<<<<< HEAD
         />
         <link rel='canonical' href='https://ziontechgroup.com/ai-guardrails' />
       </Head>
@@ -134,6 +144,8 @@ import React from 'react';
         <meta;
           name='description';
           content='Production-grade safety and governance for AI apps: policy enforcement, jailbreak detection, PII/PHI controls and audit logs with SDKs and proxies.';
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         />;
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/ai-guardrails' />;
       </Head>;Safety and governance for LLM apps with minimal integration and;
@@ -186,6 +198,7 @@ import React from 'react';
     </div>;
     </div>;
   </section>;
+<<<<<<< HEAD
   </UltraAdvancedFuturisticBackground>)}/>;
         <link rel='canonical' href='https://ziontechgroup.com/ai-guardrails' />;
       </Head>;
@@ -324,3 +337,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </UltraAdvancedFuturisticBackground>;
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  </UltraAdvancedFuturisticBackground>);
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

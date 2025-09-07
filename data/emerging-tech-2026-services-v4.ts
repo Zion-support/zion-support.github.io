@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   contactInfo: {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -65,6 +66,9 @@
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  contactInfo: {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   contactInfo: {contactInfo: {mobile: string;
     email: string;
@@ -358,6 +362,7 @@ export interface EmergingTech2026ServiceV4  {{mobile: '+1 302 464 0950',email: '
     address: string,
     website: string
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -366,6 +371,9 @@ export interface EmergingTech2026ServiceV4  {{mobile: '+1 302 464 0950',email: '
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     },
 =======
     rating: 4.8;
@@ -388,6 +396,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     id: 'quantum-internet-security-gateway', name: 'Quantum Internet Security Gateway',
     tagline: 'Unbreakable quantum encryption for the future internet', price: '$899',
     period: '/month',
@@ -578,6 +589,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     contactInfo: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -589,10 +601,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     },
     realImplementation: true, implementationDetails: 'Comprehensive digital twin platform for smart cities with real-time modeling and predictive analytics.',
     launchDate: '2026-05-15', customers: 30,
     rating: 4.8,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -606,6 +622,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     launchDate: '2026-05-15', customers: 30,
     rating: 4.8
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -614,6 +634,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 25;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -638,6 +659,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTech2026ServiceV4 {;
   id: string,;
@@ -1032,6 +1057,7 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [;
     customers: 30,;
     rating: 4.8;
     reviews: 25;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1126,84 +1152,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.8,
     reviews: 38,
   },
+=======
+  }
+];
+  }
+];
 
-  // Synthetic Biology AI Platform
-  {
-    id: 'synthetic-biology-ai-platform',
-    name: 'Synthetic Biology AI Platform',
-    tagline: 'Design and engineer life with AI-powered synthetic biology',
-    price: '$1,599',
-    period: '/month',
-    description:
-      'Revolutionary synthetic biology platform that combines AI, machine learning, and genetic engineering to design, simulate, and create novel biological systems for healthcare, agriculture, and industrial applications.',
-    features: [
-      'AI-powered DNA design',
-      'Genetic circuit simulation',
-      'Protein engineering',
-      'Metabolic pathway design',
-      'CRISPR optimization',
-      'Biological modeling',
-      'Lab automation integration',
-      'Safety assessment',
-      'Regulatory compliance',
-      'Expert consultation',
-    ],
-    popular: false,
-    icon: '🧬',
-    color: 'from-blue-600 to-cyan-600',
-    textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/synthetic-biology-ai-platform',
-    marketPosition:
-      'First AI-powered synthetic biology platform. Competitive advantage: AI-driven design, comprehensive simulation, and lab integration.',
-    targetAudience:
-      'Biotech companies, Pharmaceutical companies, Research institutions, Agricultural companies, Industrial biotech',
-    trialDays: 14,
-    setupTime: '1 month',
-    category: 'Synthetic Biology',
-    realService: true,
-    technology: [
-      'AI/ML',
-      'Genetic Engineering',
-      'CRISPR',
-      'Python',
-      'React',
-      'PostgreSQL',
-      'AWS',
-      'Lab Automation',
-    ],
-    integrations: [
-      'Lab equipment',
-      'DNA synthesizers',
-      'Sequencing platforms',
-      'Bioinformatics tools',
-    ],
-    useCases: [
-      'Drug discovery',
-      'Agricultural improvement',
-      'Industrial enzymes',
-      'Biomaterials',
-      'Biofuels',
-    ],
-    roi: 'Accelerate research by 10x, reduce development costs by 70%, increase success rates by 300%',
-    competitors: ['Ginkgo Bioworks', 'Twist Bioscience', 'Benchling'],
-    marketSize: '$15B synthetic biology market',
-    growthRate: '80% annual growth',
-    variant: 'ai-futuristic',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    },
-    realImplementation: true,
-    implementationDetails:
-      'AI-powered synthetic biology platform with genetic engineering and lab automation integration.',
-    launchDate: '2026-04-15',
-    customers: 25,
-    rating: 4.9,
-    reviews: 20,
-  },
 
+;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+<<<<<<< HEAD
   // Autonomous Drone Fleet Management
   {
     id: 'autonomous-drone-fleet-management',
@@ -1608,3 +1569,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

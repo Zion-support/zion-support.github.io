@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
 
 <<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
 import { useState } from 'react';
@@ -45,6 +46,22 @@ function AIMatchingResults() {
   const [active_tab, setActiveTab] = useState ('all');
   // Group matches by category;
 
+=======
+interface AIMatchingResultsProps {
+
+  matches: MatchResultItem[]
+  onSelectMatch?: (match: MatchResultItem) => void
+  isLoading?: boolean
+  projectDescription?: string
+  serviceType?: string;interface AIMatchingResultsProps {
+  matches: MatchResultItem[]
+  onSelectMatch?: (match: MatchResultItem,) => void
+  isLoading?: boolean
+  projectDescription?: string
+
+  serviceType?: string
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIMatchingResults.tsx
   const categories = {
     all: matches,
     talent: matches.filter (match =>;
@@ -84,6 +101,10 @@ if ( {) {$2;
 <<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
       </div>);
   }
+<<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIMatchingResults.tsx
 
 
 import { useState } from 'react';
@@ -140,7 +161,10 @@ interface AIMatchingResultsProps  {matches: MatchResultItem[];
 <<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
     );
 
+<<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIMatchingResults.tsx
   }
   return (
     <div className='space-y-4'>;
@@ -148,6 +172,7 @@ interface AIMatchingResultsProps  {matches: MatchResultItem[];
         defaultValue='all'
         value={activeTab}
         onValueChange={setActiveTab}
+<<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
         className='w-full'>;
 =======
     )}
@@ -184,6 +209,8 @@ interface AIMatchingResultsProps  {matches: MatchResultItem[];
                           match && match.category.toLowerCase().includes('talent')
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIMatchingResults.tsx
                             ? 'bg-zion-cyan'
                             : match && match.category.toLowerCase().includes('service')
                               ? 'bg-zion-purple'
@@ -196,6 +223,10 @@ interface AIMatchingResultsProps  {matches: MatchResultItem[];
                           <Avatar className='h-12 w-12 border border-zion-blue-light'>;
                             {match && match.image ? (;
 
+<<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIMatchingResults.tsx
 import { useState } from 'react';
 import { MatchResultItem } from '@/lib/ai-matchmaking';
 import { Card, CardContent } from '@/components/ui/card';
@@ -236,7 +267,10 @@ export function AIMatchingResults({matches;
                         <div className="flex items-start gap-4">
                           <Avatar className="h-12 w-12 border border-zion-blue-light">
                             {match.image ? (
+<<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIMatchingResults.tsx
                               <AvatarImage
 =======
                         match.category.toLowerCase().includes("talent") ? "bg-zion-cyan" :;
@@ -363,6 +397,10 @@ if ( {) {$2;
                                 </div>
                               )}
                             </div>
+<<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIMatchingResults.tsx
 
                             
                             <div className="mt-2 flex flex-wrap gap-1">
@@ -414,12 +452,15 @@ if ( {) {$2;
 <<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
         ))}
 
+<<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
 
 };
 ;
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIMatchingResults.tsx
 }
 =======
         ))}}}
@@ -433,6 +474,7 @@ if ( {) {$2;
       </Tabs>;
 <<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
     </div>);
+<<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
 }
 
       </Tabs>
@@ -444,3 +486,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/AIMatchingResults.tsx
+=======
+
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIMatchingResults.tsx

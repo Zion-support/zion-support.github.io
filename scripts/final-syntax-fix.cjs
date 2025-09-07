@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 #!/usr/bin/env node
 
@@ -17,6 +18,9 @@ console.log('==================');
 =======
 console.log('
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 // Function to fix specific syntax errors
 function fixSpecificErrors(content) {
   return content
@@ -79,12 +83,16 @@ let totalFixed = 0;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 for (const file of filesToFix) {
   try {
     if (!fs.existsSync(file)) {
@@ -111,9 +119,13 @@ console.log(`\n✅ Fixed ${totalFixed} files`);
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 console.log('🎉 Final syntax fix completed!');
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+console.log('🎉 Final syntax fix completed!');
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

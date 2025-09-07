@@ -1,4 +1,5 @@
 <<<<<<< HEAD:src_backup/components/developers/ApiDocsLayout.tsx
+<<<<<<< HEAD:src_backup/components/developers/ApiDocsLayout.tsx
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -31,15 +32,20 @@ import React from 'react';
   const currentPath = router && router.pathname;
 <<<<<<< HEAD:src_backup/components/developers/ApiDocsLayout.tsx
 export default ApiDocsLayout;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocsLayout.tsx
 
 
 import { SearchSuggestion } from '@/types/search';
 import React, { useState } from 'react';
+<<<<<<< HEAD:src_backup/components/developers/ApiDocsLayout.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 export default ApiDocsLayout;import { SearchSuggestion  } from '@/types/search';
 import React, { useState } from 'react';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/developers/ApiDocsLayout.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocsLayout.tsx
 import Link from 'next/link';
 import { useRouter   } from 'next/router';
 import { Search  } from 'lucide-react';
@@ -62,6 +68,7 @@ import { cn } from "@/lib/utils",
 import {
  getDocsSearchPath,
  docsSearchSuggestions
+<<<<<<< HEAD:src_backup/components/developers/ApiDocsLayout.tsx
 
 } from "@/data/docsSearchData",
 
@@ -69,6 +76,10 @@ import {
 interface ApiDocsLayoutProps {
   children: React.ReactNode;
 
+=======
+interface ApiDocsLayoutProps {
+  children: React.ReactNode
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocsLayout.tsx
 }
 
 
@@ -76,19 +87,28 @@ interface ApiDocsLayoutProps {
   const currentPath = router.pathname
   const [searchValue, setSearchValue] = useState("")
   const navigationItems = [
+<<<<<<< HEAD:src_backup/components/developers/ApiDocsLayout.tsx
    { title: "Getting Started", path: "/developers/docs/getting-started" },
     { title: "API Reference", path: "/developers/docs/reference" },
 
+=======
+
+   { title: "Getting Started", path: "/developers/docs/getting-started" },
+    { title: "API Reference", path: "/developers/docs/reference" },
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocsLayout.tsx
 
   const router = useRouter(),
   const currentPath = router.pathname,
   const [searchValue, setSearchValue] = useState(""),
 
 
+<<<<<<< HEAD:src_backup/components/developers/ApiDocsLayout.tsx
 
   const navigationItems = [
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocsLayout.tsx
    { title: "Getting Started", path: "/developers/docs/getting-started" },
     { title: "API Reference", path: "/developers/docs/reference" },
     { title: "Webhooks", path: "/developers/docs/webhooks" },
@@ -96,6 +116,10 @@ interface ApiDocsLayoutProps {
     { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }],
 
   const handleSelectSuggestion = (suggestion: SearchSuggestion) => {
+<<<<<<< HEAD:src_backup/components/developers/ApiDocsLayout.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocsLayout.tsx
     const path = getDocsSearchPath(suggestion.text),
     if (path) {
       router.push(path),
@@ -124,11 +148,15 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
   const navigationItems = [;
    { title: "Getting Started", path: "/developers/docs/getting-started" },;
     { title: "API Reference", path: "/developers/docs/reference" },;
+<<<<<<< HEAD:src_backup/components/developers/ApiDocsLayout.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocsLayout.tsx
     { title: "Webhooks", path: "/developers/docs/webhooks" },;
     { title: "Sample Code", path: "/docs/sample-code" },;
     { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }],;
   const handleSelectSuggestion = (suggestion: SearchSuggestion) => {;
+<<<<<<< HEAD:src_backup/components/developers/ApiDocsLayout.tsx
 
 
     const path = getDocsSearchPath(suggestion.text),;
@@ -150,6 +178,19 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
      {/* Sidebar */}
      <div className="hidden md:block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto">
 
+=======
+    const path = getDocsSearchPath(suggestion.text);    if (path) {
+      router.push(path)
+      setSearchValue("")
+    }
+  }
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    const path = getDocsSearchPath(searchValue);    if (path) {
+      router.push(path)
+      setSearchValue("")
+    }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocsLayout.tsx
 
 
       <Link href="/developers/docs" className="flex items-center mb-8">
@@ -161,6 +202,7 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
       <div className="mb-6">
        <form onSubmit={handleSubmit} className="relative">
         <Search className="absolute left-2 top-2.5 h-4 w-4 text-zinc-500" />
+<<<<<<< HEAD:src_backup/components/developers/ApiDocsLayout.tsx
      <div className="hidden md: block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto">;
 =======
  } from '@/data / docsSearchData';
@@ -225,11 +267,29 @@ interface ApiDocsLayoutProps  {children: React && React.ReactNode;
           currentPath === item && item.path
 
 
+=======
+
+
+         placeholder="Search documentation"
+        />
+       </form>
+      </div>
+      <nav role="navigation" aria-label="Main" className="flex flex-col space-y-1">
+       {navigationItems.map((item) => (
+        <Link
+         key={item.path}
+         href={item.path}
+         className={cn(
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocsLayout.tsx
            ? "bg-zion-purple/20 text-zion-cyan"
            : "text-zinc-400 hover: text-white hover:bg-zinc-900"
          )}>;
          {item && item.title}
         </Link>;
+<<<<<<< HEAD:src_backup/components/developers/ApiDocsLayout.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocsLayout.tsx
 
           "block px-3 py-2 rounded-md text-sm",
           currentPath === item.path
@@ -237,11 +297,15 @@ interface ApiDocsLayoutProps  {children: React && React.ReactNode;
            : "text-zinc-400 hover:text-white hover:bg-zinc-900"
          )}
         >;
+<<<<<<< HEAD:src_backup/components/developers/ApiDocsLayout.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocsLayout.tsx
 
          {item.title}
         </Link>
        ))}
+<<<<<<< HEAD:src_backup/components/developers/ApiDocsLayout.tsx
 
       </nav>;
 =======
@@ -269,6 +333,27 @@ interface ApiDocsLayoutProps  {children: React && React.ReactNode;
 <<<<<<< HEAD:src_backup/components/developers/ApiDocsLayout.tsx
   );
 
+=======
+      </nav>
+     </div>
+     {/* Main content */}
+     <div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12">
+      {children}
+}
+}
+/* Sidebar */ "
+}<div className="hidden md:block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto"> <Link href="/developers/docs"className="flex items-center mb-8"> <div className="bg-gradient-to-r from-zion-purple to-zion-cyan rounded-md w-8 h-8 mr-3 flex items-center justify-center"> <span className="text-white font-bold">Z</span> </div> <span className="font-bold text-white">API Docs</span> </Link> <div className="mb-6"> /> </form> </div>)
+}> {
+  item.title
+}</Link>) )
+}</nav> </div> {
+  /* Main content */ "
+}<div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12"> {
+  children
+}</div> </div>)
+}export default ApiDocsLayout
+"export default ApiDocsLayout
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocsLayout.tsx
 
 =======
   )}
@@ -369,6 +454,7 @@ export default ApiDocsLayout;
 }
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
   const router = null;
+<<<<<<< HEAD:src_backup/components/developers/ApiDocsLayout.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 }<div className="hidden md:block w - 64 border - r border - zinc - 800 p - 6 sticky top - 0 h - screen overflow - y-auto"> <Link href="/developers / docs"className="flex items - center mb - 8"> <div className="bg - gradient - to - r from - zion - purple to - zion - cyan rounded - md w - 8 h - 8 mr - 3 flex items - center justify - center"> <span className="text - white font - bold">Z</span> </div> <span className="font - bold text - white">API Docs</span> </Link> <div className="mb - 6"> /> </form> </div>)}> {item.title;
@@ -382,3 +468,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )}export default ApiDocsLayout;export default ApiDocsLayout;}
 export function ApiDocsLayout() {const router  = null;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/developers/ApiDocsLayout.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/developers/ApiDocsLayout.tsx

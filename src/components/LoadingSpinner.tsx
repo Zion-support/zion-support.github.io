@@ -5,10 +5,24 @@ interface LoadingSpinnerProps  {size?: 'sm' | 'md' | 'lg';
 <<<<<<< HEAD
 }
 
+<<<<<<< HEAD
+=======
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+  size = 'md', 
+  text = 'Loading...', 
+  className = '' 
+  className = ''
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
   text = 'Loading...',
   className = '',
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
@@ -27,6 +41,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 };
 
 export default LoadingSpinner;
+<<<<<<< HEAD
 =======
 }const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({size = 'md',text = 'Loading...',className = '';
 }) => {const sizeClasses = {sm: 'w-4 h-4',md: 'w-8 h-8',lg: 'w-12 h-12';
@@ -41,3 +56,5 @@ export default LoadingSpinner;
     </div>;
   )}export default LoadingSpinner;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

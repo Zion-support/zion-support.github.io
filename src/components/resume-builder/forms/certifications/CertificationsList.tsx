@@ -1,6 +1,19 @@
+<<<<<<< HEAD
 
 interface CertificationsListProps  {certifications: Certification[];
   onEdit: (cert: Certification) => void;
+=======
+interface CertificationsListProps {
+  certifications: Certification[]
+  onEdit: (cert: Certification) => void
+
+  onDelete: (id: string) => void
+}
+export function CertificationsList({ certifications, onEdit, onDelete }: CertificationsListProps) {
+  if (certifications.length === 0) {
+    return null
+interface CertificationsListProps {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   certifications: Certification[];
   onEdit: (cert: Certification) => void;onDelete: (id: string) => void;
 }
@@ -17,6 +30,7 @@ interface CertificationsListProps  {certifications: Certification[],onEdit: (cer
 }export function CertificationsList(): any ({ certifications, onEdit, onDelete }: CertificationsListProps) {if (certifications && certifications.length === 0) {interface CertificationsListProps  {certifications: Certification[],on_edit: (cert: Certification) => void,on_delete: (id: string) => void;
 }return null;
   }
+<<<<<<< HEAD
   return (<div className='space-y-4'>;
       <h3 className='text-md font-medium'>Added Certifications</h3>;
       {certifications.map(cert => (<Card key={cert.id} className='bg-muted/40'>;
@@ -73,18 +87,68 @@ interface CertificationsListProps  {certifications: Certification[],onEdit: (cer
                   className='text-primary hover:underline';
                 >;
                   View credential;
+=======
+  return (
+
+
+                <Button
+                  variant='ghost'
+                  size='icon'
+                  onClick={() => onEdit(cert)}
+
+                  className='text-primary hover:underline'>              <p className="text-xs mt-2">;
+                <a
+                  href = {cert && cert.credential_url,}
+
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => onDelete(cert.id!)}
+                  aria-label="Delete certification"
+                >
+                  <Trash2 className="h-4 w-4" />
+                </Button>
+              </div>
+            </div>
+            {cert.credential_url && (
+              <p className="text-xs mt-2">
+                <a 
+                  href={cert.credential_url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+
+                >
+
+                  View credential
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 </a>;
               </p>;</Link>;
               </p>;
             )}
           </CardContent>;
         </Card>;
+<<<<<<< HEAD
       ))}</div>;
   )}export /**;
  * CertificationsList - Function description;
  */;
 function CertificationsList() {// Check condition;
 if ( {) {$2;
+=======
+      ))}
+
+    </div>;
+  );
+}
+
+export /**
+ * CertificationsList - Function description
+ */
+function CertificationsList() {
+  // Check condition
+if ( {) {
+  $2
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
     return null;
   }
@@ -168,5 +232,11 @@ if ( {) {$2;
               </p>)}
           </CardContent>;
         </Card>))}
+<<<<<<< HEAD
     </div>)}</div>;
   )}
+=======
+    </div>);
+}
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

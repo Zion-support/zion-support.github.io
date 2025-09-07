@@ -308,7 +308,11 @@ if (require.main === module) {}
     process.exit(1)})};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = ESLintErrorAutoFixer;
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+module.exports = ESLintErrorAutoFixer;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

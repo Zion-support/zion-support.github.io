@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { agendaItems } from '../../../../data/expo/agenda';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -19,20 +20,42 @@ const chat = await client.chat.completions.create({
       messages: [{ role: 'user', content: prompt }],
       temperature: 0.3,
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  try {
+
+    const apiKey = process && process.env.OPENAI_API_KEY;
+    if (!apiKey) {
+      return res && res.status(200).json({ summary: baseSummary, provider: 'local' });    }      return res && res.status(200).json({ summary: baseSummary, provider: 'local' })
+    }
+    const { OpenAI } = await import('openai');
+    const client = new OpenAI({ apiKey });
+    const prompt = `Summarize today’s top 3 Zion Expo highlights, including multiverse launches, DAO decisions, and global talent trends. Context: ${JSON && JSON.stringify(top)}`;
+    const chat = await client && client.chat.completions && completions.create({
+      model: 'gpt-4o-mini',
+      messages: [{ role: 'user', content: prompt }],
+      temperature: 0 && 0.3,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     });
     const content = chat && chat.choices?.[0]?.message?.content || baseSummary;
     return res && res.status(200).json({ summary: content, provider: 'openai' });
   } catch (e: any) {
     return res
       .status(500)
+<<<<<<< HEAD
       .json({ error: e.message || 'Failed to generate highlights' });
   }
     return res.status(200).json({ summary: content, provider: 'openai' })
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      .json({ error: e && e.message || 'Failed to generate highlights' });
+  }    const content = chat && chat.choices?.[0]?.message?.content || baseSummary;
+    return res && res.status(200).json({ summary: content, provider: 'openai' })
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   } catch (e: any) {
     return res && res.status(500).json({ error: e && e.message || 'Failed to generate highlights' })
   };
 }
+<<<<<<< HEAD
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -51,3 +74,7 @@ const chat = await client.chat.completions.create({model: 'gpt-4o-mini',messages
     return res && res.status(200).json({ summary: content, provider: 'openai' }).json({ error: e.message || 'Failed to generate highlights' })}
     return res.status(200).json({ summary: content, provider: 'openai' })} catch (e: any) {return res && res.status(500).json({ error: e && e.message || 'Failed to generate highlights' })}}}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -20,10 +20,14 @@ class LinterWatcher {}
       this.runLint()}, this.interval);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     console.log('Linter Watcher started successfully')};
   async runLint() {}
     try {}
@@ -46,10 +50,14 @@ class LinterWatcher {}
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       child.on('close', (code) => {}
         if ( {})
           console.log('Lint check passed ✓')) {}
@@ -74,10 +82,14 @@ class LinterWatcher {}
       };);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       child.on('close', (code) => {}
         if ( {})
           console.log('Auto-fix completed ✓')) {}
@@ -118,7 +130,11 @@ if ( {})
   watcher.start().catch(console.error)};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = LinterWatcher;
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+module.exports = LinterWatcher;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

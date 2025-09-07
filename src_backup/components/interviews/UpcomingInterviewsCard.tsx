@@ -1,6 +1,10 @@
 <<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
+<<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
 // Filter for confirmed interviews in the future
 
+=======
+        // Filter for confirmed interviews in the future
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/interviews/UpcomingInterviewsCard.tsx
         const upcoming = interviews
           .filter(
             interview =>
@@ -70,6 +74,7 @@ import { useInterviews } from "@/hooks/useInterviews",;
 import { Interview } from "@/types/interview",;
 import { format, isPast, parseISO } from "date-fns",;
 import Link from "next/link",;
+<<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
 import { Calendar, Clock, Video } from 'lucide-react';
 import { Avatar } from '@/components/ui/ avatar';
 import { logErrorToProduction } from '@/utils/ production_logger';
@@ -113,6 +118,9 @@ function UpcomingInterviewsCard() {
 
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/interviews/UpcomingInterviewsCard.tsx
 import React, { useEffect, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -121,6 +129,7 @@ import { Interview } from '@/types/interview';
 import { format, isPast, parseISO } from 'date-fns';
 import Link from 'next/link';
 import { Calendar, Clock, Video } from 'lucide-react';
+<<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
 import { Avatar } from '@/components/ui/avatar';
 import { logErrorToProduction } from '@/utils/productionLogger';
 export function UpcomingInterviewsCard() {;
@@ -190,11 +199,17 @@ if ( {) {
           <CardTitle className="text-lg flex items-center">;
             <Video className="h-5 w-5 mr-2 text-zion-purple" />;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/interviews/UpcomingInterviewsCard.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/interviews/UpcomingInterviewsCard.tsx
             Upcoming Interviews;
           </CardTitle>;
         </CardHeader>;
         <CardContent>;
 <<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
+<<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/interviews/UpcomingInterviewsCard.tsx
 
           </div>;
         </CardContent>;
@@ -203,7 +218,10 @@ if ( {) {
 
 
 
+<<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/interviews/UpcomingInterviewsCard.tsx
   }
   if (upcomingInterviews.length === 0) {
     return (
@@ -227,6 +245,7 @@ if ( {) {
         </CardContent>
       </Card>
     )
+<<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
           </div>;
         </CardContent>;
       </Card>;
@@ -317,6 +336,18 @@ if ( {) {$2;
   }
   return (
 
+=======
+    <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
+      <CardHeader>
+        <CardTitle className="text-lg flex items-center">
+          <Video className="h-5 w-5 mr-2 text-zion-purple" />
+          Upcoming Interviews
+        </CardTitle>
+      </CardHeader>
+      <CardContent>
+        <div className="space-y-4">
+          {upcomingInterviews.map(interview => {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/interviews/UpcomingInterviewsCard.tsx
 
 
 
@@ -333,6 +364,10 @@ if ( {) {$2;
 
 
 
+<<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/interviews/UpcomingInterviewsCard.tsx
 import { Avatar } from '@/components/ui/avatar';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
@@ -343,12 +378,16 @@ export function UpcomingInterviewsCard() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     const loadInterviews = null;
+<<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/interviews/UpcomingInterviewsCard.tsx
             return (
               <div key={interview.id} className="flex items-center gap-3">
                 <Avatar className="h-10 w-10 bg-zion-purple/10">
                   {interview.client_avatar || interview.talent_avatar ? (
                     <img
+<<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
 =======
     )<Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
       <CardHeader>;
@@ -395,6 +434,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   )}
 <<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
                 </Avatar>
+=======
+                      src={interview.client_avatar || interview.talent_avatar}
+                      alt={interview.client_name || interview.talent_name}
+
+
+                    <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">
+                      {(interview.client_name || interview.talent_name || "U").charAt(0)}
+                    </div>
+                  )}
+                </Avatar>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/interviews/UpcomingInterviewsCard.tsx
                 <div className="flex-1">
                   <div className="flex justify-between items-start">
                     <p className="font-medium line-clamp-1">
@@ -405,6 +456,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <span className='text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse'>
                         Soon
                       </span>
+<<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
 =======
                 </Avatar>;
                 <div className="flex-1">;
@@ -471,6 +523,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           })}
         </div>
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/interviews/UpcomingInterviewsCard.tsx
         
         <div className="mt-4 pt-3 border-t border-zion-blue-light/40">
           <Button asChild size="sm" variant="outline" className="w-full">
@@ -483,6 +537,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </CardContent>
     </Card>
+<<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
                   </div>;
 =======
             )})}
@@ -608,3 +663,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </CardContent>;}</Card>)}
 })
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/interviews/UpcomingInterviewsCard.tsx
+=======
+  )
+
+
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/interviews/UpcomingInterviewsCard.tsx

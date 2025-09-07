@@ -42,6 +42,7 @@ ursor/automate-test-improve-and-merge-code-646c
   }
   "timestamp": "2025-09-06T04:56:16.606Z",
   "vulnerabilities": [
+<<<<<<< HEAD
     "Dependency vulnerabilities found",
     "XSS risk in SEOEnhancer.tsx",
     "Code injection risk in helpers.js"
@@ -60,3 +61,15 @@ ursor/automate-test-improve-and-merge-code-646c
   ]
 }
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+    {
+      "file": "/workspace/package.json",
+      "type": "potential_hardcoded_secret",
+      "severity": "high"
+    }
+  "totalVulnerabilities": 1,
+  "highSeverity": 1,
+  "mediumSeverity": 0,
+  "lowSeverity": 0
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

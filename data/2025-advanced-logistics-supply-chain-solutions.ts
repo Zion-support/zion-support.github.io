@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -27,6 +28,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import { ServiceVariant  } from '../types/service-variants';
 export interface AdvancedLogisticsSupplyChainSolution2025  {id: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+import { ServiceVariant } from '../types/service-variants';
+export interface AdvancedLogisticsSupplyChainSolution2025 {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string;
   name: string;
   tagline: string;
@@ -57,6 +64,7 @@ export interface AdvancedLogisticsSupplyChainSolution2025  {id: string;
     email: string;
 <<<<<<< HEAD
     address: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -232,6 +240,9 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     email: string;
     address: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Demand forecasting',
         'Inventory optimization',
         'Route optimization',
@@ -244,6 +255,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
         'Compliance tools'
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -266,6 +278,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       color: 'from - blue - 600 via - indigo - 600 to - purple - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / ai - powered - supply - chain - optimization',
@@ -296,6 +312,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -311,6 +328,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -325,6 +346,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       reviews: 98
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -355,6 +377,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Quantum algorithms',
         'Route optimization',
         'Scheduling optimization',
@@ -367,6 +393,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Performance analytics'
       ],
       popular: false,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -418,6 +445,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -436,23 +467,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-        'Real-time tracking',
-      id: 'iot - fleet - management - platform',
-      name: 'IoT Fleet Management Platform',
-      tagline: 'Comprehensive IoT - based fleet monitoring and management',
-      price: '$799',
-      period: '/month',
-      description:;
-        'Advanced IoT - based fleet management platform that provides real - time monitoring, predictive maintenance, and optimization for vehicle fleets.',
-      features: [;
-        'Real - time tracking',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -464,6 +489,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Predictive maintenance',
         'Fuel monitoring',
         'Driver behavior analysis',
@@ -475,6 +502,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Compliance tools'
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -526,6 +554,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -544,23 +576,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-        'End-to-end traceability',
-      id: 'blockchain - supply - chain - transparency',
-      name: 'Blockchain Supply Chain Transparency Platform',
-      tagline: 'End - to - end supply chain transparency with blockchain',
-      price: '$899',
-      period: '/month',
-      description:;
-        'Advanced blockchain - based supply chain transparency platform that provides end - to - end visibility, traceability, and compliance across global supply chains.',
-      features: [;
-        'End - to - end traceability',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -572,6 +598,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Smart contracts',
         'Compliance tracking',
         'Quality assurance',
@@ -583,6 +611,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Performance monitoring'
       ],
       popular: false,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -634,6 +663,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -648,6 +681,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       reviews: 56
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -678,6 +712,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Automated picking',
         'Smart routing',
         'Inventory optimization',
@@ -690,6 +728,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Compliance tools'
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -741,6 +780,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -753,6 +796,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',
       launchDate: '2025-02-18',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
         'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',
@@ -762,6 +806,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       customers: 178,
       rating: 4 && 4.8,
       reviews: 112
@@ -769,6 +815,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     },;
   ];    features: [
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -787,6 +834,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export interface AdvancedLogisticsSupplyChainSolution2025 {
   id: string, name: string,
   tagline: string, price: string,
@@ -802,6 +853,7 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -829,6 +881,11 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {
   customers: number;
   rating: number;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration';
+      'Custom algorithmsCompliance tools'
+    ];
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   reviews: number
 }
 export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [
@@ -841,6 +898,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     features: [
 
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
       'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration';
       'Custom algorithmsCompliance tools'
@@ -859,6 +917,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Custom algorithmsCompliance tools'
     ];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration';
+      'Custom algorithmsCompliance tools'
+    ];
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     technology: ['Machine Learning, Predictive Analytics, Supply Chain Management, Optimization Algorithms, AI/ML'];
     integrations: ['ERP systems, WMS platforms, TMS solutions, E-commerce platforms, Analytics tools'];
     useCases: ['Demand forecasting, Inventory management, Route optimization, Supplier optimization, Risk management'];
@@ -1068,13 +1132,16 @@ import { ServiceVariant } from '../types/service-variants',export interface Adva
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    popular: true, icon: '📦',
 
+<<<<<<< HEAD
     ];
 
     popular: false, icon: '⚛️',
@@ -1111,6 +1178,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     marketSize: '$28B warehouse automation market', growthRate: '38% annual growth'
     variant: 'ai-supply-chain-enterprise'
     contactInfo: {
+=======
+;
+
+
+    marketSize: '$28B warehouse automation market', growthRate: '38% annual growth'
+    variant: 'ai-supply-chain-enterprise'
+    contactInfo: {
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     popular: true;
     icon: '📦';
     color: 'from-blue-600 via-indigo-600 to-purple-600';
@@ -1318,6 +1394,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     launchDate: '2025-02-18';
     customers: 178;
     rating: 4.8;
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 112
 <<<<<<< HEAD
@@ -1422,6 +1499,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+    reviews: 112
+
+  }
+];
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;
@@ -1604,6 +1689,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 112;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
@@ -1636,3 +1722,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ];
 ;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+  }
+];
+;
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

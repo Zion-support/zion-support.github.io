@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
   id: string;
@@ -28,6 +29,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+export interface VerifiedRealService2025Batch2 {
+
+  id: string;
+
+id: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   name: string;
   tagline: string;
   price: string;
@@ -93,6 +101,7 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -117,6 +126,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
     address: string;
+=======
+
+
+    address: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
 export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
   {
@@ -156,6 +170,7 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
     }
   }
 ];
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -183,10 +198,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -205,6 +224,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -217,6 +240,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -237,6 +261,14 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+    id: "ai-quality-assurance", name: "AI Quality Assurance Platform",
+    tagline: "Automated testing and quality control", price: "$79/month",
+    description: "AI-powered quality assurance platform that automates testing and ensures software quality.",
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     address: string
   }
 }
@@ -249,6 +281,7 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
     price: "$79/month";
     description: "AI-powered quality assurance platform that automates testing and ensures software quality.";
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -257,12 +290,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     features: [
       "Automated testing";
       "AI defect detection";
       "Performance monitoring";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       "Quality metrics";
       "Continuous integration";
     ];
@@ -296,6 +335,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 =======
@@ -318,10 +358,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -383,10 +427,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ];      mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -403,3 +451,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -29,7 +29,11 @@ const path = require("path")
     const reportPath = path.join(this.projectRoot, "content-generation-report.json")
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.log(`� Report saved "to"`)
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    console.log(`� Report saved "to"`)
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

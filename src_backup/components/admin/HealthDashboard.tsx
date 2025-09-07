@@ -1,4 +1,5 @@
 <<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
+<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -8,6 +9,30 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { AlertTriangle, CheckCircle, XCircle, Clock, TrendingUp, Activity } from 'lucide-react'
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/HealthDashboard.tsx
 import React, { useState, useEffect } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -21,6 +46,7 @@ import {
   TrendingUp
   Activity
 } from 'lucide-react'
+<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/ card';
 import { Badge } from '@/components/ui/ badge';
@@ -36,12 +62,21 @@ import {
 } from 'lucide-react';
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/HealthDashboard.tsx
 interface HealthData {
   status: 'healthy' | 'warning' | 'critical';
   timestamp: string;
   uptime: number;
   version: string;
   environment: string;
+<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/HealthDashboard.tsx
 
   metrics: {
     error_rate: number;
@@ -55,6 +90,7 @@ interface HealthData {
     status: string;
     score: number;
     issues: string[];
+<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
 
     memoryUsage: number;
   };
@@ -69,6 +105,8 @@ interface HealthData {
 
     recommendations: string[];
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/HealthDashboard.tsx
   }
   errors: {
     summary: {
@@ -76,12 +114,19 @@ interface HealthData {
       critical: number;
       high: number;
       medium: number;
+<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/HealthDashboard.tsx
 
       low: number;
     };
     topErrors: Array<{;
 
+<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/HealthDashboard.tsx
       patternId: string;
       description: string;
       occurrences: number;
@@ -89,6 +134,7 @@ interface HealthData {
       solution?: string
     }>
     byCategory: { [category: string]: number }
+<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
       low: number;
 =======
 
@@ -184,6 +230,8 @@ interface HealthData  {status: 'healthy' | 'warning' | 'critical';
     return `${bytes.toFixed(1)} MB`
   },
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/HealthDashboard.tsx
 
 
 
@@ -209,6 +257,10 @@ interface HealthData  {status: 'healthy' | 'warning' | 'critical';
         </CardContent>
       </Card>
     )
+<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/HealthDashboard.tsx
 
 const HealthDashboard: React.FC = () => {;
   const [healthData, setHealthData] = useState<HealthData | null>(null);
@@ -216,7 +268,10 @@ const HealthDashboard: React.FC = () => {;
   const [error, setError] = useState<string | null>(null);
   const [autoRefresh, setAutoRefresh] = useState(true);
   }
+<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/HealthDashboard.tsx
 
 
 
@@ -245,6 +300,7 @@ const HealthDashboard: React.FC = () => {;
   if (!healthData) return null,
 
 
+<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
 
 
   return (
@@ -259,6 +315,11 @@ const HealthDashboard: React.FC = () => {;
           <Button
 
 
+=======
+  if (!healthData) return null
+  if (!healthData) return null,
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/HealthDashboard.tsx
             variant="outline"
             size="sm"
             onClick={() => setAutoRefresh(!autoRefresh)}
@@ -327,11 +388,18 @@ const HealthDashboard: React.FC = () => {;
           <TabsTrigger value="recommendations">Recommendations</TabsTrigger>
         </TabsList>
 
+<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/HealthDashboard.tsx
 
         <TabsContent value="overview" className="space-y-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
 
+<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/HealthDashboard.tsx
             <Card>
               <CardHeader>
                 <CardTitle>System Information</CardTitle>
@@ -366,10 +434,13 @@ const HealthDashboard: React.FC = () => {;
               </CardHeader>
               <CardContent>
                 {healthData.health.issues.length > 0 ? (
+<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
 
                   <ul className="space-y-2">
                     {healthData.health.issues.map((issue, index) => (
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/HealthDashboard.tsx
                       <li key={index} className="text-sm text-red-600 flex items-start">
                         <span className="w-2 h-2 bg-red-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
 ;
@@ -581,6 +652,7 @@ const HealthDashboard: React.FC = () => {;
           <Button
             variant='outline'
             size='sm'
+<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
 
 =======
           <Button;
@@ -715,6 +787,20 @@ const HealthDashboard: React.FC = () => {;
 
 
 
+=======
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-green-600 text-sm">No issues detected</p>
+                )}
+              </CardContent>
+            </Card>
+          </div>
+        </TabsContent>
+        <TabsContent value='errors' className='space-y-4'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/HealthDashboard.tsx
 
         <TabsContent value="errors" className="space-y-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -773,6 +859,10 @@ const HealthDashboard: React.FC = () => {;
               </CardHeader>
               <CardContent>
                 {healthData.errors.topErrors.length > 0 ? (
+<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/HealthDashboard.tsx
 
 =======
                     </p>;
@@ -834,7 +924,10 @@ const HealthDashboard: React.FC = () => {;
                       .slice(0, 5);
                       .map((error, index) => (;
 
+<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/HealthDashboard.tsx
                         <div
 =======
                       .slice(0, 5).map((error, index) => (<div;
@@ -853,6 +946,7 @@ const HealthDashboard: React.FC = () => {;
                 ) : (;
                   <p className='text-gray-600 text-sm'>No recurring errors</p>;
 
+<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
                   <div className="space-y-2">
                     {healthData.errors.topErrors.slice(0, 5).map((error, index) => (
                       <div key={index} className="border-l-4 border-red-400 pl-3 py-1">
@@ -871,6 +965,8 @@ const HealthDashboard: React.FC = () => {;
 <<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
                   </div>
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/HealthDashboard.tsx
 
                 ) : (
                   <p className="text-gray-600 text-sm">No recurring errors</p>
@@ -948,6 +1044,7 @@ const HealthDashboard: React.FC = () => {;
 <<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
                 </p>
                 <p className='text-xs text-gray-600'>JavaScript heap</p>
+<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
 
               </CardContent>
             </Card>
@@ -960,12 +1057,21 @@ const HealthDashboard: React.FC = () => {;
 
 
 
+=======
+                ) : (
+                  <p className="text-gray-600 text-sm">No recurring errors</p>
+                )}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/HealthDashboard.tsx
           <Card>
             <CardHeader>
               <CardTitle>Improvement Recommendations</CardTitle>
             </CardHeader>
             <CardContent>
               {healthData.health.recommendations.length > 0 ? (
+<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/HealthDashboard.tsx
 
 =======
                 </p>;
@@ -1078,7 +1184,10 @@ const HealthDashboard: React.FC = () => {;
 <<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
                       <span className='text-sm'>{rec}</span>                    </li>;
 
+<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/HealthDashboard.tsx
                   ))}
 =======
                       <span className='text-sm'>{rec}</span>                    </li>;))}
@@ -1101,6 +1210,7 @@ export default HealthDashboard;
 if ( {) {
   $2
 }
+<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
         throw new Error (`HTTP ${response.status}`);
       }
       const data = await response.json ();
@@ -1429,10 +1539,13 @@ if (return null) {$2;
 <<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
                 </p>)}
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/HealthDashboard.tsx
             </CardContent>;
           </Card>;
         </TabsContent>;
       </Tabs>;
+<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
 
 
     </div>);
@@ -1441,11 +1554,16 @@ export default HealthDashboard;
 export default HealthDashboard,
 export default HealthDashboard,
 
+=======
+export default HealthDashboard;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/HealthDashboard.tsx
   }
   );
 };
 
 export default HealthDashboard;
+<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                 </p>)}</CardContent>;
@@ -1456,3 +1574,5 @@ export default HealthDashboard;
 export default HealthDashboard,export default HealthDashboard}
   )}export default HealthDashboard;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/admin/HealthDashboard.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/HealthDashboard.tsx

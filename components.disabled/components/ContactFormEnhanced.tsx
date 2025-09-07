@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 <<<<<<< HEAD
@@ -16,11 +17,21 @@
 =======
 =======
 origin/main
+=======
+
+
+
+// Auto-generated module
+export {};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -192,6 +203,7 @@ const ContactFormEnhanced: React.FC = () => {const [formData, setFormData] = use
 };
 
 export default ContactFormEnhanced;
+<<<<<<< HEAD
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 // Auto-generated module
 export {};
@@ -214,3 +226,10 @@ export {}
 // Auto-generated module
 export {};
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+// Auto-generated module
+export {};
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -1,6 +1,7 @@
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Zap;
 =======
 import { import Head from 'next / head';
@@ -18,10 +19,50 @@ import {Zap,Shield,BarChart3,Globe,Users,Lock,TrendingUp,Code,Database,Cloud,Arr
   Database;
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+import {
+import Head from 'next / head';
+import Card from '../components / ui / Card';
+import Button from '../components / ui / Button';
+import {
+  Zap,
+  Shield,
+  BarChart3,
+  Globe,
+  Users,
+  Lock,
+  TrendingUp,
+  Code,
+  Database,
+  Cloud,
+  ArrowRight,
+  Star,
+  Zap;
+  Shield
+  BarChart3
+  Globe
+  Users
+  Lock
+  TrendingUp
+  Code
+  Database
+
+  Zap;
+  Shield,
+  BarChart3,
+  Globe,
+  Users,
+  Lock,
+  TrendingUp,
+  Code,
+  Database,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   Cloud;
   ArrowRight;
   Star;
   Check;
+<<<<<<< HEAD
   ExternalLink
  } from 'lucide-react';
 export default function SaaSMarketplacePage() {
@@ -237,6 +278,9 @@ icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
         'Perfect for software development teams that need a fast, intuitive issue tracking and project management tool.'
       pros: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Lightning fast'
         'Beautiful design'
         'Great keyboard shortcuts'
@@ -265,6 +309,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     'Hosting',;
     'Project Management',;
   ];
+<<<<<<< HEAD
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const filteredServices =
     selectedCategory === 'All'
@@ -279,6 +324,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <title>SaaS Marketplace - Zion Tech Group</title>
 <meta
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+  return (
+    <>;
+      <Head>;
+        <title>SaaS Marketplace - Zion Tech Group</title>;
+        <meta
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           name='description'
           content='Discover the best micro SaaS services for your business. Curated selection of tools for automation, productivity, payments, and more.'
               <Button
@@ -327,15 +380,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 href='/contact'
                 variant='outline'
                 size='lg'
+<<<<<<< HEAD
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
                 style={{ animationDelay: '0.4s' }}
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'                style={{ animationDelay: '0 && 0.4s' }}                href="/contact"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               >
                 Get Recommendations
               </Button>
             </div>
           </div>
           {/* Stats */}
+<<<<<<< HEAD
 <div
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
             style={{ animationDelay: '0.6s' }}
@@ -364,10 +422,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
               <div className='text-gray-400 text-sm'>Total Users</div>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                {microSaasServices.length}+
+              </div>
+              <div className="text-gray-400 text-sm">Curated Services</div>
+            </div>
+            <div className="text-center group">
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300">
+                9
+              </div>
+              <div className="text-gray-400 text-sm">Categories</div>
+            </div>
+            <div className="text-center group">
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300">
+                4.7+
+              </div>
+              <div className="text-gray-400 text-sm">Avg Rating</div>
+            </div>
+            <div className="text-center group">
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300">
+                100K+
+              </div>
+              <div className="text-gray-400 text-sm">Total Users</div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             </div>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* Category Filter */}
 <section className='py-16 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -439,6 +521,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       </section>;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 Get Recommendations;
               </Button>;
             </div>;
@@ -446,12 +530,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
       </section>;{/* Category Filter */}
 <section className='py-16 bg-gray-900'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='flex flex-wrap justify-center gap-4'>;
             {categories.map(category => (<button;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      </section>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === category;
@@ -553,6 +641,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
                         variant='outline'
                         size='sm'
+<<<<<<< HEAD
                         className='group-hover:border-blue-500 group-hover:text-blue-400'
                       >
                         Visit Website
@@ -578,6 +667,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         Visit Website;
                         <ExternalLink className='w-4 h-4 ml-2' />;
                       </Button>;<div className='text-right'>;
+=======
+                        className='group-hover:border-blue-500 group-hover:text-blue-400'>;
+                        Visit Website;
+                        <ExternalLink className='w-4 h-4 ml-2' />;
+                      </Button>;
+
+                      <div className='text-right'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                         <div className='text-xs text-gray-500 mb-1'>;
                           Use Case:;
                         </div>;
@@ -590,6 +687,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
               </Card>;className='group-hover:border-blue-500 group-hover:text-blue-400';
                       >;
                         Visit Website;
@@ -608,6 +706,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </Card>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              </Card>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             ))}
           </div>;
         </div>;
@@ -716,6 +817,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               href='/services'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
               className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'
             >
               View Our Services
@@ -753,3 +855,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>;
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              View Our Services;
+            </Button>;
+          </div>;
+        </div>;
+      </section>;
+  );
+}
+    </>);
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -27,6 +28,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import { ServiceVariant  } from '../types/service-variants';
 export interface Innovative2026EmergingTechService  {id: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+import { ServiceVariant } from '../types/service-variants';
+export interface Innovative2026EmergingTechService {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string;
   name: string;
   tagline: string;
@@ -57,6 +64,7 @@ export interface Innovative2026EmergingTechService  {id: string;
     email: string;
 <<<<<<< HEAD
     address: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -605,6 +613,13 @@ reviews: 25;
         'Spiking neural networks (SNNs)',
         'Ultra - low power consumption',
         'Real - time learning and adaptation',
+=======
+
+        'Spiking neural networks (SNNs)',
+        'Ultra - low power consumption',
+        'Real - time learning and adaptation',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     website: string
   },
   realImplementation: boolean;
@@ -905,7 +920,10 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
         'Spiking neural networks (SNNs)',
         'Ultra-low power consumption',
         'Real-time learning and adaptation',
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Cognitive computing capabilities',
         'Advanced pattern recognition',
         'Neuromorphic hardware integration',
@@ -914,6 +932,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Research collaboration platform'
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -952,6 +971,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       realService: true,
       technology: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Spiking Neural Networks',
         'Neuromorphic Algorithms',
         'Python',
@@ -959,8 +980,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'TensorFlow',
         'CUDA',
       ],
+<<<<<<< HEAD
       integrations: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      integrations: [;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Cloud platforms',
         'Edge devices',
         'IoT systems',
@@ -968,16 +993,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'AI frameworks',
         'Hardware platforms',
       ],
+<<<<<<< HEAD
       useCases: [
         'Cognitive computing',
         'Pattern recognition',
         'Adaptive learning',
         'Real-time processing',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      use_cases: [;
+        'Cognitive computing',
+        'Pattern recognition',
+        'Adaptive learning',
+        'Real - time processing',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Edge AI',
         'Research applications',
       ],
       roi: 'Average customer sees 400% ROI within 8 months through improved AI efficiency and breakthrough capabilities.',
+<<<<<<< HEAD
       competitors: [
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
@@ -988,12 +1022,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      competitors: [;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Intel Loihi',
         'IBM TrueNorth',
         'BrainChip',
         'SpiNNaker',
         'BrainScaleS'
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1021,6 +1061,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1038,26 +1081,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-        'DNA-based data storage',
-    // DNA Computing Platform;
-    {
-      id: 'dna - computing - platform - 2026',
-      name: 'DNA Computing Platform 2026',
-      tagline:;
-        'Molecular computing for complex problem solving and data storage',
-      price: '$2, 999',
-      period: '/month',
-      description:;
-        'Groundbreaking DNA computing platform that leverages molecular biology for ultra - dense data storage, complex problem solving, and next - generation computational capabilities.',
-      features: [;
-        'DNA - based data storage',
 
+<<<<<<< HEAD
         'Molecular problem solving',
         'Ultra - dense information encoding',
       marketSize: '$12.8B market',
@@ -1093,6 +1127,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Molecular problem solving',
         'Ultra-dense information encoding',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Biomolecular algorithms',
         'DNA synthesis and sequencing',
         'Molecular computing workflows',
@@ -1103,6 +1139,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ],
       popular: false,
       icon: '🧬',
+<<<<<<< HEAD
       color: 'from - green - 500 to - emerald - 600',
       text_color: 'text - green - 400',
       link: 'https://ziontechgroup.com / services / dna - computing - platform - 2026',
@@ -1128,6 +1165,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       realService: true,
       technology: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'DNA Synthesis',
         'DNA Sequencing',
         'Bioinformatics',
@@ -1135,8 +1175,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Python',
         'R',
       ],
+<<<<<<< HEAD
       integrations: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      integrations: [;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Laboratory equipment',
         'Bioinformatics platforms',
         'Cloud storage',
@@ -1144,8 +1188,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Analysis tools',
         'Sequencing platforms',
       ],
+<<<<<<< HEAD
       useCases: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      use_cases: [;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Data storage',
         'Complex problem solving',
         'Drug discovery',
@@ -1154,14 +1202,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Molecular computing',
       ],
       roi: 'Average customer sees 600% ROI within 12 months through breakthrough discoveries and new capabilities.',
+<<<<<<< HEAD
       competitors: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      competitors: [;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Microsoft DNA Storage',
         'Catalog DNA',
         'Twist Bioscience',
         'Illumina',
         'Pacific Biosciences',
       ],
+<<<<<<< HEAD
     // Photonic Computing Platform;
     {
       id: 'photonic - computing - platform - 2026',
@@ -1216,6 +1270,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Low power consumption',
         'High-bandwidth communication',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+      market_size: '$8.9B market',
+      growth_rate: '520% annual growth',
+      variant: 'quantum - futuristic',
+      contact_info: {
+
+        mobile: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        address: '364 E Main St STE 1008 Middletown DE 19709',
+        website: 'https://ziontechgroup && ziontechgroup.com',
+      },
+      real_implementation: true,
+      implementation_details:;
+        'Advanced DNA computing platform with molecular biology integration, bioinformatics tools, and comprehensive computing capabilities. Includes professional bioengineering support.',
+      launch_date: '2026 - 01 - 20',
+      customers: 45,
+      rating: 4 && 4.9,
+      reviews: 25,
+    },
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Photonic neural networks',
         'Optical memory systems',
         'Custom photonic design',
@@ -1223,6 +1299,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ],
       popular: true,
       icon: '💡',
+<<<<<<< HEAD
       color: 'from - yellow - 500 to - orange - 600',
       text_color: 'text - yellow - 400',
       link: 'https://ziontechgroup.com / services / photonic - computing - platform - 2026',
@@ -1248,6 +1325,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       realService: true,
       technology: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Photonic Integrated Circuits',
         'Optical Computing',
         'Silicon Photonics',
@@ -1255,33 +1335,53 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'MATLAB',
         'Optical Design Tools',
       ],
+<<<<<<< HEAD
       integrations: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      integrations: [;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Data centers',
         'Telecommunications networks',
         'Research equipment',
         'Cloud platforms',
         'AI frameworks',
+<<<<<<< HEAD
         'High-performance computing',
       ],
       useCases: [
         'High-speed computing',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        'High - performance computing',
+      ],
+      use_cases: [;
+        'High - speed computing',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Data center optimization',
         'Telecommunications',
         'AI acceleration',
         'Scientific computing',
+<<<<<<< HEAD
         'Real-time processing',
       ],
       roi: 'Average customer sees 450% ROI within 8 months through improved performance and reduced power consumption.',
       competitors: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        'Real - time processing',
+      ],
+      roi: 'Average customer sees 450% ROI within 8 months through improved performance and reduced power consumption.',
+      competitors: [;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Lightmatter',
         'PsiQuantum',
         'Xanadu',
         'Intel Silicon Photonics',
         'IBM Photonics',
       ],
+<<<<<<< HEAD
     // Holographic Display Platform;
     {
       id: 'holographic - display - platform - 2026',
@@ -1304,11 +1404,37 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+      market_size: '$15.6B market',
+      growth_rate: '420% annual growth',
+      variant: 'quantum - futuristic',
+      contact_info: {
+
+        mobile: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        address: '364 E Main St STE 1008 Middletown DE 19709',
+        website: 'https://ziontechgroup && ziontechgroup.com',
+      },
+      real_implementation: true,
+      implementation_details:;
+        'Advanced photonic computing platform with optical processors, photonic neural networks, and comprehensive computing capabilities. Includes professional engineering support.',
+      launch_date: '2026 - 02 - 01',
+      customers: 120,
+      rating: 4 && 4.8,
+      reviews: 60,
+    },
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         '3D holographic projection',
         'Interactive holographic displays',
         'Real - time 3D rendering',
         'Gesture and touch interaction',
         'Multi - user collaboration',
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       marketSize: '$15.6B market',
       growthRate: '420% annual growth',
       variant: 'quantum-futuristic',
@@ -1342,7 +1468,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Real-time 3D rendering',
         'Gesture and touch interaction',
         'Multi-user collaboration',
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Holographic content creation',
         'Augmented reality integration',
         'Mobile holographic apps',
@@ -1350,6 +1480,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Professional installation services'
       ],
       popular: false,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1388,6 +1519,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       realService: true,
       technology: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Holographic Projection',
         '3D Rendering',
         'Computer Vision',
@@ -1395,17 +1528,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Unreal Engine',
         'Python',
       ],
+<<<<<<< HEAD
       integrations: [
         'Content creation tools',
         '3D modeling software',
         'AR/VR platforms',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      integrations: [;
+        'Content creation tools',
+        '3D modeling software',
+        'AR / VR platforms',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Mobile devices',
         'Cloud platforms',
         'Social media',
       ],
+<<<<<<< HEAD
       useCases: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      use_cases: [;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Entertainment displays',
         'Educational content',
         'Product visualization',
@@ -1414,6 +1558,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Marketing campaigns',
       ],
       roi: 'Average customer sees 300% ROI within 4 months through improved engagement and new business opportunities.',
+<<<<<<< HEAD
       competitors: [
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1424,12 +1569,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      competitors: [;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Looking Glass',
         'Light Field Lab',
         'RealView',
         'Hologram USA',
         'HoloLens'
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1457,6 +1608,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1474,29 +1628,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-        'Multi-modal biometric authentication',
-        'AI-powered recognition',
-    // Biometric Authentication Platform;
-    {
-      id: 'biometric - authentication - platform - 2026',
-      name: 'Biometric Authentication Platform 2026',
-      tagline:;
-        'Advanced biometric security with AI - powered recognition and authentication',
-      price: '$899',
-      period: '/month',
-      description:;
-        'Next - generation biometric authentication platform that uses AI - powered facial recognition, fingerprint scanning, voice recognition, and behavioral biometrics for secure, convenient authentication.',
-      features: [;
-        'Multi - modal biometric authentication',
-        'AI - powered recognition',
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
       marketSize: '$23.4B market',
       growthRate: '280% annual growth',
@@ -1530,6 +1675,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Multi-modal biometric authentication',
         'AI-powered recognition',
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -1538,17 +1684,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Facial recognition technology',
         'Fingerprint and palm scanning',
         'Voice and speech recognition',
         'Behavioral biometrics',
         'Liveness detection',
+<<<<<<< HEAD
         'Multi-factor authentication',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        'Multi - factor authentication',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'API and SDK access',
         'Enterprise security features'
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1587,6 +1741,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       realService: true,
       technology: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Computer Vision',
         'Deep Learning',
         'Biometric Algorithms',
@@ -1594,8 +1750,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'TensorFlow',
         'OpenCV',
       ],
+<<<<<<< HEAD
       integrations: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      integrations: [;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Mobile apps',
         'Web applications',
         'IoT devices',
@@ -1603,6 +1763,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Cloud platforms',
         'Enterprise systems',
       ],
+<<<<<<< HEAD
       useCases: [
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1613,6 +1774,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      use_cases: [;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'User authentication',
         'Access control',
         'Identity verification',
@@ -1621,6 +1787,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Customer verification'
       ],
       roi: 'Average customer sees 350% ROI within 4 months through improved security and user experience.',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1649,6 +1816,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1662,6 +1832,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       rating: 4 && 4.8,
       reviews: 175
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1682,6 +1853,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       id: 'quantum - internet - platform - 2026',
       name: 'Quantum Internet Platform 2026',
       tagline: 'Ultra - secure quantum communication network for the future',
@@ -1704,6 +1879,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       ],
       popular: false,
       icon: '🌐',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1782,6 +1958,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.',
       launch_date: '2026 - 01 - 25',
       customers: 60,
@@ -1796,13 +1975,24 @@ export const getPopularEmergingTechServices = () => {;
 
   return innovative2026EmergingTechServices.filter(service => service.popular);
 }
+<<<<<<< HEAD
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => service && service.popular);
 };
+=======
+
+  return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => service && service.popular);
+};
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       id: 'quantum-internet-platform-2026'
       name: 'Quantum Internet Platform 2026'
       tagline: 'Ultra-secure quantum communication network for the future'
       price: '$5,999'
       period: '/month'
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       competitors: ['Face ID', 'Touch ID', 'Voice ID', 'Clear', 'ID.me'],
       marketSize: '$34.8B market',
       growthRate: '320% annual growth',
@@ -1829,12 +2019,18 @@ export const getPopularEmergingTechServices = () => {;
       tagline: 'Ultra-secure quantum communication network for the future',
       price: '$5,999',
       period: '/month',
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
       description:
         'Revolutionary quantum internet platform that provides ultra-secure communication, quantum key distribution, and next-generation networking capabilities for government, financial, and critical infrastructure.',
       features: [
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+      description:
+        'Revolutionary quantum internet platform that provides ultra-secure communication, quantum key distribution, and next-generation networking capabilities for government, financial, and critical infrastructure.',
+      features: [
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Quantum key distribution (QKD)'
         'Quantum secure communication'
         'Quantum network infrastructure'
@@ -1851,6 +2047,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       color: 'from-cyan-500 to-blue-600'
       textColor: 'text-cyan-400'
       link: 'https://ziontechgroup.com/services/quantum-internet-platform-2026'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -1883,6 +2080,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       marketPosition:
         'Competitive with Quantum Xchange ($50,000+/setup), ID Quantique ($30,000+/setup), and Toshiba Quantum ($40,000+/setup). Our advantage: Modern architecture, faster deployment, and 70% cost savings.',
       targetAudience:
@@ -1922,6 +2123,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   ];
 <<<<<<< HEAD
 =======
@@ -1947,6 +2149,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       growthRate: '480% annual growth',
       variant: 'quantum-futuristic',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  ];
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       contactInfo: {
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -1958,18 +2164,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   ];
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
   ];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.'
       launchDate: '2026-01-25'
       customers: 60
       rating: 4.9
       reviews: 30
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1989,9 +2200,24 @@ export const getPopularEmergingTechServices = () => {
   ];
 export const getPopularEmergingTechServices = () => {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  ];
+
+export const getPopularEmergingTechServices = () => {
+
+        'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.',
+      launchDate: '2026-01-25',
+      customers: 60,
+      rating: 4.9,
+      reviews: 30,
+    },;
+  ];
+
+export const getPopularEmergingTechServices = () => {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return innovative2026EmergingTechServices.filter(service => service.popular);
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -2001,6 +2227,11 @@ export const getPopularEmergingTechServices = () => {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 // DNA Computing Platform realImplementation: true;
 implementationDetails: 'Advanced DNA computing platform with molecular biology integration, bioinformatics tools, and comprehensive computing capabilities. Includes professional bioengineering support.';
 launchDate: '2026-01-20';
@@ -2012,6 +2243,7 @@ export const getPopularEmergingTechServices = () =>: any {
 implementation_details: 'Advanced DNA computing platform with molecular biology integration, bioinformatics tools, and comprehensive computing capabilities. Includes professional bioengineering support.';
 launch_date: '2026 - 01 - 20';
 customers: 45;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2047,6 +2279,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 // Photonic Computing Platform realImplementation: true;
 implementationDetails: 'Advanced photonic computing platform with optical processors, photonic neural networks, and comprehensive computing capabilities. Includes professional engineering support.';
 launchDate: '2026-02-01';
@@ -2063,16 +2298,17 @@ customers: 120;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-rating: 4 && 4.8;
-reviews: 60 
-};
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -2084,6 +2320,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 // Holographic Display Platform realImplementation: true;
 implementationDetails: 'Advanced holographic display platform with 3D projection, interactive capabilities, and comprehensive content creation tools. Includes professional installation and support.';
 launchDate: '2026-02-15';
@@ -2100,16 +2338,17 @@ customers: 200;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-rating: 4 && 4.7;
-reviews: 100 
-};
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -2121,6 +2360,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 // Biometric Authentication Platform realImplementation: true;
 implementationDetails: 'Advanced biometric authentication platform with multi-modal recognition, AI-powered security, and comprehensive enterprise features. Includes API access and professional support.';
 launchDate: '2026-03-01';
@@ -2161,17 +2402,20 @@ customers: 350;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-rating: 4 && 4.8;
-reviews: 175 
-};
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 };
 // DNA Computing Platform realImplementation: true;
@@ -2203,6 +2447,7 @@ rating: 4.8;
 reviews: 175 
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -2211,6 +2456,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 // Quantum Internet Platform realImplementation: true;
 implementationDetails: 'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.';
 launchDate: '2026-01-25';
@@ -2221,6 +2469,7 @@ implementation_details: 'Advanced quantum internet platform with quantum key dis
 launch_date: '2026 - 01 - 25';
 <<<<<<< HEAD
 customers: 60;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2337,6 +2586,13 @@ customers: 60;
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service =>
     service && service.category.toLowerCase().includes(category && category.toLowerCase())
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+}];
+export const getEmergingTechServicesByCategory = (category: string) => {
+  return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service =>
+    service && service.category.toLowerCase().includes(category && category.toLowerCase())
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   );
 };
 
@@ -2344,6 +2600,7 @@ export const getEmergingTechServicesByPriceRange = (
   minPrice: number,
   maxPrice: number
 ) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2367,6 +2624,11 @@ export const getEmergingTechServicesByPriceRange = (
 =======
   return innovative2026EmergingTechServices.filter(service => {;
     const price = parseInt(service.price.replace('$', '').replace(',', ''));
+=======
+
+
+    return price >= minPrice && price <= maxPrice;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -2618,6 +2880,7 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -2625,6 +2888,8 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026EmergingTechService {;
   id: string,;
@@ -2701,14 +2966,18 @@ export const getEmergingTechServicesByPriceRange = (min_price: number, max_price
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 
@@ -2720,6 +2989,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 reviews: 30;
 }];
 export const getEmergingTechServicesByCategory = (category: string) =>: any {
@@ -2747,6 +3018,7 @@ export const getEmergingTechServicesByPriceRange = (min_price: number, max_price
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -2764,3 +3036,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+  });
+};
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

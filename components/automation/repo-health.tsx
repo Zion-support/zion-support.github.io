@@ -1,6 +1,42 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 type Props = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import fs from 'fs',
+import path from 'path';
+import type { GetStaticProps } from 'next';
+interface Report {
+  generatedAt: string;
+  commits: { last7d: number, last30d: number },
+  changes: { last7dFiles: string[] },
+  largestFiles: { file: string, bytes: number }[],
+  stalePages: { file: string, lastCommitAt: string }[]
+}
+ 
+
+}
+type Props = { report: Report | null }
+export const getStaticProps: GetStaticProps<Props> = async () => {
+;
+}
+type Props = { report: Report | null },
+export const getStaticProps: GetStaticProps < Props> = async () => {
+  try {
+    const file = path.join (process.cwd (), 'publicautomationrepo - health.json');
+    const raw = fs.readFileSync (file, 'utf8');
+    const data = JSON.parse (raw);
+    return { props: { report: data }, revalidate: 3600 }
+  } catch {;
+    return { props: { report: null }, revalidate: 3600 }
+  }
+export default function RepoHealth(): any ({ report }: Props) {
+};
+
+export default function RepoHealth({ report }: Props) {
+export default function RepoHealth({ report }: Props) {;
+  if (!report) return <div>No report yet. Check back soon.</div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
 
     <div className="space-y-6">;
@@ -41,10 +77,13 @@ export default function RepoHealth(): any ({ report }: Props) {}export default f
           {report && report.stalePages.map((p, i) => (;
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{p && p.file}</span><span className="text-gray-500">{new Date(p && p.lastCommitAt).toLocaleDateString()}</span></li>;
           ))}
+<<<<<<< HEAD
         </ul>
       </section>
     </div>
 );
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -78,8 +117,12 @@ if (return <div > No report yet. Check back soon.</div>) {$2;
           {report.stale_pages.map ((p, i) => (<li key={i} className="flex justify-between gap-4"><span className="truncate">{p.file}</span><span className="text-gray-500">{new Date (p.lastCommitAt).toLocaleDateString ()}</span></li>))}
         </ul>;
       </section>;
+<<<<<<< HEAD
     </div>)</ul>;
       </section>;
     </div>;
 )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </div>);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import { useState, useEffect  } from 'react';
@@ -20,14 +21,48 @@ interface Listing  {id: string;
   description: string;
   price: number;
   category: string;author_image?: string;
+=======
+// Example listing type
+
+import { useState, useEffect } from 'react';
+import { GradientHeading } from '@/components/GradientHeading';
+import { ListingScoreCard } from '@/components/ListingScoreCard';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import {
+  Select,
+  SelectTrigger,
+  SelectContent,
+  SelectItem,
+} from '@/components/ui/select';
+import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react';
+import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton';
+import { safeStorage } from '@/utils/safeStorage';
+
+interface Listing {
+  id: string;
+  title: string;
+  description: string;
+  price: number;
+  category: string;
+
+  author_image?: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   ai_score?: number;
   authorImage?: string;
   aiScore?: number;
   rating?: number;
   reviewCount?: number;
   price?: number | null;
+<<<<<<< HEAD
   createdAt: string;
 interface CategoryListingPageProps  {title: string;
+=======
+  createdAt: string
+interface CategoryListingPageProps {
+
+  title: string
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   description: string;
   listings: Listing[];
   sortOptions?: { label: string; value: string }[];
@@ -229,6 +264,30 @@ interface Listing  {id: string,title: string,description: string,category: strin
             </p>;
           </div>;
                 ))}
+<<<<<<< HEAD
+=======
+              </div>
+            ) : (
+              <div className="text-center py-20">
+                <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>
+                <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>
+                <Button
+                  variant="outline"
+                  onClick={() => {
+                    setSearchQuery(""),
+                    setSelectedFilter(filterOptions[0]?.value || 'all')
+                  }}
+                  className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+
+
+
+                >
+                  Clear all filters
+                </Button>
+              </div>
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               </div>;
             ) : (<div className="text-center py-20">;
                 <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>;
@@ -267,7 +326,13 @@ interface Listing  {id: string,title: string,description: string,category: strin
         </div>;
       </div>;
     </>;
+<<<<<<< HEAD
   )rating: number;
+=======
+  );
+
+  rating: number;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   image: string;
   tags: string[];
   createdAt: string;
@@ -340,10 +405,18 @@ interface Listing  {id: string,title: string,description: string,category: strin
                   {cat}
                 </SelectItem>;
               ))}
+<<<<<<< HEAD
             </SelectContent>;
           </Select>;
         </div>;
       </div>;
+=======
+            </SelectContent>
+          </Select>
+        </div>
+      </div>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       {/* Results */}
       <div className="mb-4">;
         <p className="text-gray-600">;
@@ -374,6 +447,7 @@ interface Listing  {id: string,title: string,description: string,category: strin
           ))}
         </div>;
       )}
+<<<<<<< HEAD
     </div>;
   )}</>;
   )//Apply search filter const matchesSearch = listing.title.toLowerCase () .includes (searchQuery.toLowerCase () ) || listing.description.toLowerCase () .includes (searchQuery.toLowerCase () ) || (listing.tags && listing.tags.some (tag => tag.toLowerCase () .includes (searchQuery.toLowerCase () ) ) )//Apply category filters if (selectedFilter === 'all') return matchesSearch;';
@@ -424,3 +498,8 @@ case 'z-a': return (<> <div className="min-h-screen bg-zion-blue py-12 px-4"> <d
 }";
 }className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" ;
 }</div> </div> </div> </>)}'";
+=======
+    </div>
+  );
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

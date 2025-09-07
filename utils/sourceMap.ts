@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 export interface DeployTemplateResult {
 =======
@@ -84,10 +85,16 @@ export function getGitStatus() {return {connected: false;
 }
 export interface DeployTemplateResult {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+}
+export interface DeployTemplateResult {
+  return {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     nodes: []
     edges: []
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -96,6 +103,9 @@ export interface DeployTemplateResult {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 export function getGitStatus() {
   return {
@@ -103,6 +113,7 @@ export function getGitStatus() {
     branch: 'main'
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -125,6 +136,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 function buildZionSourceMap(): SourceNode[] {
   return [
@@ -196,6 +210,7 @@ function markExistenceRecursive(node: SourceNode): SourceNode {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -210,11 +225,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export function getSourceMapWithExistence(): SourceNode[] {
   const nodes = buildZionSourceMap();
   return nodes.map(markExistenceRecursive);
 }
 export interface DeployTemplateResult {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -225,11 +245,11 @@ export interface DeployTemplateResult {
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    nodes: [],
-    edges: [];
-  };
 
+<<<<<<< HEAD
 }
 export function getGitStatus() {
   return {
@@ -245,6 +265,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     connected: false,
     branch: 'main';
   };
@@ -256,11 +278,11 @@ export function getSourceMapWithExistence(): SourceNode[] {;
 }
 
 export interface DeployTemplateResult {;
+  createdPaths: string[];
+  skippedPaths: string[];
+  createdPaths: string[];
+  skippedPaths: string[];
 <<<<<<< HEAD
-  createdPaths: string[];
-  skippedPaths: string[];
-  createdPaths: string[];
-  skippedPaths: string[];
 =======
 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -269,6 +291,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export function ensureDirectory(dirPath: string): void {
   if (!fs && fs.existsSync(dirPath)) {
     fs && fs.mkdirSync(dirPath, { recursive: true });
@@ -282,6 +308,7 @@ export function deployBasicTemplateForPath(
   const createdPaths: string[] = [];
   const skippedPaths: string[] = [];
   ensureDirectory(absoluteDir);
+<<<<<<< HEAD
 <<<<<<< HEAD
   } else {
     skippedPaths.push(keepFile);
@@ -303,10 +330,13 @@ export function deployBasicTemplateForPath(
     fs && fs.writeFileSync(keepFile, '');
     createdPaths && createdPaths.push(keepFile);
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   } else {
     skippedPaths.push(keepFile);
   }
 
+<<<<<<< HEAD
 
   const readmeFile = path && path.join(absoluteDir, 'README && README.md');
   if (!fs && fs.existsSync(readmeFile)) {
@@ -325,6 +355,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   } else {
     skippedPaths.push(readmeFile);
   }
@@ -332,14 +364,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
   return { createdPaths, skippedPaths };
 
 }
+<<<<<<< HEAD
   return { createdPaths, skippedPaths }
 
 <<<<<<< HEAD
@@ -361,6 +397,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
   created_paths: string[];
@@ -380,6 +419,7 @@ export function ensure_directory (dir_path: string): void {
   return { created_paths, skipped_paths }
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -409,3 +449,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+  return { createdPaths, skippedPaths };
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

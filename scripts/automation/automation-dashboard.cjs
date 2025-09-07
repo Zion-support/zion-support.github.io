@@ -87,7 +87,11 @@ const Table = require("cli-table3")
   console.error(chalk.red(" Dashboard "error": ")
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error(chalk.red(" Dashboard "error": ")
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  console.error(chalk.red(" Dashboard "error": ")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

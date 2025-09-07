@@ -1,4 +1,5 @@
 <<<<<<< HEAD:src_backup/components/admin/fraud-detection/EmptyFraudState.tsx
+<<<<<<< HEAD:src_backup/components/admin/fraud-detection/EmptyFraudState.tsx
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from 'lucide-react'
@@ -7,6 +8,16 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
   hasFilters,
   onResetFilters 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+interface EmptyFraudStateProps {
+  hasFilters: boolean
+  onResetFilters: () => void
+}
+export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
+  hasFilters
+  onResetFilters
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/fraud-detection/EmptyFraudState.tsx
 },) => {
   return (
     <div className="text-center py-12">
@@ -28,8 +39,14 @@ import React from "react"
 import {Button} from "@/components/ui/button"
 import {ShieldAlert} from 'lucide-react'
 
+<<<<<<< HEAD:src_backup/components/admin/fraud-detection/EmptyFraudState.tsx
 
 
+=======
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { ShieldAlert } from 'lucide-react'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/fraud-detection/EmptyFraudState.tsx
 
 interface EmptyFraudStateProps {
 
@@ -60,6 +77,7 @@ import { ShieldAlert } from 'lucide-react';
 interface EmptyFraudStateProps {;
   hasFilters: boolean,;
   onResetFilters: () => void;
+<<<<<<< HEAD:src_backup/components/admin/fraud-detection/EmptyFraudState.tsx
 
 import React from "react";
 import { Button } from "@/components/ui/button";
@@ -85,6 +103,8 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ ;
 
   return (
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/fraud-detection/EmptyFraudState.tsx
     <div className="text-center py-12">;
 =======
 
@@ -174,6 +194,7 @@ export const EmptyFraudState: React.FC < EmptyFraudStateProps> = ({has_filters,o
       {has_filters && (
         <Button variant="outline" on_click={onResetFilters}>Clear Filters</Button>)}
     </div>);
+<<<<<<< HEAD:src_backup/components/admin/fraud-detection/EmptyFraudState.tsx
 }
 
 interface EmptyFraudStateProps {
@@ -196,3 +217,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   onResetFilters;
 }) => {return (<div className;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/admin/fraud-detection/EmptyFraudState.tsx
+=======
+
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/fraud-detection/EmptyFraudState.tsx

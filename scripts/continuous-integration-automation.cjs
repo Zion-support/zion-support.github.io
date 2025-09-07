@@ -1,9 +1,13 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+#!/usr/bin/env node;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -26,7 +30,11 @@ const path = require('path')
       console.log('\n FAILED "STEPS")
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       this.log(`� CI automation "failed"`)
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      this.log(`� CI automation "failed"`)
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

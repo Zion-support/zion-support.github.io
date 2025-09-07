@@ -1,6 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+import React from 'react',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 </Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {
 import React from 'react';
 
@@ -31,6 +37,7 @@ import React from 'react';
 }) </button>) ) ;
 }</motion && motion.div> > <divclassName= {
   `w-16 h-16 bg-gradient-to-br $ {
+<<<<<<< HEAD
   report.color
 }rounded-xl flex items-center justify-center text-white mb-6`
 }> {
@@ -40,6 +47,20 @@ import React from 'react';
 };
 export default ReportsPage;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+  report && report.color 
+}rounded-xl flex items-center justify-center text-white mb-6` 
+}> {;
+  report && report.icon ;
+}</div> </span> <button className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 inline-flex items-center space-x-1" > <span>Download</span> <Download className="w-4 h-4" /> </button> </div> </motion && motion.article>) ) ;
+}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" > Need Custom Research? </h2> <p className="text-xl text-gray-300 mb-8" > Our research team can conduct custom studies and analysis tailored to your specific industry needs and challenges. </p> <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2" > <span>Request Custom Research</span> <ArrowRight className="w-5 h-5" /> </a> <a href="/services" className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200" > View Research Services </a> </div> </motion && motion.div> </div> </section> </div> </UltraAdvancedFuturisticBackground>) 
+};
+export default ReportsPage;import React from 'react';
+
+import React from 'react';
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 =======
@@ -82,12 +103,31 @@ import { FileText;
   } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const ReportsPage: React.FC;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 const ReportsPage: React.FC = () => {const reports = [;
     {title: 'The Future of Quantum Computing in Enterprise: 2024 - 2030',excerpt: 'Comprehensive analysis of quantum computing adoption trends, market opportunities, and strategic implications for businesses across industries.';
       date: '2024 - 01 - 15',author: 'Dr. Sarah Chen & Quantum Research Team',category: 'Technology Trends',tags: ['Quantum ComputingEnterpriseMarket AnalysisFuture Tech'],pages: 45,downloads: 1247,views: 5678,featured: true,icon: <Atom className="w-8 h-8" />,color: 'from - purple - 500 to - pink - 500';
+=======
+const ReportsPage: React.FC = () => {
+  const reports = [;
+    {
+
+      title: 'The Future of Quantum Computing in Enterprise: 2024 - 2030',
+      excerpt: 'Comprehensive analysis of quantum computing adoption trends, market opportunities, and strategic implications for businesses across industries.';
+      date: '2024 - 01 - 15',
+      author: 'Dr. Sarah Chen & Quantum Research Team',
+      category: 'Technology Trends',
+      tags: ['Quantum ComputingEnterpriseMarket AnalysisFuture Tech'],
+      pages: 45,
+      downloads: 1247,
+      views: 5678,
+      featured: true,
+      icon: <Atom className="w-8 h-8" />,
+      color: 'from - purple - 500 to - pink - 500';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
     {title: 'AI Adoption in Fortune 500 Companies: ROI Analysis & Best Practices',excerpt: 'In - depth study of artificial intelligence implementation success stories, return on investment metrics, and strategic recommendations.';
       date: '2024 - 01 - 10',author: 'AI Research Division',category: 'Business Intelligence',tags: ['AIROIFortune 500Best Practices'],pages: 38,downloads: 892,views: 3456,featured: false,icon: <Brain className="w-8 h-8" />,color: 'from - blue - 500 to - cyan - 500';
@@ -269,7 +309,15 @@ const ReportsPage: React.FC = () => {const reports = [;
                   <span>Request Custom Research</span>;
                   <ArrowRight className="w-5 h-5" />;
                 </a>;
+<<<<<<< HEAD
                 <a;
                   href="/services";
 export default ReportsPage;const ReportsPage: React.FC;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                <a
+                  href="/services"
+
+export default ReportsPage;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

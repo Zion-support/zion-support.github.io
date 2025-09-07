@@ -1,9 +1,45 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs',
 import path from 'path';
 import type { GetStaticProps } from 'next';
 type Entry = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+}
+) )
+}</ul> </section> <section>) )
+}</ul> </section> </div>)
+ 
+};
+) ) 
+}</ul> </section> <section>) ) 
+}</ul> </section> </div>) 
+export default function ContentMap({ report }: Props) {
+  if (!report) return <div>No content map yet. Check back later.</div>;
+  const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1])
+};
+) ) 
+}</ul> </section> <section>) ) 
+}</ul> </section> </div>)
+export default function ContentMap({ report }: Props) {
+};
+) ) 
+}</ul> </section> <section>) ) 
+}</ul> </section> </div>) 
+export default function ContentMap({ report }: Props) {
+  if (!report) return <div>No content map yet. Check back later.</div>;
+  const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1])
+};
+) ) 
+}</ul> </section> <section>) ) 
+}</ul> </section> </div>) 
+
+export default function ContentMap({ report }: Props) {
+  if (!report) return <div>No content map yet. Check back later.</div>;
+  const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1]);
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
     <div className="space-y-6">
       <header className="space-y-1">
@@ -74,10 +110,13 @@ type Entry = any;return (<div className="space-y-6">;
           {report.pages.map((p, i) => (
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{p.route}</span><span className="text-gray-500 truncate">{p.file}</span></li>
           ))}
+<<<<<<< HEAD
         </ul>
       </section>
     </div>
 );
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -115,8 +154,12 @@ if (return <div > No content map yet. Check back later.</div>) {$2;
           {report.pages.map ((p, i) => (<li key={i} className="flex justify-between gap-4"><span className="truncate">{p.route}</span><span className="text-gray-500 truncate">{p.file}</span></li>))}
         </ul>;
       </section>;
+<<<<<<< HEAD
     </div>)</ul>;
       </section>;
     </div>;
 )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </div>);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

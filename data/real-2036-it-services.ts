@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -670,11 +671,15 @@ export const real2036ITServices = [;
       'Automated recovery proceduresIntelligent backup managementPredictive recovery planningReduced recovery time';
     ],useCases: [;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export const real2036ITServices = [
   {
     id: 'quantum-cloud-infrastructure-platform'
     name: 'Quantum Cloud Infrastructure Platform'
     tagline: 'Next-generation quantum cloud computing'
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -682,6 +687,12 @@ id: 'quantum-cloud-infrastructure-platform',
     name: 'Quantum Cloud Infrastructure Platform',
     tagline: 'Next-generation quantum cloud computing',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+id: 'quantum-cloud-infrastructure-platform',
+    name: 'Quantum Cloud Infrastructure Platform',
+    tagline: 'Next-generation quantum cloud computing',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     description:
       'Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum-classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.',
     price: '$6,999',
@@ -971,6 +982,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     useCases: [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Data center recovery'
       'Cloud recovery'
       'Application recovery'
@@ -1662,6 +1676,7 @@ export const real2036ITServices = [;
     ]
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -1918,6 +1933,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  }
+];
+;
+
+  },;
+];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
+    ]
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export const real2036ITServices = [;
   {;
     id: 'quantum-cloud-infrastructure-platform',;
@@ -2130,6 +2157,7 @@ export const real2036ITServices = [;
     ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
@@ -2207,3 +2235,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+  }
+];
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

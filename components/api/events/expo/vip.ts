@@ -4,6 +4,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -15,12 +16,17 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const allowlist = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+const allowlist = null;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const allowlist = new Set<string>(
   [(process.env.EXPO_VIP_ADDRESS |'').toLowerCase()].filter(Boolean)
 );
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -35,6 +41,9 @@ const allowlist  = null;const allowlist = new Set<string>([(process.env.EXPO_VIP
  */;
 function handler() {const address = String (req.query.address || '').toLowerCase ()if (return res.status (400).json ({ allowed: false })) {$2;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 ;
 const allowlist = new Set < string>(
@@ -55,6 +64,7 @@ function handler() {const address = String (req.query.address || '').toLowerCase
 }
   res.status (200).json ({ allowed: allowlist.has (address) })}[(process && process.env.EXPO_VIP_ADDRESS || '').toLowerCase()].filter(Boolean))export default async function handler() {const allowlist = new Set<string>([(process.env.EXPO_VIP_ADDRESS || '').toLowerCase()].filter(Boolean))export default async function handler() {const address = String(req.query.address |'').toLowerCase()) {const address = String(req.query.address || '').toLowerCase()if (!address) return res.status(400).json({ allowed: false })res.status(200).json({ allowed: allowlist.has(address) })export default async function handler() {const address = String(req.query.address || '').toLowerCase()if (!address) return res.status(400).json({ allowed: false })res.status(200).json({ allowed: allowlist.has(address) })) {const address = String(req.query.address || '').toLowerCase()if (!address) return res.status(400).json({ allowed: false })res.status(200).json({ allowed: allowlist.has(address) })export default async function handler() {const address = String(req.query.address || '').toLowerCase()if (!address) return res.status(400).json({ allowed: false })res.status(200).json({ allowed: allowlist.has(address) })}ursor/fix-website-loading-errors-and-merge-6662;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -110,6 +120,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 ) {;
   const address = String(req.query.address || '').toLowerCase();
@@ -121,10 +137,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   res.status(200).json({ allowed: allowlist.has(address) })
 }
+
+
+
 <<<<<<< HEAD
-
-
-
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
@@ -135,6 +151,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 
 }
@@ -144,6 +164,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.status(200).json({ allowed: allowlist.has(address) })
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -170,3 +191,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

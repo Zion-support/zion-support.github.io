@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 ;
 }export default function FilterBar(): any ({category,level,isFree,onChange}: Props) {type Props = {category: string;
@@ -25,6 +28,7 @@ type Props = {category: string,level: string,isFree: string,onChange={e => onCha
         value={category}
 export default function FilterBar(): any ({ category, level, isFree, onChange }: Props) {return (<div className="grid grid-cols-1 sm:grid-cols-3 gap-3">;type Props = any;type Props = {category: string;
 
+<<<<<<< HEAD
 =======
 };
 export default function FilterBar(): any ({;
@@ -49,11 +53,12 @@ export default function FilterBar({
 }: Props) {
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
       <select
         className='border rounded px-3 py-2 bg-white dark:bg-black'
         value={category}
-<<<<<<< HEAD
 
 
 import React from 'react';
@@ -61,6 +66,7 @@ type Props = {
   category: string,
   level: string,
   isFree: string,
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         onChange={e => onChange({ category: e.target.value, level, isFree })}
@@ -84,6 +90,9 @@ type Props = {
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   onChange: (next: { category: string, level: string, isFree: string }) => void
 }
         onChange={e => onChange({ category: e && e.target.value, level, isFree })}
@@ -95,6 +104,7 @@ type Props = {
   onChange: (next: { category: string, level: string, isFree: string }) => void;
 };
 
+<<<<<<< HEAD
 
 
 
@@ -127,10 +137,13 @@ export default function FilterBar(): any ({ category, level, isFree, onChange }:
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export default function FilterBar(): any ({ category, level, isFree, onChange }: Props) {;
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">;
 import React from 'react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -155,6 +168,11 @@ export default function FilterBar(): any ({ category, level, isFree, onChange }:
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 type Props = {
   category: string;
   level: string;
@@ -205,9 +223,14 @@ className='border rounded px-3 py-2 bg-white dark:bg-black';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         <option value=''>All Categories</option>        <option>AI Development</option>type Props = {
+=======
+        <option value=''>All Categories</option>        <option>AI Development</option>type Props = {
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   category: string
   level: string
   isFree: string
@@ -216,6 +239,7 @@ className='border rounded px-3 py-2 bg-white dark:bg-black';
   category: string,
   level: string,
   isFree: string,
+<<<<<<< HEAD
 =======
         onChange={e => onChange({ category: e && e.target.value, level, isFree })}
       >;
@@ -225,6 +249,8 @@ className='border rounded px-3 py-2 bg-white dark:bg-black';
   isFree: string,;
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   onChange: (next: { category: string, level: string, isFree: string }) => void;
 };
 
@@ -242,16 +268,23 @@ class ErrorBoundary extends React.Component {
 
 export default function FilterBar(): any ({ category, level, isFree, onChange }: Props) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
         <option value=''>All Categories</option>
 export default function FilterBar({ category, level, isFree, onChange }: Props) {
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+        <option value=''>All Categories</option>
+export default function FilterBar({ category, level, isFree, onChange }: Props) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">;
       <select
         className="border rounded px-3 py-2 bg-white dark:bg-black"
         value={category}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -315,10 +348,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  );
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
   );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -337,6 +375,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+  );
+}
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   is_free: string;
   on_change: (next: { category: string; level: string; is_free: string }) => void;
 }export default /**;
@@ -367,7 +412,6 @@ function FilterBar() {return (<div className="grid grid - cols - 1 sm:grid - col
       <select;
         className='border rounded px - 3 py - 2 bg - white dark:bg - black';
         value={level}
-<<<<<<< HEAD
         on_change={e => on_change ({ category, level: e.target.value, is_free })}
       >;
         <option value=''>All Levels</option>        <option > Beginner</option>        value={level}
@@ -397,17 +441,21 @@ function FilterBar() {return (<div className="grid grid - cols - 1 sm:grid - col
     </div>)}}ursor/fix-website-loading-errors-and-merge-6662;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 }}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 }
 
 
 
+<<<<<<< HEAD
 }
 }
 
@@ -416,6 +464,10 @@ function FilterBar() {return (<div className="grid grid - cols - 1 sm:grid - col
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         onChange={e => onChange({ category, level: e.target.value, isFree })}
       >;
         <option value=''>All Levels</option>        <option>Beginner</option>        value={level}
@@ -460,6 +512,7 @@ function FilterBar() {return (<div className="grid grid - cols - 1 sm:grid - col
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -474,3 +527,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

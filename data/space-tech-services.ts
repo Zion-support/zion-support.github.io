@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -11,6 +12,10 @@
 
 export interface SpaceTechService  {id: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export interface SpaceTechService {
 id: string;
   name: string;
@@ -794,7 +799,7 @@ export interface SpaceTechService  {id: string,name: string,tagline: string,pric
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
+
 
     website: string;
   }
@@ -804,6 +809,7 @@ export interface SpaceTechService  {id: string,name: string,tagline: string,pric
     realService: true
     technology: [
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -837,6 +843,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Coverage optimization',
       'Interference management',
       'Power optimization',
@@ -849,6 +858,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     popular: true,
     icon: '🛰️',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1541,6 +1551,9 @@ export const spaceTechServices: SpaceTechService[] = [
     price: '$5,999',
     period: '/month';
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     description: 'Comprehensive space mission management platform that enables commercial space companies to plan, execute, and monitor space missions like NASA. Manage satellite operations, launch vehicles, and ground stations.',
     features: [
       'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard';
@@ -1548,6 +1561,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     popular: true, icon: '🚀',
     color: 'from-cyan-600 to-blue-700', textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/space-technology', marketPosition: 'Revolutionary technology with no direct competitors. SpaceX Starlink ($99/month) and OneWeb ($50/month) offer basic internet services. Our advantage: Complete mission management platform.',
@@ -1561,11 +1577,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       website: 'https://ziontechgroup.com';
@@ -1579,6 +1598,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
@@ -1602,6 +1622,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 ;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     realImplementation: true
     implementationDetails:
       'Complete space mission platform with orbital calculations, satellite tracking, and mission management. Includes real-time monitoring and regulatory compliance.'
@@ -1877,6 +1903,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     contactInfo: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       'Complete space education platform with interactive courses, simulations, and comprehensive training. Includes mobile app and progress tracking.'
@@ -1887,6 +1914,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 <<<<<<< HEAD
 =======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1894,6 +1924,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     }
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
       'Complete space education platform with interactive courses, simulations, and comprehensive training. Includes mobile app and progress tracking.',
     launchDate: '2024-03-10',
     customers: 500,
@@ -1904,6 +1935,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      'Complete space education platform with interactive courses, simulations, and comprehensive training. Includes mobile app and progress tracking.'
+    launchDate: '2024-03-10'
+    customers: 500
+    rating: 4.9
+    reviews: 250
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1919,6 +1958,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export interface SpaceTechService {;
 
@@ -1926,6 +1966,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string,;
   name: string,;
   tagline: string,;
@@ -2012,6 +2054,7 @@ export const spaceTechServices: SpaceTechService[] = [;
 
   }
 ;
+<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
@@ -2029,6 +2072,15 @@ export const spaceTechServices: SpaceTechService[] = [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+  }
+];
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     popular: true;
     icon: '🚀';
     color: 'from-cyan-600 to-blue-700';
@@ -2407,6 +2459,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -2415,3 +2468,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

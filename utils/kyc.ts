@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -22,11 +23,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
 export interface KycProfile  {user_id: string;kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
   url: string;
   uploaded_at: string;
   status: 'pending' | 'approved' | 'rejected';
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -56,18 +62,28 @@ ursor/fix-website-loading-errors-and-merge-6662;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export interface KycProfile {
   user_id: string;
+=======
+
+
+
+export interface KycProfile {
+  user_id: string;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 export interface KycProfile {;
 
   userId: string;
-<<<<<<< HEAD
 export interface KycProfile {
   user_id: string;
+<<<<<<< HEAD
 =======
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   role: KycRole;
   fullLegalName?: string;
   business_name?: string;
@@ -88,14 +104,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    details?: any
 
+<<<<<<< HEAD
   }>;
 
 // KYC (Know Your Customer) utilities
@@ -157,11 +176,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface KycProfile  {export interface KycProfile  {userId: string;
     action: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     return ['government_id', 'proof_of_address'];
   } else {
     return ['business_registration', 'proof_of_address', 'beneficial_ownership'];
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -183,6 +205,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     return ['bank_statement', 'utility_bill'];
   } else {
     return ['bank_statement', 'utility_bill', 'tax_certificate'];
@@ -195,10 +221,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
   if (!profile && profile.country) {
     missing && missing.push('country');
-<<<<<<< HEAD
   const missing: string[] = [];
   if (!profile.fullLegalName && !profile.businessName) {
     missing.push('name');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -226,10 +252,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
   
   if (!profile && profile.country) {
     missing && missing.push('country');
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 <<<<<<< HEAD
@@ -240,11 +269,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-382a
   }
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  }
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   if (profile.role === 'client' && !profile.dateOfBirth) {
     missing.push('dateOfBirth');
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -256,6 +290,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   if (profile.role === 'enterprise' && !profile.businessRegistrationNumber) {
     missing.push('businessRegistrationNumber');
   if (profile && profile.role === 'individual' && !profile && profile.dateOfBirth) {
@@ -267,6 +305,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
   return {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -300,10 +339,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface KycDocumentMeta {;
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+export interface KycDocumentMeta {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
   url: string;
   uploadedAt: string;
   status: 'pending' | 'approved' | 'rejected';
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 export interface KycProfile {
@@ -315,6 +360,12 @@ export interface KycProfile {;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+}
+
+export interface KycProfile {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   userId: string;
   role: KycRole;
   fullLegalName?: string;
@@ -342,6 +393,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }>;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -365,11 +417,14 @@ export function isKycProfileComplete(profile: KycProfile): boolean {return profi
 export function isKycProfileExpired(profile: KycProfile): boolean {if (!profile.expiresAt) return false;
   return new Date(profile.expiresAt) < new Date()}export function validateKycSubmission (profile: KycProfile): { ok: boolean, missing: string[] } {const missing: string[]  = [];// Check condition;
 if ( {) {$2;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
     missing.push ('name')}
   // Check condition;
 if ( {) {$2;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -383,6 +438,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export function validateKycSubmission (profile: KycProfile): { ok: boolean, missing: string[] } {
   const missing: string[] = [];
 ;
@@ -418,8 +475,11 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   // Check condition
 if ( {) {
   $2
@@ -433,6 +493,7 @@ if ( {) {
 }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -461,3 +522,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+
+
+
+  return { ok: missing.length === 0, missing };
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

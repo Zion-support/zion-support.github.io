@@ -7,8 +7,17 @@ import React, { useState } from 'react';
 <<<<<<< HEAD
 const EnhancedNavigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+<<<<<<< HEAD
             >
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+import Link from 'next/link';
+;
+const EnhancedNavigation = () =>: any {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState (false);
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
     <nav className="bg - white shadow - lg sticky top-0 z-50">;
       <div className="container mx-auto px-4">;
@@ -74,6 +83,7 @@ const EnhancedNavigation = () => {const [isMobileMenuOpen, setIsMobileMenuOpen] 
             <Link;
               href='/contact';
               className='bg - blue - 600 text - white px - 6 py - 2 rounded - lg font - medium hover:bg - blue - 700 transition - colors';
+<<<<<<< HEAD
             >              Get Startedconst EnhancedNavigation = () =>: any {const [isMobileMenuOpen, setIsMobileMenuOpen] = useState (false),>;
   return (<nav className="bg - white shadow - lg sticky top-0 z-50">;
       <div className="container mx-auto px-4">;
@@ -133,10 +143,24 @@ className='lg:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-g
               />
             </svg>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            >              Get Startedconst EnhancedNavigation = () =>: any {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState (false),
+  return (
+    <nav className="bg - white shadow - lg sticky top-0 z-50">;
+      <div className="container mx-auto px-4">;
+        <div className="flex justify - between items-center py-4">;
+          {/* Logo */}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           </button>
         </div>
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
+<<<<<<< HEAD
 <div className='lg:hidden border-t border-gray-200 py-4'>
             <div className='space-y-2'>
               <Link
@@ -180,6 +204,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className='block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md'
               >
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              </Link>
+              <Link href="/services" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md">
+                Services
+              </Link>
+              <Link href="/products" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md">
+                Products
+              </Link>
+              <Link href="/about" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md">
+                About
+              </Link>
+              <Link href="/blog" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md">
+                Blog
+              </Link>
+              <Link href="/talent" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md">
+                Careers
+              </Link>
+              <Link href="/contact" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 Contact
               </Link>
             </div>
@@ -187,6 +230,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         )}
       </div>
     </nav>
+<<<<<<< HEAD
   )
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -264,6 +308,9 @@ export default EnhancedNavigation;
         )}
       </div>;
     </nav>;
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           <Link href="/" className="flex items-center space-x-2">;
             <div className="w - 10 h - 10 bg - blue - 600 rounded - lg flex items-center justify-center">;
               <span className="text - white font-bold text-xl">Z</span>;
@@ -382,6 +429,13 @@ export default EnhancedNavigation;
             </div>;
           </div>)}
       </div>;
+<<<<<<< HEAD
     </nav>)}
 export default EnhancedNavigation;})}export default EnhancedNavigation;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </nav>);
+}
+export default EnhancedNavigation;}
+export default EnhancedNavigation;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

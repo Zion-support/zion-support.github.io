@@ -1,7 +1,26 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+// Simple PricingCard component
+const PricingCard = ({ title, price, features, isPopular }) => (
+  <div className={`bg-white p-8 rounded-lg shadow-md border-2 ${isPopular ? 'border-blue-500' : 'border-gray-200'}`}>
+    <h3 className="text-2xl font-bold text-gray-900 mb-4">{title}</h3>
+    <div className="text-4xl font-bold text-gray-900 mb-6">{price}</div>
+    <ul className="space-y-3 mb-8">
+      {features.map((feature, index) => (
+        <li key={index} className="flex items-center text-gray-600">
+          <span className="text-green-500 mr-2">✓</span>
+          {feature}
+        </li>
+      ))}
+    </ul>
+  </div>
+);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export const metadata = {
   title: 'Ai Code Reviewer | Zion Tech Group',
   description: 'Professional ai code reviewer services for your business needs.',
@@ -72,6 +91,7 @@ function FeatureItem({
   );
 }
 
+<<<<<<< HEAD
 function PricingCard({
   plan,
   price,
@@ -109,4 +129,6 @@ function PricingCard({
     </div>
   );
 }
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 

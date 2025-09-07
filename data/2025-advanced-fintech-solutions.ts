@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -478,6 +479,9 @@ import { ServiceVariant } from '../types/service-variants',export interface Adva
       'Alternative data analysisMachine learning modelsReal-time scoringRisk predictionFraud detectionCompliance reportingAPI integrationCustom scoring models','Performance analyticsRegulatory compliance';
     ],popular: true,icon: '💳',color: 'from-green-600 via-emerald-600 to-teal-600',textColor: 'text-green-400',link: 'https://ziontechgroup.com/ai-powered-credit-risk-assessment',marketPosition: 'Leading AI-powered credit risk assessment with alternative data analysis',targetAudience: 'Banks, Credit unions, Fintech companies, Lending platforms, Insurance companies',trialDays: 30,setupTime: '15-20 days',category: 'Fintech',realService: true,technology: ['Machine Learning, Alternative Data, Credit Scoring, Risk Analytics, AI/ML'],integrations: ['Core banking systems, Credit bureaus, Payment processors, CRM systems, Compliance tools'],useCases: ['Credit scoring, Risk assessment, Fraud detection, Lending decisions, Compliance'],roi: 'Improve credit decision accuracy by 40%. Reduce default rates by 30%. Increase approval rates by 25%.',competitors: ['FICO, Experian, TransUnion, Equifax, Upstart'],marketSize: '$35B credit scoring market',growthRate: '25% annual growth',variant: 'ai-finance-enterprise',contactInfo: {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Alternative data analysis',
       'Machine learning models',
       'Real - time scoring',
@@ -494,6 +498,7 @@ import { ServiceVariant } from '../types/service-variants',export interface Adva
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -501,6 +506,10 @@ import { ServiceVariant } from '../types/service-variants',export interface Adva
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     id: 'regtech-compliance-automation-platform'
     name: 'RegTech Compliance Automation Platform'
     tagline: 'Automated regulatory compliance and reporting'
@@ -558,6 +567,7 @@ import { ServiceVariant } from '../types/service-variants',export interface Adva
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
     icon: '💳',
@@ -575,6 +585,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     color: 'from - green - 600 via - emerald - 600 to - teal - 600',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / ai - powered - credit - risk - assessment',
@@ -620,27 +633,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      'Cross-border payments',
-      'Real-time settlement',
-      'Multi-currency support',
-    id: 'blockchain - payment - processing - platform',
-    name: 'Blockchain Payment Processing Platform',
-    tagline: 'Secure cross - border payments with blockchain technology',
-    price: '$899',
-    period: '/month',
-    description:;
-      'Advanced blockchain - based payment processing platform that enables fast, secure, and cost - effective cross - border transactions with real - time settlement.',
-    features: [;
-      'Cross - border payments',
-      'Real - time settlement',
-      'Multi - currency support',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -652,6 +655,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Smart contracts',
       'Compliance tools',
       'API integration',
@@ -662,6 +667,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     popular: true,
     icon: '⛓️',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -710,6 +716,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -724,6 +734,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 56
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -754,6 +765,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Quantum algorithms',
       'Portfolio optimization',
       'Risk modeling',
@@ -767,6 +782,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     popular: false,
     icon: '⚛️',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -817,6 +833,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -831,6 +851,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 18
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -861,6 +882,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'AI risk assessment',
       'Automated underwriting',
       'Predictive modeling',
@@ -874,6 +899,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     popular: true,
     icon: '🛡️',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -924,6 +950,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -938,6 +968,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 78
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -968,6 +999,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Regulatory monitoring',
       'Automated reporting',
       'Compliance tracking',
@@ -985,6 +1020,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1002,6 +1038,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.',
     launchDate: '2025-02-12',
     customers: 89,
@@ -1018,6 +1058,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1033,6 +1074,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     color: 'from - gray - 600 via - slate - 600 to - zinc - 600',
     text_color: 'text - gray - 400',
     link: 'https://ziontechgroup.com / regtech - compliance - automation - platform',
@@ -1072,6 +1117,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.5,
     reviews: 52
   },
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     id: 'regtech-compliance-automation-platform'
     name: 'RegTech Compliance Automation Platform'
     tagline: 'Automated regulatory compliance and reporting'
@@ -1121,6 +1170,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     contactInfo: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.'
@@ -1131,6 +1181,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 <<<<<<< HEAD
 =======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1138,6 +1191,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     }
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
       'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.',
     launchDate: '2025-02-12',
     customers: 89,
@@ -1149,6 +1203,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.'
+    launchDate: '2025-02-12'
+    customers: 89
+    rating: 4.5
+    reviews: 52
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1157,11 +1219,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { ServiceVariant } from '../types/service-variants';
 export interface AdvancedFintechSolution2025 {
   id: string;
@@ -1414,6 +1481,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
       website: 'https://ziontechgroup.com'
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -1422,10 +1490,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     realImplementation: true;
     implementationDetails: 'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.';
     launchDate: '2025-02-12';
     customers: 89;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1440,10 +1512,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     rating: 4 && 4.5,
     rating: 4.5;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     reviews: 52
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1457,6 +1533,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedFintechSolution2025 {;
   id: string,;
@@ -1538,6 +1619,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1553,6 +1635,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -1596,6 +1682,7 @@ export interface AdvancedFintechSolution2025  {id: string,name: string,tagline: 
 ];];
     rating: 4.5,
     reviews: 52;
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1606,8 +1693,15 @@ export interface AdvancedFintechSolution2025  {id: string,name: string,tagline: 
 ];
 ;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
+
+];
+
+
 ;
+<<<<<<< HEAD
 ];
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -1620,10 +1714,19 @@ export interface AdvancedFintechSolution2025  {id: string,name: string,tagline: 
 ];
 <<<<<<< HEAD
 =======
+=======
+
+  }
+];
+
+  }
+];
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
 
+<<<<<<< HEAD
   }
 ursor/fix-website-loading-errors-and-merge-6662
 ];
@@ -1919,3 +2022,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+];
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

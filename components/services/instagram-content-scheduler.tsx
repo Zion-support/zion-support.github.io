@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23,6 +24,11 @@ const ServicePage: NextPage<Props> = () => {return (<> <Head> <title>Instagram C
 
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+//Using an explicit empty object type for props to satisfy lint rules type Props = Record<string never>;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 //Using an explicit empty object type for props to satisfy lint rules type Props = Record<string never>;
 
  //Using an explicit empty object type for props to satisfy lint rules type Props = Record<string never>;
@@ -32,6 +38,7 @@ const ServicePage: NextPage<Props> = () => {return (<> <Head> <title>Instagram C
 import type { NextPage } from 'next';
 // Using an explicit empty object type for props to satisfy lint rules
 type Props = Record<string, never>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 //Using an explicit empty object type for props to satisfy lint rules type Props = Record<string never>;
 <<<<<<< HEAD
@@ -48,6 +55,13 @@ type Props = Record<string, never>;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+//Using an explicit empty object type for props to satisfy lint rules type Props = Record<string never>;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const ServicePage: NextPage<Props> = () => {
   return (<> <Head> <title>Instagram Content Scheduler | Services</title> <meta name="description" content="Auto-generate posts from blog feeds and schedule with analytics." /> </Head> <main> <h1>InstagramContentScheduler</h1> <p>Service details coming soon...</p> <a href="/services" >Back to Services</a> </main> </div> export default ServicePage;  return (
     <>
@@ -63,6 +77,7 @@ const ServicePage: NextPage<Props> = () => {
     </div>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -90,6 +105,12 @@ const ServicePage: NextPage<Props> = () => {
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
  //Using an explicit empty object type for props to satisfy lint rules type Props = Record<string never>;
 const ServicePage: NextPage<Props> = () => {;
   return (<> <Head> <title>Instagram Content Scheduler | Services</title> <meta name="description" content="Auto-generate posts from blog feeds and schedule with analytics." /> </Head> <main> <h1>InstagramContentScheduler</h1> <p>Service details coming soon...</p> <a href="/services" >Back to Services</a> </main> </div> export default ServicePage;  return (
@@ -125,6 +146,7 @@ export default ServicePage;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -134,6 +156,11 @@ export default ServicePage;
 
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 //Using an explicit empty object type for props to satisfy lint rules type Props = Record < string never>;
 const ServicePage: NextPage < Props> = () => {
@@ -170,6 +197,7 @@ type Props = any;
 ;
 export default ServicePage;
 ;
+<<<<<<< HEAD
 export default ServicePage;
 
 
@@ -179,6 +207,9 @@ export default ServicePage;
 =======
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export default ServicePage;
 
 
@@ -205,6 +236,7 @@ export default ServicePage;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -215,10 +247,18 @@ export default ServicePage;
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import type { NextPage } from 'next';
 import Head from 'next/head';
 // Using an explicit empty object type for props to satisfy lint rules
 type Props = any;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -228,3 +268,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

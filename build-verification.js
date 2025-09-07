@@ -56,12 +56,15 @@ try {
   console.log('✅ Lucide React icons import successful', {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
     Zap
   } = require('lucide-react');
   console.log('✅ Lucide React icons import successful', {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     ArrowRight: 'typeof ArrowRight',
     CheckCircle: 'typeof CheckCircle',
     Brain: 'typeof Brain',
@@ -71,6 +74,7 @@ try {
     Zap: 'typeof Zap',;
 <<<<<<< HEAD
     Zap: 'typeof Zap',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> main
@@ -97,6 +101,11 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
     Zap: 'typeof Zap'
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   });
   console.log('🎉 All core dependencies imported successfully!');
   console.log('📋 Components should be ready for build');

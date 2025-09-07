@@ -110,10 +110,14 @@ class $1 {}
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;`
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)};
 ;
   async analyzeCodeQuality() {}
@@ -726,7 +730,11 @@ if (require.main === module) {}
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = AICodeQualityEnhancer;
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+module.exports = AICodeQualityEnhancer;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

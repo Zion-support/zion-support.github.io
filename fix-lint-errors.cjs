@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
     // Clean up any remaining conflict markers
@@ -8,11 +9,18 @@
 =======
 [\s\S]*?
 
+=======
+
+    content = content.replace(/<<<<<<< [^\n]*[\s\S]*?[\s\S]*?
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     
     // Clean up any remaining conflict markers
     content = content.replace(/^.*$/gm, "");
     content = content.replace(/^
+<<<<<<< HEAD
 ursor/fix-lint-push-and-merge-to-main-28da
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Remove empty lines that might be left behind
@@ -26,8 +34,9 @@ ursor/fix-lint-push-and-merge-to-main-28da
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
-
+=======
 // Function to remove unused imports
 function removeUnusedImports(filePath) {
   try {
@@ -98,7 +107,6 @@ function findFilesWithIssues(dir) {
         )) {
           try {
             const content = fs.readFileSync(fullPath, "utf8");
-            if (content.includes("<<<<<<<") || content.includes("") || content.includes(">>>>>>>")) {
               files.push(fullPath)}
           } catch (error) {
             // Skip files that can't be read
@@ -140,11 +148,19 @@ try {
 } catch (error) {
   console.error("❌ Error during lint error "fixing": ", error.message);
   process.exit(1)}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+
+
+
+<<<<<<< HEAD
 ursor/fix-lint-push-and-merge-to-main-28da
 ursor/automate-test-improve-and-merge-code-59d5
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node;
 const fs = require("fs")
 const path = require("path")

@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
@@ -16,18 +17,21 @@
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 #!/usr/bin/env node
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-const { execSync } = require('child_process');
-const fs = require('fs');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 console.log('🧪 Automated Testing Suite');
 console.log('
 =======
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 console.log('🧪 Automated Testing Suite');
-console.log('==========================');
+console.log('=====');
 
 async function runTests() {
   const tests = [
@@ -64,9 +68,12 @@ async function runTests() {
     }
   };
 
+<<<<<<< HEAD
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   fs.writeFileSync('test-results.json', JSON.stringify(report, null, 2));
   
   console.log('\n📊 Test Summary:');
@@ -78,6 +85,7 @@ async function runTests() {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -85,6 +93,12 @@ async function runTests() {
 <<<<<<< HEAD
 runTests().catch(console.error);
 
+=======
+
+
+runTests().catch(console.error);
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -92,7 +106,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 console.log('🧪 Automated Testing Suite');
-console.log('==========================');
+console.log('=====');
 
 class AutomatedTestingSuite {
   constructor() {
@@ -488,6 +502,7 @@ if (require.main === module) {
 
 module.exports = AutomatedTestingSuite;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -497,3 +512,5 @@ origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

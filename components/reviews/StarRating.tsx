@@ -3,10 +3,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 ;
 }
@@ -38,6 +41,7 @@ xmlns='http://www.w3.org/2000/svg';
               view_box='0 0 24 24';
               fill={active ? 'gold' : 'none'}export default StarRating;xmlns="http://www.w3.org/2000/svg";
 
+<<<<<<< HEAD
 =======
 }
  > <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" /> </svg> </button>) ;
@@ -49,6 +53,8 @@ xmlns='http://www.w3.org/2000/svg';
 export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOnly }) => {
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -78,9 +84,13 @@ class ErrorBoundary extends React.Component {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOnly }) => {
   const [hovered, setHovered] = useState<number | null>(null);
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -97,19 +107,22 @@ export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOn
 
   const stars = [1, 2, 3, 4, 5];
   return (
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
     <div className='flex items-center gap-1'>;
       {stars && stars.map(star => {;
         const active = (hovered ?? value) >= star;
                     onMouseEnter={() => !readOnly && setHovered(star)}        return (
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
           <button
             key={star}
             type="button"
             className={`transition-transform ${readOnly ? 'cursor-default' : 'hover: scale-110'}`}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -137,11 +150,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             onMouseLeave={() => !readOnly && setHovered(null)}
             onClick={() => !readOnly && onChange(star)}
             aria-label={`${star} star`}
           >;
             <svg
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -164,10 +182,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               width={size}
               height={size}
               view_box='0 0 24 24';
               fill={active ? 'gold' : 'none'}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -230,11 +253,17 @@ export default StarRating;
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     </div>
   );
 };
 
 export default StarRating;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -244,3 +273,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

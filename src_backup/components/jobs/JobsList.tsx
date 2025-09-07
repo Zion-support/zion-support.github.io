@@ -1,4 +1,8 @@
 <<<<<<< HEAD:src_backup/components/jobs/JobsList.tsx
+<<<<<<< HEAD:src_backup/components/jobs/JobsList.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/JobsList.tsx
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
@@ -18,7 +22,11 @@ import { format } from 'date-fns';
 import Link from 'next/link';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
+<<<<<<< HEAD:src_backup/components/jobs/JobsList.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/JobsList.tsx
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
@@ -33,8 +41,12 @@ import { format } from "date-fns",
 import Link from "next/link",
 import {logErrorToProduction} from '@/utils/productionLogger',
 interface JobsListProps {
+<<<<<<< HEAD:src_backup/components/jobs/JobsList.tsx
   filter?: JobStatus;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  filter?: JobStatus,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/JobsList.tsx
   onSelectJob?: (jobId: string, jobTitle: string) => void
 }
 
@@ -44,8 +56,16 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
   const [isLoading, setIsLoading] = useState(true),
 
   useEffect(() => {
+<<<<<<< HEAD:src_backup/components/jobs/JobsList.tsx
 
 
+=======
+    const fetchJobs = async () => {
+      if (!user) return,
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/JobsList.tsx
       try {
         let query = supabase
           .from("jobs")
@@ -203,8 +223,13 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
 
 
 
+<<<<<<< HEAD:src_backup/components/jobs/JobsList.tsx
     const fetchJobs = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+    const fetchJobs = null;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/JobsList.tsx
   return (
     <div className="grid gap-6 md:grid-cols-2">
       {jobs.map((job) => (
@@ -456,6 +481,7 @@ return (<div className="grid gap - 6 md:grid - cols - 2" > {jobs.map ( (job) => 
                 <X className="h-4 w-4" />
               </Button>
             </div>
+<<<<<<< HEAD:src_backup/components/jobs/JobsList.tsx
           </CardFooter>
         </Card>
 =======
@@ -504,3 +530,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }- $ {job.budget.max ";
 }</div> <div className="mt-1 text-sm"> </Link> </Button> <Button variant=" outline"size=" sm"> <X className="h-4 w-4" /> </Button> </div> </CardFooter> </Card>) )}</div>)}'";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/jobs/JobsList.tsx
+=======
+
+          </CardFooter>
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/JobsList.tsx

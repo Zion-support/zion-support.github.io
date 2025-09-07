@@ -1,4 +1,8 @@
 <<<<<<< HEAD:src_backup/components/jobs/JobMatchesCard.tsx
+<<<<<<< HEAD:src_backup/components/jobs/JobMatchesCard.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/JobMatchesCard.tsx
 import { useState } from 'react';
 import {
   Card
@@ -13,6 +17,7 @@ import { Button } from '@/components/ui/button'
 import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react'
 import { format } from "date-fns";
 import { JobMatch } from "@/types/jobs";
+<<<<<<< HEAD:src_backup/components/jobs/JobMatchesCard.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface JobMatchCardProps {
 import { useState } from 'react';
@@ -31,10 +36,15 @@ import { format } from 'date-fns';
 import { JobMatch } from '@/types/jobs';
 interface JobMatchCardProps {;
 
+=======
+
+interface JobMatchCardProps {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/JobMatchesCard.tsx
   match: JobMatch;
   onApply: (matchId: string, jobId: string) => void;
   onDecline: (matchId: string) => void;
   showApplied?: boolean
+<<<<<<< HEAD:src_backup/components/jobs/JobMatchesCard.tsx
 
   return (
     <Card className='overflow-hidden border-l-4 border-l-blue-500'>;
@@ -47,6 +57,18 @@ interface JobMatchCardProps {;
 
 
 
+=======
+
+export function JobMatchesCard(): any ({;
+  match,;
+  onApply,;
+  onDecline,;
+  showApplied = false,;
+}: JobMatchCardProps) {;
+  const job = match && match.job;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/JobMatchesCard.tsx
 export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }: JobMatchCardProps) {
   const job = match.job,
   
@@ -54,10 +76,17 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
   
 
 
+<<<<<<< HEAD:src_backup/components/jobs/JobMatchesCard.tsx
 }
 
 export function JobMatchesCard({ match, onApply, onDecline, showApplied;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+}
+
+export function JobMatchesCard({ match, onApply, onDecline, showApplied;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/JobMatchesCard.tsx
   return (
     <Card className="overflow-hidden border-l-4 border-l-blue-500">
       <CardHeader className="p-4 pb-2">
@@ -206,6 +235,10 @@ import { useState } from "react",import { Card, CardContent, CardHeader, CardTit
 
 
 
+<<<<<<< HEAD:src_backup/components/jobs/JobMatchesCard.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/JobMatchesCard.tsx
           </div>
           <div className='flex items-center text-sm'>
             <Calendar className='h-4 w-4 mr-1 text-muted-foreground' />
@@ -283,8 +316,11 @@ import { useState } from "react",import { Card, CardContent, CardHeader, CardTit
           </div>;
 <<<<<<< HEAD:src_backup/components/jobs/JobMatchesCard.tsx
         )}
+<<<<<<< HEAD:src_backup/components/jobs/JobMatchesCard.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/JobMatchesCard.tsx
       </CardFooter>;
 =======
         )}</CardFooter>;
@@ -374,18 +410,25 @@ if (return null) {$2;
 <<<<<<< HEAD:src_backup/components/jobs/JobMatchesCard.tsx
     </Card>);
 }
+<<<<<<< HEAD:src_backup/components/jobs/JobMatchesCard.tsx
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/JobMatchesCard.tsx
 
       </CardFooter>
     </Card>
   );
+<<<<<<< HEAD:src_backup/components/jobs/JobMatchesCard.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     </Card>)}</CardFooter>;
     </Card>;
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/jobs/JobMatchesCard.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/JobMatchesCard.tsx

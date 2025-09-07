@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
@@ -815,8 +818,11 @@ export const advancedITInfrastructureExpansion2025V2 = [;
   },{name: 'Zero-Trust Security',description: 'Comprehensive zero-trust security platform',category: 'Cybersecurity',pricing: '$599/month',features: [;
 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export const advancedITInfrastructureExpansion2025V2 = [
   {
 
@@ -827,6 +833,10 @@ export const advancedITInfrastructureExpansion2025V2 = [
     pricing: '$399 / month',
       'Automated deployment',
       'Self - healing infrastructure',
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 name: 'Autonomous DevOps Platform',
     description: 'Self-managing DevOps automation platform',
     category: 'Cloud & FinOps',
@@ -834,13 +844,19 @@ name: 'Autonomous DevOps Platform',
     features: [
       'Automated deployment',
       'Self-healing infrastructure',
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Performance optimization',
       'Cost management'
     ]
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   {
     name: 'Autonomous IT Operations',
     description: 'AI - powered IT operations automation',
@@ -1209,6 +1225,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Performance monitoring'
     ]
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2042,6 +2059,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     pricing: '$749/month',
     features: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Resource mapping',
       'Intelligence analysis',
       'Planning tools',
@@ -2049,14 +2068,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
   },
   {
+<<<<<<< HEAD
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    name: 'Zero - Trust Security',
+    description: 'Comprehensive zero - trust security platform',
+    category: 'Cybersecurity',
+    pricing: '$599 / month',
+    features: [;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     name: 'Zero-Trust Security',
     description: 'Comprehensive zero-trust security platform',
     category: 'Cybersecurity',
     pricing: '$599/month',
     features: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -2064,11 +2093,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Identity verification',
       'Access control',
       'Threat detection',
       'Performance monitoring',
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2078,6 +2111,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Performance monitoring'
     ]
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ];      'Identity verificationAccess controlThreat detectionPerformance monitoring'
     ]
 
@@ -2090,12 +2125,15 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     features: [;
       'Automated deploymentSelf-healing infrastructurePerformance optimizationCost management';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ];      'Identity verification_access control_threat detection_performance monitoring';
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     ];
 
   },;
@@ -2559,6 +2597,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -2568,10 +2607,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
 ];
 ;
 
+<<<<<<< HEAD
 export const advancedITInfrastructureExpansion2025V2 = [;
   {;
     name: 'Autonomous DevOps Platform',;
@@ -3072,3 +3119,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  }
+];
+
+
+
+  },
+];
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

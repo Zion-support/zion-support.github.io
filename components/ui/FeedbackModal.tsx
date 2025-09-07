@@ -1,9 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from 'react';
 export type FeedbackContext = any;
     onClose(true)
 export default function FeedbackModal({
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import { useState } from 'react';
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   isOpen
   onClose
   defaultContext
@@ -20,15 +25,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   onClose: (submitted: boolean) => void;
   defaultContext?: FeedbackContext;
   defaultKind?: 'general' | 'bug' | 'feature';
+<<<<<<< HEAD
   userHeaders?: Record<string, string>;
 }) {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  userHeaders?: Record<string, string>;}) {export default function FeedbackModal(): any ({;
+  isOpen;
+  onClose;
+  defaultContext;
+  defaultKind = 'general';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const [rating, setRating] = useState<number>(0);
   const [hover, setHover] = useState<number>(0);
   const [kind, setKind] = useState<'general' | 'bug' | 'feature'>(defaultKind);
   const [comment, setComment] = useState('');
   const [loading, setLoading] = useState(false);
   if (!isOpen) return null;
+<<<<<<< HEAD
   async function submit() {
     if (rating < 1) return onClose(false);
     setLoading(true);
@@ -54,10 +68,30 @@ headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) },
           {[1, 2, 3, 4, 5].map(n => (
             <button
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+    setLoading(false);
+    onClose(true);
+
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) };
+        body: JSON.stringify({ rating, comment, kind, context: defaultContext || {} })})
+    } catch {}
+    setLoading(false);
+    onClose(true)
+  }
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
+      <div className="bg-white w-full max-w-md rounded shadow-lg p-5 space-y-4">
+        <div className="text-lg font-medium">Was this helpful?</div>
+        <div className="flex gap-2">
+          {[1,2,3,4,5].map(n => (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               key={n}
               onMouseEnter={() => setHover(n)}
               onMouseLeave={() => setHover(0)}
               onClick={() => setRating(n)}
+<<<<<<< HEAD
 className={
                 hover >= n || rating >= n ? 'text-yellow-500' : 'text-gray-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -97,6 +131,12 @@ export type FeedbackContext = any;
               onMouseLeave={() => setHover(0)}
               onClick={() => setRating(n)}className={hover >= n || rating >= n ? 'text-yellow-500' : 'text-gray-300';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+className={
+                hover >= n || rating >= n ? 'text-yellow-500' : 'text-gray-300'
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               }
               aria-label={`${n} stars`}
             >;
@@ -217,6 +257,7 @@ function submit() {if (return on_close (false)) {$2;
 <<<<<<< HEAD
           <button onClick={submit} disabled={loading || rating<1} className="px-3 py-2 rounded bg-gray-900 text-white">{loading? 'Submitting…' : 'Submit'}</button>
         </div>
+<<<<<<< HEAD
         <div className='flex justify-end gap-2'>
           <button
 =======
@@ -240,10 +281,13 @@ function submit() {if (return on_close (false)) {$2;
           </button>
         </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       </div>
     </div>
   );
 }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
           </button>;
@@ -251,6 +295,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
     </div>;
   )}<div className='flex justify - end gap - 2'>;
+=======
+
+        <div className='flex justify - end gap - 2'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           <button;
             on_click={() => on_close (false)}
             className='px - 3 py - 2 rounded border';
@@ -279,6 +327,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
         <div className="flex justify-end gap-2">;
+<<<<<<< HEAD
           <button on_click={()=>on_close (false)} className="px-3 py-2 rounded border">Later</button>;}
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+          <button on_click={()=>on_close (false)} className="px-3 py-2 rounded border">Later</button>;
+
+}
+  );
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

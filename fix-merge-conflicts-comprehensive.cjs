@@ -14,7 +14,11 @@ function fixMergeConflicts(filePath) {
 
     // Remove merge conflict markers and keep the HEAD version (first part)
 <<<<<<< HEAD
+<<<<<<< HEAD
     const conflictRegex = /
+=======
+    const conflictRegex = /\n([\s\S]*?)\n\n([\s\S]*?)\n
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     
     content = content.replace(conflictRegex, (match, headContent, originContent) => {
       modified = true;
@@ -30,10 +34,16 @@ function fixMergeConflicts(filePath) {
     });
 
     // Remove any remaining conflict markers
+<<<<<<< HEAD
     content = content.replace(/
 =======
     content = content.replace(/[^\n]+\n?/g, '');
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     // Clean up HTML entities
     content = content.replace(/&apos;/g, "'");
@@ -137,6 +147,7 @@ try {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.log('\n✨ Merge conflict resolution script completed!');
 =======
 <<<<<<< HEAD
@@ -154,3 +165,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+console.log('\n✨ Merge conflict resolution script completed!');
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

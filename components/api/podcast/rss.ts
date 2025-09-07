@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const EPISODES_PATH = null;
   return res.status(200).json({ ok: true, path: '/podcast.xml' })
 }
@@ -13,11 +14,22 @@ const EPISODES_PATH = path.join(
 );
 const RSS_PATH = path.join(process.cwd(), 'public', 'podcast.xml');
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+function ensureStorage() {
+
+  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 function ensureStorage() {
 
   const dir = path.dirname(EPISODES_PATH);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -25,7 +37,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(405).json({ error: 'Method not allowed' });
   ensureStorage();
   const siteUrl = process.env.SITE_URL |'http://localhost:3000';
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
 
   const siteUrl = process && process.env.SITE_URL || 'http://localhost:3000';
@@ -41,10 +57,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   ensureStorage();
   const items = episodes
     .filter(e => e.audio?.mp3Url)
+<<<<<<< HEAD
     .map(e => {
       const pubDate = new Date(e.createdAt).toUTCString();
       const audioUrl = `${siteUrl}${e.audio.mp3Url}`;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    .map(e => {      const pubDate = new Date(e.createdAt).toUTCString();    .filter((e) => e.audio?.mp3Url)
+    .map((e) => {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       return `
     <item>
       <pubDate>${pubDate}</pubDate>
@@ -74,15 +95,23 @@ function ensureStorage() {const dir = path && path.dirname(EPISODES_PATH)if (!fs
 <<<<<<< HEAD
   </channel>
 </rss>`;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   fs.writeFileSync(RSS_PATH, xml, 'utf8');
 return res.status(200).json({ ok: true, path: '/podcast.xml' });
 
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }) .join ('\n');
 <channel> <title>Zion Podcast</title> <link>$ {
   siteUrl
 }/media/podcast</link> <language>en-us</language> <itunes:author>Zion</itunes:author> <description>Zion interviews builders, founders, and contributors.</description> $ {
+<<<<<<< HEAD
   items 
 }</channel> </rss>`;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -93,6 +122,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
  * ensure_storage - Function description;
  */;
 function ensure_storage() {const dir = path.dirname (EPISODES_PATH)if () fs.mkdir_sync (dir, { recursive: true })) {$2;
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
   if ()) {$2;
 }
@@ -136,4 +168,11 @@ function handler() {if (return res.status (405).json ({ error: 'Method not allow
 }</channel> </rss>`;items;
 }</channel> </rss>`;items;
 }</channel> </rss>`;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+  items 
+}</channel> </rss>`;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

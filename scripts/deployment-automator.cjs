@@ -11,7 +11,11 @@ console.log(' Deployment Automator Starting...')
         "command"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         execSync(step.command, { "stdio"})
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+        execSync(step.command, { "stdio"})
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

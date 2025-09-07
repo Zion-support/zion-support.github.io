@@ -27,6 +27,7 @@ module.exports = {}
     },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     // AI-Powered Code Analysis & Auto-Fixing
     {
@@ -43,6 +44,8 @@ module.exports = {}
       env: {
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     // AI-Powered Code Analysis & Auto-Fixing;
     {}
       "name": 'ai-code-analyzer',
@@ -56,8 +59,7 @@ module.exports = {}
       "max_memory_restart": '512M',
       "restart_delay": 10000,
       "env": {}
-<<<<<<< HEAD
-=======
+
     // AI-Powered Code Analysis & Auto-Fixing
     {
       name: 'ai-code-analyzer',
@@ -71,10 +73,13 @@ module.exports = {}
       max_memory_restart: '512M',
       restart_delay: 10000,
       env: {
+<<<<<<< HEAD
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         NODE_ENV: 'production',
         AI_ANALYSIS_MODE: 'comprehensive',
         AUTO_FIX: 'true'
@@ -86,6 +91,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     // Smart Performance Optimizer
@@ -103,6 +109,8 @@ main
       env: {
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     // Smart Performance Optimizer;
     {}
       "name": 'smart-performance-optimizer',
@@ -116,8 +124,7 @@ main
       "max_memory_restart": '1G',
       "restart_delay": 15000,
       "env": {}
-<<<<<<< HEAD
-=======
+
     // Smart Performance Optimizer
     {
       name: 'smart-performance-optimizer',
@@ -131,10 +138,13 @@ main
       max_memory_restart: '1G',
       restart_delay: 15000,
       env: {
+<<<<<<< HEAD
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         NODE_ENV: 'production',
         OPTIMIZATION_LEVEL: 'aggressive',
         PERFORMANCE_MONITORING: 'true'
@@ -146,6 +156,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     // Intelligent Dependency Manager
@@ -163,6 +174,8 @@ main
       env: {
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     // Intelligent Dependency Manager;
     {}
       "name": 'intelligent-dependency-manager',
@@ -176,8 +189,7 @@ main
       "max_memory_restart": '512M',
       "restart_delay": 20000,
       "env": {}
-<<<<<<< HEAD
-=======
+
     // Intelligent Dependency Manager
     {
       name: 'intelligent-dependency-manager',
@@ -191,10 +203,13 @@ main
       max_memory_restart: '512M',
       restart_delay: 20000,
       env: {
+<<<<<<< HEAD
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         NODE_ENV: 'production',
         AUTO_UPDATE: 'true',
         SECURITY_FIRST: 'true',
@@ -208,6 +223,7 @@ main
     },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     // Smart Deployment Automation
     {
@@ -224,6 +240,8 @@ main
       env: {
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     // Smart Deployment Automation;
     {}
       "name": 'smart-deployment-automation',
@@ -237,8 +255,7 @@ main
       "max_memory_restart": '1G',
       "restart_delay": 30000,
       "env": {}
-<<<<<<< HEAD
-=======
+
     // Smart Deployment Automation
     {
       name: 'smart-deployment-automation',
@@ -252,10 +269,13 @@ main
       max_memory_restart: '1G',
       restart_delay: 30000,
       env: {
+<<<<<<< HEAD
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         NODE_ENV: 'production',
         AUTO_DEPLOY: 'false', // Set to true for automatic deployment
         ROLLBACK_ENABLED: 'true',
@@ -269,6 +289,7 @@ main
     },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     // Intelligent Repository Manager
     {
@@ -285,6 +306,8 @@ main
       env: {
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     // Intelligent Repository Manager;
     {}
       "name": 'intelligent-repository-manager',
@@ -298,8 +321,7 @@ main
       "max_memory_restart": '512M',
       "restart_delay": 10000,
       "env": {}
-<<<<<<< HEAD
-=======
+
     // Intelligent Repository Manager
     {
       name: 'intelligent-repository-manager',
@@ -313,10 +335,13 @@ main
       max_memory_restart: '512M',
       restart_delay: 10000,
       env: {
+<<<<<<< HEAD
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         NODE_ENV: 'production',
         AUTO_MERGE: 'false', // Set to true for automatic merging
         CONFLICT_RESOLUTION: 'intelligent',
@@ -330,6 +355,7 @@ main
     },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     // Advanced Development Workflow
     {
@@ -346,6 +372,8 @@ main
       env: {
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     // Advanced Development Workflow;
     {}
       "name": 'advanced-development-workflow',
@@ -359,8 +387,7 @@ main
       "max_memory_restart": '512M',
       "restart_delay": 5000,
       "env": {}
-<<<<<<< HEAD
-=======
+
     // Advanced Development Workflow
     {
       name: 'advanced-development-workflow',
@@ -374,10 +401,13 @@ main
       max_memory_restart: '512M',
       restart_delay: 5000,
       env: {
+<<<<<<< HEAD
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         NODE_ENV: 'production',
         WORKFLOW_MODE: 'continuous',
         QUALITY_GATES: 'enabled'
@@ -389,6 +419,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     // Intelligent CI/CD Orchestrator
@@ -406,6 +437,8 @@ main
       env: {
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     // Intelligent CI/CD Orchestrator;
     {}
       "name": 'intelligent-cicd-orchestrator',
@@ -419,8 +452,7 @@ main
       "max_memory_restart": '1G',
       "restart_delay": 15000,
       "env": {}
-<<<<<<< HEAD
-=======
+
     // Intelligent CI/CD Orchestrator
     {
       name: 'intelligent-cicd-orchestrator',
@@ -434,10 +466,13 @@ main
       max_memory_restart: '1G',
       restart_delay: 15000,
       env: {
+<<<<<<< HEAD
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         NODE_ENV: 'production',
         PIPELINE_MODE: 'intelligent',
         AUTO_DEPLOYMENT: 'false'
@@ -449,6 +484,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     // Enhanced CI/CD Automation
@@ -466,6 +502,8 @@ main
       env: {
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     // Enhanced CI/CD Automation;
     {}
       "name": 'enhanced-ci-cd-automation',
@@ -479,8 +517,7 @@ main
       "max_memory_restart": '1G',
       "restart_delay": 10000,
       "env": {}
-<<<<<<< HEAD
-=======
+
     // Enhanced CI/CD Automation
     {
       name: 'enhanced-ci-cd-automation',
@@ -494,10 +531,13 @@ main
       max_memory_restart: '1G',
       restart_delay: 10000,
       env: {
+<<<<<<< HEAD
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         NODE_ENV: 'production',
         QUALITY_GATES: 'strict',
         PARALLEL_JOBS: '4'
@@ -509,6 +549,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     // Enhanced Testing Automation
@@ -526,6 +567,8 @@ main
       env: {
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     // Enhanced Testing Automation;
     {}
       "name": 'enhanced-testing-automation',
@@ -539,8 +582,7 @@ main
       "max_memory_restart": '1G',
       "restart_delay": 20000,
       "env": {}
-<<<<<<< HEAD
-=======
+
     // Enhanced Testing Automation
     {
       name: 'enhanced-testing-automation',
@@ -554,10 +596,13 @@ main
       max_memory_restart: '1G',
       restart_delay: 20000,
       env: {
+<<<<<<< HEAD
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         NODE_ENV: 'production',
         TEST_STRATEGY: 'comprehensive',
         PARALLEL_TESTS: 'true'
@@ -569,6 +614,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     // Enhanced Security Automation
@@ -586,6 +632,8 @@ main
       env: {
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     // Enhanced Security Automation;
     {}
       "name": 'enhanced-security-automation',
@@ -599,8 +647,7 @@ main
       "max_memory_restart": '512M',
       "restart_delay": 25000,
       "env": {}
-<<<<<<< HEAD
-=======
+
     // Enhanced Security Automation
     {
       name: 'enhanced-security-automation',
@@ -614,10 +661,13 @@ main
       max_memory_restart: '512M',
       restart_delay: 25000,
       env: {
+<<<<<<< HEAD
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         NODE_ENV: 'production',
         SECURITY_LEVEL: 'maximum',
         VULNERABILITY_SCANNING: 'true'
@@ -629,6 +679,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     // Project Health Monitor
@@ -646,6 +697,8 @@ main
       env: {
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     // Project Health Monitor;
     {}
       "name": 'project-health-monitor',
@@ -659,8 +712,7 @@ main
       "max_memory_restart": '512M',
       "restart_delay": 5000,
       "env": {}
-<<<<<<< HEAD
-=======
+
     // Project Health Monitor
     {
       name: 'project-health-monitor',
@@ -674,10 +726,13 @@ main
       max_memory_restart: '512M',
       restart_delay: 5000,
       env: {
+<<<<<<< HEAD
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         NODE_ENV: 'production',
         HEALTH_CHECKS: 'comprehensive',
         MONITORING_INTERVAL: '300000'
@@ -689,6 +744,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     // PM2 Sync Automation
@@ -706,6 +762,8 @@ main
       env: {
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     // PM2 Sync Automation;
     {}
       "name": 'pm2-sync-automation',
@@ -719,8 +777,7 @@ main
       "max_memory_restart": '1G',
       "restart_delay": 2000,
       "env": {}
-<<<<<<< HEAD
-=======
+
     // PM2 Sync Automation
     {
       name: 'pm2-sync-automation',
@@ -734,10 +791,13 @@ main
       max_memory_restart: '1G',
       restart_delay: 2000,
       env: {
+<<<<<<< HEAD
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         NODE_ENV: 'production',
         SYNC_MODE: 'continuous',
         PROCESS_MONITORING: 'true'
@@ -749,6 +809,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     // Link Checker Automation
@@ -766,6 +827,8 @@ main
       env: {
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     // Link Checker Automation;
     {}
       "name": 'link-checker-automation',
@@ -779,8 +842,7 @@ main
       "max_memory_restart": '512M',
       "restart_delay": 30000,
       "env": {}
-<<<<<<< HEAD
-=======
+
     // Link Checker Automation
     {
       name: 'link-checker-automation',
@@ -794,10 +856,13 @@ main
       max_memory_restart: '512M',
       restart_delay: 30000,
       env: {
+<<<<<<< HEAD
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         NODE_ENV: 'production',
         CHECK_DEPTH: 'deep',
         EXTERNAL_LINKS: 'true'
@@ -809,6 +874,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     // TypeScript Syntax Fixer
@@ -826,6 +892,8 @@ main
       env: {
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     // TypeScript Syntax Fixer;
     {}
       "name": 'typescript-syntax-fixer',
@@ -839,8 +907,7 @@ main
       "max_memory_restart": '256M',
       "restart_delay": 5000,
       "env": {}
-<<<<<<< HEAD
-=======
+
     // TypeScript Syntax Fixer
     {
       name: 'typescript-syntax-fixer',
@@ -854,10 +921,13 @@ main
       max_memory_restart: '256M',
       restart_delay: 5000,
       env: {
+<<<<<<< HEAD
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         NODE_ENV: 'production',
         AUTO_FIX: 'true',
         STRICT_MODE: 'true'
@@ -869,6 +939,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     // Console Error Fixer
@@ -886,6 +957,8 @@ main
       env: {
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     // Console Error Fixer;
     {}
       "name": 'console-error-fixer',
@@ -899,8 +972,7 @@ main
       "max_memory_restart": '256M',
       "restart_delay": 3000,
       "env": {}
-<<<<<<< HEAD
-=======
+
     // Console Error Fixer
     {
       name: 'console-error-fixer',
@@ -914,10 +986,13 @@ main
       max_memory_restart: '256M',
       restart_delay: 3000,
       env: {
+<<<<<<< HEAD
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         NODE_ENV: 'production',
         ERROR_DETECTION: 'real-time',
         AUTO_FIX: 'true'
@@ -929,6 +1004,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     // Quality Checks
@@ -946,6 +1022,8 @@ main
       env: {
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     // Quality Checks;
     {}
       "name": 'quality-checks',
@@ -959,8 +1037,7 @@ main
       "max_memory_restart": '256M',
       "restart_delay": 10000,
       "env": {}
-<<<<<<< HEAD
-=======
+
     // Quality Checks
     {
       name: 'quality-checks',
@@ -974,10 +1051,13 @@ main
       max_memory_restart: '256M',
       restart_delay: 10000,
       env: {
+<<<<<<< HEAD
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         NODE_ENV: 'production',
         QUALITY_STANDARDS: 'high',
         COVERAGE_THRESHOLD: '80'
@@ -989,6 +1069,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     // Security Audit
@@ -1006,6 +1087,8 @@ main
       env: {
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     // Security Audit;
     {}
       "name": 'security-audit',
@@ -1019,8 +1102,7 @@ main
       "max_memory_restart": '512M',
       "restart_delay": 20000,
       "env": {}
-<<<<<<< HEAD
-=======
+
     // Security Audit
     {
       name: 'security-audit',
@@ -1034,10 +1116,13 @@ main
       max_memory_restart: '512M',
       restart_delay: 20000,
       env: {
+<<<<<<< HEAD
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         NODE_ENV: 'production',
         AUDIT_LEVEL: 'comprehensive',
         VULNERABILITY_ALERTS: 'true'
@@ -1049,6 +1134,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     // Continuous Improvement
@@ -1066,6 +1152,8 @@ main
       env: {
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     // Continuous Improvement;
     {}
       "name": 'continuous-improvement',
@@ -1079,8 +1167,7 @@ main
       "max_memory_restart": '256M',
       "restart_delay": 60000,
       "env": {}
-<<<<<<< HEAD
-=======
+
     // Continuous Improvement
     {
       name: 'continuous-improvement',
@@ -1094,10 +1181,13 @@ main
       max_memory_restart: '256M',
       restart_delay: 60000,
       env: {
+<<<<<<< HEAD
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         NODE_ENV: 'production',
         IMPROVEMENT_MODE: 'automatic',
         LEARNING_ENABLED: 'true'
@@ -1109,6 +1199,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     // Daily Build Test
@@ -1126,6 +1217,8 @@ main
       env: {
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     // Daily Build Test;
     {}
       "name": 'daily-build-test',
@@ -1139,8 +1232,7 @@ main
       "max_memory_restart": '512M',
       "restart_delay": 120000,
       "env": {}
-<<<<<<< HEAD
-=======
+
     // Daily Build Test
     {
       name: 'daily-build-test',
@@ -1154,10 +1246,13 @@ main
       max_memory_restart: '512M',
       restart_delay: 120000,
       env: {
+<<<<<<< HEAD
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         NODE_ENV: 'production',
         BUILD_STRATEGY: 'comprehensive',
         NOTIFICATION_ENABLED: 'true'
@@ -1169,6 +1264,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     // Health Check
@@ -1186,6 +1282,8 @@ main
       env: {
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     // Health Check;
     {}
       "name": 'health-check',
@@ -1199,8 +1297,7 @@ main
       "max_memory_restart": '256M',
       "restart_delay": 5000,
       "env": {}
-<<<<<<< HEAD
-=======
+
     // Health Check
     {
       name: 'health-check',
@@ -1214,10 +1311,13 @@ main
       max_memory_restart: '256M',
       restart_delay: 5000,
       env: {
+<<<<<<< HEAD
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         NODE_ENV: 'production',
         HEALTH_CHECK_INTERVAL: '120000',
         ALERT_THRESHOLD: 'medium'
@@ -1229,6 +1329,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     // Security Scanner
@@ -1246,6 +1347,8 @@ main
       env: {
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     // Security Scanner;
     {}
       "name": 'security-scanner',
@@ -1259,8 +1362,7 @@ main
       "max_memory_restart": '512M',
       "restart_delay": 30000,
       "env": {}
-<<<<<<< HEAD
-=======
+
     // Security Scanner
     {
       name: 'security-scanner',
@@ -1274,10 +1376,13 @@ main
       max_memory_restart: '512M',
       restart_delay: 30000,
       env: {
+<<<<<<< HEAD
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         NODE_ENV: 'production',
         SCAN_DEPTH: 'comprehensive',
         REAL_TIME_SCANNING: 'true'
@@ -1289,6 +1394,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     // Performance Monitor
@@ -1306,6 +1412,8 @@ main
       env: {
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     // Performance Monitor;
     {}
       "name": 'performance-monitor',
@@ -1319,8 +1427,7 @@ main
       "max_memory_restart": '512M',
       "restart_delay": 5000,
       "env": {}
-<<<<<<< HEAD
-=======
+
     // Performance Monitor
     {
       name: 'performance-monitor',
@@ -1334,10 +1441,13 @@ main
       max_memory_restart: '512M',
       restart_delay: 5000,
       env: {
+<<<<<<< HEAD
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         NODE_ENV: 'production',
         MONITORING_INTERVAL: '180000',
         PERFORMANCE_ALERTS: 'true'
@@ -1351,11 +1461,19 @@ main
   ],
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+  // PM2 Deploy configuration;
+  "deploy": {}
+    production: {}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   // PM2 Deploy configuration
   deploy: {
     production: {
 
+<<<<<<< HEAD
   // PM2 Deploy configuration
   deploy: {
     production: {
@@ -1365,6 +1483,12 @@ main
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  // PM2 Deploy configuration;
+  "deploy": {}
+    production: {}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       user: 'node',
       host: 'your-production-server.com',
       ref: 'origin/main',

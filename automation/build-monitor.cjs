@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -45,10 +46,22 @@ main
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
 const { promisify } = require('util');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -90,6 +103,14 @@ const execAsync = promisify(exec);
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+const execAsync = promisify(exec);
+const execAsync = promisify(exec);
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 class BuildMonitor {
   constructor() {
     this.projectRoot = process.cwd();
@@ -108,6 +129,7 @@ const execAsync = promisify(exec);
 
 const execAsync = promisify(exec);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -146,6 +168,17 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+const execAsync = promisify(exec);
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 class BuildMonitor {}
   constructor() {}
     this.logFile = path.join(__dirname, 'logs', 'build-monitor.log');
@@ -155,6 +188,7 @@ class BuildMonitor {}
   };
   log(message) {}
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -203,6 +237,17 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     const logMessage = `[${timestamp}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -211,6 +256,7 @@ main
     const startTime = Date.now();
     try {}
       this.log('Starting build process...');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -244,6 +290,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       execSync('npm run clean', {
         cwd: this.projectRoot,
         stdio: 'ignore',
@@ -256,6 +310,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         timeout: 300000,
       });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -276,6 +331,22 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       const { stdout, stderr } = await execAsync('npm run build', {})
         "cwd": process.cwd(),
         "timeout": 300000, // 5 minutes timeout;
@@ -284,7 +355,10 @@ main
 
       const endTime = Date.now();
       const duration = endTime - startTime;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       this.lastBuild = {
         timestamp: new Date().toISOString(),
         success: true,
@@ -294,6 +368,7 @@ main
       const endTime = Date.now();
       const duration = endTime - startTime;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -324,6 +399,12 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       const buildResult = {}
         "timestamp": new Date().toISOString(),
         duration,
@@ -337,6 +418,7 @@ main
       };
       this.lastBuildTime = new Date();
       this.log(`Build completed successfully in ${duration}ms`);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -370,6 +452,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       this.log(`Build completed successfully in ${buildTime}ms`);
       await this.saveBuildReport();
     } catch (error) {
@@ -380,6 +470,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         error: error.message,
         output: error.stdout || error.stderr,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -400,6 +491,22 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       return buildResult;
     } catch (error) {}
       const endTime = Date.now();
@@ -421,6 +528,7 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -450,6 +558,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   async handleBuildFailure(error) {
     this.log('Handling build failure...');
     try {
@@ -479,6 +595,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -497,6 +614,22 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       return buildResult;
     };
   };
@@ -507,6 +640,7 @@ main
         "cwd": process.cwd(),
         "timeout": 60000}
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -540,6 +674,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   async reportBuildFailure(error) {
     try {
       const failureReport = {
@@ -557,6 +699,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     } catch (_) {}
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -577,6 +720,22 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       this.log('Type check completed successfully');
       return { "success": true, "output": stdout, "errors": stderr };
     } catch (error) {}
@@ -669,6 +828,7 @@ main
       this.log('Optimizing build...');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -686,17 +846,18 @@ main
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
 
 <<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -707,6 +868,14 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       // Clean up first;
       await this.cleanupOldBuilds();
 
@@ -774,21 +943,16 @@ if (require.main === module) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 });
 };
 module.exports = BuildMonitor;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-});
-};
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 });
 };
 module.exports = BuildMonitor;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -816,6 +980,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 const monitor = new BuildMonitor();
 monitor.start().catch(error => {
@@ -826,6 +996,7 @@ monitor.start().catch(error => {
 };
 });
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 module.exports = BuildMonitor;
@@ -848,10 +1019,16 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 });
 };
 
 module.exports = BuildMonitor;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -865,3 +1042,7 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

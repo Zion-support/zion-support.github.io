@@ -37,7 +37,11 @@ const { execSync } = require('child_process')
     fixed = fixed.replace(/(\w+):\s*([^,}]+)/g, '"$1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     optimized = optimized.replace(/import\s+\{\s*([^}]+)\s*\}\s+from\s+['"]([^'')]
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    optimized = optimized.replace(/import\s+\{\s*([^}]+)\s*\}\s+from\s+['"]([^'')]
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

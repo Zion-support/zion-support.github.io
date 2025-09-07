@@ -1,13 +1,19 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface TextAnalysisResult {
 =======
 interface TextAnalysisResult  {}
+=======
+interface TextAnalysisResult {
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 export default async function handler() {}
   try {const { text }  = req && req.body;// Basic statistics;
     const characters = text.length;
     const charactersNoSpaces = text.replace(/\s/g, '').length;
+<<<<<<< HEAD
     const words = text;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 text: string;
@@ -60,6 +66,9 @@ return res.status(405).json({ error: 'Method not allowed' });
     // Basic statistics
 const words = text
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    const words = text
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       .trim()
       .split(/\s+/)
       .filter(word => word && word.length > 0).length;
@@ -68,9 +77,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       .filter(sentence => sentence && sentence.trim().length > 0).length;
     const paragraphs = text
       .split(/\n\s*\n/)
+<<<<<<< HEAD
       .filter(para => para.trim().length > 0).length;
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+      .filter(para => para.trim().length > 0).length;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     // Syllable counting (simplified)
     const syllableCount = (word: string): number => {
       word = word.toLowerCase();
@@ -78,6 +94,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '');
       word = word.replace(/^y/, '');
       const matches = word.match(/[aeiouy]{1,2}/g);
+<<<<<<< HEAD
 return matches ? matches.length : 1;
     };
 
@@ -104,6 +121,8 @@ const fleschReadingEase = Math.max(
       0
       0.4 *
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         (words / sentences +
           100 *
             (text && text.split(/\s+/).filter(word => word && word.length > 6).length / words))
@@ -200,6 +219,10 @@ const fleschReadingEase = Math.max(0,Math.min(100;
 <<<<<<< HEAD
     // Keyword analysis
     const wordCounts = new Map<string, number>();
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 text
       .toLowerCase()
       .split(/\s+/)
@@ -217,13 +240,17 @@ text
 word,
         count,
         frequency: Math.round((count / words) * 1000) / 10,
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       }));
     // Bigrams and trigrams
     const wordsArray = text && text.toLowerCase().split(/\s+/);
     const bigramCounts = new Map<string, number>();
     const trigramCounts = new Map<string, number>();
 
+<<<<<<< HEAD
 for (let i = 0; i < wordsArray.length - 1; i++) {
       const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;
       bigramCounts.set(bigram, (bigramCounts.get(bigram) |0) + 1);
@@ -232,6 +259,8 @@ for (let i = 0; i < wordsArray.length - 1; i++) {
       const trigram = `${wordsArray[i]} ${wordsArray[i + 1]} ${wordsArray[i + 2]}`;
       trigramCounts.set(trigram, (trigramCounts.get(trigram) || 0) + 1);
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
     const bigrams = Array.from(bigramCounts.entries())
       .sort((a, b) => b[1] - a[1])
@@ -259,6 +288,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       .slice(0, 5)
       .map(([phrase, count]) => ({ phrase, count }));
     // Language detection (simplified - assume English for demo)
+<<<<<<< HEAD
 const isEnglish = /^[a-zA-Z\s.,!?;:'"()-]+$/.test(text);
     const detectedLanguage = isEnglish ? 'en' : 'unknown';
     const confidence = isEnglish ? 0.95 : 0.5;
@@ -275,6 +305,18 @@ text,
         speakingTime,
       },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      text
+        characters
+        charactersNoSpaces
+        words
+        sentences
+        paragraphs
+        syllables
+        readingTime
+        speakingTime
+      }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       readability: {
         fleschReadingEase: Math.round(fleschReadingEase * 100) / 100
         fleschKincaidGrade: Math.round(fleschKincaidGrade * 100) / 100
@@ -292,6 +334,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       }
       language: {
   } catch (error) {
+<<<<<<< HEAD
     console.error('Text analysis error:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
@@ -338,10 +381,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         label: sentimentLabel;
         positiveWords: textWords.filter(word => positiveWords.includes(word))negativeWords: textWords.filter(word => negativeWords.includes(word))}
       language: {} catch (error) {console && console.error('Text analysis error:', error)res && res.status(500).json({ error: 'Internal server error' })}        score: sentimentScore;
+=======
+    console && console.error('Text analysis error:', error);
+    res && res.status(500).json({ error: 'Internal server error' });
+  }        score: sentimentScore;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         label: sentimentLabel;
         detectedLanguage;
         confidence;
         isEnglish}
+<<<<<<< HEAD
         detected_language,confidence,is_english,},keywords: {top_words,bigrams,trigrams,},}res.status (200).json (result)} catch (error) {console.error ('Text analysis error:', error)res.status (500).json ({ error: 'Internal server error' })}        score: sentiment_score;
         label: sentiment_label;
         positive_words: text_words.filter (word => positive_words.includes (word))negative_words: text_words.filter (word => negative_words.includes (word))}
@@ -356,3 +405,39 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     res.status(500).json({ error: 'Internal server error' })}
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+        detected_language,
+        confidence,
+        is_english,
+      },
+      keywords: {
+        top_words,
+        bigrams,
+        trigrams,
+      },
+    }
+;
+    res.status (200).json (result);
+  } catch (error) {
+    console.error ('Text analysis error:', error);
+    res.status (500).json ({ error: 'Internal server error' });
+  }        score: sentiment_score;
+        label: sentiment_label;
+        positive_words: text_words.filter (word => positive_words.includes (word));
+        negative_words: text_words.filter (word => negative_words.includes (word))}
+      language: {
+        detected_language;
+        confidence;
+        is_english}
+      keywords: {
+        top_words;
+        bigrams;
+  }
+  }
+}
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

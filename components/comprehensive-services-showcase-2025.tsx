@@ -1,5 +1,6 @@
 import Layout from '../components/layout/Layout';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Filter, Grid3X3, List;
   Star, Users, TrendingUp, Zap, Brain, Atom, Shield, Rocket, Palette, BookOpen, Truck, DollarSign, Settings;
@@ -13,6 +14,69 @@ import { innovativeITServicesEnhanced2025  } from '../data/2025-innovative-it-se
 import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services';
 interface Service {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import { motion, AnimatePresence } from 'framer-motion';
+
+import {
+
+// Import service data;
+import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services';
+import { innovativeAIServicesEnhanced2025 } from '../data/2025-innovative-ai-services-enhanced';
+import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-services-enhanced';
+
+  Star, Users, TrendingUp, Zap, Brain, Atom, Shield, Rocket, Palette, BookOpen, Truck, DollarSign, Settings;
+  ArrowRight, ChevronDown, CheckCircle, Clock, Award, Target, Globe, Sparkles, Cpu, Lock, Cloud, BarChart3;
+  Eye, Heart, Lightbulb, Palette as PaletteIcon, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon;
+
+import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services';
+
+  Search,
+  Filter,
+  Grid3X3,
+  List,
+  Star,
+  Users,
+  TrendingUp,
+  Zap,
+  Brain,
+  Atom,
+  Shield,
+  Rocket,
+  Palette,
+  BookOpen,
+  Truck,
+  DollarSign,
+  Settings,
+  ArrowRight,
+  ChevronDown,
+  CheckCircle,
+  Clock,
+  Award,
+  Target,
+  Globe,
+  Sparkles,
+  Cpu,
+  Lock,
+  Cloud,
+  BarChart3,
+  Eye,
+  Heart,
+  Lightbulb,
+  Palette as PaletteIcon,
+  Code,
+  Database,
+  Shield as ShieldIcon,
+  Globe as GlobeIcon,
+  Star, Users, TrendingUp, Zap, Brain, Atom, Shield, Rocket, Palette, BookOpen, Truck, DollarSign, Settings;
+  ArrowRight, ChevronDown, CheckCircle, Clock, Award, Target, Globe, Sparkles, Cpu, Lock, Cloud, BarChart3;
+  Eye, Heart, Lightbulb, Palette as PaletteIcon, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon;
+// Import service data;
+import { innovativeRealMicroSaasServices2025 } from '../data / 2025 - innovative - real - micro - saas - services';
+import { innovativeAIServicesEnhanced2025 } from '../data / 2025 - innovative - ai - services - enhanced';
+import { innovativeITServicesEnhanced2025 } from '../data / 2025 - innovative - it - services - enhanced';
+import { emergingTechServicesEnhanced2025 } from '../data / emerging - tech - services';
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string;
 =======
 import { motion, AnimatePresence  } from 'framer-motion';
@@ -49,6 +113,7 @@ interface Service  {id: string;
   rating: number;
   reviews: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
   customers: number;
   marketSize: string;
 =======
@@ -57,6 +122,16 @@ const categories = [;
   {name: 'All Services';
     icon: <Globe className='w-5 h-5' />;
     count: allServices.length;
+=======
+  customers: number;
+  }))
+];
+const categories = [
+  {
+    name: 'All Services'
+    icon: <Globe className='w-5 h-5' />
+    count: allServices.length
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
   {name: 'Micro SAAS';
     icon: <Rocket className='w-5 h-5' />;
@@ -83,6 +158,7 @@ const sortOptions = [;
 const sortOptions = [;
   icon?: React && React.ReactNode;
 const allServices: Service[] = [;
+<<<<<<< HEAD
   ...innovativeRealMicroSaasServices2025 && innovativeRealMicroSaasServices2025.map(service => ({...service,category: 'Micro SAAS',icon: <Rocket className='w-6 h-6' />,})),...innovativeAIServicesEnhanced2025 && innovativeAIServicesEnhanced2025.map(service => ({...service,category: 'AI & Consciousness',icon: <Brain className='w-6 h-6' />,})),...innovativeITServicesEnhanced2025 && innovativeITServicesEnhanced2025.map(service => ({...service,category: 'Enterprise IT',icon: <Shield className='w-6 h-6' />,})),...emergingTechServicesEnhanced2025 && emergingTechServicesEnhanced2025.map(service => ({...service,category: 'Quantum & Emerging Tech',icon: <Atom className='w-6 h-6' />,})),marketSize: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   growthRate: string;
@@ -96,12 +172,83 @@ const allServices: Service[] = [;
 ];
 const sortOptions = [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  ...innovativeRealMicroSaasServices2025 && innovativeRealMicroSaasServices2025.map(service => ({;
+    ...service,;
+    category: 'Micro SAAS',;
+    icon: <Rocket className='w-6 h-6' />,;
+  })),;
+  ...innovativeAIServicesEnhanced2025 && innovativeAIServicesEnhanced2025.map(service => ({;
+    ...service,;
+    category: 'AI & Consciousness',;
+    icon: <Brain className='w-6 h-6' />,;
+  })),;
+  ...innovativeITServicesEnhanced2025 && innovativeITServicesEnhanced2025.map(service => ({;
+    ...service,;
+    category: 'Enterprise IT',;
+    icon: <Shield className='w-6 h-6' />,;
+  })),;
+  ...emergingTechServicesEnhanced2025 && emergingTechServicesEnhanced2025.map(service => ({;
+    ...service,;
+    category: 'Quantum & Emerging Tech',;
+    icon: <Atom className='w-6 h-6' />,;
+  })),;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   { label: 'Most Popular', value: 'popular' },
   { label: 'Highest Rated', value: 'rating' },
   { label: 'Newest', value: 'newest' },
   { label: 'Price: Low to High', value: 'price-low' },
+<<<<<<< HEAD
 { label: 'Price: High to Low', value: 'price-high' },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  { label: 'Price: High to Low', value: 'price-high' }
+
+];
+const categories = [;
+  {;
+    name: 'All Services',;
+    icon: <Globe className='w-5 h-5' />,;
+    count: allServices && allServices.length,;
+  },;
+  {;
+    name: 'Micro SAAS',;
+    icon: <Rocket className='w-5 h-5' />,;
+    count: innovativeRealMicroSaasServices2025 && innovativeRealMicroSaasServices2025.length,;
+  },;
+  {;
+    name: 'AI & Consciousness',;
+    icon: <Brain className='w-5 h-5' />,;
+    count: innovativeAIServicesEnhanced2025 && innovativeAIServicesEnhanced2025.length,;
+  },;
+  {;
+    name: 'Enterprise IT',;
+    icon: <Shield className='w-5 h-5' />,;
+    count: innovativeITServicesEnhanced2025 && innovativeITServicesEnhanced2025.length,;
+  },;
+  {;
+    name: 'Quantum & Emerging Tech',;
+    icon: <Atom className='w-5 h-5' />,;
+    count: emergingTechServicesEnhanced2025 && emergingTechServicesEnhanced2025.length,;
+  },];  { name: 'All Services', icon: <Globe className="w-5 h-5" />, count: allServices && allServices.length },;
+  { name: 'Micro SAAS', icon: <Rocket className="w-5 h-5" />, count: innovativeRealMicroSaasServices2025 && innovativeRealMicroSaasServices2025.length },;
+  { name: 'AI & Consciousness', icon: <Brain className="w-5 h-5" />, count: innovativeAIServicesEnhanced2025 && innovativeAIServicesEnhanced2025.length },;
+  { name: 'Enterprise IT', icon: <Shield className="w-5 h-5" />, count: innovativeITServicesEnhanced2025 && innovativeITServicesEnhanced2025.length },;
+  { name: 'Quantum & Emerging Tech', icon: <Atom className="w-5 h-5" />, count: emergingTechServicesEnhanced2025 && emergingTechServicesEnhanced2025.length }
+const priceRanges = [;
+  { label: 'All Prices', value: 'all' },;
+  { label: 'Under $50/month', value: 'under-50' },;
+  { label: '$50 - $200/month', value: '50-200' },;
+  { label: '$200 - $500/month', value: '200-500' },;
+  { label: 'Over $500/month', value: 'over-500' },];  { label: 'Over $500/month', value: 'over-500' }
+];
+const sortOptions = [;
+  { label: 'Most Popular', value: 'popular' },;
+  { label: 'Highest Rated', value: 'rating' },;
+  { label: 'Newest', value: 'newest' },;
+  { label: 'Price: Low to High', value: 'price-low' },;
+  { label: 'Price: High to Low', value: 'price-high' },];  { label: 'Price: High to Low', value: 'price-high' }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ];
 
 export default function ComprehensiveServicesShowcase2025() {;
@@ -112,6 +259,10 @@ export default function ComprehensiveServicesShowcase2025() {;
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('popular');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const [filteredServices, setFilteredServices] =
     useState<Service[]>(allServices);
 
@@ -141,6 +292,7 @@ filtered = filtered.filter(
         const price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
         switch (selectedPriceRange) {
 case 'under-50':
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                 setSelectedPriceRange('all')];
@@ -165,6 +317,9 @@ const sortOptions = [;
     // Filter by price range;
     if (selectedPriceRange !== 'all') {filtered = filtered.filter(service => {const price = parseFloat(service.price.replace(/[^0-9.]/g, ''))switch (selectedPriceRange) {case 'under-50':;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             return price < 50;
           case '50-200':;
             return price >= 50 && price <= 200;
@@ -172,10 +327,15 @@ const sortOptions = [;
             return price > 200 && price <= 500;
           case 'over-500':;
 <<<<<<< HEAD
+<<<<<<< HEAD
             return price > 500;
           default:
 =======
             return price > 500;default:;
+=======
+            return price > 500;
+          default:;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             return true;        }          case 'under-50': return price < 50;
           case '50-200': return price >= 50 && price <= 200;
           case '200-500': return price > 200 && price <= 500;
@@ -187,6 +347,7 @@ const sortOptions = [;
           case 'over-500': return price > 500;
           default: return true;
         }
+<<<<<<< HEAD
       })}
           return (new Date(b && b.launchDate).getTime() - new Date(a && a.launchDate).getTime()default:;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -203,6 +364,12 @@ const sortOptions = [;
 return (
             new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      });
+    }
+          return (
+            new Date(b && b.launchDate).getTime() - new Date(a && a.launchDate).getTime();
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           );
         case 'price-low':;
           return (
@@ -230,6 +397,7 @@ return (new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime())case
           return 0;
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
     });
 
     setFilteredServices(filtered);
@@ -248,12 +416,50 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       }
     })setFilteredServices(filtered)}, [searchTerm, selectedCategory, selectedPriceRange, sortBy])const getCategoryColor = (category: string) => {switch (category) {case 'Micro SAAS':;setFilteredServices(filtered)}, [searchTerm, selectedCategory, selectedPriceRange, sortBy])const getCategoryColor = (category: string) => {switch (category) {case 'Micro SAAS':;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    });
+          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
+        case 'price-high':
+          return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''));
+        default: return 0
+      }
+    });
+
+    setFilteredServices(filtered)
+    switch (category) {
+
+    setFilteredServices(filtered);  }, [searchTerm, selectedCategory, selectedPriceRange, sortBy]);
+  const getCategoryColor = (category: string) => {
+
+    switch (category) {
+
+    setFilteredServices(filtered)
+  }, [searchTerm, selectedCategory, selectedPriceRange, sortBy]);
+  const getCategoryColor = (category: string) => {
+    switch (category) {
+
+  const getCategoryColor = (category: string) => {;
+    switch (category) {        case 'price-low':;
+          return parseFloat(a && a.price.replace(/[^0-9.]/g, '')) - parseFloat(b && b.price.replace(/[^0-9.]/g, ''));
+        case 'price-high':;
+          return parseFloat(b && b.price.replace(/[^0-9.]/g, '')) - parseFloat(a && a.price.replace(/[^0-9.]/g, ''));
+        default: return 0;
+      }
+    });
+    setFilteredServices(filtered);
+  }, [searchTerm, selectedCategory, selectedPriceRange, sortBy]);
+  const getCategoryColor = (category: string) => {;
+    switch (category) {;
+      case 'Micro SAAS':;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         return 'from-blue-500 to-cyan-500';
       case 'AI & Consciousness':;
         return 'from-purple-500 to-pink-500';
       case 'Enterprise IT':;
         return 'from-green-500 to-emerald-500';
       case 'Quantum & Emerging Tech':;
+<<<<<<< HEAD
 <<<<<<< HEAD
         return 'from-orange-500 to-red-500';
       default:
@@ -274,12 +480,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }const getCategoryIcon = (category: string) => {switch (category) {case 'Micro SAAS':;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+        return 'from-orange-500 to-red-500';
+      default:;
+        return 'from-gray-500 to-slate-500';    }      case 'Micro SAAS': return 'from-blue-500 to-cyan-500';
+      case 'AI & Consciousness': return 'from-purple-500 to-pink-500';
+      case 'Enterprise IT': return 'from-green-500 to-emerald-500';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         return <Rocket className='w-5 h-5' />;
       case 'AI & Consciousness':;
         return <Brain className='w-5 h-5' />;
       case 'Enterprise IT':;
         return <Shield className='w-5 h-5' />;
       case 'Quantum & Emerging Tech':;
+<<<<<<< HEAD
 <<<<<<< HEAD
         return <Atom className='w-5 h-5' />;
       default:
@@ -293,6 +507,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <title>Comprehensive Services Showcase 2025 - Zion Tech Group</title>
 <meta
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        return <Atom className='w-5 h-5' />;
+      default:;
+        return <Globe className='w-5 h-5' />;    }      case 'Micro SAAS': return <Rocket className="w-5 h-5" />;
+      case 'AI & Consciousness': return <Brain className="w-5 h-5" />;
+      case 'Enterprise IT': return <Shield className="w-5 h-5" />;
+
+      case 'Quantum & Emerging Tech': return <Atom className="w-5 h-5" />,;
+      default: return <Globe className="w-5 h-5" />
+};
+
+  return (
+    <Layout>;
+      <Head>;
+        <title>Comprehensive Services Showcase 2025 - Zion Tech Group</title>;
+        <meta
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           name='description'
           content='Explore our complete portfolio of innovative micro SAAS, AI, IT, and emerging technology services. Find the perfect solution for your business needs.'
 =======
@@ -325,6 +556,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
               className='absolute w-2 h-2 bg-cyan-400 rounded-full opacity-20'
               animate={{
+<<<<<<< HEAD
                 x: [0, 100, 0]
                 y: [0, -100, 0]
                 opacity: [0.2, 0.8, 0.2]
@@ -336,6 +568,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className='absolute w-2 h-2 bg-cyan-400 rounded-full opacity-20';
               animate={{}))}
         </div>;
+=======
+
+  };
+
+          ))}
+        </div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>          <motion.div                top: `${Math.random() * 100}%`}}
             />;
           ))}
@@ -384,6 +623,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <motion&& motion.div;
                   key={stat && stat.label}
                   initial={{ opacity: 0, y: 20 }}
+<<<<<<< HEAD
                   animate={{ opacity: 1, y: 0 }}x: [0, 100, 0];
                 y: [0, -100, 0];
                 opacity: [0.2, 0.8, 0.2];
@@ -450,6 +690,18 @@ className='text-center';
                   </div>
                   <div className='text-sm text-cyan-300'>{stat.label}</div>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                  animate={{ opacity: 1, y: 0 }}
+                >
+                  <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full mb-3 text-cyan-400'>
+                    {stat.icon}
+                  </div>
+                  <div className='text-3xl font-bold text-white mb-1'>
+                    {stat.value}
+                  </div>
+                  <div className='text-sm text-cyan-300'>{stat.label}</div>                </motion.div>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 </motion.div>
 
 =======
@@ -469,6 +721,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   type='text'
                   placeholder='Search for services, features, or solutions...'
                   value={searchTerm}
+<<<<<<< HEAD
                   onChange={e => setSearchTerm(e.target.value)}
                   className='w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-cyan-500/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50'
                 />
@@ -490,19 +743,37 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='flex flex-wrap items-center space-x-4'>;
               {/* Price Range Filter */}
               <select;
+=======
+                  onChange={e => setSearchTerm(e && e.target.value)}
+                  className='w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-cyan-500/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50'                />                <input
+            {/* Price and Sort Controls */}
+            <div className='flex flex-wrap items-center space-x-4'>;
+              {/* Price Range Filter */}
+              <select
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 value={selectedPriceRange}
                 onChange={e => setSelectedPriceRange(e && e.target.value)}
                 className='px-4 py-2 bg-white/10 border border-cyan-500/30 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50';
               >;
+<<<<<<< HEAD
                 {priceRanges && priceRanges.map(range => (<option;
                     key={range && range.value}
                     value={range && range.value}
                     className='bg-gray-900 text-white'>                    {range && range.label}              {/* Price Range Filter */}
               <select;
+=======
+                {priceRanges && priceRanges.map(range => (;
+                  <option
+                    key={range && range.value}
+                    value={range && range.value}
+                    className='bg-gray-900 text-white'>                    {range && range.label}              {/* Price Range Filter */}
+              <select
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 value={selectedPriceRange}
                 onChange={(e) => setSelectedPriceRange(e && e.target.value)}
                 className="px-4 py-2 bg-white/10 border border-cyan-500/30 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50";
               >;
+<<<<<<< HEAD
                 {priceRanges && priceRanges.map((range) => (<option key={range && range.value} value={range && range.value} className="bg-gray-900 text-white">;
                     {range && range.label}
                   </option>;
@@ -533,6 +804,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='flex flex-wrap items-center space-x-2'>;
               {categories.map(category => (<button;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                {priceRanges && priceRanges.map((range) => (;
+                  <option key={range && range.value} value={range && range.value} className="bg-gray-900 text-white">;
+                    {range && range.label}
+                  </option>;
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-4 lg:space-y-0">
+            {/* Category Filters */}
+            <div className="flex flex-wrap items-center space-x-2">
+              {categories.map((category) => (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   key={category.name}
                   on_click={() => setSelectedCategory (category.name)}
                   className={`flex items - center space - x-2 px - 4 py - 2 rounded - lg text - sm font - medium transition - all duration - 200 ${selected_category === category.name;
@@ -541,17 +823,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   }`}
                 >;
 <<<<<<< HEAD
+<<<<<<< HEAD
                   {category.icon}
                   <span>{category.name}</span>
 <span className='bg-white/20 px-2 py-1 rounded-full text-xs'>
                     {category.count}
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                  {category.icon}
+
+                  <span>{category.name}</span>
+<span className='bg-white/20 px-2 py-1 rounded-full text-xs'>
+                    {category.count}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   </span>
                 </button>
               ))}
             </div>
 
             {/* Price and Sort Controls */}
+<<<<<<< HEAD
 <div className='flex flex-wrap items-center space-x-4'>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -564,6 +855,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Price and Sort Controls */}<div className='flex flex-wrap items-center space-x-4'>;
 <div className='flex flex-wrap items-center space-x-4'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+            <div className='flex flex-wrap items-center space-x-4'>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               {/* Price Range Filter */}
               <select;
                 value={selectedPriceRange}</select>;onChange={e => setSelectedPriceRange(e.target.value)}
@@ -574,6 +869,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     value={range.value}
 <<<<<<< HEAD
                     className='bg-gray-900 text-white'
+<<<<<<< HEAD
                   >
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -602,6 +898,14 @@ onChange={e => setSortBy(e.target.value)}
                   >
                     {option.label}
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+                  >
+                    {range.label}
+                  </option>
+                ))}
+              </select>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   </option>
 =======
                     className='bg-gray-900 text-white';
@@ -618,8 +922,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <button;
               {/* View Mode Toggle */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 <div className='flex items-center space-x-1 bg-white/10 rounded-lg p-1'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                <button
+                <button
+
+              {/* View Mode Toggle */}
+              <div className='flex items-center space-x-1 bg-white/10 rounded-lg p-1'>                <button
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-md transition-all duration-200 ${
@@ -627,10 +940,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       ? 'bg-cyan-500 text-white'
                       : 'text-gray-400 hover:text-white'
                   }`}
+<<<<<<< HEAD
                 >
 <Grid3X3 className='w-4 h-4' />
                 </button>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+                >
+<Grid3X3 className='w-4 h-4' />
+                </button>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-md transition-all duration-200 ${
@@ -638,6 +958,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       ? 'bg-cyan-500 text-white'
                       : 'text-white'
                   }`}
+<<<<<<< HEAD
                 >
 <List className='w-4 h-4' />
                 </button>
@@ -665,11 +986,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   }`}{/* Results Count */}
         <div className='mb-8'>;
           <p className='text-gray-400'>            Showing {filteredServices.length} of {allServices.length} services      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
+=======
+        {/* Results Count */}
+        <div className='mb-8'>
+          <p className='text-gray-400'>            Showing {filteredServices.length} of {allServices.length} services      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         {/* Results Count */}
         <div className="mb-8">;
           <p className="text-gray-400">;
           </p>;
         </div>;
+<<<<<<< HEAD
         {viewMode === 'grid' ? (<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {filteredServices && filteredServices.map((service, index) => (          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {filteredServices && filteredServices.map((service, index) => (<motion&& motion.div;
                 key={service && service.id}>;
@@ -696,16 +1023,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
                 key={service.id}
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        {viewMode === 'grid' ? (;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {filteredServices && filteredServices.map((service, index) => (          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+            {filteredServices && filteredServices.map((service, index) => (;
+              <motion&& motion.div
+                key={service && service.id}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
 
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+<<<<<<< HEAD
 className='group relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                className='group relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300'
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               >
                 {/* Category Badge */}
                 <div className='absolute top-4 right-4'>
                   <span
+<<<<<<< HEAD
 =======
         <div className='mb-8'>;
           <p className='text-gray-400'>;
@@ -721,6 +1061,9 @@ className='group relative bg-gradient-to-br from-gray-900/50 to-black/50 backdro
                 {/* Category Badge */}
                 <div className='absolute top-4 right-4'>;
                   <span;
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 {/* Service Icon */}
                 <div className='mb-4'>;
                   <div className='w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300'>                    {service && service.icon}              >;
@@ -728,6 +1071,7 @@ className='group relative bg-gradient-to-br from-gray-900/50 to-black/50 backdro
                 className="group relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300";
               >;
                 {/* Category Badge */}
+<<<<<<< HEAD
                   </div>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                     className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}
@@ -737,6 +1081,9 @@ className='group relative bg-gradient-to-br from-gray-900/50 to-black/50 backdro
                     <span className='ml-2'>{service.category}</span>
                   </span>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                  </div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 </div>
 =======
                     <span className='ml-2'>{service.category}</span>;
@@ -772,6 +1119,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <span className='ml - 2'>{service.category}</span>                  </span>;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 {/* Service Icon */}
 <div className='mb-4'>
                   <div className='w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300'>
@@ -790,6 +1138,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <p className='text-sm text-gray-500 mb-4 line-clamp-3'>
 =======
                 {/* Service Icon */}<div className='mb - 4'>;
+=======
+                {/* Service Icon */}
+                <div className='mb - 4'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   <div className='w - 16 h - 16 bg - gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 rounded - xl flex items - center justify - center text - cyan - 400 group - hover:scale - 110 transition - transform duration - 300'>                    {service.icon}              >;
                 {/* Category Badge */}
                 <div className="absolute top-4 right-4">;
@@ -806,6 +1158,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 </div>;
                 {/* Service Info */}
+<<<<<<< HEAD
                 <h3 className='text - xl font - bold text - white mb - 2 group - hover:text - cyan - 300 transition - colors duration - 200'>;<div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300">;
 <div className='mb-4'>;
                   <div className='w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300'>;
@@ -818,6 +1171,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <p className='text - gray - 400 mb - 3 line - clamp - 2'>;
                   {service.tagline}</h3>;
                 <p className="text-gray-400 mb-3 line-clamp-2">;
+=======
+                <h3 className='text - xl font - bold text - white mb - 2 group - hover:text - cyan - 300 transition - colors duration - 200'>;
+
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300">
+                    {service.icon}
+                  </div>
+                </div>
+                {/* Service Info */}
+
+<h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200'>
+                  {service.name}
+                </h3>;
+                <p className='text - gray - 400 mb - 3 line - clamp - 2'>;
+                  {service.tagline}
+                </h3>
+                <p className="text-gray-400 mb-3 line-clamp-2">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 </p>;
                 <p className='text - sm text - gray - 500 mb - 4 line - clamp - 3'>                  {service.description}
                 </p>;
@@ -881,6 +1251,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 </div>;
                     )}
+<<<<<<< HEAD
                   <div className="flex items-center justify-between">;
                 </p>;
                 <p className='text-sm text-gray-500 mb-4 line-clamp-3'>;
@@ -930,10 +1301,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='mb-4 text-xs text-gray-500'>
                   <div className='flex items-center justify-between'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                  <div className="flex items-center justify-between">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                     <span>Market Size: {service.marketSize}</span>
                     <span>Growth: {service.growthRate}</span>
                   </div>
                 </div>
+<<<<<<< HEAD
 =======
 <div className='mb-4 text-xs text-gray-500'>;
                   <div className='flex items-center justify-between'>;
@@ -942,6 +1317,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 </div>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 {/* CTA Button */}
 <button className='w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-4 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105'>;
                   Learn More;
@@ -954,11 +1332,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='space-y-6'>
             {filteredServices.map((service, index) => (
               <motion.div
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 key={service.id}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+<<<<<<< HEAD
 className='group bg-gradient-to-r from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-xl p-6 hover:border-cyan-400/40 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300'
               >
                 <div className='flex items-start space-x-6'>
@@ -966,10 +1348,20 @@ className='group bg-gradient-to-r from-gray-900/50 to-black/50 backdrop-blur-lg 
                   <div className='flex-shrink-0'>
                     <div className='w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                className='group bg-gradient-to-r from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-xl p-6 hover:border-cyan-400/40 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300'
+
+              >
+                <div className="flex items-start space-x-6">
+                  {/* Service Icon */}
+                  <div className="flex-shrink-0">
+                    <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                       {service.icon}
                     </div>
                   </div>
                   {/* Service Details */}
+<<<<<<< HEAD
 <div className='flex-1 min-w-0'>
                     <div className='flex items-start justify-between mb-3'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -997,6 +1389,9 @@ className='group bg-gradient-to-r from-gray-900/50 to-black/50 backdrop-blur-lg 
                     </div>;
                   </div>;
                   {/* Service Details */}<div className='flex-1 min-w-0'>;
+=======
+                  <div className='flex-1 min-w-0'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                     <div className='flex items-start justify-between mb-3'>;
                         <h3 className='text-2xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200'>;
                           {service && service.name}
@@ -1012,10 +1407,15 @@ className='group bg-gradient-to-r from-gray-900/50 to-black/50 backdrop-blur-lg 
                         <div className='text-3xl font-bold text-cyan-400 mb-2'>;
                           {service && service.price}
                         </div>;
+<<<<<<< HEAD
                         <div className='text-gray-500 text-sm'>/month</div>;<div className='flex-1 min-w-0'>;
                     <div className='flex items-start justify-between mb-3'>;
                         <h3 className='text-2xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                        <div className='text-gray-500 text-sm'>/month</div>;
+                        <h3 className='text-2xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200'>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                           {service.name}
                         </h3>;
                         <p className='text-lg text-cyan-300 mb-2'>;
@@ -1032,14 +1432,40 @@ className='group bg-gradient-to-r from-gray-900/50 to-black/50 backdrop-blur-lg 
                         </div>
                         <div className='text-gray-500 text-sm'>/month</div>
                         <span
+<<<<<<< HEAD
                           className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white mt-2`}
                         >
                           {service.category}
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+                  {/* Service Details */}
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-start justify-between mb-3">
+                      <div>
+                        <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200">
+                          {service.name}
+                        </h3>
+                        <p className="text-lg text-cyan-300 mb-2">
+                          {service.tagline}
+                        </p>
+                        <p className="text-gray-400 mb-4">
+                          {service.description}
+                        </p>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-3xl font-bold text-cyan-400 mb-2">{service.price}</div>
+                        <div className="text-gray-500 text-sm">/month</div>
+                        <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white mt-2`}>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                         </span>
                       </div>
                     </div>
                     {/* Stats Row */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 <div className='flex items-center space-x-8 mb-4 text-sm'>
                       <div className='flex items-center space-x-1 text-yellow-400'>
                         <Star className='w-4 h-4 fill-current' />
@@ -1049,6 +1475,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <span className='text-gray-500'>
                           ({service.reviews} reviews)
                         </span>
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
                       <div className='flex items-center space-x-1 text-gray-400'>
                         <Users className='w-4 h-4' />
@@ -1111,6 +1538,33 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </span>
                         <span className='text-gray-500'>market</span>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                      <div className='flex items-center space-x-1 text-gray-400'>
+                        <Users className='w-4 h-4' />
+                        <span className='text-white font-medium'>
+                          {service.customers.toLocaleString()}
+                        </span>
+                        <span className='text-gray-500'>customers</span>
+                      </div>
+                      <div className='flex items-center space-x-1 text-gray-400'>
+                        <TrendingUp className='w-4 h-4' />
+                        <span className='text-white font-medium'>
+                          {service.growthRate}
+                        </span>
+                        <span className='text-gray-500'>growth</span>
+                      </div>
+                      <div className='flex items-center space-x-1 text-gray-400'>
+                        <Globe className='w-4 h-4' />
+                        <span className='text-white font-medium'>
+                          {service.marketSize}
+                        </span>
+                        <span className='text-gray-500'>market</span>                      </div>
+                    </div>
+                    {/* Features */}                      <div className="flex items-center space-x-1 text-gray-400">
+                        <Globe className="w-4 h-4" />
+                        <span className="text-white font-medium">{service.marketSize}</span>
+                        <span className="text-gray-500">market</span>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                       </div>
                     </div>
 =======
@@ -1168,7 +1622,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <span className="text-gray-500">market</span>;
                     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     {/* Features */}
+=======
+                    {/* Features */}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 <div className='mb-4'>
                       <div className='text-sm text-gray-500 mb-2'>
                         Key Features:
@@ -1182,6 +1641,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             <CheckCircle className='w-3 h-3 text-cyan-400 flex-shrink-0' />
                             <span>{feature}</span>
                           </div>
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                     {/* Features */}<div className='mb-4'>;
@@ -1197,6 +1657,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             <span>{feature}</span>;
                           </div>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                         ))}
                     {/* CTA */}
 <div className='flex items-center justify-between'>;
@@ -1231,6 +1693,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         )}
         {/* No Results */}
         {filteredServices.length === 0 && (
@@ -1246,10 +1709,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               looking for.
             </p>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        )}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <button
               onClick={() => {;
                 setSearchTerm('');
                 setSelectedCategory('All Services');
+<<<<<<< HEAD
 setSelectedPriceRange('all');
               }}
               className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200'
@@ -1277,6 +1744,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>;
             <button;
               onClick={() => {setSearchTerm('')setSelectedCategory('All Services'){/* CTA Section */}
+=======
+      {/* CTA Section */}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-t border-cyan-500/20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center'>          <motion && motion.div      <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-t border-cyan-500/20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">;
@@ -1433,6 +1903,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               on_click={() => {setSearchTerm ('')setSelectedCategory ('All Services')setSelectedPriceRange ('all')}}setSelectedPriceRange('all')}}
               className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200';
               }}
+<<<<<<< HEAD
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200";
             >;
               Clear All Filters;
@@ -1441,6 +1912,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         )}
       </div>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       {/* CTA Section */}
 <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-t border-cyan-500/20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center'>;
@@ -1449,6 +1922,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
           >
 <h2 className='text-4xl font-bold text-white mb-6'>
@@ -1480,6 +1954,34 @@ href='/pricing'
 );
   filtered = filtered.filter (service => service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.tagline.toLowerCase () .includes (searchTerm.toLowerCase () ) 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+              }}
+              className="bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 text - white font - medium py - 3 px - 6 rounded - xl transition-all duration-200";
+            >;
+              Clear All Filters;
+            </button>;
+          </div>)}
+      </div>;
+      {/* CTA Section */}
+            </h2>
+            <p className="text-xl text-cyan-300 mb-8 max-w-3xl mx-auto">
+              Our team of experts is ready to help you implement the perfect solution for your needs.
+              Get in touch today and discover how our innovative services can drive your success.
+            </p>
+            <div className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                className='border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200'>              Ready to Transform Your Business?;
+            </h2>;
+            <p className="text-xl text-cyan-300 mb-8 max-w-3xl mx-auto">;
+              Our team of experts is ready to help you implement the perfect solution for your needs. ;
+              Get in touch today and discover how our innovative services can drive your success.;
+            </p>;
+            <div className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">;
+              <a
+                href="/contact"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }//Sort services filtered.sort ( (a, b) => {
   switch (sortBy) {
   case 'popular': return b.customers - a.customers;
@@ -1640,7 +2142,13 @@ top: `$ {Math.random () * 100;
   duration: 0.8;
 }viewport= {
   {
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   once: true 
 
 }> <h2 className=" text-4xl font-bold text-white mb-6"> Ready to Transform Your Business? </h2> <p className=" text-xl text-cyan-300 mb-8 max-w-3xl mx-auto"> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"> Get Started Today </a> <a href=" /pricing"className=" border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200" > View Pricing Plans </a> </div> </motion.div> </div> </div> </Layout>)

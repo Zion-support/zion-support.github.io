@@ -1,8 +1,12 @@
 <<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
+<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
 =======
 
 ;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/PerformanceDashboard.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PerformanceDashboard.tsx
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from '@/components/ui/card';
 import { Badge   } from '@/components/ui/badge';
@@ -19,7 +23,11 @@ import { Badge  } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { CheckCircle, AlertCircle, TrendingUp, Zap, Shield, Search } from 'lucide-react'
 
+<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PerformanceDashboard.tsx
 import React, { useState } from 'react'
 import {
   Card
@@ -37,6 +45,7 @@ import { Button } from '@/components/ui/button'
   Shield
   Search
 } from 'lucide-react'
+<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface PerformanceMetrics {
   buildSize: string;
@@ -100,6 +109,8 @@ interface PerformanceMetrics  {buildSize: string;
 <<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
 
 interface Improvement {;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PerformanceDashboard.tsx
 
   id: string;
 =======
@@ -122,6 +133,7 @@ interface PerformanceMetrics  {buildSize: string;
 <<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
   category: 'performance' | 'security' | 'ux' | 'build'
 
+<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
 import React, { useState } from 'react';
 import {
   Card,
@@ -289,6 +301,110 @@ const PerformanceDashboard: React.FC = () => {const [metrics] = useState < Perfo
 
 
 
+=======
+
+const PerformanceDashboard: React.FC = () => {
+  const [metrics] = useState<PerformanceMetrics>({
+    buildSize: '959 MB'
+    pageCount: 166
+    loadTime: 1.2
+    healthStatus: 'healthy'
+  })
+  const improvements: Improvement[] = [
+    {
+      id: '1'
+      title: 'Fixed Search Bar Issues'
+      description:
+        'Resolved first keystrokes ignored, suggestion clicks, and Enter key search problems'
+      status: 'completed'
+      impact: 'high'
+      category: 'ux'
+    }
+    {
+      id: '2'
+      title: 'Environment Validation System'
+      description:
+        'Added comprehensive pre-build checks to prevent deployment with missing environment variables'
+      status: 'completed'
+      impact: 'high'
+      category: 'build'
+    }
+    {
+      id: '3'
+      title: 'NextAuth Configuration Fix'
+      description:
+        'Fixed Microsoft Azure AD provider configuration and resolved TypeScript compilation errors'
+      status: 'completed'
+      impact: 'medium'
+      category: 'security'
+    }
+    {
+      id: '4'
+      title: 'API Client Error Handling'
+      description:
+        'Improved global error handling with better retry logic and user feedback'
+      status: 'completed'
+      impact: 'medium'
+      category: 'ux'
+    }
+    {
+      id: '5'
+      title: 'Bundle Analyzer Integration'
+      description:
+        'Added bundle analysis tools to identify and optimize large dependencies'
+      status: 'completed'
+      impact: 'medium'
+      category: 'performance'
+    }
+    {
+      id: '6'
+      title: 'Health Check Endpoint'
+      description:
+        'Created production monitoring endpoint for environment and service health'
+      status: 'completed'
+      impact: 'medium'
+      category: 'security'
+    }
+  ]
+  const getStatusIcon = (status: string,) => {
+    switch (status) {
+      case 'completed':
+        return <CheckCircle className='h-4 w-4 text-green-500' />
+      case 'in-progress':
+        return <AlertCircle className='h-4 w-4 text-yellow-500' />
+      case 'planned':
+        return <TrendingUp className='h-4 w-4 text-blue-500' />
+      default:
+        return <AlertCircle className='h-4 w-4 text-gray-500' />
+    }
+  }
+  const getImpactColor = (impact: string,) => {
+    switch (impact) {
+      case 'high':
+        return 'bg-red-100 text-red-800'
+      case 'medium':
+        return 'bg-yellow-100 text-yellow-800'
+      case 'low':
+        return 'bg-green-100 text-green-800'
+      default:
+        return 'bg-gray-100 text-gray-800'
+    }
+  }
+  const getCategoryIcon = (category: string,) => {
+    switch (category) {
+      case 'performance':
+        return <Zap className='h-4 w-4' />
+      case 'security':
+        return <Shield className='h-4 w-4' />
+      case 'ux':
+        return <Search className='h-4 w-4' />
+      case 'build':
+        return <TrendingUp className='h-4 w-4' />
+      default:
+        return <CheckCircle className='h-4 w-4' />
+    }
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PerformanceDashboard.tsx
 
 
   return (
@@ -325,9 +441,12 @@ const PerformanceDashboard: React.FC = () => {const [metrics] = useState < Perfo
             <p className='text-xs text-gray-500'>Average page load</p>
           </CardContent>
         </Card>
+<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PerformanceDashboard.tsx
         
 
 
@@ -338,17 +457,25 @@ const PerformanceDashboard: React.FC = () => {const [metrics] = useState < Perfo
             </CardTitle>
           </CardHeader>
           <CardContent>
+<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PerformanceDashboard.tsx
             <div className='flex items-center space-x-2'>
               <CheckCircle className='h-5 w-5 text-green-500' />
               <span className='text-sm font-semibold text-green-600'>
                 Healthy
               </span>
+<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PerformanceDashboard.tsx
             </div>
           </CardContent>
         </Card>
       </div>
 
+<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
 
 const PerformanceDashboard: React.FC = () => {;
   const [metrics] = useState<PerformanceMetrics>({;
@@ -359,60 +486,123 @@ const PerformanceDashboard: React.FC = () => {;
   });
 
 
+=======
+  }
+  const completedImprovements = improvements.filter(
+    imp => imp.status === 'completed'
+  )
+import React, { useState } from 'react',;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
+import { Badge } from '@/components/ui/badge',;
+import { Button } from '@/components/ui/button',;
+import { CheckCircle, AlertCircle, TrendingUp, Zap, Shield, Search } from 'lucide-react';
+interface PerformanceMetrics {;
+  buildSize: string,;
+  pageCount: number,;
+  loadTime: number,;
+  healthStatus: 'healthy' | 'warning' | 'error';
+}
+;
+interface Improvement {;
+  id: string,;
+  title: string,;
+  description: string,;
+  status: 'completed' | 'in-progress' | 'planned',;
+  impact: 'high' | 'medium' | 'low',;
+  category: 'performance' | 'security' | 'ux' | 'build';
+}
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PerformanceDashboard.tsx
   const improvements: Improvement[] = [;
     {;
       id: '1',;
       title: 'Fixed Search Bar Issues',;
+<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
       description:;
         'Resolved first keystrokes ignored, suggestion clicks, and Enter key search problems',;
       status: 'completed',;
       impact: 'high',;
       category: 'ux',;
 
+=======
+      description: 'Resolved first keystrokes ignored, suggestion clicks, and Enter key search problems',;
+      status: 'completed',;
+      impact: 'high',;
+      category: 'ux';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PerformanceDashboard.tsx
     },;
     {;
       id: '2',;
       title: 'Environment Validation System',;
+<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
       description:;
         'Added comprehensive pre-build checks to prevent deployment with missing environment variables',;
       status: 'completed',;
       impact: 'high',;
       category: 'build',;
 
+=======
+      description: 'Added comprehensive pre-build checks to prevent deployment with missing environment variables',;
+      status: 'completed',;
+      impact: 'high',;
+      category: 'build';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PerformanceDashboard.tsx
     },;
     {;
       id: '3',;
       title: 'NextAuth Configuration Fix',;
+<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
       description:;
         'Fixed Microsoft Azure AD provider configuration and resolved TypeScript compilation errors',;
       status: 'completed',;
       impact: 'medium',;
       category: 'security',;
 
+=======
+      description: 'Fixed Microsoft Azure AD provider configuration and resolved TypeScript compilation errors',;
+      status: 'completed',;
+      impact: 'medium',;
+      category: 'security';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PerformanceDashboard.tsx
     },;
     {;
       id: '4',;
       title: 'API Client Error Handling',;
+<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
       description:;
         'Improved global error handling with better retry logic and user feedback',;
       status: 'completed',;
       impact: 'medium',;
       category: 'ux',;
 
+=======
+      description: 'Improved global error handling with better retry logic and user feedback',;
+      status: 'completed',;
+      impact: 'medium',;
+      category: 'ux';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PerformanceDashboard.tsx
     },;
     {;
       id: '5',;
       title: 'Bundle Analyzer Integration',;
+<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
       description:;
         'Added bundle analysis tools to identify and optimize large dependencies',;
       status: 'completed',;
       impact: 'medium',;
       category: 'performance',;
 
+=======
+      description: 'Added bundle analysis tools to identify and optimize large dependencies',;
+      status: 'completed',;
+      impact: 'medium',;
+      category: 'performance';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PerformanceDashboard.tsx
     },;
     {;
       id: '6',;
       title: 'Health Check Endpoint',;
+<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
 =======
     }},const completedImprovements = improvements.filter(imp => imp.status === 'completed'),return (<Card>;
           <CardHeader className='pb-2'>;
@@ -524,6 +714,92 @@ const PerformanceDashboard: React.FC = () => {;
 <<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
         return <AlertCircle className='h-4 w-4 text-gray-500' />;
 
+=======
+      description: 'Created production monitoring endpoint for environment and service health',;
+      status: 'completed',;
+      impact: 'medium',;
+      category: 'security';
+    }
+  ],
+
+  const getStatusIcon = (status: string) => {
+    switch (status) {
+      case 'completed': return <CheckCircle className="h-4 w-4 text-green-500" />,
+      case 'in-progress': return <AlertCircle className="h-4 w-4 text-yellow-500" />,
+      case 'planned': return <TrendingUp className="h-4 w-4 text-blue-500" />,
+      default: return <AlertCircle className="h-4 w-4 text-gray-500" />
+  ],;
+  const getStatusIcon = (status: string) => {;
+    switch (status) {;
+      case 'completed': return <CheckCircle className="h-4 w-4 text-green-500" />,;
+      case 'in-progress': return <AlertCircle className="h-4 w-4 text-yellow-500" />,;
+      case 'planned': return <TrendingUp className="h-4 w-4 text-blue-500" />,;
+      default: return <AlertCircle className="h-4 w-4 text-gray-500" />;
+    }
+  },;
+  const getImpactColor = (impact: string) => {;
+    switch (impact) {;
+      case 'high': return 'bg-red-100 text-red-800',;
+      case 'medium': return 'bg-yellow-100 text-yellow-800',;
+      case 'low': return 'bg-green-100 text-green-800',;
+      default: return 'bg-gray-100 text-gray-800';
+    }
+  },
+
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
+      case 'performance': return <Zap className="h-4 w-4" />,
+      case 'security': return <Shield className="h-4 w-4" />,
+      case 'ux': return <Search className="h-4 w-4" />,
+      case 'build': return <TrendingUp className="h-4 w-4" />,
+      default: return <CheckCircle className="h-4 w-4" />
+    }
+  },
+
+  const completedImprovements = improvements.filter(imp => imp.status === 'completed'),
+
+  return (
+        <Card>
+          <CardHeader className='pb-2'>
+            <CardTitle className='text-sm font-medium text-gray-600'>
+              Page Count
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className='text-2xl font-bold'>{metrics.pageCount}</div>
+            <p className='text-xs text-gray-500'>Generated pages</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader className='pb-2'>
+            <CardTitle className='text-sm font-medium text-gray-600'>
+              Load Time
+            </CardTitle>
+          <CardContent>
+        <Card>
+          <CardHeader className='pb-2'>
+            <CardTitle className='text-sm font-medium text-gray-600'>
+              Health Status
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">{metrics.loadTime}s</div>
+            <p className="text-xs text-gray-500">Average page load</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader className="pb-2">
+            <CardTitle className="text-sm font-medium text-gray-600">Health Status</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="flex items-center space-x-2">
+              <CheckCircle className="h-5 w-5 text-green-500" />
+              <span className="text-sm font-semibold text-green-600">Healthy</span>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PerformanceDashboard.tsx
       {/* Completed Improvements */}
       <Card>
         <CardHeader>
@@ -543,9 +819,12 @@ const PerformanceDashboard: React.FC = () => {;
               <div key={improvement.id} className="flex items-start space-x-3 p-3 border rounded-lg">
                 <div className="flex-shrink-0 mt-1">
                   {getCategoryIcon(improvement.category)}
+<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PerformanceDashboard.tsx
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between">
@@ -592,6 +871,7 @@ const PerformanceDashboard: React.FC = () => {;
       case 'build': return <TrendingUp className="h-4 w-4" />,;
       default: return <CheckCircle className="h-4 w-4" />;
     }
+<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
   };
 
   const getImpactColor = (impact: string,) => {;
@@ -689,6 +969,8 @@ const PerformanceDashboard: React.FC = () => {;
                 Healthy;
               </span>;
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PerformanceDashboard.tsx
             </div>;
           </CardContent>;
         </Card>;
@@ -725,6 +1007,7 @@ const PerformanceDashboard: React.FC = () => {;
         </CardHeader>;
         <CardContent>;
 <<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
+<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
 
       {/* Completed Improvements */}
       <Card>
@@ -760,12 +1043,15 @@ const PerformanceDashboard: React.FC = () => {;
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PerformanceDashboard.tsx
                   <p className='text-sm text-gray-600 mt-1'>
                     {improvement.description}
                   </p>
                 </div>
               </div>
             ))}
+<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
 
           </div>;
         </CardContent>;
@@ -781,6 +1067,12 @@ const PerformanceDashboard: React.FC = () => {;
 
 
 
+=======
+          </div>
+        </CardContent>
+      </Card>
+      {/* Action Buttons */}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PerformanceDashboard.tsx
           Check Health Status
         </Button>
         <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">
@@ -826,20 +1118,28 @@ export default PerformanceDashboard,
         <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">;
           <TrendingUp className="h-4 w-4 mr-2" />;
 <<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
+<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
 
 
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/PerformanceDashboard.tsx
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PerformanceDashboard.tsx
           Bundle Analysis;
         </Button>;
       </div>;
     </div>;
 <<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
   );
+<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
 };
 
 export default PerformanceDashboard;
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PerformanceDashboard.tsx
 
 
 
@@ -911,6 +1211,7 @@ export default PerformanceDashboard,export default PerformanceDashboard;
 export default PerformanceDashboard;
 <<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
 export default PerformanceDashboard,
+<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
 export default PerformanceDashboard,
 
   );
@@ -921,3 +1222,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 export default PerformanceDashboard,export default PerformanceDashboard,)}export default PerformanceDashboard;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/PerformanceDashboard.tsx
+=======
+
+export default PerformanceDashboard,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PerformanceDashboard.tsx

@@ -14,6 +14,7 @@ export default function AnimatedBackground() {return (<div className='pointer-ev
             transform: translateY(0px) rotate(0deg);
           }
         }
+<<<<<<< HEAD
       `}</style>
     </div>
   );
@@ -23,6 +24,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           50% {transform: translateY(-20px) rotate(10deg)}
           100% {transform: translateY(0px) rotate(0deg)}
         }`}</style>;
+=======
+      `}</style>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     </div>;
   )return (<div className="fixed inset-0 -z-10 overflow-hidden">;
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
@@ -93,6 +97,7 @@ function AnimatedBackground() {return (<div className='pointer - events - none f
           ease: "easeInOut";
         }}
       {/* Grid Pattern */}
+<<<<<<< HEAD
       <div;
         className="absolute inset-0 opacity-10";
         style={{backgroundImage: `;
@@ -100,3 +105,9 @@ function AnimatedBackground() {return (<div className='pointer - events - none f
     </div>;
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      <div
+        className="absolute inset-0 opacity-10"
+        style={{
+          backgroundImage: `
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

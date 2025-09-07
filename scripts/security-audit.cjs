@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node
 const fs = require('fs');
@@ -495,10 +496,31 @@ class SecurityAuditor {
       this.log(`❌ Security audit failed: ${error.message}`, 'error');
       throw error;
 origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+=======
+
+#!/usr/bin/env node;
+const { execSync } = require("child_process")
+const fs = require("fs")
+const path = require("path")
+function log(msg, level = "INFO")
+    execSync(cmd, { "stdio": "inherit"})
+    return { "ok"}
+    return { "ok": false, "error"}
+  log("� Starting security audit...")
+  log("Running npm audit (moderate)..."
+  const audit = tryExec("npm audit --audit-level=moderate")
+    log("Vulnerabilities found, attempting npm audit fix", "WARN")
+    tryExec("npm audit fix")
+  const sensitive = [".env", ".env.local", ".env.production", "config.json", "secrets.json"]
+    log(`Sensitive files "present": ${found.join(", ")}`, "WARN"
+    log("No sensitive files found in repo root")
+  log(" Security audit completed")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
   }
 }
 
+<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -507,6 +529,13 @@ console.log('🔒 Running security audit...');
 console.log('✅ Security audit completed');
 
 main
+=======
+// Run the security auditor
+const auditor = new SecurityAuditor();
+auditor.run().catch(console.error);
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 // Run the auditor
 if (require.main === module) {
@@ -515,6 +544,7 @@ if (require.main === module) {
 }
 
 module.exports = SecurityAuditor;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
 =======
@@ -526,3 +556,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 =======
 
@@ -497,12 +500,15 @@ export const cuttingEdgeMicroSaasServices2025 = [
   {
     id: 'customer-success-ai-pro'
     name: 'Customer Success AI Pro'
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 id: 'customer-success-ai-pro',
     name: 'Customer Success AI Pro',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     description:
       'Intelligent customer success platform that uses AI to predict customer churn, optimize engagement strategies, and maximize customer lifetime value through predictive analytics.'
       'AI-powered churn prediction with 92% accuracy'
@@ -926,6 +932,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     compliance: [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Basel III'
       'Solvency II'
       'Dodd-Frank'
@@ -934,12 +943,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ]
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export const cuttingEdgeMicroSaasServices2025 = [
   {
 
@@ -990,6 +1002,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1004,6 +1017,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export const cuttingEdgeMicroSaasServices2025 = [;
   {;
     id: 'customer-success-ai-pro',;
@@ -1213,6 +1230,7 @@ export const cuttingEdgeMicroSaasServices2025 = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1220,6 +1238,10 @@ export const cuttingEdgeMicroSaasServices2025 = [;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
 ];
   }
@@ -1230,6 +1252,7 @@ export const cuttingEdgeMicroSaasServices2025 = [;
 <<<<<<< HEAD
 ];
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1244,6 +1267,13 @@ export const cuttingEdgeMicroSaasServices2025 = [;
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  }
+];
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
       'Basel III',
       'Solvency II',
@@ -1253,6 +1283,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
   },
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -1276,3 +1307,6 @@ ursor/fix-website-loading-errors-and-merge-6662;
   }
 ];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

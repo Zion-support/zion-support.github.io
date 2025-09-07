@@ -75,6 +75,7 @@ export default function ContactPage() {
             Contact Us
           </h1>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Ready to transform your business with cutting-edge technology? 
             Let&apos;s discuss how we can help you achieve your goals.
@@ -82,6 +83,11 @@ export default function ContactPage() {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Ready to transform your business? Let&apos;s discuss your project and discover how our solutions can accelerate your growth.
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            Ready to transform your business with AI, micro SaaS, and IT solutions? 
+            Let's discuss your project and how we can help you succeed.
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           </p>
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======

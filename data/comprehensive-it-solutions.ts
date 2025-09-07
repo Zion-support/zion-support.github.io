@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -21,6 +22,12 @@ export interface ComprehensiveItSolution  {id: string;name: string;
 export interface ComprehensiveItSolution {
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  id: string;
+
+export interface ComprehensiveItSolution {
+id: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   name: string;
   tagline: string;
   price: string;
@@ -57,6 +64,9 @@ export interface ComprehensiveItSolution  {address: string;
     email: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export interface ComprehensiveItSolution {;
     address: string;
   };
@@ -78,6 +88,7 @@ export interface ComprehensiveItSolution {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -94,6 +105,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
@@ -102,6 +116,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -116,6 +131,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -127,6 +146,7 @@ export const comprehensiveITSolutions: ComprehensiveItSolution[] = [
     id: "full-stack-development", name: "Full-Stack Development Services",
     tagline: "End-to-end web application development", price: "$80/hour",
     description: "Complete full-stack development services from frontend to backend and database design.",
+<<<<<<< HEAD
     id: 'full-stack-development'
     name: 'Full-Stack Development Services'
     tagline: 'End-to-end web application development'
@@ -140,6 +160,10 @@ export const comprehensiveITSolutions: ComprehensiveItSolution[] = [
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     address: string
   }
 }
@@ -152,6 +176,7 @@ export const comprehensiveITSolutions: ComprehensiveItSolution[] = [
     price: "$80/hour";
     description: "Complete full-stack development services from frontend to backend and database design.";
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -160,10 +185,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     features: [
       "Frontend development";
       "Backend APIs";
       "Database design";
+<<<<<<< HEAD
 <<<<<<< HEAD
       "DevOps integration",
 =======
@@ -190,17 +218,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      "DevOps integration";
+      "Testing & deployment"
+    ];
+    link: "/services/full-stack-development", category: "IT Solutions",
+    realImplementation: true,
+    contactInfo: {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+=======
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
@@ -260,10 +302,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ];      mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -282,3 +328,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

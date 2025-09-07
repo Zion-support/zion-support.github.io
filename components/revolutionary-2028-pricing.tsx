@@ -1,18 +1,102 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import { motion } from 'framer-motion';
+
+import { 
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
+
+import {
+  CheckCircle
+  ArrowRight
+  Star
+  TrendingUp
+  Phone
+  Zap
+  DollarSign
+  Shield
+  Mail
+  MapPin
+  Rocket
+  Brain
+  Sparkles
+  Globe
+  Atom
+  Heart
+  Leaf
+  Car
+  GraduationCap
+  Scale
+  Building
+  Factory
+  Camera
+  Video
+  Music
+  Gamepad2
+  Crown
+  Award
+  Target
+  Users
+  Clock
+  Globe2;} from 'lucide-react';import {
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap
+
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Phone,
+  Zap,
+  DollarSign,
+  Shield,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Sparkles,
+  Globe,
+  Atom,
+  Heart,
+  Leaf,
+  Car,
+  GraduationCap,
+  Scale,
+  Building,
+  Factory,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
+  Crown,
+  Award,
+  Target,
+  Users,
+  Clock,;
+  Globe2,;} from 'lucide-react';import {
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, ;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2;
   Crown, Award, Target, Users, Clock, Globe2
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
  } from 'lucide-react';
 import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028',
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
 import { futuristic2028Services  } from '../data/2028-futuristic-innovations';
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 const contactInfo = null;
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const pricingTiers = [
   {
     name: 'Starter'
@@ -20,6 +104,7 @@ const pricingTiers = [
     period: '/month'
     description: 'Perfect for small businesses and startups'
     features: [
+<<<<<<< HEAD
 'Basic AI integration',
       'Standard support',
       'Core features access',
@@ -38,6 +123,64 @@ const pricingTiers = [
     period: '/month',
     description: 'Ideal for growing businesses and enterprises',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Phone,
+  Zap,
+  DollarSign,
+  Shield,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Sparkles,
+  Globe,
+  Atom,
+  Heart,
+  Leaf,
+  Car,
+  GraduationCap,
+  Scale,
+  Building,
+  Factory,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
+  Crown,
+  Award,
+  Target,
+  Users,
+  Clock,;
+  Globe2,;} from 'lucide-react';import {
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, ;
+  DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
+  Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
+  Building, Factory, Camera, Video, Music, Gamepad2;
+  Crown, Award, Target, Users, Clock, Globe2
+import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
+import { futuristic2028Services  } from '../data/2028-futuristic-innovations';
+import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
+
+const contactInfo = {
+const pricingTiers = [
+  {
+    ];
+    popular: false
+    color: 'from-blue-600 to-cyan-600'
+    cta: 'Get Started'
+    href: '/contact'
+  }
+    name: 'Professional'
+    price: '$999'
+    period: '/month'
+    description: 'Ideal for growing businesses and enterprises'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     features: [
 'Advanced AI capabilities',
       'Priority support',
@@ -59,6 +202,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     period: '',
     description: 'Tailored solutions for large organizations',
     features: [
+<<<<<<< HEAD
 'Custom AI development',
       'Dedicated support team',
       'White-label solutions',
@@ -243,6 +387,102 @@ const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && z
         <meta property="og:type" content="website" />;
         <link rel="canonical" href="https://ziontechgroup.com/revolutionary-2028-pricing" />;
           href='https://ziontechgroup && ziontechgroup.com/revolutionary-2028-pricing';
+=======
+      'Custom AI development'
+      'Dedicated support team'
+      'White-label solutions'
+      '24/7 phone support'
+      'Custom analytics'
+      'Full API access'
+      'Custom integrations'
+      'Dedicated account manager'
+      'SLA guarantees'
+      'On-premise deployment'
+    ]
+    popular: false
+    color: 'from-indigo-600 to-purple-600'
+    cta: 'Contact Sales'
+    href: '/contact'
+const contactInfo = {;
+  mobile: '+1 302 464 0950',;
+  email: 'kleber@ziontechgroup && ziontechgroup.com',;
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup && ziontechgroup.com',  website: 'https://ziontechgroup && ziontechgroup.com';
+};
+      'Basic AI integrationStandard supportCore features accessEmail supportBasic analyticsMobile app access'
+    ];
+    popular: false,
+    color: 'from - blue - 600 to - cyan - 600',
+    cta: 'Get Started',
+    name: 'Professional',
+    price: '$999',
+    period: '/month',
+    description: 'Ideal for growing businesses and enterprises',
+    ];
+    popular: true,
+    color: 'from - purple - 600 to - pink - 600',
+    cta: 'Start Free Trial',
+    name: 'Enterprise',
+    price: 'Custom',
+    period: '',
+    description: 'Tailored solutions for large organizations',
+    ];
+    popular: false,
+    color: 'from - indigo - 600 to - purple - 600',
+    cta: 'Contact Sales',
+    href: '/contact';
+  }
+    services: futuristic2028Services.filter(s => s.category.includes('Quantum')).slice(0, 4)
+  }
+  {
+    category: '🤖 AI & Machine Learning'
+    services: emergingTech2028Services.filter(s => s.category.includes('AI')).slice(0, 4)
+const service_pricing = [;
+  {
+    category: '🚀 2028 Futuristic Innovations',
+    services: futuristic2028Services.slice (0, 6),
+  },
+  {
+    category: '🏙️ Smart City & Infrastructure',
+    services: emergingTech2028Services;
+      .filter (
+        string =>;
+          s.category.includes ('Smart City') ||;
+          s.category.includes ('Infrastructure'));
+      .slice (0, 4),
+  },
+  {
+    category: '⚛️ Quantum & Advanced Tech',
+    services: futuristic2028Services;
+      .filter (string => s.category.includes ('Quantum'));
+      .slice (0, 4),
+  },
+  {
+    category: '🤖 AI & Machine Learning',
+    services: emergingTech2028Services;
+      .filter (string => s.category.includes ('AI'));
+      .slice (0, 4),
+  }, ];  {
+    category: '🏙️ Smart City & Infrastructure',
+    services: emergingTech2028Services.filter (string => s.category.includes ('Smart City') || s.category.includes ('Infrastructure')).slice (0, 4);
+  }
+  {
+    category: '⚛️ Quantum & Advanced Tech',
+    services: futuristic2028Services.filter (string => s.category.includes ('Quantum')).slice (0, 4);
+  }
+  {
+    category: '🤖 AI & Machine Learning',
+    services: emergingTech2028Services.filter (string => s.category.includes ('AI')).slice (0, 4);
+  }
+  return (
+        <meta name="keywords" content="2028 pricing, AI services pricing, quantum computing pricing, technology pricing, Zion Tech Group pricing" />
+        <meta property="og:title" content="2028 Revolutionary Pricing - Zion Tech Group" />
+        <meta property="og:description" content="Competitive pricing for our cutting-edge 2028 services with transparent plans and flexible options." />
+        <meta property="og:url" content="https://ziontechgroup.com/revolutionary-2028-pricing" />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://ziontechgroup.com/revolutionary-2028-pricing" />
+          href='https://ziontechgroup && ziontechgroup.com/revolutionary-2028-pricing'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         />      </Head>        <meta name="description" content="Competitive pricing for our cutting-edge 2028 services. Transparent pricing with flexible plans for AI, quantum computing, and futuristic technology solutions." />;
         <meta name="keywords" content="2028 pricing, AI services pricing, quantum computing pricing, technology pricing, Zion Tech Group pricing" />;
         <meta property="og:title" content="2028 Revolutionary Pricing - Zion Tech Group" />;
@@ -270,12 +510,18 @@ const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && z
               Experience cutting-edge technology at competitive prices. Our transparent pricing model ;
               ensures you get maximum value for your investment in the future.;
             </p>;
+<<<<<<< HEAD
               <Link;
                 href="/contact";
+=======
+              <Link
+                href="/contact"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2">;
                 <span>Get Started</span>;
                 <ArrowRight className="w-5 h-5" />;
               </Link>;
+<<<<<<< HEAD
               <Link;
                 href="/2028-services-showcase";
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">;
@@ -414,6 +660,15 @@ className='space-y-8';
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              <Link
+                href="/2028-services-showcase"
+            <p className="text-xl text-purple-200 max-w-3xl mx-auto">
+              Flexible pricing plans designed to scale with your business. Start small and grow with us.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             {pricingTiers.map((tier, index) => (
               <motion.div
 =======
@@ -451,7 +706,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 viewport={{ once: true }}
+=======
+                viewport={{ once: true }}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 className={`relative ${tier.popular ? 'scale-105' : ''}`}
               >
                 {tier.popular && (
@@ -504,6 +764,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />
                           <span className='text-purple-200'>{feature}</span>
                         </li>
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                           className='flex items-center space-x-3';
@@ -512,6 +773,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <span className='text-purple-200'>{feature}</span>;
                         </li>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                       ))}
                     </ul>;<Link;
                       href={tier && tier.href}
@@ -550,6 +813,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           {service.name}
                         </h4>;
                         <p className='text - purple - 300 mb - 4 text - sm'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                           {service.description}
                         </p>
@@ -601,6 +865,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               {service.trialDays} days
                             </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                          {service.description}
+
+                    initial={{ opacity: 0, x: serviceIndex % 2 === 0 ? -30 : 30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
+                    viewport={{ once: true }}
+                          <Link
+                            href={service.link}
+                            className="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 text-sm"
+                          >
+                            Learn More
+                          </Link>
+                          <div className="text-right">
+                            <div className="text-xs text-purple-300">Trial</div>
+                            <div className="text-white font-medium">{service.trialDays} days</div>
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                           </div>
                         </div>
                       </div>
@@ -650,6 +933,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               unmatched features.
             </p>
           </div>
+<<<<<<< HEAD
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -665,12 +949,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>;
           </div>;
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div            </h2>;
+=======
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div            </h2>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       {/* Value Proposition */}
       <section className='py-20 bg-black/50'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-16'>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
               Why Choose{' '}
+<<<<<<< HEAD
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">;
               We offer the best value in the market with transparent pricing and unmatched features.;
             </p>;
@@ -679,6 +967,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
             <motion.div;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+            <p className="text-xl text-purple-200 max-w-3xl mx-auto">
+              We offer the best value in the market with transparent pricing and unmatched features.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
                 Our Pricing;
               </span>;
@@ -777,9 +1073,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
               viewport={{ once: true }}
 className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              viewport={{ once: true }}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             >
               <Target className='w-16 h-16 text-green-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -790,8 +1091,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 superior technology and features.
               </p>
               <div className='text-3xl font-bold text-green-400'>30%</div>
+<<<<<<< HEAD
               <div className='text-purple-300'>Lower than Market</div>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              <div className='text-purple-300'>Lower than Market</div>            </motion.div>            >
+              className="text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl"
+            >
+              <Target className="w-16 h-16 text-green-400 mx-auto mb-6" />
+              <h3 className="text-2xl font-bold text-white mb-4">Competitive Pricing</h3>
+              <p className="text-purple-300 mb-6">
+                Our prices are 30% lower than market average while providing
+                superior technology and features.
+              </p>
+              <div className="text-3xl font-bold text-green-400">30%</div>
+              <div className="text-purple-300">Lower than Market</div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             </motion.div>
             <motion.div
 =======
@@ -845,9 +1160,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
               viewport={{ once: true }}
 className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              viewport={{ once: true }}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             >
               <Shield className='w-16 h-16 text-blue-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -858,8 +1178,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 you pay, with clear value for every dollar.
               </p>
               <div className='text-3xl font-bold text-blue-400'>100%</div>
+<<<<<<< HEAD
               <div className='text-blue-300'>Transparent Pricing</div>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              <div className='text-blue-300'>Transparent Pricing</div>            </motion.div>            >
+              className="text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl"
+            >
+              <Shield className="w-16 h-16 text-blue-400 mx-auto mb-6" />
+              <h3 className="text-2xl font-bold text-white mb-4">No Hidden Costs</h3>
+              <p className="text-blue-300 mb-6">
+                Transparent pricing with no surprise fees. What you see is what you pay
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 with clear value for every dollar.
               </p>
               <div className="text-3xl font-bold text-blue-400">100%</div>
@@ -916,9 +1246,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
               viewport={{ once: true }}
 className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              viewport={{ once: true }}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             >
               <Award className='w-16 h-16 text-pink-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -929,23 +1264,46 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 that justify every penny of investment.
               </p>
               <div className='text-3xl font-bold text-pink-400'>5x</div>
+<<<<<<< HEAD
               <div className='text-pink-300'>ROI Guarantee</div>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              <div className='text-pink-300'>ROI Guarantee</div>            </motion.div>            >
+              className="text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl"
+            >
+              <Award className="w-16 h-16 text-pink-400 mx-auto mb-6" />
+              <h3 className="text-2xl font-bold text-white mb-4">Premium Quality</h3>
+              <p className="text-pink-300 mb-6">
+                Enterprise-grade technology with premium support and features
+                that justify every penny of investment.
+              </p>
+              <div className="text-3xl font-bold text-pink-400">5x</div>
+              <div className="text-pink-300">ROI Guarantee</div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             </motion.div>
           </div>
         </div>
       </section>
       {/* CTA Section */}
+<<<<<<< HEAD
 <section className='py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 className='space-y-8'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Ready to{' '}
@@ -984,6 +1342,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
       <UltraFuturisticFooter2028 />
+<<<<<<< HEAD
     </>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1063,6 +1422,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
       <UltraFuturisticFooter2028 />;
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>            <motion.div            </h2>;
             <p className="text - xl text - purple - 200 max - w-3xl mx - auto">;
@@ -1203,7 +1565,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
       <UltraFuturisticFooter2028 />;
+<<<<<<< HEAD
     </>))</>;
   )</>;
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </>);
+
+  );
+
+
+    </>
+  );
+
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

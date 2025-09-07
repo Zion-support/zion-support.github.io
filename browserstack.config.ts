@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -36,6 +37,9 @@ import { defineConfig, devices } from '@playwright/test',export default defineCo
     trace:'on-first-retry'}export default defineConfig({testDir:'tests/e2e',use:{baseURL:process && process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',trace:'on-first-retry'},projects:[;
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { defineConfig, devices } from '@playwright/test',;
 ;
 export default defineConfig({;
@@ -46,6 +50,7 @@ export default defineConfig({;
 
 
 
+<<<<<<< HEAD
 export default defineConfig({;
   testDir:'tests/e2e',;
   use:{;
@@ -73,6 +78,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   projects:[;
     {name:'Desktop Chrome';
       use:{browserName:'chromium';
@@ -94,6 +102,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       use:{;
         browserName:'webkit'}
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -198,6 +207,11 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   ]
   ]
         browserName: "webkit",
@@ -224,6 +238,7 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
       name: 'Mobile Chrome';
       use: {
         browserName: 'chromium';
+<<<<<<< HEAD
     trace: 'on-first-retry'
   }
   projects: [
@@ -261,6 +276,11 @@ export default define_config ({
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         ...devices['Pixel 5']}
     },
     {
@@ -272,10 +292,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   ],
   reporter:[;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ]
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ]
   testDir: 'tests/e2e',;
   use: {;
@@ -378,6 +402,7 @@ import { define_config, devices } from '@playwright / test',export default defin
   ],;
   reporter: [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -394,6 +419,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     ['list'];
     ['html', { outputFolder:'playwright-logs/html-report', open:'never' }]];
 })import { defineConfig, devices  } from '@playwright/test';
@@ -439,6 +466,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
         browserName: 'chromium'
@@ -462,12 +490,22 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         browserName: 'chromium'
         channel: 'chrome'
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+        browserName: 'chromium'
+        channel: 'chrome'
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
     }
     {
       name: "Desktop Firefox"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export default defineConfig({
   testDir: 'tests/e2e';
   use: {
@@ -556,10 +594,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
       use: {
+<<<<<<< HEAD
         browser_name: 'firefox';
         browser_name: 'firefox';
+=======
+
+
+
+        browser_name: 'firefox';
+
+
+        browser_name: 'firefox';
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
     }
     {
@@ -567,15 +617,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       name: "Desktop Safari"
 
       use: {
+<<<<<<< HEAD
         browser_name: 'webkit';
         browser_name: 'webkit';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+        browser_name: 'webkit';
+
+
+        browser_name: 'webkit';
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
     }
     {
 
       name: "Mobile Chrome"
       use: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -601,10 +664,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
         browser_name: 'chromium',
         ...devices['Pixel 5'];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -630,12 +696,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+        browserName: 'chromium'
+        ...devices['Pixel 5']
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
     }
     {
       name: "Mobile Safari"
       use: {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -645,14 +718,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         browser_name: 'webkit',
         ...devices['i_phone 12'];
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      }
 
-    }
 
-    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
-});
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -670,6 +742,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     ['list'];
 
@@ -677,17 +752,28 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   ],
   reporter: [;
     ['list'],
     ['html', { output_folder: 'playwright - logs / html - report', open: 'never' }];
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -760,11 +846,12 @@ ursor/fix-website-loading-errors-and-merge-6662;
 ];
   ]
   reporter: [
+=======
 
-    ['list']
-    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]
-]
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+
+<<<<<<< HEAD
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
 });
 ursor/fix-lint-push-and-merge-to-main-ae4e
@@ -788,6 +875,17 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       name: 'Mobile Chrome';
       use: {
         browserName: 'chromium';
@@ -808,6 +906,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]
 ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -816,3 +915,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

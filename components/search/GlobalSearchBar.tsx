@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -53,6 +54,9 @@ import { useRouter  } from 'next/router';
 export default function GlobalSearchBar() {useEffect(() => {if (!query) {setSuggestions([])return;      return;
       setSuggestions([])return;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export default function GlobalSearchBar() {
 
 export default function GlobalSearchBar() {;
@@ -65,6 +69,7 @@ export default function GlobalSearchBar() {;
     if (!query) {
       setSuggestions([]);
       return;      return
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -83,6 +88,10 @@ export default function GlobalSearchBar() {;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 class ErrorBoundary extends React.Component {
@@ -179,6 +188,7 @@ export default function GlobalSearchBar() {useEffect(() => {if (!query) {setSugg
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -188,6 +198,10 @@ export default function GlobalSearchBar() {useEffect(() => {if (!query) {setSugg
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
     
     return this.props.children;
@@ -212,6 +226,7 @@ export default function GlobalSearchBar() {
 import { useEffect, useMemo, useRef, useState  } from 'react';
 import { useRouter } from 'next/router';
   const router = null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -289,6 +304,9 @@ if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript))}rec.start
             {suggestions && suggestions.map((s, i) => (;
               <li key={i}>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
     controller.current?.abort();
     controller.current = new AbortController();
@@ -304,14 +322,18 @@ if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript))}rec.start
     }
     const id = setTimeout(run, 150);
 <<<<<<< HEAD
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     return () => clearTimeout(id);  }, [query]);        const j = await r.json();
         setSuggestions(j.suggestions |[]);
         setOpen(true)
       } catch {}
     }
     const id = setTimeout(run, 150);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     return () => clearTimeout(id);
   }, [query]);
@@ -361,10 +383,13 @@ if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript));
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         <button
           type='button'
           onClick={startVoice}
           className='inline-flex sm:hidden text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -375,6 +400,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           aria-label='Voice search'
         >
           🎤
@@ -398,6 +426,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     setOpen(false);
                     router.push(`/search?q=${encodeURIComponent(s)}`);
                   }}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    }
     rec.start()}
   }return (<form onSubmit={onSubmit} className="relative w-full max-w-lg" role="search">;
@@ -448,6 +480,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <li key={i}>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -460,6 +493,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 <button
                   type="button"
                   onClick={() => {;
@@ -467,6 +502,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     setOpen(false);
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -503,6 +539,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+                >
+
+
+
+                >
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800";
                 >;
                   {s}
@@ -512,6 +559,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </ul>;
         </div>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -548,11 +596,22 @@ if ( {) {$2;
 
                   {s}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+                  {s}
+
+
+                  className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                     router.push(`/search?q=${encodeURIComponent(s)}`)
                   }}
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
                 >
                   {s}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -590,6 +649,10 @@ if ( {) {$2;
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { use_router } from 'next / router';
 export default /**
  * GlobalSearchBar - Function description
@@ -704,18 +767,24 @@ if (return) {$2;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   );
 
 );  )
 }
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -746,3 +815,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+);
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

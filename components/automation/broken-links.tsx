@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
 =======
 <<<<<<< HEAD
@@ -26,10 +27,12 @@
 }
   return (return (
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
 
-}
 
+<<<<<<< HEAD
 
 =======
     <div className="py - 10">;
@@ -42,6 +45,9 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 }
 
@@ -57,6 +63,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -68,12 +75,20 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   return (
 
 
 
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

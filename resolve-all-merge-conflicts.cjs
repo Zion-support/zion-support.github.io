@@ -2,6 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -90,6 +91,8 @@ try {
 }
 
 console.log('🎉 Merge conflict resolution completed!');
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 class MergeConflictResolver {
   constructor() {
     this.resolvedFiles = [];
@@ -221,6 +224,7 @@ const resolver = new MergeConflictResolver();
 resolver.resolveMergeConflicts().catch(console.error);
 module.exports = MergeConflictResolver;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 console.log('🔧 Starting comprehensive merge conflict resolution...');
 
@@ -243,38 +247,12 @@ function resolveMergeConflicts(filePath) {
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 console.log('🚀 Starting comprehensive merge conflict resolution...');
+=======
 
-// Function to resolve modify/delete conflicts by removing the files
-function resolveModifyDeleteConflicts() {
-  console.log('📁 Resolving modify/delete conflicts...');
-  
-  try {
-    // Get list of conflicted files
-    const statusOutput = execSync('git status --porcelain', { encoding: 'utf8' });
-    const conflictedFiles = statusOutput
-      .split('\n')
-      .filter(line => line.includes('CONFLICT (modify/delete)'))
-      .map(line => line.split(' ').pop())
-      .filter(file => file && !file.includes('temp_conflicts/'));
-    
-    console.log(`Found ${conflictedFiles.length} modify/delete conflicts`);
-    
-    // Remove the conflicted files (they were deleted in main)
-    conflictedFiles.forEach(file => {
-      if (fs.existsSync(file)) {
-        console.log(`Removing ${file} (deleted in main)`);
-        fs.unlinkSync(file);
-        execSync(`git add ${file}`);
-      }
-    });
-    
-    return conflictedFiles.length;
-  } catch (error) {
-    console.error('Error resolving modify/delete conflicts:', error.message);
-    return 0;
-  }
-}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+
+<<<<<<< HEAD
 // Function to resolve content conflicts by choosing main branch version
 function resolveContentConflicts() {
   console.log('📝 Resolving content conflicts...');
@@ -454,3 +432,5 @@ ursor/integrate-build-improve-and-re-verify-7ffc
         content = content.replace(/
           const parts = match.split('
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

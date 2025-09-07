@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -66,6 +67,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  return (
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     <div className='min-h-screen bg-slate-950 text-white'>
       <Head>
         <title>Reference Architecture — Autonomous Content Mesh</title>
@@ -100,6 +106,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </p>
       </main>
     </div>
+<<<<<<< HEAD
+=======
+  );  return (
+  return (
+    </div>;
+  );  return (
+    <div className="min-h-screen bg-slate-950 text-white">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 <<<<<<< HEAD
       <Head>
@@ -200,6 +214,7 @@ function Page() {return (<div className='min - h-screen bg - slate - 950 text - 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -221,6 +236,8 @@ export default function Page(){
   return (
     </div>;
   );  return (
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Reference Architecture — Autonomous Content Mesh</title>
@@ -239,6 +256,7 @@ export default function Page(){
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -249,6 +267,10 @@ export default function Page(){
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import Head from 'next / head';
 ;
 export default /**
@@ -316,6 +338,7 @@ function Page() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -328,6 +351,8 @@ function Page() {
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   )
   } catch (error) {
     console.error("Error:", error);
@@ -336,6 +361,7 @@ function Page() {
 }
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -359,3 +385,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+  );
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

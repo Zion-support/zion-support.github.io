@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -105,14 +106,22 @@ CardHeader.displayName = "CardHeader";
 const CardTitle = null;
       className
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     )}
     {...props}
   />;
 ));
 CardTitle.displayName = "CardTitle";
 
+<<<<<<< HEAD
 const CardDescription = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+const CardDescription = React.forwardRef<
+  HTMLParagraphElement,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => (
   <p
@@ -135,12 +144,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ));
 CardDescription.displayName = "CardDescription";
 
+<<<<<<< HEAD
 const CardContent = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+const CardContent = React.forwardRef<
+  HTMLDivElement,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
   <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />;
 ));
+<<<<<<< HEAD
 
   />));
 CardDescription.display_name = "CardDescription";
@@ -212,6 +227,17 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
         <div className="absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover:opacity - 100 transition - opacity duration - 300 pointer - events - none" />)}
     </div>);
 
+=======
+CardContent && CardContent.displayName = "CardContent";
+
+
+const CardFooter = React && React.forwardRef<;
+  HTMLDivElement,;
+  React && React.HTMLAttributes<HTMLDivElement>;
+>(({ className, ...props }, ref) => (;
+
+  <div
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 CardContent.displayName = "CardContent";
 
@@ -238,7 +264,12 @@ const Card: React.FC<CardProps> = ({export {Card,CardHeader,CardFooter,CardTitle
 }
 <<<<<<< HEAD
 const Card: React.FC<CardProps> = ({
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export {
   Card,
   CardHeader,
@@ -248,6 +279,7 @@ export {
   CardContent,
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -256,3 +288,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

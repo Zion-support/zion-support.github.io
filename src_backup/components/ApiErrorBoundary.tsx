@@ -1,4 +1,5 @@
 <<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
+<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
 }
       return (
 
@@ -66,6 +67,11 @@ if ( {) {$2;
             </Alert>;
 <<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
 
+=======
+      }
+
+      return (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ApiErrorBoundary.tsx
         <div className="flex min-h-screen items-center justify-center p-4">
           <div className="w-full max-w-md space-y-4">
             <Alert variant="destructive">
@@ -73,6 +79,10 @@ if ( {) {$2;
                 {isNetworkError ? (
                   <WifiOff className="h-4 w-4" />
                 ) : (
+<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ApiErrorBoundary.tsx
 
                   <RefreshCw className="h-4 w-4" />
                 )}
@@ -80,7 +90,10 @@ if ( {) {$2;
                   {isNetworkError ? 'Connection Problem' : 'Something went wrong'}
 
 
+<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ApiErrorBoundary.tsx
                 </AlertTitle>
               </div>
               <AlertDescription className="mt-2">
@@ -95,12 +108,15 @@ if ( {) {$2;
                 )}
               </AlertDescription>
             </Alert>
+<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
 
 
             <div className='flex flex-col gap-2'>;
               <Button
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ApiErrorBoundary.tsx
                 onClick={this.handleRetry}
                 disabled={this.state.isRetrying}
                 className="w-full"
@@ -121,6 +137,7 @@ if ( {) {$2;
                 )}
 
 
+<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
                 variant="outline"
                 onClick={() => window.location.reload()}
                 className="w-full"
@@ -128,6 +145,8 @@ if ( {) {$2;
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ApiErrorBoundary.tsx
                 Reload Page
               </Button>
             </div>
@@ -137,6 +156,7 @@ if ( {) {$2;
                 <span>Offline</span>
               </div>
             )}
+<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
               <AlertDescription className='mt - 2'>;
 =======
             <div className='flex flex-col gap-2'>;
@@ -224,14 +244,22 @@ export const useApiErrorHandler = () =>: any {const handleApiError = (error: Err
 <<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
             )}
 
+=======
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ApiErrorBoundary.tsx
               <details className="mt-4 rounded border p-2 text-xs">
                 <summary className="cursor-pointer font-medium">
                   Debug Info (Development Only)
                 </summary>
+<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ApiErrorBoundary.tsx
 
                 <pre className="mt-2 whitespace-pre-wrap break-all">
 
 
+<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
 
 =======
             )}<details className="mt-4 rounded border p-2 text-xs">;
@@ -239,6 +267,8 @@ export const useApiErrorHandler = () =>: any {const handleApiError = (error: Err
                   Debug Info (Development Only)</summary>;
                 <pre className="mt-2 whitespace-pre-wrap break-all">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ApiErrorBoundary.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ApiErrorBoundary.tsx
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>;
@@ -263,6 +293,7 @@ export const useApiErrorHandler = () => {;
   };
   return { handleApiError };
 };
+<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
   return { handleApiError }
 
 
@@ -275,6 +306,9 @@ export const useApiErrorHandler = () => {;
 
 };
 
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ApiErrorBoundary.tsx
 import React, { Component, ReactNode } from 'react';
 import { QueryClient  } from '@tanstack/react-query';
 =======
@@ -302,7 +336,10 @@ interface ApiErrorBoundaryProps  {children: ReactNode;
 
   return { handleApiError };
 };
+<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
       scope.setTag('source', 'useApiErrorHandler')scope.setLevel('error')Sentry.captureException(error)})}return { handleApiError }}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ApiErrorBoundary.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ApiErrorBoundary.tsx

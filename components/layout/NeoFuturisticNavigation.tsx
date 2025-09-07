@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -88,7 +92,11 @@ export default function NeoFuturisticNavigation() {const [isOpen, setIsOpen] = u
 						</div>
 					</Link>
 
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import {
   Menu
   X
@@ -504,6 +512,7 @@ import {Menu;
       <div className='max-w-7xl mx-auto px-4'>;
         <div className='flex items-center justify-between h-20'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           {/* Logo */}
           <Link href='/' className='flex items-center space-x-3 group'>
             <div className='relative'>
@@ -779,6 +788,10 @@ import {Menu;
                   />
                 </button>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+          {/* Logo */}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 {activeDropdown === 'mobile-services' && (
                   <div className='ml-4 space-y-3'>
                     {serviceCategories.map((category, index) => (
@@ -861,6 +874,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     href='/contact'
                     variant='secondary'
                     size='lg'
+<<<<<<< HEAD
                     className='w-full'
                   >
                     Contact Us
@@ -922,6 +936,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     href='/contact';
                     variant='secondary';
                     size='lg';
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                     className='w-full'>;
                         <ArrowRight className='w - 4 h - 4 ml - 2' />;
                       </Button>;
@@ -1230,6 +1246,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 					</div>;
 				</div>;
 			)}
+<<<<<<< HEAD
 		</nav>;
                     className='w-full';
                   >;
@@ -1256,3 +1273,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }`;
 }/> </button>) )}</div>)}</div> </div> </div> <div className="mt-6 space-y-3" > <Button href="/services" variant="quantum" size="lg" className="w-full" > Explore Services <ArrowRight className="w-5 h-5 ml-2" /> </Button> <Button href="/contact" variant="secondary" size="lg" className="w-full" > Contact Us </Button> </div> </div> </div> </div> </div>)}</nav>)
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+		</nav>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

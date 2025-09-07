@@ -4,6 +4,7 @@
 export default function SiteHealth() {
 
   return (
+<<<<<<< HEAD
             </Link>
           </div>
         </nav>
@@ -23,10 +24,21 @@ export default function SiteHealth() {
           </p>
           <div className='mt-8 flex flex-wrap justify-center gap-3'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+          <div className="hidden gap-6 md:flex text-white/80">
+            <Link href="/"><a>Home</a></Link>
+            <Link href="/automation"><a>Automations</a></Link>
+            <Link href="/reports/seo"><a>SEO Audit</a></Link>
+            <Link href="/reports/ai-trends"><a>AI Trends</a></Link>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <a
               href='/site-health'
               target='_blank'
               rel='noopener'
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               className='rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10'
             >
               Live Pipelines
@@ -117,12 +129,17 @@ export default function SiteHealth() {return (<div className="hidden gap-6 md:fl
                     Open →
                   </div>
                 </a>
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               </Link>
             ))}
           </div>
         </section>
 
+<<<<<<< HEAD
 <section className='mx-auto max-w-7xl px-6 pb-16'>
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Artifacts
@@ -158,10 +175,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </a>
               </Link>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               <a
                 href='/site-health'
                 target='_blank'
                 rel='noopener'
+<<<<<<< HEAD
                 className='rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10'
               >
                 View Pipelines
@@ -226,6 +246,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 href='/site-health';
                 target='_blank';
                 rel='noopener';
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         <section className='mx - auto max - w-7xl px - 6 pb - 24'>;
           <div className='animated - border relative overflow - hidden rounded - 3xl border border - white / 10 bg - gradient - to - r from - fuchsia - 600 / 20 via - violet - 600 / 20 to - cyan - 600 / 20 p - 8 text - center backdrop - blur - xl'>;
             <h3 className='text - 2xl font - bold'>;
@@ -258,6 +280,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </section>;
       </main>;
+<<<<<<< HEAD
     </div>)className='rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10';
               >;
                 View Pipelines;
@@ -269,3 +292,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </div>);
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

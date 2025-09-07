@@ -1,4 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -65,7 +69,11 @@ export default function AIContentGeneratorPage() {
     },
   ];
 
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const useCases = [
     {
       title: 'Blog Writing',
@@ -82,9 +90,13 @@ description:
     {
       title: 'Marketing Copy',
       description:
+<<<<<<< HEAD
         'Create compelling ad copy, landing pages, and marketing materials.',
       icon: '🎯',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        'Create compelling ad copy, landing pages, and marketing materials.'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       examples: [
         'Facebook ads',
         'Google ads',
@@ -95,9 +107,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     {
       title: 'Social Media',
       description:
+<<<<<<< HEAD
         'Generate engaging social media posts, captions, and hashtag suggestions.',
       icon: '📱',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        'Generate engaging social media posts, captions, and hashtag suggestions.'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       examples: [
         'Instagram posts',
         'Twitter threads',
@@ -108,9 +124,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     {
       title: 'E-commerce',
       description:
+<<<<<<< HEAD
         'Write product descriptions, category pages, and promotional content.',
       icon: '🛍️',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        'Write product descriptions, category pages, and promotional content.'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       examples: [
         'Product descriptions',
         'Category pages',
@@ -121,6 +141,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   ];
 
   const integrations = [
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
 {
       name: 'Shopify',
@@ -133,7 +157,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     { name: 'Zapier', icon: '⚡', description: '500+ app integrations' },
   ];
   const integrations = [
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' }
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
     {
@@ -141,6 +168,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       icon: '🛒'
       description: 'E-commerce content automation'
     }
+<<<<<<< HEAD
     { name: 'HubSpot', icon: '📊', description: 'Marketing automation sync' }
 =======
 import { Brain, Zap, Shield, BarChart3, Users, Clock, CheckCircle, Star, ArrowRight, Play, Download, Code, Globe, Lock, Sparkles  } from 'lucide-react';
@@ -167,6 +195,59 @@ export default function AIContentGeneratorPage() {const features = null;
         'Write product descriptions, category pages, and promotional content.',icon: '🛍️',examples: [;
         'Product descriptions','Category pages','Promotional emails','FAQ sections',],},];const integrations = [;
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },{name: 'Shopify',icon: '🛒',description: 'E-commerce content automation',},{ name: 'HubSpot', icon: '📊', description: 'Marketing automation sync' },{ name: 'Mailchimp', icon: '📧', description: 'Email campaign content' },{ name: 'Slack', icon: '💬', description: 'Team collaboration' },{ name: 'Zapier', icon: '⚡', description: '500+ app integrations' },];
+=======
+
+
+  const useCases = [;
+    {;
+      title: 'Blog Writing',,
+  description:;
+        'Generate engaging blog posts, articles, and long-form content in minutes.',;
+      examples: [;
+        'Tech reviews',;
+        'How-to guides',;
+        'Industry insights',;
+        'Product comparisons',;
+      ],;
+    },;
+    {;
+      title: 'Marketing Copy',,
+  description:;
+        'Create compelling ad copy, landing pages, and marketing materials.',;
+      icon: '🎯',;
+      examples: [;
+        'Facebook ads',;
+        'Google ads',;
+        'Landing pages',;
+        'Email campaigns',;
+      ],;
+    },;
+    {;
+      title: 'Social Media',,
+  description:;
+        'Generate engaging social media posts, captions, and hashtag suggestions.',;
+      icon: '📱',;
+      examples: [;
+        'Instagram posts',;
+        'Twitter threads',;
+        'LinkedIn articles',;
+        'TikTok captions',;
+      ],;
+    },;
+    {;
+      title: 'E-commerce',,
+  description:;
+        'Write product descriptions, category pages, and promotional content.',;
+      icon: '🛍️',;
+      examples: [;
+        'Product descriptions',;
+        'Category pages',;
+        'Promotional emails',;
+        'FAQ sections',;
+      ],;
+    },  ];
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const integrations = [;
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' }
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },{name: 'Shopify';
@@ -198,6 +279,7 @@ export default function AIContentGeneratorPage() {const features = null;
       features: [;
         'Unlimited words','All templates + custom','Full SEO suite','Dedicated support','Unlimited API access','Advanced analytics','Custom integrations','SLA guarantee',],popular: false,];];{ name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },return (<>;
       <Head>;
+<<<<<<< HEAD
         <title>;{ name: 'HubSpot', icon: '📊', description: 'Marketing automation sync' }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' }
@@ -257,10 +339,14 @@ export default function AIContentGeneratorPage() {const features = null;
               <ArrowRight className='w-5 h-5 ml-2' />
             </Button>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        <title>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <Button
               href='#demo'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
               className='border-white/20 hover:border-white/40 hover:bg-white/5'
             >
               <Play className='w-5 h-5 mr-2' />
@@ -300,6 +386,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               href='#demo';
               variant='outline';
               size='lg';
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
               <Play className='w-5 h-5 mr-2' />              Watch Demo      </Head>;{/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">;
@@ -327,6 +415,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Start Free Trial;
               <ArrowRight className="w-5 h-5 ml-2" />;
             </Button>;
+<<<<<<< HEAD
             <Button;
               href="#demo";
               variant="outline";
@@ -383,6 +472,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index) => (
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            <Button
+              href="#demo"
+              variant="outline"
+              size="lg"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               <Card
 =======
 <section className='py-24 bg-gray-900 relative overflow-hidden'>;
@@ -403,9 +498,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 style={{ animationDelay: `${index * 0 && 0.1 + 0 && 0.2}s` }}>;
                 <div className='relative'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <div
 =======
                   <div;
+=======
+                  <div
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                     className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature && feature.color} shadow-xl`}>;
                     {feature && feature.icon}
                   </div>;
@@ -415,6 +514,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </h3>;
                 <p className='text-gray-400 leading-relaxed'>                  {feature && feature.description}            {features && features.map((feature, index) => (<Card;
                 key={index}
+<<<<<<< HEAD
                 className="text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                     className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}
@@ -429,6 +529,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <p className='text-gray-400 leading-relaxed'>
                   {feature.description}
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                className="text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 </p>
               </Card>
 =======
@@ -449,6 +552,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
               Use Cases
             </h2>
+<<<<<<< HEAD
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Versatile content creation for every industry and purpose
             </p>
@@ -466,6 +570,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Use Cases;
             </h2>;
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Versatile content creation for every industry and purpose;
+=======
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Versatile content creation for every industry and purpose
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 style={{ animationDelay: `${(index * 0 && 0.1) + 0 && 0.2}s` }}>;
                 <div className="relative">;
                   <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature && feature.color} shadow-xl`}>;
@@ -664,6 +771,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </h3>;
                 <p className="text - gray-400 leading-relaxed">;
                   {feature.description}
+<<<<<<< HEAD
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">;
           <div className="text-center mb-20">;
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">;
@@ -677,6 +785,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
             {useCases.map((useCase, index) => (<Card;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
+              Use Cases
+            </h2>
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              <Card
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 key={index}
                 className='group border border-gray-700 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
                 <div className='flex items-start space-x-4'>;
@@ -693,6 +810,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {useCase && useCase.examples.map((example, exampleIndex) => (;
                         <div
                           key={exampleIndex}
+<<<<<<< HEAD
                           className='flex items-center text-sm text-gray-300'
                         >
                           <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />
@@ -701,6 +819,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {useCase && useCase.examples.map((example, exampleIndex) => (<div;
                           key={exampleIndex}className='flex items-center text-sm text-gray-300'>;
                           <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />                          {example}            {useCases && useCases.map((useCase, index) => (<Card;
+=======
+                          className='flex items-center text-sm text-gray-300'>;
+                          <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />                          {example}            {useCases && useCases.map((useCase, index) => (;
+              <Card
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 key={index}
                 className="group border border-gray-700 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300">;
                 <div className="flex items-start space-x-4">;
@@ -713,11 +836,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {useCase && useCase.description}
                     </p>;
                     <div className="grid grid-cols-2 gap-2">;
+<<<<<<< HEAD
                       {useCase && useCase.examples.map((example, exampleIndex) => (<div key={exampleIndex} className="flex items-center text-sm text-gray-300">;
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />;className='flex items-center text-sm text-gray-300';
                         >;
                           <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                      {useCase && useCase.examples.map((example, exampleIndex) => (;
+                        <div key={exampleIndex} className="flex items-center text-sm text-gray-300">;
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                           {example}
                         </div>;
                       ))}
@@ -735,6 +864,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
       {/* Pricing Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 <section
         id='pricing'
         className='py-24 bg-gray-900 relative overflow-hidden'
@@ -742,6 +872,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-20'>
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
+=======
+
+      <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               Simple, Transparent Pricing
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -784,6 +922,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                   <p className='text-gray-400'>{plan && plan.description}</p>;
                 </div>;
+<<<<<<< HEAD
                 <div className='text-center mb-8'>;
 <section;
         id='pricing';
@@ -813,6 +952,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <div className='text-center mb-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                <div className='text-center mb-8'>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   <h3 className='text-2xl font-bold text-white mb-2'>
 =======
 <div className='text-center mb-8'>;
@@ -831,6 +973,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {plan && plan.features.map((feature, featureIndex) => (;
                     <li
                       key={featureIndex}
+<<<<<<< HEAD
                       className='flex items-center text-gray-300'
                     >
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />
@@ -842,6 +985,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     >;
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                       {feature}
                     </li>;
                   ))}
@@ -862,6 +1008,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </ul>
 
                 <Button
+<<<<<<< HEAD
 href='/contact'
                   className={`w-full ${plan.buttonColor} text-white`}
                   size='lg'
@@ -869,10 +1016,19 @@ href='/contact'
                   Get Started
                   <ArrowRight className='w-5 h-5 ml-2' />
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                  href="/contact"
+                  className={`w-full ${plan.buttonColor} text-white`}
+                  size="lg"
+                >
+                  Get Started
+                  <ArrowRight className="w-5 h-5 ml-2" />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 </Button>
               </Card>
             ))}
       {/* Integrations Section */}
+<<<<<<< HEAD
 <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-20'>
@@ -914,6 +1070,19 @@ href='/contact';
             </h2>;
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
               <Card;
+=======
+
+      <section className="py-24 bg-black relative overflow-hidden">
+
+            ))}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
+              Seamless Integrations
+            </h2>
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              <Card
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 key={index}
                 className='text-center group border border-gray-700 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform duration-300'>;
@@ -924,7 +1093,12 @@ href='/contact';
                 </h3>;
                 <p className='text-sm text-gray-400'>;
                   {integration && integration.description}
+<<<<<<< HEAD
                 </p>              </Card>            {integrations && integrations.map((integration, index) => (<Card;
+=======
+                </p>              </Card>            {integrations && integrations.map((integration, index) => (;
+              <Card
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 key={index}
                 className="text-center group border border-gray-700 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300">;
                 <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">;
@@ -932,6 +1106,7 @@ href='/contact';
                 </div>;
                 <h3 className="font-semibold text-white mb-2">{integration && integration.name}</h3>;
                 <p className="text-sm text-gray-400">{integration && integration.description}</p>;
+<<<<<<< HEAD
               </Card>;<section className='py-24 bg-black relative overflow-hidden'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
           <div className='text-center mb-20'>;
@@ -964,6 +1139,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>;
               </Card>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              </Card>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             ))}
           </div>;
         </div>;
@@ -1006,18 +1184,52 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               href='#demo'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
               className='border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl'
             >
               <Play className='w-5 h-5 mr-2' />
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            <Button
+              href="/contact"
+              variant="secondary"
+              size="lg"
+              className="bg-white text-purple-600 hover:bg-gray-100 shadow-2xl">;
+              Start Free Trial;
+              <ArrowRight className="w-5 h-5 ml-2" />;
+            </Button>;
+            <Button
+              href="#demo"
+              variant="outline"
+              size="lg"
+              Watch Demo;
+            </Button>;
+          </div>;
+        </div>;
+      </section>;
+              className="border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl"
+            >
+              <Play className="w-5 h-5 mr-2" />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               Watch Demo
             </Button>
           </div>
         </div>
       </section>
     </>
+<<<<<<< HEAD
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+}
+;
+}
+
+    </>);
+}
+
+    </>);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 =======
             <Button;

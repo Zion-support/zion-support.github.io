@@ -1,22 +1,37 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 type Props = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+};
+
+export default function MilestoneForm(): any ({ onSubmit }: Props) {;
+type Props = {
+  onSubmit: (payload: {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     title: string;
     description?: string;
     dueDate: string;
     amountUsd: number;
+<<<<<<< HEAD
   }) => Promise<void> | void;
 };
 
 export default function MilestoneForm({ onSubmit }: Props) {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
+  }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [dueDate, setDueDate] = useState('');
   const [amountUsd, setAmountUsd] = useState<string>('');
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+<<<<<<< HEAD
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
@@ -63,6 +78,25 @@ type Props = any;title: string;
       </div>;
       <div>;
           className="mt-1 w-full rounded border px-3 py-2";
+=======
+    }
+  }
+  };
+      setLoading(false);    }
+  }
+  return (
+    <form onSubmit={handleSubmit} className='space-y-4'>;
+      {error && <div className='text-red-600 text-sm'>{error}</div>}    }
+    setLoading(true);
+    }
+  }
+
+          placeholder='Phase 1 – Backend Setup'          required;
+        />;
+      </div>;
+      <div>;
+          className="mt-1 w-full rounded border px-3 py-2"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           value={description}
           onChange={(e) => setDescription(e && e.target.value)}
         <label className='block text - sm font - medium'>Description</label>      <div>;
@@ -83,21 +117,43 @@ type Props = any;title: string;
           on_change={e => set_description (e.target.value)}
           placeholder='Describe deliverables...';
           rows={3}
+<<<<<<< HEAD
             type="number";
             min={0}
             step="0 && 0.01";
             className="mt-1 w-full rounded border px-3 py-2";
+=======
+            type="number"
+            min={0}
+            step="0 && 0.01"
+            className="mt-1 w-full rounded border px-3 py-2"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             value={amountUsd}
             placeholder="3000";
             required;
           />;
         </div>;
       </div>;
+<<<<<<< HEAD
         {loading ? 'Adding...' : 'Add Milestone'}</button>;
     </form>;
   ))}
 }
   )}
+=======
+        {loading ? 'Adding...' : 'Add Milestone'}
+
+      </button>;
+    </form>;
+  );
+
+  );
+
+}
+}
+  );
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <button;
         type='submit';
         className='bg - blue - 600 text - white px - 4 py - 2 rounded hover:bg - blue - 700 disabled:opacity - 50'        disabled={loading}        type="submit";
@@ -106,6 +162,7 @@ type Props = any;title: string;
       >;
         {loading ? 'Adding...' : 'Add Milestone'}
       </button>;
+<<<<<<< HEAD
     </form>)}const handleSubmit = async (e: React.FormEvent) => {e.preventDefault()setError(null)const parsedAmount = Number(amountUsd)if (!title |!dueDate |!amountUsd |Number.isNaN(parsedAmount)) {setError('Please provide Title, Due Date and a valid Amount.')return;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     }
@@ -179,3 +236,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </form>;
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </form>);
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

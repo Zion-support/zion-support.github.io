@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -21,9 +24,12 @@ async function checkAutomationStatus() {
     try {
       const pm2List = execSync('pm2 jlist', { encoding: 'utf8' });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 main
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -39,6 +45,7 @@ main
     
     try {
       const pm2List = execSync('pm2 jlist', { "encoding": 'utf8' });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -68,12 +75,22 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       const pm2Data = JSON.parse(pm2List);
       statusReport.pm2Processes = pm2Data;
 
       const runningProcesses = pm2Data.filter(
         proc => proc.pm2_env && proc.pm2_env.status === 'online'
       );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -104,6 +121,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
     } catch (error) {
       
     } catch (error) {
@@ -111,6 +129,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);
     } catch (error) {
       console.log('⚠️  PM2 not available or no processes running');
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    } catch (error) {
+      
+    } catch (error) {
+      
+      console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);
+    } catch (error) {
+      console.log('⚠️  PM2 not available or no processes running');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -119,27 +146,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);
     } catch (error) {
       console.log('⚠️  PM2 not available or no processes running');
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-      console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);
-    } catch (error) {
-      console.log('⚠️  PM2 not available or no processes running');
-=======
-<<<<<<< HEAD
-      console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);
-    } catch (error) {
-      console.log('⚠️  PM2 not available or no processes running');
-<<<<<<< HEAD
-    } catch (error) {
-=======
+
+
+
+
+
       
     } catch (error) {
       
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -167,10 +188,16 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       statusReport.pm2Processes = [];
     }
 
     // Check automation scripts
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -208,6 +235,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+    console.log('📋 Checking automation scripts...');
+    const automationScripts = [
+      'automation/master-orchestrator.cjs',
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     
 =======
 
@@ -223,23 +259,25 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'automation/master-orchestrator.cjs',
       'automation/master-orchestrator.cjs',
     console.log('📋 Checking automation scripts...');
     const automationScripts = [
       'automation/master-orchestrator.cjs',
       'automation/master-orchestrator.cjs',
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-=======
+
+
+
       'automation/master-orchestrator.cjs',
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-2480
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -259,6 +297,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'automation/health-check.cjs',
       'automation/security-scanner.cjs',
       'automation/code-quality-monitor.cjs',
@@ -269,6 +313,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       const scriptPath = path.join(process.cwd(), script);
       const exists = fs.existsSync(scriptPath);
       statusReport.automationScripts.push({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -299,6 +344,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         name: script,
         exists,
         path: scriptPath
@@ -326,10 +378,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       platform: process.platform,
     };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
         "name": script,
         exists,
@@ -347,6 +406,7 @@ main
     } catch (error) {
       statusReport.systemHealth.healthCheck = 'failed';
       console.log('❌ Health check failed');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     }
@@ -392,6 +452,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     // Save report
 
+=======
+
+
+
+
+    }
+
+    return statusReport;
+  } catch (error) {
+    console.error('❌ Error checking automation "status": ', error.message);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         name: script,
         exists,
         path: scriptPath
@@ -417,6 +488,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
     console.error('❌ Error checking automation "status": ', error.message);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
@@ -430,6 +502,11 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     const reportPath = path.join(
       process.cwd(),
       'automation-status-report.json'
@@ -444,8 +521,15 @@ main
     
     
 
+<<<<<<< HEAD
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    return statusReport;
+
+  } catch (error) {
+    console.error('❌ Error checking automation "status": ', error.message);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     console.log('📋 Checking system health...');
     try {
       const healthCheck = execSync('node automation/health-check.cjs', { encoding: 'utf8' });
@@ -482,6 +566,7 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -495,6 +580,10 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     const reportPath = path.join(process.cwd(), 'logs', 'automation-status-report.json');
     try {
       fs.mkdirSync(path.dirname(reportPath), { recursive: true });
@@ -506,6 +595,7 @@ main
 
   } catch (error) {
     console.error('❌ Error checking automation status:', error.message);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -527,11 +617,16 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     const reportPath = path.join(
       process.cwd(),
       'automation-status-report.json'
     );
     fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2));
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -544,6 +639,19 @@ main
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    console.log('📊 Status Report:');
+    console.log(`   Overall Status: ${statusReport.overallStatus}`);
+    console.log(`   PM2 Processes: ${runningProcesses.length} running`);
+    console.log(
+      `   Available Scripts: ${availableScripts.length}/${automationScripts.length}`
+    );
+    console.log(`   Report saved to: ${reportPath}`);
+    return statusReport;
+  } catch (error) {
+    console.error('❌ Error checking automation status:', error.message);
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     return statusReport;
   } catch (error) {
     console.error('❌ Error checking automation "status": ', error.message);
@@ -558,6 +666,7 @@ main
     }
   } catch (error) {
     console.error('❌ Error checking automation status:', error.message);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -585,11 +694,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     statusReport.overallStatus = 'error';
   }
 
   return statusReport;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -628,6 +744,18 @@ if (require.main === module) {
 if (require.main === module) {
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+// Run if called directly
+if (require.main === module) {
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   checkAutomationStatus()
     .then(() => {
       process.exit(0);
@@ -639,12 +767,15 @@ if (require.main === module) {
 }
 
 module.exports = { checkAutomationStatus };
+<<<<<<< HEAD
 =======
 
 
 // Run if called directly
 main
 if (require.main === module) {
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
@@ -652,8 +783,12 @@ if (require.main === module) {
 
 
 
+<<<<<<< HEAD
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -666,9 +801,12 @@ const { execSync } = require('child_process')
     console.error(' Error checking automation "status")
       console.error('Fatal "error")
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 if (require.main === module) {
   checkAutomationStatus().then(report => {
@@ -678,6 +816,7 @@ if (require.main === module) {
 module.exports = checkAutomationStatus;
 
 module.exports = checkAutomationStatus;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -714,3 +853,14 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

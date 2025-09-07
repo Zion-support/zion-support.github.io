@@ -1,10 +1,14 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -21,6 +25,7 @@ function resolveMergeConflicts(filePath) {
     // Check if file has merge conflicts
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (!content.includes('
 =======
 
@@ -28,6 +33,12 @@ function resolveMergeConflicts(filePath) {
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+    if (!content.includes('
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         conflictType = 'incoming';
         continue;
       }
@@ -76,6 +87,7 @@ function findConflictedFiles(dir) {
           const content = fs.readFileSync(fullPath, 'utf8');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
           if (content.includes('
 =======
 
@@ -83,3 +95,9 @@ function findConflictedFiles(dir) {
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+          if (content.includes('
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -47,10 +47,14 @@ class SmartDeploymentAutomation {}
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+        
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         this.log(`Pre-deployment checks ${allPassed ? 'passed' : 'failed'}`);
         return { checks, allPassed }};
     runLintCheck() {}
@@ -192,7 +196,11 @@ if ( {})
     automation.run().catch(console.error)};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = SmartDeploymentAutomation;
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+module.exports = SmartDeploymentAutomation;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

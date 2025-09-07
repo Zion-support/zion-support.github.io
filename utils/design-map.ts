@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface TokenSet {
 =======
 <<<<<<< HEAD
@@ -22,6 +23,13 @@ export interface TokenSet {;
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+export interface TokenSet {
+
+
+export interface TokenSet {;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export type DesignMapSection = {
   id: string;
 =======
@@ -401,10 +409,14 @@ export function getZionDesignMap(): DesignMap {
   };
 
 export type TokenSet = {
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 export interface TokenSet {;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   colors: Record<string, string>;
   typography: Record<string, any>;
   spacing: Record<string, number>;
@@ -452,6 +464,7 @@ export async function buildTokenSet(fileId: string): Promise<TokenSet> {
 <<<<<<< HEAD
   return {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -479,6 +492,9 @@ class ErrorBoundary extends React.Component {
       return <div>Something went wrong.</div>;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
 =======
   return {}
@@ -537,6 +553,7 @@ export function buildUIKit(kind: UIKitKind): Record<string, string> {
 <<<<<<< HEAD
         'export function Card({ children }: { children: React && React.ReactNode }) { return <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">{children}</div> }',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -545,6 +562,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
         'export function Card({ children }: { children: React && React.ReactNode }) { return <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">{children}</div> }'
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     };
   }
   if (kind === 'chakra') {
@@ -573,10 +593,9 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
 export interface DesignElement  {id: string;
   } catch {
     return null;
+
+
 <<<<<<< HEAD
-=======
-
-
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 // Design mapping utilities
@@ -667,11 +686,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     };
   };
 }
 
-<<<<<<< HEAD
   getDesignSystem(id: string): DesignSystem | null {
     return this.designSystems.get(id) || null;
   }
@@ -681,6 +703,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     if (!designSystem) return false;
   const tokens = await buildTokenSet(fileId);
   return {
+<<<<<<< HEAD
 =======
 export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
 
@@ -688,6 +711,9 @@ export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit
   return {
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     designSystem.components.push(component);
     designSystem.lastUpdated = new Date();
@@ -886,10 +912,15 @@ export async function buildTokenSet (file_id: string): Promise < TokenSet> {
   // Placeholder implementation;
   return {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     colors: {
       primary: "#007AFF",
       secondary: "#5856D6",
@@ -907,8 +938,8 @@ main
       sm: 8,
       md: 16,
       lg: 24,
-<<<<<<< HEAD
       xl: 32,
+<<<<<<< HEAD
       xl: 32
 }
   };
@@ -932,12 +963,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     },
 =======
     }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   };
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 export async function buildUIKit(
   fileId: string,
@@ -952,6 +991,9 @@ export async function buildUIKit(
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           backgroundColor: tokens.colors.primary,
           padding: tokens.spacing.md,
         },
@@ -960,6 +1002,7 @@ export async function buildUIKit(
     tokens,
   };
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -974,6 +1017,11 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           backgroundColor: tokens.colors.primary
 =======
           backgroundColor: tokens.colors.primary,
@@ -1029,6 +1077,7 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
     return null;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -1038,3 +1087,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

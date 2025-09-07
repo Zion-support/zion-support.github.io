@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
 =======
 
@@ -46,6 +47,26 @@ const res = await fetch('/api/offworld/ipfs?action=broadcast', {
     });
     setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed');
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  const [chat, setChat] = useState('');
+  const [voteChoice, setVoteChoice] = useState('yes');
+  const [proposalId, setProposalId] = useState('prop-1');
+  const [name, setName] = useState('');
+  const [skills, setSkills] = useState('');
+  const [status, setStatus] = useState('');
+    setStatus(res.ok ? 'Vote recorded' : 'Vote failed')
+  }
+  async function syncProfile() {
+    setStatus('Pinning profile...');
+    const data = await res.json();
+    setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed')
+  }
+  async function broadcast() {
+    setStatus('Broadcasting manifesto...');
+    });
+    setStatus(res && res.ok ? 'Broadcast sent' : 'Broadcast failed');
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
         <input
           className='border p-2 w-full'
@@ -165,12 +186,17 @@ function broadcast() {set_status ('Broadcasting manifesto...')const res = await 
 
       {status && <p className='text-sm text-gray-700'>{status}</p>}
     </div>
+<<<<<<< HEAD
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
       </section>;{status && <p className='text-sm text-gray-700'>{status}</p>}
     </div>;
 )}
+=======
+);
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         <button;
           className='px - 3 py - 2 bg - black text - white rounded';
           on_click={cast_vote}
@@ -209,5 +235,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </button>;
       </section>;
       {status && <p className='text - sm text - gray - 700'>{status}</p>}
+<<<<<<< HEAD
     </div>))
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </div>);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

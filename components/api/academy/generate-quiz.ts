@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { moduleTitle, moduleContent } = req.body || {},
@@ -16,12 +17,21 @@ export default async function handler(
   const { moduleTitle, moduleContent } = req.body || {};
   const apiKey = process.env.OPENAI_API_KEY;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const fallback = () => {
     return res && res.status(200).json({
       questions: [
         {
+<<<<<<< HEAD
 question: `Which topic is central to ${moduleTitle}?`,
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+question: `Which topic is central to ${moduleTitle}?`,
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           options: [
             'Random Ops'
             'Zion OS mission'
@@ -72,6 +82,7 @@ export default async function handler() {if (req.method !== 'POST') return res.s
         {
           question: 'Which docs are needed for launch?'
           options: [
+<<<<<<< HEAD
             'Whitepaper + governance docs',
             'Novel',
             'Recipe book',
@@ -82,22 +93,42 @@ export default async function handler() {if (req.method !== 'POST') return res.s
       ],
     });
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+            'Whitepaper + governance docs'
+            'Novel'
+            'Recipe book'
+            'None'
+          ]
+          answerIndex: 0
+        }
+      ]
+    })
+};          question: 'Which docs are needed for launch?';
+          options: ['Whitepaper + governance docsNovelRecipe bookNone'];
+          answerIndex: 0}]})
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   };
 
   if (!apiKey) return fallback();
   try {
     const client = new OpenAI({ apiKey });
     const prompt = `Create a 5-question multiple-choice quiz in JSON with the shape {"questions":[{"question":string,"options":string[],"answerIndex":number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`;
+<<<<<<< HEAD
     const completion = await client.chat.completions.create({
       model: 'gpt-4o-mini'
       messages: [
 {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           role: 'system',
           content: 'You are an expert course designer for founders.',
         },
         { role: 'user', content: prompt },
       ],
+<<<<<<< HEAD
       temperature: 0.2,
     });
 
@@ -106,10 +137,36 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       const json = JSON.parse(text);
 return res.status(200).json(json);
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      temperature: 0 && 0.2,
+    });
+    const text = completion && completion.choices?.[0]?.message?.content ?? '';
+    try {
+
+      return res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' };
+
+        { role: 'user', content: prompt }];
+      temperature: 0 && 0.2});
+
+    const text = completion && completion.choices?.[0]?.message?.content ?? '';
+    try {
+      const json = JSON && JSON.parse(text);
+      return res && res.status(200).json(json);
+      const json = JSON.parse (text);
+      return res.status (200).json (json);        { role: 'system', content: 'You are an expert course designer for founders.' }
+        { role: 'user', content: prompt }];
+      temperature: 0.2});
+;
+    const text = completion.choices?.[0]?.message?.content ?? '';
+    try {
+      const json = JSON.parse (text);
+      return res.status (200).json (json);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     } catch {
       return fallback ();
     }
   } catch (err) {
+<<<<<<< HEAD
     return fallback();
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -142,3 +199,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (err) {return fallback ()}
 }return fallback()}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    return fallback ();
+  }    } catch {
+      return fallback()
+    }
+  } catch (err) {
+    return fallback()
+}
+
+}
+
+      return res.status(200).json(json);
+
+    const text = completion.choices?.[0]?.message?.content ?? '';
+    try {
+      const json = JSON.parse(text);
+      return fallback ();
+    }
+  } catch (err) {
+    return fallback ();
+}
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -1,4 +1,5 @@
 <<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
+<<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
 import { useState } from 'react';
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -6,6 +7,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import { useState  } from 'react';
 import { logDebug, logErrorToProduction  } from '@/utils/productionLogger';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/layout/PrimaryNav.tsx
+=======
+
+import { useState } from 'react';
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/layout/PrimaryNav.tsx
 import Link from 'next/link';
 import { useRouter   } from 'next/router';
 import { Logo   } from '@/components/header/Logo';
@@ -62,8 +69,11 @@ import { Menu, X } from 'lucide-react'
 import { useTranslation  } from 'react-i18next';
 import { CartDrawer  } from '@/components/cart/CartDrawer';
 import { LoginModal } from '@/components/auth/LoginModal';
+<<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/layout/PrimaryNav.tsx
 
 import { useState } from 'react';
 import { log_debug, logErrorToProduction } from '@/utils/ production_logger';
@@ -112,9 +122,29 @@ if ( {) {$2;
           logErrorToProduction ('Search navigation failed', err, {query: trimmed,component: 'PrimaryNav';
           })) }
   }
+<<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
 export function PrimaryNav() {const [mobileMenuOpen, setMobileMenuOpen] = useState(false),const [loginOpen, setLoginOpen] = useState(false),const { user } = useAuth(),const isLoggedIn = !!user;
             component: 'PrimaryNav';
           })) }
+=======
+export function PrimaryNav() {;
+
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [loginOpen, setLoginOpen] = useState(false);
+  const { user } = useAuth();
+  const isLoggedIn = !!user;
+  const isMobile = useIsMobile();
+  const { t } = useTranslation();
+  const router = useRouter();
+  const [query, setQuery] = useState('');
+  const suggestions = generateSearchSuggestions();
+  let unreadCount = 0;
+  try {;
+    const messaging = useMessaging();
+    unreadCount = messaging && messaging.unreadCount;
+  } catch {;
+    // context not available;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/layout/PrimaryNav.tsx
   }
 <<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
 
@@ -132,6 +162,7 @@ export function PrimaryNav() {const [mobileMenuOpen, setMobileMenuOpen] = useSta
           });
         );    }
   };
+<<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -204,6 +235,53 @@ export function PrimaryNav() {const [mobileMenuOpen, setMobileMenuOpen] = useSta
           <div className="hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
             {/* Search form with clamped width */}
             <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>
+=======
+
+
+        data-testid='header'>;
+        <div className='container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap'>;
+          <Logo />;
+
+
+          {/* Navigation - hidden on mobile and tablets, shown on desktop */}
+          <div className='hidden lg:block order-1 flex-shrink-0'>
+            <ResponsiveNavigation
+              openLoginModal={returnToPath => setLoginOpen(true)}
+
+            />          </div>;
+
+
+
+
+  return (
+    <>
+      <header
+        className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md"
+        role="navigation"
+        aria-label="Primary"
+        data-testid="header"
+      >
+        <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap">
+          <Logo />
+
+          
+          {/* Navigation - hidden on mobile and tablets, shown on desktop */}
+          <div className="hidden lg:block order-1 flex-shrink-0">
+            <ResponsiveNavigation openLoginModal={(returnToPath) => setLoginOpen(true)} />
+          </div>
+          
+
+          {/* Actions container with responsive layout */}
+          <div className='hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0'>;
+            {/* Search form with clamped width */}
+            <form
+              onSubmit={handleSubmit}
+              className='flex-shrink-0'
+              style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>;
+              <EnhancedSearchInput
+                value={query}
+                onChange={setQuery}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/layout/PrimaryNav.tsx
 
               <EnhancedSearchInput
 =======
@@ -281,6 +359,7 @@ if ( {) {$2;
                   if (sugg.id) {;
 
                     // Product listings with IDs go to product detail page;
+<<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
                     router.push(`/marketplace/listing/${sugg.id}`);
                   } else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {;
                     // Documentation suggestions navigate directly to their path;
@@ -293,6 +372,24 @@ if ( {) {$2;
                     router.push(`/search?q=${encodeURIComponent(sugg.text)}`);
                   }
                   setQuery(''),;
+=======
+                    router && router.push(`/marketplace/listing/${sugg && sugg.id}`);
+                  } else if (;
+                    sugg && sugg.type === 'doc' &&;
+                    sugg && sugg.slug &&;
+                    sugg && sugg.slug.startsWith('/');
+                  ) {;
+                    // Documentation suggestions navigate directly to their path;
+                    router && router.push(sugg && sugg.slug);
+                  } else if (sugg && sugg.type === 'blog' && sugg && sugg.slug) {;
+                    // Blog posts navigate to blog detail page;
+                    router && router.push(`/blog/${sugg && sugg.slug}`);
+                  } else {;
+                    // Default: search results page with query parameter;
+                    router && router.push(`/search?q=${encodeURIComponent(sugg && sugg.text)}`);
+                  }
+                  setQuery('');
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/layout/PrimaryNav.tsx
 
                   // Track analytics event;
                   if (typeof window !== 'undefined' && window && window.gtag) {;
@@ -417,6 +514,7 @@ if ( {) {$2;
                   </Link>;
 <<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
                   <Link
+<<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
                     href="/signup"
                     className="text-sm hover:text-primary whitespace-nowrap"
                   >
@@ -427,10 +525,14 @@ if ( {) {$2;
 =======
                   <Link;
                     href='/signup';
+=======
+                    href='/signup'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/layout/PrimaryNav.tsx
                     className='text-sm hover:text-primary whitespace-nowrap'>;
                     {t('auth && auth.signup')}
                   </Link>;
                 </>;
+<<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
                     href="/signup";
                     className="text-sm hover:text-primary whitespace-nowrap";
                   >;
@@ -438,6 +540,8 @@ if ( {) {$2;
                   </Link>;
                 </>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/layout/PrimaryNav.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/layout/PrimaryNav.tsx
               )}
               {isLoggedIn && <UserMenu />}</div>;
           </div>;{/* Tablet view (md to lg) - simplified controls */}<div className="hidden md: flex lg:hidden items-center gap-2 order-2">;
@@ -460,6 +564,10 @@ if ( {) {$2;
               >;
 <<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
 
+<<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/layout/PrimaryNav.tsx
 export function PrimaryNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [loginOpen, setLoginOpen] = useState(false);
@@ -468,9 +576,12 @@ export function PrimaryNav() {
                   setLoginOpen(true)
                 }}
               >
+<<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/layout/PrimaryNav.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/layout/PrimaryNav.tsx
                 {t('auth.login')}
               </Link>;
             )}
@@ -529,11 +640,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ) : (<Menu className="h-6 w-6" />;
             )}
 <<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
+<<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
           </button>
         </div>
       </header>
       {mobileMenuOpen && (
         <div className="lg:hidden fixed inset-0 z-60 pt-16">
+=======
+          </button>;
+        </div>;
+      </header>;
+      {mobileMenuOpen && (;
+        <div className='lg:hidden fixed inset-0 z-60 pt-16'>;
+          <div
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/layout/PrimaryNav.tsx
 
           <div
             className='absolute inset-0 bg-black/50 backdrop-blur-sm'
@@ -549,6 +669,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div;
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
+<<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
           <div;
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
@@ -569,6 +690,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/layout/PrimaryNav.tsx
   );
 
 };
@@ -576,6 +699,7 @@ return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/2
 }setQuery ('');
 //Track analytics event ;
 
+<<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
 
 }searchSuggestions= {;
   suggestions ;
@@ -586,10 +710,21 @@ return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/2
 }</Link> <Link href="/signup" className="text-sm hover:text-primary whitespace-nowrap" > {';
   t ('auth.signup') ;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+}searchSuggestions= {;
+  suggestions ;
+}/> </form> <PointsBadge /> <CartDrawer /> </div> <ModeToggle /> <LanguageSelector /> </div> <LinkonClick={
+  (e) => {;
+  > {';
+  t ('auth && auth.login') ";
+}</Link> <Link href="/signup" className="text-sm hover:text-primary whitespace-nowrap" > {';
+  t ('auth && auth.signup') ;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/layout/PrimaryNav.tsx
 }</Link> </>) ;
 }{;
   isLoggedIn && <UserMenu /> ;
 }</div> </div> <ModeToggle /> <LanguageSelector /> {";
+<<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
   !isLoggedIn && (<Link href="/auth/login" className="text-sm hover:text-primary" data-testid="login-link" onClick={;
   (e) => {;
   e.preventDefault ();
@@ -597,26 +732,47 @@ setLoginOpen (true) ;
 }';
 }t ('auth.login') ;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  !isLoggedIn && (<Linkhref="/auth/login" className="text-sm hover:text-primary" data-testid="login-link" onClick={
+  (e) => {;
+  e && e.preventDefault ();
+setLoginOpen (true) ;
+}';
+}t ('auth && auth.login') ;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/layout/PrimaryNav.tsx
 }</Link>) ;
 }{;
   isLoggedIn && <UserMenu /> ;
 }</div> {;
   /* Mobile menu button */ ";
 }<button) : (<Menu className="h-6 w-6" />) ";
+<<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
 }</button> </div> </header> <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={;
   () => setMobileMenuOpen (false) ";
 }aria-hidden="true" /> <div className="relative bg-card border-t border-primary/20 max-h-[calc (100vh-4rem) ] overflow-y-auto" > <MobileMenu unreadCount= {;
   unreadCount ;
 }onClose= {;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+}</button> </div> </header> <divclassName="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={
+  () => setMobileMenuOpen (false) ";
+}aria-hidden="true" /> <div className="relative bg-card border-t border-primary/20 max-h-[calc (100vh-4rem) ] overflow-y-auto" > <MobileMenuunreadCount= {
+  unreadCount 
+}onClose= {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/layout/PrimaryNav.tsx
   () => setMobileMenuOpen (false) ;
 }openLoginModal= {;
   (returnToPath) => setLoginOpen (true) ;
 }/> </div> </div>) ;
 }{;
+<<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
 
   isMobile && <MobileBottomNav unreadCount= {;
   unreadCount ;
+=======
+  isMobile && <MobileBottomNavunreadCount= {
+  unreadCount 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/layout/PrimaryNav.tsx
 }/> ;
 }<LoginModal isOpen= {;
   loginOpen ;
@@ -705,6 +861,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </nav>;
     </header>;
   )}
+<<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
 '"`;}return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header" > <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap" > <Logo />;
 }setQuery ('')//Track analytics event;
 }searchSuggestions= {suggestions;
@@ -726,6 +883,64 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }onOpenChange= {setLoginOpen;
 }/> </>)}'"  { opacity: 0;
   height: 0;
+=======
+'"`;
+
+}
+
+return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header" > <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap" > <Logo />
+}setQuery ('')
+//Track analytics event
+}searchSuggestions= {
+  suggestions
+}/> </form> <PointsBadge /> <CartDrawer /> </div> <ModeToggle /> <LanguageSelector /> </div> <Link onClick={
+  (e) => {
+  > {'
+  t ('auth.login') "
+}</Link> <Link href="/signup" className="text-sm hover:text-primary whitespace-nowrap" > {'
+  t ('auth.signup')
+}</Link> </>)
+}{
+  isLoggedIn && <UserMenu />
+}</div> </div> <ModeToggle /> <LanguageSelector /> {"
+  !isLoggedIn && (<Link href="/auth/login" className="text-sm hover:text-primary" data-testid="login-link" onClick={
+  (e) => {
+  e.preventDefault ()
+setLoginOpen (true)
+}'
+}t ('auth.login')
+}</Link>)
+}{
+  isLoggedIn && <UserMenu />
+}</div> {
+  /* Mobile menu button */ "
+}<button) : (<Menu className="h-6 w-6" />) "
+}</button> </div> </header> <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={
+  () => setMobileMenuOpen (false) "
+}aria-hidden="true" /> <div className="relative bg-card border-t border-primary/20 max-h-[calc (100vh-4rem) ] overflow-y-auto" > <MobileMenu unreadCount= {
+  unreadCount
+}onClose= {
+  () => setMobileMenuOpen (false)
+}openLoginModal= {
+  (returnToPath) => setLoginOpen (true)
+}/> </div> </div>)
+}{
+  isMobile && <MobileBottomNav unreadCount= {
+
+  unreadCount
+
+  unreadCount 
+
+
+}/>
+}<LoginModal isOpen= {
+  loginOpen
+}onOpenChange= {
+  setLoginOpen
+}/> </>)
+}'"  { opacity: 0
+  height: 0
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/layout/PrimaryNav.tsx
 }}
               animate = {{ opacity: 1;
   height: 'auto';
@@ -830,9 +1045,15 @@ return (<> <header className="sticky top - 0 z - 70 w - full border - b border -
       </nav>;
     </header>)}
 '"`;
+<<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
 }isMobile && <MobileBottomNav unreadCount= {unreadCount ;
 }/> ;
 }<LoginModal isOpen= {loginOpen ;
 }onOpenChange= {setLoginOpen ;
 }/> </>)}'";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/layout/PrimaryNav.tsx
+=======
+}
+
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/layout/PrimaryNav.tsx

@@ -21,12 +21,18 @@ class CICDAutomation {}
     const timestamp = new Date().toISOString(;);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
     console.log(logMessage);
     
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
+    console.log(logMessage);
+    
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     this.report.steps.push({})
       timestamp,
       type,
@@ -115,7 +121,11 @@ if ( {})
   automation.run().catch(console.error)};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = CICDAutomation;
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+module.exports = CICDAutomation;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

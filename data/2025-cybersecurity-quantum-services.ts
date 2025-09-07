@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -420,15 +421,22 @@ export interface CybersecurityQuantumService  {id: string,name: string,tagline: 
   }
 ];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export interface CybersecurityQuantumService {
-<<<<<<< HEAD
+
 export interface CybersecurityQuantumService {;
   id: string;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   name: string;
   tagline: string;
   description: string;
@@ -439,6 +447,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     currency: string;
     trialDays: number;
     setupTime: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -456,6 +465,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     enterprise: string
   },
@@ -481,7 +494,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   rating: number;
   reviews: number
 }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   {
 
@@ -489,6 +506,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace'],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     techStack: [
       'OpenAI GPT-4, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL, Elasticsearch'
     ],
@@ -511,6 +531,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     support:
       '24/7 security support, threat hunting training, custom development, and dedicated security manager.'
     compliance: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -604,6 +625,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     color: 'from - purple - 500 to - indigo - 600',
     popular: true,
     launch_date: '2024 - 02 - 01',
@@ -616,17 +640,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      'Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security',
-    ],
-    techStack: ['OpenAI GPT-4, React, Node && Node.js, PostgreSQL, Redis, Kubernetes'],
-    realImplementation: true,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -638,6 +662,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     implementationDetails:
       'Production-ready zero-trust platform with enterprise-grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.'
     roi: 'Organizations achieve 300% ROI through reduced security incidents and simplified access management.'
@@ -657,82 +683,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      '24/7 technical support, implementation consulting, custom development, and dedicated success manager.',
-    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP'],
-    link: 'https://ziontechgroup && ziontechgroup.com/zero-trust-network-access-platform',
-    id: 'zero - trust - network - access - platform',
-    name: 'Zero - Trust Network Access Platform',
-    tagline: 'Secure access with continuous verification and least privilege',
-    description:;
-      'Comprehensive zero - trust platform that provides secure, context - aware access to applications and resources while continuously verifying user identity and device health.',
-    category: 'Zero - Trust Security & Access Control',
-    price: {
-      monthly: 299,
-      yearly: 2990,
-      currency: 'USD',
-      trial_days: 21,
-      setup_time: '1 - 2 weeks',
-      enterprise: 'Custom pricing',
-    },
-    features: [;
-      'Continuous identity verification',
-      'Context - aware access control',
-      'Device health monitoring',
-      'Least privilege access',
-      'Micro - segmentation',
-      'Real - time risk assessment',
-      'Multi - factor authentication',
-      'Single sign - on integration',
-      'Advanced analytics',
-      'API for enterprise systems',
-    ],
-    benefits: [;
-      'Reduce security breaches by 90%',
-      'Eliminate VPN vulnerabilities',
-      'Improve user experience',
-      'Simplify compliance management',
-      'Enable secure remote work',
-    ],
-    target_audience: [;
-      'Enterprise organizations',
-      'Healthcare providers',
-      'Financial institutions',
-      'Government agencies',
-      'Educational institutions',
-      'Remote workforces',
-    ],
-    market_position:;
-      'Leading zero - trust platform. Competes with Zscaler ($5 - 15 / user), Palo Alto Prisma ($7 - 15 / user), and Cloudflare Access ($3 - 7/user). Our advantage: AI - powered risk assessment and continuous verification.',
-    competitors: [;
-      'Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security',
-    ],
-    tech_stack: ['OpenAI GPT - 4, React, Node.js, PostgreSQL, Redis, Kubernetes'],
-    real_implementation: true,
-    implementation_details:;
-      'Production - ready zero - trust platform with enterprise - grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.',
-    roi: 'Organizations achieve 300% ROI through reduced security incidents and simplified access management.',
-    use_cases: [;
-      'Secure remote access',
-      'Application access control',
-      'Cloud security',
-      'Compliance management',
-      'Identity governance',
-      'Risk management',
-    ],
-    integrations: [;
-      'Active Directory, LDAP, SAML, OAuth, Custom identity providers',
-    ],
-    support:;
-      '24 / 7 technical support, implementation consulting, custom development, and dedicated success manager.',
-    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP'],
-    link: 'https://ziontechgroup.com / zero - trust - network - access - platform',
 
+<<<<<<< HEAD
     icon: '🛡️',
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -745,6 +706,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     color: 'from - blue - 500 to - cyan - 600',
     popular: true,
     launch_date: '2024 - 01 - 20',
@@ -757,86 +720,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      'Highest security standards, Government security requirements, Industry-specific standards',
-    ],
-    link: 'https://ziontechgroup && ziontechgroup.com/quantum-key-distribution-network',
-    id: 'quantum - key - distribution - network',
-    name: 'Quantum Key Distribution Network',
-    tagline: 'Unhackable communication with quantum entanglement',
-    description:;
-      'Revolutionary quantum key distribution network that uses quantum entanglement to create unbreakable encryption keys, ensuring absolutely secure communications.',
-    category: 'Quantum Communications & Security',
-    price: {
-      monthly: 999,
-      yearly: 9990,
-      currency: 'USD',
-      trial_days: 30,
-      setup_time: '2 - 4 weeks',
-      enterprise: 'Custom pricing',
-    },
-    features: [;
-      'Quantum key distribution',
-      'Quantum entanglement networks',
-      'Real - time key generation',
-      'Multi - node quantum network',
-      'Quantum repeaters',
-      'Advanced quantum protocols',
-      'Network monitoring',
-      'Key management system',
-      'API for integration',
-      'Custom quantum protocols',
-    ],
-    benefits: [;
-      'Provide mathematically unbreakable security',
-      'Enable ultra - secure communications',
-      'Future - proof against quantum attacks',
-      'Meet highest security requirements',
-      'Enable quantum internet development',
-    ],
-    target_audience: [;
-      'Government agencies',
-      'Military organizations',
-      'Financial institutions',
-      'Healthcare providers',
-      'Research institutions',
-      'Critical infrastructure',
-    ],
-    market_position:;
-      'First - to - market quantum key distribution network. No direct competitors in commercial QKD space. Traditional competitors: Classical encryption providers. Our advantage: Quantum entanglement security.',
-    competitors: [;
-      'Classical encryption providers, Quantum computing companies',
-    ],
-    tech_stack: [;
-      'Quantum hardware, Quantum protocols, Python, C++, Custom quantum software',
-    ],
-    real_implementation: true,
-    implementation_details:;
-      'Production - ready quantum key distribution network with quantum hardware, network infrastructure, and comprehensive monitoring. Includes quantum network management tools.',
-    roi: 'Organizations achieve unlimited ROI through unbreakable security and future - proof communications.',
-    use_cases: [;
-      'Government communications',
-      'Military communications',
-      'Financial transactions',
-      'Healthcare data transmission',
-      'Critical infrastructure',
-      'Research collaboration',
-    ],
-    integrations: [;
-      'Custom quantum protocols, Classical encryption systems, Network infrastructure',
-    ],
-    support:;
-      'Quantum experts, implementation consulting, custom protocol development, and 24 / 7 technical support.',
-    compliance: [;
-      'Highest security standards, Government security requirements, Industry - specific standards',
-    ],
-    link: 'https://ziontechgroup.com / quantum - key - distribution - network',
 
+<<<<<<< HEAD
     icon: '🔮',
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -849,6 +743,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     color: 'from - purple - 500 to - pink - 600',
     popular: true,
     launch_date: '2024 - 03 - 01',
@@ -861,17 +757,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      'Leading AI-powered vulnerability assessment platform. Competes with Nessus ($2,190-6,570/year), Qualys ($2,000-5,000/year), and Rapid7 ($2,000-8,000/year). Our advantage: AI intelligence and automated remediation.',
-    competitors: ['Nessus, Qualys, Rapid7, OpenVAS, Acunetix'],
-    techStack: ['OpenAI GPT-4, TensorFlow, React, Node && Node.js, PostgreSQL, Redis'],
-    realImplementation: true,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -883,6 +779,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     implementationDetails:
       'Production-ready vulnerability assessment platform with AI-powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.'
     roi: 'Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.'
@@ -902,6 +800,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -917,6 +816,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       '24/7 technical support, security consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment',
@@ -928,6 +831,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.8,
     reviews: 1900
   },;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
@@ -1108,6 +1012,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
       '24/7 technical support, security consulting, custom development, and dedicated success manager.',
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
+
+
+
+
+      '24/7 technical support, security consulting, custom development, and dedicated success manager.',
+    ];
+    integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'],
+    support: '24/7 technical support, security consulting, custom development, and dedicated success manager.',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-vulnerability-assessment',
     id: 'ai - powered - vulnerability - assessment',
@@ -1178,6 +1095,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1193,6 +1111,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     icon: '🔍',
     color: 'from - green - 500 to - emerald - 600',
     popular: true,
@@ -1202,6 +1124,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
     reviews: 1900,
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1248,6 +1171,10 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
     reviews: 1900
   }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     ];
 
     integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'];
@@ -1255,6 +1182,7 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'];
 
     icon: '🔍';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1268,10 +1196,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     color: 'from - green - 500 to - emerald - 600';
     popular: true;
     launch_date: '2024 - 02 - 15';
     customers: 2500;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1286,10 +1219,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     rating: 4.8,
     reviews: 1900;
   }
+
 ;
+<<<<<<< HEAD
     rating: 4.8,
     reviews: 1900;
   }
@@ -1298,9 +1235,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    rating: 4 && 4.8,
 
+<<<<<<< HEAD
     reviews: 1900
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
@@ -1331,6 +1270,10 @@ export interface CybersecurityQuantumService {;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  }
+];
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string,;
   name: string,;
   tagline: string,;
@@ -1594,6 +1537,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     reviews: 1900;
     rating: 4.8,
     reviews: 1900;
+<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
@@ -1610,10 +1554,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+  }
+];
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     rating: 4.8;
     reviews: 1900
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -1623,3 +1577,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

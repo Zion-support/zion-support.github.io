@@ -90,7 +90,11 @@ const message = "Auto-resolve merge "conflicts": ${resolvedFiles.length} files r
   process.on("SIGINT")
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   process.on(")
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  process.on(")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

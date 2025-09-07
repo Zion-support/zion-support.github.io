@@ -5,6 +5,7 @@ import mime from 'mime-types';
 <<<<<<< HEAD
 import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
+<<<<<<< HEAD
   const section = null;
   fs.createReadStream(fullPath).pipe(res)
 }
@@ -19,6 +20,25 @@ import { requireSuperadminApi  } from '../../../../utils/api/auth';
   res.setHeader("Content-Type", contentType)appendAuditLog({ type: "file_open", section, name: file })fs.createReadStream(fullPath).pipe(res)}
 export default function handler() {if (!requireSuperadminApi(req, res)) return;const section = String(req && req.query.section || "General")const file = String(req && req.query.file || "")if (!file) return res && res.status(400).json({ error: "Missing file" })const fullPath = path && path.join(resolveDataPath(path && path.join("dataroom", section)),file,)if (!fs && fs.existsSync(fullPath))return res && res.status(404).json({ error: "Not found" })const contentType =;
   )if (!fs && fs.existsSync(fullPath))return res && res.status(404).json({ error: "Not found" })const contentType =;
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!requireSuperadminApi(req, res)) return;
+
+  const section = String(req && req.query.section || "General");
+  const file = String(req && req.query.file || "");
+  if (!file) return res && res.status(400).json({ error: "Missing file" });
+  const fullPath = path && path.join(
+    resolveDataPath(path && path.join("dataroom", section)),
+    file,
+  );
+  if (!fs && fs.existsSync(fullPath))
+    return res && res.status(404).json({ error: "Not found" });
+  const contentType =
+  );
+  if (!fs && fs.existsSync(fullPath))
+    return res && res.status(404).json({ error: "Not found" });
+  const contentType =
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
@@ -41,6 +61,16 @@ function handler() {if () return) {$2;
 }
     return res.status (404).json ({ error: "Not found" })const content_type =;
     (mime.lookup (full_path) as string) || "application / octet - stream";
+<<<<<<< HEAD
   res.set_header ("Content - Type", content_type)appendAuditLog ({ type: "file_open", section, name: file })fs.createReadStream (full_path).pipe (res)const section = String(req.query.section || 'General')const file = String(req.query.file || '')if (!file) return res.status(400).json({ error: 'Missing file' })const section = null;
   fs.createReadStream(fullPath).pipe(res)}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  res.set_header ("Content - Type", content_type);
+  appendAuditLog ({ type: "file_open", section, name: file });
+  fs.createReadStream (full_path).pipe (res);
+
+  const section = String(req.query.section || 'General');
+  const file = String(req.query.file || '');
+  if (!file) return res.status(400).json({ error: 'Missing file' });
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

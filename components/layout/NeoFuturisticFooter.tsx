@@ -1,10 +1,33 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { motion  } from 'framer-motion';
 import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
 const contactInfo = null;
 export default function NeoFuturisticFooter() {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+import {;
+  Phone,;
+  Mail,;
+  MapPin,;
+  Globe,;
+  Github,;
+  Linkedin,;
+  ExternalLink,;
+
+const contactInfo = {;
+  mobile: '+1 302 464 0950',;
+  email: 'kleber@ziontechgroup && ziontechgroup.com',;
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup && ziontechgroup.com',};
+export default function NeoFuturisticFooter() {;
+  return (  website: 'https://ziontechgroup && ziontechgroup.com'
+};
+
+export default function NeoFuturisticFooter() {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
               Productized AI, IT and micro SaaS solutions with transparent;
 =======
@@ -46,12 +69,15 @@ export default function NeoFuturisticFooter() {return (Productized AI, IT and mi
 <<<<<<< HEAD
               <a
                 aria-label='LinkedIn'
+<<<<<<< HEAD
                 href='https://www.linkedin.com/company/zion-tech-group/'
                 className='text-slate-400 hover:text-white'
               >
                 <Linkedin className='w-5 h-5' />
               </a>
             </div>
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           </div>
         </div>
 
@@ -204,6 +230,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <a href="/terms" className="hover:text-slate-300">Terms</a>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </footer>)}export default function NeoFuturisticFooter() {return (href='https://www.linkedin.com/company/zion-tech-group/';
                 className='text-slate-400 hover:text-white';
               >;
@@ -229,3 +256,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </footer>;
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </footer>);
+}
+;
+
+export default function NeoFuturisticFooter() {
+  return (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

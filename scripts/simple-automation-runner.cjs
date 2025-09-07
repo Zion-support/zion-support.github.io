@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 #!/usr/bin/env node;
@@ -9,6 +10,9 @@ const path = require('path')
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -120,6 +124,7 @@ const path = require('path')
 <<<<<<< HEAD
 =======
       
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -130,6 +135,11 @@ const path = require('path')
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       return size}}
 
     totalSize = getDirectorySize(buildDir);
@@ -168,6 +178,10 @@ module.exports = { runSimpleAutomation }) {
 
 module.exports = { runSimpleAutomation }}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const { execSync } = require('child_process')
   console.log(' Starting Simple Automation Runner...')
     "overallStatus"

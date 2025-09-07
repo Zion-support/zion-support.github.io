@@ -112,10 +112,14 @@ class ErrorPreventionOrchestrator {}
       const child = spawn(command, args, { "stdio": 'inherit' };);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       child.on('close', (code) => {}
         if ( {})
           resolve()} else {}
@@ -161,8 +165,13 @@ switch (command) {}
     break;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   "default": console.log('Usage: node master-orchestrator.cjs [start|stop|restart|status|check|logs]');
     process.exit(1)};
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  "default": console.log('Usage: node master-orchestrator.cjs [start|stop|restart|status|check|logs]');
+    process.exit(1)};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

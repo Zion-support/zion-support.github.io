@@ -2,6 +2,7 @@ import Button from '../components/ui/Button';
 <<<<<<< HEAD
 import { Check, X, Star, TrendingUp, DollarSign, Zap } from 'lucide-react';
 export default function PricingComparisonPage() {
+<<<<<<< HEAD
 starter: '$19/month',
         professional: '$49/month',
         enterprise: '$199/month',
@@ -48,6 +49,10 @@ pros: ['Affordable', 'Good for beginners', 'Basic features'],
       icon: '🤖',
     },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+  const serviceComparisons = [
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     {
       service: 'Cloud Monitoring',
       zionPricing: {
@@ -74,6 +79,7 @@ pros: [
           rating: '4.5/5',
 pros: ['Good APM', 'User-based pricing', 'Reliable'],
           cons: [
+<<<<<<< HEAD
             'Expensive for teams',
             'Limited server monitoring',
             'Complex setup',
@@ -153,6 +159,113 @@ pros: ['Completely free', 'Highly customizable', 'Open source'],
       icon: '🚀',
     },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            'Higher pricing',
+            'Limited customization',
+            'No unlimited plan',
+          ],
+          savings: 'Save $20/month with Zion',
+        },        {
+          name: 'Copy.ai',
+          pricing: '$36/month',
+          rating: '4.6/5',
+          pros: ['Unlimited words', 'Good value', 'Simple interface'],
+          cons: ['Basic features', 'Limited templates', 'No advanced SEO'],
+          savings: 'Save $17/month with Zion',
+        },        {
+          name: 'Writesonic',
+          pricing: '$19/month',
+          rating: '4.4/5',          pros: ['Excellent templatesGood AI qualityWide integrations'],
+          cons: ['Higher pricingLimited customizationNo unlimited plan'],
+          savings: 'Save $20/month with Zion'
+};
+          name: 'Copy.ai',
+          pricing: '$36/month',
+          rating: '4.6/5',
+          pros: ['Unlimited words', 'Good value', 'Simple interface'],
+          cons: ['Basic features', 'Limited templates', 'No advanced SEO'],
+          savings: 'Save $17/month with Zion',
+        },          pros: ['Unlimited wordsGood valueSimple interface'],
+          cons: ['Basic featuresLimited templatesNo advanced SEO'],
+          savings: 'Save $17/month with Zion'
+        },        {
+          name: 'Writesonic'
+          pricing: '$19/month'
+          rating: '4.4/5',          pros: ['Excellent templatesGood AI qualityWide integrations']
+          cons: ['Higher pricingLimited customizationNo unlimited plan']
+          savings: 'Save $20/month with Zion'
+        }
+          name: 'Copy.ai'
+          pricing: '$36/month'
+          rating: '4.6/5'
+          pros: ['Unlimited words', 'Good value', 'Simple interface']
+          cons: ['Basic features', 'Limited templates', 'No advanced SEO']
+          savings: 'Save $17/month with Zion'
+        },          pros: ['Unlimited wordsGood valueSimple interface']
+          cons: ['Basic featuresLimited templatesNo advanced SEO']
+          savings: 'Save $17/month with Zion'
+        }
+          name: 'Writesonic'
+          pricing: '$19/month'
+          rating: '4.4/5'
+          pros: ['Affordable', 'Good for beginners', 'Basic features']
+          cons: ['Limited features', 'Basic AI models', 'No team features']
+          savings: 'Same price, better features'
+        }
+      ]
+        'AI-powered content generation'
+        'Multiple content formats'
+        'SEO optimization'
+        'Team collaboration'
+        'API access'
+        'Custom templates'
+      ]
+      color: 'from-purple-500 to-indigo-600'
+      icon: '🤖'
+    };
+    {;
+      insight: 'Professional features at startup-friendly prices',;
+      icon: <Zap className="w-6 h-6" />,;
+      color: 'text-purple-400'
+};
+    {;
+      insight: 'Enterprise-grade reliability without enterprise pricing',;
+      icon: <Star className="w-6 h-6" />,;
+      color: 'text-yellow-400';
+      insight: 'Zion services are 30 - 60% more affordable than market leaders',
+      icon: <DollarSign className='w - 6 h - 6' />,
+      color: 'text - green - 400',
+    },
+    {
+      insight: 'All plans include free trials and no hidden fees',
+      icon: <Check className='w - 6 h - 6' />,
+      color: 'text - blue - 400',
+    },
+    {
+      insight: 'Professional features at startup - friendly prices',
+      icon: <Zap className='w - 6 h - 6' />,
+      color: 'text - purple - 400',
+    },
+    {
+      insight: 'Enterprise - grade reliability without enterprise pricing',
+      icon: <Star className='w - 6 h - 6' />,
+      color: 'text - yellow - 400',
+    },  ];    {
+      insight: 'All plans include free trials and no hidden fees',
+      icon: <Check className="w-6 h-6" />,
+      color: 'text - blue - 400';
+    }
+    {
+      insight: 'Professional features at startup - friendly prices',
+      icon: <Zap className="w-6 h-6" />,
+      color: 'text - purple - 400';
+    }
+    {
+      insight: 'Enterprise - grade reliability without enterprise pricing',
+      icon: <Star className="w-6 h-6" />,
+      color: 'text - yellow - 400';
+    }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   ];
   const marketInsights = [
     {
@@ -171,6 +284,7 @@ icon: <DollarSign className='w-6 h-6' />,
       color: 'text-purple-400',
     },
     {
+<<<<<<< HEAD
       insight: 'Enterprise-grade reliability without enterprise pricing',
       icon: <Star className='w-6 h-6' />,
       color: 'text-yellow-400',
@@ -295,6 +409,31 @@ starter: '$19/month',professional: '$49/month',enterprise: '$199/month',},compet
         <meta name='twitter:card' content='summary_large_image' />;
       <div className='min-h-screen bg-black'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      insight: 'Enterprise-grade reliability without enterprise pricing'
+      icon: <Star className='w-6 h-6' />
+      color: 'text-yellow-400'
+    },  ];    {
+      insight: 'All plans include free trials and no hidden fees'
+      icon: <Check className="w-6 h-6" />
+      color: 'text-blue-400'
+    }
+    {
+      insight: 'Professional features at startup-friendly prices'
+      icon: <Zap className="w-6 h-6" />
+      color: 'text-purple-400'
+    }
+    {
+      insight: 'Enterprise-grade reliability without enterprise pricing'
+      icon: <Star className="w-6 h-6" />
+      color: 'text-yellow-400'
+    <>;
+      <Head>;
+        <title>;
+          Pricing Comparison - Zion Tech Group | How We Stack Up Against the;
+          Competition;
+        </title>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         {/* Hero Section */}
         <section className='pt-32 pb-20 bg-gradient-to-br from-indigo-900/20 to-purple-900/20'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
@@ -318,15 +457,22 @@ starter: '$19/month',professional: '$49/month',enterprise: '$199/month',},compet
                 href='#comparison'
                 variant='primary'
                 size='lg'
+<<<<<<< HEAD
                 className='bg-indigo-600 hover:bg-indigo-700 text-white'
               >
                 View Comparison
               </Button>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                className='bg-indigo-600 hover:bg-indigo-700 text-white'>;
+                View Comparison;
+              </Button>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               <Button
 href='/pricing'
                 variant='outline'
                 size='lg'
+<<<<<<< HEAD
                 className='border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white'
               >
                 View Our Pricing
@@ -349,14 +495,21 @@ href='/pricing'
 href='/pricing';
                 variant='outline';
                 size='lg';
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 className='border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white'>                href="#comparison";
                 variant="primary";
                 size="lg";
                 className="bg-indigo-600 hover:bg-indigo-700 text-white";
                 View Comparison;
               </Button>;
+<<<<<<< HEAD
               <Button;
                 View Our Pricing;
+=======
+              <Button
+                View Our Pricing
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               </Button>;
             </div>;
           </div>;
@@ -364,6 +517,7 @@ href='/pricing';
                   key={index}
                   className="text - center group hover:scale - 105 transition-transform duration-300";
                 >;
+<<<<<<< HEAD
                   <div className={`w - 16 h - 16 rounded - 2xl bg - gradient - to - br from - indigo - 500 to - purple - 600 flex items - center justify - center text - white mx - auto mb - 6`}>;className='border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white';
               >;
                 View Our Pricing;
@@ -396,6 +550,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                   >;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  <div className={`w - 16 h - 16 rounded - 2xl bg - gradient - to - br from - indigo - 500 to - purple - 600 flex items - center justify - center text - white mx - auto mb - 6`}>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                     {insight.icon}
                   </div>;
                   <p className={`text-lg font-semibold ${insight.color}`}>;
@@ -409,6 +566,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>
 
         {/* Detailed Comparison */}
+<<<<<<< HEAD
 <section id='comparison' className='py-24 bg-gray-800'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
@@ -424,6 +582,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div key={serviceIndex} className='mb-24'>
                 <div className='text-center mb-16'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+        <section id="comparison" className="py-24 bg-gray-800">
+
+              ))}
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-20">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
+                Detailed Service Comparison
+              </h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                See exactly how each service compares in features, pricing, and value.
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   <div
 =======
             </div>;
@@ -512,9 +683,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
                     <span>;
                       Enterprise:{' '}
+<<<<<<< HEAD
                       <span className='text-purple-400 font-semibold'>
 =======
                     <span>Enterprise:{' '}</span>;
+=======
+                      </span>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                     </span>;
                   </div>;
                 </div>;
@@ -556,6 +731,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />;
                               <span className="text-sm">{feature}</span>;
                             </div>;
+<<<<<<< HEAD
                           ))}<span className='text-purple-400 font-semibold'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                         {service.zionPricing.enterprise}
@@ -606,6 +782,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <div className='flex items-center justify-center mb-4'>
                             {[...Array(5)].map((_, i) => (
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                          ))}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                               <Star
 =======
                           </div>;
@@ -618,11 +797,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                 }`}
                               />;
 <<<<<<< HEAD
+<<<<<<< HEAD
                             ))}
 <span className='text-sm text-gray-400 ml-2'>
                               {competitor.rating}
                             </span>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                            ))}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                           </div>
                           <div className='mb-4'>
                             <p className='text-lg font-semibold text-white'>
@@ -638,10 +822,37 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                 {competitor.pros.map((pro, proIndex) => (
                                   <li
                                     key={proIndex}
+<<<<<<< HEAD
                                     className='flex items-center'
                                   >
                                     <Check className='w-3 h-3 text-green-400 mr-2 flex-shrink-0' />
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                                    className='flex items-center'>;
+                                    <Check className='w-3 h-3 text-green-400 mr-2 flex-shrink-0' />                                    {pro}                          </div>;
+                          <div className="mb-4">;
+                            <p className="text-lg font-semibold text-white">{competitor && competitor.pricing}</p>;
+                          </div>;
+                          <div className="space-y-2 mb-4 text-xs">;
+                            <div>;
+                              <p className="text-green-400 font-medium mb-1">Pros:</p>;
+                              <ul className="text-gray-300 space-y-1">;
+                                {competitor && competitor.pros.map((pro, proIndex) => (;
+                                  <li key={proIndex} className="flex items-center">;
+                                    <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />;
+                          </div>
+                          <div className="mb-4">
+                            <p className="text-lg font-semibold text-white">{competitor.pricing}</p>
+                          </div>
+                          <div className="space-y-2 mb-4 text-xs">
+                            <div>
+                              <p className="text-green-400 font-medium mb-1">Pros:</p>
+                              <ul className="text-gray-300 space-y-1">
+                                {competitor.pros.map((pro, proIndex) => (
+                                  <li key={proIndex} className="flex items-center">
+                                    <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                                     {pro}
                                   </li>;
                                 ))}
@@ -649,6 +860,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               </ul>
                             </div>
                             <div>
+<<<<<<< HEAD
 <p className='text-red-400 font-medium mb-1'>
                                 Cons:
                               </p>
@@ -720,6 +932,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                   >;
                                     <X className='w-3 h-3 text-red-400 mr-2 flex-shrink-0' />;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                              <p className="text-red-400 font-medium mb-1">Cons:</p>
+                              <ul className="text-gray-300 space-y-1">
+                                {competitor.cons.map((con, conIndex) => (
+                                  <li key={conIndex} className="flex items-center">
+                                    <X className="w-3 h-3 text-red-400 mr-2 flex-shrink-0" />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                                     {con}
                                   </li>;
                                 ))}
@@ -755,11 +974,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               </ul>
                             </div>
                           </div>
+<<<<<<< HEAD
 <div className='text-center'>
                             <p className='text-green-400 font-semibold text-sm'>
                               {competitor.savings}
                             </p>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                            <p className="text-green-400 font-semibold text-sm">{competitor.savings}</p>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                           </div>
                         </div>
                       </Card>
@@ -783,6 +1006,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* CTA Section */}
 <section className='py-24 bg-gradient-to-r from-indigo-600 to-purple-600'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -794,28 +1018,52 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        {/* CTA Section */}
+        <section className='py - 24 bg - gradient - to - r from - indigo - 600 to - purple - 600'>;
+          <div className='max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>;
+            <h2 className='text - 3xl sm:text - 4xl font - bold text - white mb - 8'>;
+            </h2>;
+            <p className='text - xl text - indigo - 100 mb - 12'>;
+              Start your free trial today and see why thousands of businesses;
+              choose Zion.;
+            </p>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               <Button
                 href='/ai-content-generator'
                 variant='secondary'
                 size='lg'
+<<<<<<< HEAD
                 className='bg-white text-indigo-600 hover:bg-gray-100'
               >
                 Try AI Content Generator
               </Button>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                className='bg-white text-indigo-600 hover:bg-gray-100'>;
+                Try AI Content Generator;
+              </Button>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               <Button
 href='/cloud-monitoring'
                 variant='secondary'
                 size='lg'
+<<<<<<< HEAD
                 className='bg-white text-indigo-600 hover:bg-gray-100'
               >
                 Try Cloud Monitoring
               </Button>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                className='bg-white text-indigo-600 hover:bg-gray-100'>;
+                Try Cloud Monitoring;
+              </Button>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               <Button
 href='/devops-automation'
                 variant='secondary'
                 size='lg'
+<<<<<<< HEAD
                 className='bg-white text-indigo-600 hover:bg-gray-100'
               >
                 Try DevOps Automation
@@ -892,3 +1140,18 @@ href='/devops-automation';
     </>;
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                Try DevOps Automation
+              </Button>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+                className='bg-white text-indigo-600 hover:bg-gray-100'              >                href="/ai-content-generator"
+                variant="secondary"
+                size="lg"
+                className="bg-white text-indigo-600 hover:bg-gray-100"
+                Try AI Content Generator
+              </Button>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

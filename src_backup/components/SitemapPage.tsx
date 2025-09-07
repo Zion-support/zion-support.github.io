@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
 
 <<<<<<< HEAD:src_backup/components/SitemapPage.tsx
 const resolvePath = (path: string): string => pathMap[path] ?? path,
@@ -100,17 +101,83 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
 
 
+=======
+// Map sitemap paths to their actual routes in the application
+// Note: This pathMap might need to be updated based on Next.js page structure
+const pathMap: Record<string, string> = {
+
+
+const resolve_path = (path: string): string => path_map[path] ?? path, import React from 'react';
+import { complete_sitemap, dynamic_paths } from '@/config / sitemap';
+import Link from 'next / link';
+import { ChevronRight } from 'lucide-react';
+import React from 'react';
+import { SEO } from './SEO';
+// Map sitemap paths to their actual routes in the application;
+// Note: This path_map might need to be updated based on Next.js page structure;
+const path_map: Record < string, string> = {
+  '/about': '/content / about / blog': '/blog / careers': '/careers / green - it': '/content / green - it / sitemap - page': '/content / sitemap - page / talent - onboarding': '/talent - onboarding / forgot - password': '/forgot - password / signup / talent': '/auth / signup / talent / signup / client': '/auth / signup / client / talent - dashboard': '/talent - dashboard / client - dashboard': '/client - dashboard / hiring - tracker': '/dashboard / hiring - tracker / messages': '/dashboard / messages / notifications': '/dashboard / notifications / project/:project_id / room': '/dashboard / project/:project_id / room / post - job': '/marketplace / post - job'}
+const resolve_path = (path: string): string => path_map[path] ?? path,
+
+
+import React from 'react',
+import { completeSitemap, dynamicPaths } from '@/config/sitemap',
+import Link from 'next/link',
+import { ChevronRight } from 'lucide-react'
+import { SEO } from './SEO',
+// Map sitemap paths to their actual routes in the application
+// Note: This pathMap might need to be updated based on Next.js page structure
+const pathMap: Record<string string> = {
+  '/about': '/content/about/blog': '/blog/careers': '/careers/green-it': '/content/green-it/sitemap-page': '/content/sitemap-page/talent-onboarding': '/talent-onboarding/forgot-password': '/forgot-password/signup/talent': '/auth/signup/talent/signup/client': '/auth/signup/client/talent-dashboard': '/talent-dashboard/client-dashboard': '/client-dashboard/hiring-tracker': '/dashboard/hiring-tracker/messages': '/dashboard/messages/notifications': '/dashboard/notifications/project/:projectId/room': '/dashboard/project/:projectId/room/post-job': '/marketplace/post-job'},
+
+const resolvePath = (path: string): string => pathMap[path] ?? path,
+
+export const SitemapPage: React.FC = () => {
+  return (
+    <>
+      <SEO
+        title="Sitemap | Zion AI Marketplace"
+        description="Complete sitemap of the Zion AI Marketplace"
+        keywords="sitemap, zion, ai marketplace, navigation"
+        canonical="https://app.ziontechgroup.com/content/sitemap-page"
+      />
+      <div className="container mx-auto px-4 py-12">
+        <h1 className="text-3xl font-bold mb-8">Sitemap</h1>
+
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Public Pages */}
+          <div className="bg-zion-blue-dark p-6 rounded-lg">
+            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Public Pages</h2>
+            <ul className="space-y-2">
+              {completeSitemap
+                .filter(route => !route.requiredAuth)
+                .map(route => (
+                  <li key={route.path}>
+                    <Link
+                      href={resolvePath(route.path)}
+                      className="flex items-center hover:text-zion-purple"
+                    >
+                      <ChevronRight className="h-4 w-4 mr-2" />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/SitemapPage.tsx
                       {route.label}
                     </Link>;
                   </li>));
               }
 
 
+<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/SitemapPage.tsx
             </ul>;
           </div>;
 
 
+<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/SitemapPage.tsx
           {/* Talent Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Talent Pages</h2>
@@ -128,9 +195,12 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
+<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
             </ul>;
           </div>;
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/SitemapPage.tsx
           {/* Talent Routes */}
 =======
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;{route.label}
@@ -171,13 +241,20 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
 <<<<<<< HEAD:src_backup/components/SitemapPage.tsx
                   </li>));
               }
+<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/SitemapPage.tsx
 
 
             </ul>;
           </div>;
 
 
+<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/SitemapPage.tsx
           {/* Client Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Client Pages</h2>
@@ -195,9 +272,12 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
+<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
             </ul>;
           </div>;
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/SitemapPage.tsx
           {/* Client Routes */}
 =======
                   </li>))}</ul>;
@@ -236,13 +316,20 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
 <<<<<<< HEAD:src_backup/components/SitemapPage.tsx
                   </li>));
               }
+<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/SitemapPage.tsx
 
 
             </ul>;
           </div>;
 
 
+<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/SitemapPage.tsx
           {/* Shared Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Authenticated User Pages</h2>
@@ -260,9 +347,12 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
+<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
             </ul>;
           </div>;
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/SitemapPage.tsx
           {/* Shared Routes */}
 =======
                   </li>))}</ul>;
@@ -298,6 +388,7 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
 <<<<<<< HEAD:src_backup/components/SitemapPage.tsx
                       {route.label}
+<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
                     </Link>;
                   </li>));
               }
@@ -308,6 +399,12 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
 
 
 
+=======
+                    </Link>
+                  </li>
+                ))
+              }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/SitemapPage.tsx
           {/* Admin Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Admin Pages</h2>
@@ -324,6 +421,7 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
+<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
             </ul>;
 =======
                       {route.label}</Link>;
@@ -343,6 +441,8 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
                       className="flex items-center hover:text-zion-purple";
                     >;
                       <ChevronRight className="h-4 w-4 mr-2" />;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/SitemapPage.tsx
 }
     {title: 'Services';
       links: [{ name: 'AI Services', url: '/services / ai' }
@@ -357,6 +457,7 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
         { name: 'Healthcare', url: '/solutions / healthcare' }
         { name: 'Financial Services', url: '/solutions / financial' }
         { name: 'Manufacturing', url: '/solutions / manufacturing' }
+<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
       ];
 }</ul>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/SitemapPage.tsx
@@ -432,6 +533,10 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
 },
 
 
+=======
+      ]
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/SitemapPage.tsx
     {
       title: 'Resources'
 =======
@@ -448,6 +553,10 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
         { name: 'API Reference', url: '/api' }
 <<<<<<< HEAD:src_backup/components/SitemapPage.tsx
       ]}
+<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/SitemapPage.tsx
 
         { name: 'Case Studies', url: '/case - studies' }, ';
 =======
@@ -485,16 +594,22 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
                       {link.name}
 
 
+<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/SitemapPage.tsx
           {/* Dynamic Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Dynamic Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Pages with dynamic parameters</p>
             <ul className="space-y-2">
+<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
 
               {Object.entries(dynamicPaths).map(([key, path]) => (
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/SitemapPage.tsx
                 <li key={key}>
                   <div className="flex items-center text-zion-slate">
                     <ChevronRight className="h-4 w-4 mr-2" />
@@ -542,7 +657,10 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
 <<<<<<< HEAD:src_backup/components/SitemapPage.tsx
 '";
 
+<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
 }
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/SitemapPage.tsx
 
 import React from 'react';
 import { completeSitemap, dynamicPaths } from '@/config/sitemap';
@@ -558,6 +676,7 @@ import { SEO  } from './SEO';
 // Map sitemap paths to their actual routes in the application
 // Note: This pathMap might need to be updated based on Next.js page structure
 const pathMap: Record<string, string> = {
+<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '";}import { completeSitemap, dynamicPaths   } from '@/config/sitemap';
@@ -566,3 +685,5 @@ import { SEO   } from './SEO';
 // Note: This pathMap might need to be updated based on Next.js page structure;
 const pathMap: Record<string, string> = {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/SitemapPage.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/SitemapPage.tsx

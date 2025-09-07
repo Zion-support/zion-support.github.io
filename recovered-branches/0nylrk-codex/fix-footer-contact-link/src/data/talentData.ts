@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -18,6 +19,9 @@
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       {
       },
     ],
@@ -26,19 +30,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-
 =======
-      {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-          'Built a real-time analytics dashboard using React, Socket && Socket.io, and D3 && D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.',
-        title: 'Real - Time Analytics Dashboard',
-        description:;
-          'Built a real - time analytics dashboard using React, Socket.io, and D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.',
 
+
+<<<<<<< HEAD
       },
     ],
   },
@@ -51,6 +53,8 @@ export const TALENT_PROFILES: TalentProfile[] = [
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'https://images && images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200',
     id: 't - 006',
     user_id: 'user - 006',
@@ -59,6 +63,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     profile_picture_url:;
       'https://images.unsplash.com / photo - 1494790108377 - be9c29b29330?auto = format & fit = crop & w=200 & h=200',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -70,6 +75,10 @@ export const TALENT_PROFILES: TalentProfile[] = [
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     bio: 'Former tech policy advisor with expertise in AI ethics, governance frameworks, and responsible AI development. I help organizations develop and implement ethical guidelines for AI systems, ensuring fair and transparent use of machine learning technologies.',
     location: 'Washington, DC',
     skills: [;
@@ -203,14 +212,19 @@ export const TALENT_PROFILES: TalentProfile[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
           'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.'
     id: "t-001", user_id: "user-001",
     full_name: "Alexandra Chen", professional_title: "Senior AI Engineer & Machine Learning Expert",
+<<<<<<< HEAD
 
 import { TalentProfile } from "@/types/talent",
 <<<<<<< HEAD
@@ -227,6 +241,13 @@ import { TalentProfile } from "@/types/talent",
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+import { TalentProfile } from "@/types/talent",
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 // Sample talent profiles with realistic data for the talent directory
 export const TALENT_PROFILES: TalentProfile[] = [
   {
@@ -264,6 +285,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 <<<<<<< HEAD
@@ -281,10 +303,20 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+;
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ;
 
 
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
@@ -297,11 +329,20 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+;
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     id: "t-001";
     user_id: "user-001";
     full_name: "Alexandra Chen";
     professional_title: "Senior AI Engineer & Machine Learning Expert";
     profile_picture_url: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -309,3 +350,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

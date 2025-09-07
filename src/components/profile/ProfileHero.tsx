@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 avatarUrl?: string;name: string;
   title: string;
@@ -6,6 +7,18 @@ avatarUrl?: string;name: string;
   rating?: number;
   reviewCount?: number;
   aiScore?: number;return (<div className='w-full overflow-hidden'>;
+=======
+avatarUrl?: string;
+  coverImageUrl?: string;
+  location?: string;
+  rating?: number;
+  reviewCount?: number;
+  aiScore?: number;
+
+
+  return (
+    <div className='w-full overflow-hidden'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <div className='relative'>;
         <AspectRatio ratio={3 / 1} className='bg-zion-blue-light'>          {coverImageUrl ? (<img;
               src={coverImageUrl}
@@ -20,6 +33,7 @@ export function ProfileHero(): any ({name;
   rating;
   reviewCount;
   aiScore;
+<<<<<<< HEAD
   profileType;
 }: ProfileHeroProps) {return (<div className="w-full overflow-hidden">;
       <div className="relative">;
@@ -52,6 +66,57 @@ export function ProfileHero(): any ({name;
             />;
           ) : (<div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />;
           )}</AspectRatio>;
+=======
+
+
+export function ProfileHero({
+
+  name,
+  title,
+  avatarUrl,
+  coverImageUrl,
+  location,
+  rating,
+  reviewCount,
+  aiScore,
+
+
+  profileType
+}: ProfileHeroProps) {
+  return (
+    <div className="w-full overflow-hidden">
+      <div className="relative">
+        <AspectRatio ratio={3/1} className="bg-zion-blue-light">
+          {coverImageUrl ? (
+            <img
+              src={coverImageUrl}
+              alt={`${name} cover`}
+
+
+
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          ) : (
+            <div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />
+          )}
+
+        </AspectRatio>
+        
+
+
+        <div className="container px-4 md:px-6">
+          <div className="flex flex-col md:flex-row md:items-end -mt-16 md:-mt-20 relative z-10 mb-6 md:mb-10">
+            <Avatar className="h-24 w-24 md:h-32 md:w-32 border-4 border-zion-blue-dark ring-2 ring-zion-purple/30">
+              {avatarUrl ? (
+                <AvatarImage src={avatarUrl} alt={name} />
+              ) : (
+                <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">
+
+
+        </AspectRatio>;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         <div className="container px-4 md:px-6">;
           <div className="flex flex-col md:flex-row md:items-end -mt-16 md:-mt-20 relative z-10 mb-6 md:mb-10">;
             <Avatar className="h-24 w-24 md:h-32 md:w-32 border-4 border-zion-blue-dark ring-2 ring-zion-purple/30">;
@@ -85,6 +150,7 @@ export function ProfileHero(): any ({name;
 <div className='mt-4 md:mt-0 md:ml-6 md:mb-1'>;
               <div className='flex flex-wrap items-center gap-2 mb-1'>;
                 <h1 className='text-2xl md:text-3xl font-bold text-white'>;
+<<<<<<< HEAD
                   {name}
                 </h1>;
                 <Badge;
@@ -110,6 +176,50 @@ export function ProfileHero(): any ({name;
                 )}{rating && (<div className='flex items-center gap-1'>;
                     <Star className='w-4 h-4 fill-zion-cyan text-zion-cyan' />;
                     <span className='text-white font-medium'>;
+=======
+
+
+                  {name}
+                </h1>
+                <Badge
+                  variant='outline'
+                  className={cn(
+
+                    'ml-2 border-zion-purple/50 text-zion-cyan'
+                    profileType === 'service'
+                      ? 'bg-zion-purple/10'
+
+                  variant="outline" 
+                  className={cn(
+                    "ml-2 border-zion-purple/50 text-zion-cyan"
+                    profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
+                  )}
+
+                    "ml-2 border-zion-purple/50 text-zion-cyan",
+                    profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
+                  )}
+                >;
+                  {profileType === 'service' ? 'Service Provider' : 'Talent'}
+
+                </Badge>
+              </div>
+              
+              <h2 className="text-lg md:text-xl text-zion-slate-light mb-1">{title}</h2>
+              
+              <div className="flex flex-wrap items-center gap-3 mt-2">
+
+
+                {location && (
+                  <span className="text-sm text-zion-slate-light">{location}</span>
+                )}
+
+
+
+                {rating && (
+                  <div className='flex items-center gap-1'>
+                    <Star className='w-4 h-4 fill-zion-cyan text-zion-cyan' />
+                    <span className='text-white font-medium'>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                       {rating.toFixed(1)}
                     </span>;
                     {reviewCount && (<span className='text-zion-slate-light text-sm'>;
@@ -122,9 +232,24 @@ export function ProfileHero(): any ({name;
                     {reviewCount && (<span className='text-zion-slate-light text-sm'>;
                         ({reviewCount})</span>;
                     )}
+<<<<<<< HEAD
                   </div>;
                 )}{aiScore && (<div className='px-2 py-0 && 0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan'>                    AI Match: {aiScore}%                {location && (<span className="text-sm text-zion-slate-light">{location}</span>;
                 )}{rating && (<div className="flex items-center gap-1">;
+=======
+                  </div>
+                )}
+
+
+
+                {aiScore && (;
+                  <div className='px-2 py-0 && 0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan'>                    AI Match: {aiScore}%                {location && (;
+                  <span className="text-sm text-zion-slate-light">{location}</span>;
+                )}
+
+                {rating && (;
+                  <div className="flex items-center gap-1">;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                     <Star className="w-4 h-4 fill-zion-cyan text-zion-cyan" />;
                     <span className="text-white font-medium">{rating && rating.toFixed(1)}</span>;
                     {reviewCount && (<span className="text-zion-slate-light text-sm">({reviewCount})</span>;
@@ -134,6 +259,7 @@ export function ProfileHero(): any ({name;
                     AI Match: {aiScore}%;
                   </div>;
                 )}
+<<<<<<< HEAD
               </div>;
             </div>;
           </div>;
@@ -141,3 +267,8 @@ export function ProfileHero(): any ({name;
       </div>;
     </div>;
   )}
+=======
+
+
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

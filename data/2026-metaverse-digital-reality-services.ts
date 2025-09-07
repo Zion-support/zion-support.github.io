@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -21,6 +22,12 @@ export interface MetaverseDigitalRealityService2026  {id: string;name: string;
 export interface MetaverseDigitalRealityService2026 {
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  id: string;
+
+export interface MetaverseDigitalRealityService2026 {
+id: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   name: string;
   tagline: string;
   price: string;
@@ -142,6 +149,7 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -155,10 +163,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
       "Immersive experiences";
       "Digital reality";
       "Metaverse platform";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -185,6 +197,11 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 export interface MetaverseDigitalRealityService2026 {;
 
@@ -194,6 +211,10 @@ export interface MetaverseDigitalRealityService2026 {;
     category: "Metaverse Digital Reality 2026",
     realImplementation: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     address: string
   }
 }
@@ -215,20 +236,27 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
     link: "/services/2026-metaverse-digital-reality";
     category: "Metaverse Digital Reality 2026";
     realImplementation: true;
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
     contactInfo: {
 
 
 <<<<<<< HEAD
+=======
+    contactInfo: {
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
 =======
     contactInfo: {}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   }
-<<<<<<< HEAD
 
 ];
 
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -249,6 +277,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export interface MetaverseDigitalRealityService2026 {;
+=======
+
+export interface MetaverseDigitalRealityService2026 {;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   };
 
 export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService2026[] =
@@ -283,6 +316,7 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
       "Advanced graphics";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -306,6 +340,10 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
   }
 ];];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string,;
   name: string,;
   tagline: string,;
@@ -340,6 +378,7 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -351,11 +390,17 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       "Social interactions"
     ],
     link: "/services/2026-metaverse-digital-reality",
     category: "Metaverse Digital Reality 2026",
     realImplementation: true,
+<<<<<<< HEAD
     contactInfo: {}
   }
 ;
@@ -408,3 +453,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    contactInfo: {
+    }
+  }
+;
+    }
+  }
+];
+
+
+
+
+
+];
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

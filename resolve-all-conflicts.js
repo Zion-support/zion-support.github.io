@@ -34,8 +34,12 @@ function resolveMergeConflicts(filePath) {
         // Check if file has merge conflicts
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!content.includes('            return false; // No conflicts to resolve
 =======
+=======
+        if (!content.includes('<<<<<<<') && !content.includes('') && !content.includes('>>>>>>>')) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             return false; // No conflicts to resolve
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
@@ -48,6 +52,7 @@ function resolveMergeConflicts(filePath) {
         // Remove merge conflict markers and keep the HEAD version
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         content = content.replace(/        
         // Remove any remaining conflict markers
         content = content.replace(/        content = content.replace(/\n/g, '');
@@ -58,11 +63,18 @@ function resolveMergeConflicts(filePath) {
         
         // Remove any remaining conflict markers
         content = content.replace(/\n([\s\S]*?)\n([\s\S]*?)>>>>>>> [^\n]+\n?/g, '$1');
+=======
+        content = content.replace(/
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         
         // Remove any remaining conflict markers
         content = content.replace(/<<<<<<< [^\n]+\n?/g, '');
         content = content.replace(/\n?/g, '');
+<<<<<<< HEAD
         content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
+=======
+        content = content.replace(/
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

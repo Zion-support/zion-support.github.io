@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import dynamic from 'next/dynamic',
 import React, { useEffect, useState } from 'react';
 import { useWallet  } from '../../hooks/useWallet';
@@ -10,31 +14,54 @@ import {
   fetchDepinActivities
   calculateRewards
   DepinReward;
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 } from '../../utils/depins';
 import { CHAINS } from '../../utils/chains';
 const ClientOnlyBridge = dynamic(
   () => import('../../components/ui/BridgeForm')
   { ssr: false }
+<<<<<<< HEAD
 );
 export default function TokenIntegrationsPage() {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+);import { fetchDepinActivities, calculateRewards, DepinReward } from '../../utils/depins';
+import { CHAINS } from '../../utils/chains';
+
+
+
+const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false }),
+export default function TokenIntegrationsPage() {;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const { account, connect } = useWallet();
   const [region, setRegion] = useState('');
   const [stake, setStake] = useState('');
   const [suggestion, setSuggestion] = useState<any>(null);
   const [rewards, setRewards] = useState<DepinReward[] | null>(null);
   const [depinsSyncing, setDepinsSyncing] = useState(false);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   async function syncDepin() {
     if (!account) {
       await connect();
 return;
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
     setDepinsSyncing(true);
     const acts = await fetchDepinActivities(account);
     const r = calculateRewards(acts);
     setRewards(r);
+<<<<<<< HEAD
 setDepinsSyncing(false);
   }
   async function runOperator() {
@@ -44,6 +71,9 @@ setDepinsSyncing(false);
 body: JSON.stringify({ region, stakeUsd: stake }),
     });
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     const data = await res.json();
     setSuggestion(data);
   }
@@ -87,6 +117,7 @@ const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'),
               Connect Wallet;
             </button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           )}
         </div>
         {rewards && (
@@ -98,6 +129,11 @@ const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'),
                 </span>
                 <span className='font-medium'>+{r.points} ZION$</span>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+          )}
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     setSuggestion(data)
         </div>;
         {rewards && (;
@@ -192,6 +228,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         )}
       </section>
+<<<<<<< HEAD
 
 <section className='space-y-3 p-4 border rounded border-gray-200 dark:border-gray-800'>
         <h2 className='text-lg font-semibold'>Operator AI Actions</h2>
@@ -257,6 +294,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </ul>
       </section>
     </div>
+=======
+          <div className="flex flex-col gap-1">
+            <label className="text-xs text-gray-500" htmlFor="input-Stake (USD)">Stake (USD)</label>
+            <input value={stake} onChange={(e) => setStake(e.target.value)} placeholder="e.g., 1000" className="border rounded px-3 py-2 bg-white dark:bg-black" />
+          </div>
+          <div className="flex items-end"><button onClick={runOperator} className="w-full px-4 py-2 rounded bg-indigo-600 text-white">Suggest Chain</button></div>
+        </div>
+        {suggestion && (
+          <div className="text-sm mt-2">
+            <div>
+              <span className="text-gray-500">Recommendation:</span> <b>{suggestion.recommendation?.chain?.name}</b>
+            </div>
+            {suggestion.alternatives && (
+              <div className="text-gray-500">Alternatives: {suggestion.alternatives.map((a: any) => a.chain.name).join(', ')}</div>
+            )}
+          </div>;
+        )}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
@@ -474,6 +529,7 @@ function run_operator() {const res = await fetch ('/api / operator / suggest - c
           <li > Burn - and - mint model via LayerZero OFT (requires token addresses configured)</li>;
         </ul>;
       </section>;
+<<<<<<< HEAD
     </div>)</section>;
 <section className='space-y-2 text-xs text-gray-500'>;
         <div>Security</div>;
@@ -487,3 +543,7 @@ function run_operator() {const res = await fetch ('/api / operator / suggest - c
     </div>;
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </div>);
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

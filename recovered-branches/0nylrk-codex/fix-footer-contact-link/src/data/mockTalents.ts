@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -12,10 +13,16 @@ import { ProfileData } from '@/types/profile';
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
       {
 
           'https://images && images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&w=600&h=400',
+<<<<<<< HEAD
 =======
 import { ProfileData } from '@/types/profile';
 
@@ -37,6 +44,13 @@ origin/cursor/automate-test-improve-and-merge-code-382a
       {
 
           'https://images && images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&h=400',
+=======
+      {
+
+          'https://images && images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&h=400',
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     id: 'talent-1'
     name: 'Alexandra Chen'
     title: 'Senior AI Engineer & Machine Learning Expert'
@@ -64,9 +78,16 @@ origin/cursor/automate-test-improve-and-merge-code-382a
       {
 
 
+<<<<<<< HEAD
 import { ProfileData } from '@/types/profile';
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+import { ProfileData } from '@/types/profile';
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { ProfileData } from "@/types/profile";
 // Mock talent profiles for development and testing
 export const MOCK_TALENTS: ProfileData[] = [
@@ -74,6 +95,10 @@ export const MOCK_TALENTS: ProfileData[] = [
 
 <<<<<<< HEAD
       {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         id: 'p1'
         title: 'Facial Recognition System'
         description:
@@ -1205,8 +1230,11 @@ export const MOCK_TALENTS: ProfileData[] = [;
       },
     ],
 
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     experience: [;
       {
         id: 'e1',
@@ -1356,6 +1384,7 @@ export const MOCK_TALENTS: ProfileData[] = [;
         'Limited availability for short-term consulting projects and infrastructure assessments.'
       availableHours: [
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1623,6 +1652,9 @@ export const MOCK_TALENTS: ProfileData[] = [;
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     experience: [;
       {
         id: 'e1',
@@ -1774,6 +1806,7 @@ export const MOCK_TALENTS: ProfileData[] = [;
     availability: {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -1830,6 +1863,9 @@ current: true
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 hourly_rate: 150;
 contact_email: "alexandra.chen@example.com";
 }
@@ -1845,9 +1881,13 @@ available_hours: [ {
 }
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   day: "Friday", hours: "1:00 PM - 5:00 PM";
 }
 hourly_rate: 135;
@@ -2223,6 +2263,7 @@ contact_email: "david.martinez@example.com";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -2236,10 +2277,17 @@ contact_email: "david.martinez@example.com";
 
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 
 
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -2255,3 +2303,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

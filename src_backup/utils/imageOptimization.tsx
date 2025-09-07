@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src_backup/utils/imageOptimization.tsx
 import React, { useState, useRef, useEffect } from 'react',
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
@@ -29,6 +30,14 @@ export function OptimizedImage({
   })
 } 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+const imgRef = useRef<HTMLDivElement>(null);
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/utils/imageOptimization.tsx
  const observer = new IntersectionObserver ( ([entry]) => {
   if (entry && entry.isIntersecting) {
   return () => observer.disconnect ()
@@ -80,6 +89,7 @@ const observer = new IntersectionObserver ( ([entry]) => {
 if ( {) {
   $2
 }
+<<<<<<< HEAD:src_backup/utils/imageOptimization.tsx
 ;
 export function OptimizedImage({;
   src,;
@@ -103,6 +113,20 @@ export function OptimizedImage({;
   const [isInView, setIsInView] = useState(!lazy || priority),;
   const imgRef = useRef<HTMLDivElement>(null),;
 
+=======
+  return () => observer.disconnect ();
+}, [lazy, priority, isInView]);
+//Generate WebP - compatible src const getOptimizedSrc = (original_src: string) =>: any {
+  //If it's already optimized or external,  return as - is if (|| original_src.includes ('/ next / image') ) {) {
+  $2
+}
+  //For internal images, Next.js will handle optimization return original_src;
+}';
+<defs> <linear_gradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"> <stop offset="0%" style="stop - color:#f3f4f6, stop - opacity:1" /> <stop offset="100%" style="stop - color:#e5e7eb, stop - opacity:1" /> 100%"height=" 100%"fill=" url (#grad) "/> </svg>`) .to_string ('base64');
+}`;
+}
+  const img_ref = useRef < HTMLDivElement>(null);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/utils/imageOptimization.tsx
   // Intersection Observer for lazy loading;
 
     return () => observer.disconnect ();
@@ -303,10 +327,16 @@ if (return blurDataURL) {
 
       )}
       {/* Error fallback */}
+<<<<<<< HEAD:src_backup/utils/imageOptimization.tsx
       {hasError && (
         <div className="absolute inset-0 bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
           {fallbackSrc ? (
 
+=======
+      {hasError && (;
+        <div className='absolute inset-0 bg-gray-100 dark:bg-gray-800 flex items-center justify-center'>;
+          {fallbackSrc ? (;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/utils/imageOptimization.tsx
             <img
               src={fallbackSrc}
               alt={alt}
@@ -411,8 +441,21 @@ export function getImageDimensions(
   return new Promise((resolve, reject) => {
     const img = new window.Image()
     img.onload = () =>
+<<<<<<< HEAD:src_backup/utils/imageOptimization.tsx
       resolve({ width: img.naturalWidth, height: img.naturalHeight });
     img.onerror = reject;
     img.src = src;
   });
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+      resolve({ width: img.naturalWidth, height: img.naturalHeight })
+    img.onerror = reject
+    img.src = src
+  })
+}
+    img.onerror = reject
+    img.src = src
+  })
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/utils/imageOptimization.tsx

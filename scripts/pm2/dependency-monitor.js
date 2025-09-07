@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,9 @@
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 #!/usr/bin/env node;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -58,6 +62,7 @@ class DependencyMonitor {; constructor() {; this.projectRoot = process.cwd(); th
 const monitor = new DependencyMonitor();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 monitor.run().catch(error = > {process.exit(1)});
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -78,6 +83,10 @@ const monitor = new DependencyMonitor()monitor.run().catch(error = > {process.ex
     } catch (error) {,// npm audit might fail if there are vulnerabilities,try {,const output = error.stdout?.toString() || error.stderr?.toString() || '',if (output.includes('npm ERR!')) {,// Try to parse the error output for vulnerability info,const lines = output.split('\n'),const vulnerabilities = [],,lines.forEach(line => {,if (line.includes('│')) {,const parts = line.split('│').map(p => p.trim()).filter(Boolean),if (parts.length >= 4) {,vulnerabilities.push({,packag: e: parts[0],severit: y: parts[1],titl: e: parts[2],pat: h: parts[3];
                 })}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+monitor.run().catch(error = > {process.exit(1)});
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ;
   log(message) {;
     const timestamp = new Date().toISOString();
@@ -300,6 +309,7 @@ monitor.run().catch(error => {,;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -312,6 +322,8 @@ monitor.run().catch(error => {,;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 class DependencyMonitor {;
   constructor() {;
     this.projectRoot = process.cwd();
@@ -524,6 +536,7 @@ monitor.run().catch(error = > {; process.exit(1)});
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -540,3 +553,11 @@ monitor.run().catch(error = > {; process.exit(1)});
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+monitor.run().catch(error = > {; process.exit(1)});
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

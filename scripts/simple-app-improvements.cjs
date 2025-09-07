@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/simple-app-improvements.cjs
 =======
 <<<<<<< HEAD
@@ -21,16 +22,26 @@
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+:backup-problematic-files/scripts/simple-app-improvements.cjs
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
 
+<<<<<<< HEAD
 :scripts/simple-app-improvements.cjs
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -332,6 +343,13 @@ improvements.runImprovements().then(() => {;
   console.error('Improvements "failed": ', error.message);
   process.exit(1)})
 <<<<<<< HEAD
+<<<<<<< HEAD
 :scripts/simple-app-improvements.cjs
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+:backup-problematic-files/scripts/simple-app-improvements.cjs
+  process.exit(1)})
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

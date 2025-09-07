@@ -121,6 +121,7 @@ main().catch(err => {})
   process.exit(1)}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -131,3 +132,8 @@ main().catch(err => {})
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+});
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

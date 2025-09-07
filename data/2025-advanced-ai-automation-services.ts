@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   contactInfo: {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -42,6 +43,10 @@ export interface AdvancedAIAutomationService {
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  contactInfo: {
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     },
 =======
 
@@ -390,11 +395,14 @@ export interface AdvancedAIAutomationService  {{}
   reviews: number
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
@@ -409,6 +417,7 @@ export interface AdvancedAIAutomationService  {{}
     rating: 4.8,
     reviews: 38;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -433,6 +442,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ;
+=======
+
+
+
+;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     realImplementation: true
     implementationDetails:
       'Enterprise-grade DevOps automation platform with AI-powered optimization, multi-cloud support, and advanced monitoring capabilities.'
@@ -619,13 +635,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     implementationDetails:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'AI-powered sales intelligence platform with predictive analytics, customer insights, and performance optimization.'
     launchDate: '2024-10-01'
     customers: 89
     rating: 4.8
     reviews: 38
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -925,10 +946,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     realImplementation: true,
     implementationDetails:
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'AI-powered sales intelligence platform with predictive analytics, customer insights, and performance optimization.',
     launchDate: '2024-10-01',
     customers: 89,
     rating: 4.8,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     reviews: 38,;
@@ -936,6 +960,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+    reviews: 38,;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   },];
 =======
   }];
@@ -951,6 +979,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     customers: 89;
     rating: 4.8
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -980,6 +1009,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    reviews: 38
+
+  }
+];
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedAIAutomationService {;
   id: string,;
@@ -1244,6 +1280,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     reviews: 38;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
@@ -1276,3 +1313,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ];
 ;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+  }
+];
+;
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

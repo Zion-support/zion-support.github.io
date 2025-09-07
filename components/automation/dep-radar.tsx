@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 type Outdated = any;
@@ -15,6 +16,17 @@ import path from 'path';
 type Outdated = any;
     generatedAt = json.generatedAt || '';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+  const file = path.join(process.cwd(), 'datadep-radar.json');
+  let outdated: Outdated[] = [];  let generatedAt = '';
+  try {
+    const raw = fs.readFileSync(file, 'utf-8');
+    const json = JSON.parse(raw);
+    outdated = json.outdated |[];
+    generatedAt = json.generatedAt |''
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   } catch {}
   return { props: { outdated, generatedAt } }
 }
@@ -40,7 +52,12 @@ function DepRadarPage() {return (<div className="space-y-6">;
       <h1 className="text-2xl font-semibold">AI Automation: Dependency Radar</h1>;
       <div className="text - xs text-gray-500">Last updated: {generated_at ? new Date (generated_at).toLocaleString () : '—'}</div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
       {outdated.length === 0 ? (
+=======
+      {outdated.length === 0 ? (
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         <div className="text-sm text-gray-600">All dependencies up to date.</div>
       ) : (
         <div className="overflow-auto border rounded">
@@ -90,8 +107,11 @@ function DepRadarPage() {return (<div className="space-y-6">;
     </div>
 );
 }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     </div>;
 )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

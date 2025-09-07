@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src_backup/components/enterprise/admin/TeamManagement.tsx
 
 ;
 import React, { useState } from 'react';
@@ -51,6 +52,8 @@ export function TeamManagement() {
   const [isAddingMember, setIsAddingMember] = useState(false)
   const [newMemberEmail, setNewMemberEmail] = useState('')
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/TeamManagement.tsx
   // Mock team members data
   const teamMembers = [
     {
@@ -83,8 +86,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       lastActive: "3 days ago"}],
 
   const handleAddMember = () => {
+<<<<<<< HEAD:src_backup/components/enterprise/admin/TeamManagement.tsx
 const handleAddMember = () => {
 
+=======
+
+const handleAddMember = () => {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/TeamManagement.tsx
     // In a real app, this would make an API call to add the member
     if (!newMemberEmail) {
       toast({
@@ -121,6 +129,10 @@ const handleAddMember = () => {
       title: 'Invitation resent'
       description: `A new invitation has been sent to ${memberEmail}`
     })
+<<<<<<< HEAD:src_backup/components/enterprise/admin/TeamManagement.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/TeamManagement.tsx
   Table,
   TableBody,
   TableCell,
@@ -210,6 +222,7 @@ if ( {) {
     setNewMemberEmail ('');
     setIsAddingMember (false);
   }
+<<<<<<< HEAD:src_backup/components/enterprise/admin/TeamManagement.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-6">
@@ -730,6 +743,57 @@ import React, { useState } from "react",import {Table,TableBody,TableCell,TableH
 }
 ;
 
+=======
+  const handleRemoveMember = (_memberId: number, ) =>: any {
+    // In a real app, this would make an API call to remove the member;
+    toast ({
+      title: 'Team member removed',
+      description: 'The team member has been removed from your workspace.',
+    });
+  }
+  const handleResendInvite = (member_email: string, ) =>: any {
+    // In a real app, this would make an API call to resend the invitation;
+    toast ({
+      title: 'Invitation resent',
+      description: `A new invitation has been sent to ${member_email}`,
+    });
+  }
+
+
+        title: "Email required",
+        description: "Please enter an email address for the new team member.",
+        variant: "destructive"}),
+      return
+    }
+
+    toast({
+
+      title: "Invitation sent",
+      description: `An invitation has been sent to ${newMemberEmail}`}),
+
+    setNewMemberEmail(""),
+    setIsAddingMember(false)
+  },
+
+  const handleRemoveMember = (_memberId: number) => {
+    // In a real app, this would make an API call to remove the member
+    toast({
+      title: "Team member removed",
+      description: "The team member has been removed from your workspace."})
+  },
+
+  const handleResendInvite = (memberEmail: string) => {
+    // In a real app, this would make an API call to resend the invitation
+    toast({
+      title: "Invitation resent",
+      description: `A new invitation has been sent to ${memberEmail}`})
+  },
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/TeamManagement.tsx
           </TableBody>
         </Table>
       </div>
@@ -761,6 +825,7 @@ import React, { useState } from "react",import {Table,TableBody,TableCell,TableH
 }</div> </TableCell> </TableRow>) ) ;
 }</TableBody> </Table> </div> </div>) ;
 }'"
+<<<<<<< HEAD:src_backup/components/enterprise/admin/TeamManagement.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 }>Send Invitation</Button> </DialogFooter> </DialogContent> </Dialog> </div> <div className=" rounded - md border"> <Table> <TableHeader> <TableRow> <TableHead > Name</TableHead> <TableHead > Role</TableHead> <TableHead > Status</TableHead> <TableHead > Last Active</TableHead> <TableHead className=" text - right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {team_members.map ( (member) => (<TableRow key= {member.id ";
@@ -784,3 +849,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }> <Mail className="h-4 w-4 mr-1"/> Resend </Button> className="text-destructive hover:text-destructive"onClick={() => handleRemoveMember (member.id) ";
 }> <Trash className="h-4 w-4" /> </Button>)}</div> </TableCell> </TableRow>) )}</TableBody> </Table> </div> </div>)}'";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/enterprise/admin/TeamManagement.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/TeamManagement.tsx

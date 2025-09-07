@@ -8,6 +8,7 @@ import OpenAI from 'openai';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -40,6 +41,22 @@ if (!fs.existsSync(EPISODES_PATH))
 }
 episodes.unshift (episode);
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+);
+
+function ensureStorage() {
+  const dir = path && path.dirname(EPISODES_PATH);
+  if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true });
+  if (!fs && fs.existsSync(EPISODES_PATH))
+    fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path && path.join(process && process.cwd(), 'datapodcastepisodes && datapodcastepisodes.json');
+function ensureStorage() {
+  const dir = path && path.dirname(EPISODES_PATH);
+  if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true });
+  if (!fs && fs.existsSync(EPISODES_PATH))
+    fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
+};
+episodes && episodes.unshift (episode);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 writeEpisodes (episodes);
 function writeEpisodes(episodes: any[]) {
   ensureStorage();
@@ -50,6 +67,7 @@ export default async function handler(
 ) {
   if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -136,6 +154,8 @@ function ensure_storage() {const dir = path.dirname (EPISODES_PATH)if () fs.mkdi
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 function readEpisodes(): any[] {
   ensureStorage();
   return JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8'))
@@ -146,6 +166,7 @@ function writeEpisodes(episodes: any[]) {
 }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -165,6 +186,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+
+  const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
+
+  const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const id = uuidv4();
   const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -172,6 +200,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { persona, invitee, topic, operatorPrompt } = req.body |{}
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -199,6 +228,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+
+  const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
+
+
+
+
+  const { persona, invitee, topic, operatorPrompt } = req.body || {};
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const id = uuidv4();
   const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
 1) 7-10 concise interview questions mixing visionary and technical angles
@@ -207,6 +249,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 4) YouTube and Spotify descriptions
 5) A single-sentence Best Quote
 Return a strict JSON object with keys: title, questions (array), timeMarkers { intro, segments, closing }, transcript, youtubeDescription, spotifyDescription, bestQuote.`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -221,6 +264,9 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   const user = `Guest: ${invitee?.name || ''}\nBio: ${invitee?.bio || ''}\nTopic: ${topic || ''}\nOperator Prompt: ${operatorPrompt || ''}\nStyle Sample: ${persona?.cloneStyleText || ''}`;
 
@@ -242,7 +288,10 @@ let generated: any = null;
       content = completion.choices?.[0]?.message?.content |'';
       content = JSON.stringify({
         title: `Interview with ${invitee?.name |'Guest'} on ${topic |'Zion'}`
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         questions: [
           'What is the vision behind Zion as a global decentralized talent protocol?'
           'How does Zion practically onboard talent and organizations?'
@@ -273,6 +322,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         .json({ error: 'Failed to generate structured content' });    }
     const episodes = readEpisodes();
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -281,6 +331,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     const episode = {      return res && res.status(500).json({ error: 'Failed to generate structured content' });
     const episode = {
@@ -305,6 +358,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 }
 =======
@@ -313,13 +367,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-
 =======
+}
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+
+<<<<<<< HEAD
     const episode = {
 
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       const completion = await openai && openai.chat.completions && completions.create({
         model: process && process.env.ZION_GPT_MODEL || 'gpt-4o-mini',
         messages: [
@@ -445,8 +505,11 @@ Return a strict JSON object with keys: title, questions (array), time_markers { 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       id
       createdAt: new Date().toISOString()
       persona
@@ -516,6 +579,10 @@ if ( {) {$2;
 
     const episode = {
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       transcript: generated.transcript,
       youtube_description: generated.youtube_description || '',
       spotify_description: generated.spotify_description || '',
@@ -556,6 +623,7 @@ id,createdAt: new Date().toISOString(),persona,invitee,topic,title: generated.ti
     const episode = {}
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
     const episode = {
 <<<<<<< HEAD
@@ -566,12 +634,18 @@ id,createdAt: new Date().toISOString(),persona,invitee,topic,title: generated.ti
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 =======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 }
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 id,
       createdAt: new Date().toISOString(),
       persona,
@@ -600,6 +674,7 @@ id,
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -608,3 +683,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

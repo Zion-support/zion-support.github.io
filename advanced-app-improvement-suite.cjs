@@ -31,6 +31,7 @@ class AdvancedAppImprovementSuite {
     if (!fs.existsSync(this.reportsDir)) {
       fs.mkdirSync(this.reportsDir, { recursive: true });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     }
   }
@@ -56,6 +57,14 @@ class AdvancedAppImprovementSuite {
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    }
+  }
+
+  log(message, level = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level}] ${message}`;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
@@ -65,6 +74,7 @@ main
   }
 
   async runCommand(command, description) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     this.log(`Starting: ${description}`);
@@ -80,13 +90,29 @@ main
       this.log(`Failed: ${description} - ${error.message}`);
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+    try {
+      this.log(`Running: ${description}`);
+      const output = execSync(command, {
+        cwd: this.projectRoot,
+        encoding: "utf8",
+        timeout: 300000
+      });
+      this.log(`Completed: ${description}`);
+      return { success: true, output };
+    } catch (error) {
+      this.log(`Failed: ${description} - ${error.message}`, 'ERROR');
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       return { success: false, error: error.message };
     }
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   async optimizeBundleSize() {
     this.log("Optimizing bundle size...");
     const optimizations = [
@@ -129,38 +155,55 @@ main
   async optimizeBundleSize() {
     this.log("Optimizing bundle size...");
     const optimizations = [
+<<<<<<< HEAD
 
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       { command: "npm run analyze", description: "Bundle Analysis" },
       { command: "npm run build", description: "Production Build" }
     ];
     
     const results = [];
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    for (const task of tasks) {
+      const result = await this.runCommand(task.command, task.description);
+      results.push({ ...task, ...result });
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     for (const optimization of optimizations) {
       const result = await this.runCommand(optimization.command, optimization.description);
       results.push({ ...optimization, result });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     for (const optimization of optimizations) {
       const result = await this.runCommand(optimization.command, optimization.description);
       results.push({ ...optimization, result });
 
+<<<<<<< HEAD
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
     return results;
   }
 
   async improvePerformance() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     this.log("Improving performance...");
     const performanceTasks = [
@@ -170,6 +213,17 @@ main
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    this.log("⚡ Improving performance...");
+    const tasks = [
+
+    this.log("Improving performance...");
+    const performanceTasks = [
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
       { command: "npm run lint:fix", description: "Fix Linting Issues" },
       { command: "npm run type-check", description: "TypeScript Type Check" }
@@ -178,27 +232,41 @@ main
     const results = [];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    for (const task of tasks) {
+      const result = await this.runCommand(task.command, task.description);
+      results.push({ ...task, ...result });
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     for (const task of performanceTasks) {
       const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     for (const task of performanceTasks) {
       const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
 
+<<<<<<< HEAD
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
     return results;
   }
 
   async enhanceSecurity() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     this.log("Enhancing security...");
     const securityTasks = [
@@ -208,6 +276,17 @@ main
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    this.log("🔒 Enhancing security...");
+    const tasks = [
+
+    this.log("Enhancing security...");
+    const securityTasks = [
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
       { command: "npm audit --audit-level=moderate", description: "Security Audit" },
       { command: "npm audit fix --force", description: "Fix Security Vulnerabilities" }
@@ -216,27 +295,41 @@ main
     const results = [];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    for (const task of tasks) {
+      const result = await this.runCommand(task.command, task.description);
+      results.push({ ...task, ...result });
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     for (const task of securityTasks) {
       const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     for (const task of securityTasks) {
       const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
 
+<<<<<<< HEAD
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
     return results;
   }
 
   async runTests() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     this.log("Running tests...");
     const testTasks = [
@@ -246,6 +339,17 @@ main
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    this.log("🧪 Running tests...");
+    const tasks = [
+
+    this.log("Running tests...");
+    const testTasks = [
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
       { command: "npm test", description: "Run Test Suite" },
       { command: "npm run test:coverage", description: "Generate Test Coverage" }
@@ -254,26 +358,40 @@ main
     const results = [];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    for (const task of tasks) {
+      const result = await this.runCommand(task.command, task.description);
+      results.push({ ...task, ...result });
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     for (const task of testTasks) {
       const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     for (const task of testTasks) {
       const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
 
+<<<<<<< HEAD
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
     return results;
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   async generateReports() {
     this.log("Generating improvement reports...");
@@ -285,17 +403,32 @@ main
       timestamp: new Date().toISOString(),
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  async generateReport(results) {
+    this.log("📊 Generating improvement reports...");
+    const report = {
+      timestamp: new Date().toISOString(),
+      bundleOptimization: results.bundleOptimization,
+      performanceImprovements: results.performanceImprovements,
+      securityEnhancements: results.securityEnhancements,
+      testResults: results.testResults
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       bundleOptimization: await this.optimizeBundleSize(),
       performanceImprovements: await this.improvePerformance(),
       securityEnhancements: await this.enhanceSecurity(),
       testResults: await this.runTests()
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     };
     
     const reportFile = path.join(this.reportsDir, "advanced-app-improvement-report.json");
@@ -308,7 +441,28 @@ main
     const reportFile = path.join(this.reportsDir, "advanced-app-improvement-report.json");
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`Report saved to: ${reportFile}`);
+<<<<<<< HEAD
 
+=======
+
+  }
+
+  async start() {
+    this.log("🚀 Starting Advanced App Improvement Suite...");
+    
+    try {
+      const results = {
+        bundleOptimization: await this.optimizeBundle(),
+        performanceImprovements: await this.improvePerformance(),
+        securityEnhancements: await this.enhanceSecurity(),
+        testResults: await this.runTests()
+      };
+      
+      await this.generateReport(results);
+      this.log("✅ Advanced App Improvement Suite completed successfully!");
+    } catch (error) {
+      this.log(`❌ Advanced App Improvement Suite failed: ${error.message}`, 'ERROR');
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     console.log(`[${timestamp}] ${message}`);
   }
 
@@ -425,9 +579,12 @@ main
     
     this.log(`📊 Improvement report saved to: ${reportPath}`);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     return report;
   }
@@ -441,6 +598,7 @@ main
     } catch (error) {
       this.log(`Advanced App Improvement Suite failed: ${error.message}`);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       throw error;    }
@@ -453,10 +611,20 @@ main
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      throw error;
+
+
+      this.log(`❌ Fatal error: ${error.message}`);
+      this.errors.push({ type: 'fatal', message: error.message });
+      process.exit(1);
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -473,6 +641,15 @@ if (require.main === module) {
 }
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+// Run if called directly
+if (require.main === module) {
+  const suite = new AdvancedAppImprovementSuite(process.cwd());
+  suite.start().catch(console.error);
+}
+
+module.exports = AdvancedAppImprovementSuite;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 module.exports = AdvancedAppImprovementSuite;
 main
 
@@ -967,5 +1144,8 @@ suite.run();
 const suite = new AdvancedAppImprovementSuite();
 suite.run().catch(console.error);
 
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

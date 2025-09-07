@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
 
 ;
 import React, { useState } from 'react';
@@ -11,6 +12,8 @@ import {Dialog;
 import { DisputeForm } from "./DisputeForm";
 import { useRouter } from 'next/router';
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/disputes/RaiseDisputeButton.tsx
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import {  Dialog
@@ -20,6 +23,7 @@ import {  Dialog
   DialogDescription
 } from '@/components/ui/dialog'
 import { DisputeForm } from './DisputeForm'
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { ShieldAlert } from 'lucide-react'
   DialogDescription} from "@/components/ui/dialog"
@@ -34,6 +38,12 @@ interface RaiseDisputeButtonProps {
 return (
     <>;
 
+=======
+Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/disputes/RaiseDisputeButton.tsx
 
   projectId: string,
   milestoneId?: string,
@@ -55,6 +65,7 @@ export function RaiseDisputeButton({
 }: RaiseDisputeButtonProps) {
 
 
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
 }
 
 export function RaiseDisputeButton({ 
@@ -62,6 +73,16 @@ export function RaiseDisputeButton({
   milestoneId;
   variant;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  const [isDialogOpen, setIsDialogOpen] = useState(false),
+  const router = useRouter(),
+  
+  const handleDisputeCreated = (disputeId: string) => {
+    setIsDialogOpen(false),
+    router.push(`/dashboard/disputes/${disputeId}`)
+  },
+  
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/disputes/RaiseDisputeButton.tsx
   return (
     <>
       <Button 
@@ -149,6 +170,7 @@ export function RaiseDisputeButton() {const [isDialogOpen, setIsDialogOpen] = us
             milestone_id={milestone_id}
 <<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
             onDisputeCreated={handleDisputeCreated}
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
             on_cancel={() => setIsDialogOpen (false)}          />;
         </DialogContent>;
       </Dialog>;
@@ -157,6 +179,14 @@ export function RaiseDisputeButton() {const [isDialogOpen, setIsDialogOpen] = us
 
 
 
+=======
+            onCancel={() => setIsDialogOpen(false)}          />
+        </DialogContent>
+      </Dialog>
+    </>
+  )
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/disputes/RaiseDisputeButton.tsx
           
           <DisputeForm 
 import React, { useState } from "react",;
@@ -228,6 +258,7 @@ export function RaiseDisputeButton({;
     </>;
 <<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
   );
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
 
 }
 ;
@@ -237,3 +268,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
   )})
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/disputes/RaiseDisputeButton.tsx
+=======
+
+
+}
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/disputes/RaiseDisputeButton.tsx

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {useState} from "react"
 import {logDebug, logErrorToProduction} from '@/utils/productionLogger'
 import {useToast} from "@/hooks/use-toast"
@@ -23,6 +24,8 @@ const serviceStepSchema = z.object({
   serviceType: z.string().min(1),
   specificItem: z.object({ id: z.string() })}),
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   const [formData, setFormData] = useState<QuoteFormData>({
     serviceType: ""
@@ -38,6 +41,10 @@ const serviceStepSchema = z.object({
       type: "fixed"
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     },
 
 
@@ -47,6 +54,7 @@ const serviceStepSchema = z.object({
       phone: ""
       company: ""
     }
+<<<<<<< HEAD
 
 
 import {useState} from "react";
@@ -107,6 +115,8 @@ export function QuoteRequestForm() {;
   );
 }
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   )
 }
@@ -171,6 +181,7 @@ function QuoteRequestForm() {
   );
 }
 
+<<<<<<< HEAD
 ;
 =======
 
@@ -333,3 +344,7 @@ timeline: timeline || formData.timeline;
 }/> </div>)}'";
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -701,6 +702,9 @@ export interface EmergingTechBreakthrough2025  {id: string;
   }
 ];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -708,6 +712,7 @@ export interface EmergingTechBreakthrough2025  {id: string;
     },
     real_implementation: true,
     implementation_details:;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -756,6 +761,10 @@ export interface EmergingTechBreakthrough2025  {id: string;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
   // Brain-Computer Interface Platform
@@ -763,6 +772,10 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
 
     id: 'brain-computer-interface-platform', name: 'Brain-Computer Interface Platform',
     tagline: 'Direct neural interface for human-computer interaction',
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { ServiceVariant } from '../types/service-variants';
 export interface EmergingTechBreakthrough2025 {
   id: string;
@@ -805,7 +818,10 @@ export interface EmergingTechBreakthrough2025 {
     id: 'brain-computer-interface-platform';
     name: 'Brain-Computer Interface Platform';
     tagline: 'Direct neural interface for human-computer interaction';
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     price: '$25,000',
     period: '/month',
     description: 'Revolutionary brain-computer interface platform that enables direct communication between the human brain and computers for medical applications, gaming, and productivity enhancement.',
@@ -830,17 +846,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
-<<<<<<< HEAD
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -874,6 +895,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ;
+=======
+
+;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     realImplementation: true
     implementationDetails:
       'Complete quantum internet security platform with quantum cryptography, network monitoring, and compliance tools.'
@@ -926,6 +952,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Asteroid mining, Resource extraction, Space logistics, Infrastructure management, Resource trading'
     ]
     roi: 'Space resource extraction shows 2000%+ ROI through valuable rare earth elements and precious metals.'
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   // Quantum Internet Security Platform
   {
     id: 'quantum-internet-security-platform',
@@ -1033,7 +1063,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Asteroid mining, Resource extraction, Space logistics, Infrastructure management, Resource trading',
     ],
     roi: 'Space resource extraction shows 2000%+ ROI through valuable rare earth elements and precious metals.',
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     competitors: [
       'Planetary Resources, Deep Space Industries, Asteroid Mining Corporation',
     ],
@@ -1305,16 +1338,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Complete metaverse AI development platform with AI-powered tools, dynamic generation, and intelligent environments.'
     launchDate: '2025-02-25'
     customers: 32
     rating: 4.7
     reviews: 18
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       'Complete metaverse AI development platform with AI-powered tools, dynamic generation, and intelligent environments.',
@@ -1327,6 +1364,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1343,6 +1382,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
@@ -1357,6 +1397,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechBreakthrough2025 {;
   id: string,;
@@ -1629,6 +1671,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -1638,6 +1681,16 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  }
+
+  }
+
+;
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Complete metaverse AI development platform with AI-powered tools, dynamic generation, and intelligent environments.',
     launchDate: '2025-02-25',
     customers: 32,
@@ -1648,6 +1701,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 18
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -1661,3 +1715,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

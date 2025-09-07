@@ -48,10 +48,22 @@ function fixFile(filePath) {
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
     let modified = false;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    // Fix common syntax errors
+    const fixes = [
+      // Fix files that start with just a closing brace
+      {
+        pattern: /^[\s\n]*\}\s*$/,
+        replacement: `import type { NextApiRequest, NextApiResponse } from 'next';\n\nexport default async function handler(req: NextApiRequest, res: NextApiResponse) {\n  res.status(200).json({ message: 'API endpoint' });\n}`
+      },
+      // Fix merge conflict markers
+      {
+        pattern: /[\s\S]*?[\s\S]*?
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         replacement: ''
       },
       // Fix malformed function declarations
@@ -134,6 +146,7 @@ function walkDirectory(dir) {
     } else if (file.endsWith('.ts') && !file.endsWith('.d.ts')) {
       if (fixSyntaxErrors(filePath)) {
         fixedCount++;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -160,6 +173,8 @@ function walkDirectory(dir) {
         modified = true;
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       }
     }
 
@@ -170,6 +185,7 @@ function walkDirectory(dir) {
   } catch (error) {
     console.error(`Error reading directory ${dir}:`, error.message);
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -209,11 +225,20 @@ console.log('🎯 Syntax error fixing complete!');
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
   
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return fixedCount;
 }
 
 console.log('Starting syntax error fixes...');
+<<<<<<< HEAD
 const fixedCount = walkDirectory('/workspace');
 console.log(`Fixed ${fixedCount} files`);
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+=======
+const apiDir = '/workspace/pages/api';
+const fixedCount = findAndFixApiFiles(apiDir);
+console.log(`Fixed ${fixedCount} files`);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

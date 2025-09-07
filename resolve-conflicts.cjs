@@ -24,11 +24,27 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
     
+<<<<<<< HEAD
     // Remove all merge conflict markers and keep the main branch version (after =======)
     
     // Clean up any remaining conflict markers
     
     // Remove any remaining conflict markers
+=======
+    // Remove all merge conflict markers and keep the main branch version (after )
+    content = content.replace(/[\s\S]*?([\s\S]*?)
+    
+    // Handle incomplete conflicts (missing closing markers)
+    content = content.replace(/[\s\S]*?([\s\S]*?)(?=\n|$)/g, '$1');
+    
+    // Clean up any remaining conflict markers
+    content = content.replace(/[\s\S]*?[\s\S]*?
+    content = content.replace(/[\s\S]*?[\s\S]*?
+    
+    // Remove any remaining conflict markers
+    content = content.replace(/[\s\S]*?[\s\S]*?
+    content = content.replace(/[\s\S]*?[\s\S]*?
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     
     // Clean up multiple newlines
     content = content.replace(/\n{3,}/g, '\n\n');
@@ -116,7 +132,11 @@ function findFilesWithConflictMarkers() {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
 <<<<<<< HEAD
+<<<<<<< HEAD
           if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>> ')) {
+=======
+          if (content.includes('') || content.includes('') || content.includes('
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             conflictedFiles.push(fullPath);
           }
         } catch (error) {

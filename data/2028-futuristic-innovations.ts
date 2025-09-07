@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -13,10 +14,15 @@
 export interface FuturisticInnovation2028  {export interface FuturisticInnovation2028  {id: string;
 export interface FuturisticInnovation2028 {  id: string;export interface FuturisticInnovation2028  {id: string;name: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export interface FuturisticInnovation2028 {
-<<<<<<< HEAD
+
   id: string;
 export interface FuturisticInnovation2028 {  id: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -28,6 +34,8 @@ export interface FuturisticInnovation2028 {
 
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   name: string;
   tagline: string;
   price: string;
@@ -93,13 +101,17 @@ export const futuristic2028Services: FuturisticInnovation2028[] = [;
   contact_info: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 <<<<<<< HEAD
 
     address: string;
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -115,6 +127,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export interface FuturisticInnovation2028 {;
   id: string,;
   name: string,;
@@ -128,6 +143,7 @@ export interface FuturisticInnovation2028 {;
   contactInfo: {;
     mobile: string,;
     email: string,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -157,11 +173,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     address: string;
   }
 export const futuristic2028Services: FuturisticInnovation2028[] = [
   {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -184,6 +206,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
     address: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+    address: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
 ;
 export const futuristic2028Services: FuturisticInnovation2028[] = [;
@@ -218,6 +245,7 @@ export const futuristic2028Services: FuturisticInnovation2028[] = [;
     }
   }
 ];
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -245,10 +273,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -267,6 +300,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -279,6 +316,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 export const futuristic2028Services: FuturisticInnovation2028[] = [
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -299,6 +337,14 @@ export const futuristic2028Services: FuturisticInnovation2028[] = [
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+    id: "2028-futuristic-innovation", name: "2028 Futuristic Innovation Platform",
+    tagline: "Futuristic innovations for 2028", price: "$399/month",
+    description: "Futuristic innovation platform that showcases breakthrough technologies for 2028.",
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     address: string
   }
 }
@@ -311,6 +357,7 @@ export const futuristic2028Services: FuturisticInnovation2028[] = [
     price: "$399/month";
     description: "Futuristic innovation platform that showcases breakthrough technologies for 2028.";
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -319,12 +366,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     features: [
       "Futuristic innovations";
       "Breakthrough technologies";
       "Future capabilities";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       "Innovation platform";
       "Expert insights";
     ];
@@ -358,6 +411,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 =======
@@ -380,10 +434,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -445,10 +503,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ];      mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -465,3 +527,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import React, { useState } from 'react';
 <<<<<<< HEAD
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
@@ -65,8 +73,25 @@ fetch("/api/contact", {
 
 
 
+<<<<<<< HEAD
+=======
+
+import { useState } from "react",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { toast } from "@/components/ui/use-toast";
+import z from "zod";
+import { Mail } from 'lucide-react'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
+<<<<<<< HEAD
+=======
+  const handleChange = null;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
     <section className="py-16 px-4 bg-white">
       <div className="container mx-auto max-w-6xl">
@@ -234,6 +259,11 @@ const ContactSection: React.FC = () => {const [formData, setFormData] = useState
 };
 
 export default ContactSection;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
                   {submitted && (
@@ -320,7 +350,47 @@ description: err.message;
 }'"}
 }
 ;
+<<<<<<< HEAD
 =======
     </section>;
   )}export default ContactSection;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+
+}setErrors (fieldErrors);
+toast ({;
+  return;
+}setErrors ({;
+  ;
+});
+setIsSubmitting (true);
+}) .catch ( (err) => {;
+  setIsSubmitting (false);
+toast ({;
+  title: "Submission Error";
+description: err.message;
+});
+};";
+}</div> <div> <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1" > Email </label> <Input) ";
+}</div> </div> <div> <label htmlFor="subject" className="block text-sm font-medium text-zion-slate-light mb-1" > Subject </label> <Input) ";
+}</div> <div> <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1" > Message </label> <Textarea) ;
+}</div> <div> <Button > {';
+  isSubmitting ? 'Sending...' : 'Send Message' ;
+}</Button>) ;
+}</div> </form> </div> </div> </div> </div> </section>) ;
+}'"
+
+
+export default ContactSection;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -56,6 +57,11 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
 import clsx from 'clsx';
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import React from "react";
 import clsx from "clsx";
 export type EnhancedButtonProps =;
@@ -122,6 +128,7 @@ function EnhancedButton() {return (<button;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -134,6 +141,13 @@ function EnhancedButton() {return (<button;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   };
 
+=======
+
+
+
+  };
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const baseStyles =;
   "inline-flex items-center justify-center font-semibold rounded-md transition focus:outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]";
 const sizeStyles: Record<NonNullable<EnhancedButtonProps["size"]>, string> = {;
@@ -158,11 +172,11 @@ export default function EnhancedButton(): any ({;
   fullWidth,;
   ...props;
 }: EnhancedButtonProps) {;
-<<<<<<< HEAD
 
   return (
     <button
       className={clsx(
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from 'react';
@@ -223,11 +237,14 @@ export type EnhancedButtonProps = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   ...props
 }: EnhancedButtonProps) {
   return (
     <button
 className={clsx(
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -244,6 +261,12 @@ className={clsx(
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         baseStyles
         sizeStyles[size]
         variantStyles[variant]
@@ -251,6 +274,7 @@ className={clsx(
         className
       )}
       {...props}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -314,10 +338,19 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 }
+=======
+}
+
+
+
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     />;
 );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     />;
 );
@@ -360,3 +393,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+    />;
+);
+}
+
+const EnhancedButton: React.FC<EnhancedButtonProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>EnhancedButton</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default EnhancedButton;
+
+
+}
+
+
+
+
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

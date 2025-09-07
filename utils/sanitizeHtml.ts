@@ -15,9 +15,17 @@ export function sanitizeHtml("html": string): string {
   // Remove script tags
   let sanitized = html.replace(/<script\b[^<]*(?: (?!<\/script>)<[^<]*)*<\/script>/gi, '');
   // Remove event handlers
+<<<<<<< HEAD
   sanitized = sanitized.replace(/\s*on\w+\s*=\s*['"][^'"]*['"]/g, '');'"
   // Remove javascript: URLs
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+export function sanitizeHtml(html: string): string {
+  let sanitized = html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
+origin/main
+origin/automation-improvements-final
+  sanitized = sanitized.replace(/\s*on\w+\s*=\s*['"][^'"]*['"]/g, '');
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   sanitized = sanitized.replace(/javascript:/gi, '');
   sanitized = sanitized.replace(/data:text\/html/gi, '');
   return sanitized;

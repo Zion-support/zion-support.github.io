@@ -1,4 +1,5 @@
 <<<<<<< HEAD:src_backup/components/jobs/EmptyMatchesCard.tsx
+<<<<<<< HEAD:src_backup/components/jobs/EmptyMatchesCard.tsx
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Sparkles, RefreshCcw } from 'lucide-react';
@@ -6,6 +7,8 @@ import { Sparkles, RefreshCcw } from 'lucide-react';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/EmptyMatchesCard.tsx
 import { Sparkles, RefreshCcw } from 'lucide-react'
 export interface EmptyMatchesCardProps {
   onRefresh: () => void;
@@ -35,11 +38,28 @@ export function EmptyMatchesCard() {return (<Card className='p-6 text-center bor
 <<<<<<< HEAD:src_backup/components/jobs/EmptyMatchesCard.tsx
         Run AI matching to find talents that match this job&apos;s requirements.
       </p>
+<<<<<<< HEAD:src_backup/components/jobs/EmptyMatchesCard.tsx
 export function EmptyMatchesCard(): any ({;
   onRefresh,;
   isProcessing,;
 }: EmptyMatchesCardProps) {;
 
+=======
+      <Button onClick={onRefresh} disabled={isProcessing} className='mx-auto'>      <Button 
+        onClick = {onRefresh,}
+        disabled = {isProcessing,}
+  return (
+import { Card } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Sparkles, RefreshCcw } from 'lucide-react'
+
+export interface EmptyMatchesCardProps {
+  onRefresh: () => void,
+  isProcessing: boolean
+}
+
+export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/EmptyMatchesCard.tsx
   return (
 
     <Card className="p-6 text-center border-dashed border-2 bg-muted/30">
@@ -63,20 +83,28 @@ export function EmptyMatchesCard(): any ({;
           <>
 
 
+<<<<<<< HEAD:src_backup/components/jobs/EmptyMatchesCard.tsx
             <RefreshCcw className="mr-2 h-4 w-4 animate-spin" />
 
 
 
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/EmptyMatchesCard.tsx
       <Button onClick={onRefresh} disabled={isProcessing} className='mx-auto'>
         {isProcessing ? (
           <>
             <RefreshCcw className='mr-2 h-4 w-4 animate-spin' />
+<<<<<<< HEAD:src_backup/components/jobs/EmptyMatchesCard.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/EmptyMatchesCard.tsx
             Processing...
           </>
         ) : (
           <>
 
+<<<<<<< HEAD:src_backup/components/jobs/EmptyMatchesCard.tsx
 import { Card } from '@/components/ui/ card';
 import { Button } from '@/components/ui/ button';
 import { Sparkles, RefreshCcw } from 'lucide-react';
@@ -148,6 +176,22 @@ function EmptyMatchesCard() {return (<Card className='p - 6 text - center border
     </Card>);
 }
 ;
+=======
+
+
+}
+
+
+            <Sparkles className="mr-2 h-4 w-4" />
+            Find AI Matches
+          </>
+        )}
+
+      </Button>;
+    </Card>;
+  );
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/EmptyMatchesCard.tsx
 
 <Sparkles className='mr-2 h-4 w-4' />
             Find AI Matches
@@ -157,6 +201,7 @@ function EmptyMatchesCard() {return (<Card className='p - 6 text - center border
     </Card>
   );
 }
+<<<<<<< HEAD:src_backup/components/jobs/EmptyMatchesCard.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     </Card>)}<Sparkles className='mr-2 h-4 w-4' />;
@@ -167,3 +212,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </Card>;
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/jobs/EmptyMatchesCard.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/EmptyMatchesCard.tsx

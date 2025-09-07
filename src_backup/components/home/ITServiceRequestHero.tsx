@@ -1,8 +1,23 @@
 <<<<<<< HEAD:src_backup/components/home/ITServiceRequestHero.tsx
+<<<<<<< HEAD:src_backup/components/home/ITServiceRequestHero.tsx
 import { useTranslation } from "react-i18next";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function ITServiceRequestHero() {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import React, { useState } from 'react';
+import Image from 'next/image';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { useToast } from '@/hooks/use-toast';
+import axios from 'axios';
+import { Loader2 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { logErrorToProduction } from '@/utils/productionLogger';export function ITServiceRequestHero() {;
+;export function ITServiceRequestHero(): any (...args[]):  {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/home/ITServiceRequestHero.tsx
 
   const [location, setLocation] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -87,8 +102,11 @@ export function ITServiceRequestHero() {;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
   const { t } = useTranslation();
+<<<<<<< HEAD:src_backup/components/home/ITServiceRequestHero.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/home/ITServiceRequestHero.tsx
 
   const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
@@ -121,6 +139,7 @@ function ITServiceRequestHero() { export function ITServiceRequestHero (...args[
   const handle_submit = async e: React.FormEvent {e.prevent_default ();
     if () {) {
   $2
+<<<<<<< HEAD:src_backup/components/home/ITServiceRequestHero.tsx
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -159,6 +178,8 @@ import { logErrorToProduction } from '@/utils/productionLogger'; export function
   const containerVariants = {hidden: { opacity: 0;
   y: 20;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/home/ITServiceRequestHero.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/home/ITServiceRequestHero.tsx
 }
       setIsSubmitting (true)// Simulate API call;
       set_timeout (: unknown {setIsSubmitting (false)router (`/it - onsite - services?location = ${encodeURIComponent (location)}`)}, 1000)}}}}}}}}}}
@@ -226,6 +247,7 @@ if ( {) {$2;
       setIsSubmitting (false);
     }
   }
+<<<<<<< HEAD:src_backup/components/home/ITServiceRequestHero.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <section
@@ -321,6 +343,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {t(;
                   'onsite_form && onsite_form.email_helper',;
                   "We'll confirm your request here.";
+=======
+
+
+
+
+
+                )}
+              </p>;
+              <Input
+                value={phone}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/home/ITServiceRequestHero.tsx
 
                 )}
 =======
@@ -493,9 +526,14 @@ py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020
 }Request Service </Button> </form> </div>
 }'"
 
+<<<<<<< HEAD:src_backup/components/home/ITServiceRequestHero.tsx
 ;
 
 
+=======
+}
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/home/ITServiceRequestHero.tsx
 import React, { useState } from "react",;
 import Image from "next/image",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -681,6 +719,11 @@ py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020
 }'";
 <<<<<<< HEAD:src_backup/components/home/ITServiceRequestHero.tsx
 }
+<<<<<<< HEAD:src_backup/components/home/ITServiceRequestHero.tsx
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/home/ITServiceRequestHero.tsx
 }
 
 
@@ -715,7 +758,11 @@ py - 16 md:py - 24 border - b border - zion - purple / 20 bg-[radial - gradient 
 }
 ;
 
+<<<<<<< HEAD:src_backup/components/home/ITServiceRequestHero.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/home/ITServiceRequestHero.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/home/ITServiceRequestHero.tsx

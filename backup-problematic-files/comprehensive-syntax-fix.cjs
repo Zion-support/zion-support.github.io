@@ -324,6 +324,12 @@ console.log(`✅ Fixed ${fixedCount} files`);
   async fixMergeConflicts() {
     this.log('🔧 Fixing merge conflicts...');
     // Remove merge conflict markers
+<<<<<<< HEAD
+=======
+    content = content.replace(/[\s\S]*?[\s\S]*?
+    content = content.replace(/[\s\S]*?
+    content = content.replace(/[\s\S]*?
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     
     // Fix common syntax errors
     content = content.replace(/;\s*;/g, ';');

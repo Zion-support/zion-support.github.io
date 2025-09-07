@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -20,6 +21,12 @@ export interface InnovativeAIAutomationService  {id: string;name: string;
 export interface InnovativeAIAutomationService {
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  id: string;
+
+export interface InnovativeAIAutomationService {
+id: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   name: string;
   tagline: string;
   price: string;
@@ -53,14 +60,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
     website: string
   },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
   reviews: number
 }
@@ -398,6 +410,12 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     rating: 4.9;
     reviews: 28;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+  reviews: number
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   reviews: number;
 export const innovative2025AIAutomationServices: InnovativeAIAutomationService[] =
@@ -735,6 +753,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
 <<<<<<< HEAD
+<<<<<<< HEAD
     
     },
     realImplementation: true;
@@ -744,6 +763,8 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     rating: 4.9;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
     realImplementation: true
     implementationDetails: 'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.'
@@ -960,7 +981,10 @@ export interface InnovativeAIAutomationService  {id: string,name: string,tagline
   rating: number;
 
   reviews: number;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export const innovative2025AIAutomationServices: InnovativeAIAutomationService[] =
   [
     // AI-Powered Autonomous Business Process Orchestrator
@@ -1278,6 +1302,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       },
       realImplementation: true,
       implementationDetails:
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
         'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.',
       launchDate: '2025-03-01',
@@ -1337,10 +1362,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+        'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.'
+      launchDate: '2025-03-01'
+      customers: 35
+      rating: 4.9
+      reviews: 28
+    }
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ;
   }
 ];
 export interface InnovativeAIAutomationService {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1349,6 +1384,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string,;
   name: string,;
   tagline: string,;
@@ -1611,8 +1650,14 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     reviews: 28;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
 ];
 ;
@@ -1638,6 +1683,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1652,11 +1698,15 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     },
   ];
     reviews: 28
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -1666,3 +1716,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

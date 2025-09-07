@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useMemo, useState } from 'react',
 import Link from 'next/link';
 import { getWhitepaperSections, OPERATOR_PROMPT  } from '../utils/whitepaper/zionWhitepaper';
@@ -18,11 +19,29 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
   static getDerivedStateFromError(error) {return { hasError: true }}
   componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
   render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
     return this.props.children;
   }
 }
 import React, { useMemo, useState } from 'react';
+<<<<<<< HEAD
 import {getWhitepaperSections,OPERATOR_PROMPT,} from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT  } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
@@ -31,6 +50,29 @@ export default function WhitepaperBuilderPage() {export default function Whitepa
             <h2 className="text-2xl font-bold">{s.title}</h2>;
             {s.subtitle ? <p className="text-gray-500">{s.subtitle}</p> : null}
             <article className="prose dark:prose-invert max-w-none whitespace-pre-wrap">{s.contentMd}</article>;
+=======
+
+import {;
+  getWhitepaperSections,;
+  OPERATOR_PROMPT,;
+} from '../utils/whitepaper/zionWhitepaper';
+import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../utils/whitepaper/zionWhitepaper';
+import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
+export default function WhitepaperBuilderPage() {;
+export default function WhitepaperBuilderPage() {
+  const [edition, setEdition] = useState<WhitepaperEdition>('full');
+  const sections = useMemo(() => getWhitepaperSections(edition), [edition]);
+    return `/api/zion-whitepaper-pdf?edition=${edition}`;
+  }, [edition]);
+  return (
+
+  return (
+        {sections.map((s) => (
+          <section key={s.id} className="space-y-2">
+            <h2 className="text-2xl font-bold">{s.title}</h2>
+            {s.subtitle ? <p className="text-gray-500">{s.subtitle}</p> : null}
+            <article className="prose dark:prose-invert max-w-none whitespace-pre-wrap">{s.contentMd}</article>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         >;
           <option value="full">Full</option>;
           <option value="investor">Investor</option>;
@@ -39,6 +81,7 @@ export default function WhitepaperBuilderPage() {export default function Whitepa
             Download PDF;
           </a>;
         </Link>;
+<<<<<<< HEAD
       </div>;import React, { useMemo, useState } from 'react',import Link from 'next/link';
 import { getWhitepaperSections, OPERATOR_PROMPT   } from '../utils/whitepaper/zionWhitepaper';
 export default function WhitepaperBuilderPage() {const [edition, setEdition] = useState<WhitepaperEdition>('full')const sections = null;
@@ -102,10 +145,14 @@ return `/api/zion-whitepaper-pdf?edition=${edition}`;
 <<<<<<< HEAD
             </article>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      </div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           </section>
         ))}
       </div>
     </div>
+<<<<<<< HEAD
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
@@ -115,6 +162,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ))}
       </div>;
     </div>;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <div className='rounded border p - 4 bg - gray - 50 dark:bg - gray - 900'>;
         <h2 className='text - xl font - semibold mb - 2'>Operator Prompt</h2>;
         <pre className='whitespace - pre - wrap text - sm text - gray - 700 dark:text - gray - 200'>;
@@ -133,5 +182,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {s.subtitle ? <p className="text-gray-500">{s.subtitle}</p> : null}
             <article className="prose dark:prose - invert max - w-none whitespace-pre-wrap">{s.content_md}</article>))}
       </div>;
+<<<<<<< HEAD
     </div>))}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </div>);
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

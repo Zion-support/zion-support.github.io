@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -27,6 +28,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import { ServiceVariant  } from '../types/service-variants';
 export interface InnovativeBusinessSolution  {id: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+import { ServiceVariant } from '../types/service-variants';
+export interface InnovativeBusinessSolution {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string;
   name: string;
   tagline: string;
@@ -853,6 +860,7 @@ export interface InnovativeBusinessSolution  {id: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -924,6 +932,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+  {
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export interface InnovativeBusinessSolution {
   id: string, name: string,
   tagline: string, price: string,
@@ -945,16 +958,20 @@ export interface InnovativeBusinessSolution {
   reviews: number
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -985,6 +1002,12 @@ export interface InnovativeBusinessSolution {
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ;
+=======
+
+
+;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     realImplementation: true
     implementationDetails:
       'Comprehensive AI-powered marketing automation platform with intelligent optimization, customer engagement, and seamless marketing tool integration.'
@@ -1399,6 +1422,7 @@ export interface InnovativeBusinessSolution {
     reviews: 26
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       'Comprehensive AI-powered project management platform with intelligent planning, optimization, and seamless project tool integration.',
     launchDate: '2025-05-01',
@@ -1410,6 +1434,8 @@ export interface InnovativeBusinessSolution {
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1426,6 +1452,7 @@ export interface InnovativeBusinessSolution {
 ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
@@ -1440,6 +1467,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeBusinessSolution {;
   id: string,;
@@ -1746,6 +1775,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -1755,6 +1785,16 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  }
+
+  }
+
+;
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     id: 'ai-marketing-automation-platform',
     name: 'AI Marketing Automation Platform',
     tagline: 'Intelligent marketing automation and optimization',
@@ -2249,6 +2289,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
   }
@@ -2261,3 +2302,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

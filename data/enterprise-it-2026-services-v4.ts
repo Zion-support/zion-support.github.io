@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   contactInfo: {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -65,6 +66,9 @@
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  contactInfo: {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   contactInfo: {contactInfo: {mobile: string;
     email: string;
@@ -358,6 +362,7 @@ export interface EnterpriseIT2026ServiceV4  {{mobile: '+1 302 464 0950',email: '
     address: string,
     website: string
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -366,6 +371,9 @@ export interface EnterpriseIT2026ServiceV4  {{mobile: '+1 302 464 0950',email: '
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     },
 =======
     rating: 4.9;
@@ -388,6 +396,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     id: 'ai-powered-it-operations-center', name: 'AI-Powered IT Operations Center',
     tagline: 'Automate IT operations with intelligent AI', price: '$899',
     period: '/month',
@@ -575,6 +586,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     contactInfo: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -586,10 +598,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     },
     realImplementation: true, implementationDetails: 'Quantum-safe cloud storage platform with quantum-resistant encryption and distributed storage.',
     launchDate: '2026-05-01', customers: 40,
     rating: 4.9,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -603,6 +619,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     launchDate: '2026-05-01', customers: 40,
     rating: 4.9
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -611,6 +631,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 32;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -635,6 +656,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseIT2026ServiceV4 {;
   id: string,;
@@ -1029,6 +1054,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [;
     customers: 40,;
     rating: 4.9;
     reviews: 32;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1125,84 +1151,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.7,
     reviews: 95,
   },
+=======
+  }
+];
+  }
+];
 
-  // Quantum-Resistant Cryptography Platform
-  {
-    id: 'quantum-resistant-cryptography-platform',
-    name: 'Quantum-Resistant Cryptography Platform',
-    tagline: 'Future-proof encryption against quantum threats',
-    price: '$1,599',
-    period: '/month',
-    description:
-      'Advanced quantum-resistant cryptography platform that implements post-quantum cryptographic algorithms to protect sensitive data and communications from future quantum computing attacks.',
-    features: [
-      'Post-quantum algorithms',
-      'Hybrid encryption',
-      'Key management',
-      'Performance optimization',
-      'Compliance validation',
-      'Migration tools',
-      'API integration',
-      'Security auditing',
-      'Expert consultation',
-      'Future-proofing',
-    ],
-    popular: false,
-    icon: '🔒',
-    color: 'from-purple-600 to-violet-600',
-    textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/quantum-resistant-cryptography-platform',
-    marketPosition:
-      'First comprehensive quantum-resistant cryptography platform. Competitive advantage: Future-proof security, hybrid encryption, and migration tools.',
-    targetAudience:
-      'Financial institutions, Government agencies, Healthcare organizations, Defense contractors, Technology companies',
-    trialDays: 14,
-    setupTime: '1 month',
-    category: 'Quantum Security',
-    realService: true,
-    technology: [
-      'Post-Quantum Cryptography',
-      'Hybrid Encryption',
-      'React',
-      'Python',
-      'PostgreSQL',
-      'AWS',
-      'Cryptography',
-    ],
-    integrations: [
-      'PKI systems',
-      'HSMs',
-      'Cloud platforms',
-      'Security tools',
-      'Compliance systems',
-    ],
-    useCases: [
-      'Data protection',
-      'Secure communications',
-      'Compliance',
-      'Future-proofing',
-      'Migration',
-    ],
-    roi: 'Ensure long-term security, maintain compliance, protect against future threats',
-    competitors: ['Entrust', 'DigiCert', 'GlobalSign'],
-    marketSize: '$15B cryptography market',
-    growthRate: '70% annual growth',
-    variant: 'quantum-futuristic',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    },
-    realImplementation: true,
-    implementationDetails:
-      'Advanced quantum-resistant cryptography platform with post-quantum algorithms and hybrid encryption.',
-    launchDate: '2026-04-01',
-    customers: 35,
-    rating: 4.9,
-    reviews: 28,
-  },
 
+;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+<<<<<<< HEAD
   // Autonomous Cloud Migration Platform
   {
     id: 'autonomous-cloud-migration-platform',
@@ -1613,3 +1574,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

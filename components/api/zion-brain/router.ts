@@ -1,10 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { appendLog, detectIntent, routeToChain } from '@/utils/zionBrain';
 function isAuthorized(req: NextApiRequest): boolean {
   const token = null;
     return res.status(500).json({ error: 'Router failure' })
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (!isAuthorized(req))
+    return res.status(401).json({ error: "Unauthorized" });
+  function isAuthorized(req: NextApiRequest): boolean {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
   export default async function handler(
     req: NextApiRequest
@@ -63,6 +73,7 @@ function isAuthorized(req: NextApiRequest): boolean {const token = null;
       latency_ms,
       payload: { error: e?.message || "unknown" },
     });
+<<<<<<< HEAD
     return res.status(500).json({ error: "Router failure" });
   }
 }
@@ -74,3 +85,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     append_log ({module: "router",type: "audit",status: "error",latency_ms,payload: { error: e?.message || "unknown" },})return res.status(500).json({ error: "Router failure" })}
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+    return res.status(500).json({ error: "Router failure" });
+  }
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

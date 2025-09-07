@@ -4,6 +4,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -49,6 +50,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+    return res.status(405).json({ error: 'Method not allowed' });
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   if (req.method !== 'POST')
   if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
@@ -91,6 +100,7 @@ export default function handler() {if (req.method !== 'POST')if (req.method !== 
     })res && res.status(201).json({ vendor })} catch (e: any) {verification_docs,case_studies;
 
 
+<<<<<<< HEAD
   if (req.method !== 'POST')
   if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
@@ -101,6 +111,9 @@ export default function handler() {if (req.method !== 'POST')if (req.method !== 
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const {
     slug
     name
@@ -112,6 +125,7 @@ export default function handler() {if (req.method !== 'POST')if (req.method !== 
   } = req.body |{}
   if (!slug |!name)
     return res.status(400).json({ error: 'Missing required fields' });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -129,13 +143,18 @@ export default function handler() {if (req.method !== 'POST')if (req.method !== 
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
   const {
@@ -148,6 +167,7 @@ export default function handler() {if (req.method !== 'POST')if (req.method !== 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     const vendor = registerVendor({
       slug;
       name;
@@ -161,11 +181,15 @@ export default function handler() {if (req.method !== 'POST')if (req.method !== 
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+=======
+    const vendor = registerVendor({
+      slug;
+      name;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       slug,
       name,
       servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [],
       teamSize: Number(teamSize || 0),
-<<<<<<< HEAD
 
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -176,18 +200,24 @@ export default function handler() {if (req.method !== 'POST')if (req.method !== 
   if (!slug || !name) return res.status(400).json({ error: 'Missing required fields' });
   if (getVendorBySlug(slug)) return res.status(409).json({ error: 'Slug already taken' });
   try {
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     const vendor = registerVendor({
       slug;
       name;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     const vendor = registerVendor({
       slug;
       name;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [];
       teamSize: Number(teamSize || 0);
       about;
@@ -197,6 +227,7 @@ export default function handler() {if (req.method !== 'POST')if (req.method !== 
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
       servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [];
@@ -207,10 +238,13 @@ export default function handler() {if (req.method !== 'POST')if (req.method !== 
       slug;
       name;
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
       verificationDocs: Array.isArray(verificationDocs) ? verificationDocs : []
       caseStudies: Array.isArray(caseStudies) ? caseStudies : []});
     res.status(201).json({ vendor })
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -220,6 +254,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   } catch (e: any) {
     res && res.status(500).json({ error: e && e.message });
   }
@@ -230,18 +267,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     res && res.status(500).json({ error: e && e.message });
   }    res && res.status(500).json({ error: e && e.message })
   };
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -270,6 +312,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     verification_docs,
     case_studies
   } = req.body || {}
@@ -307,6 +353,7 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
   } catch (e: any) {
     res.status (500).json ({ error: e.message });
   }    res.status (500).json ({ error: e.message });
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 }
@@ -352,3 +399,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  }
+}
+
+
+  }
+}
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

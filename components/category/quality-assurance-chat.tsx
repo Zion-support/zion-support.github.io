@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -30,6 +29,7 @@ const QualityAssuranceChat: NextPage = () => {;
     </div>
       </Head>;
 
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <main>;
@@ -64,6 +64,17 @@ export default QualityAssuranceChat;
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+
+
+
+import type { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 const QualityAssuranceChat: NextPage = () => {
   return (
@@ -76,6 +87,7 @@ const QualityAssuranceChat: NextPage = () => {
 
         <title>QualityAssuranceChat - Zion Tech Solutions</title>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -99,6 +111,13 @@ const QualityAssuranceChat: NextPage = () => {
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -153,6 +172,7 @@ export default QualityAssuranceChat;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -180,29 +200,13 @@ export default QualityAssuranceChat;
 },
 
 export default QualityAssuranceChat
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
-const QualityAssuranceChat: NextPage = () => {
-  return (
-    <div>
-      <Head>
-        <title>QualityAssuranceChat - Zion Tech Solutions</title>
-        <meta
-          name="description"
-          content="QualityAssuranceChat blog post"
-        />{" "}
-      </Head>
-      <main>
-        <h1>QualityAssuranceChat</h1>
-        <p>Blog content coming soon...</p>
-        <a href="/blog">Back to Blog</a>
-      </main>
-    </div>
-  );
-}
-export default QualityAssuranceChat;
 
+<<<<<<< HEAD
         <title>QualityAssuranceChat - Zion Tech Solutions</title>
         <title>QualityAssuranceChat - Zion Tech Solutions</title>
 <<<<<<< HEAD
@@ -224,3 +228,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

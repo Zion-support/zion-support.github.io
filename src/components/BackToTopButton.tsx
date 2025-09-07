@@ -1,12 +1,46 @@
 <<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { ArrowUp } from 'lucide-react';
+<<<<<<< HEAD
+=======
+import { useEffect, useState } from 'react';
+import { useEffect, useState  } from './react';
+export /**
+ * BackToTopButton - Function description
+ */
+function BackToTopButton() {
+  const [visible, set_visible] = useState (false);
+  useEffect ((, ) => {
+    const update_visibility = () =>: any {
+      set_visible (window.scroll_y > 400);
+    }
+    update_visibility ();
+    window.addEventListener ('scroll', update_visibility);
+    return () => window.removeEventListener ('scroll', update_visibility);
+  }, []);
+  const scrollToTop = () =>: any {
+    const opts: ScrollToOptions = { top: 0, behavior: 'smooth' }
+    window.scroll_to (opts);
+    document.document_element.scroll_to (opts);
+    document.body.scroll_to (opts);
+  }
+
+import { ArrowUp } from 'lucide-react';
+import { useEffect, useState } from "react",;
+export function BackToTopButton() {;
+  const [visible, setVisible] = useState(false),;
+  useEffect(() => {;
+    const updateVisibility = () => {;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 const BackToTopButton: React.FC = () => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const updateVisibility = () => {
+<<<<<<< HEAD
       setVisible(window.scrollY > 400);
     };
 
@@ -14,6 +48,8 @@ const BackToTopButton: React.FC = () => {
     window.addEventListener('scroll', updateVisibility);
     return () => window.removeEventListener('scroll', updateVisibility);
   }, []);
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -21,7 +57,11 @@ const BackToTopButton: React.FC = () => {
       behavior: 'smooth'
     });
   };
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
     <button
       aria-label="Back to top"
@@ -33,6 +73,7 @@ const BackToTopButton: React.FC = () => {
       <ArrowUp className="w-5 h-5" />
     </button>
   );
+<<<<<<< HEAD
 };
 
 export default BackToTopButton;
@@ -49,3 +90,10 @@ export function BackToTopButton() {const [visible, setVisible]  = useState(false
     </button>;
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+}
+;
+
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

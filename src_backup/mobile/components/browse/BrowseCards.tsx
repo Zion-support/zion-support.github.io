@@ -1,6 +1,9 @@
 <<<<<<< HEAD:src_backup/mobile/components/browse/BrowseCards.tsx
+<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseCards.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/browse/BrowseCards.tsx
 interface BrowseItem {;
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/ card';
@@ -16,6 +19,7 @@ import {
 } from 'lucide-react';
 <<<<<<< HEAD:src_backup/mobile/components/browse/BrowseCards.tsx
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
+<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseCards.tsx
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -47,6 +51,8 @@ import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/ avatar';
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/browse/BrowseCards.tsx
 interface BrowseItem {
   id: string;
 =======
@@ -160,6 +166,25 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   {type === "talents" ? (
                     <Avatar className="h-12 w-12">
                       <AvatarImage src={item.image} alt={item.title} />
+<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseCards.tsx
+=======
+                      <AvatarFallback>{item.title.charAt(0).toUpperCase()}</AvatarFallback>
+                    </Avatar>
+                  ) : (
+                    <div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center">
+                      <span className="text-primary font-semibold">JOB</span>
+                    </div>
+                  )}
+
+                  <div>;
+                    <h3 className="font-medium">{item && item.title}</h3>;
+                    <p className="text-sm text-muted-foreground">{item && item.subtitle}</p>;
+                  </div>;
+                </div>;
+
+                <button
+                  className="h-8 w-8 flex items-center justify-center"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/browse/BrowseCards.tsx
 
                   )}
 
@@ -233,6 +258,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     className="text-xs font-normal";
                   >;
 
+<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseCards.tsx
                       <AvatarFallback>
                         {item.title.charAt(0).toUpperCase()}
                       </AvatarFallback>
@@ -267,10 +293,13 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     className='text-xs font-normal'
                   >
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/browse/BrowseCards.tsx
                     {badge}
                   </Badge>
                 ))}
               </div>
+<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseCards.tsx
 <p className='mt-3 text-sm line-clamp-2'>{item.description}</p>
 
               <div className='mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground'>
@@ -295,11 +324,37 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {item.match && (
                   <div className='ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+                {item.location && (
+                  <div className="flex items-center gap-1">
+                    <MapPin className="h-3 w-3" />
+                    <span>{item.location}</span>
+                  </div>
+                )}
+
+                {item.price && (
+                  <div className="flex items-center gap-1">
+                    <DollarSign className="h-3 w-3" />
+                    <span>{item.price}</span>
+                  </div>
+                )}
+
+                {item.timePosted && (
+                  <div className="flex items-center gap-1">
+                    <Clock className="h-3 w-3" />
+                    <span>{item.timePosted}</span>
+                  </div>
+                )}
+
+                  <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/browse/BrowseCards.tsx
                     {item.match}% match
                   </div>
                 )}
               </div>
             </div>
+<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseCards.tsx
 <div className='border-t border-border p-3 flex justify-end'>
               <Button
                 size='sm'
@@ -312,6 +367,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </CardContent>
         </Card>
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/browse/BrowseCards.tsx
 
 =======
   timePosted?: string;
@@ -513,7 +570,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </CardContent>;
         </Card>;
+<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseCards.tsx
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/mobile/components/browse/BrowseCards.tsx
+=======
+
+      ))}
+
+            <div className="border-t border-border p-3 flex justify-end">
+              <Button 
+                size="sm"
+
+                onClick={() => onViewDetails(item.id)}
+                className="gap-1"
+              >
+                View Details <ChevronRight className='h-4 w-4' />
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/browse/BrowseCards.tsx
   time_posted?: string;
 interface BrowseCardsProps  {items: BrowseItem[];
   type: 'jobs' | 'talents';
@@ -634,6 +710,7 @@ function BrowseCards() {const [saved_items, setSavedItems] = useState < string[]
 }
 
       ))}
+<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseCards.tsx
     </div>
   );
 }
@@ -643,3 +720,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )}}</div>;
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/mobile/components/browse/BrowseCards.tsx
+=======
+
+    </div>;
+  );
+};
+}
+
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/browse/BrowseCards.tsx

@@ -1,9 +1,25 @@
 <<<<<<< HEAD:src_backup/components/profile/ProfileAvailability.tsx
+<<<<<<< HEAD:src_backup/components/profile/ProfileAvailability.tsx
 }
 
 export function ProfileAvailability({ availability }: ProfileAvailabilityProps) {
   const getStatusColor = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import { Calendar, Clock, Check } from 'lucide-react'
+import { Calendar } from 'lucide-react'
+interface ProfileAvailabilityProps {
+  availability: Availability
+
+
+
+
+
+
+
+export function ProfileAvailability({
+  availability
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/profile/ProfileAvailability.tsx
 }: ProfileAvailabilityProps) {
   const getStatusColor = (status: 'available' | 'limited' | 'unavailable') => {
 import { Availability } from '@/types / profile';
@@ -18,6 +34,7 @@ export /**
 function ProfileAvailability() {
   const getStatusColor = (status: 'available' | 'limited' | 'unavailable') =>: any {
     switch (status) {
+<<<<<<< HEAD:src_backup/components/profile/ProfileAvailability.tsx
       case 'available':
         return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30';
       case 'limited':
@@ -62,6 +79,33 @@ function ProfileAvailability() {
       </div>
 {availability.message && (
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      case 'available':;
+        return 'bg - emerald - 500 / 20 text - emerald - 400 border - emerald - 500 / 30';
+      case 'limited':;
+        return 'bg - amber - 500 / 20 text - amber - 400 border - amber - 500 / 30';
+      case 'unavailable':;
+        return 'bg - rose - 500 / 20 text - rose - 400 border - rose - 500 / 30';
+      default:;
+        return '';
+    }
+  }
+  const getStatusText = (status: 'available' | 'limited' | 'unavailable') =>: any {
+    switch (status) {
+      case 'available':;
+        return 'Available Now';
+      case 'limited':;
+        return 'Limited Availability';
+      case 'unavailable':;
+        return 'Currently Unavailable';
+      default:;
+        return '' }
+  }
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/profile/ProfileAvailability.tsx
   return (
 
 
@@ -342,11 +386,14 @@ interface ProfileAvailabilityProps  {availability: Availability;export function 
           </div>;
         )}
 <<<<<<< HEAD:src_backup/components/profile/ProfileAvailability.tsx
+<<<<<<< HEAD:src_backup/components/profile/ProfileAvailability.tsx
 
     </div>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/profile/ProfileAvailability.tsx
       </div>;
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">;
       <h3 className="text-xl font-bold text-white mb-4">Availability</h3>;<div className="flex flex-col md:flex-row md:items-center md:gap-6 mb-4">;
@@ -453,6 +500,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>))}
           </div>;
         </div>)}
+<<<<<<< HEAD:src_backup/components/profile/ProfileAvailability.tsx
     </div>)}</div>;
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/profile/ProfileAvailability.tsx
+=======
+    </div>);
+}
+
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/profile/ProfileAvailability.tsx

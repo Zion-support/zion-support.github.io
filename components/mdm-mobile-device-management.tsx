@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Smartphone  } from 'lucide-react';
@@ -15,6 +16,14 @@ import {
   ArrowRight
   Smartphone;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  Phone,
+  Mail,
+  MapPin,
+  Check,
+  ArrowRight,;
+  Smartphone,;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
@@ -22,6 +31,7 @@ import { extraServices } from '../data/extra-services';
 export default function MDMPage() {
   const service = extraServices.find(s =>
     s.link.endsWith('/mdm-mobile-device-management')
+<<<<<<< HEAD
   );
   if (!service) return null;
   return (
@@ -30,6 +40,24 @@ export default function MDMPage() {
         <title>{service.name} - Zion Tech Group</title>
 <meta name='description' content={service.description} />
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+export default function MDMPage() {;
+  const service = extraServices && extraServices.find(s =>;
+    s && s.link.endsWith('/mdm-mobile-device-management');
+  );  if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Button from '../components/ui/Button';
+import { extraServices } from '../data/extra-services';
+export default function MDMPage() {;
+  const service = extraServices && extraServices.find(s => s && s.link.endsWith('/mdm-mobile-device-management'));
+  if (!service) return null;
+
+  return (
+    <UltraAdvancedFuturisticBackground>;
+      <Head>;
+        <title>{service && service.name} - Zion Tech Group</title>;
+        <meta name='description' content={service && service.description} />;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         <link
           rel='canonical'
           href='https://ziontechgroup && ziontechgroup.com/mdm-mobile-device-management'
@@ -110,6 +138,7 @@ export default function MDMPage() {const service = extraServices && extraService
                 href='/contact'
                 variant='quantum'
                 size='lg'
+<<<<<<< HEAD
                 className='w-full'
               >
                 Start Trial
@@ -144,6 +173,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 href='/contact';
                 variant='quantum';
                 size='lg';
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 className='w-full'>;
                 Start Trial;
                 <ArrowRight className='w-5 h-5 ml-2' />;
@@ -263,6 +294,7 @@ if (return null) {$2;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 import { Phone, Mail, MapPin, Check, ArrowRight, Smartphone  } from 'lucide-react';
   const service = extraServices.find(s => s.link.endsWith('/mdm-mobile-device-management'))if (!service) return null;return (<UltraAdvancedFuturisticBackground>;
       <Head>;
@@ -298,3 +330,31 @@ import { Phone, Mail, MapPin, Check, ArrowRight, Smartphone  } from 'lucide-reac
 }
 }</UltraAdvancedFuturisticBackground>)})}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+import { Phone, Mail, MapPin, Check, ArrowRight, Smartphone } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Button from '../components/ui/Button';
+import { extraServices } from '../data/extra-services';
+  const service = extraServices.find(s => s.link.endsWith('/mdm-mobile-device-management'));
+  if (!service) return null;
+
+  return (
+    <UltraAdvancedFuturisticBackground>
+      <Head>
+        <title>{service.name} - Zion Tech Group</title>
+              <div className="mt-6 space-y-3 text-sm text-slate-300">
+                <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
+                <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
+                <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </UltraAdvancedFuturisticBackground>
+}
+}
+
+    </UltraAdvancedFuturisticBackground>);
+}
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

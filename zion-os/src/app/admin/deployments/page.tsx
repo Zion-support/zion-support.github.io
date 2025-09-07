@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -35,6 +36,10 @@
   Rocket,Clock,CheckCircle,AlertCircle,Play,Eye,Settings,Globe,Activity,Calendar,User,Building2,Shield,TrendingUp,Users,Zap,Sparkles,ArrowRight,RefreshCw,Pause,StopCircle,MapPin} from 'lucide-react';
 interface Deployment  {id: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   Rocket
   Clock
   CheckCircle
@@ -234,6 +239,10 @@ const getVerticalIcon = (vertical: string) => {switch (vertical) {case 'HEALTH':
           </div>;
         </div>;
   country?: string;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
         <div className='bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10'>;
@@ -254,6 +263,7 @@ const getVerticalIcon = (vertical: string) => {switch (vertical) {case 'HEALTH':
             </div>;
             <div>;
               <p className='text-2xl font-bold'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -427,6 +437,8 @@ return (
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 {getStatusCount('deploying')}
               </p>;
               <p className='text-sm text-white/60'>Active</p>;
@@ -440,6 +452,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div>;
               <p className='text-2xl font-bold'>;
                 {getStatusCount('completed')}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -524,6 +537,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <p className="text-2xl font-bold">{getStatusCount('failed')}</p>;
               <p className="text-sm text-white/60">Failed</p>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               </p>;
               <p className='text-sm text-white/60'>Live</p>;
             </div>;
@@ -566,6 +581,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -593,6 +609,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       {/* Stats Overview */}
       <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-8">
         <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
@@ -648,6 +667,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
               <p className="text-2xl font-bold">{getStatusCount('failed')}</p>
               <p className="text-sm text-white/60">Failed</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               </p>
               <p className='text-sm text-white/60'>Live</p>
             </div>
@@ -661,14 +684,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
             <div>
               <p className='text-2xl font-bold'>{getStatusCount('failed')}</p>
               <p className='text-sm text-white/60'>Failed</p>
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             </div>
           </div>
         </div>
       </div>
       {/* Filter Tabs */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -692,6 +720,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='flex flex-wrap gap-2'>
           { key: 'all', label: 'All Deployments', count: deployments.length }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      <div className='flex flex-wrap gap-2'>
+          { key: 'all', label: 'All Deployments', count: deployments.length }
+
+<div className='flex flex-wrap gap-2'>
+        {[
+          { key: 'all', label: 'All Deployments', count: deployments.length },
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           {
             key: 'pending'
             label: 'Pending'
@@ -877,6 +913,7 @@ export default function DeploymentsPage() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -891,6 +928,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             }`}
           >;
             {label} ({count})</button>;
@@ -936,6 +977,7 @@ const mockDeployments: Deployment[] = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -957,6 +999,10 @@ const mockDeployments: Deployment[] = [;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           <div
             key={deployment && deployment.id}
             className='group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-white/5'>;
@@ -987,6 +1033,7 @@ const mockDeployments: Deployment[] = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -994,6 +1041,10 @@ const mockDeployments: Deployment[] = [;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         ))}
       </div>
       {/* Deployments Grid */}
@@ -1106,6 +1157,7 @@ const mockDeployments: Deployment[] = [;
                     ></div>
                   </div>
                 </div>
+<<<<<<< HEAD
 =======
 
 
@@ -1115,10 +1167,13 @@ const mockDeployments: Deployment[] = [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">;
         {filteredDeployments.map((deployment) => (;
           <div key={deployment.id} className="group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-white/5">;
             {/* Status Header */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1138,6 +1193,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <div className="p-6 border-b border-white/10">;
               <div className="flex items-start justify-between mb-4">;
                 <div className="flex items-center gap-3">;
@@ -1155,6 +1214,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
                       <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-400">;
 <<<<<<< HEAD
                         {deployment && deployment.governanceType}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1439,10 +1499,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
                   <div className='flex justify-between text-sm text-white/70'>;<span>Deployment Progress</span>;
                         {deployment && deployment.governanceType}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                       </span>;
                     </div>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1469,6 +1534,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                     <span>Deployment Progress</span>;
                     <span>{deployment && deployment.progress}%</span>;
                   </div>;
@@ -1487,11 +1556,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
             </div>;
             {/* Deployment Details */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 <div className='p-6 space-y-4'>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 <div className='p-6 space-y-4'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+<div className='p-6 space-y-4'>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               {/* Domain & Location */}
               <div className='grid grid-cols-2 gap-4 text-sm'>;
                 <div className='flex items-center gap-2 text-white/70'>;
@@ -1510,6 +1584,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {[deployment.region, deployment.country]
                         .filter(Boolean)
                         .join(', ')}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                     </span>                  </div>              {/* Domain & Location */}
@@ -1600,6 +1675,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </span>                  </div>              {/* Domain & Location */}
                       style={{ width: `${deployment.progress}%` }}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                    </span>                  </div>              {/* Domain & Location */}
+
+                      style={{ width: `${deployment.progress}%` }}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                     ></div>;
                   </div>;
                 </div>)}
@@ -1611,6 +1691,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className="flex items-center gap-2 text-white/70">
                   <span></span>
                   <span className="font-mono">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1628,6 +1709,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                     {deployment.domain || deployment.subdomain || 'No domain set'}
                   </span>
                 </div>
@@ -1635,6 +1719,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
                   <div className="flex items-center gap-2 text-white/70">
                     <span></span>
                     <span>{deployment.region} {deployment.country}</span>
+<<<<<<< HEAD
                     </span>
 origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
@@ -1713,6 +1798,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
                 )}
               </div>
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+                    </span>
+                  </div>
+
+                )}
+              </div>
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               <div className='grid grid-cols-2 gap-4 text-sm'>;
                 <div className='flex items-center gap-2 text-white/70'>;
                   <Globe className='w-4 h-4' />;
@@ -1742,12 +1837,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               {/* Features */}
 <div className='space-y-2'>
                 <div className='text-sm font-medium text-white/80'>
@@ -1756,6 +1855,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
                 <div className='flex flex-wrap gap-2'>
                   {deployment.features.slice(0, 4).map(feature => (
                     <span
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -1772,6 +1872,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='flex flex-wrap gap-2'>;
                   {deployment.features.slice(0, 4).map(feature => (<span;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                       key={feature}
                       className='inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70';
                     >;
@@ -1779,10 +1881,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </span>;
                   ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   {deployment.features.length > 4 && (
                     <span className='inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70'>
                       +{deployment.features.length - 4} more
                     </span>
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
                   )}
               {/* Timestamps */}
@@ -1862,9 +1969,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   )}
               {/* Timestamps */}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+                  )}
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               )}
             </div>;
             {/* Deployment Details */}
+<<<<<<< HEAD
             <div className='p-6 space-y-4'>;
               {/* Domain & Location */}
               <div className='grid grid-cols-2 gap-4 text-sm'>;
@@ -1900,6 +2014,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <span>📍</span>;
                     <span>{deployment.region} {deployment.country}</span>;
                   </div>;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <div className='p-6 space-y-4'>
               {/* Domain & Location */}
               <div className='grid grid-cols-2 gap-4 text-sm'>
@@ -1912,6 +2028,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </span>
                 </div>
                 {(deployment.region |deployment.country) && (
+<<<<<<< HEAD
 =======
 
 
@@ -1926,6 +2043,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {(deployment.region || deployment.country) && (
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   <div className='flex items-center gap-2 text-white/70'>
                     <MapPin className='w-4 h-4' />
                     <span>
@@ -1937,11 +2056,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className="flex items-center gap-2 text-white/70">
                   <span>🌐</span>
                   <span className="font-mono">
-<<<<<<< HEAD
                     {deployment.domain |deployment.subdomain |'No domain set'}
                   </span>
                 </div>
                 {(deployment.region |deployment.country) && (
+<<<<<<< HEAD
 =======
                     {deployment.domain || deployment.subdomain || 'No domain set'}
                   </span>
@@ -1949,10 +2068,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {(deployment.region || deployment.country) && (
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   <div className="flex items-center gap-2 text-white/70">
                     <span>📍</span>
                     <span>{deployment.region} {deployment.country}</span>
                   </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <div className="p-6 space-y-4">;
               {/* Domain & Location */}
               <div className="grid grid-cols-2 gap-4 text-sm">;
@@ -1967,11 +2092,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <span>{[deployment.region, deployment.country].filter(Boolean).join()}</span>;
                   </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 )}
               </div>;
               {/* Features */}key={feature}
@@ -1982,6 +2111,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   ))}
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
               <div className="space-y-2">;
                 <div className="text-sm font-medium text-white/80">Active Features</div>;
@@ -1999,10 +2132,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </span>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   )}
 
                 </div>;
@@ -2011,10 +2149,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               {/* Timestamps */}
+=======
+
+              {/* Timestamps */}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               <div className='flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10'>;
                 <div className='flex items-center gap-1'>;
                   <Calendar className='w-3 h-3' />;
@@ -2040,6 +2184,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -2060,12 +2205,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
               <div className='flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10'>
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 <div className='flex items-center gap-1'>
                   <Calendar className='w-3 h-3' />
                   <span>Created: {formatDate(deployment.createdAt)}</span>
                 </div>
                 {deployment.updatedAt !== deployment.createdAt && (
                   <div className='flex items-center gap-1'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2079,6 +2227,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                     <RefreshCw className='w-3 h-3' />                    <span>Updated: {formatDate(deployment.updatedAt)}</span>              <div className="flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10">
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                    <RefreshCw className='w-3 h-3' />                    <span>Updated: {formatDate(deployment.updatedAt)}</span>              <div className="flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10">
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 <div className="flex items-center gap-1">
                   <span>📅</span>
                   <span>Created: {formatDate(deployment.createdAt)}</span>
@@ -2086,6 +2239,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {deployment.updatedAt !== deployment.createdAt && (
                   <div className="flex items-center gap-1">
                     <span>🔄</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -2123,6 +2277,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
               {/* Timestamps */}
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                    <span>Updated: {formatDate(deployment.updatedAt)}</span>
+                  </div>
+
+
+              {/* Timestamps */}
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               <div className="flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10">;
               <div className='flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10'>;
 <div className='flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10'>;
@@ -2150,6 +2313,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
                     <RefreshCw className="w-3 h-3" />;
                     <span>Updated: {formatDate(deployment.updatedAt)}</span>;
                   </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2185,6 +2349,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+                )}
+            {/* Action Buttons */}
+
+                )}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 )}
 
               </div>;
@@ -2192,6 +2364,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
             {/* Action Buttons */}
+<<<<<<< HEAD
 
 
                 )}
@@ -2209,6 +2382,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                )}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   <>;
                     <button className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-orange-600 hover:bg-orange-700 text-white text-sm font-medium rounded-lg transition-colors duration-200">;
                       ⏸️ Pause;
@@ -2238,9 +2415,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         ))}
 
       </div>;
@@ -2259,6 +2440,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   );
 }
       {filteredDeployments.length === 0 && (;
@@ -2266,6 +2450,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className="w-16 h-16 mx-auto mb-4 p-4 bg-white/10 rounded-full">;
             <Rocket className="w-8 h-8 text-white/40" />;
           </div>;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -2305,6 +2490,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <div className='flex gap-2'>
 <<<<<<< HEAD
+=======
+              <div className='flex gap-2'>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 {deployment.status === 'pending' && (
                   <button className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200">
                     ▶️ Start Deployment
@@ -2450,6 +2639,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {filter === 'all' && (<a;
               href="/admin/os-deploy";
               className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200";
+<<<<<<< HEAD
             >;}
           </p>;
           {filter === 'all' && (<a;
@@ -2467,10 +2657,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+            >;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               <Rocket className="w-4 h-4" />;
               Deploy First Instance;
             </a>;
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         </div>;
@@ -2736,10 +2930,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <Rocket className='w-4 h-4' />
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        </div>;
+      )}
+    </div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               Deploy First Instance
             </a>
           )}
         </div>
+<<<<<<< HEAD
         </div>;
       )}
     </div>;
@@ -2754,11 +2954,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      )}
+    </div>
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   );
 }
     </div>))}
     </div>);
 }
+<<<<<<< HEAD
 =======
 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -2768,6 +2976,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       {filteredDeployments.length === 0 && (;
         <div className="text-center py-16">;
           <div className="w-16 h-16 mx-auto mb-4 p-4 bg-white/10 rounded-full">;
@@ -2791,6 +3002,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         </div>;
       )}
     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2842,11 +3054,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     </div>;
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   );
 }
     </div>))}
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2863,6 +3081,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 </div>
 
       {/* Deployments Table */}
@@ -2911,6 +3132,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -2919,3 +3141,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

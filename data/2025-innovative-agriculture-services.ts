@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   customers: number;
   rating: number;
   reviews: number;
@@ -291,12 +292,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  customers: number;
+  rating: number;
+  reviews: number;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'};
 
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -308,6 +315,10 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
   mobile: '+1 302 464 0950',
@@ -319,6 +330,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -327,6 +339,9 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -345,6 +360,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   address: '364 E Main St STE 1008 Middletown DE 19709',
 <<<<<<< HEAD
   website: 'https://ziontechgroup && ziontechgroup.com',};
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -399,12 +415,19 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 =======
   website: 'https://ziontechgroup && ziontechgroup.com'};
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
   {
 
 
   {
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     id: 'quantum - agriculture - optimization',
     name: 'Quantum Agriculture Optimization',
     tagline:;
@@ -419,6 +442,10 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
       'Crop planning optimization',
       'Resource allocation',
       'Real - time adaptation',
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeAgricultureService {
   id: string;
@@ -529,11 +556,15 @@ const contact = null;
       'Crop planning optimization',
       'Resource allocation',
       'Real-time adaptation',
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Performance analytics',
       'Cost optimization',
       'Efficiency analysis',
       'Regulatory compliance',
+<<<<<<< HEAD
 <<<<<<< HEAD
       'Multi-crop support',
     ],
@@ -558,6 +589,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
     useCases: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      'Multi - crop support',
+    ],
+    popular: false,
+    icon: '⚡',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Crop planning, Resource allocation, Efficiency optimization, Cost reduction',
 =======
       'Multi - crop support'
@@ -570,8 +608,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
     roi: 'Improve agricultural efficiency by 40% and reduce resource waste by 50%',
     competitors: ['D-Wave, Rigetti, IBM Quantum, Google Quantum'],
+<<<<<<< HEAD
     marketSize: '$9.8B+ quantum agriculture market',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    marketSize: '$9 && 9.8B+ quantum agriculture market',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     growthRate: '380% YoY',
     variant: 'ai-futuristic',
     contactInfo: contact,
@@ -579,6 +621,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     implementationDetails:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     color: 'from - blue - 600 to - indigo - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / quantum - agriculture - optimization',
@@ -610,12 +655,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Quantum agriculture optimization platform with advanced algorithms and resource allocation capabilities.',
     launch_date: '2025 - 01 - 15',
     customers: 34,
@@ -623,6 +673,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 26
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -655,6 +706,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Quality monitoring',
       'Safety compliance',
       'Real - time alerts',
@@ -665,6 +719,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Compliance management'
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -696,6 +751,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     use_cases: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
       'Quantum agriculture optimization platform with advanced algorithms and resource allocation capabilities.',
     launchDate: '2025-01-15',
@@ -744,16 +803,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     useCases: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Contamination detection, Quality monitoring, Safety compliance, Risk assessment',
     ],
     roi: 'Reduce food safety incidents by 80% and improve compliance by 90%',
     competitors: ['FoodLogiQ, SafetyChain, TraceGains, FoodShield'],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -788,6 +852,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     roi: 'Reduce food safety incidents by 80% and improve compliance by 90%',
     competitors: ['FoodLogiQ, SafetyChain, TraceGains, FoodShield'],
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     customers: 189,
     rating: 4 && 4.7,
     reviews: 145
@@ -797,24 +864,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      'Blockchain-based tracking',
-    id: 'blockchain - food - traceability',
-    name: 'Blockchain Food Traceability',
-    tagline:;
-      'Transparent food traceability with blockchain technology and supply chain tracking',
-    price: '$1, 799',
-    period: '/month',
-    description:;
-      'Advanced food traceability platform that uses blockchain technology to provide transparent, secure, and immutable tracking of food products throughout the supply chain.',
-    features: [;
-      'Blockchain - based tracking',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -826,12 +886,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Supply chain transparency',
       'Product authentication',
       'Real - time monitoring',
       'Compliance verification',
       'Performance analytics',
       'Multi - party collaboration',
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     marketSize: '$15.6B+ food safety market',
     growthRate: '220% YoY',
     variant: 'ai-futuristic',
@@ -861,11 +927,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Compliance verification',
       'Performance analytics',
       'Multi-party collaboration',
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'API integration',
       'Mobile app support'
     ],
     popular: false,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -898,6 +969,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     icon: '🔗',
     color: 'from-purple-600 to-violet-700',
     textColor: 'text-purple-400',
@@ -917,16 +992,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     useCases: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Food tracking, Supply chain transparency, Product authentication, Compliance management',
     ],
     roi: 'Improve supply chain transparency by 100% and reduce food fraud by 70%',
     competitors: ['IBM Food Trust, VeChain, OriginTrail, Provenance'],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -959,6 +1038,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     roi: 'Improve supply chain transparency by 100% and reduce food fraud by 70%',
     competitors: ['IBM Food Trust, VeChain, OriginTrail, Provenance'],
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Blockchain food traceability platform with supply chain tracking and product authentication capabilities.',
     launch_date: '2025 - 01 - 26',
     customers: 89,
@@ -970,24 +1052,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      'AI-powered climate control',
-    id: 'ai - powered - vertical - farming',
-    name: 'AI - Powered Vertical Farming',
-    tagline:;
-      'Intelligent vertical farming with AI - powered climate control and crop optimization',
-    price: '$2, 299',
-    period: '/month',
-    description:;
-      'Advanced vertical farming platform that uses AI to optimize climate control, monitor crop growth, and maximize yields in controlled environment agriculture.',
-    features: [;
-      'AI - powered climate control',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -999,6 +1074,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Crop growth monitoring',
       'Environmental optimization',
       'Real - time control',
@@ -1009,6 +1086,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Compliance management'
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1040,6 +1118,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     use_cases: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     marketSize: '$18.4B+ food traceability market',
     growthRate: '320% YoY',
@@ -1094,16 +1176,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     useCases: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Climate control, Crop monitoring, Environmental optimization, Yield maximization',
     ],
     roi: 'Increase crop yields by 300% and reduce energy consumption by 40%',
     competitors: ['Plenty, AeroFarms, Bowery Farming, Gotham Greens'],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1148,10 +1234,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     roi: 'Increase crop yields by 300% and reduce energy consumption by 40%',
     competitors: ['Plenty, AeroFarms, Bowery Farming, Gotham Greens']
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ];      'AI-powered climate controlCrop growth monitoringEnvironmental optimizationReal-time controlPerformance analyticsIntegration capabilitiesCustom growing protocolsMulti-tier support';
 
       'Compliance management'
     ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1177,6 +1267,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Compliance management'
     ];
     popular: true, icon: '🌾',
@@ -1319,6 +1413,7 @@ ursor/fix-website-loading-errors-and-merge-6662;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1361,6 +1456,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ];      'AI - powered climate control_crop growth monitoring_environmental optimization_real - time control_performance analytics_integration capabilities_custom growing protocols_multi - tier support';
       'Compliance management';
     ];
@@ -1434,11 +1534,15 @@ import { ServiceVariant } from '../types/service-variants',export interface Inno
     reviews: 89;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -1456,6 +1560,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+  }
+];
+;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeAgricultureService {;
   id: string,;
@@ -1517,6 +1630,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
       'Compliance management';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
@@ -1524,6 +1638,9 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 =======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     ],;
     popular: true,;
     icon: '🌾',;
@@ -1704,13 +1821,19 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     rating: 4.6;
     reviews: 89;
 
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
 ];
 
 
+<<<<<<< HEAD
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     marketSize: '$9.3B+ vertical farming market',
     growthRate: '280% YoY',
     variant: 'ai-futuristic',
@@ -1725,6 +1848,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -1735,3 +1859,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

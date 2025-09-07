@@ -4,6 +4,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -44,6 +45,13 @@ function handler() {if (return res.status (405).json ({ error: 'Method not allow
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const rssUrl = null;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -51,12 +59,16 @@ export default async function handler(
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     (process.env.SITE_URL |'http://localhost:3000') + '/podcast.xml';
   return res.status(200).json({ ok: true, rssUrl });export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     (process.env.SITE_URL || 'http://localhost:3000') + '/podcast.xml';
   return res.status(200).json({ ok: true, rssUrl });export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
@@ -68,11 +80,15 @@ export default async function handler(
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const rssUrl = (process.env.SITE_URL |'http: //localhost:3000') + '/podcast.xml';
 
   return res.status(200).json({ ok: true, rssUrl })
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -91,6 +107,11 @@ export default async function handler(
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     (process && process.env.SITE_URL || 'http://localhost:3000') + '/podcast && podcast.xml';
   return res && res.status(200).json({ ok: true, rssUrl });export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -98,8 +119,8 @@ export default async function handler(
   const rssUrl = (process && process.env.SITE_URL || 'http: //localhost:3000') + '/podcast && podcast.xml';
   return res && res.status(200).json({ ok: true, rssUrl })
 }
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -120,6 +141,10 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ;
 export default async /**
  * handler - Function description
@@ -142,6 +167,7 @@ function handler() {if (return res.status (405).json ({ error: 'Method not allow
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -155,11 +181,18 @@ function handler() {if (return res.status (405).json ({ error: 'Method not allow
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+}
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 }
 
 
 
+<<<<<<< HEAD
 }
 }
 
@@ -172,12 +205,18 @@ function handler() {if (return res.status (405).json ({ error: 'Method not allow
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 
 }
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -187,12 +226,18 @@ function handler() {if (return res.status (405).json ({ error: 'Method not allow
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });
   const rssUrl =
 =======
   return res.status (200).json ({ ok: true, rss_url })}}ursor/fix-website-loading-errors-and-merge-6662;
 }
+<<<<<<< HEAD
 }}
 }}if (req.method !== 'POST')return res.status(405).json({ error: 'Method not allowed' })const rssUrl =;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -228,3 +273,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

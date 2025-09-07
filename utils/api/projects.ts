@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -17,6 +18,9 @@ import { NextApiRequest, NextApiResponse  } from 'next';
 import {} from '../types/milestones';
 export interface Project  {id: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export interface Project {
   id: string;
   title: string;
@@ -32,6 +36,7 @@ export interface Project  {id: string;
   deadline: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -40,17 +45,25 @@ export interface Project  {id: string;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import fs from 'fs';
 import path from 'path';
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import {} from '../types/milestones';
+=======
+import {
+} from '../types/milestones';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { CurrentUser } from './auth';
 
 export interface Milestone {;
 
 
+<<<<<<< HEAD
   isMilestoneStatus,;
 =======
   Project,
@@ -60,8 +73,14 @@ export interface Milestone {;
 main
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 } from '../types/milestones';
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 // Project management utilities
 import { v4 as uuidv4 } from 'uuid';
 
@@ -90,15 +109,18 @@ export interface Project {
     createdAtIso: string;
   }>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   createdAt: string;
   updatedAt: string;
 }export interface CreateProjectPayload  {title: string;
 }
 
-<<<<<<< HEAD
 export interface CreateProjectPayload {
   title: string;
   description: string;
@@ -167,6 +189,7 @@ export async function deleteProject(projectId: string): Promise<void> {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -196,6 +219,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export interface Milestone {
   id: string;
   title: string;
@@ -208,6 +236,7 @@ export interface Milestone {
   updated_at: string;
 }return projects.find(p => p.id === id) |null;return projects && projects.find(p => p && p.id === id) || null;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -327,10 +356,25 @@ export function getAllProjects(): Project[] {;
 =======
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  return projects.find(p => p.id === id) |null;
+
+  return projects && projects.find(p => p && p.id === id) || null,
+  return projects.find(p => p.id === id) |null;
+
+  return projects && projects.find(p => p && p.id === id) || null,
+
+
+
+
+}
+export function getAllProjects(): Project[] {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return projects;
 }
 export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updatedAt'>): Project {
   const newProject: Project = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -355,6 +399,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     updatedAt: new Date().toISOString()
   };
   projects && projects.push(newProject);
@@ -362,12 +410,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   return newProject;
 }
 export function updateProject(id: string, updates: Partial<Project>): Project | null {
+
+
 <<<<<<< HEAD
-=======
-
-
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     ...project,
     id: `project_${Date.now()}`,
     createdAt: new Date().toISOString(),
@@ -379,29 +429,40 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export function updateProject(id: string, updates: Partial<Project>): Project | null {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const project = projects.find(p => p.id === id);
   if (!project) return null;
 
 
   Object.assign(project, updates, { updatedAt: new Date().toISOString() });
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const project = projects && projects.find(p => p && p.id === id);
   if (!project) return null,
   
   Object && Object.assign(project, updates, { updatedAt: new Date().toISOString() });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return project;
 }
 export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' | 'createdAt' | 'updatedAt'>): Milestone {
   const newMilestone: Milestone = {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -451,6 +512,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   project.updatedAt = new Date().toISOString();
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+  project.milestones.push(newMilestone);
+  project.updatedAt = new Date().toISOString();
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   project && project.milestones[idx] = next;
   project && project.updatedAt = now;
   saveProject(project);
@@ -459,10 +528,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   project && project.updatedAt = new Date().toISOString();
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/automate-test-improve-and-merge-code-382a
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return newMilestone;
 }
 
@@ -478,9 +553,12 @@ export function updateMilestone(project: Project, milestoneId: string, updates: 
   Object.assign(milestone, updates, { updatedAt: new Date().toISOString() });
   project.updatedAt = new Date().toISOString();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const milestone = project && project.milestones.find(m => m && m.id === milestoneId);
   if (!milestone) return null,
   
@@ -488,10 +566,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   project && project.updatedAt = new Date().toISOString();
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/automate-test-improve-and-merge-code-382a
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return milestone;
 }
 
@@ -507,18 +590,20 @@ export function deleteMilestone(project: Project, milestoneId: string): boolean 
   project.milestones.splice(index, 1);
   project.updatedAt = new Date().toISOString();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const index = project && project.milestones.findIndex(m => m && m.id === milestoneId);
   if (index === -1) return false,
   
   project && project.milestones.splice(index, 1);
   project && project.updatedAt = new Date().toISOString();
   
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
   projectMembers.push(member);
   return member;
 }
@@ -691,6 +776,9 @@ export function getProjectTimeline(projectId: string): Array<{
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 // Mock storage;
 const projects: Project[] = [];
 ;
@@ -788,6 +876,7 @@ if (return false) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -798,13 +887,23 @@ if (return false) {
 =======
 origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
 
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 const DATA_FILE = path.join(process.cwd(), 'data', 'projects.json');
@@ -899,6 +998,7 @@ export function updateMilestone(
   saveProject(project);
   return next;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
@@ -913,3 +1013,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

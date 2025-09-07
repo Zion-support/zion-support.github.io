@@ -1,10 +1,18 @@
 <<<<<<< HEAD:src_backup/components/jobs/MyApplications.tsx
+<<<<<<< HEAD:src_backup/components/jobs/MyApplications.tsx
 default:
 
+=======
+      default:
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/MyApplications.tsx
         return <Badge variant="outline">{status}</Badge>
     }
 
 import {ApplicationStatus} from "@/types/jobs";
+<<<<<<< HEAD:src_backup/components/jobs/MyApplications.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/MyApplications.tsx
 import { useState } from 'react';
 import { useJobApplications } from '@/hooks/useJobApplications';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -28,7 +36,10 @@ export function MyApplications() {
   const { applications, isLoading, error } = useJobApplications();
   const getStatusBadge = null;
   if (isLoading) {
+<<<<<<< HEAD:src_backup/components/jobs/MyApplications.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/MyApplications.tsx
     return (
       <div className="flex justify-center items-center p-8">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
@@ -96,6 +107,10 @@ export function MyApplications() {;
   const getStatusBadge = (status: ApplicationStatus,) => {;
     switch (status) {;
       case "new": return <Badge variant="secondary">New</Badge>;
+<<<<<<< HEAD:src_backup/components/jobs/MyApplications.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/MyApplications.tsx
         return <Badge className="bg-red-100 text-red-800">Rejected</Badge>;
 =======
 
@@ -211,6 +226,7 @@ import Link from "next/link",import { ApplicationStatus } from "@/types/jobs",ex
                   variant="outline" 
                   size="sm" 
 
+<<<<<<< HEAD:src_backup/components/jobs/MyApplications.tsx
 
                   className="text-xs"
                   asChild
@@ -280,12 +296,19 @@ import Link from "next/link",import { ApplicationStatus } from "@/types/jobs",ex
       ))}
 ;
 
+=======
+                  {application.cover_letter}
+                </p>
+              )}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/MyApplications.tsx
     </div>
   );
 
 };
 <p> {;
   error ;
+<<<<<<< HEAD:src_backup/components/jobs/MyApplications.tsx
 =======
       ))}</div>;
   )}},// Check condition;
@@ -361,6 +384,8 @@ if ( {) {$2;
   )}</div>;
   )}<p> {error ;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/jobs/MyApplications.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/MyApplications.tsx
 }</p> </div>) ";
 }You haven't submitted any applications yet. </p> <Button className="mt-4" asChild> <Link href="/jobs" >Browse Jobs</Link> </Button> </CardContent> </Card> </CardTitle> {getStatusBadge (application.status)}</div> {application.cover letter ;
 }</p>) ";
@@ -368,7 +393,10 @@ if ( {) {$2;
 }<div className="flex justify-between items-center" > <Button variant="outline" size="sm" className="text-xs" asChild > </Link> </Button> <Button variant="default" size="sm" className="text-xs" asChild > </Link> </Button> </div> </div> </CardContent> </Card>) ) ;
 }</div>) ;
 }'"
+<<<<<<< HEAD:src_backup/components/jobs/MyApplications.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 }<div className="flex justify-between items-center" > <Button variant="outline" size="sm" className="text-xs" asChild > </Link> </Button> <Button variant="default" size="sm" className="text-xs" asChild > </Link> </Button> </div> </div> </CardContent> </Card>) )}</div>)}'";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/jobs/MyApplications.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/MyApplications.tsx

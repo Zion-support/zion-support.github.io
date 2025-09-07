@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -25,11 +26,14 @@ export interface User  {id: string;
 ursor/fix-website-loading-errors-and-merge-6662;
 }try {const user  = parseUserFromRequest(req)ensureAdmin(user)export function parseUserFromRequest (req: NextApiRequest): User {// Mock implementation - replace with actual auth logic;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import type { NextApiRequest, NextApiResponse } from "next";
 
 
 // Authentication utilities
 
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -66,12 +70,27 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 export interface User {
   id: string;
   email: string;
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+;
+
+
+import { NextApiRequest, NextApiResponse } from 'next';
+
+
+export interface User {
+  id: string;
+  email: string;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   role: "admin" | "user" | "guest";
 }
 
 export function parseUserFromRequest(req: NextApiRequest): User {
   // Mock implementation - replace with actual auth logic;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -100,6 +119,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export interface User {;
   id: string;
   email: string;
@@ -108,8 +129,7 @@ export interface User {;
 
 <<<<<<< HEAD
 export function parseUserFromRequest(req: NextApiRequest): User {
-<<<<<<< HEAD
-=======
+
   // Mock implementation - replace with actual auth logic;
   const authHeader = req.headers.authorization;
   if (!authHeader) {
@@ -123,9 +143,14 @@ export function parseUserFromRequest(req: NextApiRequest): User {
   
   return { id: 'user-1', email: 'user@zion.os', role: 'user' };
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 =======
 export function parseUserFromRequest(req: NextApiRequest): User {}
@@ -137,6 +162,7 @@ export function parseUserFromRequest(req: NextApiRequest): User {}
 
     ensureAdmin(user);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -155,6 +181,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export function parseUserFromRequest (req: NextApiRequest): User {
   // Mock implementation - replace with actual auth logic;
   const auth_header = req.headers.authorization;
@@ -182,14 +211,59 @@ if ( {) {$2;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+}
+
+export function parseUserFromRequest(req: NextApiRequest): User {
+  // Mock implementation - replace with actual auth logic
+  const authHeader = req.headers.authorization;
+  if (!authHeader) {
+    return { id: 'guest', email: 'guest@example.com', role: 'guest' };
+  }
+  
+  // Simple mock for admin users
+  if (authHeader.includes('admin')) {
+    return { id: 'admin-1', email: 'admin@zion.os', role: 'admin' };
+  }
+  
+  return { id: 'user-1', email: 'user@zion.os', role: 'user' };
+}
+
+  try {;
+    const user = parseUserFromRequest(req);
+
+
+    ensureAdmin(user);
+
+    return { id: 'guest', email: 'guest@example.com', role: 'guest' }
+  }
+  // Simple mock for admin users
+  if (authHeader.includes('admin')) {
+    return { id: 'admin-1', email: 'admin@zion.os', role: 'admin' }
+  }
+  return { id: 'user-1', email: 'user@zion.os', role: 'user' }
+}
+export function ensureAdmin(user: User): void {
+  if (user.role !== 'admin') {;
+    const error = new Error('Forbidden');
+    (error as any).statusCode = 403;
+    throw error;
+  }
+}
+export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }> {
+    ensureAdmin(user);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 export async function ensureAdminFromApi (req: NextApiRequest): Promise<{ allowed: boolean }> {
   try {
     const user = parseUserFromRequest (req);
     ensure_admin (user);
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export interface User {;
@@ -233,15 +307,22 @@ export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed
 }// Additional auth utilities for login;export interface DemoUser  {// Additional auth utilities for login;
 export interface DemoUser  {id: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 
 export function parseUserFromRequest(req: NextApiRequest): User {
   // Mock implementation - replace with actual auth logic
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const authHeader = req.headers.authorization;
   if (!authHeader) {
     return { id: "guest", email: "guest@example.com", role: "guest" };
@@ -251,10 +332,10 @@ main
   if (authHeader.includes("admin")) {
     return { id: "admin-1", email: "admin@zion.os", role: "admin" };
   }
-<<<<<<< HEAD
 
   return { id: "user-1", email: "user@zion.os", role: "user" };
 
+<<<<<<< HEAD
   return { id: "user-1", email: "user@zion.os", role: "user" };
 =======
   
@@ -263,6 +344,9 @@ main
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 
 export function ensureAdmin(user: User): void {
@@ -273,7 +357,12 @@ export function ensureAdmin(user: User): void {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
     ensureAdmin(user);
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 export async function ensureAdminFromApi(
   req: NextApiRequest,
@@ -282,10 +371,15 @@ export async function ensureAdminFromApi(
     const user = parseUserFromRequest (req);
     ensure_admin (user);
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   try {
     ensureAdmin(user);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -306,6 +400,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     return { allowed: true }
   } catch {
     return { allowed: false }
@@ -315,14 +413,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-// Additional auth utilities for login;
 
+<<<<<<< HEAD
 export interface DemoUser {
 // Additional auth utilities for login
 export interface DemoUser {;
@@ -339,6 +440,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string;
   name: string;
   role: "admin" | "user" | "guest";
@@ -401,6 +504,7 @@ export function getUserFromRequest(req: NextApiRequest): DemoUser | null {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -424,6 +528,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const demo_users: DemoUser[] = [];
 ;
 export function ensureDemoUsers (): void {
@@ -483,6 +591,7 @@ if (return null) {
   $2
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 main
@@ -501,11 +610,16 @@ main
 }export function clearUserCookie() {// Mock implementation;
   res.setHeader('Set-Cookie', 'user=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT')}export function getUserFromRequest(req: NextApiRequest): User | null {return parseUserFromRequest(req)}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   try {
     return JSON.parse (decodeURIComponent (match[1]));
   } catch {
     return null;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -522,13 +636,11 @@ main
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-
-    user,
-    token,
-    expiresAt: Date && Date.now() + 24 * 60 * 60 * 1000, // 24 hours
-  };
 }
+<<<<<<< HEAD
 
   }
 }
@@ -548,6 +660,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 export function isAuthenticated(session: AuthSession | null): boolean {
@@ -557,6 +671,7 @@ export function isAuthenticated(session: AuthSession | null): boolean {
 
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -580,6 +695,9 @@ export function hasRole(session: AuthSession | null, role: string): boolean {
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 
 export function isModerator(session: AuthSession | null): boolean {
@@ -587,6 +705,7 @@ export function isModerator(session: AuthSession | null): boolean {
 
 }
 
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -606,6 +725,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+}
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 export class AuthError extends Error {
   statusCode: number;
@@ -662,6 +791,7 @@ export function getUserFromRequest(req: NextApiRequest): User | null {
   return parseUserFromRequest(req);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -670,3 +800,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

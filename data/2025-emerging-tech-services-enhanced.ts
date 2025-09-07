@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface EmergingTechService {
 =======
 <<<<<<< HEAD
@@ -38,10 +39,26 @@ export interface EmergingTechService {;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+export interface EmergingTechService {
+
+export interface EmergingTechService {
+
+
+
+export interface EmergingTechService {;
+
+
+export interface EmergingTechService {
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 import { ServiceVariant } from '../types/service-variants';
 export interface EmergingTechService2025 {
 export interface EmergingTechService {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -65,6 +82,9 @@ export interface EmergingTechService {
 
 export interface EmergingTechService {;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string;
   name: string;
   tagline: string;
@@ -600,6 +620,7 @@ export interface EmergingTechService2025  {id: string, name: string,tagline: str
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -669,10 +690,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+  {
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Virtual experiences, Gaming, Education, Social interaction, Entertainment',
     ],
     roi: 'Metaverse companies report 1000x improvement in graphics quality and 500% increase in user engagement.',
     competitors: ['No direct competitors - first quantum metaverse platform'],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -681,12 +709,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    market_size: '$35.5B quantum metaverse market',
-    growth_rate: '85% annual growth',
-    variant: 'quantum - metaverse - enterprise',
-    contact_info: {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -702,6 +729,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     roi: 'Metaverse companies report 1000x improvement in graphics quality and 500% increase in user engagement.',
     competitors: ['No direct competitors - first quantum metaverse platform'],
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -722,6 +751,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -737,6 +767,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -746,14 +780,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    customers: 18;
 
+<<<<<<< HEAD
     rating: 4 && 4.8,
 
     reviews: 11
@@ -769,6 +806,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export interface EmergingTechService2025 {
   id: string, name: string,
   tagline: string, price: string,
@@ -799,6 +838,9 @@ export interface EmergingTechService2025 {
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     id: 'quantum-bio-computing', name: 'Quantum Bio-Computing Platform',
     tagline: 'Revolutionary computing that combines quantum mechanics with biological systems',
     price: '$3,999',
@@ -1172,6 +1214,7 @@ export interface EmergingTechService2025 {
     contactInfo: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1183,10 +1226,14 @@ export interface EmergingTechService2025 {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     },
     realImplementation: true, implementationDetails: 'Quantum metaverse platform with enhanced graphics and AI capabilities.',
     launchDate: '2024-04-30', customers: 18,
     rating: 4.8,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1200,6 +1247,10 @@ export interface EmergingTechService2025 {
     launchDate: '2024-04-30', customers: 18,
     rating: 4.8
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1207,6 +1258,7 @@ export interface EmergingTechService2025 {
     }
     reviews: 11;
 
+<<<<<<< HEAD
 =======
 =======
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -2102,10 +2154,13 @@ export interface EmergingTechService2025 {
   },
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     realImplementation: true;
     implementationDetails: 'Quantum metaverse platform with enhanced graphics and AI capabilities.';
     launchDate: '2024-04-30';
     customers: 18;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2131,6 +2186,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechService2025 {;
   id: string,;
@@ -2793,6 +2852,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
 ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   }
@@ -2812,6 +2872,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
 ];ursor/fix-website-loading-errors-and-merge-6662;
   }
@@ -2826,6 +2889,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -2833,10 +2897,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     rating: 4.8;
     reviews: 11
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -2846,3 +2916,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

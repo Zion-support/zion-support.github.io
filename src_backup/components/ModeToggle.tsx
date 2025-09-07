@@ -1,4 +1,8 @@
 <<<<<<< HEAD:src_backup/components/ModeToggle.tsx
+<<<<<<< HEAD:src_backup/components/ModeToggle.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ModeToggle.tsx
 import { Moon, Sun } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -15,14 +19,21 @@ import { toast } from '@/hooks/use-toast'
 import { useTheme } from '@/components/ThemeProvider'
 import { logIssue } from '@/utils/logIssue'
 import { useEffect, useState } from 'react'
+<<<<<<< HEAD:src_backup/components/ModeToggle.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ModeToggle.tsx
 import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { toast } from "@/hooks/use-toast"
 import { darkModeMessages, lightModeMessages } from "@/utils/themeToggleMessages"
+<<<<<<< HEAD:src_backup/components/ModeToggle.tsx
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ModeToggle.tsx
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
@@ -34,8 +45,11 @@ import { useTheme } from "@/components/ThemeProvider"
 import { logIssue } from "@/utils/logIssue"
 import { useEffect, useState } from "react"
 
+<<<<<<< HEAD:src_backup/components/ModeToggle.tsx
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ModeToggle.tsx
     setIsClient(true);
   }, []);
   // Determine the actual resolved theme for display purposes;
@@ -48,6 +62,7 @@ import { useEffect, useState } from "react"
       return window.matchMedia('(prefers-color-scheme: dark)').matches
         ? 'dark'
         : 'light'
+<<<<<<< HEAD:src_backup/components/ModeToggle.tsx
 import { Moon, Sun } from 'lucide-react';
 import { Button } from '@/components/ui/ button';
 import {
@@ -120,6 +135,8 @@ if ( {) {$2;
 <<<<<<< HEAD:src_backup/components/ModeToggle.tsx
         : 'light';
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ModeToggle.tsx
     }
 =======
         : 'light';}
@@ -134,6 +151,7 @@ if ( {) {$2;
     try {
 
 
+<<<<<<< HEAD:src_backup/components/ModeToggle.tsx
 export function ModeToggle() {
 
   const { theme, toggleTheme } = useTheme();
@@ -166,6 +184,11 @@ const newTheme = isDarkMode ? 'light' : 'dark';
         description: `Theme changed to ${newTheme} mode successfully`
       })
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  const handleToggle = () => {
+    try {
+      // Determine the new theme we are switching TO
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ModeToggle.tsx
       // Accessibility announcement for screen readers
       const announcement = `Theme switched to ${newTheme} mode`
       // Create a live region announcement
@@ -186,12 +209,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         resolvedTheme
       })
       toast({
+<<<<<<< HEAD:src_backup/components/ModeToggle.tsx
     }
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
   if (!isClient) {
     // Return a neutral state during SSR to prevent hydration issues
 
+=======
+
+    }
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ModeToggle.tsx
 
     
 
@@ -284,8 +313,11 @@ export function ModeToggle() {
       <Tooltip>
         <TooltipTrigger asChild>
           <Button
+<<<<<<< HEAD:src_backup/components/ModeToggle.tsx
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ModeToggle.tsx
             variant="ghost"
             size="icon"
 import { Moon, Sun } from 'lucide-react';
@@ -311,12 +343,19 @@ import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { toast } from "@/hooks/use-toast";
 import { darkModeMessages, lightModeMessages } from "@/utils/themeToggleMessages";
+<<<<<<< HEAD:src_backup/components/ModeToggle.tsx
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ModeToggle.tsx
 // Use the ThemeProvider hook directly to ensure no conflicts;
 import { useTheme } from "@/components/ThemeProvider";
 import { logIssue } from "@/utils/logIssue";
 import { useEffect, useState } from "react";
+<<<<<<< HEAD:src_backup/components/ModeToggle.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ModeToggle.tsx
 export function ModeToggle() {;
   const { theme, toggleTheme } = useTheme();
   const [isClient, setIsClient] = useState(false);
@@ -424,7 +463,10 @@ export function ModeToggle() {const { theme, toggleTheme } = useTheme()const [is
 <<<<<<< HEAD:src_backup/components/ModeToggle.tsx
     );
 
+<<<<<<< HEAD:src_backup/components/ModeToggle.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ModeToggle.tsx
   }
   return (
     <TooltipProvider>;
@@ -438,12 +480,16 @@ export function ModeToggle() {const { theme, toggleTheme } = useTheme()const [is
 <<<<<<< HEAD:src_backup/components/ModeToggle.tsx
             size="icon";
 
+<<<<<<< HEAD:src_backup/components/ModeToggle.tsx
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ModeToggle.tsx
             onClick={handleToggle}
             aria-pressed={isDarkMode}
             aria-label={`Toggle theme. Current theme: ${resolvedTheme}. Click to switch to ${isDarkMode ? 'light' : 'dark'} mode.`}
             title={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
+<<<<<<< HEAD:src_backup/components/ModeToggle.tsx
 
 =======
             size="icon";onClick={handleToggle}
@@ -451,6 +497,12 @@ export function ModeToggle() {const { theme, toggleTheme } = useTheme()const [is
             aria-label={`Toggle theme. Current theme: ${resolvedTheme}. Click to switch to ${isDarkMode ? 'light' : 'dark'} mode.`}
             title={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}{isDarkMode ? (<Sun className="h-5 w-5 text-yellow-400 transition-all duration-300 group-hover:text-yellow-300 group-hover:rotate-12" />;
             ) : (<Moon className='h-5 w-5 text-slate-600 dark:text-slate-400 transition-all duration-300 group-hover:text-slate-500 group-hover:-rotate-12' />;
+=======
+            {isDarkMode ? (
+              <Sun className="h-5 w-5 text-yellow-400 transition-all duration-300 group-hover:text-yellow-300 group-hover:rotate-12" />
+            ) : (
+              <Moon className='h-5 w-5 text-slate-600 dark:text-slate-400 transition-all duration-300 group-hover:text-slate-500 group-hover:-rotate-12' />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ModeToggle.tsx
             )}
             {/* Enhanced visual indicator */}
             <div;
@@ -458,6 +510,7 @@ export function ModeToggle() {const { theme, toggleTheme } = useTheme()const [is
                   ? 'bg-yellow-400 shadow-sm shadow-yellow-400/50';
                   : 'bg-slate-600 dark:bg-slate-400';
               } opacity-70 group-hover:opacity-100`}
+<<<<<<< HEAD:src_backup/components/ModeToggle.tsx
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ModeToggle.tsx
             />;
             <span className='sr-only'>;
@@ -489,6 +542,12 @@ export function ModeToggle() {const { theme, toggleTheme } = useTheme()const [is
             ) : (
 
 
+=======
+            />
+            <span className='sr-only'>
+              Toggle theme. Current: {resolvedTheme}. Click to switch to{' '}
+              {isDarkMode ? 'light' : 'dark'}.
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ModeToggle.tsx
               <Moon className="h-5 w-5 text-slate-600 dark:text-slate-400 transition-all duration-300 group-hover:text-slate-500 group-hover:-rotate-12" />
             )}
 ;
@@ -502,6 +561,7 @@ export function ModeToggle() {const { theme, toggleTheme } = useTheme()const [is
             <span className="sr-only">
               Toggle theme. Current: {resolvedTheme}. Click to switch to {isDarkMode ? 'light' : 'dark'}.
 
+<<<<<<< HEAD:src_backup/components/ModeToggle.tsx
 
             </span>
           </Button>
@@ -525,6 +585,18 @@ export function ModeToggle() {const { theme, toggleTheme } = useTheme()const [is
 
 
 
+=======
+            {isDarkMode ? (
+              <Sun className="h-5 w-5 text-yellow-400 transition-all duration-300 group-hover:text-yellow-300 group-hover:rotate-12" />
+            ) : (
+              <p className="text-xs opacity-60 mt-1">Following system preference</p>
+            )}
+          </div>;
+        </TooltipContent>;
+      </Tooltip>;
+    </TooltipProvider>;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ModeToggle.tsx
       // Determine the new theme we are switching TO;
 =======
           >;
@@ -628,13 +700,20 @@ if ( {") {$2;
 }</div> </TooltipContent> </Tooltip> </TooltipProvider>);
 }'"}
 }
+<<<<<<< HEAD:src_backup/components/ModeToggle.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ModeToggle.tsx
           </div>
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
   );
 
+<<<<<<< HEAD:src_backup/components/ModeToggle.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ModeToggle.tsx
 };
 if (!isClient) {";
   //Return a neutral state during SSR to prevent hydration issues return (<Button variant="ghost" size="icon" disabled aria-label="Loading theme toggle" className="focus-visible:ring-ring relative text-foreground" > <div className="h-5 w-5 bg-muted rounded animate-pulse" /> {;
@@ -657,6 +736,7 @@ if (!isClient) {";
 }/> </span> </Button> </TooltipTrigger> <TooltipContent>) ;
 }</div> </TooltipContent> </Tooltip> </TooltipProvider>) ;
 }'"
+<<<<<<< HEAD:src_backup/components/ModeToggle.tsx
 ;
 
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -664,3 +744,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }/> </span> </Button> </TooltipTrigger> <TooltipContent>)}</div> </TooltipContent> </Tooltip> </TooltipProvider>)}'";
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ModeToggle.tsx
+=======
+  );
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ModeToggle.tsx

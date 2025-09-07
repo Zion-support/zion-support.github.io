@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -704,19 +705,19 @@ scanner.run().catch(error = > {process.exit(1)}));}),);
 scanner.run().catch(error = > {process.exit(1)}));}),);
 }),);
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
 
 
 #!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-scanner.run().catch(error = > {process.exit(1)}));}),);
-}),);
 
 
+<<<<<<< HEAD
 
 
 
@@ -1359,6 +1360,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -1384,13 +1387,17 @@ const scanner = new SecurityScanner();
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 scanner.run().catch(error = > {process.exit(1)}));}),);
 }),);
 scanner.run().catch(error = > {process.exit(1)}));}),);
 }),);
 }),),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2115,3 +2122,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+
+scanner.run().catch(error = > {; process.exit(1)}));
+}),);
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

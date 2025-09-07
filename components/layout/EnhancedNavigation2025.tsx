@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 import { useState, useEffect  } from 'react';
 =======
@@ -466,6 +469,7 @@ function EnhancedNavigation2025() {const [is_open, setIsOpen] = useState (false)
       </AnimatePresence>;
       {/* Spacer for fixed navigation */}
       <div className="h-20" />;
+<<<<<<< HEAD
     </>)}'use client',import { useState, useEffect   } from 'react';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import Link from 'next/link';
@@ -487,3 +491,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   } from 'lucide-react';
 const navigationItems  = null;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </>);
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

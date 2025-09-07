@@ -103,6 +103,9 @@ const performanceChecks = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   memoryUsage: false;
 };
 <<<<<<< HEAD
@@ -125,6 +128,7 @@ const performanceChecks = {
   "loadTime": false,
   "memoryUsage": false};
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -133,6 +137,8 @@ const performanceChecks = {
 origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 try {
   // Check build size
   if (fs.existsSync('.next')) {
@@ -157,6 +163,7 @@ try {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   performanceChecks.bundleAnalysis = true;
 } catch (error) {
+<<<<<<< HEAD
       console.warn('⚠️  Could not collect system metrics:', error.message);
     }
   }
@@ -301,6 +308,9 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 } catch (error) {
   console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)');
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)');
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
   performanceChecks.bundleAnalysis = true;
 } catch (error) {
@@ -394,6 +404,7 @@ const report = {
   score: performanceScore,
   checks: performanceChecks,
 <<<<<<< HEAD
+<<<<<<< HEAD
   recommendations: []
 }
 origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
@@ -401,6 +412,10 @@ origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
   recommendations: [];
 };
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  recommendations: [];
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 if (performanceScore < 80) {
 
 module.exports = PerformanceMonitor;

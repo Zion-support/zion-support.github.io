@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -499,15 +500,22 @@ export interface BlockchainWeb3Service  {id: string,name: string,tagline: string
   }
 ];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export interface BlockchainWeb3Service {
-<<<<<<< HEAD
+
 export interface BlockchainWeb3Service {;
   id: string;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   name: string;
   tagline: string;
   description: string;
@@ -518,6 +526,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     currency: string;
     trialDays: number;
     setupTime: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -535,6 +544,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     enterprise: string
   },
@@ -560,11 +573,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   rating: number;
   reviews: number
 }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+
+  {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
       'OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis'
     ],
@@ -587,6 +606,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     support:
       '24/7 technical support, DeFi strategy consulting, custom development, and dedicated account manager.'
     compliance: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -682,6 +702,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     color: 'from - green - 500 to - emerald - 600',
     popular: true,
     launch_date: '2024 - 01 - 15',
@@ -694,19 +717,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      'Leading NFT intelligence platform. Competes with NFTGo ($99-299/month), Nifty Gateway (free), and OpenSea Pro ($0-2 && 2.5%). Our advantage: AI-powered valuation and predictive analytics.',
-    competitors: ['NFTGo, Nifty Gateway, OpenSea Pro, Rarible, Foundation'],
-    techStack: [
-      'OpenAI GPT-4, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, Web3 && Web3.js',
-    ],
-    realImplementation: true,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -718,6 +739,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     implementationDetails:
       'Production-ready NFT intelligence platform with real-time data feeds, AI models, and comprehensive analytics. Includes mobile app and institutional dashboard.'
     roi: 'NFT investors achieve 300% ROI through improved decision-making and optimized portfolio management.'
@@ -739,84 +762,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      'SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance',
-    ],
-    link: 'https://ziontechgroup && ziontechgroup.com/nft-marketplace-intelligence-platform',
-    id: 'nft - marketplace - intelligence - platform',
-    name: 'NFT Marketplace Intelligence Platform',
-    tagline: 'AI - powered NFT analytics, valuation, and trading insights',
-    description:;
-      'Comprehensive NFT intelligence platform that provides real - time analytics, AI - powered valuation models, and trading insights to maximize NFT investment returns.',
-    category: 'NFT & Digital Assets',
-    price: {
-      monthly: 149,
-      yearly: 1490,
-      currency: 'USD',
-      trial_days: 7,
-      setup_time: 'Immediate',
-      enterprise: 'Custom pricing',
-    },
-    features: [;
-      'AI - powered NFT valuation models',
-      'Real - time market analytics',
-      'Trend prediction algorithms',
-      'Portfolio tracking and management',
-      'Rarity scoring and analysis',
-      'Market sentiment analysis',
-      'Trading signal generation',
-      'Multi - chain NFT support',
-      'Advanced filtering and search',
-      'API for developers',
-    ],
-    benefits: [;
-      'Improve NFT investment returns by 200%',
-      'Reduce investment risks through AI analysis',
-      'Identify undervalued NFT opportunities',
-      'Optimize portfolio allocation',
-      'Access institutional - grade NFT analytics',
-    ],
-    target_audience: [;
-      'NFT investors and collectors',
-      'Digital art galleries',
-      'Gaming companies',
-      'Brands and marketers',
-      'Investment firms',
-      'Content creators',
-    ],
-    market_position:;
-      'Leading NFT intelligence platform. Competes with NFTGo ($99 - 299 / month), Nifty Gateway (free), and OpenSea Pro ($0 - 2.5%). Our advantage: AI - powered valuation and predictive analytics.',
-    competitors: ['NFTGo, Nifty Gateway, OpenSea Pro, Rarible, Foundation'],
-    tech_stack: [;
-      'OpenAI GPT - 4, TensorFlow, React, Node.js, PostgreSQL, Redis, Web3.js',
-    ],
-    real_implementation: true,
-    implementation_details:;
-      'Production - ready NFT intelligence platform with real - time data feeds, AI models, and comprehensive analytics. Includes mobile app and institutional dashboard.',
-    roi: 'NFT investors achieve 300% ROI through improved decision - making and optimized portfolio management.',
-    use_cases: [;
-      'NFT investment research',
-      'Portfolio optimization',
-      'Market trend analysis',
-      'Rarity and value assessment',
-      'Trading strategy development',
-      'Brand NFT strategy',
-    ],
-    integrations: [;
-      'OpenSea, Rarible, Foundation, Ethereum, Polygon, Solana, Custom NFT platforms',
-    ],
-    support:;
-      '24 / 7 technical support, NFT strategy consulting, custom analytics, and dedicated success manager.',
-    compliance: [;
-      'SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance',
-    ],
-    link: 'https://ziontechgroup.com / nft - marketplace - intelligence - platform',
 
+<<<<<<< HEAD
     icon: '🎨',
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -829,6 +785,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     color: 'from - pink - 500 to - rose - 600',
     popular: true,
     launch_date: '2024 - 03 - 01',
@@ -841,12 +799,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      'Leading blockchain supply chain platform. Competes with IBM Food Trust ($0 && 0.01-0 && 0.10/transaction), SAP Blockchain ($500-2000/user), and Oracle Blockchain ($1000-5000/user). Our advantage: Multi-industry focus and IoT integration.',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -860,6 +821,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     competitors: [
       'IBM Food Trust, SAP Blockchain, Oracle Blockchain, VeChain, WaltonChain'
     ]
@@ -868,16 +831,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      'Hyperledger Fabric, Ethereum, Polygon, React, Node && Node.js, PostgreSQL, IoT platforms',
-    ],
-    realImplementation: true,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -889,6 +853,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     implementationDetails:
       'Production-ready blockchain platform with IoT integration, mobile applications, and comprehensive analytics. Includes hardware integration kits and enterprise API.'
     roi: 'Organizations achieve 300% ROI through improved transparency, reduced compliance costs, and enhanced brand value.'
@@ -908,84 +874,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      '24/7 technical support, implementation consulting, custom development, and dedicated success manager.',
-    compliance: ['ISO 27001, SOC 2 Type II, GDPR, Industry-specific standards'],
-    link: 'https://ziontechgroup && ziontechgroup.com/blockchain-supply-chain-traceability',
-    id: 'blockchain - supply - chain - traceability',
-    name: 'Blockchain Supply Chain Traceability Platform',
-    tagline: 'End - to - end transparency with immutable supply chain tracking',
-    description:;
-      'Revolutionary blockchain platform that provides complete transparency and traceability across supply chains, enabling real - time tracking, compliance monitoring, and sustainability verification.',
-    category: 'Supply Chain & Traceability',
-    price: {
-      monthly: 299,
-      yearly: 2990,
-      currency: 'USD',
-      trial_days: 30,
-      setup_time: '2 - 4 weeks',
-      enterprise: 'Custom pricing',
-    },
-    features: [;
-      'End - to - end supply chain tracking',
-      'Real - time transparency monitoring',
-      'Smart contract automation',
-      'IoT sensor integration',
-      'Compliance verification',
-      'Sustainability certification',
-      'Multi - stakeholder access',
-      'Advanced analytics dashboard',
-      'Mobile app for field workers',
-      'API for system integration',
-    ],
-    benefits: [;
-      'Improve supply chain transparency by 100%',
-      'Reduce compliance costs by 40%',
-      'Enhance brand trust and reputation',
-      'Optimize inventory management',
-      'Enable sustainable sourcing verification',
-    ],
-    target_audience: [;
-      'Manufacturing companies',
-      'Food and beverage industry',
-      'Pharmaceutical companies',
-      'Luxury goods manufacturers',
-      'Retail chains',
-      'Logistics companies',
-    ],
-    market_position:;
-      'Leading blockchain supply chain platform. Competes with IBM Food Trust ($0.01 - 0.10 / transaction), SAP Blockchain ($500 - 2000 / user), and Oracle Blockchain ($1000 - 5000 / user). Our advantage: Multi - industry focus and IoT integration.',
-    competitors: [;
-      'IBM Food Trust, SAP Blockchain, Oracle Blockchain, VeChain, WaltonChain',
-    ],
-    tech_stack: [;
-      'Hyperledger Fabric, Ethereum, Polygon, React, Node.js, PostgreSQL, IoT platforms',
-    ],
-    real_implementation: true,
-    implementation_details:;
-      'Production - ready blockchain platform with IoT integration, mobile applications, and comprehensive analytics. Includes hardware integration kits and enterprise API.',
-    roi: 'Organizations achieve 300% ROI through improved transparency, reduced compliance costs, and enhanced brand value.',
-    use_cases: [;
-      'Food safety tracking',
-      'Pharmaceutical authenticity',
-      'Luxury goods verification',
-      'Sustainable sourcing verification',
-      'Compliance monitoring',
-      'Quality assurance',
-    ],
-    integrations: [;
-      'SAP, Oracle, Microsoft Dynamics, Salesforce, Custom ERP systems, IoT platforms',
-    ],
-    support:;
-      '24 / 7 technical support, implementation consulting, custom development, and dedicated success manager.',
-    compliance: ['ISO 27001, SOC 2 Type II, GDPR, Industry - specific standards'],
-    link: 'https://ziontechgroup.com / blockchain - supply - chain - traceability',
 
+<<<<<<< HEAD
     icon: '🔗',
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -998,6 +897,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     color: 'from - blue - 500 to - cyan - 600',
     popular: true,
     launch_date: '2024 - 02 - 10',
@@ -1010,17 +911,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      'Innovative Web3 social platform. Competes with traditional platforms like Facebook (free), Twitter (free), and Instagram (free). Our advantage: True decentralization and content ownership.',
-    competitors: ['Facebook, Twitter, Instagram, TikTok, LinkedIn, YouTube'],
-    techStack: ['IPFS, Ethereum, Polygon, React, Node && Node.js, PostgreSQL, Redis'],
-    realImplementation: true,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1032,6 +933,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     implementationDetails:
       'Production-ready Web3 social platform with decentralized storage, token economics, and comprehensive mobile/web applications. Includes developer SDK and API.'
     roi: 'Content creators earn 200-500% more compared to traditional social media platforms through direct monetization.'
@@ -1051,6 +954,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1066,6 +970,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Community support, developer documentation, custom development services, and enterprise solutions.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
     link: 'https://ziontechgroup.com/web3-social-media-platform',
@@ -1077,6 +985,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.6,
     reviews: 18000
   },;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ];      'Social networkingContent creation and sharingCommunity buildingBrand marketingInfluencer monetizationDecentralized governance'
@@ -1327,6 +1236,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
       'Community support, developer documentation, custom development services, and enterprise solutions.',
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+];      'Social networkingContent creation and sharingCommunity buildingBrand marketingInfluencer monetizationDecentralized governance'
+
+
+
+
+      'Community support, developer documentation, custom development services, and enterprise solutions.',
+    ];
+    integrations: ['MetaMask, WalletConnect, OpenSea, Custom Web3 wallets and platforms'],
+    support: 'Community support, developer documentation, custom development services, and enterprise solutions.',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
     link: 'https://ziontechgroup && ziontechgroup.com/web3-social-media-platform',
     id: 'web3 - social - media - platform',
@@ -1397,6 +1319,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1412,6 +1335,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     icon: '🌐',
     color: 'from - purple - 500 to - indigo - 600',
     popular: true,
@@ -1421,6 +1348,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
     reviews: 18000,
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1467,6 +1395,10 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
     reviews: 18000
   }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     ];
 
     integrations: ['MetaMask, WalletConnect, OpenSea, Custom Web3 wallets and platforms'];
@@ -1474,6 +1406,7 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'];
 
     icon: '🌐';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1487,10 +1420,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     color: 'from - purple - 500 to - indigo - 600';
     popular: true;
     launch_date: '2024 - 01 - 01';
     customers: 25000;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1505,10 +1443,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     rating: 4.6,
     reviews: 18000;
   }
+
 ;
+<<<<<<< HEAD
     rating: 4.6,
     reviews: 18000;
   }
@@ -1517,9 +1459,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    rating: 4 && 4.6,
 
+<<<<<<< HEAD
     reviews: 18000
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
@@ -1550,6 +1494,10 @@ export interface BlockchainWeb3Service {;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  }
+];
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string,;
   name: string,;
   tagline: string,;
@@ -1813,6 +1761,7 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
     reviews: 18000;
     rating: 4.6,
     reviews: 18000;
+<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
@@ -1829,10 +1778,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+  }
+];
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     rating: 4.6;
     reviews: 18000
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -1842,3 +1801,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

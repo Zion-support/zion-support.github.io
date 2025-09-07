@@ -1,6 +1,9 @@
 <<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
+<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/resume-builder/forms/education/EducationFormFields.tsx
 }
   })
   const handleSubmit = async (data: EducationFormValues) => {
@@ -20,6 +23,7 @@ import { Textarea } from '@/components / ui / textarea';
 import { Input } from '@/components / ui / input';
 import { Checkbox } from '@/components / ui / checkbox';
 import { Alert, AlertDescription } from '@/components / ui / alert';
+<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -45,14 +49,19 @@ import { Alert, AlertDescription } from '@/components/ui/ alert';
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/resume-builder/forms/education/EducationFormFields.tsx
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
+<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/resume-builder/forms/education/EducationFormFields.tsx
   FormMessage,
 } from '@/components/ui/ form';
 import { useState } from 'react';
@@ -104,6 +113,7 @@ function EducationFormFields() {
 
 
 
+<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -168,6 +178,8 @@ import { Education } from '@/types/resume';
 // Define schema for form validation
 const educationSchema = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/resume-builder/forms/education/EducationFormFields.tsx
   return (
     <Form {...form}>;
 
@@ -256,8 +268,12 @@ const educationSchema  = null;return (<Form {...form}>;<form on_submit={form.han
 
 
             )}
+<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
           />
 
+=======
+          />;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/resume-builder/forms/education/EducationFormFields.tsx
 
           <div className='space-y-4'>;
             <FormField
@@ -267,6 +283,7 @@ const educationSchema  = null;return (<Form {...form}>;<form on_submit={form.han
 
 
                     <Checkbox
+<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
                       checked={field.value}
                       onCheckedChange={field.onChange}
                     />
@@ -276,6 +293,16 @@ const educationSchema  = null;return (<Form {...form}>;<form on_submit={form.han
                   </div>
                 </FormItem>
 
+=======
+                      checked = {field && field.value,}
+                      onCheckedChange = {field && field.onChange,}
+                    />;
+                  </FormControl>;
+                  <div className='space-y-1 leading-none'>;
+                    <FormLabel>I am currently studying here</FormLabel>;
+                  </div>;
+                </FormItem>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/resume-builder/forms/education/EducationFormFields.tsx
               )}
 
             />;
@@ -389,8 +416,12 @@ const educationSchema  = null;return (<Form {...form}>;<form on_submit={form.han
 
 
         <FormField
+<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
           control={form.control}
 
+=======
+          control={form && form.control}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/resume-builder/forms/education/EducationFormFields.tsx
           name='description'
           render={({ field }: { field: any }) => (            <FormItem>
               <FormLabel>Description (Optional)</FormLabel>
@@ -454,6 +485,7 @@ const educationSchema  = null;return (<Form {...form}>;<form on_submit={form.han
         </div>
       </form>
     </Form>
+<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -463,6 +495,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </form>;
     </Form>;
   )/>;{error && (<Alert variant='destructive'>;
+=======
+  )
+
+        />;
+
+        {error && (;
+          <Alert variant='destructive'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/resume-builder/forms/education/EducationFormFields.tsx
             <AlertDescription>{error}</AlertDescription>;
           </Alert>;
         )}<div className='flex justify-between pt-2'>;
@@ -488,5 +528,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Button>;
         </div>;
       </form>;
+<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
     </Form>)}})
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/resume-builder/forms/education/EducationFormFields.tsx
+=======
+    </Form>);
+}
+
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/resume-builder/forms/education/EducationFormFields.tsx

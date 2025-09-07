@@ -11,6 +11,7 @@ class AppEnhancementSuite {
     console.log(message);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -38,6 +39,8 @@ class AppEnhancementSuite {
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     // Create security headers configuration
     const securityConfig = {
@@ -48,8 +51,14 @@ class AppEnhancementSuite {
         'Strict-Transport-Security': 'max-age=31536000; includeSubDomains';
         'Content-Security-Policy':
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+
+
+          "default-src 'self'; script-src 'self' 'unsafe-inline'"},
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   
   createPerformanceOptimizations() {
@@ -72,6 +81,7 @@ class AppEnhancementSuite {
         'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline'"
       },
 
+<<<<<<< HEAD
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       "validation": {
@@ -90,6 +100,8 @@ class AppEnhancementSuite {
     };
 ursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     fs.writeFileSync(
       path.join(this.projectRoot, 'security-config.json');
@@ -102,6 +114,7 @@ ursor/automate-test-improve-and-merge-code-59d5
   createMonitoringScripts() {
     this.log('📊 Creating Monitoring Scripts');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -249,6 +262,8 @@ ursor/automate-test-improve-and-merge-code-59d5
       '',
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     ];
     const monitoringScript = monitoringLines.join('\n');
@@ -267,6 +282,7 @@ ursor/automate-test-improve-and-merge-code-59d5
 
     const report = {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     const securityHeaders = {}
 =======
@@ -275,6 +291,12 @@ ursor/automate-test-improve-and-merge-code-59d5
 
 
     const securityHeaders = {}
+=======
+
+
+    const securityHeaders = {}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       timestamp: new Date().toISOString(),
       enhancements: this.enhancements,
       status: 'completed'
@@ -283,6 +305,7 @@ ursor/automate-test-improve-and-merge-code-59d5
 
     const securityHeaders = {
 
+<<<<<<< HEAD
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       'X-Content-Type-Options': 'nosniff',
@@ -299,6 +322,14 @@ ursor/automate-test-improve-and-merge-code-59d5
       status: 'completed';
 ursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      'Content-Security-Policy': "default-src 'self''
+
+      timestamp: new Date().toISOString();
+      enhancements: this.enhancements;
+      status: 'completed';
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     };
 
     // Write enhancement report
@@ -308,12 +339,12 @@ ursor/automate-test-improve-and-merge-code-59d5
     );
 
     // Security headers are already configured in createSecurityEnhancements
-<<<<<<< HEAD
-=======
+
       'Content-Security-Policy': "default-src 'self'"
     };
     this.log(`Security headers configured: ${Object.keys(securityHeaders).join(', ')}`);
 
+<<<<<<< HEAD
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     this.enhancements.push('Security headers configuration created');
@@ -322,6 +353,8 @@ ursor/automate-test-improve-and-merge-code-59d5
     this.log('🏥 Creating Health Check Endpoint');
     const healthCheckConfig = {
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       timestamp: new Date().toISOString();
       status: 'healthy';
       checks: {
@@ -349,8 +382,7 @@ ursor/automate-test-improve-and-merge-code-59d5
       path.join(this.projectRoot, 'health-check-config.json');
       JSON.stringify(healthCheckConfig, null, 2)
     );
-<<<<<<< HEAD
-=======
+
       "timestamp": new Date().toISOString(),
       "status": "healthy",
       "checks": {
@@ -374,7 +406,10 @@ ursor/automate-test-improve-and-merge-code-59d5
     };
     this.log(`Health check config: ${JSON.stringify(healthCheckConfig, null, 2)}`);
 
+<<<<<<< HEAD
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     this.enhancements.push('Health check endpoint created');
   }

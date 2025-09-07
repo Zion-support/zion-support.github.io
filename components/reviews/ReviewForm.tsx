@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
@@ -27,6 +28,11 @@
 
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -89,13 +95,20 @@ type Props = {
 
 const ReviewForm: React.FC<Props> = ({ initial }) => {;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import React, { useState } from 'react';
 import StarRating from './StarRating';
 export type ReviewFormValues = any;
 const ReviewForm: React.FC<Props> = ({ initial }) => {
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const [rating, setRating] = useState(0);
   const [text, setText] = useState('');
   const [anonymous, setAnonymous] = useState(false);
@@ -146,6 +159,7 @@ function handle_submit() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -170,6 +184,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           categories: {
             communication
             qualityOfWork
@@ -207,6 +223,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       const data = await res && res.json();
       if (!res && res.ok) throw new Error(data && data.error || 'Failed to submit');
 
+<<<<<<< HEAD
       setMessage('Review submitted! Pending admin approval.');
     } catch (err: any) {;
       setMessage(err && err.message);
@@ -227,6 +244,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       setMessage('Review submitted! Pending admin approval.');
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       const data = await res.json ();
       if (throw new Error (data.error || 'Failed to submit')) {
   $2
@@ -246,6 +265,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (}
         <label className='block text - sm font - medium mb - 2'>Your Review</label>          categories: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -256,13 +276,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 
 
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
   }
   return (
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
   }
   return (<div>;
@@ -281,11 +308,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     } catch (err: any) {
       setMessage(err.message);
     } finally {
@@ -300,6 +332,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
       <div>
 <label className='block text-sm font-medium mb-2'>Your Review</label>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -320,10 +353,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <textarea;
           className='w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         <textarea
           className='w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500'
           rows={5}
           value={text}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -342,10 +379,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           onChange={e => setText(e && e.target.value)}          required;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+=======
+          onChange={e => setText(e && e.target.value)}          required;
+        />;
+      </div>;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         <textarea
           className="w-full rounded-md border border-gray-300 p-3 focus: outline-none focus:ring-2 focus:ring-blue-500"
           rows={5}
           value={text}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -371,6 +416,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         <input
           id='anonymous'
           type='checkbox'
@@ -400,11 +449,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               value={communication |0}
               onChange={v => setCommunication(v)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
       set_submitting (false)}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       set_submitting (false);
     }
   }
@@ -465,12 +517,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;<div className='enhanced - card'>;
               on_change={v => setQualityOfWork (v)}
 
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             />;
           </div>;
           <span className='pill'>Optional</span>;
         </div>;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         <div className='enhanced - card'>;
@@ -530,11 +586,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+              onChange={e => setWouldWorkWithAgain(e && e.target.checked)}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             />;
           </div>;
           <span className='pill'>Optional</span>        </div>;
       </div>;
-<<<<<<< HEAD
 
       </button>;
 
@@ -547,6 +606,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
         {submitting ? 'Submitting...' : 'Submit Review'}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -568,9 +628,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         disabled={submitting}
       >;
         {submitting ? 'Submitting...' : 'Submit Review'}
+=======
+        disabled={submitting}
+      >;
+        {submitting ? 'Submitting...' : 'Submit Review'}
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 <<<<<<< HEAD
 export default ReviewForm;
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -600,6 +667,9 @@ type='submit';
         {submitting ? 'Submitting...' : 'Submit Review'}
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       </button>;
       {message && <p className='text - sm'>{message}</p>}
     </form>);
@@ -611,6 +681,7 @@ export default ReviewForm;    </form>);
 export default ReviewForm;
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -635,3 +706,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

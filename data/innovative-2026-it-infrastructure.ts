@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -27,6 +28,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import { ServiceVariant  } from '../types/service-variants';
 export interface Innovative2026ITInfrastructureService  {id: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+import { ServiceVariant } from '../types/service-variants';
+export interface Innovative2026ITInfrastructureService {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string;
   name: string;
   tagline: string;
@@ -57,6 +64,7 @@ export interface Innovative2026ITInfrastructureService  {id: string;
     email: string;
 <<<<<<< HEAD
     address: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -667,6 +675,9 @@ export interface Innovative2026ITInfrastructureService  {id: string,name: string
     email: string;
     address: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Quantum machine learning acceleration',
         'Multi - cloud orchestration',
         'Auto - scaling infrastructure',
@@ -677,6 +688,7 @@ export interface Innovative2026ITInfrastructureService  {id: string,name: string
         'Quantum - safe data storage'
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -699,6 +711,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       color: 'from - indigo - 600 to - purple - 700',
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / quantum - enhanced - cloud',
@@ -745,6 +761,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -760,6 +777,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'AWS',
         'Google Cloud',
         'Microsoft Azure',
@@ -770,17 +791,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      market_size: '$397.4B market',
-      growth_rate: '280% annual growth',
-      variant: 'quantum - futuristic',
-      contact_info: {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -792,6 +813,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -809,26 +832,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-        'AI-powered edge orchestration',
-    // Edge Computing Orchestration Platform;
-    {
-      id: 'edge - computing - orchestration',
-      name: 'Edge Computing Orchestration Platform',
-      tagline:;
-        'Manage distributed computing at the edge with AI - powered orchestration',
-      price: '$299',
-      period: '/month',
-      description:;
-        'Advanced edge computing platform that intelligently orchestrates distributed computing resources, optimizing performance and reducing latency for IoT and real - time applications.',
-      features: [;
-        'AI - powered edge orchestration',
 
+<<<<<<< HEAD
         'Global edge network management',
         'Real - time load balancing',
         'Edge AI model deployment',
@@ -934,6 +948,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Continuous identity verification',
         'Micro - segmentation',
         'AI - powered threat detection',
@@ -946,6 +962,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Automated response'
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -981,6 +998,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Python',
         'TensorFlow',
         'React',
@@ -991,6 +1012,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Docker',
         'Kubernetes'
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1024,6 +1046,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Network access control',
         'Remote work security',
         'Cloud security',
@@ -1035,15 +1061,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      roi: 'Average customer saves $1.8M annually through prevented security breaches and simplified compliance.',
-      competitors: [;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1055,6 +1083,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Palo Alto Networks',
         'Cisco',
         'Fortinet',
@@ -1065,17 +1095,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      market_size: '$45.2B market',
-      growth_rate: '260% annual growth',
-      variant: 'security - futuristic',
-      contact_info: {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1087,6 +1117,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1104,25 +1136,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-        'AI-powered CI/CD automation',
-    // AI - Powered DevOps Platform;
-    {
-      id: 'ai - powered - devops - platform',
-      name: 'AI - Powered DevOps Platform',
-      tagline: 'Automate and optimize your development pipeline with AI',
-      price: '$199',
-      period: '/month',
-      description:;
-        'Intelligent DevOps platform that uses AI to automate deployment, optimize performance, and predict potential issues before they impact your applications.',
-      features: [;
-        'AI - powered CI / CD automation',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1134,6 +1158,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Intelligent testing and QA',
         'Performance optimization',
         'Predictive issue detection',
@@ -1145,6 +1171,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Team collaboration tools'
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1180,6 +1207,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'React',
         'Node && Node.js',
         'Python',
@@ -1190,6 +1221,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Azure',
         'Jenkins'
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1233,6 +1265,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'GitLab',
         'GitHub Actions',
         'Jenkins',
@@ -1243,17 +1279,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      market_size: '$8.2B market',
-      growth_rate: '190% annual growth',
-      variant: 'devops - futuristic',
-      contact_info: {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1265,6 +1301,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1278,6 +1316,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       rating: 4 && 4.7,
       reviews: 1250
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1300,6 +1339,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       id: 'quantum - safe - data - storage',
       name: 'Quantum - Safe Data Storage',
       tagline: 'Future - proof your data with quantum - resistant encryption',
@@ -1325,27 +1368,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-        'Post-Quantum Cryptography',
-      color: 'from - violet - 600 to - purple - 700',
-      text_color: 'text - violet - 400',
-      link: 'https://ziontechgroup.com / quantum - safe - storage',
-      market_position:;
-        'Competitive with AWS S3 ($0.023+), Google Cloud Storage ($0.020+), and Azure Blob ($0.0184+). Our advantage: Quantum - safe encryption, comprehensive security, and future - proof architecture.',
-      target_audience:;
-        'Financial institutions, Healthcare organizations, Government agencies, Legal firms, Research institutions, Technology companies',
-      trial_days: 30,
-      setup_time: '1 week',
-      category: 'Data Storage & Security',
-      real_service: true,
-      technology: [;
-        'Post - Quantum Cryptography',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1357,6 +1390,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'React',
         'Node && Node.js',
         'Python',
@@ -1365,6 +1400,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'AWS',
         'Docker'
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1428,6 +1464,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       customers: 1100,
       rating: 4 && 4.8,
       reviews: 550
@@ -1437,6 +1477,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
   ];    features: [
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export interface Innovative2026ITInfrastructureService {
   id: string, name: string,
   tagline: string, price: string,
@@ -1459,6 +1503,10 @@ export interface Innovative2026ITInfrastructureService {
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     website: string
   },
   realImplementation: boolean;
@@ -1466,7 +1514,10 @@ export interface Innovative2026ITInfrastructureService {
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   reviews: number
 }
 export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] = [
@@ -1483,6 +1534,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -1490,11 +1542,15 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       id: 'quantum-safe-data-storage'
       name: 'Quantum-Safe Data Storage'
       tagline: 'Future-proof your data with quantum-resistant encryption'
       price: '$349'
       period: '/month'
+<<<<<<< HEAD
     ];
     popular: true;
     icon: '⚛️';
@@ -2077,6 +2133,8 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       price: '$349',
       period: '/month',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       description:
         'Advanced data storage platform that uses quantum-resistant encryption algorithms to protect your data against future quantum computing threats.',
       features: [
@@ -2107,6 +2165,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       technology: [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Post-Quantum Cryptography'
         'React'
         'Node.js'
@@ -2116,6 +2177,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'AWS'
         'Docker'
       ]
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -2141,6 +2203,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       integrations: [
         'AWS S3',
         'Azure Blob',
@@ -2160,6 +2226,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ],
       roi: 'Average customer saves $500K annually through improved security and compliance management.',
       competitors: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2187,6 +2254,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       growthRate: '220% annual growth',
       variant: 'quantum-futuristic',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       contactInfo: {
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -2198,16 +2267,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Enterprise-grade quantum-safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24/7 support.'
       launchDate: '2025-11-20'
       customers: 1100
       rating: 4.8
       reviews: 550
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2222,6 +2296,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Enterprise-grade quantum-safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24/7 support.',
       launchDate: '2025-11-20',
       customers: 1100,
@@ -2230,13 +2306,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       reviews: 550,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       reviews: 550
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     },;
   ];    features: [
       'Quantum-resistant encryptionMulti-layer securityAutomated backup and recoveryGlobal data distributionCompliance certificationsReal-time monitoringDisaster recoveryData deduplication';
       'API accessMobile applications'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2251,6 +2331,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     ];
     popular: true, icon: '⚛️',
     color: 'from-indigo-600 to-purple-700', textColor: 'text-indigo-400',
@@ -2291,6 +2373,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -2298,6 +2381,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026ITInfrastructureService {;
   id: string,;
@@ -2559,6 +2646,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     launchDate: '2025-11-20',;
     customers: 1100,;
     rating: 4.8;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2603,6 +2691,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    reviews: 550
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     real_implementation: true,
     implementation_details: 'Enterprise - grade quantum - safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24 / 7 support.',
@@ -2611,14 +2703,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 550;
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 ];
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   }
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -2631,6 +2726,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+];
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 import { ServiceVariant } from '../types/service-variants',;
 =======
@@ -2681,6 +2780,7 @@ export interface Innovative2026ITInfrastructureService {;
   rating: number,;
   reviews: number;
 }
+
 ;
 export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] = [;
   // Quantum-Enhanced Cloud Infrastructure;
@@ -2902,6 +3002,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     customers: 1100,;
     rating: 4.8;
     reviews: 550;
+<<<<<<< HEAD
 ];
   }
 <<<<<<< HEAD
@@ -3217,3 +3318,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+  }
+];
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

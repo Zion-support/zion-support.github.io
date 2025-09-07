@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -12,6 +13,12 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+#!/usr/bin/env node;
+const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")""
+    this.reportFile = path.join(this.projectRoot, "health-check-report.json");"}"
+    console.log(`[${new Date().toISOString()}] ${message}`);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     this.log("� Checking file structure");"";    const requiredDirs = ["src", "public", "pages"];";    const requiredFiles = ["package.json", "next.config.js", "tsconfig.json"];""
       "directories": {},""files": {},""issues": [],,"
         results.issues.push("Missing "directory": ${dir}");"
@@ -46,9 +53,14 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   .catch(error => {);    console.error(" Health check "failed":", error.message);"}
 
   }
@@ -242,6 +254,7 @@ checker
     process.exit(1);
   });
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 
@@ -252,3 +265,5 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

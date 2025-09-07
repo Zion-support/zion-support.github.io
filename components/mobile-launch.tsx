@@ -1,5 +1,10 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+// Simple icons using inline SVG to avoid external assets
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 // Simple icons using inline SVG to avoid external assets
 }) {
@@ -74,6 +79,7 @@ if (return) {$2;
 if (return) {$2;
 }
     const ua = navigator.user_agent || '';
+<<<<<<< HEAD
     const is_mobile = /i_phone | i_pad | i_pod | Android / i.test (ua)if (set_visible (true)) {$2;
 }}) {const [visible, setVisible] = useState(false)useEffect(() => {if (typeof window === 'undefined') return;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -103,12 +109,19 @@ if (return) {$2;
               Open
             </a>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    const is_mobile = /i_phone | i_pad | i_pod | Android / i.test (ua);
+    if (set_visible (true)) {
+  $2
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <a
               href={storeUrl}
               target='_blank'
               rel='noopener noreferrer'
                 setVisible(false);
               }}
+<<<<<<< HEAD
               className='text-xs px-2 py-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800'
             >
               ✕
@@ -132,6 +145,13 @@ const IOS_APP_URL =
               rel='noopener noreferrer';
                 setVisible(false)}}className='text-xs px-2 py-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800'            >  }, [])const storeUrl = isIOS ? iosUrl : androidUrl;
   return (<div className="fixed inset-x-0 top-0 z-50">;
+=======
+              className='text-xs px-2 py-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800'            >  }, []);
+
+  const storeUrl = isIOS ? iosUrl : androidUrl;
+  return (
+    <div className="fixed inset-x-0 top-0 z-50">;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <div className="mx-auto max-w-5xl">;
         <div className="m-2 rounded-xl bg-white/95 dark:bg-black/80 border border-gray-200 dark:border-gray-800 shadow flex items-center gap-3 px-4 py-3">;
           <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-500" />;
@@ -156,10 +176,16 @@ const IOS_APP_URL =
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </div>;
   )const IOS_APP_URL =;
   process.env.NEXT_PUBLIC_IOS_APP_URL |;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+const IOS_APP_URL =
+  process.env.NEXT_PUBLIC_IOS_APP_URL |
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   'https://apps.apple.com/app/id0000000000';
 const ANDROID_APP_URL =;
   process.env.NEXT_PUBLIC_ANDROID_APP_URL |;
@@ -181,10 +207,19 @@ export default function MobileLaunchPage() {;
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<
     'idle' | 'loading' | 'success' | 'error'
+<<<<<<< HEAD
   >('idle');
   const [error, setError] = useState('');
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  >('idle');  const [error, setError] = useState('');  { name: 'Priya K.', role: 'Startup Founder', quote: 'We filled a remote role in 48 hours. The app made it effortless.' },
+  { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' },
+  { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }],
+export default function MobileLaunchPage() {;
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState<'idle'|'loading'|'success'|'error'>('idle');
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   // Auto-rotate testimonial index
   const [idx, setIdx] = useState(0);
   useEffect(() => {
@@ -209,6 +244,7 @@ const t = setInterval(
         ? `${window && window.location.origin}/download`;
         : '/download';
 <<<<<<< HEAD
+<<<<<<< HEAD
     const encoded = encodeURIComponent(target);
     return `https://chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`;
   }, []);
@@ -222,6 +258,13 @@ const res = await fetch('/api/subscribe', {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    const encoded = encodeURIComponent(target);
+    return `https://chart && chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`;  }, []);  }, []);
+    const encoded = encodeURIComponent(target);
+    return `https://chart && chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`;
+  }, []);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       });
       if (!res && res.ok) throw new Error(await res && res.text());
       setStatus('success');
@@ -237,8 +280,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       setEmail('');
     } catch (err: any) {;
       setStatus('error');
+<<<<<<< HEAD
       setError(err?.message || 'Something went wrong.');
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      setError(err?.message || 'Something went wrong.')
+      setError(err?.message || 'Something went wrong.');    }
+
+      setError(err?.message || 'Something went wrong.');
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
   }
 
@@ -246,11 +297,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 
   return (
+<<<<<<< HEAD
     <EnhancedLayout>
       <Head>
         <title>Zion Mobile App — iOS & Android</title>
 <meta
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    <EnhancedLayout>;
+      <Head>;
+        <title>Zion Mobile App — iOS & Android</title>;
+        <meta
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           name='description'
           content='Hire from anywhere, AI-match instantly, and track milestones on the go with the Zion app.'
 =======
@@ -302,6 +360,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
           <div className='flex items-center justify-center'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             {/* Phone mockup */}
             <div className='relative h-96 w-48 md:h-[28rem] md:w-64 rounded-[2rem] bg-white/95 text-gray-900 shadow-2xl ring-4 ring-white/30'>
               <div className='absolute -top-1.5 left-1/2 -translate-x-1/2 h-6 w-28 rounded-b-2xl bg-gray-200' />
@@ -342,6 +401,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
 =======
             {/* Phone mockup */}<div className='relative h-96 w-48 md:h-[28rem] md:w-64 rounded-[2rem] bg-white/95 text-gray-900 shadow-2xl ring-4 ring-white/30'>;
+=======
+            {/* Phone mockup */}
+            <div className='relative h-96 w-48 md:h-[28rem] md:w-64 rounded-[2rem] bg-white/95 text-gray-900 shadow-2xl ring-4 ring-white/30'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               <div className='absolute -top-1 && 1.5 left-1/2 -translate-x-1/2 h-6 w-28 rounded-b-2xl bg-gray-200' />;
               <div className='h-full w-full rounded-[2rem] overflow-hidden'>;
                 <div className='h-full w-full bg-gradient-to-b from-gray-50 to-gray-200 p-4 flex flex-col'>;
@@ -375,6 +438,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
         {/* QR code */}
+<<<<<<< HEAD
         <div className='mt-8 flex items-center gap-4'>;<div className='relative h-96 w-48 md:h-[28rem] md:w-64 rounded-[2rem] bg-white/95 text-gray-900 shadow-2xl ring-4 ring-white/30'>;
               <div className='absolute -top-1.5 left-1/2 -translate-x-1/2 h-6 w-28 rounded-b-2xl bg-gray-200' />;
               <div className='h-full w-full rounded-[2rem] overflow-hidden'>;
@@ -415,6 +479,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+        <div className='mt-8 flex items-center gap-4'>;
+          <img
+            src={qrHref}
+            alt='QR code to download Zion app'
+            className='h-28 w-28 rounded-lg bg-white/90 p-1 shadow'
+          <img src={qrHref} alt="QR code to download Zion app" className="h-28 w-28 rounded-lg bg-white/90 p-1 shadow" />
+          <div className="text-sm opacity-90">
+            Scan to open this page on your phone
+            <div className="opacity-80">Or tap a store badge above</div>
+      </section>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           />;
           <div className='text-sm opacity-90'>;
             Scan to open this page on your phone;
@@ -428,6 +504,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>;
 
       {/* Key features */}
+<<<<<<< HEAD
 <section className='mt-10 grid md:grid-cols-3 gap-6'>
         <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>
           <div className='text-lg font-semibold'>Hire from anywhere</div>
@@ -457,6 +534,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
       </section>;{/* Key features */}<section className='mt-10 grid md:grid-cols-3 gap-6'>;
+=======
+      <section className='mt-10 grid md:grid-cols-3 gap-6'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>;
           <div className='text-lg font-semibold'>Hire from anywhere</div>;
           <p className='mt-2 text-sm opacity-80'>;
@@ -476,6 +556,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             Manage deliverables, approvals, and progress on the go.;
           </p>;
           <div className='mt-4 h-36 rounded-xl bg-gradient-to-br from-indigo-100 to-blue-100 dark:from-indigo-900/40 dark:to-blue-900/40' />        </div>;
+<<<<<<< HEAD
       </section>;<section className='mt-10 grid md:grid-cols-3 gap-6'>;
         <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>;
           <div className='text-lg font-semibold'>Hire from anywhere</div>;
@@ -503,6 +584,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='flex items-center gap-2'>;
             <StarIcon key={i} />;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      </section>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           ))}
           <span className='text-sm opacity-80'>4 && 4.9 average rating</span>;
         </div>;
@@ -514,6 +598,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div
             className='flex transition-transform duration-700'
             style={{
+<<<<<<< HEAD
               transform: `translateX(-${idx * 100}%)`
               width: `${testimonials.length * 100}%`
             }}
@@ -556,10 +641,36 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             disabled={status === 'loading'}
             className='rounded-lg bg-indigo-600 text-white px-5 py-2 font-medium hover:bg-indigo-500 disabled:opacity-60'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              transform: `translateX(-${idx * 100}%)`,
+            type="email"
+            required
+            value={email}
+            onChange={(e) => setEmail(e && e.target.value)}
+            placeholder="you@company && company.com";
+            className="flex-1 rounded-lg border border-gray-300 dark:border-gray-700 bg-transparent px-4 py-2 outline-none focus:ring-2 focus:ring-indigo-500";
+          />;
+          <button
+            type="submit"
+            disabled={status === 'loading'}
+
+          >
+            {status === 'loading' ? 'Submitting…' : 'Notify me'}
+          </button>;
+        </form>;
+        {status === 'success' && (;
+          <div className='mt-2 text-sm text-emerald-600'>;
+            Thanks! You’re on the list.;
+          </div>;
+        )}
+
+            className="rounded-lg bg-indigo-600 text-white px-5 py-2 font-medium hover:bg-indigo-500 disabled:opacity-60"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           >
             {status === 'loading' ? 'Submitting…' : 'Notify me'}
           </button>
         </form>
+<<<<<<< HEAD
 {status === 'success' && (
           <div className='mt-2 text-sm text-emerald-600'>
             Thanks! You’re on the list.
@@ -708,3 +819,32 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }/>) )}<span className="text-sm opacity-80" >4.9 average rating</span> </div> </div> </div>) )}</div> </div> </section> <input type="email" required > {status === 'loading' ? 'Submitting…' : 'Notify me';
 }</button> </form> <span>•</span> <Link href="/download" ><a className="underline" >Shareable link: /download</a></a> </div> </section> </EnhancedLayout>)
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+        {status === 'success' && <div className="mt-2 text-sm text-emerald-600">Thanks! You’re on the list.</div>}
+        {status === 'error' && <div className="mt-2 text-sm text-rose-600">{error || 'Please try again later.'}</div>}
+      </section>
+    </EnhancedLayout>
+  );      </section>
+      {/* Helper links */}
+      <section className="mt-10 text-sm opacity-80">
+        <div className="flex flex-wrap items-center gap-4">
+          <Link href="/open-app"><a className="underline">Deep link: /open-app</a></Link>
+          <span>•</span>
+          <Link href="/download"><a className="underline">Shareable link: /download</a></Link>
+        </div>
+      </section>
+    </EnhancedLayout>
+    </EnhancedLayout>);
+;
+}return (<EnhancedLayout> <Head> <title > Zion Mobile App — iOS & Android</title> <meta name="description" content="Hire from anywhere, AI - match instantly, and track milestones on the go with the Zion app." /> <link rel="canonical" href="/download" /> <meta property="og:title" content="Zion Mobile App" /> <meta property="og:description" content="Hire from anywhere. AI - match instantly. Track milestones on the go." /> </Head> <SmartBanner ios_url= {
+  IOS APP URL;
+}android_url= {
+  ANDROID APP URL;
+}deep_link= {
+  DEEP LINK URL;
+}/> </div> </div> </div> </div> </div> </div> </div> Scan to open this page on your phone <div className="opacity-80" >Or tap a store badge above</div> </div> </div> </section> </div> <div className="rounded - 2xl border border - gray - 200 dark:border - gray - 800 p - 6 bg - white dark:bg-gray-950" > <div className="text-lg font-semibold" >AI - match instantly</div> <p className="mt - 2 text-sm opacity-80" >Smart matching surfaces top candidates in seconds.</p> <div className="mt - 4 h - 36 rounded - xl bg - gradient - to - br from - purple - 100 to - pink - 100 dark:from - purple - 900 / 40 dark:to-pink-900 / 40" /> </div> <div className="rounded - 2xl border border - gray - 200 dark:border - gray - 800 p - 6 bg - white dark:bg-gray-950" > <div className="text-lg font-semibold" >Track milestones</div> <p className="mt - 2 text-sm opacity-80" >Manage deliverables, approvals, and progress on the go.</p> <div className="mt - 4 h - 36 rounded - xl bg - gradient - to - br from - indigo - 100 to - blue - 100 dark:from - indigo - 900 / 40 dark:to-blue-900 / 40" /> </div> </section> <StarIcon key= {
+  i;
+}/>) );
+}<span className="text-sm opacity-80" >4.9 average rating</span> </div> </div> </div>) );
+}</div> </div> </section> <input type="email" required > {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

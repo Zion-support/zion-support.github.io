@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node
 const fs = require('fs');
@@ -12,6 +13,10 @@ const path = require('path');
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const fs = require('fs')
 const path = require('path')
         console.log(' Checking system health...')
@@ -24,6 +29,7 @@ const path = require('path')
             "message"
             "status"
             "message"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -39,11 +45,11 @@ monitor.run().catch(console.error);
 module.exports = HealthMonitor;
 
 #!/usr/bin/env node
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
 
+<<<<<<< HEAD
 console.log('🏥 Starting Enhanced Health Monitor...');
 
 class EnhancedHealthMonitor {
@@ -302,6 +308,8 @@ const monitor = new EnhancedHealthMonitor();
 monitor.run().catch(console.error);
 ursor/automate-test-improve-and-merge-code-59d5
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -321,6 +329,7 @@ const monitor = new HealthMonitor();
 monitor.run().catch(console.error);
 
 module.exports = HealthMonitor;
+<<<<<<< HEAD
 
 main
 
@@ -328,3 +337,5 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

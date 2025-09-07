@@ -251,7 +251,11 @@ this.log(" Smart Dependency Optimization completed successfully")
         " Smart Dependency Optimization "failed": ${error.message  }",ERROR"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         ` Smart Dependency Optimization "failed": ${error.message}"
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+        ` Smart Dependency Optimization "failed": ${error.message}"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

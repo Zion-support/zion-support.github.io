@@ -19,10 +19,14 @@ class DependencyMonitor {}
       this.runDependencyCheck()}, this.interval);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     console.log('Dependency Monitor started successfully')};
   async runDependencyCheck() {}
     try {}
@@ -46,10 +50,14 @@ class DependencyMonitor {}
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       child.on('close', (code) => {}
         if ( {})
           console.log('Dependency check passed ✓')) {}
@@ -70,10 +78,14 @@ class DependencyMonitor {}
    ;);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     if ( {})
       console.log('Outdated packages "found": ')) {}
      {}
@@ -102,10 +114,14 @@ class DependencyMonitor {}
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       child.on('close', (code) => {}
         if ( {})
           console.log('Package integrity check passed ✓')) {}
@@ -147,7 +163,11 @@ if ( {})
   monitor.start().catch(console.error)};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = DependencyMonitor;
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+module.exports = DependencyMonitor;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

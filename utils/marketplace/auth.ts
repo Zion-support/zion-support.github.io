@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -11,6 +12,10 @@
 
 ;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       name: 'Test User'
     }
   }
@@ -23,11 +28,14 @@ export function assertTalentOrClientForOffer(
   offer: { clientId: string; talentSlug: string },
 
 
+<<<<<<< HEAD
 =======
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   talentSlugHeader?: string
 ): DemoUser {
   const u = getDemoUser(req);
@@ -37,15 +45,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    u && u.role === 'talent' &&
-    (u && u.talentSlug || talentSlugHeader) === offer && offer.talentSlug
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -57,10 +67,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   )
     return u;
   const err = new Error('Not authorized for this offer');
   // @ts-ignore
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -122,16 +135,23 @@ export interface AuthContext {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 
 
 
 
-<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+
+
+
 export function getUserFromRequest (req: any): User | null {
   // Mock implementation - in production, this would extract user from JWT or session;
   const auth_header = req.headers.authorization;
   if () {) {
   $2
+<<<<<<< HEAD
 
 =======
 
@@ -139,6 +159,10 @@ export function getUserFromRequest (req: any): User | null {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
     return null;
   }
@@ -226,6 +250,7 @@ if ( {) {$2;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -254,3 +279,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }err.statusCode = 403;
   throw err;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+  err.statusCode = 403;
+  throw err;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

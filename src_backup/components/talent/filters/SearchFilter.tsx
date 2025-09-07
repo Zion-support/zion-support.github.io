@@ -1,9 +1,17 @@
 <<<<<<< HEAD:src_backup/components/talent/filters/SearchFilter.tsx
+<<<<<<< HEAD:src_backup/components/talent/filters/SearchFilter.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/talent/filters/SearchFilter.tsx
 import { Input } from '@/components/ui/input';
 import { SearchIcon } from 'lucide-react';
 import { SearchFilterProps } from '@/types/filters';
 
+<<<<<<< HEAD:src_backup/components/talent/filters/SearchFilter.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/talent/filters/SearchFilter.tsx
 export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
 
 
@@ -21,17 +29,26 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
           type='text'
           placeholder='Search talents...'
           value={searchTerm}
+<<<<<<< HEAD:src_backup/components/talent/filters/SearchFilter.tsx
           onChange={e => setSearchTerm(e.target.value)}
           aria-describedby='talent-search-help'
           className='pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light'
         />
         <p id='talent-search-help' className='sr-only'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/talent/filters/SearchFilter.tsx
           Type a name or skill to filter results
         </p>
       </div>
     </div>
+<<<<<<< HEAD:src_backup/components/talent/filters/SearchFilter.tsx
         <p id="talent-search-help" className="sr-only">;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/talent/filters/SearchFilter.tsx
 
           Type a name or skill to filter results;
 =======
@@ -74,8 +91,17 @@ export function SearchFilter() {return (<div className="mb-6">;
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           aria-describedby="talent-search-help";
+<<<<<<< HEAD:src_backup/components/talent/filters/SearchFilter.tsx
           className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light";/>;<p id='talent-search-help' className='sr-only'>          Type a name or skill to filter results        <p id="talent-search-help" className="sr-only">;<p id="talent-search-help" className="sr-only">;Type a name or skill to filter results;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/talent/filters/SearchFilter.tsx
+=======
+          className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light";
+
+        />;
+
+        <p id='talent-search-help' className='sr-only'>          Type a name or skill to filter results        <p id="talent-search-help" className="sr-only">;
+          Type a name or skill to filter results;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/talent/filters/SearchFilter.tsx
         </p>;
       </div>;
     </div>;
@@ -115,9 +141,15 @@ import { SearchFilterProps  } from '@/types / filters';
     </div>);
 }
 ;
+<<<<<<< HEAD:src_backup/components/talent/filters/SearchFilter.tsx
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     </div>)})}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/talent/filters/SearchFilter.tsx
+=======
+
+  );
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/talent/filters/SearchFilter.tsx

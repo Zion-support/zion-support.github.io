@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 export type ModerationModalProps = {flag: any | null;class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
   static getDerivedStateFromError(error) {return { hasError: true }}
@@ -33,6 +36,7 @@ export default function ModerationModal(): any ({flag,onClose,onAction}: Moderat
             onClick={onClose}className='text-gray-500 hover:text-gray-700'>;
 export type ModerationModalProps = {
   flag: any | null;
+<<<<<<< HEAD
 =======
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -55,6 +59,10 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   onAction: (;
     action: 'approve' | 'remove' | 'warn' | 'ban',;
@@ -66,17 +74,23 @@ export default function ModerationModal(): any ({;
   onAction,;
 }: ModerationModalProps) {;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   flag,
   onClose,
   onAction
 }: ModerationModalProps) {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -97,6 +111,10 @@ export default function ModerationModal(): any ({;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   flag,
   onClose,
   onAction
@@ -131,6 +149,7 @@ export type ModerationModalProps = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -142,6 +161,11 @@ export type ModerationModalProps = {
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
 
@@ -156,6 +180,7 @@ export type ModerationModalProps = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -166,6 +191,8 @@ export type ModerationModalProps = {
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             className='text-gray-500 hover:text-gray-700'>;
             ✕;
           </button>;
@@ -224,6 +251,7 @@ export type ModerationModalProps = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -237,6 +265,8 @@ export type ModerationModalProps = {
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <textarea
               value={adminNotes}
               onChange={e => setAdminNotes(e && e.target.value)}
@@ -336,6 +366,7 @@ export type ModerationModalProps = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -418,12 +449,21 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+  );
+}        <div className="p-4 border-t flex items-center justify-end gap-2">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           <button onClick={() => onAction('approve', adminNotes)} className="px-3 py-2 rounded bg-green-600 text-white">Approve</button>
           <button onClick={() => onAction('remove', adminNotes)} className="px-3 py-2 rounded bg-red-600 text-white">Remove</button>
           <button onClick={() => onAction('warn', adminNotes)} className="px-3 py-2 rounded bg-yellow-600 text-white">Warn</button>
           <button onClick={() => onAction('ban', adminNotes)} className="px-3 py-2 rounded bg-gray-800 text-white">Ban User</button>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 );
@@ -442,6 +482,11 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+  );
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
   on_close: () => void;
   on_action: (action: 'approve' | 'remove' | 'warn' | 'ban',admin_notes?: string) => Promise < void>;export default /**;
@@ -569,6 +614,7 @@ export default function ModerationModal() {flag,onClose,onAction;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -578,10 +624,16 @@ export default function ModerationModal() {flag,onClose,onAction;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-
-  );
-
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+<<<<<<< HEAD
+=======
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   );
 
@@ -596,11 +648,18 @@ export type ModerationModalProps = {;
 export type ModerationModalProps = {
   flag: any | null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 export type ModerationModalProps = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+import React, { useState } from 'react';
+export type ModerationModalProps = any;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   onClose: () => void;
   onAction: (
     action: 'approve' | 'remove' | 'warn' | 'ban'
@@ -617,6 +676,7 @@ export default function ModerationModal({
 }: ModerationModalProps) {;
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -770,3 +830,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -37,6 +37,7 @@ function fixLayoutConflicts() {function fixLayoutConflicts() {function fixLayout
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   // Check if both Layout component and Layout icon are imported
   const hasLayoutComponent =
 <<<<<<< HEAD
@@ -47,6 +48,8 @@ function fixLayoutConflicts() {function fixLayoutConflicts() {function fixLayout
   // Check if both Layout component and Layout icon are imported;
   const hasLayoutComponent =;
     fixedContent.includes("import Layout from '../components/Layout'") ||;fixedContent.includes("import Layout from '../components/Layout'") ||;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   // Check if both Layout component and Layout icon are imported
   const hasLayoutComponent =
 
@@ -94,6 +97,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
   const hasLayoutIcon =
     fixedContent.includes('Layout,') || fixedContent.includes('Layout }');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -109,12 +113,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   if (hasLayoutComponent && hasLayoutIcon) {
     // Remove Layout from lucide-react import
     fixedContent = fixedContent.replace(/Layout,\s*/g, '');
     fixedContent = fixedContent.replace(/,\s*Layout/g, '');
     fixedContent = fixedContent.replace(/{\s*Layout\s*}/g, '{}');
     changes++;
+<<<<<<< HEAD
 <<<<<<< HEAD
     console.log(`✅ Fixed Layout conflict in ${filePath}`);
   }
@@ -127,11 +134,16 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     console.log(`✅ Fixed Layout conflict in ${filePath}`)}
   return { "content": fixedContent, changes }}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    console.log(`✅ Fixed Layout conflict in ${filePath}`)}
+  return { "content": fixedContent, changes }}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 // Process individual file
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     const result = fixLayoutConflicts(content, filePath);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     if (result.changes > 0) {
@@ -145,6 +157,8 @@ function processFile(filePath) {
   }
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     if (result.changes > 0) {
       fs.writeFileSync(filePath, result.content, 'utf8');
       totalFixes += result.changes}
@@ -152,7 +166,10 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
     console && console.error(`❌ Error processing ${filePath}:`, error && error.message)}
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 
 
@@ -162,6 +179,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 // Main function
 async function main() {
   console.log('🔧 Starting Layout conflicts fix...\n');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const patterns = [
@@ -180,6 +198,13 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   ];
   const excludeDirs = ['node_modules',
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  const patterns = ['pages/**/*.{tsx,jsx}',
+    'src/**/*.{tsx,jsx}',
+    'components/**/*.{tsx,jsx}',
+  ];
+  const excludeDirs = ['node_modules',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     '.next',
       'build'
     'dist',
@@ -190,6 +215,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     'pages.disabled',
     'components.disabled'
   ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -209,6 +235,9 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       "ignore": excludeDirs.map(dir => `**/${dir}/**`)});
     for (const file of files) {
       processFile(file)}
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
   for (const pattern of patterns) {
@@ -227,6 +256,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   console.log(`\n✨ Layout conflicts fix completed!`);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
@@ -240,6 +270,10 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
   /**`)});
@@ -254,6 +288,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
   console.log(`   Total "fixes": ${totalFixes}`);
   console.log("\n✨ Layout conflicts fix completed!")}
 // Run the script
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -316,3 +351,13 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+main().catch(console.error);
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

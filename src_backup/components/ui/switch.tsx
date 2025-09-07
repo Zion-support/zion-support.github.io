@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -10,6 +11,8 @@
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   SERVICE_CATEGORIES
   ALL_SERVICES
   AI_SERVICES
@@ -29,6 +32,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -37,6 +41,9 @@
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -50,11 +57,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   ALL_SERVICES
   AI_SERVICES
   IT_SERVICES
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import React, { useState } from 'react';
 import { SERVICE_CATEGORIES;
   ALL_SERVICES;
   AI_SERVICES;
   IT_SERVICES;
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
   ALL_SERVICES;
@@ -76,6 +88,9 @@ import { SERVICE_CATEGORIES;
   AI_SERVICES
   IT_SERVICES
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   MICRO_SAAS_SERVICES;
   CYBERSECURITY_SERVICES;
   DATA_ANALYTICS_SERVICES;
@@ -86,6 +101,7 @@ import { ServiceCategory, ServiceSolution } from '@/types/services';
 
 
 export function ServicesPage() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -107,11 +123,17 @@ export function ServicesPage() {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
   const filteredServices = ALL_SERVICES.filter(service => {
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -139,6 +161,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     switch (categoryId) {
 case 'ai-services':
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         return AI_SERVICES;
       case 'it-services':
         return IT_SERVICES;
@@ -183,15 +207,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 href='mailto:kleber@ziontechgroup.com'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 className='bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors'              >    }
   }
   const selectedServices = selectedCategory === 'all' ? filteredServices : getServicesByCategory(selectedCategory);
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
@@ -216,6 +246,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <a 
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -246,6 +277,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 import React, { useState } from 'react',;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              >
+
+
+import React, { useState } from 'react',;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import {;
   SERVICE_CATEGORIES,;
   ALL_SERVICES,;
@@ -287,6 +326,7 @@ export function ServicesPage() {export function ServicesPage() {const [selectedC
       default:;
         return ALL_SERVICES;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -581,12 +621,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 ✉️ Email Us
               </a>
             </div>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -610,6 +659,14 @@ ursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="min - h-screen bg - gradient - to - br from - gray - 50 to - gray - 100">;
       {/* Hero Section */}
+=======
+  return (
+    <div className="min - h-screen bg - gradient - to - br from - gray - 50 to - gray - 100">;
+      {/* Hero Section */}
+  return (
+    <div className="min - h-screen bg - gradient - to - br from - gray - 50 to - gray - 100">;
+      {/* Hero Section */}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <div className="bg - gradient - to - r from - blue - 600 via - purple - 600 to - indigo - 600 text - white">;
         <div className="container mx - auto px - 4 py - 20">;
           <div className="text - center max - w-4xl mx - auto">;
@@ -630,6 +687,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <a;
                 href="mailto:kleber@ziontechgroup.com";
                 className="bg - blue - 500 text - white px - 6 py - 3 rounded - lg font - semibold hover:bg - blue - 600 transition - colors";
+<<<<<<< HEAD
               >;✉️ Email Us;
               >;
 
@@ -641,11 +699,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              >;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 ✉️ Email Us;
               </a>;
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
       </div>;{/* Contact Info Banner */}
       {/* Contact Info Banner */}<div className="bg-white border-b">;
         <div className="container mx-auto px-4 py-4">;
@@ -851,6 +915,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
                 href='https://ziontechgroup && ziontechgroup.com';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      </div>;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               <span>364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
             <div className="flex items-center gap-2">
@@ -865,6 +933,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -885,6 +954,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
             <div className="flex items-center gap-2">
               <span className="text-blue-600">🌐</span>
               <a href="https://ziontechgroup.com" className="text-blue-600 hover:underline">
+=======
+
+
+            <div className="flex items-center gap-2">
+              <span className="text-blue-600">🌐</span>
+              <a href="https://ziontechgroup.com" className="text-blue-600 hover:underline">
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       {/* Contact Info Banner */}
 <div className='bg-white border-b'>
         <div className='container mx-auto px-4 py-4'>
@@ -907,6 +984,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
                 href='https://ziontechgroup.com'
                 className='text-blue-600 hover:underline'
               >
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
                 ziontechgroup.com
 <<<<<<< HEAD
@@ -939,10 +1017,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
               <a href="https://ziontechgroup.com" className="text-blue-600 hover:underline">
                 ziontechgroup.com
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                ziontechgroup.com
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             </div>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -955,6 +1039,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 href='https://ziontechgroup && ziontechgroup.com'
                 className='text-blue-600 hover:underline'>                ziontechgroup && ziontechgroup.com              <span>364 E Main St STE 1008, Middletown DE 19709</span>;
             </div>;
@@ -1039,6 +1125,7 @@ ursor/fix-website-loading-errors-and-merge-6662;
             <div className='flex gap-2'>;
               {SERVICE_CATEGORIES.map(category => (<button;
       </div>;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1078,6 +1165,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 type="text"
                 placeholder="Search services..."
                 value={searchTerm}
@@ -1087,6 +1179,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
             </div>
             <div className="flex gap-2">
               {SERVICE_CATEGORIES.map((category) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1105,6 +1198,11 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       {/* Search and Filter Section */}
 <div className='container mx-auto px-4 py-8'>
         <div className='bg-white rounded-xl shadow-lg p-6 mb-8'>
@@ -1121,6 +1219,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
             <div className='flex gap-2'>
               {SERVICE_CATEGORIES.map(category => (
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -1129,6 +1228,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 <button
                   key={category && category.id}
                   onClick={() => setSelectedCategory(category && category.id)}
@@ -1141,6 +1243,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </button>;
 <<<<<<< HEAD
               ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1166,6 +1269,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+            <ServiceCard key={service.id} service={service} />
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
             </div>;
           </div>;
@@ -1174,10 +1281,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         {/* Services Grid */}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
 
 
+<<<<<<< HEAD
 
           {selectedServices.map((service) => (
             <ServiceCard key={service.id} service={service} />
@@ -1343,6 +1455,12 @@ ursor/fix-website-loading-errors-and-merge-6662;
           {selectedServices.map((service) => (
             <ServiceCard key={service.id} service={service} />
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+          {selectedServices.map((service) => (
+            <ServiceCard key={service.id} service={service} />
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           ))}
 
 
@@ -1355,6 +1473,7 @@ ursor/fix-website-loading-errors-and-merge-6662;
         </div>
 
         {selectedServices.length === 0 && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1397,20 +1516,42 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <h3 className="text-xl text-gray-600 mb-4">No services found</h3>
             <p className="text-gray-500">Try adjusting your search or filter criteria</p>
+=======
+
+          <div className="text-center py-12">
+
+          <div className="text-center py-12">
+
+
+
+          <div className="text-center py-12">
+
+          <div className="text-center py-12">
+
+
+            <h3 className="text-xl text-gray-600 mb-4">No services found</h3>
+            <p className="text-gray-500">Try adjusting your search or filter criteria</p>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 <div className='text-center py-12'>
             <h3 className='text-xl text-gray-600 mb-4'>No services found</h3>
             <p className='text-gray-500'>
               Try adjusting your search or filter criteria
             </p>
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
             <h3 className="text-xl text-gray-600 mb-4">No services found</h3>
             <p className="text-gray-500">Try adjusting your search or filter criteria</p>
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           </div>
         )}
       </div>
       {/* Why Choose Zion Tech Group */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1459,21 +1600,33 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+              Why Choose Zion Tech Group?
+            </h2>
+
+              Why Choose Zion Tech Group?
+            </h2>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               Why Choose Zion Tech Group?
             </h2>
 
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We deliver innovative, reliable, and cost-effective solutions that drive real business results
             </p>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1495,11 +1648,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🚀</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1523,12 +1681,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               </div>
               <h3 className='text-xl font-semibold mb-2'>Innovation First</h3>
               <p className='text-gray-600'>
                 Cutting-edge AI and technology solutions
               </p>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1559,6 +1723,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               </div>
               <h3 className='text-xl font-semibold mb-2'>
                 Enterprise Security
@@ -1567,6 +1735,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
                 SOC 2, HIPAA, GDPR compliant solutions
               </p>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1597,6 +1766,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               </div>
               <h3 className='text-xl font-semibold mb-2'>Fast Deployment</h3>
               <p className='text-gray-600'>Quick setup and implementation</p>
@@ -1606,10 +1779,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-            </h2>
-=======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             </h2>
+            </h2>
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -1636,6 +1811,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
             </h2>
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We deliver innovative, reliable, and cost-effective solutions that drive real business results
             </p>
@@ -1663,16 +1841,22 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
               <p className="text-gray-600">Quick setup and implementation</p>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
             
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <div className="text-center">
               <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🎯</span>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1698,17 +1882,28 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <h3 className="text-xl font-semibold mb-2">Proven Results</h3>
               <p className="text-gray-600">Trusted by businesses nationwide</p>
+=======
+
+
+              <h3 className="text-xl font-semibold mb-2">Proven Results</h3>
+              <p className="text-gray-600">Trusted by businesses nationwide</p>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <div className='text-center'>
               <div className='bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
                 <span className='text-2xl'>🎯</span>
               </div>
               <h3 className='text-xl font-semibold mb-2'>Proven Results</h3>
               <p className='text-gray-600'>Trusted by businesses nationwide</p>
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
               <h3 className="text-xl font-semibold mb-2">Proven Results</h3>
               <p className="text-gray-600">Trusted by businesses nationwide</p>
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             </div>
           </div>
         </div>
@@ -1773,6 +1968,7 @@ ursor/fix-website-loading-errors-and-merge-6662;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
       {/* CTA Section */}
@@ -1788,6 +1984,9 @@ ursor/fix-website-loading-errors-and-merge-6662;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
@@ -1806,6 +2005,7 @@ ursor/fix-website-loading-errors-and-merge-6662;
             >
               ✉️ Get Free Consultation
             </Link>
+<<<<<<< HEAD
             </Link>
             <a 
 
@@ -1819,6 +2019,16 @@ ursor/fix-website-loading-errors-and-merge-6662;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+            </Link>
+            <a 
+
+            <a 
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               href="https://ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
             >
@@ -1829,9 +2039,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       </div>
     </div>
 
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   )
@@ -1843,6 +2052,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               Why Choose Zion Tech Group?;
             </h2>;
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>;
@@ -2051,8 +2263,8 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>;
 <<<<<<< HEAD
       </div>;
-<<<<<<< HEAD
           </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -2180,12 +2392,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <h2 className='text-4xl font-bold mb-6'>
 <<<<<<< HEAD
 =======
+=======
+          </h2>
+
+      <div className='bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16'>
+        <div className='container mx-auto px-4 text-center'>
+          <h2 className='text-4xl font-bold mb-6'>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">
 
+<<<<<<< HEAD
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
@@ -2209,6 +2432,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               href='https://ziontechgroup.com'
               className='bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors'            >            Ready to Transform Your Business?
           </h2>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
             Get started with Zion Tech Group today and discover how our innovative solutions can drive growth, efficiency, and success for your organization.
           </p>
@@ -2224,6 +2451,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className="bg-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 transition-colors"
             >
               ✉️ Get Free Consultation
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2255,6 +2483,22 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+            <a 
+            <a
+            <a
+
+            </a>
+            <a
+            <a 
+
+
+              href="https://ziontechgroup.com"
+              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
+
+              className='bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors'
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             >
               🌐 Visit Website
           </div>
@@ -2262,9 +2506,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 <<<<<<< HEAD
   )
@@ -2335,6 +2582,7 @@ interface ServiceCardProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -2345,6 +2593,9 @@ interface ServiceCardProps {
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               📞 Call +1 302 464 0950;
             </a>;
             <a;
@@ -2366,10 +2617,14 @@ interface ServiceCardProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -2395,10 +2650,13 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {const [showDetails,
 function ServiceCard(): any ({ service }: ServiceCardProps) {)interface ServiceCardProps  {service: ServiceSolution;function ServiceCard() {const [showDetails, setShowDetails]  = useState(false)const getPopularPlan = () => {if (service.pricing.professional.popular) return service.pricing.professional;if (service.pricing.basic.popular) return service.pricing.basic;
   );
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2446,6 +2704,18 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
   const [showDetails, setShowDetails] = useState(false);
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+}
+function ServiceCard(): any ({ service }: ServiceCardProps) {;
+  const [showDetails, setShowDetails] = useState(false);
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     if (service.pricing.basic.popular) return service.pricing.basic;
     if (service.pricing.enterprise.popular) return service.pricing.enterprise;
     return service.pricing.professional;
@@ -2456,6 +2726,7 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
     if (service && service.pricing.basic && basic.popular) return service && service.pricing.basic;
     if (service && service.pricing.enterprise && enterprise.popular) return service && service.pricing.enterprise;
     return service && service.pricing.professional;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2473,12 +2744,17 @@ if (service.pricing.professional.popular)return service.pricing.professional;
     return service.pricing.professional;
   }const popularPlan = getPopularPlan()return (<div className='bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     if (service.pricing.professional.popular) return service.pricing.professional,
     if (service.pricing.basic.popular) return service.pricing.basic,
     if (service.pricing.enterprise.popular) return service.pricing.enterprise,
     return service.pricing.professional
   },
     <div className='bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -2498,6 +2774,8 @@ if (service.pricing.professional.popular)
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       {/* Service Image */}
       <div className='h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden'>;
         <img;
@@ -2509,8 +2787,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           className="w-full h-full object-cover"
         />;
         <div className="absolute top-4 right-4">;
@@ -2566,6 +2847,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -2583,10 +2865,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             </span>;
           </div>;
           <div>          </div>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2666,6 +2952,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
           <div>          </div>;
         </div>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       {/* Service Image */}
       <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden">
         <img 
@@ -2673,6 +2963,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
           alt={service.title}
           className="w-full h-full object-cover"
         />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -2687,10 +2978,22 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+        <div className="absolute top-4 right-4">
+          <span className="bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-semibold">
+
+        />
+        <div className='absolute top-4 right-4'>
+          <span className='bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-semibold'>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             {service.category}
           </span>
         </div>
         {service.aiScore && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2787,6 +3090,27 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       </div>
       {/* Service Content */}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+            <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+
+<div className='absolute bottom-4 left-4'>
+            <span className='bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold'>
+
+              AI Score: {service.aiScore}
+            </span>
+          </div>
+
+
+
+
+
+        )}
+      </div>
+      {/* Service Content */}
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
       {/* Service Image */}
@@ -2809,7 +3133,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
               AI Score: {service.aiScore}
             </span>;
           </div>;
-<<<<<<< HEAD
         )}
       </div>;
       {/* Service Content */}
@@ -2936,6 +3259,10 @@ ursor/fix-website-loading-errors-and-merge-6662;
           {service.provider.verified && (<span className="text-blue-600 text-sm">✓ Verified</span>;
         <div className='flex items-center gap-3 mb-4'>
           <div className='w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <span className='text-blue-600 font-semibold text-sm'>              {service.provider.name.charAt(0)}
             </span>
           </div>
@@ -2943,6 +3270,7 @@ ursor/fix-website-loading-errors-and-merge-6662;
         </div>
         <p className="text-gray-600 mb-4 line-clamp-3">{service.description}</p>
         {/* Provider Info */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2958,10 +3286,14 @@ ursor/fix-website-loading-errors-and-merge-6662;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         )}
       </div>
       {/* Service Content */}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2977,6 +3309,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <div className="p-6">
         <div className="flex items-start justify-between mb-3">
           <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
@@ -2993,6 +3329,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3020,10 +3357,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
             <span className="text-blue-600 font-semibold text-sm">
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+        <div className="flex items-center gap-3 mb-4">
+          <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+            <span className="text-blue-600 font-semibold text-sm">
+
+            <span className='text-blue-600 font-semibold text-sm'>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               {service.provider.name.charAt(0)}
             </span>
           </div>
           <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3047,6 +3394,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <p className='font-medium text-gray-900'>{service.provider.name}</p>
             <p className='text-sm text-gray-500'>{service.provider.location}</p>
           </div>
@@ -3054,6 +3404,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <span className='text-blue-600 text-sm'>✓ Verified</span>          )}
         </div>
         {/* Pricing */}            <p className="font-medium text-gray-900">{service.provider.name}</p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3068,10 +3419,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <p className="text-sm text-gray-500">{service.provider.location}</p>
           </div>
           {service.provider.verified && (
             <span className="text-blue-600 text-sm">✓ Verified</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3114,6 +3470,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Pricing */}
         <div className='bg-gray-50 rounded-lg p-4 mb-4'>
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+        </div>
+        {/* Pricing */}
+        <div className='bg-gray-50 rounded-lg p-4 mb-4'>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           <div className='text-center'>
             <div className='text-2xl font-bold text-gray-900'>
               {popularPlan.currency}
@@ -3125,8 +3487,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               <span className='bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium'>                Most Popular        <div className="bg-gray-50 rounded-lg p-4 mb-4">
           <div className="text-center">
             <div className="text-2xl font-bold text-gray-900">
@@ -3135,11 +3500,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </span>
             </div>
             {popularPlan.popular && (
+<<<<<<< HEAD
 =======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <span className='bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium'>              <span className="bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium">
+=======
+              <span className='bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium'>              <span className="bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium">
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <p className="font-medium text-gray-900">{service.provider.name}</p>
             <p className="text-sm text-gray-500">{service.provider.location}</p>
           </div>
@@ -3150,6 +3520,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
           </div>;
           {service && service.provider.verified && (<span className="text-blue-600 text-sm">✓ Verified</span>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3191,10 +3562,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <span className="text-sm font-normal text-gray-500">;
                 /{popularPlan.period}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 Most Popular
               </span>
             )}
         {/* Features Preview */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <div className='mb-4'>
           <h4 className='font-semibold text-gray-900 mb-2'>Key Features:</h4>
@@ -3202,6 +3578,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+<div className='mb-4'>
+          <h4 className='font-semibold text-gray-900 mb-2'>Key Features:</h4>
+          <div className='flex flex-wrap gap-2'>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             {service.features.slice(0, 3).map((feature, index) => (
               <span 
                 key={index}
@@ -3211,6 +3594,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs"
               >
                 {feature}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         {/* Pricing */}
@@ -3228,6 +3612,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Most Popular
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               </span>
             ))}
             {service.features.length > 3 && (
@@ -3239,13 +3625,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
                 {feature}
 
 
-<<<<<<< HEAD
-=======
+
         {/* Features Preview */}
 
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               </span>;
             </div>;
             {popularPlan.popular && (<span className="bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium">;
@@ -3295,9 +3684,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         <div className='flex gap-2'>;
           <button;
             {service.features.length > 3 && (
-<<<<<<< HEAD
             )}
         {/* Action Buttons */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3320,6 +3709,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             )}
 
           </div>;
@@ -3327,8 +3719,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
         {/* Action Buttons */}
-<<<<<<< HEAD
         <div className='flex gap-2'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -3338,6 +3730,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           <button
             onClick={() => setShowDetails(!showDetails)}
             className='flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors'          >        <div className="flex gap-2">;
@@ -3348,6 +3744,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           <button;
             onClick={() => setShowDetails(!showDetails)}
             className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3400,11 +3797,16 @@ className='bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-gre
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 <div className='flex gap-2'>
           <button
             onClick={() => setShowDetails(!showDetails)}
             className='flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors'
           >
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -3414,10 +3816,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             {showDetails ? 'Hide Details' : 'View Details'}
           </button>;
           <a
             href={`tel:+13024640950`}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3443,6 +3849,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+className='bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-green-700 transition-colors'
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           >
             Call Now
           </a>
@@ -3512,6 +3924,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -3526,6 +3939,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="mt-6 pt-6 border-t border-gray-200">
                 <h4 className='font-semibold text-gray-900 mb-2'>Benefits:</h4>
                 <ul className='list-disc list-inside text-sm text-gray-600 space-y-1'>                  {service.benefits.slice(0, 3).map((benefit, index) => (          <div className="mt-6 pt-6 border-t border-gray-200">
+=======
+
+
+        {/* Detailed Information */}
+        {showDetails && (
+          <div className="mt-6 pt-6 border-t border-gray-200">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <div className="space-y-4">
               {/* Benefits */}
               <div>
@@ -3533,6 +3953,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <li key={index}>{benefit}</li>
                   ))}
               {/* Use Cases */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -3586,6 +4007,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {service.useCases.slice(0, 3).map((useCase, index) => (
                     <span 
                       key={index}
+=======
+                  {service.useCases.slice(0, 3).map((useCase, index) => (
+                    <span 
+                      key={index}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                       className='bg-green-100 text-green-800 px-2 py-1 rounded text-xs'                    >                  {service.useCases.slice(0, 3).map((useCase, index) => (
                     <span
                       key={index}
@@ -3596,32 +4022,49 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div>;
                 <h4 className='font-semibold text-gray-900 mb-2'>Use Cases:</h4>;
                 <div className='flex flex-wrap gap-2'>;
+<<<<<<< HEAD
                   {service && service.useCases.slice(0, 3).map((useCase, index) => (<span;
                       key={index}
                     <span;
+=======
+                  {service && service.useCases.slice(0, 3).map((useCase, index) => (;
+                    <span
+                      key={index}
+                    <span
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                       key={index}
                       className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">;
                       {useCase}
                     </span>;
                   ))}
               {/* Technologies */}
+<<<<<<< HEAD
                   {service.technologies.slice(0, 4).map((tech, index) => (<span;
                       key={index}
                       className='bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs'                    >                  {service.technologies.slice(0, 4).map((tech, index) => (<span;
                       key={index}className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs";
                       className='bg-green-100 text-green-800 px-2 py-1 rounded text-xs';
                     >;
+=======
+                  {service.technologies.slice(0, 4).map((tech, index) => (
+                    <span 
+                      key={index}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                       className='bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs'                    >                  {service.technologies.slice(0, 4).map((tech, index) => (
                     <span
                       key={index}
 
 
                       className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                     >
                       {tech}
                     </span>;
                   ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3632,6 +4075,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/integrate-build-improve-and-re-verify-2156
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <div className="grid grid-cols-2 gap-4 text-sm">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   ))}
 
                 </ul>;
@@ -3642,6 +4088,7 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                       className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs"
                     >
 =======
@@ -3651,6 +4098,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/integrate-build-improve-and-re-verify-2156
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+                      className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs"
+                    >
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                       {useCase}
                     </span>;
                   ))}
@@ -3702,6 +4155,7 @@ ursor/fix-website-loading-errors-and-merge-6662;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                       className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs"
                     >
 =======
@@ -3711,6 +4165,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/integrate-build-improve-and-re-verify-2156
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+                      className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs"
+                    >
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                       {tech}
                     </span>;
                   ))}
@@ -3722,6 +4183,7 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -3729,10 +4191,16 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 </div>
               </div>
               {/* Deployment & Support */}
 <div className='grid grid-cols-2 gap-4 text-sm'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -3742,6 +4210,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 <div>
                   <span className='font-medium text-gray-900'>Deployment:</span>
                   <p className='text-gray-600'>{service.deploymentTime}</p>
@@ -3752,10 +4223,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 <div>
 
               <div>;
@@ -3785,16 +4259,21 @@ ursor/fix-website-loading-errors-and-merge-6662;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
               <div className="grid grid-cols-2 gap-4 text-sm">
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
                 <div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -3810,10 +4289,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
                 <div>
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   <span className="font-medium text-gray-900">Deployment:</span>
                   <p className="text-gray-600">{service.deploymentTime}</p>
                 </div>
                 <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3840,6 +4324,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   <span className="font-medium text-gray-900">Support:</span>
                   <p className="text-gray-600">{service.support.slice(0, 2).join(', ')}</p>
                 </div>
@@ -3864,6 +4353,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
                 </div>;
 <<<<<<< HEAD
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3906,6 +4396,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {Object.entries(service.pricing).map(([plan, details]) => (
 
 
+=======
+
+                  ))}
+              {/* Contact CTA */}
+
+              {/* All Pricing Plans */}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   ))}
 
                 </div>;
@@ -3915,6 +4413,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {/* Contact CTA */}
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -3987,6 +4486,10 @@ className='bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:b
                   ))}
               {/* Contact CTA */}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   Ready to get started with {service.title}?
                 </p>
                 <div className="flex gap-2 justify-center">
@@ -3996,6 +4499,7 @@ className='bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:b
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4014,6 +4518,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     className="bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-700 transition-colors"
+=======
+
+                    className="bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-700 transition-colors"
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 <div className='bg-blue-50 rounded-lg p-4 text-center'>
                 <p className='text-sm text-blue-800 mb-2'>
                   Ready to get started with {service.title}?
@@ -4022,15 +4531,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
                   <a
                     href={`tel:+13024640950`}
                     className='bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-700 transition-colors'
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                     className="bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-700 transition-colors"
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   >
                     📞 Call +1 302 464 0950
                   </a>
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.title}`}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4059,6 +4573,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+className='bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-green-700 transition-colors'
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   >
                     ✉️ Email Inquiry
                   </Link>
@@ -4119,6 +4639,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -4151,13 +4672,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       </div>;
     </div>;
   );  );
 }
-<<<<<<< HEAD
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -4183,6 +4707,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         {/* Detailed Information */}
         {show_details && (
           <div className='mt - 6 pt - 6 border - t border - gray - 200'>;
@@ -4304,6 +4830,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -4317,10 +4844,22 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
       </div>
     </div>
 );
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -4336,3 +4875,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

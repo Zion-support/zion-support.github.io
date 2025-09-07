@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { Project } from "@/types/projects";
 export const PROJECTS: Project[] = [
@@ -19,6 +20,10 @@ export const PROJECTS: Project[] = [
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
     job: {
@@ -31,6 +36,10 @@ export const PROJECTS: Project[] = [
     }
   }
 ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     id: "project-1";
     client_id: "client-1";
     talent_id: "t-001";
@@ -45,6 +54,7 @@ export const PROJECTS: Project[] = [
       title: "AI Dashboard Development";
       description: "Develop dashboards using React and integrate ML models"
     },
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
     talent_profile: {
       full_name: "Alexandra Chen";
@@ -56,9 +66,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-      professional_title: "Senior AI Engineer";
 =======
 
+    talent_profile: {
+      full_name: "Alexandra Chen";
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+      professional_title: "Senior AI Engineer";
+
+<<<<<<< HEAD
 import { Project } from "@/types/projects",
 export const PROJECTS: Project[] = [
 import { Project } from '@/types/projects';
@@ -67,11 +84,14 @@ export const PROJECTS: Project[] = [
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
       professional_title: "Senior AI Engineer"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -84,11 +104,16 @@ export const PROJECTS: Project[] = [
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { Project } from "@/types/projects",
 export const PROJECTS: Project[] = [
 import { Project } from '@/types/projects';
 import { Project } from "@/types/projects",
 export const PROJECTS: Project[] = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -114,6 +139,10 @@ export const PROJECTS: Project[] = [
 
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       full_name: 'Alexandra Chen',
       professional_title: 'Senior AI Engineer',
     },
@@ -126,9 +155,13 @@ export const PROJECTS: Project[] = [
       full_name: "Alexandra Chen";
       professional_title: "Senior AI Engineer"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       full_name: "Alexandra Chen",
       professional_title: "Senior AI Engineer"
 import { Project } from "@/types/projects",;
@@ -151,25 +184,36 @@ export const PROJECTS: Project[] = [;
     talent_profile: {;
       full_name: "Alexandra Chen";
       professional_title: "Senior AI Engineer";
-<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
   }
 ];
 
 
+<<<<<<< HEAD
 =======
 ;
 origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ;
     }
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
   }
 ];
@@ -178,6 +222,7 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 ];
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -193,3 +238,9 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

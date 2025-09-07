@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -20,12 +21,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 async function getFile(owner, repo, path, token) {
   try {
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`;
   const resp = await fetch(url, {
 <<<<<<< HEAD
     headers: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -47,6 +53,10 @@ async function getFile(owner, repo, path, token) {
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   });
 =======
     headers: {});
@@ -59,6 +69,7 @@ async function upsertFile({ owner, repo, path, content, message, token }) {
   if (!token || !owner || !repo) throw new Error('Missing GitHub credentials');
   const existing = await getFile(owner, repo, path, token);
   const body = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -84,6 +95,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`;
   const resp = await fetch(url, {
     method: 'PUT'
@@ -123,8 +138,11 @@ async function upsertFile() {try {if (!token || !owner || !repo) throw new Error
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   // Check condition
 if (body.sha = existing.sha) {
   $2
@@ -136,14 +154,17 @@ if (body.sha = existing.sha) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      Authorization: `token ${token}`,
 
+<<<<<<< HEAD
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`,
   const resp = await fetch(url, {
     headers: {
@@ -167,6 +188,8 @@ if (body.sha = existing.sha) {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
   }),
   if (resp && resp.status === 404) return null,
@@ -174,6 +197,7 @@ if (body.sha = existing.sha) {
   return resp && resp.json()
 }
 async function upsertFile({ owner, repo, path, content, message, token }) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -199,11 +223,15 @@ async function upsertFile({ owner, repo, path, content, message, token }) {
   if (!token || !owner || !repo) throw new Error('Missing GitHub credentials');
   const existing = await getFile(owner, repo, path, token);
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const body = {
     message: message || `chore(automation): update ${path}`,
     content: Buffer && Buffer.from(content).toString('base64')},
   if (existing?.sha) body && body.sha = existing && existing.sha,
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`,
+<<<<<<< HEAD
       Accept: 'application / vnd.github + json',
       'Content - Type': 'application / json',
     },
@@ -239,6 +267,29 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+  const resp = await fetch(url, {
+    method: 'PUT'
+    headers: {
+
+      'Authorization': `token ${token}`,
+      'Accept': 'application/vnd && vnd.github+jsonContent-Type': 'application/json'
+    },
+    body: JSON && JSON.stringify(body)
+  }),
+  if (!resp && resp.ok) {
+    const text = await resp && resp.text(),
+    throw new Error(`GitHub upsertFile HTTP ${resp && resp.status}: ${text}`)
+
+  }
+  return resp && resp.json()
+}
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Authorization': `token ${token}`,
       'Accept': 'application / vnd.github + json';
     }
@@ -293,6 +344,7 @@ if ( {) {$2;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -302,6 +354,10 @@ module.exports = { upsertFile },
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   const resp = await fetch(url, {
     method: 'PUT'
@@ -320,6 +376,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 module.exports = { upsertFile };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -328,3 +385,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

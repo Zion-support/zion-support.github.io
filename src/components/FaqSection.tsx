@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import React, { useState } from 'react';
 <<<<<<< HEAD
 
@@ -75,6 +80,27 @@ const FaqSection = () => {
 };
 
 export default FaqSection;
+<<<<<<< HEAD
+=======
+
+
+
+
+
+import { GradientHeading } from "./GradientHeading";
+import {
+  Accordion;
+  AccordionContent;
+  AccordionItem;
+  AccordionTrigger} from "@/components/ui/accordion",
+import { GradientHeading } from './GradientHeading'
+  Accordion
+  AccordionContent
+  AccordionItem
+  AccordionTrigger
+} from '@/components/ui/accordion'
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { FileText } from 'lucide-react'
 const faqs = [
   {
@@ -339,6 +365,10 @@ const faqs = [
 export function FaqSection() {
   return (
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
@@ -348,6 +378,7 @@ export function FaqSection() {
             <FileText className="h-6 w-6 text-zion-cyan mr-2" />
             <h3 className="text-xl font-bold text-white">Common Questions</h3>
           </div>
+<<<<<<< HEAD
 
 
           
@@ -524,3 +555,30 @@ const FaqSection: React.FC = () => {const [openIndex, setOpenIndex]  = useState<
     </section>;
   )}export default FaqSection;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default FaqSection;
+
+
+
+
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
+export default FaqSection;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

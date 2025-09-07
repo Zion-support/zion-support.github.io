@@ -6,6 +6,7 @@ const { execSync } = require('child_process');
 console.log('🔧 Resolving New Merge Conflicts');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.log('
 =======
 console.log('=================================');
@@ -19,10 +20,23 @@ function resolveMergeConflicts(content) {
 =======
 console.log('
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+console.log('=====');
+
+:backup-problematic-files/scripts/final-critical-fix.cjs
+:scripts/resolve-new-merge-conflicts.cjs
+
+
+// Function to resolve merge conflicts by keeping the first version
+function resolveMergeConflicts(content) {
+  return content
+    .replace(/
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 
 // Function to fix common syntax errors
 function fixSyntaxErrors(content) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -35,6 +49,15 @@ function fixCriticalSyntax(content) {
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+:backup-problematic-files/scripts/final-critical-fix.cjs
+
+// Function to fix all remaining critical syntax errors
+function fixCriticalSyntax(content) {
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return content
     // Fix malformed JSX tags
     .replace(/<h3([^>]*)>([^<]+)><\/h3>/gm, '<h3$1>$2</h3>')
@@ -109,8 +132,17 @@ for (const file of conflictFiles) {
     let content = fs.readFileSync(file, 'utf8');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+:backup-problematic-files/scripts/final-critical-fix.cjs
+:scripts/resolve-new-merge-conflicts.cjs
+    let modified = false;
+
+    // Check for merge conflict markers
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     const originalContent = content;
     
     content = fixCriticalSyntax(content);
@@ -161,6 +193,7 @@ try {
 }
 
 console.log('\n🎉 Final critical fix completed!');
+<<<<<<< HEAD
 :backup-problematic-files/scripts/final-critical-fix.cjs
     let modified = false;
 
@@ -170,3 +203,11 @@ console.log('\n🎉 Final critical fix completed!');
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+    let modified = false;
+
+    // Check for merge conflict markers
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

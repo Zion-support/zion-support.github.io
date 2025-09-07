@@ -12,6 +12,7 @@ export default function CaseStudiesPage() {;
       <SEO
         title='Case Studies | Zion Tech Group'
         description='Proven outcomes across AI, cloud, and automation projects.'
+<<<<<<< HEAD
         canonical='https://ziontechgroup.com/case-studies/'
       />
       <div className='container mx-auto px-4 py-16 text-white'>
@@ -33,6 +34,9 @@ export default function CaseStudiesPage() {export default function CaseStudiesPa
         title='Case Studies | Zion Tech Group';
         description='Proven outcomes across AI, cloud, and automation projects.';
         canonical='https://ziontechgroup && ziontechgroup.com/case-studies/';
+=======
+        canonical='https://ziontechgroup && ziontechgroup.com/case-studies/'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       />;
       <div className='container mx-auto px-4 py-16 text-white'>;
         <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
@@ -82,6 +86,7 @@ function CaseStudiesPage() {return (<UltraFuturisticBackground intensity="high" 
         <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip-text text-transparent">Case Studies</h1>;
         <p className="mt - 4 text - gray-300 max-w-3xl">Explore measurable results and implementation details across industries. Want a tailored reference? Contact kleber@ziontechgroup.com.</p>;
       </div>;
+<<<<<<< HEAD
     </UltraFuturisticBackground>)}
     <UltraFuturisticBackground intensity="high" variant="quantum">;
       <SEO title="Case Studies | Zion Tech Group" description="Proven outcomes across AI, cloud, and automation projects." canonical="https: //ziontechgroup.com/case-studies/" />;
@@ -104,3 +109,14 @@ function CaseStudiesPage() {return (<UltraFuturisticBackground intensity="high" 
     </UltraFuturisticBackground>;
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </UltraFuturisticBackground>);
+}
+    <UltraFuturisticBackground intensity="high" variant="quantum">
+      <SEO title="Case Studies | Zion Tech Group" description="Proven outcomes across AI, cloud, and automation projects." canonical="https: //ziontechgroup.com/case-studies/" />
+      <div className="container mx-auto px-4 py-16 text-white">
+        <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Case Studies</h1>
+        <p className="mt-4 text-gray-300 max-w-3xl">Explore measurable results and implementation details across industries. Want a tailored reference? Contact kleber@ziontechgroup.com.</p>
+      </div>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

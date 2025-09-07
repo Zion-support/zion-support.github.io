@@ -3,6 +3,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -50,12 +51,18 @@ export default function handler() {if (!requireSuperadminApi(req, res)) return;c
   res.status(200).json(terms)}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const terms = readJsonFile('deal/terms && terms.json', {
     round: 'Series A',
     target: '$10,000,000',
     valuationCap: '$80,000,000',
     discount: '20%'
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -69,6 +76,8 @@ export default function handler() {if (!requireSuperadminApi(req, res)) return;c
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   });
   res && res.status(200).json(terms);export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
@@ -77,8 +86,8 @@ export default function handler() {if (!requireSuperadminApi(req, res)) return;c
 
 <<<<<<< HEAD
     discount: '20%'
-=======
 
+<<<<<<< HEAD
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     leadInvestor: 'TBD'});
@@ -111,6 +120,18 @@ leadInvestor: 'TBD'});
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    leadInvestor: 'TBD'});
+
+
+  res && res.status(200).json(terms)
+}
+
+
+    leadInvestor: 'TBD'});
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { readJsonFile } from '../../../../utils / api / storage';
 import { requireSuperadminApi } from '../../../../utils / api / auth';
 export default /**
@@ -141,6 +162,7 @@ function handler() {
     discount: '20%',
     lead_investor: 'TBD'});
   res.status (200).json (terms);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -174,19 +196,29 @@ function handler() {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 }
 
 
 
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 }
 
 
 
+<<<<<<< HEAD
 import { readJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 <<<<<<< HEAD
@@ -195,6 +227,11 @@ import { requireSuperadminApi } from '../../../../utils/api/auth';
 import { readJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+import { readJsonFile } from '../../../../utils/api/storage';
+import { requireSuperadminApi } from '../../../../utils/api/auth';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (!requireSuperadminApi(req, res)) return;
 
@@ -219,6 +256,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 }
 
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
@@ -249,3 +287,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+  const terms = null;
+  res.status(200).json(terms)
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
   id: string;
 =======
 
@@ -18,16 +19,26 @@ import React from 'react';
     setupTime?: string
   },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import React from 'react';
+    monthly?: number;
+    yearly?: number;
+    currency?: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   period?: string;
   pricing?: any;
   features: string[],;
   popular?: boolean;
+<<<<<<< HEAD
   category: string;
 =======
     setupTime?: string;
   },period?: string;
   pricing?: any;
   features: string[],popular?: boolean;competitors?: string[];
+=======
+  competitors?: string[];
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   targetMarket?: string;
   useCases?: string[];
     switch (variant) {case 'ai':;
@@ -265,6 +276,7 @@ export default UltraFuturisticServiceCard2026;</div>;
         {/* Enhanced Hover Effects */}
         <div className="absolute inset - 0 bg - gradient - to - br from - white / 0 via - white / 0 to - white / 0 group - hover: from - white / 5 group - hover:via - white / 2 group - hover:to - white / 5 transition - all duration-500 rounded-2xl"></div>;
       </div>;
+<<<<<<< HEAD
     </motion.div>),})UltraFuturisticServiceCard2026.display_name = 'UltraFuturisticServiceCard2026';export default UltraFuturisticServiceCard2026;category: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   icon: string;
@@ -287,3 +299,12 @@ interface ServiceCardProps  {service: Service;
   variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default';
 }const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps>  = ({ service, variant;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </motion.div>),
+});
+;
+UltraFuturisticServiceCard2026.display_name = 'UltraFuturisticServiceCard2026';
+;
+export default UltraFuturisticServiceCard2026;
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

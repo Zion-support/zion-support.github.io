@@ -1,6 +1,9 @@
 <<<<<<< HEAD:src_backup/components/ServiceQuoteModal.tsx
+<<<<<<< HEAD:src_backup/components/ServiceQuoteModal.tsx
 ...formData;            startDate: startDate?.toISOString(),
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ServiceQuoteModal.tsx
 
             endDate: endDate?.toISOString()}
         }
@@ -18,14 +21,22 @@
 }
 }
 
+<<<<<<< HEAD:src_backup/components/ServiceQuoteModal.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ServiceQuoteModal.tsx
 
 
 ;
 
+<<<<<<< HEAD:src_backup/components/ServiceQuoteModal.tsx
 
 import { useState } from 'react',
 import { useState  } from 'react';
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import { useState } from 'react',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ServiceQuoteModal.tsx
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -201,6 +212,10 @@ interface ServiceQuoteModalProps {;
   service: ProductListing | null;
 }
 ;
+<<<<<<< HEAD:src_backup/components/ServiceQuoteModal.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ServiceQuoteModal.tsx
 const BUDGET_RANGES = [;
   { label: "Less than $5,000", value: "0-5000" },;
   { label: "$5,000 - $10,000", value: "5000-10000" },;
@@ -500,6 +515,7 @@ interface ServiceQuoteModalProps  {open: boolean,onOpenChange: (open: boolean) =
 <<<<<<< HEAD:src_backup/components/ServiceQuoteModal.tsx
                 </Button>
               )}
+<<<<<<< HEAD:src_backup/components/ServiceQuoteModal.tsx
             </div>
           </DialogFooter>
         </form>
@@ -558,3 +574,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ServiceQuoteModal.tsx
+=======
+            </div>;
+          </DialogFooter>;
+        </form>;
+      </DialogContent>;
+    </Dialog>;
+  );
+}
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ServiceQuoteModal.tsx

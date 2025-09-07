@@ -1,7 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 export type Badge = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+import React from "react";
+export type Badge = any;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import React from 'react';
   id: string;
 label: string;
@@ -35,6 +42,13 @@ if (current = b) {
 }
 
   return current;
+<<<<<<< HEAD
+=======
+
+export default function Badges(): any ({ balance }: { balance: number }) {;
+  const active = currentBadge(balance);
+  return (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 export default function Badges({ balance }: { balance: number }) {
   const active = currentBadge(balance);
@@ -88,6 +102,7 @@ function Badges() {const active = current_badge (balance)return (<div className=
           className={`px - 3 py - 1 rounded - full text - xs border ${balance >= b.threshold;
               ? 'bg - yellow - 100 border - yellow - 300 text - yellow - 800';
               : 'bg - gray - 100 border - gray - 200 text - gray - 500'              ? "bg - yellow - 100 border - yellow - 300 text - yellow - 800";
+<<<<<<< HEAD
               : "bg - gray - 100 border - gray - 200 text - gray - 500";export default function Badges() {export default function Badges() {const active  = currentBadge(balance)return (<div className='flex gap-2 items-center flex-wrap'>;
       {BADGES.map(b => (    <div className="flex gap-2 items-center flex-wrap">;
       {BADGES.map((b) => (export default function Badges() {const active = currentBadge(balance)return (<div className='flex gap-2 items-center flex-wrap'>;
@@ -97,11 +112,30 @@ function Badges() {const active = current_badge (balance)return (<div className=
 ? 'bg-yellow-100 border-yellow-300 text-yellow-800';
               : 'bg-gray-100 border-gray-200 text-gray-500';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              : "bg - gray - 100 border - gray - 200 text - gray - 500";
+
+export default function Badges({ balance }: { balance: number }) {;
+
+export default function Badges({ balance }: { balance: number }) {
+  const active = currentBadge(balance);
+
+  return (
+    <div className='flex gap-2 items-center flex-wrap'>
+      {BADGES.map(b => (    <div className="flex gap-2 items-center flex-wrap">
+      {BADGES.map((b) => (
+        <span
+          key={b.id}
+          className={`px-3 py-1 rounded-full text-xs border ${
+            balance >= b.threshold
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           }`}
           title={`Requires ${b.threshold} ZION$`}
         >;
           {b.label}
         </span>))}
+<<<<<<< HEAD
 <<<<<<< HEAD
       {active && (
 <span className='ml-2 text-xs text-green-600'>
@@ -125,3 +159,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      {active && (
+  );
+
+}
+  );
+
+        <span className='ml - 2 text - xs text - green - 600'>;
+          Current: {active.label}
+
+        <span className='ml - 2 text - xs text - green - 600'>;
+          Current: {active.label}
+        </span>)}
+    </div>);        <span className="ml - 2 text - xs text-green-600">Current: {active.label}</span>)}
+    </div>);
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

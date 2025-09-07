@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -101,11 +102,31 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 // Security middleware
 import { NextResponse } from 'next/server';
 import { getSecurityHeaders } from '../utils/security-headers';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export function securityMiddleware(request) {
   const response = NextResponse.next();
   
@@ -124,6 +145,7 @@ export function securityMiddleware(request) {
   }
   
   return response;
+<<<<<<< HEAD
 }
 =======
 origin/main
@@ -136,6 +158,24 @@ origin/main
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 export function securityMiddleware(request) {;
@@ -146,15 +186,14 @@ export function securityMiddleware(request) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-  const response = NextResponse && NextResponse.next();
-  const response = NextResponse.next();
-=======
 <<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const response = NextResponse && NextResponse.next();
   const response = NextResponse.next();
+  const response = NextResponse && NextResponse.next();
+  const response = NextResponse.next();
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -176,6 +215,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   const response = NextResponse && NextResponse.next();
   const response = NextResponse.next();
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   // Add security headers
   const headers = getSecurityHeaders();
   headers && headers.forEach(({ key, value }) => {
@@ -186,20 +231,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-  if (request && request.nextUrl.protocol === 'https:') {
-    response && response.headers.set(
-      'Strict-Transport-Security',
 
-      'max-age=31536000; includeSubDomains; preload'
-    );
-  }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -232,6 +275,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return response;// Security headers middleware
 // Security headers middleware
 
@@ -239,6 +288,7 @@ export function securityHeaders(req, res, next) {
 
   Object && Object.entries({
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -263,16 +313,28 @@ export function securityHeaders(req, res, next) {
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+  return response;// Security headers middleware
+export function securityHeaders(req, res, next) {
+  Object.entries({
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     'X-Content-Type-Options': 'nosniff',
     'X-Frame-Options': 'DENY',
     'X-XSS-Protection': '1; mode=block',
     'Referrer-Policy': 'strict-origin-when-cross-origin',
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
 
-<<<<<<< HEAD
   return response;// Security headers middleware
 export function securityHeaders(req, res, next) {
   Object.entries({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -295,6 +357,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
   }).forEach(([key, value]) => {
     res.setHeader(key, value);
@@ -304,15 +368,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -334,6 +404,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 
 }
@@ -359,6 +432,7 @@ function security_headers() {
 ;
   next ();
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -397,13 +471,35 @@ origin/automation-improvements-final
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+}
+
+
+
+
+
+}
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export function securityMiddleware(request) {
   const response = NextResponse.next();
   
@@ -423,6 +519,7 @@ export function securityMiddleware(request) {
   
   return response;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -465,3 +562,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

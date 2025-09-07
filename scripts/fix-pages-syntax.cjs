@@ -15,7 +15,11 @@ const files = fs.readdirSync(pagesDir).filter(file => file.endsWith('.tsx')
         '};\n\n'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     if (p1.includes("'") && p2.includes("'") && !p1.includes("'") && !p2.includes(")
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    if (p1.includes("'") && p2.includes("'") && !p1.includes("'") && !p2.includes(")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

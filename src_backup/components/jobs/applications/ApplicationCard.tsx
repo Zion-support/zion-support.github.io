@@ -1,4 +1,5 @@
 <<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationCard.tsx
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationCard.tsx
 application: JobApplication
 }
 
@@ -16,6 +17,8 @@ import { Button } from '@/components/ui/ button';
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/applications/ApplicationCard.tsx
 import {
   Card,
   CardContent,
@@ -46,6 +49,10 @@ import { StatusBadge  } from './StatusBadge';
 import { ApplicationProgress  } from './ApplicationProgress';
 <<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationCard.tsx
 import { toast  } from './sonner';
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationCard.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/applications/ApplicationCard.tsx
 
 import { useState } from "react",
 import { formatDistanceToNow } from "date-fns",
@@ -57,6 +64,7 @@ import Link from "next/link",
 import { StatusBadge } from "./StatusBadge",
 import { ApplicationProgress } from "./ApplicationProgress";
 import { toast } from "sonner";
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationCard.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface ApplicationCardProps {
   application: JobApplication;
@@ -106,6 +114,25 @@ function ApplicationCard() {
     switch (application.status) {
       case 'shortlisted':;
 
+=======
+interface ApplicationCardProps {
+}
+
+export function ApplicationCard({ application }: ApplicationCardProps) {
+  const [expanded, setExpanded] = useState(false),
+
+  const handleDownloadResume = () => {
+    // This would typically download the resume file
+
+  const [expanded, setExpanded] = useState(false)
+  const handleDownloadResume = () => {
+    // This would typically download the resume file
+    toast.info("Resume download functionality will be implemented soon")
+  }
+  const renderActionButtons = () =>: any {
+    switch (application.status) {
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/applications/ApplicationCard.tsx
     toast.info('Resume download functionality will be implemented soon') }
   const renderActionButtons = () => {
     switch (application.status) {interface ApplicationCardProps {
@@ -114,12 +141,19 @@ function ApplicationCard() {
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false);
   const handleDownloadResume = null;
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationCard.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/applications/ApplicationCard.tsx
         return (
           <Button variant='default' size='sm'>;
             <Calendar className='h - 4 w - 4 mr - 1' /> Prepare for Interview);
       case 'interview':;
         return (
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationCard.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/applications/ApplicationCard.tsx
 
           <Button variant='default' size='sm'>;
 =======
@@ -153,6 +187,7 @@ export function ApplicationCard() {const [expanded, setExpanded] = useState(fals
         return null
     }
   }
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationCard.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
@@ -160,44 +195,63 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   const renderActionButtons = () => {
     switch (application.status) {
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/applications/ApplicationCard.tsx
 
       case "shortlisted": return (
           <Button variant="default" size="sm">
             <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview
           </Button>
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationCard.tsx
         ),
 
+=======
+
+        ),
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/applications/ApplicationCard.tsx
       case "interview":
         return (
           <Button variant="default" size="sm">
             <Calendar className="h-4 w-4 mr-1" /> View Interview Details
           </Button>
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationCard.tsx
         ),
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/applications/ApplicationCard.tsx
       case "hired":
         return (
           <Button variant="secondary" size="sm" className="bg-green-100 text-green-800 hover: bg-green-200 hover:text-green-900">
             <FileText className="h-4 w-4 mr-1" /> View Offer
           </Button>
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationCard.tsx
         ),
 
+=======
+
+        ),
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/applications/ApplicationCard.tsx
       case "rejected":
         return (
           <Button variant="outline" size="sm">
             <HelpCircle className="h-4 w-4 mr-1" /> View Feedback
           </Button>
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationCard.tsx
         ),
       default:
         return null
     }
   },
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/applications/ApplicationCard.tsx
 
   return (
     <Card className="overflow-hidden">
       <CardHeader className="pb-3">
         <div className="flex justify-between items-start">
           <div>
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationCard.tsx
             <CardTitle>{application.job?.title |'Unknown Job'}</CardTitle>
             <div className='text-sm text-muted-foreground mt-1'>
               Applied{' '}
@@ -205,12 +259,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 addSuffix: true,
               })}
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            <CardTitle>{application.job?.title || "Unknown Job"}</CardTitle>
+
+
+
+
+export function ApplicationCard({ application }: ApplicationCardProps) {
+  const [expanded, setExpanded] = useState(false),
+
+  const handleDownloadResume = () => {
+    // This would typically download the resume file
+
+
+            <div className="text-sm text-muted-foreground mt-1">
+              Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/applications/ApplicationCard.tsx
             </div>
           </div>
           <StatusBadge status={application.status} />
         </div>
       </CardHeader>
 
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationCard.tsx
 =======
           </Button>)case 'rejected':;return (<Button variant='outline' size='sm'>;
             <HelpCircle className='h-4 w-4 mr-1' /> View Feedback;
@@ -274,14 +345,22 @@ export function ApplicationCard() {const [expanded, setExpanded] = useState(fals
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/applications/ApplicationCard.tsx
       
       <CardContent className="pb-3">
         <ApplicationProgress status={application.status} className="my-4" />
         
 
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationCard.tsx
 <CardContent className='pb-3'>
         <ApplicationProgress status={application.status} className='my-4' />
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+<CardContent className='pb-3'>
+        <ApplicationProgress status={application.status} className='my-4' />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/applications/ApplicationCard.tsx
         {expanded && (
           <div className='mt - 4 space - y-3'>;
             {application.cover_letter && (
@@ -360,6 +439,7 @@ interface ApplicationCardProps  {application: JobApplication;export function App
                     onClick={handleDownloadResume}
 <<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationCard.tsx
                   >
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationCard.tsx
 
       
       <CardContent className="pb-3">
@@ -423,10 +503,44 @@ interface ApplicationCardProps  {application: JobApplication;export function App
                     <Download className="h-3 w-3 mr-1" /> Download
                     <Download className='h-3 w-3 mr-1' /> Download
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                    <Download className='h-3 w-3 mr-1' /> Download                  </Button>
+                </div>
+              </div>
+            )}
+        {expanded && (
+          <div className="mt-4 space-y-3">
+            {application.cover_letter && (
+              <div>
+                <h4 className="text-sm font-medium mb-1">Your Cover Letter</h4>
+                <p className="text-sm text-muted-foreground">{application.cover_letter}</p>
+              </div>
+            )}
+            {application.resume && (
+              <div className="border rounded-md p-3 bg-muted/20">
+                <div className="flex justify-between items-center">
+                  <div className="flex items-center">
+                    <FileText className="h-4 w-4 mr-2 text-blue-500" />
+                    <span className="text-sm font-medium">{application.resume.title |"Resume"}</span>
+                  </div>
+            
+            {application.resume && (
+              <div className="border rounded-md p-3 bg-muted/20">
+                <div className="flex justify-between items-center">
+                  <div className="flex items-center">
+                    <FileText className="h-4 w-4 mr-2 text-blue-500" />
+                    <span className="text-sm font-medium">{application.resume.title || "Resume"}</span>
+                  </div>
+                  <Button variant="ghost" size="sm" onClick={handleDownloadResume}>
+                    <Download className="h-3 w-3 mr-1" /> Download
+
+                    <Download className='h-3 w-3 mr-1' /> Download
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/applications/ApplicationCard.tsx
                   </Button>
                 </div>
               </div>
             )}
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationCard.tsx
 {application.match_score && (
 origin/cursor/automate-test-improve-and-merge-code-2533
               <div>
@@ -437,6 +551,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                   <span className='ml-2 text-xs text-muted-foreground'>
                     Relevance to job requirements
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/applications/ApplicationCard.tsx
               <div>;
 =======
         {expanded && (<div className="mt-4 space-y-3">;
@@ -460,6 +577,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <Download className="h - 3 w - 3 mr - 1" /> Download;
                   </Button>;
                 </div>;
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationCard.tsx
               </div>)}{application.match_score && ({application.match_score && (<div>;
                 <h4 className='text-sm font-medium mb-1'>Match Score</h4>;
                 <div className='flex items-center'>;
@@ -485,6 +603,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {application.match_score && (
 
 
+=======
+              </div>)}
+
+
+
+
+            {application.match_score && (
+              <div>
+                <h4 className='text-sm font-medium mb-1'>Match Score</h4>
+                <div className='flex items-center'>
+                  <div className='h-6 w-6 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center text-xs font-medium'>
+                    {application.match_score}%
+                  </div>
+                  <span className='ml-2 text-xs text-muted-foreground'>
+                    Relevance to job requirements
+                  </span>                </div>            {application.match_score && (
+              <div>
+            
+            {application.match_score && (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/applications/ApplicationCard.tsx
               <div>
 
 
@@ -496,10 +634,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {application.match_score}%
                   </div>
                   <span className="ml-2 text-xs text-muted-foreground">Relevance to job requirements</span>
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationCard.tsx
                   </span>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </div>
+=======
+
+                  </span>
+                </div>
+              </div>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/applications/ApplicationCard.tsx
 
 
 import { useState } from "react",;
@@ -584,8 +730,11 @@ import { ApplicationProgress } from "./ApplicationProgress",import { toast } fro
               </div>;
             )}
 
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationCard.tsx
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/applications/ApplicationCard.tsx
             )}
 ;
             {application.match_score && (;
@@ -611,11 +760,14 @@ import { ApplicationProgress } from "./ApplicationProgress",import { toast } fro
 <<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationCard.tsx
         )}
 
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationCard.tsx
 
       </CardContent>
 <CardFooter className='flex flex-col gap-3 pt-0'>
         <div className='flex justify-between items-center w-full'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/applications/ApplicationCard.tsx
           <Button
             variant='ghost'
             size='sm'
@@ -641,16 +793,49 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="flex gap-2">;
             {renderActionButtons()}
 <<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationCard.tsx
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationCard.tsx
             <Button variant='outline' size='sm' asChild>
               <Link href={`/jobs/${application.job_id}`}>
                 <ExternalLink className='h-4 w-4 mr-1' /> View Job
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+          </div>
+        )}
+
+      </CardContent>
+      
+      <CardFooter className="flex flex-col gap-3 pt-0">
+        <div className="flex justify-between items-center w-full">
+          <Button variant="ghost" size="sm" onClick={() => setExpanded(!expanded)}>
+            {expanded ? "Show Less" : "Show More"}
+
+
+
+          </Button>
+          <div className="flex gap-2">
+            {renderActionButtons()}
+            <Button 
+              variant="outline" 
+              size="sm"
+              asChild
+            >
+              <Link href={`/jobs/${application.job_id}`}>
+
+
+
+
+                <ExternalLink className="h-4 w-4 mr-1" /> View Job
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/applications/ApplicationCard.tsx
               </Link>
             </Button>
           </div>
         </div>
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationCard.tsx
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/applications/ApplicationCard.tsx
         
 
         
@@ -669,10 +854,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <MessageSquare className="h-4 w-4 mr-1" /> Message Client
 
 
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationCard.tsx
           </Link>
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/applications/ApplicationCard.tsx
         </Button>
       </CardFooter>
     </Card>
@@ -821,6 +1009,7 @@ default: return (<Card className="overflow-hidden" > <CardHeader className="pb-3
 }</div>) ";
 }</CardContent> <Button variant="outline" size="sm" asChild > </Link> </Button> </div> </div> <Button variant="secondary" size="sm" className="w-full" asChild > </Link> </Button> </CardFooter> </Card>) ;
 }"
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationCard.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
   application.cover letter && (<div> <h4 className="text - sm font - medium mb - 1" >Your Cover Letter</h4> <p className="text - sm text - muted - foreground" > {application.cover letter;
@@ -842,3 +1031,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }% </div> <span className="ml-2 text-xs text-muted-foreground" >Relevance to job requirements</span> </div> </div>)}</div>) ";
 }</CardContent> <Button variant="outline" size="sm" asChild > </Link> </Button> </div> </div> <Button variant="secondary" size="sm" className="w-full" asChild > </Link> </Button> </CardFooter> </Card>)}";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/jobs/applications/ApplicationCard.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/applications/ApplicationCard.tsx

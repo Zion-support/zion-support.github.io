@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -18,10 +19,15 @@ export interface DevIdentity  {export interface DevIdentity  {isAuthenticated: b
     }).toString().trim()return { connected: true, branch }
   } catch {return { connected: false }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export interface DevIdentity {
 
 export interface DevIdentity {;
   isAuthenticated: boolean;
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -54,6 +60,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     const branch = execSync('git rev-parse --abbrev-ref HEAD', {
       stdio: ['ignore', 'pipe', 'ignore']
     })
@@ -69,6 +77,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   const adminToken = process && process.env.ADMIN_TOKEN;
 
   if (token && adminToken && token === adminToken) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   const adminToken  = process && process.env.ADMIN_TOKEN;if (token && adminToken && token === adminToken) {}
@@ -108,6 +117,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  }
+  return { isAuthenticated: false, roles: [] }
+}
+    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
   return { isAuthenticated: false, roles: [] }
 }
@@ -124,6 +139,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   return { isAuthenticated: false, roles: [] }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -145,6 +161,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export function requireRoles(
   req: NextApiRequest
   res: NextApiResponse
@@ -167,6 +191,7 @@ export interface DevAccessConfig  {enabled: boolean;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -185,6 +210,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 // Development access utilities
 export interface DevAccessConfig {
   enabled: boolean;
@@ -225,6 +253,10 @@ export function isDevelopmentMode(): boolean {return process.env.NODE_ENV === 'd
 }export function getDevIdentity (req: NextApiRequest): DevIdentity {// TODO: integrate real auth; for now, check a header and env var for dev;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export function getDevIdentity (req: NextApiRequest): DevIdentity {
   // TODO: integrate real auth; for now, check a header and env var for dev;
   const token = req.headers['x - dev - token'] || req.headers['x - admin - token'];
@@ -250,6 +282,7 @@ if ( {) {$2;
 }ursor/fix-website-loading-errors-and-merge-6662;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -268,10 +301,15 @@ if ( {) {$2;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -279,3 +317,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

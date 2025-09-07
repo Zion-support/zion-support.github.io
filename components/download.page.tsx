@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -48,3 +49,15 @@ export { default } from "./mobile-launch";
 export { default } from "./mobile-launch";
 export { default } from "./mobile-launch";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+export { default } from "./mobile-launch";
+
+
+
+
+
+
+
+export { default } from './mobile-launch';
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -5,17 +5,25 @@ const { execSync } = require('child_process');
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.log('🔧 Resolving Final Conflicts');
 console.log('
 }
 =======
 :scripts/resolve-final-conflicts.cjs
+=======
+:backup-problematic-files/scripts/final-build-fix.cjs
+:scripts/resolve-final-conflicts.cjs
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 console.log('🔧 Resolving Final Conflicts');
-console.log('============================');
+console.log('');
 
 // Function to resolve merge conflicts by keeping the first version
 function resolveMergeConflicts(content) {
   return content
+<<<<<<< HEAD
     .replace(/[a-f0-9]+/g, '');
 }
 console.log('🔧 Final Build Fix');
@@ -28,6 +36,17 @@ console.log('🔧 Resolving Final Conflicts');
 console.log('
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    .replace(/
+}
+:backup-problematic-files/scripts/final-build-fix.cjs
+
+console.log('🔧 Final Build Fix');
+console.log('====');
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 // Function to fix all remaining syntax errors
 function fixAllSyntax(content) {
@@ -109,8 +128,17 @@ for (const file of filesToFix) {
     let content = fs.readFileSync(file, 'utf8');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+:backup-problematic-files/scripts/final-build-fix.cjs
+:scripts/resolve-final-conflicts.cjs
+    let modified = false;
+
+    // Check for merge conflict markers
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     const originalContent = content;
     
     content = fixAllSyntax(content);
@@ -161,6 +189,7 @@ try {
 }
 
 console.log('\n🎉 Final build fix completed!');
+<<<<<<< HEAD
 :backup-problematic-files/scripts/final-build-fix.cjs
     let modified = false;
 
@@ -170,3 +199,11 @@ console.log('\n🎉 Final build fix completed!');
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+    let modified = false;
+
+    // Check for merge conflict markers
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -1,4 +1,5 @@
 <<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
+<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
 export function RoleManagement() {
   // Mock team members data
   const teamMembers = [
@@ -6,14 +7,21 @@ import React from 'react';
 
 import React from 'react';
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+import React from 'react';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/RoleManagement.tsx
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/RoleManagement.tsx
   TableRow,
 } from '@/components/ui/ table';
 import { Badge } from '@/components/ui/ badge';
@@ -41,7 +49,6 @@ function RoleManagement() {
       },
     },
 
-<<<<<<< HEAD
 
 
   const roleDescriptions: Record<string string> = {
@@ -49,6 +56,7 @@ function RoleManagement() {
     "Recruiter": "Can manage candidates and job postings",
     "Manager": "Can view candidates and create jobs",
     "Viewer": "Read-only access to candidates"},
+<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -124,10 +132,13 @@ import {;
   TableHead,;
   TableHeader,;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/RoleManagement.tsx
   TableRow,;
 } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
 import { Switch } from '@/components/ui/switch';
+<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
 import { toast } from '@/hooks/use-toast';
 import { InfoIcon } from 'lucide-react';
 import {
@@ -200,6 +211,95 @@ export function RoleManagement() {
   // Mock team members data
   const teamMembers = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import { toast } from '@/hooks/use-toast';import { InfoIcon } from 'lucide-react';
+import {;
+  Tooltip,;
+  TooltipContent,;
+  TooltipProvider,;
+  TooltipTrigger,;
+} from '@/components/ui/tooltip';
+
+export function RoleManagement() {;
+  // Mock team members data;
+  const teamMembers = [;
+    {;
+      id: 1,;
+      name: 'Alex Johnson',;
+      email: 'alex@example && example.com',;
+      role: 'Admin',;
+      permissions: {;
+        viewCandidates: true,;
+        editCandidates: true,;
+        createJobs: true,;
+        manageTeam: true,;
+        viewBilling: true,;
+        manageBilling: true,;
+      },;
+    },;
+    {;
+      id: 2,;
+      name: 'Jamie Smith',;
+      email: 'jamie@example && example.com',;
+      role: 'Recruiter',;
+      permissions: {;
+        viewCandidates: true,;
+        editCandidates: true,;
+        createJobs: true,;
+        manageTeam: false,;
+        viewBilling: false,;
+        manageBilling: false,;
+      },;
+    },;
+    {;
+      id: 3,;
+      name: 'Sam Williams',;
+      email: 'sam@example && example.com',;
+      role: 'Manager',;
+      permissions: {;
+        viewCandidates: true,;
+        editCandidates: false,;
+        createJobs: true,;
+        manageTeam: false,;
+        viewBilling: true,;
+        manageBilling: false,;
+      },;
+    },;
+    {;
+      id: 4,;
+      name: 'Taylor Brown',;
+      email: 'taylor@example && example.com',;
+      role: 'Viewer',;
+      permissions: {;
+        viewCandidates: true,;
+        editCandidates: false,;
+        createJobs: false,;
+        manageTeam: false,;
+        viewBilling: false,;
+        manageBilling: false,;
+      },;
+    },;
+  ];
+
+  const handlePermissionChange = (;
+    _memberId: number,;
+    permission: string,;
+    value: boolean;
+  ) => {    // In a real app, this would make an API call to update permissions;
+    toast({;
+      title: 'Permission updated',;
+      description: `Permission ${permission} has been ${value ? 'granted' : 'revoked'}.`,;
+    });
+  };
+
+  const roleDescriptions: Record<string, string> = {;
+    Admin: 'Full access to all features and settings',;
+    Recruiter: 'Can manage candidates and job postings',;
+    Manager: 'Can view candidates and create jobs',;
+    Viewer: 'Read-only access to candidates',;
+  };
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/RoleManagement.tsx
   return (
 
 
@@ -251,15 +351,33 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         viewBilling: false,
 
 
+<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/RoleManagement.tsx
 
 
 
   return (
     <div className="space-y-6">
       <div>
+<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
 
 
+=======
+        <h3 className='text-xl font-medium mb-4'>Role Permissions</h3>
+        <div className='grid grid-cols-1 md:grid-cols-4 gap-4 mb-6'>
+          {Object.entries(roleDescriptions).map(([role, description]) => (
+            <div
+              key={role}
+              className='bg-card rounded-lg p-4 border border-border'
+            >
+              <div className='flex items-center gap-2 mb-2'>
+                <Badge variant={role === 'Admin' ? 'default' : 'outline'}>
+                  {role}
+                </Badge>              </div>
+              <p className='text-sm text-muted-foreground'>{description}</p>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/RoleManagement.tsx
         <h3 className="text-xl font-medium mb-4">Role Permissions</h3>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
           {Object.entries(roleDescriptions).map(([role, description]) => (
@@ -269,6 +387,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
               <p className="text-sm text-muted-foreground">{description}</p>
 
+<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
             </div>
           ))}
 
@@ -276,6 +395,53 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       <div className="rounded-md border">
 
+=======
+
+import React from "react",
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
+import { Switch } from "@/components/ui/switch",
+import { toast } from "@/hooks/use-toast",
+import { InfoIcon } from 'lucide-react'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger} from "@/components/ui/tooltip",
+
+export function RoleManagement() {
+  // Mock team members data
+  const teamMembers = [
+    {
+        manageBilling: false}}],
+
+  const handlePermissionChange = (_memberId: number, permission: string, value: boolean) => {
+    // In a real app, this would make an API call to update permissions
+    toast({
+      title: "Permission updated",
+      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})
+  },
+
+  const roleDescriptions: Record<string string> = {
+    "Admin": "Full access to all features and settings",
+    "Recruiter": "Can manage candidates and job postings",
+    "Manager": "Can view candidates and create jobs",
+    "Viewer": "Read-only access to candidates"},
+
+  return (
+    <div className="space-y-6">
+      <div>
+            </div>
+          ))}
+        </div>
+      </div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/RoleManagement.tsx
 
 
         <Table>
@@ -363,6 +529,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <TableBody>
 
 
+<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/RoleManagement.tsx
             {teamMembers.map((member) => (
               <TableRow key={member.id}>
 
@@ -375,9 +545,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </TableCell>
                 <TableCell>
+<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/RoleManagement.tsx
                   <select 
                     className="w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                     defaultValue={member.role}
@@ -393,8 +566,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </TableCell>
                 <TableCell className="text-center">
                   <Switch
+<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/RoleManagement.tsx
                     aria-label="View candidates"
                     checked={member.permissions.viewCandidates}
                     onCheckedChange={(checked) =>
@@ -643,15 +819,24 @@ import React from "react",Table,TableBody,TableCell,TableHead,TableHeader,TableR
               <TableHead>Team Member</TableHead>;
 <<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
               <TableHead>Role</TableHead>;
+<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
               <TableHead className='text-center'>;
                 <div className='flex items-center justify-center gap-1'>;
 
+=======
+
+              <TableHead className='text-center'>;
+                <div className='flex items-center justify-center gap-1'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/RoleManagement.tsx
                   View Candidates;
                   <TooltipProvider>;
                     <Tooltip>;
                       <TooltipTrigger>;
+<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
                         <InfoIcon className='h-4 w-4 text-muted-foreground' />;
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/RoleManagement.tsx
                       </TooltipTrigger>;
                       <TooltipContent>;
                         Can view candidate profiles and applications;
@@ -669,15 +854,24 @@ import React from "react",Table,TableBody,TableCell,TableHead,TableHeader,TableR
                 </div>;
 <<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
               </TableHead>;
+<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
               <TableHead className='text-center'>;
                 <div className='flex items-center justify-center gap-1'>;
 
+=======
+
+              <TableHead className='text-center'>;
+                <div className='flex items-center justify-center gap-1'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/RoleManagement.tsx
                   Edit Candidates;
                   <TooltipProvider>;
                     <Tooltip>;
                       <TooltipTrigger>;
+<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
                         <InfoIcon className='h-4 w-4 text-muted-foreground' />;
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/RoleManagement.tsx
                       </TooltipTrigger>;
                       <TooltipContent>;
                         Can edit candidate information and status;
@@ -695,15 +889,24 @@ import React from "react",Table,TableBody,TableCell,TableHead,TableHeader,TableR
                 </div>;
 <<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
               </TableHead>;
+<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
               <TableHead className='text-center'>;
                 <div className='flex items-center justify-center gap-1'>;
 
+=======
+
+              <TableHead className='text-center'>;
+                <div className='flex items-center justify-center gap-1'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/RoleManagement.tsx
                   Create Jobs;
                   <TooltipProvider>;
                     <Tooltip>;
                       <TooltipTrigger>;
+<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
                         <InfoIcon className='h-4 w-4 text-muted-foreground' />;
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/RoleManagement.tsx
                       </TooltipTrigger>;
                       <TooltipContent>;
                         Can create and publish job listings;
@@ -721,15 +924,24 @@ import React from "react",Table,TableBody,TableCell,TableHead,TableHeader,TableR
                 </div>;
 <<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
               </TableHead>;
+<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
               <TableHead className='text-center'>;
                 <div className='flex items-center justify-center gap-1'>;
 
+=======
+
+              <TableHead className='text-center'>;
+                <div className='flex items-center justify-center gap-1'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/RoleManagement.tsx
                   Manage Team;
                   <TooltipProvider>;
                     <Tooltip>;
                       <TooltipTrigger>;
+<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
                         <InfoIcon className='h-4 w-4 text-muted-foreground' />;
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/RoleManagement.tsx
                       </TooltipTrigger>;
                       <TooltipContent>;
                         Can add, edit, and remove team members;
@@ -747,15 +959,24 @@ import React from "react",Table,TableBody,TableCell,TableHead,TableHeader,TableR
                 </div>;
 <<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
               </TableHead>;
+<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
               <TableHead className='text-center'>;
                 <div className='flex items-center justify-center gap-1'>;
 
+=======
+
+              <TableHead className='text-center'>;
+                <div className='flex items-center justify-center gap-1'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/RoleManagement.tsx
                   Billing Access;
                   <TooltipProvider>;
                     <Tooltip>;
                       <TooltipTrigger>;
+<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
                         <InfoIcon className='h-4 w-4 text-muted-foreground' />;
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/RoleManagement.tsx
                       </TooltipTrigger>;
                       <TooltipContent>;
                         Can view and manage billing information;
@@ -926,6 +1147,7 @@ import React from "react",Table,TableBody,TableCell,TableHead,TableHeader,TableR
                     }                  />
                 </TableCell>
                 <TableCell className='text-center'>
+<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
 =======
                     aria-label="View candidates";checked={member.permissions.viewCandidates}
                     onCheckedChange={checked =>;
@@ -997,11 +1219,32 @@ import React from "react",Table,TableBody,TableCell,TableHead,TableHeader,TableR
                     checked={member.permissions.viewBilling}
 
 
+=======
+                  <Switch
+                    aria-label='Create jobs'
+                    checked={member.permissions.createJobs}
+                    onCheckedChange={checked =>
+                      handlePermissionChange(member.id, 'createJobs', checked)
+                    }                  />
+                </TableCell>
+                <TableCell className='text-center'>
+                  <Switch
+                    aria-label='Manage team'
+                    checked={member.permissions.manageTeam}
+                    onCheckedChange={checked =>
+                      handlePermissionChange(member.id, 'manageTeam', checked)
+                    }                  />
+                </TableCell>
+                <TableCell className='text-center'>
+                  <Switch
+                    aria-label='View billing'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/RoleManagement.tsx
       </div>;
     </div>;
   );
 };
 
+<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
 
                     onCheckedChange={(checked) =>;
                       handlePermissionChange(member.id, "viewBilling", checked);
@@ -1071,11 +1314,16 @@ import React from "react",Table,TableBody,TableCell,TableHead,TableHeader,TableR
 }
 ;
 
+=======
+                    checked={member.permissions.viewBilling}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/RoleManagement.tsx
           </TableBody>
         </Table>
       </div>
     </div>
   );
+<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     </div>)}</TableBody>;
@@ -1084,3 +1332,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/enterprise/admin/RoleManagement.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/RoleManagement.tsx

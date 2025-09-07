@@ -4,8 +4,20 @@ import TrustBadge from '../components/ui/TrustBadge';
 import TrustRadar from '../components/ui/TrustRadar';
 import RiskIndicator from '../components/ui/RiskIndicator';
 <<<<<<< HEAD
+<<<<<<< HEAD
     const params = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+  const [loading, setLoading] = useState<boolean>(true);
+  const [showLogic, setShowLogic] = useState<boolean>(false);
+  useEffect(() => {
+
+    const params = new URLSearchParams(window.location.search);
+    const u = params.get('user');
+    if (u) setUserId(u);    if (u) setUserId(u)
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }, []);
   useEffect(() => {
     async function load() {
@@ -14,9 +26,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   useEffect(() => {;
     async function load() {;
       setLoading(true);
+<<<<<<< HEAD
 const res = await fetch(
         `/api/trust/${encodeURIComponent(userId)}?analyze=true`
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+const res = await fetch(
+        `/api/trust/${encodeURIComponent(userId)}?analyze=true`
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       );
       const json = await res && res.json();
       setData(json);
@@ -24,6 +43,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
     load();
   }, [userId]);
+<<<<<<< HEAD
   async function submitPeer(type: 'endorse' | 'flag') {
     await fetch('/api/trust/peer', {
       method: 'POST'
@@ -47,6 +67,14 @@ await fetch('/api/trust/appeal', {
     form.reset();
     form.reset()
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    <EnhancedLayout>    await fetch('/api/trust/appeal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, message, contactEmail }) });
+    alert('Appeal submitted');
+
+
+    form && form.reset();
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
   return (
     <EnhancedLayout>
@@ -60,6 +88,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 checked={showLogic}
                 onChange={() => setShowLogic(!showLogic)}
               />{' '}
+<<<<<<< HEAD
               Transparent logic
             </label>
           </div>
@@ -129,6 +158,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
                         </span>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        <div className="flex items-center justify-between">
+          <h1 className="text-2xl font-semibold">Trust & Reputation</h1>
+          <div className="flex items-center gap-3">
+            <label className="text-sm inline-flex items-center gap-2"><input type="checkbox" checked={showLogic} onChange={() => setShowLogic(!showLogic)} /> Transparent logic</label>
+              <div className="bg-white dark:bg-gray-900 rounded border p-4">
+                <h2 className="font-medium mb-2">Trust Metrics</h2>
+                <TrustRadar metrics={(data.components |[]).map((c: any) => ({ label: c.key, value: Math.round(c.raw * 100) }))} />
+              </div>
+              {showLogic && (
+                <div className="bg-white dark:bg-gray-900 rounded border p-4 text-sm">
+                  <h3 className="font-medium mb-2">Score Breakdown</h3>
+                  <ul className="space-y-1">
+                    {data.components.map((c: any) => (
+                      <li key={c.key} className="flex justify-between">
+
+
+  }
+  return (
+    <EnhancedLayout>
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                       </li>
 
 =======
@@ -148,6 +201,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               )}
 <<<<<<< HEAD
               {data.reasonSummary && (
+<<<<<<< HEAD
 <div className='bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap'>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -185,12 +239,47 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </form>
                 </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+<div className='bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap'>
+                  <strong>Operator GPT Analysis:</strong> {data.reasonSummary}
+                </div>
+              )}
+            </div>
+<div className='space-y-4'>
+              <div className='bg-white dark:bg-gray-900 rounded border p-4 space-y-3'>
+                <h3 className='font-medium'>Peer Review</h3>
+                <button
+                  className='text-sm px-3 py-1 rounded bg-green-600 text-white'
+                  onClick={() => submitPeer('endorse')}
+                    <input
+                      name='email'
+                      type='email'
+                      placeholder='Contact email'
+                      className='w-full border rounded px-2 py-1 text-sm'
+                    <textarea
+                      name='message'
+                      placeholder='Explain why your score should be reconsidered'
+                      className='w-full border rounded px-2 py-1 text-sm'
+                      rows={4}
+                      required
+
+
+      </div>;
+    </EnhancedLayout>;
+  );
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               )}
             </div>;
           </div>;
         )}
+<<<<<<< HEAD
       </div>
     </EnhancedLayout>
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -349,7 +438,13 @@ function submit_appeal() {e.prevent_default ()const form = e.target as HTMLFormE
             </div>;
           </div>)}
       </div>;
+<<<<<<< HEAD
     </EnhancedLayout>)}</div>;
     </EnhancedLayout>;
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </EnhancedLayout>);
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

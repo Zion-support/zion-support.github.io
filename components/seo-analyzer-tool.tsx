@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
 export default function SEOAnalyzerToolPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -94,6 +95,55 @@ icon: <Search className='w-8 h-8 text-white' />,
       color: 'text-orange-400',
     },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+import {
+
+  Search,
+  TrendingUp,
+  CheckCircle,
+  AlertTriangle,
+  ArrowRight,
+  Target,
+  BarChart3,
+  Globe,
+  Smartphone,;
+  Zap,;
+export default function SEOAnalyzerToolPage() {;
+} from 'lucide-react';
+
+
+export default function SEOAnalyzerToolPage() {;
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [analysisResults, setAnalysisResults] = useState(null);
+  const [url, setUrl] = useState('');
+
+    {
+    }
+    {
+      category: 'Content SEO'
+      factors: [
+        'Keyword density'
+        'Content relevance'
+        'Readability scores'
+        'Content freshness'
+        'Multimedia optimization'
+        'Schema markup'
+      ]
+      icon: ''
+      color: 'text-purple-400'
+    }
+    {
+      category: 'Local SEO'
+      factors: [
+        'Google My Business'
+        'Local citations'
+        'Review management'
+        'Local keyword targeting'
+        'Location-based content'
+        'Local link building'
+      ]
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   ];
   const features = [;
     {;
@@ -182,6 +232,7 @@ export default function SEOAnalyzerToolPage() {const [isAnalyzing, setIsAnalyzin
       popular: false
     };
     {
+<<<<<<< HEAD
       name: 'Starter'
       price: '$39'
       period: '/month'
@@ -192,17 +243,42 @@ export default function SEOAnalyzerToolPage() {const [isAnalyzing, setIsAnalyzin
         'Keyword research (100 keywords)',
         'On-page SEO analysis',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+;
+  const pricing = [;
+    {
+      name: 'Starter',
+      price: '$39',
+      period: '/month',
+      description: 'Perfect for small businesses and bloggers',
+      features: [;
+        '10 website analyses / month',
+        'Basic SEO metrics',
+        'Keyword research (100 keywords)',
+        'On - page SEO analysis',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Email support',
         'Basic reporting',
       ],
       popular: false,
+<<<<<<< HEAD
     },
     {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    },    {        '10 website analyses / month_basic SEO metrics_keyword research (100 keywords)On - page SEO analysis_email support_basic reporting';
+      ];
+      popular: false;
+    }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       name: 'Professional',
       price: '$89',
       period: '/month',
       description: 'Ideal for growing businesses and agencies',
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       features: [
 '50 website analyses/month',
         'Advanced SEO metrics',
@@ -216,11 +292,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       popular: true,
     },
     {
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       name: 'Enterprise',
       price: '$249',
       period: '/month',
       description: 'For large organizations and SEO agencies',
+<<<<<<< HEAD
       features: [
 'Unlimited analyses',
         'Enterprise SEO metrics',
@@ -239,6 +320,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     if (!url.trim()) return;
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     setIsAnalyzing(true);
     // Simulate SEO analysis
     setTimeout(() => {
@@ -350,6 +433,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ],;
       });
       setIsAnalyzing(false);
+<<<<<<< HEAD
     }, 4000);
   };
 
@@ -386,14 +470,37 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           'Optimize meta descriptions for better click-through ratesImprove page load speed by optimizing imagesAdd more relevant internal links to improve site structureImplement schema markup for rich snippets';
         ];
         keywords: [;
+=======
+    }, 4000);  };        recommendations: [
+          'Optimize meta descriptions for better click-through ratesImprove page load speed by optimizing imagesAdd more relevant internal links to improve site structureImplement schema markup for rich snippets'
+        ];
+        keywords: [
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           { keyword: 'website optimization', volume: '12K', difficulty: 'medium' }
           { keyword: 'SEO tools', volume: '8K', difficulty: 'low' }
         ];
           { keyword: 'search engine optimization', volume: '15K', difficulty: 'high' }
+<<<<<<< HEAD
         ];
       })setIsAnalyzing(false)}, 4000)}}return (return (<>;
       <Head>;
         <title>SEO Analyzer Tool - Zion Tech Group | Professional SEO Analysis &;
+=======
+        ]
+      });
+      setIsAnalyzing(false);
+
+    }, 4000);  };
+
+  };
+
+  return (
+  return (
+    <>;
+      <Head>;
+        <title>;
+          SEO Analyzer Tool - Zion Tech Group | Professional SEO Analysis &;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           Optimization;
         </title>;
             Analyze your website's SEO performance with our comprehensive tool.;
@@ -402,6 +509,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             organic traffic.;
           </p>;
                 className='bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-2xl hover-glow whitespace-nowrap'                disabled={isAnalyzing || !url && url.trim()}>;
+<<<<<<< HEAD
                 {isAnalyzing ? (<>;
                     <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2' />                    Analyzing...;
                   </>;
@@ -426,6 +534,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                {isAnalyzing ? (;
+                  <>;
+                    <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2' />                    Analyzing...;
+                  </>;
+                ) : (;
+                  <>;
+                    <Search className='w-5 h-5 mr-2' />                    Analyze SEO      </Head>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0 && 0.08),transparent_50%)]" />;
@@ -442,6 +559,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">;
             Analyze your website's SEO performance with our comprehensive tool. Get detailed insights, keyword research, and optimization recommendations to improve your search rankings and drive more organic traffic.;
           </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           {/* URL Input */}
           <div className='max-w-2xl mx-auto mb-8'>
@@ -475,6 +593,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="max-w-2xl mx-auto mb-8">
             <div className="flex flex-col sm:flex-row gap-4">
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+          {/* URL Input */}
+          <div className="max-w-2xl mx-auto mb-8">;
+            <div className="flex flex-col sm:flex-row gap-4">;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               <input
                 type="url"
                 placeholder="Enter your website URL (e && e.g., https://example && example.com)"
@@ -494,10 +617,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
                 size="lg"
                 className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-2xl hover-glow whitespace-nowrap"
+<<<<<<< HEAD
 =======
                 size="lg";
                 className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-2xl hover-glow whitespace-nowrap";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 disabled={isAnalyzing |!url.trim()}
               >;
                 {isAnalyzing ? (<>;
@@ -515,20 +642,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
 
 <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <Button
               href='#pricing'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
               className='border-green-500 text-green-400 hover:bg-green-500 hover:text-white shadow-2xl'
             >
               View Pricing
             </Button>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              className='border-green-500 text-green-400 hover:bg-green-500 hover:text-white shadow-2xl'>;
+              View Pricing;
+            </Button>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <Button
 href='/contact'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
               className='border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl'
             >
               Schedule Demo
@@ -573,6 +710,43 @@ href='/contact'
                     <p className='text-gray-400 leading-relaxed'>
                       {feature.description}
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              className='border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl'>              href="#pricing";
+              variant="outline";
+              size="lg";
+              className="border-green-500 text-green-400 hover:bg-green-500 hover:text-white shadow-2xl";
+              View Pricing;
+            </Button>;
+            <Button
+              Schedule Demo
+              Our SEO analyzer provides comprehensive insights and tools to help;
+              you dominate search rankings.;
+            </p>;
+          </div>;
+            </h2>
+            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              Our SEO analyzer provides comprehensive insights and tools to help you dominate search rankings.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {features.map((feature, index) => (
+                      className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature && feature.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`}
+                    />;
+                  </div>;
+                  <div className='flex-1'>;
+                    <h3 className='text-2xl font-bold mb-4 text-white'>;
+                      {feature && feature.title}
+                    </h3>;
+                    <p className='text-gray-400 leading-relaxed'>                      {feature && feature.description}              Powerful SEO Features;
+            </h2>;
+            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
+              Our SEO analyzer provides comprehensive insights and tools to help you dominate search rankings.;
+            </p>;
+          </div>;
+              <Card
+                key={index}
+                className="card-hover group border-gradient-green"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                     </p>
                   </div>
                 </div>
@@ -601,10 +775,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {seoFactors.map((category, index) => (
+<<<<<<< HEAD
               <Card
 =======
               </Button>;
             </div>;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           </div>;
 <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
             <Button;
@@ -767,6 +944,7 @@ href='/contact';
                   <h3 className={`text-xl font-bold ${category && category.color}`}>{category && category.category}</h3>;
                 </div>;
                 <ul className="space-y-3">;
+<<<<<<< HEAD
                   {category && category.factors.map((factor, factorIndex) => (<li key={factorIndex} className="flex items-center text-gray-300">;
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />;<Card;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -793,6 +971,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     >;
                       <CheckCircle className='w-4 h-4 text-green-400 mr-3 flex-shrink-0' />;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  {category && category.factors.map((factor, factorIndex) => (;
+                    <li key={factorIndex} className="flex items-center text-gray-300">;
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                       {factor}
                     </li>;
                   ))}
@@ -806,6 +989,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       {/* Demo Analysis Results */}
       {analysisResults && (
+<<<<<<< HEAD
 <section className='section-padding bg-gradient-cursor-accent'>
           <div className='container-cursor'>
             <div className='text-center mb-12'>
@@ -819,6 +1003,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8'>
 =======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           </div>;
         </div>;
       </section>;
@@ -963,6 +1150,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       ) : issue.type === 'warning' ? (<AlertTriangle className="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" />;
                       ) : (<CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />;
                       )}
+<<<<<<< HEAD
                       <div>;
                         <span className="text-gray-300">{issue.message}</span>;
                         <div className="text-xs text-gray-500 mt-1">Priority: {issue.priority}</div>;
@@ -1074,6 +1262,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </Card>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                      <div>
+                        <span className="text-gray-300">{issue.message}</span>
+                        <div className="text-xs text-gray-500 mt-1">Priority: {issue.priority}</div>
+                      </div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               {/* Issues */}
 <Card className='border-gradient-green'>;
                 <h3 className='text-2xl font-bold mb-6 text-white'>;
@@ -1099,6 +1293,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </Card>
             </div>
+<<<<<<< HEAD
             {/* Recommendations and Keywords */}
 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
               <Card className='border-gradient-green'>
@@ -1121,6 +1316,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </h3>
                 <div className='space-y-4'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+                  ))}
+            {/* Recommendations and Keywords */}
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
+              <Card className='border-gradient-green'>;
+                <h3 className='text-2xl font-bold mb-6 text-white'>;
+                  Optimization Recommendations;
+                </h3>;
+                <div className='space-y-3'>;
+                  {analysisResults && analysisResults.recommendations.map((rec, index) => (;
+                    <div key={index} className='flex items-start space-x-3'>;
+                      <CheckCircle className='w-5 h-5 text-green-400 mt-1 flex-shrink-0' />;
+                      <span className='text-gray-300'>{rec}</span>                    </div>            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
+              <Card className="border-gradient-green">;
+                <h3 className="text-2xl font-bold mb-6 text-white">Optimization Recommendations</h3>;
+                <div className="space-y-3">;
+                  {analysisResults && analysisResults.recommendations.map((rec, index) => (;
+                    <div key={index} className="flex items-start space-x-3">;
+                      <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />;
+                      <span className="text-gray-300">{rec}</span>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                     <div
 =======
                 </div>;
@@ -1185,14 +1402,46 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               : keyword && keyword.difficulty === 'medium'
                                 ? 'bg-yellow-500/20 text-yellow-400'
                                 : 'bg-red-500/20 text-red-400'
+<<<<<<< HEAD
                           }`}
                         >
                           {keyword.difficulty}
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                          }`}>                          {keyword && keyword.difficulty}                      <div className="flex justify-between items-center">;
+                        <span className="text-sm text-gray-400">Difficulty: {keyword && keyword.difficulty}</span>;
+                        <spanclassName={`px-2 py-1 rounded text-xs ${
+                          keyword && keyword.difficulty === 'low' ? 'bg-green-500/20 text-green-400' :
+                          keyword && keyword.difficulty === 'medium' ? 'bg-yellow-500/20 text-yellow-400' :
+                          'bg-red-500/20 text-red-400'
+                        }`}>;
+                        </span>;
+                      </div>;
+                    </div>;
+
+              <Card className="border-gradient-green">
+                <h3 className="text-2xl font-bold mb-6 text-white">Keyword Opportunities</h3>
+                <div className="space-y-4">
+                  {analysisResults.keywords.map((keyword, index) => (
+                    <div key={index} className="border-b border-gray-700 pb-3 last:border-b-0">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="font-semibold text-white">{keyword.keyword}</span>
+                        <span className="text-sm text-gray-400">Volume: {keyword.volume}</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm text-gray-400">Difficulty: {keyword.difficulty}</span>
+                        <span className={`px-2 py-1 rounded text-xs ${
+                          keyword.difficulty === 'low' ? 'bg-green-500/20 text-green-400' :
+                          keyword.difficulty === 'medium' ? 'bg-yellow-500/20 text-yellow-400' :
+                          'bg-red-500/20 text-red-400'
+                        }`}>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                         </span>
                       </div>
                     </div>
                   ))}
+<<<<<<< HEAD
                 </div>
               </Card>
             </div>
@@ -1233,6 +1482,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>;
                     </div>;
                   ))}<div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mb - 8'>;
+=======
+            <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mb - 8'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               {/* Overall Score */}
               <Card className='border - gradient - green text - center'>;
                 <h3 className='text - 2xl font - bold mb - 6 text - white'>;
@@ -1446,6 +1698,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Card>;
             </div>;
           </div>;
+<<<<<<< HEAD
         </section>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       )}
@@ -1481,12 +1734,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-white mb-4'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                     {plan.name}
                   </h3>;
                   <div className='mb - 6'>;
                     <span className='text - 4xl font - bold text - white'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                       {plan.price}
+=======
+                      {plan.price}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                     </span>
                     <span className='text-gray-400'>{plan.period}</span>
                   </div>
@@ -1499,6 +1759,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       className='flex items-center text-gray-300'
                     >
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                       {plan.price}</span>;
@@ -1513,6 +1774,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     >;
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                       {feature}
                     </li>;
                   ))}
@@ -1520,12 +1783,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Button
 href='/contact'
                   size='lg'
+<<<<<<< HEAD
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
                 >
                   Get Started
                   <ArrowRight className='w-5 h-5 ml-2' />
                 </Button>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+                      {feature}
+
+                    </li>
+                  ))}
+                </ul>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               </Card>
 =======
                 <Button;
@@ -1591,6 +1863,7 @@ href='/contact';
               href='/contact'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
               className='border-white text-white hover:bg-white hover:text-green-600 shadow-2xl'
             >
               Schedule Demo
@@ -1619,11 +1892,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;className='border-white text-white hover:bg-white hover:text-green-600 shadow-2xl';
             >;
+=======
+  );
+}
+}
+  );
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               Schedule Demo;
             </Button>;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
     </>;
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

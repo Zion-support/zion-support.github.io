@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -27,6 +28,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import { ServiceVariant  } from '../types/service-variants';
 export interface InnovativeITService2025  {id: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+import { ServiceVariant } from '../types/service-variants';
+export interface InnovativeITService2025 {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string;
   name: string;
   tagline: string;
@@ -820,6 +827,7 @@ export interface InnovativeITService2025  {id: string, name: string,tagline: str
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -891,6 +899,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+  {
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -911,6 +925,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -926,6 +941,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -935,14 +954,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    customers: 123;
 
+<<<<<<< HEAD
     rating: 4 && 4.8,
 
     reviews: 52
@@ -958,6 +980,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export interface InnovativeITService2025 {
   id: string, name: string,
   tagline: string, price: string,
@@ -988,6 +1012,9 @@ export interface InnovativeITService2025 {
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     id: 'zero-trust-security-platform', name: 'Zero Trust Security Platform',
     tagline: 'Advanced cybersecurity with zero trust architecture and AI threat detection', price: '$799',
     period: '/month',
@@ -1637,6 +1664,7 @@ export interface InnovativeITService2025 {
     contactInfo: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1648,10 +1676,14 @@ export interface InnovativeITService2025 {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     },
     realImplementation: true, implementationDetails: 'Cloud-based blockchain platform with multi-chain support and enterprise features.',
     launchDate: '2024-09-01', customers: 123,
     rating: 4.8,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1665,6 +1697,10 @@ export interface InnovativeITService2025 {
     launchDate: '2024-09-01', customers: 123,
     rating: 4.8
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1673,6 +1709,7 @@ export interface InnovativeITService2025 {
     reviews: 52;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1697,6 +1734,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeITService2025 {;
   id: string,;
@@ -2751,6 +2792,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [;
     customers: 123,;
     rating: 4.8;
     reviews: 52;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -2834,73 +2876,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.8,
     reviews: 42,
   },
+=======
+  }
+];
+  }
+];
 
-  // Edge Computing Orchestration Platform
-  {
-    id: 'edge-computing-orchestration',
-    name: 'Edge Computing Orchestration Platform',
-    tagline:
-      'Optimize edge computing with intelligent orchestration and automation',
-    price: '$599',
-    period: '/month',
-    description:
-      'Advanced edge computing orchestration platform that optimizes distributed computing resources, reduces latency, and improves performance for IoT applications and edge computing workloads.',
-    features: [
-      'Intelligent edge orchestration',
-      'Automatic resource optimization',
-      'Latency reduction algorithms',
-      'IoT device management',
-      'Edge analytics processing',
-      'Load balancing automation',
-      'Performance monitoring',
-      'Cost optimization',
-      'Multi-edge coordination',
-      'Real-time analytics',
-    ],
-    popular: true,
-    icon: '🌐',
-    color: 'from-green-600 to-emerald-700',
-    textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/edge-computing-orchestration',
-    marketPosition:
-      'Competes with AWS Greengrass ($0.16/hour), Azure IoT Edge ($0.20/hour). Our advantage: Intelligent orchestration and cost optimization.',
-    targetAudience:
-      'IoT companies, Manufacturing businesses, Smart city projects, Transportation companies, Retail businesses',
-    trialDays: 14,
-    setupTime: '3-5 days',
-    category: 'Edge Computing & IoT',
-    realService: true,
-    technology: [
-      'Python, Kubernetes, Docker, React, Node.js, PostgreSQL, Redis',
-    ],
-    integrations: [
-      'AWS IoT, Azure IoT, Google Cloud IoT, Kubernetes, Docker, Monitoring tools',
-    ],
-    useCases: [
-      'IoT device management, Edge analytics, Smart manufacturing, Autonomous vehicles, Smart cities',
-    ],
-    roi: 'Organizations report 60% reduction in latency and 40% improvement in edge computing efficiency.',
-    competitors: [
-      'AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge, EdgeX Foundry',
-    ],
-    marketSize: '$111B edge computing market',
-    growthRate: '37% annual growth',
-    variant: 'edge-computing-enterprise',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    },
-    realImplementation: true,
-    implementationDetails:
-      'Edge computing orchestration platform with intelligent resource management, automated optimization, and comprehensive monitoring tools.',
-    launchDate: '2024-10-20',
-    customers: 89,
-    rating: 4.7,
-    reviews: 56,
-  },
 
+;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+<<<<<<< HEAD
   // Blockchain Enterprise Platform
   {
     id: 'blockchain-enterprise-platform',
@@ -4178,3 +4166,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

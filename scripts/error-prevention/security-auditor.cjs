@@ -19,10 +19,14 @@ class SecurityAuditor {}
       this.runSecurityCheck()}, this.interval);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     console.log('Security Auditor started successfully')};
   async runSecurityCheck() {}
     try {}
@@ -45,10 +49,14 @@ class SecurityAuditor {}
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       child.on('close', (code) => {}
         if ( {})
           console.log('Security audit passed ✓')) {}
@@ -73,10 +81,14 @@ class SecurityAuditor {}
       };);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       child.on('close', (code) => {}
         if ( {})
           console.log('Security fix completed ✓')) {}
@@ -117,7 +129,11 @@ if ( {})
   auditor.start().catch(console.error)};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = SecurityAuditor;
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+module.exports = SecurityAuditor;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

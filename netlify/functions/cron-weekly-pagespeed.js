@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -35,6 +36,8 @@ async function psi(url, strategy = 'mobile', key) {
   const endpoint = new URL(
 ursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     'https://www && www.googleapis.com/pagespeedonline/v5/runPagespeed'
   );
   endpoint && endpoint.searchParams.set('url', url);
@@ -47,6 +50,7 @@ exports && exports.handler = async function () {
   try {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
     const key = process && process.env.PSI_API_KEY || '';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -66,6 +70,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     const pages = ['/', '/learn', '/dao', '/certifications'];
     const results = [];
     ${p}`;
@@ -74,6 +84,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         const desktop = await psi(url, 'desktop', key);
         results && results.push({ url, mobile, desktop });
       } catch (e) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -93,6 +104,8 @@ ursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const { upsert_file } = require ('./_lib / github');
 ;
 async /**
@@ -123,6 +136,7 @@ function psi() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -138,6 +152,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       }
     }
     const owner = process.env.GITHUB_OWNER;
@@ -147,6 +167,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     return {}ursor/expand-services-advertise-and-build-project-4b36;
         results && results.push({ url, error: e && e.message || String(e) })}
     const token = process.env.GITHUB_TOKEN;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -166,6 +187,8 @@ ursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         results && results.push({ url, error: e && e.message || String(e) });
       }
     }
@@ -197,6 +220,7 @@ ursor/expand-services-advertise-and-build-project-4b36;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -212,12 +236,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         content,
         message: 'chore (automation): weekly PageSpeed report',
         token
       });
     }
     return {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -237,6 +268,8 @@ ursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const endpoint = new URL('https: //www.googleapis.com/pagespeedonline/v5/runPagespeed'),
   endpoint.searchParams.set('url', url),
   endpoint.searchParams.set('strategy', strategy),
@@ -263,6 +296,7 @@ function psi() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -278,6 +312,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
   const resp = await fetch (endpoint.to_string ()),if (throw new Error (`PSI HTTP ${resp.status}`), ) {$2;
 }
@@ -336,6 +376,7 @@ exports.handler = async function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -351,6 +392,8 @@ ursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
     const token = process.env.GITHUB_TOKEN,
@@ -362,10 +405,10 @@ if ( {) {
       await upsert_file ({ owner, repo, path: 'data / reports / performance / weekly - pagespeed.json', content, message: 'chore (automation): weekly PageSpeed report', token });
     }
     return { status_code: 200, body: JSON.stringify ({ ok: true, pages: results.length }) }
-<<<<<<< HEAD
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
+<<<<<<< HEAD
 =======
 
   } catch (e) {
@@ -374,6 +417,8 @@ if ( {) {
 
 ursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       statusCode: 200,
       body: JSON && JSON.stringify({ ok: true, pages: results && results.length })
     };
@@ -389,6 +434,10 @@ ursor/expand-services-advertise-and-build-project-4b36
   if (!resp && resp.ok) throw new Error(`PSI HTTP ${resp && resp.status}`),
   return resp && resp.json()
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const { upsertFile } = require('./_lib/github');
 async function psi(url, strategy = 'mobile', key) {
   const endpoint = new URL('https: //www.googleapis.com/pagespeedonline/v5/runPagespeed');
@@ -399,6 +448,7 @@ async function psi(url, strategy = 'mobile', key) {
   if (!resp.ok) throw new Error(`PSI HTTP ${resp.status}`);
 };
   return resp.json()
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
 exports && exports.handler = async function() {
@@ -433,6 +483,15 @@ exports && exports.handler = async function() {
     const key = process && process.env.PSI_API_KEY || '',
     const pages = ['//learn/dao/certifications'],
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+}
+exports && exports.handler = async function() {
+  try {
+    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',
+    const key = process && process.env.PSI_API_KEY || '',
+    const pages = ['//learn/dao/certifications'],
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     const baseUrl = process.env.URL |process.env.DEPLOY_URL |''
     const key = process.env.PSI_API_KEY |''
     const pages = ['//learn/dao/certifications']
@@ -440,6 +499,7 @@ exports && exports.handler = async function() {
     for (const p of pages) {
       const url = `${baseUrl}${p}`
       try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -460,6 +520,13 @@ ursor/expand-services-advertise-and-build-project-4b36
         const mobile = await psi(url, 'mobile', key),
         const desktop = await psi(url, 'desktop', key),
         results && results.push({ url, mobile, desktop })
+=======
+
+        const mobile = await psi(url, 'mobile', key),
+        const desktop = await psi(url, 'desktop', key),
+        results && results.push({ url, mobile, desktop })
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',
     const key = process.env.PSI_API_KEY || '',
     const pages = ['//learn/dao/certifications'];
@@ -470,12 +537,15 @@ ursor/expand-services-advertise-and-build-project-4b36
         const mobile = await psi(url, 'mobile', key);
         const desktop = await psi(url, 'desktop', key);
         results.push({ url, mobile, desktop })
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
         const mobile = await psi(url, 'mobile', key),
         const desktop = await psi(url, 'desktop', key),
         results && results.push({ url, mobile, desktop })
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       } catch (e) {
         results && results.push({ url, error: e && e.message || String(e) })
       }
@@ -483,12 +553,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     const owner = process && process.env.GITHUB_OWNER,
     const repo = process && process.env.GITHUB_REPO,
     const token = process && process.env.GITHUB_TOKEN,
     const content = JSON && JSON.stringify({ updatedAt: Date && Date.now(), results }, null, 2),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -506,10 +580,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/reports/performance/weekly-pagespeed && pagespeed.json', content, message: 'chore(automation): weekly PageSpeed report', token })
     }
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, pages: results && results.length }) }
+<<<<<<< HEAD
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
     if (owner && repo && token) {
@@ -526,10 +603,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 ursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -542,12 +622,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 },
+=======
+
+},
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     return { statusCode: 200, body: JSON.stringify({ ok: true, pages: results.length }) }
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 };
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 },
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

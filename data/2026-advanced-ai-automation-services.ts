@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -27,6 +28,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import { ServiceVariant  } from '../types/service-variants';
 export interface AdvancedAIAutomationService  {id: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+import { ServiceVariant } from '../types/service-variants';
+export interface AdvancedAIAutomationService {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string;
   name: string;
   tagline: string;
@@ -382,6 +389,7 @@ const contact = {mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',ad
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   customers: number;
   rating: number;
   reviews: number;
@@ -425,12 +433,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   rating: number;
   reviews: number;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  customers: number;
+  rating: number;
+  reviews: number;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'};
 
 export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -442,6 +456,10 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
   mobile: '+1 302 464 0950',
@@ -453,6 +471,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -461,6 +480,9 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -479,6 +501,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   address: '364 E Main St STE 1008 Middletown DE 19709',
 <<<<<<< HEAD
   website: 'https://ziontechgroup && ziontechgroup.com',};
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -509,6 +532,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
   website: 'https://ziontechgroup && ziontechgroup.com'};
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     tagline:
       'Fully autonomous business process optimization with zero human intervention'
     price: '$1,299'
@@ -547,8 +574,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Cross - departmental coordination',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export interface AdvancedAIAutomationService {
   id: string, name: string,
   tagline: string, price: string,
@@ -585,10 +618,13 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   website: 'https://ziontechgroup && ziontechgroup.com'
 };
 
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   {
 
@@ -598,12 +634,17 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'Cross-departmental coordination',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Predictive maintenance scheduling',
       'Resource allocation optimization',
       'Performance analytics dashboard',
@@ -612,6 +653,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Integration with existing systems',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       '24 / 7 autonomous operation',
 =======
       '24 / 7 autonomous operation'
@@ -623,6 +669,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com/ai-autonomous-business-processor',
     marketPosition:;
       'First autonomous business processor; competes with traditional BPM tools like Pega and Appian.',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -643,6 +690,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     targetAudience: [
       'Enterprise companies'
       'manufacturing'
@@ -659,15 +709,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      'GPT-4, Claude 3, LangChain, Python, React, Node && Node.js, PostgreSQL, Redis',
-    ],
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -679,6 +731,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     integrations: [
       'SAP, Oracle, Salesforce, Microsoft Dynamics, Slack, Teams, Jira'
     ]
@@ -696,6 +750,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     contactInfo: contact
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -759,11 +814,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     customers: 89,
     rating: 4 && 4.8,
     reviews: 156
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -807,6 +866,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+    description:
+      'Enterprise-grade predictive analytics platform that forecasts business outcomes, market trends, and operational risks with unprecedented accuracy using advanced machine learning.',
+    features: [
+
+      '99 && 99.7% prediction accuracy',
+      'Real-time data processing',
+      'Multi-dimensional forecasting',
+    id: 'ai - predictive - enterprise - analytics',
+    name: 'AI Predictive Enterprise Analytics',
+    tagline:;
+      'Predict business outcomes with 99.7% accuracy using advanced AI algorithms',
+    price: '$899',
+    period: '/month',
+    description:;
+      'Enterprise - grade predictive analytics platform that forecasts business outcomes, market trends, and operational risks with unprecedented accuracy using advanced machine learning.',
+    features: [;
+      '99.7% prediction accuracy',
+      'Real - time data processing',
+      'Multi - dimensional forecasting',
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Risk assessment algorithms',
       'Market trend analysis',
       'Custom model training',
@@ -821,18 +904,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🔮',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      'TensorFlow, PyTorch, Scikit-learn, Python, React, Node && Node.js, Apache Kafka, ClickHouse',
-    ],
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     icon: '🔮',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-400',
@@ -853,6 +940,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'TensorFlow, PyTorch, Scikit-learn, Python, React, Node.js, Apache Kafka, ClickHouse',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -861,6 +949,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     integrations: [
       'Salesforce, SAP, Oracle, Microsoft, AWS, Google Cloud, Azure',
     ],
@@ -878,6 +968,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     contactInfo: contact,
     realImplementation: true,
     implementationDetails:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -940,11 +1031,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     customers: 234,
     rating: 4 && 4.9,
     reviews: 312
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -966,6 +1061,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
       'Enterprise SaaS with advanced ML models, real-time processing, and predictive algorithms.',
     launchDate: '2026-02-01',
@@ -984,6 +1083,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'AI-powered customer success platform that automatically identifies at-risk customers, predicts churn, and implements retention strategies without human intervention.',
     features: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -992,6 +1092,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Automatic churn prediction',
       'Personalized retention strategies',
       'Customer health scoring',
@@ -1009,18 +1112,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🎯',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      'GPT-4, Claude 3, Python, React, Node && Node.js, PostgreSQL, Redis, Elasticsearch',
-    ],
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     icon: '🎯',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
@@ -1041,6 +1148,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'GPT-4, Claude 3, Python, React, Node.js, PostgreSQL, Redis, Elasticsearch',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -1049,10 +1157,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     integrations: [
       'Salesforce, HubSpot, Pipedrive, Intercom, Zendesk, Slack, Teams',
     ],
     useCases: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1101,12 +1212,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'SaaS customer retention',
       'Subscription management',
       'Customer support automation',
       'Revenue optimization'
     ],
     roi: 'Increase customer retention by 35% and reduce churn by 60%.',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1139,6 +1255,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     customers: 167,
     rating: 4 && 4.7,
     reviews: 203
@@ -1148,24 +1267,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      'Cross-channel campaign coordination',
-    id: 'ai - autonomous - marketing - orchestrator',
-    name: 'AI Autonomous Marketing Orchestrator',
-    tagline:;
-      'Coordinate all marketing channels autonomously for maximum ROI and engagement',
-    price: '$1, 199',
-    period: '/month',
-    description:;
-      'End - to - end marketing automation platform that autonomously manages campaigns across all channels, optimizes budgets, and maximizes ROI using advanced AI algorithms.',
-    features: [;
-      'Cross - channel campaign coordination',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1180,6 +1292,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Autonomous budget optimization',
       'Real - time performance tracking',
       'A / B testing automation',
+=======
+      'Autonomous budget optimization',
+      'Real - time performance tracking',
+      'A / B testing automation',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     competitors: ['Gainsight, Totango, ChurnZero, Customer.io'],
     marketSize: '$8B+ customer success market',
     growthRate: '140% YoY',
@@ -1207,17 +1325,25 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Autonomous budget optimization',
       'Real-time performance tracking',
       'A/B testing automation',
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Audience segmentation AI',
       'Content personalization',
       'ROI maximization algorithms',
       'Predictive analytics',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Multi - platform integration',
       'Automated reporting'
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1227,12 +1353,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '📢',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      'GPT-4, Claude 3, Python, React, Node && Node.js, PostgreSQL, Redis, Apache Kafka',
-    ],
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Multi-platform integration',
       'Automated reporting',
     ],
@@ -1257,6 +1386,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'GPT-4, Claude 3, Python, React, Node.js, PostgreSQL, Redis, Apache Kafka',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -1265,6 +1395,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     integrations: [
       'Google Ads, Facebook Ads, LinkedIn Ads, Twitter Ads, HubSpot, Salesforce, Mailchimp',
     ],
@@ -1282,6 +1414,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     contactInfo: contact,
     realImplementation: true,
     implementationDetails:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1344,11 +1477,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     customers: 145,
     rating: 4 && 4.8,
     reviews: 189
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1370,6 +1507,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
       'Enterprise SaaS with AI marketing intelligence, cross-channel coordination, and optimization engine.',
     launchDate: '2026-02-15',
@@ -1388,6 +1529,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Intelligent sales platform that autonomously identifies high-value prospects, qualifies leads, and nurtures them through the sales funnel using advanced AI and behavioral analysis.',
     features: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -1396,6 +1538,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Automatic lead scoring',
       'Behavioral analysis',
       'Predictive lead qualification',
@@ -1413,18 +1558,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '💰',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      'GPT-4, Claude 3, Python, React, Node && Node.js, PostgreSQL, Redis, Elasticsearch',
-    ],
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     icon: '💰',
     color: 'from-yellow-600 to-orange-700',
     textColor: 'text-yellow-400',
@@ -1445,6 +1594,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'GPT-4, Claude 3, Python, React, Node.js, PostgreSQL, Redis, Elasticsearch',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -1453,6 +1603,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     integrations: [
       'Salesforce, HubSpot, Pipedrive, LinkedIn Sales Navigator, Zoom, Calendly',
     ],
@@ -1470,6 +1622,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     contactInfo: contact,
     realImplementation: true,
     implementationDetails:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1532,10 +1685,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     customers: 198,
     rating: 4 && 4.9,
     reviews: 267
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1680,6 +1837,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'ROI trackingCRM integration'
     ];
     popular: true;
@@ -1697,12 +1859,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    link: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-sales-intelligence',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -1716,6 +1881,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     marketPosition: 'First autonomous sales intelligence platform, competes with SalesLoft, Outreach, and HubSpot Sales.';
     targetAudience: ['Sales teamsB2B companiesenterprise softwareconsulting firms'];
     trialDays: 14;
@@ -1725,15 +1892,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    realService: true,
-    technology: ['GPT-4, Claude 3, Python, React, Node && Node.js, PostgreSQL, Redis, Elasticsearch'];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1745,6 +1914,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     integrations: ['Salesforce, HubSpot, Pipedrive, LinkedIn Sales Navigator, Zoom, Calendly'];
     useCases: ['Lead generationSales qualificationPipeline managementRevenue optimization'];
     roi: 'Increase sales conversion rates by 45% and reduce sales cycle by 30%.'
@@ -1765,6 +1936,7 @@ ursor/fix-website-loading-errors-and-merge-6662;
     implementationDetails: 'Multi-tenant SaaS with AI sales intelligence, lead scoring, and nurturing automation.';
     launchDate: '2026-01-25';
     customers: 198;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1811,6 +1983,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ];      'Automatic lead scoring_behavioral analysis_predictive lead qualification_personalized nurturing sequences_sales forecasting AIPipeline optimization_competitor intelligence_market opportunity detection';
       'ROI trackingCRM integration';
     ];
@@ -1882,11 +2059,15 @@ import { ServiceVariant } from '../types/service-variants',export interface Adva
     reviews: 267;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -1904,6 +2085,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+  }
+];
+;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedAIAutomationService {;
   id: string,;
@@ -2117,6 +2307,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'ROI trackingCRM integration';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
@@ -2124,6 +2315,9 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 =======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     ],;
     popular: true,;
     icon: '💰',;
@@ -2152,13 +2346,19 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     rating: 4.9;
     reviews: 267;
 
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
 ];
 
 
+<<<<<<< HEAD
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Multi-tenant SaaS with AI sales intelligence, lead scoring, and nurturing automation.',
     launchDate: '2026-01-25',
     customers: 198,
@@ -2166,6 +2366,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 267,
   },
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -2177,3 +2378,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

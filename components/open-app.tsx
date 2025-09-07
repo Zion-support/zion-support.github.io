@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect } from 'react';
 const IOS_APP_URL = null;
 const IOS_APP_URL =
@@ -18,6 +19,11 @@ const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open';
 
 export default function OpenApp() {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import { useEffect } from 'react';
+
+const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL |'zion://open';export default function OpenApp() {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   useEffect(() => {
 const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open';export default function OpenApp() {
   useEffect(() => {;
@@ -29,8 +35,14 @@ const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open';exp
     const timeout = setTimeout(() => {
       const elapsed = Date.now() - now;
       if (elapsed < 2000) {
+<<<<<<< HEAD
 window.location.href = isIOS ? IOS_APP_URL : ANDROID_APP_URL;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+window.location.href = isIOS ? IOS_APP_URL : ANDROID_APP_URL;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       }
     }, 1200);
     // Try to open the deep link
@@ -39,24 +51,37 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     iframe.src = DEEP_LINK_URL;
     document.body.appendChild(iframe);
     const timer = setTimeout(() => {
+<<<<<<< HEAD
 try {
         document.body.removeChild(iframe);
       } catch {}
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+      try {
+        document.body.remove_child (iframe);
+      } catch {}    }, 1500);      try { document.body.remove_child (iframe) } catch {}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }, 1500);
     }, 1500);
 
     return () => {;
       clearTimeout(timeout);
       clearTimeout(timer);
+<<<<<<< HEAD
 try {
         document.body.removeChild(iframe);
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      try {;
+        document && document.body.removeChild(iframe);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       } catch {}
       try { document.body.removeChild(iframe) } catch {}
     }
   }, []);
   return (
+<<<<<<< HEAD
     <div className='min-h-[50vh] flex items-center justify-center'>
       <div className='text-center'>
         <div className='text-lg font-semibold'>Opening the Zion app…</div>
@@ -86,6 +111,9 @@ const DEEP_LINK_URL  = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open';ex
       try { document.body.removeChild(iframe) } catch {}
     }
   }, [])return (<div className='min-h-[50vh] flex items-center justify-center'>;
+=======
+    <div className='min-h-[50vh] flex items-center justify-center'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <div className='text-center'>;
         <div className='text-lg font-semibold'>Opening the Zion app…</div>;
         <div className='mt-2 text-sm opacity-70'>;
@@ -93,6 +121,7 @@ const DEEP_LINK_URL  = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open';ex
         </div>;
       </div>;
     </div>;
+<<<<<<< HEAD
   )}, [])<div className='min-h-[50vh] flex items-center justify-center'>;
       <div className='text-center'>;
         <div className='text-lg font-semibold'>Opening the Zion app…</div>;
@@ -109,3 +138,7 @@ const DEEP_LINK_URL  = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open';ex
     </div>;
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  );  }, []);
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

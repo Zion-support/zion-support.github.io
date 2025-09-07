@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 =======
@@ -130,6 +131,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 origin/automation-improvements-final;
 }),
 import { Link } from 'react-router-dom';
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
@@ -138,6 +141,7 @@ import { Link } from 'react-router-dom';
 
 
 
+<<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -175,11 +179,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ;,
 import _React from 'react';';,
 import { Link } from 'react-router-dom';,
 export function Logo({ customLogo, customColor }) {}
   const logoColor = customColor || '#22D3EE';',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -198,6 +207,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (;
     <Link to="/" className="flex items-center space-x-3 group">";
       <div);
@@ -207,6 +219,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ? `linear-gradient(135deg,${customColor},${customColor}dd)`,
             : 'linear-gradient(135deg,#22D3EE,#A855F7)'}}',
       >;,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -238,6 +251,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         <span className="text-white font-bold text-xl">Z</span>";
       </div>;
       <div className="flex flex-col">";
@@ -246,6 +265,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </span>;
         <span className="text-sm text-zinc-300 font-medium">Tech Group</span>";
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -266,6 +286,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 =======
 
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     </Link>;
 
 <<<<<<< HEAD
@@ -400,6 +423,10 @@ origin/automation-improvements-final
             ? `linear-gradient(135deg,${customColor},${customColor}dd)`
             : 'linear-gradient(135deg,#22D3EE,#A855F7)'
         }}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     </Link>;
   return (
     <Link to="/" className="flex items-center space-x-3 group">
@@ -409,18 +436,26 @@ style={{
           background: customColor
             ? `linear-gradient(135deg,${customColor},${customColor}dd)`
             : 'linear-gradient(135deg,#22D3EE,#A855F7)'}}
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       >
         <span className="text-white font-bold text-xl">Z</span>
       </div>
       <div className="flex flex-col">
+<<<<<<< HEAD
         <span className="text-xl font-bold" style={{ "color": logoColor }}>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        <span className="text-xl font-bold" style={{ color: logoColor }}>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           Zion
         </span>
         <span className="text-sm text-zinc-300 font-medium">Tech Group</span>
       </div>
     </Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -503,10 +538,13 @@ import _React from 'react'; import { Link } from 'react-router-dom'; export func
     </Link>
   );
 }
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -519,11 +557,14 @@ origin/automation-improvements-final
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   );
 
 ,
 import _React from 'react'; import { Link } from 'react-router-dom'; export function Logo({ customLogo,customColor }) { const logoColor = customColor || '#22D3EE'; return ( <Link to="/" className="flex items-center space-x-3 group"> {' '} <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300" style={{ background: customColor ? `linear-gradient(135deg,${customColor},${customColor}dd)` : 'linear-gradient(135deg,#22D3EE,#A855F7)',}} > {' '} <span className="text-white font-bold text-xl">Z</span>{' '} </div>{' '} <div className="flex flex-col"> {' '} <span className="text-xl font-bold" style={{ color: logoColor }}> {' '} Zion{' '} </span>{' '} <span className="text-sm text-zinc-300 font-medium"> {' '} Tech Group{' '} </span>{' '} </div>{' '} </Link> )}',
 import _React from 'react'; import { Link } from 'react-router-dom'; export function Logo({ customLogo,customColor }) { const logoColor = customColor || '#22D3EE'; return ( <Link to="/" className="flex items-center space-x-3 group"> {' '} <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300" style={{ background: customColor ? `linear-gradient(135deg,${customColor},${customColor}dd)` : 'linear-gradient(135deg,#22D3EE,#A855F7)',}} > {' '} <span className="text-white font-bold text-xl">Z</span>{' '} </div>{' '} <div className="flex flex-col"> {' '} <span className="text-xl font-bold" style={{ color: logoColor }}> {' '} Zion{' '} </span>{' '} <span className="text-sm text-zinc-300 font-medium"> {' '} Tech Group{' '} </span>{' '} </div>{' '} </Link> )}',
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -545,3 +586,8 @@ import _React from 'react'; import { Link } from 'react-router-dom'; export func
 >>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -17,6 +18,13 @@
 // Type definition for MessageEvent
 interface MessageEvent {
   data: unknown;
+=======
+
+// Type definition for MessageEvent
+interface MessageEvent {
+  data: unknown;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { useEffect, useCallback } from "react";
 
 ;
@@ -32,12 +40,15 @@ interface Event  {type: string;
   target: EventTarget | null;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 }type EventListener = (event: Event) => void;interface EventTarget  {addEventListener(type: string, listener: EventListener): void;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 
 type EventListener = (event: Event) => void;
@@ -63,8 +74,8 @@ interface EventTarget {
 
 export function useMessageChannelHandler({
   onMessage,
-<<<<<<< HEAD
   onError,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -84,6 +95,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   onError
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  onError
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }: MessageChannelHandlerProps = {}) {
   const handleMessage = useCallback((event: MessageEvent<unknown>) => {
     try {
@@ -101,6 +116,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     };
   }, [handleMessage]);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -131,6 +147,8 @@ import { useEffect,useCallback } from 'react'; interface MessageEvent { data: un
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 import { useEffect,useCallback } from 'react'; interface MessageEvent { data: unknown} interface MessageChannelHandlerProps { onMessage?: (message: unknown) => void; onError?: (error: Error) => void} export function useMessageChannelHandler({ onMessage,onError }: MessageChannelHandlerProps = {}) { const handleMessage = useCallback((event: MessageEvent) => { try { if (onMessage) { onMessage(event.data)} } catch (error) { if (onError) { onError(error as Error)} } },[onMessage,onError]); useEffect(() => { window.addEventListener('message',handleMessage); return () => { window.removeEventListener('message',handleMessage)}},[handleMessage])}
 
@@ -139,6 +157,7 @@ import { useEffect,useCallback } from 'react'; interface MessageEvent { data: un
 
 
 
+<<<<<<< HEAD
 main
 
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -146,3 +165,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 import { useEffect,useCallback } from 'react'; interface MessageEvent { data: unknown} interface MessageChannelHandlerProps { onMessage?: (message: unknown) => void; onError?: (error: Error) => void} export function useMessageChannelHandler({ onMessage,onError }: MessageChannelHandlerProps = {}) { const handleMessage = useCallback((event: MessageEvent) => { try { if (onMessage) { onMessage(event.data)} } catch (error) { if (onError) { onError(error as Error)} } },[onMessage,onError]); useEffect(() => { window.addEventListener('message',handleMessage); return () => { window.removeEventListener('message',handleMessage)}},[handleMessage])}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

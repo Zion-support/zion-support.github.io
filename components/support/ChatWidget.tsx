@@ -1,7 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 type ChatMessage = any;
 export default function ChatWidget() {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import { X } from 'lucide-react';
+
+type ChatMessage = {
+  role: 'user' | 'assistant' | 'system'
+  content: string
+  timestamp?: number
+}
+function generateSessionId(): string {
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState('');
@@ -10,6 +22,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const [showEscalation, setShowEscalation] = useState(false);
   const sessionIdRef = useRef<string>('');
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
+<<<<<<< HEAD
   useEffect(() => {
 sessionIdRef.current = generateSessionId();
   }, []);
@@ -44,12 +57,16 @@ body: JSON.stringify({
         }),
       });
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     } catch {}
   }
 
   async function escalateSupport(reason: string) {
     try {
       await fetch('/api/support/escalate', {
+<<<<<<< HEAD
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({
@@ -60,6 +77,24 @@ body: JSON.stringify({
       });
       setShowEscalation(true);
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
+    } catch {}
+  }
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({
+          sessionId: sessionIdRef.current
+          reason
+          tag: 'escalate'
+        })
+      });
+
+      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     } catch {}
   }
 
@@ -83,6 +118,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   async function onSend(messageText?: string) {
     const text = (messageText ?? input).trim();
     if (!text) return;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 const newUserMessage: ChatMessage = {
       role: 'user',
@@ -120,7 +159,11 @@ timestamp: Date.now(),
       }
       if (data?.meta?.intentMatched === false) {
         setFailedIntents(n => {
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           const next = n + 1;
           if (next >= 3) {;
             escalateSupport('Failed to match user intent 3+ times');
@@ -130,6 +173,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       } else if (data?.meta?.intentMatched === true) {;
         setFailedIntents(0);
       }
+<<<<<<< HEAD
     } catch (e) {
       setMessages(prev => [
         ...prev
@@ -191,11 +235,53 @@ export default function ChatWidget() {const [isOpen, setIsOpen] = useState(false
           onClick={() => setIsOpen(true)}
           className='rounded-full shadow-lg bg-blue-600 text-white w-14 h-14 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-black'        >      {!isOpen && (<button;
           aria-label="Open support chat";
+=======
+
+  return (
+    <div className='fixed bottom-4 right-4 z-50'>      }
+      if (data?.meta?.intentMatched === false) {
+        setFailedIntents((n) => {
+
+      if (data?.meta?.intentMatched === false) {;
+        setFailedIntents((n) => {;
+          const next = n + 1;
+          if (next >= 3) {;
+            escalateSupport('Failed to match user intent 3+ times');
+          }
+          return next;
+        });
+      } else if (data?.meta?.intentMatched === true) {;
+        setFailedIntents(0);
+      }
+    }
+  }
+    <div className='fixed bottom-4 right-4 z-50'>
+
+  return (
+
+    }
+  }
+
+  return (
+
+    }
+  }
+  return (
+    <div className='fixed bottom-4 right-4 z-50'>;
+      {!isOpen && (;
+        <button
+          aria-label='Open support chat'
+          onClick={() => setIsOpen(true)}
+          className='rounded-full shadow-lg bg-blue-600 text-white w-14 h-14 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-black'        >      {!isOpen && (;
+        <button
+          aria-label="Open support chat"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           onClick={() => setIsOpen(true)}
           className="rounded-full shadow-lg bg-blue-600 text-white w-14 h-14 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-black";
         >;
           ?;
         </button>;
+<<<<<<< HEAD
       )}} catch (e) {setMessages(prev => [;
         ...prev;
         {role: 'assistant';
@@ -250,6 +336,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     m.role === 'assistant'
                       ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      )}
+              <div
+                key={idx}
+                className={
+                  m && m.role === 'assistant' ? 'text-sm' : 'text-sm text-right'
+                }>;
+                <div
+                  className={
+                    m && m.role === 'assistant'
+                      ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800'                      : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'            {messages && messages.map((m, idx) => (;
+              <div key={idx} className={m && m.role === 'assistant' ? 'text-sm' : 'text-sm text-right'}>;
+                <div
+                  className={
+                    m && m.role === 'assistant'
+                      ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark: bg-gray-800'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                       : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'
 =======
                 <div;
@@ -269,6 +372,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </div>
             ))}
+<<<<<<< HEAD
             {isLoading && (
 <div className='text-sm'>
                 <div className='inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800 animate-pulse'>
@@ -288,12 +392,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'
                   >
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+            )}
+                  <button
+                    key={q}
+                    onClick={() => onSend(q)}
+                    className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >            <div className="px-3 pb-2">;
+              <div className="flex flex-wrap gap-2 mb-2">;
+                {quickReplies && quickReplies.map((q) => (;
+                  <button
+                    key={q}
+                    onClick={() => onSend(q)}
+                    className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
+                    className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >
+
+                  >
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                     {q}
                   </button>
                 ))}
               </div>
             </div>
           )}
+<<<<<<< HEAD
 
 <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -312,6 +435,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {quickReplies && quickReplies.map((q) => (<button;
                     key={q}
                     onClick={() => onSend(q)}
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                     className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800";
                     className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >;
                   >;
@@ -335,6 +460,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 ))}
               </div>;
             </div>;
+<<<<<<< HEAD
           )}className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800";
                     {q}
                   </button>;
@@ -345,6 +471,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='border-t border-gray-200 dark:border-gray-800 p-2'>;
             {!showEscalation ? (<div className='flex gap-2'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+          )}
+
+          <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
+            {!showEscalation ? (
+              <div className='flex gap-2'>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>;
             {!showEscalation ? (<div className='flex gap-2'>;
                 <input;
@@ -357,6 +491,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       onSend();
                     }
                   }}
+<<<<<<< HEAD
                   placeholder='Ask a question…'
                   className='flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500'
                       onSend()
@@ -365,10 +500,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   placeholder="Ask a question…"
                   className="flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                  placeholder='Ask a question…';
+                  className='flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500'                />;
+                <button
+                  onClick={() => onSend()}
+                  disabled={isLoading}
+              <div className="flex gap-2">
+                <input
+                  value={input}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 />
                 <button
                   onClick={() => onSend()}
                   disabled={isLoading}
+<<<<<<< HEAD
 className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'
                 >
                   Send
@@ -395,10 +541,15 @@ className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-
                 </div>
               </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                    }
+                  }}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             )}
           </div>;
         </div>;
       )}
+<<<<<<< HEAD
     </div>
   );
 }
@@ -456,3 +607,13 @@ if ( {) {$2;
 }</div>;
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+}
+  );
+}
+useEffect ( () => {
+  // Check condition
+if ( {) {
+  $2
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

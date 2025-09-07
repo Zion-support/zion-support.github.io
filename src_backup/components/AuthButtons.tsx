@@ -1,4 +1,5 @@
 <<<<<<< HEAD:src_backup/components/AuthButtons.tsx
+<<<<<<< HEAD:src_backup/components/AuthButtons.tsx
 import { signIn } from 'next-auth/react';
 type Provider = any;
 import { signIn } from 'next-auth/react'
@@ -10,10 +11,13 @@ export function AuthButtons({
 }: AuthButtonsProps) {
   const [loadingProvider, setLoadingProvider] = useState<string | null>(null)
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AuthButtons.tsx
   const handleSignIn = async (provider: Provider) => {
     setLoadingProvider(provider)
     await signIn(provider)
   }
+<<<<<<< HEAD:src_backup/components/AuthButtons.tsx
 import { useState } from 'react';
 import { Button } from '@/components/ui/ button';
 import { Facebook } from 'lucide-react';
@@ -67,6 +71,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
           onClick={() => handleSignIn('google')}
 
+=======
+
+
+
+
+
+  const gridCols = `grid-cols-${providers.length}`
+  return (
+    <div className={`mt-6 grid ${gridCols} gap-3`}>
+      {providers.includes('google') && (
+        <Button
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AuthButtons.tsx
           disabled={loadingProvider !== null}
         >
           <span className="sr-only">Sign in with Google</span>
@@ -81,12 +97,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+<<<<<<< HEAD:src_backup/components/AuthButtons.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AuthButtons.tsx
             </svg>
           )}
         </Button>;
       )}
       {providers && providers.includes('github') && (;
         <Button
+<<<<<<< HEAD:src_backup/components/AuthButtons.tsx
 
 
           type="button"
@@ -94,6 +115,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
           onClick={() => handleSignIn('github')}
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AuthButtons.tsx
           disabled={loadingProvider !== null}
         >
           <span className="sr-only">Sign in with GitHub</span>
@@ -111,9 +134,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       )}
       {providers && providers.includes('facebook') && (;
         <Button
+<<<<<<< HEAD:src_backup/components/AuthButtons.tsx
 
 
 
+=======
+          type='button'
+          variant='outline'
+          className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
+          onClick={() => handleSignIn('facebook')}
+          disabled={loadingProvider !== null}        >
+          <span className='sr-only'>Sign in with Facebook</span>
+          {loadingProvider === 'facebook' ? (
+            <svg className='h-5 w-5 animate-spin' viewBox='0 0 24 24' />
+          ) : (
+            <Facebook className='h-5 w-5' />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AuthButtons.tsx
           type="button"
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
@@ -262,6 +298,7 @@ interface AuthButtonsProps  {providers?: Provider[];export function AuthButtons(
 };
 }
 
+<<<<<<< HEAD:src_backup/components/AuthButtons.tsx
 
           type="button"
           variant="outline"
@@ -274,15 +311,44 @@ interface AuthButtonsProps  {providers?: Provider[];export function AuthButtons(
 
 
 
+=======
+            </svg>
+          )}
+        </Button>
+      )}
+      {providers.includes('github') && (
+        <Button
+            </svg>
+          )}
+        </Button>
+      )}
+      {providers.includes('facebook') && (
+        <Button
+          )}
+        </Button>
+      )}
+      {providers.includes('credentials') && (
+        <Button
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AuthButtons.tsx
           ) : (
             <>Email Login</>
           )}
         </Button>;
       )}
+<<<<<<< HEAD:src_backup/components/AuthButtons.tsx
+=======
+
+
+    </div>;
+  );
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AuthButtons.tsx
 ;
 
     </div>
   );
+<<<<<<< HEAD:src_backup/components/AuthButtons.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     </div>)}) : (<>Email Login</>;
@@ -317,3 +383,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )};</div>;
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/AuthButtons.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AuthButtons.tsx

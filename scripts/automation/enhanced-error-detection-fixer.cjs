@@ -59,7 +59,11 @@ console.log(' Starting enhanced error detection and fixing automation...')
     return { "type": 'peer-dependency', "action"}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.error(' Enhanced error detection "failed")
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    console.error(' Enhanced error detection "failed")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

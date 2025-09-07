@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -69,6 +70,21 @@ class AICodeQualityAnalyzer {
       console.error('❌ AI code quality analysis failed:', error.message);
       return { success: false, error: error.message };
 
+=======
+
+#!/usr/bin/env node;
+
+#!/usr/bin/env node
+
+#!/usr/bin/env node;
+
+/**
+ * AI Code Quality Analyzer
+ * Analyzes code quality using AI-powered insights
+ */
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -89,6 +105,10 @@ const { execSync } = require('child_process')
       const result = execSync('find src -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
       const result = execSync('find . -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
       const result = execSync('find src -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -320,6 +340,10 @@ class AICodeQualityAnalyzer {
     } catch (error) {
       this.log(`❌ AI code quality analysis: failed: ${error.message}`);
       process.exit(1);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const fs = require('fs');
 const path = require('path');
 
@@ -382,6 +406,7 @@ class AICodeQualityAnalyzer {
     } catch (error) {
       console.error('❌ AI code quality analysis failed:', error.message);
       return { success: false, error: error.message };
+<<<<<<< HEAD
 
 main
 
@@ -390,10 +415,13 @@ main
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 // Run the analyzer
@@ -418,3 +446,12 @@ const analyzer = new AICodeQualityAnalyzer();
 analyzer.run().catch(console.error);
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+=======
+// Run the analyzer
+const analyzer = new AICodeQualityAnalyzer();
+analyzer.run().catch(console.error);
+
+const analyzer = new AICodeQualityAnalyzer();
+analyzer.analyzeCodeQuality();
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -44,6 +45,10 @@ function NotificationsPage() {return <NotificationCenter />;const NotificationCe
 function NotificationsPage() {return <NotificationCenter />;
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -71,6 +76,7 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -78,10 +84,15 @@ import React from 'react';
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
   return <NotificationCenter />;
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import dynamic from 'next / dynamic';
@@ -99,11 +110,16 @@ const NotificationCenter = dynamic (
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import React from 'react';
 import dynamic from 'next/dynamic';
 const NotificationCenter = null;
 const NotificationCenter = dynamic(
   () => import('../components/notifications/NotificationCenter')
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -113,10 +129,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   {
     ssr: false
   }
 );
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function NotificationsPage() {
   return <NotificationCenter />;const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {
@@ -124,6 +144,13 @@ export default function NotificationsPage() {
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+export default function NotificationsPage() {
+  return <NotificationCenter />;const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {
+  ssr: false})
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export default function NotificationsPage() {
 const NotificationCenter = dynamic(;
   () => import('../components/notifications/NotificationCenter'),;
@@ -136,6 +163,7 @@ export default function NotificationsPage() {;
   ssr: false}),;
 export default function NotificationsPage() {;
   return <NotificationCenter />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -180,3 +208,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+}
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

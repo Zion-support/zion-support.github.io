@@ -52,14 +52,22 @@ function resolveMergeConflicts(filePath) {
     
     // Check if file has merge conflicts
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (!content.includes('
+=======
+    if (!content.includes('') && !content.includes('') && !content.includes('
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       return false;
     }
     
     console.log(`📝 Fixing merge conflicts in: ${filePath}`);
     
     // Strategy: Keep the newer version (after ) for most cases
+<<<<<<< HEAD
     content = content.replace(/
+=======
+    content = content.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       // For version conflicts, prefer the newer version
       if (headContent.includes('"') && newContent.includes('"')) {
         return newContent.trim();
@@ -68,9 +76,14 @@ function resolveMergeConflicts(filePath) {
     });
     
     // Clean up any remaining conflict markers
+<<<<<<< HEAD
     content = content.replace(/
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    content = content.replace(/[\s\S]*?
+    content = content.replace(/[\s\S]*?
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     
     fs.writeFileSync(filePath, content);
     return true;
@@ -102,7 +115,11 @@ function findConflictedFiles(dir) {
           try {
             const content = fs.readFileSync(fullPath, 'utf8');
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (content.includes('
+=======
+            if (content.includes('') || content.includes('') || content.includes('
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               conflictedFiles.push(fullPath);
             }
           } catch (err) {

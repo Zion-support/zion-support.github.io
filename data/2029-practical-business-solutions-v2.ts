@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -111,6 +112,9 @@ export interface PracticalBusinessSolution2029  {id: string;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Predictive business modeling',
       'Automated report generation',
       'Custom dashboard creation',
@@ -128,6 +132,7 @@ export interface PracticalBusinessSolution2029  {id: string;
 
       'Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making'
     ],    features: [;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -220,6 +225,8 @@ export interface PracticalBusinessSolution2029 {
       'Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making'
     ],    features: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Real-time data analyticsPredictive business modelingAutomated report generationCustom dashboard creationData visualization toolsBusiness trend analysisPerformance benchmarkingROI tracking automation';
       'Market opportunity identificationCompetitive intelligence'
     ];
@@ -229,6 +236,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     textColor: 'text-blue-400';
     link: 'https://ziontechgroup.com/services/ai-business-intelligence-suite';
 <<<<<<< HEAD
+<<<<<<< HEAD
     marketPosition: 'Leading AI-powered BI platform. 50% more accurate predictions than traditional BI tools.';
     targetAudience: 'Medium to large businesses, Data-driven companies, Consulting firms, Financial institutions, Marketing agencies',
 =======
@@ -236,6 +244,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Leading AI-powered BI platform. 50% more accurate predictions than traditional BI tools.';
     targetAudience:;
       'Medium to large businesses, Data-driven companies, Consulting firms, Financial institutions, Marketing agencies';
+=======
+
+    marketPosition: 'Leading AI-powered BI platform. 50% more accurate predictions than traditional BI tools.'
+    targetAudience: 'Medium to large businesses, Data-driven companies, Consulting firms, Financial institutions, Marketing agencies';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     trialDays: 21;
     setupTime: '2-3 weeks';
     category: 'AI Business Intelligence';
@@ -361,13 +374,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     roi: 'Average customer sees 350% ROI through improved decision making and business optimization.'
     competitors: ['Tableau, Power BI, Qlik, Looker, Domo'];
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     marketSize: '$18B market';
     growthRate: '280% annual growth';
     variant: 'ai-futuristic';
     contactInfo: {
 
       mobile: '+1 302 464 0950';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -416,6 +433,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 167
   }
 
+=======
+
+    reviews: 167
+  }
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'
@@ -427,7 +451,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.8;
     reviews: 167
   },
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   // Intelligent Customer Experience Platform
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
@@ -443,6 +471,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   {
     id: 'intelligent - customer - experience - platform';
     name: 'Intelligent Customer Experience Platform';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -468,6 +497,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     targetAudience: 'E-commerce companies, Retail businesses, SaaS companies, Service providers, Hospitality industry';
     trialDays: 14;
     setupTime: '1-2 weeks';
@@ -478,6 +510,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     useCases: ['Customer personalization, Journey optimization, Customer retention, Revenue optimization, Customer insights'];
     roi: 'Average customer sees 450% ROI through improved customer satisfaction and increased revenue.'
     competitors: ['Adobe Experience Cloud, Salesforce Customer 360, HubSpot, Intercom, Zendesk'];
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     tagline: 'AI-powered customer journey optimization and personalization';
     price: '$1,899',
     period: '/month';
@@ -502,7 +538,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     useCases: ['Customer personalization, Journey optimization, Customer retention, Revenue optimization, Customer insights'],
     roi: 'Average customer sees 450% ROI through improved customer satisfaction and increased revenue.';
     competitors: ['Adobe Experience Cloud, Salesforce Customer 360, HubSpot, Intercom, Zendesk'],
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     marketSize: '$22B market';
     growthRate: '320% annual growth';
     variant: 'ai-futuristic';
@@ -611,6 +650,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -641,6 +681,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 134
   }
 
+=======
+
+    reviews: 134
+  }
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'
@@ -652,7 +699,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.9;
     reviews: 134
   },
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   // Smart Supply Chain Optimization
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
@@ -668,6 +718,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   {
     id: 'smart - supply - chain - optimization';
     name: 'Smart Supply Chain Optimization';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -693,6 +744,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     targetAudience: 'Manufacturing companies, Retail chains, E-commerce businesses, Logistics companies, Distribution networks';
     trialDays: 30;
     setupTime: '3-4 weeks';
@@ -703,6 +757,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     useCases: ['Demand forecasting, Inventory management, Cost optimization, Risk management, Performance tracking'];
     roi: 'Average customer sees 500% ROI through cost reduction and efficiency improvements.'
     competitors: ['SAP Supply Chain, Oracle SCM, Manhattan Associates, Blue Yonder, Kinaxis'];
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     tagline: 'AI-powered supply chain intelligence and automation';
     price: '$3,999',
     period: '/month';
@@ -727,7 +785,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     useCases: ['Demand forecasting, Inventory management, Cost optimization, Risk management, Performance tracking'],
     roi: 'Average customer sees 500% ROI through cost reduction and efficiency improvements.';
     competitors: ['SAP Supply Chain, Oracle SCM, Manhattan Associates, Blue Yonder, Kinaxis'],
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     marketSize: '$28B market';
     growthRate: '350% annual growth';
     variant: 'ai-futuristic';
@@ -836,6 +897,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -866,6 +928,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 98
   }
 
+=======
+
+    reviews: 98
+  }
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'
@@ -877,7 +946,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.8;
     reviews: 98
   },
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   // Intelligent HR Management System
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
@@ -893,6 +965,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   {
     id: 'intelligent - hr - management - system';
     name: 'Intelligent HR Management System';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -918,6 +991,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     targetAudience: 'Medium to large companies, HR departments, Recruitment agencies, Consulting firms, Educational institutions';
     trialDays: 21;
     setupTime: '2-3 weeks';
@@ -928,6 +1004,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     useCases: ['Recruitment optimization, Employee engagement, Performance management, Training optimization, HR analytics'];
     roi: 'Average customer sees 400% ROI through improved employee retention and HR efficiency.'
     competitors: ['Workday, BambooHR, ADP, Gusto, Zenefits'];
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     tagline: 'AI-powered human resources optimization and talent management';
     price: '$1,599',
     period: '/month';
@@ -952,7 +1032,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     useCases: ['Recruitment optimization, Employee engagement, Performance management, Training optimization, HR analytics'],
     roi: 'Average customer sees 400% ROI through improved employee retention and HR efficiency.';
     competitors: ['Workday, BambooHR, ADP, Gusto, Zenefits'],
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     marketSize: '$15B market';
     growthRate: '300% annual growth';
     variant: 'ai-futuristic';
@@ -1061,6 +1144,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1091,6 +1175,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 189
   }
 
+=======
+
+    reviews: 189
+  }
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'
@@ -1102,7 +1193,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.7;
     reviews: 189
   },
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   // Smart Financial Management Platform
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
@@ -1118,6 +1212,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   {
     id: 'smart - financial - management - platform';
     name: 'Smart Financial Management Platform';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1143,6 +1238,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     targetAudience: 'Small to medium businesses, Financial departments, Accounting firms, Consulting companies, Startups';
     trialDays: 30;
     setupTime: '2-4 weeks';
@@ -1153,6 +1251,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     useCases: ['Cash flow management, Financial planning, Risk management, Accounting automation, Tax optimization'];
     roi: 'Average customer sees 380% ROI through improved financial management and cost optimization.'
     competitors: ['QuickBooks, Xero, FreshBooks, Wave, Sage'];
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     tagline: 'AI-powered financial planning and business optimization';
     price: '$2,999',
     period: '/month';
@@ -1177,7 +1279,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     useCases: ['Cash flow management, Financial planning, Risk management, Accounting automation, Tax optimization'],
     roi: 'Average customer sees 380% ROI through improved financial management and cost optimization.';
     competitors: ['QuickBooks, Xero, FreshBooks, Wave, Sage'],
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     marketSize: '$20B market';
     growthRate: '280% annual growth';
     variant: 'ai-futuristic';
@@ -1286,6 +1391,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1316,6 +1422,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 156
   }
 
+=======
+
+    reviews: 156
+  }
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'
@@ -1327,7 +1440,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.8;
     reviews: 156
   },
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   // Intelligent Marketing Automation
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
@@ -1343,6 +1459,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   {
     id: 'intelligent - marketing - automation';
     name: 'Intelligent Marketing Automation';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1368,6 +1485,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     targetAudience: 'Marketing agencies, E-commerce businesses, SaaS companies, B2B companies, Retail businesses';
     trialDays: 14;
     setupTime: '1-2 weeks';
@@ -1378,6 +1498,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     useCases: ['Campaign optimization, Content personalization, Lead generation, Customer engagement, ROI optimization'];
     roi: 'Average customer sees 420% ROI through improved campaign performance and marketing efficiency.'
     competitors: ['HubSpot, Marketo, Pardot, ActiveCampaign, ConvertKit'];
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     tagline: 'AI-powered marketing optimization and campaign automation';
     price: '$1,299',
     period: '/month';
@@ -1402,7 +1526,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     useCases: ['Campaign optimization, Content personalization, Lead generation, Customer engagement, ROI optimization'],
     roi: 'Average customer sees 420% ROI through improved campaign performance and marketing efficiency.';
     competitors: ['HubSpot, Marketo, Pardot, ActiveCampaign, ConvertKit'],
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     marketSize: '$25B market';
     growthRate: '320% annual growth';
     variant: 'ai-futuristic';
@@ -1510,6 +1637,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1540,6 +1668,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 234
   }
 
+=======
+
+    reviews: 234
+  }
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'
@@ -1551,7 +1686,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.9;
     reviews: 234
   },
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   // Smart Project Management
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
@@ -1569,6 +1707,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     name: 'Smart Project Management';
     tagline: 'AI - powered project optimization and team collaboration';
     price: '$899';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1596,6 +1735,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     targetAudience: 'Project managers, Development teams, Consulting firms, Construction companies, Event planners';
     trialDays: 21;
     setupTime: '1-2 weeks';
@@ -1608,16 +1750,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    roi: 'Average customer sees 350% ROI through improved project success rates and team efficiency.',
-    competitors: ['Asana, Monday && Monday.com, Trello, Jira, Basecamp'];
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     period: '/month';
     description: 'Intelligent project management platform that uses AI to optimize workflows, predict project risks, automate task management, and improve team collaboration for successful project delivery.',
@@ -1642,6 +1788,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     roi: 'Average customer sees 350% ROI through improved project success rates and team efficiency.';
     competitors: ['Asana, Monday.com, Trello, Jira, Basecamp'],
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -1650,6 +1797,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     marketSize: '$12B market';
     growthRate: '280% annual growth';
     variant: 'ai-futuristic';
@@ -1754,6 +1904,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1784,6 +1935,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 312
   }
 
+=======
+
+    reviews: 312
+  }
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'
@@ -1795,7 +1953,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.8;
     reviews: 312
   },
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   // Intelligent Sales Optimization
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
@@ -1811,6 +1972,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   {
     id: 'intelligent - sales - optimization';
     name: 'Intelligent Sales Optimization';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1836,6 +1998,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     targetAudience: 'Sales teams, B2B companies, SaaS businesses, Real estate, Financial services';
     trialDays: 21;
     setupTime: '2-3 weeks';
@@ -1846,6 +2011,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     useCases: ['Lead scoring, Sales optimization, Revenue optimization, Pipeline management, Performance tracking'];
     roi: 'Average customer sees 450% ROI through improved sales performance and revenue optimization.'
     competitors: ['Salesforce, HubSpot Sales, Pipedrive, Zoho CRM, Freshsales'];
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     tagline: 'AI-powered sales intelligence and revenue optimization';
     price: '$1,799',
     period: '/month';
@@ -1870,7 +2039,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     useCases: ['Lead scoring, Sales optimization, Revenue optimization, Pipeline management, Performance tracking'],
     roi: 'Average customer sees 450% ROI through improved sales performance and revenue optimization.';
     competitors: ['Salesforce, HubSpot Sales, Pipedrive, Zoho CRM, Freshsales'],
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     marketSize: '$18B market';
     growthRate: '300% annual growth';
     variant: 'ai-futuristic';
@@ -2225,6 +2397,7 @@ import { ServiceVariant } from '../types/service-variants',export interface Prac
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -2252,6 +2425,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     reviews: 198
   }
 ];
@@ -2265,12 +2441,15 @@ export const getPracticalBusinessSolutions2029ByCategory = (category: string) =>
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => service && service.category === category)
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => service && service.popular)
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 };
@@ -2279,6 +2458,7 @@ export const getPracticalBusinessSolutions2029ByCategory = (category: string) =>
   return practicalBusinessSolutions2029.filter(service => service.category === category);
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2312,6 +2492,14 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
   return practicalBusinessSolutions2029.filter(service => {;
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, maxPrice: number) => {
+  return practicalBusinessSolutions2029.filter(service => {;
+    const price = parseInt(service.price.replace(/[^0-9]/g, ''));
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     return price >= minPrice && price <= maxPrice;
   });
 }
@@ -2322,6 +2510,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
     variant: 'ai-futuristic'
 <<<<<<< HEAD
     contactInfo: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2342,6 +2531,10 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
 =======
     contactInfo: {}
@@ -2356,6 +2549,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
 export const getPopularPracticalBusinessSolutions2029 = () =>: any {
   return practicalBusinessSolutions2029.filter (service => service.popular);
+<<<<<<< HEAD
 ;
 export const getPopularPracticalBusinessSolutions2029 = () =>: any {
   return practicalBusinessSolutions2029.filter (service => service.popular);
@@ -2374,6 +2568,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
   return practicalBusinessSolutions2029.filter(service => service.popular);
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  return practicalBusinessSolutions2029.filter(service => service.popular);
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 ;
 export const getPracticalBusinessSolutions2029ByCategory = (category: string) =>: any {
@@ -2410,25 +2608,17 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      'AI-powered personalization',
-  // Intelligent Customer Experience Platform;
-  {
-    id: 'intelligent - customer - experience - platform',
-    name: 'Intelligent Customer Experience Platform',
-    tagline: 'AI - powered customer journey optimization and personalization',
-    price: '$1, 899',
-    period: '/month',
-    description:;
-      'Revolutionary customer experience platform that uses AI to optimize every touchpoint, personalize interactions, and create seamless customer journeys that drive loyalty and revenue.',
-    features: [;
-      'AI - powered personalization',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -2440,6 +2630,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Customer journey mapping',
       'Real - time optimization',
       'Multi - channel integration',
@@ -2451,6 +2643,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Revenue optimization'
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2502,6 +2695,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2515,6 +2712,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.9,
     reviews: 134
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2547,6 +2745,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'AI demand forecasting',
       'Inventory optimization',
       'Supply chain risk management',
@@ -2559,6 +2761,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Performance analytics'
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2610,6 +2813,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2627,25 +2834,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      'AI-powered recruitment',
-  // Intelligent HR Management System;
-  {
-    id: 'intelligent - hr - management - system',
-    name: 'Intelligent HR Management System',
-    tagline: 'AI - powered human resources optimization and talent management',
-    price: '$1, 599',
-    period: '/month',
-    description:;
-      'Next - generation HR management system that uses AI to optimize recruitment, improve employee engagement, predict turnover, and create data - driven HR strategies that drive business success.',
-    features: [;
-      'AI - powered recruitment',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -2657,6 +2856,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Employee engagement analytics',
       'Turnover prediction',
       'Performance optimization',
@@ -2668,6 +2869,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'HR analytics dashboard'
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2717,6 +2919,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2730,6 +2936,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.7,
     reviews: 189
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2762,6 +2969,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'AI cash flow optimization',
       'Financial risk prediction',
       'Automated accounting',
@@ -2774,6 +2985,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Performance analytics'
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2823,6 +3035,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2836,6 +3052,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.8,
     reviews: 156
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2868,6 +3085,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'AI campaign optimization',
       'Content personalization',
       'Customer behavior prediction',
@@ -2880,6 +3101,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Performance analytics'
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2929,6 +3151,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2942,6 +3168,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.9,
     reviews: 234
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2974,6 +3201,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'AI workflow optimization',
       'Project risk prediction',
       'Task automation',
@@ -2990,48 +3221,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '📋',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      'Workflow optimization, Risk management, Team collaboration, Resource management, Quality assurance',
-    ],
-    roi: 'Average customer sees 350% ROI through improved project success rates and team efficiency.',
-    competitors: ['Asana, Monday && Monday.com, Trello, Jira, Basecamp'],
-    marketSize: '$12B market',
-    growthRate: '280% annual growth',
-    variant: 'ai-futuristic',
-    contactInfo: {
-    color: 'from - cyan - 500 via - blue - 500 to - indigo - 500',
-    text_color: 'text - cyan - 400',
-    link: 'https://ziontechgroup.com / services / smart - project - management',
-    market_position:;
-      'Advanced AI project management platform. 40% better project success rate than traditional tools.',
-    target_audience:;
-      'Project managers, Development teams, Consulting firms, Construction companies, Event planners',
-    trial_days: 21,
-    setup_time: '1 - 2 weeks',
-    category: 'Project Management',
-    real_service: true,
-    technology: [;
-      'AI optimization, Machine learning, Project analytics, Workflow automation, Risk modeling',
-    ],
-    integrations: [;
-      'Communication tools, File sharing platforms, Time tracking, Reporting tools, Team collaboration',
-    ],
-    use_cases: [;
-      'Workflow optimization, Risk management, Team collaboration, Resource management, Quality assurance',
-    ],
-    roi: 'Average customer sees 350% ROI through improved project success rates and team efficiency.',
-    competitors: ['Asana, Monday.com, Trello, Jira, Basecamp'],
-    market_size: '$12B market',
-    growth_rate: '280% annual growth',
-    variant: 'ai - futuristic',
-    contact_info: {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -3043,6 +3244,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3056,6 +3259,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.8,
     reviews: 312
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3088,6 +3292,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'AI lead scoring',
       'Customer behavior prediction',
       'Sales process optimization',
@@ -3100,6 +3308,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'ROI analytics'
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3149,6 +3358,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3165,6 +3378,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ];
   return practicalBusinessSolutions2029.filter(service => service.popular);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -3194,6 +3408,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => service && service.popular);
 };
 
@@ -3204,6 +3421,7 @@ export const getPracticalBusinessSolutions2029ByCategory = (
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -3231,6 +3449,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(
     service => service && service.category === category
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   );
 }
 export const getPracticalBusinessSolutions2029ByPriceRange = (
@@ -3241,6 +3463,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -3268,6 +3491,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => {
     const price = parseInt(service && service.price.replace(/[^0-9]/g, ''));
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     return price >= minPrice && price <= maxPrice;
   });
 };export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [;
@@ -3282,9 +3509,13 @@ export const getPopularPracticalBusinessSolutions2029 = () =>: any {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 ;
 export const getPracticalBusinessSolutions2029ByCategory = (
@@ -3292,6 +3523,7 @@ export const getPracticalBusinessSolutions2029ByCategory = (
   return practicalBusinessSolutions2029.filter (
     service => service.category === category);
 }
+<<<<<<< HEAD
 ;
 export const getPracticalBusinessSolutions2029ByPriceRange = (
   min_price: number,
@@ -3306,6 +3538,8 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (
     id: "ai - business - intelligence - suite",
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     name: "AI Business Intelligence Suite",
     tagline: "Intelligent insights and predictive analytics for business growth",
     price: "$2, 499",
@@ -3322,6 +3556,10 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (
       "Market opportunity identification",
       "Competitive intelligence" ],
     popular: true,
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     icon: "📊",
 
     color: "from - blue - 500 via - indigo - 500 to - purple - 500",
@@ -3332,7 +3570,10 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (
     trial_days: 21,
     setup_time: "2 - 3 weeks",
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     category: "AI Business Intelligence",
     real_service: true,
     technology["Machine learning, Predictive analytics, Data processing, Business intelligence, Real - time analytics"],
@@ -3349,6 +3590,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com";,
 },
+<<<<<<< HEAD
 
   id: string, name: string,
   tagline: string, price: string,
@@ -3395,11 +3637,17 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     category: 'AI Business Intelligence', realService: true,
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     technology: ['Machine learning, Predictive analytics, Data processing, Business intelligence, Real-time analytics'];
     integrations: ['ERP systems, CRM platforms, Financial systems, Marketing tools, Social media platforms'];
     useCases: ['Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making'];
     roi: 'Average customer sees 350% ROI through improved decision making and business optimization.',
     competitors: ['Tableau, Power BI, Qlik, Looker, Domo'];
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     marketSize: '$18B market', growthRate: '280% annual growth',
     variant: 'ai-futuristic',
@@ -3409,6 +3657,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       website: 'https://ziontechgroup.com'
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -3420,6 +3669,9 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     realImplementation: true,
     implementationDetails: "Production-ready AI business intelligence platform with predictive analytics, automated reporting, and real-time insights.",
     launchDate: "2024-07-01",
@@ -3449,6 +3701,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       "Loyalty program optimization",
       "Revenue optimization" ],
     popular: true,
+<<<<<<< HEAD
     icon: "🎯",
 
     color: "from - green - 500 via - emerald - 500 to - teal - 500",
@@ -3460,6 +3713,8 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     setup_time: "1 - 2 weeks",
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     category: "Customer Experience",
     real_service: true,
     technology["AI personalization, Machine learning, Customer analytics, Journey mapping, Behavioral analysis"],
@@ -3502,6 +3757,10 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       "Compliance automation",
       "Performance analytics" ],
     popular: true,
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     icon: "🚚",
 
     color: "from - orange - 500 via - red - 500 to - pink - 500",
@@ -3512,7 +3771,10 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     trial_days: 30,
     setup_time: "3 - 4 weeks",
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     category: "Supply Chain Management",
     real_service: true,
     technology["AI forecasting, Machine learning, Supply chain analytics, Risk modeling, Optimization algorithms"],
@@ -3555,6 +3817,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       "Employee sentiment analysis",
       "HR analytics dashboard" ],
     popular: true,
+<<<<<<< HEAD
     icon: "👥",
 
     color: "from - purple - 500 via - violet - 500 to - indigo - 500",
@@ -3566,6 +3829,8 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     setup_time: "2 - 3 weeks",
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     category: "Human Resources",
     real_service: true,
     technology["AI recruitment, Machine learning, HR analytics, Predictive modeling, Sentiment analysis"],
@@ -3608,6 +3873,10 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       "Compliance monitoring",
       "Performance analytics" ],
     popular: true,
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     icon: "💼",
 
     color: "from - emerald - 500 via - teal - 500 to - cyan - 500",
@@ -3618,7 +3887,10 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     trial_days: 30,
     setup_time: "2 - 4 weeks",
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     category: "Financial Management",
     real_service: true,
     technology["AI financial modeling, Machine learning, Financial analytics, Risk modeling, Automation"],
@@ -3661,6 +3933,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       "Lead scoring automation",
       "Performance analytics" ],
     popular: true,
+<<<<<<< HEAD
     icon: "📢",
 
     color: "from - pink - 500 via - rose - 500 to - red - 500",
@@ -3672,6 +3945,8 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     setup_time: "1 - 2 weeks",
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     category: "Marketing Automation",
     real_service: true,
     technology["AI marketing, Machine learning, Marketing analytics, Automation, Personalization"],
@@ -3714,6 +3989,10 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       "Communication optimization",
       "Performance analytics" ],
     popular: true,
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     icon: "📋",
 
     color: "from - cyan - 500 via - blue - 500 to - indigo - 500",
@@ -3724,13 +4003,17 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     trial_days: 21,
     setup_time: "1 - 2 weeks",
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     category: "Project Management",
     real_service: true,
     technology["AI optimization, Machine learning, Project analytics, Workflow automation, Risk modeling"],
     integrations["Communication tools, File sharing platforms, Time tracking, Reporting tools, Team collaboration"],
     use_cases["Workflow optimization, Risk management, Team collaboration, Resource management, Quality assurance"],
     roi: "Average customer sees 350% ROI through improved project success rates and team efficiency.",
+<<<<<<< HEAD
 
     competitors["Asana, Monday.com, Trello, Jira, Basecamp"],
     market_size: "$12B market",
@@ -3739,6 +4022,8 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     contact_info: {
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
@@ -3770,6 +4055,10 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       "Performance tracking",
       "ROI analytics" ],
     popular: true,
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     icon: "💰",
 
     color: "from - yellow - 500 via - orange - 500 to - red - 500",
@@ -3780,7 +4069,10 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     trial_days: 21,
     setup_time: "2 - 3 weeks",
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     category: "Sales Optimization",
     real_service: true,
     technology["AI sales intelligence, Machine learning, Sales analytics, Predictive modeling, Automation"],
@@ -3805,6 +4097,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     reviews: 198;
 ]}}
 
+<<<<<<< HEAD
 };
 
 
@@ -3816,6 +4109,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { ServiceVariant } from '../types/service-variants',;
 export interface PracticalBusinessSolution2029 {;
   id: string,;
@@ -4200,6 +4496,7 @@ export const getPracticalBusinessSolutions2029ByCategory = (
     reviews: 198;
 ]}}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -4207,6 +4504,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [;
   // AI-Powered Business Intelligence;
   {;
@@ -4575,6 +4874,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 };
@@ -4600,3 +4900,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+      email: 'kleber@ziontechgroup.com';
+};
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

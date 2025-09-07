@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 export default function CoachWidget() {
   const [input, setInput] = useState('');
@@ -43,10 +44,69 @@ function ask() {if () return) {$2;
   return (      })const data = await resp.json ()set_reply (data.text || '')} finally {set_loading (false)}
   }
   return (<div className='border rounded p - 3'>;
+=======
+        body: JSON.stringify({ prompt: input })
+      });
+      const data = await resp.json();
+      setReply(data.text |'');
+    } finally {
+  return (      });
+      const data = await resp.json();
+      setReply(data.text |'')
+
+    }
+  }
+  return (
+
+
+  return (      });
+    }
+  }
+  );
+}
+import React, { useState } from 'react';
+export default /**
+ * CoachWidget - Function description
+ */
+function CoachWidget() {
+  const [input, set_input] = useState ('');
+  const [reply, set_reply] = useState < string | null>(null);
+  const [loading, set_loading] = useState (false);
+;
+  async /**
+ * ask - Function description
+ */
+function ask() {
+    if () return) {
+  $2
+}
+    set_loading (true);
+    try {
+      const resp = await fetch ('/api / learn / coach', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({ prompt: input }),
+      });
+      const data = await resp.json ();
+      set_reply (data.text || '');
+    } finally {
+      set_loading (false);    }
+  }
+  return (      });
+      const data = await resp.json ();
+      set_reply (data.text || '');
+    } finally {
+      set_loading (false);
+    }
+  }
+  return (
+    <div className='border rounded p - 3'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <div className='font - medium mb - 2'>ZionGPT Coach</div>;
       <div className='flex gap - 2'>;
         <input;
           className='flex - 1 border rounded px - 3 py - 2 bg - white dark:bg - black';
+<<<<<<< HEAD
           placeholder='Ask for help...';export default function CoachWidget() {const [input, setInput] = useState('')const [reply, setReply] = useState<string | null>(null),const [loading, setLoading] = useState(false)async function ask() {if (!input.trim()) return;
     setLoading(true)try {const resp = null;
       setReply(data.text || '')} finally {setLoading(false)}
@@ -58,6 +118,9 @@ function ask() {if () return) {$2;
           className='flex-1 border rounded px-3 py-2 bg-white dark:bg-black';
           placeholder='Ask for help...';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+          placeholder='Ask for help...';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           value={input}
           on_change={e => set_input (e.target.value)}
         />;
@@ -72,6 +135,7 @@ function ask() {if () return) {$2;
       {reply && (
         <div className='mt - 2 text - sm text - gray - 800 dark:text - gray - 200'>;
           {reply}
+<<<<<<< HEAD
         </div>
       )}
     </div>
@@ -86,3 +150,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+        </div>)}
+    </div>);
+    }
+  }
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

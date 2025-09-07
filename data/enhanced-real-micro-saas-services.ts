@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -21,6 +22,14 @@
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export interface MicroSaasService {
   id: string;
   name: string;
@@ -2048,6 +2057,7 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
 export const getServicesByCategory = null;
 name: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -3742,6 +3752,9 @@ name: string;tagline: string;
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 tagline: string;
 price: string;
 period: string;
@@ -3767,6 +3780,7 @@ category: 'AI & Machine Learning';
 'Cloud Computing';
 <<<<<<< HEAD
 'Data Analytics' ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4036,6 +4050,13 @@ export const allEnhancedRealMicroSaasServices  = enhancedRealMicroSaasServices;;
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export interface MicroSaasService {
   id: string,
   name: string,
@@ -6240,6 +6261,7 @@ export const serviceCategories = [
   'Robotics & AutomationAgriculture & Food Tech'
 ];
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -6248,10 +6270,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 // Combined all services
 export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
 
 
+<<<<<<< HEAD
 export const getServicesByCategory = (category: string) => {
   if (category === 'All') return allEnhancedRealMicroSaasServices;
   return allEnhancedRealMicroSaasServices.filter(service => service.category === category)
@@ -6278,6 +6304,9 @@ export const serviceCategories = [
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   
   // Map category names to match service categories
   const categoryMapping: { [key: string]: string[] } = {
@@ -6345,6 +6374,7 @@ export const serviceCategories = [
 export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
 
 
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -6371,3 +6401,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

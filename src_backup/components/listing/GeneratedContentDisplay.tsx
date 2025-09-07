@@ -1,4 +1,5 @@
 <<<<<<< HEAD:src_backup/components/listing/GeneratedContentDisplay.tsx
+<<<<<<< HEAD:src_backup/components/listing/GeneratedContentDisplay.tsx
 <Badge
 =======
 
@@ -31,6 +32,23 @@ import { Badge } from "@/components/ui/badge",
 import { ArrowRight } from 'lucide-react'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 
+=======
+import { ArrowRight } from 'lucide-react'
+
+import {
+  Card
+  CardContent
+  CardFooter
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
+interface GeneratedContent {
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ArrowRight } from 'lucide-react'
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/listing/GeneratedContentDisplay.tsx
 
 interface GeneratedContent {
   description: string,
@@ -77,15 +95,22 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
         </div>
 
 
+<<<<<<< HEAD:src_backup/components/listing/GeneratedContentDisplay.tsx
         
         <div>
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/listing/GeneratedContentDisplay.tsx
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>
           <div className="flex flex-wrap gap-2">
             {content.tags.map((tag, index) => (
               <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
+<<<<<<< HEAD:src_backup/components/listing/GeneratedContentDisplay.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/listing/GeneratedContentDisplay.tsx
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -142,17 +167,36 @@ export function GeneratedContentDisplay({
                 key={index}
                 className='bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30'
               >
+<<<<<<< HEAD:src_backup/components/listing/GeneratedContentDisplay.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
                 {tag}
+=======
+                {tag}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/listing/GeneratedContentDisplay.tsx
 
 
 
               </Badge>;
             ))}
+<<<<<<< HEAD:src_backup/components/listing/GeneratedContentDisplay.tsx
           </div>
         </div>
 <div>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+        
+
+
+        <div>
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
+          <p className="text-white">
+            ${content.suggestedPrice.min.toFixed(2)} - ${content.suggestedPrice.max.toFixed(2)}
+
+
+        <div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/listing/GeneratedContentDisplay.tsx
           <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
             Suggested Price Range
           </h3>
@@ -162,11 +206,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </p>
         </div>
         
+<<<<<<< HEAD:src_backup/components/listing/GeneratedContentDisplay.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/listing/GeneratedContentDisplay.tsx
           </p>
         </div>
 
         
         <div>
+<<<<<<< HEAD:src_backup/components/listing/GeneratedContentDisplay.tsx
           <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
             Key Selling Points
           </h3>
@@ -368,10 +417,25 @@ function GeneratedContentDisplay() {return (<Card className='border border - zio
           <h3 className="text - sm font - medium text - zion - slate - light mb - 2">Key Selling Points</h3>;
           <ul className="list - disc pl - 5 text - white space - y-1">;
             {content.key_points.map ((point, index) => ({content.key_points.map ((point, index, ) => (<li key={index}>{point}</li>))}</ul>;
+=======
+
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
+          <p className="text-white">
+            ${content.suggestedPrice.min.toFixed(2)} - ${content.suggestedPrice.max.toFixed(2)}
+          </p>
+        </div>
+        <div>
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>
+          <ul className="list-disc pl-5 text-white space-y-1">
+            {content.keyPoints.map((point, index) => (
+              <li key={index}>{point}</li>
+          </ul>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/listing/GeneratedContentDisplay.tsx
         </div>;
       </CardContent>;
 <<<<<<< HEAD:src_backup/components/listing/GeneratedContentDisplay.tsx
       <CardFooter>;
+<<<<<<< HEAD:src_backup/components/listing/GeneratedContentDisplay.tsx
 <<<<<<< HEAD
 =======
 =======
@@ -379,6 +443,12 @@ function GeneratedContentDisplay() {return (<Card className='border border - zio
 
 
 
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/listing/GeneratedContentDisplay.tsx
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white"
         >
           Apply to My Listing
@@ -386,6 +456,7 @@ function GeneratedContentDisplay() {return (<Card className='border border - zio
         </Button>
       </CardFooter>
     </Card>
+<<<<<<< HEAD:src_backup/components/listing/GeneratedContentDisplay.tsx
   )
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white";
 =======
@@ -421,6 +492,8 @@ function GeneratedContentDisplay() {return (<Card className='border border - zio
 }
 
 ;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/listing/GeneratedContentDisplay.tsx
 
           </ul>
         </div>
@@ -437,6 +510,7 @@ className='w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-z
     </Card>
   );
 }
+<<<<<<< HEAD:src_backup/components/listing/GeneratedContentDisplay.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     </Card>)}</ul>;
@@ -454,3 +528,5 @@ className='w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-z
     </Card>;
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/listing/GeneratedContentDisplay.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/listing/GeneratedContentDisplay.tsx

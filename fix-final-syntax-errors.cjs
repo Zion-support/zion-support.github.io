@@ -2,22 +2,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-console.log('🔧 Fixing final syntax errors...');
 
-// Function to fix specific syntax issues
-function fixFinalSyntax(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    let changesMade = false;
 
+<<<<<<< HEAD
     // Fix specific patterns
     const fixes = [
       // Fix type definitions with extra commas
@@ -158,6 +155,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node
 
 const fs = require('fs');

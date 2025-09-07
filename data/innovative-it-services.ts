@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -11,6 +12,10 @@
 
 export interface InnovativeITService  {id: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export interface InnovativeITService {
 id: string;
   name: string;
@@ -509,11 +514,12 @@ export interface InnovativeITService  {id: string,name: string,tagline: string,p
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
+
 
     website: string;
   }
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -545,6 +551,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Distributed edge nodes',
       'Real - time data processing',
       'Low - latency computing',
@@ -558,6 +567,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     popular: true,
     icon: '🌐',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -592,6 +602,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Edge Computing',
       'IoT',
       '5G',
@@ -602,6 +616,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Python',
       'AWS'
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -971,6 +986,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   customers: number;
   rating: number;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   reviews: number
 }
 export const innovativeITServices: InnovativeITService[] = [
@@ -997,6 +1016,7 @@ export const innovativeITServices: InnovativeITService[] = [
     contactInfo: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -1004,6 +1024,10 @@ export const innovativeITServices: InnovativeITService[] = [
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       website: 'https://ziontechgroup.com';
@@ -1017,6 +1041,7 @@ export const innovativeITServices: InnovativeITService[] = [
 
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
@@ -1040,6 +1065,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 ;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     realImplementation: true
     implementationDetails:
       'Enterprise-grade zero trust platform with advanced AI, real-time monitoring, and comprehensive security controls.'
@@ -1241,6 +1272,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     contactInfo: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       'Complete DevOps automation platform with CI/CD, infrastructure management, and comprehensive monitoring capabilities.'
@@ -1251,6 +1283,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 <<<<<<< HEAD
 =======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1258,6 +1293,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     }
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
       'Complete DevOps automation platform with CI/CD, infrastructure management, and comprehensive monitoring capabilities.',
     launchDate: '2024-01-20',
     customers: 2500,
@@ -1268,6 +1304,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      'Complete DevOps automation platform with CI/CD, infrastructure management, and comprehensive monitoring capabilities.'
+    launchDate: '2024-01-20'
+    customers: 2500
+    rating: 4.7
+    reviews: 1250
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1283,6 +1327,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export interface InnovativeITService {;
 
@@ -1290,6 +1335,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string,;
   name: string,;
   tagline: string,;
@@ -1376,6 +1423,7 @@ export const innovativeITServices: InnovativeITService[] = [;
 
   }
 ;
+<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
@@ -1393,6 +1441,15 @@ export const innovativeITServices: InnovativeITService[] = [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+  }
+];
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1579,6 +1636,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -1587,3 +1645,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

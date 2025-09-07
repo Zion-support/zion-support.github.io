@@ -1,5 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { createServerClient } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -85,7 +89,11 @@ supabase;
               (1000 * 60 * 60 * 24)
           0
         ) / filled.length
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     const talentViewed = 12; // Placeholder
     const shortlisted = 5; // Placeholder
     const funnel = [
@@ -101,10 +109,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       funnel: [
         { label: 'Post', value: 3 }
         { label: 'Invite', value: 2 }
+<<<<<<< HEAD
         { label: 'Hire', value: 2 }
       ]
     });
   }
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         { label: 'Hire', value: 2 }]})
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -132,8 +145,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       funnel: [;
         { label: 'Post', value: 3 }
         { label: 'Invite', value: 2 }
+<<<<<<< HEAD
         { label: 'Hire', value: 2 }]})}{ label: 'Hire', value: 2 }
       ];
     })}
         { label: 'Hire', value: 2 }]})}}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+        { label: 'Hire', value: 2 }]});
+  }
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

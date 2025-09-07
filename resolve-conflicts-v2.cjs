@@ -18,11 +18,18 @@ function resolveMergeConflicts(filePath) {
     
     // Check if file has merge conflicts
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     if (!content.includes('
     
     // Clean up any remaining conflict markers
     resolvedContent = resolvedContent.replace(/
+<<<<<<< HEAD
     resolvedContent = resolvedContent.replace(//g, '');
+=======
+    resolvedContent = resolvedContent.replace(/[\s\S]*?/g, '');
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     // Write the resolved content
     fs.writeFileSync(filePath, resolvedContent, 'utf8');

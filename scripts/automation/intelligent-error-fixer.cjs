@@ -111,7 +111,11 @@ console.log("🤖 Starting intelligent error fixer...")
       fixes++} catch (error) {  console.log("⚠  Command "failed": ${command  } - ${error.message}")
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   const sourceDirs = ["src", "components", "pages"]
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  const sourceDirs = ["src", "components", "pages"]
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
 
 id: string;import React from "react",import { Card, CardContent } from "@/components/ui/card",import { Button } from "@/components/ui/button",import { Badge } from "@/components/ui/badge",import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",import { CheckCircle, ChevronRight, FileText, MessageSquare, Video  } from 'lucide-react';
 import { Progress } from "@/components/ui/progress",import { SeverityIndicator  } from '../common/SeverityIndicator';
@@ -27,6 +28,9 @@ interface ProjectViewProps {
   project: {
     id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+id: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/projects/MobileProjectView.tsx
     title: string;
     client: {
       name: string;
@@ -37,8 +41,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     status: string;
     totalAmount: string;
     progress: number;
+<<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/projects/MobileProjectView.tsx
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/ card';
@@ -73,7 +80,6 @@ import { useRouter } from 'next/router',
 import { toast } from "sonner",
 
 interface Milestone {
-<<<<<<< HEAD
   id: string;
 =======
   amount: string;
@@ -123,6 +129,7 @@ interface Milestone  {id: string,title: string,dueDate: string,status: "complete
   },description: string;
   }
 <<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
+<<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -167,6 +174,8 @@ interface ProjectViewProps {;
     description: string;
   },;
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/projects/MobileProjectView.tsx
   milestones: Milestone[];
 
     description: string;
@@ -216,12 +225,19 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
   
 
 
+<<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/projects/MobileProjectView.tsx
     description: string
   }
   milestones: Milestone[]
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {
   const router = null;
+<<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/projects/MobileProjectView.tsx
   return (
 
 
@@ -231,10 +247,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
                 <span>Progress</span>
+<<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
                 <span className="font-medium">{project.progress}%</span>
               </div>
               <Progress value={project.progress} className="h-2" />
 
+=======
+                <span className='font-medium'>{project.progress}%</span>
+              </div>
+              <Progress value={project.progress} className='h-2' />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/projects/MobileProjectView.tsx
             </div>
 
 
@@ -269,9 +291,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
             <div>
+<<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
               <p className="text-sm text-muted-foreground mb-1">Description</p>
               <p className="text-sm">{project.description}</p>
 
+=======
+              <p className='text-sm text-muted-foreground mb-1'>Description</p>
+              <p className='text-sm'>{project.description}</p>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/projects/MobileProjectView.tsx
             </div>
 
 =======
@@ -466,6 +493,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
   return (;
     <div className="space-y-6 px-4 pb-24">;
       <Card>;
+<<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
         <CardContent className="p-4">;
 =======
   )}<div className='space - y-6 px - 4 pb - 24'>;
@@ -478,6 +506,9 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
     })// Navigate to messaging with this client;
   }return (<div className="space-y-6 px-4 pb-24">;
       <Card>;<CardContent className='p - 4'>;
+=======
+        <CardContent className='p - 4'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/projects/MobileProjectView.tsx
           <div className='space - y-4'>;
             <div className='flex items - center justify - between'>;
               <div>;
@@ -490,6 +521,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                     />;
                     <AvatarFallback>{project.client.name[0]}</AvatarFallback>;
                   </Avatar>;
+<<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
                   <span className='text - sm'>{project.client.name}</span>;<CardContent className="p-4">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/mobile/components/projects/MobileProjectView.tsx
           <div className="space-y-4">;
@@ -504,16 +536,23 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
 <<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
                   <span className="text-sm">{project.client.name}</span>;
 
+=======
+                  <span className='text - sm'>{project.client.name}</span>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/projects/MobileProjectView.tsx
                 </div>;
               </div>;
               <Badge>{project.status}</Badge>;
             </div>;
+<<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
             <div className="space-y-1">;
 =======
                   <span className="text-sm">{project.client.name}</span>;</div>;
               </div>;
               <Badge>{project.status}</Badge>;
             </div>;<div className='space - y-1'>;
+=======
+            <div className='space - y-1'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/projects/MobileProjectView.tsx
               <div className='flex justify - between items - center text - sm'>;
                 <span > Progress</span>;
                 <span className='font - medium'>{project.progress}%</span>;
@@ -557,6 +596,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                 size='sm';
                 className='gap - 1 flex - 1 bg - zion - purple hover:bg - zion - purple - light';
                 on_click={startProjectCall}              >;
+<<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
                 <Video className='h - 4 w - 4' /> Call;<div className="space-y-1">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/mobile/components/projects/MobileProjectView.tsx
               <div className="flex justify-between items-center text-sm">;
@@ -607,6 +647,9 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
 <<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
                 <Video className="h-4 w-4" /> Call;
 
+=======
+                <Video className='h - 4 w - 4' /> Call;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/projects/MobileProjectView.tsx
               </Button>;
 =======
                 <Video className="h-4 w-4" /> Call;</Button>;
@@ -617,14 +660,19 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
       </Card>;
 <<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
       <section>;
+<<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
         <h2 className="text-lg font-medium mb-4">Milestones</h2>;
 =======
       <section>;<h2 className='text - lg font - medium mb - 4'>Milestones</h2>;
+=======
+        <h2 className='text - lg font - medium mb - 4'>Milestones</h2>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/projects/MobileProjectView.tsx
         <div className='space - y-3'>;
           {milestones.map (milestone => (            <Card key={milestone.id}>;
               <CardContent className='p - 4'>;
                 <div className='flex justify - between items - start mb - 2'>;
                   <div className='flex items - center gap - 2'>;
+<<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
                     {milestone.status === 'completed' ? (<CheckCircle className='h - 5 w - 5 text - green - 500' />) : (<div className='h - 5 w - 5 rounded - full border - 2 border - muted - foreground'></div>)}
                     <h3 className='font - medium'>{milestone.title}</h3>;<h2 className="text-lg font-medium mb-4">Milestones</h2>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/mobile/components/projects/MobileProjectView.tsx
@@ -639,6 +687,12 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
 <<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
                     <h3 className="font-medium">{milestone.title}</h3>;
 
+=======
+                    {milestone.status === 'completed' ? (
+                      <CheckCircle className='h - 5 w - 5 text - green - 500' />) : (
+                      <div className='h - 5 w - 5 rounded - full border - 2 border - muted - foreground'></div>)}
+                    <h3 className='font - medium'>{milestone.title}</h3>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/projects/MobileProjectView.tsx
                   </div>;
                   <Badge;
 
@@ -654,6 +708,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                     {milestone.paymentStatus}
                   </Badge>;
                 </div>;
+<<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
                 <div className="pl-7">;
 <<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
 =======
@@ -681,6 +736,9 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
             </Card>;
                   </Badge>;
                 </div>;<div className='pl - 7'>;
+=======
+                <div className='pl - 7'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/projects/MobileProjectView.tsx
                   <div className='flex justify - between text - sm'>;
                     <span className='text - muted - foreground'>Due Date:</span>;
                     <span>{milestone.due_date}</span>;
@@ -707,6 +765,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
             </Card>))}
         </div>;
       </section>;
+<<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
     </div>)<div className="pl-7">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/mobile/components/projects/MobileProjectView.tsx
                   <div className="flex justify-between text-sm">;
@@ -733,10 +792,19 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
             </Card>;
 <<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
           ))}
+=======
+    </div>);
+}
+
+
+;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/projects/MobileProjectView.tsx
         </div>
       </section>
     </div>
   );
+<<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
           ))}</div>;
@@ -747,3 +815,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/mobile/components/projects/MobileProjectView.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/projects/MobileProjectView.tsx

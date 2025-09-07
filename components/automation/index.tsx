@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 <<<<<<< HEAD
@@ -48,19 +49,30 @@ import React from 'react';
 =======
 import React from 'react';
 
+=======
+import React from 'react';
 
 import React from 'react';
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+import React from 'react';
+
+
+<<<<<<< HEAD
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export default function AutomationPage() {
   return (
     <div className="container mx-auto px-4 py-10">
       <h1 className="text-2xl font-semibold">Automation</h1>
       <p className="mt-2 text-gray-600 dark: text-gray-300">Automation tools overview coming soon.</p>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -73,6 +85,12 @@ export default function AutomationPage() {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export default function AutomationPage() {;
   return (
     <div className="container mx-auto px-4 py-10">;
@@ -80,6 +98,7 @@ export default function AutomationPage() {;
       <p className="mt-2 text-gray-600 dark: text-gray-300">Automation tools overview coming soon.</p>;
     </div>;
   ),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -93,6 +112,8 @@ export default function AutomationPage() {;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 export default /**
  * AutomationPage - Function description
@@ -111,6 +132,7 @@ function AutomationPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -123,10 +145,12 @@ function AutomationPage() {
     </div>)
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
+=======
 
-  )
-}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+
+<<<<<<< HEAD
   )
 }
 
@@ -158,3 +182,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+<div className="container mx-auto px-4 py-10"> <h1 className="text-2xl font-semibold">Automation</h1> <p className="mt-2 text-gray-600 dark: text-gray-300">Automation tools overview coming soon.</p>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

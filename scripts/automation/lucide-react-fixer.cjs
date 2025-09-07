@@ -74,7 +74,11 @@ const { execSync } = require("child_process")
   arrayOfFiles = await this.getAllFiles(fullPath")
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   const fullPath = path.join(dirPath, ")
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  const fullPath = path.join(dirPath, ")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

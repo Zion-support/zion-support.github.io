@@ -1,9 +1,33 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import fs from "fs";
 import path from "path";
 type Experiment = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+type Experiment = {
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import React from 'react';
 import fs from 'fs';
 =======
@@ -26,6 +50,7 @@ metric?: string;
 effort?: number;impact?: number;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 type Props = {
   updatedAt: string | null;
 items: Experiment[]
@@ -45,6 +70,45 @@ export default function CurationPage({ updatedAt, items }: Props) {
         </p>
       )}
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+type Props = {
+  updated_at: string | null;
+items: Experiment[] }
+  return (type Experiment = {
+  title: string
+  title: string
+import React from "react";
+import fs from "fs";
+import path from "path";
+type Experiment = {
+  title: string,
+
+  title: string,;
+
+  hypothesis?: string;
+  metric?: string;
+  effort?: number;
+
+impact?: number 
+};
+type Props = {;
+  updatedAt: string | null;
+items: Experiment[] };
+export default function CurationPage(): any ({ updatedAt, items }: Props) {;
+  return (type Experiment = {;
+  title: string,;
+  hypothesis?: string;
+  metric?: string;
+  effort?: number;
+  impact?: number
+};
+
+type Props = {;
+  updatedAt: string | null,;
+  items: Experiment[]
+};
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <div className='mt-6 space-y-4'>
         {items.map((exp, idx) => (
           <div
@@ -185,9 +249,15 @@ export default function CurationPage() {return (<main className="mx-auto max-w-4
           </div>;
         ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
         {!items.length && (
 <div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        {!items.length && (
+          <div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>            Nothing to show yet.
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             Nothing to show yet.
 
         )}
@@ -205,6 +275,7 @@ export async function getStaticProps() {
     const parsed = JSON.parse(raw);
     return {
       props: {
+<<<<<<< HEAD
         updatedAt: parsed.updatedAt || null,
 items: parsed.items || [],
       },
@@ -220,6 +291,140 @@ items: [],
     };
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            </div>;
+            {(exp.hypothesis || exp.metric) && (
+              <div className='mt - 2 text - sm text - gray - 700'>;
+                {exp.hypothesis && (
+                  <div>;
+                    <span className='font - medium'>Hypothesis:</span>{' '}
+                    {exp.hypothesis}
+                  </div>)}
+                {exp.metric && (
+                  <div>;
+                    <span className='font - medium'>Metric:</span> {exp.metric}
+                  </div>)}
+              </div>)}
+            {(exp.effort || exp.impact) && (
+              <div className='mt - 2 text - xs text - gray - 500'>;
+                {exp.effort ? `Effort: ${exp.effort}/5` : null}
+                {exp.effort && exp.impact ? ' · ' : null}                {exp.impact ? `Impact: ${exp.impact}/5` : null}                {exp.effort && exp.impact ? " · " : null}
+                {exp.impact ? `Impact: ${exp.impact}/5` : null}
+              </div>)}
+          </div>))}
+        {!items.length && (
+          <div className='rounded - xl border border - gray - 200 bg - white p - 6 text - center text - gray - 600'>            Nothing to show yet.          <div className="rounded - xl border border - gray - 200 bg - white p - 6 text - center text-gray-600">;
+            Nothing to show yet.;
+          </div>)}
+      </div>;
+    </main>);
+;
+export async /**
+ * getStaticProps - Function description
+ */
+function getStaticProps() {
+  try {
+    const file_path = path.join (
+      process.cwd (),
+      'data',
+      'ai - curation',
+      'growth - experiments.json');
+    const raw = fs.readFileSync (file_path, 'utf8');    const parsed = JSON.parse (raw);
+    return {
+      props: {
+        updated_at: parsed.updated_at || null,
+        items: parsed.items || [],
+      },
+      revalidate: 300,
+    return {
+      props: {
+        updated_at: null, }
+export async /**
+ * getStaticProps - Function description
+ */
+function getStaticProps() {
+  try {
+    const file_path = path.join (process.cwd (), "data", "ai - curation", "growth - experiments.json");
+    const raw = fs.readFileSync (file_path, "utf8");
+    return {
+      props: {
+        updated_at: parsed.updated_at || null,
+        items: parsed.items || [],
+      },
+      revalidate: 300,
+    }        items: parsed.items || []},
+      revalidate: 300}
+  } catch {
+    return {
+      props: {
+
+export async function getStaticProps() {;
+  try {;
+    const filePath = path && path.join(;
+      process && process.cwd(),;
+      'data',;
+      'ai-curation',;
+      'growth-experiments && experiments.json';
+    );
+    const raw = fs && fs.readFileSync(filePath, 'utf8');    const parsed = JSON && JSON.parse(raw);
+    return {;
+      props: {;
+        updatedAt: parsed && parsed.updatedAt || null,;
+        items: parsed && parsed.items || [],;
+      },;
+      revalidate: 300,
+};  } catch {;
+    return {;
+      props: {;
+        updatedAt: null,}
+export async function getStaticProps() {;
+  try {;
+    const filePath = path && path.join(process && process.cwd(), "data", "ai-curation", "growth-experiments && experiments.json");
+    const raw = fs && fs.readFileSync(filePath, "utf8");
+    return {;
+      props: {;
+        updatedAt: parsed && parsed.updatedAt || null,;
+        items: parsed && parsed.items || [],;
+      },;
+      revalidate: 300,
+};        items: parsed && parsed.items || []},;
+      revalidate: 300}
+  } catch {;
+    return {;
+      props: {;
+        updatedAt: null,;
+        items: [],;
+      },;
+      revalidate: 300,
+};
+  }        items: []},;
+        updatedAt: null
+        items: []
+      }
+      revalidate: 300
+    }
+  }        items: []}
+
+        updatedAt: null,
+        items: [],
+      },
+      revalidate: 300,
+    };
+  }        items: []},
+        updated_at: null,
+        items: [],
+      },
+      revalidate: 300,
+    }
+  }        items: []}
+
+        updatedAt: null,
+        items: [],
+      },
+      revalidate: 300,
+    };
+  }        items: []},
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       revalidate: 300}
 }
 =======

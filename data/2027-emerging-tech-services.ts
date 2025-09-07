@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -21,6 +22,12 @@ export interface Service  {id: string;name: string;
 export interface Service {
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  id: string;
+
+export interface Service {
+id: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   name: string;
   description: string;
   category: string;
@@ -173,6 +180,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   link: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
   {
@@ -324,6 +334,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   link: string;
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -872,12 +883,16 @@ export interface Service  {id: string,name: string,description: string,category:
   }];];
   {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Pharmaceutical companies',
       'Agricultural companies',
       'Industrial biotech firms',
       'Research institutions',
       'Environmental companies'
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -889,6 +904,10 @@ export interface Service  {id: string,name: string,description: string,category:
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Most comprehensive synthetic biology platform with AI integration',
     implementation_time: '8 - 12 weeks',
     roi: '1500% within 24 months',
@@ -930,6 +949,7 @@ export interface Service  {id: string,name: string,description: string,category:
       'Industrial inspection'
     ]
     targetAudience: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -996,12 +1016,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Medical device companies',
       'Environmental monitoring firms',
       'Navigation companies',
       'Research institutions',
       'Industrial companies'
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1013,6 +1037,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     tags: [
       'Quantum Technology'
       'Sensors'
@@ -1051,6 +1079,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Communication aids'
     ]
     targetAudience: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1115,12 +1144,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Medical device companies',
       'Research institutions',
       'Assistive technology firms',
       'Gaming companies',
       'Healthcare providers'
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1132,6 +1165,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     tags: [
       'Brain-Computer Interface'
       'Neural Technology'
@@ -1144,6 +1181,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ]
   }
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1261,6 +1299,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Manufacturing companies',
       'Logistics companies',
       'Agricultural companies',
@@ -1271,15 +1312,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    market_size: '$19.8B by 2027',
-    competitive_advantage:;
 
+<<<<<<< HEAD
       'Most advanced autonomous robotics platform with AI learning',
     implementation_time: '5 - 7 weeks',
     roi: '700% within 12 months',
@@ -1302,6 +1345,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     id: 'quantum - materials - discovery',
     name: 'Quantum Materials Discovery Platform',
     description:;
@@ -1342,15 +1387,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    market_size: '$21.3B by 2027',
-    competitive_advantage:;
 
+<<<<<<< HEAD
       'Only quantum materials discovery platform with AI integration',
     implementation_time: '8 - 10 weeks',
     roi: '1100% within 20 months',
@@ -1406,12 +1453,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Investment banks',
       'Hedge funds',
       'Asset managers',
       'Insurance companies',
       'Regulatory bodies'
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1445,6 +1495,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     id: 'quantum - climate - modeling',
     name: 'Quantum Climate Modeling Platform',
     description:;
@@ -1484,6 +1538,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1506,6 +1561,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   tags: string[]
 }
 
@@ -1753,6 +1813,7 @@ export const emergingTech2027Services: Service[] = [
     targetAudience: [
       'Government agenciesResearch institutionsEnvironmental organizationsInsurance companiesEnergy companies'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -1763,11 +1824,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Energy companies'
     ]
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     ];
     marketSize: '$17 && 17.6B by 2027';
     competitiveAdvantage: 'Only quantum climate modeling platform with real-time predictions';
     implementationTime: '7-9 weeks';
     roi: '800% within 18 months';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1790,6 +1855,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch']
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     market_size: '$17.6B by 2027',
     competitive_advantage:;
       'Only quantum climate modeling platform with real - time predictions',
@@ -1807,17 +1875,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ];      'Government agencies_research institutions_environmental organizations_insurance companies_energy companies';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     ];
     marketSize: '$17 && 17.6B by 2027';
     competitiveAdvantage: 'Only quantum climate modeling platform with real-time predictions';
     implementationTime: '7-9 weeks';
     roi: '800% within 18 months';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1858,6 +1931,14 @@ export interface Service {;
 ];
 export interface Service {;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+;
+
+
+  }
+];
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string,;
   name: string,;
   description: string,;
@@ -2127,6 +2208,7 @@ export const emergingTech2027Services: Service[] = [;
     tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch'];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2157,3 +2239,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+  }
+;
+
+];
+
+
+
+];
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

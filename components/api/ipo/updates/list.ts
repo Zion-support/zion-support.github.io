@@ -37,6 +37,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const data = readJsonFile('updates.json', [] as any[]);
   res.status(200).json(data)
 }
@@ -72,15 +73,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const data = readJsonFile('updates.json', [] as any[]);
   res.status(200).json(data)
 }
+=======
+  const data = readJsonFile('updates.json', [] as any[]);
+  res.status(200).json(data)
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   const data = readJsonFile('updates.json', [] as any[]);
   res.status(200).json(data)
 }
 
+<<<<<<< HEAD
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { readJsonFile } from '../../../../utils / api / storage';
 import { requireSuperadminApi } from '../../../../utils / api / auth';
 export default /**
@@ -105,6 +114,7 @@ function handler() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -122,6 +132,12 @@ function handler() {
 
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
@@ -139,6 +155,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 }
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -162,3 +179,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+  const data = readJsonFile('updates.json', [] as any[]);
+  res.status(200).json(data);
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

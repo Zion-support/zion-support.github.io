@@ -1,4 +1,5 @@
 <<<<<<< HEAD:src_backup/components/services/GeneratedDescriptionDisplay.tsx
+<<<<<<< HEAD:src_backup/components/services/GeneratedDescriptionDisplay.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/services/GeneratedDescriptionDisplay.tsx
@@ -66,6 +67,20 @@ export function GeneratedDescriptionDisplay({
     })
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import React, { useState } from 'react';
+import { useToast } from '@/hooks/use-toast';
+import { Button } from '@/components/ui/button';
+import {;
+  Card,;
+  CardContent,;
+  CardHeader,;
+  CardTitle,;
+  CardFooter,;
+} from '@/components/ui/card';
+import { Textarea } from '@/components/ui/textarea';
+import { Check, Pencil } from 'lucide-react';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/services/GeneratedDescriptionDisplay.tsx
   return (
 
   return (
@@ -222,6 +237,7 @@ import React, { useState } from "react",import { useToast } from "@/hooks/use-to
 }</CardContent> {;
   isEditing && (<CardFooter> <ButtononClick={
   handleSave "
+<<<<<<< HEAD:src_backup/components/services/GeneratedDescriptionDisplay.tsx
 }className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>)
 }</Card>)
 }'"
@@ -240,6 +256,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</div>)}</CardContent> {isEditing && (<CardFooter> <ButtononClick={handleSave ";
 }className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"> Save Changes </Button> </CardFooter>)}</Card>)}'";
 }{is_editing ? (<Textarea;
+=======
+}className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"> Save Changes </Button> </CardFooter>) ;
+}</Card>) ;
+}'";
+}
+
+        {is_editing ? (
+          <Textarea;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/services/GeneratedDescriptionDisplay.tsx
             value={edited_description}
             on_change={e => setEditedDescription (e.target.value)}
             className='bg - zion - blue border border - zion - blue - light text - white min - h-[300px] resize - none'          />) : (<div className='bg - zion - blue p - 4 rounded - md text - white min - h-[300px] whitespace - pre - wrap'>;
@@ -253,8 +278,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             Save Changes;
           </Button>;
         </CardFooter>)}
+<<<<<<< HEAD:src_backup/components/services/GeneratedDescriptionDisplay.tsx
     </Card>)is_editing ? (<> <Check className="h - 4 w - 4 mr - 1" /> Done </>) : (<> <Pencil className="h - 4 w - 4 mr - 1" /> Edit </>)}</Button> </CardTitle> </CardHeader> <CardContent> {is_editing ? (<Textarea value= {edited_description;
 }</div>)}</CardContent> {is_editing && (<CardFooter> <Button on_click={handle_save ";
 }className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan text - white" > Save Changes </Button> </CardFooter>)}</Card>)}'";
 }}className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>)}</Card>)}'";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/services/GeneratedDescriptionDisplay.tsx
+=======
+    </Card>);
+  is_editing ? (<> <Check className="h - 4 w - 4 mr - 1" /> Done </>) : (<> <Pencil className="h - 4 w - 4 mr - 1" /> Edit </>);
+}</Button> </CardTitle> </CardHeader> <CardContent> {
+  is_editing ? (<Textarea value= {
+  edited_description;
+}</div>);
+}</CardContent> {
+  is_editing && (<CardFooter> <Button on_click={
+  handle_save ";
+}className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan text - white" > Save Changes </Button> </CardFooter>);
+}</Card>);
+}'";
+}
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/services/GeneratedDescriptionDisplay.tsx

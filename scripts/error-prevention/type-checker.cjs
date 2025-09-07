@@ -19,10 +19,14 @@ class TypeChecker {}
       this.runTypeCheck()}, this.interval);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     console.log('Type Checker started successfully')};
   async runTypeCheck() {}
     try {}
@@ -45,10 +49,14 @@ class TypeChecker {}
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       child.on('close', (code) => {}
         if ( {})
           console.log('Type check passed ✓')) {}
@@ -70,10 +78,14 @@ class TypeChecker {}
    ;);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     if ( {})
       console.log('TypeScript errors "found": ')) {}
      {}
@@ -112,7 +124,11 @@ if ( {})
   checker.start().catch(console.error)};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = TypeChecker;
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+module.exports = TypeChecker;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -12,7 +12,11 @@ const { execSync } = require('child_process')
         {"pattern": /\[\s*,\s*/g, "replacement"}]
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       this.log('\n Errors "encountered")
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      this.log('\n Errors "encountered")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

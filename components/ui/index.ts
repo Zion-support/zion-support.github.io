@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -19,10 +20,14 @@ export type { AIAssistantProps } from './AIAssistant';
 
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export { default as AIAssistant } from './AIAssistant';
 export type { AIAssistantProps } from './AIAssistant';
 export type { AIAssistantProps } from "./AIAssistant";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -46,3 +51,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+export { default as AIAssistant } from './AIAssistant';
+export type { AIAssistantProps } from './AIAssistant';
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

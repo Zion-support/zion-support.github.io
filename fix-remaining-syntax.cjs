@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 function fixFile(filePath) {
 
 =======
@@ -10,6 +11,20 @@ function fixFile(filePath) {
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+console.log('🔧 Fixing remaining syntax errors...');
+
+// Fix specific files with known issues
+const filesToFix = [
+    'src/components/SEO.tsx',
+    'src/components/ui/button.tsx',
+    'src/components/ui/card.tsx',
+    'src/components/ui/input.tsx',
+    'src/components/talent/TalentCard.jsx'
+
+];
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 // Function to fix remaining syntax errors in a file;
 function fixRemainingSyntax(filePath) {}
   try {}
@@ -144,8 +159,12 @@ function fixFilesInDirectory(dirPath) {}
     const handleRequestHire = (talentId) => {
         // Handle hire request logic here
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     if (stat.isDirectory()) {}
       fixedCount += fixFilesInDirectory(filePath);
     } else if (file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.tsx')) {}
@@ -158,11 +177,19 @@ function fixFilesInDirectory(dirPath) {}
 // Main execution
 
 const fixedCount = fixFilesInDirectory('./src');
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 };
 // Main execution;
 console.log('Starting remaining syntax error fixing...');
 const fixedCount = fixFilesInDirectory('./src');
 console.log(`Fixed ${fixedCount} files with remaining syntax errors.`);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     let content = fs.readFileSync(filePath, 'utf8');
 
     // More comprehensive fixes
@@ -237,4 +264,7 @@ walkDir('./pages');
 
 console.log('Remaining syntax error fixing completed!');
 
+<<<<<<< HEAD
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -2,6 +2,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile } from "../../../../utils/api/storage";
 import { requireSuperadminApi } from "../../../../utils/api/auth";
@@ -9,6 +12,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -75,6 +79,28 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+  if (!requireSuperadminApi(req, res)) return;
+
+  const id = String(req.query.id |"");
+  const updates = readJsonFile("updates.json", [] as any[]);
+  const u = updates.find((x: any) => x.id === id);
+  if (!u) return res.status(404).json({ error: "Not found" });
+  res.status(200).json({ opens: u.opens |0 });
+  res.status(200).json({ opens: u.opens |0 });
+}
+
+
+
+  if (!u) return res.status(404).json({ error: 'Not found' });
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!requireSuperadminApi(req, res)) return;
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   if (!u) return res.status(404).json({ error: 'Not found' });
 
@@ -85,6 +111,7 @@ ursor/fix-website-loading-errors-and-merge-6662
  */;
 function handler() {if () return) {$2;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -106,6 +133,9 @@ function handler() {if () return) {$2;
   if (!u) return res.status(404).json({ error: 'Not found' })const id = null;
   res.status(200).json({ opens: u.opens || 0 })}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import type { NextApiRequest, NextApiResponse } from './next';
 import { readJsonFile  } from '../../../../utils / api / storage';
 import { requireSuperadminApi  } from '../../../../utils / api / auth';
@@ -129,6 +159,7 @@ function handler() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (!u) return res.status(404).json({ error: 'Not found' });
 =======
 <<<<<<< HEAD
@@ -147,6 +178,15 @@ import { readJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  if (!u) return res.status(404).json({ error: 'Not found' });
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJsonFile } from '../../../../utils/api/storage';
+import { requireSuperadminApi } from '../../../../utils/api/auth';
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile } from "../../../../utils/api/storage";
 import { requireSuperadminApi } from "../../../../utils/api/auth";
@@ -197,6 +237,7 @@ function handler() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -218,3 +259,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+  const id = null;
+  res.status(200).json({ opens: u.opens || 0 })
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

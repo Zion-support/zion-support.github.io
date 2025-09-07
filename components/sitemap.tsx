@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -72,10 +73,13 @@ import Head from "next/head";
 export default function SitemapPage() {
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const links = [
     { name: "Home", href: "/" }
     { name: "Services", href: "/services" }
     {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -114,6 +118,17 @@ export default function SitemapPage() {;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      name: "All Services Showcase"
+      href: "/comprehensive-services-showcase-2025"
+    }
+    { name: "Pricing", href: "/pricing" }
+    { name: "Market Pricing", href: "/market-pricing" }
+    { name: "Services Advertising", href: "/services-advertising" }
+    { name: "Resources", href: "/resources" }
+    { name: "Support", href: "/support" }
+    { name: "Contact", href: "/contact" }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const links = [;
     { name: "Home", href: "/" },;
     { name: "Services", href: "/services" },;
@@ -267,12 +282,33 @@ function SitemapPage() {const links = [;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 }
 
+=======
+
+  const links = [;
+    { name: "Home", href: "/" },;
+    { name: "Services", href: "/services" },;
+    {;
+      name: "All Services Showcase",;
+      href: "/comprehensive-services-showcase-2025",;
+    },;
+    { name: "Pricing", href: "/pricing" },;
+    { name: "Market Pricing", href: "/market-pricing" },;
+    { name: "Services Advertising", href: "/services-advertising" },;
+    { name: "Resources", href: "/resources" },;
+    { name: "Support", href: "/support" },;
+    { name: "Contact", href: "/contact" },;
+
+}
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 	const links = [
 		{ name: 'Home', href: '/' },
 		{ name: 'Services', href: '/services' },
@@ -285,13 +321,20 @@ function SitemapPage() {const links = [;
 		{ name: 'Contact', href: '/contact' }
 	];
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import React from 'react';
 import Head from 'next/head';
 export default function SitemapPage() {
 	const links = null;
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
@@ -313,6 +356,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
@@ -326,6 +370,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+	);
+
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import React from './react';
 export default /**
  * SitemapPage - Function description
@@ -344,9 +394,9 @@ function SitemapPage() {
     { name: "Services Advertising", href: "/services - advertising" },
     { name: "Resources", href: "/resources" },
     { name: "Support", href: "/support" },
-<<<<<<< HEAD
 
     { name: "Contact", href: "/contact" },;
+<<<<<<< HEAD
 =======
     { name: "Contact", href: "/contact" },
 import React from 'react';
@@ -356,6 +406,8 @@ import Head from "next/head";
 
 export default function SitemapPage() {
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
   const links = [
@@ -522,11 +574,18 @@ function SitemapPage() {const links = [;
             >
               <a className="text-cyan-300" href={l.href}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 	)
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+	)
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 {l.name}
               </a>
             </li>
@@ -538,9 +597,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   ];
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -591,6 +654,7 @@ function SitemapPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     { name: "Contact", href: "/contact" },;
@@ -608,6 +672,10 @@ function SitemapPage() {
 =======
     { name: "Contact", href: "/contact" },;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   ];
   return (
     <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
@@ -671,6 +739,7 @@ function SitemapPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -688,10 +757,16 @@ function SitemapPage() {
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
@@ -702,3 +777,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

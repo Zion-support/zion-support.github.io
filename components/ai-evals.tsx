@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head';
 import { Check, ShieldCheck, TrendingUp, Clock, Phone, Mail, MapPin, ExternalLink  } from 'lucide-react';
@@ -25,6 +26,14 @@ import {
   MapPin
   ExternalLink;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  Check,
+  ShieldCheck,
+  TrendingUp,
+  Clock,
+  Phone,
+  Mail,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 } from 'lucide-react';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -80,6 +89,7 @@ export default function AIEvalsPage() {const contactInfo = {mobile: '+1 302 464 
 <<<<<<< HEAD
         <meta
           name='description'
+<<<<<<< HEAD
           content='Ship reliable AI with continuous evaluation, red‑teaming, regression tests and live observability. Guardrails, datasets, dashboards and CI gates included.'
         />
         <link rel='canonical' href='https://ziontechgroup.com/ai-evals' />
@@ -107,6 +117,8 @@ export default function AIEvalsPage() {const contactInfo = {mobile: '+1 302 464 
 =======
         <meta;
           name='description';
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         />;
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/ai-evals' />;
       </Head>;Continuous evaluation, drift detection, and quality gates to ship;
@@ -162,6 +174,7 @@ export default function AIEvalsPage() {const contactInfo = {mobile: '+1 302 464 
     </div>;
     </div>;
   </section>;
+<<<<<<< HEAD
   </QuantumHolographicMatrixBackground>)}content='Ship reliable AI with continuous evaluation, red‑teaming, regression tests and live observability. Guardrails, datasets, dashboards and CI gates included.';
         />;
         <link rel='canonical' href='https://ziontechgroup.com/ai-evals' />;
@@ -306,3 +319,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </QuantumHolographicMatrixBackground>;
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  </QuantumHolographicMatrixBackground>);
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32,23 +33,45 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 const fs = require('fs');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       "mergeConflicts": { resolved: 0, "failed": 0 },
       "syntaxErrors": { fixed: 0, "failed": 0 },
       "prsProcessed": { merged: 0, "failed": 0 },
       "improvements": { applied: 0, "failed": 0 }};
 
+<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+const fs = require('fs');
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const { exec, execSync } = require('child_process');
 const { promisify } = require('util');
 
@@ -59,6 +82,10 @@ class CompleteImprovementSuite {
     this.reportsDir = './automation-reports';
     this.projectRoot = process.cwd();
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     this.reportsDir = path.join(this.projectRoot, 'improvement-reports');
     this.ensureDirectories();
@@ -68,25 +95,33 @@ class CompleteImprovementSuite {
       prsProcessed: { merged: 0, failed: 0 },
       improvements: { applied: 0, failed: 0 },
     };
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       "mergeConflicts": { resolved: 0, "failed": 0 },
       "syntaxErrors": { fixed: 0, "failed": 0 },
       "prsProcessed": { merged: 0, "failed": 0 },
       "improvements": { applied: 0, "failed": 0 }};
+<<<<<<< HEAD
 
 =======
 const fs = require('fs');
 const { exec, execSync } = require('child_process');
 const { promisify } = require('util');
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-const execAsync = promisify(exec);
 
+<<<<<<< HEAD
 class CompleteImprovementSuite {
   constructor() {
     this.reportsDir = './automation-reports';
     this.projectRoot = process.cwd();
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     this.stats = {
       "mergeConflicts": { resolved: 0, "failed": 0 },
       "syntaxErrors": { fixed: 0, "failed": 0 },
@@ -97,12 +132,18 @@ class CompleteImprovementSuite {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       "mergeConflicts": { resolved: 0, "failed": 0 },
       "syntaxErrors": { fixed: 0, "failed": 0 },
       "prsProcessed": { merged: 0, "failed": 0 },
       "improvements": { applied: 0, "failed": 0 }};
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -122,6 +163,11 @@ origin/automation-improvements-final
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     this.stats = {
       "mergeConflicts": { resolved: 0, "failed": 0 },
       "syntaxErrors": { fixed: 0, "failed": 0 },
@@ -129,6 +175,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       "improvements": { applied: 0, "failed": 0 }
     };
 
+<<<<<<< HEAD
       "mergeConflicts": { resolved: 0, "failed": 0 },
       "syntaxErrors": { fixed: 0, "failed": 0 },
       "prsProcessed": { merged: 0, "failed": 0 },
@@ -153,6 +200,11 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
 
   ensureDirectories() {
@@ -163,16 +215,21 @@ main
 
   log(message) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.log(`[${new Date().toISOString()}] ${message}`);
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+    .toISOString()}] ${message}`);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
 
   async runCommand(command, description, timeout = 60000) {
     this.log(`🚀 "Starting": ${description}`);
     try {
       const result = execSync(command, {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -203,12 +260,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: timeout,
       });
       this.log(`✅ Completed: ${description}`);
       return { success: true, output: result };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -243,6 +309,13 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         "cwd": this.projectRoot,
         "encoding": 'utf8',
         "timeout": timeout});
@@ -259,6 +332,7 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -285,10 +359,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     this.log('🔧 Phase 1: Resolving Merge Conflicts');
     try {
       const files = this.getAllFiles(this.projectRoot, [
         '.tsx',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -323,6 +406,13 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     this.log('🔧 Phase "1": Resolving Merge Conflicts');
 
     try {
@@ -357,6 +447,7 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -383,10 +474,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     this.log('🔧 Phase 2: Fixing Syntax Errors');
     try {
       const files = this.getAllFiles(path.join(this.projectRoot, 'src'), [
         '.tsx',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -421,6 +521,13 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     this.log('🔧 Phase "2": Fixing Syntax Errors');
 
     try {
@@ -452,6 +559,7 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -478,6 +586,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     this.log('🔧 Phase 3: Applying Improvements');
     const improvements = [
       {
@@ -496,6 +612,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         name: 'Build Optimization',
         action: () => this.createBuildOptimization(),
       },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -530,6 +647,13 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     this.log('🔧 Phase "3": Applying Improvements');
 
     const improvements = [{
@@ -567,6 +691,7 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -593,6 +718,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     this.log('🔧 Phase 4: Committing and Pushing Changes');
     const commands = [
       { cmd: 'git add .', desc: 'Adding all changes' },
@@ -601,6 +734,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         desc: 'Committing changes',
       },
       { cmd: 'git push origin main', desc: 'Pushing to main branch' },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -635,6 +769,13 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     this.log('🔧 Phase "4": Committing and Pushing Changes');
 
     const commands = [{ cmd: 'git add .', "desc": 'Adding all changes' },
@@ -688,6 +829,7 @@ main
       return (
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         content.includes('
 
       );
@@ -702,10 +844,22 @@ main
       );
         content.includes('')
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+        content.includes('') ||
+        content.includes('') ||
+        content.includes('
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       );
+
+
         content.includes('') ||
         content.includes('') ||
         content.includes('      );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -746,6 +900,15 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     } catch (error) {
       return false;
     }
@@ -759,15 +922,28 @@ main
       // Remove merge conflict markers and keep HEAD version
       content = content.replace(
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         /
 
         '$1'
+=======
+
+
+
+
+        /\n(.*?)\n\n(.*?)\n
+
+        '$1'
+      // Clean up any remaining markers
+        /\n([\s\S]*?)\n\n([\s\S]*?)\n        '$1'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
       );
 
       // Clean up any remaining markers
 
+<<<<<<< HEAD
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
         this.log(
@@ -781,10 +957,14 @@ main
       content = content.replace(/[^\n]+\n/g, '');
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      content = content.replace(/
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
         this.log(
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -821,10 +1001,28 @@ main
       content = content.replace(/[^\n]+\n/g, '');
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+          `✅ Resolved conflicts in: ${path.relative(this.projectRoot, filePath)}`
+      content = content.replace(/
 
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
         this.log(
+
+
+
+
+
+      // Clean up any remaining markers
+
+      content = content.replace(/
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+      if (content !== originalContent) {
+        fs.writeFileSync(filePath, content, 'utf8');
+        this.log(
+<<<<<<< HEAD
 <<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
@@ -857,6 +1055,11 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           `✅ Resolved conflicts "in": ${path.relative(this.projectRoot, filePath)}`
         );
         return true;
@@ -889,6 +1092,7 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           `✅ Fixed syntax in: ${path.relative(this.projectRoot, filePath)}`
 <<<<<<< HEAD
 =======
@@ -922,6 +1126,13 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+          `✅ Fixed syntax in: ${path.relative(this.projectRoot, filePath)}`
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           `✅ Fixed syntax "in": ${path.relative(this.projectRoot, filePath)}`
         );
         return true;
@@ -942,6 +1153,7 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -968,6 +1180,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         codeSplitting: true,
         lazyLoading: true,
         compression: true,
@@ -987,6 +1207,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1017,6 +1238,13 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         "codeSplitting": true,
         "lazyLoading": true,
         "compression": true},
@@ -1033,6 +1261,7 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1059,6 +1288,16 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     fs.writeFileSync(
       path.join(this.projectRoot, 'performance-optimization.json'),
       JSON.stringify(config, null, 2)
@@ -1077,6 +1316,7 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1103,6 +1343,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           "default-src 'self'; script-src 'self' 'unsafe-inline'",
       },
       validation: {
@@ -1115,6 +1363,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1145,6 +1394,13 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           "default-src 'self'; script-src 'self' 'unsafe-inline'"},
       "validation": {
         inputSanitization: true,
@@ -1155,6 +1411,7 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1181,6 +1438,16 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     fs.writeFileSync(
       path.join(this.projectRoot, 'security-enhancement.json'),
       JSON.stringify(config, null, 2)
@@ -1195,6 +1462,7 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1221,6 +1489,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         interval: 60000,
         endpoints: ['/health', '/api/status'],
       },
@@ -1238,6 +1514,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1268,6 +1545,13 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         "interval": 60000,
         "endpoints": ['/health', '/api/status']},
       "logging": {
@@ -1282,6 +1566,7 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1308,6 +1593,16 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     fs.writeFileSync(
       path.join(this.projectRoot, 'monitoring-config.json'),
       JSON.stringify(config, null, 2)
@@ -1327,6 +1622,7 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1353,6 +1649,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 name: 'vendors',
                 chunks: 'all',
               },
@@ -1371,6 +1675,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1401,6 +1706,13 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 "name": 'vendors',
                 "chunks": 'all'}}}}},
       "nextjs": {
@@ -1412,6 +1724,7 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1438,6 +1751,16 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     fs.writeFileSync(
       path.join(this.projectRoot, 'build-optimization.json'),
       JSON.stringify(config, null, 2)
@@ -1451,12 +1774,13 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-    // Phase 1: Resolve merge conflicts
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     // Phase 1: Resolve merge conflicts
+
+    // Phase 1: Resolve merge conflicts
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 <<<<<<< HEAD
@@ -1488,6 +1812,16 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     // Phase "1": Resolve merge conflicts
     await this.resolveMergeConflicts();
 
@@ -1510,6 +1844,7 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1539,6 +1874,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         totalSyntaxErrorsFixed: this.results.syntaxErrors.fixed,
         totalImprovementsApplied: this.results.improvements.applied,
         pushSuccessful: pushSuccess,
@@ -1547,6 +1890,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         "totalSyntaxErrorsFixed": this.results.syntaxErrors.fixed,
         "totalImprovementsApplied": this.results.improvements.applied,
         "pushSuccessful": pushSuccess}};
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1563,10 +1907,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         "totalSyntaxErrorsFixed": this.results.syntaxErrors.fixed,
         "totalImprovementsApplied": this.results.improvements.applied,
         "pushSuccessful": pushSuccess}};
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1575,11 +1923,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         "totalSyntaxErrorsFixed": this.results.syntaxErrors.fixed,
         "totalImprovementsApplied": this.results.improvements.applied,
         "pushSuccessful": pushSuccess}};
 
 
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 
@@ -1593,6 +1948,10 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     fs.writeFileSync(
       path.join(this.reportsDir, 'complete-improvement-report.json'),
       JSON.stringify(finalReport, null, 2)
@@ -1600,6 +1959,7 @@ main
 
     this.log('🎉 Complete Improvement Suite Finished');
 
+<<<<<<< HEAD
     this.log("📊 Summary: ");
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1633,10 +1993,29 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+    this.log("📊 Summary: ");
+    this.log(`📊 Summary:`);
+    this.log("📊 "Summary": ");
+
+    this.log("📊 "Summary": ");
+
+
+
+
+
+    this.log("📊 "Summary": ");
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     this.log(
       `   - Merge conflicts resolved: ${finalReport.summary.totalMergeConflictsResolved}`
     );
     this.log(
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1667,12 +2046,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       `   - Syntax errors fixed: ${finalReport.summary.totalSyntaxErrorsFixed}`
     );
     this.log(
       `   - Improvements applied: ${finalReport.summary.totalImprovementsApplied}`
     );
     this.log(`   - Push successful: ${finalReport.summary.pushSuccessful}`);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1707,6 +2093,13 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       `   - Syntax errors "fixed": ${finalReport.summary.totalSyntaxErrorsFixed}`
     );
     this.log(
@@ -1719,6 +2112,7 @@ main
 // Run the complete improvement suite
 const suite = new CompleteImprovementSuite();
 suite.run().catch(console.error);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1772,6 +2166,19 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");class CompleteImprovementSuite { constructor() { this.projectRoot = process.cwd();" this.reportsDir = path.join(this.projectRoot, "improvement-reports"); this.ensureDirectories(); this.results = { mergeConflicts: { resolved: 0, failed: 0 }," syntaxErrors: { fixed: 0, failed: 0 }," prsProcessed: { merged: 0, failed: 0 }," improvements: { applied: 0, failed: 0 }}; } ensureDirectories() { if (!fs.existsSync(this.reportsDir)) {" fs.mkdirSync(this.reportsDir, { recursive: true }); } } log(message) { console.log(`[${new Date().toISOString()}] ${message}`); } async runCommand(command, description, timeout = 60000) {"` this.log(` Starting: ${description}`); try { const result = execSync(command, {" cwd: this.projectRoot,"" encoding: "utf8"," timeout: timeout});"` this.log(` Completed: ${description}`);" return { success: true, output: result }; } catch (error) {"` this.log(` Failed: ${description} - ${error.message}`);" return { success: false, error: error.message }; } } async resolveMergeConflicts() {"" this.log(" Phase 1: Resolving Merge Conflicts"); try {" const files = this.getAllFiles(this.projectRoot, [".tsx"," ".ts"," ".jsx"," ".js"," ".json"," ".md", ]); let resolvedCount = 0; for (const file of files) { if (this.hasMergeConflicts(file)) { if (this.resolveFileConflicts(file)) { resolvedCount++; } } } this.results.mergeConflicts.resolved = resolvedCount;` this.log(` Resolved merge conflicts in ${resolvedCount} files`); return resolvedCount; } catch (error) {"` this.log(` Error resolving merge conflicts: ${error.message}`); return 0; } } async fixSyntaxErrors() {"" this.log(" Phase 2: Fixing Syntax Errors"); try {" const files = this.getAllFiles(path.join(this.projectRoot, "src"), [".tsx"," ".ts"," ".jsx"," ".js", ]); let fixedCount = 0; for (const file of files.slice(0, 100)) { / Limit to first 100 files if (this.fixFileSyntax(file)) { fixedCount++; } } this.results.syntaxErrors.fixed = fixedCount;` this.log(` Fixed syntax errors in ${fixedCount} files`); return fixedCount; } catch (error) {"` this.log(` Error fixing syntax errors: ${error.message}`); return 0; } } async applyImprovements() {"" this.log(" Phase 3: Applying Improvements"); const improvements = [{" name: "Performance Configuration"," action: () => this.createPerformanceConfig()}, {"" name: "Security Configuration"," action: () => this.createSecurityConfig()}, {"" name: "Monitoring Setup"," action: () => this.createMonitoringConfig()}, {"" name: "Build Optimization"," action: () => this.createBuildOptimization()}, ]; let appliedCount = 0; for (const improvement of improvements) { try { improvement.action(); appliedCount++;"` this.log(` Applied: ${improvement.name}`); } catch (error) {"` this.log(` Failed to apply: ${improvement.name} - ${error.message}`); } } this.results.improvements.applied = appliedCount; return appliedCount; } async commitAndPush() {"" this.log(" Phase 4: Committing and Pushing Changes");"" const commands = [{ cmd: "git add .", desc: "Adding all changes" }, {"" cmd: "git commit -m "feat: Complete improvement suite - merge conflicts, syntax fixes, and enhancements"","" desc: "Committing changes"},"" { cmd: "git push origin main", desc: "Pushing to main branch" }, ]; let successCount = 0; for (const command of commands) { const result = await this.runCommand(command.cmd, command.desc); if (result.success) { successCount++; } } return successCount === commands.length; } getAllFiles(dir, extensions) { let files = []; try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir, item); const stat = fs.statSync(fullPath); if ( stat.isDirectory() &&" !item.startsWith(".") &&" item !== "node_modules" ) { files = files.concat(this.getAllFiles(fullPath, extensions)); } else if (extensions.some(ext => item.endsWith(ext))) { files.push(fullPath); } } } catch (error) {" / Skip directories that can"t be read } return files; } hasMergeConflicts(filePath) { try {" const content = fs.readFileSync(filePath, "utf8"); return (""`"`
+
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -1798,6 +2205,7 @@ const { execSync } = require('child_process')
                 "name"
                 "chunks"
 cursor/fix-lint-push-and-merge-to-main-f3c1;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1841,3 +2249,13 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

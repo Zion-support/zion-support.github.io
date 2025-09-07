@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -21,6 +22,10 @@ function CategoryIndexPage() {
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
 <div className='container mx-auto px-4 py-10'>
       <h1 className='text-2xl font-semibold'>Categories</h1>
@@ -33,13 +38,16 @@ function CategoryIndexPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
   );
 
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 export default /**
  * CategoryIndexPage - Function description
  */
@@ -79,6 +87,10 @@ function CategoryIndexPage() {return (<div className='container mx-auto px-4 py-
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   return (
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     <div className='container mx-auto px-4 py-10'>
       <h1 className='text-2xl font-semibold'>Categories</h1>
       <p className='mt-2 text-gray-600'>
@@ -94,6 +106,7 @@ function CategoryIndexPage() {return (<div className='container mx-auto px-4 py-
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -147,6 +160,9 @@ function CategoryIndexPage() {
 }
 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 }
 }
@@ -154,7 +170,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 
 
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

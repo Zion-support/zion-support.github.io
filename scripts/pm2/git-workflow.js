@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             }).trim(),
 ,
             const commitCount = execSync(`git rev-list --count origin/${branchName}`, {,
@@ -307,11 +308,14 @@
       this.log(`❌ Error running git workflow: monitor: ${error.message}`),;
       process.exit(1);
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
     }
   }
 
@@ -513,6 +517,24 @@ if (require.main === module) {
 
 module.exports = GitWorkflow;
 
+=======
+class GitWorkflow {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.logFile = path.join(this.projectRoot, 'logs/pm2/git-workflow.log');
+    this.reportFile = path.join(this.projectRoot, 'logs/pm2/git-workflow-report.json');
+    this.startTime = Date.now();
+  }
+
+  log(message) {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}\n`;
+    try {
+      fs.appendFileSync(this.logFile, logMessage);
+    } catch (error) {
+      console.error('Error writing to log file: ', error.message);
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ;
 class GitWorkflow {; constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/git-workflow.log'); this.reportFile = path.join(this.projectRoot, 'logs/pm2/git-workflow-report.json'); this.startTime = Date.now()};
 ; log(message) {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`;
@@ -564,6 +586,7 @@ class GitWorkflow {; constructor() {; this.projectRoot = process.cwd(); this.log
 // Run the git workflow monitor;
 const gitWorkflow = new GitWorkflow();
 gitWorkflow.run().catch(error = > {; process.exit(1)});
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 =======
@@ -573,3 +596,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 // Run the git workflow monitor;
 const gitWorkflow = new GitWorkflow()gitWorkflow.run().catch(error = > {process.exit(1)})
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

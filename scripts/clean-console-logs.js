@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
@@ -7,16 +10,20 @@
 
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
 #!/usr/bin/env node];import { glob } from "glob;""
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
 #!/usr/bin/env node];import { glob } from "glob;""
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
 #!/usr/bin/env node];import { glob } from "glob;""
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
 #!/usr/bin/env node];import { glob } from "glob;""
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -38,24 +45,11 @@ const directories = [
   'pages/**/*.{js,jsx,ts,tsx}',
   'components/**/*.{js,jsx,ts,tsx}',
 ];
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-// Directories to exclude
-const excludeDirs = [
-  'node_modules',
-  '.next',
-  'build',
-  'dist',
-  'scripts',
-  'automation',
-  'automation_backup',
-  'src.disabled',
-  'pages.disabled',
-  'components.disabled',
-  'backup-pages',
-  'pages_backup',
-  'pages.__backup',
-];
 
+<<<<<<< HEAD
 let totalFiles = 0;
 =======
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;"";
@@ -164,3 +158,10 @@ main().catch(console.error)export { cleanConsoleLogs, processFile }
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
 #!/usr/bin/env node];import { glob } from "glob;""
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -46,6 +46,7 @@ import React from 'react',export default function SecretsRotationAutomationPage(
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -61,6 +62,10 @@ import React from 'react',export default function SecretsRotationAutomationPage(
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 import React from "react";
@@ -68,7 +73,7 @@ import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
 
 
-<<<<<<< HEAD
+
 import React from './react';
 import SEO from "../components / SEO";
 import { Check, ExternalLink  } from './lucide-react';
@@ -77,6 +82,7 @@ export default /**
  */
 function SecretsRotationAutomationPage() {
   const features = [;
+<<<<<<< HEAD
 =======
 import React from "react";
 import SEO from "../components/SEO";
@@ -120,6 +126,10 @@ export default function SecretsRotationAutomationPage() {
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+
+export default function SecretsRotationAutomationPage() {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   const features = [
     "Automated key and secret rotation"
@@ -132,7 +142,12 @@ export default function SecretsRotationAutomationPage() {
 
 export default function SecretsRotationAutomationPage() {
   const features = [
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     "Automated key and secret rotation",
     "JIT credentials with expirations",
     "Policy approvals and audit trails",
@@ -196,6 +211,7 @@ export default function SecretsRotationAutomationPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -207,6 +223,11 @@ export default function SecretsRotationAutomationPage() {
       </main>;</>)return (<>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             </a>;
           </div>;
         </section>;
@@ -248,6 +269,7 @@ return (return (return (return (<>;
             {features.map((f) => (<div;
             {features.map ((f) => (
               <div;
+<<<<<<< HEAD
 return (
   return (
   return (
@@ -260,6 +282,17 @@ main
   return (
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+  return (
+
+
+  return (
+
+
+  return (
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     <>
       <SEO
         title="Secrets Rotation Automation"
@@ -369,6 +402,7 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -387,6 +421,17 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+}
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     </>);
 }
@@ -395,10 +440,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 		'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support'
 	];
 <<<<<<< HEAD
+<<<<<<< HEAD
 	const features = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+	const features = null;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 	return (
 		<>
 			<SEO title="Secrets Rotation Automation" description="Automate key and secret rotation across cloud and CI/CD with approvals and audit logs." />
@@ -431,8 +482,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     </>);
 }
   return (
@@ -516,6 +570,7 @@ return (
             <a
               href="/contact"
               className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover:bg-gray-200"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             >
               Start from $199/mo
@@ -622,10 +677,15 @@ return (
 }
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             </a>;
           </div>;
         </section>;
       </main>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -706,3 +766,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>;
       </main>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

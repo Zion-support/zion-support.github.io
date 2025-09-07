@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -7,6 +8,12 @@ const fs = require('fs')
 const path = require('path')
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const { execSync } = require('child_process')
 console.log(' Starting CI/CD Pipeline...')
   "branch"
@@ -71,6 +78,7 @@ console.log(' Starting CI/CD Pipeline...')
 // console.log(`   - Successful "Stages"`)
 console.log(`   - Failed "Stages"`)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   console.log('� Application "URL")
@@ -222,3 +230,6 @@ if (require.main === module) {
 
 module.exports = { main, runCommand, checkGitStatus };
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  console.log('� Application "URL")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

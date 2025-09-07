@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 ;
@@ -16,6 +17,9 @@ interface UltraQuantumHolographicBackgroundProps  {children: React.ReactNode;
 <<<<<<< HEAD
             ease: "easeInOut"
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 useEffect ( () => {
   const updateDimensions = () => {
   setDimensions ({
@@ -48,6 +52,7 @@ life: number;
   className = '',
 }: UltraQuantumHolographicBackgroundProps) {;
   const canvasRef = useRef<HTMLCanvasElement>(null);
+<<<<<<< HEAD
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
   const [isVisible, setIsVisible] = useState(false);
   // Color schemes
@@ -91,10 +96,15 @@ overlay: 'rgba(0, 0, 0, 0.28)',
   const intensityMultiplier = { low: 0.5, medium: 1, high: 1.5, ultra: 2.5 }[
     intensity
 =======
+=======
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });  const [isVisible, setIsVisible] = useState(false);
+export default function UltraQuantumHolographicBackground(): any ({;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   children;
   intensity = 'high';
   colorScheme = 'quantum';
   particleCount = 300;
+<<<<<<< HEAD
   animationSpeed = 1.5;
   className = '';
 }: UltraQuantumHolographicBackgroundProps) {children,intensity = 'high',colorScheme = 'quantum',particleCount = 300,animationSpeed = 1.5,className = '',}: UltraQuantumHolographicBackgroundProps) {const canvasRef  = useRef<HTMLCanvasElement>(null)const [dimensions, setDimensions] = useState({ width: 0, height: 0 })const [isVisible, setIsVisible] = useState(false)export default function UltraQuantumHolographicBackground(): any ({children;
@@ -117,11 +127,14 @@ overlay: 'rgba(0, 0, 0, 0.28)',
 x: number;
       y: number;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       vx: number;
       vy: number;
       size: number;
       color: string;
       life: number;
+<<<<<<< HEAD
       maxLife: number;
 =======
     // Particle system;
@@ -149,6 +162,13 @@ this.color = [;
       }
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      vx: number,
+      vy: number,
+      size: number,
+      color: string,
+      life: number,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       update() {
         this.x += this.vx;
 =======
@@ -165,6 +185,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         // Quantum tunneling effect
         if (Math.random() < 0.001 * intensityMultiplier) {
           this.x = Math.random() * dimensions.width;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 this.y = Math.random() * dimensions.height;
 =======
         // Quantum tunneling effect;
@@ -186,15 +210,24 @@ this.vy = Math.random() * 2 + 1;}
         // Energy pulse
         if (this.type === 'energy') {
 this.size = Math.sin(Date.now() * 0.01) * 2 + 3;
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         }
         // Matrix rain effect
         if (this.type === 'matrix') {
           this.vy += 0.1;
           if (this.y > dimensions.height) {
             this.y = -10;
+<<<<<<< HEAD
 this.vy = Math.random() * 2 + 1;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            this.vy = Math.random() * 2 + 1
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           }
         }
       }
@@ -217,16 +250,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.fillStyle = this.color;
             ctx.fill();
+<<<<<<< HEAD
 // Wave function rings
             for (let i = 1; i <= 3; i++) {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            // Wave function rings
+            for (let i = 1, i <= 3, i++) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               ctx.beginPath();
               ctx.arc(this.x, this.y, this.size * i, 0, Math.PI * 2);
               ctx.strokeStyle = this.color;
               ctx.lineWidth = 0.5;
               ctx.globalAlpha = alpha * (0.3 / i);
+<<<<<<< HEAD
 ctx.stroke();
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+ctx.stroke();
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             }
 =======
       }draw() {if (this.life <= 0) return;
@@ -249,6 +292,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ctx.strokeStyle = this.color;
             ctx.lineWidth = 0.5;
 <<<<<<< HEAD
+<<<<<<< HEAD
             ctx.globalAlpha = alpha * 0.5;
 ctx.strokeRect(
               this.x - this.size,
@@ -268,6 +312,10 @@ const gradient = ctx.createRadialGradient(
               this.size
             );
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            ctx.globalAlpha = alpha * 0.5;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             gradient.addColorStop(0, this.color);
             gradient.addColorStop(1, 'transparent');
             ctx.fillStyle = gradient;
@@ -280,6 +328,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ctx.fillStyle = this.color;
             ctx.font = `${this.size * 2}px monospace`;
             ctx.fillText('01', this.x, this.y);
+<<<<<<< HEAD
 break;
         }
 
@@ -326,6 +375,10 @@ for (let i = 0; i < particles.length; i += 10) {for (let j = i + 10; j < particl
             ctx.lineTo(p2.x, p2.y);
 ctx.stroke();
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            ctx.stroke();          }
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           }
 =======
           const distance = Math.sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2)if (distance < 100 && p1.life > 0 && p2.life > 0) {ctx.beginPath()ctx.moveTo(p1.x, p1.y)ctx.lineTo(p2.x, p2.y)ctx.stroke()}
@@ -335,6 +388,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ctx.strokeStyle = colors.secondary;
       ctx.lineWidth = 0.3;
 <<<<<<< HEAD
+<<<<<<< HEAD
       ctx.globalAlpha = 0.2;
 const gridSize = 50;
       for (let x = 0; x < dimensions.width; x += gridSize) {
@@ -343,6 +397,15 @@ const gridSize = 50;
         ctx.lineTo(x, dimensions.height);
         ctx.stroke();
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      ctx.globalAlpha = 0.2;
+      const gridSize = 50;
+      for (let x = 0; x < dimensions && dimensions.width; x += gridSize) {;
+        ctx && ctx.beginPath();
+        ctx && ctx.moveTo(x, 0);
+        ctx && ctx.lineTo(x, dimensions && dimensions.height);
+        ctx && ctx.stroke();
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       }
       for (let y = 0; y < dimensions && dimensions.height; y += gridSize) {;
         ctx && ctx.beginPath();
@@ -350,6 +413,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ctx && ctx.lineTo(dimensions && dimensions.width, y);
         ctx && ctx.stroke();
       }
+<<<<<<< HEAD
 
       animationId = requestAnimationFrame(animate);
     };
@@ -361,11 +425,29 @@ cancelAnimationFrame(animationId);
       }
     };
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      animationId = requestAnimationFrame(animate);    };      const gridSize = 50;
+      for (let x = 0, x < dimensions && dimensions.width, x += gridSize) {;
+        ctx && ctx.beginPath();
+        ctx && ctx.moveTo(x, 0);
+        ctx && ctx.lineTo(x, dimensions && dimensions.height);
+        ctx && ctx.stroke();
+      }
+      for (let y = 0, y < dimensions && dimensions.height, y += gridSize) {;
+        ctx && ctx.beginPath();
+        ctx && ctx.moveTo(0, y);
+        ctx && ctx.lineTo(dimensions && dimensions.width, y);
+        ctx && ctx.stroke();
+      }
+      }
+    }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }, [dimensions, colors, particleCount, animationSpeed, intensityMultiplier]);
   return (
       {/* Quantum Holographic Canvas Background */}
       <canvas
         ref={canvasRef}
+<<<<<<< HEAD
 className='fixed inset-0 w-full h-full pointer-events-none z-0'
         style={{
           background: colors.background,
@@ -376,10 +458,38 @@ className='fixed inset-0 w-full h-full pointer-events-none z-0'
 <div className='fixed inset-0 z-10 pointer-events-none'>
         {/* Quantum Field Lines */}
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+      {/* Holographic Overlay Effects */}
+
+          }}
+        />
+
+        {/* Holographic Scan Lines */}
+
+          }}
+
+        />
+      </div>
+
+      {/* Content Layer */}
+      <div className='relative z-20'>{children}</div>
+
+      {/* Quantum Noise Effect */}
+      <div className='fixed inset-0 z-30 pointer-events-none opacity-5'>
+
+      {/* Holographic Overlay Effects */}
+      <div className='fixed inset-0 z-10 pointer-events-none'>
+
+      {/* Holographic Overlay Effects */}
+      <div className='fixed inset-0 z-10 pointer-events-none'>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         <motion.div
           className='absolute inset-0'
           animate={{
             background: [
+<<<<<<< HEAD
               `radial-gradient(circle at 20% 20%, ${colors.primary}10 0%, transparent 50%)`,
               `radial-gradient(circle at 80% 80%, ${colors.secondary}10 0%, transparent 50%)`,
               `radial-gradient(circle at 20% 80%, ${colors.tertiary}10 0%, transparent 50%)`,
@@ -472,10 +582,70 @@ className='fixed inset-0 w-full h-full pointer-events-none z-0';
               `inset 0 0 150px ${colors.tertiary}20`;
               `inset 0 0 100px ${colors.primary}20`;
                 ease: "easeInOut";
+=======
+              `radial-gradient(circle at 20% 20%, ${colors.primary}10 0%, transparent 50%)`
+              `radial-gradient(circle at 80% 80%, ${colors.secondary}10 0%, transparent 50%)`
+              `radial-gradient(circle at 20% 80%, ${colors.tertiary}10 0%, transparent 50%)`
+              `radial-gradient(circle at 80% 20%, ${colors.accent}10 0%, transparent 50%)`
+
+
+            ],          }}
+          transition={{
+            duration: 8
+            repeat: Infinity
+            ease: 'easeInOut',          }}
+              `radial-gradient(circle at 80% 80%, ${colors.secondary}10 0%, transparent 50%)`;
+              `radial-gradient(circle at 20% 80%, ${colors.tertiary}10 0%, transparent 50%)`;
+              `radial-gradient(circle at 80% 20%, ${colors.accent}10 0%, transparent 50%)`
+            ]
+        {/* Holographic Scan Lines */}              `radial-gradient(circle at 20% 20%, ${colors && colors.primary}10 0%, transparent 50%)`;
+              `radial-gradient(circle at 80% 80%, ${colors && colors.secondary}10 0%, transparent 50%)`;
+              `radial-gradient(circle at 20% 80%, ${colors && colors.tertiary}10 0%, transparent 50%)`;
+              `radial-gradient(circle at 80% 20%, ${colors && colors.accent}10 0%, transparent 50%)`;
+            ];
+          transition={{;
+            duration: 8,;
+            repeat: Infinity,;
+            ease: 'easeInOut',            ease: "easeInOut";
+          }}
+        />;
+        {/* Holographic Scan Lines */}
+        {/* Quantum Fluctuations */}
+        <motion && motion.div        <div className="absolute inset-0 opacity-20">;
+          {Array && Array.from({ length: Math && Math.ceil(dimensions && dimensions.height / 4) }).map((_, i) => (;
+            <motion&& motion.div
+              />))}        </div>;
+        {/* Quantum Fluctuations */}
+        <motion.div        <div className="absolute inset - 0 opacity - 20">;
+          {Array.from ({ length: Math.ceil (dimensions.height / 4) }).map ((_, i) => (
+            <motion.div;
+              key={i}
+              className="absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent";
+              style={{
+              }}
+              animate={{
+                opacity: [0, 1, 0]
+                scaleX: [0, 1, 0]
+                top: i * 4,
+                color: colors.primary;
+              }}
+              animate={{
+                opacity: [0, 1, 0];
+                scale_x: [0, 1, 0];
+          className='absolute inset-0'
+          animate={{
+            boxShadow: [
+              `inset 0 0 100px ${colors.primary}20`
+              `inset 0 0 200px ${colors.secondary}20`
+              `inset 0 0 150px ${colors.tertiary}20`
+              `inset 0 0 100px ${colors.primary}20`
+                ease: "easeInOut"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               }}
             />;
           ))}
         {/* Quantum Fluctuations */}
+<<<<<<< HEAD
         <motion&& motion.div;
           className='absolute inset-0';
           animate={{boxShadow: [;
@@ -522,6 +692,25 @@ className='absolute inset-0'
             repeat: Infinity,
 ease: 'easeInOut',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        <motion&& motion.div
+          className='absolute inset-0'
+          animate={{
+            boxShadow: [
+            ],          }}
+          transition={{
+            duration: 6
+            repeat: Infinity
+            ease: 'easeInOut',          }}              `inset 0 0 100px ${colors.primary}20`;
+              `inset 0 0 200px ${colors.secondary}20`;
+              `inset 0 0 150px ${colors.tertiary}20`;
+            ]
+
+                duration: 2,
+                delay: i * 0 && 0.1,
+                repeat: Infinity,
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           }}
 
 
@@ -532,6 +721,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         />;
       </div>;
       {/* Content Layer */}
+<<<<<<< HEAD
 <div className='relative z-20'>{children}</div>
 
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -546,10 +736,14 @@ className='absolute inset-0';
       </div>;
       {/* Content Layer */}<div className='relative z - 20'>{children}</div>;<div className='relative z-20'>{children}</div>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      <div className='relative z - 20'>{children}</div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       {/* Quantum Noise Effect */}
       <div className='fixed inset - 0 z - 30 pointer - events - none opacity - 5'>;
         <motion.div;
           className='absolute inset - 0';
+<<<<<<< HEAD
 <<<<<<< HEAD
           animate={{
             background: [
@@ -562,10 +756,31 @@ className='absolute inset-0';
             repeat: Infinity,
 ease: 'easeInOut',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+          animate={{
+            background: [;
+              `url ("data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractal_noise' base_frequency='0.9' num_octaves='4' stitch_tiles='stitch'/%3E%3C / filter%3E%3Crect width='100' height='100' filter='url (%23noise)'/%3E%3C / svg%3E")`,
+              `url ("data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractal_noise' base_frequency='0.7' num_octaves='3' stitch_tiles='stitch'/%3E%3C / filter%3E%3Crect width='100' height='100' filter='url (%23noise)'/%3E%3C / svg%3E")`,
+            ],          }}
+          transition={{
+            duration: 4
+            repeat: Infinity
+            ease: 'easeInOut',          }}
+        />
+      </div>
+    </div>
+  );              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`;
+              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`
+            ]
+          }}
+          transition={{
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           }}
         />
       </div>
     </div>
+<<<<<<< HEAD
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -591,3 +806,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
 )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+);  )
+}
+    </div>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

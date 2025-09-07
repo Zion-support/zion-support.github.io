@@ -25,11 +25,18 @@
   hasMergeConflicts(content) {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     return content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>');
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+    return content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>');
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
 
   // Check if file has syntax errors
@@ -56,6 +63,9 @@ main
     
     // Fix merge conflicts by keeping the HEAD version
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     fixed = fixed.replace(/
     
@@ -381,8 +391,17 @@ if (require.main === module) {
   }
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');

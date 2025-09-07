@@ -6,8 +6,12 @@ export type AdminNotesPanelProps = {targetType: string; // e && e.g., 'user' | '
   target_id: string; // unique identifier for the target;
 import React, { useEffect, useMemo, useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type AdminNotesPanelProps = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  targetType: string; // e.g., 'user' | 'listing'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   targetId: string; // unique identifier for the target
 }
 ;
@@ -24,6 +28,7 @@ export type AdminNotesPanelProps = any;targetId: string; // unique identifier fo
   targetType: string;
   targetId: string;
   text: string;
+<<<<<<< HEAD
   authorId: string;
   createdAt: number;
 }}export default function AdminNotesPanel() {authorId: string;
@@ -35,12 +40,38 @@ export default function AdminNotesPanel({
   targetId,
 }: AdminNotesPanelProps) {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  targetType,
+  targetId,;
+}: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);};
+
+type Note = {
+  id: string
+  targetType: string
+  targetId: string
+  text: string
+  authorId: string
+  createdAt: number
+
+};
+
+
+
+};
+
+export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const [isAdmin, setIsAdmin] = useState(true);
   const [adminId, setAdminId] = useState('admin-demo');
   const [notes, setNotes] = useState<Note[]>([]);
   const [loading, setLoading] = useState(false);
   const [adding, setAdding] = useState(false);
   const [text, setText] = useState('');
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   async function fetchNotes() {
     try {
       setLoading(true);
@@ -48,6 +79,7 @@ const res = await fetch(
         `/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`,
         {
           headers: { 'X-Admin': isAdmin ? 'true' : 'false' }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 export default function AdminNotesPanel() {const [isAdmin, setIsAdmin] = useState(true)const [adminId, setAdminId] = useState('admin-demo')const [notes, setNotes] = useState<Note[]>([])const [loading, setLoading] = useState(false)const [adding, setAdding] = useState(false)const [text, setText]  = useState('')async function fetchNotes() {try {setLoading(true)const res = await fetch(`/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`,{headers: { 'X-Admin': isAdmin ? 'true' : 'false' }}
@@ -59,9 +91,13 @@ export default function AdminNotesPanel() {const [isAdmin, setIsAdmin] = useStat
           'X-Admin': isAdmin ? 'true' : 'false';
           'X-Admin-User': adminId;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         }
         body: JSON.stringify({ targetType, targetId, text })} finally {setAdding(false)}      if (!res.ok) {method: 'POST',headers: {'Content-Type': 'application/json','X-Admin': isAdmin ? 'true' : 'false','X-Admin-User': adminId,},body: JSON.stringify({ targetType, targetId, text }),})if (!res.ok) {alert('Failed to add note')return;
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
       const data = await res.json();
       setNotes(data.notes |[]);
@@ -70,6 +106,13 @@ export default function AdminNotesPanel() {const [isAdmin, setIsAdmin] = useStat
     }
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+        method: 'POST',
+        headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'falseX-Admin-User': adminId },
+        body: JSON.stringify({ targetType, targetId, text })});
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   useEffect(() => {
 if (isAdmin) fetchNotes();
   }, [isAdmin, targetType, targetId]);
@@ -78,6 +121,7 @@ if (isAdmin) fetchNotes();
     setAdding(true);
     try {
       const res = await fetch('/api/admin/notes', {
+<<<<<<< HEAD
         method: 'POST',
 headers: {
           'Content-Type': 'application/json',
@@ -88,10 +132,22 @@ headers: {
       });
       if (!res.ok) {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        method: 'POST'
+        headers: {
+          'Content-Type': 'application/json'
+          'X-Admin': isAdmin ? 'true' : 'false'
+          'X-Admin-User': adminId
+        }
+        body: JSON.stringify({ targetType, targetId, text })
+    } finally {
+      setAdding(false);    }      if (!res.ok) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         alert('Failed to add note');
         return;
       }
       setText('');
+<<<<<<< HEAD
       await fetchNotes();
     } finally {
       setAdding(false);
@@ -99,6 +155,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     } finally {
       setAdding(false)
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      setAdding(false);    }
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
   }
 
@@ -287,7 +348,23 @@ if ( {) {$2;
 <<<<<<< HEAD
       </div>
     </div>
+<<<<<<< HEAD
   );
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+  target_type: string; // e.g., 'user' | 'listing';
+  target_id: string; // unique identifier for the target;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -466,5 +543,10 @@ if ( {) {$2;
               </li>))}
           </ul>)}
       </div>;
+<<<<<<< HEAD
     </div>)})}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </div>);
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

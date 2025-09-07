@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -23,6 +24,10 @@
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+#!/usr/bin/env node;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")""
     console.log(" Enhanced App Improver Starting...");""
       console.error(" Error during "improvements":", error.message);"}"
@@ -131,9 +136,13 @@ module.exports = DeploymentAutomation";"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     console.log();      "\\n� Full report saved "to": enhanced-app-improvement-report.json""
 
 #!/usr/bin/env node
@@ -827,6 +836,7 @@ if (require.main === module) {
 
 module.exports = EnhancedAppImprover;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 
@@ -837,3 +847,5 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

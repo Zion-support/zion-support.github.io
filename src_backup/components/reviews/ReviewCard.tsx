@@ -1,4 +1,5 @@
 <<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
+<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
 import { Review } from "@/types/reviews",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button";
@@ -44,6 +45,11 @@ setIsReporting (true)const success = await onReport (review.id, reportReason)set
       <div className='flex'>
         {[1, 2, 3, 4, 5].map(star => (
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+return (
+      <div className='flex'>;
+        {[1, 2, 3, 4, 5].map(star => (;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/reviews/ReviewCard.tsx
           <Star
 =======
   const renderStars = (rating?: number) => {if (!rating) return null;
@@ -60,6 +66,7 @@ import { Button } from "@/components/ui/button",import { Badge } from "@/compone
       .split(' ').map(n => n[0]).join('')            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
           />;
         ))}
+<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
 <<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
       </div>
     )
@@ -97,6 +104,10 @@ import { Button } from "@/components/ui/button",import { Badge } from "@/compone
           {review.is_anonymous ? (
             <Avatar>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/reviews/ReviewCard.tsx
               <AvatarFallback className="bg-muted">
                 <User className="h-4 w-4" />
               </AvatarFallback>
@@ -104,8 +115,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ) : (
             <Avatar>
               {review.reviewer_profile?.avatar_url ? (
+<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/reviews/ReviewCard.tsx
                 <AvatarImage src={review.reviewer_profile.avatar_url} alt={review.reviewer_profile.display_name} />
               ) : (
                 <AvatarFallback>
@@ -217,6 +231,7 @@ if (return null) {$2;
 <<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
                     getInitials(review && review.reviewer_profile.display_name) : "??"}
 
+<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -230,10 +245,13 @@ if (return null) {$2;
                     ? getInitials(review.reviewer_profile.display_name)
                     : '??'}
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/reviews/ReviewCard.tsx
                 </AvatarFallback>
               )}
             </Avatar>
           )}
+<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
 <div>
             <div className='font-medium'>
               {review.is_anonymous
@@ -270,6 +288,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         review.quality_rating |
         review.timeliness_rating |
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/reviews/ReviewCard.tsx
         review.would_work_again !== undefined) && (
         <div className='border-t pt-3 mt-3'>
           <div className='flex flex-wrap gap-2'>
@@ -346,6 +368,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Badge>)}
 <<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
             {review.would_work_again !== undefined && (
+<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
               <Badge
                 variant={review.would_work_again ? 'default' : 'secondary'}
                 className={`${review.would_work_again ? 'bg-green-100 text-green-800 hover:bg-green-200' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}              >
@@ -355,6 +378,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Badge>
 origin/cursor/automate-test-improve-and-merge-code-2533
             )}
+=======
+              <Badge;
+                variant={review.would_work_again ? 'default' : 'secondary'}
+                className={`${review.would_work_again ? 'bg - green - 100 text - green - 800 hover:bg - green - 200' : 'bg - gray - 100 text - gray - 800 hover:bg - gray - 200'}`}              >;
+                {review.would_work_again;
+                  ? 'Would work again';
+                  : 'Would not work again'}              </Badge>;
+                {review.would_work_again ? "Would work again" : "Would not work again"}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/reviews/ReviewCard.tsx
 
             {review && review.quality_rating && (;
               <Badge variant='outline' className='flex gap-1 items-center'>;
@@ -459,8 +491,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </span>;
               </Badge>;: 'Would not work again'}
               </Badge>;
+<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
             )}{review && review.quality_rating && (<Badge variant='outline' className='flex gap-1 items-center'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/reviews/ReviewCard.tsx
+=======
+
+                  : 'Would not work again'}
+              </Badge>
+
+            )}
+
+            {review && review.quality_rating && (;
+              <Badge variant='outline' className='flex gap-1 items-center'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/reviews/ReviewCard.tsx
                 Quality;
                 <span className='ml-1 text-yellow-500'>;
                   {review && review.quality_rating}/5;
@@ -516,6 +559,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
 <<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
       )}
+<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
 <div className='mt-3 flex justify-end'>
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
           <DialogTrigger asChild>
@@ -523,14 +567,46 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Flag className='h-3 w-3 mr-1' />
               Report
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+
+
+
+      <div className='mt-3 flex justify-end'>
+        <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
+          <DialogTrigger asChild>
+            <Button variant='ghost' size='sm' className='text-muted-foreground'>
+              <Flag className='h-3 w-3 mr-1' />              Report
+      
+      <div className="mt-3 flex justify-end">
+        <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
+          <DialogTrigger asChild>
+            <Button variant="ghost" size="sm" className="text-muted-foreground">
+              <Flag className="h-3 w-3 mr-1" />
+
+              Report
+
+              Report
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/reviews/ReviewCard.tsx
             </Button>
           </DialogTrigger>
           <DialogContent>
             <DialogHeader>
               <DialogTitle>Report Review</DialogTitle>
               <DialogDescription>
+<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
 If you believe this review violates our community guidelines,
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+                If you believe this review violates our community guidelines,
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/reviews/ReviewCard.tsx
                 please provide details below.
               </DialogDescription>
             </DialogHeader>
@@ -600,14 +676,53 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
               <Button
                 onClick={handleReport}
+<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
                 disabled={!reportReason.trim() || isReporting}
               >
                 {isReporting ? 'Submitting...' : 'Submit Report'}
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+              onChange = {(e,) => setReportReason(e.target.value),}
+
+
+
+                If you believe this review violates our community guidelines, please provide details below.
+              </DialogDescription>
+            </DialogHeader>
+            
+            <Textarea
+              placeholder="Why are you reporting this review?"
+              value={reportReason}
+              onChange={(e) => setReportReason(e.target.value)}
+
+
+
+
+              className="min-h-[100px]"
+            />
+            
+            <DialogFooter>
+              <Button variant="outline" onClick={() => setIsReportDialogOpen(false)}>
+                Cancel
+              </Button>
+
+
+
+              <Button 
+                onClick={handleReport} 
+                disabled={!reportReason.trim() || isReporting}
+              >
+                {isReporting ? "Submitting..." : "Submit Report"}
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/reviews/ReviewCard.tsx
               </Button>
             </DialogFooter>
           </DialogContent>
         </Dialog>
+<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
       </div>
     </div>
   );
@@ -636,6 +751,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </DialogFooter>;
           </DialogContent>;
         </Dialog>;
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/reviews/ReviewCard.tsx
                 disabled={!reportReason && reportReason.trim() || isReporting}>;
                 {isReporting ? 'Submitting...' : 'Submit Report'}              </Button>                {isReporting ? "Submitting..." : "Submit Report"}
               </Button>;
@@ -690,6 +808,7 @@ return (<div className="border rounded - lg p - 4 bg - card"> <div className="fl
 }/5</span> </Badge>) ";
 }Quality <span className="ml - 1 text - yellow - 500" > {review.quality rating;
 }/5</span> </Badge>) ";
+<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
 }Timeliness <span className="ml - 1 text - yellow - 500" > {review.timeliness rating;
 }/5</span> </Badge>)}{review.would work again !== undefined && (<Badge </Badge>)}</div> </div>) ";
 }<DialogTrigger as_child> <Button variant="ghost" size="sm" className="text - muted - foreground"> <Flag className="h - 3 w - 3 mr - 1" /> Report </Button> </DialogTrigger> <DialogContent> <DialogHeader> <DialogTitle > Report Review</DialogTitle> <DialogDescription> If you believe this review violates our community guidelines, please provide details below. </DialogDescription> </DialogHeader> <Textarea Cancel </Button> <Button on_click={handle_report;
@@ -735,3 +854,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }disabled= {!reportReason.trim () || isReporting ;
 }> </Button> </DialogFooter> </DialogContent> </Dialog> </div> </div>)}";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/reviews/ReviewCard.tsx
+=======
+}Timeliness <span className="ml - 1 text - yellow - 500" > {
+  review.timeliness rating;
+}/5</span> </Badge>);
+}{
+  review.would work again !== undefined && (<Badge </Badge>);
+}</div> </div>) ";
+}<DialogTrigger as_child> <Button variant="ghost" size="sm" className="text - muted - foreground"> <Flag className="h - 3 w - 3 mr - 1" /> Report </Button> </DialogTrigger> <DialogContent> <DialogHeader> <DialogTitle > Report Review</DialogTitle> <DialogDescription> If you believe this review violates our community guidelines, please provide details below. </DialogDescription> </DialogHeader> <Textarea Cancel </Button> <Button on_click={
+  handle_report;
+}disabled= {
+  !report_reason.trim () || is_reporting;
+}> </Button> </DialogFooter> </DialogContent> </Dialog> </div> </div>);
+}"}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/reviews/ReviewCard.tsx

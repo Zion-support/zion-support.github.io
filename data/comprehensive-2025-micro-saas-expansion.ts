@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 ;
@@ -54,11 +55,14 @@ ursor/fix-website-loading-errors-and-merge-6662;
 name: 'AI Healthcare Diagnostics Platform';tagline: 'Advanced AI - powered medical diagnostics with 99.7% accuracy';price: '$599';
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
 import { ServiceVariant } from '../types/service-variants',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -69,6 +73,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution'
 }
 
@@ -79,9 +85,13 @@ marketAdvantage: 'First platform to combine content creation, optimization, and 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { ServiceVariant } from '../types/service-variants';
 export interface ComprehensiveMicroSaasService {
   id: string;
@@ -129,6 +139,7 @@ export interface ComprehensiveMicroSaasService {
 
 const contact = null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -147,10 +158,13 @@ ursor/fix-website-loading-errors-and-merge-6662
   id: 'ai - healthcare - diagnostics - platform';
 name: 'AI Healthcare Diagnostics Platform';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 //Healthcare AI Services {
   id: 'ai - healthcare - diagnostics - platform';
 name: 'AI Healthcare Diagnostics Platform';
 
+<<<<<<< HEAD
 tagline: 'Advanced AI - powered medical diagnostics with 99.7% accuracy';
 
 <<<<<<< HEAD
@@ -166,6 +180,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 price: '$599';
 period: '/month';
 description: 'Revolutionary AI platform that provides accurate medical diagnostics, treatment recommendations, and patient monitoring with FDA compliance.';
@@ -176,6 +192,7 @@ features: [ 'AI - powered medical image analysis (X - ray, MRI, CT) Symptom anal
 'Automated report generation_telemedicine integration capabilities' ];
 <<<<<<< HEAD
 popular: true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -211,6 +228,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 setup_time: '2 weeks';category: 'Healthcare AI';
 popular: true;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 category: 'Healthcare AI';
 real_service: true;
 technology: ['Deep Learning, Computer Vision, Python, TensorFlow, PyTorch'];
@@ -219,6 +240,7 @@ use_cases: ['Medical imaging analysis_diagnostic assistance', 'Treatment plannin
 roi: 'Average 500% ROI through improved diagnostic accuracy and reduced misdiagnosis costs';
 <<<<<<< HEAD
 competitors: ['Aidoc, Zebra Medical, Arterys, Enlitic'];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -258,6 +280,10 @@ market_advantage: 'Highest accuracy rate in the market with comprehensive multi 
 //Fintech AI Services {id: 'ai - fintech - intelligence - platform';
 competitors: ['Aidoc, Zebra Medical, Arterys, Enlitic'];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 //Fintech AI Services {
   id: 'ai - fintech - intelligence - platform';
@@ -273,6 +299,7 @@ features: [ 'Real - time market analysis and prediction_automated trading strate
 'Real - time alerts and notifications_integration with major exchanges' ];
 <<<<<<< HEAD
 popular: true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -308,6 +335,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 setup_time: '1 week';category: 'Fintech AI';
 popular: true;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 category: 'Fintech AI';
 real_service: true;
 technology: ['Machine Learning, Deep Learning, Python, TensorFlow, PyTorch'];
@@ -316,6 +347,7 @@ use_cases: ['Algorithmic trading_risk management', 'Portfolio optimization_marke
 roi: 'Average 400% ROI through improved trading performance and risk reduction';
 <<<<<<< HEAD
 competitors: ['Alpaca, QuantConnect, AlgoTrader, MetaTrader'];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -355,6 +387,10 @@ market_advantage: 'First platform to combine AI - powered trading, risk manageme
 //Cybersecurity AI Services {id: 'ai - cybersecurity - threat - hunting';
 competitors: ['Alpaca, QuantConnect, AlgoTrader, MetaTrader'];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 //Cybersecurity AI Services {
   id: 'ai - cybersecurity - threat - hunting';
@@ -370,6 +406,7 @@ features: [ 'AI - powered threat hunting and detection_zero false positive guara
 'Multi - cloud security coverage24 / 7 security monitoring' ];
 <<<<<<< HEAD
 popular: true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -405,6 +442,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 setup_time: '1 week';category: 'Cybersecurity';
 popular: true;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 category: 'Cybersecurity';
 real_service: true;
 technology: ['Machine Learning, Deep Learning, Python, TensorFlow, PyTorch'];
@@ -413,6 +454,7 @@ use_cases: ['Threat detection_incident response', 'Security monitoring_complianc
 roi: 'Average 350% ROI through reduced security incidents and automated response';
 <<<<<<< HEAD
 competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance'];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -452,6 +494,10 @@ market_advantage: 'Only platform with zero false positive guarantee and automate
 //IoT & Smart City Services {id: 'iot - smart - city - platform';
 competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance'];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 //IoT & Smart City Services {
   id: 'iot - smart - city - platform';
@@ -467,6 +513,7 @@ features: [ 'Smart traffic management and optimization_energy consumption monito
 'Data analytics and insights_multi - city management capabilities' ];
 <<<<<<< HEAD
 popular: true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -501,10 +548,15 @@ technology: ['IoT, Edge Computing, AI / ML, Python, Node.js, React'];
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 integrations: ['Traffic systems, Energy grids, Waste management, Environmental sensors'];
 use_cases: ['Traffic optimization_energy management', 'Waste optimization_environmental monitoring'];
 roi: 'Average 600% ROI through operational efficiency and cost savings';
 competitors: ['Cisco Kinetic, Siemens MindSphere, IBM Watson IoT, Microsoft Azure IoT'];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -551,6 +603,10 @@ use_cases: ['Traffic optimization_energy management', 'Waste optimization_enviro
 roi: 'Average 600% ROI through operational efficiency and cost savings';
 competitors: ['Cisco Kinetic, Siemens MindSphere, IBM Watson IoT, Microsoft Azure IoT'];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 //Blockchain & DeFi Services {
   id: 'blockchain - defi - intelligence';
@@ -566,6 +622,7 @@ features: [ 'AI - powered blockchain transaction analysisDeFi strategy optimizat
 'Yield farming optimization_regulatory compliance monitoring' ];
 <<<<<<< HEAD
 popular: true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -600,10 +657,15 @@ technology: ['Blockchain, AI / ML, Python, Solidity, Web3.js, React'];
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 integrations: ['Ethereum, Solana, Polygon, Binance Smart Chain, Major DeFi protocols'];
 use_cases: ['Blockchain analysisDeFi optimization', 'Portfolio management_risk assessment'];
 roi: 'Average 800% ROI through improved DeFi strategies and risk reduction';
 competitors: ['Chainalysis, Elliptic, CipherTrace, TRM Labs'];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -650,6 +712,10 @@ use_cases: ['Blockchain analysisDeFi optimization', 'Portfolio management_risk a
 roi: 'Average 800% ROI through improved DeFi strategies and risk reduction';
 competitors: ['Chainalysis, Elliptic, CipherTrace, TRM Labs'];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 //Quantum Computing Services {
   id: 'quantum - computing - as - a-service';
@@ -665,6 +731,7 @@ features: [ 'Access to 1000+ qubit quantum computersAI - powered quantum algorit
 'API access for custom applications_expert quantum computing support' ];
 <<<<<<< HEAD
 popular: true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -700,6 +767,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 setup_time: '2 weeks';category: 'Quantum Computing';
 popular: true;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 category: 'Quantum Computing';
 real_service: true;
 technology: ['Quantum Computing, AI / ML, Python, Qiskit, Cirq, Q#'];
@@ -708,6 +779,7 @@ use_cases: ['Drug discovery_financial modeling', 'CryptographyOptimization probl
 roi: 'Average 1000% ROI through breakthrough discoveries and research acceleration';
 <<<<<<< HEAD
 competitors: ['IBM Quantum, Google Quantum AI, Microsoft Azure Quantum, Amazon Braket'];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -747,6 +819,10 @@ market_advantage: 'First platform to combine quantum computing access with AI - 
 //Space Technology Services {id: 'space - resource - intelligence';
 competitors: ['IBM Quantum, Google Quantum AI, Microsoft Azure Quantum, Amazon Braket'];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 //Space Technology Services {
   id: 'space - resource - intelligence';
@@ -762,6 +838,7 @@ features: [ 'AI - powered asteroid resource identification_satellite mission opt
 'Space traffic management_commercial space mission support' ];
 <<<<<<< HEAD
 popular: true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -797,6 +874,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 setup_time: '3 weeks';category: 'Space Technology';
 popular: true;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 category: 'Space Technology';
 real_service: true;
 technology: ['AI / ML, Computer Vision, Python, TensorFlow, Satellite imagery analysis'];
@@ -805,6 +886,7 @@ use_cases: ['Resource discovery_mission optimization', 'Debris tracking_traffic 
 roi: 'Average 700% ROI through optimized missions and resource discovery';
 <<<<<<< HEAD
 competitors: ['Maxar, Planet Labs, Airbus Defence and Space, Thales Alenia Space'];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -844,6 +926,10 @@ market_advantage: 'First platform to combine AI - powered resource discovery wit
 //Autonomous Systems Services {id: 'autonomous - systems - orchestration';
 competitors: ['Maxar, Planet Labs, Airbus Defence and Space, Thales Alenia Space'];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 //Autonomous Systems Services {
   id: 'autonomous - systems - orchestration';
@@ -859,6 +945,7 @@ features: [ 'Multi - vehicle autonomous coordinationAI - powered route optimizat
 'Real - time performance analytics_custom autonomous system integration' ];
 <<<<<<< HEAD
 popular: true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -894,6 +981,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 setup_time: '2 weeks';category: 'Autonomous Systems';
 popular: true;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 category: 'Autonomous Systems';
 real_service: true;
 technology: ['AI / ML, Computer Vision, Robotics, Python, TensorFlow, ROS'];
@@ -903,8 +994,8 @@ roi: 'Average 450% ROI through operational efficiency and safety improvements';
 <<<<<<< HEAD
 competitors: ['Waymo, Cruise, Argo AI, Aurora'];
 
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1031,21 +1122,30 @@ competitors: ['Waymo, Cruise, Argo AI, Aurora'];
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 customers: 89;
 rating: 4 && 4.7;
 reviews: 67;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { ServiceVariant } from '../types/service-variants',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1067,6 +1167,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { ServiceVariant } from '../types/service-variants';
 export interface ComprehensiveMicroSaasService {
   id: string, name: string,
@@ -1379,6 +1483,7 @@ market_advantage: 'First platform to provide comprehensive orchestration of mult
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
@@ -1412,3 +1517,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     const resp = await fetch(`${baseUrl}/api/dao/metrics`);
     const data = await resp && resp.json();
 
@@ -14,10 +15,13 @@
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     const resp = await fetch(`${baseUrl}/api/dao/metrics`);
     const data = await resp && resp.json();
 
 
+<<<<<<< HEAD
     const owner = process && process.env.GITHUB_OWNER;
     const repo = process && process.env.GITHUB_REPO;
     const token = process && process.env.GITHUB_TOKEN;
@@ -75,6 +79,8 @@ if ( {) {$2;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         content,
         message: 'chore (automation): weekly DAO metrics update',
         token
@@ -82,6 +88,7 @@ if ( {) {$2;
     }
 <<<<<<< HEAD
     return {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -122,6 +129,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+    if (owner && repo && token) {
+      await upsertFile({ owner, repo, path: 'data/dao/metrics.json', content, message: 'chore(automation): weekly DAO metrics update', token })
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
 =======
     return {}
@@ -141,6 +155,7 @@ if ( {) {$2;
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -201,3 +216,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 },
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+},
+
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

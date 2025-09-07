@@ -31,6 +31,7 @@ export default function LocationsPage() {return (<div className="min-h-screen pt
             +1 302 464 0950;
           </a>{" "}
 <<<<<<< HEAD
+<<<<<<< HEAD
           or email{" "}
           <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">
             kleber@ziontechgroup.com
@@ -43,6 +44,10 @@ export default function LocationsPage() {return (<div className="min-h-screen pt
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
           or email{" "}import React from './react';
+=======
+          or email{" "}
+import React from './react';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import Head from './next / head';
 export default /**;
  * LocationsPage - Function description;
@@ -83,6 +88,7 @@ function LocationsPage() {return (<div className="min - h-screen pt - 24 pb - 20
           .;
         </p>;
       </div>;
+<<<<<<< HEAD
     </div>)}<a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">;
             kleber@ziontechgroup.com;
           </a>;
@@ -92,3 +98,7 @@ function LocationsPage() {return (<div className="min - h-screen pt - 24 pb - 20
     </div>;
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </div>);
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

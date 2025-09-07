@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -12,11 +13,14 @@
 
 ;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export interface ModerationFlag {
 export interface ModerationFlag {;
 
 
 export interface ModerationFlag {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -36,6 +40,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string;
   contentId: string;export interface ModerationFlag  {export interface ModerationFlag  {export interface ModerationFlag  {id: string;
   contentId: string;
@@ -52,8 +59,13 @@ let flags: ModerationFlag[]  = [];export async function getFlagById (id: string)
   updatedAt: string;
   adminNotes?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export interface ModerationFlag  {id: string;
+=======
+export interface ModerationFlag {
+  id: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   content_id: string;
   content_type: 'post' | 'comment' | 'user';
   reason: string;
@@ -115,25 +127,34 @@ if (return undefined) {$2;
 }
 // Mock data storage - replace with actual database;
 let flags: ModerationFlag[] = [];
+<<<<<<< HEAD
 =======
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 ;
 export async function getFlagById (id: string): Promise < ModerationFlag | null> {
   return flags.find (flag => flag.id === id) || null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 export async function readAllFlags (): Promise < ModerationFlag[]> {
   return [...flags];
 
-<<<<<<< HEAD
 export async function getFlagById(id: string): Promise<ModerationFlag | null> {
   return flags.find((flag) => flag.id === id) || null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -195,6 +216,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 // Mock data storage - replace with actual database
@@ -205,6 +230,7 @@ export async function getFlagById(id: string): Promise<ModerationFlag | null> {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 =======
@@ -212,6 +238,11 @@ export async function getFlagById(id: string): Promise<ModerationFlag | null> {;
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 export async function getFlagById(id: string): Promise<ModerationFlag | null> {
   // Mock implementation - replace with actual database logic
@@ -252,6 +283,7 @@ let flags: ModerationFlag[] = [];
 export async function getFlagById(id: string): Promise<ModerationFlag | null> {
   return flags.find(flag => flag.id === id) |null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -260,6 +292,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 
 export async function readAllFlags(): Promise<ModerationFlag[]> {;
@@ -268,8 +303,11 @@ export async function readAllFlags(): Promise<ModerationFlag[]> {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 export async function createFlag(
   data: Partial<ModerationFlag>,
@@ -289,6 +327,7 @@ export async function createFlag(
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
     contentId: data.contentId || '',
@@ -301,6 +340,9 @@ export async function createFlag(
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     id: `flag_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
     content_id: data.content_id || '',
     content_type: data.content_type || 'post',
@@ -312,16 +354,26 @@ export async function createFlag(
   }
 ;
   flags.push (flag);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return flag;
 }
 
 export async function updateFlagStatus(
   id: string,
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   status: ModerationFlag["status"],
   adminNotes?: string,
 ): Promise<FlaggedContent | undefined> {
   const flag = await getFlagById(id);
   if (!flag) return undefined;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -372,12 +424,18 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   flag.status = status;
   flag.adminNotes = adminNotes || flag.adminNotes;
   flag.updatedAt = new Date().toISOString();
   await upsertFlag(flag);
   return flag;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -400,3 +458,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

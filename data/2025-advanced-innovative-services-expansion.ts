@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -27,6 +28,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import { ServiceVariant  } from '../types/service-variants';
 export interface AdvancedInnovativeService  {id: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+import { ServiceVariant } from '../types/service-variants';
+export interface AdvancedInnovativeService {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string;
   name: string;
   tagline: string;
@@ -800,6 +807,7 @@ export interface AdvancedInnovativeService  {id: string,name: string,tagline: st
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -807,18 +815,21 @@ export interface AdvancedInnovativeService  {id: string,name: string,tagline: st
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     website: string;
   }
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     website: string
   },
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -828,11 +839,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   customers: number;
   rating: number;
   reviews: number;
   benefits: string[];
   capabilities: string[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -863,6 +877,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
@@ -874,6 +891,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -895,6 +913,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 const contact = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+    id: 'ai-autonomous-devops-orchestrator'
+    name: 'AI Autonomous DevOps Orchestrator'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     tagline:
       'Self-healing DevOps with intelligent automation and predictive maintenance'
     price: '$1,299'
@@ -1935,6 +1959,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     ];
     market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy';
@@ -1985,6 +2010,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+
+    ];
+    market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy';
+
+    ];
+    market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy';
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     ];
     market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy';
@@ -2009,6 +2043,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -2019,6 +2054,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { ServiceVariant } from '../types/service-variants',;
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -2536,12 +2575,18 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
+=======
+
+  }
+];
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 ursor/fix-website-loading-errors-and-merge-6662
   }
@@ -2550,6 +2595,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedInnovativeService {;
   id: string,;
@@ -2651,6 +2697,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     benefits: [;
       '30% improvement in prediction accuracy',
       '50% reduction in modeling time',
@@ -2675,6 +2724,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 ];
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2713,3 +2763,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+  }
+];
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

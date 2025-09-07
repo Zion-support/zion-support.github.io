@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,6 +21,11 @@
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -29,6 +35,7 @@ const { execSync } = require('child_process');
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -47,6 +54,14 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const fs = require("fs");
 const path = require("path");
 const { exec } = require("child_process");
@@ -54,10 +69,17 @@ const { promisify } = require("util");
 
 const execAsync = promisify(exec);
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -79,6 +101,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 class MasterAutomation {
   constructor() {
     this.logsDir = path.join(__dirname, '../logs');
@@ -88,6 +117,7 @@ class MasterAutomation {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -102,6 +132,13 @@ class MasterAutomation {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   log(message) {
 
+=======
+
+
+  log(message) {
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 class MasterAutomation {}
   constructor() {}
     this.logFile = path.join(__dirname, 'logs', 'master-automation.log');
@@ -115,13 +152,19 @@ class MasterAutomation {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -131,6 +174,8 @@ class MasterAutomation {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   ensureLogsDir() {
     if (!fs.existsSync(this.logsDir)) {
@@ -139,6 +184,7 @@ class MasterAutomation {}
   }
 
   log(message, type = 'info') {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -159,6 +205,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
@@ -184,6 +233,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   async runCommand(command, description) {
@@ -203,20 +253,24 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
   async runCommand(command, description) {
   async runCommand(command, description) {
-
-
-
-
-  async runCommand(command, description) {
 =======
+
+  async runCommand(command, description) {
   async runCommand(command, description) {
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
+
+  async runCommand(command, description) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+
+
+
+
+
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -227,6 +281,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     try {
       this.log(`Running: ${description}`);
       const output = execSync(command, {
@@ -238,12 +295,26 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    try {
+      const { stdout, stderr } = await execAsync(command, { 
+        cwd: process.cwd(), 
+        timeout: 30000, 
+        ...options 
+      });
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -257,6 +328,11 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   };
   async runCommand(command, options = {}) {}
     try {}
@@ -267,20 +343,18 @@ main
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 class MasterAutomation {
   constructor() {
     this.logFile = path.join(__dirname, "logs", "master-automation.log");
     this.pm2Processes = ["error-monitor", "lint-fixer", "build-monitor", "git-automation"];
   }
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-  log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;
-    console.log(logMessage.trim());
-    fs.appendFileSync(this.logFile, logMessage);
-  }
 
+<<<<<<< HEAD
   async runCommand(command, options = {}) {
     try {
       const { stdout, stderr } = await execAsync(command, {
@@ -290,10 +364,17 @@ class MasterAutomation {
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       return { success: true, stdout, stderr };
     } catch (error) {}
       this.log(`Command failed: ${command} - ${error.message}`);
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       return { 
         success: false, 
         stdout: error.stdout || "", 
@@ -383,9 +464,14 @@ class MasterAutomation {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       this.log(`✅ ${description} completed successfully`);
       return { success: true, output };
     } catch (error) {
@@ -393,6 +479,7 @@ class MasterAutomation {
       return { success: false, error: error.message };
     }
   }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -442,6 +529,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       }
     }
 
@@ -453,12 +544,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       }
     } else {
       this.log("Failed to get PM2 process list");
       return [];
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -474,6 +569,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   async performHealthCheck() {
     this.log("Performing health check.");
     // Check if PM2 is running
@@ -481,6 +579,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     if (!pm2Status) {
       this.log("PM2 is not running, attempting to start processes.");
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
       return {}
         success: false,
@@ -588,10 +691,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     const pm2Status = await this.checkPM2Status();
     if (!pm2Status) {}
       this.log('PM2 is not running, attempting to start processes...');
+<<<<<<< HEAD
 
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      await this.startPM2Processes();
+      return;
+    };
+    // Check individual processes;
+    const processes = await this.monitorProcesses();
+    const expectedProcesses = this.pm2Processes.length;
+    const runningProcesses = processes.length;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     if (runningProcesses < expectedProcesses) {
       this.log(`Only ${runningProcesses}/${expectedProcesses} processes running, restarting.`);
       await this.restartPM2Processes();
@@ -601,6 +715,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   async runQualityChecks() {
     this.log('🔍 Running quality checks...');
@@ -734,8 +851,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       },
     };
 
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -749,6 +866,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     if (runningProcesses < expectedProcesses) {}
       this.log()
@@ -771,8 +891,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         "buildMonitor": await this.getPM2Logs('build-monitor', 20),
         "gitAutomation": await this.getPM2Logs('git-automation', 20)}};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       return { 
         success: false, 
         stdout: error.stdout || "", 
@@ -851,8 +976,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     const pm2Status = await this.checkPM2Status();
     if (!pm2Status) {
       this.log("PM2 is not running, attempting to start processes.");
+<<<<<<< HEAD
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       await this.startPM2Processes();
       return;
     }
@@ -862,6 +990,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     const expectedProcesses = this.pm2Processes.length;
     const runningProcesses = processes.length;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     if (runningProcesses < expectedProcesses) {
@@ -910,6 +1039,29 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         gitAutomation: await this.getPM2Logs("git-automation", 20)
       }
     };
+=======
+    if (runningProcesses < expectedProcesses) {}
+      this.log()
+        `Only ${runningProcesses}/${expectedProcesses} processes running, restarting...``
+      );
+      await this.restartPM2Processes();
+    } else {}
+      this.log('All processes are running normally');
+    };
+  };
+  async generateReport() {}
+    this.log('Generating automation report...');
+
+    const report = {}
+      "timestamp": new Date().toISOString(),
+      "processes": await this.monitorProcesses(),
+      "logs": {}
+        errorMonitor: await this.getPM2Logs('error-monitor', 20),
+        "lintFixer": await this.getPM2Logs('lint-fixer', 20),
+        "buildMonitor": await this.getPM2Logs('build-monitor', 20),
+        "gitAutomation": await this.getPM2Logs('git-automation', 20)}};
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
@@ -935,8 +1087,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     this.log(`📄 Report saved to: ${reportFile}`);
     return report;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
   async start() {
 
@@ -957,8 +1113,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       fs.mkdirSync(logsDir, { recursive: true });
     }
     // Start PM2 processes
+<<<<<<< HEAD
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   };
   async start() {}
     this.log('Master Automation started');
@@ -974,6 +1133,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     // Perform initial health check;
     await this.performHealthCheck();
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     // Set up periodic health checks every 30 minutes
@@ -1149,6 +1309,8 @@ if (require.main === module) {
       automation.start().catch(error => {
         console.error("Master Automation failed: ", error);
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     // Set up periodic health checks every 30 minutes;
     setInterval()
@@ -1180,6 +1342,7 @@ if (require.main === module) {}
 
   switch (command) {}
     case 'start':
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1231,10 +1394,16 @@ if (require.main === module) {
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      automation.start().catch(error => {})
+        console.error('Master Automation "failed": ', error);
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         process.exit(1);
       }
 });
       break;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     case "stop":
@@ -1243,10 +1412,16 @@ if (require.main === module) {
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+    case 'stop':
+      automation.stop().catch(error => {})
+        console.error('Failed to stop Master "Automation": ', error);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         process.exit(1);
       }
 });
       break;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     case "restart":
@@ -1254,11 +1429,17 @@ if (require.main === module) {
         console.error("Failed to restart processes: ", error);
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    case 'restart':
+      automation.restartPM2Processes().catch(error => {})
+        console.error('Failed to restart "processes": ', error);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
         process.exit(1);
       }
 });
       break;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     case "status":
@@ -1266,11 +1447,17 @@ if (require.main === module) {
         console.error("Failed to get status: ", error);
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    case 'status':
+      automation.monitorProcesses().catch(error => {})
+        console.error('Failed to get "status": ', error);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
         process.exit(1);
       }
 });
       break;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     case "report":
@@ -1278,15 +1465,24 @@ if (require.main === module) {
         console.error("Failed to generate report: ", error);
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    case 'report':
+      automation.generateReport().catch(error => {})
+        console.error('Failed to generate report: ', error);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
         process.exit(1);
       }
 });
       break;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     default:
       console.log("Usage: node master-automation.js [start|stop|restart|status|report]");
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 const fs = require('fs');
@@ -1354,9 +1550,14 @@ class MasterAutomation {
     this.log('✅ Build process completed successfully');
     return { success: true, results };
   }
+<<<<<<< HEAD
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   async runQualityChecks() {
     this.log('🔍 Running quality checks...');
@@ -1370,6 +1571,7 @@ main
     for (const check of checks) {
       const result = await this.runCommand(check.command, check.description);
       results.push({ ...check, result });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1393,6 +1595,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
 
     this.log('✅ Quality checks completed');
@@ -1439,6 +1643,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     return { success: true, results };
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -1479,6 +1684,76 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+    }
+
+    this.log('✅ Quality checks completed');
+    return { success: true, results };
+  }
+
+  async runAutomationScripts() {
+    this.log('🤖 Running automation scripts...');
+
+    const scripts = [
+      {
+        command: 'node automation/ai-intelligent-code-analyzer.cjs',
+        description: 'AI Code Analyzer',
+      },
+      {
+        command: 'node automation/intelligent-git-workflow.cjs',
+        description: 'Git Workflow Automation',
+      },
+      {
+        command: 'node automation/advanced-performance-optimizer.cjs',
+        description: 'Performance Optimizer',
+      },
+      {
+        command: 'node automation/automated-test-runner.cjs',
+        description: 'Automated Test Runner',
+      },
+      {
+        command: 'node automation/security-auditor.cjs',
+        description: 'Security Auditor',
+      },
+      {
+        command: 'node automation/performance-monitor.cjs',
+        description: 'Performance Monitor',
+      },
+    ];
+
+    const results = [];
+    for (const script of scripts) {
+      const result = await this.runCommand(script.command, script.description);
+      results.push({ ...script, result });
+    }
+
+    this.log('✅ Automation scripts completed');
+    return { success: true, results };
+  }
+
+
+  async generateReport() {
+    this.log('📊 Generating automation report...');
+
+    const report = {
+      timestamp: new Date().toISOString(),
+      build: await this.runBuildProcess(),
+      quality: await this.runQualityChecks(),
+      automation: await this.runAutomationScripts(),
+      summary: {
+        totalScripts: 6,
+        successfulScripts: 0,
+        failedScripts: 0,
+      },
+    };
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     if (runningProcesses < expectedProcesses) {}
       this.log()
         `Only ${runningProcesses}/${expectedProcesses} processes running, restarting...``
@@ -1501,9 +1776,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     const reportFile = path.join(__dirname, "logs", "automation-report.json");
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     // Calculate summary
     if (report.build.success) report.summary.successfulScripts++;
     else report.summary.failedScripts++;
@@ -1523,16 +1802,22 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
     this.log(`📄 Report saved to: ${reportFile}`);
     return report;
   }
-<<<<<<< HEAD
 
+
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   async start() {
@@ -1558,6 +1843,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  async start() {
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
     this.log(`📄 Report saved to: ${reportFile}`);
@@ -1569,6 +1861,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1586,6 +1879,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     this.log("Master Automation started");
     // Ensure logs directory exists
     const logsDir = path.join(__dirname, "logs");
@@ -1619,14 +1916,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     this.log('🎯 Starting Master Automation System...');
     const report = await this.generateReport();
     this.log('🏁 Master Automation completed');
     return report;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -1645,6 +1949,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
 
   async status() {
@@ -1695,15 +2004,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     this.log('🎯 Starting Master Automation System...');
     const report = await this.generateReport();
     this.log('🏁 Master Automation completed');
     return report;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1717,6 +2031,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   }
 
@@ -1813,6 +2130,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 ursor/integrate-build-improve-and-re-verify-8f7d
 
@@ -1821,11 +2142,14 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
-// CLI interface
+<<<<<<< HEAD
 =======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+// CLI interface
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+// CLI interface
+
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1835,11 +2159,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 if (require.main === module) {
   const automation = new MasterAutomation();
   const command = process.argv[2];
 
   switch (command) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1865,6 +2197,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     case "start":
       automation.start().catch(error => {
         console.error("Master Automation failed: ", error);
@@ -1931,9 +2269,13 @@ if (require.main === module) {}
 module.exports = MasterAutomation;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     case 'start':
       automation
         .start()
@@ -1959,12 +2301,18 @@ module.exports = MasterAutomation;
         });
       break;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     default:
       console.log('Usage: node master-automation.cjs [start|status]');
 
       process.exit(1);
 =======
+=======
+    default:
+      console.log('Usage: node master-automation.cjs [start|status]');
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     default: console.log('Usage: node master-automation.cjs [start|status]'); process.exit(1);
 
     default:
@@ -1983,6 +2331,7 @@ module.exports = MasterAutomation;
       console.log('Usage: node master-automation.cjs [start|status]');
 
       process.exit(1);
+<<<<<<< HEAD
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
@@ -1996,6 +2345,17 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 <<<<<<< HEAD
+=======
+      break;
+  }
+}
+
+module.exports = MasterAutomation;
+
+
+module.exports = MasterAutomation;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 <<<<<<< HEAD
     default: 
@@ -2005,6 +2365,7 @@ main
   }
 }
 module.exports = MasterAutomation;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -2018,6 +2379,10 @@ module.exports = MasterAutomation;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     default: console.log()
         'Usage: node master-automation.js [start|stop|restart|status|report]'
       );
@@ -2025,6 +2390,7 @@ module.exports = MasterAutomation;
   };
 };
 module.exports = MasterAutomation;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2066,3 +2432,23 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+module.exports = MasterAutomation;
+
+
+
+
+
+
+
+
+
+
+module.exports = MasterAutomation;
+
+
+module.exports = MasterAutomation;
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

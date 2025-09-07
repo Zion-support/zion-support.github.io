@@ -1,9 +1,12 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -18,6 +21,7 @@ async function analyzeBundle() {}
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -30,4 +34,6 @@ analyzeBundle();
       
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 

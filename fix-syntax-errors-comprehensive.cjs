@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 // Function to fix common syntax errors
@@ -5,6 +6,21 @@ function fixSyntaxErrors(content, filePath) {
     let fixes = 0;
     let originalContent = content;
 =======
+=======
+#!/usr/bin/env node
+
+/**
+ * Comprehensive Syntax Error Fixer for Zion Tech Group
+ * Fixes all known syntax errors in the codebase
+ */
+
+const fs = require('fs');
+const path = require('path');
+
+console.log('🔧 Comprehensive Syntax Error Fixer');
+console.log('=');
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const fixes = [];
 
 function fixFile(filePath, description, fixFunction) {
@@ -17,6 +33,7 @@ function fixFile(filePath, description, fixFunction) {
     
 console.log('🔧 Starting comprehensive syntax error fixing...');
 
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 
@@ -45,6 +62,36 @@ function fixSyntaxErrors(filePath) {
 
 
 <<<<<<< HEAD
+=======
+// Function to fix common syntax errors
+function fixSyntaxErrors(content, filePath) {
+    let fixes = 0;
+    let originalContent = content;
+
+    // Fix triple quotes in imports
+    content = content.replace(/import\s+[^;]+;'''/g, (match) => {
+        fixes++;
+        return match.replace(/;'''$/, ';');
+    });
+
+    // Fix "Reac t" -> "React"
+    content = content.replace(/Reac\s+t/g, 'React');
+    fixes += (originalContent.match(/Reac\s+t/g) || []).length;
+
+    // Fix unterminated string constants
+    content = content.replace(/from\s+'react';'''/g, "from 'react';");
+    content = content.replace(/from\s+'[^']+';'''/g, (match) => {
+        fixes++;
+        return match.replace(/;'''$/, ';');
+    });
+
+    // Fix malformed JSX closing tags
+    content = content.replace(/<\/HTMLDivElement>/g, '');
+    content = content.replace(/<\/HTMLInputElement>/g, '');
+    content = content.replace(/<\/HTMLParagraphElement>/g, '');
+    content = content.replace(/<\/h3>/g, '');
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     // Fix malformed return statements
     content = content.replace(/return\s*\(\s*<div[^>]*>\s*\/\*[^*]*\*\/\s*<div[^>]*>\s*<div[^>]*><\/div>\s*<div[^>]*>\s*<div[^>]*>\s*<h1[^>]*>([^<]*)<\/h1>\s*<\/div>\s*<p[^>]*>([^<]*)<\/p>\s*<p[^>]*>([^<]*)<\/p>\s*<div[^>]*>\s*<Link[^>]*>([^<]*)<\/Link>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*\)/g, (match, title, desc1, desc2, linkText) => {
         fixes++;
@@ -72,8 +119,15 @@ function fixSyntaxErrors(filePath) {
         </div>
     );`;
     });
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     // Fix malformed CSS in JSX
     content = content.replace(/@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, '');
@@ -86,10 +140,14 @@ function fixSyntaxErrors(filePath) {
 
     // Fix missing semicolons
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    content = content.replace(/([^;}])\s*$/gm, '$1;');
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     // Fix malformed object destructuring
     content = content.replace(/const\s+\{\s*([^}]+)\s*\}\s*=\s*useAuth\(\);\s*const\s+\[([^\]]+)\]\s*=\s*useState\(\[\]\);\s*const\s+\[([^\]]+)\]\s*=\s*useState\(true\);\s*const\s+navigate\s*=\s*useNavigate\(\);\s*useEffect\(\(\)\s*=>\s*\{[^}]*\},\s*\[user\]\);\s*const\s+handleRequestHire\s*=\s*\([^)]*\)\s*=>\s*\{[^}]*\};\s*return\s*\(<div[^>]*>([^<]*)<\/div>\);\s*}/g, (match, user, savedTalents, isLoading, content) => {
@@ -124,6 +182,7 @@ fixFile('pages/_app.tsx', 'Button style syntax', (content) => {
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     content = content.replace(/([^;}])\s*$/gm, '$1;');
 =======
     // Fix missing semicolons at end of statements
@@ -141,6 +200,57 @@ ursor/automate-test-improve-and-merge-code-59d5
 
 <<<<<<< HEAD
 =======
+=======
+
+
+    // Fix missing semicolons at end of statements
+    content = content.replace(/([^;}])\s*$/gm, '$1;');
+
+// Fix index.tsx JSON-LD syntax
+fixFile('pages/index.tsx', 'JSON-LD script syntax', (content) => {
+    return content.replace(
+        /"sameAs":\s*\[contact\.site\]\s*\}\)\s*\}\s*\/>/g,
+        '"sameAs": [contact.site]\n            })\n          }}\n        />'
+    );
+});
+
+// Fix ErrorBoundary syntax
+fixFile('components/ErrorBoundary.tsx', 'ErrorBoundary class syntax', (content) => {
+    let fixed = content.replace(
+        /return\s*\{\s*hasError:\s*true,\s*error\s*\}\s*public\s*componentDidCatch/g,
+        'return { hasError: true, error };\n  }\n  \n  public componentDidCatch'
+    );
+    
+    useEffect(() => {
+        const fetchSavedTalents = async () => {
+            if (!user) return;
+            try {
+                setIsLoading(true);
+                // Fetch saved talents logic here
+            } catch (error) {
+                console.error('Error fetching saved talents:', error);
+            } finally {
+                setIsLoading(false);
+            }
+        };
+        fetchSavedTalents();
+    }, [user]);
+    
+    const handleRequestHire = (talentId) => {
+        // Handle hire request logic here
+    };
+    
+    return (
+        <div className="min-h-screen bg-gray-50">
+            ${content}
+        </div>
+    );`;
+    });
+
+    return { content, fixes };
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 
 // Function to process a single file
@@ -200,7 +310,12 @@ async function main() {
         
 
 
+<<<<<<< HEAD
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     fixed = fixed.replace(
         /return\s*this\.props\.children;\s*\}\s*export\s*default/g,
         'return this.props.children;\n  }\n}\n\nexport default'
@@ -209,7 +324,83 @@ async function main() {
     return fixed;
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+// Fix PerformanceMonitor syntax
+fixFile('components/PerformanceMonitor.tsx', 'PerformanceMonitor syntax', (content) => {
+    // Replace the entire file with correct syntax
+    return `import { useEffect } from 'react';
+
+const PerformanceMonitor: React.FC = () => {
+  useEffect(() => {
+    // Monitor Core Web Vitals
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      // Monitor Largest Contentful Paint (LCP)
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'largest-contentful-paint') {
+            console.log('LCP:', entry.startTime);
+          }
+        }
+      });
+      
+      try {
+        observer.observe({ entryTypes: ['largest-contentful-paint'] });
+      } catch (e) {
+        // Fallback for browsers that don't support LCP
+      }
+
+      // Monitor First Input Delay (FID)
+      const fidObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'first-input') {
+            console.log('FID:', entry.processingStart - entry.startTime);
+          }
+        }
+      });
+
+      try {
+        fidObserver.observe({ entryTypes: ['first-input'] });
+      } catch (e) {
+        // Fallback for browsers that don't support FID
+      }
+
+      // Monitor Cumulative Layout Shift (CLS)
+      let clsValue = 0;
+      const clsObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (!(entry as any).hadRecentInput) {
+            clsValue += (entry as any).value;
+          }
+        }
+        console.log('CLS:', clsValue);
+      });
+
+      try {
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
+      } catch (e) {
+        // Fallback for browsers that don't support CLS
+      }
+
+      return () => {
+        observer.disconnect();
+        fidObserver.disconnect();
+        clsObserver.disconnect();
+      };
+    }
+  }, []);
+
+  return null; // This component doesn't render anything
+};
+
+export default PerformanceMonitor;`;
+});
+
+console.log('\n📊 Fix Summary');
+console.log('=');
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 console.log(`Total fixes applied: ${fixes.length}`);
 
 if (fixes.length > 0) {
@@ -222,7 +413,11 @@ if (fixes.length > 0) {
 }
 
 console.log('\n🎯 Syntax error fixing completed!');
+<<<<<<< HEAD
 origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     if (openBraces > closeBraces) {
       const missingBraces = openBraces - closeBraces;
@@ -233,8 +428,11 @@ origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
     // Fix missing closing parentheses
     const openParens = (content.match(/\(/g) || []).length;
     const closeParens = (content.match(/\)/g) || []).length;
+<<<<<<< HEAD
 ursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     if (openParens > closeParens) {
       const missingParens = openParens - closeParens;
@@ -297,6 +495,7 @@ ursor/automate-test-improve-and-merge-code-59d5
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 function processDirectory(dirPath) {
@@ -332,3 +531,7 @@ console.log(`Fixed ${fixedCount} files`);
 ursor/automate-test-improve-and-merge-code-59d5
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+console.log('\n🎯 Syntax error fixing completed!');
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

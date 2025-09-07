@@ -1,4 +1,5 @@
 <<<<<<< HEAD:src_backup/components/ui/steps.tsx
+<<<<<<< HEAD:src_backup/components/ui/steps.tsx
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { CheckIcon } from 'lucide-react';
@@ -11,6 +12,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   className?: string
 }
 export function Step({
+=======
+  className?: string
+}
+export function Step({
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ui/steps.tsx
 status;
   label;
   description;
@@ -30,6 +37,7 @@ interface StepProps {
 export function Step({
 
 
+<<<<<<< HEAD:src_backup/components/ui/steps.tsx
 
   className}: StepProps) {
   return (
@@ -38,6 +46,13 @@ export function Step({
         {
           "opacity-60": status === "incomplete"},
 
+=======
+  className}: StepProps) {
+  return (
+    <li
+
+      className={cn(
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ui/steps.tsx
 
 
         className
@@ -45,10 +60,17 @@ export function Step({
     >
       <div
         className={cn(
+<<<<<<< HEAD:src_backup/components/ui/steps.tsx
 
           "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium"          {
 
 
+=======
+
+
+          "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium"          {
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ui/steps.tsx
             "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":
               status === "incomplete"
             "bg-zion-blue border-zion-cyan text-white":
@@ -60,6 +82,7 @@ export function Step({
             "bg-zion-blue border-zion-cyan text-white":
               status === "current",
             "bg-zion-purple border-zion-purple text-white":
+<<<<<<< HEAD:src_backup/components/ui/steps.tsx
               status === "complete",}
         )}>;
 
@@ -70,6 +93,8 @@ export function Step({
             "bg-zion-blue border-zion-cyan text-white":
               status === "current",
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ui/steps.tsx
 
             "bg-zion-purple border-zion-purple text-white":
               status === "complete"}
@@ -123,17 +148,24 @@ export function Step() {return (<li;
         )}
       >;
 <<<<<<< HEAD:src_backup/components/ui/steps.tsx
+<<<<<<< HEAD:src_backup/components/ui/steps.tsx
         {status === "complete" ? (;
           <CheckIcon className="h-5 w-5" />;
         ) : (;
           <span>;
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ui/steps.tsx
 
 
 
             {/* Step number would go here */}
+<<<<<<< HEAD:src_backup/components/ui/steps.tsx
           </span>;
 
+=======
+          </span>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ui/steps.tsx
         )}
 
 
@@ -152,6 +184,7 @@ export function Step() {return (<li;
             "text-zion-slate-light": status === "incomplete"
             "text-white": status === "current" || status === "complete"})}>;
           {label}
+<<<<<<< HEAD:src_backup/components/ui/steps.tsx
         </h3>
         {description && (
           <p className="text-sm text-zion-slate-light">{description}</p>
@@ -166,6 +199,8 @@ export function Step() {return (<li;
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ui/steps.tsx
 interface StepsProps {
   currentStep: number
   className?: string
@@ -173,6 +208,10 @@ interface StepsProps {
 }
 export function Steps({ currentStep, className, children }: StepsProps) {
   const childrenArray = React.Children.toArray(children)
+<<<<<<< HEAD:src_backup/components/ui/steps.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ui/steps.tsx
 
 ;
 interface StepsProps {;
@@ -184,7 +223,10 @@ interface StepsProps {;
 export function Steps({ currentStep, className, children }: StepsProps) {
   const childrenArray = React.Children.toArray(children),
   
+<<<<<<< HEAD:src_backup/components/ui/steps.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ui/steps.tsx
 
 
 
@@ -201,24 +243,36 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           if (index < currentStep) status = "complete",
           if (index === currentStep) status = "current",
           
+<<<<<<< HEAD:src_backup/components/ui/steps.tsx
 
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ui/steps.tsx
           if (!React.isValidElement(child)) return null,
           
           let status: "incomplete" | "current" | "complete" = "incomplete",
           if (index < currentStep) status = "complete",
           if (index === currentStep) status = "current",
           
+<<<<<<< HEAD:src_backup/components/ui/steps.tsx
       className;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+      className;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ui/steps.tsx
           return React.cloneElement(child as React.ReactElement<StepProps>, {
             status})
         })}
       </ol>
 
 
+<<<<<<< HEAD:src_backup/components/ui/steps.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ui/steps.tsx
       
 
 
@@ -244,8 +298,11 @@ export function Steps(): any ({ currentStep, className, children }: StepsProps) 
 }/> </div> </div> </div>) 
 }"};
 ;
+<<<<<<< HEAD:src_backup/components/ui/steps.tsx
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ui/steps.tsx
 ;
 export function Steps({ currentStep, className, children }: StepsProps) {;
   const childrenArray = React.Children.toArray(children),;
@@ -297,6 +354,7 @@ export function Steps() {const childrenArray  = React.Children.toArray(children)
 <<<<<<< HEAD:src_backup/components/ui/steps.tsx
             style={{;
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
+<<<<<<< HEAD:src_backup/components/ui/steps.tsx
 
 
 
@@ -394,6 +452,17 @@ if (status = "current") {$2;
 }
 ;
 
+=======
+          />;
+        </div>;
+      </div>;
+    </div>;
+  );
+
+}
+;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ui/steps.tsx
           />
         </div>
       </div>
@@ -402,6 +471,7 @@ if (status = "current") {$2;
 
 }/> </div> </div> </div>) ;
 }"
+<<<<<<< HEAD:src_backup/components/ui/steps.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     </div>)}/> </div> </div> </div>)}"}
@@ -411,3 +481,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
   )}/> </div> </div> </div>)}";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ui/steps.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ui/steps.tsx

@@ -1,9 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import Link from 'next/link';
 import { CheckCircle2, Circle, PartyPopper } from 'lucide-react';
 export type OnboardingStep = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+export type OnboardingStep = {;
+  id: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   label: string;
   completed: boolean
 };
@@ -21,9 +26,18 @@ export type OnboardingStep = any;label: string;
 };
 
 function computePercentage(steps: OnboardingStep[]): number {
+<<<<<<< HEAD
   if (!steps || steps.length === 0) return 0;
 const completedCount = steps.filter(s => s.completed).length;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  if (!steps |steps.length === 0) return 0;
+  const completedCount = steps.filter(s => s.completed).length;
+
+function computePercentage(steps: OnboardingStep[]): number {
+  if (!steps |steps.length === 0) return 0;
+  const completedCount = steps.filter(s => s.completed).length;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return Math.round((completedCount / steps.length) * 100);
   title
   steps
@@ -47,8 +61,50 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Progress Bar */}
       <div className='mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden'>
         <div
+<<<<<<< HEAD
           className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`}
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+          className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`}          style={{ width: `${percentage}%` }}
+export default function OnboardingProgressCard({ title, steps, highlightColorClass = 'from-neon-green to-neon-blue' }: OnboardingProgressCardProps) {;
+  const percentage = computePercentage(steps);
+  const allDone = percentage === 100;
+  const firstIncomplete = steps.find((s) => !s.completed && s.ctaHref && s.ctaLabel)
+};
+
+function computePercentage(steps: OnboardingStep[]): number {
+  if (!steps || steps.length === 0) return 0;
+
+function computePercentage(): any (steps: OnboardingStep[]): number {;
+  if (!steps || steps && steps.length === 0) return 0;
+  const completedCount = steps && steps.filter(s => s && s.completed).length;
+  return Math && Math.round((completedCount / steps && steps.length) * 100);  ctaLabel?: string;
+  ctaHref?: string
+};
+
+export type OnboardingProgressCardProps = {;
+  title: string,;
+  steps: OnboardingStep[],;
+  highlightColorClass?: string
+};
+
+function computePercentage(): any (steps: OnboardingStep[]): number {;
+  if (!steps || steps && steps.length === 0) return 0;
+  const completedCount = steps && steps.filter(s => s && s.completed).length;
+  return Math && Math.round((completedCount / steps && steps.length) * 100);
+
+export default function OnboardingProgressCard(): any ({;
+  title,;
+  steps,;
+  highlightColorClass = 'from-neon-green to-neon-blue',;
+}: OnboardingProgressCardProps) {;
+  const percentage = computePercentage(steps);
+  const allDone = percentage === 100;
+
+  const firstIncomplete = steps && steps.find(;
+    s => !s && s.completed && s && s.ctaHref && s && s.ctaLabel;
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
     <div className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 p-5 shadow-sm">
       <div className="flex items-center justify-between">
@@ -195,12 +251,23 @@ export default function OnboardingProgressCard() {const percentage = computePerc
             <a className="inline - flex items - center justify - center px - 4 py - 2 rounded - lg text - sm font - medium text - black dark:text - white bg - gradient - to - r from - neon - blue to - neon - green shadow - neon-blue hover:opacity-90 transition">;
               {first_incomplete.cta_label}
             </a>;
+<<<<<<< HEAD
           </Link>;className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`}return (<div className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 p-5 shadow-sm">;
       <div className="flex items-center justify-between">;
         <h3 className="text-lg font-semibold">{title}</h3>;
         <div className="text-sm opacity-75">{percentage}% complete</div>;
       </div>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+          </Link>;
+
+  return (
+    <div className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 p-5 shadow-sm">
+      <div className="flex items-center justify-between">
+        <h3 className="text-lg font-semibold">{title}</h3>
+        <div className="text-sm opacity-75">{percentage}% complete</div>
+      </div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       {/* Progress Bar */}
       <div className="mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden">;
         <div;
@@ -216,9 +283,13 @@ export default function OnboardingProgressCard() {const percentage = computePerc
           <span className='text-sm'>All steps completed — great job!</span>
         </div>
       ) : null}
+<<<<<<< HEAD
       {/* Checklist */}
 <ul className='mt-4 space-y-2'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      <ul className='mt-4 space-y-2'>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         {steps.map(step => (
           <li key={step.id} className='flex items-center justify-between'>
             <div className='flex items-center gap-2'>
@@ -250,6 +321,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
             {!step.completed && step.ctaHref && step.ctaLabel ? (
               <Link href={step.ctaHref}>
+<<<<<<< HEAD
                 <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition'>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -281,11 +353,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <Link href={firstIncomplete.ctaHref!}>;
             <a className='inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark:text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition'>                  {step.ctaLabel}                <a className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
+
+                  {step.ctaLabel}
+                </a>
+              </Link>
+            ) : null}
+          </li>
+        ))}
+      </ul>
+      {/* Primary CTA for next step */}
+      {!allDone && firstIncomplete ? (
+        <div className="mt-5">
+          <Link href={firstIncomplete.ctaHref!}>
+            <a className="inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark:text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               {firstIncomplete.ctaLabel}
             </a>;
           </Link>;
         </div>;
       ) : null}
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -293,6 +382,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 =======
     </div>;
+=======
+    </div>
+}
+}
+  );
+}
+  )
+
+}
+
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 }
   )}

@@ -1,10 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from 'next/link';
 import type { GetServerSideProps } from 'next';
 import type { Vendor } from '../../utils/vendor-types';
 type Props = any;
 export default function VendorsPage({ vendors }: Props) {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            Apply as Vendor;
+          </a>;
+        </Link>;
+      </div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
     <div className="space-y-6">;
 =======
@@ -34,6 +41,7 @@ export default function VendorsPage() {return (<div className="space-y-6">;
                 ) : (;
                   <div className="w-12 h-12 rounded bg-gray-100 dark:bg-gray-900" />;
                 )}
+<<<<<<< HEAD
                 <div>
                   <div className='font-medium flex items-center gap-2'>
 =======
@@ -61,6 +69,9 @@ export default function VendorsPage() {return (<div className="space-y-6">;
         Powered by Zion • Co-brand available
       </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        ))}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     </div>
 =======
       </div>;
@@ -79,6 +90,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  );
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
+const { listVendors } = await import('../../utils/vendor-store');
+  const vendors = listVendors();
+  return { props: { vendors } }
+};      <div className="text-center text-xs text-gray-500">Powered by Zion • Co-brand available</div>
+    </div>
+export const getServerSideProps: GetServerSideProps<Props> = async () => {;
+  const { listVendors } = await import('../../utils/vendor-store');
+  const vendors = listVendors();
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   );
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
@@ -149,5 +173,14 @@ function VendorsPage() {return (<div className="space - y-6">;
     </div>)}
 export const getServerSideProps: GetServerSideProps < Props> = async () => {const { list_vendors } = await import ('../../utils / vendor - store')const vendors = list_vendors ()return { props: { vendors } }
 }  return { props: { vendors } }
+<<<<<<< HEAD
 }}export const getServerSideProps: GetServerSideProps<Props> = async () => {const { listVendors } = await import('../../utils/vendor-store')const vendors = listVendors()return { props: { vendors } }}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+}
+;
+
+};
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

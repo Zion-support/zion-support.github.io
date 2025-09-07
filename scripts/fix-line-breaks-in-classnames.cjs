@@ -11,7 +11,11 @@ console.log(' Fixing line breaks in className attributes...')
 // console.log(` Fixed: ${path.relative('/workspace'`})
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 console.log('✨ Line break fixes completed!')
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+console.log('✨ Line break fixes completed!')
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

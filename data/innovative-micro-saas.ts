@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -20,6 +21,12 @@ export interface InnovativeMicroSaas  {id: string;name: string;
 export interface InnovativeMicroSaas {
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  id: string;
+
+export interface InnovativeMicroSaas {
+id: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   name: string;
   tagline: string;
   price: string;
@@ -258,6 +265,9 @@ export interface InnovativeMicroSaas  {export interface InnovativeMicroSaas  {}]
   variant: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     website: string;
   }
@@ -277,6 +287,7 @@ export interface InnovativeMicroSaas  {export interface InnovativeMicroSaas  {}]
     reviews: 1600
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -369,16 +380,22 @@ export interface InnovativeMicroSaas  {export interface InnovativeMicroSaas  {}]
   {
     id: 'smart-contract-automation',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     name: 'Smart Contract Automation',
     tagline: 'Automate business processes with smart contracts',
     price: '$149',
     period: '/month',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     description:;
       'Platform for creating and deploying smart contracts to automate business processes, payments, and agreements without intermediaries.',
     features: [;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -396,6 +413,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Visual smart contract builder',
       'Multi-blockchain support',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+      'Visual smart contract builder',
+      'Multi - blockchain support',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Template library',
       'Automated execution',
       'Payment processing',
@@ -407,6 +429,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
     popular: true,
     icon: '⚡',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -433,6 +456,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     color: 'from-green-500 to-emerald-600',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/smart-contract-automation',
@@ -446,6 +473,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     realService: true,
     technology: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -454,16 +482,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Blockchain',
       'Smart Contracts',
       'Solidity',
       'React',
+<<<<<<< HEAD
       'Node.js',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      'Node && Node.js',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Web3',
       'Ethereum',
       'Polygon'
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -478,6 +513,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     integrations: [;
     integrations: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'DocuSign',
       'Adobe Sign',
       'Salesforce',
@@ -487,6 +524,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'MetaMask',
       'WalletConnect',
     ],
+<<<<<<< HEAD
     useCases: [
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
@@ -497,6 +535,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    use_cases: [;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Legal agreements',
       'Real estate transactions',
       'Insurance claims',
@@ -506,6 +549,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
     roi: 'Average customer sees 400% ROI within 6 months through reduced costs and improved efficiency.',
     competitors: ['OpenLaw', 'Clause', 'Agrello', 'Lexon', 'Monax'],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -533,6 +577,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -546,6 +593,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.9,
     reviews: 900
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -587,6 +635,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Automatic categorization',
       'Trend identification',
       'Real - time alerts',
+=======
+
+
+  {
+      'Automatic categorization',
+      'Trend identification',
+      'Real - time alerts',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     marketSize: '$1.2B smart contract market',
     growthRate: '200% annual growth',
     variant: 'quantum-blockchain',
@@ -618,7 +675,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Automatic categorization',
       'Trend identification',
       'Real-time alerts',
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Custom dashboards',
       'Integration with CRM',
       'Export capabilities',
@@ -627,6 +688,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
     popular: true,
     icon: '💬',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -650,6 +712,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     technology: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     color: 'from-purple-500 to-pink-600',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-powered-customer-feedback-analyzer',
@@ -663,6 +728,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     realService: true,
     technology: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -671,16 +737,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Natural Language Processing',
       'Machine Learning',
       'Sentiment Analysis',
       'React',
+<<<<<<< HEAD
       'Node.js',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      'Node && Node.js',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Python',
       'MongoDB',
       'AWS'
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -693,6 +766,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     integrations: [;
     integrations: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Salesforce',
       'HubSpot',
       'Zendesk',
@@ -702,8 +777,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Zapier',
       'Webhooks',
     ],
+<<<<<<< HEAD
     useCases: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    use_cases: [;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Customer feedback analysis',
       'Product improvement',
       'Customer satisfaction',
@@ -712,6 +791,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Competitive analysis',
     ],
     roi: 'Average customer sees 250% ROI within 4 months through improved customer satisfaction and product decisions.',
+<<<<<<< HEAD
     competitors: [
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
@@ -722,6 +802,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    competitors: [;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Qualtrics',
       'SurveyMonkey',
       'Typeform',
@@ -730,6 +814,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -744,6 +831,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 1400
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 origin/cursor/automate-test-improve-and-merge-code-382a
@@ -772,6 +860,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       'Content generation suggestions',
       'Multi - platform support',
+=======
+      'Content generation suggestions',
+      'Multi - platform support',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     marketSize: '$3.5B feedback management market',
     growthRate: '160% annual growth',
     variant: 'ai-futuristic',
@@ -801,7 +894,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'AI-powered scheduling',
       'Content generation suggestions',
       'Multi-platform support',
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Analytics and insights',
       'Team collaboration',
       'Content calendar',
@@ -812,6 +908,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
     popular: true,
     icon: '📱',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -845,6 +942,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Social Media APIs',
       'React',
       'Node && Node.js',
@@ -854,13 +953,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Redis',
       'AWS',
     ],
 
+<<<<<<< HEAD
     integrations: [;
     color: 'from-pink-500 to-rose-600',
     textColor: 'text-pink-400',
@@ -885,6 +989,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     integrations: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Facebook',
       'Instagram',
       'Twitter',
@@ -895,8 +1001,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Slack',
       'Zapier',
     ],
+<<<<<<< HEAD
     useCases: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    use_cases: [;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Social media management',
       'Content scheduling',
       'Performance optimization',
@@ -905,8 +1015,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Content planning',
     ],
     roi: 'Average customer sees 200% ROI within 3 months through improved engagement and time savings.',
+<<<<<<< HEAD
     competitors: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    competitors: [;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Buffer',
       'Hootsuite',
       'Later',
@@ -915,6 +1030,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     market_size: '$4.2B social media management market',
     growth_rate: '180% annual growth',
@@ -934,6 +1052,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     rating: 4 && 4.8,
     reviews: 2250,
   },
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -965,6 +1084,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  {
+
+      'AI-powered planning',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     marketSize: '$4.2B social media management market',
     growthRate: '180% annual growth',
     variant: 'ai-futuristic',
@@ -993,6 +1118,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [
       'AI-powered planning',
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -1001,6 +1127,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Resource optimization',
       'Timeline prediction',
       'Risk assessment',
@@ -1013,6 +1142,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
     popular: true,
     icon: '📋',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1049,6 +1179,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Project Management',
       'React',
       'Node && Node.js',
+=======
+      'Project Management',
+      'React',
+      'Node && Node.js',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     color: 'from-orange-500 to-yellow-600',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/intelligent-project-management',
@@ -1065,12 +1201,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Project Management',
       'React',
       'Node.js',
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Python',
       'PostgreSQL',
       'Redis',
       'AWS'
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1083,6 +1223,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     integrations: [;
     integrations: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Slack',
       'Teams',
       'Jira',
@@ -1092,6 +1234,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Zapier',
       'Webhooks',
     ],
+<<<<<<< HEAD
     useCases: [
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1102,6 +1245,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    use_cases: [;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Project planning',
       'Resource management',
       'Team collaboration',
@@ -1112,6 +1259,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     roi: 'Average customer sees 300% ROI within 4 months through improved project efficiency and team productivity.',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1128,12 +1278,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -1186,6 +1339,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1193,6 +1347,10 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Complete project management platform with AI-powered planning, resource optimization, and comprehensive collaboration features.'
     launchDate: '2024-01-30'
     customers: 3200
@@ -1222,6 +1380,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -1247,6 +1406,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -1261,6 +1425,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface InnovativeMicroSaas {;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 ];
@@ -1268,12 +1433,13 @@ export interface InnovativeMicroSaas {;
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-export interface InnovativeMicroSaas {;
 
-  }
 
+<<<<<<< HEAD
 ];
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -1292,6 +1458,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string,;
   name: string,;
   tagline: string,;
@@ -1549,8 +1718,14 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
     reviews: 1600;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
 
 ];
@@ -1596,6 +1771,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1611,6 +1787,9 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     competitors: ['Asana', 'Monday.com', 'ClickUp', 'Trello', 'Basecamp'],
     marketSize: '$5.8B project management market',
     growthRate: '150% annual growth',
@@ -1634,6 +1813,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -1642,3 +1822,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

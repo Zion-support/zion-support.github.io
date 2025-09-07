@@ -19,10 +19,14 @@ class BuildMonitor {}
       this.runBuildCheck()}, this.interval);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     console.log('Build Monitor started successfully')};
   async runBuildCheck() {}
     try {}
@@ -45,10 +49,14 @@ class BuildMonitor {}
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       child.on('close', (code) => {}
         if ( {})
           console.log('Build check passed ✓')) {}
@@ -75,10 +83,14 @@ class BuildMonitor {}
       };);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       cleanChild.on('close', (code) => {}
         if ( {})
           console.log('Clean completed, retrying build...')) {}
@@ -120,7 +132,11 @@ if ( {})
   monitor.start().catch(console.error)};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = BuildMonitor;
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+module.exports = BuildMonitor;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

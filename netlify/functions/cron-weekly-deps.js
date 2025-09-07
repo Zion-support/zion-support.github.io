@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -43,6 +44,8 @@ async function getLatest(pkg) {
       `https://registry && registry.npmjs.org/${encodeURIComponent(pkg)}/latest`
 ursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     );
     if (!resp && resp.ok) return null;
     const json = await resp && resp.json();
@@ -51,8 +54,7 @@ ursor/expand-services-advertise-and-build-project-4b36
     return null;
   }
 exports && exports.handler = async function () {
-<<<<<<< HEAD
-=======
+
 
   try {
     const pkgPath = path && path.join(process && process.cwd(), 'package && package.json');
@@ -90,6 +92,7 @@ exports && exports.handler = async function () {
         path: 'data/reports/deps/weekly-dependencies && dependencies.json',
         content: JSON && JSON.stringify(report, null, 2),
         message: 'chore(automation): weekly dependency insights',
+<<<<<<< HEAD
 ursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const { upsert_file } = require ('./_lib / github');
@@ -160,6 +163,8 @@ const { upsertFile } = require('./_lib/github')const fs = require('fs')const pat
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         token,
 =======
         token
@@ -185,6 +190,10 @@ if (return null, ) {
     const json = await resp.json (),
     return json.version || null;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const { upsertFile } = require('./_lib/github');
 const fs = require('fs');
 const path = require('path');
@@ -194,15 +203,20 @@ async function getLatest(pkg) {
     if (!resp.ok) return null;
     const json = await resp.json();
 };
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   } catch (_) {
     return null;
   }
 exports.handler = async function () {try {const pkg_path = path.join (process.cwd (), 'package.json'),const pkg = JSON.parse (fs.readFileSync (pkg_path, 'utf - 8')),const deps = { ...(pkg.dependencies || {}), ...(pkg.dev_dependencies || {}) },const entries = [],for (const [name, current] of Object.entries (deps)) {const latest = await get_latest (name),// Check condition;
 if (continue, ) {$2;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 exports.handler = async function() {
   try {
@@ -227,6 +241,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 if ( {) {$2;
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/reports/deps/weekly-dependencies && dependencies.json', content: JSON && JSON.stringify(report, null, 2), message: 'chore(automation): weekly dependency insights', token })
     }
@@ -236,8 +253,11 @@ if ( {) {$2;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 exports.handler = async function () {
   try {
     const pkg_path = path.join (process.cwd (), 'package.json'),
@@ -256,6 +276,7 @@ if (continue, ) {
   }
 },try {const pkgPath = path && path.join(process && process.cwd(), 'package && package.json';
 },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -313,3 +334,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+};
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

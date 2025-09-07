@@ -1,6 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 trace: on-first-retry' 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+ trace: on-first-retry'
+}
+ trace: on-first-retry' 
+// Playwright.config utility
+export const Playwright.config = () => {
+  // Implementation here
+  return null;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 };
 reporter: [ ['list'], ['json', {
 
@@ -29,6 +39,7 @@ export const Playwright.config = () => {// Implementation here;
 <<<<<<< HEAD
 // {
   // name: webkit', // use: {
+<<<<<<< HEAD
   //     name: webkit',  //     use: { ...devices['Desktop Safari'] },  //   };
   // ]
 });
@@ -46,3 +57,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 })//     name: webkit',  //     use: { ...devices['Desktop Safari'] },  //   }
   // ];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    timeout: 120 * 1000, // 2 minutes timeout for server to start
+    stdout: pipe', // Pipe stdout to the console'    stderr: pipe', // Pipe stderr to the console'  }
+  // Optional: Define projects for different browsers
+  // projects: [
+  //   {
+  //     name: chromium',  //     use: { ...devices['Desktop Chrome'] },  //   }
+  //   {
+  //     name: firefox',  //     use: { ...devices['Desktop Firefox'] },  //   }
+  //   {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

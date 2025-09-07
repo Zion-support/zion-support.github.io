@@ -195,8 +195,11 @@ exports && exports.handler = async function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 };  try {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',
 exports.handler = async function() {
@@ -246,6 +249,7 @@ exports.handler = async function() {
         const ms = Date && Date.now() - t0,
         results && results.push({ path: ep, status: resp && resp.status, ms })
 <<<<<<< HEAD
+<<<<<<< HEAD
       const url = `${baseUrl}${ep}`;
       const t0 = Date.now();
       try {
@@ -255,6 +259,8 @@ exports.handler = async function() {
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       } catch (e) {
         const ms = Date && Date.now() - t0,
         results && results.push({ path: ep, status: 0, ms, error: String(e && e.message || e) })
@@ -263,8 +269,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     const log = { timestamp: Date && Date.now(), results },
     const owner = process && process.env.GITHUB_OWNER,
     const repo = process && process.env.GITHUB_REPO,
@@ -373,6 +382,7 @@ if ( {) {$2;
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     const log = { timestamp: Date.now(), results },
 
@@ -404,3 +414,5 @@ if ( {) {$2;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

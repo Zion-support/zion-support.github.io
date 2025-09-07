@@ -8,13 +8,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 >>>>>>> main
 >>>>>>> main
@@ -33,6 +37,12 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   "timestamp": "2025-09-04T15:37:53.118Z",
   "totalFiles": 1516,
   "fixedFiles": 31,
@@ -6945,10 +6955,14 @@ main
   ],
   "errorList": []
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   "timestamp": "2025-09-03T22:43:17.753Z",
   "fixes": [
     "components/ErrorBoundary.tsx: Remove semicolon after closing brace (2 fixes)",
@@ -6972,6 +6986,7 @@ main
   "totalFixes": 16,
   "totalIssues": 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
 }
 =======
@@ -6979,3 +6994,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
 }
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

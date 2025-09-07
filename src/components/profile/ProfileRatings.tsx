@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  userId: string;
+  averageRating?: number;
+  ratingCount?: number
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 
       })

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -17,11 +18,16 @@
 }
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), { ssr: false }),
 export default function GlobalEventRoute() {
 const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), {;
   ssr: false,;
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -36,6 +42,10 @@ const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), {;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export default function GlobalEventRoute() {;
   return <ExpoPage />;const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), { ssr: false });
 export default function GlobalEventRoute() {;
@@ -48,12 +58,18 @@ import dynamic from 'next / dynamic';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import dynamic from 'next/dynamic';
 =======
 }const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), { ssr: false }),export default function GlobalEventRoute() {const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), {ssr: false})export default function GlobalEventRoute() {return <ExpoPage />;const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), { ssr: false })export default function GlobalEventRoute() {return <ExpoPage />;const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), { ssr: false })export default function GlobalEventRoute() {return <ExpoPage />;const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), { ssr: false })export default function GlobalEventRoute() {return <ExpoPage />;
@@ -72,6 +88,7 @@ function GlobalEventRoute() {return <ExpoPage />;
 const ExpoPage = null;
 export default function GlobalEventRoute() {return <ExpoPage />;const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), { ssr: false })export default function GlobalEventRoute() {return <ExpoPage />;
 }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -85,3 +102,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

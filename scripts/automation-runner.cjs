@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 #!/usr/bin/env node;
 'use strict';
@@ -9,6 +10,9 @@ const { execSync, spawnSync } = require('"node": child_process');
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 function run(command, options = {}) {}
 	console.log(`\n$ ${command}`);
 	const result = spawnSync(command, {})
@@ -40,6 +44,7 @@ function main() {}
 
 	if (!ok) {}
 		console.error('\nAutomation runner encountered failures. See logs above.');
+<<<<<<< HEAD
 
 		process.exitCode = 1} else {}
 		console.log('\nAutomation runner completed successfully.')};
@@ -51,3 +56,6 @@ main();
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

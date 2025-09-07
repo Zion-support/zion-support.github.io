@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -7,6 +8,18 @@
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+module.exports = {
+  apps: [
+    {
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       name: 'auto-fix',
       script: 'scripts/pm2/auto-fix.js',
       instances: 1,
@@ -38,6 +51,7 @@ main
       name: 'code-quality-monitor',
       script: 'scripts/pm2/code-quality-monitor.js',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       name: 'bolt-zion-app',
 =======
@@ -50,18 +64,34 @@ main
 
 
       name: 'bolt-zion-app',
+=======
+
+
+
+
+
+      name: 'bolt-zion-app',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 module.exports = {
   apps: [
     {
       name: 'ci-cd-pipeline',
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       name: 'bolt-zion-app',
       name: 'ci-cd-pipeline',
       name: 'ci-cd-pipeline',
 
+<<<<<<< HEAD
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       script: 'npm',
       args: 'run build',
       cwd: '/workspace',
@@ -72,6 +102,7 @@ main
       env: {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -79,10 +110,20 @@ main
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'code-quality-monitor',
         QUALITY_THRESHOLD: '80',
         AUTO_FIX_CRITICAL: 'true',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       },
@@ -100,13 +141,31 @@ main
       error_file: 'logs/pm2/code-quality-monitor-error.log',
       out_file: 'logs/pm2/code-quality-monitor-out.log',
     },
+=======
+
+        NODE_ENV: 'production'
+
+        NODE_ENV: 'production',
+
+      },
+      cron_restart: '0 0 * * *', // Daily restart
+      error_file: './logs/ci-cd-error.log',
+      out_file: './logs/ci-cd-out.log',
+      log_file: './logs/ci-cd-combined.log',
+      time: true,    },
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     {
       name: 'auto-commit-fixes',
       script: 'scripts/pm2/auto-commit-fixes.js',
 
 
 
+<<<<<<< HEAD
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
         NODE_ENV: 'production',
       },
@@ -117,11 +176,19 @@ main
     {
       name: 'auto-fix',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       name: 'continuous-automation',
 
       name: 'continuous-automation',
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+      name: 'continuous-automation',
+
+
+      name: 'continuous-automation',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
       script: 'node',
       args: 'scripts/automation/automation-orchestrator.cjs',
@@ -133,18 +200,31 @@ main
       env: {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+
+        NODE_ENV: 'production',
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'auto-commit-fixes',
         COMMIT_FREQUENCY: 'hourly',
         AUTO_PUSH: 'false',
-<<<<<<< HEAD
-=======
+
         NODE_ENV: 'production'
+<<<<<<< HEAD
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
       },
       cron_restart: '0 */6 * * *', // Every 6 hours
@@ -152,6 +232,7 @@ main
       out_file: './logs/automation-out.log',
       log_file: './logs/automation-combined.log',
       time: true,
+<<<<<<< HEAD
     },
     {
 
@@ -290,6 +371,19 @@ main
 
 
 main
+=======
+    },
+    {
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         NODE_ENV: 'production',
       },
       log_file: 'logs/pm2/preview.log',
@@ -298,8 +392,38 @@ main
     },
     {
       name: 'auto-fix',
+<<<<<<< HEAD
       name: 'continuous-automation',
 
+=======
+      script: 'node',
+      args: 'scripts/pm2/auto-fix.cjs',
+      cron_restart: '0 */6 * * *',
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: { NODE_ENV: 'production' },
+      log_file: 'logs/pm2/auto-fix.log',
+      error_file: 'logs/pm2/auto-fix-error.log',
+      out_file: 'logs/pm2/auto-fix-out.log',
+    },
+    {
+      name: 'healthcheck',
+      script: 'node',
+      args: 'scripts/pm2/healthcheck.cjs',
+      cron_restart: '*/5 * * * *',
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '128M',
+      env: { NODE_ENV: 'production' },
+      log_file: 'logs/pm2/health.log',
+      error_file: 'logs/pm2/health-error.log',
+      out_file: 'logs/pm2/health-out.log',
+    },
+    {
+      name: 'code-quality-monitor',
+      script: 'scripts/pm2/code-quality-monitor.cjs',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       script: 'node',
       args: 'scripts/automation/automation-orchestrator.cjs',
       cwd: '/workspace',
@@ -310,10 +434,21 @@ main
       env: {
 
 
+<<<<<<< HEAD
+=======
+
+
+        NODE_ENV: 'production',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'auto-commit-fixes',
         COMMIT_FREQUENCY: 'hourly',
         AUTO_PUSH: 'false',
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         NODE_ENV: 'production'
 
       },
@@ -324,12 +459,26 @@ main
       time: true
     },
     {
+<<<<<<< HEAD
         NODE_ENV: 'development',
 
 
 
         NODE_ENV: 'development',
 
+=======
+
+      name: 'dependency-monitor',
+      script: 'scripts/pm2/dependency-monitor.js',
+
+
+
+
+
+
+        NODE_ENV: 'development',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         PM2_PROCESS_NAME: 'code-quality-monitor',
         QUALITY_THRESHOLD: '80',
         AUTO_FIX_CRITICAL: 'true',
@@ -341,11 +490,24 @@ main
 
 
 
+<<<<<<< HEAD
+=======
+    }
+  ]
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     },
     {
       name: 'auto-commit-fixes',
       script: 'scripts/pm2/auto-commit-fixes.js',
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       name: 'comprehensive-automation',
       script: 'node',
       args: 'scripts/automation/comprehensive-continuous-automation.cjs',
@@ -381,6 +543,7 @@ main
       watch: false,
       max_memory_restart: '1G',
       env: {
+<<<<<<< HEAD
 module.exports = {}
   "apps": [{}]
       name: 'ziontechgroup-web',
@@ -565,14 +728,223 @@ module.exports = {}
       "error_file": 'logs/pm2/type-checker-error.log',
       "out_file": 'logs/pm2/type-checker-out.log'};
   ];
+=======
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'auto-commit-fixes',
+        COMMIT_FREQUENCY: 'hourly',
+        AUTO_PUSH: 'false',
+      },
+      cron_restart: '0 */2 * * *', // Restart every 2 hours
+      log_file: 'logs/pm2/auto-commit-fixes.log',
+      error_file: 'logs/pm2/auto-commit-fixes-error.log',
+      out_file: 'logs/pm2/auto-commit-fixes-out.log',
+    },
+    {
+      name: 'dependency-monitor',
+      script: 'scripts/pm2/dependency-monitor.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'dependency-monitor',
+        AUTO_UPDATE_DEV: 'true',
+        SECURITY_ALERTS: 'true',
+      },
+      cron_restart: '0 0 * * 0', // Restart weekly on Sunday
+      log_file: 'logs/pm2/dependency-monitor.log',
+      error_file: 'logs/pm2/dependency-monitor-error.log',
+      out_file: 'logs/pm2/dependency-monitor-out.log',
+    },
+    {
+      name: 'performance-monitor',
+      script: 'scripts/pm2/performance-monitor.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'performance-monitor',
+        PERFORMANCE_THRESHOLD: '3000',
+        BUNDLE_SIZE_LIMIT: '2MB',
+      },
+      cron_restart: '0 */8 * * *', // Restart every 8 hours
+      log_file: 'logs/pm2/performance-monitor.log',
+      error_file: 'logs/pm2/performance-monitor-error.log',
+      out_file: 'logs/pm2/performance-monitor-out.log',
+    },
+    // NEW: Intelligent Test Automation
+    {
+      name: 'test-automation',
+      script: 'scripts/pm2/test-automation.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'test-automation',
+        TEST_COVERAGE_THRESHOLD: '80',
+        AUTO_RETRY_FAILED: 'true',
+        PARALLEL_TESTS: 'true',
+      },
+      cron_restart: '0 */3 * * *', // Restart every 3 hours
+      log_file: 'logs/pm2/test-automation.log',
+      error_file: 'logs/pm2/test-automation-error.log',
+      out_file: 'logs/pm2/test-automation-out.log',
+    },
+    // NEW: Security Scanner
+    {
+      name: 'security-scanner',
+      script: 'scripts/pm2/security-scanner.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'security-scanner',
+        SCAN_DEPENDENCIES: 'true',
+        SCAN_CODE: 'true',
+        SCAN_CONFIGS: 'true',
+        ALERT_ON_CRITICAL: 'true',
+      },
+      cron_restart: '0 */12 * * *', // Restart every 12 hours
+      log_file: 'logs/pm2/security-scanner.log',
+      error_file: 'logs/pm2/security-scanner-error.log',
+      out_file: 'logs/pm2/security-scanner-out.log',
+    },
+    // NEW: Build Optimization Monitor
+    {
+      name: 'build-optimizer',
+      script: 'scripts/pm2/build-optimizer.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'build-optimizer',
+        OPTIMIZE_BUNDLES: 'true',
+        TREE_SHAKING: 'true',
+        CODE_SPLITTING: 'true',
+        MINIFICATION: 'true',
+      },
+      cron_restart: '0 0 * * *', // Restart daily at midnight
+      log_file: 'logs/pm2/build-optimizer.log',
+      error_file: 'logs/pm2/build-optimizer-error.log',
+      out_file: 'logs/pm2/build-optimizer-out.log',
+    },
+    // NEW: Git Workflow Automation
+    {
+      name: 'git-workflow',
+      script: 'scripts/pm2/git-workflow.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'git-workflow',
+        AUTO_BRANCH_CLEANUP: 'true',
+        AUTO_MERGE_SAFE: 'true',
+        CONFLICT_RESOLUTION: 'true',
+        BRANCH_STRATEGY: 'gitflow',
+      },
+      cron_restart: '0 */6 * * *', // Restart every 6 hours
+      log_file: 'logs/pm2/git-workflow.log',
+      error_file: 'logs/pm2/git-workflow-error.log',
+      out_file: 'logs/pm2/git-workflow-out.log',
+    },
+    // NEW: Environment Health Monitor
+    {
+      name: 'health-monitor',
+      script: 'scripts/pm2/health-monitor.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'health-monitor',
+        MONITOR_SYSTEM: 'true',
+        MONITOR_PROCESSES: 'true',
+        MONITOR_RESOURCES: 'true',
+        ALERT_THRESHOLD: '80',
+      },
+      cron_restart: '0 */1 * * *', // Restart every hour
+      log_file: 'logs/pm2/health-monitor.log',
+      error_file: 'logs/pm2/health-monitor-error.log',
+      out_file: 'logs/pm2/health-monitor-out.log',
+    },
+    // NEW: Documentation Generator
+    {
+      name: 'docs-generator',
+      script: 'scripts/pm2/docs-generator.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'docs-generator',
+        AUTO_GENERATE: 'true',
+        UPDATE_README: 'true',
+        API_DOCS: 'true',
+        COMPONENT_DOCS: 'true',
+      },
+      cron_restart: '0 2 * * *', // Restart daily at 2 AM
+      log_file: 'logs/pm2/docs-generator.log',
+      error_file: 'logs/pm2/docs-generator-error.log',
+      out_file: 'logs/pm2/docs-generator-out.log',
+    },
+    // NEW: SEO and Accessibility Monitor
+    {
+      name: 'seo-accessibility',
+      script: 'scripts/pm2/seo-accessibility.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'seo-accessibility',
+        CHECK_SEO: 'true',
+        CHECK_ACCESSIBILITY: 'true',
+        CHECK_PERFORMANCE: 'true',
+        LIGHTHOUSE_AUDIT: 'true',
+      },
+      cron_restart: '0 */4 * * *', // Restart every 4 hours
+      log_file: 'logs/pm2/seo-accessibility.log',
+      error_file: 'logs/pm2/seo-accessibility-error.log',
+      out_file: 'logs/pm2/seo-accessibility-out.log',
+    },
+  ],
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 };
 
 };
 
+<<<<<<< HEAD
 };
 
 };
 
+=======
+
+};
+
+
+};
+
+
+};
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       name: 'comprehensive-automation',
       script: 'node',
       args: 'scripts/automation/comprehensive-continuous-automation.cjs',
@@ -584,14 +956,23 @@ module.exports = {}
       env: {
         NODE_ENV: 'production'
       },
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         NODE_ENV: 'production',      },
 
       cron_restart: '0 */6 * * *', // Every 6 hours
       error_file: './logs/comprehensive-automation-error.log',
       out_file: './logs/comprehensive-automation-out.log',
       log_file: './logs/comprehensive-automation-combined.log',
+<<<<<<< HEAD
       time: true,    },
 
+=======
+      time: true
+    },
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     {
       name: 'marketing-automation',
       script: 'node',
@@ -602,12 +983,18 @@ module.exports = {}
       watch: false,
       max_memory_restart: '1G',
       env: {
+<<<<<<< HEAD
         NODE_ENV: 'production',      },
 
+=======
+        NODE_ENV: 'production'
+      },
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       cron_restart: '0 */12 * * *', // Every 12 hours
       error_file: './logs/marketing-automation-error.log',
       out_file: './logs/marketing-automation-out.log',
       log_file: './logs/marketing-automation-combined.log',
+<<<<<<< HEAD
       time: true,    },
     {
       name: 'security-audit',
@@ -619,21 +1006,43 @@ module.exports = {}
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      time: true
+    },
+    {
+      name: 'security-audit',
+      script: 'npm',
+      args: 'audit',
+      cwd: '/workspace',
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '500M',
       env: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         NODE_ENV: 'production',      },
 
+=======
+        NODE_ENV: 'production'
+      },
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       cron_restart: '0 2 * * *', // Daily at 2 AM
       error_file: './logs/security-audit-error.log',
       out_file: './logs/security-audit-out.log',
       log_file: './logs/security-audit-combined.log',
+<<<<<<< HEAD
       time: true,    },
 
+=======
+      time: true
+    },
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     {
       name: 'test-runner',
       script: 'npm',
@@ -644,19 +1053,33 @@ main
       watch: false,
       max_memory_restart: '1G',
       env: {
+<<<<<<< HEAD
         NODE_ENV: 'production',      },
 
+=======
+        NODE_ENV: 'production'
+      },
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       cron_restart: '0 */4 * * *', // Every 4 hours
       error_file: './logs/test-runner-error.log',
       out_file: './logs/test-runner-out.log',
       log_file: './logs/test-runner-combined.log',
+<<<<<<< HEAD
       time: true,    },
 
+=======
+      time: true
+    },
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     {
       name: 'lint-checker',
       script: 'npm',
       args: 'run lint',
       cwd: '/workspace',
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         NODE_ENV: 'production',
       },
       log_file: 'logs/pm2/preview.log',
@@ -692,15 +1115,23 @@ main
     {
       name: 'code-quality-monitor',
       script: 'scripts/pm2/code-quality-monitor.cjs',
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '500M',
       env: {
+<<<<<<< HEAD
         NODE_ENV: 'production',      },
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+        NODE_ENV: 'production'
+      },
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       cron_restart: '0 */2 * * *', // Every 2 hours
       error_file: './logs/lint-checker-error.log',
       out_file: './logs/lint-checker-out.log',
@@ -713,8 +1144,7 @@ main
       args: "start",
       interpreter: "none",
       cwd: __dirname,
-<<<<<<< HEAD
-=======
+
         NODE_ENV: 'production',
         PM2_PROCESS_NAME: 'code-quality-monitor',
         QUALITY_THRESHOLD: '80',
@@ -726,8 +1156,11 @@ main
       out_file: 'logs/pm2/code-quality-monitor-out.log',
     }
   ]
+<<<<<<< HEAD
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       watch: false,
       autorestart: true,
       max_restarts: 10,
@@ -779,6 +1212,7 @@ main
       out_file: "automation/logs/build-monitor-out.log",
       time: true
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     }
   ];};
@@ -788,4 +1222,81 @@ main
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    },
+    {
+      name: "performance-optimizer",
+      script: "automation/performance-optimizer.cjs",
+      interpreter: "node",
+      cwd: __dirname,
+      watch: false,
+      autorestart: true,
+      max_restarts: 5,
+      env: {
+        NODE_ENV: "production"
+      },
+      cron_restart: "0 */2 * * *", // Every 2 hours
+      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
+      error_file: "automation/logs/performance-optimizer-error.log",
+      out_file: "automation/logs/performance-optimizer-out.log",
+      time: true
+    },
+    {
+      name: "seo-optimizer",
+      script: "automation/seo-optimizer.cjs",
+      interpreter: "node",
+      cwd: __dirname,
+      watch: false,
+      autorestart: true,
+      max_restarts: 5,
+      env: {
+        NODE_ENV: "production"
+      },
+      cron_restart: "0 */6 * * *", // Every 6 hours
+      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
+      error_file: "automation/logs/seo-optimizer-error.log",
+      out_file: "automation/logs/seo-optimizer-out.log",
+      time: true
+    },
+    {
+      name: "health-check",
+      script: "automation/health-check.cjs",
+      interpreter: "node",
+      cwd: __dirname,
+      watch: false,
+      autorestart: true,
+      max_restarts: 5,
+      env: {
+        NODE_ENV: "production"
+      },
+      cron_restart: "*/5 * * * *", // Every 5 minutes
+      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
+      error_file: "automation/logs/health-check-error.log",
+      out_file: "automation/logs/health-check-out.log",
+      time: true
+    },
+    {
+      name: "security-scanner",
+      script: "automation/security-scanner.cjs",
+      interpreter: "node",
+      cwd: __dirname,
+      watch: false,
+      autorestart: true,
+      max_restarts: 5,
+      env: {
+        NODE_ENV: "production"
+      },
+      cron_restart: "0 */4 * * *", // Every 4 hours
+      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
+      error_file: "automation/logs/security-scanner-error.log",
+      out_file: "automation/logs/security-scanner-out.log",
+      time: true
+    }
+
+  ]
+};
+
+  ];};
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 

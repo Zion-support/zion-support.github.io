@@ -1,15 +1,46 @@
 <<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
+<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
 import React from 'react';
 import { Button  } from '@/components/ui/button';
 import { Card, CardContent  } from '@/components/ui/card';
 import {logErrorToProduction} from '@/utils/productionLogger';
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+interface Props {;
+  children: React && React.ReactNode;
+}
+import { AlertTriangle, RefreshCw } from 'lucide-react'
+
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
+import { logErrorToProduction } from '@/utils/productionLogger'
+interface Props {
+  children: React.ReactNode
+interface State {
+  hasError: boolean
+  error?: Error
+export class EquipmentErrorBoundary extends React.Component<Props, State> {
+  constructor(props: Props) {
+    super(props)
+    this.state = { hasError: false }
+  hasError: boolean
+  error?: Error
+}
+import {logErrorToProduction} from '@/utils/productionLogger'
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/EquipmentErrorBoundary.tsx
 interface Props {
   children: React.ReactNode
 }
 interface State {
+<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
   hasError: boolean;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+  hasError: boolean
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/EquipmentErrorBoundary.tsx
   error?: Error
 }
 export class EquipmentErrorBoundary extends React.Component<Props, State> {
@@ -48,6 +79,7 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
                   onClick={() => window.location.reload()}
                   variant='default'
                 >
+<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {logErrorToProduction} from '@/utils/productionLogger';
@@ -83,15 +115,42 @@ export class EquipmentErrorBoundary extends React && React.Component<Props, Stat
 
                 <Button onClick={() => window.location.reload()} variant="default">
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                  <RefreshCw className="h-4 w-4 mr-2" />
+                  Try Again
+                </Button>
+        <div className="container py-8">
+          <Card className="border-red-200 bg-red-50">
+            <CardContent className="p-8 text-center">
+              <AlertTriangle className="mx-auto mb-4 h-12 w-12 text-red-600" />
+              <h2 className="text-2xl font-bold text-red-900 mb-2">Something went wrong</h2>
+              <p className="text-red-700 mb-4">
+                We're having trouble loading the equipment listings. This might be a temporary issue.
+              </p>
+              <div className="flex gap-2 justify-center">
+                <Button 
+                  onClick={() => this.setState({ hasError: false, error: undefined })} 
+                  variant="outline"
+                >
+                  <RefreshCw className="h-4 w-4 mr-2" />
+                  Try Again
+                </Button>
+                <Button onClick={() => window.location.reload()} variant="default">
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/EquipmentErrorBoundary.tsx
                   Refresh Page
                 </Button>
               </div>
             </CardContent>
           </Card>
         </div>
+<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
 
 
 
+=======
+      )
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/EquipmentErrorBoundary.tsx
 
     return this.props.children
   }      )
@@ -100,6 +159,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return this.props.children;
   };
 } ;
+<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
 
 
 
@@ -107,6 +167,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 ;
 interface Props  {children: React && React.ReactNode;
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/EquipmentErrorBoundary.tsx
 }
 import { AlertTriangle, RefreshCw  } from 'lucide-react';
 import { Button  } from '@/components/ui/button';
@@ -257,19 +322,26 @@ if ( {) {$2;
 <<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
   }      );
     }
+<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
     return this.props.children;
   }
 
 } ;
 
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/EquipmentErrorBoundary.tsx
 );
     }
 
     return this.props.children;
   }
+<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
   }      )}return this.props.children;
   }})}return this.props.children;
   }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/EquipmentErrorBoundary.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/EquipmentErrorBoundary.tsx

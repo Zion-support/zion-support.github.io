@@ -1,5 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { supabase as supabaseClient  } from '@/utils/supabase/client';
 import { TALENT_PROFILES as LOCAL } from '@/data/talent';
 =======
@@ -25,14 +29,31 @@ return {item: { ...item, ...translated },translated: Object.keys(translated).len
     const base = LOCAL.find(t => t.slug === slug) |null;
 <<<<<<< HEAD
     if (!base) return res.status(404).json({ error: 'Not found' });
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     const { item, translated } = applyTranslations(base, lang);
     return res && res.status(200).json({ item, translated });
   } catch (e: any) {
     return res && res.status(500).json({ error: e && e.message });
   }
+<<<<<<< HEAD
     return res.status(200).json({ item, translated })
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    if (hasSupabase) {
+      const { data, error } = await supabaseClient && supabaseClient.from('talent_profiles').select('*').eq('slug', slug).single();
+      if (error) throw error;
+      const { item, translated } = applyTranslations(data as unknown as TalentProfile, lang);
+      return res && res.status(200).json({ item, translated })
+    }
+    const { item, translated } = applyTranslations(base, lang);
+    return res && res.status(200).json({ item, translated })
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   } catch (e: any) {
 
 import {supabase, as, supabase_client} from '@/utils / supabase / client';
@@ -86,6 +107,7 @@ if (throw error) {$2;
     if (return res.status (404).json ({ error: 'Not found' })) {$2;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
     const { item, translated } = apply_translations (base, lang);
     return res.status (200).json ({ item, translated });
   } catch (e: any) {
@@ -96,3 +118,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     const { item, translated } = apply_translations (base, lang)return res.status (200).json ({ item, translated })} catch (e: any) {return res.status (500).json ({ error: e.message })}}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -2,10 +2,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 export default function Page() {export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white'>;
       <Head>;
@@ -22,6 +25,7 @@ export default function Page() {return (<div className='min-h-screen bg-slate-95
           property='og:description';
           content='Pragmatic case scenario inspired by live site signals.';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -42,10 +46,17 @@ export default function Page() {;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
     <div className='min-h-screen bg-slate-950 text-white'>;
       <Head>;
         <title>Case Study — Trigger Homepage</title>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -60,6 +71,9 @@ export default function Page() {
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         <meta
           name='description'
           content='Pragmatic case scenario inspired by live site signals.'
@@ -83,6 +97,7 @@ export default function Page() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -106,6 +121,15 @@ export default function Page() {
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><h2>Scenario</h2><p>Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>',;
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           }}
 =======
         <div;
@@ -148,6 +172,7 @@ function Page() {return (<div className='min - h-screen bg - slate - 950 text - 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -157,8 +182,14 @@ function Page() {return (<div className='min - h-screen bg - slate - 950 text - 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
 
 
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+<<<<<<< HEAD
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup.com/automation</a></p><h2>Scenario</h2><p>Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>'
 
 <<<<<<< HEAD
@@ -175,6 +206,10 @@ function Page() {return (<div className='min - h-screen bg - slate - 950 text - 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           }}
         />
         <p className='mt-6 text-white/60 text-sm'>
@@ -187,6 +222,7 @@ function Page() {return (<div className='min - h-screen bg - slate - 950 text - 
 export default function Page() {
   return (
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -214,10 +250,14 @@ export default function Page() {
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
     <div className="min-h-screen bg-slate-950 text-white">;
       <Head>;
         <title>Case Study — Trigger Homepage</title>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -234,6 +274,10 @@ export default function Page() {
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import Head from 'next / head';
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -328,6 +372,7 @@ function Page() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -351,11 +396,18 @@ function Page() {
         <title > Case Study — Trigger Homepage</title>;
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+        <title > Case Study — Trigger Homepage</title>;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         <meta name="description" content="Pragmatic case scenario inspired by live site signals." />;
         <meta property="og:title" content="Case Study — Trigger Homepage" />;
         <meta property="og:description" content="Pragmatic case scenario inspired by live site signals." />;
         <meta name="twitter:card" content="summary_large_image" />;
       </Head>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -401,6 +453,15 @@ function Page() {
 }
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+}
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <main className="container mx - auto px - 6 py - 12 prose prose - invert">;
         <h1 className="text - 3xl font - extrabold">Case Study  Trigger Homepage</h1>;
         <div className="mt - 4" dangerouslySetInnerHTML={{ __html: "<p > Source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / automation" target="_blank" rel="noopener">https://ziontechgroup.com / automation</a></p><h2 > Scenario</h2><p > Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2 > Approach</h2><ul><li > Baseline metrics</li><li > Iterative improvements</li><li > Risk management</li></ul><h2 > Results</h2><p > Lower latency, higher reliability, and faster iteration speed.</p>" }} />;
@@ -408,6 +469,7 @@ function Page() {
       </main>;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -424,6 +486,9 @@ function Page() {
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
@@ -452,10 +517,17 @@ function Page() {
         </p>
       </main>
     </div>
+<<<<<<< HEAD
+=======
+    </div>;
+  );export default function Page() {
+  return (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 <<<<<<< HEAD
 export default function Page() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -469,6 +541,9 @@ export default function Page() {
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Case Study — Trigger Homepage</title>
@@ -486,6 +561,7 @@ export default function Page() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -493,10 +569,16 @@ export default function Page() {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     </div>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -515,6 +597,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     </div>;
   );
 }
@@ -526,6 +612,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   }
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -548,3 +635,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+  );
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

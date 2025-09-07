@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 ;
@@ -12,16 +13,33 @@ interface TryItProps  {method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',metho
 <<<<<<< HEAD
 export default function TryItConsole({
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   method
   path
   requiresAuth
 }: TryItProps) {
+<<<<<<< HEAD
   const [baseUrl, setBaseUrl] = useState('https://api.zion.os');
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'
+
+interface TryItProps {
+  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
+
+  method,
+  path,
+  requiresAuth,
+}: TryItProps) {;
+  const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   path: string, // full URL or relative
   requiresAuth: boolean
 }
 export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
+<<<<<<< HEAD
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os');
   const [token, setToken] = useState('');
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os')
@@ -58,12 +76,46 @@ const headers: Record<string, string> = {
     } finally {
       setLoading(false)
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
+  path: string; // full URL or relative;
+  requiresAuth: boolean;
+
+export default function TryItConsole(): any ({;
+  method,;
+  path,;
+  requiresAuth,;
+}: TryItProps) {;
+  const [baseUrl, setBaseUrl] = useState('https://api && api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',;
+  path: string, // full URL or relative;
+  requiresAuth: boolean;
+  const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
+
+  const [body, setBody] = useState('');
+  const [response, setResponse] = useState<string>(''),
+  const [loading, setLoading] = useState(false);
+
+      const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
+      const res = await fetch(url, {
+        method;
+        headers;
+        body: method === 'GET' || method === 'DELETE' ? undefined : body || undefined}),;
+      const text = await res && res.text();
+      setResponse(text);
+    } catch (e: any) {;
+      setResponse(String(e?.message || e));
+    } finally {;
+      setLoading(false);
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
   }
   return (
 <div className='space-y-2'>
       <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
         <div>
+<<<<<<< HEAD
           <label className='block text-sm mb-1'>Base URL</label>
           <input
             className='w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary'
@@ -125,14 +177,33 @@ export default function TryItConsole() {method: 'GET' | 'POST' | 'PUT' | 'PATCH'
             readOnly
           />
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+          <label className="block text-sm mb-1" htmlFor="input-Base URL">Base URL</label>
+          <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={baseUrl} onChange={(e) => setBaseUrl(e.target.value)} />
+        </div>
+        <div>
+          <label className="block text-sm mb-1" htmlFor="input-Auth Token">Auth Token</label>
+          <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={token} onChange={(e) => setToken(e.target.value)} placeholder="Optional" />
+        </div>
+        <div>
+          <label className="block text-sm mb-1" htmlFor="input-Method">Method</label>
+          <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={method} readOnly />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         </div>
       </div>
       {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
       {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
         <div>
+<<<<<<< HEAD
 <label className='block text-sm mb-1'>Request Body (JSON)</label>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+<label className='block text-sm mb-1'>Request Body (JSON)</label>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           <textarea
             className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm'
 =======
@@ -207,6 +278,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <pre className=&quot;p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm max-h-80&quot;><code>{response}</code></pre>
       </div>
     </div>
+<<<<<<< HEAD
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -224,3 +296,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (<div>;
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+  )
+    <div className='space-y-2'>
+
+}
+
+    }
+  }
+  return (
+    <div className='space-y-2'>
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
+
+      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
+        <div>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

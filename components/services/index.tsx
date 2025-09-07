@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import React from 'react',
@@ -22,6 +23,36 @@ import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-
 
 const mapLocalToServiceItem = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+  const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
+}React.useEffect ( () => {
+  const next = services.filter ( (s) => {
+  //Category const handle_submit = async (values: QuoteFormValues) => {
+  const res = await fetch ('/api / quote - request', {
+  method: 'POST', headers: {
+
+  'Content-Type': 'application/json' 
+};
+
+body: JSON.stringify ({
+  service: values.serviceTitle, description: values.projectDescription, timeline: {
+  start: values.timelineStart, end: values.timelineEnd
+}
+budgetRange: values.budgetRange;
+}
+<Head> <title>Zion AI Marketplace - Services</title> <meta name="description" content="Discover curated IT services. Request quotes with AI-assisted summaries." /> </Head>) )
+}</div> </div> </div> </div> <QuoteRequestModal open= {
+  modalOpen
+}onClose= {
+  () => setModalOpen (false)
+}service= {
+  selected
+}onSubmit= {
+  handleSubmit
+}/> </div>)
+};export default ServicesPage;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export default function ServicesIndexPage () {
  export default function ServicesIndexPage () {
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
@@ -44,6 +75,7 @@ budgetRange: values.budgetRange;
 }service= {
   selected
 }onSubmit= {
+<<<<<<< HEAD
   handleSubmit 
 }/> </div>) 
 };
@@ -90,6 +122,28 @@ const mapLocalToServiceItem = (item: any): ServiceItem => ({slug: item.slug;
   priceRangeUSD: item.priceRangeUSD;
   categories: [item.category];
   rating: Math.round((3.8 + Math.random() * 1.2) * 10) / 10})const ServicesPage: NextPage = () => {const [services, setServices] = React.useState<ServiceItem[]>([])const [filtered, setFiltered] = React.useState<ServiceItem[]>([])const [filters, setFilters] = React.useState<Filters>({ categories: [] })const [modalOpen, setModalOpen] = React.useState(false)const [selected, setSelected] = React.useState<ServiceItem | null>(null)export default function ServicesIndexPage() {const all = (enhancedRealMicroSaasServices as unknown[])extraServices as any[];
+=======
+  handleSubmit
+}/> </div>)
+};export default ServicesPage;
+const mapLocalToServiceItem = (item: any): ServiceItem => ({
+  slug: item.slug
+  title: item.name
+  description: item.description
+  provider: 'Zion Provider'
+  priceRangeUSD: item.priceRangeUSD
+  categories: [item.category]
+  rating: Math.round((3.8 + Math.random() * 1.2) * 10) / 10})
+const ServicesPage: NextPage = () => {
+  const [services, setServices] = React.useState<ServiceItem[]>([]);
+  const [filtered, setFiltered] = React.useState<ServiceItem[]>([]);
+  const [filters, setFilters] = React.useState<Filters>({ categories: [] })
+  const [modalOpen, setModalOpen] = React.useState(false);
+  const [selected, setSelected] = React.useState<ServiceItem | null>(null);
+export default function ServicesIndexPage() {
+  const all = (enhancedRealMicroSaasServices as unknown[])
+      extraServices as any[];
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   'Content - Type': 'application / json';
 }
 body: JSON.stringify ({service: values.service_title, description: values.project_description, timeline: {start: values.timeline_start, end: values.timeline_end;
@@ -191,6 +245,14 @@ export default ServicesPage;export default ServicesPage;<QuoteRequestModal;
         service={selected}
         on_submit={handle_submit}
       />;
+<<<<<<< HEAD
     </div>)}export default ServicesPage;handleSubmit;
 }/> </div>)}export default ServicesPage;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </div>);
+}
+;
+export default ServicesPage;
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

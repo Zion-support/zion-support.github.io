@@ -135,7 +135,11 @@ if (require.main === module) {}
   fixer.run().catch(console.error)};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = ComprehensiveErrorFixer;
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+module.exports = ComprehensiveErrorFixer;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

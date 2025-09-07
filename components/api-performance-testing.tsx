@@ -46,6 +46,7 @@ import React from 'react',export default function ApiPerformanceTestingPage() {c
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -54,12 +55,12 @@ import React from 'react',export default function ApiPerformanceTestingPage() {c
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-import React from "react";
-import SEO from "../components/SEO";
-import { Check, ExternalLink } from "lucide-react";
 
+<<<<<<< HEAD
 
 import React from './react';
 import SEO from "../components / SEO";
@@ -127,6 +128,8 @@ export default function ApiPerformanceTestingPage() {
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export default function ApiPerformanceTestingPage() {
 
   const features = [
@@ -142,7 +145,12 @@ export default function ApiPerformanceTestingPage() {
   const features = [
     "k6/Gatling-compatible test runner",
     "SLO-aware latency reports",
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     "Regression baselines per endpoint",
     "CI checks and PR annotations",
     "Synthetic traffic for staging"
@@ -204,6 +212,7 @@ export default function ApiPerformanceTestingPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -215,6 +224,11 @@ export default function ApiPerformanceTestingPage() {
       </main>;</>)return (<>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             </a>;
           </div>;
         </section>;
@@ -256,6 +270,7 @@ return (return (return (return (<>;
             {features.map((f) => (<div;
             {features.map ((f) => (
               <div;
+<<<<<<< HEAD
 return (
   return (
   return (
@@ -268,6 +283,17 @@ main
   return (
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+  return (
+
+
+  return (
+
+
+  return (
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     <>
       <SEO
         title="API Performance Testing"
@@ -377,6 +403,7 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -395,6 +422,17 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+}
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     </>);
 }
@@ -403,10 +441,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 		'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging'
 	];
 <<<<<<< HEAD
+<<<<<<< HEAD
 	const features = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+	const features = null;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 	return (
 		<>
 			<SEO title="API Performance Testing" description="Load, latency and regression testing-as-a-service with CI and SLOs." />
@@ -439,8 +483,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     </>);
 }
   return (
@@ -524,6 +571,7 @@ return (
             <a
               href="/contact"
               className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover:bg-gray-200"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             >
               Start from $129/mo
@@ -630,10 +678,15 @@ return (
 }
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             </a>;
           </div>;
         </section>;
       </main>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -714,3 +767,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>;
       </main>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

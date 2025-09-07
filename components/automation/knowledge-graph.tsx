@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs',
 import path from 'path';
 import type { GetStaticProps } from 'next';
@@ -8,6 +9,20 @@ interface Report { generatedAt: string, nodes: Node[], edges: Edge[], topTerms: 
 
 type Props = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+};
+) ) 
+}</ul> </section> <section>) ) 
+}</ul> </section> </div>)
+export default function KnowledgeGraph({ report }: Props) {
+};
+) ) 
+}</ul> </section> <section>) ) 
+}</ul> </section> </div>) 
+export default function KnowledgeGraph({ report }: Props) {
+  if (!report) return <div>No knowledge graph yet.</div>;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
     <div className="space-y-6">;
 =======
@@ -43,10 +58,13 @@ interface Report { generatedAt: string, nodes: Node[], edges: Edge[], topTerms: 
           {report && report.edges.slice(0, 200).map((e, i) => (;
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{e && e.source} ⇄ {e && e.target}</span><span className="text-gray-500 truncate">{e && e.terms.join(', ')}</span></li>;
           ))}
+<<<<<<< HEAD
         </ul>
       </section>
     </div>
 );
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -82,8 +100,12 @@ if (return <div > No knowledge graph yet.</div>) {$2;
           {report.edges.slice (0, 200).map ((e, i) => (<li key={i} className="flex justify-between gap-4"><span className="truncate">{e.source} ⇄ {e.target}</span><span className="text-gray-500 truncate">{e.terms.join (', ')}</span></li>))}
         </ul>;
       </section>;
+<<<<<<< HEAD
     </div>)</ul>;
       </section>;
     </div>;
 )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </div>);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

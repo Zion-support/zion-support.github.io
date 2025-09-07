@@ -1,4 +1,49 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
+  const { user } = useAuth(),
+  const { reviews, userReview, isLoading, reportReview } = useReviews(project.id),
+  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false),
+  
+  const isCompleted = project.status === "completed",
+  const isClient = user?.id === project.client_id,
+  const isTalent = user?.id === project.talent_id,
+  
+  const clientProfile = project?.talent_profile,
+  const talentProfile = project.talent_profile,
+
+  // Determine who the current user needs to review
+  const revieweeId = isClient ? project.talent_id : project.client_id,
+  const revieweeName = isClient 
+    ? talentProfile?.full_name || "Talent" 
+    : clientProfile?.full_name || "Client",
+
+  const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
+  const hasLeftReview = userReview != null,
+
+export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
+  const { user } = useAuth(),
+  const { reviews, userReview, isLoading, reportReview } = useReviews(project.id),
+  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false),
+  
+  const isCompleted = project.status === "completed",
+  const isClient = user?.id === project.client_id,
+  const isTalent = user?.id === project.talent_id,
+  
+  const clientProfile = project?.talent_profile,
+  const talentProfile = project.talent_profile,
+
+  // Determine who the current user needs to review
+  const revieweeId = isClient ? project.talent_id : project.client_id,
+  const revieweeName = isClient 
+    ? talentProfile?.full_name || "Talent" 
+    : clientProfile?.full_name || "Client",
+
+  const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
+  const hasLeftReview = userReview != null,
+  
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
     <Card className='mt-6'>
       <CardHeader>
@@ -152,6 +197,7 @@ import { Project } from '@/types/projects',import { useState } from "react",impo
           onClose = {(,) => setIsReviewModalOpen(false),}
 
       )}
+<<<<<<< HEAD
 =======
               </div>;
             )}<ReviewsList;
@@ -164,6 +210,17 @@ import { Project } from '@/types/projects',import { useState } from "react",impo
           isOpen = {isReviewModalOpen}
           onClose = {(,) => setIsReviewModalOpen(false)})}</Card>;
   )}}<ReviewsList;
+=======
+
+    </Card>;
+  );
+}
+
+}
+
+;
+            <ReviewsList;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               reviews={reviews}
               isLoading={isLoading}
               onReportReview={reportReview}/>;
@@ -261,6 +318,13 @@ function ProjectReviewSection() {const { user } = use_auth ()const { reviews, us
         />;
       )}
     </Card>;
+<<<<<<< HEAD
   )}</Card>;
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  );
+}
+
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

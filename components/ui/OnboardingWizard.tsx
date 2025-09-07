@@ -1,5 +1,6 @@
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useRole } from '../context/RoleContext';
       const has = null;
 =======
@@ -7,6 +8,19 @@ import { useRole  } from '../context/RoleContext';
 export default function OnboardingWizard() {export default function OnboardingWizard() {const { role, setRole } = useRole()const [open, setOpen] = useState(false): 'true';
       if (!has) {setOpen(true)const has = typeof window !== 'undefined' ? window && window.localStorage.getItem('zion_has_onboarded') : 'true';
       if (!has) {setOpen(true)}
+=======
+import { useRole } from '../context/RoleContext';
+export default function OnboardingWizard() {;
+export default function OnboardingWizard() {
+  const { role, setRole } = useRole();
+  const [open, setOpen] = useState(false);
+          : 'true';
+      if (!has) {;
+        setOpen(true);      const has = typeof window !== 'undefined' ? window && window.localStorage.getItem('zion_has_onboarded') : 'true';
+      if (!has) {;
+        setOpen(true);
+      }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     } catch {}
   }, [])}
     } catch {}
@@ -80,6 +94,7 @@ if (return null) {$2;
             className='px-3 py-1 && 1.5 rounded-md border'>;
             Done;
           </button>        </div>;
+<<<<<<< HEAD
       </div>;const has = null;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       }
@@ -178,3 +193,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      </div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

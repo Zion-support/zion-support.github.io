@@ -1,14 +1,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 import OffworldDeploy from "../deploy/offworld";
 export default OffworldDeploy;
 
 import OffworldDeploy from "../deploy / offworld";
 export default OffworldDeploy;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26,6 +30,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import OffworldDeploy from '../deploy/offworld';
 export default OffworldDeploy;import OffworldDeploy from '../deploy / offworld';
 export default OffworldDeploy;export default OffworldDeploy;
@@ -38,6 +46,7 @@ export default OffworldDeploy;
 export default OffworldDeploy;
 
 export default OffworldDeploy;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -61,3 +70,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+import OffworldDeploy from '../deploy/offworld';
+export default OffworldDeploy;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

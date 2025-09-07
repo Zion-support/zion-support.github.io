@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 ;
@@ -23,6 +24,11 @@ interface SEOProps  {title?: string;
 const SEO: React.FC<SEOProps> = ({
   title;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+{
+  /* Robots Meta */
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }{
   noindex && <meta name="robots" content="noindex" />
 }{
@@ -174,12 +180,15 @@ const SEO: React.FC<SEOProps> = ({title = 'Zion Tech Group - Revolutionary AI, Q
 <<<<<<< HEAD
   const fullImage = image.startsWith('http')
     ? image
+<<<<<<< HEAD
     : `https://ziontechgroup.com${image}`;
 
   return (
     <Head>
 =======
   const fullImage = image.startsWith('http')? image;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     : `https://ziontechgroup.com${image}`;  title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions';
   description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading-edge services in AI, cybersecurity, space tech, and quantum solutions.';
   keywords = 'AI, artificial intelligence, quantum computing, space technology, cybersecurity, machine learning, automation, Zion Tech Group, technology solutions, enterprise software, cloud computing, blockchain, IoT, robotics';
@@ -189,6 +198,7 @@ const SEO: React.FC<SEOProps> = ({title = 'Zion Tech Group - Revolutionary AI, Q
   author = 'Zion Tech Group';
   section;
   tags = [];
+<<<<<<< HEAD
   structuredData;: `https://ziontechgroup.com${image}`;return (<Head>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       {/* Basic Meta Tags */}
@@ -207,6 +217,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <meta name='author' content={author} />;
       <meta name='robots' content={noindex ? 'noindex' : 'index'} />;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  structuredData;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       {nofollow && <meta name='robots' content='nofollow' />}
       {noindex && <meta name='robots' content='noindex' />}
       {nofollow && <meta name='robots' content='nofollow' />}
@@ -326,6 +339,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{
+<<<<<<< HEAD
             __html: JSON.stringify(structuredData),
 origin/cursor/automate-test-improve-and-merge-code-2533
           }}
@@ -333,6 +347,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       )}
     </Head>
 );
+=======
+            __html: JSON && JSON.stringify(structuredData),          }}
+        />;
+      )}
+    </Head>;
+  )
+};
+
+export default SEO;            __html: JSON && JSON.stringify(structuredData);
+          }}
+        />;
+      )}
+  );
+export default SEO;  )
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 };
 
 export default SEO;
@@ -396,6 +425,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         />)}
     </Head>)}export default SEO;            __html: JSON.stringify (structured_data)}}
         />)}
+<<<<<<< HEAD
     </Head>)}export default SEO)}export default SEO;</Head>;
 )}export default SEO;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </Head>);
+}
+;
+export default SEO);
+}
+;
+export default SEO;
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -5,10 +5,14 @@
  */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -32,7 +36,11 @@ const { execSync } = require('child_process')
   console.error(' Targeted error resolution "failed")
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.error(' Targeted error resolution interval "failed")
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    console.error(' Targeted error resolution interval "failed")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

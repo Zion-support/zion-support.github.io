@@ -25,9 +25,19 @@
       </ul>
     </div>
   );
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
       </ul>;
+=======
+export async function getStaticProps() {;
+  try{;
+    const p = path && path.join(process && process.cwd(),'datagovernanceproposals && datagovernanceproposals.json');
+    const raw = fs && fs.readFileSync(p,'utf8');
+    return { props: { data: JSON && JSON.parse(raw) } }
+  }catch{;
+  try{
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     </div>;
   )export async function getStaticProps() {try{const p = path && path.join(process && process.cwd(),'datagovernanceproposals && datagovernanceproposals.json')const raw = fs && fs.readFileSync(p,'utf8')return { props: { data: JSON && JSON.parse(raw) } }
   }catch{try{</div>;
@@ -35,4 +45,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return { props: { data: { updated_at: null, proposals: [] } } }
   }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

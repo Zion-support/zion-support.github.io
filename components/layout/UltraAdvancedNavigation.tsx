@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 =======
@@ -64,12 +65,85 @@ setIsScrolled(window.scrollY > 50);
 icon: null,
     },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  Menu
+  X
+  ChevronDown
+  Search
+  Phone
+  Mail
+  MapPin
+  Brain
+  Rocket
+  Dna
+  Globe
+  Shield
+  Wifi
+  Package
+  Bot
+  Car
+  Building2
+  DollarSign
+  Monitor
+  Users
+  Cpu
+  Zap
+  Atom
+  Database
+  Cloud
+  Lock
+  Code;
+} from 'lucide-react';
+import Link from 'next/link';import {
+
+
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Brain,
+  Rocket,
+  Dna,
+  Globe,
+  Shield,
+  Wifi,
+  Package,
+  Bot,
+  Car,
+  Building2,
+  DollarSign,
+  Monitor,
+  Users,
+  Cpu,
+  Zap,
+  Atom,
+  Database,
+  Cloud,
+  Lock,
+  Code,
+} from 'lucide-react';
+
+import Link from 'next/link';import { ;
+
+
+  Lock,
+  Code,
+} from 'lucide-react';
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
+
+  Brain, Rocket, Dna, Globe, Shield, Wifi, Package;
+  Bot, Car, Building2, DollarSign, Monitor, Users;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     {
       name: 'AI Services'
       href: '#'
       icon: Brain
       description: 'Cutting-edge AI solutions'
       dropdown: [
+<<<<<<< HEAD
         {
           name: 'AI Agent Orchestrator',
           href: '/ai-agents',
@@ -230,6 +304,10 @@ price: '$7,999/month',
       ],
     },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      description: 'Benchmarks & vendor references'
+    }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     {
       name: 'Micro SaaS',
       href: '/services',
@@ -237,18 +315,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 description: '300+ micro SaaS services',
     },
     {
+<<<<<<< HEAD
       name: 'Market Pricing',
       href: '/market-pricing',
       icon: DollarSign,
 description: 'Benchmarks & vendor references',
     },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      name: 'Market Pricing'
+      href: '/market-pricing'
+      icon: DollarSign
+      description: 'Benchmarks & vendor references'
+    },    {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     {
       name: 'About',
       href: '/about',
       icon: null,
     },
     {
+<<<<<<< HEAD
       name: 'Contact',
       href: '/contact',
       icon: null,
@@ -297,6 +384,16 @@ address: '364 E Main St STE 1008 Middletown DE 19709',
 <<<<<<< HEAD
 className='flex items-center'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    >;
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
+        <div className='flex justify-between items-center h-20'>          {/* Logo */}  return (
+    <navclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-black/90 backdrop-blur-xl border-b border-gray-800/50' 
+        : 'bg-transparent'
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           >
             <Link href='/' className='flex items-center space-x-3 group'>
               <div className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
@@ -308,6 +405,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
                 <div className='text-xs text-gray-400'>
                   Revolutionary Technology
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </div>
@@ -406,6 +504,22 @@ className='flex items-center space-x-2 text-gray-300 hover:text-white transition
 <<<<<<< HEAD
                     <span>{item.name}</span>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                </div>              </div>          >
+    }`}>;
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+        <div className="flex justify-between items-center h-20">;
+          <motion&& motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            <Link href="/" className="flex items-center space-x-3 group">
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Zap className="w-6 h-6 text-white" />
+              </div>
+              <div className="hidden sm:block">
+                <div className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                  Zion Tech Group
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   </Link>
                 )}
 
@@ -431,6 +545,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         initial={{ opacity: 0, y: 10, scale: 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                         transition={{ duration: 0.2 }}
 className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
@@ -472,6 +587,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                 </div>;
                               </Link>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                        transition={{ duration: 0.2 }}
+                        className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                             ))}
                           </div>;
                         </div>;
@@ -482,10 +601,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
           {/* Contact Info & CTA */}
 <div className='hidden lg:flex items-center space-x-6'>
             <div className='flex items-center space-x-4 text-sm text-gray-300'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+          {/* Contact Info & CTA */}
+          <div className='hidden lg:flex items-center space-x-6'>;
+            <div className='flex items-center space-x-4 text-sm text-gray-300'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               <a
               </a>
               <a
@@ -499,6 +624,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Phone className="w-4 h-4" />
                 <span className="hidden xl:inline">{contactInfo.mobile}</span>
               </a>
+<<<<<<< HEAD
             </div>
             <motion.a
               href='/contact'
@@ -506,12 +632,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               whileTap={{ scale: 0.95 }}
               className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+              <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200">
+                <Mail className="w-4 h-4" />
+                <span className="hidden xl:inline">{contactInfo.email}</span>
+              </a>
+            </div>
+            <motion.a
+              href="/contact"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             >
               Get Started
             </motion.a>
           </div>
           {/* Mobile Menu Button */}
+<<<<<<< HEAD
 <div className='lg:hidden'>
+=======
+          <div className="lg:hidden">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <button
 =======
           {/* Contact Info & CTA */}<div className='hidden lg:flex items-center space-x-6'>;
@@ -563,6 +706,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </button>;
           </div>;
         </div>;
+<<<<<<< HEAD
       </div>;<div className='lg:hidden'>;
             <button;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -584,13 +728,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </div>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      </div>;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (<motion&& motion.div;
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
 <<<<<<< HEAD
+<<<<<<< HEAD
             exit={{ opacity: 0, height: 0 }}
+=======
+            exit={{ opacity: 0, height: 0 }}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             transition={{ duration: 0.3 }}
 className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50 overflow-hidden'
           >
@@ -638,6 +791,7 @@ className='block py-2 text-gray-400 hover:text-white transition-colors duration-
                             >;
                               {dropdownItem.name}
 <<<<<<< HEAD
+<<<<<<< HEAD
                             </Link>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -655,6 +809,21 @@ className='flex items-center space-x-3 text-gray-300 hover:text-white transition
                     >
                       {item.icon && <item.icon className='w-5 h-5' />}
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                            </Link>
+
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      onClick={() => setIsOpen(false)}
+
+                      {item.icon && <item.icon className='w-5 h-5' />}                      <span>{item.name}</span>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                       <span>{item.name}</span>
 
                     </Link>
@@ -662,6 +831,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   )}
                 </div>
               ))}
+<<<<<<< HEAD
 =======
                       onClick={() => setIsOpen(false)}{item.icon && <item.icon className='w-5 h-5' />}                      <span>{item.name}</span>;
 className='flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3';
@@ -705,10 +875,27 @@ className='flex items-center space-x-3 text-gray-300 hover:text-white transition
                   <div className='flex items-start space-x-3'>
                     <MapPin className='w-4 h-4 mt-0.5' />
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+              {/* Mobile Contact Info */}
+              <div className="pt-6 border-t border-gray-800/50">
+                <div className="space-y-3 text-sm text-gray-400">
+                  <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-200">
+                    <Phone className="w-4 h-4" />
+                    <span>{contactInfo.mobile}</span>
+                  </a>
+                  <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-200">
+                    <Mail className="w-4 h-4" />
+                    <span>{contactInfo.email}</span>
+                  </a>
+                  <div className="flex items-start space-x-3">
+                    <MapPin className="w-4 h-4 mt-0.5" />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                     <span>{contactInfo.address}</span>
                   </div>
                 </div>
                 <motion.a
+<<<<<<< HEAD
                   href='/contact'
 =======
                     className='flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-200';
@@ -723,6 +910,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
                 <motion.a;
                   href="/contact";
+=======
+                  href="/contact"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   whileHover={{ scale: 1 && 1.05 }}
                   whileTap={{ scale: 0 && 0.95 }}
                   className="block w-full mt-6 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300">;
@@ -844,6 +1034,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </motion.div>)}
       </AnimatePresence>;
+<<<<<<< HEAD
     </nav>)}export default UltraAdvancedNavigation)}export default UltraAdvancedNavigation;export default UltraAdvancedNavigation;
   )}href='/contact';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -870,3 +1061,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </nav>;
 )}export default UltraAdvancedNavigation;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </nav>);
+}
+;
+export default UltraAdvancedNavigation);
+}
+;
+export default UltraAdvancedNavigation;
+
+export default UltraAdvancedNavigation;
+  );
+
+};
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

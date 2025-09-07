@@ -82,6 +82,7 @@ function resolveMergeConflicts() {
             // Remove conflict markers and keep both versions where possible
             content = content
 <<<<<<< HEAD
+<<<<<<< HEAD
               .replace(/
               .replace(/<<<<<<< [^\n]+\n/g, '')
               .replace(/
@@ -91,6 +92,14 @@ function resolveMergeConflicts() {
               .replace(/=======\n/g, '')
               .replace(/[^\n]+\n/g, '');
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              .replace(/\n/g, '')
+              .replace(/\n/g, '')
+              .replace(/
+              .replace(/<<<<<<< [^\n]+\n/g, '')
+              .replace(/\n/g, '')
+              .replace(/
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             
             fs.writeFileSync(file, content);
             console.log(`✅ Resolved conflicts in ${file}`);

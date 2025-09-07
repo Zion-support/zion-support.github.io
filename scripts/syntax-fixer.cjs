@@ -11,7 +11,11 @@ const util = require("util")
     await this.log(" Starting syntax error fixing...")
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     fixed = fixed.replace(/(\w+):\s*([^}]+)/g, '"$1"
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    fixed = fixed.replace(/(\w+):\s*([^}]+)/g, '"$1"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

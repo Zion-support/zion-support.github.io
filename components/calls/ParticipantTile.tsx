@@ -1,9 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
 type Props = any;
 import type {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   RemoteParticipant
   LocalParticipant
   TrackPublication
@@ -27,6 +31,7 @@ type Props = {participant: RemoteParticipant | LocalParticipant;
   participant,isLocal,displayName,}: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null)type Props = {participant: RemoteParticipant | LocalParticipant;
   isLocal?: boolean;
   displayName?: string;
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 export default function ParticipantTile({
@@ -35,11 +40,29 @@ export default function ParticipantTile({
   displayName,
 }: Props) {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  participant
+  isLocal
+  displayName
+  participant,
+  isLocal,
+  displayName,;
+}: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null);
+type Props = {
+  participant: RemoteParticipant | LocalParticipant
+  isLocal?: boolean;
+  displayName?: string
+}
+export default function ParticipantTile({ participant, isLocal, displayName }: Props) {
+};
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   useEffect(() => {
     const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {
       if (track.kind === 'video' && videoRef.current) {
+<<<<<<< HEAD
 track.attach(videoRef.current);
       }
       if (track.kind === 'audio' && audioRef.current) {
@@ -59,16 +82,61 @@ track.detach(videoRef.current);
       const track = pub.track;
 if (track) handleTrackSubscribed(pub, track);
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        track.attach(videoRef.current);
+};
+
+export default function ParticipantTile(): any ({;
+  participant,;
+  isLocal,;
+  displayName,;
+}: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null);
+type Props = {;
+  participant: RemoteParticipant | LocalParticipant,;
+  isLocal?: boolean;
+  displayName?: string;
+};
+
+  useEffect(() => {;
+    const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {;
+      if (track && track.kind === 'video' && videoRef && videoRef.current) {;
+        track && track.attach(videoRef && videoRef.current);
+      }
+      if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
+        track && track.attach(audioRef && audioRef.current);      }
+    };
+    const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) => {;
+      if (track && track.kind === 'video' && videoRef && videoRef.current) {;
+        track && track.detach(videoRef && videoRef.current);
+      }
+      if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
+        track && track.detach(audioRef && audioRef.current);      }        track && track.attach(videoRef && videoRef.current);
+      }
+      if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
+        track && track.attach(audioRef && audioRef.current);
+      }
+      }
+      if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
+        track && track.detach(audioRef && audioRef.current);        track && track.detach(videoRef && videoRef.current);
+      }
+      }
+    };
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     });
     participant.on('trackSubscribed', handleTrackSubscribed);
     participant.on('trackUnsubscribed', handleTrackUnsubscribed);
     return () => {
       participant.off('trackSubscribed', handleTrackSubscribed);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 participant.off('trackUnsubscribed', handleTrackUnsubscribed);
     };
   }, [participant]);
   return (
     <div className='bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative'>
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
       <video
 =======
@@ -107,6 +175,16 @@ if (track) handleTrackSubscribed(pub, track)})participant.on('trackSubscribed', 
     </div>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+      <video
+        ref={videoRef}
+        autoPlay
+        playsInline
+        muted={Boolean(isLocal)}
+        className='w-full h-48 object-cover bg-black'
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
   RemoteParticipant,
   LocalParticipant,
@@ -203,6 +281,7 @@ if ( {) {$2;
     </div>
 );
 }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     </div>)}
@@ -210,3 +289,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
 )})
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+  );
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

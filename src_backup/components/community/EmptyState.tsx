@@ -1,4 +1,5 @@
 <<<<<<< HEAD:src_backup/components/community/EmptyState.tsx
+<<<<<<< HEAD:src_backup/components/community/EmptyState.tsx
 import React from 'react'
 import Link from 'next/link'
 
@@ -7,6 +8,12 @@ import Link from 'next/link'
 import { MessageSquare } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
+=======
+import { MessageSquare } from 'lucide-react'
+
+import { Button } from '@/components/ui/button'
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/community/EmptyState.tsx
 import React from 'react',
 =======
 
@@ -18,7 +25,10 @@ import { MessageSquare  } from 'lucide-react';
 import { Button  } from '@/components/ui/button';
 <<<<<<< HEAD:src_backup/components/community/EmptyState.tsx
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+<<<<<<< HEAD:src_backup/components/community/EmptyState.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/community/EmptyState.tsx
 import {
   Tooltip
   TooltipContent
@@ -26,6 +36,7 @@ import {
   TooltipTrigger
 } from '@/components/ui/tooltip'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
+<<<<<<< HEAD:src_backup/components/community/EmptyState.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface EmptyStateProps {
 
@@ -76,11 +87,14 @@ import {
 } from '@/components/ui/ tooltip';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/ tooltip';
 interface EmptyStateProps {
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/community/EmptyState.tsx
 
   title: string;
   subtitle: string;
   cta: string;
   href: string;
+<<<<<<< HEAD:src_backup/components/community/EmptyState.tsx
 
 import React from 'react';
 import Link from 'next/link';
@@ -158,6 +172,35 @@ const EmptyState: React.FC<EmptyStateProps> = ({title,subtitle,cta,href,hasSessi
             ) : (;
               <Button disabled>{cta}</Button>;
 
+=======
+  hasSession: boolean
+
+const EmptyState: React.FC<EmptyStateProps> = ({
+  title
+  subtitle
+  cta
+  href
+  hasSession
+}) => {  return (
+    <div className='text-center py-16'>
+      <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>
+        <MessageSquare className='h-10 w-10 text-zion-purple' />
+      </div>
+      <h2 className='text-xl font-medium mb-2'>{title}</h2>
+      <p className='text-muted-foreground mb-6'>{subtitle}</p>      <TooltipProvider>      <h2 className="text-xl font-medium mb-2">{title}</h2>
+import React from 'react';
+import Link from 'next/link';
+import { MessageSquare } from 'lucide-react';
+import { Button } from '@/components/ui/button',;
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',;
+interface EmptyStateProps {;
+  title: string,;
+  subtitle: string,;
+  cta: string,;
+  href: string,;
+  hasSession: boolean;
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/community/EmptyState.tsx
 
 const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, hasSession }) => {
   return (
@@ -169,9 +212,12 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
 
 
       <p className="text-muted-foreground mb-6">{subtitle}</p>
+<<<<<<< HEAD:src_backup/components/community/EmptyState.tsx
   hasSession: boolean
       <p className='text-muted-foreground mb-6'>{subtitle}</p>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/community/EmptyState.tsx
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
@@ -182,6 +228,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ) : (
               <Button disabled>{cta}</Button>
             )}
+<<<<<<< HEAD:src_backup/components/community/EmptyState.tsx
           </TooltipTrigger>;
           {!hasSession && <TooltipContent>Login required</TooltipContent>}
 
@@ -246,12 +293,27 @@ export default EmptyState;
 },;
 export default EmptyState;
 
+=======
+
+          </TooltipTrigger>;
+          {!hasSession && <TooltipContent>Login required</TooltipContent>}
+
+
+
+
+        </Tooltip>;
+      </TooltipProvider>;
+    </div>;
+  );
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/community/EmptyState.tsx
         </Tooltip>
       </TooltipProvider>
     </div>
 );
 };
 export default EmptyState;
+<<<<<<< HEAD:src_backup/components/community/EmptyState.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 },export default EmptyState;</Tooltip>;
@@ -259,3 +321,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
 )}export default EmptyState;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/community/EmptyState.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/community/EmptyState.tsx

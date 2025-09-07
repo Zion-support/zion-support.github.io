@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -27,6 +28,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import { ServiceVariant  } from '../types/service-variants';
 export interface SpecializedEnterpriseService  {id: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+import { ServiceVariant } from '../types/service-variants';
+export interface SpecializedEnterpriseService {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string;
   name: string;
   tagline: string;
@@ -384,6 +391,7 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
     address: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     website: string;
   }
@@ -395,18 +403,24 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
+    website: string;
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     website: string
   },
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -416,11 +430,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   customers: number;
   rating: number;
   reviews: number;
   benefits: string[];
   capabilities: string[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -451,6 +468,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
@@ -462,6 +482,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -513,11 +534,16 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
   // Advanced AI & Consciousness Services
   {
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -531,6 +557,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Consciousness simulation engine',
       'Cognitive architecture modeling',
       'Emotional intelligence algorithms',
@@ -543,6 +572,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Expert consultation services'
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -584,6 +614,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     marketPosition:
       'Leading AI consciousness research platform for scientific institutions'
     targetAudience:
@@ -613,6 +647,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
     icon: '🧠',
@@ -630,6 +665,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     color: 'from - purple - 600 to - pink - 600',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / ai - consciousness - research',
@@ -662,6 +700,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -677,6 +716,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Advanced research platform with custom AI models and collaborative research tools',
     launch_date: '2024 - 11 - 01',
     customers: 23,
@@ -686,42 +729,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      'Quantum-enhanced ML algorithms',
-    benefits: [;
-      'Breakthrough consciousness research',
-      'AGI development capabilities',
-      'Scientific collaboration',
-      'Patent - pending algorithms',
-      'Exclusive research access',
-    ],
-    capabilities: [;
-      'Consciousness simulation',
-      'Cognitive modeling',
-      'Emotional intelligence',
-      'Research collaboration',
-      'Advanced analytics',
-    ],
-    market_advantage:;
-      'Only comprehensive AI consciousness research platform available',
-  },
-  // Quantum Computing Services;
-  {
-    id: 'quantum - machine - learning - platform',
-    name: 'Quantum Machine Learning Platform',
-    tagline: 'Quantum - enhanced machine learning and optimization',
-    price: '$4, 499',
-    period: '/month',
-    description:;
-      'Revolutionary platform that combines quantum computing with machine learning, enabling unprecedented computational power for complex optimization problems.',
-    features: [;
-      'Quantum - enhanced ML algorithms',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -733,6 +751,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Quantum optimization solvers',
       'Hybrid quantum - classical computing',
       'Quantum feature selection',
@@ -748,46 +768,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '⚛️',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      'Multi-quantum backend platform with hybrid computing capabilities',
-    launchDate: '2024-10-01',
-    color: 'from - blue - 600 to - cyan - 600',
-    text_color: 'text - blue - 400',
-    link: 'https://ziontechgroup.com / quantum - machine - learning',
-    market_position:;
-      'Leading quantum machine learning platform for research and enterprise',
-    target_audience:;
-      'Research institutions, Financial services, Pharmaceutical companies, Logistics companies',
-    trial_days: 21,
-    setup_time: '4 - 6 weeks',
-    category: 'Quantum Computing & AI',
-    real_service: true,
-    technology: [;
-      'Qiskit, Cirq, TensorFlow Quantum, Python, C++, Quantum algorithms',
-    ],
-    integrations: [;
-      'IBM Quantum, Google Quantum, AWS Braket, Azure Quantum, D - Wave',
-    ],
-    use_cases: [;
-      'Financial optimization, Drug discovery, Logistics optimization, Machine learning research',
-    ],
-    roi: 'Solve previously intractable problems and accelerate research by 100x',
-    competitors: ['IBM Quantum, Google Quantum AI, Rigetti, D - Wave'],
-    market_size: '$10B+ quantum computing market',
-    growth_rate: '250% YoY',
-    variant: 'quantum - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;
-      'Multi - quantum backend platform with hybrid computing capabilities',
-    launch_date: '2024 - 10 - 01',
 
+<<<<<<< HEAD
     customers: 45,
     rating: 4 && 4.9,
     reviews: 32,
@@ -839,6 +831,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Multivariate cryptography',
       'Quantum key distribution',
       'Hybrid encryption systems',
@@ -851,46 +845,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🔒',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      'Enterprise-grade quantum-resistant cryptography platform with migration tools',
-    launchDate: '2024-09-01',
-    color: 'from - red - 600 to - orange - 600',
-    text_color: 'text - red - 400',
-    link: 'https://ziontechgroup.com / quantum - resistant - cryptography',
-    market_position:;
-      'Leading quantum - resistant cryptography platform for enterprise security',
-    target_audience:;
-      'Financial institutions, Government agencies, Healthcare organizations, Defense contractors',
-    trial_days: 30,
-    setup_time: '3 - 4 weeks',
-    category: 'Advanced Cybersecurity',
-    real_service: true,
-    technology: [;
-      'Post - quantum algorithms, Lattice cryptography, Hash functions, Python, C++, Rust',
-    ],
-    integrations: [;
-      'PKI systems, Identity providers, Encryption tools, Security frameworks',
-    ],
-    use_cases: [;
-      'Data encryption, Digital signatures, Key management, Secure communications',
-    ],
-    roi: 'Future - proof security infrastructure and maintain compliance with emerging standards',
-    competitors: ['NIST post - quantum candidates, PQShield, PQSecure, ISARA'],
-    market_size: '$8B+ post - quantum cryptography market',
-    growth_rate: '300% YoY',
-    variant: 'cybersecurity - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;
-      'Enterprise - grade quantum - resistant cryptography platform with migration tools',
-    launch_date: '2024 - 09 - 01',
 
+<<<<<<< HEAD
     customers: 78,
     rating: 4 && 4.8,
     reviews: 56,
@@ -934,6 +900,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Autonomous satellite operations',
       'Constellation optimization',
       'AI - powered mission planning',
@@ -950,46 +918,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🛰️',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      'Custom satellite orchestration platform with AI-powered optimization',
-    launchDate: '2024-08-01',
-    color: 'from - indigo - 600 to - purple - 600',
-    text_color: 'text - indigo - 400',
-    link: 'https://ziontechgroup.com / satellite - ai - orchestration',
-    market_position:;
-      'Leading AI satellite orchestration platform for space companies',
-    target_audience:;
-      'Satellite companies, Space agencies, Telecommunications, Earth observation companies',
-    trial_days: 14,
-    setup_time: '8 - 12 weeks',
-    category: 'Space Technology',
-    real_service: true,
-    technology: [;
-      'AI / ML, Orbital mechanics, Satellite protocols, Python, C++, Space systems',
-    ],
-    integrations: [;
-      'Satellite networks, Ground stations, Space data providers, Mission control systems',
-    ],
-    use_cases: [;
-      'Satellite operations, Constellation management, Mission planning, Data processing',
-    ],
-    roi: 'Optimize satellite operations by 400% and reduce mission costs by 60%',
-    competitors: ['Maxar, Planet Labs, Spire, ICEYE'],
-    market_size: '$5B+ satellite operations market',
-    growth_rate: '400% YoY',
-    variant: 'space - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;
-      'Custom satellite orchestration platform with AI - powered optimization',
-    launch_date: '2024 - 08 - 01',
 
+<<<<<<< HEAD
     customers: 12,
     rating: 4 && 4.9,
     reviews: 8,
@@ -1033,6 +973,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Neural signal processing',
       'Brain - computer communication',
       'Cognitive enhancement tools',
@@ -1049,46 +991,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🧬',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      'Advanced BCI platform with medical-grade hardware and research tools',
-    launchDate: '2024-07-01',
-    color: 'from - pink - 600 to - rose - 600',
-    text_color: 'text - pink - 400',
-    link: 'https://ziontechgroup.com / brain - computer - interface',
-    market_position:;
-      'Leading brain - computer interface platform for research and medical applications',
-    target_audience:;
-      'Research institutions, Medical centers, Rehabilitation facilities, Technology companies',
-    trial_days: 7,
-    setup_time: '12 - 16 weeks',
-    category: 'Neural Technology & BCI',
-    real_service: true,
-    technology: [;
-      'Neural signal processing, Machine learning, Neuroscience, Python, C++, Neural hardware',
-    ],
-    integrations: [;
-      'Medical devices, Research equipment, Neural monitoring systems, Clinical platforms',
-    ],
-    use_cases: [;
-      'Medical rehabilitation, Cognitive research, Assistive technology, Human augmentation',
-    ],
-    roi: 'Revolutionary medical applications and breakthrough research capabilities',
-    competitors: ['Neuralink, CTRL - labs, Kernel, Paradromics'],
-    market_size: '$3B+ BCI market',
-    growth_rate: '600% YoY',
-    variant: 'neural - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;
-      'Advanced BCI platform with medical - grade hardware and research tools',
-    launch_date: '2024 - 07 - 01',
 
+<<<<<<< HEAD
     customers: 8,
     rating: 5 && 5.0,
     reviews: 5,
@@ -1132,6 +1046,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Autonomous device management',
       'Self - healing networks',
       'AI - powered optimization',
@@ -1148,46 +1064,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🌐',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      'Industrial-grade autonomous IoT platform with AI-powered management',
-    launchDate: '2024-06-01',
-    color: 'from - teal - 600 to - cyan - 600',
-    text_color: 'text - teal - 400',
-    link: 'https://ziontechgroup.com / autonomous - iot - ecosystem',
-    market_position:;
-      'Advanced autonomous IoT platform for industrial and enterprise applications',
-    target_audience:;
-      'Manufacturing companies, Smart cities, Energy companies, Industrial IoT providers',
-    trial_days: 30,
-    setup_time: '4 - 6 weeks',
-    category: 'Advanced IoT & Edge Computing',
-    real_service: true,
-    technology: [;
-      'AI / ML, IoT protocols, Edge computing, Python, Kubernetes, Docker',
-    ],
-    integrations: [;
-      'Industrial IoT platforms, Cloud providers, Device manufacturers, Network equipment',
-    ],
-    use_cases: [;
-      'Industrial automation, Smart city management, Energy optimization, Manufacturing IoT',
-    ],
-    roi: 'Reduce IoT management costs by 70% and improve operational efficiency by 50%',
-    competitors: ['AWS IoT, Azure IoT, Google Cloud IoT, PTC ThingWorx'],
-    market_size: '$20B+ industrial IoT market',
-    growth_rate: '180% YoY',
-    variant: 'iot - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;
-      'Industrial - grade autonomous IoT platform with AI - powered management',
-    launch_date: '2024 - 06 - 01',
 
+<<<<<<< HEAD
     customers: 67,
     rating: 4 && 4.7,
     reviews: 45,
@@ -1219,6 +1107,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     id: 'predictive - analytics - engine',
     name: 'Predictive Analytics Engine',
     tagline: 'AI - powered predictive insights and forecasting',
@@ -1231,6 +1121,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1238,6 +1129,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     id: 'predictive-analytics-engine'
     name: 'Predictive Analytics Engine'
     tagline: 'AI-powered predictive insights and forecasting'
@@ -1246,6 +1141,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     description:
       'Advanced predictive analytics platform that uses machine learning and AI to provide accurate forecasts, trend analysis, and business intelligence insights.'
     features: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1261,6 +1157,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Advanced ML algorithms',
       'Predictive modeling',
       'Time series forecasting',
@@ -1274,6 +1173,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     popular: true,
     icon: '📊',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1302,10 +1202,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Businesses, Financial services, Retail companies, Manufacturing companies',
     trial_days: 21,
     setup_time: '2 - 3 weeks',
     category: 'Advanced Analytics & AI',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1317,6 +1222,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     integrations: [
       'Data warehouses, Business intelligence tools, CRM systems, ERP platforms'
     ]
@@ -1331,6 +1240,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     contactInfo: contact
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1369,6 +1279,9 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
     launch_date: '2024 - 05 - 01',
 
 
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     customers: 189,
     rating: 4 && 4.8,
     reviews: 145,
@@ -1382,6 +1295,7 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
 export default specializedEnterpriseServices;    id: 'quantum-machine-learning-platform';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -1392,6 +1306,9 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     benefits: [;
       '60% decision accuracy improvement',
       '35% operational cost reduction',
@@ -1412,11 +1329,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Advanced predictive analytics platform with custom ML model development',
   },;
 
@@ -1440,6 +1362,7 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
     market_advantage:;
       'Advanced predictive analytics platform with custom ML model development',
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1561,8 +1484,11 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
       'Advanced predictive analytics platform with custom ML model development'
   }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ];
-<<<<<<< HEAD
 ;
 export default specializedEnterpriseServices;    id: 'quantum - machine - learning - platform';
     name: 'Quantum Machine Learning Platform';
@@ -1573,6 +1499,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
       'Quantum-enhanced ML algorithmsQuantum optimization solversHybrid quantum-classical computingQuantum feature selectionQuantum neural networksQuantum data encodingPerformance benchmarkingQuantum error correction';
       'Research and development toolsExpert quantum consulting';
     description: 'Revolutionary platform that combines quantum computing with machine learning, enabling unprecedented computational power for complex optimization problems.';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1598,6 +1525,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     features: [
       'Quantum-enhanced ML algorithmsQuantum optimization solversHybrid quantum-classical computingQuantum feature selectionQuantum neural networksQuantum data encodingPerformance benchmarkingQuantum error correction';
       'Research and development toolsExpert quantum consulting'
@@ -1653,17 +1583,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    market_advantage: 'Advanced quantum ML platform with hybrid computing capabilities';
-  }
-;
-  // Advanced Cybersecurity Services;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1675,6 +1605,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   {
     id: 'quantum - resistant - cryptography';
     name: 'Quantum - Resistant Cryptography Platform';
@@ -1688,6 +1620,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ];
 <<<<<<< HEAD
     popular: true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1723,6 +1656,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '3 - 4 weeks';category: 'Advanced Cybersecurity';
     popular: true;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     category: 'Advanced Cybersecurity';
     real_service: true;
     technology: ['Post - quantum algorithms, Lattice cryptography, Hash functions, Python, C++, Rust'];
@@ -1752,17 +1689,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    market_advantage: 'Comprehensive quantum - resistant cryptography platform with migration support';
-  }
-;
-  // Space Technology Services;
 
+<<<<<<< HEAD
   {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -1775,6 +1712,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     id: 'satellite - ai - orchestration';
     name: 'Satellite AI Orchestration Platform';
     tagline: 'Intelligent satellite constellation management';
@@ -1787,6 +1726,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ];
 <<<<<<< HEAD
     popular: false;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1822,6 +1762,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '8 - 12 weeks';category: 'Space Technology';
     popular: false;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     category: 'Space Technology';
     real_service: true;
     technology: ['AI / ML, Orbital mechanics, Satellite protocols, Python, C++, Space systems'];
@@ -1851,17 +1795,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    market_advantage: 'Advanced AI satellite orchestration with autonomous capabilities';
-  }
-;
-  // Neural Interface Services;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1873,6 +1817,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   {
     id: 'brain - computer - interface - platform';
     name: 'Brain - Computer Interface Platform';
@@ -1886,6 +1832,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ];
 <<<<<<< HEAD
     popular: true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1921,6 +1868,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '12 - 16 weeks';category: 'Neural Technology & BCI';
     popular: true;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     category: 'Neural Technology & BCI';
     real_service: true;
     technology: ['Neural signal processing, Machine learning, Neuroscience, Python, C++, Neural hardware'];
@@ -1950,17 +1901,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    market_advantage: 'Advanced BCI platform with medical - grade capabilities and research tools';
-  }
-;
-  // Advanced IoT Services;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1972,6 +1923,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   {
     id: 'autonomous - iot - ecosystem';
     name: 'Autonomous IoT Ecosystem Platform';
@@ -1985,6 +1938,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ];
 <<<<<<< HEAD
     popular: false;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2020,6 +1974,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '4 - 6 weeks';category: 'Advanced IoT & Edge Computing';
     popular: false;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     category: 'Advanced IoT & Edge Computing';
     real_service: true;
     technology: ['AI / ML, IoT protocols, Edge computing, Python, Kubernetes, Docker'];
@@ -2049,17 +2007,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    market_advantage: 'Advanced autonomous IoT platform with AI - powered management capabilities';
-  }
-;
-  // Advanced Analytics Services;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -2071,6 +2029,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   {
     id: 'predictive - analytics - engine';
     name: 'Predictive Analytics Engine';
@@ -2084,6 +2044,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ];
 <<<<<<< HEAD
     popular: true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2122,6 +2083,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology: ['Python, TensorFlow, PyTorch, Scikit - learn, React, Node.js'];integrations: ['Data warehouses, Business intelligence tools, CRM systems, ERP platforms'];
     popular: true;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     integrations: ['Data warehouses, Business intelligence tools, CRM systems, ERP platforms'];
     use_cases: ['Sales forecasting, Demand prediction, Risk assessment, Performance optimization'];
     roi: 'Improve decision - making accuracy by 60% and reduce operational costs by 35%';
@@ -2149,6 +2114,7 @@ export default specializedEnterpriseServices;export default specializedEnterpris
 ursor/fix-website-loading-errors-and-merge-6662;
 export default specializedEnterpriseServices;export default specializedEnterpriseServices;export default specializedEnterpriseServices;
 ];
+<<<<<<< HEAD
 ;
 =======
 <<<<<<< HEAD
@@ -2182,6 +2148,16 @@ export default specializedEnterpriseServices;
 
 ursor/fix-website-loading-errors-and-merge-6662
 export default specializedEnterpriseServices;
+=======
+;
+export default specializedEnterpriseServices;
+
+
+
+
+
+export default specializedEnterpriseServices;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
@@ -2189,6 +2165,7 @@ export default specializedEnterpriseServices;
 
 export default specializedEnterpriseServices;
 
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -2198,3 +2175,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 export default specializedEnterpriseServices;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -1,13 +1,29 @@
 import React, { useState } from 'react';
 <<<<<<< HEAD
 import { useAutoTranslate } from '../../hooks/useAutoTranslate';
+<<<<<<< HEAD
 const defaultTargets = null;
 origin/cursor/automate-test-improve-and-merge-code-2533:components/admin/TranslationPreview.tsx
+=======
+:backup-problematic-files/temp_broken_files/components/admin/TranslationPreview.tsx
+
+const defaultTargets = ['enptesar']
+
+const defaultTargets = null;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export default function TranslationPreview() {
   const [text, setText] = useState('')
   const [targets, setTargets] = useState<string[]>(defaultTargets)
   const { translations, loading, error } = useAutoTranslate(text, targets)
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533:components/admin/TranslationPreview.tsx
+=======
+:backup-problematic-files/temp_broken_files/components/admin/TranslationPreview.tsx
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
 <div className='space-y-4'>
       <h2 className='text-lg font-semibold'>Translation Preview</h2>
@@ -17,6 +33,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/admin/Transla
         value={text}
         onChange={e => setText(e.target.value)}
       />
+<<<<<<< HEAD
+=======
+:backup-problematic-files/temp_broken_files/components/admin/TranslationPreview.tsx
+      <div className="text-sm text-gray-500">{loading ? 'Translating' : error ? `Error: ${error}` : 'Ready'}</div>
+      <div className="grid md:grid-cols-2 gap-4">
+        {targets.map((lng) => (
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <div className='text-sm text-gray-500'>
 =======
 import { useAutoTranslate  } from '../../hooks/useAutoTranslate';
@@ -42,11 +66,16 @@ const defaultTargets  = null;export default function TranslationPreview() {const
               {translations[lng] || (lng === 'en' ? text : '')}
 <<<<<<< HEAD
             </div>
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533:components/admin/TranslationPreview.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           </div>
         ))}
       </div>
     </div>
+<<<<<<< HEAD
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533:components/admin/TranslationPreview.tsx
@@ -58,3 +87,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/admin/Transla
     </div>;
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+:backup-problematic-files/temp_broken_files/components/admin/TranslationPreview.tsx
+
+  );
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

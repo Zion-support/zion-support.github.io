@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   try {
       return {
 =======
@@ -21,6 +22,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   try {
       return {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+  try {
+      return {
+  try {
+      return {
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
 =======
 
@@ -80,6 +88,7 @@ export interface GptClassification  {label: 'SAFE' | 'SUSPICIOUS' | 'DANGEROUS';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -116,12 +125,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       label: 'SUSPICIOUS'
       reason: 'Invalid JSON from GPT'
       confidence: 0.5
       confidence: 0.5
     }
   }export interface GptResult {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -145,10 +158,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       label: 'SUSPICIOUS',
       reason: 'Invalid JSON from GPT',
       confidence: 0.5
     };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -163,6 +182,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
   }export interface GptResult {;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  }export interface GptResult {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   label: string;
   confidence: number;
   reasoning: string
@@ -171,11 +193,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
 
 }
+<<<<<<< HEAD
 =======
 =======
 
@@ -196,6 +222,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  label: string;
+  confidence: number;
+  reasoning: string
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 
   const suspicious = data && data.description && data && data.description.toLowerCase().includes('fraud');
@@ -210,15 +242,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
 
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 
@@ -247,3 +283,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+}
+
+
+}
+
+
+
+
+  }
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

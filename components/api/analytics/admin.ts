@@ -1,5 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { createServerClient } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -14,7 +18,11 @@ supabase.from('users').select('id, role, country'),
       supabase.from('quotes').select('id, status'),
       supabase.from('projects').select('id, status'),
       supabase.from('referrals').select('id, converted, source'),
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     ]);
     const [usersR, jobsR, quotesR, projectsR, referralsR] = result;
     const users =
@@ -85,11 +93,17 @@ supabase.from('users').select('id, role, country'),supabase.from('jobs').select(
     const jobsPosted = jobsData.filter(j => j.status === 'posted').length;
     const jobsFilled = jobsData.filter(j => j.status === 'filled').length;
 <<<<<<< HEAD
+<<<<<<< HEAD
     const quotesSent = quotesData.filter(q => q.status === 'sent').length;
 const quotesAccepted = quotesData.filter(
       q => q.status === 'accepted'
 =======
     const quotesSent  = quotesData.filter(q => q.status === 'sent').length;const activeProjects = projectsData.filter(p => p.status === 'active').length;
+=======
+    const quotesSent = quotesData.filter(q => q.status === 'sent').length;
+
+    const activeProjects = projectsData.filter(p => p.status === 'active').length;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     const categoryCounts: Record<string, number> = {}
     jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] |0) + 1 })const referralConversions  = referralsData.filter(r => r.converted).length;const totalUsers = usersData && usersData.length;
     const totalTalents = usersData && usersData.filter(u => u && u.role === 'talent').length;
@@ -103,6 +117,7 @@ const quotesAccepted = quotesData.filter(
     const geoCounts: Record<string, number> = {}usersData.forEach(u => { geoCounts[u.country || 'Unknown'] = (geoCounts[u.country || 'Unknown'] || 0) + 1 })res.status(200).json({totals: {totalUsers, totalTalents, totalClients, jobsPosted, jobsFilled, quotesSent, quotesAccepted, activeProjects;
     },topCategories: Object.entries(categoryCounts).sort((a, b) => b[1] - a[1]).slice(0, 5).map(([label, value]) => ({ label, value }))referralConversions;
       topCategories: [{ label: 'AI/ML', value: 2 }, { label: 'Design', value: 1 }];
+<<<<<<< HEAD
       referralConversions: 2;
 const quotesAccepted = quotesData.filter(q => q.status === 'accepted';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -136,12 +151,17 @@ const quotesAccepted = quotesData.filter(q => q.status === 'accepted';
         value,
       })),
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      referralConversions: 2
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       geo: [{ label: 'US', value: 2 }, { label: 'IN', value: 1 }, { label: 'GB', value: 1 }]})
   }
     });
   } catch (e: any) {
     res.status (200).json ({
       totals: {
+<<<<<<< HEAD
         totalUsers: 4,
         totalTalents: 2,
         totalClients: 2,
@@ -158,11 +178,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       referralConversions: 2,
       geo: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        total_users: 4,
+        total_talents: 2,
+        total_clients: 2,
+        jobs_posted: 1,
+        jobs_filled: 2,
+        quotes_sent: 2,
+        quotes_accepted: 1,
+        active_projects: 2,
+      },
+      top_categories: [;
+        { label: 'AI / ML', value: 2 },
+        { label: 'Design', value: 1 },
+      ],
+      referral_conversions: 2,
+      geo: [;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         { label: 'US', value: 2 },
         { label: 'IN', value: 1 },
         { label: 'GB', value: 1 },
       ],
     });
+<<<<<<< HEAD
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -172,3 +210,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         { label: 'AI/ML', value: 2 },{ label: 'Design', value: 1 },],referralConversions: 2,geo: [;
         { label: 'US', value: 2 },{ label: 'IN', value: 1 },{ label: 'GB', value: 1 },],})}}}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  }}
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

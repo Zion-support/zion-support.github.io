@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -21,6 +22,12 @@ export interface EmergingTechService2029  {id: string;name: string;
 export interface EmergingTechService2029 {
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  id: string;
+
+export interface EmergingTechService2029 {
+id: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   name: string;
   tagline: string;
   price: string;
@@ -57,6 +64,9 @@ export interface EmergingTechService2029  {address: string;
     email: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export interface EmergingTechService2029 {;
     address: string;
   };
@@ -78,6 +88,7 @@ export interface EmergingTechService2029 {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -94,6 +105,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
@@ -102,6 +116,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -116,6 +131,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -127,6 +146,7 @@ export const emergingTechServices2029: EmergingTechService2029[] = [
     id: "2029-emerging-tech-service", name: "2029 Emerging Tech Service Platform",
     tagline: "Emerging tech services for 2029", price: "$399/month",
     description: "Advanced platform showcasing emerging technology services and innovations for 2029.",
+<<<<<<< HEAD
     id: '2029-emerging-tech-service'
     name: '2029 Emerging Tech Service Platform'
     tagline: 'Emerging tech services for 2029'
@@ -140,6 +160,10 @@ export const emergingTechServices2029: EmergingTechService2029[] = [
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     address: string
   }
 }
@@ -152,6 +176,7 @@ export const emergingTechServices2029: EmergingTechService2029[] = [
     price: "$399/month";
     description: "Advanced platform showcasing emerging technology services and innovations for 2029.";
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -160,10 +185,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     features: [
       "Emerging tech services";
       "Innovation platform";
       "Future capabilities";
+<<<<<<< HEAD
 <<<<<<< HEAD
       "Advanced features",
 =======
@@ -190,17 +218,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      "Advanced features";
+      "Expert insights"
+    ];
+    link: "/services/2029-emerging-tech-service", category: "Emerging Tech Services 2029",
+    realImplementation: true,
+    contactInfo: {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+=======
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
@@ -260,10 +302,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ];      mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -282,3 +328,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

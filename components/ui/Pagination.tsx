@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 ;
@@ -19,6 +20,10 @@ export default function Pagination({
   onChange,
 }: PaginationProps) {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
   const canPrev = page > 1;
 =======
@@ -42,6 +47,7 @@ export default function Pagination() {const totalPages = Math.max(1, Math.ceil(t
         size='md';
         onClick={() => goTo(page + 1)}
 <<<<<<< HEAD
+<<<<<<< HEAD
         disabled={!canNext}
       >
         Next
@@ -50,6 +56,14 @@ export default function Pagination() {const totalPages = Math.max(1, Math.ceil(t
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        disabled={!canNext}
+      >        Next;
+      </EnhancedButton>;
+    </div>;
+  );
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
     <div className="flex items-center justify-between gap-2 mt-4">;
 =======
@@ -121,7 +135,12 @@ if ( {) {$2;
 if ( {) {$2;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default Pagination;
+=======
+      for (let index = 1; i <= total_pages; i++) {
+        pages.push (i);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -191,4 +210,10 @@ if ( {) {$2;
         </span>)}
     </nav>)})export default Pagination;
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+  );
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

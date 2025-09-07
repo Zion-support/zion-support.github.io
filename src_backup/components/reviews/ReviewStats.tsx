@@ -1,4 +1,5 @@
 <<<<<<< HEAD:src_backup/components/reviews/ReviewStats.tsx
+<<<<<<< HEAD:src_backup/components/reviews/ReviewStats.tsx
                     i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
 import { Star } from 'lucide-react';
 import { Progress } from "@/components/ui/progress",;
@@ -40,10 +41,23 @@ import { Progress } from "@/components/ui/progress",interface ReviewStatsProps  
 <<<<<<< HEAD:src_backup/components/reviews/ReviewStats.tsx
                   className={`h-4 w-4 ${;
 
+=======
+<h3 className="text-xl font-bold">{formattedRating}</h3>
+          <div className="flex items-center">
+            <div className="flex mr-2">
+              {[1, 2, 3, 4, 5].map((i) => (
+                <Star
+                  key={i}
+                  className={`h-4 w-4 ${
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/reviews/ReviewStats.tsx
                     i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300";
 
 
 
+<<<<<<< HEAD:src_backup/components/reviews/ReviewStats.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/reviews/ReviewStats.tsx
 import { Star } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 
@@ -71,6 +85,7 @@ export function ReviewStats() {// Format the average rating to one decimal place
                     i <= Math.round(averageRating)
                       ? 'fill-yellow-400 text-yellow-400'
                       : 'text-gray-300'
+<<<<<<< HEAD:src_backup/components/reviews/ReviewStats.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
   return (<div className='bg-card border rounded-lg p-4'>;
@@ -92,10 +107,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <span className='text-sm text-muted-foreground'>
               {totalReviews} {totalReviews === 1 ? 'review' : 'reviews'}
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                  }`}
+                />
+              ))}
+            </div>
+
+
+            <span className="text-sm text-muted-foreground">
+
+
+              {totalReviews} {totalReviews === 1 ? "review" : "reviews"}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/reviews/ReviewStats.tsx
             </span>
           </div>
         </div>
       </div>
+<<<<<<< HEAD:src_backup/components/reviews/ReviewStats.tsx
 {ratingDistribution && (
         <div className='space-y-2'>
           {[5, 4, 3, 2, 1].map(rating => (
@@ -109,6 +137,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='w-8 text-xs text-muted-foreground'>
                 {ratingDistribution[rating] || 0}
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+      
+      {ratingDistribution && (
+        <div className="space-y-2">
+          {[5, 4, 3, 2, 1].map((rating) => (
+
+            <div key={rating} className="flex items-center gap-2">
+              <div className="w-6 text-sm text-right">{rating}</div>
+              <Star className="h-3 w-3 text-yellow-400" />
+              <Progress
+                value = {getPercentage(ratingDistribution[rating] |0),}
+                className="h-2"
+              />
+
+              <div className="w-8 text-xs text-muted-foreground">
+                {ratingDistribution[rating] || 0}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/reviews/ReviewStats.tsx
               </div>
             </div>
 import { Star } from 'lucide-react';
@@ -196,7 +243,12 @@ if (return 0) {$2;
         </div>;
 <<<<<<< HEAD:src_backup/components/reviews/ReviewStats.tsx
       )}
+<<<<<<< HEAD:src_backup/components/reviews/ReviewStats.tsx
     </div>
+=======
+
+    </div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/reviews/ReviewStats.tsx
   );
 }</div>) ;
 }</div>) ;
@@ -223,7 +275,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
             </div>))}
         </div>)}
+<<<<<<< HEAD:src_backup/components/reviews/ReviewStats.tsx
     </div>)}</div>)}</div>)}"}}</div>)}</div>)}"}</div>;
   )}</div>;
   )}</div>)}</div>)}";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/reviews/ReviewStats.tsx
+=======
+    </div>);
+}</div>);
+}</div>);
+}"}
+
+}</div>) ;
+}</div>) ;
+}"};
+
+    </div>;
+  );
+}
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/reviews/ReviewStats.tsx

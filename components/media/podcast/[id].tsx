@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 ;
 export default function EpisodePage() {export default function EpisodePage() {const router = useRouter()const { id } = router.query as { id?: string }
@@ -49,6 +52,7 @@ if (return <div > Loading…</div>) {$2;
         <h2 className="text-xl font-semibold">Transcript</h2>;
         <pre className="whitespace - pre - wrap bg - gray-50 p-3 rounded">{episode.transcript}</pre>;
       </div>;
+<<<<<<< HEAD
     </div>)}
     <div className='space-y-4'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -61,6 +65,11 @@ import { useRouter  } from 'next/router';
   return (
 <div className='space-y-4'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    </div>);
+}
+    <div className='space-y-4'>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <h1 className='text-2xl font-bold'>{episode.title}</h1>
       <p className='text-sm text-gray-600'>
 =======
@@ -84,6 +93,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </pre>
       </div>
     </div>
+<<<<<<< HEAD
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -92,3 +102,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

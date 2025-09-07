@@ -1,7 +1,6 @@
-<<<<<<< HEAD
+
 
 <<<<<<< HEAD
-
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
@@ -33,6 +32,8 @@ const ReviewSummary: React.FC<Props> = ({ summary }) => {;
 
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
     <div className='enhanced-card flex items-center justify-between'>;
       <div>;
@@ -89,6 +90,7 @@ const ReviewSummary: React.FC<Props> = ({ summary }) => {
     <div className="enhanced-card flex items-center justify-between">
       <div>
 
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <div className="flex items-center gap-3">
@@ -119,6 +121,8 @@ export default ReviewSummary;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           <span>{summary.totalCompletedProjects} completed projects</span>
         </div>
       </div>
@@ -128,10 +132,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 };
 
@@ -157,6 +165,7 @@ export default ReviewSummary;  );
 export default ReviewSummary;
 
 
+<<<<<<< HEAD
 };
 
 export default ReviewSummary;
@@ -166,6 +175,8 @@ export default ReviewSummary;
 export default ReviewSummary;
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   summary: ReviewsSummary;
 const ReviewSummary: React.FC < Props> = ({ summary }) => {return (<div className='enhanced - card flex items - center justify - between'>;
       <div>;
@@ -206,6 +217,7 @@ export default ReviewSummary;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -226,3 +238,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 ;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import React, { useState } from 'react';
 type PersonaConfig = any;
   language: string;
@@ -11,7 +15,11 @@ type PersonaConfig = any;
 <<<<<<< HEAD
 export default function StudioHostPage() {
   const [persona, setPersona] = useState<PersonaConfig>({
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     voice: 'Visionary'
     language: 'English'
     voice: 'Visionary',
@@ -21,15 +29,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');
   const [topic, setTopic] = useState('');
+<<<<<<< HEAD
   const [operatorPrompt, setOperatorPrompt] = useState(
     'Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.'
   );
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+export default function StudioHostPage() {;
+  const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),;
+  const [inviteeName, setInviteeName] = useState('');
+  const [inviteeBio, setInviteeBio] = useState('');
+  const [topic, setTopic] = useState('');
+  const [operatorPrompt, setOperatorPrompt] = useState('Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.');
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const [generating, setGenerating] = useState(false);
   const [episode, setEpisode] = useState<any>(null);
   const [synthesizing, setSynthesizing] = useState(false);
   const [publishing, setPublishing] = useState(false);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const handleGenerate = async () => {
     setGenerating(true);
     try {
@@ -45,11 +67,15 @@ body: JSON.stringify({
       });
       const data = await res.json();
       setEpisode(data.episode);
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     } catch (e) {
       console.error (e);
       alert ('Failed to generate episode');
     } finally {
+<<<<<<< HEAD
       setGenerating(false);
     }
   }
@@ -94,6 +120,20 @@ const res = await fetch('/api/podcast/rss', { method: 'POST' });
           <div>
             <label className='block text-sm font-medium'>Voice</label>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      set_generating (false);
+    }
+
+  return (
+    <div className='space-y-8'>;
+      <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>;
+
+      <section className='space-y-3'>;
+        <h2 className='text-xl font-semibold'>AI Persona</h2>;
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
+          <div>;
+            <label className='block text-sm font-medium'>Voice</label>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <select
               className='mt-1 w-full border rounded p-2'
 =======
@@ -152,6 +192,7 @@ export default function StudioHostPage() {const [persona, setPersona] = useState
 <<<<<<< HEAD
                 setPersona({ ...persona, cloneStyleText: e && e.target.value });
               }
+<<<<<<< HEAD
             />
           </div>
         </div>
@@ -167,6 +208,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className='mt-1 w-full border rounded p-2'
 =======
                 setPersona({ ...persona, cloneStyleText: e && e.target.value })}/>          </div>;
+=======
+            />          </div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         </div>;
       </section>;
       <section className='space-y-3'>;
@@ -187,9 +231,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
           <div>;
             <label className='block text-sm font-medium'>Invitee Name</label>;
+<<<<<<< HEAD
             <input;
               className='mt-1 w-full border rounded p-2';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+            <input
+              className='mt-1 w-full border rounded p-2'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               value={inviteeName}
               onChange={e => setInviteeName(e && e.target.value)}
             />;
@@ -225,6 +274,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <button
           className='px-4 py-2 bg-blue-600 text-white rounded'
           onClick={handleGenerate}
+<<<<<<< HEAD
           disabled={generating}
         >
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -246,11 +296,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <button;
           className='px-4 py-2 bg-blue-600 text-white rounded';
           onClick={handleGenerate}disabled={generating}>          {generating ? 'Generating…' : 'Generate Episode'}
+=======
+          disabled={generating}>          {generating ? 'Generating…' : 'Generate Episode'}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <section className="space-y-3">;
         <h2 className="text-xl font-semibold">AI Persona</h2>;
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
           <div>;
             <label className="block text-sm font-medium" htmlFor="input-Voice">Voice</label>;
+<<<<<<< HEAD
             <select;
               className="mt-1 w-full border rounded p-2";
           <div>;
@@ -283,6 +337,39 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div>;
               <h4 className="font-semibold">Questions</h4>;
               <ol className="list-decimal list-inside space-y-1">;
+=======
+            <select
+              className="mt-1 w-full border rounded p-2"
+          <div>
+            <label className="block text-sm font-medium" htmlFor="input-Invitee Name">Invitee Name</label>
+            <input className="mt-1 w-full border rounded p-2" value={inviteeName} onChange={(e) => setInviteeName(e.target.value)} />
+          </div>
+          <div className="md:col-span-2">
+            <label className="block text-sm font-medium" htmlFor="input-Invitee Bio">Invitee Bio</label>
+            <textarea className="mt-1 w-full border rounded p-2" rows={3} value={inviteeBio} onChange={(e) => setInviteeBio(e.target.value)} />
+          </div>
+          <div className="md:col-span-3">
+            <label className="block text-sm font-medium" htmlFor="input-Topic">Topic</label>
+            <input className="mt-1 w-full border rounded p-2" value={topic} onChange={(e) => setTopic(e.target.value)} />
+          </div>
+          <div className="md:col-span-3">
+            <label className="block text-sm font-medium" htmlFor="input-Operator Prompt">Operator Prompt</label>
+            <textarea className="mt-1 w-full border rounded p-2" rows={3} value={operatorPrompt} onChange={(e) => setOperatorPrompt(e.target.value)} />
+          </div>
+        </div>
+        <button className="px-4 py-2 bg-blue-600 text-white rounded" onClick={handleGenerate} disabled={generating}>
+          {generating ? 'Generating…' : 'Generate Episode'}
+        </button>
+      </section>
+      {episode && (
+          <h2 className="text-xl font-semibold">Episode Draft</h2>
+          <div className="border rounded p-4 space-y-3">
+            <p className="text-sm text-gray-600">ID: {episode.id}</p>
+            <h3 className="text-lg font-bold">{episode.title}</h3>
+            <div>
+              <h4 className="font-semibold">Questions</h4>
+              <ol className="list-decimal list-inside space-y-1">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               value={persona && persona.voice}
               onChange={(e) => setPersona({ ...persona, voice: e && e.target.value as any })}
             >;
@@ -352,6 +439,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </a>)}
                 {episode.audio.mp4Url && (<a;
                 disabled={publishing}
+<<<<<<< HEAD
               >                {publishing ? 'Publishing…' : 'Update RSS'}<section className='space-y-4'>;
           <h2 className='text-xl font-semibold'>Episode Draft</h2>;
           <div className='border rounded p-4 space-y-3'>;
@@ -405,6 +493,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 {publishing ? 'Publishing…' : 'Update RSS'}
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              >                {publishing ? 'Publishing…' : 'Update RSS'}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               </button>
             </div>
             {episode.audio && (
@@ -447,6 +538,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
   );
 }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     </div>;
@@ -455,3 +547,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
             {episode.audio && (
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+;
+
+            {episode.audio && (
+
+                {publishing ? 'Publishing…' : 'Update RSS'}
+              </button>
+            </div>
+            {episode.audio && (
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

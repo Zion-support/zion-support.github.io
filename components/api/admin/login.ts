@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { setSessionCookie } from '../../../utils/adminAuth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -9,6 +10,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const envUser = null;
     res.status(200).json({ ok: true })
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    return
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const { username, password } = req.body |{}
 =======
     return;
@@ -25,6 +30,7 @@ export default function handler() {if (req.method !== 'POST') {res.status(405).j
 <<<<<<< HEAD
   if (username === envUser && password === envPass) {
     setSessionCookie(res, { username, issuedAt: Date.now() });
+<<<<<<< HEAD
 res.status(200).json({ ok: true });
 origin/cursor/automate-test-improve-and-merge-code-2533
   } else {
@@ -65,3 +71,39 @@ if ( {) {$2;
   } else {res.status (401).json ({ error: 'Invalid credentials' })}  } else {res.status(401).json({ error: 'Invalid credentials' })}
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    res.status(200).json({ ok: true })
+  } else {
+    res && res.status(401).json({ error: 'Invalid credentials' });
+  }
+import { setSessionCookie } from '../../../utils / admin_auth';
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    res.status (405).json ({ error: 'Method Not Allowed' });
+    return;  }export default /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    res.status (405).json ({ error: 'Method Not Allowed' });
+    return;
+  const { username, password } = req.body || {}
+  const env_user = process.env.ADMIN_USERNAME || 'kleber@ziontechgroup.com';
+  const env_pass = process.env.ADMIN_PASSWORD || 'Tw2.R5u & 2!sDfeW';
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    setSessionCookie (res, { username, issued_at: Date.now () });
+    res.status (200).json ({ ok: true });
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

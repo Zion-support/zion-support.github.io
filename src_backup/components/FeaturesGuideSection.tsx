@@ -1,4 +1,5 @@
 <<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 import Link from "next/link",
 import { GradientHeading } from "./GradientHeading",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -9,6 +10,48 @@ import { Zap } from 'lucide-react'
 export function FeaturesGuideSection() {
   const features = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import Link from 'next/link'
+import { GradientHeading } from './GradientHeading'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { Button } from './ui/button'
+import { fireEvent } from '@/lib/analytics'
+import {
+  Users
+  Zap
+  Settings
+  MessageSquare
+  Sparkles
+  ArrowRight
+  BarChart3
+  Plus
+  HelpCircle
+} from 'lucide-react'
+export function FeaturesGuideSection() {
+  const features = [
+    {import Link from "next/link"
+import { GradientHeading } from "./GradientHeading"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Button } from "./ui/button"
+import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react'
+import { Zap } from 'lucide-react'
+export function FeaturesGuideSection() {
+  const features = [
+    {
+
+
+        'Navigate to the AI Matcher page from the homepage or marketplace',
+        'Fill in your project requirements and specifications',
+        'Review the AI-recommended matches tailored to your needs',
+        'Connect with matched talents or services directly',
+      ],
+      link: '/match',
+      buttonText: 'Try AI Matcher',
+    },
+    {
+      id: 'talent-directory',
+      title: 'Talent Directory',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/FeaturesGuideSection.tsx
       description:
         'Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.',
       icon: <Users className='h-10 w-10 text-zion-purple' />,
@@ -269,6 +312,10 @@ export function FeaturesGuideSection() {
     {
 
 
+<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/FeaturesGuideSection.tsx
       id: "ai-matcher",
       title: "AI Matcher",
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
@@ -522,8 +569,11 @@ export function FeaturesGuideSection() {;
       ],;
       link: "/help";
       buttonText: "View Resources";
+<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/FeaturesGuideSection.tsx
     }
     {
       id: 'talent-directory'
@@ -649,12 +699,15 @@ export function FeaturesGuideSection() {;
                 key={feature.id}
                 value={feature.id}
 
+<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
       id: "ai-matcher",
       title: "AI Matcher",
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
       icon: <Sparkles className = "h-10 w-10 text-zion-cyan" />,
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/FeaturesGuideSection.tsx
       instructions: [
         "Navigate to the AI Matcher page from the homepage or marketplace"
         "Fill in your project requirements and specifications"
@@ -913,8 +966,13 @@ export function FeaturesGuideSection() {;
     },;
   ];
 
+<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
                 className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+                className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/FeaturesGuideSection.tsx
   return (
     <section className='py-20 bg-zion-blue-dark'>;
 =======
@@ -1543,6 +1601,10 @@ function FeaturesGuideSection() {const features = [;
       ];
 
 
+<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/FeaturesGuideSection.tsx
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan";
               >;
 
@@ -1553,15 +1615,19 @@ function FeaturesGuideSection() {const features = [;
             ))}
           </TabsList>
 
-          <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">
 
+<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
 <TabsList className='grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+<TabsList className='grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1'>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/FeaturesGuideSection.tsx
             {features.slice(4).map(feature => (
               <TabsTrigger
                 key={feature.id}
                 value={feature.id}
+<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">
             {features.slice(4).map(feature => (
               <TabsTrigger 
@@ -1572,6 +1638,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
                 className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
+
+                className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/FeaturesGuideSection.tsx
               >
 =======
       ];className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan";
@@ -1595,6 +1667,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
           </TabsList>
           {features.map(feature => (
+<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
       link: "/help",
       button_text: "View Resources";
@@ -1649,6 +1722,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {feature.description}
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/FeaturesGuideSection.tsx
             <TabsContent key={feature.id} value={feature.id} className="mt-8">
               <div className="bg-zion-blue rounded-lg border border-zion-blue-light p-6 md:p-8 flex flex-col md:flex-row gap-8">
                 <div className="md:w-1/3 flex flex-col items-center md:items-start">
@@ -1657,6 +1732,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-zion-slate-light mb-6">{feature.description}</p>
+<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
                   <Button 
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
 
@@ -1695,10 +1771,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Button
                     className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                  <Button
+                    className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/FeaturesGuideSection.tsx
                     asChild
                   >
                     <Link href={feature.link}>
                       {feature.buttonText}
+<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
 
 =======
@@ -1718,6 +1799,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {feature.instructions.map((instruction, idx,) => (<li key={idx} className="text-zion-slate-light">;
                         <span className="text-zion-cyan mr-2">{idx + 1}.</span>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/FeaturesGuideSection.tsx
+=======
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
+                
+                <div className="md:w-2/3 bg-zion-blue-dark p-6 rounded-lg">
+                  <h4 className="text-xl font-semibold text-white mb-4">How to Use</h4>
+                  <ol className="list-decimal list-inside space-y-3 pl-4">
+                    {feature.instructions.map((instruction, idx,) => (
+                      <li key={idx} className="text-zion-slate-light">
+                        <span className="text-zion-cyan mr-2">{idx + 1}.</span>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/FeaturesGuideSection.tsx
     <section className="py-20 bg-zion-blue-dark">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-12">;
@@ -1808,6 +1902,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {instruction}
                       </li>;
 <<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/FeaturesGuideSection.tsx
 
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/FeaturesGuideSection.tsx
@@ -1831,6 +1929,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               onClick = {() => fireEvent('explore_marketplace_click'),}
 
 
+<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
 <ArrowRight className='ml-2 h-4 w-4' />
                     </Link>
@@ -1847,6 +1946,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {instruction}
                       </li>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/FeaturesGuideSection.tsx
                     ))}
                   </ol>
                 </div>
@@ -1854,6 +1955,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </TabsContent>
           ))}
         </Tabs>
+<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
         
         <div className="mt-12 text-center">
 
@@ -1861,12 +1963,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 <div className='mt-12 text-center'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+
+<div className='mt-12 text-center'>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/FeaturesGuideSection.tsx
           <Button
             variant="outline"
             className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
             asChild
           >
             <Link
+<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
               href="/marketplace"
               onClick={() => fireEvent('explore_marketplace_click')}
             >
@@ -1876,17 +1985,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/FeaturesGuideSection.tsx
               href='/marketplace'
               onClick={() => fireEvent('explore_marketplace_click')}
             >
               Explore Full Marketplace
               <ArrowRight className='ml-2 h-4 w-4' />
+<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/FeaturesGuideSection.tsx
             </Link>
           </Button>
         </div>
       </div>
     </section>
+<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
 
 =======
@@ -1921,6 +2040,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/FeaturesGuideSection.tsx
   );
 }
 =======
@@ -1982,6 +2103,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
     </section>);
 }
+<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
   );
 }
@@ -2018,3 +2140,47 @@ const features = [ {return (<section className="py-20 bg-zion-blue-dark" > <div 
   )}
   )})})})}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/FeaturesGuideSection.tsx
+=======
+  ),;}
+ import { ;
+  {;
+  {;
+  Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3,  Plus, HelpCircle ;
+ } from "lucide-react";
+const features = [ {;
+  return (<section className="py-20 bg-zion-blue-dark" > <div className="container mx-auto px-4" > <div className="text-center mb-12" > <GradientHeading>Your Complete Guide to Zion</GradientHeading> <p className="text-zion-slate-light text-xl mt-4 max-w-3xl mx-auto" > Discover all the powerful tools and features available to help you navigate the world of AI and tech services </p> </div> > {;
+  feature.title ;
+}</TabsTrigger>) ) ;
+}</TabsList> > {;
+  feature.title ;
+}</TabsTrigger>) ) ";
+}</TabsList> <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" asChild > </Link> </Button> </div> </li>) ) ;
+}</ol> </div> </div> </TabsContent>) ) ";
+}</Tabs> <div className="mt-12 text-center" > <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10" asChild > <Link > Explore Full Marketplace <ArrowRight className="ml-2 h-4 w-4" /> </Link> </Button> </div> </div> </section>) ;
+}'"
+              <ArrowRight className='ml-2 h-4 w-4' />            </Link>              <ArrowRight className="ml-2 h-4 w-4" />
+              href="/marketplace"
+              onClick={() => fireEvent('explore_marketplace_click')}
+            >
+              Explore Full Marketplace
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+};
+  );
+};
+}
+}
+}
+  )
+}
+  )
+}
+
+  );
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/FeaturesGuideSection.tsx

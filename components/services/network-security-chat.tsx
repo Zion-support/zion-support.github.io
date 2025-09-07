@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
@@ -39,6 +40,10 @@ const NetworkSecurityChat: NextPage = () => {
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 const NetworkSecurityChat: NextPage = () => {;
   return (
@@ -46,6 +51,7 @@ const NetworkSecurityChat: NextPage = () => {;
       <Head>;
         <title>NetworkSecurityChat - Zion Tech Solutions</title>;
         <meta name="description" content="NetworkSecurityChat service" />{" "}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -58,10 +64,18 @@ const NetworkSecurityChat: NextPage = () => {;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const NetworkSecurityChat: NextPage = () => {
   return (
     <div>
       <Head>
+<<<<<<< HEAD
 
       </Head>;
 
@@ -90,6 +104,8 @@ const NetworkSecurityChat: NextPage = () => {
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <main>
         <h1>NetworkSecurityChat</h1>
         <p>Service details coming soon...</p>
@@ -102,6 +118,7 @@ const NetworkSecurityChat: NextPage = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -113,6 +130,9 @@ const NetworkSecurityChat: NextPage = () => {
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <main>;
         <h1>NetworkSecurityChat</h1>;
         <p>Service details coming soon...</p>;
@@ -137,6 +157,7 @@ export default NetworkSecurityChat;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -144,19 +165,28 @@ export default NetworkSecurityChat;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
         <title>NetworkSecurityChat - Zion Tech Solutions</title>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-        <title>NetworkSecurityChat - Zion Tech Solutions</title>
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -177,6 +207,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -225,6 +258,7 @@ export default NetworkSecurityChat;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -252,26 +286,13 @@ export default NetworkSecurityChat;
 },
 
 export default NetworkSecurityChat
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
-const NetworkSecurityChat: NextPage = () => {
-  return (
-    <div>
-      <Head>
-        <title>NetworkSecurityChat - Zion Tech Solutions</title>
-        <meta name="description" content="NetworkSecurityChat service" />{" "}
-      </Head>
-      <main>
-        <h1>NetworkSecurityChat</h1>
-        <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>
-      </main>
-    </div>
-  );
-}
-export default NetworkSecurityChat;
 
+<<<<<<< HEAD
         <title>NetworkSecurityChat - Zion Tech Solutions</title>
         <title>NetworkSecurityChat - Zion Tech Solutions</title>
 <<<<<<< HEAD
@@ -295,3 +316,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 
@@ -24,10 +25,40 @@ import { Brain;
 <<<<<<< HEAD
   Zap;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  Brain,
+  MessageSquare,
+  Image,
+  Video,
+  Code,
+  FileText,
+  Zap,
+  Star,
+  ExternalLink,
+  CheckCircle,
+  Brain;
+  MessageSquare
+  Image
+  Video
+  Code
+  FileText
+  Zap
+
+
+
+  Brain;
+  MessageSquare,
+  Image,
+  Video,
+  Code,
+  FileText,
+  Zap,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   Star;
   ExternalLink;
   CheckCircle;
   TrendingUp;
+<<<<<<< HEAD
   Shield
  } from 'lucide-react';
 export default function AiToolsPage() {
@@ -36,11 +67,24 @@ export default function AiToolsPage() {
         'Advanced AI chatbot with enhanced reasoning, web browsing, and plugin capabilities for professional use.'
       features: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        'Advanced reasoning & analysis'
+        'Web browsing & real-time info'
+        'Plugin ecosystem access'
+        'Code generation & debugging'
+        'Professional writing assistance'
+      ],      pricing: '$20/month',        'Advanced reasoning & analysisWeb browsing & real-time infoPlugin ecosystem accessCode generation & debuggingProfessional writing assistance'
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Advanced reasoning & analysis',
         'Web browsing & real-time info',
         'Plugin ecosystem access',
         'Code generation & debugging',
         'Professional writing assistance',
+<<<<<<< HEAD
       ],
       pricing: '$20/month',
       marketPrice: '$20/month',
@@ -121,11 +165,43 @@ category: 'Video Generation',
         'Professional AI video generation and editing tools for filmmakers, marketers, and content creators.'
       features: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      ],      pricing: '$20/month',        'Advanced reasoning & analysisWeb browsing & real-time infoPlugin ecosystem accessCode generation & debuggingProfessional writing assistance';
+      ];
+      pricing: '$20/month'
+      marketPrice: '$20/month'
+      website: 'https://chat.openai.com'
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+      textColor: 'text-green-400'
+      gradient: 'from-green-400 to-emerald-500'
+      popular: true
+      website: 'https://chat.openai.com',
+      color: 'bg - gradient - to - br from - green - 500 to - emerald - 600',
+      text_color: 'text - green - 400',
+      gradient: 'from - green - 400 to - emerald - 500',
+      popular: true,
+      category: 'Conversational AI'
+    }
+    {
+      website: 'https://midjourney.com',
+      color: 'bg - gradient - to - br from - purple - 500 to - pink - 600',
+      text_color: 'text - purple - 400',
+      gradient: 'from - purple - 400 to - pink - 500',
+      popular: true,
+      category: 'Image Generation'
+    }
+    {
+      description: 'Anthropic\'s advanced AI assistant with superior reasoning, analysis, and document processing capabilities.';
+      features: [;
+        'Advanced reasoning abilitiesDocument analysisCode generationCreative writingResearch assistance';
+      ];
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Advanced reasoning abilities',
         'Document analysis',
         'Code generation',
         'Creative writing',
         'Research assistance',
+<<<<<<< HEAD
       ],
       pricing: '$20/month',
       marketPrice: '$20/month',
@@ -165,22 +241,148 @@ category: 'Content Creation',
       growth: '+37% YoY',
 description: 'Global AI market value in 2024',
     },
+=======
+      ],      pricing: '$20 / month',    {
+      icon: <MessageSquare className="w - 8 h - 8 text - white" />,
+      title: 'Claude Pro',
+      description: 'Anthropic's advanced AI assistant with superior reasoning, analysis, and document processing capabilities.';
+      features: [;
+        'Advanced reasoning abilities_document analysis_code generation_creative writing_research assistance';
+      ];
+  ];
+
+  const aiMarketStats = [;
+    {;
+      title: 'AI Market Size',;
+      value: '$136 && 136.6B',;
+      growth: '+37% YoY',;
+      description: 'Global AI market value in 2024',;
+    },    {;
+      title: 'AI Adoption Rate',;
+      value: '35%',;
+      growth: '+12% YoY',;
+      description: 'Businesses actively using AI tools',;
+    },    {;
+      title: 'AI Investment',;
+      value: '$93 && 93.5B',;
+      growth: '+28% YoY',;
+      description: 'Global AI investment in 2024',;
+    },    {;
+      title: 'AI Productivity Gain',;
+      value: '40%',;
+      growth: '+15% YoY',;
+      description: 'Average productivity improvement',;
+    },  ];      description: 'Global AI market value in 2024';
+    };
+    {;
+      title: 'AI Adoption Rate',;
+      value: '35%',;
+      growth: '+12% YoY',;
+      description: 'Businesses actively using AI tools',;
+    },      description: 'Businesses actively using AI tools';
+    };
+    {;
+      title: 'AI Investment',;
+      value: '$93 && 93.5B',;
+      growth: '+28% YoY',;
+      description: 'Global AI investment in 2024',;
+    },      description: 'Global AI investment in 2024';
+    };
+    {;
+      title: 'AI Productivity Gain',;
+      value: '40%',;
+      growth: '+15% YoY',;
+      description: 'Average productivity improvement',;
+    },      description: 'Average productivity improvement';
+    }
+  ];
+
+  const aiCategories = [;
+    {;
+      name: 'Conversational AI',;
+      description: 'Chatbots, virtual assistants, and language models',;
+      tools: 3,      tools: 3,;
+      avgPrice: '$20/month';
+    };
+    {;
+      name: 'Image Generation',;
+      description: 'AI-powered art, design, and visual content creation';
+      tools: 1,;
+      avgPrice: '$20/month',;
+    },;
+    {;
+      name: 'Image Generation',;
+      description: 'AI-powered art, design, and visual content creation',;
+      tools: 1,;
+      avgPrice: '$20/month',;
+    },    {;
+      name: 'Code Generation',;
+      description: 'AI-assisted programming and development tools',;
+      tools: 1,;
+      avgPrice: '$10/month',;
+    },    {;
+      name: 'Video Generation',;
+      description: 'AI video creation and editing tools',;
+      tools: 1,;
+      avgPrice: '$44/month',;
+    },    {;
+      name: 'Content Creation',;
+      description: 'AI-powered writing and content generation',;
+      tools: 1,;
+      avgPrice: '$82/month',;
+    },  ];    {;
+      name: 'Code Generation',;
+      description: 'AI-assisted programming and development tools',;
+      tools: 1,;
+      avgPrice: '$10/month',;
+    },      avgPrice: '$20/month';
+    };
+    {;
+      name: 'Code Generation',;
+      description: 'AI-assisted programming and development tools',;
+      tools: 1,;
+      avgPrice: '$10/month';
+    };
+    {;
+      name: 'Video Generation',;
+      description: 'AI video creation and editing tools',;
+      tools: 1,;
+      avgPrice: '$44/month',;
+    },      avgPrice: '$44/month';
+    };
+    {;
+      name: 'Content Creation',;
+      description: 'AI-powered writing and content generation',;
+      tools: 1,;
+      avgPrice: '$82/month',;
+    },      avgPrice: '$82/month';
+      description: 'Average productivity improvement',
+    },  ];      description: 'Global AI market value in 2024';
+    }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     {
       title: 'AI Adoption Rate',
       value: '35%',
       growth: '+12% YoY',
+<<<<<<< HEAD
 description: 'Businesses actively using AI tools',
     },
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     {
       title: 'AI Investment',
       value: '$93.5B',
       growth: '+28% YoY',
+<<<<<<< HEAD
 description: 'Global AI investment in 2024',
     },
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     {
       title: 'AI Productivity Gain',
       value: '40%',
       growth: '+15% YoY',
+<<<<<<< HEAD
 description: 'Average productivity improvement',
     },
   ];
@@ -378,6 +580,11 @@ export default function AiToolsPage() {const aiTools = null;
         </div>
       </section>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       {/* AI Tools Grid */}
 <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -386,6 +593,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               Curated AI Tools & Services
             </h2>
+<<<<<<< HEAD
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Each tool has been carefully selected based on performance
               reliability, and real-world value.
@@ -394,6 +602,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              Each tool has been carefully selected based on performance, reliability, and real-world value.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             {aiTools.map((tool, index) => (
 =======
           </div>;
@@ -441,6 +656,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className={`card-hover group border-gradient-blue relative ${
                   tool && tool.popular ? 'ring-2 ring-cursor-blue ring-opacity-50' : ''
                 }`}
+<<<<<<< HEAD
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {tool.popular && (
@@ -461,6 +677,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         href={tool && tool.website}
                         variant='primary';
                         size='sm';
+=======
+                      <Button
+                        href={tool && tool.website}
+                        variant='primary'
+                        size='sm'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                         className='bg-cursor-blue hover:bg-cursor-blue-dark'>;
                         Try Tool;
                         <ExternalLink className='w-4 h-4 ml-2' />;
@@ -469,10 +691,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <div className='text-xs text-gray-500'>Direct Link</div>;
                         <div className='text-xs text-cursor-blue font-mono'>;
                           {tool && tool.website}
+<<<<<<< HEAD
                         </div>                      </div>                      <Button;
                         href={tool && tool.website}
                         variant="primary";
                         size="sm";
+=======
+                        </div>                      </div>                      <Button
+                        href={tool && tool.website}
+                        variant="primary"
+                        size="sm"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                         className="bg-cursor-blue hover:bg-cursor-blue-dark">;
                         Try Tool;
                         <ExternalLink className="w-4 h-4 ml-2" />;
@@ -484,6 +713,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
               </Card>;style={{ animationDelay: `${index * 0.1}s` }}
               >;
                 {tool.popular && (<div className='absolute -top-3 left-1/2 transform -translate-x-1/2'>;
@@ -585,6 +815,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
                         </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              </Card>;
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                        variant="primary"
+                        size="sm"
+                        className="bg-cursor-blue hover:bg-cursor-blue-dark"
+                      >
+                        Try Tool
+                        <ExternalLink className="w-4 h-4 ml-2" />
+                      </Button>
+                      <div className="text-right">
+                        <div className="text-xs text-gray-500">Direct Link</div>
+                        <div className="text-xs text-cursor-blue font-mono">{tool.website}</div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                       </div>
                     </div>
                   </div>
@@ -610,6 +857,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {aiCategories.map((category, index) => (
+<<<<<<< HEAD
               <Card
 =======
                         </div>;
@@ -619,6 +867,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </Card>;
             ))}
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           </div>;
         </div>;
       </section>;
@@ -705,6 +955,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='text - center mb - 20'>;
             <h2 className='text - responsive - lg font - bold mb - 8 gradient - text text - shadow'>;
             </h2>;
+<<<<<<< HEAD
             <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;<Card;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 key={index}
@@ -735,6 +986,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </Card>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+            <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             ))}
               Understanding the different types of AI tools helps you build a;
               comprehensive toolkit for your needs.;
@@ -762,6 +1016,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               Getting Started with AI Tools
             </h2>
+<<<<<<< HEAD
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Practical advice for implementing AI tools in your workflow and
               maximizing their value.
@@ -782,12 +1037,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>
                 <ul className='space-y-2 text-sm text-gray-300'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              Practical advice for implementing AI tools in your workflow and maximizing their value.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card className="card-hover border-gradient-blue">
+              <div className="p-6">
+                <div className="w-16 h-16 bg-cursor-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <TrendingUp className="w-8 h-8 text-cursor-blue" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Start Small</h3>
+                <p className="text-gray-400 mb-4">
+                  Begin with one AI tool that addresses your most immediate need. Master it before adding more.
+                </p>
+                <ul className="space-y-2 text-sm text-gray-300">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   <li>• Choose based on your primary use case</li>
                   <li>• Start with free tiers when available</li>
                   <li>• Focus on one tool at a time</li>
                 </ul>
               </div>
             </Card>
+<<<<<<< HEAD
 
 <Card className='card-hover border-gradient-blue'>
               <div className='p-6'>
@@ -803,6 +1076,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>
                 <ul className='space-y-2 text-sm text-gray-300'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                <h3 className="text-xl font-semibold text-white mb-3">Best Practices</h3>
+                <p className="text-gray-400 mb-4">
+                  Follow proven strategies to get the most out of your AI tools and ensure quality output.
+                </p>
+                <ul className="space-y-2 text-sm text-gray-300">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   <li>• Always review and edit AI-generated content</li>
                   <li>• Use specific, detailed prompts</li>
                   <li>• Maintain human oversight and creativity</li>
@@ -812,6 +1092,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* CTA Section */}
 <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor text-center'>
@@ -959,3 +1240,22 @@ href='/contact';
     </>;
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                </ul>;
+              </div>;
+            </Card>;
+          </div>;
+        </div>;
+      </section>;
+            </Button>;
+          </div>;
+        </div>;
+      </section>;
+              className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'            >              href="/micro-saas"
+              variant="primary"
+              size="lg"
+              className="bg-cursor-blue hover:bg-cursor-blue-dark"
+              Explore More Tools
+            </Button>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

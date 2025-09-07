@@ -54,7 +54,11 @@ const { execSync, spawn } = require("child_process")
   const interval = parseInt(args.find(arg => arg.startsWith("--interval="))?.split("=")
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     automation.runContinuousMode(interval).catch(console.error)} else if (args.includes(")
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    automation.runContinuousMode(interval).catch(console.error)} else if (args.includes(")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

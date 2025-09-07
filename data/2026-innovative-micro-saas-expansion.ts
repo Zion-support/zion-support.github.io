@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -27,6 +28,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import { ServiceVariant  } from '../types/service-variants';
 export interface InnovativeMicroSaasService2026  {id: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+import { ServiceVariant } from '../types/service-variants';
+export interface InnovativeMicroSaasService2026 {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string;
   name: string;
   tagline: string;
@@ -761,6 +768,7 @@ export const getInnovativeMicroSaasServices2026ByCategory = (category: string) =
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -768,6 +776,8 @@ export const getInnovativeMicroSaasServices2026ByCategory = (category: string) =
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   customers: number;
   rating: number;
   reviews: number;
@@ -1399,9 +1409,13 @@ export const getInnovativeMicroSaasServices2026ByCategory = (
 }
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
   return innovativeMicroSaasServices2026.filter(service => service.popular);
 }
 =======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     website: string;
   }
 
@@ -1436,6 +1450,7 @@ export const getPopularInnovativeMicroSaasServices2026 = () => {;
 
   return innovativeMicroSaasServices2026.filter(service => service.popular);
 }
+<<<<<<< HEAD
 };
 
 export const getPopularInnovativeMicroSaasServices2026 = () => {;
@@ -1449,10 +1464,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   return innovativeMicroSaasServices2026.filter(service => service.popular);
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+};
+
+export const getPopularInnovativeMicroSaasServices2026 = () => {;
+  return innovativeMicroSaasServices2026.filter(service => service.popular);
+}
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export const getInnovativeMicroSaasServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1464,6 +1490,10 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return innovativeMicroSaasServices2026.filter(service => {
     const price = parseInt(service.price.replace('$', ''));
     return price >= minPrice && price <= maxPrice;
@@ -1471,6 +1501,7 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (
 };    return price >= minPrice && price <= maxPrice
   })
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1486,6 +1517,9 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export interface InnovativeMicroSaasService2026 {
   id: string, name: string,
   tagline: string, price: string,
@@ -1773,6 +1807,7 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number,
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1803,6 +1838,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ;
 export const getInnovativeMicroSaasServices2026ByCategory = (
   category: string) =>: any {
@@ -1825,6 +1865,7 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1838,6 +1879,11 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     website: string
   },
   realImplementation: boolean;
@@ -1847,6 +1893,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   rating: number;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -1855,3 +1902,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

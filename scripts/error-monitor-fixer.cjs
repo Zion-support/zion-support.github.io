@@ -28,7 +28,12 @@ const { execSync } = require('child_process')
       execSync('npm run "build": fast', { "cwd": this.projectRoot, "stdio"})
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

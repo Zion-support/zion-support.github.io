@@ -1,7 +1,11 @@
 <<<<<<< HEAD:src_backup/components/mobile-app/CommunityTrust.tsx
+<<<<<<< HEAD:src_backup/components/mobile-app/CommunityTrust.tsx
 import { Star } from 'lucide-react';
 
 
+=======
+import { Star } from 'lucide-react'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/CommunityTrust.tsx
 
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
@@ -21,6 +25,10 @@ export const CommunityTrust: React.FC = () => {;
   ];
 
 
+<<<<<<< HEAD:src_backup/components/mobile-app/CommunityTrust.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/CommunityTrust.tsx
 
 export const CommunityTrust: React.FC;
 export const CommunityTrust: React.FC = () => {
@@ -32,13 +40,20 @@ export const CommunityTrust: React.FC = () => {
     { value: '12M+', label: 'Matches Made' },
   ];
 
+<<<<<<< HEAD:src_backup/components/mobile-app/CommunityTrust.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/CommunityTrust.tsx
   return (
     <section className='py-16 bg-zion-blue'>;
       <div className='container mx-auto px-4'>;
         <div className='text-center mb-12'>;
           <h2 className='text-3xl md:text-4xl font-bold text-white'>;
             Trusted by the{' '}
+<<<<<<< HEAD:src_backup/components/mobile-app/CommunityTrust.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/CommunityTrust.tsx
 
             <span className='text-zion-cyan'>Tech Community</span>;
 =======
@@ -107,6 +122,10 @@ export const CommunityTrust: React.FC = () => {// Stats display with social proo
               />            ))}
 
 
+<<<<<<< HEAD:src_backup/components/mobile-app/CommunityTrust.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/CommunityTrust.tsx
   ]
     { value: "4.8", label: "App Store Rating" },
     { value: "50K+", label: "Downloads" },
@@ -131,6 +150,7 @@ export const CommunityTrust: React.FC = () => {// Stats display with social proo
         </div>
 
 
+<<<<<<< HEAD:src_backup/components/mobile-app/CommunityTrust.tsx
 =======
               />            ))}];
     { value: "4.8", label: "App Store Rating" },{ value: "50K+", label: "Downloads" },{ value: "96%", label: "User Satisfaction" },{ value: "12M+", label: "Matches Made" }
@@ -145,6 +165,8 @@ export const CommunityTrust: React.FC = () => {// Stats display with social proo
           </p>;
         </div>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/mobile-app/CommunityTrust.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/CommunityTrust.tsx
           </div>;
           <blockquote className='text-center text-lg text-white italic mb-4'>;
             "The Zion app has completely changed how I find tech talent. The AI;
@@ -160,6 +182,7 @@ export const CommunityTrust: React.FC = () => {// Stats display with social proo
             <div className="font-semibold text-zion-cyan">Sarah Johnson</div>;
 <<<<<<< HEAD:src_backup/components/mobile-app/CommunityTrust.tsx
             <div className="text-sm text-zion-slate-light">CTO at TechFlow</div>;
+<<<<<<< HEAD:src_backup/components/mobile-app/CommunityTrust.tsx
 
         
         {/* Stats Grid */}
@@ -182,6 +205,8 @@ export const CommunityTrust: React.FC = () => {;
   ];
   return (;
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/CommunityTrust.tsx
     <section className="py-16 bg-zion-blue">;
 =======
             <div className="text-sm text-zion-slate-light">CTO at TechFlow</div>;{/* Stats Grid */}
@@ -211,6 +236,10 @@ import React from "react",export const CommunityTrust: React.FC = () => {// Stat
             </div>;
 <<<<<<< HEAD:src_backup/components/mobile-app/CommunityTrust.tsx
           ))}
+<<<<<<< HEAD:src_backup/components/mobile-app/CommunityTrust.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/CommunityTrust.tsx
 
         </div>;
 
@@ -223,7 +252,10 @@ import React from "react",export const CommunityTrust: React.FC = () => {// Stat
             ))}
 
 
+<<<<<<< HEAD:src_backup/components/mobile-app/CommunityTrust.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/CommunityTrust.tsx
           </div>
           <blockquote className="text-center text-lg text-white italic mb-4">
             "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere."
@@ -231,6 +263,7 @@ import React from "react",export const CommunityTrust: React.FC = () => {// Stat
           <div className="text-center">
             <div className="font-semibold text-zion-cyan">Sarah Johnson</div>
             <div className="text-sm text-zion-slate-light">CTO at TechFlow</div>
+<<<<<<< HEAD:src_backup/components/mobile-app/CommunityTrust.tsx
           </div>
           <blockquote className='text-center text-lg text-white italic mb-4'>
             "The Zion app has completely changed how I find tech talent. The AI
@@ -240,6 +273,8 @@ import React from "react",export const CommunityTrust: React.FC = () => {// Stat
             <div className='font-semibold text-zion-cyan'>Sarah Johnson</div>
             <div className='text-sm text-zion-slate-light'>CTO at TechFlow</div>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/CommunityTrust.tsx
           </div>
         </div>
       </div>
@@ -285,6 +320,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </div>;
     </section>;
+<<<<<<< HEAD:src_backup/components/mobile-app/CommunityTrust.tsx
   )}</div>) ))}}</div>) )}</div> <blockquote className="text-center text-lg text-white italic mb-4" > "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere." </blockquote> <div className="text-center" > <div className="font-semibold text-zion-cyan" >Sarah Johnson</div> <div className="text-sm text-zion-slate-light" >CTO at TechFlow</div> </div> </div> </div> </section>)}'"  )})}}</div>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/mobile-app/CommunityTrust.tsx
           <blockquote className='text - center text - lg text - white italic mb - 4'>;
@@ -339,14 +375,32 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 '"  );
 }
+=======
+  );
+}</div>) ) ;
+
+  )
+},
+
+}</div>) ) 
+}</div> <blockquote className="text-center text-lg text-white italic mb-4" > "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere." </blockquote> <div className="text-center" > <div className="font-semibold text-zion-cyan" >Sarah Johnson</div> <div className="text-sm text-zion-slate-light" >CTO at TechFlow</div> </div> </div> </div> </section>) ;
+};
+'"  );
+};
+  )
+},
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/CommunityTrust.tsx
 
 );
 }</div>) ) ;
 }</div> <blockquote className="text-center text-lg text-white italic mb-4" > "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere." </blockquote> <div className="text-center" > <div className="font-semibold text-zion-cyan" >Sarah Johnson</div> <div className="text-sm text-zion-slate-light" >CTO at TechFlow</div> </div> </div> </div> </section>) ;
 };
 '"
+<<<<<<< HEAD:src_backup/components/mobile-app/CommunityTrust.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     </section>)}</div>) )}</div> <blockquote className="text - center text - lg text - white italic mb - 4" > "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere." </blockquote> <div className="text - center" > <div className="font - semibold text - zion - cyan" >Sarah Johnson</div> <div className="text - sm text - zion - slate - light" >CTO at TechFlow</div> </div> </div> </div> </section>)}
 '"  )})}</div>) )}</div> <blockquote className="text-center text-lg text-white italic mb-4" > "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere." </blockquote> <div className="text-center" > <div className="font-semibold text-zion-cyan" >Sarah Johnson</div> <div className="text-sm text-zion-slate-light" >CTO at TechFlow</div> </div> </div> </div> </section>)}'";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/mobile-app/CommunityTrust.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/CommunityTrust.tsx

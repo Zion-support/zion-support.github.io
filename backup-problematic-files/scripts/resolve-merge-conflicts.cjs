@@ -18,11 +18,33 @@ function resolveMergeConflicts(filePath) {
     
     // Check if file has merge conflicts
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
     if (!content.includes('
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
+      return false;
+    }
+    console.log(`📝 Resolving conflicts in: ${filePath}`);
+    // Split by merge conflict markers
+    const lines = content.split('\n');
+    const resolvedLines = [];
+    let inConflict = false;
+    let conflictType = '';
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      if (line.includes('')) {
+        inConflict = true;
+        conflictType = 'head';
+conflictType = 'incoming';
+        continue;
+      }
+      
+      if (line.includes('')) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         conflictType = 'incoming';
         continue;
       }
@@ -70,7 +92,23 @@ function findConflictedFiles(dir) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+          if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
+            conflictedFiles.push(fullPath);
+          }
+        } catch (error) {
+          // Skip files that can't be read
+        }
+      }
+    }
+  }
+  
+  scanDirectory(dir);
+  return conflictedFiles;
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
           if (content.includes('
 

@@ -1,4 +1,26 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+:backup-problematic-files/components/docs/ApiDocsPage.tsx
+
+import React, { useMemo, useState } from 'react';
+import Sidebar from './Sidebar';
+import EndpointDetail from './EndpointDetail';
+import v1 from '../../data/api-docs/v1';
+import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types';
+export default function ApiDocsPage() {
+  const spec: ApiDocsSpec = v1, // could switch by version later
+  const [selectedVersion, setSelectedVersion] = useState<string>(spec.defaultVersion)
+  const [visibility, setVisibility] = useState<Visibility | 'all'>('all')
+  const allEndpoints: EndpointSpec[] = useMemo(() => spec.sections.flatMap((s) => s.endpoints), [spec])
+  const firstEndpoint = useMemo(() => allEndpoints.find((e) => e.versions.includes(selectedVersion)), [allEndpoints, selectedVersion])
+  const [activeEndpointId, setActiveEndpointId] = useState<string | undefined>(firstEndpoint?.id)
+  const activeEndpoint = allEndpoints.find((e) => e.id === activeEndpointId) |firstEndpoint
+  return (
+    <div className="min - h-screen bg - high - contrast - primary text - high - contrast grid grid-cols-1" style={{ gridTemplateColumns: '18rem 1fr' }}>;
+      <Sidebar;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import {
   ApiDocsSpec,
   EndpointSpec,
@@ -29,6 +51,7 @@ export default function ApiDocsPage() {
   
     >
       <Sidebar
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533:components/docs/ApiDocsPage.tsx
 =======
 
@@ -51,6 +74,9 @@ export default function ApiDocsPage() {const spec: ApiDocsSpec = v1; // could sw
     allEndpoints.find(e => e.id === activeEndpointId) || firstEndpoint;>;
       <Sidebar;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         spec={spec}
         activeEndpointId={active_endpoint?.id}
         onSelectEndpoint={setActiveEndpointId}
@@ -122,6 +148,14 @@ function ChangelogWidget() {
     setContent(data.content || '');
   }
   async function save() {
+<<<<<<< HEAD
+=======
+:backup-problematic-files/components/docs/ApiDocsPage.tsx
+    setMessage('')
+    await fetch('/api/docs/changelog', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ content }) })
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     setMessage('');
 await fetch('/api/docs/changelog', {
       method: 'POST',
@@ -210,7 +244,11 @@ await fetch('/api/docs/changelog', {
       />
     </div>
   );
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533:components/docs/ApiDocsPage.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     setMessage('Saved')
   }
   return (

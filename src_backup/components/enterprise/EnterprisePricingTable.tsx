@@ -1,4 +1,5 @@
 <<<<<<< HEAD:src_backup/components/enterprise/EnterprisePricingTable.tsx
+<<<<<<< HEAD:src_backup/components/enterprise/EnterprisePricingTable.tsx
 TableBody,
   TableCell,
   TableHead,
@@ -22,6 +23,14 @@ import { Badge } from "@/components/ui/badge",
 
 
 
+=======
+import { Check, X } from 'lucide-react'
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/EnterprisePricingTable.tsx
 import {
   Table;
 =======
@@ -38,7 +47,10 @@ TableBody,TableCell,TableHead,TableHeader,import React from "react",import { But
 import { Badge } from "@/components/ui/badge";
 export function EnterprisePricingTable() {
   const plans = null;
+<<<<<<< HEAD:src_backup/components/enterprise/EnterprisePricingTable.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/EnterprisePricingTable.tsx
 export function EnterprisePricingTable() {
   const plans = [
     {
@@ -60,13 +72,18 @@ export function EnterprisePricingTable() {
         { name: "Dedicated success manager", included: false }]},
     {
       name: "Business",
+<<<<<<< HEAD:src_backup/components/enterprise/EnterprisePricingTable.tsx
       price: "$1,999";
 
+=======
+      price: "$1,999",
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/EnterprisePricingTable.tsx
       billing: "/month",
       description: "Ideal for growing companies",
       users: "Up to 50 users",
       popular: true,
       features: [
+<<<<<<< HEAD:src_backup/components/enterprise/EnterprisePricingTable.tsx
 
         { name: "Private hiring portal", included: true },
         { name: "Dedicated talent pool", included: true },
@@ -90,12 +107,34 @@ export function EnterprisePricingTable() {
 
 
 
+=======
+        { name: 'Private hiring portal', included: true }
+        { name: 'Dedicated talent pool', included: true }
+        { name: 'Enhanced SLA (8h)', included: true }
+        { name: 'Advanced branding', included: true }
+        { name: 'Admin dashboard', included: true }
+        { name: 'Team collaboration', included: true }
+        { name: 'API access', included: true }
+        { name: 'Custom integrations', included: false }
+        { name: 'Dedicated success manager', included: false }
+      ]
+    }
+    {
+      name: 'Enterprise'
+      price: 'Custom'
+      billing: ''
+      description: 'For large organizations'
+      users: 'Unlimited users'
+      popular: false
+      features: [
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/EnterprisePricingTable.tsx
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Enterprise Plans</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
 
 
+<<<<<<< HEAD:src_backup/components/enterprise/EnterprisePricingTable.tsx
 =======
   TableRow} from "@/components/ui/table",import { Badge  } from '@/components/ui/badge';
 export function EnterprisePricingTable() {const plans  = null;export function EnterprisePricingTable() {const plans = [;
@@ -126,6 +165,9 @@ export function EnterprisePricingTable() {const plans  = null;export function En
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Enterprise Plans</h2>;
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/enterprise/EnterprisePricingTable.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/EnterprisePricingTable.tsx
 import React from 'react';
 import { Button  } from '@/components/ui/button';
 import { Table,  Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from '@/components/ui/table';
@@ -189,11 +231,15 @@ import { Table,  Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from 
                   </TableHead>;
 
             Choose the perfect plan for your team size and requirements
+<<<<<<< HEAD:src_backup/components/enterprise/EnterprisePricingTable.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/EnterprisePricingTable.tsx
           </p>
         </div>
 
 
+<<<<<<< HEAD:src_backup/components/enterprise/EnterprisePricingTable.tsx
 =======
                   </TableHead>;Choose the perfect plan for your team size and requirements;
           </p>;
@@ -240,12 +286,15 @@ import { Table,  Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from 
                         <span className='text-2xl font-bold'>{plan.price}</span>
                         <span className='text-sm text-muted-foreground ml-1'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/EnterprisePricingTable.tsx
                           {plan.billing}
                         </span>
                       </div>
                       <p className='text-sm text-muted-foreground mt-1'>
                         {plan.description}
 
+<<<<<<< HEAD:src_backup/components/enterprise/EnterprisePricingTable.tsx
         <div className="overflow-x-auto">
           <Table className="border rounded-lg">
             <TableHeader>
@@ -298,6 +347,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       >
                         {plan.name === "Enterprise" ? "Request Quote" : "Get Started"}
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/EnterprisePricingTable.tsx
 
 
 
@@ -310,11 +361,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 {plan.name === 'Enterprise'
                           ? 'Request Quote'
                           : 'Get Started'}
+<<<<<<< HEAD:src_backup/components/enterprise/EnterprisePricingTable.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/EnterprisePricingTable.tsx
                       </Button>
                     </div>
                   </TableHead>
                 ))}
+<<<<<<< HEAD:src_backup/components/enterprise/EnterprisePricingTable.tsx
 
 
               </TableRow>;
@@ -384,6 +439,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <Check className='h-5 w-5 text-green-500 mx-auto' />;
                       ) : (<X className='h-5 w-5 text-muted-foreground mx-auto' />;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/enterprise/EnterprisePricingTable.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/EnterprisePricingTable.tsx
                       )}
                     </TableCell>;
                   ))}
@@ -396,7 +453,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           All plans include SSL security, 99.9% uptime SLA, and dedicated support
         </div>
+<<<<<<< HEAD:src_backup/components/enterprise/EnterprisePricingTable.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/EnterprisePricingTable.tsx
       </div>
     </section>
 
@@ -423,6 +483,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   ))}
                 </TableRow>
               ))}
+<<<<<<< HEAD:src_backup/components/enterprise/EnterprisePricingTable.tsx
 
   );
 }
@@ -640,6 +701,34 @@ function EnterprisePricingTable() {const plans = [;
 }
 ;
 
+=======
+
+            </TableBody>;
+          </Table>;
+        </div>;
+
+        <div className='mt-8 text-center text-sm text-muted-foreground'>;
+          All plans include SSL security, 99 && 99.9% uptime SLA, and dedicated;
+          support        </div>;
+      </div>;
+    </section>;
+  );
+}        <div className="mt-8 text-center text-sm text-muted-foreground">;
+          All plans include SSL security, 99 && 99.9% uptime SLA, and dedicated support;
+        </div>;
+      </div>;
+    </section>;
+  );
+}
+          All plans include SSL security, 99.9% uptime SLA, and dedicated support;
+        </div>;
+      </div>;
+    </section>;
+  );
+}
+;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/EnterprisePricingTable.tsx
             </TableBody>
           </Table>
         </div>
@@ -652,6 +741,7 @@ function EnterprisePricingTable() {const plans = [;
     </section>
   );
 }
+<<<<<<< HEAD:src_backup/components/enterprise/EnterprisePricingTable.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     </section>)}</TableBody>;
@@ -665,3 +755,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </section>;
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/enterprise/EnterprisePricingTable.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/EnterprisePricingTable.tsx

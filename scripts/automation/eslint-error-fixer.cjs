@@ -433,7 +433,11 @@ if (require.main === module) {}
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = ESLintErrorFixer;
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+module.exports = ESLintErrorFixer;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

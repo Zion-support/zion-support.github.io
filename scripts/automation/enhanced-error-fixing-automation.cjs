@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -110,6 +111,8 @@ module.exports = EnhancedErrorFixingAutomation;
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node;
 const fs = require("fs")
 const path = require("path")
@@ -282,6 +285,7 @@ export default function"
       "summary"
         "typescriptFixes": this.fixesApplied.filter(f => f.type === "typescript_error")
         "eslintFixes": this.fixesApplied.filter(f => f.type === "eslint_error" || f.type === "eslint_auto_fix")
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -289,3 +293,7 @@ export default function"
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+        "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

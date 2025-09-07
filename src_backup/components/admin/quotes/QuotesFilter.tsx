@@ -1,4 +1,5 @@
 <<<<<<< HEAD:src_backup/components/admin/quotes/QuotesFilter.tsx
+<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesFilter.tsx
 interface QuotesFilterProps {;
 
 
@@ -6,12 +7,18 @@ interface QuotesFilterProps {;
 import React from "react",
 import { Calendar, RefreshCw } from 'lucide-react'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import React from "react",
+import { Calendar, RefreshCw } from 'lucide-react'
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/quotes/QuotesFilter.tsx
 import { Card, CardContent } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
 import { Button } from "@/components/ui/button",
 import { Calendar as CalendarComponent } from "@/components/ui/calendar",
+<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesFilter.tsx
 import { format } from "date-fns";
 import type { DateRange } from "react-day-picker";
 import type { QuoteStatus } from "@/types/quotes";
@@ -32,6 +39,13 @@ import { format } from 'date-fns'
 import type { DateRange } from 'react-day-picker'
 import type { QuoteStatus } from '@/types/quotes'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import { format } from "date-fns",
+import type { DateRange } from "react-day-picker",
+import type { QuoteStatus } from "@/types/quotes",
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/quotes/QuotesFilter.tsx
 interface QuotesFilterProps {
   searchQuery: string;
 =======
@@ -63,6 +77,7 @@ interface QuotesFilterProps  {searchQuery: string;
   dateRange: DateRange | undefined;
 <<<<<<< HEAD:src_backup/components/admin/quotes/QuotesFilter.tsx
   setDateRange: (range: DateRange | undefined) => void;
+<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesFilter.tsx
 
   onReset: () => void;
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
@@ -79,6 +94,8 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
 },) => {;
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/quotes/QuotesFilter.tsx
   return (
     <Card className='mb-6 bg-zion-blue-dark border-zion-blue-light'>;
       <CardContent className='p-6'>;
@@ -88,6 +105,10 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
               placeholder='Search quotes...'
               className='pl-10 bg-zion-blue border-zion-blue-light text-white'
               value={searchQuery}
+<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesFilter.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/quotes/QuotesFilter.tsx
 
               onChange={e => setSearchQuery(e && e.target.value)}            />;
           </div>;
@@ -155,7 +176,10 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({search_query,setSea
 <<<<<<< HEAD:src_backup/components/admin/quotes/QuotesFilter.tsx
               <SelectContent className='bg - zion - blue - dark border - zion - blue - light text - white'>;
 
+<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesFilter.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/quotes/QuotesFilter.tsx
                 <SelectItem value='all'>All Statuses</SelectItem>;
 =======
               <SelectContent className='bg - zion - blue - dark border - zion - blue - light text - white'>;<SelectItem value='all'>All Statuses</SelectItem>;
@@ -206,6 +230,7 @@ interface QuotesFilterProps {
   onReset: () => void
 }
 
+<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesFilter.tsx
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   searchQuery;
 =======
@@ -284,12 +309,16 @@ interface QuotesFilterProps  {searchQuery: string,setSearchQuery: (value: string
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({
                       format(dateRange.from, 'LLL dd, y')
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/quotes/QuotesFilter.tsx
                     )
                   ) : (
                     <span>Date range</span>
                   )}
                 </Button>
               </PopoverTrigger>
+<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesFilter.tsx
 <PopoverContent
                 className='w-auto p-0 bg-zion-blue-dark border-zion-blue-light'
                 align='start'
@@ -299,6 +328,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   mode='range'
                   defaultMonth={dateRange?.from}
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light" align="start">
+                <CalendarComponent
+                  initialFocus
+                  mode="range"
+                  defaultMonth={dateRange?.from}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/quotes/QuotesFilter.tsx
                   selected={dateRange}
                   onSelect={setDateRange}
                   numberOfMonths={2}
@@ -306,8 +343,82 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   selected = {dateRange,}
                   onSelect = {setDateRange,}
                   numberOfMonths = {2,}
+<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesFilter.tsx
 }
 
+=======
+
+
+  onReset: () => void
+
+
+}
+
+};
+          <div>;
+            <p className='text - zion - slate - light text - sm mb - 2'>Date Range</p>;
+            <Popover>;
+              <PopoverTrigger as_child>;
+                <Button;
+                  variant='outline';
+                  className='w - full justify - start text - left font - normal bg - zion - blue border - zion - blue - light text - white';
+                >;
+                  <Calendar className='mr - 2 h - 4 w - 4 text - zion - slate - light' />;
+                  {date_range?.from ? (
+                    date_range.to ? (
+                      <>;
+                        {format (date_range.from, 'LLL dd, y')} -{' '}
+                        {format (date_range.to, 'LLL dd, y')}
+                      </>) : (
+                      format (date_range.from, 'LLL dd, y')                    )                      format (date_range.from, "LLL dd, y"))) : (
+                    <span > Date range</span>)}
+                </Button>;
+              </PopoverTrigger>;
+              <PopoverContent;
+                className='w - auto p - 0 bg - zion - blue - dark border - zion - blue - light';
+                align='start';
+              >;
+                <CalendarComponent;
+                  initial_focus;
+                  mode='range'                  default_month={date_range?.from}              <PopoverContent className="w - auto p - 0 bg - zion - blue - dark border - zion - blue - light" align="start">;
+                <CalendarComponent;
+                  initial_focus;
+                  mode="range";
+                  selected={date_range}
+                  on_select={setDateRange}
+                  numberOfMonths={2}
+                  default_month = {date_range?.from, }
+                  selected = {date_range, }
+                  on_select = {setDateRange, }
+                  numberOfMonths = {2, }
+                />;
+              </PopoverContent>;
+            </Popover>;
+          </div>;
+        </div>;
+        <div className='mt - 4 flex justify - end'>;
+          <Button;
+            variant='outline';
+            on_click={on_reset}
+            className='border - zion - blue - light text - zion - slate - light'          >;
+            <RefreshCw className='mr - 2 h - 4 w - 4' /> Reset Filters          </Button>;
+        </div>;
+      </CardContent>;
+    </Card>);
+}
+            <RefreshCw className="mr - 2 h - 4 w - 4" /> Reset Filters;
+            on_click={on_reset}
+            className="border - zion - blue - light text - zion - slate - light";
+          >;
+            <RefreshCw className="mr - 2 h - 4 w - 4" /> Reset Filters;
+          </Button>;
+        </div>;
+      </CardContent>;
+    </Card>);
+}  );
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/quotes/QuotesFilter.tsx
                 />
               </PopoverContent>
             </Popover>
@@ -326,6 +437,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </Card>
 );
 };
+<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesFilter.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                       </>;
@@ -424,3 +536,5 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({format(dateRange.from
     </Card>;
 )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/admin/quotes/QuotesFilter.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/quotes/QuotesFilter.tsx

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 export const messageChannelHandler = {
+<<<<<<< HEAD
 
   sendMessage: (message: any) => {},
   receiveMessage: (callback: any) => {},
@@ -13,6 +14,10 @@ export const messageChannelHandler = {
     // eslint-disable-next-line no-console
     console.log('Setting up message receiver');
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+  sendMessage: (message: string) => {},
+  receiveMessage: (callback: (message: string) => void) => {},
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
 };
 };
@@ -77,6 +82,7 @@ export default MessageChannelHandler;
 ,;
 ;
 
+<<<<<<< HEAD
 =======
 }},export const messageChannelHandler = {sendMessage: (message: string) => {},receiveMessage: (callback: (message: string) => void) => {},sendMessage: (message: any) => {},receiveMessage: (callback: any) => {}
 }export const messageChannelHandler: MessageHandler = {sendMessage: (_message) => {// No-op: placeholder for message channel integration;
@@ -104,3 +110,5 @@ if ( {) {$2;
 }
 export default MessageChannelHandler;}}}}},,ursor/automate-test-improve-and-merge-code-646c;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

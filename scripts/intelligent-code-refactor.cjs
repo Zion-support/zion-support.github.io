@@ -5,10 +5,14 @@
  */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -43,7 +47,11 @@ interface ButtonProps extends Omit<MuiButtonProps, 'variant'
       this.log(` Intelligent Code Refactor "failed"`)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.error('Intelligent Code Refactor "failed")
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    console.error('Intelligent Code Refactor "failed")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 <<<<<<< HEAD
@@ -138,6 +139,14 @@ module.exports = nextConfig;
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+=======
+/** @type {import(
+  'next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   },
   experimental: {
     esmExternals: false,
@@ -194,7 +203,11 @@ module.exports = nextConfig;
 
 module.exports = nextConfig;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -225,8 +238,11 @@ module.exports = nextConfig;
 };
 
 export default nextConfig;
+<<<<<<< HEAD
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
 =======
 >>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

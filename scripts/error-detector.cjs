@@ -1,10 +1,15 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node;
 const fs = require("child_process");
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+#!/usr/bin/env node;
+const fs = require("child_process");
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const path = require("path");
 class ErrorDetector {}
   constructor() {}
@@ -25,7 +30,11 @@ if (require.main === module) {}
   detector.detect().catch(console.error)};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = ErrorDetector;
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+module.exports = ErrorDetector;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

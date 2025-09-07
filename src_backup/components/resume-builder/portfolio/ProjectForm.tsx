@@ -1,11 +1,15 @@
 <<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
+<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
 =======
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/resume-builder/portfolio/ProjectForm.tsx
 }
       let success = false;
       // Check condition;
 if ( {) {$2;
 }
+<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
         success = await update_project (project.id, project_data)import { useState   } from 'react';
 import { useForm   } from 'react-hook-form';
 import { zodResolver   } from '@hookform/resolvers/zod';
@@ -75,6 +79,9 @@ export function ProjectForm() {const { user } = useAuth()const { addProject, upd
       if (isEditing && project?.id) {
         success = await updateProject(project.id, projectData)
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        success = await update_project (project.id, project_data);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/resume-builder/portfolio/ProjectForm.tsx
       } else {
         const projectId = await addProject(projectData)
         success = !!projectId
@@ -105,6 +112,24 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {setIsLoa
       setIsLoading (false)}
   }
 <<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
+<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
+=======
+
+import { useState } from 'react',;
+import { useForm } from 'react-hook-form',;
+import { zodResolver } from '@hookform/resolvers/zod',;
+import { z } from 'zod',;
+import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input',;
+import { Textarea } from '@/components/ui/textarea',;
+import {logErrorToProduction} from '@/utils/productionLogger',;
+import {;
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/resume-builder/portfolio/ProjectForm.tsx
 
   const form = useForm<ProjectFormValues>({;
     resolver: zodResolver(projectSchema),;
@@ -121,6 +146,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {setIsLoa
 
   },
 
+<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
@@ -374,3 +400,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </Form>)}
 })
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/resume-builder/portfolio/ProjectForm.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/resume-builder/portfolio/ProjectForm.tsx

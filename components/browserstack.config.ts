@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -40,6 +41,10 @@ default defineConfig({
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   projects: [
       name: Desktop Chrome',      use: {
         browserName: chromium',        channel: chrome'}
@@ -62,6 +67,7 @@ default define_config ({test_dir: tests / e2e',  use: {baseURL: process.env.PLAY
     {
       name: Mobile Chrome',      use: {
         browserName: chromium',        ...devices['Pixel 5']}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -114,12 +120,20 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
     {
       name: Mobile Safari',      use: {
         browser_name: webkit',        ...devices['i_phone 12']}
     }
   ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -135,6 +149,9 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   ];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 });
   reporter: [;
     ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]];
@@ -177,14 +194,20 @@ reporter: [;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
     {
       name: Mobile Safari',      use: {
         browserName: webkit',        ...devices['iPhone 12']}
     }
   ];
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 });
   reporter: [;
@@ -192,6 +215,7 @@ reporter: [;
 });
 ;
 
+<<<<<<< HEAD
 });
 });
 <<<<<<< HEAD
@@ -207,6 +231,12 @@ reporter: [;
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 projects: [ {
   name: Desktop Chrome', use: {
   browserName: chromium', channel: window.chrome' 
@@ -234,6 +264,7 @@ projects: [ {
 }];
 reporter: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -242,3 +273,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

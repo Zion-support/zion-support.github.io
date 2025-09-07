@@ -8,6 +8,7 @@ import {Check, ExternalLink} from 'lucide-react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -52,6 +53,10 @@ export default function BrowserAutomationCloudPage() {const features = [;
         description='Parallel Playwright/Puppeteer automation at scale with queues, storage, and proxies.';
 import {Check, ExternalLink} from 'lucide-react';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
@@ -116,6 +121,7 @@ import {Check, ExternalLink} from 'lucide-react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -145,6 +151,11 @@ function BrowserAutomationCloudPage() {const features = [;
     'Webhook callbacks and REST API';
   ];return (<>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export default /**
  * BrowserAutomationCloudPage - Function description
  */
@@ -218,6 +229,7 @@ function BrowserAutomationCloudPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -242,6 +254,12 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     </>);	return (
   <>;
   <SEO title="Browser Automation Cloud" description="Parallel Playwright / Puppeteer automation at scale with queues, storage, and proxies." />;
@@ -304,6 +322,7 @@ export default function BrowserAutomationCloudPage() {export default function Br
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -345,6 +364,10 @@ export default function BrowserAutomationCloudPage() {
     'Rotating proxies and geo targeting'
     'Webhook callbacks and REST API'
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   ];
   return (
     <>
@@ -470,12 +493,17 @@ export default function BrowserAutomationCloudPage() {
       </main>
     </>
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
   );	return (
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  );	return (
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 		<>
 			<SEO title="Browser Automation Cloud" description="Parallel Playwright/Puppeteer automation at scale with queues, storage, and proxies." />
 			<main id="main" className="container mx-auto px-4 py-24">
@@ -509,6 +537,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -535,12 +564,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 	),
 }
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 	),
 }
 
 
 
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

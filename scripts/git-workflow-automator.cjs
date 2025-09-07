@@ -41,7 +41,11 @@ const { execSync } = require('child_process')
       console.log(` Current "branch"`)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       console.error('\n� Git Workflow Automator "failed")
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      console.error('\n� Git Workflow Automator "failed")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

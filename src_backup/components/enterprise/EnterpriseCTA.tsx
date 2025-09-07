@@ -1,4 +1,8 @@
 <<<<<<< HEAD:src_backup/components/enterprise/EnterpriseCTA.tsx
+<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseCTA.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/EnterpriseCTA.tsx
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Calendar, ArrowRight } from 'lucide-react';
@@ -6,7 +10,11 @@ import { Calendar, ArrowRight } from 'lucide-react';
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Calendar, ArrowRight } from 'lucide-react'
+<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseCTA.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/EnterpriseCTA.tsx
 export function EnterpriseCTA() {
   return (
     <section id='contact' className='py-20 px-4 md:px-6'>
@@ -66,12 +74,18 @@ export function EnterpriseCTA() {
                     <div className='h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0'>
                       <span className='text-primary text-sm font-medium'>
                         4
+<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseCTA.tsx
 import { Calendar } from 'lucide-react';
 
 
 
 
 
+=======
+                      </span>                    </div>
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/EnterpriseCTA.tsx
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Calendar, ArrowRight } from 'lucide-react'
@@ -126,8 +140,13 @@ export function EnterpriseCTA() {
                   <li className="flex gap-3">
                     <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
                       <span className="text-primary text-sm font-medium">4</span>
+<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseCTA.tsx
                       </span>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+                      </span>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/EnterpriseCTA.tsx
                     </div>
                     <p>Free consultation on implementation</p>
                   </li>
@@ -137,6 +156,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </div>
+<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseCTA.tsx
 
 
 
@@ -334,6 +354,14 @@ export function EnterpriseCTA() {return (<section id='contact' className='py-20 
                   <li className="flex gap-3">;
                     <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">;
                       <span className="text-primary text-sm font-medium">4</span>;export function EnterpriseCTA() {return (<section id="contact" className="py-20 px-4 md: px-6">;
+=======
+import React from "react",;
+import { Button } from "@/components/ui/button";
+import { Calendar, ArrowRight } from 'lucide-react';
+export function EnterpriseCTA() {;
+  return (;
+    <section id="contact" className="py-20 px-4 md: px-6">;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/EnterpriseCTA.tsx
       <div className="container mx-auto max-w-6xl">;
         <div className="rounded-xl bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-purple-light/20 p-1">;
           <div className="bg-card rounded-lg shadow-sm p-8 md:p-12">;
@@ -381,12 +409,26 @@ export function EnterpriseCTA() {return (<section id='contact' className='py-20 
                     <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">;
                       <span className="text-primary text-sm font-medium">4</span>;
                     </div>;
+<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseCTA.tsx
                     <p>Free consultation on implementation</p>;import { Button  } from '@/components / ui / button';
 export /**;
  * EnterpriseCTA - Function description;
  */;
 function EnterpriseCTA() {return (<section id='contact' className='py - 20 px - 4 md:px - 6'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/enterprise/EnterpriseCTA.tsx
+=======
+                    <p>Free consultation on implementation</p>;
+
+import React from 'react';
+import { Button } from '@/components / ui / button';
+import { Calendar, ArrowRight } from 'lucide-react';
+export /**
+ * EnterpriseCTA - Function description
+ */
+function EnterpriseCTA() {
+  return (
+    <section id='contact' className='py - 20 px - 4 md:px - 6'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/EnterpriseCTA.tsx
       <div className='container mx - auto max - w-6xl'>;
         <div className='rounded - xl bg - gradient - to - r from - zion - cyan / 20 via - zion - purple / 20 to - zion - purple - light / 20 p - 1'>;
           <div className='bg - card rounded - lg shadow - sm p - 8 md:p - 12'>;
@@ -513,6 +555,7 @@ function EnterpriseCTA() {return (<section id="contact" className="py - 20 px - 
 <<<<<<< HEAD:src_backup/components/enterprise/EnterpriseCTA.tsx
       </div>;
 
+<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseCTA.tsx
   );
 }
 
@@ -525,3 +568,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
       </div>;</section>)})}</section>)})}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/enterprise/EnterpriseCTA.tsx
+=======
+    </section>);
+}
+;
+
+  );
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/EnterpriseCTA.tsx

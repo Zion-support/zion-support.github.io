@@ -134,7 +134,11 @@ this.log(" Found ${branches.length} cursor branches to process")
   console.log(")
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error(" Auto merge conflict resolution "failed": ")
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  console.error(" Auto merge conflict resolution "failed": ")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

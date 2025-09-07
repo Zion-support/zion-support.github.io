@@ -1,4 +1,5 @@
 <<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
+<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
 import React from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -46,6 +47,16 @@ import { Progress } from "@/components/ui/progress";
 export function UsageStats() {
   const handleSaveChanges = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import {
+
+export function UsageStats() {
+
+
+  const handleSaveChanges = () => {
+    toast({
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/UsageStats.tsx
   return (
     <div className="space-y-8">
       <div>
@@ -54,6 +65,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           Configure usage limits for your team to manage your subscription resources.
         </p>
       </div>
+<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/UsageStats.tsx
 return (
 
 
@@ -61,7 +76,10 @@ return (
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
 
+<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/UsageStats.tsx
         <Card>
           <CardHeader>
             <CardTitle>Job Postings</CardTitle>
@@ -96,6 +114,10 @@ return (
         </Card>
 
 
+<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/UsageStats.tsx
         
 
 
@@ -134,10 +156,13 @@ return (
         </Card>
 
 
+<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
         
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/UsageStats.tsx
         <Card>
           <CardHeader>
             <CardTitle>AI Features</CardTitle>
@@ -170,10 +195,17 @@ return (
         </Card>
 
 
+<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
         
 
 
 
+=======
+
+        
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/UsageStats.tsx
         <Card>
           <CardHeader>
             <CardTitle>Budget Controls</CardTitle>
@@ -218,6 +250,7 @@ return (
       </div>
 
 
+<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
       
       <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
@@ -226,6 +259,8 @@ return (
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/UsageStats.tsx
           </div>
           <div>
             <h3 className='font-medium'>Need higher limits?</h3>
@@ -533,6 +568,7 @@ export function UsageStats() {const handleSaveChanges = () => {toast({title: 'Li
         </Card>;
 <<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
       </div>;
+<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
 
       <div className='bg - muted / 50 rounded - lg p - 6 flex items - center justify - between'>;
 =======
@@ -564,3 +600,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>)}"}</div>;
   ))}";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/enterprise/admin/UsageStats.tsx
+=======
+    </div>;
+  );
+}
+;
+
+  );
+
+}"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/UsageStats.tsx

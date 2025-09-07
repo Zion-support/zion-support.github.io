@@ -1,14 +1,22 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
 import {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
+import {
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   setVendorApproval
   setVendorCommission
   suspendVendor;
 } from '../../../utils/vendor-store';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST')
+<<<<<<< HEAD
     return res.status(405).json({ error: 'Method not allowed' });
   const { action, vendorId, value } = req.body || {};
   try {
@@ -24,6 +32,13 @@ else if (action === 'commission')
     res.status(500).json({ error: e.message });
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    return res.status(405).json({ error: 'Method not allowed' });  const { action, vendorId, value } = req.body |{};import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
+  setVendorApproval,
+  setVendorCommission,;
+  suspendVendor,;
+} from '../../../utils/vendor-store';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });  const { action, vendorId, value } = req.body || {};import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
@@ -58,6 +73,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     res && res.status(500).json({ error: e && e.message })
   };
 }
+<<<<<<< HEAD
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -73,3 +89,8 @@ import {try {if (action === 'approve') setVendorApproval(String(vendorId), true)
 export default function handler() {if (req.method !== 'POST')return res.status(405).json({ error: 'Method not allowed' })const { action, vendorId, value } = req.body || {}import { setVendorApproval, setVendorCommission, suspendVendor  } from '../../../utils/vendor-store';
 export default function handler() {if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })const { action, vendorId, value } = req.body || {},try {if (action === 'approve') setVendorApproval(String(vendorId), true)else if (action === 'revoke') setVendorApproval(String(vendorId), false)else if (action === 'suspend') suspendVendor(String(vendorId), true)else if (action === 'unsuspend') suspendVendor(String(vendorId), false)} catch (e: any) {res && res.status(500).json({ error: e && e.message })}}}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

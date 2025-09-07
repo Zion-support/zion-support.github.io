@@ -10,7 +10,11 @@ const { execSync } = require('child_process')
 // console.log(`Environment "Files"`)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.log(`Vulnerable "Packages"`)
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    console.log(`Vulnerable "Packages"`)
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

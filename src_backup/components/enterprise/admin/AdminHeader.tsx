@@ -1,10 +1,18 @@
 <<<<<<< HEAD:src_backup/components/enterprise/admin/AdminHeader.tsx
+<<<<<<< HEAD:src_backup/components/enterprise/admin/AdminHeader.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/AdminHeader.tsx
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Download, Settings } from 'lucide-react';
 import { useCompanyWorkspace } from '@/hooks/useCompanyWorkspace';
 
+<<<<<<< HEAD:src_backup/components/enterprise/admin/AdminHeader.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/AdminHeader.tsx
 import React from "react",
 import { Button } from "@/components/ui/button";
 import { Download, Settings } from 'lucide-react'
@@ -12,10 +20,13 @@ import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
 export function AdminHeader() {
   // const { user } = useAuth(), // Unused but available
   const { company } = useCompanyWorkspace();
+<<<<<<< HEAD:src_backup/components/enterprise/admin/AdminHeader.tsx
   return (
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/AdminHeader.tsx
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Download, Settings } from 'lucide-react'
@@ -37,8 +48,22 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
           <p className="text-muted-foreground mt-1">
             Manage your company's account, team members, and subscription
           </p>
+<<<<<<< HEAD:src_backup/components/enterprise/admin/AdminHeader.tsx
 
         </div>
+=======
+          <Button variant="outline" size="sm" className="gap-2">
+            <Settings className="h-4 w-4" />
+            Settings
+          </Button>
+
+
+
+
+          <Button variant="outline" size="sm" className="gap-2">
+            <Download className="h-4 w-4" />
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/AdminHeader.tsx
         <div className='flex items-center gap-2'>
           <Button variant='outline' size='sm' className='gap-2'>
             <Settings className='h-4 w-4' />
@@ -46,11 +71,15 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
           </Button>
           <Button variant='outline' size='sm' className='gap-2'>
             <Download className='h-4 w-4' />
+<<<<<<< HEAD:src_backup/components/enterprise/admin/AdminHeader.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/AdminHeader.tsx
             Export Data
           </Button>
         </div>
       </div>
+<<<<<<< HEAD:src_backup/components/enterprise/admin/AdminHeader.tsx
 
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -59,6 +88,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="text-xl font-medium">{company?.plan || "Enterprise"}</div>
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/AdminHeader.tsx
         </div>
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Team Members</div>
@@ -75,10 +106,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="flex items-center gap-4">
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center">
             <img
+<<<<<<< HEAD:src_backup/components/enterprise/admin/AdminHeader.tsx
 
               src={company?.logoUrl || "/placeholder.svg"}
               alt={company?.name || "Company"}
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/AdminHeader.tsx
               className="max-h-10 max-w-10"
               loading="lazy"
             />
@@ -107,11 +141,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="flex items-center gap-4">
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center">
             <img
+<<<<<<< HEAD:src_backup/components/enterprise/admin/AdminHeader.tsx
 
               src={company?.logoUrl || "/placeholder.svg"}
               alt={company?.name || "Company"}
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/AdminHeader.tsx
               className="max-h-10 max-w-10"
               loading="lazy"
             />
@@ -124,6 +161,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <h2 className="font-medium">{company?.name || "Company Name"}</h2>
             <p className="text-sm text-muted-foreground">
               Workspace URL: {company?.workspaceUrl || "loading..."}
+<<<<<<< HEAD:src_backup/components/enterprise/admin/AdminHeader.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/AdminHeader.tsx
 <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
         <div className='bg-card rounded-lg p-4 border border-border'>
           <div className='text-sm text-muted-foreground'>Subscription Plan</div>
@@ -157,7 +198,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <h2 className='font-medium'>{company?.name |'Company Name'}</h2>
             <p className='text-sm text-muted-foreground'>
               Workspace URL: {company?.workspaceUrl || 'loading...'}
+<<<<<<< HEAD:src_backup/components/enterprise/admin/AdminHeader.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/AdminHeader.tsx
             </p>
           </div>
         </div>
@@ -166,6 +210,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
 
 
+<<<<<<< HEAD:src_backup/components/enterprise/admin/AdminHeader.tsx
+=======
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/AdminHeader.tsx
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Download, Settings } from 'lucide-react';
@@ -176,6 +224,7 @@ export function AdminHeader() {;
   return (;
     <div className="space-y-4">;
       <div className="flex items-center justify-between">;
+<<<<<<< HEAD:src_backup/components/enterprise/admin/AdminHeader.tsx
 
         <div>;
 =======
@@ -189,6 +238,8 @@ import React from "react",export function AdminHeader() {// const { user } = use
   const { company }  = useCompanyWorkspace()return (export function AdminHeader() { // const { user  } = useAuth(), // Unused but available;
   const { company  } = useCompanyWorkspace(),return (<div className="space-y-4">;
       <div className="flex items-center justify-between">;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/AdminHeader.tsx
         <div>;
           <h1 className="text-3xl font-bold tracking-tight">Enterprise Admin Dashboard</h1>;
           <p className="text-muted-foreground mt-1">;
@@ -196,6 +247,7 @@ import React from "react",export function AdminHeader() {// const { user } = use
           </p>;
         </div>;
         <div className="flex items-center gap-2">;
+<<<<<<< HEAD:src_backup/components/enterprise/admin/AdminHeader.tsx
           <Button variant="outline" size="sm" className="gap-2">;
             <Settings className="h-4 w-4" />;
             Settings;
@@ -331,6 +383,8 @@ import React from "react",export function AdminHeader() {// const { user } = use
 <<<<<<< HEAD:src_backup/components/enterprise/admin/AdminHeader.tsx
       </div>        <div className="flex items-center gap-2">;
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/AdminHeader.tsx
           <Button variant="outline" size="sm" className="gap-2">;
 =======
       </div>        <div className="flex items-center gap-2">;<Button variant="outline" size="sm" className="gap-2">;
@@ -341,6 +395,10 @@ import React from "react",export function AdminHeader() {// const { user } = use
           <Button variant="outline" size="sm" className="gap-2">;
 <<<<<<< HEAD:src_backup/components/enterprise/admin/AdminHeader.tsx
             <Download className="h-4 w-4" />;
+<<<<<<< HEAD:src_backup/components/enterprise/admin/AdminHeader.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/AdminHeader.tsx
 import React from 'react';
 import { Button } from '@/components/ui/ button';
 import { Download, Settings } from 'lucide-react';
@@ -388,11 +446,15 @@ function AdminHeader() {// const { user } = use_auth ()// Unused but available;
           <Button variant="outline" size="sm" className="gap - 2">;
 <<<<<<< HEAD:src_backup/components/enterprise/admin/AdminHeader.tsx
             <Download className="h - 4 w - 4" />;
+<<<<<<< HEAD:src_backup/components/enterprise/admin/AdminHeader.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/AdminHeader.tsx
             Export Data;
           </Button>;
         </div>;
       </div>;
+<<<<<<< HEAD:src_backup/components/enterprise/admin/AdminHeader.tsx
 
   );
 }
@@ -403,6 +465,9 @@ function AdminHeader() {// const { user } = use_auth ()// Unused but available;
           </Button>;
         </div>;
       </div>;<div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
+=======
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/AdminHeader.tsx
         <div className="bg-card rounded-lg p-4 border border-border">;
           <div className="text-sm text-muted-foreground">Subscription Plan</div>;
           <div className="text-xl font-medium">{company?.plan || "Enterprise"}</div>;
@@ -422,6 +487,7 @@ function AdminHeader() {// const { user } = use_auth ()// Unused but available;
             <img;
               src={company?.logoUrl || "/placeholder.svg"}
               alt={company?.name || "Company"}
+<<<<<<< HEAD:src_backup/components/enterprise/admin/AdminHeader.tsx
               className="max-h-10 max-w-10";)}<div className='grid grid - cols - 1 md:grid - cols - 3 gap - 4'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/enterprise/admin/AdminHeader.tsx
         <div className='bg - card rounded - lg p - 4 border border - border'>;
@@ -478,16 +544,23 @@ function AdminHeader() {// const { user } = use_auth ()// Unused but available;
 <<<<<<< HEAD:src_backup/components/enterprise/admin/AdminHeader.tsx
               className="max - h-10 max - w-10";
 
+=======
+              className="max-h-10 max-w-10";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/AdminHeader.tsx
               loading="lazy";
             />;
           </div>;
           <div>;
+<<<<<<< HEAD:src_backup/components/enterprise/admin/AdminHeader.tsx
             <h2 className="font - medium">{company?.name || "Company Name"}</h2>;
 =======
               className="max - h-10 max - w-10";loading="lazy";
             />;
           </div>;
           <div>;<h2 className="font-medium">{company?.name || "Company Name"}</h2>;
+=======
+            <h2 className="font-medium">{company?.name || "Company Name"}</h2>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/AdminHeader.tsx
             <p className="text-sm text-muted-foreground">;
               Workspace URL: {company?.workspaceUrl || "loading..."}
             </p>;
@@ -496,6 +569,7 @@ function AdminHeader() {// const { user } = use_auth ()// Unused but available;
         <Button>Customize Workspace</Button>;
       </div>;
     </div>;
+<<<<<<< HEAD:src_backup/components/enterprise/admin/AdminHeader.tsx
   )}<h2 className="font - medium">{company?.name || "Company Name"}</h2>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/enterprise/admin/AdminHeader.tsx
             <p className="text - sm text - muted - foreground">;
@@ -507,12 +581,18 @@ function AdminHeader() {// const { user } = use_auth ()// Unused but available;
       </div>;
 <<<<<<< HEAD:src_backup/components/enterprise/admin/AdminHeader.tsx
     </div>);
+=======
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/AdminHeader.tsx
 }
 ;
 
   );
 }
+<<<<<<< HEAD:src_backup/components/enterprise/admin/AdminHeader.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     </div>)})}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/enterprise/admin/AdminHeader.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/admin/AdminHeader.tsx

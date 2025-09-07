@@ -5,16 +5,24 @@ const files = [
     pat: h: 'components/Header.tsx',
     conten: t: `import React, { useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import Link from 'next/link';
 import { Menu, X, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+=======
+;
+const files = [;
+  {;
+    pat:h:'components/Header.tsx',;
+    conten:t:`import React, { useState } from 'react';
+>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-const: Header: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+<<<<<<< HEAD
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -1234,3 +1242,5 @@ main
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

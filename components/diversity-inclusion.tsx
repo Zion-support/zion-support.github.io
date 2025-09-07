@@ -33,10 +33,16 @@ export default function DiversityInclusionPage() {return (<div className="min-h-
       </div>;
     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
   )return (<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
+=======
+  );
+  return (
+    <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <Head>;
         <title>Diversity & Inclusion | Zion Tech Group</title>;
         <meta;
@@ -121,5 +127,11 @@ function DiversityInclusionPage() {return (<div className="min - h-screen pt - 2
           <li > Respectful, safe, and collaborative culture</li>;
         </ul>;
       </div>;
+<<<<<<< HEAD
     </div>)}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </div>);
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

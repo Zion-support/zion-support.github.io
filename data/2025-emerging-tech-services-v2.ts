@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -31,6 +32,12 @@ export interface EmergingTechService  {id: string;name: string;
 export interface EmergingTechService {
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  id: string;
+
+export interface EmergingTechService {
+id: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   name: string;
   tagline: string;
   description: string;
@@ -39,11 +46,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     monthly: number;
     yearly: number;
     currency: string;
+<<<<<<< HEAD
     trialDays: number;
     setupTime: string;
     enterprise: number
   },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   features: string[];
   benefits: string[];
   target_audience: string[];
@@ -65,6 +77,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   customers: number;
   rating: number;
   reviews: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -311,6 +324,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ];
     integrations: ['Satellite systems, Ground stations, Space hardware, Monitoring tools, Business applications'],support: '24/7 space operations support, dedicated space engineer, training programs, and quarterly mission reviews.',compliance: ['Space regulations, International treaties, Safety standards, Industry regulations'],link: 'https://ziontechgroup.com/space-mining-platform';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     implementationDetails:
       'Comprehensive space mining platform with automated operations, resource management, and logistics coordination. Includes ground control systems and space hardware.'
     roi: 'Average customer sees 1000% ROI within 24 months through access to valuable space resources.'
@@ -340,6 +355,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -363,6 +379,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     implementationDetails:
       'Advanced quantum-bio platform with hybrid processing, biological modeling, and research tools. Includes desktop application and cloud access.'
     roi: 'Average customer sees 600% ROI within 18 months through accelerated research and reduced costs.'
@@ -384,86 +403,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      'Research ethics, Data privacy, Scientific standards, Industry regulations',
-    ],
-    link: 'https://ziontechgroup && ziontechgroup.com/quantum-bio-computing-platform',
-    id: 'quantum - bio - computing - platform',
-    name: 'Quantum Bio - Computing Platform',
-    tagline: 'Quantum computing meets biological systems',
-    description:;
-      'Revolutionary platform that combines quantum computing with biological processing to solve complex biological problems, drug discovery, and genetic analysis.',
-    category: 'Quantum & Emerging Tech',
-    price: {
-      monthly: 599,
-      yearly: 5990,
-      currency: 'USD',
-      trial_days: 14,
-      setup_time: '8 hours',
-      enterprise: 2499,
-    },
-    features: [;
-      'Quantum - biological hybrid processing',
-      'DNA sequence analysis',
-      'Protein folding simulation',
-      'Drug discovery algorithms',
-      'Genetic optimization',
-      'Biological data processing',
-      'Quantum molecular dynamics',
-      'Bioinformatics tools',
-      'Custom biological models',
-      'API for research',
-    ],
-    benefits: [;
-      'Solve biological problems 1000x faster',
-      'Accelerate drug discovery',
-      'Improve genetic analysis',
-      'Enable new research capabilities',
-      'Reduce research costs',
-    ],
-    target_audience: [;
-      'Pharmaceutical companies',
-      'Research institutions',
-      'Biotechnology firms',
-      'Healthcare organizations',
-      'Universities',
-      'Government agencies',
-    ],
-    market_position:;
-      'Competitive with IBM Quantum ($500+), Google Quantum AI ($1000+), and specialized bio - computing platforms ($800+). Our advantage: Biological integration, quantum processing, and research optimization.',
-    competitors: [;
-      'IBM Quantum, Google Quantum AI, D - Wave, Rigetti, Specialized bio - computing platforms',
-    ],
-    tech_stack: [;
-      'Quantum computing, Biological algorithms, Bioinformatics, React, Node.js, PostgreSQL, Redis, AWS',
-    ],
-    real_implementation: true,
-    implementation_details:;
-      'Advanced quantum - bio platform with hybrid processing, biological modeling, and research tools. Includes desktop application and cloud access.',
-    roi: 'Average customer sees 600% ROI within 18 months through accelerated research and reduced costs.',
-    use_cases: [;
-      'Drug discovery',
-      'Genetic analysis',
-      'Protein folding',
-      'Molecular dynamics',
-      'Biological optimization',
-      'Research acceleration',
-    ],
-    integrations: [;
-      'Research databases, Laboratory equipment, Analysis tools, Cloud platforms, Scientific software',
-    ],
-    support:;
-      '24 / 7 research support, dedicated bio - quantum specialist, training programs, and quarterly research reviews.',
-    compliance: [;
-      'Research ethics, Data privacy, Scientific standards, Industry regulations',
-    ],
-    link: 'https://ziontechgroup.com / quantum - bio - computing - platform',
 
+<<<<<<< HEAD
     icon: '🧬',
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -476,6 +426,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     color: 'from - green - 500 to - emerald - 600',
     popular: true,
     launch_date: '2024 - 02 - 01',
@@ -490,16 +442,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      'Neural signal processing, AI/ML, React, Node && Node.js, PostgreSQL, Redis, AWS, Neural hardware',
-    ],
-    realImplementation: true,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -511,6 +464,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     implementationDetails:
       'Advanced BCI platform with neural processing, real-time analysis, and comprehensive applications. Includes hardware integration and development tools.'
     roi: 'Average customer sees 400% ROI within 12 months through new capabilities and applications.'
@@ -532,86 +487,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      'Medical device regulations, Data privacy, Ethical guidelines, Industry standards',
-    ],
-    link: 'https://ziontechgroup && ziontechgroup.com/brain-computer-interface-platform',
-    id: 'brain - computer - interface - platform',
-    name: 'Brain - Computer Interface Platform',
-    tagline: 'Direct neural interface for human - computer interaction',
-    description:;
-      'Advanced platform that enables direct communication between the human brain and computers, opening new possibilities for accessibility, gaming, and medical applications.',
-    category: 'Emerging Tech',
-    price: {
-      monthly: 399,
-      yearly: 3990,
-      currency: 'USD',
-      trial_days: 21,
-      setup_time: '6 hours',
-      enterprise: 1599,
-    },
-    features: [;
-      'Neural signal processing',
-      'Brain activity monitoring',
-      'Thought - to - text conversion',
-      'Mental command recognition',
-      'Accessibility tools',
-      'Gaming integration',
-      'Medical applications',
-      'Real - time processing',
-      'Custom neural models',
-      'API for developers',
-    ],
-    benefits: [;
-      'Enable new forms of human - computer interaction',
-      'Improve accessibility for disabled users',
-      'Create immersive gaming experiences',
-      'Advance medical research',
-      'Enhance human capabilities',
-    ],
-    target_audience: [;
-      'Healthcare providers',
-      'Gaming companies',
-      'Accessibility organizations',
-      'Research institutions',
-      'Technology companies',
-      'Educational institutions',
-    ],
-    market_position:;
-      'Competitive with Neuralink ($1000+), CTRL - labs ($500+), and specialized BCI platforms ($400+). Our advantage: Advanced signal processing, comprehensive applications, and developer - friendly platform.',
-    competitors: [;
-      'Neuralink, CTRL - labs, Kernel, Paradromics, specialized BCI platforms',
-    ],
-    tech_stack: [;
-      'Neural signal processing, AI / ML, React, Node.js, PostgreSQL, Redis, AWS, Neural hardware',
-    ],
-    real_implementation: true,
-    implementation_details:;
-      'Advanced BCI platform with neural processing, real - time analysis, and comprehensive applications. Includes hardware integration and development tools.',
-    roi: 'Average customer sees 400% ROI within 12 months through new capabilities and applications.',
-    use_cases: [;
-      'Accessibility assistance',
-      'Gaming control',
-      'Medical research',
-      'Communication aids',
-      'Prosthetic control',
-      'Cognitive enhancement',
-    ],
-    integrations: [;
-      'Neural hardware, Gaming platforms, Medical devices, Accessibility tools, Development platforms',
-    ],
-    support:;
-      '24 / 7 BCI specialist support, dedicated neural engineer, training programs, and quarterly capability reviews.',
-    compliance: [;
-      'Medical device regulations, Data privacy, Ethical guidelines, Industry standards',
-    ],
-    link: 'https://ziontechgroup.com / brain - computer - interface - platform',
 
+<<<<<<< HEAD
     icon: '🧠',
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -624,6 +510,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     color: 'from - blue - 500 to - indigo - 600',
     popular: true,
     launch_date: '2024 - 01 - 15',
@@ -638,16 +526,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      'Quantum computing, Energy algorithms, React, Node && Node.js, PostgreSQL, Redis, AWS, Energy systems',
-    ],
-    realImplementation: true,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -659,6 +548,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     implementationDetails:
       'Advanced quantum energy platform with optimization algorithms, fusion simulation, and comprehensive energy modeling. Includes desktop application and cloud access.'
     roi: 'Average customer sees 500% ROI within 15 months through energy optimization and cost reduction.'
@@ -680,86 +571,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      'Energy regulations, Safety standards, Environmental regulations, Industry standards',
-    ],
-    link: 'https://ziontechgroup && ziontechgroup.com/quantum-energy-platform',
-    id: 'quantum - energy - platform',
-    name: 'Quantum Energy Platform',
-    tagline: 'Quantum - enhanced energy optimization and fusion simulation',
-    description:;
-      'Revolutionary platform that uses quantum computing to optimize energy systems, simulate fusion reactions, and enable breakthrough energy solutions.',
-    category: 'Quantum & Emerging Tech',
-    price: {
-      monthly: 499,
-      yearly: 4990,
-      currency: 'USD',
-      trial_days: 14,
-      setup_time: '6 hours',
-      enterprise: 1999,
-    },
-    features: [;
-      'Quantum energy optimization',
-      'Fusion reaction simulation',
-      'Grid optimization algorithms',
-      'Energy storage optimization',
-      'Renewable energy integration',
-      'Quantum thermodynamics',
-      'Real - time monitoring',
-      'Predictive analytics',
-      'Custom energy models',
-      'API for energy systems',
-    ],
-    benefits: [;
-      'Optimize energy systems 100x faster',
-      'Enable fusion power simulation',
-      'Reduce energy costs by 30%',
-      'Improve grid efficiency',
-      'Accelerate clean energy adoption',
-    ],
-    target_audience: [;
-      'Energy companies',
-      'Utility providers',
-      'Research institutions',
-      'Government agencies',
-      'Technology companies',
-      'Environmental organizations',
-    ],
-    market_position:;
-      'Competitive with specialized energy platforms ($300+), quantum computing services ($500+), and simulation software ($400+). Our advantage: Quantum optimization, comprehensive energy modeling, and fusion simulation.',
-    competitors: [;
-      'Specialized energy platforms, Quantum computing services, Simulation software, Energy optimization tools',
-    ],
-    tech_stack: [;
-      'Quantum computing, Energy algorithms, React, Node.js, PostgreSQL, Redis, AWS, Energy systems',
-    ],
-    real_implementation: true,
-    implementation_details:;
-      'Advanced quantum energy platform with optimization algorithms, fusion simulation, and comprehensive energy modeling. Includes desktop application and cloud access.',
-    roi: 'Average customer sees 500% ROI within 15 months through energy optimization and cost reduction.',
-    use_cases: [;
-      'Energy system optimization',
-      'Fusion power simulation',
-      'Grid optimization',
-      'Energy storage optimization',
-      'Renewable integration',
-      'Energy research',
-    ],
-    integrations: [;
-      'Energy management systems, Grid infrastructure, Monitoring tools, Research platforms, Business applications',
-    ],
-    support:;
-      '24 / 7 energy specialist support, dedicated quantum engineer, training programs, and quarterly optimization reviews.',
-    compliance: [;
-      'Energy regulations, Safety standards, Environmental regulations, Industry standards',
-    ],
-    link: 'https://ziontechgroup.com / quantum - energy - platform',
 
+<<<<<<< HEAD
     icon: '⚡',
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -772,6 +594,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     color: 'from - yellow - 500 to - orange - 600',
     popular: true,
     launch_date: '2024 - 02 - 10',
@@ -786,16 +610,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-      'Advanced AI/ML, Computer Vision, Robotics, React, Node && Node.js, PostgreSQL, Redis, AWS, Vehicle systems',
-    ],
-    realImplementation: true,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -807,6 +632,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     implementationDetails:
       'Advanced autonomous vehicle platform with AI perception, decision-making, and safety systems. Includes vehicle integration and fleet management tools.'
     roi: 'Average customer sees 600% ROI within 18 months through improved safety and operational efficiency.'
@@ -828,6 +655,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -841,6 +669,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards',
 =======
       'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'
@@ -859,6 +691,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -866,6 +699,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ];      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
 
+=======
+
+];      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   marketSize: string;
   growthRate: string
 }
@@ -888,7 +727,11 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     features: [
       'Asteroid identification and mappingAutomated mining operationsResource extraction systemsSpace logistics managementReal-time monitoringResource processingTransportation coordinationMarket analysis';
       'Risk assessmentRegulatory compliance tools'
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     ];
     benefits: [
       'Access to rare earth elementsReduce Earth resource dependencyEnable space colonizationCreate new economic opportunitiesAdvance space technology'
@@ -979,11 +822,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     category: 'Quantum & Emerging Tech';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     price: {
       monthly: 799,
       yearly: 7990,
@@ -992,6 +839,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       setup_time: '12 hours',
       enterprise: 2999
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1069,6 +917,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     icon: '🚗',
     color: 'from - red - 500 to - pink - 600',
     popular: true,
@@ -1083,6 +935,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1092,6 +945,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     growth_rate: '75% annually'
   }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     ];
     ];
     integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'],
@@ -1102,6 +959,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     support: '24 / 7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.';
     compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];
     link: 'https://ziontechgroup.com / autonomous - vehicle - ai - platform';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1152,6 +1010,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     icon: '🚗';
     color: 'from - red - 500 to - pink - 600';
     popular: true;
@@ -1159,6 +1020,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 180;
     rating: 4 && 4.9;
     reviews: 65;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1209,6 +1071,11 @@ ursor/fix-website-loading-errors-and-merge-6662;
   }
 ];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+  }
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string,;
   name: string,;
   tagline: string,;
@@ -1251,6 +1118,7 @@ ursor/fix-website-loading-errors-and-merge-6662;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1258,6 +1126,10 @@ ursor/fix-website-loading-errors-and-merge-6662;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 export interface EmergingTechService {;
   id: string,;
@@ -1301,6 +1173,7 @@ export interface EmergingTechService {;
   }
 ];
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1315,11 +1188,16 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 export interface EmergingTechService {;
 
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1334,10 +1212,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     marketSize: '$35B autonomous vehicle market';
     growthRate: '75% annually'
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -1347,3 +1232,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

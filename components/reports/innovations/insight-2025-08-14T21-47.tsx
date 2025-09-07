@@ -2,10 +2,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 export default function Page() {export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white'>;
       <Head>;
@@ -27,6 +30,7 @@ export default function Page() {return (<div className='min-h-screen bg-slate-95
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export default function Page() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -45,10 +49,17 @@ export default function Page() {;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
     <div className='min-h-screen bg-slate-950 text-white'>;
       <Head>;
         <title>Innovation Insight — 2025-08-14 21-47</title>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -63,6 +74,9 @@ export default function Page() {
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         <meta
           name='description'
           content='An inventive insight derived from autonomous research.'
@@ -89,6 +103,7 @@ export default function Page() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -112,6 +127,15 @@ export default function Page() {
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+              '<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/newsroom</a></li></ul>',;
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           }}
 =======
         <div;
@@ -166,6 +190,7 @@ function Page() {return (<div className='min - h-screen bg - slate - 950 text - 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -192,6 +217,15 @@ function Page() {return (<div className='min - h-screen bg - slate - 950 text - 
               '<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup.com/newsroom</a></li></ul>'
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+              '<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup.com/newsroom</a></li></ul>',
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           }}
         />
         <p className='mt-6 text-white/60 text-sm'>
@@ -209,6 +243,7 @@ export default function Page() {
   );export default function Page() {
   return (
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -232,10 +267,19 @@ export default function Page() {
 =======
 export default function Page() {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+export default function Page() {
+  return (
+
+
+export default function Page() {
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
 
 }
 
+<<<<<<< HEAD
 export default function Page() {
   return (
 <<<<<<< HEAD
@@ -270,6 +314,14 @@ export default function Page() {
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+export default function Page() {
+  return (
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import Head from 'next / head';
 export default /**
  * Page - Function description
@@ -385,6 +437,7 @@ function Page() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -404,6 +457,15 @@ function Page() {
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
       <Head>
@@ -432,12 +494,16 @@ function Page() {
     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     </div>;
   );export default function Page() {
   return (
 
 export default function Page() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -456,6 +522,10 @@ export default function Page() {
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Innovation Insight — 2025-08-14 21-47</title>
@@ -473,6 +543,7 @@ export default function Page() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -480,10 +551,16 @@ export default function Page() {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     </div>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -502,6 +579,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     </div>;
   );
 }
@@ -514,6 +595,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -536,3 +618,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+  );
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

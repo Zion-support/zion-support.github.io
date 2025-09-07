@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 ;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import React, { useState } from 'react';
 import { motion   } from 'framer-motion';
 import { ChevronDown, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Eye, Timer, Sparkles   } from 'lucide-react';
@@ -12,7 +16,11 @@ type Service = any;
 <<<<<<< HEAD
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   ChevronDown
   Star
   TrendingUp
@@ -135,6 +143,7 @@ interface UltraFuturistic2029ServiceShowcaseProps {
     'all',;
     ...Array && Array.from(new Set(services && services.map(service => service && service.category))),;
   ];
+<<<<<<< HEAD
   // Filter and sort services
   const filteredServices = services
     .filter(
@@ -142,6 +151,44 @@ interface UltraFuturistic2029ServiceShowcaseProps {
         selectedCategory === 'all' || service.category === selectedCategory
     )
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+  // Filter and sort services;
+  const filteredServices = services;
+    .filter(;
+      service =>;
+        selectedCategory === 'all' || service && service.category === selectedCategory;
+    )    .sort((a, b) => {import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
+import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations';
+type Service = CuttingEdgeInnovation2029 | any;
+
+interface UltraFuturistic2029ServiceShowcaseProps {;
+  services: Service[],;
+  title?: string;
+  subtitle?: string;
+  max_services?: number;
+}
+const category_colors: { [key: string]: string } = {
+  'AI & Consciousness': 'from - purple - 600 to - pink - 600Quantum & Neuroscience': 'from - indigo - 600 to - purple - 600Space Colonization': 'from - red - 600 to - orange - 600Space Mining': 'from - yellow - 600 to - orange - 600Space Architecture': 'from - green - 600 to - teal - 600Space Energy': 'from - yellow - 500 to - orange - 500AI & Business': 'from - blue - 600 to - cyan - 600Quantum & Time': 'from - green - 600 to - emerald - 600AI & Augmented Reality': 'from - orange - 600 to - red - 600';
+}
+;
+const category_icons: { [key: string]: any } = {
+  'AI & Consciousness': Brain;
+  'Quantum & Neuroscience': Cpu;
+  'Space Colonization': Rocket;
+  'Space Mining': Zap;
+  'Space Architecture': Globe;
+  'Space Energy': Sparkles;
+  'AI & Business': Database;
+  'Quantum & Time': Timer;
+  'AI & Augmented Reality': Eye;
+}
+;
+const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceShowcaseProps> = ({
+  services;
+  title = "2029 Ultra - Futuristic Innovations";
+  subtitle = "Experience the future of technology with our revolutionary services";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     .sort((a, b) => {
       switch (sortBy) {
         case 'innovation':
@@ -156,6 +203,10 @@ const innovationOrder = {
           };
           return (
             (innovationOrder[bLevel] |0) - (innovationOrder[aLevel] |0)
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           );
         case 'price':
           return (
@@ -239,13 +290,17 @@ staggerChildren: 0.1,
     },
   };
 
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
       opacity: 1
       y: 0
       transition: {
+<<<<<<< HEAD
         duration: 0.6,
 ease: 'easeOut' as const,
       },
@@ -264,6 +319,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  return (
+    <section className="py-20 relative overflow-hidden">;
+      {/* Background Elements */}
+        {/* Header */}
+
+  return (
+    <section className="py-20 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>
+      </div>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         {/* Header */}
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}
 
@@ -273,13 +344,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+          className='text-center mb-16'        >          className="text-center mb-16"
+          className='text-center mb-16'        >
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         >
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
+<<<<<<< HEAD
 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6'
           >
 =======
@@ -305,6 +384,8 @@ className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-p
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
         {/* Header */}
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}{/* Header */}<motion.div;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}className='text-center mb-16'        >          className="text-center mb-16";
@@ -329,6 +410,7 @@ className='text-center mb-16';
           </motion && motion.h2>;
           <motion&& motion.p;
             initial={{ opacity: 0, y: 20 }}
+<<<<<<< HEAD
             whileInView={{ opacity: 1, y: 0 }}className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6';
           >;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -346,6 +428,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed';
           >;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+            whileInView={{ opacity: 1, y: 0 }}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             {subtitle}
           </motion.p>;
         </motion.div>;
@@ -359,7 +444,12 @@ className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed';
         <motion&& motion.div;
           initial={{ opacity: 0, y: 20 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
           whileInView={{ opacity: 1, y: 0 }}
+=======
+          whileInView={{ opacity: 1, y: 0 }}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           transition={{ duration: 0.6, delay: 0.3 }}
 className='flex flex-col sm:flex-row items-center justify-between gap-4 mb-12'
         >
@@ -371,6 +461,7 @@ className='flex flex-col sm:flex-row items-center justify-between gap-4 mb-12'
             <div className='flex flex-wrap gap-2'>
               {categories.map(category => (
                 <button
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
           whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6, delay: 0.3 }}
@@ -384,6 +475,8 @@ className='flex flex-col sm:flex-row items-center justify-between gap-4 mb-12';
             <div className='flex flex-wrap gap-2'>;
               {categories.map(category => (<button;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${selectedCategory === category;
@@ -392,10 +485,16 @@ className='flex flex-col sm:flex-row items-center justify-between gap-4 mb-12';
                   }`}
                 >;
 <<<<<<< HEAD
+<<<<<<< HEAD
                   {category === 'all' ? 'All Categories' : category}
                 </button>
 =======
                   {category === 'all' ? 'All Categories' : category}<select;
+=======
+                  {category === 'all' ? 'All Categories' : category}
+
+            <select
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               value={sortBy}
               onChange={e => setSortBy(e && e.target.value as any)}
               className='px-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 focus:outline-none focus:border-purple-500';
@@ -409,6 +508,7 @@ className='flex flex-col sm:flex-row items-center justify-between gap-4 mb-12';
               <option value="price">Price</option>;
               <option value="rating">Rating</option>;
             </select>;
+<<<<<<< HEAD
           </div>;</button>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               ))}
@@ -419,6 +519,9 @@ className='flex flex-col sm:flex-row items-center justify-between gap-4 mb-12';
 <div className='flex items-center space-x-2'>
             <span className='text-gray-300 text-sm font-medium'>Sort by:</span>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+          </div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <select
               value={sortBy}
               onChange={e => setSortBy(e.target.value as any)}
@@ -426,8 +529,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <option value='innovation'>Innovation Level</option>
               <option value='price'>Price</option>
+<<<<<<< HEAD
               <option value='rating'>Rating</option>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              <option value='rating'>Rating</option>            </select>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             </select>
 
           </div>
@@ -456,6 +564,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 initial='hidden'
           whileInView='visible'
           viewport={{ once: true }}
+<<<<<<< HEAD
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
         >
           {filteredServices.map((service, index) => (
@@ -498,15 +607,41 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               />;
             </motion.div>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>          initial="hidden";
+          whileInView="visible";
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
+          {filteredServices && filteredServices.map((service, index) => (;
+            <motion&& motion.div
+              key={service && service.id}
+              variants={itemVariants}
+              className='group'>;
+              <UltraFuturisticServiceCard
+                service={service}
+                className='h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300'              />              className="group";
+            >;
+              <UltraFuturisticServiceCard
+                service={service}
+                className="h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300"
+            </motion && motion.div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           ))}
         {/* Call to Action */}
         <motion&& motion.div;
           initial={{ opacity: 0, y: 30 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
 className='text-center mt-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+          whileInView={{ opacity: 1, y: 0 }}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         >
           <div className='bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm'>
             <h3 className='text-3xl font-bold text-white mb-4'>
@@ -519,6 +654,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
               <a
                 href='/contact'
+<<<<<<< HEAD
                 className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25'
               >
                 Get Started Today
@@ -553,6 +689,13 @@ className='text-center mt-16';
               </a>;
               <a;
                 href='/pricing';
+=======
+                className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25'              >
+                Get Started Today
+              </a>
+              <a
+                href='/pricing'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 className='px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold'>        >;
           <div className="bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm">;
             <h3 className="text-3xl font-bold text-white mb-4">;
@@ -562,6 +705,7 @@ className='text-center mt-16';
               Join thousands of forward-thinking companies already using our revolutionary 2029 technology solutions.;
             </p>;
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">;
+<<<<<<< HEAD
               <a;
                 href="/contact";
                 className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25">;
@@ -570,10 +714,99 @@ className='text-center mt-16';
               <a;
                 href='/pricing';
                 className='px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold'                href="/pricing";
+=======
+              <a
+                href="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25">;
+                Get Started Today;
+              </a>;
+              <a
+                href='/pricing'
+                className='px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold'                href="/pricing"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 View Pricing;
               </a>;
             </div>;
           </div>;
+<<<<<<< HEAD
+=======
+        {/* Innovation Stats */}
+        <motion&& motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
+            {[
+              {
+                label: 'Revolutionary Services'
+                value: services.filter(
+                  s => s.innovationLevel === 'Revolutionary'
+                ).length
+                icon: Rocket
+                color: 'from-purple-500 to-pink-500'
+              }
+              {
+                label: 'Patent Pending'
+                value: services.filter(s => s.patentStatus === 'Patent Pending')
+                  .length
+                icon: Shield
+                color: 'from-blue-500 to-cyan-500'
+              }
+              {
+                label: 'Total Customers'
+                value: services.reduce((sum, s) => sum + s.customers, 0)
+                icon: Star
+                color: 'from-yellow-500 to-orange-500'
+              }
+        </motion.div>;
+        {/* Innovation Stats */}
+        <motion.div;
+          initial={{ opacity: 0, coordinate_y: 30 }}
+          whileInView={{ opacity: 1, coordinate_y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className='mt - 20';
+          <div className='grid grid - cols - 1 md:grid - cols - 4 gap - 8'>;
+            {[;
+              {
+                label: 'Revolutionary Services',
+                value: services.filter (
+                  string => s.innovation_level === 'Revolutionary').length,
+                icon: Rocket,
+                color: 'from - purple - 500 to - pink - 500',
+              },
+              {
+                label: 'Patent Pending',
+                value: services.filter (string => s.patent_status === 'Patent Pending');
+                  .length,
+                icon: Shield,
+                color: 'from - blue - 500 to - cyan - 500',
+              },
+              {
+                label: 'Total Customers',
+                value: services.reduce ((sum, s) => sum + s.customers, 0),
+                icon: Star,
+                color: 'from - yellow - 500 to - orange - 500',
+              },
+              {
+                label: 'Average Rating'
+                value: (
+                  services.reduce((sum, s) => sum + s.rating, 0) /
+                  services.length
+                ).toFixed(1)
+                icon: TrendingUp
+                color: 'from-green-500 to-teal-500'
+              },            ].map((stat, index) => (              { label: 'Revolutionary Services', value: services.filter(s => s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' }
+              { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' }
+              { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' }
+              { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
+                ).toFixed(1),
+                icon: TrendingUp,
+                color: 'from-green-500 to-teal-500',
+              },            ].map((stat, index) => (              { label: 'Revolutionary Services', value: services.filter(s => s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' },
+              { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' },
+              { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' },
+              { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
+              <motion.div
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         {/* Innovation Stats */}
         <motion&& motion.div;
           initial={{ opacity: 0, y: 30 }}
@@ -659,12 +892,16 @@ className='mt-20';
                 value: (
                   services.reduce((sum, s) => sum + s.rating, 0) /
                   services.length
+<<<<<<< HEAD
                 ).toFixed(1),
                 icon: TrendingUp,
                 color: 'from-green-500 to-teal-500',
               },
             ].map((stat, index) => (
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               <motion.div
 =======
               {label: 'Average Rating';
@@ -682,10 +919,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
 className='text-center'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                whileInView={{ opacity: 1, y: 0 }}
+
+export default UltraFuturistic2029ServiceShowcase;  );
+};
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               >
                 <div
 =======
@@ -709,7 +954,18 @@ className='text-center';
         </motion.div>
       </div>
     </section>
+<<<<<<< HEAD
 );
+=======
+  );
+export default UltraFuturistic2029ServiceShowcase;  )
+}
+export default UltraFuturistic2029ServiceShowcase;
+
+export default UltraFuturistic2029ServiceShowcase;
+export default UltraFuturistic2029ServiceShowcase;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 };
 
 export default UltraFuturistic2029ServiceShowcase;
@@ -749,5 +1005,16 @@ export default UltraFuturistic2029ServiceShowcase;}export default UltraFuturisti
           </div>;
         </motion.div>;
       </div>;
+<<<<<<< HEAD
     </section>)}export default UltraFuturistic2029ServiceShowcase)}export default UltraFuturistic2029ServiceShowcase;)}export default UltraFuturistic2029ServiceShowcase;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </section>);
+}
+;
+export default UltraFuturistic2029ServiceShowcase);
+}
+;
+export default UltraFuturistic2029ServiceShowcase;
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

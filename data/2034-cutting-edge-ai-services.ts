@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -29,16 +30,22 @@ export type CuttingEdgeAIService = any;name: string;
     | 'AI Healthcare';
     | 'AI Neural Interfaces';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export type CuttingEdgeAIService = {
       'CBT-guided prompts',
   launch_date?: string;
   real_service?: boolean;
   id: string;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export type CuttingEdgeAIService = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   name: string;
   description: string;
   category:
@@ -98,6 +105,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -125,6 +133,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     id: 'ai - product - spec - writer',
     name: 'AI Product Spec Writer',
     description:;
@@ -146,6 +157,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
   },
   {
+<<<<<<< HEAD
     id: 'ai-creative-studio'
     name: 'AI Creative Studio'
     description:
@@ -154,12 +166,23 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     pricing: { starter: '$149/mo' }
     features: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    id: 'ai - creative - studio',
+    name: 'AI Creative Studio',
+    description:;
+      'Generate brand - consistent images and short - form videos with approvals and rights management.',
+    category: 'AI Creativity',
+    pricing: { starter: '$149 / mo' },
+    features: [;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Brand kit',
       'Image & video gen',
       'Review & approvals',
       'Rights management'
     ],
     integrations: ['Canva', 'Figma'],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -172,12 +195,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     useCases: ['Marketing velocity', 'Cost savings'],
     link: 'https://ziontechgroup.com/services/ai-creative-studio',
     realService: true
   },;
 ];	id: string;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -210,10 +236,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ];	id: string;
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+];	id: string;
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     useCases: ['Marketing velocity', 'Cost savings'],
     link: 'https://ziontechgroup.com/services/ai-creative-studio',
     realService: true
   },;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -231,10 +265,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ];	id: string;
 	id: string, name: string,
 	description: string,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -254,6 +295,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 	category:
 		| 'AI Consciousness'
 		| 'AI Emotional Intelligence'
@@ -321,12 +365,15 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-emotional-support-agent',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -340,6 +387,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 		realService: true
 	}
 	{
@@ -355,12 +404,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-product-spec-writer',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -374,6 +426,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 		realService: true
 	}
 	{
@@ -385,6 +439,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		features: ['Brand kitImage & video genReview & approvalsRights management'];
 		integrations: ['CanvaFigma'];
 		useCases: ['Marketing velocityCost savings'];
+<<<<<<< HEAD
 	}
 ];
 
@@ -410,10 +465,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 	}
 ];
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -431,6 +489,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+	}
+];
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 name: string;
 description: string;
 category:;
@@ -565,6 +631,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type CuttingEdgeAIService = {;
 	}
 =======
@@ -588,6 +655,17 @@ export type CuttingEdgeAIService = {}
 
 export type CuttingEdgeAIService = {;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+];
+;
+
+
+
+export type CuttingEdgeAIService = {;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 	id: string,;
 	name: string,;
 	description: string,;
@@ -648,8 +726,14 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 		realService: true;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 	}
 ];
 ;
@@ -852,6 +936,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -861,11 +946,15 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     useCases: ['Marketing velocity', 'Cost savings'],
     link: 'https://ziontechgroup.com/services/ai-creative-studio',
     realService: true,
   },
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -875,3 +964,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -158,7 +158,11 @@ console.log( AI optimization report saved to ${reportPath}")
   console.log("🤖 Starting AI Code Optimizer...")
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error(" AI Code Optimizer "failed")
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  console.error(" AI Code Optimizer "failed")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

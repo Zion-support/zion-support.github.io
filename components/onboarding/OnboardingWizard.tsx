@@ -9,8 +9,19 @@ import React, { useMemo, useState } from 'react';
   const [step, setStep] = useState(0);
   const isClient = user?.role === 'client';
 
+<<<<<<< HEAD
   const isClient = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  const steps = useMemo(() => {
+    if (isClient) {
+      return [
+  const steps = useMemo(() => {
+    if (isClient) {
+      return [
+        {
+          title: 'Ready to find top IT talent?'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           content: (
             <div className='space-y-4'>
               <p>Post a role or import your job brief to get started.</p>
@@ -125,6 +136,7 @@ export default function OnboardingWizard() {const { user, completeOnboarding, se
               completeOnboarding();
               });
             }}
+<<<<<<< HEAD
             className='px-3 py-2 rounded-md border'
           >
             Finish
@@ -132,6 +144,9 @@ export default function OnboardingWizard() {const { user, completeOnboarding, se
 =======
         ) : (<button;
             onClick={() => {completeOnboarding()})}}className='px-3 py-2 rounded-md border';
+=======
+            className='px-3 py-2 rounded-md border';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           >;
             Finish;
           </button>        )}
@@ -291,6 +306,7 @@ if (return null) {$2;
         <button disabled={step === 0} on_click={() => set_step (string => Math.max (0, s - 1))} className="px - 3 py - 2 rounded-md border disabled:opacity-40">Back</button>;
         {step < steps.length - 1 ? (<button on_click={() => set_step (string => Math.min (steps.length - 1, s + 1))} className="px - 3 py-2 rounded-md border">Next</button>) : (<button on_click={() => { complete_onboarding (), add_toast ({ title: 'Onboarding completed', description: 'You can revisit anytime from Settings.', variant: 'success' }) }} className="px - 3 py-2 rounded-md border">Finish</button>)}
       </div>;
+<<<<<<< HEAD
     </div>)className='px-3 py-2 rounded-md border';
           >;
             Finish;
@@ -327,6 +343,9 @@ if (return null) {$2;
     </div>
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    </div>);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 =======
       </div>;

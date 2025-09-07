@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -629,6 +630,9 @@ export interface Innovative2026Service  {id: string;
   }
 ];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -670,11 +674,14 @@ export interface Innovative2026Service  {id: string;
   reviews: number
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 
 export const innovative2026Services: Innovative2026Service[] = [
@@ -683,6 +690,10 @@ export const innovative2026Services: Innovative2026Service[] = [
     id: 'ai-consciousness-simulation-pro',
     name: 'AI Consciousness Simulation Pro',
     tagline: 'Simulate human consciousness with quantum precision',
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { ServiceVariant } from '../types/service-variants';
 export interface Innovative2026Service {
   id: string;
@@ -725,11 +736,16 @@ export interface Innovative2026Service {
     id: 'ai-consciousness-simulation-pro';
     name: 'AI Consciousness Simulation Pro';
     tagline: 'Simulate human consciousness with quantum precision';
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     price: '$2,999',
     period: '/month',
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -745,6 +761,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     reviews: 234
+=======
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+
+    reviews: 234
+
+      website: 'https://ziontechgroup.com';
+    }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     real_implementation: true,
     implementation_details: 'Advanced emotional intelligence platform with real - time emotion detection, analysis, and response generation capabilities.';
     launch_date: '2026 - 01 - 25';
@@ -753,6 +777,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 234;
 
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       website: 'https://ziontechgroup.com';
@@ -1019,6 +1044,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1034,12 +1061,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026Service {;
   id: string,;
@@ -1533,6 +1563,7 @@ export const innovative2026Services: Innovative2026Service[] = [
     reviews: 234;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 ;
 <<<<<<< HEAD
@@ -1546,6 +1577,15 @@ export const innovative2026Services: Innovative2026Service[] = [
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+
+  }
+;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   // Quantum Neural Interface Platform
   {
     id: 'quantum-neural-interface-platform',
@@ -1872,6 +1912,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -1882,3 +1923,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

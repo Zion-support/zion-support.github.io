@@ -1,12 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
+
+
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -14,6 +12,9 @@ main
 function fixTestFile(filePath) {
   try {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 // Function to fix malformed test files;
 function fixTestFile(filePath) {}
   try {}

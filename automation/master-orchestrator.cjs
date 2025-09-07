@@ -1,6 +1,12 @@
 #!/usr/bin/env node
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 // Master Automation Orchestrator (clean version)
 const fs = require('fs');
 const path = require('path');
@@ -14,6 +20,7 @@ class MasterOrchestrator {
     this.startTime = Date.now();
     this.results = {};
     try {
+<<<<<<< HEAD
 
 =======
 #!/usr/bin/env node
@@ -30,6 +37,10 @@ class MasterOrchestrator {
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       fs.mkdirSync(this.logsDir, { "recursive": true });
     } catch {}
   }
@@ -55,11 +66,18 @@ main
   }
 
   async runAllChecks() {
+<<<<<<< HEAD
 
+=======
+    this.log('Starting comprehensive system check...');
+
+    const tasks = [['health', 'node automation/health-check.cjs'],
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     this.log('Starting comprehensive system check.');
     
     const tasks = [
       ['health', 'node automation/health-check.cjs'],
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -69,6 +87,9 @@ main
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       ['security', 'node automation/security-scanner.cjs'],
       ['performance', 'node automation/performance-optimizer.cjs'],
       ['codeQuality', 'node automation/code-quality-monitor.cjs'],
@@ -93,6 +114,7 @@ main
     const total = Object.keys(this.results).length;
     const durationMs = Date.now() - this.startTime;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 
@@ -100,13 +122,23 @@ main
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+    
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     const summary = {
       timestamp: new Date().toISOString(),
       durationMs,
       total,
       passed,
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       "failed": total - passed,
       "status": passed === total
           ? 'HEALTHY'
@@ -296,9 +328,12 @@ class MasterAutomationOrchestrator {
       summary: 'Master automation orchestrator completed successfully',
     };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
       "failed": total - passed,
       "status": passed === total
@@ -314,6 +349,7 @@ main
       );
     } catch {}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -322,6 +358,10 @@ main
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+    this.log(
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       `"Completed": ${passed}/${total} passed in ${durationMs}ms ("Status": ${summary.status})`
     );
     return passed === total;
@@ -370,6 +410,7 @@ module.exports = MasterOrchestrator;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -392,6 +433,14 @@ module.exports = MasterOrchestrator;
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -535,6 +584,7 @@ class MasterAutomationOrchestrator {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -558,6 +608,13 @@ origin/main
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+    };
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       "failed": total - passed,
       "status": passed === total
           ? 'HEALTHY'
@@ -566,18 +623,23 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             : 'CRITICAL'};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     try {
       fs.writeFileSync(
         path.join(this.logsDir, 'master-orchestrator-report.json'),
         JSON.stringify({ summary, results: this.results }, null, 2)
       );
     } catch {}
-<<<<<<< HEAD
 
+<<<<<<< HEAD
       `"Completed": ${passed}/${total} passed in ${durationMs}ms ("Status": ${summary.status})`
     );
 
@@ -588,6 +650,11 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     );
 ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    this.log(`Completed: ${passed}/${total} passed in ${durationMs}ms (Status: ${summary.status})`);
+      `"Completed": ${passed}/${total} passed in ${durationMs}ms ("Status": ${summary.status})`
+    );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     return passed === total;
   }
 }
@@ -601,6 +668,7 @@ if (require.main === module) {
       orchestrator.runAllChecks().then(ok => process.exit(ok ? 0 : 1));
       break;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     default:
       console.log('Usage: node automation/master-orchestrator.cjs check');
@@ -610,6 +678,13 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
     default:
       console.log('Usage: node automation/master-orchestrator.cjs check');
+=======
+
+    "default": 
+    default:
+      console.log('Usage: node automation/master-orchestrator.cjs check');
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     const reportPath = path.join(
       __dirname,
       '..',
@@ -632,12 +707,16 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       this.log('🎉 Master automation orchestration completed successfully!');
     } catch (error) {
       this.log(`❌ Master automation orchestration failed: ${error.message}`);
+<<<<<<< HEAD
 origin/main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       process.exit(1);
     }
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -668,6 +747,13 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+module.exports = MasterOrchestrator;
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -821,6 +907,7 @@ class MasterAutomationOrchestrator {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -849,15 +936,25 @@ ursor/automate-test-improve-and-merge-code-2480
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 // Run the orchestrator
 const orchestrator = new MasterAutomationOrchestrator();
 orchestrator.run().catch(console.error);
+<<<<<<< HEAD
 ursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 // Run the orchestrator
 const orchestrator = new MasterAutomationOrchestrator();
@@ -867,6 +964,7 @@ orchestrator.run().catch(console.error);
 <<<<<<< HEAD
 module.exports = MasterOrchestrator;
 orchestrator.run().catch(console.error);
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -883,3 +981,7 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -9,9 +9,30 @@ console.log('🔧 Fixing merge conflicts in API files...');
 // Find all files with merge conflicts
 const findConflictedFiles = () => {
   try {
+<<<<<<< HEAD
     
     // Clean up any remaining conflict markers
     content = content.replace(/[^\n]+\n?/g, '');
+=======
+    const result = execSync('grep -r "" pages/api/ --include="*.ts" --include="*.js" | cut -d: -f1 | sort -u', { encoding: 'utf8' });
+    return result.trim().split('\n').filter(file => file);
+  } catch (error) {
+    return [];
+  }
+};
+
+const fixMergeConflicts = (filePath) => {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Remove merge conflict markers and keep the main branch content
+    content = content.replace(/\n([\s\S]*?)\n([\s\S]*?)
+    
+    // Clean up any remaining conflict markers
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     
     // Fix common syntax issues
     content = content.replace(/,\s*;/g, ';'); // Remove trailing commas before semicolons

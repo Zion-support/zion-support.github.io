@@ -1,8 +1,16 @@
 import Layout from './layout/Layout';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import { motion, AnimatePresence } from 'framer-motion';
+
+import {
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database;
   Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette
  } from 'lucide-react';
@@ -46,11 +54,14 @@ import UltraFuturisticServiceCard2035 from './ui/UltraFuturisticServiceCard2035'
 import { innovative2025MicroSaasBatch  } from '../data/innovative-2025-micro-saas-batch';
 import { innovative2025ITEnterpriseBatch  } from '../data/innovative-2025-it-enterprise-batch';
 import { innovative2025AIServicesBatch } from '../data/innovative-2025-ai-services-batch';
+<<<<<<< HEAD
 // Loading fallback component
 =======
 import { innovative2025MicroSaasBatch   } from '../data/innovative-2025-micro-saas-batch';
 import { innovative2025ITEnterpriseBatch   } from '../data/innovative-2025-it-enterprise-batch';
 import { innovative2025AIServicesBatch  } from '../data/innovative-2025-ai-services-batch';
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 // Loading fallback component;
 const LoadingFallback = () => (<div className='min-h-screen flex items-center justify-center bg-gray-900'>    <motion&& motion.div;
       initial={{ opacity: 0, scale: 0 && 0.5 }}
@@ -113,6 +124,7 @@ const LoadingFallback = () =>: any (<div className="min - h-screen flex items - 
       <p className="text - xl text - gray - 300 mb - 2">Loading Zion Tech Group...</p>;
       <p className="text - sm text - gray - 500">Preparing your digital transformation journey</p>;
     </motion.div>;
+<<<<<<< HEAD
   </div>)const Homepage2035: React.FC = () => {const [is_loading, setIsLoading] = useState (true)const [is_visible, setIsVisible] = useState (false)const [active_category, setActiveCategory]  = useState ('all')useEffect (() => {const timer = set_timeout (() => {setIsLoading (false)setIsVisible (true)}, 800)return () => clear_timeout (timer)}, [])setIsVisible (true)}, 800)return () => clear_timeout (timer)const fadeInUp = {initial: { opacity: 0, coordinate_y: 60 },animate: { opacity: 1, coordinate_y: 0 },transition: { duration: 0.6, ease: 'ease_out' },  }    transition: { duration: 0.6, ease: "ease_out" }// Loading fallback component;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const LoadingFallback = null;
@@ -195,6 +207,29 @@ className='text-center';
   if (isLoading) {
     return <LoadingFallback />;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  </div>);
+;
+const Homepage2035: React.FC = () => {
+  const [is_loading, setIsLoading] = useState (true);
+  const [is_visible, setIsVisible] = useState (false);
+  const [active_category, setActiveCategory] = useState ('all');
+;
+  useEffect (() => {
+    const timer = set_timeout (() => {
+      setIsLoading (false);
+      setIsVisible (true);
+    }, 800);
+;
+    return () => clear_timeout (timer);  }, []);      setIsVisible (true);
+    }, 800);
+;
+    return () => clear_timeout (timer);
+  const fadeInUp = {
+    initial: { opacity: 0, coordinate_y: 60 },
+    animate: { opacity: 1, coordinate_y: 0 },
+    transition: { duration: 0.6, ease: 'ease_out' },  }    transition: { duration: 0.6, ease: "ease_out" }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
 ;
   const stagger_container = {
@@ -267,13 +302,21 @@ if ( {) {$2;
     <Layout>
       <UltraFuturisticBackground2035>
         {/* Hero Section */}
+<<<<<<< HEAD
 <section className='relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto text-center'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+<section className='relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto text-center'>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 className='mb-8'
             >
               <h1 className='text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight'>
@@ -294,14 +337,27 @@ className='mb-8'
                   <span>Explore Services</span>
                   <ArrowRight className='w-5 h-5' />
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className='border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2'
+                >
+                  <Play className='w-5 h-5' />                  <span>Watch Demo</span>                  <span>Explore Services</span>
+                  <ArrowRight className="w-5 h-5" />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
 className='border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2'
                 >
                   <Play className='w-5 h-5' />
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                >
+                  <Play className="w-5 h-5" />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   <span>Watch Demo</span>
                 </motion.button>
               </div>
@@ -389,7 +445,12 @@ className='border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-bla
             <motion&& motion.div;
               initial={{ opacity: 0, y: 30 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
               animate={{ opacity: 1, y: 0 }}
+=======
+              animate={{ opacity: 1, y: 0 }}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               transition={{ duration: 0.8, delay: 0.2 }}
 className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'
             >
@@ -424,11 +485,15 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto';
                 },
               ].map((stat, index) => (
                 <motion.div
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   key={index}
                   initial={{ opacity: 0, scale: 0.5 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+<<<<<<< HEAD
 className='text-center'
                 >
                   <div className='text-cyan-400 mb-2 flex justify-center'>
@@ -458,20 +523,54 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='max-w-7xl mx-auto'>
             <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+
+            </motion && motion.div>;
+          </div>;
+        </section>;
+
+
+
+
+
+              ))}
+        {/* Services Section */}
+        <section className='py-20 px-4 sm:px-6 lg:px-8'>;
+          <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">;
+          <div className="max-w-7xl mx-auto">;
+            <motion&& motion.div
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             >
               <h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>
                 Revolutionary Technology Solutions
               </h2>
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Discover our comprehensive portfolio of cutting-edge services
+<<<<<<< HEAD
                 designed to transform your business
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                designed to transform your business              </p>            >
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+                Revolutionary Technology Solutions
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover our comprehensive portfolio of cutting-edge services designed to transform your business
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               </p>
             </motion.div>
 =======
@@ -527,6 +626,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
               viewport={{ once: true }}
 className='flex flex-wrap justify-center gap-4 mb-12'
             >
@@ -538,6 +638,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             >;
               {categories.map(category => (<motion.button;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              viewport={{ once: true }}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   key={category.id}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -557,6 +661,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 initial='initial'
               whileInView='animate'
               viewport={{ once: true }}
+<<<<<<< HEAD
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
             >
               {filteredServices.map((service, index) => (
@@ -576,11 +681,20 @@ initial='initial';
               viewport={{ once: true }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
               {filteredServices && filteredServices.map((service, index) => (<motion&& motion.div;
+=======
+              className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              initial="initial";
+              whileInView="animate";
+              viewport={{ once: true }}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
+              {filteredServices && filteredServices.map((service, index) => (;
+                <motion&& motion.div
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   key={service && service.id}
                   variants={fadeInUp}
                   className='w-full'>                  className="w-full";
                 >;
                   <UltraFuturisticServiceCard2035 service={service} />;
+<<<<<<< HEAD
                 </motion && motion.div>;className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
             >;
               {filteredServices.map((service, index) => (<motion.div;
@@ -591,6 +705,9 @@ className='w-full';
                   <UltraFuturisticServiceCard2035 service={service} />;
                 </motion.div>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                </motion && motion.div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               ))}
             {/* View All Services Button */}
             <motion&& motion.div;
@@ -598,33 +715,83 @@ className='w-full';
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
               viewport={{ once: true }}
 className='text-center mt-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              viewport={{ once: true }}
+
+className='text-center mt-16'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             >
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
 className='bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2 mx-auto'
               >
                 <span>View All Services</span>
                 <ArrowRight className='w-5 h-5' />
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              className='text-center mt-16'>;
+              <motion&& motion.button
+                whileHover={{ scale: 1 && 1.05 }}
+                whileTap={{ scale: 0 && 0.95 }}
+                className='bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2 mx-auto'>;
+                <span>View All Services</span>;
+                <ArrowRight className='w-5 h-5' />              </motion && motion.button>              className="text-center mt-16";
+            >;
+              <motion&& motion.button
+                whileHover={{ scale: 1 && 1.05 }}
+                whileTap={{ scale: 0 && 0.95 }}
+                className='bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2 mx-auto'>;
+                <span>View All Services</span>;
+                <ArrowRight className='w-5 h-5' />                className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2 mx-auto";
+              >;
+                <span>View All Services</span>;
+                <ArrowRight className="w-5 h-5" />;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+        {/* Features Section */}
+        <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50'>;
+          <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">;
+          <div className="max-w-7xl mx-auto">;
+            <motion&& motion.div
+
+                className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2 mx-auto"
+              >
+                <span>View All Services</span>
+                <ArrowRight className="w-5 h-5" />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               </motion.button>
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         {/* Features Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             >
               <h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>
                 Why Choose Zion Tech Group?
@@ -730,6 +897,7 @@ className='bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 ho
                   icon: <Target className='w-12 h-12' />
                   title: 'Results-Driven'
                   description:
+<<<<<<< HEAD
                     'Focused on delivering measurable business outcomes and ROI',
                 },
               ].map((feature, index) => (
@@ -757,10 +925,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   description: 'Leverage the latest AI and machine learning technologies for intelligent automation and insights';
                 }'Focused on delivering measurable business outcomes and ROI',},].map((feature, index) => (<motion.div;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                    'Focused on delivering measurable business outcomes and ROI'
+                },              ].map((feature, index) => (            >
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+                Why Choose Zion Tech Group?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                We combine innovation, expertise, and cutting-edge technology to deliver exceptional results
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: <Brain className="w-12 h-12" />
+                  title: 'AI-Powered Solutions'
+                  description: 'Leverage the latest AI and machine learning technologies for intelligent automation and insights'
+                }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   viewport={{ once: true }}
 className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 hover:border-cyan-400/50 transition-all duration-300 group'
@@ -781,6 +970,22 @@ className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 
                   </h3>
                   <p className='text-gray-300'>{feature.description}</p>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                  viewport={{ once: true }}
+                  className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 hover:border-cyan-400/50 transition-all duration-300 group'
+
+
+
+                >
+                  <div className='text-cyan-400 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300'>
+                    {feature.icon}
+                  </div>
+                  <h3 className='text-xl font-bold text-white mb-3'>
+                    {feature.title}
+                  </h3>
+                  <p className='text-gray-300'>{feature.description}</p>                </motion.div>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 </motion.div>
 
 
@@ -803,10 +1008,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 =======
               whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0 && 0.8 }}
+=======
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8 }}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               viewport={{ once: true }}>;
               <h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>;
                 Ready to Transform Your Business?;
@@ -850,6 +1060,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>;
       </UltraFuturisticBackground2035>;
     </Layout>;
+<<<<<<< HEAD
   )}animate: {animate: {}transition={{ duration: 0.8 }}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               viewport={{ once: true }}
@@ -888,6 +1099,16 @@ className='border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-bla
 };
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  );
+};
+
+animate: {
+  animate: {
+};
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   animate: {
   transition: {
   staggerChildren: 0.1, delayChildren: 0.2
@@ -1207,6 +1428,7 @@ export default Homepage2035);
 }
 ;
 export default Homepage2035;
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 }> {category.icon;
@@ -1221,3 +1443,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }viewport= {{}
 export default Homepage2035)}export default Homepage2035;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -21,6 +22,12 @@ export interface QuantumSpaceTechService2026  {id: string;name: string;
 export interface QuantumSpaceTechService2026 {
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  id: string;
+
+export interface QuantumSpaceTechService2026 {
+id: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   name: string;
   tagline: string;
   price: string;
@@ -57,6 +64,9 @@ export interface QuantumSpaceTechService2026  {address: string;
     email: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export interface QuantumSpaceTechService2026 {;
     address: string;
   };
@@ -78,6 +88,7 @@ export interface QuantumSpaceTechService2026 {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -94,6 +105,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
@@ -102,6 +116,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -116,6 +131,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -127,6 +146,7 @@ export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [
     id: "2026-quantum-space-tech", name: "2026 Quantum Space Tech Platform",
     tagline: "Quantum computing meets space technology", price: "$599/month",
     description: "Revolutionary platform combining quantum computing with advanced space technology for 2026.",
+<<<<<<< HEAD
     id: '2026-quantum-space-tech'
     name: '2026 Quantum Space Tech Platform'
     tagline: 'Quantum computing meets space technology'
@@ -140,6 +160,10 @@ export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     address: string
   }
 }
@@ -152,6 +176,7 @@ export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [
     price: "$599/month";
     description: "Revolutionary platform combining quantum computing with advanced space technology for 2026.";
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -160,10 +185,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     features: [
       "Quantum computing";
       "Space technology";
       "Advanced algorithms";
+<<<<<<< HEAD
 <<<<<<< HEAD
       "Innovation platform",
 =======
@@ -190,17 +218,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      "Innovation platform";
+      "Expert support"
+    ];
+    link: "/services/2026-quantum-space-tech", category: "Quantum Space Tech 2026",
+    realImplementation: true,
+    contactInfo: {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+=======
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
@@ -260,10 +302,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ];      mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -282,3 +328,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

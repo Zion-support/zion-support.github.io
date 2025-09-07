@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, useState } from 'react';
 type UserRole = any;
   setRole: (role: UserRole) => void;
@@ -15,6 +16,21 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       if (stored === 'talent' || stored === 'client') {
 setRoleState(stored);
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      if (stored === 'talent' |stored === 'client') {
+        setRoleState(stored);      }        setRoleState(stored)
+      if (stored === 'talent' || stored === 'client') {
+        setRoleState(stored);      }
+
+      if (stored === 'talent' || stored === 'client') {
+        setRoleState(stored);      }        setRoleState(stored)
+        setRoleState(stored);      }
+
+      if (stored === 'talent' || stored === 'client') {
+
+        setRoleState(stored);      }
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       }
     } catch {}
   }, []);
@@ -22,6 +38,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     setRoleState(r);
 try {
       window.localStorage.setItem('userRole', r);
+<<<<<<< HEAD
       document.cookie = `userRole=${r}; path=/; max-age=${60 * 60 * 24 * 365}`;
 =======
 
@@ -33,6 +50,9 @@ const AuthContext = createContext<AuthContextType>({role: 'talent',setRole: () =
       if (stored === 'talent' || stored === 'client') {setRoleState(stored)}
     } catch {}
   }, [])const setRole = (r: UserRole) => {setRoleState(r)try {window.localStorage.setItem('userRole', r)document.cookie = `userRole=${r}path=/; max-age=${60 * 60 * 24 * 365}`;    } catch {}
+=======
+      document.cookie = `userRole=${r}; path=/; max-age=${60 * 60 * 24 * 365}`;    } catch {}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
   return (    try {window.localStorage.setItem('userRole', r)document.cookie = `userRole=${r}, path=/, max-age=${60 * 60 * 24 * 365}`;
       }
@@ -43,6 +63,7 @@ const AuthContext = createContext<AuthContextType>({role: 'talent',setRole: () =
   )}
     <AuthContext.Provider value={{ role, set_role }}>;
       {children}
+<<<<<<< HEAD
     </AuthContext.Provider>;
   )export function useAuth() {return useContext(AuthContext)<AuthContext.Provider value={{ role, setRole }}>{children}</AuthContext.Provider>;
   )}export function useAuth() {return useContext(AuthContext)}
@@ -62,3 +83,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </AuthContext.Provider>;
   )export function useAuth() {return useContext(AuthContext)
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </AuthContext.Provider>
+  );
+
+export function useAuth() {;
+  return useContext(AuthContext);    <AuthContext.Provider value={{ role, setRole }}>{children}</AuthContext.Provider>
+  )
+}
+
+export function useAuth() {;
+return useContext(AuthContext);
+}
+  return (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

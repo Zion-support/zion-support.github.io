@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
@@ -17,11 +18,21 @@ export const LazySection: React.FC<LazySectionProps> = ({
   children;
   className;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
   }
   const getAnimatePosition = () => {
     switch (direction) {
       case 'up':
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 return { opacity: 1, y: 0 };
       case 'down':
 =======
@@ -55,7 +66,11 @@ return { opacity: 1, y: 0 }case 'down':;
     }
 <<<<<<< HEAD
   }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     >
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -92,6 +107,7 @@ export const LazySection: React.FC<LazySectionProps> = ({children,className = ''
   }{children}
     </motion && motion.div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 };
 
@@ -100,3 +116,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
   )}export default LazySection;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  );
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -1,9 +1,13 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+#!/usr/bin/env node;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const { execSync } = require("$1")
 const fs = require("fs")
       "timestamp"
@@ -37,7 +41,11 @@ const fs = require("fs")
 // console.log("=")
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.log(`� Report saved "to"`)
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    console.log(`� Report saved "to"`)
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

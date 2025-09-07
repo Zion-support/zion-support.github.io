@@ -2,9 +2,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 let state: SyncState = { ...defaultState }
 export function readState(): SyncState {return { ...state }
@@ -13,6 +16,7 @@ export function readState(): SyncState {return { ...state }
 export function updateState(updates: Partial<SyncState>): void {
   state = { ...state, ...updates }
 };
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -44,6 +48,12 @@ export function upsertEvent(state: MultiverseState;
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+=======
+}
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 export function readState(): SyncState {;
   return { ...state };
@@ -160,9 +170,12 @@ export interface SyncJob  {id: string;
   updatedAt: string;
 }export interface SyncMapping  {id: string;
 }
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 export interface SyncMapping {
   id: string;
@@ -220,7 +233,6 @@ const default_state: SyncState = {config: {instance_id: 'default - instance',pee
   const is_newer  = event.version > current_version;// Check condition;
 if ( {) {$2;
 
-<<<<<<< HEAD
 class SyncStorage {
   private jobs: Map<string, SyncJob> = new Map();
   private connections: Map<string, SyncConnection> = new Map();
@@ -423,6 +435,7 @@ export function formatDuration(startTime: string, endTime?: string): string {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -438,6 +451,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const default_state: SyncState = {
   config: {
     instance_id: 'default - instance',
@@ -451,6 +469,7 @@ const default_state: SyncState = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -458,10 +477,15 @@ const default_state: SyncState = {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return events;export function resetState(): void {;
   state = { ...defaultState };
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -488,6 +512,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
     state.proposalMerkleById[entity_id] = event.merkle_root;
   }
@@ -517,9 +543,13 @@ if ( {) {$2;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   // Check condition
 if ( {) {
   $2
@@ -538,6 +568,7 @@ if ( {) {$2;
   return events;export function reset_state (): void {
   state = { ...default_state }
 }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -555,3 +586,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return events;export function reset_state (): void {state = { ...default_state }
 }return events;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -3,17 +3,22 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 export type HttpMethod = any;
 export interface CodeSample {
   language: 'curl' | 'javascript' | 'python';
   code: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -36,6 +41,8 @@ export interface CodeSample  {language: 'curl' | 'javascript' | 'python';
   httpStatus: number;
   message: string;export interface EndpointSpec  {ursor/fix-website-loading-errors-and-merge-6662;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export interface RateLimitInfo {
   tier: 'free' | 'partner' | 'internal';
   limitPerMinute: number;
@@ -44,12 +51,15 @@ export interface RateLimitInfo {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -63,10 +73,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export interface ErrorCode {
   code: string;
   http_status: number;
   message: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -76,9 +89,11 @@ export interface ErrorCode {
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-;
 
+<<<<<<< HEAD
 export interface EndpointSpec {
 
 <<<<<<< HEAD
@@ -92,6 +107,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 
 export interface CodeSample {;
@@ -113,6 +130,7 @@ export interface EndpointSpec {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -130,12 +148,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string;
   title: string;
   description: string;
   path: string;
   method: HttpMethod;
   visibility: Visibility;
+<<<<<<< HEAD
   auth: Array<'jwt' | 'oauth' | 'wallet' | 'apiKey' | 'none'>;
   query?: Record<string, string>;
   params?: Record<string, string>;
@@ -144,6 +167,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 samples: CodeSample[];
   rateLimits?: RateLimitInfo[];
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  auth: Array<'jwt' | 'oauth' | 'wallet' | 'api_key' | 'none'>;  query?: Record < string, string>;
+  params?: Record < string, string>;
+  requestBodySchema?: unknown;
+  responseBodySchema?: unknown;
+  samples: CodeSample[];
+  rate_limits?: RateLimitInfo[];
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   errors?: ErrorCode[];
   tags?: string[];auth: Array<'jwt' | 'oauth' | 'wallet' | 'apiKey' | 'none'>;
   query?: Record<string, string>;
@@ -191,6 +222,7 @@ export interface EndpointSpec  {id: string, title: string,description: string, p
 export interface SectionSpec {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 export interface SectionSpec {
@@ -220,11 +252,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 export interface SectionSpec {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+export interface SectionSpec {
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   versions: string[]; // e.g., ['v1'] or ['v1','v2']
 
 export interface SectionSpec {;
 
 export interface SectionSpec {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -243,10 +282,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string;
   title: string;
   description?: string;
   endpoints: EndpointSpec[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -258,10 +302,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export interface ApiDocsSpec {
 
 
 export interface ApiDocsSpec {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -290,10 +339,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   product: 'Zion OS';
   versions: string[]; // available versions;
   default_version: string;
   sections: SectionSpec[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -324,6 +378,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export type Visibility = 'public' | 'partner' | 'internal';
 ;
 export interface CodeSample {
@@ -352,6 +409,7 @@ export interface EndpointSpec {
   params?: Record < string, string>;
   requestBodySchema?: unknown;
   responseBodySchema?: unknown;
+<<<<<<< HEAD
 <<<<<<< HEAD
   lastUpdatedIso: string
 
@@ -383,6 +441,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   lastUpdatedIso: string
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+  lastUpdatedIso: string
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 }
 
@@ -415,6 +478,7 @@ ursor/fix-website-loading-errors-and-merge-6662;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -431,6 +495,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',;
 export type Visibility = 'public' | 'partner' | 'internal',;
 export interface CodeSample {;
@@ -491,6 +559,7 @@ export interface ApiDocsSpec {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   lastUpdatedIso: string;
@@ -517,3 +586,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+  lastUpdatedIso: string;
+  lastUpdatedIso: string
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -2,14 +2,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-import { ServiceVariant } from '../types / service - variants';
 
+<<<<<<< HEAD
 export interface Revolutionary2026Service {
 
   {
@@ -419,8 +422,9 @@ import { ServiceVariant } from '../types/service-variants',export interface Revo
   }
 ];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   contactInfo: {
-<<<<<<< HEAD
       
     mobile: string, email: string,
     address: string,
@@ -434,6 +438,7 @@ import { ServiceVariant } from '../types/service-variants',export interface Revo
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -441,6 +446,9 @@ import { ServiceVariant } from '../types/service-variants',export interface Revo
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
       'Space-grade quantum platform with satellite integration, mission planning tools, and comprehensive space operations support.'
     launchDate: '2026-03-01'
@@ -512,6 +520,7 @@ export interface Revolutionary2026Service {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -574,6 +583,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -582,6 +597,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 45;
     rating: 4.8,
     reviews: 25;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -604,6 +620,11 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { ServiceVariant } from '../types/service-variants',;
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -1268,6 +1289,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
     reviews: 25;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1285,6 +1307,18 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+
+  }
+;
+
+];
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     mobile: string;
     email: string;
     address: string;
@@ -2467,6 +2501,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 ;
@@ -2478,3 +2513,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

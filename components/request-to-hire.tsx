@@ -9,6 +9,7 @@ import React from 'react';
 <<<<<<< HEAD
 import { useEffect, useMemo, useState } from 'react';
 export default function RequestToHirePage() {
+<<<<<<< HEAD
   const router = null;
   });
   const [submitting, setSubmitting] = useState(false);
@@ -30,6 +31,64 @@ export default function RequestToHirePage() {export default function RequestToHi
   })const [submitting, setSubmitting] = useState(false)const [result, setResult] = useState<null | { id: string; message: string }>(null;
   )const [error, setError] = useState<string | null>(null)setError('Please fill in name, email, and description.')return;    }      return;
       const data = await res.json()if (!res.ok) throw new Error(data.error |'Failed to submit')setResult({ id: data.id, message: 'Request submitted successfully.' })} catch (err: any) {setError(err.message |'Something went wrong')} finally {setSubmitting(false)}if (result) {return (<div className='max-w-xl mx-auto py-12'>;
+=======
+
+export default function RequestToHirePage() {;
+  const router = useRouter();
+  const { talent } = router.query as { talent?: string }
+  const selected = useMemo(
+    () => TALENT_PROFILES.find(t => t.slug === talent)
+    [talent]
+  );export default function RequestToHirePage() {;
+
+  const router = useRouter();
+  const { talent } = router.query as { talent?: string }
+  const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent), [talent]);
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    budget: '',
+    timeline: '',
+export default function RequestToHirePage() {;
+  const router = useRouter();
+  const { talent } = router && router.query as { talent?: string };
+  const selected = useMemo(;
+    () => TALENT_PROFILES && TALENT_PROFILES.find(t => t && t.slug === talent),;
+    [talent];
+  );export default function RequestToHirePage() {;
+  const router = useRouter();
+  const { talent } = router && router.query as { talent?: string };
+  const selected = useMemo(() => TALENT_PROFILES && TALENT_PROFILES.find(t => t && t.slug === talent), [talent]);
+  const [form, setForm] = useState({;
+    name: '',;
+    email: '',;
+    budget: '',;
+    timeline: '',,
+  description: '',;
+  });
+  const [submitting, setSubmitting] = useState(false);
+  const [result, setResult] = useState<null| { id: string message: string }>(;
+    null;
+  );  const [error, setError] = useState<string | null>(null),
+  description: ''}),;
+  const [submitting, setSubmitting] = useState(false);
+  const [result, setResult] = useState<null | { id: string, message: string }>(null),;
+  const [error, setError] = useState<string | null>(null);
+      setError('Please fill in name, email, and description.');
+      return;    }      return;
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error |'Failed to submit');
+      setResult({ id: data.id, message: 'Request submitted successfully.' })
+    } catch (err: any) {
+      setError(err.message |'Something went wrong')
+    } finally {
+      setSubmitting(false)
+    }
+
+  if (result) {;
+    return (
+      <div className='max-w-xl mx-auto py-12'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         <h1 className='text-2xl font-semibold mb-2'>Thanks!</h1>;
         <p className='text-gray-600 mb-4'>;
           We received your request. We will notify the appropriate team.;
@@ -37,6 +96,7 @@ export default function RequestToHirePage() {export default function RequestToHi
         <div className='text-sm text-gray-500'>;
           Confirmation ID: {result && result.id}
         </div>;
+<<<<<<< HEAD
       </div>;return;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     }
@@ -55,6 +115,9 @@ export default function RequestToHirePage() {export default function RequestToHi
         </div>
       </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      </div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     );
   }
   return (
@@ -119,6 +182,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
         <button
           disabled={submitting}
+<<<<<<< HEAD
           className='px-4 py-2 rounded bg-black text-white'
         >
           {submitting ? 'Submitting…' : 'Submit Request'}
@@ -133,6 +197,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           disabled={submitting}className='px-4 py-2 rounded bg-black text-white'>          {submitting ? 'Submitting…' : 'Submit Request'}      </div>;
     )}
   return (<div className="max-w-xl mx-auto">;
+=======
+          className='px-4 py-2 rounded bg-black text-white'>          {submitting ? 'Submitting…' : 'Submit Request'}      </div>;
+    );
+  }
+  return (
+    <div className="max-w-xl mx-auto">;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <h1 className="text-2xl font-semibold mb-4">Request to Hire{selected ? ` — ${selected && selected.name}` : ''}</h1>;
       <form className="space-y-4" onSubmit={onSubmit}>;
         <div>;
@@ -263,6 +334,7 @@ if ( {) {$2;
           {submitting ? 'Submitting…' : 'Submit Request'}
         </button>;
       </form>;
+<<<<<<< HEAD
     </div>)className='px-4 py-2 rounded bg-black text-white';
         >;
           {submitting ? 'Submitting…' : 'Submit Request'}
@@ -271,3 +343,6 @@ if ( {) {$2;
     </div>;
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </div>);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

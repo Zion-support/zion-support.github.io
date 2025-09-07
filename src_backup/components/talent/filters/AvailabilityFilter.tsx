@@ -1,4 +1,5 @@
 <<<<<<< HEAD:src_backup/components/talent/filters/AvailabilityFilter.tsx
+<<<<<<< HEAD:src_backup/components/talent/filters/AvailabilityFilter.tsx
 import { Checkbox } from "@/components/ui/checkbox";
 import { AvailabilityFilterProps } from "@/types/filters";
 =======
@@ -23,6 +24,10 @@ export function AvailabilityFilter({
   return (
     <div className='mb-6 border-b border-zion-blue-light pb-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+return (
+    <div className='mb-6 border-b border-zion-blue-light pb-6'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/talent/filters/AvailabilityFilter.tsx
       <button
         onClick={toggleSection}
 
@@ -73,6 +78,35 @@ function AvailabilityFilter() {return (<div className='mb - 6 border - b border 
       </button>;
 
       {expanded && (
+<<<<<<< HEAD:src_backup/components/talent/filters/AvailabilityFilter.tsx
+=======
+        <div className='mt - 4 space - y-2'>;
+          {AVAILABILITY_OPTIONS.map (option => (
+            <div key={option.id} className='flex items - center'>              <Checkbox;
+                id={`availability-${option.id}`}
+
+      </button>;
+
+  { id: "full_time", label: "Full-time" },
+  { id: "part_time", label: "Part-time" },
+
+      {expanded && (;
+        <div className='mt-4 space-y-2'>;
+          {AVAILABILITY_OPTIONS && AVAILABILITY_OPTIONS.map(option => (;
+            <div key={option && option.id} className='flex items-center'>              <Checkbox
+                id={`availability-${option && option.id}`}
+                checked={selectedAvailability && selectedAvailability.includes(option && option.id)}
+                onCheckedChange={() => toggleAvailability(option && option.id)}
+            <div key={option && option.id} className="flex items-center">;
+
+import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Checkbox } from "@/components/ui/checkbox";
+import { AvailabilityFilterProps } from "@/types/filters";
+const AVAILABILITY_OPTIONS = [;
+  { id: "full_time", label: "Full-time" },;
+  { id: "part_time", label: "Part-time" },;
+  { id: "project", label: "Project-based" }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/talent/filters/AvailabilityFilter.tsx
 
 export function AvailabilityFilter({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {
   return (
@@ -183,10 +217,13 @@ const AVAILABILITY_OPTIONS = [;
   { id: "project", label: "Project-based" }
 ]
 
+<<<<<<< HEAD:src_backup/components/talent/filters/AvailabilityFilter.tsx
         <div className='mt-4 space-y-2'>
           {AVAILABILITY_OPTIONS.map(option => (
             <div key={option.id} className='flex items-center'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/talent/filters/AvailabilityFilter.tsx
 export function AvailabilityFilter({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
@@ -224,6 +261,7 @@ className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[sta
               />
               <label
                 htmlFor={`availability-${option.id}`}
+<<<<<<< HEAD:src_backup/components/talent/filters/AvailabilityFilter.tsx
                 className='ml-2 text-sm text-zion-slate-light cursor-pointer'
               >
                 {option.label}
@@ -270,3 +308,24 @@ className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[sta
 }className="flex items-center" > <Checkbox > {option.label ;
 }</label> </div>) )}</div>)}</div>)}";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/talent/filters/AvailabilityFilter.tsx
+=======
+
+  option.label 
+}</label> </div>) ) 
+}</div>) ;
+}</div>) ;
+}"};
+
+                className="ml-2 text-sm text-zion-slate-light cursor-pointer";
+              >;
+                {option.label}
+              </label>;
+            </div>;
+          ))}
+        </div>;
+      )}
+    </div>;
+  );
+}
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/talent/filters/AvailabilityFilter.tsx

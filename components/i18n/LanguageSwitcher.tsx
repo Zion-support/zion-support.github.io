@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const localeToFlag: Record<string, string> = {
   en: 'us';
@@ -30,6 +31,22 @@ const localeLabelKey: Record<string, string> = {
 };  ar: 'lang.arabic'}
 export default function LanguageSwitcher() {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+const localeToFlag: Record<string, string> = {
+
+  en: 'us',
+  pt: 'br',
+  es: 'es',
+  ar: 'sa'},
+const localeLabelKey: Record<string, string> = {
+  en: 'lang.english',
+  pt: 'lang.portuguese',
+  es: 'lang.spanish',
+  ar: 'lang.arabic',
+};  ar: 'lang.arabic'},
+export default function LanguageSwitcher() {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const current = i18n.resolvedLanguage |i18n.language |'en';
@@ -92,9 +109,16 @@ export default function LanguageSwitcher() {const { t } = useTranslation()const 
             <li key={lng}>;
               <button
                 role='option'
+<<<<<<< HEAD
                 aria-selected={current.startsWith(lng)}
                 className='w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+                aria-selected={current.startsWith(lng)}
+                className='w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900'
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
     <div className="relative">;
       <button
@@ -126,7 +150,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </ul>;
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>
+=======
+    </div>
+
+);
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -195,5 +226,9 @@ function LanguageSwitcher() {const { t } = use_translation ()const [open, set_op
               </button>;
             </li>))}
         </ul>)}
+<<<<<<< HEAD
     </div>))}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </div>);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

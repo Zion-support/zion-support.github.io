@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
   content: string;
 =======
 
@@ -20,6 +21,10 @@ import { Send;
 import { useRouter  } from 'next/router';
 interface Message  {id: string;content: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+id: string;
+  content: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   timestamp: string;
   isMe: boolean;
   sender?: string;
@@ -30,8 +35,12 @@ interface Message  {id: string;content: string;
   },messages: Message[];
   onBack: () => void;
 <<<<<<< HEAD
+<<<<<<< HEAD
   onSendMessage: (content: string) => void
                 {message.timestamp}
+=======
+  onSendMessage: (content: string) => void
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
                 {message.isMe && message.status && (;
                   <span className="ml-1">;
@@ -276,11 +285,23 @@ export function MobileChatView(): any ({contact,messages,onBack,onSendMessage}: 
                 className={cn ('text - xs mt - 1 flex justify - end',message.is_me;
                     ? 'text - primary - foreground / 80';
                     : 'text - muted - foreground')}
+<<<<<<< HEAD
               >;}export function MobileChatView() {const [newMessage, setNewMessage] = useState("")const router = null;
                 message.isMe ? "text-primary-foreground/80" : "text-muted-foreground";
               )}>;
                 {message.timestamp}{message.isMe && message.status && (<span className="ml-1">;{message.status === 'read' ? '✓✓' : '✓'}</div>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              >;
+                {message.timestamp}
+
+                {message.isMe && message.status && (;
+                  <span className="ml-1">;
+
+                    {message.status === 'read' ? '✓✓' : '✓'}
+
+              </div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             </div>;
           </div>;
         ))}<div className="sticky bottom-0 bg-background border-t border-border p-2">;
@@ -373,6 +394,7 @@ export function MobileChatView(): any ({contact,messages,onBack,onSendMessage}: 
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 =======
         </div>;
       </div>;
@@ -380,6 +402,15 @@ export function MobileChatView(): any ({contact,messages,onBack,onSendMessage}: 
   )placeholder='Type a message...';
             className='flex-1'          />;<Button;
             size='icon';
+=======
+  )
+
+            placeholder='Type a message...';
+            className='flex-1'          />;
+
+          <Button
+            size='icon'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             onClick={handleSend}
             disabled={!newMessage && newMessage.trim()}
             className={!newMessage && newMessage.trim() ? 'opacity-50' : ''}
@@ -415,5 +446,13 @@ export function MobileChatView(): any ({contact,messages,onBack,onSendMessage}: 
           </Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </div>)}})
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </div>);
+}
+
+}
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

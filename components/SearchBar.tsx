@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -20,6 +21,8 @@ import React, { useState } from 'react';
 import { Search, X  } from 'lucide-react';
 interface SearchResult  {title: string;
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 interface SearchResult {
   title: string;
   description: string;
@@ -28,11 +31,15 @@ interface SearchResult {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const SearchBar: React.FC = () => {
 interface SearchResult {;
   title: string, description: string,;
   url: string, type: 'service' | 'page' | 'category',;
 }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -79,6 +86,8 @@ const SearchBar: React.FC = () => {
 
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     {
       title: 'Cloud Cost Guard',
       description: 'FinOps Assistant for anomaly detection and cost optimization',
@@ -210,23 +219,35 @@ export default SearchBar;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 interface SearchResult {
   title: string, description: string
   url: string, type: 'service' | 'page' | 'category'
 
 import React, { useState } from 'react';
 import { Search, X } from 'lucide-react';
+<<<<<<< HEAD
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import Link from 'next/link';
 origin/cursor/analyze-improve-and-deploy-application-0a01
+=======
+
+import { useState, useEffect, useCallback, useMemo } from 'react';
+import Link from 'next/link';
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 interface SearchBarProps {
   onSearch?: (query: string) => void;
   placeholder?: string;
   className?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> main
 =======
@@ -236,6 +257,9 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 
 const SearchBar: React.FC<SearchBarProps> = ({
@@ -268,6 +292,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
     setResults(filteredResults);
     setIsOpen(true);
     setIsLoading(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -336,6 +361,9 @@ const SearchBar: React.FC<SearchBarProps> = ({
     setIsOpen(false);
   }
 origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
     <div className="relative w-full max-w-md">
       <div className="relative">
@@ -406,6 +434,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
               aria-selected={index === selectedIndex}
 <<<<<<< HEAD
               tabIndex={-1}
+<<<<<<< HEAD
 origin/cursor/analyze-improve-and-deploy-application-0a01
 =======
               tabIndex={-1}>;
@@ -418,6 +447,8 @@ origin/cursor/analyze-improve-and-deploy-application-0a01
   )}export default SearchBar;ursor/automate-test-improve-and-merge-code-646c;
               className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             >
               <X className="w-4 h-4" />
             </button>
@@ -432,6 +463,7 @@ export default SearchBar;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -442,3 +474,7 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

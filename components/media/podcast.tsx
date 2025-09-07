@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 type EpisodeListItem = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 useEffect ( () => {
   const load = async () => {
   try {
@@ -38,6 +42,7 @@ type EpisodeListItem = any;useEffect ( () => {const load = async () => {try {ret
                 {ep && ep.audio?.mp3Url && (<a;
                     href={ep && ep.audio.mp3Url}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     className='px-3 py-2 bg-blue-600 text-white rounded'
                     download
                   >
@@ -53,6 +58,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   >;
   return (<div className="space-y-6">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                    className='px-3 py-2 bg-blue-600 text-white rounded'
+                    download>                    MP3;
+                  </a>;
+                )}
+                {ep && ep.audio?.wavUrl && (  if (loading) return <div>Loading episodes…</div>;
+  return (
+    <div className="space-y-6">;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <div className="flex items-center justify-between">;
         <h1 className="text-3xl font-bold">Zion Podcast</h1>;
         <Link href="/studio/host" className="text-blue-600 underline">Create Episode</Link>;
@@ -71,11 +85,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     MP3;
                   </a>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 )}
                 {ep.audio?.wavUrl && (
 <a
 =======
                 )}{ep && ep.audio?.wavUrl && (<a;
+=======
+                )}
+                {ep && ep.audio?.wavUrl && (;
+                  <a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                     href={ep && ep.audio.wavUrl}
                     className='px-3 py-2 bg-gray-700 text-white rounded';
                     download>                    WAV;
@@ -102,6 +122,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Link>            </div>            <div className="mt-3 flex gap-4">;
               <Link href={`/media/podcast/${ep && ep.id}`} className="text-blue-600 underline">View Transcript</Link>;
             </div>;
+<<<<<<< HEAD
           </li>;{ep.audio?.wavUrl && (<a;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                     href={ep.audio.wavUrl}
@@ -132,11 +153,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </li>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+          </li>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         ))}
       </ul>;
     </div>;
   );
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  // Check condition
+if (return <div > Loading episodes…</div>) {
+  $2
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 =======
                 className='text-blue-600 underline';
@@ -227,5 +257,14 @@ if (return <div > Loading episodes…</div>) {$2;
             </div>;
           </li>))}
       </ul>;
+<<<<<<< HEAD
     </div>)}}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </div>);
+}
+
+
+
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -7,6 +8,13 @@
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export const advancedITServices2025 = [
   {
 
@@ -16,9 +24,13 @@ export const advancedITServices2025 = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 id: 'quantum-cloud-infrastructure-platform',
     name: 'QuantumCloud Infrastructure',
     description:
@@ -427,6 +439,7 @@ id: 'quantum-cloud-infrastructure-platform',
           'Dedicated support'
         ]
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -1106,6 +1119,8 @@ export const advancedITServices2025 = [
   {};
     marketSize: '$15 && 15.7B'
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
     category: 'IT Operations'
     tags: [
@@ -1301,6 +1316,7 @@ export const advancedITServices2025 = [
     },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     targetAudience:
       'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms'
     competitiveAdvantage:
@@ -1316,6 +1332,14 @@ export const advancedITServices2025 = [
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
   }
+=======
+    targetAudience:
+      'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms'
+    competitiveAdvantage:
+      'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
+  }
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ];      phone: '+1 302 464 0950';
     };
     marketSize: '$15 && 15.7B',
@@ -1323,6 +1347,7 @@ export const advancedITServices2025 = [
     competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1349,10 +1374,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$15.7B'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1360,12 +1389,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';
     competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1382,6 +1414,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     market_size: '$15.7B',
     target_audience:;
       'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',
@@ -1612,6 +1651,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 ;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -1625,6 +1665,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export const advancedITServices2025 = [;
   {;
     id: 'quantum-cloud-infrastructure-platform',;
@@ -1857,6 +1904,7 @@ export const advancedITServices2025 = [;
     competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
@@ -1887,3 +1935,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+  }
+];
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

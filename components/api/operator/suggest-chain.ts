@@ -4,6 +4,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30,10 +31,13 @@ let candidates  = ['polygon', 'bnb', 'avalanche'];if (stake > 5000) candidates =
       stake > 5000;
         ? ['arbitrum', 'optimism', 'avalanche'];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
   const stake = Number(stakeUsd || 0);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -46,11 +50,15 @@ let candidates  = ['polygon', 'bnb', 'avalanche'];if (stake > 5000) candidates =
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { CHAINS } from '../../../utils/chains';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { region, stakeUsd } = req.body || {},
   const stake = null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -60,11 +68,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });  const { region, stakeUsd } = req.body |{};export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST');
@@ -73,8 +88,8 @@ export default async function handler(
   const { region, stakeUsd } = req.body |{}
   const stake = Number(stakeUsd |0);
 
-  const stake = Number(stakeUsd || 0);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -91,10 +106,13 @@ export default async function handler(
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     return res.status(405).json({ error: 'Method not allowed' });
   const { region, stakeUsd } = req.body || {};
   const stake = Number(stakeUsd || 0);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -104,11 +122,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   // Simple heuristics
   // - Low stake: prefer low fees (Polygon, BNB, Avalanche)
   // - High stake: prefer high trust L2s (Arbitrum/Optimism) or Ethereum
   // - Region hints (very rough):
   //   APAC -> BNB/Avalanche, NA/EU -> Arbitrum/Optimism/Ethereum
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -127,6 +149,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -135,10 +162,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 
   let candidates = ['polygon', 'bnb', 'avalanche'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 let candidates = ['polygon', 'bnb', 'avalanche'];
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+let candidates = ['polygon', 'bnb', 'avalanche'];
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   if (stake > 5000) candidates = ['arbitrum', 'optimism', 'ethereum'];
   const regionLc = (region |'').toString().toLowerCase();
   if (regionLc.includes('apac') |regionLc.includes('asia')) {
@@ -162,6 +194,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -182,10 +215,18 @@ function handler() {if (return res.status (405).json ({ error: 'Method not allow
  */;
 function handler() {if (return res.status (405).json ({ error: 'Method not allowed' })) {$2;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const ranked = candidates && candidates.map(k => ({ key: k, chain: (CHAINS as any)[k] }));
   res
     .status(200)
     .json({ recommendation: ranked[0], alternatives: ranked && ranked.slice(1) });
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const regionLc = (region || '').toString().toLowerCase();
   if (regionLc && regionLc.includes('apac') || regionLc && regionLc.includes('asia')) {
     candidates = stake > 5000 ? ['arbitrumoptimismavalanche'] : ['bnbavalanchepolygon']
@@ -246,6 +287,7 @@ if (||) {$2;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -273,3 +315,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+    .json({ recommendation: ranked[0], alternatives: ranked.slice(1) });
+  res.status(200).json({ recommendation: ranked[0], alternatives: ranked.slice(1) })
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

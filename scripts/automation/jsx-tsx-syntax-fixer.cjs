@@ -21,7 +21,11 @@ console.log(' Starting JSX/TSX syntax fixer...')
       "status"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error(' JSX/TSX syntax fixer failed to "start")
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  console.error(' JSX/TSX syntax fixer failed to "start")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

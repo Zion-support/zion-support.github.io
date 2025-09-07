@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src_backup/components/GlobalServiceSection.tsx
 
 <<<<<<< HEAD:src_backup/components/GlobalServiceSection.tsx
 import { GradientHeading } from "./GradientHeading";
@@ -15,6 +16,13 @@ import {
 } from 'lucide-react'
 import { Button } from './ui/button'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  Truck,;
+} from 'lucide-react';
+import { Button } from './ui/button';
+
+import { GradientHeading } from "./GradientHeading",
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/GlobalServiceSection.tsx
 const services = [
   {
     title: "Servers",
@@ -37,6 +45,7 @@ const services = [
     description: "Sustainable disposal and recycling of IT equipment following eco-friendly practices",
     icon: <Recycle className="h-10 w-10" />},
   {
+<<<<<<< HEAD:src_backup/components/GlobalServiceSection.tsx
 export function GlobalServiceSection() {;
     title: 'Equipment Rentals'
     description:
@@ -46,6 +55,44 @@ export function GlobalServiceSection() {;
 ]
 export function GlobalServiceSection() {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    title: "Equipment Rentals",
+    description: "Flexible rental options for temporary projects and scaling requirements",
+    icon: <Truck className="h-10 w-10" />}],
+
+  Truck,;
+} from 'lucide-react';
+import { Button } from './ui/button';
+
+import { GradientHeading } from "./GradientHeading",
+import { Server, HardDrive, Network, Clock, Recycle, Truck } from 'lucide-react'
+import { Button } from "./ui/button",
+const services = [
+  {
+    title: "Servers",
+    description: "Enterprise-grade servers for any workload with 24/7 maintenance and support",
+    icon: <Server className="h-10 w-10" />},
+  {
+    title: "Storage",
+    description: "Scalable storage solutions from SSDs to large-scale enterprise storage systems",
+    icon: <HardDrive className="h-10 w-10" />},
+  {
+    title: "Networking",
+    description: "Connectivity solutions including switches, routers, and network security devices",
+    icon: <Network className="h-10 w-10" />},
+  {
+    title: "24x7x365 Support",
+    description: "Around-the-clock technical support with rapid response times guaranteed",
+    icon: <Clock className="h-10 w-10" />},
+  {
+    title: "Recycling Services",
+    description: "Sustainable disposal and recycling of IT equipment following eco-friendly practices",
+    icon: <Recycle className="h-10 w-10" />},
+  {
+    title: "Equipment Rentals",
+    description: "Flexible rental options for temporary projects and scaling requirements",
+    icon: <Truck className="h-10 w-10" />}],
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/GlobalServiceSection.tsx
   return (
 
     <section className='py-20 bg-zion-blue' id='global-services'>;
@@ -89,6 +136,7 @@ export function GlobalServiceSection() {return (<section className='py-20 bg-zio
 
             <div
               key={index}
+<<<<<<< HEAD:src_backup/components/GlobalServiceSection.tsx
               className='bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300'
             >
               <div className='text-zion-cyan mb-4'>{service.icon}</div>
@@ -97,12 +145,16 @@ export function GlobalServiceSection() {return (<section className='py-20 bg-zio
         </div>;<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
           {services && services.map((service, index) => (<div;
               key={index}className='bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300'>;
+=======
+              className='bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/GlobalServiceSection.tsx
               <div className='text-zion-cyan mb-4'>{service && service.icon}</div>;
               <h3 className='text-xl font-bold text-white mb-2'>;
                 {service && service.title}
               </h3>;
               <p className='text-zion-slate-light mb-4'>;
                 {service && service.description}
+<<<<<<< HEAD:src_backup/components/GlobalServiceSection.tsx
               </p>            </div>;className='bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300';
             >;
               <div className='text-zion-cyan mb-4'>{service.icon}</div>;
@@ -118,6 +170,11 @@ export function GlobalServiceSection() {return (<section className='py-20 bg-zio
 origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
 
+=======
+              </p>            </div>;
+
+          ))}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/GlobalServiceSection.tsx
 
 export function GlobalServiceSection() {
   return (
@@ -128,6 +185,7 @@ export function GlobalServiceSection() {
           <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">
             Our 24x7x365 global IT service offering provides enterprise-grade solutions for businesses of all sizes
           </p>
+<<<<<<< HEAD:src_backup/components/GlobalServiceSection.tsx
 
         </div>
 
@@ -136,6 +194,11 @@ export function GlobalServiceSection() {
 
 
 
+=======
+        </div>
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/GlobalServiceSection.tsx
           {services.map((service, index) => (
             <div key={index} className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300">
               <div className="text-zion-cyan mb-4">
@@ -156,17 +219,25 @@ export function GlobalServiceSection() {
 
 
           <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">
+<<<<<<< HEAD:src_backup/components/GlobalServiceSection.tsx
 <div className='flex justify-center mt-12'>
           <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             Get Your Free Commercial Proposal
           </Button>
         </div>
+=======
+            Get Your Free Commercial Proposal
+          </Button>
+        </div>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/GlobalServiceSection.tsx
 
 
 
       </div>
     </section>
+<<<<<<< HEAD:src_backup/components/GlobalServiceSection.tsx
 =======
               </p>;
             </div>;
@@ -177,6 +248,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">;
             Our 24x7x365 global IT service offering provides enterprise-grade solutions for businesses of all sizes;
           </p>;
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/GlobalServiceSection.tsx
         </div>;
         </div>;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
@@ -210,8 +284,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;<div className='flex justify-center mt-12'>;
           <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8'>        <div className="flex justify-center mt-12">;
           <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">;
+<<<<<<< HEAD:src_backup/components/GlobalServiceSection.tsx
 import { Server,HardDrive,Network,Clock,Recycle,Truck} from 'lucide-react';
 import { Button  } from './ui / button';
+=======
+import { GradientHeading } from './GradientHeading';
+import {
+  Server,
+  HardDrive,
+  Network,
+  Clock,
+  Recycle,
+  Truck,
+} from 'lucide-react';
+import { Button } from './ui / button';
+import { GradientHeading } from "./GradientHeading",;
+import { Server, HardDrive, Network, Clock, Recycle, Truck } from 'lucide-react';
+import { Button } from "./ui/button",;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/GlobalServiceSection.tsx
 const services = [;
   {title: "Servers",description: "Enterprise-grade servers for any workload with 24/7 maintenance and support",icon: <Server className="h-10 w-10" />},{title: "Storage",description: "Scalable storage solutions from SSDs to large-scale enterprise storage systems",icon: <HardDrive className="h-10 w-10" />},{title: "Networking",description: "Connectivity solutions including switches, routers, and network security devices",icon: <Network className="h-10 w-10" />},{title: "24x7x365 Support",description: "Around-the-clock technical support with rapid response times guaranteed",icon: <Clock className="h-10 w-10" />},{title: "Recycling Services",description: "Sustainable disposal and recycling of IT equipment following eco-friendly practices",icon: <Recycle className="h-10 w-10" />},{title: "Equipment Rentals",description: "Flexible rental options for temporary projects and scaling requirements",icon: <Truck className="h-10 w-10" />}];
 export function GlobalServiceSection() {return (<section className="py-20 bg-zion-blue" id="global-services">;
@@ -226,6 +316,7 @@ export function GlobalServiceSection() {return (<section className="py-20 bg-zio
           {services.map((service, index) => (<div key={index} className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300">;
               <div className="text-zion-cyan mb-4">;
                 {service.icon}
+<<<<<<< HEAD:src_backup/components/GlobalServiceSection.tsx
               </div>;
               <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>;
               <p className="text-zion-slate-light mb-4">{service.description}</p>;
@@ -277,12 +368,18 @@ function GlobalServiceSection() {return (<section className='py - 20 bg - zion -
 <<<<<<< HEAD:src_backup/components/GlobalServiceSection.tsx
           <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white text - lg py - 6 px - 8">;
 
+=======
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
+              <p className="text-zion-slate-light mb-4">{service.description}</p>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/GlobalServiceSection.tsx
 
             Get Your Free Commercial Proposal;
           </Button>;
         </div>;
       </div>;
 
+<<<<<<< HEAD:src_backup/components/GlobalServiceSection.tsx
   );
 }
 
@@ -298,3 +395,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </div>;</section>)})}</section>)})}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/GlobalServiceSection.tsx
+=======
+    </section>);
+}
+;
+
+  );
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/GlobalServiceSection.tsx

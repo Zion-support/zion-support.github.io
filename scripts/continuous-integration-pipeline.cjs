@@ -1,9 +1,13 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+#!/usr/bin/env node;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const { execSync } = require("$1")
 const fs = require("$1")
 const path = require("path")
@@ -83,7 +87,11 @@ const path = require("path")
       ` Final "Summary"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.error(" CI pipeline "failed": ")
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    console.error(" CI pipeline "failed": ")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

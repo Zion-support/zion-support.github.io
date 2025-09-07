@@ -10,6 +10,7 @@ console.log('==');
 // Function to remove merge conflict markers
 function removeMergeConflictMarkers(content) {
   return content
+<<<<<<< HEAD
     .replace(/[a-f0-9]+/g, '');
 =======
 
@@ -23,6 +24,11 @@ function removeMergeConflictMarkers(content) {
 
     .replace(/
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    .replace(/
+    .replace(/
+    .replace(/
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 
 // Function to fix common syntax errors
@@ -103,11 +109,51 @@ function processFile(filePath) {
 
     // Check for merge conflict markers
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
     if (content.includes('
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
+      console.log(`🔧 Removing merge conflict markers from ${filePath}`);
+      content = removeMergeConflictMarkers(content);
+      modified = true;
+    }
+    // Fix syntax errors
+    const originalContent = content;
+    content = fixSyntaxErrors(content);
+    if (content !== originalContent) {
+      console.log(`🔧 Fixing syntax errors in ${filePath}`);
+      modified = true;
+    }
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`✅ Fixed ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.log(`❌ Error processing ${filePath}: ${error.message}`);
+    return false;
+  }
+}
+// Function to find all files with merge conflicts
+function findFilesWithConflicts() {
+  const files = [];
+  function searchDirectory(dir) {
+    const items = fs.readdirSync(dir);
+    for (const item of items) {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        searchDirectory(fullPath);
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js'))) {
+        try {
+          const content = fs.readFileSync(fullPath, 'utf8');
+          if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             files.push(fullPath);
           }
         } catch (error) {

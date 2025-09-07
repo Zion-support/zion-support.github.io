@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
@@ -1257,12 +1260,19 @@ export const advancedEmergingTechServices2025 = [;
 ];
 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export const advancedEmergingTechServices2025 = [
   {
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 id: 'space-mining-operations-platform',
     name: 'SpaceMining Operations',
     description:
@@ -1325,6 +1335,7 @@ id: 'space-mining-operations-platform',
     competitiveAdvantage:
       'Industry-leading space mining operations, comprehensive resource mapping, and extensive space agency integration'
   }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
   {
 <<<<<<< HEAD
@@ -1338,6 +1349,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  {
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     features: [
       'Quantum-biological hybrid processing'
       'DNA-based computing'
@@ -1348,6 +1364,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Custom quantum bio algorithms'
       '24/7 platform monitoring'
     ]
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     pricing: {
@@ -1441,6 +1458,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       '24 / 7 robotic operations',
     ],
 
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     pricing: {
       starter: {
         price: 499,
@@ -1488,6 +1508,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     market_size: '$3.2B',
     target_audience:;
       'Robotics companies, manufacturing firms, automation specialists, research institutions',
@@ -1556,6 +1580,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     market_size: '$8.9B',
     target_audience:;
       'Internet service providers, telecommunications companies, government agencies, cybersecurity firms',
@@ -1624,6 +1652,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     market_size: '$12.4B',
     target_audience:;
       'Logistics companies, supply chain managers, transportation firms, e - commerce businesses',
@@ -1699,6 +1731,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     };
     marketSize: '$6 && 6.8B',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -1708,6 +1741,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       starter: {
         price: 599
         period: 'month'
@@ -2266,6 +2302,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
@@ -2279,10 +2316,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
   }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$6.8B'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2294,6 +2336,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Quantum Computing',
       'Materials Science',
       'AI Discovery',
@@ -2819,18 +2865,22 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     };
     marketSize: '$6 && 6.8B',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     targetAudience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups';
     competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   }
@@ -2857,6 +2907,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  }
+];
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     market_size: '$6.8B',
     target_audience:;
       'Gaming companies, virtual reality firms, entertainment companies, technology startups',
@@ -3087,6 +3143,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 ;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -3100,6 +3157,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export const advancedEmergingTechServices2025 = [;
   {;
     id: 'space-mining-operations-platform',;
@@ -3332,6 +3396,7 @@ export const advancedEmergingTechServices2025 = [;
     competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
@@ -3362,3 +3427,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+  }
+];
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

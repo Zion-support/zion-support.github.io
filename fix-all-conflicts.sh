@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 echo "Fixing all merge conflicts in the project..."
 
+<<<<<<< HEAD
 # Find all files with merge conflicts
 find /workspace -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | while read -r file; do
   if grep -q "<<<<<<< HEAD" "$file"; then
@@ -16,6 +17,25 @@ find /workspace -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" |
     sed -i '/^<<<<<<< HEAD$/d' "$file"
     sed -i '/^=======$/d' "$file"
     sed -i '/^>>>>>>> /d' "$file"
+=======
+# Find all files with merge conflicts and fix them
+find src app -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" -o -name "*.css" | while read file; do
+  if [ -f "$file" ] && grep -q "
+    echo "Fixing conflicts in: $file"
+    
+    # Remove all merge conflict markers
+
+    sed -i '/^/,/^/d' "$file"
+    sed -i '/^>>>>>>>/d' "$file"
+
+
+    
+    # Remove everything from 
+    sed -i '/^
+    
+    # Remove any remaining  markers
+    sed -i '/^$/d' "$file"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     
     echo "Fixed: $file"
   fi

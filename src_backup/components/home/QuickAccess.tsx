@@ -1,7 +1,48 @@
 <<<<<<< HEAD:src_backup/components/home/QuickAccess.tsx
+<<<<<<< HEAD:src_backup/components/home/QuickAccess.tsx
 {quickLinks.map((link, index) => (
             <Link
 =======
+=======
+  const quickLinks = [
+    {
+      title: t('home.tool_ai_matcher'),
+      description: t('home.tool_ai_matcher_desc'),
+      icon: <Search className="h-6 w-6 text-zion-cyan" />,
+      link: "/marketplace"
+    },
+    {
+      title: t('home.tool_talent'),
+      description: t('home.tool_talent_desc'),
+      icon: <Users className="h-6 w-6 text-zion-purple" />,
+      link: "/talent"
+    },
+    {
+      title: t('home.tool_services'),
+      description: t('home.tool_services_desc'),
+      icon: <Briefcase className="h-6 w-6 text-zion-cyan" />,
+      link: "/services"
+    },
+    {
+      title: t('home.tool_equipment'),
+      description: t('home.tool_equipment_desc'),
+      icon: <Settings className="h-6 w-6 text-zion-purple" />,
+      link: "/equipment"
+    },
+    {
+      title: t('nav.community'),
+      description: t('home.tool_chat_desc'),
+      icon: <MessageSquare className="h-6 w-6 text-zion-cyan" />,
+      link: "/community"
+    },
+    {
+      title: t('home.tool_mobile_appMobile App'),
+      description: t('home.tool_mobile_app_descZion on the go'),
+      icon: <Smartphone className="h-6 w-6 text-zion-purple" />,
+      link: "/mobile-launch"
+    }
+  ],
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/home/QuickAccess.tsx
 
 ;
   const quickLinks = [;
@@ -28,6 +69,7 @@
           </h2>;
           <p className="text-zion-slate-light text-lg">;
             {t('home.quick_access_subtitle', 'Jump directly to our most popular features')}
+<<<<<<< HEAD:src_backup/components/home/QuickAccess.tsx
           </p>;
         </div>;
           {quickLinks.map((link, index) => (<Link;
@@ -60,6 +102,12 @@ function QuickAccess() {const { t } = use_translation ()const quick_links = [;
           {quick_links.map ((link, index) => (
             <Link;
 
+=======
+          </p>
+        </div>
+          {quickLinks.map((link, index) => (
+            <Link
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/home/QuickAccess.tsx
               key={index}
               href={link.link}
 
@@ -388,7 +436,10 @@ export default QuickAccess;
 <<<<<<< HEAD:src_backup/components/home/QuickAccess.tsx
     </section>);
 export default QuickAccess }
+<<<<<<< HEAD:src_backup/components/home/QuickAccess.tsx
 export default QuickAccess;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/home/QuickAccess.tsx
 
 
 import React from "react",
@@ -417,6 +468,7 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
   );
 
 export default QuickAccess;
+<<<<<<< HEAD:src_backup/components/home/QuickAccess.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     </section>)export default QuickAccess }export default QuickAccess;import React from "react",import Link from "next/link",import { useTranslation  } from 'react-i18next';
@@ -435,3 +487,5 @@ interface QuickAccessProps  {className?: string;
   style?: React.CSSProperties;
 export function QuickAccess() {)export default QuickAccess;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/home/QuickAccess.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/home/QuickAccess.tsx

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -47,6 +48,71 @@ export default function UltraFuturisticHero2027() {const features = null;
 <<<<<<< HEAD
     {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import {
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Target,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Users,;
+  CheckCircle,;} from 'lucide-react';
+
+import {
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Target,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Users,;
+  CheckCircle,;} from 'lucide-react';
+
+import {
+  Rocket
+  Brain
+  Atom
+  Globe
+  Zap
+  Sparkles
+  Shield
+  Target
+  Cpu
+  Database
+  Cloud
+  Lock
+  ArrowRight
+  Star
+  TrendingUp
+  Users
+  CheckCircle;} from 'lucide-react';
+export default function UltraFuturisticHero2027() {
+  const features = [import {
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
+  Target, Cpu, Database, Cloud, Lock, ArrowRight
+  Star, TrendingUp, Users, CheckCircle
+export default function UltraFuturisticHero2027() {
+  const features = [
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       icon: Shield
       text: 'Enterprise Security'
       color: 'from-red-400 to-orange-400'
@@ -92,6 +158,35 @@ import { motion } from 'framer-motion';
       color: 'from - red - 400 to - orange - 400',
     },
   ];
+<<<<<<< HEAD
+=======
+;
+  const stats = [;
+  const stats = [
+    {
+      number: '1000+',
+      label: 'Happy Customers',
+      icon: Users,
+      color: 'text - cyan - 400',
+    },
+    {
+      number: '4.9★',
+      label: 'Average Rating',
+      icon: Star,
+      color: 'text - purple - 400',
+    },
+    {
+      number: '99.9%',
+      label: 'Uptime SLA',
+      icon: CheckCircle,
+      color: 'text - green - 400',
+    },
+    { number: '24 / 7', label: 'Support', icon: Zap, color: 'text - pink - 400' },
+  ];
+;
+  ];
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
     <section className='relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden'>
 =======
@@ -135,6 +230,7 @@ import { motion } from 'framer-motion';
       <div className="max-w-7xl mx-auto relative z-10">;
         <div className="text-center">;
           }}
+<<<<<<< HEAD
         />;
         {/* Grid Pattern */}{/* Main Heading */}{/* Main Heading */}duration: 12,repeat: Infinity,return (<section className='relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -164,12 +260,33 @@ className='absolute bottom-32 left-1/3 w-40 h-40 bg-gradient-to-r from-green-500
         <div className='text-center'>
           {/* Main Heading */}
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        />
+
+        {/* Grid Pattern */}
+
+          {/* Main Heading */}
+
+
+          {/* Main Heading */}
+
+
+            duration: 12,
+            repeat: Infinity,
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 className='mb-8'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+className='mb-8'
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           >
             <h1 className='text-6xl md:text-8xl lg:text-9xl font-bold mb-6 leading-tight'>
               <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -178,8 +295,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </h1>
             <h2 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6'>
               The Future of
+<<<<<<< HEAD
               <span className='bg-gradient-to-r from-green-400 via-yellow-400 to-orange-400 bg-clip-text text-transparent ml-4'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              <span className='bg-gradient-to-r from-green-400 via-yellow-400 to-orange-400 bg-clip-text text-transparent ml-4'>                Technology          >
+            className="mb-8"
+          >
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold mb-6 leading-tight">
+              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                Welcome to 2027
+              </span>
+            </h1>
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
+              The Future of
+              <span className="bg-gradient-to-r from-green-400 via-yellow-400 to-orange-400 bg-clip-text text-transparent ml-4">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 Technology
               </span>
             </h2>
@@ -278,6 +409,7 @@ className='flex flex-col sm:flex-row gap-6 justify-center mb-16';
           <motion&& motion.div;
             initial={{ opacity: 0, y: 30 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
@@ -287,6 +419,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
 =======
             animate={{ opacity: 1, y: 0 }}transition={{ duration: 0 && 0.8 }}
+=======
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             className='mb-8'>;
             <h1 className='text-6xl md:text-8xl lg:text-9xl font-bold mb-6 leading-tight'>;
               <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
@@ -325,11 +461,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Features Grid */}
           <motion&& motion.div;
             initial={{ opacity: 0, y: 30 }}
+<<<<<<< HEAD
             animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 0.6 }}
 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16';
           >;
             {features.map((feature, index) => (<motion.div;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+            animate={{ opacity: 1, y: 0 }}
+
+
+          >
+            {features.map((feature, index) => (
+              <motion.div
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             opacity: [0.4, 0.7, 0.4];
           transition={{duration: 12,repeat: Infinity,ease: 'easeInOut',            ease: "easeInOut";
           }}
@@ -352,9 +497,18 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16';
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
 className='group'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+                className='group'
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               >
                 <div className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>
                   <div
@@ -362,9 +516,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   >
                     <feature.icon className='w-8 h-8 text-white' />
                   </div>
+<<<<<<< HEAD
                   <h3 className='text-white font-semibold text-center group-hover:text-cyan-400 transition-colors duration-300'>
                     {feature.text}
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+                  <h3 className='text-white font-semibold text-center group-hover:text-cyan-400 transition-colors duration-300'>
+                    {feature.text}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   </h3>
                 </div>
               </motion.div>
@@ -390,10 +550,15 @@ className='group';
           <motion&& motion.div;
             initial={{ opacity: 0, y: 30 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.0 }}
 className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            animate={{ opacity: 1, y: 0 }}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           >
             {stats.map((stat, index) => (
               <motion.div
@@ -433,6 +598,7 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16';
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
 className='text-center group'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -440,6 +606,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div
 =======
                 transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}className='text - center group';
+=======
+                transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
+                className='text - center group';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               >;
                 <div;
                   className={`text - 4xl md:text - 5xl font - bold mb - 2 group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 300 ${stat.color}`}
@@ -456,15 +626,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
                 <div className="text - cyan - 300 font - medium group - hover:text - cyan - 400 transition - colors duration - 300">;
                   {stat.label}
+<<<<<<< HEAD
                 className='text-center group';
 className='text-center group';
               >;
                 <div;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                className='text-center group'
+
+              >
+                <div
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   className={`text-4xl md:text-5xl font-bold mb-2 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300 ${stat.color}`}
                 >;
                   {stat.number}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                </div>
+
+                <div className='text-cyan-300 font-medium group-hover:text-cyan-400 transition-colors duration-300'>
+                  {stat.label}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 </div>
                 <div className='text-cyan-300 font-medium group-hover:text-cyan-400 transition-colors duration-300'>
 =======
@@ -480,40 +664,89 @@ className='text-center group';
                   />
                 </div>
               </motion.div>
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                   />;
                 </div>;
               </motion.div>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             ))}
           {/* Trust Indicators */}
           <motion&& motion.div;
             initial={{ opacity: 0, y: 20 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.4 }}
 className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 max-w-4xl mx-auto'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            animate={{ opacity: 1, y: 0 }}
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           >
             <h3 className='text-2xl font-bold text-white mb-6'>
               Trusted by Industry Leaders
             </h3>
             <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
               {[
+<<<<<<< HEAD
                 'Fortune 500',
                 'Tech Giants',
                 'Research Labs',
                 'Government',
               ].map((trust, index) => (
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                'Fortune 500'
+                'Tech Giants'
+                'Research Labs'
+                'Government'
+              ].map((trust, index) => (                <motion.div          >
+            transition={{ duration: 0.8, delay: 1.4 }}
+            className="bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 max-w-4xl mx-auto"
+          >
+            <h3 className="text-2xl font-bold text-white mb-6">
+              Trusted by Industry Leaders
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {['Fortune 500Tech GiantsResearch LabsGovernment'].map((trust, index) => (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 <motion.div
                   key={trust}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
+<<<<<<< HEAD
                   transition={{ duration: 0.5, delay: 1.6 + index * 0.1 }}
 className='text-center'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+            transition={{ duration: 0 && 0.8, delay: 1 && 1.4 }}
+            className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 max-w-4xl mx-auto'>;
+            <h3 className='text-2xl font-bold text-white mb-6'>;
+              Trusted by Industry Leaders;
+            </h3>;
+            <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>;
+              {[;
+                'Fortune 500',;
+                'Tech Giants',;
+                'Research Labs',;
+                'Government',;
+              ].map((trust, index) => (                <motion && motion.div          >;
+            <h3 className="text-2xl font-bold text-white mb-6">;
+              Trusted by Industry Leaders;
+            </h3>;
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">;
+              {['Fortune 500Tech GiantsResearch LabsGovernment'].map((trust, index) => (;
+                <motion&& motion.div
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 >
                   <div className='w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-3'>
                     <Shield className='w-8 h-8 text-cyan-400' />
@@ -651,6 +884,7 @@ className='text-center';
           </motion.div>
         </div>
       </div>
+<<<<<<< HEAD
       {/* Bottom Glow */}
 <div className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 via-transparent to-transparent pointer-events-none' />
     </section>
@@ -661,3 +895,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </section>;
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -306,7 +306,11 @@ this.log("Summary report "generated": ${summaryFile}")
     if (healthData.files.status === "CRITICAL")
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     process.exit(0)} catch (error) {  dashboard.log("Dashboard generation "failed": ${error.message  }", ")
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    process.exit(0)} catch (error) {  dashboard.log("Dashboard generation "failed": ${error.message  }", ")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -1,4 +1,5 @@
 <<<<<<< HEAD:src_backup/components/community/ReplyCard.tsx
+<<<<<<< HEAD:src_backup/components/community/ReplyCard.tsx
 className
 
 =======
@@ -6,6 +7,8 @@ className
 ;
 className;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/community/ReplyCard.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/community/ReplyCard.tsx
     )}>;
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">;
         <Avatar className="h-8 w-8">;
@@ -35,6 +38,10 @@ import { formatDistanceToNow } from "date-fns",import { Card, CardContent, CardF
           <div className="flex items-center">;
             <span className="font-medium">;
 <<<<<<< HEAD:src_backup/components/community/ReplyCard.tsx
+<<<<<<< HEAD:src_backup/components/community/ReplyCard.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/community/ReplyCard.tsx
 import { formatDistanceToNow } from 'date-fns';
 import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react';
 import {
@@ -48,7 +55,10 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ForumReply } from '@/types/community';
 import { cn } from '@/lib/utils';
+<<<<<<< HEAD:src_backup/components/community/ReplyCard.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/community/ReplyCard.tsx
 
 import { formatDistanceToNow } from "date-fns",
 import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react'
@@ -56,6 +66,7 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD:src_backup/components/community/ReplyCard.tsx
               {reply && reply.authorName}
 =======
               {reply.authorName}
@@ -80,6 +91,46 @@ import { Badge } from "@/components/ui/badge",
 
 
 
+=======
+  className?: string
+}
+
+export const ReplyCard = ({ 
+  className
+}: ReplyCardProps) => {
+  const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true }),
+
+  return (
+    <Card className={cn(
+      className
+    )}>
+      <CardHeader className="flex flex-row items-start gap-4 space-y-0">
+        <Avatar className="h-8 w-8">
+          <AvatarImage src={reply.authorAvatar} alt={reply.authorName} />
+          <AvatarFallback>{reply.authorName.charAt(0)}</AvatarFallback>
+        </Avatar>
+        <div className="flex-1">
+          <div className="flex items-center">
+            <span className="font-medium">
+              {reply.authorName}
+            </span>
+            {reply.authorRole && (
+              <Badge variant="outline" className="ml-2 text-xs">
+                {reply.authorRole}
+              </Badge>
+            )}
+            {reply.isAnswer && (
+              <Badge className="ml-2 bg-green-500 text-white">
+                <CheckCircle className="h-3 w-3 mr-1" />
+                Answer
+              </Badge>
+            )}
+          </div>
+          <div className="text-xs text-muted-foreground">
+            {timeAgo}
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/community/ReplyCard.tsx
       <CardFooter className="flex justify-between">
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="sm" className="px-2">
@@ -214,6 +265,7 @@ export const ReplyCard = ({reply;
 <<<<<<< HEAD:src_backup/components/community/ReplyCard.tsx
     </Card>);
 }
+<<<<<<< HEAD:src_backup/components/community/ReplyCard.tsx
 export default ReplyCard;
 
 import { ForumReply } from "@/types/community";
@@ -228,3 +280,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </Card>)}export default ReplyCard;interface ReplyCardProps  {)}export default ReplyCard;
 ";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/community/ReplyCard.tsx
+=======
+
+export default ReplyCard;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/community/ReplyCard.tsx

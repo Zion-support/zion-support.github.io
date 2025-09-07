@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -670,11 +671,15 @@ export const real2036AIServices = [;
       'Enhanced vehicle safetyAutonomous operationTraffic optimizationPredictive maintenance';
     ],useCases: [;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export const real2036AIServices = [
   {
     id: 'ai-emotion-intelligence-platform'
     name: 'AI Emotion Intelligence Platform'
     tagline: 'Advanced emotional AI understanding'
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -682,6 +687,12 @@ id: 'ai-emotion-intelligence-platform',
     name: 'AI Emotion Intelligence Platform',
     tagline: 'Advanced emotional AI understanding',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+id: 'ai-emotion-intelligence-platform',
+    name: 'AI Emotion Intelligence Platform',
+    tagline: 'Advanced emotional AI understanding',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     description:
       'Revolutionary AI platform for understanding, analyzing, and responding to human emotions. Features emotion recognition, sentiment analysis, emotional response generation, and emotional intelligence training.',
     price: '$3,999',
@@ -971,6 +982,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     useCases: [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Autonomous vehicles'
       'Fleet management'
       'Traffic optimization'
@@ -1662,6 +1676,7 @@ export const real2036AIServices = [;
     ]
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -1918,6 +1933,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  }
+];
+;
+
+  },;
+];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
+    ]
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export const real2036AIServices = [;
   {;
     id: 'ai-emotion-intelligence-platform',;
@@ -2130,6 +2157,7 @@ export const real2036AIServices = [;
     ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
@@ -2207,3 +2235,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+  }
+];
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

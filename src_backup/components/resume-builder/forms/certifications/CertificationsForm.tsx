@@ -1,4 +1,5 @@
 <<<<<<< HEAD:src_backup/components/resume-builder/forms/certifications/CertificationsForm.tsx
+<<<<<<< HEAD:src_backup/components/resume-builder/forms/certifications/CertificationsForm.tsx
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
@@ -14,6 +15,11 @@ import { useState  } from 'react';
 =======
 
 return (<div className='space-y-6'>;
+=======
+return (
+
+    <div className='space-y-6'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/resume-builder/forms/certifications/CertificationsForm.tsx
       <div>;
         <h2 className='text-xl font-semibold mb-2'>;
           Certifications & Licenses;
@@ -22,6 +28,7 @@ return (<div className='space-y-6'>;
           Add any professional certifications, licenses, or credentials you have;
           earned.;
         </p>;
+<<<<<<< HEAD:src_backup/components/resume-builder/forms/certifications/CertificationsForm.tsx
       </div>;{certifications && certifications.length > 0 && (import { useState  } from 'react';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/resume-builder/forms/certifications/CertificationsForm.tsx
 import { useForm  } from 'react-hook-form';
@@ -79,6 +86,12 @@ interface CertificationsFormProps {
       </div>
       {certifications.length > 0 && (
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      </div>;
+
+      {certifications && certifications.length > 0 && (;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/resume-builder/forms/certifications/CertificationsForm.tsx
         <CertificationsList
           certifications={certifications}
           onEdit={handleEdit}
@@ -117,6 +130,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     setEditingId(null),
 
                     form.reset({
+<<<<<<< HEAD:src_backup/components/resume-builder/forms/certifications/CertificationsForm.tsx
                       name: ''
                       issuing_organization: ''
                       issue_date: ''
@@ -125,6 +139,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       credential_url: ''
                     })
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                      name: '',
+                      issuing_organization: '',
+                      issue_date: '',
+                      expiration_date: '',
+                      credential_id: '',
+
+                    setEditingId(null),
+                    setEditingId(null),
+                    form.reset({
+                      name: '',
+                      issuing_organization: '',
+                      issue_date: '',
+                      expiration_date: '',
+                      credential_id: '',
+                      credential_url: ''})
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/resume-builder/forms/certifications/CertificationsForm.tsx
                   } else {
                     onBack()
 
@@ -223,8 +254,12 @@ interface CertificationsFormProps  {resumeId: string;
         </Form>
       </div>
     </div>
+<<<<<<< HEAD:src_backup/components/resume-builder/forms/certifications/CertificationsForm.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
   );
+=======
+  )
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/resume-builder/forms/certifications/CertificationsForm.tsx
 
 }> {;
   editingId ? 'Cancel' : 'Back' ;
@@ -243,6 +278,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Form>;
       </div>;
     </div>;
+<<<<<<< HEAD:src_backup/components/resume-builder/forms/certifications/CertificationsForm.tsx
   )</Button>;<div className='flex gap-2'>;
                 <Button type='submit' disabled={isLoading}>;
                   {isLoading && (<Loader2 className='mr-2 h-4 w-4 animate-spin' />;
@@ -324,3 +360,5 @@ if ( {) {$2;
     </div>)}> {editing_id ? 'Cancel' : 'Back';
 }</Button> Next </Button> </div> </div> </form> </Form> </div> </div>)}'"}}}'";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/resume-builder/forms/certifications/CertificationsForm.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/resume-builder/forms/certifications/CertificationsForm.tsx

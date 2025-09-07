@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src_backup/components/CategoriesSection.tsx
 
 <<<<<<< HEAD:src_backup/components/CategoriesSection.tsx
 import { GradientHeading } from "./GradientHeading",
@@ -27,6 +28,13 @@ interface CategoryType {
   name: string
   description?: string
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+// This is the type definition copied from Categories.tsx for consistency.
+// Ideally, this would be in a shared types file.
+interface CategoryType {
+  id: string,
+  name: string,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/CategoriesSection.tsx
   iconName?: string, // Example field if categories have icons
   itemCount?: number, // Example field for number of items in a category
   // Add a 'link' property if your API provides it, or construct it.
@@ -43,10 +51,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 // Default static categories with translation keys
 
+<<<<<<< HEAD:src_backup/components/CategoriesSection.tsx
 const getDefaultCategories = (t: any) => [
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/CategoriesSection.tsx
   {
     id: "services"
     name: t('categories.services')
@@ -56,10 +67,17 @@ const getDefaultCategories = (t: any) => [
     color: "from-purple-500 to-indigo-600", // Keep color for styling
 
 
+<<<<<<< HEAD:src_backup/components/CategoriesSection.tsx
   },
 
 
 
+=======
+
+  },
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/CategoriesSection.tsx
   {
     id: "talents"
     name: t('categories.talents')
@@ -75,6 +93,7 @@ const getDefaultCategories = (t: any) => [
     link: "/equipment"
     color: "from-amber-500 to-orange-600"}
   {
+<<<<<<< HEAD:src_backup/components/CategoriesSection.tsx
 
 
     id: "innovation",
@@ -274,6 +293,12 @@ export function CategoriesSection({
   
 
 
+=======
+// Helper to get icon component from name
+const getIcon = (iconName?: string) => {
+  switch (iconName) {
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/CategoriesSection.tsx
 
   // Use fetchedCategories if provided, otherwise fallback to defaultCategories
   const displayCategories = fetchedCategories && fetchedCategories.length > 0
@@ -286,18 +311,28 @@ export function CategoriesSection({
         // Assign a default color or implement logic to assign colors
         color: defaultCategories.find(dc => dc.id === cat.id)?.color |"from-gray-500 to-gray-600"}))
     : defaultCategories.map(cat => ({
+<<<<<<< HEAD:src_backup/components/CategoriesSection.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/CategoriesSection.tsx
 
 
         ...cat,
         ...cat,
 
 
+<<<<<<< HEAD:src_backup/components/CategoriesSection.tsx
 
         title: cat.name,
         icon: getIcon(cat.iconName)})),
 
 const getDefaultCategories = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        title: cat.name,
+        icon: getIcon(cat.iconName)})),
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/CategoriesSection.tsx
   // If fetchedCategories is an empty array, and we want to show nothing:
   if (fetchedCategories && fetchedCategories.length === 0) {
     return (
@@ -419,6 +454,10 @@ export function CategoriesSection(): any ({showTitle = true;
           </p>;
 <<<<<<< HEAD:src_backup/components/CategoriesSection.tsx
           <p className="text-zion-slate-light text-md">;
+<<<<<<< HEAD:src_backup/components/CategoriesSection.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/CategoriesSection.tsx
             {t('home && home.no_categories_support')}
 
 
@@ -427,6 +466,7 @@ export function CategoriesSection(): any ({showTitle = true;
         </div>;
       </section>;
     );
+<<<<<<< HEAD:src_backup/components/CategoriesSection.tsx
 
 
 
@@ -461,6 +501,9 @@ export function CategoriesSection(): any ({showTitle = true;
               href={category.link || '#'}
 
 
+=======
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/CategoriesSection.tsx
               className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
             >
               <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 group-hover:border-zion-purple/50 group-focus:border-zion-purple/50 hover:translate-y-[-5px] group-hover:shadow-lg">
@@ -476,14 +519,22 @@ export function CategoriesSection(): any ({showTitle = true;
           ))}
 
 
+<<<<<<< HEAD:src_backup/components/CategoriesSection.tsx
         </div>;
 
 
 
+=======
+
+        </div>;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/CategoriesSection.tsx
         {/* Special services section with translations */}
         <div className="mt-8">
           <h3 className="text-center text-xl font-bold text-white mb-6">{t('home.featured_services')}</h3>
           <div className="flex flex-wrap justify-center gap-4">
+<<<<<<< HEAD:src_backup/components/CategoriesSection.tsx
 
 
             {getSpecialServices(t).map((service) => (
@@ -539,6 +590,14 @@ export function CategoriesSection(): any ({showTitle = true;
         </div>
         
 
+=======
+                className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
+              >
+                {service.title}
+              </Link>            ))}
+          </div>
+        </div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/CategoriesSection.tsx
 
 
         <div className="mt-12 flex justify-center">
@@ -549,7 +608,10 @@ export function CategoriesSection(): any ({showTitle = true;
             {t('home.view_all_categories')}
 
 
+<<<<<<< HEAD:src_backup/components/CategoriesSection.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/CategoriesSection.tsx
           </Link>
         </div>
       </div>
@@ -590,14 +652,20 @@ style;
 categories: fetchedCategories, //Rename prop for clarity ;
 }: CategoriesSectionProps) {;
   const {;
+<<<<<<< HEAD:src_backup/components/CategoriesSection.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/CategoriesSection.tsx
   t ;
 }= useTranslation ();
 const defaultCategories = getDefaultCategories (t);
 //Use fetchedCategories if provided, otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({;
+<<<<<<< HEAD:src_backup/components/CategoriesSection.tsx
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/CategoriesSection.tsx
   id: cat.id;"
 title: cat.name,  //Map name to title description: cat.description |"No description available."
 icon: getIcon (cat.iconName), //Get icon component link: cat.link |`/category/$ {
@@ -624,6 +692,10 @@ icon: getIcon (cat.iconName)
   t ('home.view all categories')
 }</Link> </div> </div> </section>)
 }'"}
+<<<<<<< HEAD:src_backup/components/CategoriesSection.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/CategoriesSection.tsx
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">;
           {displayCategories && displayCategories.map((category,) => (;
@@ -789,6 +861,7 @@ if ( {) {$2;
 }'"}
 }
 ;
+<<<<<<< HEAD:src_backup/components/CategoriesSection.tsx
 
   id: cat.id;";
 =======
@@ -816,3 +889,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
   t ('home.view all categories')}</Link> </div> </div> </section>)}'";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/CategoriesSection.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/CategoriesSection.tsx

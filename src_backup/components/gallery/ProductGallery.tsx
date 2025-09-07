@@ -1,6 +1,9 @@
 <<<<<<< HEAD:src_backup/components/gallery/ProductGallery.tsx
+<<<<<<< HEAD:src_backup/components/gallery/ProductGallery.tsx
 }
 });
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/gallery/ProductGallery.tsx
 
 import React, { useState, Suspense } from 'react';
 =======
@@ -38,7 +41,10 @@ const ModelViewer = React.lazy(async () => {
     default: (props: any) => React.createElement('model-viewer', props)
   }
 })
+<<<<<<< HEAD:src_backup/components/gallery/ProductGallery.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/gallery/ProductGallery.tsx
 interface ProductGalleryProps {
 
 const ReactPlayer = React && React.lazy(() => import('react-player'));
@@ -127,6 +133,7 @@ const ReactPlayer = React.lazy(() => import('react-player'))const ModelViewer = 
 <<<<<<< HEAD:src_backup/components/gallery/ProductGallery.tsx
                   alt='3d model'
                   camera-controls
+<<<<<<< HEAD:src_backup/components/gallery/ProductGallery.tsx
 =======
                   alt='3d model';
                   camera-controls;
@@ -221,6 +228,14 @@ function ProductGallery() {const [selected, set_selected] = useState (0)const [z
 
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+          <div
+            className={`w-full h-full overflow-auto ${zoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
+            onClick={() => setZoomed(!zoomed)}
+          >
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/gallery/ProductGallery.tsx
             <img
 =======
             </AspectRatio>;>;<img;
@@ -233,12 +248,42 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD:src_backup/components/gallery/ProductGallery.tsx
       )}
 
+<<<<<<< HEAD:src_backup/components/gallery/ProductGallery.tsx
 }
 }
 
 }
 
 
+=======
+    </Dialog>;
+  );
+
+    </Dialog>;
+  );
+};
+};
+
+import React, { useState, Suspense } from 'react',;
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogTrigger} from '@/components/ui/dialog',;
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',;
+import { AspectRatio } from '@/components/ui/aspect-ratio',;
+const ReactPlayer = React.lazy(() => import('react-player')),;
+const ModelViewer = React.lazy(async () => {;
+  await import('@google/model-viewer'),;
+  return {;
+    default: (props: any) => (;
+      React.createElement('model-viewer', props);
+    )}
+}),;
+interface ProductGalleryProps {;
+  images: string[],;
+  videoUrl?: string,;
+  modelUrl?: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/gallery/ProductGallery.tsx
           </TabsContent>)}
 =======
       )}</Dialog>;
@@ -262,6 +307,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD:src_backup/components/gallery/ProductGallery.tsx
     </Dialog>);
 }
+<<<<<<< HEAD:src_backup/components/gallery/ProductGallery.tsx
 
 ;
 
@@ -272,3 +318,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </Dialog>)}</Dialog>;
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/gallery/ProductGallery.tsx
+=======
+
+
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/gallery/ProductGallery.tsx

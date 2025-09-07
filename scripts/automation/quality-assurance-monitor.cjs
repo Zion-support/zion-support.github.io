@@ -81,7 +81,11 @@ if (require.main === module) {}
   monitor.run().catch(console.error)};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = QualityAssuranceMonitor;
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+module.exports = QualityAssuranceMonitor;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -27,6 +28,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import { ServiceVariant  } from '../types/service-variants';
 export interface AdvancedHealthcareBiotechService  {id: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+import { ServiceVariant } from '../types/service-variants';
+export interface AdvancedHealthcareBiotechService {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string;
   name: string;
   tagline: string;
@@ -57,6 +64,7 @@ export interface AdvancedHealthcareBiotechService  {id: string;
     email: string;
 <<<<<<< HEAD
     address: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -96,6 +104,10 @@ export interface AdvancedHealthcareBiotechService  {id: string;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     website: string
   },
   realImplementation: boolean;
@@ -475,6 +487,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
         'Advanced AI platform that accelerates drug discovery through molecular modeling, target identification, and predictive analytics, reducing development time and costs significantly.',
       features: [
         'AI-powered molecular modeling and simulation',
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -878,12 +891,18 @@ export interface AdvancedHealthcareBiotechService  {id: string,name: string,tagl
     email: string;
     address: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Target identification and validation',
         'Drug repurposing and optimization',
         'Predictive toxicity and efficacy analysis',
         'Clinical trial optimization',
+<<<<<<< HEAD
         'Real-time collaboration tools',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        'Real - time collaboration tools',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Integration with research databases',
         'Advanced analytics and reporting',
         'Mobile research app',
@@ -895,18 +914,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       icon: '🧬',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-        'Python, TensorFlow, PyTorch, React, Node && Node.js, Molecular dynamics, Bioinformatics',
-      ],
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       icon: '🧬',
       color: 'from-green-600 to-emerald-600',
       textColor: 'text-green-400',
@@ -923,6 +946,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Python, TensorFlow, PyTorch, React, Node.js, Molecular dynamics, Bioinformatics',
       ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -931,6 +955,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       integrations: [
         'PubChem, ChEMBL, PDB, Clinical trial databases, Research platforms',
       ],
@@ -939,6 +965,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ],
       roi: 'Pharma companies report 500% ROI through accelerated drug discovery and reduced development costs.',
       competitors: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -996,6 +1023,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1009,6 +1039,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       rating: 4 && 4.9,
       reviews: 12
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1043,6 +1074,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         'Whole genome sequencing and analysis',
         'AI - powered disease risk assessment',
+=======
+
+
+        'Whole genome sequencing and analysis',
+        'AI - powered disease risk assessment',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Schrödinger, Atomwise, Insilico Medicine, BenevolentAI, Exscientia',
       ],
       marketSize: '$45.8B AI drug discovery market',
@@ -1075,7 +1113,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       features: [
         'Whole genome sequencing and analysis',
         'AI-powered disease risk assessment',
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Personalized treatment recommendations',
         'Drug response prediction',
         'Clinical decision support',
@@ -1091,18 +1133,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       icon: '🧬',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-        'Python, TensorFlow, React, Node && Node.js, Bioinformatics tools, Cloud computing',
-      ],
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       icon: '🧬',
       color: 'from-blue-600 to-indigo-600',
       textColor: 'text-blue-400',
@@ -1119,6 +1165,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Python, TensorFlow, React, Node.js, Bioinformatics tools, Cloud computing',
       ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -1127,6 +1174,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       integrations: [
         'Epic, Cerner, Allscripts, Lab systems, Research databases',
       ],
@@ -1135,6 +1184,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ],
       roi: 'Healthcare providers report 300% ROI through improved patient outcomes and reduced treatment costs.',
       competitors: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1192,6 +1242,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1209,27 +1262,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-        'AI-powered image analysis and diagnosis',
-        'Multi-modality support (X-ray, MRI, CT, Ultrasound)',
-    // AI - Powered Medical Imaging Analysis;
-    {
-      id: 'ai - medical - imaging - analysis',
-      name: 'AI - Powered Medical Imaging Analysis Platform',
-      tagline: 'Advanced medical imaging analysis with AI and deep learning',
-      price: '$899',
-      period: '/month',
-      description:;
-        'Advanced AI platform that provides automated medical image analysis, diagnosis assistance, and clinical decision support for radiologists and healthcare providers.',
-      features: [;
-        'AI - powered image analysis and diagnosis',
-        'Multi - modality support (X - ray, MRI, CT, Ultrasound)',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1241,10 +1284,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Automated abnormality detection',
         'Clinical decision support tools',
         'Integration with PACS systems',
         'Real - time analysis and reporting',
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         '23andMe, AncestryDNA, Color Genomics, Invitae, Myriad Genetics',
       ],
       marketSize: '$78.6B precision medicine market',
@@ -1281,7 +1330,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Clinical decision support tools',
         'Integration with PACS systems',
         'Real-time analysis and reporting',
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Mobile imaging app',
         'API for healthcare systems',
         'Advanced analytics and insights',
@@ -1293,18 +1346,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       icon: '🩻',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-        'Python, TensorFlow, PyTorch, React, Node && Node.js, Medical imaging libraries',
-      ],
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       icon: '🩻',
       color: 'from-purple-600 to-pink-600',
       textColor: 'text-purple-400',
@@ -1321,6 +1378,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Python, TensorFlow, PyTorch, React, Node.js, Medical imaging libraries',
       ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -1329,10 +1387,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       integrations: [
         'PACS systems, DICOM, EHR systems, Medical devices, Cloud platforms',
       ],
       useCases: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1375,10 +1436,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Medical imaging analysis, Diagnosis assistance, Clinical decision support, Research collaboration, Quality assurance',
       ],
       roi: 'Healthcare providers report 400% ROI through improved diagnostic accuracy and workflow efficiency.',
       competitors: ['Aidoc, Zebra Medical, Arterys, Enlitic, Infervision'],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1409,6 +1475,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       roi: 'Healthcare providers report 400% ROI through improved diagnostic accuracy and workflow efficiency.',
       competitors: ['Aidoc, Zebra Medical, Arterys, Enlitic, Infervision'],
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1422,6 +1491,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       rating: 4 && 4.7,
       reviews: 34
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1458,10 +1528,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     {
       id: 'digital-health-telemedicine',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       name: 'Digital Health & Telemedicine Platform',
       tagline: 'Comprehensive digital health and telemedicine solutions',
       price: '$399',
       period: '/month',
+<<<<<<< HEAD
       description:
         'Integrated digital health platform that provides telemedicine, remote patient monitoring, health analytics, and patient engagement tools for modern healthcare delivery.',
       features: [
@@ -1475,18 +1550,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      description:;
+        'Integrated digital health platform that provides telemedicine, remote patient monitoring, health analytics, and patient engagement tools for modern healthcare delivery.',
+      features: [;
+        'High - quality video consultations',
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Remote patient monitoring',
         'Health data analytics and insights',
         'Patient engagement and education',
         'Integration with EHR systems',
         'Mobile health apps',
+<<<<<<< HEAD
         'AI-powered health recommendations',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        'AI - powered health recommendations',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Secure messaging and file sharing',
         'Billing and insurance integration',
         'API for healthcare applications'
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1498,12 +1586,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       icon: '🏥',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-        'React, Node && Node.js, WebRTC, Python, TensorFlow, PostgreSQL, Redis',
-      ],
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       icon: '🏥',
       color: 'from-teal-600 to-cyan-600',
       textColor: 'text-teal-400',
@@ -1520,6 +1611,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'React, Node.js, WebRTC, Python, TensorFlow, PostgreSQL, Redis',
       ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -1528,10 +1620,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       integrations: [
         'Epic, Cerner, Allscripts, Practice management systems, Insurance systems',
       ],
       useCases: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1589,6 +1684,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1606,25 +1704,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-        'AI-powered trial design optimization',
-    // Clinical Trial Management & Optimization;
-    {
-      id: 'clinical - trial - management - optimization',
-      name: 'Clinical Trial Management & Optimization Platform',
-      tagline: 'Streamline clinical trials with AI - powered optimization',
-      price: '$1, 999',
-      period: '/month',
-      description:;
-        'Advanced clinical trial platform that uses AI to optimize trial design, patient recruitment, data collection, and analysis for faster, more efficient clinical research.',
-      features: [;
-        'AI - powered trial design optimization',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1638,6 +1728,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         'Intelligent patient recruitment and matching',
         'Real - time data collection and monitoring',
+=======
+        'Intelligent patient recruitment and matching',
+        'Real - time data collection and monitoring',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Telemedicine consultations, Remote patient monitoring, Health analytics, Patient engagement, Chronic disease management',
       ],
       roi: 'Healthcare providers report 350% ROI through improved patient access and reduced operational costs.',
@@ -1673,7 +1768,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'AI-powered trial design optimization',
         'Intelligent patient recruitment and matching',
         'Real-time data collection and monitoring',
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Predictive analytics and insights',
         'Regulatory compliance management',
         'Site and investigator management',
@@ -1688,19 +1787,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       icon: '🔬',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-        'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Clinical trial software',
-      ],
-      integrations: ['EDC systems, CTMS, ePRO, eConsent, Regulatory databases'],
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       icon: '🔬',
       color: 'from-orange-600 to-red-600',
       textColor: 'text-orange-400',
@@ -1718,6 +1820,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       ],
       integrations: ['EDC systems, CTMS, ePRO, eConsent, Regulatory databases'],
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -1726,11 +1829,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       useCases: [
         'Clinical trial optimization, Patient recruitment, Data management, Regulatory compliance, Risk management',
       ],
       roi: 'Research organizations report 400% ROI through faster trial completion and improved data quality.',
       competitors: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1756,6 +1862,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       color: 'from - orange - 600 to - red - 600',
       text_color: 'text - orange - 400',
       link: 'https://ziontechgroup.com / clinical - trial - management - optimization',
@@ -1793,6 +1902,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Advanced clinical trial platform with AI - powered optimization, patient recruitment, and data management.',
       launch_date: '2024 - 11 - 01',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
         'Advanced clinical trial platform with AI-powered optimization, patient recruitment, and data management.',
@@ -1802,6 +1912,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       customers: 34,
       rating: 4 && 4.8,
       reviews: 19
@@ -1809,6 +1922,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     },;
   ];    features: [
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1827,6 +1941,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export interface AdvancedHealthcareBiotechService {
   id: string, name: string,
   tagline: string, price: string,
@@ -1848,6 +1966,7 @@ export interface AdvancedHealthcareBiotechService {
     website: string
   
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1915,6 +2034,11 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       realImplementation: true,
       implementationDetails:
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  ];    features: [
+      'AI-powered trial design optimizationIntelligent patient recruitment and matchingReal-time data collection and monitoringPredictive analytics and insightsRegulatory compliance managementSite and investigator managementRisk assessment and mitigationIntegration with EDC systems';
+      'Mobile data collection appAPI for research platforms'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Advanced clinical trial platform with AI-powered optimization, patient recruitment, and data management.',
       launchDate: '2024-11-01',
       customers: 34,
@@ -1922,12 +2046,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       reviews: 19,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
   ];    features: [
       'AI-powered trial design optimizationIntelligent patient recruitment and matchingReal-time data collection and monitoringPredictive analytics and insightsRegulatory compliance managementSite and investigator managementRisk assessment and mitigationIntegration with EDC systems';
       'Mobile data collection appAPI for research platforms'
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -1940,6 +2067,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'AI-powered trial design optimizationIntelligent patient recruitment and matchingReal-time data collection and monitoringPredictive analytics and insightsRegulatory compliance managementSite and investigator managementRisk assessment and mitigationIntegration with EDC systems';
       'Mobile data collection appAPI for research platforms'
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     ];
     popular: true, icon: '🧬',
     color: 'from-green-600 to-emerald-600', textColor: 'text-green-400',
@@ -1984,6 +2115,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -2010,10 +2142,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     integrations: ['EDC systems, CTMS, ePRO, eConsent, Regulatory databases'];
     useCases: ['Clinical trial optimization, Patient recruitment, Data management, Regulatory compliance, Risk management'];
     roi: 'Research organizations report 400% ROI through faster trial completion and improved data quality.'
     competitors: ['Medidata, Veeva Vault, Oracle Clinical, IBM Clinical Development, Parexel'];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2025,6 +2161,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedHealthcareBiotechService {;
   id: string,;
@@ -2286,6 +2426,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     launchDate: '2024-11-01',;
     customers: 34,;
     rating: 4.8;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2321,6 +2462,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    reviews: 19
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     real_implementation: true,
     implementation_details: 'Advanced clinical trial platform with AI - powered optimization, patient recruitment, and data management.',
@@ -2329,14 +2474,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 19;
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 ];
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   }
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -2349,6 +2497,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+];
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 import { ServiceVariant } from '../types/service-variants',;
 =======
@@ -2399,6 +2551,7 @@ export interface AdvancedHealthcareBiotechService {;
   rating: number,;
   reviews: number;
 }
+
 ;
 export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechService[] = [;
   // AI-Powered Drug Discovery Platform;
@@ -2620,6 +2773,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     customers: 34,;
     rating: 4.8;
     reviews: 19;
+<<<<<<< HEAD
 ];
   }
 <<<<<<< HEAD
@@ -2935,3 +3089,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+  }
+];
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

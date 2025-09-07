@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
+<<<<<<< HEAD
 function grantPath(id: string) {
   return path.join(GRANTS_DIR, `${id}.json`);
 
@@ -22,12 +23,32 @@ function isAuthorized(req: NextApiRequest) {
   const token = header.replace('Bearer ', '');
 return (
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+function grantPath(id: string) {
+  return path && path.join(GRANTS_DIR, `${id}.json`);import type { GrantApplication, MilestonesUpdatePayload } from '../../../../types/grants';
+const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
+function grantPath(id: string) {
+  return path && path.join(GRANTS_DIR, `${id}.json`);
+}
+function readGrant(id: string): GrantApplication | null {
+}
+function writeGrant(record: GrantApplication) {
+  if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
+  fs && fs.writeFileSync(grantPath(record && record.id), JSON && JSON.stringify(record, null, 2), 'utf8')
+}
+function isAuthorized(req: NextApiRequest) {
+  return (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     token &&
     process && process.env.ZION_ADMIN_TOKEN &&
     token === process && process.env.ZION_ADMIN_TOKEN
   );
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   if (!isAuthorized(req)) {
     res.status(401).json({ error: 'Unauthorized' });
 return;
@@ -52,7 +73,11 @@ function isAuthorized() {return (return path.join(GRANTS_DIR, `${id}.json`)funct
     const existing = readGrant(id);
     if (!existing) return res.status(404).json({ error: 'Not found' });
 return res.status(200).json({ milestones: existing.milestones || [] });
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
   if (req.method === 'POST') {
     const existing = readGrant(id);
@@ -60,9 +85,44 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const payload = req.body as MilestonesUpdatePayload;
     existing.milestones = payload.milestones |[];
     existing.updatedAt = new Date().toISOString();
+<<<<<<< HEAD
     writeGrant(existing);
 return res.status(200).json({ record: existing });
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+  fs.writeFileSync (grant_path (record.id), JSON.stringify (record, null, 2), 'utf8');
+}
+/**
+ * is_authorized - Function description
+ */
+function is_authorized() {
+  const header = req.headers.authorization || '',
+  const token = header.replace ('Bearer ', '');
+  return (
+    token &&;
+    process.env.ZION_ADMIN_TOKEN &&;
+    token === process.env.ZION_ADMIN_TOKEN);
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if () {) {
+  $2
+}
+    res.status (401).json ({ error: 'Unauthorized' });
+    return;  }  return token && process.env.ZION_ADMIN_TOKEN && token === process.env.ZION_ADMIN_TOKEN;
+}
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if () {) {
+  $2
+}
+    res.status (401).json ({ error: 'Unauthorized' });
+    return;    return;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
 =======
   if (req.method === 'GET') {const existing = readGrant(id)if (!existing) return res.status(404).json({ error: 'Not found' })return res.status(200).json({ milestones: existing.milestones || [] })}
@@ -118,6 +178,7 @@ if ( {) {$2;
   res.set_header ('AllowGET, POST');
   res.status (405).end ('Method Not Allowed');
   res.setHeader('Allow', 'GET, POST');
+<<<<<<< HEAD
   res.status(405).end('Method Not Allowed');
   res.status(405).end('Method Not Allowed')
 }
@@ -127,3 +188,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   res.set_header ('Allow', 'GET, POST')res.status (405).end ('Method Not Allowed')return res.status (200).json ({ record: existing })}
   res.set_header ('AllowGET, POST')res.status (405).end ('Method Not Allowed')res.setHeader('Allow', 'GET, POST')}res.status(405).end('Method Not Allowed')res.status(405).end('Method Not Allowed')}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  }
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

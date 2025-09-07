@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 ;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import React from 'react';
 import { motion   } from 'framer-motion';
 import { ArrowRight, Star, Users, TrendingUp, Zap, Shield, Globe, Rocket  } from 'lucide-react';
@@ -11,7 +15,11 @@ import { motion  } from 'framer-motion';
 import { ArrowRight, Star, Users, TrendingUp, Zap, Shield, Globe, Rocket } from 'lucide-react';
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   ArrowRight
   Star
   Users
@@ -36,6 +44,7 @@ interface ServiceCardProps  {service: {id: string;
     tagline: string;
     description: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
     category: string;
     price: {
       monthly: number;
@@ -59,6 +68,9 @@ interface ServiceCardProps  {service: {id: string;
 <<<<<<< HEAD
     useCases: string[];
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    category: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     integrations: string[];
 =======
     useCases: string[];integrations: string[];
@@ -69,10 +81,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     icon: string;
     color: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
     popular: boolean;
     launchDate: string;
 =======
     popular: boolean;return <Zap className='w-5 h-5' />;
+=======
+    popular: boolean;
+        return <Zap className='w-5 h-5' />;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       case 'quantum & emerging tech':;
         return <Rocket className='w-5 h-5' />;
       case 'enterprise it':;
@@ -87,6 +104,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       case 'space & metaverse':;
         return <Globe className="w-5 h-5" />;
       case 'micro saas':;
+<<<<<<< HEAD
         return <TrendingUp className="w-5 h-5" />;default:;
         return <Zap className='w-5 h-5' />;    }launchDate: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -97,6 +115,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
         return <Zap className='w-5 h-5' />;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        return <TrendingUp className="w-5 h-5" />;
+
+      default:
+
+
+        return <Zap className='w-5 h-5' />;    }
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
 
 
@@ -106,6 +133,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   const getGradientClass = (color: string) => {
     if (color.includes('from-') && color.includes('to-')) {
+<<<<<<< HEAD
 return color;
     }
     return 'from-cyan-500 to-blue-500';
@@ -119,10 +147,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
     >;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+  };
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       {/* Glow effect */}
       <div className='absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200'></div>;
       {/* Main card */}
       <div className='relative bg-gray-900/80 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full overflow-hidden'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Background pattern */}
         <div className='absolute inset-0 opacity-5'>
@@ -131,6 +166,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
 =======
         {/* Background pattern */}return 'from-cyan-500 to-blue-500';
+=======
+        {/* Background pattern */}
+    return 'from-cyan-500 to-blue-500'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
         <div className='absolute inset-0 opacity-5'>;
           <div className='absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-400'></div>;
@@ -159,6 +198,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div>;
                 <div className="flex items - center space - x-2">;
                   {getCategoryIcon (service.category)}
+<<<<<<< HEAD
                   <span className="text - xs font - medium text - gray - 400 uppercase tracking - wider">;<div className='absolute inset-0 opacity-5'>;
           <div className='absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-400'></div>;
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length:20px_20px]'></div>;
@@ -175,12 +215,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
                   <span className='text-xs font-medium text-gray-400 uppercase tracking-wider'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                  <span className="text - xs font - medium text - gray - 400 uppercase tracking - wider">;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                     {service.category}
                   </span>
                 </div>
               </div>
             </div>
 
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
             {service.popular && (
               <motion.div
@@ -253,6 +297,10 @@ transition={{ delay: 0.5, type: 'spring', stiffness: 200 }}
             <div className='text-center'>
               <div className='text-2xl font-bold text-cyan-400'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 {service.rating}
 
               </div>
@@ -290,9 +338,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='text - center'>;
               <div className='text - 2xl font - bold text - pink - 400'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 {service.reviews}
               </div>
               <div className='text-xs text-gray-400'>Reviews</div>
+=======
+                {service.reviews}
+            <div className="text-center">
+              <div className="text-2xl font-bold text-purple-400">{service.customers.toLocaleString()}</div>
+              <div className="text-xs text-gray-400">Customers</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-pink-400">{service.reviews}</div>
+              <div className="text-xs text-gray-400">Reviews</div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             </div>
           </div>
         </div>
@@ -343,6 +402,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         {/* Pricing */}
 <div className='relative z-10 mb-6'>;
@@ -375,21 +435,40 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         {/* Features preview */}
 <div className='relative z-10 mb-6'>
           <h4 className='text-sm font-semibold text-gray-300 mb-3'>
             Key Features
           </h4>
+<<<<<<< HEAD
           <div className='space-y-2'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+          <div className='space-y-2'>            {service.features.slice(0, 3).map((feature, idx) => (        <div className="relative z-10 mb-6">
+          <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Features</h4>
+          <div className="space-y-2">
+          <div className='space-y-2'>            {service.features.slice(0, 3).map((feature, idx) => (
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             {service.features.slice(0, 3).map((feature, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
+<<<<<<< HEAD
                 transition={{ delay: 0.6 + idx * 0.1 }}
 className='flex items-center space-x-2 text-sm'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+                transition={{ delay: 0.6 + idx * 0.1 }}
+className='flex items-center space-x-2 text-sm'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               >
                 <div className='w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full'></div>
                 <span className='text-gray-300'>{feature}</span>
@@ -476,12 +555,18 @@ className='flex items-center space-x-2 text-sm';
           </div>
         </div>
         {/* Benefits */}
+<<<<<<< HEAD
 <div className='relative z-10 mb-6'>
           <h4 className='text-sm font-semibold text-gray-300 mb-3'>
             Key Benefits
           </h4>
           <div className='space-y-2'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        <div className="relative z-10 mb-6">
+          <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Benefits</h4>
+          <div className="space-y-2">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             {service.benefits.slice(0, 2).map((benefit, idx) => (
               <motion.div
 =======
@@ -518,6 +603,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 animate={{ opacity: 1, coordinate_x: 0 }}
                 transition={{ delay: 0.8 + idx * 0.1 }}
         {/* Benefits */}
+<<<<<<< HEAD
         <div className='relative z-10 mb-6'>;
           <h4 className='text-sm font-semibold text-gray-300 mb-3'>;
             Key Benefits;
@@ -529,6 +615,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='space-y-2'>;
             {service.benefits.slice(0, 2).map((benefit, idx) => (<motion.div;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+        <div className='relative z-10 mb-6'>
+          <h4 className='text-sm font-semibold text-gray-300 mb-3'>
+            Key Benefits
+          </h4>
+            {service.benefits.slice(0, 2).map((benefit, idx) => (
+              <motion.div
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 key={idx}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -536,9 +630,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 className='flex items-center space-x-2 text-sm'
               >
+<<<<<<< HEAD
                 <div className='w-2 h-2 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full'></div>
                 <span className='text-gray-300'>{benefit}</span>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+                <div className='w-2 h-2 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full'></div>
+                <span className='text-gray-300'>{benefit}</span>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               </motion.div>
             ))}
 
@@ -551,6 +651,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Market info */}
 
         {service.marketSize && service.growthRate && (
+<<<<<<< HEAD
 <div className='relative z-10 mb-6'>
             <div className='bg-gray-800/30 rounded-lg p-3 border border-gray-600/20'>
               <div className='flex items-center justify-between text-xs'>
@@ -592,6 +693,18 @@ className='flex items-center space-x-2 text-sm';
                 </span>
               </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+          <div className="relative z-10 mb-6">
+            <div className="bg-gray-800/30 rounded-lg p-3 border border-gray-600/20">
+              <div className="flex items-center justify-between text-xs">
+                <span className="text-gray-400">Market Size</span>
+                <span className="text-cyan-400 font-medium">{service.marketSize}</span>
+              </div>
+              <div className="flex items-center justify-between text-xs mt-1">
+                <span className="text-gray-400">Growth Rate</span>
+                <span className="text-green-400 font-medium">{service.growthRate}</span>
+              </div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             </div>
           </div>
             ))}
@@ -630,14 +743,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         )}
         {/* CTA Button */}
 <div className='relative z-10'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        )}
+
+        {/* CTA Button */}
+<div className='relative z-10'>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           <motion.a
             href={service.link}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
 className='group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25'
           >
             <span className='relative z-10 flex items-center space-x-2'>
@@ -647,6 +768,15 @@ className='group/btn relative w-full inline-flex items-center justify-center px-
             {/* Button glow effect */}
             <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300'></div>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+            <span className="relative z-10 flex items-center space-x-2">
+              <span>Learn More</span>
+              <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200" />
+            </span>
+            {/* Button glow effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           </motion.a>
         </div>
         <div className='relative z-10'>          <motion&& motion.a
@@ -702,6 +832,7 @@ className='group/btn relative w-full inline-flex items-center justify-center px-
         <motion&& motion.div;
           initial={{ opacity: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
           whileHover={{ opacity: 1 }}
 className='absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-2xl pointer-events-none'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -711,6 +842,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 };
 
+=======
+          whileHover={{ opacity: 1 }}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export default UltraFuturisticServiceCardV2;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -783,6 +917,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
     </motion.div>)}export default UltraFuturisticServiceCardV2;        />;
       </div>;
+<<<<<<< HEAD
     </motion.div>)}export default UltraFuturisticServiceCardV2;className='absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-2xl pointer-events-none';
         />;
       </div>;
@@ -794,3 +929,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export default UltraFuturisticServiceCardV2;export default UltraFuturisticServiceCardV2;
 export default UltraFuturisticServiceCardV2;}}export default UltraFuturisticServiceCardV2;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </motion.div>);
+}
+;
+export default UltraFuturisticServiceCardV2;
+;
+
+
+
+        />
+      </div>
+    </motion.div>
+  );
+export default UltraFuturisticServiceCardV2;        />
+      </div>
+    </motion.div>
+  )
+}
+export default UltraFuturisticServiceCardV2;
+
+export default UltraFuturisticServiceCardV2;
+export default UltraFuturisticServiceCardV2;
+
+};
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

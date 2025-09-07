@@ -55,9 +55,13 @@
 <<<<<<< HEAD
     fixed = fixed.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n    
     // Fix merge conflicts by keeping the HEAD version
+<<<<<<< HEAD
 =======
 
     fixed = fixed.replace(/
+=======
+    fixed = fixed.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     
     // Fix common syntax patterns
     fixed = fixed.replace(/,\s*"/g, ',\n  "');

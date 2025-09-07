@@ -1,10 +1,30 @@
 <<<<<<< HEAD:src_backup/components/mobile-app/AppScreenshots.tsx
+<<<<<<< HEAD:src_backup/components/mobile-app/AppScreenshots.tsx
 if (scrollContainerRef.current) {
 
+=======
+// These would be replaced with actual screenshots
+const mockScreenshots = [
+  { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" },
+  { id: 2, alt: "Talent matching screen", src: "/placeholder.svg" },
+  { id: 3, alt: "Resume builder screen", src: "/placeholder.svg" },
+  { id: 4, alt: "Messaging screen", src: "/placeholder.svg" },
+  { id: 5, alt: "Profile screen", src: "/placeholder.svg" }],
+
+export const AppScreenshots: React.FC = () => {
+  const scrollContainerRef = useRef<HTMLDivElement>(null),
+
+  const scroll = (direction: "left" | "right") => {
+    if (scrollContainerRef.current) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/AppScreenshots.tsx
       const scrollAmount = 300
       scrollContainerRef.current.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount
         behavior: "smooth"})
+<<<<<<< HEAD:src_backup/components/mobile-app/AppScreenshots.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/AppScreenshots.tsx
 
 
 };
@@ -29,7 +49,10 @@ export const AppScreenshots: React.FC = () => {;
       scrollContainerRef && scrollContainerRef.current.scrollBy({;
         left: direction === "left" ? -scrollAmount : scrollAmount,;
         behavior: "smooth"});
+<<<<<<< HEAD:src_backup/components/mobile-app/AppScreenshots.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/AppScreenshots.tsx
     }
 =======
 
@@ -67,6 +90,7 @@ const mockScreenshots = [;
 
         
 
+<<<<<<< HEAD:src_backup/components/mobile-app/AppScreenshots.tsx
 
         <div className="relative">
           <Button
@@ -77,17 +101,35 @@ const mockScreenshots = [;
             onClick={() => scroll("left")}
 
 
+=======
+  return (
+    <section className="py-16 bg-zion-blue-dark">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">App Screenshots</h2>
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+            Take a visual tour through the Zion app's intuitive interface.
+          </p>
+        </div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/AppScreenshots.tsx
             aria-label="Scroll left"
           >
             <ChevronLeft className="h-6 w-6" />
           </Button>
+<<<<<<< HEAD:src_backup/components/mobile-app/AppScreenshots.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/AppScreenshots.tsx
 
             aria-label="Scroll left";
           >;
             <ChevronLeft className="h-6 w-6" />;
           </Button>;
 
+<<<<<<< HEAD:src_backup/components/mobile-app/AppScreenshots.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/AppScreenshots.tsx
           <div
             ref = {scrollContainerRef,}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
@@ -119,6 +161,7 @@ const mockScreenshots = [;
                 />
               </div>
             ))}
+<<<<<<< HEAD:src_backup/components/mobile-app/AppScreenshots.tsx
 
           </div>;
 
@@ -126,6 +169,8 @@ const mockScreenshots = [;
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/AppScreenshots.tsx
           
           <div 
 =======
@@ -153,17 +198,26 @@ const mockScreenshots = [;
 <<<<<<< HEAD:src_backup/components/mobile-app/AppScreenshots.tsx
           </div>
 
+<<<<<<< HEAD:src_backup/components/mobile-app/AppScreenshots.tsx
           
 
 
+=======
+
+          
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/AppScreenshots.tsx
           <Button
             variant="ghost"
             size="icon"
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white"
+<<<<<<< HEAD:src_backup/components/mobile-app/AppScreenshots.tsx
 
             onClick={() => scroll("right")}
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/AppScreenshots.tsx
             aria-label="Scroll right"
           >
             <ChevronRight className="h-6 w-6" />
@@ -171,6 +225,7 @@ const mockScreenshots = [;
         </div>
       </div>
     </section>
+<<<<<<< HEAD:src_backup/components/mobile-app/AppScreenshots.tsx
 
 
             aria-label="Scroll right";
@@ -189,6 +244,13 @@ const mockScreenshots = [;
       </div>;
     </section>;
 },import React, { useRef } from "react",import { Button } from "@/components/ui/button",// These would be replaced with actual screenshots;
+=======
+},
+import React, { useRef } from "react",;
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { Button } from "@/components/ui/button",;
+// These would be replaced with actual screenshots;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/AppScreenshots.tsx
 const mockScreenshots = [;
   { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" },{ id: 2, alt: "Talent matching screen", src: "/placeholder.svg" },{ id: 3, alt: "Resume builder screen", src: "/placeholder.svg" },{ id: 4, alt: "Messaging screen", src: "/placeholder.svg" },{ id: 5, alt: "Profile screen", src: "/placeholder.svg" }],export const AppScreenshots: React.FC = () => {const scrollContainerRef = useRef<HTMLDivElement>(null),const scroll = (direction: "left" | "right") => {if (scrollContainerRef.current) {const scrollAmount = 300,scrollContainerRef.current.scrollBy({left: direction === "left" ? -scrollAmount : scrollAmount,behavior: "smooth"})}
   }return (<section className="py-16 bg-zion-blue-dark">;
@@ -206,7 +268,12 @@ const mockScreenshots = [;
           </div>;
           <Button;
             variant="ghost";
+<<<<<<< HEAD:src_backup/components/mobile-app/AppScreenshots.tsx
             size="icon";aria-label="Scroll right";
+=======
+            size="icon";
+            aria-label="Scroll right";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/AppScreenshots.tsx
           >;
             <ChevronRight className="h-6 w-6" />;
           </Button>;
@@ -284,9 +351,12 @@ import { Button } from "@/components/ui/button";
   );
 };
 '"
+<<<<<<< HEAD:src_backup/components/mobile-app/AppScreenshots.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     </section>)}
 '"}}))// These would be replaced with actual screenshots;
   )}'";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/mobile-app/AppScreenshots.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/AppScreenshots.tsx

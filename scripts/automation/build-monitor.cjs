@@ -49,12 +49,18 @@ setupSignalHandlers() {}
     const timestamp = new Date().toISOString();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
     console.log(message);
     
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
+    console.log(message);
+    
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     const logFile = path.join(this.logDir, 'build-monitor.log');
     fs.appendFileSync(logFile, message + '\n')};
   async runCommand(command, options = {}) {}
@@ -262,7 +268,11 @@ monitor.start().catch(error => {})
   process.exit(1)}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 });
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+});
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

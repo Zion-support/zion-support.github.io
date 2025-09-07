@@ -1,8 +1,12 @@
 
 <<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 =======
 ;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ai-enhancement/AIEnhancementPanel.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ai-enhancement/AIEnhancementPanel.tsx
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter   } from '@/components/ui/card';
 import { Textarea   } from '@/components/ui/textarea';
@@ -39,6 +43,7 @@ import { Sparkles, Loader2, Copy, Check } from 'lucide-react'
   useAIContentEnhancer
   AIEnhancementOptions
 } from '@/hooks/useAIContentEnhancer'
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface AIEnhancementPanelProps {
 import React, { useState } from 'react';
@@ -61,11 +66,16 @@ import {;
 
 interface AIEnhancementPanelProps {;
 
+=======
+
+interface AIEnhancementPanelProps {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ai-enhancement/AIEnhancementPanel.tsx
   title: string;
   defaultOptions: AIEnhancementOptions;
   onApply: (content: string) => void;
   onClose?: () => void;
   showInstructions?: boolean;
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 
 import React, { useState } from 'react';
 import {
@@ -132,11 +142,29 @@ if ( {) {$2;
   initialContent?: string;
 export function AIEnhancementPanel(): any ({;
 
+=======
+import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Sparkles, Loader2, Copy, Check } from 'lucide-react';
+import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;
+interface AIEnhancementPanelProps {;
+  title: string,;
+  defaultOptions: AIEnhancementOptions,;
+  onApply: (content: string) => void,;
+  onClose?: () => void,;
+  showInstructions?: boolean,;
+  initialContent?: string;
+}
+;
+export function AIEnhancementPanel({;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ai-enhancement/AIEnhancementPanel.tsx
   title,;
   defaultOptions,;
   onApply,;
   onClose,;
   showInstructions = true,;
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
   initialContent = '',;
 }: AIEnhancementPanelProps) {;
   const [options, setOptions] = useState<AIEnhancementOptions>({;
@@ -176,12 +204,15 @@ export function AIEnhancementPanel(): any ({title,defaultOptions,onApply,onClose
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ai-enhancement/AIEnhancementPanel.tsx
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     field: keyof AIEnhancementOptions
   ) => {
     setOptions({
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 
       ...options,
 
@@ -189,6 +220,40 @@ export function AIEnhancementPanel(): any ({title,defaultOptions,onApply,onClose
 
 
 
+=======
+    })
+  }
+  const handleApply = () => {
+    onApply(generatedContent)
+    if (onClose) onClose()
+  }
+  const handleCopy = () => {
+    navigator.clipboard.writeText(generatedContent)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
+
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(generatedContent),
+    setCopied(true),
+    setTimeout(() => setCopied(false), 2000)
+      [field]: e.target.value})
+  },
+
+  const handleApply = () => {
+    onApply(generatedContent),
+    if (onClose) onClose()
+  },
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(generatedContent),
+    setCopied(true),
+    setTimeout(() => setCopied(false), 2000)
+  },
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ai-enhancement/AIEnhancementPanel.tsx
   initialContent?: string
 export function AIEnhancementPanel({
   title;
@@ -196,7 +261,10 @@ export function AIEnhancementPanel({
   onApply;
   onClose;
   showInstructions;
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ai-enhancement/AIEnhancementPanel.tsx
   return (
     <Card className="w-full max-w-2xl mx-auto">
       <CardHeader>
@@ -228,6 +296,10 @@ export function AIEnhancementPanel({title;
           <Textarea
 
 
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ai-enhancement/AIEnhancementPanel.tsx
             placeholder="Enter your content to enhance..."
             className="min-h-[100px]"
 =======
@@ -264,12 +336,15 @@ export function AIEnhancementPanel({title;
         )}
 
         {/* Generate button */}
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
         <Button 
           onClick={handleGenerate} 
           className="w-full" 
           disabled={isEnhancing || !options.content && !options.context}
         >
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ai-enhancement/AIEnhancementPanel.tsx
 
 
 
@@ -285,6 +360,10 @@ export function AIEnhancementPanel({title;
             </>
           )}
         </Button>
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ai-enhancement/AIEnhancementPanel.tsx
           disabled={isEnhancing || (!options && options.content && !options && options.context)}>;
           {isEnhancing ? (;
             <>;
@@ -326,7 +405,10 @@ export function AIEnhancementPanel({title;
               >
 
 
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ai-enhancement/AIEnhancementPanel.tsx
                 {copied ? (
                   <><Check className="h-4 w-4 mr-1" /> Copied</>
                 ) : (
@@ -356,16 +438,23 @@ export function AIEnhancementPanel({title;
         )}
 
 
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
       
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ai-enhancement/AIEnhancementPanel.tsx
       {generatedContent && (
         <CardFooter className='flex justify-between'>
           {onClose && (
             <Button variant='outline' onClick={onClose}>
               Cancel
             </Button>
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ai-enhancement/AIEnhancementPanel.tsx
       </CardContent>;
 
       {generatedContent && (;
@@ -378,7 +467,10 @@ export function AIEnhancementPanel({title;
 
     </Card>;
   );
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ai-enhancement/AIEnhancementPanel.tsx
 }
 
     <Card className='w - full max - w-2xl mx - auto'>;
@@ -484,6 +576,7 @@ export function AIEnhancementPanel({title;
         </CardFooter>;
 <<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
       )}
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 ;
 
     </Card>
@@ -494,3 +587,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )}</Card>;
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ai-enhancement/AIEnhancementPanel.tsx
+=======
+    </Card>;
+  );
+}
+
+
+    </Card>
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ai-enhancement/AIEnhancementPanel.tsx

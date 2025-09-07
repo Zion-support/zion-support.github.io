@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -24,6 +25,8 @@ export const TALENT_PROFILES  = [;{];id: '1', slug: 'sample-talent',name: 'Sampl
   }
 ];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 // Stub talent data - placeholder for missing functionality
 
 export const TALENT_PROFILES = [
@@ -31,6 +34,7 @@ export const TALENT_PROFILES = [
   {
     id: '1',
     slug: 'sample - talent',
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -38,6 +42,12 @@ export const TALENT_PROFILES = [
 id: '1',
     slug: 'sample-talent',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+// Stub talent data - placeholder for missing functionality
+id: '1',
+    slug: 'sample-talent',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     name: 'Sample Talent',
     title: 'Full Stack Developer',
     category: 'Development',
@@ -46,6 +56,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     region: 'Global',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     skills: ['React', 'Node && Node.js', 'TypeScript'],
     summary: 'Experienced developer with expertise in modern web technologies.',
     bio: 'Passionate about creating innovative solutions.',
@@ -64,6 +77,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -75,11 +89,14 @@ export const TALENT_PROFILES = [;
   {
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
     id: '1', slug: 'sample-talent',
     name: 'Sample Talent', title: 'Full Stack Developer',
     category: 'Development', location: 'Remote',
@@ -108,6 +125,11 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     skills: ['React', 'Node.js', 'TypeScript'],
     summary: 'Experienced developer with expertise in modern web technologies.',
     bio: 'Passionate about creating innovative solutions.',
@@ -126,6 +148,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -137,3 +160,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

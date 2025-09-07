@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28,6 +29,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -95,6 +103,7 @@ class ImprovedMasterAutomationOrchestrator {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -127,6 +136,17 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -187,6 +207,7 @@ const { execSync, spawn } = require('child_process')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -211,6 +232,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       };
       return this.results.buildTest;
     }
@@ -268,6 +296,7 @@ module.exports = ImprovedMasterAutomationOrchestrator;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -300,6 +329,17 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     this.log('\n AUTOMATION REPORT', 'PHASE')
     this.log('=')
     console.log('\n� Phase Results:')
@@ -313,24 +353,16 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-      this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)
-      this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)
-      this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
-<<<<<<< HEAD
-      this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)
       this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)
+      this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)
+
+      this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)
+      this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -369,3 +401,16 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

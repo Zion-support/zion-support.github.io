@@ -1,12 +1,20 @@
 #!/usr/bin/env node;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       log(❌ Error processing directory ${currentPath}: ${error.message}", ""red""),"}
   }
   processDirectory(dirPath)
@@ -44,11 +52,16 @@ if (require.main === module) {;
 module.exports = { fixFile, scanAndFixDirectory }}}}}}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")

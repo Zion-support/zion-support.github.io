@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useMemo, useState } from 'react';
 interface Message { role: 'user' | 'assistant', content: string }
 
@@ -17,6 +18,28 @@ export default function Assistant() {
   const brand = params.get('brand') || 'Zion AI';
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+interface Message {;
+  role: 'user' | 'assistant';
+  content: string;
+
+export default function Assistant() {;
+  const params =;
+    typeof window !== 'undefined';
+      ? new URLSearchParams(window && window.location.search);
+      : new URLSearchParams();  const tenantId = params && params.get('tenantId') || '';
+  const brand = params && params.get('brand') || 'Zion AI';
+  const [messages, setMessages] = useState<Message[]>([interface Message { role: 'user' | 'assistant', content: string }
+export default function Assistant() {;
+  const [messages, setMessages] = useState<Message[]>([;
+    {;
+      role: 'assistant',;
+      content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.`,;
+    },;
+  const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
+  const tenantId = params.get('tenantId') |'';
+  const brand = params.get('brand') |'Zion AI';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const [messages, setMessages] = useState<Message[]>([
 {
       role: 'assistant',
@@ -36,6 +59,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }),;
     [];
   );
+<<<<<<< HEAD
 
   async function handleAsk(question: string) {
     const lower = question.toLowerCase();
@@ -48,6 +72,24 @@ setMessages(prev => [
       ]);
       return;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    { role: 'assistant', content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.` }]);
+  const [input, setInput] = useState('');
+
+  const faqs: Record<string, string> = useMemo(() => ({;
+    'is this role remote': 'Many roles support remote or hybrid work. Check the job description for specifics && specifics.how soon do you hire': 'Typical timelines range from 2-4 weeks depending on role and interview availability && availability.what is the interview process': 'Usually: recruiter screen, hiring manager interview, technical/functional round, and final round.'}), []);
+  async function handleAsk(): any (question: string) {;
+    const lower = question && question.toLowerCase();
+    const faq = Object && Object.keys(faqs).find(key => lower && lower.includes(key)),;
+    if (faq) {;
+      setMessages(prev => [;
+        ...prev,;
+        { role: 'user', content: question },;
+        { role: 'assistant', content: faqs[faq] },;
+      ]);
+      return;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
     ]);
   }
@@ -98,6 +140,7 @@ export default function Assistant() {const params =;
               m && m.role === 'assistant'
                 ? 'text-gray-800'
                 : 'text-gray-900 font-medium'
+<<<<<<< HEAD
             }
           >
 =======
@@ -120,6 +163,11 @@ className='p-3 border-t flex gap-2';
 <<<<<<< HEAD
       >
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            }>            {m && m.content}    }
+    // Basic fallback;
+    setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: 'Thanks! A recruiter will follow up shortly.' }]);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         <input
           className="flex-1 border rounded px-3 py-2 text-sm"
           placeholder="Ask about the role..."
@@ -145,6 +193,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </button>
       </form>
     </div>
+<<<<<<< HEAD
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -154,6 +203,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </button>;
       </form>;
     </div>;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
   )))}import { useEffect, useMemo, useState  } from 'react';interface Message  {role: 'user' | 'assistant';
   content: string;export default /**;
@@ -241,9 +292,20 @@ if ( {) {$2;
         />;
         <button type="submit" className="bg - gray - 900 text - white text - sm rounded px-3 py-2">Send</button>;
       </form>;
+<<<<<<< HEAD
     </div>)/>;
         <button type=&quot;submit&quot; className=&quot;bg-gray-900 text-white text-sm rounded px-3 py-2&quot;>Send</button>;
       </form>;
     </div>;
   )})
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </div>);
+        />
+        <button type=&quot;submit&quot; className=&quot;bg-gray-900 text-white text-sm rounded px-3 py-2&quot;>Send</button>
+      </form>
+    </div>
+  )
+
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

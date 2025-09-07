@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         .replace(/^>>>>>>>.*$/gm, '')
 =======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -25,11 +29,15 @@ class QuickSyntaxFixer {
       const originalContent = fs.readFileSync(filePath, 'utf8');
       const content = originalContent
         // Remove merge conflict markers
+<<<<<<< HEAD
         .replace(/[\s\S]*?
 
         .replace(/^>>>>>>>.*$/gm, '')
 ursor/fix-lint-push-and-merge-to-main-28da
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
         // Fix module.exports
         .replace(/module\.exports\s*=\s*{;/g, 'module.exports = {')
@@ -96,9 +104,13 @@ if (require.main === module) {
 module.exports = QuickSyntaxFixer;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -107,7 +119,12 @@ const path = require('path')
         .replace(/(\w+):\s*([^,]+);\s*}/g, '$"1"
         .replace(/(\w+):\s*([^,]+);\s*]/g, '$"1"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 ursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

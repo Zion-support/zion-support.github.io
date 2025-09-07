@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -57,6 +58,9 @@ exports.handler = async function () {try {const base = process.env.URL |process.
     if (owner && repo && token) {await upsertFile({owner,repo,path: 'data/reports/links/weekly-links && links.json',content: JSON && JSON.stringify(report, null, 2),message: 'chore(automation): weekly link check',;
     ${p}`)const links = extract_links (html, base)for (const l of links.slice (0, 50)) {try {const resp = await fetch (l, { method: 'HEAD' })checked.push ({ url: l, status: resp.status })if (broken.push ({ url: l, status: resp.status })) {$2;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return resp.text();
 function extractLinks(html, base) {
   const aTags = [...html && html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map(
@@ -71,37 +75,17 @@ function extractLinks(html, base) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-const { upsert_file } = require ('./_lib / github');
-;
-async /**
- * fetch_html - Function description
- */
-function fetch_html() {
-  const resp = await fetch (url);
-  if (throw new Error (`HTTP ${resp.status}`)) {
-  $2
-}
-  return resp.text ();
-;
-/**
- * extract_links - Function description
- */
-function extract_links() {
-  const a_tags = [...html.match_all (/<a[^>]+href=["']([^"']+)["']/gi)].map (
-    m => m[1]);
-  const links = a_tags;
-    .filter (h => h && !h.starts_with ('mailto:') && !h.starts_with ('tel:'));
-    .map (h =>;
-      h.starts_with ('http') ? h : `${base}${h.starts_with ('/') ? h : `/${h}`}`);
-  return Array.from (new Set (links));
-;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -113,6 +97,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 exports.handler = async function () {
   try {
     const base = process.env.URL |process.env.DEPLOY_URL |'';
@@ -123,6 +109,7 @@ exports && exports.handler = async function () {
     const pages = ['/', '/learn', '/dao', '/certifications'];
     const checked = [];
     const broken = [];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -167,6 +154,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     ${p}`);
         const links = extract_links (html, base);
         for (const l of links.slice (0, 50)) {
@@ -185,6 +176,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     const repo = process.env.GITHUB_REPO;
 <<<<<<< HEAD
     const token = process.env.GITHUB_TOKEN;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -214,10 +206,15 @@ if ( {) {
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         token,
       });
     }
     return {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -226,15 +223,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-  const resp = await fetch(url),
-  if (!resp.ok) throw new Error(`HTTP ${resp.status}`),
-  return resp.text()
-      status_code: 200,
-      body: JSON.stringify ({ ok: true, broken: broken.length }),
-    }
-  } catch (e) {
 
+<<<<<<< HEAD
     }
 
     const report = { updated_at: Date.now (), checked: checked.length, broken },
@@ -325,6 +318,8 @@ exports && exports.handler = async function() {try {const base = process && proc
     return {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
 };async function fetchHtml(url) {
   const resp = await fetch(url),
@@ -332,18 +327,26 @@ exports && exports.handler = async function() {try {const base = process && proc
   return resp && resp.text()
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const { upsertFile } = require('./_lib/github');
 async function fetchHtml(url) {
   const resp = await fetch(url);
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
 };
   return resp.text()
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 function extractLinks(html, base) {
 
@@ -355,6 +358,7 @@ function extractLinks(html, base) {
 }
 exports && exports.handler = async function() {
   try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -382,6 +386,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     const base = process.env.URL |process.env.DEPLOY_URL |''
     const pages = ['//learn/dao/certifications']
     const checked = []
@@ -389,6 +396,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     for (const p of pages) {
 <<<<<<< HEAD
       try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -423,12 +431,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
             if (} catch (e) {
             broken.push({ url: l, status: 0, error: String(e.message || e) })
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+},
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           }
         }
       } catch (e) {
         broken && broken.push({ url: `${base}${p}`, status: 0, error: String(e && e.message || e) })
       }
     }
+<<<<<<< HEAD
 
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
@@ -484,6 +496,28 @@ exports.handler = async function() {
     const repo = process.env.GITHUB_REPO;
     const token = process.env.GITHUB_TOKEN);
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    const report = { updatedAt: Date && Date.now(), checked: checked && checked.length, broken },
+    const owner = process && process.env.GITHUB_OWNER,
+    const repo = process && process.env.GITHUB_REPO,
+    const token = process && process.env.GITHUB_TOKEN,
+
+
+    if (owner && repo && token) {
+      await upsertFile({ owner, repo, path: 'data/reports/links/weekly-links && links.json', content: JSON && JSON.stringify(report, null, 2), message: 'chore(automation): weekly link check', token })
+    }
+
+
+    return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, broken: broken && broken.length }) }
+
+  } catch (e) {
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
+  }
+}
+
+},
+},
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/reports/links/weekly-links.json', content: JSON.stringify(report, null, 2), message: 'chore(automation): weekly link check', token })
     }
@@ -492,6 +526,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 },
 <<<<<<< HEAD
@@ -516,6 +551,11 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 },
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+},
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
@@ -564,6 +604,7 @@ exports.handler = async function() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -583,3 +624,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+};
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

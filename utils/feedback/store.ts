@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
@@ -22,6 +23,10 @@ export type FeedbackRecord = {id: string;
 
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 export interface FeedbackRecord {;
 
@@ -33,22 +38,29 @@ export type FeedbackRecord = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-export interface FeedbackRecord {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import fs from 'fs';
 import path from 'path';
 
 export type FeedbackRecord = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -58,10 +70,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string;
   type: string;
   message: string;
   rating: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -74,11 +90,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   comment?: string;
   kind: 'general' | 'bug' | 'feature';
   context?: { actionType?: string; metadata?: any };
 };
 
+<<<<<<< HEAD
 
 export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<void> {;
   feedbackData.push(feedback);
@@ -94,6 +113,25 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+const DATA_DIR = path && path.join(process && process.cwd(), 'data', 'runtime');
+const DB_PATH = path && path.join(DATA_DIR, 'feedback && feedback.json');
+
+function ensureDataFile(): void {
+  if (!fs && fs.existsSync(DATA_DIR)) fs && fs.mkdirSync(DATA_DIR, { recursive: true });
+  if (!fs && fs.existsSync(DB_PATH))
+    fs && fs.writeFileSync(DB_PATH, JSON && JSON.stringify({ items: [] }, null, 2), 'utf-8');
+
+export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
+  ensureDataFile();
+  const raw = fs && fs.readFileSync(DB_PATH, 'utf-8');
+  const data = JSON && JSON.parse(raw || '{}');
+  const items: FeedbackRecord[] = Array && Array.isArray(data && data.items) ? data && data.items : [];
+  items && items.push(rec);
+  fs && fs.writeFileSync(DB_PATH, JSON && JSON.stringify({ items }, null, 2), 'utf-8');
+  return rec;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 
 export interface FeedbackStats {
@@ -116,6 +154,7 @@ export interface FeedbackStats {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -134,6 +173,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   metadata: Record < string, any>;
   created_at: string;
   ip: string;
@@ -145,11 +188,16 @@ ursor/automate-test-improve-and-merge-code-646c;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export function getAllFeedback (): FeedbackRecord[] {return [...feedback_data];
 }const DATA_DIR = path.join(process.cwd(), 'data', 'runtime')const DB_PATH  = path.join(DATA_DIR, 'feedback.json')function ensureDataFile(): void {if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true })if (!fs.existsSync(DB_PATH))fs.writeFileSync(DB_PATH, JSON.stringify({ items: [] }, null, 2), 'utf-8')export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {ensureDataFile()const raw = fs.readFileSync(DB_PATH, 'utf-8')const data = JSON.parse(raw || '{}')const items: FeedbackRecord[] = Array.isArray(data.items) ? data.items : [];
   items.push(rec)fs.writeFileSync(DB_PATH, JSON.stringify({ items }, null, 2), 'utf-8')return rec;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 const feedbackData: FeedbackRecord[] = [];
 
@@ -158,6 +206,7 @@ export async function saveFeedbackFallback(
 ): Promise<void> {
   feedbackData.push(feedback);
   console.log("Feedback saved:", feedback.id);
+<<<<<<< HEAD
 =======
 const feedback_data: FeedbackRecord[] = [];
 ;
@@ -168,16 +217,24 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 
 export function writeAll(rows: any[]): void {
   console.log("Writing feedback rows:", rows.length);
   // Implementation would write to database or file
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 export function getAllFeedback(): FeedbackRecord[] {
   return [...feedbackData];
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -191,6 +248,10 @@ export function getAllFeedback (): FeedbackRecord[] {
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 const DATA_DIR = path.join(process.cwd(), 'data', 'runtime');
 const DB_PATH = path.join(DATA_DIR, 'feedback.json');
@@ -209,6 +270,7 @@ export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
   fs.writeFileSync(DB_PATH, JSON.stringify({ items }, null, 2), 'utf-8');
   return rec;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -217,3 +279,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

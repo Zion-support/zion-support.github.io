@@ -1,4 +1,5 @@
 <<<<<<< HEAD:src_backup/components/support/HelpCenter.tsx
+<<<<<<< HEAD:src_backup/components/support/HelpCenter.tsx
 import React, { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -10,6 +11,9 @@ import { HELP_CATEGORIES } from './help-content';
 import { Search } from 'lucide-react';
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import { Search } from 'lucide-react'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/support/HelpCenter.tsx
 export default function HelpCenter() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null)
@@ -41,6 +45,7 @@ function HelpCenter() {
     setSelectedArticle(articleId)
   }
 
+<<<<<<< HEAD:src_backup/components/support/HelpCenter.tsx
 export default function HelpCenter() {;
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null),;
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null),;
@@ -51,6 +56,113 @@ export default function HelpCenter() {
   const [searchQuery, setSearchQuery] = useState("");
   const handleCategorySelect = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+export default /**
+ * HelpCenter - Function description
+ */
+function HelpCenter() {
+  const [selected_category, setSelectedCategory] = useState < string | null>(null),
+  const [selected_article, setSelectedArticle] = useState < string | null>(null),
+  const [search_query, setSearchQuery] = useState (""),
+  const handleCategorySelect = (category_id: string, ) =>: any {
+    setSelectedCategory (category_id),
+    setSelectedArticle (null);
+  },
+  const handleArticleSelect = (article_id: string, ) =>: any {
+    setSelectedArticle (article_id);
+  },
+  const handleBackToCategories = () =>: any {
+    setSelectedCategory (null);
+    setSelectedArticle (null);
+
+  }
+  const handleBackToArticles = () =>: any {
+    setSelectedArticle (null);
+  }
+
+
+
+  return (
+
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { HelpCategoryList } from './HelpCategoryList';
+import { HelpArticleList } from './HelpArticleList';
+import { HelpArticleView } from './HelpArticleView';
+import { HELP_CATEGORIES } from './help-content';
+
+          
+          <div className="relative mb-8">
+            <Input
+              placeholder="Search for help articles..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="pl-10"
+            />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+          </div>
+          
+          <Tabs defaultValue="articles" className="mb-8">
+            <TabsList className="w-full grid grid-cols-3 mb-6">
+              <TabsTrigger value="articles">Articles</TabsTrigger>
+              <TabsTrigger value="faq">FAQ</TabsTrigger>
+              <TabsTrigger value="contact">Contact Us</TabsTrigger>
+            </TabsList>
+            
+            <TabsContent value="articles">
+              {!selectedCategory && !selectedArticle && (
+                <HelpCategoryList 
+                  categories={HELP_CATEGORIES} 
+import React, { useState } from "react",;
+import { Input } from "@/components/ui/input",;
+import { Button } from "@/components/ui/button",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { HelpCategoryList } from "./HelpCategoryList",;
+import { HelpArticleList } from "./HelpArticleList",;
+import { HelpArticleView } from "./HelpArticleView",;
+import { HELP_CATEGORIES } from "./help-content",;
+import { Search } from 'lucide-react';
+
+export default function HelpCenter() {;
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const handleCategorySelect = (categoryId: string) => {;
+    setSelectedCategory(categoryId);
+    setSelectedArticle(null);
+  };
+
+  const handleArticleSelect = (articleId: string) => {;
+    setSelectedArticle(articleId);
+  };
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/support/HelpCenter.tsx
   return (
     <>;
 =======
@@ -108,6 +220,10 @@ function HelpCenter() {const [selected_category, setSelectedCategory] = useState
             Find answers to common questions or get in touch with our support;
 <<<<<<< HEAD:src_backup/components/support/HelpCenter.tsx
             team.;
+<<<<<<< HEAD:src_backup/components/support/HelpCenter.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/support/HelpCenter.tsx
   const handleCategorySelect = (categoryId: string) => {;
     setSelectedCategory(categoryId),;
     setSelectedArticle(null);
@@ -135,7 +251,10 @@ function HelpCenter() {const [selected_category, setSelectedCategory] = useState
           <p className="text-zion-slate-light mb-6">;
 <<<<<<< HEAD:src_backup/components/support/HelpCenter.tsx
             Find answers to common questions or get in touch with our support team.;
+<<<<<<< HEAD:src_backup/components/support/HelpCenter.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/support/HelpCenter.tsx
           </p>;
 
           <div className='relative mb-8'>;
@@ -236,10 +355,21 @@ function HelpCenter() {const [selected_category, setSelectedCategory] = useState
                 
                 <div className="space-y-6">
                   <div>
+<<<<<<< HEAD:src_backup/components/support/HelpCenter.tsx
                     <h3 className="font-medium text-zion-cyan mb-2">How does the AI matching work?</h3>
                     <p className="text-zion-slate-light">
                       Our AI matching algorithm analyzes your requirements and preferences to match you with the most compatible talent or services. The process takes into account skills, experience, availability, and past performance to ensure optimal results.
 
+=======
+                    <h3 className='font-medium text-zion-cyan mb-2'>
+                      How do I hire someone on Zion?
+                    </h3>
+                    <p className='text-zion-slate-light'>
+                      To hire talent on Zion, post a job or project, review
+                      matches or applications, interview candidates through our
+                      platform, and extend an offer. Our secure payment system
+                      protects both parties throughout the engagement.
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/support/HelpCenter.tsx
                     </p>
                   </div>
 
@@ -248,10 +378,21 @@ function HelpCenter() {const [selected_category, setSelectedCategory] = useState
 
 
                   <div>
+<<<<<<< HEAD:src_backup/components/support/HelpCenter.tsx
                     <h3 className="font-medium text-zion-cyan mb-2">How do I hire someone on Zion?</h3>
                     <p className="text-zion-slate-light">
                       To hire talent on Zion, post a job or project, review matches or applications, interview candidates through our platform, and extend an offer. Our secure payment system protects both parties throughout the engagement.
 
+=======
+                    <h3 className='font-medium text-zion-cyan mb-2'>
+                      What are the payment terms?
+                    </h3>
+                    <p className='text-zion-slate-light'>
+                      Zion offers flexible payment options including
+                      milestone-based payments, hourly rates, or fixed project
+                      fees. Funds are held in escrow until deliverables are
+                      approved, ensuring security for both clients and talent.
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/support/HelpCenter.tsx
                     </p>
                   </div>
 
@@ -439,8 +580,12 @@ function HelpCenter() {const [selected_category, setSelectedCategory] = useState
                       </div>
                       <a href="mailto:support@ziontechgroup.com" className="text-zion-cyan hover:underline">
                         support@ziontechgroup.com
+<<<<<<< HEAD:src_backup/components/support/HelpCenter.tsx
                       </Link>
 
+=======
+                      </a>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/support/HelpCenter.tsx
                     </div>
 
                         href='mailto:support@ziontechgroup && ziontechgroup.com'
@@ -594,6 +739,7 @@ function HelpCenter() {const [selected_category, setSelectedCategory] = useState
 
       </div>
     </>
+<<<<<<< HEAD:src_backup/components/support/HelpCenter.tsx
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -601,3 +747,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>;
   ))
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/support/HelpCenter.tsx
+=======
+  )
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/support/HelpCenter.tsx

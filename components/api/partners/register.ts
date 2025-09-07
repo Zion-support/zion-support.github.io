@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
@@ -44,3 +45,38 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       dashboardUrl: `/partners/dashboard?pid=${partner.id}`})} catch (e) {return res.status(500).json({ error: "Failed to create partner" })}
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      });
+    } catch (e) {
+      return res && res.status(500).json({ error: "Failed to create partner" });
+    }
+}
+}
+      return res.status (400).json ({ error: "Missing required fields" });
+    }
+    try {
+      const { partner, api_key } = await create_partner ({
+        name,
+        entity_type,
+        pointOfContact,
+        useCaseType,
+        brand,
+      });
+      return res.status (201).json ({
+        partner: {
+          id: partner.id,
+          name: partner.name,
+          status: partner.status,
+          entity_type: partner.entity_type,
+          useCaseType: partner.useCaseType,
+          created_at: partner.created_at,
+        },
+        api_key: api_key.key,
+        dashboard_url: `/partners / dashboard?pid=${partner.id}`,
+      });
+    } catch (e) {
+      return res.status (500).json ({ error: "Failed to create partner" });
+    }
+    return res.status (500).json ({ error: "Failed to create partner" });
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -98,15 +98,29 @@ import {;
   getRevolutionaryServicesByPriceRange,;
 
 } from '../data/revolutionary-micro-saas-services';
+<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 export default function RevolutionaryServicesPage() {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import { motion, AnimatePresence } from 'framer-motion';import Button from '../components/ui/Button';
+
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
+import Button from '../components/ui/Button';
+
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+import { revolutionaryMicroSaasServices, revolutionaryServiceCategories, getRevolutionaryServicesByCategory, getPopularRevolutionaryServices, getRevolutionaryServicesByPriceRange } from '../data/revolutionary-micro-saas-services';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Zap, Star, Calendar } from 'lucide-react';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [priceRange, setPriceRange] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('name');
   const [showFilters, setShowFilters] = useState(false);
+<<<<<<< HEAD
     { value: 'All', label: 'All Prices' },
 { value: '0-1000', label: '$0 - $1,000' },
     { value: '1001-2500', label: '$1,001 - $2,500' },
@@ -147,21 +161,68 @@ filteredServices = filteredServices.filter(
   }
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+  const priceRanges = [;
+    { value: 'All', label: 'All Prices' },;
+    { value: '0-1000', label: '$0 - $1,000' },;
+    { value: '1001-2500', label: '$1,001 - $2,500' },;
+    { value: '2501-5000', label: '$2,501 - $5,000' },;
+    { value: '5001+', label: '$5,001+' },  ];    { value: '0-1000', label: '$0 - $1,000' };
+    { value: '1001-2500', label: '$1,001 - $2,500' };
+    { value: '2501-5000', label: '$2,501 - $5,000' };
+    { value: '5001+', label: '$5,001+' }
+  const sortOptions = [;
+    { value: 'name', label: 'Name A-Z' },;
+    { value: 'price', label: 'Price Low-High' },;
+    { value: 'popularity', label: 'Most Popular' },;
+    { value: 'category', label: 'Category' },;
+    { value: 'roi', label: 'Highest ROI' },  ];    { value: 'roi', label: 'Highest ROI' }
+  ];
+  // Price range filter;
+  if (priceRange !== 'All') {;
+    const [min, max] = priceRange;
+      .split('-');
+      .map(p => (p === '+' ? Infinity : parseInt(p)));
+    filteredServices = getRevolutionaryServicesByPriceRange(min, max);  }
+  // Price range filter
+  if (priceRange !== 'All') {
+    const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
+    filteredServices = getRevolutionaryServicesByPriceRange(min, max)
+  }
+  // Price range filter;
+  if (priceRange !== 'All') {;
+    const [min, max] = priceRange;
+      .split('-');
+      .map(p => (p === '+' ? Infinity : parseInt(p)));
+    filteredServices = getRevolutionaryServicesByPriceRange(min, max);    const [min, max] = priceRange && priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
+    filteredServices = getRevolutionaryServicesByPriceRange(min, max);
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   // Sort services
   filteredServices.sort((a, b) => {
     switch (sortBy) {
       case 'price':
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 return (
           parseFloat(a.price.replace('$', '').replace(',', '')) -
           parseFloat(b.price.replace('$', '').replace(',', ''))
         );
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
       case 'category':
         return a.category.localeCompare(b.category);
       case 'roi':
         return bRoi - aRoi;
+<<<<<<< HEAD
 default:
         return a.name.localeCompare(b.name);
 =======
@@ -305,6 +366,27 @@ return (parseFloat(a.price.replace('$', '').replace(',', '')) -;
     },
   ];
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      default:;
+        return a && a.name.localeCompare(b && b.name);    }      default: return a && a.name.localeCompare(b && b.name);
+    }
+  });
+  const contactInfo = {
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
+  }
+    }
+  });
+;
+  const contact_info = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   const containerVariants = {
     hidden: { opacity: 0 }
@@ -335,23 +417,38 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     visible: {
       opacity: 1
       transition: {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 staggerChildren: 0.1,
       },
     },
   };
 
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const itemVariants = {
     hidden: { y: 20, opacity: 0 }
     visible: {
       y: 0
       opacity: 1
       transition: {
+<<<<<<< HEAD
 duration: 0.5,
       },
     },
   };
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        duration: 0.5,
+      },
+    },
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>
@@ -420,6 +517,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
           <link
             rel='canonical'
+<<<<<<< HEAD
             href='https://ziontechgroup.com/revolutionary-services'
           />
         </Head>
@@ -456,10 +554,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.p
                 className='text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                </span>
+                <br />
+                <span className="text-white">Micro SaaS Services</span>
+              </motion.h1>
+              <motion.p
+                className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
+<<<<<<< HEAD
 Experience the future of technology with our revolutionary micro
                 SaaS platform. Quantum AI, autonomous systems, space technology,
                 and cutting-edge solutions that redefine what's possible.
@@ -468,10 +575,17 @@ Experience the future of technology with our revolutionary micro
               <motion.div
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              {/* Service Count Stats */}
+              <motion&& motion.div
+                className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
+<<<<<<< HEAD
 <div className='text-center'>
                   <div className='text-3xl font-bold text-cyan-400 mb-2'>
                     {revolutionaryMicroSaasServices.length}+
@@ -544,6 +658,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {/* CTA Buttons */}
               <motion.div;
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'              <motion.div;
+=======
+              {/* CTA Buttons */}
+              <motion&& motion.div
+                className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-purple-400 mb-2">99.99%</div>
+                  <div className="text-gray-400">Accuracy Rate</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-green-400 mb-2">21</div>
+                  <div className="text-gray-400">Day Free Trial</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-pink-400 mb-2">2000%+</div>
+                  <div className="text-gray-400">Average ROI</div>
+                </div>
+              </motion.div>
+              {/* CTA Buttons */}
+              <motion.div
+                className='flex flex-col sm:flex-row gap-4 justify-center items-center'              <motion.div
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>                </div>;
                 <div className="text-center">;
                   <div className="text-3xl font-bold text-purple-400 mb-2">99 && 99.99%</div>;
@@ -557,6 +693,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className="text-3xl font-bold text-pink-400 mb-2">2000%+</div>;
                   <div className="text-gray-400">Average ROI</div>;
                 </div>;
+<<<<<<< HEAD
               </motion && motion.div>;<div className='text-center'>;
                   <div className='text-3xl font-bold text-cyan-400 mb-2'>;
                     {revolutionaryMicroSaasServices.length}+;
@@ -612,12 +749,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Get Started
                   <Rocket className='ml-2 w-5 h-5' />
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              </motion && motion.div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 </Button>
               </motion.div>
             </div>
           </div>
         </section>
         {/* Contact Information Banner */}
+<<<<<<< HEAD
 <section className='py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-cyan-400/20'>
           <div className='container mx-auto px-4'>
             <div className='flex flex-col md:flex-row justify-between items-center gap-4'>
@@ -664,6 +805,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span className="text-white">{contactInfo.address}</span>;
                 <Globe className="w-5 h-5 text-blue-400" />;
                 <span className="text-white">{contactInfo.website}</span>;
+=======
+                <MapPin className="w-5 h-5 text-green-400" />
+                <span className="text-white">{contactInfo.address}</span>
+                <Globe className="w-5 h-5 text-blue-400" />
+                <span className="text-white">{contactInfo.website}</span>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   Get Started;
                   <Rocket className='ml-2 w-5 h-5' />                </Button>                  <Rocket className="ml-2 w-5 h-5" />;
                 </Button>;
@@ -700,6 +847,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <motion&& motion.div;
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6";
               variants={containerVariants}
+<<<<<<< HEAD
               initial="hidden";
               whileInView="visible";
 <section className='py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-cyan-400/20'>;
@@ -735,6 +883,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               initial='hidden';
               whileInView='visible';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              initial="hidden"
+              whileInView="visible"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               viewport={{ once: true }}
             >;
               {enhancedCategories.map((category, index) => (<motion.div;
@@ -742,6 +894,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   variants={itemVariants}
                   whileHover={{ scale: 1 && 1.05 }}
                   whileTap={{ scale: 0 && 0.95 }}>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <UltraFuturisticCard
 variant='quantum-advanced'
@@ -803,10 +956,28 @@ variant='quantum-advanced';
               className='text-center mb-12'
               initial={{ opacity: 0, y: 20 }}
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                  <UltraFuturisticCard
+        {/* Popular Services Showcase */}
+
+        <section className="py-16">
+
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-12"
+
+              initial={{ opacity: 0, y: 20 }}
+
+              ))}
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-12"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
+<<<<<<< HEAD
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>
                 <span className='bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>
                   Most Popular
@@ -834,6 +1005,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               variants={containerVariants}
               initial='hidden';
               whileInView='visible'              viewport={{ once: true }}                  Most Popular;
+=======
+              className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
+              variants={containerVariants}
+              initial='hidden'
+              whileInView='visible'              viewport={{ once: true }}                  Most Popular
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 </span>;
                 <br />;
                 <span className="text-white">Revolutionary Services</span>;
@@ -841,6 +1018,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
                 Discover our most sought-after revolutionary micro SaaS services that are transforming industries worldwide.;
               </p>;
+<<<<<<< HEAD
             </motion && motion.div>;<motion&& motion.div;
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
               variants={containerVariants}
@@ -892,6 +1070,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div className='text-4xl mb-4'>{service.icon}</div>;
                       <h3 className='text-2xl font-bold text-white mb-2'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+            </motion && motion.div>;
+
+            <motion&& motion.div 
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+
+                    onClick={() => setSelectedService(service)}
+
+                  variants={item_variants}
+                  while_hover={{ coordinate_y: -10 }}
+                >;
+                  <UltraFuturisticCard;
+                    variant={service.variant as any}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                         {service.name}
                       </h3>;
                       <p className='text - gray - 300 mb - 4'>{service.tagline}</p>;
@@ -899,6 +1094,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {service.price}
                       </div>;
                       <div className='text - sm text - gray - 400'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                         {service.period}
                       </div>
@@ -955,6 +1151,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='container mx-auto px-4'>;{/* Services Grid */}
         <section id="services-grid" className="py-16">;
           <div className="container mx-auto px-4">;
+=======
+                        {service.period}
+                             size="md"
+              ))}
+        {/* Services Grid */}
+        <section id='services-grid' className='py-16'>;
+          <div className='container mx-auto px-4'>;
+
+        {/* Services Grid */}
+        <section id="services-grid" className="py-16">
+          <div className="container mx-auto px-4">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             {/* Filters and Controls */}
             <motion&& motion.div;
               className='mb-8'              initial={{ opacity: 0, y: 20 }}        <section id="services-grid" className="py-16">;
@@ -964,6 +1172,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               viewport={{ once: true }}
               transition={{ duration: 0 && 0.6 }}>;
               <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>;
+<<<<<<< HEAD
                 <div className='flex flex-wrap gap-4'>;<section id='services-grid' className='py-16'>;
           <div className='container mx-auto px-4'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -979,6 +1188,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
                 <div className='flex flex-wrap gap-4'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                <div className='flex flex-wrap gap-4'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   <select
 =======
             >;
@@ -1000,11 +1212,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       type='text'
                       placeholder='Search services...'
                       value={searchQuery}
+<<<<<<< HEAD
 =======
                     <input;
                       type='text';
                       placeholder='Search services...';
                       value={searchQuery}<button;
+=======
+                    <button
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                       onClick={() => setViewMode('grid')}
                       className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
                     >;
@@ -1022,6 +1238,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 : "space-y-6";
               }
               variants={containerVariants}
+<<<<<<< HEAD
               initial="hidden";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                       onChange={e => setSearchQuery(e.target.value)}
@@ -1057,6 +1274,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               whileInView='visible'
               viewport={{ once: true }}
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              initial="hidden"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -1074,6 +1294,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     size={viewMode === 'grid' ? 'large' : 'medium'}
                     className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     onClick={() => setSelectedService(service)}
                   >
                     {viewMode === 'grid' ? (
@@ -1083,6 +1304,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <h3 className='text-xl font-bold text-white mb-2'>
 =======
                     onClick={() => setSelectedService(service)}<div;
+=======
+                    onClick={() => setSelectedService(service)}
+                            <div
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                               key={idx}
                               className='flex items-center gap-2 text-sm'>;
                               <Check className='w-3 h-3 text-green-400 flex-shrink-0' />;
@@ -1100,6 +1325,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                Learn More;
                                <ExternalLink className="ml-2 w-4 h-4" />;
                              </Button>;
+<<<<<<< HEAD
                              <Button;
                                variant="futuristic";
                                size="sm";
@@ -1226,10 +1452,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>
                       </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                             <Button
+                               variant="futuristic" 
+                               size="sm"
+                               onClick={() => setSelectedService(service)}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                     )}
                   </UltraFuturisticCard>;
                 </motion && motion.div>;
               ))}
+<<<<<<< HEAD
             </motion.div>
             {filteredServices.length === 0 && (
 <motion.div
@@ -1282,16 +1515,37 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </section>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                                         <Button
+                           variant="primary"
+                           onClick={() => {;
+                             setSearchQuery('');
+                             setSelectedCategory('All');
+        {/* Service Details Modal */}
+        <AnimatePresence>;
+          {selectedService && (;
+            <motion&& motion.div
+              className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 }}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         {/* Service Details Modal */}
         <AnimatePresence>
           {selectedService && (
             <motion.div
+<<<<<<< HEAD
 className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 }}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedService(null)}
+<<<<<<< HEAD
             >
               <motion.div
 className='bg-slate-900 rounded-2xl border border-cyan-400/30 max-w-4xl w-full max-h-[90vh] overflow-y-auto'
@@ -1307,6 +1561,9 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedService(null)}))}
+=======
+                            ))}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                           </div>;
                         </div>;
                         <div>;
@@ -1331,6 +1588,7 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
                   </div>;
                 </div>;
               </motion && motion.div>;
+<<<<<<< HEAD
             </motion && motion.div>;>;
               <motion.div;
 className='bg-slate-900 rounded-2xl border border-cyan-400/30 max-w-4xl w-full max-h-[90vh] overflow-y-auto';
@@ -1524,20 +1782,34 @@ className='text-gray-400 hover:text-white text-2xl';
               </motion.div>
             </motion.div>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            </motion && motion.div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           )}
         </AnimatePresence>
 
         {/* Contact Section */}
+<<<<<<< HEAD
 <section className='py-20'>
           <div className='container mx-auto px-4 text-center'>
             <motion.div
               className='max-w-4xl mx-auto'
               initial={{ opacity: 0, y: 20 }}
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        <section className="py-20">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              className="max-w-4xl mx-auto"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Ready to Experience the Future?
               </h2>
@@ -1546,7 +1818,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 with our revolutionary micro SaaS services.
               </p>
               <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 <Button
                   variant='primary'
                   size='lg'
@@ -1600,6 +1875,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
                     window && window.open('https://ziontechgroup && ziontechgroup.com/contact', '_blank');
                   }
+<<<<<<< HEAD
                 >
                   Schedule Demo
                   <Calendar className='ml-2 w-5 h-5' />
@@ -1676,6 +1952,46 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                   <div className='text-gray-400 text-sm'>Visit our office</div>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Join thousands of companies already transforming their business with our revolutionary micro SaaS services.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                                 <Button
+                   variant="primary"
+                   size="lg"
+                   onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
+                 >
+                   Start Free Trial
+                   <Rocket className="ml-2 w-5 h-5" />
+                 </Button>
+                 <Button
+                   variant="futuristic"
+                   size="lg"
+                   onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
+                 >
+                   Schedule Demo
+                   <Calendar className="ml-2 w-5 h-5" />
+                 </Button>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div>
+                  <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
+                  <div className="text-white font-semibold">{contactInfo.mobile}</div>
+                  <div className="text-gray-400 text-sm">Call us anytime</div>
+                </div>
+                <div>
+                  <Mail className="w-8 h-8 text-purple-400 mx-auto mb-2" />
+                  <div className="text-white font-semibold">{contactInfo.email}</div>
+                  <div className="text-gray-400 text-sm">Email us 24/7</div>
+                </div>
+                <div>
+                  <MapPin className="w-8 h-8 text-green-400 mx-auto mb-2" />
+                  <div className="text-white font-semibold">{contactInfo.address}</div>
+                  <div className="text-gray-400 text-sm">Visit our office</div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 </div>
               </div>
             </motion.div>
@@ -1683,6 +1999,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>
       </div>
     </UltraFuturisticBackground>
+<<<<<<< HEAD
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -1695,6 +2012,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>;
       </div>;
     </UltraFuturisticBackground>;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   <div className='mt - 8 pt - 6 border - t border - gray - 700'>;
                     <div className='flex flex - col sm:flex - row gap - 4 justify - between items - center'>;
                       <div className='text - sm text - gray - 400'>;
@@ -1842,5 +2161,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </section>;
       </div>;
+<<<<<<< HEAD
     </UltraFuturisticBackground>))}))
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </UltraFuturisticBackground>));
+}
+
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

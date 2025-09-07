@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -21,6 +22,12 @@ export interface EmergingTechService2026  {id: string;name: string;
 export interface EmergingTechService2026 {
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  id: string;
+
+export interface EmergingTechService2026 {
+id: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   name: string;
   tagline: string;
   price: string;
@@ -52,6 +59,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     address: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   text_color: string;
   link: string;
   market_position: string;
@@ -555,6 +565,7 @@ export interface EmergingTechService2026  {})}})}export const getEmergingTechSer
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -567,10 +578,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -582,10 +597,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export const emergingTechServices2026: EmergingTechService2026[] = [
   // Quantum Computing Services
   {
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -599,6 +619,8 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export const emergingTechServices2026: EmergingTechService2026[] = [
   // Quantum Computing Services
   {
@@ -608,6 +630,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
 
   return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular);
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -622,6 +645,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     id: 'ai-digital-twin-platform'
     name: 'AI Digital Twin Platform'
     tagline:
@@ -718,6 +745,10 @@ export const getEmergingTechServices2026ByCategory = (category: string) => {
 export const emergingTechServices2026: EmergingTechService2026[] = [
   // Quantum Computing Services
   {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     website: string
   },
   realImplementation: boolean;
@@ -729,7 +760,11 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
 }
 
 const contact = null;
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     tagline:
       'Access quantum computing power through the cloud with AI-optimized algorithms'
     price: '$999'
@@ -1148,6 +1183,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
       'Autodesk',
     ],
+<<<<<<< HEAD
       'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.'
     launchDate: '2024-06-25'
     customers: 56
@@ -1202,6 +1238,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    customers: 56,
+    rating: 4 && 4.4,
+    reviews: 29,
+  },
+];
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ];
 export const getEmergingTechServices2026ByCategory = (category: string) => {
   return emergingTechServices2026.filter(
@@ -1209,6 +1252,7 @@ export const getEmergingTechServices2026ByCategory = (category: string) => {
   );
 }
 export const getPopularEmergingTechServices2026 = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1228,10 +1272,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export const getEmergingTechServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1256,12 +1303,16 @@ export const getEmergingTechServices2026ByPriceRange = (
   return emergingTechServices2026 && emergingTechServices2026.filter(service => {
     const price = parseInt(service && service.price.replace('$', ''));
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     return price >= minPrice && price <= maxPrice;
   });
-<<<<<<< HEAD
 };    return price >= minPrice && price <= maxPrice
 
   })
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1279,6 +1330,9 @@ export const getEmergingTechServices2026ByPriceRange = (
 =======
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     id: 'quantum-computing-as-a-service', name: 'Quantum Computing as a Service (QCaaS)',
     tagline: 'Access quantum computing power through the cloud with AI-optimized algorithms', price: '$999',
     period: '/month',
@@ -1470,6 +1524,7 @@ export const getEmergingTechServices2026ByPriceRange = (
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1499,6 +1554,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export const getEmergingTechServices2026ByPriceRange = (minPrice: number, maxPrice: number) => {
   return emergingTechServices2026.filter(service => {
     const price = parseInt(service.price.replace('$', ''));
@@ -1507,9 +1566,13 @@ export const getEmergingTechServices2026ByPriceRange = (minPrice: number, maxPri
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   })
 };
@@ -1518,6 +1581,7 @@ export const getEmergingTechServices2026ByCategory = (category: string) =>: any 
   return emergingTechServices2026.filter (
     service => service.category === category);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1543,6 +1607,9 @@ export const getEmergingTechServices2026ByPriceRange = (
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 export interface EmergingTechService2026 {;
 
@@ -1553,7 +1620,7 @@ export const getEmergingTechServices2026ByCategory = (category: string) =>: any 
   return emergingTechServices2026.filter (
     service => service.category === category);
 }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 
 export interface EmergingTechService2026 {;
   id: string,;
@@ -1628,6 +1695,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1644,3 +1712,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+};
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

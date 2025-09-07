@@ -8,8 +8,11 @@ import typescriptParser from '@typescript-eslint/parser';
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
+<<<<<<< HEAD
 import nextPlugin from '@next/eslint-plugin-next';
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
@@ -18,6 +21,7 @@ import reactHooks from 'eslint-plugin-react-hooks';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import globals from 'globals';
 
+<<<<<<< HEAD
 const compat = new FlatCompat({
   baseDirectory: import.meta.dirname,
   recommendedConfig: js.configs.recommended,
@@ -30,6 +34,10 @@ const compat = new FlatCompat({
 
 export default [
   ...compat.extends('next/core-web-vitals'),
+=======
+export default [
+  js.configs.recommended,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   {
     ignores: [
       'node_modules/**',

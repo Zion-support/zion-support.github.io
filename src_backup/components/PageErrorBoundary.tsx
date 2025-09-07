@@ -1,4 +1,5 @@
 <<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
+<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
 import React from 'react';
 import Link from 'next/link';
 import { ErrorBoundary, FallbackProps  } from 'react-error-boundary';
@@ -8,15 +9,21 @@ import { logInfo, logErrorToProduction as prodLogError } from '@/utils/productio
 interface PageErrorFallbackProps extends FallbackProps {
   pageName?: string
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PageErrorBoundary.tsx
 }
 
   },
 
+<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PageErrorBoundary.tsx
 
 
 
   return (
+<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
 
 import React from 'react';
 import Link from 'next / link';
@@ -45,6 +52,9 @@ import { logErrorToProduction  } from '@/utils/productionLogger';
 import { logInfo, logErrorToProduction as prodLogError  } from '@/utils/productionLogger';
 interface PageErrorFallbackProps extends FallbackProps  {pageName?: string;
 }},return (<div className='min-h-screen bg-zion-blue flex items-center justify-center p-4'>;
+=======
+    <div className='min-h-screen bg-zion-blue flex items-center justify-center p-4'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PageErrorBoundary.tsx
       <div className='max-w-2xl w-full'>;
         {/* Main Error Card */}
         <div className='bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6'>;
@@ -58,11 +68,33 @@ interface PageErrorFallbackProps extends FallbackProps  {pageName?: string;
             <p className='text-gray-600'>;
               {isAuthConfigError;
                 ? 'This page cannot load due to missing authentication configuration';
+<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
                 : 'An unexpected error occurred while loading this page'}import { logInfo;
   logErrorToProduction as prodLogError;
  } from '@/utils/productionLogger';
 interface PageErrorFallbackProps extends FallbackProps  {pageName?: string;
 function PageErrorFallback() {error?.message?.includes('environment')const handleRefresh = () => {if (resetErrorBoundary) {resetErrorBoundary()} else {window.location.reload()}
+=======
+                : 'An unexpected error occurred while loading this page'}
+import {
+  logInfo
+  logErrorToProduction as prodLogError
+} from '@/utils/productionLogger'
+interface PageErrorFallbackProps extends FallbackProps {
+  pageName?: string
+function PageErrorFallback({
+  error
+  resetErrorBoundary
+  pageName
+}: PageErrorFallbackProps) {
+    error?.message?.includes('environment')
+  const handleRefresh = () => {
+    if (resetErrorBoundary) {
+      resetErrorBoundary()
+    } else {
+      window.location.reload()
+    }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PageErrorBoundary.tsx
   }
 import { ErrorBoundary, FallbackProps  } from 'react-error-boundary';
 import {logErrorToProduction} from '@/utils/productionLogger',import { logInfo, logErrorToProduction as prodLogError } from '@/utils/productionLogger',interface PageErrorFallbackProps extends FallbackProps  {pageName?: string;
@@ -101,6 +133,7 @@ import {logErrorToProduction} from '@/utils/productionLogger',import { logInfo, 
               </div>;
             </div>;
           )}
+<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
           {error?.message && (import Link from 'next / link';
 import { ErrorBoundary, FallbackProps  } from 'react - error - boundary';
 import { logErrorToProduction  } from '@/utils / production_logger';
@@ -181,10 +214,17 @@ if ( {) {$2;
               onClick={handleRefresh}
 
 
+=======
+          {error?.message && (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PageErrorBoundary.tsx
             <details className="bg-gray-50 rounded-lg p-4 mb-6">
               <summary className="cursor-pointer text-gray-700 font-medium">
                 Technical Details
               </summary>
+<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PageErrorBoundary.tsx
 
               <pre className="mt-2 text-sm text-gray-600 whitespace-pre-wrap break-all overflow-auto">
 =======
@@ -208,19 +248,26 @@ if ( {) {$2;
               <RefreshCw className="w-4 h-4 mr-2" />
               Try Again
             </button>
+<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PageErrorBoundary.tsx
             
             <Link 
               href="/"
               className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors"
+<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PageErrorBoundary.tsx
             >
               <Home className="w-4 h-4 mr-2" />
               Go Home
             </Link>
           </div>
+<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
 =======
               className="flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors";
             >;
@@ -236,6 +283,9 @@ if ( {) {$2;
             </Link>;
           </div>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/PageErrorBoundary.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PageErrorBoundary.tsx
               className='flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors'             aria-label="Button">;
               <RefreshCw className='w-4 h-4 mr-2' />;
               Try Again;
@@ -349,7 +399,10 @@ function PageErrorBoundary() {
     fallback ||
 
 
+<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PageErrorBoundary.tsx
     ((props: FallbackProps) => (
       <PageErrorFallback {...props} pageName={pageName} />
     ))
@@ -360,8 +413,11 @@ function PageErrorBoundary() {
               support@zion && zion.tech;
 
         logInfo(`Resetting error boundary for ${pageName || 'page'}`)
+<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PageErrorBoundary.tsx
           <div className="flex flex-col sm:flex-row gap-3 mb-6">;
 =======
 export default /**;
@@ -420,10 +476,15 @@ function PageErrorBoundary() {const handle_error = (error: Error, error_info: Re
             >;
 <<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
               support@zion.tech;
+<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
 
             </a>;
             <Link href='/status' className='text-blue-400 hover:underline'>;
 
+=======
+            </a>;
+            <Link href="/status" className="text-blue-400 hover:underline">;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PageErrorBoundary.tsx
               Service Status;
 =======
               support@zion.tech;</a>;
@@ -437,6 +498,7 @@ function PageErrorBoundary() {const handle_error = (error: Error, error_info: Re
     </div>;
 <<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
   );
+<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
 
 interface PageErrorBoundaryProps {;
   children: React && React.ReactNode;
@@ -461,17 +523,55 @@ interface PageErrorBoundaryProps {;
 
       onReset={() => {        // Reset any application state if needed;
 
+=======
+}
+;
+interface PageErrorBoundaryProps {;
+  children: React.ReactNode,;
+  pageName?: string,;
+  fallback?: React.ComponentType<FallbackProps>;
+}
+;
+export default function PageErrorBoundary({;
+  children,;
+  pageName,;
+  fallback;
+}: PageErrorBoundaryProps) {;
+  const handleError = (error: Error, errorInfo: React.ErrorInfo) => {;
+    prodLogError(`PageErrorBoundary caught error on ${pageName || 'unknown page'}:`, error),;
+    logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, {;
+      page: pageName || 'unknown',;
+      componentStack: errorInfo.componentStack || undefined,;
+      errorBoundary: 'PageErrorBoundary',;
+      timestamp: new Date().toISOString();
+    });
+  };
+  const FallbackComponent = fallback || ((props: FallbackProps) => (;
+    <PageErrorFallback {...props} pageName={pageName} />;
+  ));
+  return (;
+    <ErrorBoundary;
+      FallbackComponent={FallbackComponent}
+      onError={handleError}
+      onReset={() => {;
+        // Reset any application state if needed;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PageErrorBoundary.tsx
         logInfo(`Resetting error boundary for ${pageName || 'page'}`);
 
 
 
 
+<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PageErrorBoundary.tsx
     <ErrorBoundary
       FallbackComponent={FallbackComponent}
       onError={handleError}
       onReset={() => {
         // Reset any application state if needed
         logInfo(`Resetting error boundary for ${pageName || 'page'}`)
+<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
       }}
     >;
@@ -479,6 +579,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+=======
+      }}
+    >
+      {children}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PageErrorBoundary.tsx
 } ;
 } ;
 };
@@ -511,12 +616,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {children}
 <<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
     </ErrorBoundary>);
+<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
 }
 }
+=======
+  );}
+;
+interface PageErrorBoundaryProps {;
+  children:React.ReactNode,;
+  pageName?:string,;
+  fallback?:React.ComponentType<FallbackProps>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PageErrorBoundary.tsx
 }
 
     </ErrorBoundary>
   );
+<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     </ErrorBoundary>))}interface PageErrorBoundaryProps  {children:React.ReactNode,pageName?:string,fallback?:React.ComponentType<FallbackProps>;
@@ -525,3 +640,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</ErrorBoundary>;
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/PageErrorBoundary.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/PageErrorBoundary.tsx

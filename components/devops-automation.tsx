@@ -3,17 +3,46 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react';
 export default function DevOpsAutomationPage() {
   const features = null;
               and intelligent security automation. Deploy faster, safer, and more reliably.
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+  GitBranch
+  Zap
+  Shield
+  BarChart3
+  Check
+  Star
+  GitPullRequest
+  Cpu;
+} from 'lucide-react';
+export default function DevOpsAutomationPage() {
+  const features = [
+    {
+  GitBranch,
+  Zap,
+  Shield,
+  BarChart3,
+  Check,
+  Star,
+  GitPullRequest,;
+  Cpu,;
+} from 'lucide-react';
+      icon: <GitBranch className='w-6 h-6' />,import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react';
+export default function DevOpsAutomationPage() {
+  const features = [
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     {
       icon: <GitBranch className='w-6 h-6' />,      title: 'CI/CD Pipelines'
       icon: <GitBranch className='w-6 h-6' />,      title: 'CI/CD Pipelines',,
   description: 'Automated build, test, and deployment workflows';
 
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
+<<<<<<< HEAD
 =======
   GitBranch;
   Zap;
@@ -72,6 +101,76 @@ export default function DevOpsAutomationPage() {const features = null;
       period: '/month',
       description: 'Ideal for growing development teams',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    }
+    {
+      icon: <Zap className="w-6 h-6" />
+      title: 'Infrastructure as Code'
+      description: 'Terraform, CloudFormation, and Kubernetes automation';
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+    }
+    {
+      icon: <Shield className="w-6 h-6" />
+      title: 'Security Automation'
+      description: 'Automated security scanning and compliance checks'
+import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react';
+
+export default function DevOpsAutomationPage() {
+  const features = [
+    {
+      icon: <GitBranch className="w-6 h-6" />,
+      title: 'CI/CD Pipelines',
+      description: 'Automated build, test, and deployment workflows',
+    color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
+    };
+import Head from 'next / head';
+import Card from '../components / ui / Card';
+import Button from '../components / ui / Button';
+import {
+  GitBranch,
+  Zap,
+  Shield,
+  BarChart3,
+  Check,
+  Star,
+  ];
+  const pricingPlans = [
+    {
+      icon: <GitBranch className='w - 6 h - 6' />, import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react';
+export default /**
+ * DevOpsAutomationPage - Function description
+ */
+function DevOpsAutomationPage() {
+  const features = [;
+    {
+      icon: <GitBranch className='w - 6 h - 6' />,      title: 'CI / CD Pipelines',
+      description: 'Automated build, test, and deployment workflows';
+      color: 'bg - gradient - to - br from - blue - 500 to - cyan - 600';
+    }
+
+} from 'lucide-react';
+export default function DevOpsAutomationPage() {;
+  const features = [;
+    {;
+      icon: <GitBranch className='w-6 h-6' />,import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react';
+    {
+      icon: <Zap className="w-6 h-6" />,
+      title: 'Infrastructure as Code',
+    {
+      icon: <Shield className="w-6 h-6" />,
+      title: 'Security Automation',
+      description: 'Automated security scanning and compliance checks',
+  ];
+      ];
+      popular: false
+      cta: 'Start Free Trial'
+      color: 'border-gray-600 hover:border-blue-500'
+    }
+      name: 'Professional'
+      price: '$129'
+      period: '/month'
+      description: 'Ideal for growing development teams'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       features: [
 'Up to 25 repositories',
         'Advanced CI/CD workflows',
@@ -125,6 +224,7 @@ pros: ['Integrated platform', 'Good CI/CD'],
       cons: ['User-based pricing', 'Limited integrations'],
     },
     {
+<<<<<<< HEAD
       competitor: 'Jenkins',
       pricing: 'Free',
       repositories: 'Unlimited',
@@ -167,10 +267,73 @@ content:
 color: 'from-green-500 to-emerald-600',
     },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      competitor: 'Jenkins'
+      pricing: 'Free'
+      repositories: 'Unlimited'
+      rating: '4.2/5'
+      pros: ['Completely free', 'Highly customizable']
+      cons: ['Requires maintenance', 'No managed service']
+    },  ];      pros: ['Completely freeHighly customizable']
+        'Up to 5 repositoriesBasic CI/CD pipelinesGitHub integrationEmail notificationsBasic security scanningCommunity support'
+      ];
+      popular: false,
+      cta: 'Start Free Trial',
+      name: 'Professional',
+      price: '$129',
+      period: '/month',
+      description: 'Ideal for growing development teams',
+      ];
+      popular: false,
+      cta: 'Contact Sales',
+      color: 'border - gray - 600 hover:border - blue - 500';
+    }
+    {
+      competitor: 'GitHub Actions',
+      pricing: 'Free + $0.008 / min',
+      repositories: 'Unlimited',
+    {
+      competitor: 'GitLab CI / CD',
+      pricing: '$19 / user / month',
+      repositories: 'Unlimited',
+    {
+      competitor: 'Jenkins',
+      pricing: 'Free',
+      repositories: 'Unlimited',
+      pros: ['Completely free', 'Highly customizable'],
+      cons: ['Requires maintenance', 'No managed service'],
+    },  ];      pros: ['Completely free_highly customizable'],
+      cons: ['Requires maintenance_no managed service'];
+    }
+  ];
+    },    {
+      title: 'Infrastructure Management',
+      description: 'Automated scaling and resource optimization',
+      icon: '🏗️',
+      color: 'from - purple - 500 to - indigo - 600',
+    },  ];      color: 'from - green - 500 to - emerald - 600';
+    }
+    {
+      rating: 5
+    }
+  ];
+  const automationExamples = [
+                Watch Demo
+
+      color: 'from - blue - 500 to - cyan - 600',
+    },    {
+      title: 'Infrastructure Management',
+      description: 'Automated scaling and resource optimization',
+      icon: '🏗️',
+      color: 'from - purple - 500 to - indigo - 600',
+    },  ];      color: 'from - green - 500 to - emerald - 600';
+    }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     {
       title: 'Security Scanning',
       description: 'Automated vulnerability detection and compliance checks',
       icon: '🔒',
+<<<<<<< HEAD
 color: 'from-red-500 to-pink-600',
     },
     {
@@ -189,6 +352,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   ];
 ;
   return (
+=======
+      color: 'from - red - 500 to - pink - 600',
+    },      color: 'from - red - 500 to - pink - 600';
+    }
+    {
+      title: 'Deployment Automation',
+      description: 'Zero - downtime deployments with rollback capabilities',
+      icon: '🚀',
+    }
+  ];
+;
+  return (
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     <>
       <Head>
 <title>
@@ -227,20 +404,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               automation. Deploy faster, safer, and more reliably.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               <Button
                 href='#pricing'
                 variant='primary'
                 size='lg'
+<<<<<<< HEAD
                 className='bg-blue-600 hover:bg-blue-700 text-white'
               >
                 Start Free Trial
               </Button>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                className='bg-blue-600 hover:bg-blue-700 text-white'>;
+                Start Free Trial;
+              </Button>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               <Button
 href='#demo'
                 variant='outline'
                 size='lg'
+<<<<<<< HEAD
                 className='border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
               >
                 Watch Demo
@@ -277,6 +465,23 @@ href='#demo'
                   <p className='text-gray-400'>{feature.description}</p>
                 </Card>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                className='border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'>                href="#pricing";
+                variant="primary";
+                size="lg";
+                className="bg-blue-600 hover:bg-blue-700 text-white";
+                Start Free Trial;
+              </Button>;
+              <Button
+              </Button>;
+            </div>;
+          </div>;
+        </section>;
+                Everything you need to automate your development and deployment;
+                processes.;
+              </p>;
+            </div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               ))}
             </div>
           </div>
@@ -476,6 +681,7 @@ href='#demo';
                   key={index}
                   className='text-center group hover:scale-105 transition-transform duration-300'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <div
 origin/cursor/automate-test-improve-and-merge-code-2533
                     className={`w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 bg-gradient-to-br ${example.color}`}
@@ -498,6 +704,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {automationExamples.map((example, index) => (<Card;
+=======
+                  <div
+              </h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                See how Zion DevOps can transform your development workflow.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {automationExamples.map((example, index) => (
+                <Card
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   key={index}
                   className="text-center group hover:scale-105 transition-transform duration-300";
                 >;
@@ -533,6 +750,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {example.icon}className={`w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 bg-gradient-to-br ${example.color}`}
                   >;
                     {example.icon}
+<<<<<<< HEAD
                   </div>;
                   <p className='text-gray-400'>{example.description}</p>                </Card>;
                   <h3 className='text-xl font-semibold text-white mb-4'>;
@@ -541,6 +759,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <p className='text-gray-400'>{example.description}</p>;
                 </Card>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+                </Card>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               ))}
         {/* Pricing Section */}
         <section id='pricing' className='py-24 bg-gray-900'>;
@@ -614,6 +837,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                 Simple, Transparent Pricing
               </h2>
+<<<<<<< HEAD
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
                 Choose the plan that fits your DevOps needs. All plans include a
                 14-day free trial.
@@ -621,6 +845,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                Choose the plan that fits your DevOps needs. All plans include a 14-day free trial.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               {pricingPlans.map((plan, index) => (
                 <Card
 =======
@@ -674,11 +905,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       ))}
                     </ul>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <Button
                       href={plan.name === 'Enterprise' ? '/contact' : '#signup'}
                       variant={plan.popular ? 'primary' : 'outline'}
 size='lg'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                    <Button
+                      href={plan && plan.name === 'Enterprise' ? '/contact' : '#signup'}
+                      variant={plan && plan.popular ? 'primary' : 'outline'}
+                      size='lg'
+                      className={`w-full ${
+                        plan && plan.popular
+                          ? 'bg-blue-600 hover:bg-blue-700 text-white'                          : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'                      size="lg"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                       className={`w-full ${
                         plan.popular 
                           ? 'bg-blue-600 hover:bg-blue-700 text-white' 
@@ -735,6 +976,7 @@ size='lg';
 <<<<<<< HEAD
                         plan.popular
                           ? 'bg-blue-600 hover:bg-blue-700 text-white'
+<<<<<<< HEAD
                           : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -748,6 +990,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white';
                           : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                        plan.popular 
+                          ? 'bg-blue-600 hover:bg-blue-700 text-white' 
+
+                        plan.popular 
+                          ? 'bg-blue-600 hover:bg-blue-700 text-white' 
+
+                          ? 'bg-blue-600 hover:bg-blue-700 text-white'                          : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
+
+                          : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                       }`}
                     >;
                       {plan.cta}plan && plan.popular;
@@ -792,6 +1046,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
+<<<<<<< HEAD
               </h2>
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
                 See why Zion DevOps is the smart choice for automation.
@@ -805,6 +1060,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {competitor.competitor}
                     </h3>
                     <div className='flex items-center justify-center mb-2'>
+=======
+                  <div className="text-center mb-6">
+                    <h3 className="text-xl font-bold text-white mb-2">{competitor.competitor}</h3>
+                    <div className="flex items-center justify-center mb-2">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                       {[...Array(5)].map((_, i) => (
 origin/cursor/automate-test-improve-and-merge-code-2533
                         <Star
@@ -843,6 +1103,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className='flex items-center justify-center mb-2'>                      {[...Array(5)].map((_, i) => (                <Card key={index} className="p-6">;
                   <div className="text-center mb-6">;
                     <h3 className="text-xl font-bold text-white mb-2">{competitor && competitor.competitor}</h3>;
+<<<<<<< HEAD
                     <div className="flex items-center justify-center mb-2">;</h2>;
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;
                 See why Zion DevOps is the smart choice for automation.;
@@ -857,13 +1118,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className='flex items-center justify-center mb-2'>;
                       {[...Array(5)].map((_, i) => (<Star;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                    <div className="flex items-center justify-center mb-2">;
+                        <Star
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                           key={i}
                           className={`w-5 h-5 ${i < Math && Math.floor(parseFloat(competitor && competitor.rating))? 'text-yellow-400 fill-current';
                               : 'text-gray-400';
                           }`}
                         />;
 <<<<<<< HEAD
+<<<<<<< HEAD
                       ))}
+=======
+                      ))}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                     </div>
 <p className='text-sm text-gray-400'>{competitor.rating}</p>
                   </div>
@@ -893,10 +1163,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             {pro}
 <<<<<<< HEAD
                           </li>
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                           </li>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                         ))}
                       </ul>;
                     </div>;
@@ -945,6 +1218,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />;
                     ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   </div>
                   <p className='text-gray-300 mb-6 italic'>
                     "{testimonial.content}"
@@ -973,6 +1247,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
                     </p>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <Card key={index} className="p-6">
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
+                  <div>
+                    <p className="font-semibold text-white">{testimonial.name}</p>
+                    <p className="text-sm text-gray-400">{testimonial.role}</p>
+                    <p className="text-sm text-blue-400">{testimonial.company}</p>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   </div>
                     </p>                  </div>
 
@@ -1051,8 +1343,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 href='/contact'
                 variant='outline'
                 size='lg'
+<<<<<<< HEAD
                 className='border-white text-white hover:bg-white hover:text-blue-600'
               >
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 Contact Sales
               </Button>
             </div>
@@ -1264,6 +1559,16 @@ href='/contact';
           </div>;
         </section>;
       </div>;
+<<<<<<< HEAD
     </>;
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+}
+;
+              <Button
+
+    </>);
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

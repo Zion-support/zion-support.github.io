@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Metadata } from 'next';
 import Link from 'next/link';
 import React from 'react';
@@ -9,6 +10,20 @@ export const metadata: Metadata = {
   keywords: 'AI services, machine learning, LLM development, RAG systems, AI agents, computer vision, MLOps, AI consulting'
 =======
 export const metadata = {
+=======
+import Link from 'next/link';
+
+
+// Simple ServiceCard component
+const ServiceCard = ({ title, description, icon }) => (
+  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+    <div className="text-3xl mb-4">{icon}</div>
+    <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
+    <p className="text-gray-600">{description}</p>
+  </div>
+);
+export const metadata = { 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   title: 'AI Services | Zion Tech Group',
   description: 'Comprehensive AI solutions including machine learning, natural language processing, computer vision, and intelligent automation.',
   keywords: 'AI services, machine learning, NLP, computer vision, automation, artificial intelligence'
@@ -19,6 +34,7 @@ function FeatureItem({ icon, title, description, benefits }: { icon: string; tit
   return (
 <<<<<<< HEAD
     <div className="animate-fade-in">
+<<<<<<< HEAD
       <section className="text-center py-12">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
           AI Services & Solutions
@@ -28,6 +44,179 @@ function FeatureItem({ icon, title, description, benefits }: { icon: string; tit
           to natural language processing, we deliver cutting-edge AI that drives real results.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
+=======
+      <section className="py-12">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">AI Services</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Ship AI features with confidence: RAG, agents, fine-tuning, evals and MLOps. 
+            We help you build, deploy, and scale AI solutions that drive real business value.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <ServiceCard 
+            title="Applied AI Solutions" 
+            details={[
+              "RAG over private data",
+              "Task-specific agents",
+              "Vision + speech processing",
+              "Personalization engines",
+              "Content generation",
+              "Intelligent automation"
+            ]} 
+            icon="🤖"
+          />
+          <ServiceCard 
+            title="Model Operations" 
+            details={[
+              "Offline evaluation systems",
+              "Safety + guardrails",
+              "Batch + streaming inference",
+              "Cost optimization",
+              "Performance monitoring",
+              "A/B testing frameworks"
+            ]} 
+            icon="⚙️"
+          />
+          <ServiceCard 
+            title="Data & MLOps" 
+            details={[
+              "Data pipeline automation",
+              "Feature store management",
+              "Vector database setup",
+              "Model drift detection",
+              "Continuous integration",
+              "Monitoring + alerting"
+            ]} 
+            icon="📊"
+          />
+        </div>
+
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">AI Solutions Portfolio</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <SolutionCard
+              title="Intelligent Document Processing"
+              description="Extract, analyze, and process information from documents using advanced NLP and computer vision."
+              features={[
+                "OCR + text extraction",
+                "Document classification",
+                "Data validation",
+                "API integration"
+              ]}
+              pricing="Starting at $25,000"
+            />
+            <SolutionCard
+              title="Conversational AI Platform"
+              description="Build intelligent chatbots and virtual assistants with natural language understanding."
+              features={[
+                "Multi-channel support",
+                "Context awareness",
+                "Intent recognition",
+                "Human handoff"
+              ]}
+              pricing="Starting at $30,000"
+            />
+            <SolutionCard
+              title="Predictive Analytics Engine"
+              description="Leverage machine learning to predict trends, behaviors, and outcomes for better decision making."
+              features={[
+                "Time series forecasting",
+                "Anomaly detection",
+                "Risk assessment",
+                "Real-time predictions"
+              ]}
+              pricing="Starting at $35,000"
+            />
+            <SolutionCard
+              title="Computer Vision System"
+              description="Implement image and video analysis solutions for automation and quality control."
+              features={[
+                "Object detection",
+                "Image classification",
+                "Video analytics",
+                "Quality assurance"
+              ]}
+              pricing="Starting at $40,000"
+            />
+          </div>
+        </div>
+
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Technology Stack</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <TechCard
+              title="Large Language Models"
+              description="GPT-4, Claude, Llama, and custom fine-tuned models"
+              icon="🧠"
+            />
+            <TechCard
+              title="Vector Databases"
+              description="Pinecone, Weaviate, Chroma for semantic search"
+              icon="🔍"
+            />
+            <TechCard
+              title="ML Frameworks"
+              description="TensorFlow, PyTorch, Scikit-learn, Hugging Face"
+              icon="⚡"
+            />
+            <TechCard
+              title="Cloud Platforms"
+              description="AWS, GCP, Azure with GPU acceleration"
+              icon="☁️"
+            />
+          </div>
+        </div>
+
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Pricing Plans</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <Plan
+              name="AI Discovery"
+              price="$5k–$12k"
+              features={[
+                "2–3 weeks consultation",
+                "Use case design",
+                "Technology selection",
+                "Implementation roadmap",
+                "Proof of concept"
+              ]}
+            />
+            <Plan
+              name="Pilot"
+              price="$15k–$45k"
+              features={[
+                "4–8 weeks development",
+                "RAG / agent MVP",
+                "Evaluation framework",
+                "Safety guardrails",
+                "Performance dashboards"
+              ]}
+              popular={true}
+            />
+            <Plan
+              name="Production"
+              price="$50k+"
+              features={[
+                "Hardened infrastructure",
+                "Monitoring & alerting",
+                "SLA guarantees",
+                "Cost optimization",
+                "Ongoing maintenance"
+              ]}
+            />
+          </div>
+        </div>
+
+        <section className="bg-blue-50 rounded-xl p-8 text-center">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            Ready to implement AI in your business?
+          </h2>
+          <p className="text-lg text-gray-600 mb-6">
+            Let's discuss your AI needs and create a solution that delivers measurable results.
+          </p>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           <a
             href="tel:+13024640950"
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
@@ -85,6 +274,7 @@ function CTA() {
   );
 }
 
+<<<<<<< HEAD
 export default function ServicePage() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -313,6 +503,8 @@ function Item({ title, details }: { title: string; details: string[] }) {
     </div>
   );
 }
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 function Pricing() {
   return (

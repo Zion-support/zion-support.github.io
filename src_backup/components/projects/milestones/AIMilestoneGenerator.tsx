@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src_backup/components/projects/milestones/AIMilestoneGenerator.tsx
 
 interface AIMilestoneGeneratorProps  {import React, { useState } from 'react';
 import { Button   } from '@/components/ui/button';
@@ -37,13 +38,19 @@ import { format, parseISO } from 'date-fns'
 import { Badge } from '@/components/ui/badge'
 interface AIMilestoneGeneratorProps {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+interface AIMilestoneGeneratorProps {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/projects/milestones/AIMilestoneGenerator.tsx
   scope: string;
   startDate: string;
   endDate: string | null;
   projectType: string;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void;
+<<<<<<< HEAD:src_backup/components/projects/milestones/AIMilestoneGenerator.tsx
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/projects/milestones/AIMilestoneGenerator.tsx
 
 
 
@@ -362,6 +369,7 @@ export function AIMilestoneGenerator({;
                       size="sm"
                       onClick={(e) => {
                         e.stopPropagation(),
+<<<<<<< HEAD:src_backup/components/projects/milestones/AIMilestoneGenerator.tsx
   onAddMilestone: (milestone: GeneratedMilestone) => void
 export function AIMilestoneGenerator({
   scope;
@@ -376,6 +384,8 @@ export function AIMilestoneGenerator({
 
   const handleGenerateMilestones = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/projects/milestones/AIMilestoneGenerator.tsx
                         handleAddSingleMilestone(milestone)
                       }}
                       className="mr-2"
@@ -453,7 +463,12 @@ export function AIMilestoneGenerator() {const { generateMilestones, generatedMil
         </Card>;
 <<<<<<< HEAD:src_backup/components/projects/milestones/AIMilestoneGenerator.tsx
       )}
+<<<<<<< HEAD:src_backup/components/projects/milestones/AIMilestoneGenerator.tsx
     </div>
+=======
+
+    </div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/projects/milestones/AIMilestoneGenerator.tsx
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -483,6 +498,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Accordion>;
           </CardContent>;
         </Card>)}
+<<<<<<< HEAD:src_backup/components/projects/milestones/AIMilestoneGenerator.tsx
     </div>)}</div>;
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/projects/milestones/AIMilestoneGenerator.tsx
+=======
+    </div>);
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/projects/milestones/AIMilestoneGenerator.tsx

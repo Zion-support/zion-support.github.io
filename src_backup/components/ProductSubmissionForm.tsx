@@ -1,8 +1,168 @@
 <<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
 try {
       // Create the product listing;
       const product_data = {
 
+=======
+import {
+
+  Form
+  FormControl
+  FormDescription
+  FormField
+  FormItem
+  FormLabel
+  FormMessage
+} from '@/components/ui/form'
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+import { Textarea } from '@/components/ui/textarea'
+import { AspectRatio } from '@/components/ui/aspect-ratio'
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'
+import { AIListingGenerator } from '@/components/listing/AIListingGenerator'
+import { Sparkles } from 'lucide-react'
+// Define the form schema with zod
+const productSchema = z.object({
+  title: z.string().min(3, 'Title must be at least 3 characters')
+  description: z.string().min(10, 'Description must be at least 10 characters')
+  price: z
+    .string()
+    .refine(val => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
+      message: 'Price must be a valid number'
+    })
+  category: z.string().min(1, 'Please select a category')
+  image:
+    typeof window === 'undefined'
+      ? z.any().optional()
+      : z.instanceof(File).optional()
+  video:
+    typeof window === 'undefined'
+      ? z.any().optional()
+      : z.instanceof(File).optional()
+  model:
+    typeof window === 'undefined'
+      ? z.any().optional()
+      : z.instanceof(File).optional()
+  tags: z.string().optional()
+})
+// Type for our form values
+type ProductFormValues = z.infer<typeof productSchema>
+export function ProductSubmissionForm() {
+  const { user } = useAuth()
+  const { toast } = useToast()
+  const router = useRouter()
+  const [isSubmitting, setIsSubmitting] = React.useState(false)
+  const [imagePreview, setImagePreview] = React.useState(null as string | null)
+  const [activeTab, setActiveTab] = React.useState('manual')
+import React from "react",
+import { useForm, ControllerRenderProps } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import z from "zod",
+import { supabase } from "@/integrations/supabase/client",
+import { useAuth } from "@/hooks/useAuth",
+import { useToast } from "@/hooks/use-toast",
+import { useRouter } from "next/router",
+import Image from 'next/image', // Import next/image
+import {logErrorToProduction} from '@/utils/productionLogger',
+  // Initialize the form
+  const form = useForm<ProductFormValues>({
+    resolver: zodResolver(productSchema)
+    defaultValues: {
+    const file = e.target.files?.[0];    if (file) {
+      form.setValue('image', file)
+      const reader = new FileReader()
+      reader.onloadend = () => {
+        setImagePreview(reader.result as string)
+      }
+      reader.readAsDataURL(file)
+    }
+  }
+  const handleVideoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];    if (file) {
+      form.setValue('video', file)
+    }
+  }
+  const handleModelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];    if (file) {
+      form.setValue('model', file)
+    }
+  }
+  // Apply AI-generated content to the form
+  const handleApplyGenerated = (content: any) => {
+    form.setValue('description', content.description)
+    form.setValue('tags', content.tags.join(', '))
+    // Set a default price as the middle of the suggested range
+    const averagePrice = (
+      (content.suggestedPrice.min + content.suggestedPrice.max) /
+      2
+    ).toFixed(2)
+    form.setValue('price', averagePrice)
+    // Switch to the manual tab to show applied content
+    setActiveTab('manual')
+  }
+      tags: ""}}),
+  
+  // Handle image upload preview
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0],
+    if (file) {
+      form.setValue("image", file),
+      const reader = new FileReader(),
+      reader.onloadend = () => {
+        setImagePreview(reader.result as string)
+      },
+      reader.readAsDataURL(file)
+    }
+  },
+
+  const handleVideoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0],
+    if (file) {
+      form.setValue("video", file)
+    }
+  },
+
+  const handleModelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0],
+    if (file) {
+      form.setValue("model", file)
+    }
+  },
+
+  // Apply AI-generated content to the form
+  const handleApplyGenerated = (content: any) => {
+    form.setValue("description", content.description),
+    form.setValue("tags", content.tags.join(", ")),
+    
+    // Set a default price as the middle of the suggested range
+    const averagePrice = ((content.suggestedPrice.min + content.suggestedPrice.max) / 2).toFixed(2),
+    form.setValue("price", averagePrice),
+    
+    // Switch to the manual tab to show applied content
+    setActiveTab("manual")
+  },
+
+  // Handle form submission
+  const onSubmit = async (values: ProductFormValues) => {
+    if (!user) {
+      toast({
+      })
+      return;
+    }
+    setIsSubmitting(true)
+        title: "Authentication Required",
+        description: "You must be logged in to publish products",
+        variant: "destructive"}),
+      return
+    }
+
+    setIsSubmitting(true),
+    
+    try {
+      // Create the product listing
+      const productData = {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
         title: values.title,
         description: values.description,
         price: parse_float (values.price),
@@ -146,7 +306,11 @@ if ( {) {$2;
       }
 
 
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
 import React from 'react';
 import { useForm, ControllerRenderProps } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -155,6 +319,7 @@ import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
 import { useToast } from '@/hooks/use-toast';
 import { useRouter } from 'next/router';
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
 
       const { data: productRecord, error: productError } = await supabase
         .from('product_listings')
@@ -162,6 +327,17 @@ import { useRouter } from 'next/router';
         .select('id')
 
 
+=======
+import Image from 'next/image'; // Import next/image;
+import { logErrorToProduction } from '@/utils/productionLogger';
+
+
+
+          name: user.displayName || "Anonymous Creator",
+          id: user.id},
+        createdAt: new Date().toISOString()},
+      
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
         .single(),
         
       if (productError) {
@@ -183,6 +359,10 @@ import {;
   FormField,;
   FormItem,;
   FormLabel,;
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
   FormMessage,;
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
@@ -230,11 +410,15 @@ export function ProductSubmissionForm() {;
   const [imagePreview, setImagePreview] = React && React.useState(null as string | null);
   const [activeTab, setActiveTab] = React && React.useState('manual');
 
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
   // Initialize the form;
   const form = useForm<ProductFormValues>({;
     resolver: zodResolver(productSchema),;
     defaultValues: {;
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
       title: '',;
       description: '',;
       price: '',;
@@ -314,10 +498,16 @@ export function ProductSubmissionForm() {;
       };
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
       const { data: productRecord, error: productError } = await supabase;
         .from('product_listings');
         .insert([productData]);
         .select('id');
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
         .single();
 
       if (productError) {;
@@ -357,11 +547,15 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
           .getPublicUrl(imagePath);
         imagePublicUrl = publicUrlData && publicUrlData.publicUrl;
 
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
         // Update the product with the image URL;
         const { error: updateError } = await supabase;
           .from('product_listings');
           .update({;
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
             images: [imagePublicUrl],;
           });
           .eq('id', productRecord && productRecord.id);
@@ -421,6 +615,8 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
             sellerId: user && user.id,;
           },;
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
         });
       } catch (err) {;
         logErrorToProduction('Error invoking moderation:', { data: err });
@@ -433,17 +629,27 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
         title: "Product Published!",
         description: "Your product has been successfully published on Zion."}),
       
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
       // Redirect to product page
       router.push(`/marketplace/listing/${productRecord.id}`)
     } catch (error) {
       toast({
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
 
         title: 'Publication Failed',
 
 
+=======
+
+
+        title: 'Publication Failed',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
         description:
           error instanceof Error ? error.message : 'An unknown error occurred'
         variant: 'destructive'
@@ -463,6 +669,7 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
 
 
   return (
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
     <Tabs value={activeTab} onValueChange={setActiveTab} className='w-full'>;
 =======
           .from('products').upload(modelPath, values && values.model)if (uploadError) {throw new Error(uploadError && uploadError.message)}const { data: publicUrlData } = supabase && supabase.storage;
@@ -551,11 +758,30 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                 const { onChange, onBlur, value, ref } = field,
                 return (
 
+=======
+    <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+      <TabsList className="grid grid-cols-2 mb-6">
+        <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">
+          Manual Creation
+        </TabsTrigger>
+        <TabsTrigger value="ai" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">
+          <Sparkles className="h-4 w-4 mr-2" />
+          AI-Powered Creation
+        </TabsTrigger>
+      </TabsList>
+
+
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            <FormField
+              control={form.control}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
 
 
                   <FormItem>
                     <FormLabel>Product Title</FormLabel>
                     <FormControl>
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
                 field: ControllerRenderProps<ProductFormValues, 'title'>;
               }) => {;
                 const { onChange, onBlur, value, ref } = field;                return (
@@ -602,6 +828,9 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
 <<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
                         value={value}
 
+=======
+                      <Input
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
                         ref={ref}
                       />;
 
@@ -628,9 +857,15 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                       placeholder="Describe your product in detail...";
                       className="min-h-32";
 <<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
                       {...field}
                     />
                   </FormControl>
@@ -640,6 +875,7 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                   <FormMessage />
                 </FormItem>
               )}
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
             />
 
 
@@ -648,6 +884,8 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                 control={form.control}
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
                     <FormLabel>Price (USD)</FormLabel>
                     <FormControl>
                       <Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />
@@ -657,6 +895,10 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                     </FormDescription>
                     <FormMessage />
                   </FormItem>
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
 
 =======
               name="description";
@@ -691,7 +933,10 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                 name="price";
 <<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues "price"> }) => (;
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
                   <FormItem>;
 =======
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues "price"> }) => (<FormItem>;
@@ -751,6 +996,7 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                   </FormItem>;
 <<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
                 )}
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
 
               />;
 
@@ -790,6 +1036,8 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                   </FormItem>;
                 )}
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
               />;
               <FormField;
                 control={form.control}
@@ -816,6 +1064,7 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                     </FormControl>
                     <FormMessage />
                   </FormItem>
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
 
 
 =======
@@ -826,6 +1075,11 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
               <FormField;
                 control={form.control}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ProductSubmissionForm.tsx
+=======
+            <FormField
+              control={form && form.control}
+              name='tags'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
                 name="category";
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues "category"> }) => (<FormItem>;
                     <FormLabel>Category</FormLabel>;
@@ -882,11 +1136,18 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
             <FormField;
 <<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
               control={form.control}
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
 
               name="tags"
               render={({ field }: { field: ControllerRenderProps<ProductFormValues "tags"> }) => (
                 <FormItem>
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
 
 
                   <FormLabel>Tags</FormLabel>
@@ -897,6 +1158,7 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                     />
                   </FormControl>
                   <FormDescription>
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
 
                 field: ControllerRenderProps<ProductFormValues, 'tags'>;
 =======
@@ -910,6 +1172,8 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                     />;
                   </FormControl>;
                   <FormDescription>;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
               name="tags";
               render={({ field }: { field: ControllerRenderProps<ProductFormValues "tags"> }) => (<FormItem>;
                   <FormLabel>Tags</FormLabel>;
@@ -917,6 +1181,7 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                     <Input placeholder="Enter tags separated by commas" {...field} />;
                   </FormControl>;
                   <FormDescription>;
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
                     Add relevant tags to help users find your product (e.g., ai, productivity, design)field: ControllerRenderProps<ProductFormValues, 'tags'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ProductSubmissionForm.tsx
               }) => (                <FormItem>;
@@ -932,11 +1197,18 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                     Add relevant tags to help users find your product (e && e.g., ai,;
                     productivity, design);
 
+=======
+                    Add relevant tags to help users find your product (e.g., ai, productivity, design);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
                   </FormDescription>;
                   <FormMessage />;
                 </FormItem>;
               )}
             />;
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
 
 
             <FormField
@@ -976,13 +1248,23 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                   <FormMessage />
                 </FormItem>
 
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
               render={() => (
                 <FormItem>
                   <FormLabel>Product Image</FormLabel>
                   <FormControl>
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
 
 
+=======
+                    <Input
+                      type='file'
+                      accept='image/*'
+                      onChange={handleImageChange}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
                     <Input 
                       type="file" 
                       accept="image/*" 
@@ -999,6 +1281,7 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                   <FormMessage />
 
 
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
                   
 
 
@@ -1017,10 +1300,16 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                     <div className='mt-2 w-full max-w-md border rounded overflow-hidden'>;
                       <AspectRatio ratio={3 / 2}>;
 
+=======
+                  {imagePreview && (
+                    <div className="mt-2 w-full max-w-md border rounded overflow-hidden">
+                      <AspectRatio ratio={3/2}>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
                         <Image
                           src={imagePreview}
 
 
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
                           alt="Product image preview"
                           width={600} // Example width, adjust as needed
 
@@ -1035,6 +1324,16 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                       </AspectRatio>;
                     </div>;
 
+=======
+                          height={400} // Example height, adjust as needed
+                          className='w-full h-full object-cover'
+                          // `sizes` might not be strictly necessary for a preview of this nature
+                          // but can be added if responsive behavior is critical here.
+                          // For local object URLs, optimization via loader won't occur.
+                        />
+                      </AspectRatio>
+                    </div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
                   )}
 =======
                       className="cursor-pointer";
@@ -1173,6 +1472,10 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                 className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'>;
 <<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
                 {isSubmitting ? 'Publishing...' : 'Publish Product'}
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
 
 
             />;
@@ -1182,7 +1485,10 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
               render={() => (
 
 
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
                 <FormItem>
                   <FormLabel>Product Video (MP4)</FormLabel>
                   <FormControl>
@@ -1194,8 +1500,11 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                   <FormMessage />
                 </FormItem>
               )}
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
             />;
 =======
                 {isSubmitting ? 'Publishing...' : 'Publish Product'}/>;
@@ -1232,13 +1541,24 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
 
 
 
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
 
 
+=======
+            <div className="flex justify-end">
+              <Button 
+                type="submit" 
+                disabled={isSubmitting}
+                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+              >
+                {isSubmitting ? "Publishing..." : "Publish Product"}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
               </Button>
             </div>
           </form>
         </Form>
       </TabsContent>
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
 
                 </FormItem>)}
 =======
@@ -1328,15 +1648,28 @@ if (file) {;
 };
 reader.readAsDataURL (file) ;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        <AIListingGenerator
+          onApplyGenerated={handleApplyGenerated}          initialValues={{
+            title: form.getValues('title')
+            category: form.getValues('category')
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
 
 };
 
 };
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
 const handleModelChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
   const file = e.target.files?.[0];
 if (file) {;
   ;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+const handleModelChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
+  const file = e && e.target.files?.[0];
+if (file) {;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
 
 };
 //Apply AI-generated content to the form const handleApplyGenerated = (content: any) => {;
@@ -1345,15 +1678,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return;
 }setIsSubmitting (true);
 author: {";
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
   name: user.displayName || "Anonymous Creator";
 id: user.id ;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  name: user && user.displayName || "Anonymous Creator";
+id: user && user.id ;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
 };
 createdAt: new Date () .toISOString () ;
 };
 data: productRecord, error: productError ';
 }= await supabase .from ('product listings') .insert ([productData]) .select ('id') .single ();
 let imagePublicUrl: string | undefined;';
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
 //If we have an image, upload it .from ('products') .upload (imagePath, values.image);
 //Get the public window.URL for the image const {;
   data: publicUrlData ';
@@ -1372,10 +1711,30 @@ const {;
   data: publicUrlData ';
 }= supabase.storage.from ('products') .getPublicUrl (modelPath);
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+//If we have an image, upload it .from ('products') .upload (imagePath, values && values.image);
+//Get the public window && window.URL for the image const {;
+  data: publicUrlData ';
+}= supabase && supabase.storage.from ('products') .getPublicUrl (imagePath);
+imagePublicUrl = publicUrlData && publicUrlData.publicUrl;
+//Update the product with the image window && window.URL const {;
+  error: updateError ';
+}= await supabase .from ('product listings') .from ('products') .upload (videoPath, values && values.video);
+const {;
+  data: publicUrlData ';
+}= supabase && supabase.storage.from ('products') .getPublicUrl (videoPath);
+const {;
+  error: updateError ';
+}= await supabase .from ('product listings') .from ('products') .upload (modelPath, values && values.model);
+const {;
+  data: publicUrlData ';
+}= supabase && supabase.storage.from ('products') .getPublicUrl (modelPath);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
 const {;
   error: updateError ';
 }= await supabase .from ('product listings') ;
 }//Send listing to moderation service try {';
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
   await supabase.functions.invoke ('moderate-listing', {;
   body: {;
   //Redirect to product page router.push (`/marketplace/listing/$ {;
@@ -1385,6 +1744,16 @@ const {;
   toast ({;
   ;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  await supabase && supabase.functions.invoke ('moderate-listing', {;
+  body: {;
+  //Redirect to product page router && router.push (`/marketplace/listing/$ {;
+  productRecord && productRecord.id ;
+}`) ;
+}catch (error) {;
+  toast ({;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
 }finally {;
   setIsSubmitting (false) ;
 
@@ -1392,6 +1761,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }className="w-full"> <TabsList className="grid grid-cols-2 mb-6" > <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple" > ai"className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple"> <Sparkles className="h-4 w-4 mr-2"/> AI-Powered Creation </TabsTrigger> </TabsList> ;
 }";
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
 }className="w - full"> <TabsList className="grid grid - cols - 2 mb - 6" > <TabsTrigger value="manual" className="data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple" > ai"className="data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple"> <Sparkles className="h - 4 w - 4 mr - 2"/> AI - Powered Creation </TabsTrigger> </TabsList>;
 }";
 }/> <FormField Describe your product in detail..." className="min - h-32" {
@@ -1446,6 +1816,114 @@ id: user.id ;}createdAt: new Date () .toISOString ()}data: productRecord, error:
 }/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ";
 }/> <div className="flex justify - end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>);
 }'"  );
+=======
+}/> <FormFieldDescribe your product in detail..." className="min-h-32" {
+  ...field '
+}/> </FormControl> <FormDescription> Provide a detailed description of what you're offering </FormDescription> <FormMessage /> </FormItem>) ";
+}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <FormField <FormItem> <FormLabel>Price (USD) </FormLabel> <FormControl> <Inputtype="number" min="0" step="0 && 0.01" placeholder="0 && 0.00" {
+  ...field 
+}/> ";
+}/> <FormField >Select a category</option> <option value="digital product" >Digital Product</option> <option value="service" >Service</option> <option value="ai tool" >AI Tool</option> <option value="course" >Course</option> <option value="template" >Template</option> <option value="other" >Other</option> </select> </FormControl> <FormMessage /> </FormItem>) ";
+}/> </div> <FormField <FormItem> <FormLabel>Tags</FormLabel> <FormControl> <Inputplaceholder="Enter tags separated by commas" {
+  ...field 
+}/> ";
+}/> <FormField <FormItem> <FormLabel>Product Image</FormLabel> <FormControl> <Inputtype="file" accept="image/*" onChange= {
+  handleImageChange "
+}className="cursor-pointer" /> </FormControl> <FormDescription> Upload a high-quality image of your product (recommended size: 1200x800px) </FormDescription> <FormMessage /> //`sizes` might not be strictly necessary for a preview of this nature;';
+//but can be added if responsive behavior is critical here. //For local object URLs, optimization via loader won't occur. /> </AspectRatio> </div>) ;
+}</FormItem>) ";
+}/> <FormField <FormItem> <FormLabel>Product Video (MP4) </FormLabel> <FormControl> <Inputtype="file" accept="video/mp4" onChange= {
+  handleVideoChange "
+}className="cursor-pointer" /> </FormControl> <FormDescription> Optional video demonstrating your product </FormDescription> <FormMessage /> </FormItem>) ;
+}/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ";
+}/> <div className="flex justify-end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>) ;
+}'"  );
+
+}
+
+reader.readAsDataURL (file)
+  setImagePreview (reader.result as string);
+}
+reader.readAsDataURL (file);
+
+}
+}
+const handleModelChange = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
+  const file = e.target.files?.[0];
+// Check condition
+if ( {) {
+  $2
+}
+}
+//Apply AI - generated content to the form const handleApplyGenerated = (content: any) =>: any {
+  // Check condition
+if ( {) {
+  $2
+}
+  toast ({
+
+  return;
+}setIsSubmitting (true);
+author: {";
+  name: user.display_name || "Anonymous Creator";
+id: user.id;
+}
+created_at: new Date () .toISOString ();
+
+}
+data: product_record, error: product_error ';
+}= await supabase .from ('product listings') .insert ([product_data]) .select ('id') .single ();
+let imagePublicUrl: string | undefined;';
+//If we have an image, upload it .from ('products') .upload (image_path, values.image);
+//Get the public window.URL for the image const {
+  data: publicUrlData ';
+}= supabase.storage.from ('products') .getPublicUrl (image_path);
+imagePublicUrl = publicUrlData.public_url;
+//Update the product with the image window.URL const {
+  error: update_error ';
+}= await supabase .from ('product listings') .from ('products') .upload (video_path, values.video);
+const {
+  data: publicUrlData ';
+}= supabase.storage.from ('products') .getPublicUrl (video_path);
+const {
+  error: update_error ';
+}= await supabase .from ('product listings') .from ('products') .upload (model_path, values.model);
+const {
+  data: publicUrlData ';
+}= supabase.storage.from ('products') .getPublicUrl (model_path);
+const {
+
+
+
+  error: update_error ';
+}= await supabase .from ('product listings');
+}//Send listing to moderation service try {';
+  await supabase.functions.invoke ('moderate - listing', {
+  body: {
+  //Redirect to product page router.push (`/marketplace / listing/$ {
+  product_record.id;
+}`);
+}catch (error) {
+  toast ({
+}finally {
+  setIsSubmitting (false);
+
+
+      
+      <TabsContent value="ai">
+        <AIListingGenerator 
+          onApplyGenerated={handleApplyGenerated}
+          initialValues={{
+            title: form.getValues("title"),
+            category: form.getValues("category")
+          }}
+        />;
+      </TabsContent>;
+    </Tabs>;
+  );
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx
 }
 
 }/> <FormField Describe your product in detail..." className="min-h-32" {;
@@ -1469,6 +1947,7 @@ id: user.id ;}createdAt: new Date () .toISOString ()}data: productRecord, error:
 }/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ";
 }/> <div className="flex justify-end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>) ;
 }'"
+<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 }/> <FormField <FormItem> <FormLabel>Product Image</FormLabel> <FormControl> <Inputtype="file" accept="image/*" onChange= {handleImageChange ";
@@ -1539,3 +2018,5 @@ data: product_record, error: product_error ';
 }className="cursor-pointer" /> </FormControl> <FormDescription> Optional video demonstrating your product </FormDescription> <FormMessage /> </FormItem>)}/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ";
 }/> <div className="flex justify-end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>)}'";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ProductSubmissionForm.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ProductSubmissionForm.tsx

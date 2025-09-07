@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src_backup/components/mobile-app/MobileAppHero.tsx
 
 ;
 import React from "react",import Link from "next/link",import { ArrowRight, Phone  } from 'lucide-react';
@@ -11,6 +12,8 @@ import Link from "next/link"
 import { ArrowRight, Phone } from 'lucide-react'import { Button } from "@/components/ui/button"
 import { AppStoreButtons } from "./AppStoreButtons"
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/MobileAppHero.tsx
 export const MobileAppHero: React.FC = () => {
   // These would come from environment variables or a config
   const appStoreUrl = "#", // Replace with actual App Store URL when available
@@ -35,9 +38,15 @@ export const MobileAppHero: React.FC = () => {
             </div>
             <Link href="/open-app">
               <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover:bg-white/10">
+<<<<<<< HEAD:src_backup/components/mobile-app/MobileAppHero.tsx
 <Link href="/open-app">
               <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover: bg-white/10">
 
+=======
+
+<Link href="/open-app">
+              <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover: bg-white/10">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/MobileAppHero.tsx
                 Open App
                 <ArrowRight size={20} />
               </Button>
@@ -45,6 +54,10 @@ export const MobileAppHero: React.FC = () => {
           </div>
 
 
+<<<<<<< HEAD:src_backup/components/mobile-app/MobileAppHero.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/MobileAppHero.tsx
           
 
 
@@ -53,6 +66,7 @@ export const MobileAppHero: React.FC = () => {
             <div className="relative w-64 h-auto">
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
               <Phone className="w-full h-auto text-white" />
+<<<<<<< HEAD:src_backup/components/mobile-app/MobileAppHero.tsx
 
 =======
 import React from 'react';
@@ -128,6 +142,8 @@ export const MobileAppHero: React.FC = () => {// These would come from environme
 <<<<<<< HEAD:src_backup/components/mobile-app/MobileAppHero.tsx
     </section>);
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/MobileAppHero.tsx
 }
 
 
@@ -192,6 +208,7 @@ export const MobileAppHero: React.FC = () => {;
 };
 
 "
+<<<<<<< HEAD:src_backup/components/mobile-app/MobileAppHero.tsx
 ";
 
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -199,3 +216,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )}";
 ";";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/mobile-app/MobileAppHero.tsx
+=======
+
+
+
+";
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/MobileAppHero.tsx

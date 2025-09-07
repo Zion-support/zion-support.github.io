@@ -1,9 +1,13 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+#!/usr/bin/env node;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const fs = require("$1")
 const path = require("$1")
 const { execSync, spawn } = require("child_process")
@@ -161,7 +165,11 @@ process.on("SIGINT")
   } catch (error) {launcher.log(` Command failed``})
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 process.on("SIGINT", () => {";  launcher.log("\n� Shutting down PM2 automation launcher...");  process.exit(0),"}
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+process.on("SIGINT", () => {";  launcher.log("\n� Shutting down PM2 automation launcher...");  process.exit(0),"}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

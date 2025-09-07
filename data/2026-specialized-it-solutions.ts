@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -21,6 +22,12 @@ export interface SpecializedITSolution2026  {id: string;name: string;
 export interface SpecializedITSolution2026 {
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  id: string;
+
+export interface SpecializedITSolution2026 {
+id: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   name: string;
   tagline: string;
   price: string;
@@ -52,6 +59,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     address: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   text_color: string;
   link: string;
   market_position: string;
@@ -699,6 +709,7 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) => {re
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -711,10 +722,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1284,6 +1299,13 @@ const contact = null;
     realImplementation: true
     implementationDetails:
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+export const specializedITSolutions2026: SpecializedITSolution2026[] = [
+  // Cloud Infrastructure & DevOps
+  {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.'
     launchDate: '2024-05-25'
     customers: 67
@@ -1307,6 +1329,7 @@ export const getPopularSpecializedITSolutions2026 = () => {};
 export const getPopularSpecializedITSolutions2026 = () => {;
   return specializedITSolutions2026.filter(solution => solution.popular);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1337,6 +1360,10 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
   // Cloud Infrastructure & DevOps
   {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 ];
@@ -1349,6 +1376,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1373,13 +1401,17 @@ export const getSpecializedITSolutions2026ByPriceRange = (
   return specializedITSolutions2026 && specializedITSolutions2026.filter(solution => {
     const price = parseInt(solution && solution.price.replace('$', ''));
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     return price >= minPrice && price <= maxPrice;
   });
-<<<<<<< HEAD
 };    return price >= minPrice && price <= maxPrice
 
   })
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1393,6 +1425,9 @@ export const getSpecializedITSolutions2026ByPriceRange = (
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     id: 'cloud-infrastructure-automation', name: 'Cloud Infrastructure Automation Platform',
     tagline: 'Automate cloud infrastructure deployment and management with intelligent orchestration', price: '$399',
     period: '/month',
@@ -1611,6 +1646,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -1635,6 +1671,8 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPrice: number, maxP
     const price = parseInt(solution.price.replace('$', ''));
     return price >= minPrice && price <= maxPrice
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   })
 };
@@ -1645,7 +1683,11 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>: an
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ;
 export const getPopularSpecializedITSolutions2026 = () =>: any {
   return specializedITSolutions2026.filter (solution => solution.popular);
@@ -1662,6 +1704,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (
   });
 }
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
@@ -1670,6 +1713,8 @@ export const getSpecializedITSolutions2026ByPriceRange = (
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 export interface SpecializedITSolution2026 {;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   })
 };
@@ -1678,7 +1723,7 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>: an
   return specializedITSolutions2026.filter (
     solution => solution.category === category);
 }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 
 export interface SpecializedITSolution2026 {;
   id: string,;
@@ -1753,6 +1798,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1769,3 +1815,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+};
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

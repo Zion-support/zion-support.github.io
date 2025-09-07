@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22,6 +22,11 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
+=======
+  if (req.method === 'POST') {
+    // In a real implementation, validate and insert review into Supabase
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   if (req.method === 'POST') {
     // In a real implementation, validate and insert review into Supabase
   }
@@ -30,6 +35,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   return res && res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -58,6 +64,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -67,12 +79,16 @@ export default async function handler(
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     // In a real implementation, fetch reviews from Supabase by talent id/slug
-<<<<<<< HEAD
+
     const { slug } = req.query as { slug?: string }
     // In a real implementation, fetch reviews from Supabase by talent id/slug;
     const { slug } = req.query as { slug?: string };
@@ -105,6 +121,7 @@ if ( {) {$2;
     return res.status(200).json({ slug, reviews: [], average: null, count: 0 })
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -118,6 +135,8 @@ return res.status(201).json({ ok: true });
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     return res.status(200).json({ slug, reviews: [], average: null, count: 0 })
   if (req.method === 'POST') {
     // In a real implementation, validate and insert review into Supabase
@@ -139,6 +158,7 @@ return res && res.setHeader('AllowGET, POST').status(405).end('Method Not Allowe
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -152,6 +172,11 @@ return res && res.setHeader('AllowGET, POST').status(405).end('Method Not Allowe
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ;
 export default async /**
  * handler - Function description
@@ -194,6 +219,7 @@ return res;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -222,6 +248,13 @@ return res;
     // In a real implementation, validate and insert review into Supabase;
     .end('Method Not Allowed')
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   if (req.method === 'GET') {
 
     // In a real implementation, fetch reviews from Supabase by talent id/slug;
@@ -238,7 +271,10 @@ return res
     .setHeader('Allow', 'GET, POST')
     .status(405)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     .end('Method Not Allowed');    return res.status(201).json({ ok: true })
   }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -262,6 +298,7 @@ return res
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -272,6 +309,10 @@ return res
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }
 
@@ -281,6 +322,7 @@ return res
 }
 }
     // In a real implementation, validate and insert review into Supabase
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -298,3 +340,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+    .end('Method Not Allowed');
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

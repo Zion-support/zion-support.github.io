@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 <<<<<<< HEAD
@@ -39,6 +40,12 @@ jest.mock('next/router', () => ({
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import React from 'react';
 >>>>>>> e69e89595790a81610b7c67a3a58ff639695f186
 =======
@@ -80,6 +87,7 @@ export default function Setup({ }: SetupProps) {
     </div>
   );
 }
+<<<<<<< HEAD
 // Mock ResizeObserver;
 global.ResizeObserver = class ResizeObserver {
   observe () { /* do nothing */ }
@@ -155,11 +163,11 @@ afterEach(() => {cleanup()vi.restoreAllMocks()})
 import React from 'react';
 =======
 >>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-interface SetupProps {
-  // Add props here as needed
-}
 
+<<<<<<< HEAD
 export default function Setup({}: SetupProps) {
   return (
     <div>
@@ -178,6 +186,8 @@ export default function Setup({}: SetupProps) {
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import '@testing-library/jest-dom'
 import { cleanup } from '@testing-library/react'
 import { afterEach, vi } from 'vitest'
@@ -187,6 +197,7 @@ afterEach(() => {
   cleanup()
   vi.restoreAllMocks()
 })
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
 =======
@@ -200,3 +211,8 @@ origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
 =======
 >>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

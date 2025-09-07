@@ -1,15 +1,21 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node;
 /**
  * Deployment Automation;
  * Automates deployment processes;
  */
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const fs = require('fs')
 const { execSync } = require('child_process')
   log(message, type = 'INFO')
@@ -26,8 +32,13 @@ const { execSync } = require('child_process')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     console.error('Deployment automation "failed")
 
 const { execSync, spawn } = require('child_process');
@@ -160,6 +171,10 @@ class DeploymentAutomation {
     } catch (error) {
       this.log(`💥 Deployment Automation Failed: ${error.message}`);
       process.exit(1);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -167,7 +182,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 console.log('🚀 Deployment Automation');
-console.log('========================');
+console.log('===');
 
 class DeploymentAutomation {
   constructor() {
@@ -562,11 +577,15 @@ Sitemap: https://ziontechgroup.com/sitemap.xml`;
       
       await this.generateReport();
       return false;
+<<<<<<< HEAD
 origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
   }
 }
 
+<<<<<<< HEAD
 // Run the deployment automation
 if (require.main === module) {
   const deployment = new DeploymentAutomation();
@@ -585,3 +604,9 @@ origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+// Run the automation
+const automation = new DeploymentAutomation();
+automation.run();
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

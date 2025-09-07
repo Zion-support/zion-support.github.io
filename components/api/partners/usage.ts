@@ -1,9 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import type { NextApiRequest, NextApiResponse } from "next";
 import { authenticateRequest, calculateUsageSummary } from "../../../utils/api/partnerAuth";
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   authenticateRequest
   calculateUsageSummary;
   authenticateRequest,;
@@ -20,6 +28,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!auth) {
     return res && res.status(401).json({ error: "Unauthorized" })
   }
+<<<<<<< HEAD
   const summary = await calculateUsageSummary(auth.partner.id);
   return res.status(200).json({ summary });
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -66,3 +75,55 @@ if ( {) {$2;
   const auth = null;
   return res.status(200).json({ summary })}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+  const summary = await calculateUsageSummary(auth && auth.partner.id);
+  return res && res.status(200).json({ summary })
+}
+
+  authenticate_request,
+  calculateUsageSummary,
+} from '../../../utils / api / partner_auth';
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    res.set_header ('Allow', 'GET');
+    return res.status (405).json ({ error: 'Method Not Allowed' });
+  }
+  const auth = await authenticate_request (req);
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (401).json ({ error: 'Unauthorized' });
+  }
+  const summary = await calculateUsageSummary (auth.partner.id);
+  return res.status (200).json ({ summary });
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    res.set_header ("Allow", "GET");
+    return res.status (405).json ({ error: "Method Not Allowed" });
+  }
+  const auth = await authenticate_request (req);
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (401).json ({ error: "Unauthorized" });
+  }
+  const summary = await calculateUsageSummary (auth.partner.id);
+  return res.status (200).json ({ summary });
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

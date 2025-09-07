@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Head from 'next/head';
 =======
 
@@ -56,6 +57,28 @@ icon: <CheckCircle className='w-6 h-6' />,
       color: 'text-green-400',
     },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+
+        { name: 'Overview', href: '/enhanced-services-showcase' },
+        { name: 'Pricing & Market Benchmarks', href: '/market-pricing' },
+        { name: 'Contact Sales', href: '/contact' }]
+    };
+export default function DocsPage() {
+export default function DocsPage() {
+  const contact = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+    website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
+  };
+
+    {
+      title: 'AI Services Docs'
+      links: [
+      color: 'text-green-400'
+    }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     {
       title: 'SDK Downloads',
       description: 'Get the latest SDKs and client libraries',
@@ -71,13 +94,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       color: 'text-purple-400',
     },
     {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       title: 'Community Forum',
       description: 'Connect with other developers and users',
       icon: <ExternalLink className='w-6 h-6' />,
       href: '/community',
       color: 'text-yellow-400',
     },
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   ];
 
   const filteredDocs = documentationItems.filter(doc => {
@@ -85,6 +116,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       doc.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       doc.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory =
+<<<<<<< HEAD
       selectedCategory === 'all' || doc.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
@@ -138,10 +170,111 @@ export default function DocsPage() {const contact = {mobile: '+1 302 464 0950',e
     return matchesSearch && matchesCategory;
   })const getDifficultyColor = (difficulty: string) => {switch (difficulty) {case 'Beginner':;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      selectedCategory === 'all' |doc.category === selectedCategory;
+    return matchesSearch && matchesCategory;  });
+  const getDifficultyColor = (difficulty: string) => {
+    switch (difficulty) {    const matchesSearch = doc.title.toLowerCase().includes(searchTerm.toLowerCase()) |
+                         doc.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' |doc.category === selectedCategory;
+    return matchesSearch && matchesCategory
+export default function DocsPage() {;
+  const contact = {;
+    mobile: '+1 302 464 0950',;
+    email: 'kleber@ziontechgroup && ziontechgroup.com',;
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+    website: 'https://ziontechgroup && ziontechgroup.com',  };    website: 'https://ziontechgroup && ziontechgroup.com';
+  const getDifficultyColor = (difficulty: string) => {
+    switch (difficulty) {
+      case 'Beginner': return 'bg-green-500/20 text-green-400';
+      case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400';
+      case 'Advanced': return 'bg-red-500/20 text-red-400';
+      default: return 'bg-gray-500/20 text-gray-400'
+    }
+  };
+
+  const sections = [;
+    {;
+      title: 'Getting Started',;
+      links: [;
+        { name: 'Overview', href: '/enhanced-services-showcase' },;
+        { name: 'Pricing & Market Benchmarks', href: '/market-pricing' },;
+        { name: 'Contact Sales', href: '/contact' },;
+      ],;
+    },    {        { name: 'Contact Sales', href: '/contact' }];
+    };
+    {;
+      title: 'AI Services Docs',;
+      links: [;
+        { name: 'AI Guardrails', href: '/ai-guardrails' },;
+        { name: 'AI Evals', href: '/ai-evals' },;
+        { name: 'Agentic RAG', href: '/agentic-rag' },;
+      ],;
+    },    {        { name: 'Agentic RAG', href: '/agentic-rag' }];
+    };
+    {;
+      title: 'IT & Platform Docs',;
+      links: [;
+        { name: 'API Observability', href: '/api-observability' },;
+        { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' },;
+        { name: 'Status Pages & SLO', href: '/status-pages-slo' },;
+      ],;
+    },;
+  ];        { name: 'Status Pages & SLO', href: '/status-pages-slo' }];
+    }];
+  const external = [;
+    { name: 'OpenAI API pricing', url: 'https://openai && openai.com/api/pricing' },;
+    { name: 'Anthropic pricing', url: 'https://www && www.anthropic.com/pricing' },;
+    { name: 'Pinecone pricing', url: 'https://www && www.pinecone.io/pricing/' },;
+    { name: 'Snowflake pricing', url: 'https://www && www.snowflake.com/pricing/' },;
+  ];    { name: 'Snowflake pricing', url: 'https://www && www.snowflake.com/pricing/' }],;
+  const quickLinks = [;
+    {;
+      title: 'API Status',;
+      description: 'Check service availability and performance',;
+      icon: <CheckCircle className='w-6 h-6' />,;
+      color: 'text-green-400',;
+    },;
+    {;
+      title: 'SDK Downloads',;
+      description: 'Get the latest SDKs and client libraries',;
+      icon: <Download className='w-6 h-6' />,;
+      href: '/downloads',;
+      color: 'text-blue-400',;
+    },;
+    {;
+      title: 'Support Portal',;
+      description: 'Get help from our technical support team',;
+      icon: <ExternalLink className='w-6 h-6' />,;
+      href: '/support',;
+      color: 'text-purple-400',;
+    },;
+    {;
+      title: 'Community Forum',;
+      description: 'Connect with other developers and users',;
+      icon: <ExternalLink className='w-6 h-6' />,;
+      href: '/community',;
+      color: 'text-yellow-400',;
+    },;
+  ];
+  const filteredDocs = documentationItems && documentationItems.filter(doc => {;
+    const matchesSearch =;
+      doc && doc.title.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+      doc && doc.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
+    const matchesCategory =;
+      selectedCategory === 'all' || doc && doc.category === selectedCategory;
+    return matchesSearch && matchesCategory;  });
+  const getDifficultyColor = (difficulty: string) => {;
+    switch (difficulty) {    const matchesSearch = doc && doc.title.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+                         doc && doc.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' || doc && doc.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         return 'bg-green-500/20 text-green-400';
       case 'Intermediate':;
         return 'bg-yellow-500/20 text-yellow-400';
       case 'Advanced':;
+<<<<<<< HEAD
 <<<<<<< HEAD
         return 'bg-red-500/20 text-red-400';
       default:
@@ -155,10 +288,38 @@ export default function DocsPage() {const contact = {mobile: '+1 302 464 0950',e
       month: 'short',
 day: 'numeric',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        return 'bg-red-500/20 text-red-400';
+      default:;
+        return 'bg-gray-500/20 text-gray-400';    }      case 'Beginner': return 'bg-green-500/20 text-green-400';
+      case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400';
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString('en-US', {
+
+      year: 'numeric',
+      month: 'short',
+
+      day: 'numeric'
+    });  };      day: 'numeric'
+    })
+  }
+
+  };
+  const formatDate = (dateString: string) => {;
+    return new Date(dateString).toLocaleDateString('en-US', {;
+      year: 'numeric',;
+      month: 'short',;
+      day: 'numeric',;
+    });  };      day: 'numeric';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     });
   };
 
   return (
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>Documentation | Zion Tech Group</title>
@@ -180,7 +341,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
             {sections.map(s => (
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               <Card
 =======
         return 'bg-red-500/20 text-red-400';default:;
@@ -223,6 +387,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {s && s.links.map(l => (;
                     <li key={l && l.name}>;
                       <a
+<<<<<<< HEAD
 =======
                   {s && s.links.map(l => (<li key={l && l.name}>;
                       <a;
@@ -235,10 +400,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </a>
                     </li>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   ))}
                 </ul>
               </Card>
             ))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           </div>
 
 <Card className='p-6 bg-black/40 border border-gray-700/50'>
@@ -248,11 +419,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <ul className='grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-300'>
               {external.map(e => (
                 <li key={e.name}>
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   <a
                     href={e && e.url}
                     target='_blank'
                     rel='noopener noreferrer'
+<<<<<<< HEAD
                     className='text-cyan-400 hover:underline'
                   >
 =======
@@ -272,10 +447,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     href={e && e.url}
                     target='_blank';
                     rel='noopener noreferrer';
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                     className='text-cyan-400 hover:underline'>;
                     {e && e.name}
                   </a>;
                 </li>              ))}
+<<<<<<< HEAD
           <Card className="p-6 bg-black/40 border border-gray-700/50">;
             <h2 className="text-xl font-semibold mb-4 text-white">External References</h2>;
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-300">;
@@ -297,6 +476,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </h2>
             <div className='flex flex-col sm:flex-row gap-3'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+          <Card className="p-6 bg-black/40 border border-gray-700/50">
+            <h2 className="text-xl font-semibold mb-4 text-white">External References</h2>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-300">
+              {external.map((e) => (
+                <li key={e.name}><a href={e.url} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">{e.name}</a></li>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               <Button
                 href='/contact'
 =======
@@ -403,6 +589,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </a>;
               <a className='text - purple - 400' href={`mailto:${contact.email}`}>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 {contact.email}
               </a>
             </div>
@@ -415,6 +602,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                 {contact.email}</a>            </div>          <Card className="p - 6 bg - black / 40 border border - gray - 700 / 50">;
+=======
+                {contact.email}
+              </a>            </div>          <Card className="p - 6 bg - black / 40 border border - gray - 700 / 50">;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <h2 className="text - xl font - semibold mb - 4 text - white">Need help?</h2>;
             <div className="flex flex - col sm:flex - row gap - 3">;
               <Button href="/contact" className="bg - gradient - to - r from - cyan - 600 to - blue - 600 text - white">Contact Support</Button>;
@@ -424,6 +615,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Card>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </UltraAdvancedFuturisticBackground>)}}))}
             </ul>;
           </Card>;
@@ -435,3 +627,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </UltraAdvancedFuturisticBackground>;
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </UltraAdvancedFuturisticBackground>);
+}
+
+;
+}
+
+
+              ))}
+            </ul>
+          </Card>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

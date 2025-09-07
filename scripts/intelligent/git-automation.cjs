@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node;
 
 =======
@@ -18,6 +19,19 @@ const path = require('path')
 
 <<<<<<< HEAD
 =======
+=======
+
+
+
+
+
+#!/usr/bin/env node;
+
+
+const { execSync, spawn } = require('child_process')
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       if ( {
@@ -477,9 +491,14 @@ const gitAutomation = new IntelligentGitAutomation;(;);
 gitAutomation.start().catch(console.error);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       "autoMerge"
       "conflictResolution"
       "branchProtection"
@@ -552,10 +571,16 @@ gitAutomation.start().catch(console.error);
       console.error('Error saving "notification")
       console.error('Error loading "history")
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       console.error('Error loading "history")
 
       console.error('Error loading "history")
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+      console.error('Error loading "history")
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 

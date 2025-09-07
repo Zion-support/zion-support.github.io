@@ -217,7 +217,11 @@ process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error(" Failed to start intelligent code "refactorer")
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  console.error(" Failed to start intelligent code "refactorer")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

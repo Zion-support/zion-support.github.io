@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface FraudRecord {
   id: string;
 =======
@@ -35,6 +36,13 @@ class FraudStore {
     const id = Date.now().toString();
     const newRecord: FraudRecord = {
 
+=======
+  private records: Map < string, FraudRecord> = new Map ();
+;
+  create_record (record: Omit < FraudRecord, 'id' | 'timestamp'>): FraudRecord {
+    const id = Date.now ().to_string ();
+    const new_record: FraudRecord = {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       ...record,
       id,
       timestamp: new Date().toISOString(),
@@ -79,6 +87,7 @@ class FraudStore {
     };
   }
 }
+<<<<<<< HEAD
 
 export const fraudStore = new FraudStore();
 export const getFraudStore = () => fraudStore;
@@ -86,6 +95,11 @@ export const getFraudStore = () => fraudStore;
 =======
 export const fraud_store = new FraudStore ()export const getFraudStore  = () =>: any fraud_store;export const fraudStore = new FraudStore()export const getFraudStore = () => fraudStore;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+export const fraud_store = new FraudStore ();
+export const getFraudStore = () =>: any fraud_store;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import fs from 'fs-extra';
 import path from 'path';
 import { createClient  } from '@supabase/supabase-js';
@@ -174,9 +188,12 @@ export function newEvent(
     ipAddress: partial.ipAddress ?? null,
     createdAt: partial.createdAt ?? new Date().toISOString(),
   };
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
       }).filter(Boolean) as AdminActionRecord[];
   }export function getFraudStore(): FraudStore {return new FraudStore()export function newEvent(partial: Partial<FraudEvent> & Pick<FraudEvent, 'source'>;
 ): FraudEvent {const id = uuidv4()return {id,userId: partial.userId ?? null,source: partial.source,content: partial.content ?? null,metadata: partial.metadata ?? null,ipAddress: partial.ipAddress ?? null,createdAt: partial.createdAt ?? new Date().toISOString()}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

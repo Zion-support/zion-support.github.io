@@ -1,11 +1,17 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 console.log(' Starting Analytics Collection...')
   fs.writeFileSync('analytics-report.json')
   console.log(' Analytics collected and saved to analytics-report.json')
@@ -17,7 +23,11 @@ console.log(' Starting Analytics Collection...')
     '.env.example'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     'next.config.js'
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    'next.config.js'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

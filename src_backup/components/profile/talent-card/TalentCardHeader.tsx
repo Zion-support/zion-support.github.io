@@ -1,4 +1,5 @@
 <<<<<<< HEAD:src_backup/components/profile/talent-card/TalentCardHeader.tsx
+<<<<<<< HEAD:src_backup/components/profile/talent-card/TalentCardHeader.tsx
 import React from 'react';
 import { BadgeCheck } from 'lucide-react';
 import { TalentCardAvatar } from './TalentCardAvatar';
@@ -26,6 +27,9 @@ export function TalentCardHeader({
   availabilityType;
   yearsExperience
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+yearsExperience
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/profile/talent-card/TalentCardHeader.tsx
 }: TalentCardHeaderProps) {
   return (
     <div className='flex items-start gap-4 mb-4'>
@@ -59,6 +63,19 @@ export function TalentCardHeader(): any ({fullName,professionalTitle,profilePict
             )}
 
           </h3>
+<<<<<<< HEAD:src_backup/components/profile/talent-card/TalentCardHeader.tsx
+=======
+
+    </div>;
+  );
+};
+
+}
+          </h3>;
+
+          <TalentCardAvailability availabilityType={availabilityType} />;
+        </div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/profile/talent-card/TalentCardHeader.tsx
 
       </div>;
 =======
@@ -101,6 +118,7 @@ function TalentCardHeader() {return (<div className='flex items - start gap - 4 
     </div>);
 }
 ;
+<<<<<<< HEAD:src_backup/components/profile/talent-card/TalentCardHeader.tsx
           <TalentCardAvailability availabilityType={availabilityType} />
         </div>
         <p className='text-zion-cyan text-sm'>{professionalTitle}</p>
@@ -116,3 +134,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/profile/talent-card/TalentCardHeader.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/profile/talent-card/TalentCardHeader.tsx

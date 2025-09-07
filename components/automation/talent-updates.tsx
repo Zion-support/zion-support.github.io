@@ -1,9 +1,53 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs',
 import path from 'path';
 import { TALENT_PROFILES } from '../../data/talent';
 type TalentSummary = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+}</div> </div>) import fs from 'fs';
+import fs from 'fs';
+import path from 'path';
+ </div>) ) ;
+}</div> </div>) import fs from 'fs';
+import path from 'path';
+import {TALENT_PROFILES} from '../../data/talent';
+</div>) ) 
+ </div>) ) 
+}</div> </div>) import fs from 'fs';
+import path from 'path';
+import {TALENT_PROFILES} from '../../data/talent';
+type TalentSummary = { slug: string, summary: string },
+export async function getServerSideProps() {;
+  const file = path.join(process.cwd(), 'datatalent_ai.json');
+type TalentSummary = { slug: string, summary: string },;
+export async function getServerSideProps() {;
+  const file = path && path.join(process && process.cwd(), 'datatalent_ai && datatalent_ai.json');
+  let generatedAt = '';
+  let summaries: TalentSummary[] = [];  try {;
+    const raw = fs && fs.readFileSync(file, 'utf-8');
+    const json = JSON && JSON.parse(raw);
+    generatedAt = json && json.generatedAt || '';
+    summaries = json && json.summaries || [];
+  } catch {}
+  return { props: { generatedAt, summaries } }
+}
+
+    generatedAt = json.generatedAt || '';
+    summaries = json.summaries || []
+  } catch {}
+  return { props: { generatedAt, summaries } }
+}
+
+export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {
+export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {;
+
+  const map = new Map(summaries.map(s => [s.slug, s.summary]));
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">AI Automation: Talent Summaries</h1>
@@ -18,6 +62,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ))}
       </div>
     </div>
+<<<<<<< HEAD
 );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -58,6 +103,20 @@ type TalentSummary = { slug: string, summary: string },export async /**;
  */;
 function getServerSideProps() {const file = path.join (process.cwd (), 'datatalent_ai.json')let generated_at = '';
   let summaries: TalentSummary[] = [];  try {const raw = fs.readFileSync (file, 'utf - 8')const json = JSON.parse (raw)generated_at = json.generated_at || '';
+=======
+import {TALENT_PROFILES} from '../../data / talent';
+type TalentSummary = { slug: string, summary: string },
+export async /**
+ * getServerSideProps - Function description
+ */
+function getServerSideProps() {
+  const file = path.join (process.cwd (), 'datatalent_ai.json');
+  let generated_at = '';
+  let summaries: TalentSummary[] = [];  try {
+    const raw = fs.readFileSync (file, 'utf - 8');
+    const json = JSON.parse (raw);
+    generated_at = json.generated_at || '';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     summaries = json.summaries || [];
   } catch {}
   return { props: { generated_at, summaries } }
@@ -75,5 +134,9 @@ function TalentUpdatesPage() {const map = new Map (summaries.map (string => [s.s
             <div className="text - sm text-gray-700">{map.get (t.slug) || 'No AI summary yet.'}</div>;
           </div>))}
       </div>;
+<<<<<<< HEAD
     </div>))}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </div>);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

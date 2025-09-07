@@ -24,6 +24,7 @@ function fixFile(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Remove all merge conflict markers
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     content = content.replace(/
@@ -33,6 +34,17 @@ function fixFile(filePath) {
 
     content = content.replace(/[^\n]+\n?/g, '');
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/\n?/g, '');
+
+
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/\n?/g, '');
+
+
+    content = content.replace(/
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     
     // Fix common syntax issues
     content = content.replace(/md: text-2xl/g, 'md:text-2xl');

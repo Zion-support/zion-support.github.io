@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -79,6 +80,13 @@ function fixSyntaxErrors() {try {let content = fs.readFileSync(filePath, 'utf8')
           modified = true;
           return `[${items.join(', ')}]`;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+
+        }
+        return match;
+      },
+    );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
         }
 =======
@@ -137,6 +145,36 @@ if (&&) {$2;
 
 console.log(`\nTotal files fixed: ${totalFixed}`);
   }
+<<<<<<< HEAD
+=======
+}},
+,
+// Run all fixes,
+fixFooter();
+fixAccessibility();
+fixAiServices();
+fixApiDocs();
+fixCareers();
+,
+console.log('🎉 Syntax error fixes completed');
+// Run all fixes,
+fixFooter(),
+fixAccessibility(),
+fixAiServices(),
+fixApiDocs(),
+fixCareers(),
+// // // console.log('🎉 Syntax error fixes completed'),
+}},;
+// Run all fixes,;
+fixFooter(),;
+fixAccessibility(),;
+fixAiServices(),;
+fixApiDocs(),;
+fixCareers(),;
+// // // console.log('🎉 Syntax error fixes completed'),;
+}},
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -233,6 +271,7 @@ const fs = require('fs')const path  = require('path')console.log('🔧 Fixing sy
 };
 
 main();
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-646c
 
 =======
@@ -241,3 +280,7 @@ origin/cursor/automate-test-improve-and-merge-code-646c
     }
   })console.log(`\n🎉 Fixed ${fixed}/${files.length} files`)}main()ursor/automate-test-improve-and-merge-code-646c;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -22,10 +23,15 @@
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { ProductListing } from '@/types/listings';
 import { SearchSuggestion, FilterOptions } from '@/types/search';
 // Mock marketplace listings with more realistic data
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -34,6 +40,10 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
   {
@@ -46,9 +56,12 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     createdAt: '2024-02-15T10:45:00 && 00.000Z',
     rating: 4 && 4.8,
     reviewCount: 32,
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     id: 'ai - service - 2',
     title: 'Custom Machine Learning Model Development',
     description:;
@@ -145,6 +158,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { ProductListing } from "@/types/listings";
 import { SearchSuggestion, FilterOptions } from "@/types/search";
@@ -159,6 +173,11 @@ import { SearchSuggestion, FilterOptions } from "@/types/search";
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+import { ProductListing } from "@/types/listings";
+import { SearchSuggestion, FilterOptions } from "@/types/search";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   {;
 import { ProductListing } from "@/types/listings";
 import { SearchSuggestion, FilterOptions } from "@/types/search";
@@ -170,11 +189,17 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500',
     ],
     createdAt: '2024-02-02T11:30:00 && 00.000Z',
@@ -367,11 +392,14 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     review_count: 22,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     location: 'North America',
 =======
 
@@ -389,6 +417,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
   },
   {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     id: 'ai-model-1'
@@ -627,6 +656,8 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
   }
   {
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
       'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'
     ]
@@ -636,12 +667,15 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     featured: true
     location: 'North America'
     availability: '2-4 Weeks'
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500',
     ],
     createdAt: '2023-12-15T09:45:00.000Z',
@@ -726,6 +760,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     reviewCount: 18;
     featured: true;
 =======
@@ -761,6 +796,19 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     availability: "2-4 Weeks"
   }
+=======
+    reviewCount: 18;
+    featured: true;
+
+
+    reviewCount: 18;
+    featured: true;
+
+
+    availability: "2-4 Weeks"
+  }
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     id: "ai-model-1";
     title: "GPT-4 API Integration Package";
     description: "Complete integration solution for GPT-4 API with ready-made templates, connectors, and usage optimization tools. Includes 10 hours of expert implementation support.",
@@ -772,11 +820,16 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
       name: "AI Solutions Inc.";
       id: "ai-solutions";
       avatarUrl: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto;
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ];
 // Generate search suggestions based on existing listings
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
   const suggestions = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -825,6 +878,14 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     'AI models',
 'AI models',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+    'AI models',
+
+'AI models',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     'GPT integration',
     'Machine learning',
     'Computer vision',
@@ -841,6 +902,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     'Server rack',
     'GPU cluster',
     'Edge computing',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -863,6 +925,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     'High performance storage',;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  ];
+  // Convert strings to SearchSuggestion objects
+    type: 'product', // Use a valid type from the updated SearchSuggestion interface
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
   ];
@@ -892,6 +963,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -901,6 +973,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }));};  ];
   // Convert strings to SearchSuggestion objects
   return suggestions && suggestions.map(text => ({
@@ -910,6 +986,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -927,12 +1004,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+    ...new Set(MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.category)),
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 // Generate filter options for sidebar
 export const generateFilterOptions = (): FilterOptions => {
   // Extract unique categories, locations, and availability options from listings
   const productTypes = [
     ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -947,6 +1031,11 @@ export const generateFilterOptions = (): FilterOptions => {
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }));
 };
 
@@ -956,12 +1045,15 @@ export const generateFilterOptions = (): FilterOptions => {
 const productTypes = [
     ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category)),
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   ].sort();
   const locations = [
     ...new Set(
@@ -1009,6 +1101,7 @@ availabilityOptions: availability && availability.map (item => ({
 }) );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ratingOptions: [1, 2, 3, 4, 5] // Add rating options
 };export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
@@ -1017,6 +1110,13 @@ export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing
   }));};
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+ratingOptions: [1, 2, 3, 4, 5] // Add rating options
+};export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
+export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 };export const MAX_PRICE = Math && Math.max(...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0));
@@ -1025,15 +1125,15 @@ export const MIN_PRICE = Math && Math.min(...MARKETPLACE_LISTINGS && MARKETPLACE
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-};
-=======
 <<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 };
+
+
+
+};
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -1045,10 +1145,15 @@ export const MIN_PRICE = Math && Math.min(...MARKETPLACE_LISTINGS && MARKETPLACE
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 // Generate filter options for sidebar
 export const generateFilterOptions = (): FilterOptions => {
   // Extract unique categories, locations, and availability options from listings
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1081,11 +1186,17 @@ export const generateFilterOptions = (): FilterOptions => {
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const productTypes = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))].sort(),
   const locations = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean))].sort(),
   const availability = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean))].sort(),
   
   return {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1098,6 +1209,11 @@ export const generateFilterOptions = (): FilterOptions => {
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
@@ -1121,6 +1237,7 @@ export const generateFilterOptions = (): FilterOptions => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1136,6 +1253,9 @@ export const generateFilterOptions = (): FilterOptions => {
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     ratingOptions: [1, 2, 3, 4, 5], // Add rating options
   };
 };
@@ -1444,6 +1564,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [;
     location: "North America",;
     availability: "2-4 Weeks";
 
+<<<<<<< HEAD
 export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
 <<<<<<< HEAD
@@ -1458,6 +1579,9 @@ export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     id: 'equipment - 2',
     title: 'Enterprise GPU Server Rack',
     description:;
@@ -1579,6 +1703,7 @@ export const MIN_PRICE = Math.min (...MARKETPLACE_LISTINGS.map (listing => listi
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
 =======
 <<<<<<< HEAD
@@ -1587,10 +1712,17 @@ export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     })),
 
 
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+<<<<<<< HEAD
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
 <<<<<<< HEAD
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
@@ -1614,3 +1746,16 @@ ratingOptions: [1, 2, 3, 4, 5] // Add rating options
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+
+
+
+ratingOptions: [1, 2, 3, 4, 5] // Add rating options 
+
+};
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

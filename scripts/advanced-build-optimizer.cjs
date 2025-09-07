@@ -1,11 +1,17 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const { execSync } = require('child_process')
 console.log('⚡ Starting Advanced Build Optimization...')
   log(message, type = 'info')
@@ -97,7 +103,11 @@ console.log('⚡ Starting Advanced Build Optimization...')
           resolve({ "size": 0, "message"})
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     this.log(' Build Optimization "Summary")
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    this.log(' Build Optimization "Summary")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

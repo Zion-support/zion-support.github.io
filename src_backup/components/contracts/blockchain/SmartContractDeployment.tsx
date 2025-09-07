@@ -1,4 +1,5 @@
 <<<<<<< HEAD:src_backup/components/contracts/blockchain/SmartContractDeployment.tsx
+<<<<<<< HEAD:src_backup/components/contracts/blockchain/SmartContractDeployment.tsx
 import React, { useState } from 'react';
 import {
   Card,
@@ -30,6 +31,8 @@ import { Loader2, ShieldCheck, Download } from 'lucide-react'
 import { toast } from "sonner";
 import {logErrorToProduction} from '@/utils/productionLogger';
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/contracts/blockchain/SmartContractDeployment.tsx
 interface SmartContractDeploymentProps {
   solidityCode: string,
   onDeploy: (options: DeploymentOptions) => Promise<void>,
@@ -38,14 +41,20 @@ interface SmartContractDeploymentProps {
 
 export function SmartContractDeployment({ 
   isDeploying
+<<<<<<< HEAD:src_backup/components/contracts/blockchain/SmartContractDeployment.tsx
 isDeploying
 
+=======
+
+isDeploying
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/contracts/blockchain/SmartContractDeployment.tsx
 }: SmartContractDeploymentProps) {
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({
     network: 'none'
     useEscrow: true
     deployToChain: false
     walletAddress: ''
+<<<<<<< HEAD:src_backup/components/contracts/blockchain/SmartContractDeployment.tsx
 
 ;
 import React, { useState } from './react';
@@ -81,6 +90,8 @@ if ( {) {
 }
       toast.error ("Please enter a wallet address for blockchain deployment");
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/contracts/blockchain/SmartContractDeployment.tsx
       return;
     }
     try {
@@ -91,6 +102,10 @@ if ( {) {
   }
 
 
+<<<<<<< HEAD:src_backup/components/contracts/blockchain/SmartContractDeployment.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/contracts/blockchain/SmartContractDeployment.tsx
   }),
 
   const handleDeployContract = async () => {
@@ -159,7 +174,10 @@ export function SmartContractDeployment({;
 
 
 
+<<<<<<< HEAD:src_backup/components/contracts/blockchain/SmartContractDeployment.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/contracts/blockchain/SmartContractDeployment.tsx
   return (
     <Card className="w-full">
       <CardHeader>
@@ -171,6 +189,7 @@ export function SmartContractDeployment({;
           Deploy your agreement as a smart contract for enhanced security and automation
         </CardDescription>
       </CardHeader>
+<<<<<<< HEAD:src_backup/components/contracts/blockchain/SmartContractDeployment.tsx
 
 
 import React, { useState } from "react";
@@ -235,10 +254,37 @@ export function SmartContractDeployment(): any ({ ;
 
   return (
 
+=======
+      <CardContent className="space-y-6">
+        <div className="space-y-4">
+          <div className="flex items-center space-x-2">
+            <Switch
+  },;
+  const handleDownloadSolidity = () => {;
+    // Create a blob from the Solidity code;
+    const blob = new Blob([solidityCode], { type: 'text/plain' }),;
+    const url = URL.createObjectURL(blob),;
+    // Create a temporary anchor to trigger download;
+    const a = document.createElement('a'),;
+    a.href = url,;
+    a.download = 'ZionContract.sol',;
+    document.body.appendChild(a),;
+    a.click(),;
+    // Clean up;
+    URL.revokeObjectURL(url),;
+    document.body.removeChild(a),;
+    toast.success("Solidity contract downloaded");
+  },;
+  return (;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/contracts/blockchain/SmartContractDeployment.tsx
     <Card className="w-full">;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
           <ShieldCheck className="h-5 w-5 text-primary" />;
+<<<<<<< HEAD:src_backup/components/contracts/blockchain/SmartContractDeployment.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/contracts/blockchain/SmartContractDeployment.tsx
   const handleDownloadSolidity = () =>: any {
     // Create a blob from the Solidity code;
     const blob = new Blob ([solidity_code], { type: 'text / plain' }),
@@ -259,6 +305,7 @@ export function SmartContractDeployment(): any ({ ;
       <CardHeader>;
         <CardTitle className="flex items - center gap - 2">;
           <ShieldCheck className="h - 5 w - 5 text - primary" />;
+<<<<<<< HEAD:src_backup/components/contracts/blockchain/SmartContractDeployment.tsx
 
 =======
 
@@ -314,6 +361,8 @@ import { toast } from "sonner",import {logErrorToProduction} from '@/utils/produ
         <CardTitle className="flex items-center gap-2">;
           <ShieldCheck className="h-5 w-5 text-primary" />;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/contracts/blockchain/SmartContractDeployment.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/contracts/blockchain/SmartContractDeployment.tsx
           Smart Contract Deployment;
         </CardTitle>;
         <CardDescription>Deploy your agreement as a smart contract for enhanced security and automation;
@@ -333,11 +382,28 @@ import { toast } from "sonner",import {logErrorToProduction} from '@/utils/produ
               id="deploy-blockchain"
               aria-label="Deploy to blockchain"
 
+<<<<<<< HEAD:src_backup/components/contracts/blockchain/SmartContractDeployment.tsx
               })}
 
 
           
 
+=======
+      <CardContent className="space-y-6">;
+        <div className="space-y-4">;
+          <div className="flex items-center space-x-2">;
+            <Switch;
+              id="deploy-blockchain";
+              aria-label="Deploy to blockchain";
+              checked={deploymentOptions.deployToChain}
+              onCheckedChange={(checked) => setDeploymentOptions({;
+                ...deploymentOptions,;
+                deployToChain: checked;
+              })}
+            />
+            <Label htmlFor="deploy-blockchain">Deploy to blockchain</Label>
+          </div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/contracts/blockchain/SmartContractDeployment.tsx
 
 
           {deploymentOptions.deployToChain && (
@@ -357,9 +423,12 @@ import { toast } from "sonner",import {logErrorToProduction} from '@/utils/produ
                   onValueChange={(value) => setDeploymentOptions({;
                     ...deploymentOptions,;
                     network: value as BlockchainNetwork;
+<<<<<<< HEAD:src_backup/components/contracts/blockchain/SmartContractDeployment.tsx
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/contracts/blockchain/SmartContractDeployment.tsx
                   })}
                   className="flex flex-col space-y-1"
                 >
@@ -377,8 +446,12 @@ import { toast } from "sonner",import {logErrorToProduction} from '@/utils/produ
 
 
               
+<<<<<<< HEAD:src_backup/components/contracts/blockchain/SmartContractDeployment.tsx
 
 
+=======
+              
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/contracts/blockchain/SmartContractDeployment.tsx
               <div className="space-y-2">
                 <Label htmlFor="wallet-address">Wallet address for transactions</Label>
                 <Input 
@@ -387,6 +460,7 @@ import { toast } from "sonner",import {logErrorToProduction} from '@/utils/produ
                   value={deploymentOptions.walletAddress || ''}
 
 
+<<<<<<< HEAD:src_backup/components/contracts/blockchain/SmartContractDeployment.tsx
 
               <div className="flex items-center space-x-2">
                 <Switch
@@ -472,12 +546,25 @@ interface SmartContractDeploymentProps  {solidityCode: string,onDeploy: (options
   const handleDeployContract = null;
                     useEscrow: checked
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                  onChange={(e) => setDeploymentOptions({;
+                    ...deploymentOptions;
+                    walletAddress: e.target.value;
+                  })}
+                />
+              </div>
+              
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/contracts/blockchain/SmartContractDeployment.tsx
                   })}
                 />
                 <Label htmlFor="use-escrow">Use escrow for payments</Label>
               </div>
             </>
           )}
+<<<<<<< HEAD:src_backup/components/contracts/blockchain/SmartContractDeployment.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/contracts/blockchain/SmartContractDeployment.tsx
                   onCheckedChange={(checked) => setDeploymentOptions({;
                     ...deploymentOptions;
                     useEscrow: checked;
@@ -542,7 +629,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           
 
 
+<<<<<<< HEAD:src_backup/components/contracts/blockchain/SmartContractDeployment.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/contracts/blockchain/SmartContractDeployment.tsx
           <div className="rounded-md bg-muted p-4">
             <h4 className="text-sm font-medium mb-2">Smart Contract Preview</h4>
             <div className="max-h-52 overflow-y-auto bg-background p-3 rounded text-xs font-mono">
@@ -553,6 +643,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </CardContent>
 
 
+<<<<<<< HEAD:src_backup/components/contracts/blockchain/SmartContractDeployment.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/contracts/blockchain/SmartContractDeployment.tsx
       
 
 
@@ -564,10 +658,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Button>
 
 
+<<<<<<< HEAD:src_backup/components/contracts/blockchain/SmartContractDeployment.tsx
         
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/contracts/blockchain/SmartContractDeployment.tsx
         <Button onClick={handleDeployContract} disabled={isDeploying}>
           {isDeploying ? (
             <>
@@ -579,6 +676,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           )}
 
 
+<<<<<<< HEAD:src_backup/components/contracts/blockchain/SmartContractDeployment.tsx
           <div className="rounded-md bg-muted p-4">;
 =======
           )}onCheckedChange={(checked) => setDeploymentOptions({...deploymentOptions;
@@ -737,6 +835,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 ;
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/contracts/blockchain/SmartContractDeployment.tsx
         </Button>
       </CardFooter>
     </Card>
@@ -752,6 +852,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   isDeploying ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Deploying... </>) : ('Deploy Contract') ;
 }</Button> </CardFooter> </Card>) ;
 }'"
+<<<<<<< HEAD:src_backup/components/contracts/blockchain/SmartContractDeployment.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
   is_deploying ? (<> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Deploying... </>) : ('Deploy Contract')}</Button> </CardFooter> </Card>)}'"}
@@ -763,3 +864,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }> {'";
   isDeploying ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Deploying... </>) : ('Deploy Contract')}</Button> </CardFooter> </Card>)}'";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/contracts/blockchain/SmartContractDeployment.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/contracts/blockchain/SmartContractDeployment.tsx

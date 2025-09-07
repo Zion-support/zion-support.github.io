@@ -10,7 +10,11 @@ const path = require('path')
         "name"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         "severity"
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+        "severity"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

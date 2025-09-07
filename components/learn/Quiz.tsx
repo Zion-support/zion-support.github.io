@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 ;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import React, { useState } from 'react';
 type Question = any;
   question: string;
@@ -14,7 +18,11 @@ type Props = {questions: Question[];
 <<<<<<< HEAD
 };
 
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export default function Quiz({ questions, onComplete }: Props) {
 
 export default function Quiz({ questions, onComplete }: Props) {;
@@ -47,8 +55,16 @@ const score = questions.reduce(
             {q && q.options.map((opt, i) => (;
               <label key={i} className='flex items-center gap-2'>;
                 <input
+<<<<<<< HEAD
                   type='radio'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  function submit() {
+  function submit() {
+
+    setSubmitted(true)
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     onComplete(score)
   }
   return (
@@ -88,11 +104,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
           </div>
           {submitted && (
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 <div className='mt-2 text-sm'>
               {answers[q.id] === q.answerIndex ? (
                 <span className='text-green-600'>Correct</span>
               ) : (
                 <span className='text-red-600'>Incorrect</span>
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
           </div>;
@@ -100,12 +121,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {answers[q.id] === q.answerIndex ? (<span className='text-green-600'>Correct</span>;
               ) : (<span className='text-red-600'>Incorrect</span>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               )}
             </div>;
           )}
 <<<<<<< HEAD
         </div>
       ))}
+<<<<<<< HEAD
 <button
 =======
         </div>;
@@ -129,3 +153,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+  )
+
+}
+  );
+}
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

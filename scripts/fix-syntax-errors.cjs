@@ -1,13 +1,30 @@
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node;
+/**
+ * Syntax Error Fixer;
+ * Automatically fixes common syntax errors in the codebase;
+ */
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 <<<<<<< HEAD
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
 =======
 
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   }
 
@@ -33,6 +50,10 @@ main
       return false;
     } catch (error) {
       this.errors.push(`${filePath}: ${error.message}`);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -40,7 +61,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 console.log('🔧 Syntax Error Fixer');
-console.log('=====================');
+console.log('');
 
 class SyntaxErrorFixer {
   constructor() {
@@ -84,13 +105,20 @@ class SyntaxErrorFixer {
         }
       }
       
+<<<<<<< HEAD
 origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       return false;
     }
   }
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   fixCommonErrors(content) {
     // Fix unterminated strings
     content = content.replace(/'([^']*?)(?=\n|$)/g, (match, str) => {
@@ -111,9 +139,13 @@ origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
     content = content.replace(/([^;}])\n/g, '$1;\n');
     
     // Fix merge conflict markers
+<<<<<<< HEAD
     content = content.replace(/
 
 =======
+=======
+    content = content.replace(/[\s\S]*?[\s\S]*?
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
@@ -202,6 +234,7 @@ if (require.main === module) {
 }
 
 module.exports = SyntaxErrorFixer;
+<<<<<<< HEAD
 
   log(message, level = 'INFO')
     this.log(' Starting syntax error fixing...')
@@ -367,3 +400,6 @@ if (require.main === module) {
 
 module.exports = SyntaxErrorFixer;
 origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -5,10 +5,14 @@
  */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -27,7 +31,11 @@ const { execSync } = require('child_process')
             execSync('npm run "lint")
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             execSync('npm run "lint")
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+            execSync('npm run "lint")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() {  this.optimizations.push('Images optimized')} async optimizeCode() {  this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
 
+<<<<<<< HEAD
 
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() {  this.optimizations.push('Images optimized')} async optimizeCode() {  this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
 #!/usr/bin/env node
@@ -92,6 +93,12 @@ function optimizeCSS() {let optimized = content;
         optimized = optimized.replace(rule, newRule);
         changes++;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+#!/usr/bin/env node
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       }
     });
     return totalSize;
@@ -112,6 +119,7 @@ const fs = require('fs')const path = require('path')class PerformanceOptimizer {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
@@ -127,6 +135,10 @@ const fs = require('fs')const path = require('path')class PerformanceOptimizer {
     const files = fs.readdirSync(dirPath)files.forEach(file => {const filePath = path.join(dirPath, file)const stats = fs.statSync(filePath)if (stats.isDirectory()) {totalSize += this.getDirectorySize(filePath)} else {totalSize += stats.size;
 #!/usr/bin/env node
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 #!/usr/bin/env node
@@ -573,6 +585,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       "details": results
     };
 <<<<<<< HEAD
@@ -765,6 +780,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -846,6 +862,10 @@ ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
 ursor/automate-test-improve-and-merge-code-646c;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 export default PerformanceMonitor;";
     const scriptPath = path.join(this.srcDir, 'utils', 'PerformanceMonitor.js');
@@ -871,8 +891,11 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     const scriptPath = path && path.join(this && this.srcDir, 'utils', 'PerformanceMonitor && PerformanceMonitor.js');
     const utilsDir = path && path.dirname(scriptPath);
     if (!fs && fs.existsSync(utilsDir)) {
@@ -941,6 +964,7 @@ module.exports = PerformanceOptimizer;
     .catch((error) => {
       console.error('❌ Performance optimization failed:', error);
       process.exit(1);
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -968,6 +992,8 @@ module.exports = PerformanceOptimizer;
     const files = await glob(pattern, {
       ignore: excludeDirs.map(dir => `**/${dir}/**`),
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     });
 
 =======

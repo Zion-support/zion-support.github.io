@@ -302,10 +302,14 @@ export class PerformanceMonitor {}
       this.metrics.set(name, measure.duration);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       // Log slow operations;
       if ( {})
         console.warn(\`Slow operation "detected": \${name} took \${measure.duration}ms\`)};
@@ -494,7 +498,11 @@ if ( {})
     optimizer.run().catch(console.error)};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = AdvancedAppOptimizer;
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+module.exports = AdvancedAppOptimizer;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

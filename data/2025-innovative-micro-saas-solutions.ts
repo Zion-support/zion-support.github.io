@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 id: 'ai-powered-customer-feedback-analyzer',
     name: 'AI-Powered Customer Feedback Analyzer',
     description:
@@ -385,6 +386,17 @@ export const innovativeMicroSaasSolutions2025 = [
     pricing: {
       starter: {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+export const innovativeMicroSaasSolutions2025 = [
+  {
+
+
+    pricing: {
+      starter: {
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         price: 49
         period: 'month'
         features: [
@@ -394,6 +406,7 @@ export const innovativeMicroSaasSolutions2025 = [
           'Standard reports'
         ]
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -422,6 +435,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       professional: {
         price: 149
         period: 'month'
@@ -454,6 +470,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     pricing: {
       starter: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -827,6 +844,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       'CRM systems',
       'E - commerce platforms',
+=======
+
+
+      'CRM systems',
+      'E - commerce platforms',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'AI-powered demand forecasting with 92.4% accuracy'
       'Real-time inventory tracking and monitoring'
       'Automated reorder point calculations'
@@ -991,10 +1015,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'CRM systems'
       'E-commerce platforms'
       'Analytics tools'
@@ -1003,6 +1030,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ]
     compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations']
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ];      'Email campaign automationCustomer segmentation and personalizationConversion rate optimizationSubscriber engagement improvementMarketing ROI optimization'
     id: 'ai-powered-customer-feedback-analyzer', name: 'AI-Powered Customer Feedback Analyzer',
     description: 'Intelligent platform that automatically analyzes customer feedback from multiple channels, providing actionable insights and sentiment analysis to improve customer experience.',
@@ -1026,6 +1057,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'E - commerce platforms',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -1043,10 +1075,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+      'CRM systems',
+      'E-commerce platforms',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Analytics tools',
       'Social media platforms',
       'Marketing tools',
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1076,11 +1115,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Marketing tools'
     ]
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     ];
     integrations: ['CRM systems_e - commerce platforms_analytics tools_social media platforms_marketing tools'];
     compliance: ['CAN - SPAMGDPRCCPAEmail marketing regulations'];
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1121,10 +1164,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },;
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+    compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations'],
+  },;
+
+    compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations'],
+  },;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ];      'Email campaign automationCustomer segmentation and personalizationConversion rate optimizationSubscriber engagement improvementMarketing ROI optimization'
     ];
     integrations: ['CRM systemsE-commerce platformsAnalytics toolsSocial media platformsMarketing tools'];
     compliance: ['CAN-SPAMGDPRCCPAEmail marketing regulations']
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1147,6 +1201,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export const innovativeMicroSaasSolutions2025 = [;
   {;
     id: 'ai-powered-customer-feedback-analyzer',;
@@ -1356,6 +1414,7 @@ export const innovativeMicroSaasSolutions2025 = [;
 ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   }
@@ -1371,10 +1430,18 @@ export const innovativeMicroSaasSolutions2025 = [;
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  }
+];
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations'],
   },
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -1395,3 +1462,6 @@ ursor/fix-website-loading-errors-and-merge-6662;
   }
 ];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

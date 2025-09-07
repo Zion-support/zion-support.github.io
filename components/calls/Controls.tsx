@@ -1,8 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import type { Room } from 'livekit-client';
 type Props = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+type Props = {;
+  room: Room | null;
+  onLeave: () => void;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
   const [micEnabled, setMicEnabled] = React.useState(true);
   const [camEnabled, setCamEnabled] = React.useState(true);
@@ -10,6 +17,7 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
   const accentClass = accent === 'blue' ? 'bg-blue-600' : 'bg-cyan-600';
   const toggleMic = async () => {
     if (!room) return;
+<<<<<<< HEAD
 const enabled =
       await room.localParticipant.setMicrophoneEnabled(!micEnabled);
     setMicEnabled(enabled);
@@ -35,6 +43,48 @@ const enabled =
   return (
 <div className='flex items-center gap-3'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  accent?: 'blue' | 'cyan';};type Props = {;
+  room: Room | null,;
+  onLeave: () => void,;
+  accent?: 'blue' | 'cyan';
+
+export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Props) {;
+  const [micEnabled, setMicEnabled] = React && React.useState(true);
+  const [camEnabled, setCamEnabled] = React && React.useState(true);
+  const [sharing, setSharing] = React && React.useState(false);
+
+  const accentClass = accent === 'blue' ? 'bg-blue-600' : 'bg-cyan-600';
+
+  const toggleMic = async () => {;
+    if (!room) return;
+    const enabled =;
+      await room && room.localParticipant.setMicrophoneEnabled(!micEnabled);
+    setMicEnabled(enabled);  };    const enabled = await room && room.localParticipant.setMicrophoneEnabled(!micEnabled);
+    setMicEnabled(enabled);
+  };
+
+  const toggleCam = async () => {;
+    if (!room) return;
+    const enabled = await room && room.localParticipant.setCameraEnabled(!camEnabled);
+    setCamEnabled(enabled);  };    setCamEnabled(enabled);
+  };
+
+  const toggleScreenShare = async () => {;
+    if (!room) return;
+    try {;
+      const enabled =;
+        await room && room.localParticipant.setScreenShareEnabled(!sharing);
+      setSharing(enabled);
+
+    } catch (e) {;
+      console && console.warn('Screen share failed', e);    }
+    try {
+      const enabled = await room.localParticipant.setScreenShareEnabled(!sharing);
+      setSharing(enabled)
+    } catch (e) {
+      console.warn('Screen share failed', e)
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
     <div className='flex items-center gap-3'>
       <button
@@ -84,11 +134,30 @@ type Props = any;export default function Controls() {const [micEnabled, setMicEn
         Leave
       </button>
     </div>
+<<<<<<< HEAD
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
         className='px-4 py-2 rounded bg-red-600 text-white';
       >;
+=======
+);
+}
+
+    }
+
+  };
+
+  return (      const enabled = await room && room.localParticipant.setScreenShareEnabled(!sharing);
+      setSharing(enabled);
+    } catch (e) {;
+      console && console.warn('Screen share failed', e);
+  };
+
+  return (
+
+        className='px-4 py-2 rounded bg-red-600 text-white'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         Leave;
       </button>;
     </div>;
@@ -139,5 +208,10 @@ if (return) {$2;
       >;
         Leave;
       </button>;
+<<<<<<< HEAD
     </div>)})
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </div>);
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

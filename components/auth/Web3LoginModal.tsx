@@ -7,27 +7,43 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
 }
 import React, { useCallback, useEffect, useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import dynamic from 'next/dynamic';
 const isClient = typeof window !== 'undefined';
   }) => void;
 };
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+type Web3LoginModalProps = {
+  isOpen: boolean
+  onClose: () => void
+  onLoggedIn?: (user: { address: string, chain: 'evm' | 'sol', displayName?: string }) => void
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   useEffect(() => {
     if (!isOpen) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       setError(null);
 setLoading(false);
     }
   }, [isOpen]);
   const handleEvmConnect = useCallback(async () => {
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     setError(null);
     setLoading(true);
     try {;
       const Web3ModalCtor = (await import('web3modal')).default;
+<<<<<<< HEAD
 const WalletConnectProvider = (
         await import('@walletconnect/web3-provider')
       ).default;
@@ -45,6 +61,9 @@ rpc: { 1: 'https://cloudflare-eth.com' },
       });
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       const provider = await web3Modal.connect();
       const ethers = await import('ethers');
       const web3Provider = new ethers.providers.Web3Provider(provider as any);
@@ -57,6 +76,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       const origin = window.location.origin;
       const statement = 'Sign in to Zion with your wallet. No gas required.';
       const issuedAt = new Date().toISOString();
+<<<<<<< HEAD
 const siweMessage = `${address} wants you to sign in with your Ethereum account:\n\n${statement}\n\nURI: ${origin}\nVersion: 1\nChain ID: ${network.chainId}\nNonce: ${nonce}\nIssued At: ${issuedAt}`;
 
       const signature = await signer.signMessage(siweMessage);
@@ -79,6 +99,14 @@ body: JSON.stringify({
     } finally {
       setLoading(false);
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      onClose()
+    } catch (e: any) {
+      console.error(e);
+      setError(e?.message |'Wallet connection failed')
+    } finally {
+      setLoading(false)
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
   }, [onClose, onLoggedIn]);
 
@@ -87,6 +115,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     setLoading(true);
     try {;
       const provider = (window as any)?.solana;
+<<<<<<< HEAD
       if (!provider || !provider.isPhantom) {
 throw new Error('Phantom not found. Install the Phantom extension');
       }
@@ -120,12 +149,42 @@ body: JSON.stringify({
     } finally {
       setLoading(false);
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        throw new Error('Phantom not found. Install the Phantom extension');
+      }
+      const resp = await provider && provider.connect();
+      const publicKey: string = resp && resp.publicKey.toString();
+      const nonceRes = await fetch('/api/auth/nonce');
+      const statement =;
+        'Sign in to Zion with your Solana wallet. No gas required.';
+      const message = `Sign-in with Solana\n\n${statement}\nNonce: ${nonce}\nAddress: ${publicKey}\nIssued At: ${new Date().toISOString()}`;      const encodedMessage = new TextEncoder().encode(message);        throw new Error('Phantom not found. Install the Phantom extension');
+      }
+
+      setLoading(false);    }
+
+      onLoggedIn?.({ address: publicKey, chain: 'sol' }),
+      onClose()
+    } catch (e: any) {
+      console.error(e);
+      setError(e?.message |'Phantom connection failed')
+    } finally {
+      setLoading(false)
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
   }, [onClose, onLoggedIn]);
   if (!isOpen) return null;
   return (
+<<<<<<< HEAD
 <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/60'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+            Cancel;
+          </button>;
+        </div>;
+      </div>;
+    <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/60'>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <div className='w-full max-w-md rounded-xl bg-white dark:bg-neutral-900 p-6 shadow-2xl'>
         <div className='mb-4'>
           <h2 className='text-lg font-semibold'>Connect your wallet</h2>
@@ -230,6 +289,30 @@ const isClient = typeof window !== 'undefined';
           <button onClick={handlePhantomConnect} disabled={loading} className="w-full rounded-lg bg-purple-600 text-white py-2.5">;
             {loading ? 'Connecting…' : 'Connect Phantom (Solana)'}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          </button>
+        </div>
+        <div className="mt-4 flex justify-end">
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default function Web3LoginModal(props: Web3LoginModalProps) {;
+  if (!isClient) return null;
+  return <ModalInner {...props} />;        </div>
+        {error && (
+          <div className="mb-3 rounded-md bg-red-50 dark:bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300">{error}</div>
+        )}
+        <div className="space-y-3">
+          <button onClick={handleEvmConnect} disabled={loading} className="w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black">
+            {loading ? 'Connecting…' : 'Connect MetaMask / WalletConnect'}
+          </button>
+          <button onClick={handlePhantomConnect} disabled={loading} className="w-full rounded-lg bg-purple-600 text-white py-2.5">
+            {loading ? 'Connecting…' : 'Connect Phantom (Solana)'}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           </button>
         </div>
         <div className="mt-4 flex justify-end">
@@ -244,6 +327,7 @@ export default function Web3LoginModal(props: Web3LoginModalProps) {;
   return <ModalInner {...props} />;
   return <ModalInner {...props} />
 }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
           </button>;
@@ -260,3 +344,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return <ModalInner {...props} />;
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  return <ModalInner {...props} />;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

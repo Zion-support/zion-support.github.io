@@ -1,3 +1,7 @@
+<<<<<<< HEAD:src_backup/components/quotes/QuoteDetails.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/quotes/QuoteDetails.tsx
 
 ;
 import React from 'react';
@@ -32,7 +36,11 @@ import { Separator } from "@/components/ui/separator"
 import { QuoteStatusBadge } from "./QuoteStatusBadge"
 import type { QuoteRequest } from "@/types/quotes"
 import {format} from "date-fns"
+<<<<<<< HEAD:src_backup/components/quotes/QuoteDetails.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/quotes/QuoteDetails.tsx
 interface QuoteDetailsProps {
   quote: QuoteRequest | null
   isOpen: boolean
@@ -312,6 +320,7 @@ if (return 'Not specified') {$2;
 }` : 'Not specified');
 }</div> </CardContent> </Card> </div> </DialogContent> </Dialog>);
 }
+<<<<<<< HEAD:src_backup/components/quotes/QuoteDetails.tsx
 '"
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -321,3 +330,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }` : quote.budget min ? `$$ {quote.budget min ';
 }` : 'Not specified')}</div> </CardContent> </Card> </div> </DialogContent> </Dialog>)}'";'";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/quotes/QuoteDetails.tsx
+=======
+
+'";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/quotes/QuoteDetails.tsx

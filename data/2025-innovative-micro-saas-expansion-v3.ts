@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -27,6 +28,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import { ServiceVariant  } from '../types/service-variants';
 export interface InnovativeMicroSaasService  {id: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+import { ServiceVariant } from '../types/service-variants';
+export interface InnovativeMicroSaasService {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string;
   name: string;
   tagline: string;
@@ -864,6 +871,7 @@ export interface InnovativeMicroSaasService  {id: string,name: string,tagline: s
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -871,6 +879,8 @@ export interface InnovativeMicroSaasService  {id: string,name: string,tagline: s
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   customers: number;
   rating: number;
   reviews: number;
@@ -1249,7 +1259,11 @@ export interface InnovativeMicroSaasService  {id: string,name: string,tagline: s
       reviews: 28
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     website: string;
   }
 
@@ -1274,10 +1288,13 @@ const contact = {
     },;
 
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   ];    features: [
 
 export interface InnovativeMicroSaasService {
@@ -1657,6 +1674,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1682,6 +1700,11 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     website: string
   },
   realImplementation: boolean;
@@ -1689,6 +1712,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -1698,12 +1722,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Robotics-grade platform with AI-powered autonomy and comprehensive logistics management',
       launchDate: '2023-10-01',
       customers: 34,
       rating: 4.9,
 <<<<<<< HEAD
       reviews: 28,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     },;
@@ -1726,6 +1753,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   ];    features: [
       'Autonomous warehouse robotsAI-powered route optimizationReal-time inventory trackingPredictive maintenanceMulti-robot coordinationSafety and collision avoidancePerformance analyticsScalable deployment';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    },;
+
+  ];    features: [
+      'Autonomous warehouse robotsAI-powered route optimizationReal-time inventory trackingPredictive maintenanceMulti-robot coordinationSafety and collision avoidancePerformance analyticsScalable deployment';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'API integration capabilities'
     ];
     popular: true, icon: '💰',
@@ -1911,6 +1944,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1926,6 +1960,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Autonomous warehouse robotsAI-powered route optimizationReal-time inventory trackingPredictive maintenanceMulti-robot coordinationSafety and collision avoidancePerformance analyticsScalable deployment';
       'API integration capabilities'
   ];    features: [;
@@ -1936,12 +1974,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-    popular: true, icon: '🤖',
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1956,6 +1997,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     color: 'from - gray - 600 to - slate - 700', text_color: 'text - gray - 400',
     link: 'https://ziontechgroup.com / autonomous - supply - chain - robotics',
     market_position: 'Leading - edge platform competing with Amazon Robotics, Fetch Robotics, and Locus Robotics',
@@ -1973,6 +2016,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     launch_date: '2023 - 10 - 01', customers: 34,
 <<<<<<< HEAD
     rating: 4.9,
+<<<<<<< HEAD
 =======
     reviews: 28;
 
@@ -2416,6 +2460,13 @@ ursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
+=======
+
+  }
+];
+;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     marketSize: '$28B+ Warehouse Robotics market', growthRate: '35% YoY'
     variant: 'autonomous-robotics-enterprise', contactInfo: contact
     realImplementation: true, implementationDetails: 'Robotics-grade platform with AI-powered autonomy and comprehensive logistics management'
@@ -2426,12 +2477,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeMicroSaasService {;
   id: string,;
@@ -3944,6 +3998,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     reviews: 28;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
@@ -3970,3 +4025,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+  }
+];
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

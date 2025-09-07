@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30,6 +31,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 console && console.log('🔌 MCP Client Integration - Placeholder');
@@ -287,6 +293,10 @@ console.log('This system is not yet implemented but will provide MCP client inte
 console.log('This system is not yet implemented but will provide MCP client integration.'),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 console.log('🔌 MCP Client Integration - Placeholder');
 
@@ -294,9 +304,13 @@ console.log('🔌 MCP Client Integration - Placeholder');
 class MCPClientIntegration {
   constructor() {
 this.status = 'placeholder';
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 // Placeholder functionality
 class MCPClientIntegration {
   constructor() {
@@ -316,9 +330,12 @@ class MCPClientIntegration {constructor () {this.status = 'placeholder';
   connect() {
     console.log('MCP client would connect here');
 <<<<<<< HEAD
+<<<<<<< HEAD
   client.connect();
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     return { success: true, message: 'Placeholder connection' }
   }
@@ -385,7 +402,10 @@ if (require.main === module) {
   connect() {
     console.log('MCP client would connect here')
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     return { success: true, message: 'Placeholder connection' }
   }
   status() {return { status: 'placeholder', message: 'Not implemented yet' }
@@ -480,4 +500,21 @@ if (require.main === module) {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+module.exports = MCPClientIntegration;
+// Run if called directly
+if (require.main === module) {
+  const client = new MCPClientIntegration();
+  client.connect()
+}
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

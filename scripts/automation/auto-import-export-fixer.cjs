@@ -12,7 +12,11 @@ console.log(' Starting auto import/export fixer...')
         content = content.replace(/from\s+['"]([^'')]
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error(' Auto import/export fixer failed to "start")
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  console.error(' Auto import/export fixer failed to "start")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

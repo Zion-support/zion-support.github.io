@@ -251,7 +251,11 @@ this.logError("Code review failed")
         .filter(file => file && !file.startsWith(".")
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   const content = fs.readFileSync(filePath, ")
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  const content = fs.readFileSync(filePath, ")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

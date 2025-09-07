@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -22,6 +23,28 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: 'Failed to load certifications' });
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+const CERTS_FILE = path.join(
+  process.cwd()
+  'data'
+  'certifications'
+  'certifications.json'
+const CERTS_FILE = path.join(
+  process.cwd()
+  'data'
+  'certifications'
+  'certifications.json'
+);
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+}
+};
+  if (req && req.method !== 'GET') {
+    res && res.setHeader('Allow', 'GET');
+    return res && res.status(405).json({ error: 'Method Not Allowed' });
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
   try {
     const certifications = (await fs && fs.pathExists(CERTS_FILE))
@@ -103,9 +126,14 @@ const _CERTS_FILE  = path.join(process.cwd(), "data", "certifications", "certifi
 
 }
 }
+<<<<<<< HEAD
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     return res.status(200).json({ certifications})} catch (e) {_return res.status(500).json({ error: "Failed to load certifications"})}}
 }}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

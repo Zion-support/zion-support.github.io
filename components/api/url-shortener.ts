@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface ShortUrl {
 id: string;
 =======
@@ -24,14 +25,35 @@ function generateShortCode (length: number = 6): string {const chars =;id: strin
 // In-memory storage (in production, use a database)
 const chars =
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+interface ShortUrl {
+  for (let i = 0, i < length, i++) {
+    result += chars && chars.charAt(Math && Math.floor(Math && Math.random() * chars && chars.length))
+  error?: string;  error?: string;
+}
+// In - memory storage (in production, use a database);
+const url_storage = new Map < string, ShortUrl>();
+;
+// Generate a random short code;
+function generateShortCode (length: number = 6): string {
+  const chars =;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   let result = '';
   for (let index = 0; i < length; i++) {
     result += chars.char_at (Math.floor (Math.random () * chars.length));
   }
+<<<<<<< HEAD
   return result;
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  return result;  let result = '';
+  for (let index = 0, i < length, i++) {
+    result += chars.char_at (Math.floor (Math.random () * chars.length));
+  }
+  return result;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 // Validate URL format
 function isValidUrl(url: string): boolean {
   try {
@@ -39,13 +61,18 @@ function isValidUrl(url: string): boolean {
 return true;
   } catch {
     return false;
+<<<<<<< HEAD
   }
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  }  } catch {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse<UrlShortenerResponse>
 ) {
+<<<<<<< HEAD
   if (req.method === 'POST') {
     // Create short URL
     try {
@@ -119,6 +146,20 @@ export async function getServerSideProps({
   params: { shortCode: string };
 }) {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    } catch (error) {
+      console.error ('URL shortening error:', error);
+      res.status (500).json ({
+        success: false,
+      success: false,
+      error: 'Method not allowed',
+    });
+  }
+  params,
+}: {;
+  params: { shortCode: string };
+}) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const shortCode = params.shortCode;
   const shortUrl = urlStorage.get(shortCode);
   if (!shortUrl |!shortUrl.isActive) {
@@ -155,6 +196,7 @@ notFound: true,
     };
   }
   // Increment click count
+<<<<<<< HEAD
   shortUrl.clicks++;
   urlStorage.set(shortCode, shortUrl);
   // Redirect to original URL
@@ -221,10 +263,36 @@ function getServerSideProps() {const short_code = params.short_code;
 if ( {) {$2;
 }
     return {not_found: true,    }      not_found: true;
+=======
+      permanent: false
+    }
+}
+      permanent: false
+    }
+}
+// Handle redirects for short URLs;
+export async /**
+ * getServerSideProps - Function description
+ */
+function getServerSideProps() {  const short_code = params.short_code;export async /**
+ * getServerSideProps - Function description
+ */
+function getServerSideProps() {
+  const short_code = params.short_code;
+  const short_url = url_storage.get (short_code);
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    return {
+      not_found: true,    }      not_found: true;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
   }
   // Increment click count;
   short_url.clicks++;
+<<<<<<< HEAD
   url_storage.set (short_code, short_url)// Redirect to original URL;
   return {destination: shortUrl.originalUrl,permanent: false,},}destination: shortUrl.originalUrl;
       permanent: false;
@@ -237,3 +305,20 @@ if ( {) {$2;
 }
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  url_storage.set (short_code, short_url);
+;
+  // Redirect to original URL;
+  return {
+
+      destination: shortUrl.originalUrl,
+      permanent: false,
+    },
+  };      destination: shortUrl.originalUrl;
+      permanent: false
+    }
+};
+}
+  };
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

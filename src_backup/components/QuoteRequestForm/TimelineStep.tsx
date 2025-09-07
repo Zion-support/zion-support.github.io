@@ -1,4 +1,5 @@
 <<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
+<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
 <div
 
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
@@ -12,11 +13,16 @@ import {
 import { cn } from '@/lib/utils'
 import { QuoteFormData } from '@/types/quotes'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/QuoteRequestForm/TimelineStep.tsx
 interface TimelineStepProps {
   formData: QuoteFormData
   updateFormData: (data: Partial<QuoteFormData>) => void
 
+<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/QuoteRequestForm/TimelineStep.tsx
 
 import { format } from "date-fns",
 import { Calendar } from "@/components/ui/calendar",
@@ -35,6 +41,7 @@ interface TimelineStepProps {
 
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
   return (
+<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
     <div className="space-y-6">
       <div>
 
@@ -86,6 +93,19 @@ export function TimelineStep() {return (className={`flex-1 p-4 rounded-lg border
             <div 
 
 
+=======
+
+    <div className='space-y-6'>
+      <div>
+
+export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
+  return (
+              className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
+                formData.timeline === "fixed" 
+                  ? "bg-zion-purple/20 border-zion-purple" 
+                  : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
+              }`}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/QuoteRequestForm/TimelineStep.tsx
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData && formData.timeline === 'flexible'
                   ? 'bg-zion-purple/20 border-zion-purple'
@@ -93,13 +113,30 @@ export function TimelineStep() {return (className={`flex-1 p-4 rounded-lg border
               }`}
               onClick={() => updateFormData({ timeline: 'flexible' })}
 
+<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
 
 
+=======
+              className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
+                formData && formData.timeline === 'flexible'
+                  ? 'bg-zion-purple/20 border-zion-purple'
+                  : 'bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50'
+              }`}
+              onClick={() => updateFormData({ timeline: "flexible" })}
+            >
+              <h4 className="font-medium text-white">Flexible Timeline</h4>
+              <p className="text-sm text-zion-slate-light">I'm flexible on the timing</p>
+            </div>
+          </div>
+          {formData.timeline === 'fixed' && (
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-6'>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/QuoteRequestForm/TimelineStep.tsx
           
           {formData.timeline === "fixed" && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
 
 
+<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
 
               <div>
                 <Label className='block mb-2 text-zion-slate-light'>
@@ -185,10 +222,17 @@ function TimelineStep() {return (<div className='space - y-6'>;
               <p className='text - sm text - zion - slate - light'>;
 
 
+=======
+          </div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/QuoteRequestForm/TimelineStep.tsx
                 I'm flexible on the timing;
               </p>;
             </div>;
           </div>;
+<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/QuoteRequestForm/TimelineStep.tsx
 
 
                       variant="outline"
@@ -197,6 +241,7 @@ function TimelineStep() {return (<div className='space - y-6'>;
                         !formData.startDate && "text-zion-slate-light"
 
 
+<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
 
 =======
               <p className='text - sm text - zion - slate - light'>;I'm flexible on the timing;
@@ -205,6 +250,8 @@ function TimelineStep() {return (<div className='space - y-6'>;
           </div>;variant="outline";
                       className={cn("w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark",!formData.startDate && "text-zion-slate-light";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/QuoteRequestForm/TimelineStep.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/QuoteRequestForm/TimelineStep.tsx
                       )}
                     >;
                       <CalendarIcon className="mr-2 h-4 w-4" />;
@@ -214,8 +261,11 @@ function TimelineStep() {return (<div className='space - y-6'>;
                   </PopoverTrigger>
                   <PopoverContent className="w-auto p-0 bg-zion-blue-dark border border-zion-blue-light" align="start">
                     <Calendar
+<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/QuoteRequestForm/TimelineStep.tsx
                       mode="single"
                       selected={formData.startDate}
                       onSelect={(date) => updateFormData({ startDate: date })}
@@ -228,10 +278,17 @@ function TimelineStep() {return (<div className='space - y-6'>;
               </div>
 
 
+<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
               
 
 
 
+=======
+
+              
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/QuoteRequestForm/TimelineStep.tsx
               <div>
                 <Label className='block mb-2 text-zion-slate-light'>
                   End Date
@@ -293,8 +350,14 @@ function TimelineStep() {return (<div className='space - y-6'>;
 <<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
               </div>;
 
+<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
     <div className;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                      variant="outline"
+                      className={cn(
+                        "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark",
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/QuoteRequestForm/TimelineStep.tsx
                         !formData.endDate && "text-zion-slate-light"
 =======
               </div>;variant="outline";
@@ -321,6 +384,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
         </div>
       </div>
+<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
                         "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark",
                         !formData.endDate && "text-zion-slate-light"
 
@@ -349,6 +413,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       initialFocus
 
 
+=======
+    </div>;
+  );
+};
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/QuoteRequestForm/TimelineStep.tsx
                       className="p-3 pointer-events-auto"
 import { format } from "date-fns",;
 import { Calendar } from "@/components/ui/calendar",;
@@ -436,6 +506,7 @@ interface TimelineStepProps  {formData: QuoteFormData,updateFormData: (data: Par
       </div>;
     </div>);
 }
+<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
 ;
 
     </div>
@@ -451,3 +522,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/QuoteRequestForm/TimelineStep.tsx
+=======
+                      selected={formData.endDate}
+                      onSelect={date => updateFormData({ endDate: date })}
+                      initialFocus
+
+    </div>
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/QuoteRequestForm/TimelineStep.tsx

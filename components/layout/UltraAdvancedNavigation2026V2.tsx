@@ -1,9 +1,41 @@
 import Link from 'next/link';
+<<<<<<< HEAD
 import { motion, AnimatePresence  } from 'framer-motion';
 <<<<<<< HEAD
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
 export default function UltraAdvancedNavigation2026V2() {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+import { motion, AnimatePresence } from 'framer-motion';
+import {;
+  Menu,;
+  X,;
+  ChevronDown,;
+  Search,;
+  Phone,;
+  Mail,;
+  MapPin,;
+  Zap,;
+  Brain,;
+  Atom,;
+  Microscope,;
+  Gamepad2,;
+  Shield,;
+  Rocket,;
+  Database,;
+  TestTube,;
+  Car,;
+  Globe,;
+  Code,;
+  Palette,;
+  Cloud,;
+  Server,;
+  Network,;
+  Cpu,;
+} from 'lucide-react';import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
+export default function UltraAdvancedNavigation2026V2() {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -140,6 +172,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return () => window.removeEventListener('scroll', handleScroll)
   }, []);
 
+<<<<<<< HEAD
   useEffect(() => {
     const handleScroll = null;
 import { motion, AnimatePresence } from 'framer-motion';
@@ -169,6 +202,78 @@ import {
   Network
   Cpu;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  const navigationItems = [
+    {
+      name: 'Home',
+      href: '/',
+      icon: <Zap className="w-4 h-4" />
+    };
+    {
+      name: 'Services',
+      href: '/services',
+      icon: <Brain className="w-4 h-4" />,
+      dropdown: [
+        { name: 'AI & Machine Learning', href: '/services?category=ai', icon: <Brain className="w-4 h-4" /> },
+        { name: 'Quantum & Space Tech', href: '/services?category=quantum', icon: <Atom className="w-4 h-4" /> },
+        { name: 'Emerging Technologies', href: '/services?category=emerging', icon: <Microscope className="w-4 h-4" /> },
+        { name: 'Micro SaaS', href: '/services?category=micro-saas', icon: <Code className="w-4 h-4" /> },
+        { name: 'Metaverse & VR', href: '/services?category=metaverse', icon: <Gamepad2 className="w-4 h-4" /> },
+        { name: 'Cybersecurity', href: '/services?category=cybersecurity', icon: <Shield className="w-4 h-4" /> },
+        { name: 'Space Technology', href: '/services?category=space', icon: <Rocket className="w-4 h-4" /> },
+        { name: 'Biotech & Healthcare', href: '/services?category=biotech', icon: <TestTube className="w-4 h-4" /> },
+        { name: 'Blockchain & Web3', href: '/services?category=blockchain', icon: <Database className="w-4 h-4" /> },
+        { name: 'Autonomous Vehicles', href: '/services?category=transportation', icon: <Car className="w-4 h-4" /> },
+        { name: 'Cloud & Infrastructure', href: '/services?category=cloud', icon: <Cloud className="w-4 h-4" /> },
+        { name: 'Edge Computing', href: '/services?category=edge', icon: <Server className="w-4 h-4" /> },
+        { name: 'IoT & Connectivity', href: '/services?category=iot', icon: <Network className="w-4 h-4" /> },
+        { name: 'Semiconductor Tech', href: '/services?category=semiconductor', icon: <Cpu className="w-4 h-4" /> },
+        { name: 'Creative & Design', href: '/services?category=creative', icon: <Palette className="w-4 h-4" /> },
+        { name: 'Global Solutions', href: '/services?category=global', icon: <Globe className="w-4 h-4" /> }
+      ]
+    },    {
+    {
+      name: 'Showcase',
+      href: '/enhanced-services-showcase-2026-v2',
+      icon: <Rocket className="w-4 h-4" />
+    };
+    {
+      name: 'Pricing',
+      href: '/pricing-enhanced-2026',
+      icon: <Database className="w-4 h-4" />
+    };
+    {
+      name: 'About',
+      href: '/about',
+      icon: <Globe className="w-4 h-4" />
+    };
+    {
+      name: 'Contact',
+      href: '/contact',
+      icon: <Mail className="w-4 h-4" />
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Zap,
+  Brain,
+  Atom,
+  Microscope,
+  Gamepad2,
+  Shield,
+  Rocket,
+  Database,
+  TestTube,
+  Car,
+  Globe,
+  Code,
+  Palette,
+  Cloud,
+  Server,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 } from 'lucide-react';import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
 export default function UltraAdvancedNavigation2026V2() {;
 } from 'lucide-react';
@@ -179,6 +284,7 @@ export default function UltraAdvancedNavigation2026V2() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   useEffect(() => {
     const handleScroll = () => {
+<<<<<<< HEAD
 setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
@@ -287,15 +393,46 @@ icon: <Zap className='w-4 h-4' />,
       name: 'Pricing',
       href: '/pricing-enhanced-2026',
       icon: <Database className='w-4 h-4' />,
+=======
+      setIsScrolled(window.scrollY > 20);
+  Network,
+  Cpu,
+} from 'lucide-react';import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
+export default /**
+ * UltraAdvancedNavigation2026V2 - Function description
+ */
+function UltraAdvancedNavigation2026V2() {
+  const [is_open, setIsOpen] = useState (false);
+  const [is_scrolled, setIsScrolled] = useState (false);
+  const [active_dropdown, setActiveDropdown] = useState < string | null>(null);
+;
+  useEffect (() => {
+    const handle_scroll = () =>: any {
+      setIsScrolled (window.scroll_y > 20);
+    }
+    }
+      name: 'Showcase',
+      href: '/enhanced - services - showcase - 2026 - v2',
+      icon: <Rocket className='w - 4 h - 4' />,
+    },
+    {
+      name: 'Pricing',
+      href: '/pricing - enhanced - 2026',
+      icon: <Database className='w - 4 h - 4' />,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     },
     {
       name: 'About',
       href: '/about',
+<<<<<<< HEAD
       icon: <Globe className='w-4 h-4' />,
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     },
     {
       name: 'Contact',
       href: '/contact',
+<<<<<<< HEAD
       icon: <Mail className='w-4 h-4' />,
     },
   ];
@@ -310,6 +447,15 @@ address: '364 E Main St STE 1008 Middletown DE 19709',
       {/* Top Contact Bar */}
 <div className='bg-gradient-to-r from-purple-900/80 to-blue-900/80 backdrop-blur-sm border-b border-white/10'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  ];
+;
+  const contact_info = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+  };
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
                 <span>{contactInfo.mobile}</span>
 =======
@@ -393,15 +539,31 @@ function UltraAdvancedNavigation2026V2() {const [is_open, setIsOpen] = useState 
 <<<<<<< HEAD
               <Link
                 href='/enhanced-services-showcase-2026-v2'
+<<<<<<< HEAD
                 className='text-purple-400 hover:text-purple-300 transition-colors'
               >
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              </div>
+              <div className="flex items-center space-x-2">
+                <Mail className="w-4 h-4 text-blue-400" />
+                <span>{contactInfo.email}</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <MapPin className="w-4 h-4 text-green-400" />
+                <span>{contactInfo.address}</span>
+              </div>
+            </div>
+            <div className="flex items-center space-x-4">
+              <Link href="/enhanced-services-showcase-2026-v2" className="text-purple-400 hover:text-purple-300 transition-colors">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 🚀 New 2026 Services
               </Link>
             </div>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
       {/* Main Navigation */}
 <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -431,6 +593,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       </div>;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               </Link>;
             </div>;
           </div>;
@@ -452,6 +616,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className="text-xl font-bold text-white">Zion Tech Group</div>;
                 <div className="text-xs text-gray-400">Innovation 2026</div>;
               </div>;
+<<<<<<< HEAD
             </Link>;{/* Main Navigation */}
 <nav;
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled;
@@ -497,6 +662,9 @@ className='flex items-center space-x-2 text-gray-300 hover:text-white transition
 <<<<<<< HEAD
                       <span>{item.name}</span>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            </Link>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                     </Link>
 =======
                       <span>{item.name}</span>;
@@ -525,9 +693,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {item && item.dropdown && activeDropdown === item && item.name && (<div;
                       onMouseEnter={() => setActiveDropdown(item && item.name)}
 <<<<<<< HEAD
+<<<<<<< HEAD
                       onMouseLeave={() => setActiveDropdown(null)}
 className='absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl p-4'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                      onMouseLeave={() => setActiveDropdown(null)}
+
+className='absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl p-4'
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                     >
                       <div className='grid grid-cols-1 gap-2'>
                         {item.dropdown.map(dropdownItem => (
@@ -555,6 +730,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   )}
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               ))}
             </div>
             {/* CTA Button */}
@@ -562,6 +738,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Link href='/contact'>
                 <button className='bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              ))}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   Get Started
                 </button>
               </Link>
@@ -759,6 +938,7 @@ href={item && item.href}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
 <<<<<<< HEAD
+<<<<<<< HEAD
             transition={{ duration: 0.3 }}
 className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 lg:hidden'
           >
@@ -846,12 +1026,38 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Link href='/contact' onClick={() => setIsOpen(false)}>
                     <button className='w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            transition={{ duration: 0.3 }}
+            className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 lg:hidden'
+                      <Link
+                        href={item && item.href}
+                        onClick={() => setIsOpen(false)}
+
+className='flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3'
+                      >
+                        {item.icon}
+                        <span>{item.name}</span>
+                      </Link>
+                    )}
+                  </div>;
+                ))}
+
+                <div className='pt-6 border-t border-white/10'>
+                  <Link href='/contact' onClick={() => setIsOpen(false)}>
+                    <button className='w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300'>                      Get Started                <div className="pt-6 border-t border-white/10">
+                    )}
+                  </div>;
+                ))}
+                  <Link href="/contact" onClick={() => setIsOpen(false)}>
+                    <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                       Get Started
                     </button>
                   </Link>
                 </div>
 
                 {/* Mobile Contact Info */}
+<<<<<<< HEAD
 <div className='pt-6 border-t border-white/10 space-y-3 text-sm text-gray-400'>
                   <div className='flex items-center space-x-2'>
                     <Phone className='w-4 h-4 text-purple-400' />
@@ -883,6 +1089,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </Link>;
                 </div>;
                 {/* Mobile Contact Info */}<div className='pt-6 border-t border-white/10 space-y-3 text-sm text-gray-400'>;
+=======
+                <div className='pt-6 border-t border-white/10 space-y-3 text-sm text-gray-400'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   <div className='flex items-center space-x-2'>;
                     <Phone className='w-4 h-4 text-purple-400' />;
                     <span>{contactInfo && contactInfo.mobile}</span>;
@@ -1009,10 +1218,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
           </motion.div>;
         )}
       </AnimatePresence>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       {/* Overlay */}
       {isOpen && (<motion&& motion.div;
           </motion.div>)}
@@ -1022,6 +1236,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
 className='fixed inset-0 bg-black/50 z-40 lg:hidden'
@@ -1030,6 +1245,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           exit={{ opacity: 0 }}transition={{ duration: 0.3 }}
 className='fixed inset-0 bg-black/50 z-40 lg:hidden';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+          exit={{ opacity: 0 }}
+
+
+          transition={{ duration: 0.3 }}
+className='fixed inset-0 bg-black/50 z-40 lg:hidden'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           onClick={() => setIsOpen(false)}
       )}
       {/* Spacer for fixed navigation */}
@@ -1059,6 +1281,7 @@ className='fixed inset-0 bg-black/50 z-40 lg:hidden';
 <div className='h-32'></div>
     </>
   );
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     </>)<div className="h - 32"></div>;
@@ -1069,3 +1292,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )}}
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+}
+
+}
+  );
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33,12 +34,25 @@ export default function handler() {const svg = null;
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+}
+
+
+}
+
+
+
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 import type { NextApiRequest, NextApiResponse } from "next";
 
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -71,6 +85,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const svg = `<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="800" height="300"><rect width="100%" height="100%" fill="#f3f4f6"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="20" fill="#374151">Retention Cohorts (placeholder)</text></svg>`;
   res.setHeader("Content-Type", "image/svg+xml");
   res.send(svg);
@@ -78,6 +99,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   res.send(svg);
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -99,11 +121,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+}
+
+
+
+}
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const svg = null;
   res.send(svg)
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -115,3 +148,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

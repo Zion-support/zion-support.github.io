@@ -148,7 +148,11 @@ const path = require("path")
       console.log(" Automation Orchestrator started")
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error(" Orchestrator "error")
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  console.error(" Orchestrator "error")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

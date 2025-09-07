@@ -1,4 +1,5 @@
 <<<<<<< HEAD:src_backup/components/header/MobileBottomNav.tsx
+<<<<<<< HEAD:src_backup/components/header/MobileBottomNav.tsx
 import React from "react",
 import { useRouter } from "next/router",
 import Link from "next/link",
@@ -9,6 +10,8 @@ import { useCart  } from '@/context/CartContext';
 import { logWarn } from '@/utils/productionLogger';
 import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/header/MobileBottomNav.tsx
 interface MobileBottomNavProps {
   unread_count?: number;
 export /**
@@ -42,6 +45,7 @@ if ( {) {
   $2
 }
 
+<<<<<<< HEAD:src_backup/components/header/MobileBottomNav.tsx
 export function MobileBottomNav({ unreadCount;
 import React from 'react'
 import { useRouter } from 'next/router'
@@ -77,6 +81,10 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   }
   const navItems = [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  const nav_items = [;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/header/MobileBottomNav.tsx
     {
       name: 'Home'
       href: '/'
@@ -118,7 +126,10 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
     cartCount = cartContextValue.items.reduce((sum, i) => sum + i.quantity, 0)
   } else {
 
+<<<<<<< HEAD:src_backup/components/header/MobileBottomNav.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/header/MobileBottomNav.tsx
 
     // logWarn("MobileBottomNav: Cart data or items not available, defaulting cartCount to 0.")
   }
@@ -177,8 +188,12 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
             href={item.href}
             aria-label={item.name}
             className={cn(
+<<<<<<< HEAD:src_backup/components/header/MobileBottomNav.tsx
               'flex flex-col items-center justify-center w-full h-full px-1 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              "flex flex-col items-center justify-center w-full h-full px-1 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/header/MobileBottomNav.tsx
               item.matches(router.pathname)
                 ? "text-primary"
                 : "text-foreground/70 hover:text-foreground"
@@ -199,6 +214,10 @@ import { logWarn } from '@/utils/productionLogger',;
 import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react';
 interface MobileBottomNavProps {;
   unreadCount?: number;
+<<<<<<< HEAD:src_backup/components/header/MobileBottomNav.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/header/MobileBottomNav.tsx
 
 export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProps) {;
   const router = useRouter();
@@ -355,6 +374,7 @@ import { useWishlist } from "@/hooks/useWishlist",import { useCart } from '@/con
           </Link>;
 <<<<<<< HEAD:src_backup/components/header/MobileBottomNav.tsx
         ))}
+<<<<<<< HEAD:src_backup/components/header/MobileBottomNav.tsx
 
 
 
@@ -406,3 +426,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </nav>;
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/header/MobileBottomNav.tsx
+=======
+
+
+;
+}
+
+
+      </div>;
+    </nav>;
+  );
+}
+
+
+      </div>
+    </nav>
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/header/MobileBottomNav.tsx

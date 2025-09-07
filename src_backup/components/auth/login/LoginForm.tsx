@@ -1,4 +1,8 @@
 <<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
+<<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/auth/login/LoginForm.tsx
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { useForm, ControllerRenderProps } from 'react-hook-form';
@@ -26,7 +30,11 @@ import Link from 'next/link';
 import { useState  } from 'react';
 import { useRouter  } from 'next/router';
 <<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
+<<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/auth/login/LoginForm.tsx
 import { useForm, ControllerRenderProps } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod";
@@ -34,6 +42,7 @@ import { LogIn, User, Eye, EyeOff } from 'lucide-react'
 import { fireEvent  } from '@/lib/analytics';
 import { useAuth } from "@/context/auth/AuthProvider",
 
+<<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
 import { useState } from 'react';
 import { use_router } from 'next/router';
 import { use_form, ControllerRenderProps } from 'react - hook - form';
@@ -79,6 +88,8 @@ import { Input  } from '@/components/ui/ input';
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/auth/login/LoginForm.tsx
 import {
   Form,
   FormControl,
@@ -154,6 +165,7 @@ import {
   FormItem,
   FormLabel,
   const form = useForm<LoginFormValues>({
+<<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
     resolver: zodResolver(loginSchema) as any,
     defaultValues: {
       email: '',
@@ -169,6 +181,22 @@ import {
       const result = await login(data.email, data.password, data.rememberMe);
       if (result?.error) {;
 
+=======
+    resolver: zodResolver(loginSchema) as any
+    defaultValues: {
+      email: ''
+      password: ''
+      rememberMe: false
+    }
+  })
+  const onSubmit = async (data: LoginFormValues) => {
+    if (isSubmitting) return
+    try {
+      setIsSubmitting(true)
+      // Pass email and password to the login function
+      const result = await login(data.email, data.password, data.rememberMe)
+      if (result?.error) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/auth/login/LoginForm.tsx
         let errorMessage = 'Login failed. Please try again.'; // Default generic error
         if (result?.error && result?.error?.message) {
           if (
@@ -176,8 +204,31 @@ import {
           ) {
             errorMessage =
               'Your email is not confirmed. Please check your inbox for a confirmation link.'
+<<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
 
 
+=======
+} from '@/components/ui/form'
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import Link from 'next/link';
+import { Checkbox } from '@/components/ui/checkbox';// Form validation schema
+const loginSchema = z.object({
+  email: z
+    .string()
+    .email('Please enter a valid email')
+    .min(1, 'Email is required')
+  password: z.string().min(6, 'Password must be at least 6 characters')
+  rememberMe: z.boolean()
+})
+type LoginFormValues = z.infer<typeof loginSchema>
+export function LoginForm() {
+  const { isLoading, login } = useAuth()
+  const [showPassword, setShowPassword] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isResending, setIsResending] = useState(false)
+  const [verificationMessage, setVerificationMessage] = useState('')
+  const router = useRouter()
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/auth/login/LoginForm.tsx
   FormMessage} from "@/components/ui/form",
 import { Alert, AlertDescription } from "@/components/ui/alert",
 import Link from "next/link",
@@ -215,10 +266,21 @@ export function LoginForm() {
     try {
       setIsSubmitting(true)
       // Pass email and password to the login function
+<<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
 
       const result = await login(data.email, data.password, data.rememberMe),
 
 
+=======
+      if (result?.error) {
+        let errorMessage = "Login failed. Please try again.", // Default generic error
+        if (result?.error && result?.error?.message) {
+      if (result?.error) {
+        let errorMessage = "Login failed. Please try again.", // Default generic error
+        if (result?.error && result?.error?.message) {
+          if (result.error.message.toLowerCase().includes("email not confirmed")) {
+            errorMessage = "Your email is not confirmed. Please check your inbox for a confirmation link."
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/auth/login/LoginForm.tsx
           } else {
             error_message = result.error.message;
           }
@@ -258,6 +320,10 @@ if ( {) {
     }
     router.push (`/verify - status?email=${encodeURIComponent (email)}`);
   }
+<<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/auth/login/LoginForm.tsx
 
         form.setError("root", { message: errorMessage })
       } else {
@@ -272,13 +338,17 @@ import { fireEvent } from '@/lib/analytics',;
 import { useAuth } from "@/context/auth/AuthProvider",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
+<<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/auth/login/LoginForm.tsx
 import {;
   Form,;
   FormControl,;
   FormField,;
   FormItem,;
   FormLabel,;
+<<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
   FormMessage,;
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/auth/login/LoginForm.tsx
@@ -318,12 +388,18 @@ const loginSchema = z && z.object({email: z;
 <<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
         form && form.setError('root', { message: errorMessage });
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/auth/login/LoginForm.tsx
       } else {;
         fireEvent('login', { method: 'email' });
       }
     } finally {;
       setIsSubmitting(false);
     }
+<<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/auth/login/LoginForm.tsx
   };
 
   const handleResendEmail = async () => {;
@@ -334,11 +410,15 @@ const loginSchema = z && z.object({email: z;
     }
     setIsResending(true);
     setVerificationMessage('');
+<<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/auth/login/LoginForm.tsx
     try {;
       const response = await fetch('/api/auth/resend-verification-email', {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
+<<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
         body: JSON && JSON.stringify({ email }),;
       });
       const data = await response && response.json();
@@ -351,12 +431,18 @@ const loginSchema = z && z.object({email: z;
           data && data.message || 'Failed to resend verification email.';
         );
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/auth/login/LoginForm.tsx
       }
     } catch (err) {;
       setVerificationMessage('Failed to resend verification email.');
     } finally {;
       setIsResending(false);
     }
+<<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/auth/login/LoginForm.tsx
   };
 
   const handleCheckStatus = () => {;
@@ -414,7 +500,10 @@ if ( {) {$2;
 
 
 
+<<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/auth/login/LoginForm.tsx
   return (
     <Form {...form}>
       {form.formState.errors.root && (
@@ -422,8 +511,11 @@ if ( {) {$2;
           <AlertDescription>{form.formState.errors.root.message}</AlertDescription>
         </Alert>
       )}
+<<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/auth/login/LoginForm.tsx
       <form;
         onSubmit={form.handleSubmit(onSubmit, (errors) => {;
           const firstError = Object.keys(errors)[0] as keyof LoginFormValues;
@@ -432,6 +524,10 @@ if ( {) {$2;
           }
         })}
         className="space-y-6"
+<<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/auth/login/LoginForm.tsx
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -460,7 +556,10 @@ const loginSchema = null;
             form.setFocus(firstError)
           }        })}
         className='space-y-6'
+<<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/auth/login/LoginForm.tsx
       >
         <FormField
           control={form.control}
@@ -470,6 +569,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <FormLabel className="text-zion-slate-light">Email address</FormLabel>
 
               <FormControl>
+<<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
                 <div className='relative'>
 =======
           if (firstError) {form.setFocus(firstError)}        })}
@@ -533,6 +633,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple"
                     {...field}
 
+=======
+                <div className="relative">
+                  <Input
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/auth/login/LoginForm.tsx
 
                   />
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
@@ -542,6 +646,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </FormItem>
 
 
+<<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
 =======
                     className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple";
                     {...field}/>;
@@ -551,6 +656,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <FormMessage className="text-red-400" />;
             </FormItem>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/auth/login/LoginForm.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/auth/login/LoginForm.tsx
         className="space-y-6";
       >;
         <FormField;
@@ -574,6 +682,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </FormControl>
               <FormMessage className='text-red-400' />
             </FormItem>
+<<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
 
 
 =======
@@ -584,6 +693,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <FormMessage className='text-red-400' />;
             </FormItem>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/auth/login/LoginForm.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/auth/login/LoginForm.tsx
           )}
         />;
         <FormField;
@@ -673,6 +784,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
 <<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
               </FormControl>;
+<<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/auth/login/LoginForm.tsx
 
               <FormMessage className='text - red - 400' />;
             </FormItem>)}
@@ -680,12 +795,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <FormField;
           control={form.control}
 
+<<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/auth/login/LoginForm.tsx
               <FormControl>
             field: ControllerRenderProps<LoginFormValues, 'rememberMe'>;
           }) => (;
             <FormItem className='flex flex-row items-start space-x-3 space-y-0'>;
               <FormControl>;
+<<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
                 <Checkbox
 
                   checked={field.value}
@@ -697,12 +816,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+=======
+              <FormControl>
+                <Checkbox
+                  checked={field.value}
+                  onCheckedChange={field.onChange}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/auth/login/LoginForm.tsx
               </FormControl>
               <div className="space-y-1 leading-none">
                 <FormLabel className="text-zion-slate-light">Remember me</FormLabel>
               </div>
             </FormItem>
           )}
+<<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
         />;
 =======
               </FormControl>;<FormMessage className='text - red - 400' />;
@@ -791,6 +917,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             href='/signup'
 
 
+=======
+        />
+        <div className="flex items-center justify-between">
+          <div className="text-sm">
+            {/* "Remember me" checkbox is now above, this div can be used for "Forgot Password" if it's still needed */}
+            {/* If "Remember me" was previously here, it's moved. */}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/auth/login/LoginForm.tsx
           </div>
           <div className="text-sm">
             <Link href="/forgot-password" className="font-medium text-zion-cyan hover:text-zion-cyan-light">
@@ -799,6 +932,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
         <Button
+<<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
 
           type="submit"
           className="w-full inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zion-purple-light visible"
@@ -888,6 +1022,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+=======
+          <Button
+            type='button'
+            variant='secondary'
+            className='w-1/2 mr-2'
+            onClick={handleResendEmail}
+          <Button
+            type='button'
+            variant='outline'
+            className='w-1/2 ml-2'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/auth/login/LoginForm.tsx
             Check status
           </Button>
         </div>
@@ -898,12 +1043,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </p>
       </form>
     </Form>
+<<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
 
 
 return;
 
 
 
+=======
+  )
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/auth/login/LoginForm.tsx
 }setIsResending (true);'
 setVerificationMessage ('')
 try {'
@@ -932,12 +1082,19 @@ if (!email) {'
   form.setError ('root', {'
   message: 'Please enter your email address.'
 })
+<<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/auth/login/LoginForm.tsx
 
 
 return;
 
 
+<<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/auth/login/LoginForm.tsx
 }router.push (`/verify-status?email=$ {
   encodeURIComponent (email)
 }`)
@@ -958,6 +1115,7 @@ return;
   isResending ? 'Sending...': 'Resend / Verify e-mail'
 }</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>)
 }'"}
+<<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
             className='font-medium text-zion-cyan hover:text-zion-cyan-light'>;
 
 =======
@@ -968,10 +1126,16 @@ return;
         <p className="text-sm text-center mt-4">;
           <Link href="/signup" className="font-medium text-zion-cyan hover: text-zion-cyan-light">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/auth/login/LoginForm.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/auth/login/LoginForm.tsx
             Create account;
           </Link>;
         </p>;
       </form>;
+<<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/auth/login/LoginForm.tsx
     </Form>;
   )return;}setIsResending (true)';
 setVerificationMessage ('')try {';
@@ -1088,6 +1252,7 @@ if ( {') {$2;
 }'"}
 }
 ;
+<<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
 
   );
 
@@ -1137,3 +1302,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 }</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>)}'";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/auth/login/LoginForm.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/auth/login/LoginForm.tsx

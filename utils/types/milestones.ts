@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -20,11 +21,20 @@ export type ProjectParticipants = {
 
 export type ProjectParticipants = {
 
+=======
+
+
+export type ProjectParticipants = {
+
+export type ProjectParticipants = {;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   clientUserId: string;
   talentUserId: string;
 }
 export type Project = {  id: string;
+<<<<<<< HEAD
   title: string;
   description?: string;
 <<<<<<< HEAD
@@ -49,6 +59,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   title: string;
   description?: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+  title: string;
+  description?: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   title: string;
   description?: string;
   due_date: string;
@@ -71,6 +86,7 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -81,12 +97,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     value === 'Pending' ||
     value === 'In Progress' ||
     value === 'Submitted' ||
     value === 'Approved' ||;
     value === 'Paid';
   );export interface MilestoneAttachment {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -108,6 +129,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string;
   name: string;
   url: string;
@@ -127,14 +152,17 @@ export interface UpdateMilestoneRequest  {export interface UpdateMilestoneReques
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-  uploaded_at: string,
 
+<<<<<<< HEAD
 }
   uploadedAt: string
 }
@@ -151,24 +179,33 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 export interface CreateMilestoneRequest {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 export interface CreateMilestoneRequest {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   title: string;
   description?: string;
 }
 export interface UpdateMilestoneRequest {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 export interface UpdateMilestoneRequest {;
 
-<<<<<<< HEAD
 export interface UpdateMilestoneRequest {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -187,6 +224,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   title?: string;
   description?: string;
   due_date?: string;
@@ -194,6 +235,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   status?: 'pending' | 'completed' | 'cancelled';
 <<<<<<< HEAD
   attachments?: MilestoneAttachment[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -244,6 +286,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   )
   attachments?: MilestoneAttachment[];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 
 
@@ -260,6 +306,7 @@ export function getDaysUntilDue(milestone: Milestone): number | null {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -267,6 +314,11 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+}
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 };
 
@@ -288,6 +340,7 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
     value === 'Paid'
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 }
@@ -298,3 +351,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

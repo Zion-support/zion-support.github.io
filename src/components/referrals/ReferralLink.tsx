@@ -1,4 +1,25 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+import { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import {
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
+import { Input } from '@/components/ui/input'
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react'
 interface ReferralLinkProps {
   referralLink: string;
@@ -204,12 +225,15 @@ interface ReferralLinkProps  {referralLink: string,onCopy: () => void,onShare: (
               className="font-mono text-sm"
 
 
+<<<<<<< HEAD
           )}
         </div>
       </CardContent>
 =======
               readOnly;
               className="font-mono text-sm";
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           )}
         </div>;
       </CardContent>;
@@ -231,6 +255,7 @@ interface ReferralLinkProps  {referralLink: string,onCopy: () => void,onShare: (
               Copied to clipboard!;
             </p>;
           )}
+<<<<<<< HEAD
         </div>;
       </CardContent>;
       <CardFooter className="border-t bg-muted/50 p-4">;
@@ -279,6 +304,52 @@ interface ReferralLinkProps  {referralLink: string,onCopy: () => void,onShare: (
             </Button>;
           </div>;
         </div>;
+=======
+        </div>
+      </CardContent>
+
+
+      <CardFooter className="border-t bg-muted/50 p-4">
+        <div className="flex flex-col sm:flex-row w-full justify-between items-center gap-4">
+          <p className="text-sm text-muted-foreground">Share on social media:</p>
+          <div className="flex space-x-2">
+            <Button 
+
+              variant="outline" 
+
+              size="sm"
+              className="flex items-center gap-2"
+
+
+            <Button 
+              variant="outline" 
+              size="sm"
+              className="flex items-center gap-2"
+
+
+            >
+              <Facebook className="h-4 w-4" />
+              Facebook
+            </Button>
+
+
+
+            <Button 
+              variant="outline" 
+              size="sm"
+              className="flex items-center gap-2"
+              onClick={() => onShare('linkedin')}
+            >
+              <Share className="h-4 w-4" />
+
+
+
+              LinkedIn
+            </Button>
+          </div>
+        </div>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               onClick={() => onShare('linkedin')}            >;
               <Share className='h-4 w-4' />              LinkedIn              <Share className="h-4 w-4" />;
         <div className="flex flex - col space - y-3">;
@@ -339,6 +410,7 @@ interface ReferralLinkProps  {referralLink: string,onCopy: () => void,onShare: (
             </Button>;
           </div>;
         </div>;
+<<<<<<< HEAD
       </CardFooter>;)}
     </Card>)}</CardFooter>;
     </Card>;
@@ -347,3 +419,19 @@ interface ReferralLinkProps  {referralLink: string,onCopy: () => void,onShare: (
       </CardContent>;
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      </CardFooter>;
+
+
+  );
+}
+    </Card>);
+}
+
+      </CardFooter>
+    </Card>
+  )
+
+  );
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

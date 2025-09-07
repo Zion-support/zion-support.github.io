@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
@@ -121,6 +122,10 @@ export default SEO;interface SEOProps  {title?: string;
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+import React from 'react';
+import Head from 'next/head';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 import React from './react';
@@ -158,20 +163,16 @@ export default function SEO({
 export default SEO;
 }
 export default SEO;
+<<<<<<< HEAD
 
 
 import React from 'react';
 import Head from 'next/head';
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-}
 
+<<<<<<< HEAD
 const SEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Leading Technology Solutions',
   description = 'Zion Tech Group provides cutting-edge technology solutions including web development, mobile apps, cloud solutions, and AI/ML services.',
@@ -245,3 +246,5 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

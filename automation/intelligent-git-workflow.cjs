@@ -84,6 +84,11 @@ class IntelligentGitWorkflow {
     const statusResult = await this.runCommand('git status', 'Check for merge conflicts');
     if (!statusResult.success) return false;
 
+<<<<<<< HEAD
+=======
+    return statusResult.output.includes('') || 
+           statusResult.output.includes('') || 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
            statusResult.output.includes('>>>>>>>');
   }
 
@@ -123,6 +128,29 @@ class IntelligentGitWorkflow {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
       
+<<<<<<< HEAD
+=======
+      if (!content.includes('')) {
+        return false; // No conflicts in this file
+      }
+
+      // Simple conflict resolution strategy
+      const lines = content.split('\n');
+      const resolvedLines = [];
+      let inConflict = false;
+      let conflictType = '';
+
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        
+        if (line.includes('')) {
+          inConflict = true;
+          conflictType = 'head';
+          continue;
+        }
+        
+        if (line.includes('')) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           conflictType = 'main';
           continue;
         }

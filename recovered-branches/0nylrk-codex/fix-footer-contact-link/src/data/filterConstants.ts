@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -18,6 +19,12 @@
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export const COMMON_SKILLS = [
   'Machine Learning',
   'Python',
@@ -30,6 +37,7 @@ export const COMMON_SKILLS = [
   'DevOps',
   'Cloud Architecture',;
   'TensorFlow',];
+<<<<<<< HEAD
 // Common skills for filtering
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -44,6 +52,10 @@ export const COMMON_SKILLS = [
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 export const COMMON_SKILLS = [
   'Machine Learning'
@@ -58,6 +70,7 @@ export const COMMON_SKILLS = [
   'Cloud Architecture'
   'TensorFlow',];
 // Regions
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -79,6 +92,10 @@ export const COMMON_SKILLS = [
 =======
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   'Machine Learning',
   'Python',
   'JavaScript',
@@ -95,6 +112,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -104,11 +122,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export const REGIONS = [  "Machine Learning";
   "Python";
   "JavaScript";
@@ -119,6 +143,7 @@ export const REGIONS = [  "Machine Learning";
   "Kubernetes";
   "DevOps";
   "Cloud Architecture";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -153,10 +178,20 @@ export const REGIONS = [
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   "Europe";
   "Asia Pacific";
   "South America";
   "Middle East";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -179,6 +214,13 @@ export const REGIONS = [
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 // Common skills for filtering
 export const COMMON_SKILLS = [
@@ -281,6 +323,10 @@ export const REGIONS = [  "Machine Learning";
   "Middle East";
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   'Cloud Architecture',;
   'TensorFlow',];
 
@@ -300,6 +346,7 @@ export const COMMON_SKILLS = [
   "Cloud Architecture",
   "TensorFlow"
 
+<<<<<<< HEAD
   "Africa";
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -318,3 +365,9 @@ export const COMMON_SKILLS = null;
 export const COMMON_SKILLS = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+export const COMMON_SKILLS = null;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

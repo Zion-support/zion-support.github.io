@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ursor/automate-test-fix-improve-and-merge-code-48f3
   return (    <footer className='bg-gray-900 text-white'>
 =======
@@ -187,7 +191,10 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
     </footer>
   )
 }
+<<<<<<< HEAD
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 const EnhancedFooter: React.FC = () => {;

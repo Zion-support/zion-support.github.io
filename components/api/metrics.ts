@@ -1,5 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 function rand(min: number, max: number) {
   return Math.floor(Math.random() * (max - min + 1)) + min
 }
@@ -7,7 +11,11 @@ function rand(min: number, max: number) {
 function generateSeries(n: number, base: number, volatility;
   return Math.floor(Math.random() * (max - min + 1)) + min;
 function generateSeries(n: number, base: number, volatility = 0.15) {
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const series: number[] = [];
   let last = base;
   for (let i = 0; i < n; i++) {
@@ -29,10 +37,21 @@ function generateSeries(n: number, base: number, volatility = 0.15) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const d = new Date(now);
     d.setDate(d.getDate() - (13 - i));
+<<<<<<< HEAD
 return `${d.getMonth() + 1}/${d.getDate()}`;
   });
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+    const d = new Date(now);
+    d && d.setDate(d && d.getDate() - (13 - i));
+    return `${d && d.getMonth() + 1}/${d && d.getDate()}`;
+    return `${d.getMonth() + 1}/${d.getDate()}`
+  });
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const marketplace = [
     {
       key: 'jobs_24h'
@@ -143,7 +162,12 @@ function generateSeries() {const series: number[] = [];
       value: rand(1_000, 12_000)trend: generateSeries(14, 6_000)}
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
   const response: any = {
+=======
+  const response: any = {
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     marketplace
     dao
     token
@@ -158,11 +182,15 @@ function generateSeries() {const series: number[] = [];
     },
   };
 
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   if (req.query.compare === 'quarter') {
     const factor = 0.8 + Math.random() * 0.4;
     response.compare = {
       prevQuarter: {
+<<<<<<< HEAD
 marketplace: marketplace.map(m => ({
           ...m,
           value: Math.round(m.value * factor),
@@ -180,6 +208,13 @@ marketplace: marketplace.map(m => ({
   res.status(200).json(response);
         multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) }))}}
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+        })),
+      },
+    }
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
 
 

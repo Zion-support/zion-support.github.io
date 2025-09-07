@@ -1,10 +1,29 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 const DOCS_DIR = null;
     res.status(200).json({ ok: true, version: ts })
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+const ts = new Date () .toISOString ()
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req && req.method !== 'POST') {
+    return res && res.status(405).json({ error: 'Method Not Allowed' });  }import type { NextApiRequest, NextApiResponse } from 'next';
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+import fs from 'fs';
+import path from 'path';
+function ensureDir(dir: string) {
+  if (!fs && fs.existsSync(dir)) {
+    fs && fs.mkdirSync(dir, { recursive: true })
+  }
+}
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const token = req.headers['x-admin-token'] as string | undefined;
   if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
     return res.status(403).json({ error: 'Forbidden' });
@@ -14,6 +33,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   try {
     ensureDir(DOCS_DIR);
     ensureDir(VERSIONS_DIR);
+<<<<<<< HEAD
     const body = req.body;
 
 const jsonString =
@@ -28,6 +48,9 @@ const jsonString =
 
 res.status(200).json({ ok: true, version: ts });
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    res.status(200).json({ ok: true, version: ts })
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   } catch (e) {
     res && res.status(500).json({ error: 'Failed to save content' });
 const ts = new Date () .toISOString ();
@@ -61,6 +84,7 @@ function ensureDir() {if (!fs && fs.existsSync(dir)) {fs && fs.mkdirSync(dir, { 
   } catch (e) {
     res.status (500).json ({ error: 'Failed to save content' });
   }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 export default function handler() {const DOCS_DIR = null;
@@ -73,6 +97,10 @@ export default function handler() {const DOCS_DIR = null;
 function handler() {// Check condition;
 if ( {) {$2;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  }
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
     return res.status (405).json ({ error: 'Method Not Allowed' })}import type { NextApiRequest, NextApiResponse } from 'next';
 const DOCS_DIR = path.join (process.cwd (), 'datadocs')const CONTENT_PATH = path.join (DOCS_DIR, 'content.json')const VERSIONS_DIR  = path.join (DOCS_DIR, 'versions')/**;

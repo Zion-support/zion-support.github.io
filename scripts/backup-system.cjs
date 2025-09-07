@@ -29,7 +29,11 @@ const { execSync } = require("child_process")
   case "list"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   "default": console.log("Usage: node backup-system.cjs [create|restore|list] [backup-name]")
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  "default": console.log("Usage: node backup-system.cjs [create|restore|list] [backup-name]")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

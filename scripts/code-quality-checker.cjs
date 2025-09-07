@@ -49,7 +49,11 @@ const path = require('path')
         this.log('� No code quality issues found!', 'SUCCESS')
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       this.log(`Error during code quality check: ${error.message}`, 'ERROR'`)
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      this.log(`Error during code quality check: ${error.message}`, 'ERROR'`)
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -34,6 +35,9 @@ export default function EnhancedServicesShowcase() {
 
   const contactInfo = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
 =======
   Crown, Award, Target, Globe, Cpu, Database;
@@ -85,6 +89,7 @@ const container_variants = {
   {
 }
 }> {
+<<<<<<< HEAD
   children 
 }</button>) 
 };
@@ -98,6 +103,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }> {children;
 }</button>)}
 // Button component (if not imported)const Button = ({href;
+=======
+  children
+}</button>)
+}
+// Button component (if not imported)
+const Button = ({
+  href
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   variant = 'primary';
   size = 'md';
   className = '';
@@ -129,6 +142,12 @@ if ( {) {$2;
       </a>)}
   return (<button on_click={on_click} className={classes}>;
       {children}
+<<<<<<< HEAD
     </button>)}children;
 }</button>)}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </button>);
+}
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

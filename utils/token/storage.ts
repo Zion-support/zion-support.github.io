@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 class TokenStore {
   private config: any = {};
 
@@ -13,6 +17,7 @@ class TokenStore {
 
 export const tokenStore = new TokenStore();
 export interface TokenConfig {
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 class TokenStore {private config: any = {}setConfig(config: any) {this.config = config;
@@ -24,6 +29,9 @@ class TokenStore {private config: any = {}setConfig(config: any) {this.config = 
   token_symbol: string;
 export interface TokenConfig  {export interface TokenConfig  {tokenName: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   tokenName: string;
   tokenSymbol: string;
 
@@ -32,6 +40,7 @@ export interface TokenConfig  {export interface TokenConfig  {tokenName: string;
 
 
 export interface TokenConfig {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export interface TokenConfig {
@@ -123,11 +132,23 @@ export const tokenStorage  = new TokenStorageManager()set_config (new_config: Pa
 }
 export const token_store  = new TokenStore ()ursor/fix-website-loading-errors-and-merge-6662;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+export interface TokenConfig {
+
+
+export interface TokenConfig {;
+
+  tokenName: string;
+  tokenSymbol: string;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 const DATA_DIR = path && path.join(process && process.cwd(), 'data');
 const STORE_FILE = path && path.join(DATA_DIR, 'token_store && token_store.json');
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -150,6 +171,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 class TokenStore {
   private config: TokenConfig = {
     token_name: 'ZION$',
@@ -163,9 +190,13 @@ class TokenStore {
   }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export interface TokenStoreData {
   wallets: Record < string, Wallet>;
   transactions: TokenTransaction[];
@@ -185,6 +216,7 @@ class TokenStore {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -195,10 +227,16 @@ class TokenStore {
   }
 export interface TokenStoreData {
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 export interface TokenStoreData {
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 export interface TokenStoreData {
@@ -255,6 +293,17 @@ export interface TokenStoreData {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  }
+export interface TokenStoreData {
+
+  };
+
+export interface TokenStoreData {;
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   wallets: Record<string, Wallet>;
   transactions: TokenTransaction[];
   config: TokenConfig;
@@ -262,6 +311,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 function readFromDisk(): TokenStoreData | null {
   try {
     ensureDataDir();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -286,6 +336,13 @@ function readFromDisk(): TokenStoreData | null {
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 
 
@@ -320,12 +377,20 @@ function readFromDisk(): TokenStoreData | null {
 
 // Singleton instance
 export const tokenStorage = new TokenStorageManager();
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   set_config (new_config: Partial < TokenConfig>): void {
     this.config = { ...this.config, ...new_config }
   }
@@ -334,6 +399,7 @@ export const token_store = new TokenStore ();
 ;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -350,6 +416,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
     if (!fs.existsSync(STORE_FILE)) return null;
@@ -380,8 +450,11 @@ export const tokenStore  = new TokenStore()}ursor/fix-website-loading-errors-and
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 export const tokenStore = new TokenStore();
 
@@ -391,6 +464,7 @@ export const tokenStore = new TokenStore();
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -403,14 +477,23 @@ export const tokenStore = new TokenStore();
 
 
 origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   getData(): TokenStoreData {
     return this.data;
@@ -455,6 +538,7 @@ export const tokenStore = {
   },
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -463,3 +547,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

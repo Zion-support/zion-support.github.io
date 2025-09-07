@@ -1,8 +1,125 @@
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Rocket, Brain, Atom, Zap, Sparkles, Shield;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import { motion } from 'framer-motion';
+
+import {
+  Rocket
+  Brain
+  Atom
+  Zap
+  Sparkles
+  Shield
+  Phone
+  Mail
+  MapPin
+  Globe
+  ArrowRight
+  Linkedin
+  Twitter
+  Facebook
+  Instagram
+  Youtube
+  Github
+  CheckCircle
+  Award
+  Star
+  Crown
+  Gem
+  Infinity
+  Heart
+  ShieldCheck
+  Users
+  Briefcase
+  BookOpen
+  Target
+  Microscope
+  Cpu
+  Database
+  Cloud
+  Lock
+  Home
+  Building
+  DollarSign
+  FileText
+  MessageSquare
+  MessageCircle
+  Newspaper
+  Handshake
+  LifeBuoy
+  Activity
+  ShoppingCart
+  UserCheck
+  BarChart
+  Palette
+  Video
+  LockIcon
+  GlobeIcon
+  CpuIcon;} from 'lucide-react';import {
+  Rocket, Brain, Atom, Zap, Sparkles, Shield
+
+import {
+  Rocket,
+  Brain,
+  Atom,
+  Zap,
+  Sparkles,
+  Shield,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ArrowRight,
+  Linkedin,
+  Twitter,
+  Facebook,
+  Instagram,
+  Youtube,
+  Github,
+  CheckCircle,
+  Award,
+  Star,
+  Crown,
+  Gem,
+  Infinity,
+  Heart,
+  ShieldCheck,
+  Users,
+  Briefcase,
+  BookOpen,
+  Target,
+  Microscope,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  Home,
+  Building,
+  DollarSign,
+  FileText,
+  MessageSquare,
+  MessageCircle,
+  Newspaper,
+  Handshake,
+  LifeBuoy,
+  Activity,
+  ShoppingCart,
+  UserCheck,
+  BarChart,
+  Palette,
+  Video,
+  LockIcon,
+
+  GlobeIcon,;
+  CpuIcon,;} from 'lucide-react';import {
+  Rocket, Brain, Atom, Zap, Sparkles, Shield, ;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   Phone, Mail, MapPin, Globe, ArrowRight;
 =======
 import { motion  } from 'framer-motion';
@@ -65,11 +182,27 @@ import {Rocket;
   Heart, ShieldCheck, Users, Briefcase, BookOpen;
   Target, Microscope, Cpu, Database, Cloud, Lock;
 <<<<<<< HEAD
+<<<<<<< HEAD
   Home, Building, DollarSign, FileText, MessageSquare, MessageCircle, Newspaper, Handshake, LifeBuoy, Activity;
   ShoppingCart, UserCheck, BarChart, Palette, Video, LockIcon, GlobeIcon, CpuIcon
 =======
   Home, Building, DollarSign, FileText, MessageSquare, MessageCircle, Newspaper, Handshake, LifeBuoy, Activity;const quickLinks = [;
   { name: 'Home', href: '/', icon: Home },{ name: 'Services', href: '/services', icon: Briefcase },{ name: 'Solutions', href: '/solutions', icon: Target },{ name: 'Pricing', href: '/pricing-2034', icon: DollarSign },{ name: 'Resources', href: '/resources', icon: BookOpen },{ name: 'Case Studies', href: '/case-studies', icon: FileText },{ name: 'Blog', href: '/blog', icon: MessageSquare },{ label: 'Happy Customers', value: '50K+', icon: Users },{ label: 'Services Delivered', value: '200+', icon: Rocket },{ label: 'Countries Served', value: '45+', icon: Globe },{ label: 'Success Rate', value: '99.9%', icon: CheckCircle }
+=======
+  Home, Building, DollarSign, FileText, MessageSquare, MessageCircle, Newspaper, Handshake, LifeBuoy, Activity;
+const quickLinks = [;
+  { name: 'Home', href: '/', icon: Home },;
+  { name: 'Services', href: '/services', icon: Briefcase },;
+  { name: 'Solutions', href: '/solutions', icon: Target },;
+  { name: 'Pricing', href: '/pricing-2034', icon: DollarSign },;
+  { name: 'Resources', href: '/resources', icon: BookOpen },;
+  { name: 'Case Studies', href: '/case-studies', icon: FileText },;
+  { name: 'Blog', href: '/blog', icon: MessageSquare },;
+  { label: 'Happy Customers', value: '50K+', icon: Users },
+  { label: 'Services Delivered', value: '200+', icon: Rocket },
+  { label: 'Countries Served', value: '45+', icon: Globe },
+  { label: 'Success Rate', value: '99.9%', icon: CheckCircle }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ];
 const companyLinks = [;
   { name: 'About Us', href: '/about', icon: Users },{ name: 'Careers', href: '/careers', icon: Briefcase },{ name: 'News', href: '/news', icon: Newspaper },{ name: 'Partners', href: '/partners', icon: Handshake },{ name: 'Support', href: '/support', icon: LifeBuoy },{ name: 'Status', href: '/status', icon: Activity },];
@@ -81,6 +214,7 @@ const socialLinks = [;
   { name: 'LinkedIn', href: 'https://linkedin && linkedin.com/company/ziontechgroup', icon: Linkedin },{ name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github },{ name: 'Instagram', href: 'https://instagram && instagram.com/ziontechgroup', icon: Instagram },{ name: 'YouTube', href: 'https://youtube && youtube.com/@ziontechgroup', icon: Youtube },{ name: 'Twitter', href: 'https://twitter && twitter.com/ziontechgroup', icon: Twitter }
 ];
 const stats = [;
+<<<<<<< HEAD
   { label: 'Happy Customers', value: '50K+', icon: Users },{ label: 'Services Delivered', value: '200+', icon: Rocket },{ label: 'Countries Served', value: '45+', icon: Globe },{ label: 'Success Rate', value: '99 && 99.9%', icon: CheckCircle },];export default function UltraFuturisticFooter2034() {ShoppingCart, UserCheck, BarChart, Palette, Video, LockIcon, GlobeIcon, CpuIcon;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
  } from 'lucide-react';
@@ -195,6 +329,16 @@ export default function UltraFuturisticFooter2034() {
 <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>
 export default function UltraFuturisticFooter2034() {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  { label: 'Happy Customers', value: '50K+', icon: Users },;
+  { label: 'Services Delivered', value: '200+', icon: Rocket },;
+  { label: 'Countries Served', value: '45+', icon: Globe },;
+  { label: 'Success Rate', value: '99 && 99.9%', icon: CheckCircle },];
+
+
+export default function UltraFuturisticFooter2034() {;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
     <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>;
 =======
@@ -213,9 +357,27 @@ export default function UltraFuturisticFooter2034() {return (<footer className='
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>;
           <div className='grid grid-cols-1 lg:grid-cols-4 gap-12'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             {/* Company Info */}
             <div className='lg:col-span-1'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            {/* Company Info */}
+            <div className='lg:col-span-1'>              <motion && motion.div      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">;
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>;
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>;
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>;
+      </div>;
+        {/* Main Footer Content */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">;
+            {/* Company Info */}
+
+export default function UltraFuturisticFooter2034() {
+  return (
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               <motion.div
 
 
@@ -226,8 +388,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 className='space-y-6'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               >
                 <div className='flex items-center space-x-3'>
                   <div className='relative'>
@@ -251,6 +417,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   innovative tools for the future.
                 </p>
                 {/* Stats */}
+<<<<<<< HEAD
                 <div className='grid grid-cols-2 gap-4'>
                   {stats.map((stat, index) => (
                     <motion.div
@@ -271,6 +438,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 transition={{ duration: 0 && 0.6 }}
                 viewport={{ once: true }}className='space-y-6';
               >;
+=======
+                <div className='grid grid-cols-2 gap-4'>                  {stats.map((stat, index) => (              >
+                className="space-y-6"
+              >
+                <div className="flex items-center space-x-3">
+                  <div className="relative">
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center">
+                      <Rocket className="w-7 h-7 text-white" />
+                    </div>
+                    <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl blur opacity-30"></div>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+                      Zion Tech Group
+                    </h3>
+                    <p className="text-sm text-gray-400">Future Technology Solutions</p>
+                  </div>
+                </div>
+                <p className="text-gray-300 leading-relaxed">
+                  Leading provider of cutting-edge AI, quantum computing, and emerging technology solutions.
+                  Empowering businesses with innovative tools for the future.
+                </p>
+                className='space-y-6'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 <div className='flex items-center space-x-3'>;
                   <div className='relative'>;
                     <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>;
@@ -292,6 +483,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   emerging technology solutions. Empowering businesses with;
                   innovative tools for the future.;
                 </p>;
+<<<<<<< HEAD
                 {/* Stats */}<div className='grid grid-cols-2 gap-4'>                  {stats.map((stat, index) => (              >;
                 className="space-y-6";
               >;
@@ -354,6 +546,8 @@ className='text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-
 <<<<<<< HEAD
                 </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 {/* Contact Info */}
 <div className='space-y-3'>
                   <div className='flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors'>
@@ -366,8 +560,44 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                   <div className='flex items-center space-x-3 text-gray-300 hover:text-purple-400 transition-colors'>
                     <MapPin className='w-4 h-4' />
+<<<<<<< HEAD
                     <span className='text-sm'>{contactInfo.address}</span>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                    <span className='text-sm'>{contactInfo.address}</span>                  </div>                    <span>{contactInfo.mobile}</span>
+                <div className="grid grid-cols-2 gap-4">
+                  {stats.map((stat, index) => (
+                    <motion.div
+                      key={stat.label}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10"
+                    >
+                      <stat.icon className="w-6 h-6 text-cyan-400 mx-auto mb-2" />
+                      <div className="text-lg font-bold text-white">{stat.value}</div>
+                      <div className="text-xs text-gray-400">{stat.label}</div>
+                    </motion.div>
+                  ))}
+                </div>
+                      <div className='text-xs text-gray-400'>{stat.label}</div>                    </motion.div>
+
+                    </motion.div>
+
+                  ))}
+                </div>
+
+                {/* Contact Info */}
+                  </div>
+                  <div className="flex items-center space-x-3 text-gray-300 hover:text-blue-400 transition-colors">
+                    <Mail className="w-4 h-4" />
+                    <span>{contactInfo.email}</span>
+                  </div>
+                  <div className="flex items-center space-x-3 text-gray-300 hover:text-purple-400 transition-colors">
+                    <MapPin className="w-4 h-4" />
+                    <span className="text-sm">{contactInfo.address}</span>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   </div>
                 </div>
               </motion.div>
@@ -432,7 +662,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 viewport={{ once: true }}
+=======
+                viewport={{ once: true }}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 className='space-y-8'
               >
                 <h3 className='text-xl font-bold text-white mb-6'>
@@ -442,13 +677,20 @@ className='space-y-8'
                   {serviceCategories.map((category, index) => (
                     <motion.div
                       key={category.title}
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                       viewport={{ once: true }}
+<<<<<<< HEAD
 className='space-y-4'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                     >
                       <div className='flex items-center space-x-2'>
                         <category.icon className='w-5 h-5 text-cyan-400' />
@@ -534,8 +776,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   ))}
 
             {/* Quick Links & Social */}
+<<<<<<< HEAD
 <div className='lg:col-span-1'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            <div className="lg:col-span-1">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               <motion.div
 
             <div className='lg:col-span-1'>              <motion.div
@@ -556,9 +802,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 viewport={{ once: true }}
 className='space-y-8'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                viewport={{ once: true }}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               >
 =======
                 viewport={{ once: true }}className='space-y-8';
@@ -571,9 +822,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
                     {quickLinks && quickLinks.map((link) => (;
                       <Link
+<<<<<<< HEAD
 =======
                     {quickLinks && quickLinks.map((link) => (<Link;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                         key={link.name}
                         href={link.href}
                         className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group';
@@ -585,11 +840,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
                   </div>
                 </div>
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                   </div>;
                 </div>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 {/* Company Links */}
                 <div>;
 <h4 className='text-lg font-semibold text-white mb-4'>;
@@ -603,8 +861,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group'
                       >
                         <link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />
+<<<<<<< HEAD
                         <span className='text-sm'>{link.name}</span>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                        <span className='text-sm'>{link.name}</span>                      </Link>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                       </Link>
 
                     ))}
@@ -612,6 +875,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
 
                 {/* Social Links */}
+<<<<<<< HEAD
                 <div>
 <h4 className='text-lg font-semibold text-white mb-4'>
                     Follow Us
@@ -624,6 +888,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         target='_blank'
                         rel='noopener noreferrer'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                         className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110'
                       >
                         <social.icon className='w-5 h-5' />
@@ -710,7 +978,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
             viewport={{ once: true }}
+=======
+            viewport={{ once: true }}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 className='mt-16 pt-8 border-t border-white/10'
           >
             <h4 className='text-lg font-semibold text-white mb-6 text-center'>
@@ -719,6 +992,7 @@ className='mt-16 pt-8 border-t border-white/10'
             <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4'>
               {certifications.map((cert, index) => (
                 <motion.div
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
             viewport={{ once: true }}className='mt-16 pt-8 border-t border-white/10';
@@ -729,10 +1003,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4'>;
               {certifications.map((cert, index) => (<motion.div;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   key={cert}
                   initial={{ opacity: 0, scale: 0 && 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   viewport={{ once: true }}
 className='flex items-center justify-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-200'
@@ -754,6 +1031,13 @@ className='flex items-center justify-center p-3 rounded-lg bg-white/5 backdrop-b
                   </span>;
                 </motion.div>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  viewport={{ once: true }}
+                  </span>                </motion.div>
+
+                </motion.div>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               ))}
             </div>;
           </motion.div>;
@@ -781,6 +1065,10 @@ className='flex items-center justify-center p-3 rounded-lg bg-white/5 backdrop-b
 <<<<<<< HEAD
                 <Link
                   href='/terms'
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   className='hover:text-cyan-400 transition-colors'
                 >
                   Terms of Service
@@ -790,12 +1078,16 @@ className='flex items-center justify-center p-3 rounded-lg bg-white/5 backdrop-b
                 <Heart className='w-4 h-4 text-red-400' />
                 <span className='text-sm'>Made with ❤️ for the future</span>
               </div>
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             </div>
           </div>
         </div>
       </div>
     </footer>
+<<<<<<< HEAD
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -816,6 +1108,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </div>;
     </footer>;
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               <div className='flex items-center space-x-2 text-gray-400'>;
                 <Heart className='w-4 h-4 text-red-400' />;
                 <span className='text-sm'>Made with ❤️ for the future</span>              </div>              ;
@@ -829,5 +1125,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export default function UltraFuturisticFooter2034() {return (";<footer className = "py-8 text-center text-sm text-gray-400">;
       <span>© {new Date().getFullYear()} Zion Tech Group</span>;
     </footer>;
+<<<<<<< HEAD
   )}"';)}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  )}"';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

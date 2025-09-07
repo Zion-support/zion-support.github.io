@@ -1,11 +1,17 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 console.log('� Starting Security Enhancement Automation...')
     "file"
     "issue"
@@ -46,7 +52,11 @@ console.log('� Starting Security Enhancement Automation...')
   console.log('� Security improvements "applied")
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error(' Security enhancement automation "failed")
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  console.error(' Security enhancement automation "failed")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -13,6 +13,7 @@ export default function LeadershipPage() {export default function LeadershipPage
         <meta
           name='description'
           content="Meet the leadership team guiding Zion Tech Group's vision and execution."
+<<<<<<< HEAD
         />
         <link rel='canonical' href='https://ziontechgroup.com/leadership' />
       </Head>
@@ -46,6 +47,8 @@ export default function LeadershipPage() {export default function LeadershipPage
         <meta;
           name='description';
           content="Meet the leadership team guiding Zion Tech Group's vision and execution.";
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         />;
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/leadership' />;
       </Head>;
@@ -119,6 +122,7 @@ function LeadershipPage() {return (<div className='min - h-screen pt - 24 pb - 2
     </div>;
     <div className="mt - 10 text-slate-300">Contact: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> • <a className="text-cyan-400" href="tel:+13024640950">+1 302 464 0950</a></div>;
   </div>;
+<<<<<<< HEAD
   </div>),}/>;
         <link rel='canonical' href='https://ziontechgroup.com/leadership' />;
       </Head>;
@@ -172,3 +176,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  </div>),
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

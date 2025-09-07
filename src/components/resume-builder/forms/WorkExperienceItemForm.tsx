@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Set up form
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema)
@@ -171,6 +170,7 @@ import { cn } from '@/lib/utils';
 import { Switch } from '@/components/ui/switch';
 import { format } from 'date-fns';
 import { CalendarIcon, Loader2 } from 'lucide-react';
+<<<<<<< HEAD
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",;
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",;
 // Define form schema;
@@ -195,10 +195,42 @@ export function WorkExperienceItemForm({;
   onSubmit,;
   onCancel}: WorkExperienceItemFormProps) {;
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false),;
+=======
+
+import { AIEnhancementButton } from '@/components/ai-enhancement/AIEnhancementButton';
+import { AIEnhancementDialog } from '@/components/ai-enhancement/AIEnhancementDialog';
+// Define form schema;
+const formSchema = z && z.object({;
+  company_name: z && z.string().min(1, 'Company name is required'),;
+  role_title: z && z.string().min(1, 'Role title is required'),;
+  start_date: z && z.date({;
+    required_error: 'Start date is required',;
+  }),;
+  end_date: z && z.date().optional(),;
+  is_current: z && z.boolean().default(false),;
+  description: z && z.string().optional(),;
+  location: z && z.string().optional(),;
+});
+
+type FormValues = z && z.infer<typeof formSchema>;
+
+interface WorkExperienceItemFormProps {;
+  initialData?: WorkExperience;
+  onSubmit: (data: WorkExperience) => Promise<void>;
+  onCancel: () => void;
+export function WorkExperienceItemForm(): any ({;
+  initialData,;
+  onSubmit,;
+  onCancel,;
+}: WorkExperienceItemFormProps) {;
+  const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false);
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   // Set up form;
   const form = useForm<FormValues>({;
     resolver: zodResolver(formSchema),;
     defaultValues: {;
+<<<<<<< HEAD
       company_name: initialData?.company_name || "",;
       role_title: initialData?.role_title || "",;
       start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),;
@@ -243,12 +275,39 @@ const formSchema = z.object({company_name: z.string().min(1, "Company name is re
         ? new Date(initialData && initialData.end_date): undefined,is_current: initialData?.is_current || false,description: initialData?.description || '',location: initialData?.location || ''}})const { isSubmitting } = form && form.formState;
   const watchIsCurrent = form && form.watch('is_current')const watchRoleTitle = form && form.watch('role_title')const watchCompanyName  = form && form.watch('company_name')const handleFormSubmit = async (values: FormValues,) => {// Create a properly typed WorkExperience object with all required fields;
     const workExperience: WorkExperience = {id: initialData?.id,company_name: values && values.company_name, // Required;
+=======
+      company_name: initialData?.company_name || '',;
+      role_title: initialData?.role_title || '',;
+      start_date: initialData?.start_date;
+        ? new Date(initialData && initialData.start_date);
+        : new Date(),;
+      end_date: initialData?.end_date;
+        ? new Date(initialData && initialData.end_date);
+        : undefined,;
+      is_current: initialData?.is_current || false,;
+      description: initialData?.description || '',;
+      location: initialData?.location || '',;
+    },;
+  });
+
+  const { isSubmitting } = form && form.formState;
+  const watchIsCurrent = form && form.watch('is_current');
+  const watchRoleTitle = form && form.watch('role_title');
+  const watchCompanyName = form && form.watch('company_name');
+
+  const handleFormSubmit = async (values: FormValues,) => {;
+    // Create a properly typed WorkExperience object with all required fields;
+    const workExperience: WorkExperience = {;
+      id: initialData?.id,;
+      company_name: values && values.company_name, // Required;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       role_title: values && values.role_title, // Required;
       start_date: values && values.start_date, // Required;
       end_date: values && values.end_date, // Optional;
       is_current: values && values.is_current, // Required;
       description: values && values.description, // Optional;
       location: values && values.location, // Optional;
+<<<<<<< HEAD
     }await onSubmit(workExperience)}const handleAIEnhancement = (content: string) => {form && form.setValue('description', content, { shouldDirty: true })company_name: initialData?.company_name || "",role_title: initialData?.role_title || "",start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),end_date: initialData?.end_date ? new Date(initialData.end_date) : undefined,is_current: initialData?.is_current || false,description: initialData?.description || "",location: initialData?.location || ""}}),const { isSubmitting } = form.formState,const watchIsCurrent = form.watch("is_current")const watchIsCurrent = form.watch("is_current")const watchRoleTitle = form.watch("role_title"),const watchCompanyName = form.watch("company_name"),const handleFormSubmit = async (values: FormValues) => {// Create a properly typed WorkExperience object with all required fields;
     const workExperience: WorkExperience = {id: initialData?.id,company_name: values.company_name,  // Required;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -264,15 +323,28 @@ const formSchema = z.object({company_name: z.string().min(1, "Company name is re
   },;
   const handleAIEnhancement = (content: string) => {;
     form.setValue("description", content, { shouldDirty: true }),;
+=======
+    };
+
+    await onSubmit(workExperience);
+  };
+
+  const handleAIEnhancement = (content: string) => {;
+    form && form.setValue('description', content, { shouldDirty: true });
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     setIsEnhancementDialogOpen(false);
   };
   return (
     <>;
       <Form {...form}>;
+<<<<<<< HEAD
 =======
     },await onSubmit(workExperience)},const handleAIEnhancement = (content: string) => {form.setValue("description", content, { shouldDirty: true }),setIsEnhancementDialogOpen(false)}return (<>;
       <Form {...form}>;
         <form;
+=======
+        <form
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           onSubmit={form && form.handleSubmit(handleFormSubmit)}
           className='space-y-6'>;
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
@@ -283,6 +355,7 @@ const formSchema = z.object({company_name: z.string().min(1, "Company name is re
                   <FormLabel>Company Name</FormLabel>;
                   <FormControl>;
                     <Input placeholder='e && e.g. Acme Corporation' {...field} />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         <form onSubmit={form.handleSubmit(handleFormSubmit)} className="space-y-6">;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
@@ -293,6 +366,8 @@ const formSchema = z.object({company_name: z.string().min(1, "Company name is re
                   <FormLabel>Company Name</FormLabel>;
                   <FormControl>;
                     <Input placeholder="e.g. Acme Corporation" {...field} />;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   </FormControl>;
                   <FormMessage />;
                 </FormItem>;
@@ -497,6 +572,26 @@ const formSchema = z.object({company_name: z.string().min(1, "Company name is re
                       <PopoverTrigger asChild>;
                         <FormControl>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                          <Button
+                            variant={'outline'}
+                            className={cn(
+
+            />;
+            {!watchIsCurrent && (;
+              <FormField;
+                control={form.control}
+                name="end_date"
+                render={({ field }: { field: any }) => (
+                  <FormItem className="flex flex-col">
+                    <FormLabel>End Date</FormLabel>
+
+
+                    <Popover>
+                      <PopoverTrigger asChild>
+                        <FormControl>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                           <Button
 =======
                           <Button;
@@ -710,6 +805,7 @@ const formSchema = z.object({company_name: z.string().min(1, "Company name is re
         onClose={() => setIsEnhancementDialogOpen(false)}
         onApply={handleAIEnhancement}enhancementType: 'work-description',content: form.getValues('description') || '',context: `${watchRoleTitle} at ${watchCompanyName}`;
         }}
+<<<<<<< HEAD
         initialContent={form.getValues('description') |''}      />;
 import { useState   } from 'react';
   Form;
@@ -731,6 +827,20 @@ const formSchema = null;
     </>;
   )is current: z.boolean () .default (false)description: z.string () .optional ()location: z.string () .optional ()})type FormValues = z.infer<typeof formSchema>;
 //Create a properly typed WorkExperience object with all required fields const workExperience: WorkExperience = {await onSubmit (workExperience)<AIEnhancementDialog;
+=======
+        initialContent={form.getValues('description') |''}      />
+
+    </>
+  )
+is current: z.boolean () .default (false)
+description: z.string () .optional ()
+location: z.string () .optional ()
+})
+type FormValues = z.infer<typeof formSchema>
+//Create a properly typed WorkExperience object with all required fields const workExperience: WorkExperience = {
+  await onSubmit (workExperience)
+      <AIEnhancementDialog;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         title='Enhance Work Experience Description';
         is_open={isEnhancementDialogOpen}
         on_close={() => setIsEnhancementDialogOpen (false)}
@@ -756,7 +866,14 @@ setIsEnhancementDialogOpen (false)}defaultOptions={{enhancementType: 'work-descr
 }}/> <FormField </FormControl> <FormMessage /> </FormItem>)}/> </div> <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4" > <FormField </FormControl> <FormMessage /> </FormItem>) ";
 }/> <FormField <FormLabel > Current Position</FormLabel> <div className="flex items - center gap - 2 h - 10" > <Switch /> <label html_for="current - position" className="text - sm text - muted - foreground" > I currently work here </label> </div> <FormMessage /> </FormItem>) ";
 }/> </div> <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4" > <FormField <FormLabel > Start Date</FormLabel> <Popover> <PopoverTrigger as_child> <FormControl> <Button) : (<span > Select date</span>) ";
+<<<<<<< HEAD
 }<CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" aria - hidden="true" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w - auto p - 0" align="start" > <Calendar /> </PopoverContent> </Popover> <FormMessage /> </FormItem>)}/> {!watchIsCurrent && (<FormField control= {form.control;
+=======
+}<CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" aria - hidden="true" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w - auto p - 0" align="start" > <Calendar /> </PopoverContent> </Popover> <FormMessage /> </FormItem>);
+}/> {
+  !watchIsCurrent && (<FormField control= {
+  form.control;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }<FormLabel > End Date</FormLabel> <Popover> <PopoverTrigger as_child> <FormControl> <Button) : (<span > Select date</span>) ";
 }<CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" aria - hidden="true" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w - auto p - 0" align="start" > <Calendar /> </PopoverContent> </Popover> <FormMessage /> </FormItem>)}/>) ";
 }</div> <FormField <FormLabel > Description</FormLabel> <div className="flex gap - 2" > <AIEnhancementButton > AI Writer </Button> </div> </div> <FormControl> <Textarea placeholder="Describe your responsibilities, achievements, and skills used in this role..." className="min - h-[150px]" {...field;
@@ -766,6 +883,7 @@ setIsEnhancementDialogOpen (false)}defaultOptions={{enhancementType: 'work-descr
 }}/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (<>Save</>)}</Button> </div> </form> </Form> <AIEnhancementDialog /> </>)}";
 }}enhancementType: "work-description",content: form.getValues("description") || "",context: `${watchRoleTitle} at ${watchCompanyName}`}}
         initialContent={form.getValues("description") || ""}
+<<<<<<< HEAD
       />;
     </>;
   )}form.control;
@@ -775,3 +893,10 @@ setIsEnhancementDialogOpen (false)}defaultOptions={{enhancementType: 'work-descr
 }/> </FormControl> <FormMessage /> </FormItem>) ";
 }/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (<>Save</>)}</Button> </div> </form> </Form> <AIEnhancementDialog /> </>)}";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      />
+    </>
+  )
+}
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -1,4 +1,5 @@
 <<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
 })
       // Check condition
 if (?.error) {) {
@@ -6,6 +7,8 @@ if (?.error) {) {
 }
         throw new Error ((data as any).error);
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIListingGenerator.tsx
       }
       setGeneratedContent ((data as any)?.generated || null);
       toast ({
@@ -14,6 +17,7 @@ if (?.error) {) {
       });
     } catch (error) {
 
+<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
 
       logErrorToProduction('Error generating content:', { data: error }),
       toast({
@@ -31,12 +35,135 @@ if (?.error) {) {
 import React, { useState, useMemo } from 'react';
 import React, { useState } from 'react';
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
+  const { toast } = useToast(),
+  const [title, setTitle] = useState(initialValues.title || ""),
+  const [category, setCategory] = useState(initialValues.category || ""),
+  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),
+  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),
+  const [isLoading, setIsLoading] = useState(false),
+  const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null),
+
+  const handleInputChange = (e: { target: { value: string } }, field: string) => {
+    switch(field) {
+      case 'title':
+        setTitle(e.target.value),
+        break,
+      case 'category':
+        setCategory(e.target.value),
+        break,
+      case 'keyFeatures':
+        setKeyFeatures(e.target.value),
+        break,
+      case 'targetAudience':
+        setTargetAudience(e.target.value),
+        break
+    }
+  },
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIListingGenerator.tsx
 import { useToast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
 
 
+=======
+import {;
+  Card,;
+  CardContent,;
+  CardFooter,;
+  CardHeader,;
+  CardTitle,;
+} from '@/components/ui/card';
+import Skeleton from '@/components/ui/skeleton';
+import { Sparkles, ArrowRight } from 'lucide-react';
+import { supabase } from '@/integrations/supabase/client';
+import { Badge } from '@/components/ui/badge';
+import { logErrorToProduction } from '@/utils/productionLogger';
+
+interface GeneratedContent {;
+  description: string;
+tags: string[];
+suggestedPrice: {;
+  min: number;
+max: number ;
+};
+keyPoints: string[] ;
+}interface AIListingGeneratorProps {;
+  onApplyGenerated?: (content: GeneratedContent) => void;
+initialValues?: {;
+  title?: string;
+category?: string;
+keyFeatures?: string;
+targetAudience?: string ;
+
+export function AIListingGenerator(): any ({;
+  onApplyGenerated,;
+  initialValues = {},;
+}: AIListingGeneratorProps) {;
+  const { toast } = useToast();
+  const [title, setTitle] = useState(initialValues && initialValues.title || '');
+  const [category, setCategory] = useState(initialValues && initialValues.category || '');
+  const [keyFeatures, setKeyFeatures] = useState(;
+    initialValues && initialValues.keyFeatures || '';
+  );
+  const [targetAudience, setTargetAudience] = useState(;
+    initialValues && initialValues.targetAudience || '';
+  );
+  const [isLoading, setIsLoading] = useState(false);
+  const [generatedContent, setGeneratedContent] = useState(;
+    null as GeneratedContent | null;
+  );
+
+  const handleInputChange = (;
+    e: { target: { value: string } },;
+    field: string;
+  ) => {;
+    switch (field) {      case 'title':;
+        setTitle(e && e.target.value);
+        break;
+      case 'category':;
+        setCategory(e && e.target.value);
+        break;
+      case 'keyFeatures':;
+        setKeyFeatures(e && e.target.value);
+        break;
+      case 'targetAudience':;
+        setTargetAudience(e && e.target.value);
+        break;
+  const handle_apply = () =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      onApplyGenerated (generated_content);
+      toast ({
+        title: 'Content Applied',
+        description: 'The generated content has been applied to your listing.',
+      });
+    }
+  };
+
+  const handleGenerate = async () => {;
+    if (!title || !category) {;
+
+  }
+
+  },
+
+  const handleApply = () => {
+    if (generatedContent && onApplyGenerated) {
+      onApplyGenerated(generatedContent),
+      toast({
+        title: "Content Applied",
+        description: "The generated content has been applied to your listing."
+      })
+    }
+  },
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIListingGenerator.tsx
 
   return (
     <div className="space-y-6">
@@ -46,17 +173,25 @@ import { Textarea } from '@/components/ui/textarea';
             <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
             AI Listing Optimizer
           </CardTitle>
+<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIListingGenerator.tsx
 
           <p className="text-sm text-zion-slate-light">
             Provide basic information and let AI generate optimized, SEO-friendly content for your listing
 
+<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIListingGenerator.tsx
           </p>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="space-y-2">
             <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>
             <Input
+<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
 
 
               id="title"
@@ -130,6 +265,9 @@ if ( {) {$2;
             <Input;
               id="title";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/AIListingGenerator.tsx
+=======
+              id="title"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIListingGenerator.tsx
               value={title}
               onChange={(e) => handleInputChange(e, 'title')}
               placeholder="Enter your product or service title";
@@ -165,8 +303,11 @@ if ( {) {$2;
           <div className="space-y-2">
             <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>
             <Textarea
+<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIListingGenerator.tsx
               id="keyFeatures"
 =======
             />;
@@ -214,6 +355,7 @@ if ( {) {$2;
     } finally {;
       setIsLoading(false);
     }
+<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
   };
 
   const handleApply = () => {;
@@ -263,6 +405,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     targetAudience?: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/AIListingGenerator.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIListingGenerator.tsx
   }
 }export function AIListingGenerator({ onApplyGenerated, initialValues;
   return (<div className='space-y-6'>;
@@ -338,7 +482,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             disabled={isLoading || !title || !category}
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
           >
+<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIListingGenerator.tsx
 
 
             {isLoading ? (
@@ -353,8 +500,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </CardContent>
       </Card>
       {isLoading && (
+<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
         <Card className='border border-zion-blue-light bg-zion-blue-dark overflow-hidden'>
 
+=======
+      )}
+        <Card className="border border-zion-blue-light bg-zion-blue-dark overflow-hidden">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIListingGenerator.tsx
           <CardHeader>
             <Skeleton className='h-8 w-3/4 bg-zion-blue-light/20' />
           </CardHeader>
@@ -505,6 +657,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {[...Array (3)].map ((_, i) => (
                 <Skeleton;
                   key={i}
+<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
                   className='h - 6 w - full bg - zion - blue - light / 20';
                 />              ))}
             </div>;
@@ -513,6 +666,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+=======
+                  className='h-6 w-full bg-zion-blue-light/20'
+                />              ))}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIListingGenerator.tsx
           <CardContent className="space-y-4">
             <Skeleton className="h-32 w-full bg-zion-blue-light/20" />
             <div className="flex flex-wrap gap-2">
@@ -543,6 +700,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIListingGenerator.tsx
       )}
 
       {generatedContent && !isLoading && (
@@ -550,6 +711,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <CardHeader>
             <CardTitle className="text-white">Generated Content</CardTitle>
           </CardHeader>
+<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
           <CardContent className="space-y-4">
             <div>
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Description</h3>
@@ -604,10 +766,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIListingGenerator.tsx
             <div>
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
               <p className="text-white">${generatedContent.suggestedPrice.min.toFixed(2)} - ${generatedContent.suggestedPrice.max.toFixed(2)}</p>
             </div>
+<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIListingGenerator.tsx
 
             
             <div>
@@ -642,7 +810,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <ul className='list-disc pl-5 text-white space-y-1'>;
 <<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
                 {generatedContent && generatedContent.keyPoints.map((point, index) => (                  <li key={index}>{point}</li>;
+<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIListingGenerator.tsx
                 ))}
 =======
                 {generatedContent && generatedContent.keyPoints.map((point, index) => (                  <li key={index}>{point}</li>;))}
@@ -687,6 +858,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </CardContent>;
 <<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
           <CardFooter>;
+<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
 
             <Button;
               onClick={handleApply}
@@ -695,6 +867,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIListingGenerator.tsx
               Apply to My Listing
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
@@ -702,7 +876,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Card>
       )}
 
+<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIListingGenerator.tsx
   value: string ;
 }, field: string) => {;
   switch (field) {;
@@ -715,6 +892,10 @@ case 'keyFeatures': setKeyFeatures (e.target.value)
 break;'
 case 'targetAudience': const handleGenerate = async () => {
   if (!title |!category) {
+<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIListingGenerator.tsx
             <Button;
 =======
           <CardFooter>;<Button;
@@ -756,7 +937,10 @@ case 'target_audience': const handle_generate = async () => {
 if ( {) {
   $2
 }
+<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIListingGenerator.tsx
   toast ({
   return;
 }setIsLoading (true);
@@ -764,8 +948,11 @@ if ( {) {
   logErrorToProduction ('Error generating content:', {
 
     </div>;
+<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
     </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIListingGenerator.tsx
   );
 
   target: {;
@@ -773,12 +960,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }, field: string) => {;
   switch (field) {;
+<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
   case 'title': setTitle (e.target.value);
 break;';
 case 'category': setCategory (e.target.value);
 break;';
 case 'keyFeatures': setKeyFeatures (e.target.value);
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  case 'title': setTitle (e && e.target.value);
+break;';
+case 'category': setCategory (e && e.target.value);
+break;';
+case 'keyFeatures': setKeyFeatures (e && e.target.value);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIListingGenerator.tsx
 break;';
 case 'targetAudience': const handleGenerate = async () => {;
   if (!title || !category) {;
@@ -790,8 +985,12 @@ case 'targetAudience': const handleGenerate = async () => {;
   data: error ;
 });
 toast ({;
+<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
   ;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIListingGenerator.tsx
 }finally {;
   setIsLoading (false) ;
 
@@ -800,8 +999,12 @@ const handleApply = () => {;
   if (generatedContent && onApplyGenerated) {;
   onApplyGenerated (generatedContent);
 toast ({;
+<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
   ;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIListingGenerator.tsx
 
 };
 <CardHeader> <CardTitle className="flex items-center text-white" > <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" /> AI Listing Optimizer </CardTitle> </p> </CardHeader> <CardContent className="space-y-4" > <div className="space-y-2" > <label htmlFor="title" className="text-sm font-medium text-zion-slate-light" >Title</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {";
@@ -809,12 +1012,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</Button> </CardContent> </Card> <CardHeader> <Skeleton className="h-8 w-3/4 bg-zion-blue-light/20" /> </CardHeader>) ) ;
 }</div> </CardContent> </Card>) ";
 }<CardHeader> <CardTitle className="text-white" >Generated Content</CardTitle> </CardHeader> <CardContent className="space-y-4" > <div> <h3 className="text-sm font-medium text-zion-slate-light mb-2" >Description</h3> <p className="text-white" > {;
+<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
   generatedContent.description ;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  generatedContent && generatedContent.description ;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIListingGenerator.tsx
 }</p> </div> <div>) ) ;
 }</div> </div> <div>) ) ";
 }</ul> </div> </CardContent> <CardFooter> <Button > Apply to My Listing <ArrowRight className="ml-2 h-4 w-4" /> </Button> </CardFooter> </Card>) ;
 }</div>) ;
+<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
 toast ({
 }finally {
   setIsLoading (false);
@@ -891,3 +1099,41 @@ if ( {) {$2;
 }</ul> </div> </CardContent> <CardFooter> <Button > Apply to My Listing <ArrowRight className="ml - 2 h - 4 w - 4" /> </Button> </CardFooter> </Card>)}</div>)}'"  )}
   )}}'";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/AIListingGenerator.tsx
+=======
+}'"  );
+};
+  );
+
+  data: error;
+});
+  data: error
+})
+toast ({
+}finally {
+  setIsLoading (false)
+}
+const handleApply = () => {
+  if (generatedContent && onApplyGenerated) {
+  onApplyGenerated (generatedContent)
+toast ({
+}
+<CardHeader> <CardTitle className="flex items-center text-white" > <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" /> AI Listing Optimizer </CardTitle> </p> </CardHeader> <CardContent className="space-y-4" > <div className="space-y-2" > <label htmlFor="title" className="text-sm font-medium text-zion-slate-light" >Title</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {"
+  isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>) "
+}</Button> </CardContent> </Card> <CardHeader> <Skeleton className="h-8 w-3/4 bg-zion-blue-light/20" /> </CardHeader>) )
+}</div> </CardContent> </Card>) "
+}<CardHeader> <CardTitle className="text-white" >Generated Content</CardTitle> </CardHeader> <CardContent className="space-y-4" > <div> <h3 className="text-sm font-medium text-zion-slate-light mb-2" >Description</h3> <p className="text-white" > {
+  generatedContent.description
+}</p> </div> <div>) )
+}</div> </div> <div>) ) "
+}</ul> </div> </CardContent> <CardFooter> <Button > Apply to My Listing <ArrowRight className="ml-2 h-4 w-4" /> </Button> </CardFooter> </Card>)
+}</div>)
+}'"  )
+}
+  )
+}
+    </div>;
+  );
+}
+
+}'"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIListingGenerator.tsx

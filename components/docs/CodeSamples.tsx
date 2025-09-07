@@ -5,6 +5,7 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
 }
 import React, { useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface Props {
 samples: { language: 'curl' | 'javascript' | 'python'; code: string }[];
 
@@ -22,11 +23,20 @@ export default function CodeSamples() {interface Props  {samples: { language: 'c
 <<<<<<< HEAD
 export default function CodeSamples({ samples }: Props) {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+
+export default function CodeSamples({ samples }: Props) {;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const [active, setActive] = useState<(typeof tabs)[number]['key']>('curl');
   const sampleMap = Object.fromEntries(samples.map(s => [s.language, s.code]));
   return (
     <div className='w-full'>
       <div className='flex gap-2 mb-2'>
+<<<<<<< HEAD
   { key: 'curl', label: 'cURL' },
   { key: 'javascript', label: 'JavaScript' },
   { key: 'python', label: 'Python' }];
@@ -34,6 +44,41 @@ export default function CodeSamples({ samples }: Props) {
   const [active, setActive] = useState<typeof tabs[number]['key']>('curl');
   const sampleMap = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        {tabs.map(t => (          <button
+
+
+interface Props {
+  samples: { language: 'curl' | 'javascript' | 'python', code: string }[]
+}
+
+
+const tabs: Array<{ key: Props['samples'][number]['language'], label: string }> = [
+
+const tabs: Array<{ key: Props['samples'][number]['language'], label: string }> = [
+
+  { key: 'curl', label: 'cURL' }
+  { key: 'javascript', label: 'JavaScript' }
+  { key: 'python', label: 'Python' }]
+export default function CodeSamples({ samples }: Props) {
+
+interface Props {;
+  samples: { language: 'curl' | 'javascript' | 'python'; code: string }[];
+
+const tabs: Array<{;
+  key: Props['samples'][number]['language'];
+  label: string;
+}> = [;
+  { key: 'curl', label: 'cURL' },;
+  { key: 'javascript', label: 'JavaScript' },;
+  { key: 'python', label: 'Python' },;
+];
+
+export default function CodeSamples(): any ({ samples }: Props) {;
+  const [active, setActive] = useState<(typeof tabs)[number]['key']>('curl');
+  const sampleMap = Object && Object.fromEntries(samples && samples.map(s => [s && s.language, s && s.code]));
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
   const [active, setActive] = useState<typeof tabs[number]['key']>('curl');
   const sampleMap = Object && Object.fromEntries(samples && samples.map((s) => [s && s.language, s && s.code]));
@@ -75,6 +120,14 @@ export default function CodeSamples() {const [active, setActive] = useState<type
       </pre>
     </div>
   );
+<<<<<<< HEAD
+=======
+}      <pre className="p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm">
+        <code>{sampleMap[active] |''}</code>
+      </pre>
+    </div>
+);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -128,5 +181,9 @@ function CodeSamples() {const [active, set_active] = useState < typeof tabs[numb
     </div>)}      <pre className="p - 3 rounded bg - high - contrast - tertiary overflow - auto text - sm">;
         <code>{sample_map[active] || ''}</code>;
       </pre>;
+<<<<<<< HEAD
     </div>)}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </div>);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

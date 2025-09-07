@@ -2,15 +2,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 ;
   return (<div className='container mx-auto px-4 py-10'>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -25,6 +29,10 @@
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
     <div className='container mx-auto px-4 py-10'>;
       <h1 className='text-2xl font-semibold'>Forgot Password</h1>;
@@ -38,6 +46,7 @@
     </div>;
 <<<<<<< HEAD
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -67,6 +76,15 @@
 =======
   )}}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+}
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import React from 'react';
 export default function ForgotPasswordPage() {return (<div className='container mx-auto px-4 py-10'>;
       <h1 className='text-2xl font-semibold'>Forgot Password</h1>;
@@ -88,8 +106,11 @@ export default function ForgotPasswordPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     </div>;
   )export default function ForgotPasswordPage() {return (<div className="container mx-auto px-4 py-10">;
       <h1 className="text-2xl font-semibold">Forgot Password</h1>;
@@ -121,6 +142,7 @@ function ForgotPasswordPage() {return (<div className="container mx - auto px - 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -132,6 +154,10 @@ function ForgotPasswordPage() {return (<div className="container mx - auto px - 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
@@ -143,9 +169,12 @@ function ForgotPasswordPage() {return (<div className="container mx - auto px - 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export default function ForgotPasswordPage() {
   return (
     <div className='container mx-auto px-4 py-10'>
@@ -159,11 +188,11 @@ export default function ForgotPasswordPage() {
     <div className="container mx-auto px-4 py-10">
       <h1 className="text-2xl font-semibold">Forgot Password</h1>
       <p className="mt-2 text-gray-600 dark: text-gray-300">Enter your email to reset your password.</p>
-<<<<<<< HEAD
 
     </div>
   );
 
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     </div>
@@ -208,3 +237,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+
+    </div>
+  );
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

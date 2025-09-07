@@ -1,23 +1,48 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 import {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  Brain
+  Cloud
+  RefreshCw
+  Wifi
+  Shield
+  BarChart3
+  ArrowRight
+  Zap;} from 'lucide-react';import {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   Brain,
   Cloud,
   RefreshCw,
   Wifi,
   Shield,
   BarChart3,
+<<<<<<< HEAD
   ArrowRight,
   Zap,;
 } from 'lucide-react';
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  ArrowRight,;
+  Zap,;} from 'lucide-react';import { ;
+  Brain;
+  Cloud
+  RefreshCw
+  Wifi
+  Shield
+  BarChart3;
+  ArrowRight;
+  Zap
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const ServicesSection: React.FC = () => {
   const services = [;
     {
       icon: Brain,
       title: 'AI Development',
+<<<<<<< HEAD
 description:
         'Custom AI solutions and machine learning models tailored to your business needs.',
       features: [
@@ -57,10 +82,13 @@ description:
       color: 'from-green-500 to-emerald-500',
       href: '/services/digital-transformation',
     },
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     {
       icon: Wifi,
       title: 'IoT Platforms',
       description: 'Connected device solutions and IoT platform development.',
+<<<<<<< HEAD
 features: [
         'Sensor Networks',
         'Real-time Monitoring',
@@ -84,10 +112,13 @@ features: [
       color: 'from-indigo-500 to-purple-500',
       href: '/services/blockchain-solutions',
     },
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     {
       icon: BarChart3,
       title: 'Data Analytics',
       description: 'Advanced analytics and business intelligence solutions.',
+<<<<<<< HEAD
 features: [
         'Big Data Processing',
         'Real-time Dashboards',
@@ -194,6 +225,188 @@ const ServicesSection: React.FC = () => {const services = [;
       </div>;
       <div className='relative container mx-auto px-4'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      features: [;
+        'Big Data Processing',
+        'Real - time Dashboards',
+        'Predictive Modeling',
+        'Data Visualization',
+      ],
+      color: 'from - teal - 500 to - blue - 500',
+      href: '/services / data - analytics',
+    },  ];      features: ['Big Data ProcessingReal - time DashboardsPredictive ModelingData Visualization'],
+      color: 'from - teal - 500 to - blue - 500',
+      href: '/services / data - analytics';
+    }
+  const container_variants = {
+    hidden: { opacity: 0 },
+
+
+import {;
+  Brain,;
+  Cloud,;
+  RefreshCw,;
+  Wifi,;
+  Shield,;
+  BarChart3,;
+  ArrowRight,;
+  Zap,;} from 'lucide-react';import { ;
+  Brain;
+  Cloud, ;
+  RefreshCw, ;
+  Wifi, ;
+  Shield, ;
+  BarChart3;
+  ArrowRight;
+  Zap;
+const ServicesSection: React.FC = () => {;
+  const services = [;
+    {;
+      icon: Brain,;
+      title: 'AI Development',;
+      description:;
+        'Custom AI solutions and machine learning models tailored to your business needs.',;
+      features: [;
+        'Machine Learning Models',;
+        'Natural Language Processing',;
+        'Computer Vision',;
+        'Predictive Analytics',;
+      ],;
+      color: 'from-blue-500 to-cyan-500',;
+      href: '/services/ai-development',      color: 'from-blue-500 to-cyan-500',;
+      href: '/services/ai-development';
+    };
+    {;
+      icon: Cloud,;
+      title: 'Cloud Architecture',;
+      description: 'Scalable cloud solutions and infrastructure design for modern applications.',;
+      features: ['AWS/Azure/GCPMicroservicesServerless ArchitectureDevOps Automation'],;
+      color: 'from-purple-500 to-pink-500',;
+      href: '/services/cloud-architecture';
+    };
+    {;
+      icon: RefreshCw,;
+      title: 'Digital Transformation',;
+      description: 'End-to-end digital transformation services to modernize your business.',;
+      features: ['Process AutomationLegacy System MigrationChange ManagementDigital Strategy'],;
+      color: 'from-green-500 to-emerald-500',;
+      href: '/services/digital-transformation',;
+    },;
+    {;
+      icon: Cloud,;
+      title: 'Cloud Architecture',;
+      description:;
+        'Scalable cloud solutions and infrastructure design for modern applications.',;
+      features: [;
+        'AWS/Azure/GCP',;
+        'Microservices',;
+        'Serverless Architecture',;
+        'DevOps Automation',;
+      ],;
+      color: 'from-purple-500 to-pink-500',;
+      href: '/services/cloud-architecture',;
+    },;
+    {;
+      icon: RefreshCw,;
+      title: 'Digital Transformation',;
+      description:;
+        'End-to-end digital transformation services to modernize your business.',;
+      features: [;
+        'Process Automation',;
+        'Legacy System Migration',;
+        'Change Management',;
+        'Digital Strategy',;
+      ],;
+      color: 'from-green-500 to-emerald-500',;
+      href: '/services/digital-transformation',;
+    },    {;
+      icon: Wifi,;
+      title: 'IoT Platforms',;
+      description: 'Connected device solutions and IoT platform development.',      href: '/services/digital-transformation';
+    };
+    {;
+      icon: Wifi,;
+      title: 'IoT Platforms',;
+      description: 'Connected device solutions and IoT platform development.',;
+      features: [;
+        'Sensor Networks',;
+        'Real-time Monitoring',;
+        'Data Analytics',;
+        'Edge Computing',;
+      ],;
+      color: 'from-orange-500 to-red-500',;
+      href: '/services/iot-platforms',      color: 'from-orange-500 to-red-500',;
+      href: '/services/iot-platforms';
+    };
+    {;
+      icon: Shield,;
+      title: 'Blockchain Solutions',;
+      description: 'Decentralized technology platforms and smart contract development.',;
+      features: ['Smart ContractsDeFi ApplicationsNFT PlatformsSupply Chain Solutions'],;
+      color: 'from-indigo-500 to-purple-500',;
+      href: '/services/blockchain-solutions',;
+    },;
+    {;
+      icon: Shield,;
+      title: 'Blockchain Solutions',;
+      description:;
+        'Decentralized technology platforms and smart contract development.',;
+      features: [;
+        'Smart Contracts',;
+        'DeFi Applications',;
+        'NFT Platforms',;
+        'Supply Chain Solutions',;
+      ],;
+      color: 'from-indigo-500 to-purple-500',;
+      href: '/services/blockchain-solutions',;
+    },    {;
+      icon: BarChart3,;
+      title: 'Data Analytics',;
+      description: 'Advanced analytics and business intelligence solutions.',      href: '/services/blockchain-solutions';
+    };
+    {;
+      icon: BarChart3,;
+      title: 'Data Analytics',;
+      description: 'Advanced analytics and business intelligence solutions.',;
+      features: [;
+        'Big Data Processing',;
+        'Real-time Dashboards',;
+        'Predictive Modeling',;
+        'Data Visualization',;
+      ],;
+      color: 'from-teal-500 to-blue-500',;
+      href: '/services/data-analytics',;
+    },  ];      features: ['Big Data ProcessingReal-time DashboardsPredictive ModelingData Visualization'],;
+      color: 'from-teal-500 to-blue-500',;
+      href: '/services/data-analytics';
+    }
+  const containerVariants = {;
+    hidden: { opacity: 0 },;
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0 && 0.1,;
+      },;
+    },  };
+  const cardVariants = {;
+    hidden: { opacity: 0, y: 20 },;
+    visible: { opacity: 1, y: 0 },        staggerChildren: 0 && 0.1;
+      }
+    }
+  const cardVariants = {;
+    hidden: { opacity: 0, y: 20 },;
+    visible: { opacity: 1, y: 0 },;
+  };
+  return (
+    <section className='py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden'>;
+      {/* Background Elements */}
+
+      <div className='relative container mx-auto px-4'>        {/* Section Header */}  };
+
+  return (
+    <section className="py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">;
+      {/* Background Elements */}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         {/* Section Header */}
       }
     }
@@ -219,9 +432,16 @@ const ServicesSection: React.FC = () => {const services = [;
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
           viewport={{ once: true }}
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+          viewport={{ once: true }}
+
+className='text-center mb-16'
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         >
           <motion.div
 =======
@@ -246,10 +466,20 @@ className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-
             </span>
           </h2>
           <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
+<<<<<<< HEAD
             We deliver cutting-edge technology solutions that drive innovation,
             efficiency, and growth for businesses across all industries.
           </p>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+            efficiency, and growth for businesses across all industries.          </p>
+            We deliver cutting-edge technology solutions that drive innovation,
+            efficiency, and growth for businesses across all industries.          </p>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            We deliver cutting-edge technology solutions that drive innovation, efficiency, and growth
+            for businesses across all industries.
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         </motion.div>
 =======
 className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-500/30 rounded-full px-6 py-3 mb-6';
@@ -294,6 +524,7 @@ className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-
 initial='hidden'
           whileInView='visible'
           viewport={{ once: true }}
+<<<<<<< HEAD
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'
         >
           {services.map((service, index) => (
@@ -328,6 +559,20 @@ initial='hidden';
 className='group relative';
             >;
               <div className='relative h-full bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 hover:border-gray-700 transition-all duration-300 overflow-hidden'>;
+=======
+          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>          initial="hidden";
+          whileInView="visible";
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16";
+          {services && services.map((service, index) => (;
+            <motion&& motion.div
+              key={service && service.title}
+              variants={cardVariants}
+              whileHover={{ y: -10 }}
+                {/* Background Gradient */}
+                <div
+                {/* Content */}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 {/* Background Gradient */}
                 <div;
                 {/* Content */}{/* Background Gradient */}
@@ -359,6 +604,7 @@ className='group relative';
                   className='inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-300 group-hover:translate-x-1'>;
                   <span className='font-medium'>Learn More</span>;
                   <ArrowRight className='w-4 h-4' />;
+<<<<<<< HEAD
                 </Link>;<h3 className='text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   {service.title}
@@ -389,6 +635,9 @@ className='inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 
 <<<<<<< HEAD
                 <div className='absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300' />
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                </Link>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               </div>
             </motion.div>
 =======
@@ -408,9 +657,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
           viewport={{ once: true }}
 className='text-center'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+          viewport={{ once: true }}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         >
           <div className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl p-8 max-w-2xl mx-auto'>
             <h3 className='text-2xl font-bold text-white mb-4'>
@@ -422,6 +676,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
             <Link
               href='/contact'
+<<<<<<< HEAD
               className='inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1'
             >
               <span>Get Started Today</span>
@@ -449,6 +704,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>;
             <Link;
               href='/contact';
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               className='inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1'>;
               <span>Get Started Today</span>;
               <ArrowRight className='w-5 h-5' />            </Link>        >;
@@ -524,6 +781,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </motion.div>;
       </div>;
+<<<<<<< HEAD
     </section>)}export default ServicesSection)}export default ServicesSection;export default ServicesSection;
   )}className='inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1';
             >;
@@ -536,3 +794,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </section>;
 )}export default ServicesSection;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </section>);
+}
+;
+export default ServicesSection);
+}
+;
+export default ServicesSection;
+
+export default ServicesSection;
+  );
+
+};
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

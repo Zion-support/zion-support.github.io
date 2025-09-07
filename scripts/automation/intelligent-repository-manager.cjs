@@ -74,7 +74,11 @@
       this.log(`Error starting Intelligent Repository "Manager"`)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.error('Failed to start Intelligent Repository "Manager")
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    console.error('Failed to start Intelligent Repository "Manager")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -1,6 +1,10 @@
 <<<<<<< HEAD:src_backup/components/ChatAssistantTrigger.tsx
+<<<<<<< HEAD:src_backup/components/ChatAssistantTrigger.tsx
 // Handle sending messages to the AI chat assistant
 
+=======
+  // Handle sending messages to the AI chat assistant
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ChatAssistantTrigger.tsx
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
@@ -62,6 +66,7 @@ export function ChatAssistantTrigger() {;
             role: 'Virtual Assistant';      if (!response && response.ok) {;
         throw new Error("Failed to get response from AI assistant");
       }
+<<<<<<< HEAD:src_backup/components/ChatAssistantTrigger.tsx
 
       return Promise && Promise.resolve();
     } catch (error) {;
@@ -71,6 +76,13 @@ export function ChatAssistantTrigger() {;
 
 
 
+=======
+      return Promise.resolve()
+    } catch (error) {
+      logErrorToProduction('Error in AI chat:', { data: error })
+      return Promise.resolve()
+    }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ChatAssistantTrigger.tsx
   },;
   return (;
     <>;
@@ -86,9 +98,12 @@ export function ChatAssistantTrigger() {;
       >
         <MessageSquare className="h-5 w-5" />
       </Button>
+<<<<<<< HEAD:src_backup/components/ChatAssistantTrigger.tsx
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ChatAssistantTrigger.tsx
       
       return Promise.resolve()
     } catch (error) {
@@ -97,6 +112,7 @@ export function ChatAssistantTrigger() {;
     }
   },
 
+<<<<<<< HEAD:src_backup/components/ChatAssistantTrigger.tsx
 
   return (
     <>;
@@ -132,6 +148,15 @@ import { Button } from "@/components/ui/button",import { ChatAssistant } from "@
 
       {isOpen && (;
 
+=======
+        size="icon"
+        variant="outline"
+        className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50"
+        aria-label="Open chat assistant"
+      >
+        <MessageSquare className="h-5 w-5" />
+      </Button>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ChatAssistantTrigger.tsx
         <ChatAssistant
           isOpen = {isOpen,}
           onClose = {(,) => setIsOpen(false),}
@@ -147,6 +172,7 @@ import { Button } from "@/components/ui/button",import { ChatAssistant } from "@
 
 
 
+<<<<<<< HEAD:src_backup/components/ChatAssistantTrigger.tsx
 
 import { useState } from 'react';
 import { MessageSquare } from 'lucide-react';
@@ -166,12 +192,19 @@ export function ChatAssistantTrigger() {
   const handleSendMessage = null;
             role: 'Virtual Assistant'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      {isOpen && (
+        <ChatAssistant
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ChatAssistantTrigger.tsx
           }}
           onSendMessage = {handleSendMessage,}
         />;
       )}
+<<<<<<< HEAD:src_backup/components/ChatAssistantTrigger.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ChatAssistantTrigger.tsx
 
     </>;
   );
@@ -281,6 +314,7 @@ if ( {) {$2;
             avatar_url: 'https://placehold.co / 64x64?text = AI',
             role: 'Virtual Assistant';
           }}
+<<<<<<< HEAD:src_backup/components/ChatAssistantTrigger.tsx
 <<<<<<< HEAD
 =======
 =======
@@ -291,6 +325,9 @@ if ( {) {$2;
 }
 
 
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ChatAssistantTrigger.tsx
     </>;
   );
 }
@@ -317,6 +354,7 @@ return (<> <Button > <MessageSquare className="h-5 w-5" /> </Button> {;
 }/>) ;
 }</>) ;
 }'"
+<<<<<<< HEAD:src_backup/components/ChatAssistantTrigger.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
       {is_open && (<ChatAssistant;
@@ -333,3 +371,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   id: 'ai-assistant', name: 'AI Assistant',  avatarUrl: 'https://placehold.co/64x64?text=AI', role: 'Virtual Assistant' ;}onSendMessage= {handleSendMessage ;
 }/>)}</>)}'";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ChatAssistantTrigger.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/ChatAssistantTrigger.tsx

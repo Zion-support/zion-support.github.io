@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -30,6 +31,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 async function scorePage(url) {
 
     const html = await resp && resp.text();
@@ -52,6 +56,7 @@ exports && exports.handler = async function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -70,6 +75,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const { upsert_file } = require ('./_lib / github');
 ;
 ursor/fix-website-loading-errors-and-merge-6662;
@@ -100,6 +109,7 @@ exports.handler = async function () {try {const base_url = process.env.URL || pr
 <<<<<<< HEAD
     ${p}`));
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -141,10 +151,15 @@ if ( {) {$2;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         token,
       });
     }
     return {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -224,6 +239,10 @@ exports && exports.handler = async function() {try {},statusCode: 200,body: JSON
     }
     return {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   try {
     const resp = await fetch (url),
     const html = await resp.text (),
@@ -234,6 +253,10 @@ exports && exports.handler = async function() {try {},statusCode: 200,body: JSON
     const score = (title ? 20 : 0) + (hasMetaDesc ? 20 : 0) + Math.min (60, h1Count * 10) - Math.min (20, Math.floor (ms / 500)),
     return { url, ms, title, hasMetaDesc, h1Count, score: Math.max (0, score) }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const { upsertFile } = require('./_lib/github');
 async function scorePage(url) {
   const t0 = Date.now();
@@ -246,9 +269,12 @@ async function scorePage(url) {
     const h1Count = (html.match(/<h1[^>]*>/gi) || []).length,
     const score = (title ? 20 : 0) + (hasMetaDesc ? 20 : 0) + Math.min(60, h1Count * 10) - Math.min(20, Math.floor(ms / 500)),
     return { url, ms, title, hasMetaDesc, h1Count, score: Math.max(0, score) }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   } catch (e) {
     return { url, error: e.message || String (e), score: 0 }
   }
@@ -259,6 +285,7 @@ exports.handler = async function () {
     const pages = ['//learn / dao / certifications / blog'],
     const results = [],
     for (const p of pages) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -278,6 +305,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       results.push (await score_page (`${base_url}${p}`));
     }
     const report = { updated_at: Date.now (), results },
@@ -295,16 +326,17 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-  } catch (e) {
-    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
-  }
 
+<<<<<<< HEAD
       statusCode: 200,
       body: JSON && JSON.stringify({ ok: true, pages: results && results.length }),
     };
@@ -322,6 +354,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 };async function scorePage(url) {
   const t0 = Date && Date.now(),
   try {
@@ -340,6 +374,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 exports && exports.handler = async function() {
 <<<<<<< HEAD
   try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -423,6 +458,9 @@ exports.handler = async function() {
   }
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+},
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/reports/seo/weekly-seo.json', content: JSON.stringify(report, null, 2), message: 'chore(automation): weekly SEO report', token })
     }
@@ -431,6 +469,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 },
 <<<<<<< HEAD
@@ -450,6 +489,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+},
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
       statusCode: 200,
       body: JSON.stringify({ ok: true, pages: results.length }),
@@ -502,6 +547,7 @@ exports.handler = async function() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -521,3 +567,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+};
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

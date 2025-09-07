@@ -26,6 +26,7 @@ function resolveMergeConflicts(filePath) {
     // Check if file has merge conflicts
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     content = content.replace(/    
@@ -37,6 +38,19 @@ function resolveMergeConflicts(filePath) {
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+:backup-problematic-files/scripts/fix-all-merge-conflicts.cjs
+:scripts/fix-all-merge-conflicts.cjs
+    content = content.replace(/
+    
+
+    content = content.replace(/    
+
+
+    content = content.replace(/
+    
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     // Clean up any double newlines
     content = content.replace(/\n\n\n+/g, '\n\n');
     

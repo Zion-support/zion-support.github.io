@@ -135,7 +135,11 @@ console.log(`� Starting smart dependency fixer automation...``)
 // console.log(" No missing packages found")
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.log(" No missing packages found")
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  console.log(" No missing packages found")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

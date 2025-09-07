@@ -43,7 +43,11 @@ const logsDir = path.join(process.cwd(), "logs"
   path.join(logsDir, "advanced-syntax-fixes.json")
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

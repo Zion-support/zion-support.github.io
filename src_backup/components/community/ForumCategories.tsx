@@ -1,6 +1,25 @@
 <<<<<<< HEAD:src_backup/components/community/ForumCategories.tsx
+<<<<<<< HEAD:src_backup/components/community/ForumCategories.tsx
 {
 
+=======
+  {
+
+    id: "getting-hired"
+    name: "Getting Hired"
+    description: "Tips, strategies, and questions about getting hired on the platform."
+    adminOnly: false
+    icon: "Briefcase"
+  }
+import { ForumCategoryInfo } from "@/types/community",
+  {
+    id: "project-help"
+    name: "Project Help"
+    description: "Get help with your ongoing projects and collaboration."
+    adminOnly: false
+    icon: "MessageSquare"
+  {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/community/ForumCategories.tsx
     id: "feedback"
     name: "Feedback & Feature Requests"
     description: "Share your feedback and suggest new features."
@@ -8,16 +27,24 @@
     icon: "FileText"
 
 
+<<<<<<< HEAD:src_backup/components/community/ForumCategories.tsx
   },
 
 
 
+=======
+
+  },
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/community/ForumCategories.tsx
   {
     id: "announcements"
     name: "Announcements"
     description: "Official announcements from the Zion team."
     adminOnly: true
     icon: "Megaphone"
+<<<<<<< HEAD:src_backup/components/community/ForumCategories.tsx
 const categories: ForumCategoryInfo[] = [;
   {
     id: "getting - hired",
@@ -96,6 +123,8 @@ export const ForumCategories = () => {
         const Icon = iconMap[category.icon as keyof typeof iconMap],
         return (
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/community/ForumCategories.tsx
 
           <Link key={category.id} href={`/community/category/${category.id}`}>
             <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">
@@ -125,17 +154,25 @@ const categories: ForumCategoryInfo[] = [;
   {;
     id: "getting-hired",;
     name: "Getting Hired",;
+<<<<<<< HEAD:src_backup/components/community/ForumCategories.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/community/ForumCategories.tsx
     description: "Tips, strategies, and questions about getting hired on the platform.";
     adminOnly: false,;
     icon: "Briefcase";
   };
+<<<<<<< HEAD:src_backup/components/community/ForumCategories.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/community/ForumCategories.tsx
   {;
     id: "project-help",;
     name: "Project Help",;
     description: "Get help with your ongoing projects and collaboration.",;
     adminOnly: false,;
     icon: "MessageSquare";
+<<<<<<< HEAD:src_backup/components/community/ForumCategories.tsx
   };
   {;
     id: "ai-tools",;
@@ -145,14 +182,21 @@ const categories: ForumCategoryInfo[] = [;
     icon: "Code";
   };
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/community/ForumCategories.tsx
   {;
     id: "feedback",;
     name: "Feedback & Feature Requests",;
     description: "Share your feedback and suggest new features.",;
     adminOnly: false,;
     icon: "FileText";
+<<<<<<< HEAD:src_backup/components/community/ForumCategories.tsx
   };
 
+=======
+
+  };
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/community/ForumCategories.tsx
   {;
     id: "announcements",;
     name: "Announcements",;
@@ -160,6 +204,7 @@ const categories: ForumCategoryInfo[] = [;
     adminOnly: true,;
     icon: "Megaphone";
   }
+<<<<<<< HEAD:src_backup/components/community/ForumCategories.tsx
 ];
 
 const iconMap = {;
@@ -193,15 +238,22 @@ export const ForumCategories = () => {;
       {visibleCategories.map((category) => {const Icon = iconMap[category.icon as keyof typeof iconMap],return (<Link key={category.id} href={`/community/category/${category.id}`}>;
             <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/community/ForumCategories.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/community/ForumCategories.tsx
               <CardHeader className="flex flex-row items-center gap-4">;
                 <div className="p-2 bg-zion-purple/10 rounded-full">;
                   <Icon className="h-6 w-6 text-zion-purple" />;
                 </div>;
 <<<<<<< HEAD:src_backup/components/community/ForumCategories.tsx
+<<<<<<< HEAD:src_backup/components/community/ForumCategories.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/community/ForumCategories.tsx
                 <CardTitle className="text-xl">{category && category.name}</CardTitle>;
               </CardHeader>;
               <CardContent>;
                 <CardDescription className="text-base">{category && category.description}</CardDescription>;
+<<<<<<< HEAD:src_backup/components/community/ForumCategories.tsx
 
 =======
                 <CardTitle className="text-xl">{category.name}</CardTitle>;
@@ -209,6 +261,8 @@ export const ForumCategories = () => {;
               <CardContent>;
                 <CardDescription className="text-base">{category.description}</CardDescription>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/community/ForumCategories.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/community/ForumCategories.tsx
               </CardContent>;
             </Card>;
           </Link>;
@@ -242,9 +296,12 @@ const categories: ForumCategoryInfo[] = [;
 <<<<<<< HEAD:src_backup/components/community/ForumCategories.tsx
   );
 };
+<<<<<<< HEAD:src_backup/components/community/ForumCategories.tsx
 
 export default ForumCategories;
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/community/ForumCategories.tsx
 
 export default ForumCategories;
 
@@ -274,6 +331,7 @@ import { ForumCategoryInfo } from '@/types/community';
 
 const categories: ForumCategoryInfo[] = [
   {
+<<<<<<< HEAD:src_backup/components/community/ForumCategories.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
   )}export default ForumCategories;export default ForumCategories;export default ForumCategories;
@@ -286,3 +344,5 @@ import { ForumCategoryInfo  } from '@/types/community';
 const categories: ForumCategoryInfo[] = [;
   {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/community/ForumCategories.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/community/ForumCategories.tsx

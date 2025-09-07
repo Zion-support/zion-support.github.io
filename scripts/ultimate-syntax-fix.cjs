@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 #!/usr/bin/env node
 
@@ -13,6 +14,9 @@ console.log('======================');
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 // Function to fix all remaining syntax errors
 function fixAllSyntax(content) {
   return content
@@ -140,6 +144,7 @@ try {
   console.log('⚠️  Failed to push syntax fixes:', error.message);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -147,3 +152,8 @@ try {
 console.log('\n🎉 Ultimate syntax fix completed!');
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+console.log('\n🎉 Ultimate syntax fix completed!');
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

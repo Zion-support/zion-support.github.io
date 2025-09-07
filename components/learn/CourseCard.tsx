@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from 'next/link';
 export type Course = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export type Course = {
 
   id: string;
@@ -16,6 +20,7 @@ export type Course = any;export type Course = {id: string;
   level: string;
   is_free: boolean;
 <<<<<<< HEAD
+<<<<<<< HEAD
   category: string;
   certificationBadge: string;
 =======
@@ -24,6 +29,17 @@ export default /**;
  * CourseCard - Function description;
  */;
 function CourseCard() {return (<div className='border rounded - lg p - 4 hover:shadow - md transition'>;
+=======
+  category: string;
+  certification_badge: string,
+  description?: string;
+export default /**
+ * CourseCard - Function description
+ */
+function CourseCard() {
+  return (
+    <div className='border rounded - lg p - 4 hover:shadow - md transition'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <div className='flex items - center justify - between'>;
         <h3 className='font - semibold text - lg'>{course.title}</h3>;
         <span className='text - xs border px - 2 py - 0.5 rounded bg - green - 50 text - green - 700'>;
@@ -52,6 +68,7 @@ function CourseCard() {return (<div className='border rounded - lg p - 4 hover:s
     </div>)}          <a className="text - blue-600 hover: underline text-sm">View course</a>;
         </Link>;
       </div>;
+<<<<<<< HEAD
     </div>))certificationBadge: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   description?: string;
@@ -90,3 +107,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </div>);
+
+  );
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

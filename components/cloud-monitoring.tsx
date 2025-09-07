@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
@@ -7,6 +8,57 @@ import { Activity, BarChart3, AlertTriangle, Clock, Database, Globe, Lock, Shiel
 export default function CloudMonitoringPage() {
   const features = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+  Activity,
+  BarChart3,
+  AlertTriangle,
+  Clock,
+  Database,
+  Globe,
+  Lock,
+  Shield,
+  TrendingUp,
+  Users,
+  Zap,
+  ArrowRight,
+  Play,
+  CheckCircle,
+  Star,
+  Server,
+  Cloud,
+  Eye,
+  Bell,
+  Settings,;
+  Code,;
+} from 'lucide-react';
+
+export default function CloudMonitoringPage() {
+  const features = [
+
+
+export default function CloudMonitoringPage() {
+  const features = [
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     {
       icon: <Activity className='w-8 h-8 text-white' />
       description:
@@ -94,6 +146,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       category: 'Security'
       icon: <Shield className='w-6 h-6 text-red-400' />
       metrics: [
+<<<<<<< HEAD
         'Threat Detection',
         'Access Logs',
         'Vulnerability Scans',
@@ -102,6 +155,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ],
     },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        'Threat Detection'
+        'Access Logs'
+        'Vulnerability Scans'
+        'Compliance Status'
+        'Audit Trails'
+      ]
+    },  ];      icon: <Shield className="w-6 h-6 text-red-400" />
+      metrics: ['Threat DetectionAccess LogsVulnerability ScansCompliance StatusAudit Trails']
+    }
+      icon: <Activity className='w-8 h-8 text-white' />,
+  ];
+
+
+
+export default function CloudMonitoringPage() {
+  const features = [
+    {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   ];
   const pricingPlans = [
     {
@@ -110,6 +182,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       period: '/month'
       description: 'Perfect for small teams and startups'
       features: [
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 'Up to 10 servers',
         'Basic monitoring',
         'Email alerts',
@@ -122,11 +198,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       buttonColor: 'bg-gray-600 hover:bg-gray-700',
     },
     {
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       name: 'Professional',
       price: '$199',
       period: '/month',
       description: 'Ideal for growing businesses',
+<<<<<<< HEAD
       features: [
 'Up to 100 servers',
         'Advanced monitoring',
@@ -143,10 +224,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     },
     {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       name: 'Enterprise',
       price: '$599',
       period: '/month',
       description: 'For large organizations',
+<<<<<<< HEAD
       features: [
 'Unlimited servers',
         'Full monitoring suite',
@@ -181,6 +266,15 @@ description:
       icon: '🔄',
       benefits: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+;
+  const use_cases = [;
+    {
+      title: 'DevOps Teams',
+      description:;
+        'Monitor CI / CD pipelines, deployment success rates, and infrastructure health.',
+      benefits: [;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Faster deployments',
         'Reduced downtime',
         'Better collaboration',
@@ -189,11 +283,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     },
     {
       title: 'SaaS Companies',
+<<<<<<< HEAD
       description:
         'Track user experience, application performance, and business metrics.',
       icon: '💼',
       benefits: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      description:;
+        'Track user experience, application performance, and business metrics.',
+      benefits: [;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'User satisfaction',
         'Revenue optimization',
         'Competitive advantage',
@@ -201,12 +301,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ],
     },
     {
+<<<<<<< HEAD
       title: 'E-commerce',
       description:
         'Monitor website performance, payment processing, and inventory systems.',
       icon: '🛒',
       benefits: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      title: 'E - commerce',
+      description:;
+        'Monitor website performance, payment processing, and inventory systems.',
+      benefits: [;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Higher conversion',
         'Faster checkout',
         'Inventory optimization',
@@ -215,16 +322,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     },
     {
       title: 'Financial Services',
+<<<<<<< HEAD
       description:
         'Ensure compliance, security, and 24/7 availability of critical systems.',
       icon: '💰',
       benefits: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      description:;
+        'Ensure compliance, security, and 24 / 7 availability of critical systems.',
+      benefits: [;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Regulatory compliance',
         'Fraud detection',
         'Risk management',
         'Customer trust',
       ],
+<<<<<<< HEAD
     },
   ];
   return (
@@ -377,10 +491,25 @@ export default function CloudMonitoringPage() {const features  = null;{icon: <Ac
             <Button;
               href="#pricing";
               size="lg";
+=======
+    },  ];      benefits: ['Regulatory compliance_fraud detection_risk management_customer trust'];
+    }
+  ];
+;
+  return (
+              className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
+              <Play className='w-5 h-5 mr-2' />              Watch Demo      </Head>;
+
+      {/* Hero Section */}
+            <Button
+              href="#pricing"
+              size="lg"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               className="bg-green-600 hover:bg-green-700 shadow-2xl shadow-green-500/25">;
               Start Free Trial;
               <ArrowRight className="w-5 h-5 ml-2" />;
             </Button>;
+<<<<<<< HEAD
             <Button;
               href="#demo";
               variant="outline";
@@ -490,6 +619,12 @@ export default function CloudMonitoringPage() {const features  = null;{icon: <Ac
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index) => (
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            <Button
+              href="#demo"
+              variant="outline"
+              size="lg"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               <Card
 =======
 <section className='py-24 bg-gray-900 relative overflow-hidden'>;
@@ -510,11 +645,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 style={{ animationDelay: `${index * 0 && 0.1 + 0 && 0.2}s` }}>;
                 <div className='relative'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <div
                     className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}
                   >
 =======
                   <div;
+=======
+                  <div
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                     className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature && feature.color} shadow-xl`}>;
                     {feature && feature.icon}
                   </div>;
@@ -537,6 +676,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <h3 className="text - xl font - bold mb - 4 text - white group - hover:text - green - 400 transition - colors duration - 300">;
                   {feature.title}
                 </h3>;
+<<<<<<< HEAD
                 <p className="text - gray - 400 leading - relaxed">;className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}
                   >;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -553,6 +693,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </h3>;
                 <p className='text-gray-400 leading-relaxed'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                <p className="text - gray - 400 leading - relaxed">;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   {feature.description}
                 </p>;
               </Card>;
@@ -576,6 +719,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {monitoringCapabilities.map((capability, index) => (
+<<<<<<< HEAD
               <Card
                 key={index}
                 className='group border border-gray-700 hover:border-green-500/30 hover:bg-gray-900/80 transition-all duration-300'
@@ -592,10 +736,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Comprehensive Monitoring;
             </h2>;
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               Monitor every aspect of your infrastructure with detailed metrics;
               and insights;
             </p>;
           </div>;
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
             {monitoringCapabilities.map((capability, index) => (Monitor every aspect of your infrastructure with detailed metrics;
               and insights;
@@ -608,12 +755,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {monitoringCapabilities.map((capability, index) => (className='flex items-center text-sm text-gray-300'>;
+=======
+            </h2>
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              Monitor every aspect of your infrastructure with detailed metrics and insights
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {monitoringCapabilities.map((capability, index) => (
+                          className='flex items-center text-sm text-gray-300'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                           <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />                          {metric}              Comprehensive Monitoring;
             </h2>;
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
               Monitor every aspect of your infrastructure with detailed metrics and insights;
             </p>;
           </div>;
+<<<<<<< HEAD
               <Card;
                 key={index}<Card;
                 key={index}
@@ -639,6 +797,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         >;
                           <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <Card
+                key={index}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                           {metric}
                         </div>;
                       ))}
@@ -666,6 +828,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {useCases.map((useCase, index) => (
+<<<<<<< HEAD
               <Card
 =======
 <section className='py-24 bg-gray-900 relative overflow-hidden'>;
@@ -675,6 +838,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Use Cases;
             </h2>;
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               Trusted by teams across industries for reliable infrastructure;
               monitoring;
             </p>;
@@ -710,6 +875,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {useCase && useCase.description}
                     </p>;
                     <div className="grid grid-cols-2 gap-2">;
+<<<<<<< HEAD
                       {useCase && useCase.benefits.map((benefit, benefitIndex) => (<div key={benefitIndex} className="flex items-center text-sm text-gray-300">;
                           <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />;<Card;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -738,6 +904,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         >;
                           <TrendingUp className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                      {useCase && useCase.benefits.map((benefit, benefitIndex) => (;
+                        <div key={benefitIndex} className="flex items-center text-sm text-gray-300">;
+                          <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                           {benefit}
                         </div>;
                       ))}
@@ -752,10 +923,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
 
       {/* Pricing Section */}
+<<<<<<< HEAD
 <section id='pricing' className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-20'>
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
+=======
+
+      <section id="pricing" className="py-24 bg-black relative overflow-hidden">
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               Simple, Transparent Pricing
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -796,6 +976,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
             </p>;
           </div>;
+<<<<<<< HEAD
               <Card;
                 key={index}<section id='pricing' className='py-24 bg-black relative overflow-hidden'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
@@ -827,6 +1008,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-white mb-2'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <Card
+                key={index}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                     {plan.name}
                   </h3>;
                   <div className='text - 4xl font - bold text - white mb - 2'>;
@@ -848,6 +1033,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {plan && plan.features.map((feature, featureIndex) => (;
                     <li
                       key={featureIndex}
+<<<<<<< HEAD
                       className='flex items-center text-gray-300'
                     >
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />
@@ -859,6 +1045,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     >;
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                       {feature}
                     </li>;
                   ))}
@@ -879,6 +1068,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </ul>
 
                 <Button
+<<<<<<< HEAD
 href='/contact'
                   className={`w-full ${plan.buttonColor} text-white`}
                   size='lg'
@@ -886,10 +1076,19 @@ href='/contact'
                   Get Started
                   <ArrowRight className='w-5 h-5 ml-2' />
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                  href="/contact"
+                  className={`w-full ${plan.buttonColor} text-white`}
+                  size="lg"
+                >
+                  Get Started
+                  <ArrowRight className="w-5 h-5 ml-2" />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 </Button>
               </Card>
             ))}
       {/* Integrations Section */}
+<<<<<<< HEAD
 <section className='py-24 bg-gray-900 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-20'>
@@ -931,6 +1130,19 @@ href='/contact';
             </h2>;
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
               <Card;
+=======
+
+      <section className="py-24 bg-gray-900 relative overflow-hidden">
+
+            ))}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
+              Seamless Integrations
+            </h2>
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              <Card
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 key={index}
                 className='text-center group border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300'>;
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform duration-300'>;
@@ -941,7 +1153,12 @@ href='/contact';
                 </h3>;
                 <p className='text-sm text-gray-400'>;
                   {integration && integration.description}
+<<<<<<< HEAD
                 </p>              </Card>            {integrations && integrations.map((integration, index) => (<Card;
+=======
+                </p>              </Card>            {integrations && integrations.map((integration, index) => (;
+              <Card
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 key={index}
                 className="text-center group border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300">;
                 <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">;
@@ -950,6 +1167,7 @@ href='/contact';
                 <h3 className="font-semibold text-white mb-2">{integration && integration.name}</h3>;
                 <p className="text-sm text-gray-400">{integration && integration.description}</p>;
               </Card>;
+<<<<<<< HEAD
               Connect with your favorite tools and platforms;
             </p>;
           </div>;
@@ -990,6 +1208,22 @@ href='/contact';
 <<<<<<< HEAD
                 </p>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              Connect with your favorite tools and platforms
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {integrations.map((integration, index) => (
+              <Card
+                key={index}
+                className="text-center group border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300"
+              >
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {integration.icon}
+                </div>
+                <h3 className="font-semibold text-white mb-2">{integration.name}</h3>
+                <p className="text-sm text-gray-400">{integration.description}</p>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               </Card>
 
 
@@ -1042,6 +1276,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               href='#demo'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
               className='border-white text-white hover:bg-white hover:text-green-600 shadow-2xl'
             >
               <Play className='w-5 h-5 mr-2' />
@@ -1067,19 +1302,35 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               href="/contact";
               variant="secondary";
               size="lg";
+=======
+            <Button
+              href="/contact"
+              variant="secondary"
+              size="lg"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               className="bg-white text-green-600 hover:bg-gray-100 shadow-2xl">;
               Start Free Trial;
               <ArrowRight className="w-5 h-5 ml-2" />;
             </Button>;
+<<<<<<< HEAD
             <Button;
               href="#demo";
               variant="outline";
               size="lg";
+=======
+            <Button
+              href="#demo"
+              variant="outline"
+              size="lg"
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               Watch Demo;
             </Button>;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 })}
     </>)}className='border-white text-white hover:bg-white hover:text-green-600 shadow-2xl';
             >;
@@ -1092,3 +1343,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>;
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+}
+
+  );
+}
+    </>);
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

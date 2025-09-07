@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 export const real2027Q3Additions = [;
@@ -312,11 +313,13 @@ export const real2027Q3Additions = [;
   }
 ];}
 ];
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
 
 
 
 <<<<<<< HEAD
-
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -348,6 +351,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     roi: 'Reduce manual inventory work by 80% and avoid surprise shadow IT risks.',
   },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+    description:
+      'Continuously discover devices, services, and SaaS apps across your environment with CMDB export and change tracking.',
+    features: [
+      'Streaming replication and automatic failover'
+      'PITR backups with retention policies'
+      'Performance tuning and query insights'
+      'Security hardening and auditing'
+    ]
+    category: 'Cloud & Infrastructure'
+    link: '/managed-postgres-ha'
+    realService: true
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   {
     id: 'managed-postgres-ha',
     name: 'Managed Postgres HA',
@@ -509,6 +528,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     description:
       'Detects drift between IaC (Terraform) and live cloud state, with approvals and auto-remediation.',
     features: [
+<<<<<<< HEAD
       'Terraform plan diffs as PR comments',
       'Change approval workflows',
       'Selective auto-remediation',
@@ -520,6 +540,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     roi: 'Prevent config drift incidents and reduce compliance toil.',
   },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      'Auto triage and severity suggestion'
+      'Channel orchestration (Slack/Teams)'
+      'Timeline and comms templates'
+      'Postmortem drafts and actions'
+    ]
+    category: 'Operations'
+    link: '/incident-copilot'
+    realService: true
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   {
     id: 'incident-copilot',
     name: 'Incident Copilot',
@@ -529,6 +560,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     description:
       'Triage, summarize, and coordinate incidents with auto-generated timelines and draft postmortems.',
     features: [
+<<<<<<< HEAD
       'Auto triage and severity suggestion',
       'Channel orchestration (Slack/Teams)',
       'Timeline and comms templates',
@@ -540,6 +572,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     roi: 'Reduce incident resolution time by 30–50% and improve learning capture.',
   },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      'Web and doc ingestion with citations'
+      'Competitor profiles and matrices'
+      'Alerts for launches and pricing changes'
+      'Export to Slides/Docs'
+    ]
+    category: 'AI & Data'
+    link: '/ai-market-research'
+    realService: true
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   {
     id: 'ai-market-research',
     name: 'AI Market Research',
@@ -549,6 +592,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     description:
       'Automate competitor tracking, category mapping, and trend detection with exportable insight briefs.',
     features: [
+<<<<<<< HEAD
       'Web and doc ingestion with citations',
       'Competitor profiles and matrices',
       'Alerts for launches and pricing changes',
@@ -560,6 +604,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     roi: 'Save 10–20 analyst hours per week while increasing coverage.',
   },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      'Lead enrichment and routing'
+      'Multichannel sequences'
+      'AI-generated replies with approvals'
+      'Pipeline analytics'
+    ]
+    category: 'Sales & Marketing'
+    link: '/ai-sales-automation'
+    realService: true
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   {
     id: 'ai-sales-automation',
     name: 'AI Sales Automation',
@@ -588,6 +643,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     description:
       'Extract key clauses, flag risks, and align to your negotiation playbooks with redlines and exports.',
     features: [
+<<<<<<< HEAD
       'Smart clause detection and summaries',
       'Risk scoring and deviations',
       'Playbook alignment and suggestions',
@@ -599,6 +655,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     roi: 'Cut review cycles from weeks to days and reduce outside counsel spend.',
   },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      'Templates and brand voices'
+      'SEO scoring and suggestions'
+      'Collaboration and approvals'
+      'WordPress/Shopify integrations'
+    ]
+    category: 'Content & Marketing'
+    link: '/ai-content-generator'
+    realService: true
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   {
     id: 'ai-content-generator',
     name: 'AI Content Generator',
@@ -627,6 +694,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     description:
       'Aggregate and analyze DMARC reports with actionable guidance to reach enforcement safely.',
     features: [
+<<<<<<< HEAD
       'Aggregate and forensic reports',
       'Source identification and alignment',
       'Policy simulation and enforcement guides',
@@ -647,6 +715,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Continuously map APIs and detect OWASP API Top 10 risks with CI gating and drift detection.',
     features: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      'Discovery via traffic/specs'
+      'OWASP API Top 10 checks'
+      'PR annotations and CI gating'
+      'Change detection and drift alerts'
+    ]
+    category: 'Security & Identity'
+    link: '/api-security-scanner'
+    realService: true
+    roi: 'Prevent high-severity API incidents and cut MTTR.'
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Discovery via traffic/specs',
       'OWASP API Top 10 checks',
       'PR annotations and CI gating',
@@ -659,9 +739,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     roi: 'Prevent high-severity API incidents and cut MTTR.',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     roi: 'Prevent high-severity API incidents and cut MTTR.'
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   },;
 ];      'Discovery via traffic/specsOWASP API Top 10 checksPR annotations and CI gatingChange detection and drift alerts'
     ];
@@ -674,6 +757,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -686,6 +770,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 export const real2027Q3Additions = [
   {
@@ -695,6 +782,7 @@ export const real2027Q3Additions = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -709,6 +797,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export const real2027Q3Additions = [;
   {
     id: 'it - asset - discovery - agent',
@@ -1029,6 +1121,7 @@ export const real2027Q3Additions = [;
     roi: 'Prevent high - severity API incidents and cut MTTR.';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -1067,9 +1160,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 ;
+=======
+
+  }
+];
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -1091,6 +1191,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export const real2027Q3Additions = [;
   {;
     id: 'it-asset-discovery-agent',;
@@ -1348,6 +1453,7 @@ export const real2027Q3Additions = [;
     roi: 'Prevent high-severity API incidents and cut MTTR.';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
@@ -1378,3 +1484,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+  }
+];
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

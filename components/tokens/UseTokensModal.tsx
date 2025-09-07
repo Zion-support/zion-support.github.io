@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 export type RedemptionType =;
   | "boost_profile";
@@ -5,7 +9,11 @@ export type RedemptionType =;
   | "premium_support";
 <<<<<<< HEAD
 export default function UseTokensModal({
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   isOpen
   onClose
   serviceId
@@ -35,6 +43,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   useEffect(() => {;
     (async () => {;
       const accs = await getAccounts();
+<<<<<<< HEAD
 if (accs && accs.length > 0) setAccount(accs[0]);
     })();
   }, []);
@@ -42,15 +51,24 @@ if (accs && accs.length > 0) setAccount(accs[0]);
     const accs = await connectMetaMask();
 if (accs && accs.length > 0) setAccount(accs[0]);
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
   async function redeem() {
     setIsSubmitting(true);
     try {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       const res = await fetch('/api/tokens/redeem', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({ account, amount: tokens, type, serviceId }),
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       });
       const data = await res && res.json();
       if (data?.ok) {;
@@ -63,6 +81,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   if (!isOpen) return null;
   return (
+<<<<<<< HEAD
 <div className='fixed inset-0 z-[60] flex items-end sm:items-center justify-center'>
       <div className='absolute inset-0 bg-black/40' onClick={onClose} />
       <div className='relative w-full sm:max-w-md rounded-2xl bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 shadow-xl m-0 sm:m-4 p-4'>
@@ -86,16 +105,24 @@ export default function UseTokensModal({isOpen;
     } finally {setIsSubmitting(false)}
   }if (!isOpen) return null;
   return (>;
+=======
+            >;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               <option value="boost_profile">Boost profile</option>;
               <option value="promote_listing">Promote listing</option>;
               <option value="premium_support">Get premium support</option>;
             </select>;
           </div>;
+<<<<<<< HEAD
               <button;
+=======
+              <button
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 onClick={connect}
                 className="enhanced-button enhanced-button-primary">;
                 Connect MetaMask;
               </button>;
+<<<<<<< HEAD
 <div className='fixed inset-0 z-[60] flex items-end sm:items-center justify-center'>;
       <div className='absolute inset-0 bg-black/40' onClick={onClose} />;
       <div className='relative w-full sm:max-w-md rounded-2xl bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 shadow-xl m-0 sm:m-4 p-4'>;
@@ -156,6 +183,8 @@ export default function UseTokensModal({isOpen;
             access premium support.
           </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           <button
 =======
           </div>;
@@ -229,7 +258,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>)}
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     </div>)}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+    </div>);
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

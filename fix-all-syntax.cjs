@@ -16,7 +16,11 @@ function fixFile(filePath) {
       // Fix merge conflict markers
       {
 <<<<<<< HEAD
+<<<<<<< HEAD
         pattern: /
+=======
+        pattern: /[\s\S]*?[\s\S]*?
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         replacement: ''
       },
       // Fix malformed function calls and syntax

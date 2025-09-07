@@ -1,9 +1,33 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useMemo, useState } from "react";
 import Badges from "./Badges";
 type Tx = any;
       refresh()
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+type Tx = {
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import React, { useEffect, useMemo, useState } from 'react';
 =======
 
@@ -35,6 +59,7 @@ export default function WalletPanel() {;
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(
     'earnings'
+<<<<<<< HEAD
   );
   const [ethAddress, setEthAddress] = useState<string | null>(null);
   const userId = useMemo(() => getUserId(), []);
@@ -56,10 +81,53 @@ setSummary(data);
   );
   const nextBadgeThreshold = useMemo(() => {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  );  const [ethAddress, setEthAddress] = useState<string | null>(null);type Tx = {
+  id: string
+  type: "earn" | "burn" | "issue" | "revoke" | "redeem"
+  amount: number
+  reason: string
+  id: string,
+  type: "earn" | "burn" | "issue" | "revoke" | "redeem",
+  amount: number,
+  reason: string,
+export default function WalletPanel() {;
+  const [summary, setSummary] = useState<Summary | null>(null);
+  const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(;
+    'earnings';
+  );  const [ethAddress, setEthAddress] = useState<string | null>(null);type Tx = {;
+  id: string,;
+  type: "earn" | "burn" | "issue" | "revoke" | "redeem",;
+  amount: number,;
+  reason: string,;
+  createdAt: string
+};
+
+type Summary = {;
+  wallet: { userId: string, balance: number },;
+  transactions: Tx[],;
+  config: { usdPerToken: number, symbol: string }
+};
+  if (typeof window === "undefined") return "demo-user";
+  const [summary, setSummary] = useState<Summary | null>(null);
+  const [tab, setTab] = useState<"earnings" | "spending" | "redeem">("earnings");
+  const [ethAddress, setEthAddress] = useState<string | null>(null);
+  const userId = useMemo(() => getUserId(), []);
+    refresh()
+  }, []);
+  const balance = summary?.wallet.balance ?? 0;
+  const symbol = summary?.config.symbol ?? "ZION$";
+  const earnings = (summary?.transactions |[]).filter((t) =>
+    ["earn", "issue"].includes(t.type)
+  );
+  const spending = (summary?.transactions |[]).filter((t) =>
+    ["burn", "revoke", "redeem"].includes(t.type)
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     if (balance < 50) return 50;
     if (balance < 200) return 200;
     if (balance < 500) return 500;
     if (balance < 1000) return 1000;
+<<<<<<< HEAD
 return balance;
   }, [balance]);
   const progress = Math.min(
@@ -91,6 +159,9 @@ return balance;
     if (balance < 200) return 200;
     if (balance < 500) return 500;
     if (balance < 1000) return 1000;}
+=======
+    }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
   async function redeem() {if (!amount |amount <= 0) return;
     const res = await fetch('/api/wallet/redeem', {method: 'POST';
@@ -130,6 +201,7 @@ if ( {) {$2;
                 {balance} {symbol}
               </div>;
             </div>;
+<<<<<<< HEAD
           </div>;return balance;
   }, [balance])const progress = Math.min(100;
     Math.floor((balance / nextBadgeThreshold) * 100))async function connectWallet() {if (typeof window === 'undefined') return;
@@ -182,6 +254,9 @@ const res = await fetch('/api/wallet/redeem', {method: 'POST',headers: { 'Conten
 <div className='p-4 border rounded-lg bg-white dark:bg-zinc-900'>
         <div className='flex gap-3 mb-4 text-sm'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+          </div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           <button
 =======
           </div>;
@@ -247,6 +322,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <button
                 className='px-3 py-1 rounded border'
                 onClick={() => redeem(500)}
+<<<<<<< HEAD
               >
                 Redeem 500
               </button>
@@ -267,6 +343,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <button;
                 className='px-3 py-1 rounded border';
                 onClick={() => redeem(500)}<button;
+=======
+          <button;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             on_click={connect_wallet}
             className='px - 3 py - 1 text - sm rounded border';
           >;
@@ -371,6 +450,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>          </div>            <div className="text - xs text-gray-500">Coming soon: Redeem for branded perks and courses.</div>;
           </div>)}
       </div>;
+<<<<<<< HEAD
     </div>)}>;
                 Redeem 500;
               </button>;
@@ -384,3 +464,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
 )}})}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </div>);
+}
+
+          </div>
+
+        )}
+      </div>
+    </div>
+);
+}
+
+}
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
