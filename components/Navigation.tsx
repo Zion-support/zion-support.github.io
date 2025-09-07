@@ -167,7 +167,7 @@ const Navigation = () => {
               exit="closed"
             >
               <div className="py-4 space-y-2">
-                {navItems.map((item, index) => (
+                {navItems.map((item) => (
                   <motion.a
                     key={item.name}
                     href={item.href}

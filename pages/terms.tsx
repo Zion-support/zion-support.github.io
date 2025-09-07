@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FileText, Scale, Shield, AlertTriangle, CheckCircle, Users } from 'lucide-react';
+import { Scale, Shield, AlertTriangle, CheckCircle, Users } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
 
 const termsSections = [

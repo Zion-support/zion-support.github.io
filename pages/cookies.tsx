@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Cookie, Settings, Shield, Eye, Database, AlertCircle } from 'lucide-react';
+import { Cookie, Settings, Shield, Eye, Database } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
 
 const cookieTypes = [

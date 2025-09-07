@@ -50,7 +50,7 @@ export default async function handler(
 ) {
   const { type } = req.query as { type: AdminType };
 
-  if (!ADMIN_TYPES.includes(type)) {
+  if (!Object.values(ADMIN_TYPES).includes(type)) {
     return res.status(400).json({ error: 'Invalid type' });
   }
 

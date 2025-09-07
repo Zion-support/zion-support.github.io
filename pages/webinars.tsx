@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, Clock, Users, Play, ArrowRight, ExternalLink, Star } from 'lucide-react';
+import { Calendar, Clock, Users, Play, ExternalLink, Star } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
 
 const upcomingWebinars = [

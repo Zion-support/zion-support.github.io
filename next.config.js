@@ -6,10 +6,12 @@ const nextConfig = {
     optimizePackageImports: ['lucide-react']
   },
   eslint: {
-    ignoreDuringBuilds: false
+    ignoreDuringBuilds: false,
+    dirs: ['pages', 'components', 'app', 'lib', 'src']
   },
   typescript: {
-    ignoreBuildErrors: false
+    ignoreBuildErrors: false,
+    tsconfigPath: './tsconfig.json'
   },
   // Image optimization
   images: {
