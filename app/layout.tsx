@@ -1,67 +1,8 @@
 import type { Metadata } from 'next';
-<<<<<<< HEAD
-// import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Leading Technology Solutions',
   description: 'Leading technology solutions provider specializing in AI, web development, mobile applications, cloud services, and digital transformation.',
-=======
-import React from 'react';
-import { Inter } from 'next/font/google';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import './globals.css';
-import PerformanceMonitor from './components/PerformanceMonitor';
-
-const inter = Inter({ subsets: ['latin'] });
-
-export const metadata: Metadata = {
-  title: 'Zion Tech Group - Leading AI and Technology Solutions',
-  description: 'Zion Tech Group is a leading technology company specializing in AI, micro SaaS development, and IT services. Transform your business with cutting-edge technology.',
-  keywords: ['AI', 'artificial intelligence', 'micro SaaS', 'IT services', 'technology', 'innovation', 'business solutions', 'zion tech'],
-  authors: [{ name: 'Zion Tech Group' }],
-  creator: 'Zion Tech Group',
-  publisher: 'Zion Tech Group',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  metadataBase: new URL('https://ziontechgroup.com'),
-  alternates: {
-    canonical: '/',
-  },
-  openGraph: {
-    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-    description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
-    url: 'https://ziontechgroup.com',
-    siteName: 'Zion Tech Group',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Zion Tech Group - AI and Technology Solutions',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Zion Tech Group - Leading AI and Technology Solutions',
-    description: 'Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.',
-    images: ['/og-image.jpg'],
-  },
-  verification: {
-    google: 'your-google-verification-code',
-  },
-  category: 'technology',
-  classification: 'Business',
-  referrer: 'origin-when-cross-origin',
-  colorScheme: 'light',
-  themeColor: '#000000',
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 };
 
 export default function RootLayout({
@@ -71,28 +12,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-<<<<<<< HEAD
-      <body>
+      <body className="antialiased">
         {children}
-=======
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link 
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" 
-          rel="stylesheet" 
-        />
-      </head>
-      <body className={`${inter.className} font-sans antialiased`}>
-        <div className="min-h-screen flex flex-col">
-          <Header />
-          <main className="flex-1">
-            {children}
-          </main>
-          <Footer />
-        </div>
-        {/* <PerformanceMonitor /> */}
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </body>
     </html>
   );
