@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Metadata } from 'next';
 import Link from "next/link";
 import React from 'react';
@@ -8,10 +9,17 @@ import React from 'react';
 export const metadata: Metadata = {
   title: "Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions",
   description: "Comprehensive technology services including AI development, micro SaaS solutions, FinTech applications, HealthTech innovations, and EdTech platforms. Transform your business with cutting-edge technology."
+=======
+export const metadata = {
+  title: 'Services | Zion Tech Group',
+  description: 'Professional services services for your business needs.',
+  keywords: 'services, services, business, technology',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
 };
 
 export default function ServicesOverviewPage() {
   return (
+<<<<<<< HEAD
     <div className="animate-fade-in">
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -242,6 +250,45 @@ export default function ServicesPage() {
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
               Comprehensive technology solutions designed to transform your business and drive growth.
+=======
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
+      <div className='container mx-auto px-4 py-16'>
+        <div className='text-center mb-16'>
+          <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
+            Services
+          </h1>
+          <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
+            Professional services services for your business needs.
+          </p>
+        </div>
+
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          <div className='bg-gray-800 rounded-lg p-6'>
+            <h3 className='text-xl font-bold text-white mb-4'>
+              Expert Solutions
+            </h3>
+            <p className='text-gray-300'>
+              Tailored services solutions designed for your specific business
+              requirements.
+            </p>
+          </div>
+
+          <div className='bg-gray-800 rounded-lg p-6'>
+            <h3 className='text-xl font-bold text-white mb-4'>
+              Advanced Technology
+            </h3>
+            <p className='text-gray-300'>
+              Cutting-edge technology and best practices to deliver exceptional
+              results.
+            </p>
+          </div>
+
+          <div className='bg-gray-800 rounded-lg p-6'>
+            <h3 className='text-xl font-bold text-white mb-4'>24/7 Support</h3>
+            <p className='text-gray-300'>
+              Round-the-clock support to ensure your services solutions run
+              smoothly.
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
             </p>
           </div>
         </div>
@@ -680,6 +727,7 @@ export default function ServicePage() {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 
@@ -741,3 +789,6 @@ function ServiceCard({
 }
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29

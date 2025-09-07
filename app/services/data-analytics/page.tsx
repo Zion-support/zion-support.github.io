@@ -4,8 +4,9 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import React from 'react';
 
-export const metadata: Metadata = { 
+export const metadata: Metadata = {
   title: 'Data Analytics Solutions | Zion Tech Group',
+<<<<<<< HEAD
   description: 'Advanced data analytics solutions including business intelligence, data visualization, predictive analytics, and data engineering. Turn data into actionable insights.'
 =======
 export const metadata = {
@@ -13,10 +14,15 @@ export const metadata = {
   description: 'Transform your data into actionable insights with our advanced analytics solutions.',
   keywords: 'data analytics, business intelligence, data visualization, insights'
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  description:
+    'Advanced data analytics solutions including business intelligence, data visualization, predictive analytics, and data engineering. Turn data into actionable insights.',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
 };
 
 export default function ServicePage() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -81,12 +87,56 @@ export default function ServicePage() {
             >
               Call +1 302 464 0950
             </a>
+=======
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
+      <div className='container mx-auto px-4 py-16'>
+        <div className='text-center mb-16'>
+          <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
+            Data Analytics Solutions
+          </h1>
+          <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
+            Advanced data analytics solutions to transform your data into
+            actionable business insights.
+          </p>
+        </div>
+
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          <div className='bg-gray-800 rounded-lg p-6'>
+            <h3 className='text-xl font-bold text-white mb-4'>
+              Business Intelligence
+            </h3>
+            <p className='text-gray-300'>
+              Comprehensive BI solutions to analyze and visualize your business
+              data effectively.
+            </p>
+          </div>
+
+          <div className='bg-gray-800 rounded-lg p-6'>
+            <h3 className='text-xl font-bold text-white mb-4'>
+              Predictive Analytics
+            </h3>
+            <p className='text-gray-300'>
+              Leverage machine learning to predict trends and make data-driven
+              decisions.
+            </p>
+          </div>
+
+          <div className='bg-gray-800 rounded-lg p-6'>
+            <h3 className='text-xl font-bold text-white mb-4'>
+              Data Engineering
+            </h3>
+            <p className='text-gray-300'>
+              Build robust data pipelines and infrastructure for scalable
+              analytics.
+            </p>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
           </div>
         </div>
       </div>
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 import Link from "next/link";
 
@@ -96,3 +146,5 @@ export const metadata = {
   keywords: 'data-analytics, services, business, technology'
 };
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29

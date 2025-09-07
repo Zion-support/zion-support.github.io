@@ -1,26 +1,10 @@
 import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
-<<<<<<< HEAD
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-});
-=======
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-// import nextPlugin from '@next/eslint-plugin-next'; // Not needed for Vite project
 import globals from 'globals';
->>>>>>> cursor/expand-services-advertise-and-build-project-e77d
 
 const compat = new FlatCompat({
   baseDirectory: import.meta.dirname,
@@ -29,45 +13,19 @@ const compat = new FlatCompat({
 });
 
 export default [
-<<<<<<< HEAD
-  ...compat.extends('next/core-web-vitals'),
-  {
-    rules: {
-      'react/no-unescaped-entities': 'off',
-      'react-hooks/exhaustive-deps': 'warn',
-      'no-console': 'warn'
-    }
-  },
-  {
-    ignores: [
-      'node_modules/**',
-      '.next/**',
-      'out/**',
-      'dist/**',
-      '*.config.js',
-      '*.config.cjs',
-      '*.config.mjs',
-      'automation/**',
-      'backup-problematic-files/**',
-      'tests/**',
-      '*.test.js',
-      '*.test.ts',
-      '*.test.tsx',
-      '*.spec.js',
-      '*.spec.ts',
-      '*.spec.tsx'
-    ]
-=======
   js.configs.recommended,
   {
-    files: ['**/*.{js,jsx}'],
     languageOptions: {
-      ecmaVersion: 2022,
-      sourceType: 'module',
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true
-        }
+      globals: {
+        console: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        global: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        exports: 'readonly'
       }
     },
     rules: {
@@ -96,36 +54,9 @@ export default [
       'src.disabled/**',
       'components.disabled/**',
       'pages.disabled/**',
-      'pages_backup/**',
-      'pages_backup_*/**',
-      'pages_backup_conflict/**',
-      'pages_backup_conflicts/**',
-      'pages_minimal/**',
-      'pages.broken/**',
-      'pages.corrupted.*/**',
-      'pages.disabled*/**',
-      'pages.disabled_*/**',
-      'pages.disabled_full/**',
-      'pages.old/**',
-      'pages_api.disabled/**',
-      'pages_disabled/**',
-      'pages.__backup/**',
-      'pages._archive_corrupted/**',
-      'pages._quarantine/**',
-      'pages.bak/**',
-      'pages.blog.disabled/**',
-      'solutions.disabled/**',
-      'src.corrupted/**',
-      'src.pages.disabled/**',
-      'src_backup/**',
-      'temp-backup/**',
-      'tests.disabled/**',
       'zion-os/**',
       'zion-website/**',
       'zion_academy/**',
-      'zion-ai-assistant/**',
-      'zion-os.disabled/**',
-      'api/**',
       'api-backup/**',
       'api-disabled/**',
       'api.disabled/**',
@@ -237,9 +168,7 @@ export default [
     plugins: {
       '@typescript-eslint': typescript,
       'react': react,
-      'react-hooks': reactHooks,
-      '@next/next': nextPlugin
-      // '@next/next': nextPlugin, // Not needed for Vite project
+      'react-hooks': reactHooks
     },
     rules: {
       ...typescript.configs.recommended.rules,
@@ -282,9 +211,5 @@ export default [
     rules: {
       'no-console': 'off'
     }
-  }
-      'no-console': 'off'
-    }
->>>>>>> cursor/expand-services-advertise-and-build-project-e77d
   }
 ];

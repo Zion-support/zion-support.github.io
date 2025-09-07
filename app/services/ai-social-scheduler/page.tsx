@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import Link from "next/link";
 import { Metadata } from 'next';
@@ -6,10 +7,18 @@ export const metadata: Metadata = {
   title: 'AI Social Media Scheduler | Zion Tech Group',
   description: 'Intelligent social media management with optimal posting times and content suggestions. Maximize engagement across all platforms.',
   keywords: 'social media scheduler, AI social media, content scheduling, social media automation, engagement optimization',
+=======
+export const metadata = {
+  title: 'Ai Social Scheduler | Zion Tech Group',
+  description:
+    'Professional ai social scheduler services for your business needs.',
+  keywords: 'ai-social-scheduler, services, business, technology',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
 };
 
 export default function AISocialSchedulerPage() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-100">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -20,6 +29,16 @@ export default function AISocialSchedulerPage() {
           <p className="text-xl text-gray-600 mb-8 max-w-4xl mx-auto">
             Maximize your social media impact with AI-powered scheduling and content optimization. 
             Post at optimal times, engage your audience, and grow your following across all platforms.
+=======
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
+      <div className='container mx-auto px-4 py-16'>
+        <div className='text-center mb-16'>
+          <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
+            Ai Social Scheduler
+          </h1>
+          <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
+            Professional ai social scheduler services for your business needs.
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -37,6 +56,7 @@ export default function AISocialSchedulerPage() {
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Features Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           <div>
@@ -208,12 +228,42 @@ export default function AISocialSchedulerPage() {
           <div className="mt-8 text-sm">
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
             <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
+=======
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          <div className='bg-gray-800 rounded-lg p-6'>
+            <h3 className='text-xl font-bold text-white mb-4'>
+              Expert Solutions
+            </h3>
+            <p className='text-gray-300'>
+              Tailored ai social scheduler solutions designed for your specific
+              business requirements.
+            </p>
+          </div>
+
+          <div className='bg-gray-800 rounded-lg p-6'>
+            <h3 className='text-xl font-bold text-white mb-4'>
+              Advanced Technology
+            </h3>
+            <p className='text-gray-300'>
+              Cutting-edge technology and best practices to deliver exceptional
+              results.
+            </p>
+          </div>
+
+          <div className='bg-gray-800 rounded-lg p-6'>
+            <h3 className='text-xl font-bold text-white mb-4'>24/7 Support</h3>
+            <p className='text-gray-300'>
+              Round-the-clock support to ensure your ai social scheduler
+              solutions run smoothly.
+            </p>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
           </div>
         </div>
       </div>
     </div>
   );
 }
+<<<<<<< HEAD
 
 function FeatureItem({ icon, title, description, benefits }: { 
   icon: string; 
@@ -321,3 +371,5 @@ function PricingCard({
     </div>
   );
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29

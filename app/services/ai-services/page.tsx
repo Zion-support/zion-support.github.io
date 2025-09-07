@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   keywords: 'AI services, machine learning, LLM development, RAG systems, AI agents, computer vision, MLOps, AI consulting'
 =======
 export const metadata = {
+<<<<<<< HEAD
 =======
 import Link from 'next/link';
 
@@ -37,10 +38,16 @@ export const metadata = {
   description: "Comprehensive AI services including custom LLM development, RAG systems, AI agents, computer vision, and MLOps solutions for enterprise applications.",
   keywords: 'ai-services, services, business, technology'
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+  title: 'Ai Services | Zion Tech Group',
+  description: 'Professional ai services services for your business needs.',
+  keywords: 'ai-services, services, business, technology',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
 };
 
 function FeatureItem({ icon, title, description, benefits }: { icon: string; title: string; description: string; benefits: string[] }) {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="animate-fade-in">
 <<<<<<< HEAD
@@ -149,6 +156,46 @@ function FeatureItem({ icon, title, description, benefits }: { icon: string; tit
               ]}
               pricing="Starting at $40,000"
             />
+=======
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
+      <div className='container mx-auto px-4 py-16'>
+        <div className='text-center mb-16'>
+          <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
+            Ai Services
+          </h1>
+          <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
+            Professional ai services services for your business needs.
+          </p>
+        </div>
+
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          <div className='bg-gray-800 rounded-lg p-6'>
+            <h3 className='text-xl font-bold text-white mb-4'>
+              Expert Solutions
+            </h3>
+            <p className='text-gray-300'>
+              Tailored ai services solutions designed for your specific business
+              requirements.
+            </p>
+          </div>
+
+          <div className='bg-gray-800 rounded-lg p-6'>
+            <h3 className='text-xl font-bold text-white mb-4'>
+              Advanced Technology
+            </h3>
+            <p className='text-gray-300'>
+              Cutting-edge technology and best practices to deliver exceptional
+              results.
+            </p>
+          </div>
+
+          <div className='bg-gray-800 rounded-lg p-6'>
+            <h3 className='text-xl font-bold text-white mb-4'>24/7 Support</h3>
+            <p className='text-gray-300'>
+              Round-the-clock support to ensure your ai services solutions run
+              smoothly.
+            </p>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
           </div>
         </div>
 
@@ -283,6 +330,7 @@ function CTA() {
     </div>
   );
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export default function ServicePage() {
@@ -831,3 +879,5 @@ function Plan() { return ( <div style={{border: '1px solid #e5e7eb', border_radi
   );
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29

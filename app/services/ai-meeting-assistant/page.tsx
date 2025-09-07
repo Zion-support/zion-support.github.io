@@ -6,12 +6,14 @@ import Link from 'next/link';
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 export const metadata = {
   title: 'Ai Meeting Assistant | Zion Tech Group',
-  description: 'Professional ai meeting assistant services for your business needs.',
-  keywords: 'ai-meeting-assistant, services, business, technology'
+  description:
+    'Professional ai meeting assistant services for your business needs.',
+  keywords: 'ai-meeting-assistant, services, business, technology',
 };
 
 export default function ServicePage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="space-y-16">
       {/* Hero Section */}
@@ -62,12 +64,19 @@ export default function ServicePage() {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+=======
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
+      <div className='container mx-auto px-4 py-16'>
+        <div className='text-center mb-16'>
+          <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
             Ai Meeting Assistant
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
             Professional ai meeting assistant services for your business needs.
           </p>
         </div>
+<<<<<<< HEAD
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-gray-800 rounded-lg p-6">
@@ -75,20 +84,35 @@ export default function ServicePage() {
             <p className="text-gray-300">
               Tailored ai meeting assistant solutions designed for your specific business requirements.
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          <div className='bg-gray-800 rounded-lg p-6'>
+            <h3 className='text-xl font-bold text-white mb-4'>
+              Expert Solutions
+            </h3>
+            <p className='text-gray-300'>
+              Tailored ai meeting assistant solutions designed for your specific
+              business requirements.
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
             </p>
           </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
-            <p className="text-gray-300">
-              Cutting-edge technology and best practices to deliver exceptional results.
+
+          <div className='bg-gray-800 rounded-lg p-6'>
+            <h3 className='text-xl font-bold text-white mb-4'>
+              Advanced Technology
+            </h3>
+            <p className='text-gray-300'>
+              Cutting-edge technology and best practices to deliver exceptional
+              results.
             </p>
           </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
-            <p className="text-gray-300">
-              Round-the-clock support to ensure your ai meeting assistant solutions run smoothly.
+
+          <div className='bg-gray-800 rounded-lg p-6'>
+            <h3 className='text-xl font-bold text-white mb-4'>24/7 Support</h3>
+            <p className='text-gray-300'>
+              Round-the-clock support to ensure your ai meeting assistant
+              solutions run smoothly.
             </p>
           </div>
         </div>

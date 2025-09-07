@@ -9,10 +9,16 @@ export const metadata: Metadata = {
   description: 'Comprehensive IT services including cloud migration, system administration, network management, and technical support for businesses of all sizes.'
 =======
 export const metadata = {
+<<<<<<< HEAD
   title: 'Comprehensive IT Services | Zion Tech Group',
   description: 'Full-stack IT services including cloud migration, cybersecurity, DevOps, system administration, and 24/7 support. Trusted by 500+ businesses.',
   keywords: 'it-services, cloud-migration, cybersecurity, devops, system-administration, managed-services, it-support'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  title: 'It Services | Zion Tech Group',
+  description: 'Professional it services services for your business needs.',
+  keywords: 'it-services, services, business, technology',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
 };
 
 interface ITServiceProps {
@@ -27,6 +33,7 @@ interface ITServiceProps {
 
 function ITService({ title, description, price, features, benefits, icon, href }: ITServiceProps) {
   return (
+<<<<<<< HEAD
     <Link
       href={href}
       className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200 hover:border-blue-300"
@@ -327,6 +334,16 @@ export default function ITServicesPage() {
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
             End-to-end IT solutions that keep your business running smoothly and securely. 
             From cloud migration to cybersecurity, we provide the expertise and support you need to succeed.
+=======
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
+      <div className='container mx-auto px-4 py-16'>
+        <div className='text-center mb-16'>
+          <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
+            It Services
+          </h1>
+          <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
+            Professional it services services for your business needs.
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -343,6 +360,7 @@ export default function ITServicesPage() {
             </a>
           </div>
         </div>
+<<<<<<< HEAD
         
         {/* Core Services */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -1420,10 +1438,43 @@ function ContactSection() {
               title="Enterprise Security"
               description="Bank-grade security measures and compliance with industry standards and regulations."
             />
+=======
+
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          <div className='bg-gray-800 rounded-lg p-6'>
+            <h3 className='text-xl font-bold text-white mb-4'>
+              Expert Solutions
+            </h3>
+            <p className='text-gray-300'>
+              Tailored it services solutions designed for your specific business
+              requirements.
+            </p>
+          </div>
+
+          <div className='bg-gray-800 rounded-lg p-6'>
+            <h3 className='text-xl font-bold text-white mb-4'>
+              Advanced Technology
+            </h3>
+            <p className='text-gray-300'>
+              Cutting-edge technology and best practices to deliver exceptional
+              results.
+            </p>
+          </div>
+
+          <div className='bg-gray-800 rounded-lg p-6'>
+            <h3 className='text-xl font-bold text-white mb-4'>24/7 Support</h3>
+            <p className='text-gray-300'>
+              Round-the-clock support to ensure your it services solutions run
+              smoothly.
+            </p>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
           </div>
         </div>
       </div>
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29

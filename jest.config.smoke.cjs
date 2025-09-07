@@ -4,14 +4,7 @@ const createJestConfig = nextJest({
   dir: './'
 });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 const config = {
-  testEnvironment: 'jsdom',
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jsdom',
   moduleNameMapper: {
@@ -112,14 +105,6 @@ const config = {
     '<rootDir>/automation/logs*/',
     '<rootDir>/automation/backup*/'
   ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   coverageThreshold: {
     global: {
       branches: 70,
@@ -129,26 +114,9 @@ const config = {
     }
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-<<<<<<< HEAD
-<<<<<<< HEAD
-  verbose: true,
-  collectCoverage: false,
-  testTimeout: 30000,
-};
-
-module.exports = createJestConfig(config);
-=======
-=======
   verbose: true,
   collectCoverage: false,
   testTimeout: 30000
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/']
 };
 
 module.exports = createJestConfig(config);
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

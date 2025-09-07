@@ -4,12 +4,19 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Smart Invoice Generator | Zion Tech Group',
+<<<<<<< HEAD
   description: 'Automated invoice creation with AI-powered expense categorization and payment tracking. Streamline your billing process and get paid faster.',
   keywords: 'invoice generator, automated billing, expense tracking, payment management, AI invoicing, financial automation',
+=======
+  description:
+    'Professional smart invoice generator services for your business needs.',
+  keywords: 'smart-invoice-generator, services, business, technology',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
 };
 
 export default function SmartInvoiceGeneratorPage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="space-y-16">
       {/* Hero Section */}
@@ -37,6 +44,17 @@ export default function SmartInvoiceGeneratorPage() {
           <p className="text-xl text-gray-600 mb-8 max-w-4xl mx-auto">
             Revolutionize your billing process with AI-powered invoice generation. Automatically categorize expenses, 
             track payments, and get paid faster with our intelligent invoicing platform.
+=======
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
+      <div className='container mx-auto px-4 py-16'>
+        <div className='text-center mb-16'>
+          <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
+            Smart Invoice Generator
+          </h1>
+          <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
+            Professional smart invoice generator services for your business
+            needs.
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -53,6 +71,7 @@ export default function SmartInvoiceGeneratorPage() {
             </a>
           </div>
         </div>
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
         {/* Features Section */}
@@ -221,12 +240,43 @@ export default function SmartInvoiceGeneratorPage() {
           <div className="mt-8 text-sm">
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
             <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
+=======
+
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          <div className='bg-gray-800 rounded-lg p-6'>
+            <h3 className='text-xl font-bold text-white mb-4'>
+              Expert Solutions
+            </h3>
+            <p className='text-gray-300'>
+              Tailored smart invoice generator solutions designed for your
+              specific business requirements.
+            </p>
+          </div>
+
+          <div className='bg-gray-800 rounded-lg p-6'>
+            <h3 className='text-xl font-bold text-white mb-4'>
+              Advanced Technology
+            </h3>
+            <p className='text-gray-300'>
+              Cutting-edge technology and best practices to deliver exceptional
+              results.
+            </p>
+          </div>
+
+          <div className='bg-gray-800 rounded-lg p-6'>
+            <h3 className='text-xl font-bold text-white mb-4'>24/7 Support</h3>
+            <p className='text-gray-300'>
+              Round-the-clock support to ensure your smart invoice generator
+              solutions run smoothly.
+            </p>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
           </div>
         </div>
       </div>
     </div>
   );
 }
+<<<<<<< HEAD
 
 function FeatureItem({ icon, title, description, benefits }: { 
   icon: string; 
@@ -364,3 +414,5 @@ function TestimonialCard({
 =======
 }
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29

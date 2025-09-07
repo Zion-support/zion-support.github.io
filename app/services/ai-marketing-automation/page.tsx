@@ -10,13 +10,21 @@ import React from 'react';
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 export const metadata = {
+<<<<<<< HEAD
   title: 'AI Marketing Automation | Zion Tech Group',
   description: 'Professional AI marketing automation services for your business needs.',
   keywords: 'ai-marketing-automation, services, business, technology'
+=======
+  title: 'Ai Marketing Automation | Zion Tech Group',
+  description:
+    'Professional ai marketing automation services for your business needs.',
+  keywords: 'ai-marketing-automation, services, business, technology',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
 };
 
 export default function AIMarketingAutomationPage() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -343,6 +351,47 @@ function CaseStudy({ company, industry, result, description, metrics }: {
               <li>• Web personalization</li>
               <li>• Cross-platform analytics</li>
             </ul>
+=======
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
+      <div className='container mx-auto px-4 py-16'>
+        <div className='text-center mb-16'>
+          <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
+            Ai Marketing Automation
+          </h1>
+          <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
+            Professional ai marketing automation services for your business
+            needs.
+          </p>
+        </div>
+
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          <div className='bg-gray-800 rounded-lg p-6'>
+            <h3 className='text-xl font-bold text-white mb-4'>
+              Expert Solutions
+            </h3>
+            <p className='text-gray-300'>
+              Tailored ai marketing automation solutions designed for your
+              specific business requirements.
+            </p>
+          </div>
+
+          <div className='bg-gray-800 rounded-lg p-6'>
+            <h3 className='text-xl font-bold text-white mb-4'>
+              Advanced Technology
+            </h3>
+            <p className='text-gray-300'>
+              Cutting-edge technology and best practices to deliver exceptional
+              results.
+            </p>
+          </div>
+
+          <div className='bg-gray-800 rounded-lg p-6'>
+            <h3 className='text-xl font-bold text-white mb-4'>24/7 Support</h3>
+            <p className='text-gray-300'>
+              Round-the-clock support to ensure your ai marketing automation
+              solutions run smoothly.
+            </p>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
           </div>
         </div>
         
