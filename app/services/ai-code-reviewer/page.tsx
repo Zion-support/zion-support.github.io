@@ -100,26 +100,3 @@ export default function ServicePage() {
     </div>
   );
 }
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <FeatureCard
-            title="Professional Service"
-            description="Expert solutions designed to meet your specific requirements."
-            icon="🔍"
-          />
-          <FeatureCard
-            title="24/7 Support"
-            description="Round-the-clock assistance to ensure your success."
-            icon="🛠️"
-          />
-          <FeatureCard
-            title="Custom Solutions"
-            description="Tailored approaches that fit your unique business model."
-            icon="⚙️"
-          />
-        </div>
-      </section>
-
-      <ContactSection />
-    </div>
-  );
-}

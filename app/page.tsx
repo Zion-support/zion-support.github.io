@@ -45,6 +45,32 @@ export const metadata: Metadata = {
   },
 };
 
+function Card({ title, href, description, icon }: {
+  title: string;
+  href: string;
+  description: string;
+  icon: string;
+}) {
+  return (
+    <Link
+      href={href}
+      className="group bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+    >
+      <div className="flex items-center space-x-4">
+        <div className="text-3xl">{icon}</div>
+        <div>
+          <h3 className="text-xl font-semibold text-white group-hover:text-blue-300 transition-colors">
+            {title}
+          </h3>
+          <p className="text-gray-300 group-hover:text-gray-200 transition-colors">
+            {description}
+          </p>
+        </div>
+      </div>
+    </Link>
+  );
+}
+
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -198,6 +224,8 @@ export default function HomePage() {
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
+            Our Services
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Solutions</h3>
@@ -309,20 +337,3 @@ export default function HomePage() {
   );
 }
 
-function Card({ title, href, description, icon }: {
-  title: string;
-  href: string;
-  description: string;
-  icon: string;
-}) {
-  return (
-    <Link
-      href={href}
-      className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300 hover:scale-105 block"
-    >
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-xl font-semibold mb-4">{title}</h3>
-      <p className="text-slate-400">{description}</p>
-    </Link>
-  );
-}
