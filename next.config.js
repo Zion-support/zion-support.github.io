@@ -2,6 +2,9 @@
 // Memory optimization settings
 const nextConfig = {
   reactStrictMode: true,
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -11,17 +14,13 @@ const nextConfig = {
   images: {
     domains: ['ziontechgroup.com', 'images.unsplash.com', 'via.placeholder.com'],
     formats: ['image/webp', 'image/avif'],
-<<<<<<< HEAD
-    unoptimized: true,
-  },
-  compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
-=======
+    minimumCacheTTL: 60,
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     unoptimized: true
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production'
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
   },
   webpack: (config, { dev, isServer }) => {
     // Exclude problematic directories from webpack compilation
@@ -70,11 +69,7 @@ const nextConfig = {
       ...config.resolve.fallback,
       fs: false,
       net: false,
-<<<<<<< HEAD
-      tls: false,
-=======
       tls: false
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
     };
 
     return config;
@@ -82,13 +77,8 @@ const nextConfig = {
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   onDemandEntries: {
     maxInactiveAge: 25 * 1000,
-<<<<<<< HEAD
-    pagesBufferLength: 2,
-  },
-=======
     pagesBufferLength: 2
   }
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 };
 
 module.exports = nextConfig;
