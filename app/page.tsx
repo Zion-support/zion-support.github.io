@@ -20,6 +20,7 @@ import { Metadata } from 'next';
 import ServicesGrid from './components/ServicesGrid';
 import HeroSection from './components/HeroSection';
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const metadata: Metadata = {
 <<<<<<< HEAD
   title: 'Zion Tech Group - Leading AI and Technology Solutions',

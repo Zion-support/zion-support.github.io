@@ -122,8 +122,6 @@
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     "src/**/*.ts",
     "src/**/*.tsx",
-    "pages/**/*.ts",
-    "pages/**/*.tsx",
     "app/**/*.ts",
     "app/**/*.tsx",
     "components/**/*.ts",

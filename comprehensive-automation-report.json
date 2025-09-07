@@ -7,19 +7,26 @@
   "timestamp": "2025-09-05T22:04:15.746Z",
   "totalDuration": 16690,
 =======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-  "timestamp": "2025-09-07T02:33:22.872Z",
-  "duration": "1285ms",
+  "timestamp": "2025-09-07T05:09:16.275Z",
+  "duration": null,
+>>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
   "summary": {
     "successful": 3,
-    "errors": 14,
-    "warnings": 3
+    "errors": 5,
+    "warnings": 0
   },
   "results": {
     "success": [
       "Pre-automation checks passed",
       {
+<<<<<<< HEAD
+        "check": "ESLint",
+        "output": "\n> ziontechgroup-site@1.0.0 lint\n> node --max-old-space-size=4096 ./node_modules/.bin/eslint . --max-warnings 1000\n\n"
+      },
+      {
+        "check": "Build",
+        "output": "\n> ziontechgroup-site@1.0.0 prebuild\n> echo \"Starting build...\"\n\nStarting build...\n\n> ziontechgroup-site@1.0.0 build\n> next build\n\n   ▲ Next.js 15.5.2\n   - Environments: .env.production, .env\n   - Experiments (use with caution):\n     ✓ optimizeCss\n\n   Creating an optimized production build ...\n ✓ Compiled successfully in 8.7s\n   Skipping validation of types\n   Skipping linting\n   Collecting page data ...\n   Generating static pages (0/26) ...\n   Generating static pages (6/26) \r\n   Generating static pages (12/26) \r\n   Generating static pages (19/26) \r\n ✓ Generating static pages (26/26)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (app)                                      Size  First Load JS\n┌ ○ /_not-found                                 160 B         102 kB\n├ ○ /research                                   160 B         102 kB\n├ ○ /services/ai-analytics-dashboard            160 B         102 kB\n├ ○ /services/ai-analytics-platform             160 B         102 kB\n├ ○ /services/ai-code-reviewer                  160 B         102 kB\n├ ○ /services/ai-content-generation             160 B         102 kB\n├ ○ /services/ai-content-generator              160 B         102 kB\n├ ○ /services/ai-content-optimizer              160 B         102 kB\n├ ○ /services/ai-content-writer                 180 B         105 kB\n├ ○ /services/ai-copilots                       160 B         102 kB\n├ ○ /services/ai-customer-insights              160 B         102 kB\n├ ○ /services/ai-customer-support               180 B         105 kB\n├ ○ /services/ai-customer-support-automation    180 B         105 kB\n├ ○ /services/ai-finance-analyzer               160 B         102 kB\n├ ○ /services/ai-healthcare-assistant           160 B         102 kB\n├ ○ /services/ai-powered-tools                  160 B         102 kB\n├ ○ /services/ai-project-management             160 B         102 kB\n├ ○ /services/ai-project-manager                160 B         102 kB\n├ ○ /services/ai-services                       180 B         105 kB\n├ ○ /services/blockchain                        180 B         105 kB\n├ ○ /services/micro-saas                        180 B         105 kB\n└ ○ /solutions                                  180 B         105 kB\n+ First Load JS shared by all                  102 kB\n  ├ chunks/255-310f1cc3c9beb704.js            45.7 kB\n  ├ chunks/4bd1b696-c023c6e3521b1417.js       54.2 kB\n  └ other shared chunks (total)               1.93 kB\n\nRoute (pages)                                    Size  First Load JS\n┌ ○ / (318 ms)                                3.26 kB        89.2 kB\n├   /_app                                         0 B        82.9 kB\n├ ƒ /sitemap                                    241 B        83.1 kB\n└ ○ /space-tech (320 ms)                      4.09 kB          90 kB\n+ First Load JS shared by all                 82.9 kB\n  ├ chunks/framework-a6e0b7e30f98059a.js      44.8 kB\n  ├ chunks/main-f0223600fb885098.js           36.1 kB\n  └ other shared chunks (total)               1.99 kB\n\nƒ Middleware                                  33.3 kB\n\n○  (Static)   prerendered as static content\nƒ  (Dynamic)  server-rendered on demand\n\n\n> ziontechgroup-site@1.0.0 postbuild\n> echo \"Build completed\"\n\nBuild completed\n"
+=======
         "script": "scripts/performance-monitor-enhanced.js",
         "category": "performance-monitoring",
         "output": "ℹ️ Starting enhanced performance monitoring...\nℹ️ Monitoring build performance...\n❌ Build performance monitoring failed: Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at <unknown> (next.config.js:58:1)\n\n❌ Performance monitoring failed: Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at <unknown> (next.config.js:58:1)\n\n"
@@ -28,6 +35,7 @@
         "script": "scripts/auto-fixer.js",
         "category": "error-fixing",
         "output": "[INFO] Starting auto-fixer...\n[INFO] Checking for merge conflicts...\n[INFO] No merge conflicts found\n[INFO] Fixing import errors...\n[INFO] Fixing TypeScript errors...\n[ERROR] Failed to fix TypeScript errors\n[INFO] Fixing syntax errors...\n[ERROR] Failed to fix syntax errors\n[INFO] Report saved to /workspace/error-reports/auto-fixer-report.json\n[INFO] Auto-fixer completed. Applied: 1, Failed: 1\n"
+>>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
       }
     ],
     "errors": [
