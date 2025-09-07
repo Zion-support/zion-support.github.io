@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react';
 import Head from 'next/head';
 import Header from './Header';
 import Footer from './Footer';
+import PerformanceMonitor from './PerformanceMonitor';
 
 interface LayoutProps {
   children: ReactNode;
@@ -77,6 +78,7 @@ const Layout: React.FC<LayoutProps> = ({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </Head>
+      <PerformanceMonitor />
       <Header />
       <main>{children}</main>
       <Footer />

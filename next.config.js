@@ -26,7 +26,9 @@ const nextConfig = {
   },
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons', 'framer-motion']
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons', 'framer-motion', '@heroicons/react'],
+    scrollRestoration: true,
+    largePageDataBytes: 128 * 1024
   },
   webpack: (config, { dev, isServer }) => {
     if (dev) {
