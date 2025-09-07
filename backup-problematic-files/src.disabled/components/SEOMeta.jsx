@@ -6,6 +6,6 @@ const SEOMeta = ({ className }) => {
       <h1>SEOMeta</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

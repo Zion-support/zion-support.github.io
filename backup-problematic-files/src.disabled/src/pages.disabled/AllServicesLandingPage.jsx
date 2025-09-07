@@ -6,6 +6,6 @@ const AllServicesLandingPage = ({ className }) => {
       <h1>AllServicesLandingPage</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

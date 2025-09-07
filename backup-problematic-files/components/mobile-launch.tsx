@@ -10,7 +10,6 @@ function StarIcon({ className = 'w-5 h-5 text-yellow-500' }: { className?: strin
     </svg>
   )
 }
-
 function AppleBadge({ href }: { href: string }) {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 rounded-lg bg-black text-white px-4 py-2 shadow hover: opacity-90">
@@ -24,7 +23,6 @@ function AppleBadge({ href }: { href: string }) {
     </a>
   )
 }
-
 function GoogleBadge({ href }: { href: string }) {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 rounded-lg bg-[#121212] text-white px-4 py-2 shadow hover: opacity-90">
@@ -59,7 +57,6 @@ function GoogleBadge({ href }: { href: string }) {
     </a>
   )
 }
-
 function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string, androidUrl: string, deepLink: string }) {
   const [visible, setVisible] = useState(false),
   useEffect(() => {
@@ -70,11 +67,9 @@ function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string, android
     const isMobile = /iPhone|iPad|iPod|Android/i.test(ua),
     if (isMobile) setVisible(true)
   }, []),
-
   if (!visible) return null,
   const isIOS = typeof navigator !== 'undefined' && /iPhone|iPad|iPod/i.test(navigator.userAgent),
   const storeUrl = isIOS ? iosUrl : androidUrl,
-
   return (
     <div className="fixed inset-x-0 top-0 z-50">
       <div className="mx-auto max-w-5xl">
@@ -92,17 +87,16 @@ function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string, android
               onClick={() => { localStorage.setItem('smartBannerDismissed1'), setVisible(false) }}
               className="text-xs px-2 py-1 rounded-md hover: bg-gray-100 dark:hover:bg-gray-800"
             >
-              
             </button>
           </div>
         </div>
       </div>
     </div>
   )
-import Head from 'next/head',;
-import { useEffect, useMemo, useState } from 'react',;
-import EnhancedLayout from '../components/layout/EnhancedLayout',;
-import Link from 'next/link',;
+import Head from 'next/head';
+import { useEffect, useMemo, useState } from 'react';
+import EnhancedLayout from "EnhancedLayout";
+import Link from "Link";
 // Simple icons using inline SVG to avoid external assets;
 function StarIcon({ className = 'w-5 h-5 text-yellow-500' }: { className?: string }) {;
   return (;
@@ -237,7 +231,6 @@ export default function MobileLaunchPage() {;
       setError(err?.message || 'Something went wrong.');
     }
   }
-
   return (
     <EnhancedLayout>
       <Head>
@@ -247,9 +240,7 @@ export default function MobileLaunchPage() {;
         <meta property="og:title" content="Zion Mobile App" />
         <meta property="og:description" content="Hire from anywhere. AI-match instantly. Track milestones on the go." />
       </Head>
-
       <SmartBanner iosUrl={IOS_APP_URL} androidUrl={ANDROID_APP_URL} deepLink={DEEP_LINK_URL} />
-
       {/* Hero */}
       <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 text-white p-6 md:p-10">
         <div className="grid md:grid-cols-2 gap-10 items-center">
@@ -293,7 +284,6 @@ export default function MobileLaunchPage() {;
           </div>
         </div>
       </section>
-
       {/* Key features */}
       <section className="mt-10 grid md:grid-cols-3 gap-6">
         <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">
@@ -312,7 +302,6 @@ export default function MobileLaunchPage() {;
           <div className="mt-4 h-36 rounded-xl bg-gradient-to-br from-indigo-100 to-blue-100 dark:from-indigo-900/40 dark:to-blue-900/40" />
         </div>
       </section>
-
       {/* Trust & Community */}
       <section className="mt-12">
         <div className="flex items-center gap-2">
@@ -359,7 +348,6 @@ export default function MobileLaunchPage() {;
         {status === 'success' && <div className="mt-2 text-sm text-emerald-600">Thanks! Youre on the list.</div>}
         {status === 'error' && <div className="mt-2 text-sm text-rose-600">{error || 'Please try again later.'}</div>}
       </section>
-
       {/* Helper links */}
       <section className="mt-10 text-sm opacity-80">
         <div className="flex flex-wrap items-center gap-4">
@@ -371,4 +359,4 @@ export default function MobileLaunchPage() {;
     </EnhancedLayout>
   )
 }
-;
+}

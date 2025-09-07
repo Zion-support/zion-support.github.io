@@ -6,6 +6,6 @@ const CreatePostButton = ({ className }) => {
       <h1>CreatePostButton</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

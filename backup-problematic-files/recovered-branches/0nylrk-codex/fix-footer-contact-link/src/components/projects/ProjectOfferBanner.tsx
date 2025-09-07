@@ -1,6 +1,5 @@
-
-import { useEffect, useState } from "react",;
-import { useNavigate } from "react-router-dom",;
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Bell, Calendar, X } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent } from "@/components/ui/card",;

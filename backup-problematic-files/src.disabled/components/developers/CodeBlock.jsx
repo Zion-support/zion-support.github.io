@@ -6,6 +6,6 @@ const CodeBlock = ({ className }) => {
       <h1>CodeBlock</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

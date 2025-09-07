@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react",;
-import { useRouter } from 'next/router',;
+import { useState, useEffect } from "react";
+import { useRouter } from 'next/router';
 import { GradientHeading } from "@/components/GradientHeading",;
 import { ProductListingCard } from "@/components/ProductListingCard",;
 import { Button } from "@/components/ui/button",;
@@ -12,7 +12,7 @@ import {;
   SelectContent,;
   SelectItem} from "@/components/ui/select",;
 import { Checkbox } from "@/components/ui/checkbox",;
-import Skeleton from "react-loading-skeleton",;
+import Skeleton from "Skeleton";
 import "react-loading-skeleton/dist/skeleton.css",;
 import { Slider } from "@/components/ui/slider",;
 import { ProductListing, ListingView } from "@/types/listings",;
@@ -26,7 +26,7 @@ interface PriceRange {;
 }
 ;
 interface DynamicListingPageProps {;
-  title:string,;
+  title:string,,
   description:string,;
   categorySlug:string,;
   listings:ProductListing[],;
@@ -180,8 +180,8 @@ export function DynamicListingPage({;
       setIsLoading(false),;
       if (listing) {;
         toast({;
-          title:"Quote Requested",;
-          description:`Your quote request for ${listing.title} has been sent.`}),;
+          title:"Quote Requested",,
+  description:`Your quote request for ${listing.title} has been sent.`}),;
 ;
         // Store quote data in sessionStorage for the request-quote page;
         const quoteData = {;
@@ -522,8 +522,8 @@ interface PriceRange {;
   min: number;
 max: number ;
 }interface DynamicListingPageProps {;
-  title: string;
-description: string;
+  title: string,
+  description: string;
 categorySlug: string;
 listings: ProductListing[];
 categoryFilters: {;
@@ -554,7 +554,7 @@ if (typeof window !== 'undefined') {';
   sessionStorage.setItem ('quoteRequestData', JSON.stringify (quoteData) ) ;
 }
 }
-}, 500) ;
+}, 500) 
 };";
 return (</p> </div> <div className="grid grid-cols-1 lg:grid-cols-4 gap-6" > <div className="lg:col-span-1" > <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6" > <h3 className="text-lg font-medium text-white mb-4 flex items-center" > <Filter className="mr-2 h-5 w-5" /> Filters </h3> <div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Categories </label> > {;
   filter.label ;

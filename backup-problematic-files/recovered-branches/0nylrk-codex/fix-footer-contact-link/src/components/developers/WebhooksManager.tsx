@@ -1,6 +1,5 @@
-
-import { useState, useEffect } from "react",;
-import { format } from "date-fns",;
+import { useState, useEffect } from "react";
+import { format } from "date-fns";
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react",;
 import { useWebhooks, type WebhookEventType } from "@/hooks/useWebhooks",;
 ;
@@ -533,7 +532,6 @@ setSelectedEvents (prev => prev.includes (event) ? prev.filter (e => e !== event
   setShowTestDialog (null);
 setTestEventType ('new application');
 if (showTestResult) {
-  
 }
 }
 }> <DialogContent className="bg-zinc-900 border-zinc-800 text-white"> <DialogHeader> <DialogTitle>Test Webhook</DialogTitle> <DialogDescription className="text-zinc-400"> Send a test webhook to your endpoint. </DialogDescription> </DialogHeader> {

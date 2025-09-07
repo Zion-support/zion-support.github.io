@@ -177,7 +177,7 @@ curl: http://localhost:3000/api/health;
       // Build the application;
       const buildCommand = this.environment === 'production';
         ? 'npm run "build": production';
-        : 'npm run buil
+        : 'npm run buil;
     d:optimized';
       execSync(buildCommand, { "stdio": 'pipe' });
       this.deploymentSteps.push(' Application built successfully');

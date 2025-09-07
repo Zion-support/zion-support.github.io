@@ -6,6 +6,6 @@ const ServicePortfolioDashboard = ({ className }) => {
       <h1>ServicePortfolioDashboard</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

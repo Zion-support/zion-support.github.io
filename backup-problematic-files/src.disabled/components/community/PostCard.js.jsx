@@ -6,6 +6,6 @@ const PostCard.js = ({ className }) => {
       <h1>PostCard.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

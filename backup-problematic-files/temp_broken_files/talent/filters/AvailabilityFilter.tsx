@@ -1,7 +1,6 @@
-
 import { ChevronDown, ChevronUp } from 'lucide-react';
-import { Checkbox } from "@/components/ui/checkbox",;
-import { AvailabilityFilterProps } from "@/types/filters",;
+import { Checkbox } from "@/components/ui/checkbox";
+import { AvailabilityFilterProps } from "@/types/filters";
 ;
 const AVAILABILITY_OPTIONS = [;
   { id:"full_time", label:"Full-time" },;
@@ -47,7 +46,6 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
   ),;}
  ];
 :temp_broken_files/talent/filters/AvailabilityFilter.tsx
-
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/AvailabilityFilter.tsx
   toggleSection ;
 }className="flex w-full items-center justify-between text-white font-medium" > <span>Availability</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />) ;

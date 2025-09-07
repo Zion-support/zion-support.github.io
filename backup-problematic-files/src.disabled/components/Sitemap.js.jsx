@@ -6,6 +6,6 @@ const Sitemap.js = ({ className }) => {
       <h1>Sitemap.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

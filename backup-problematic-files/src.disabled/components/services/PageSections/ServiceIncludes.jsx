@@ -24,6 +24,6 @@ const ServiceIncludes = ({ className }) => {
       <h1>ServiceIncludes</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

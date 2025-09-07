@@ -1,6 +1,5 @@
-
-import React, { useState } from "react",;
-import { Button } from "@/components/ui/button",;
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
 import {logErrorToProduction} from '@/utils/productionLogger',;
 import { ;
   getClientBudgetSuggestion,;
@@ -132,7 +131,7 @@ const generateSuggestion = async () => {;
 try {;
   const params: ClientBudgetParams = {;
   jobTitle;
-category ;
+category 
 };
 if (scope) params.scope = scope;
 if (experienceLevel) params.experienceLevel = experienceLevel;

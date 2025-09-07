@@ -6,6 +6,6 @@ const MicroSAAS = ({ className }) => {
       <h1>MicroSAAS</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

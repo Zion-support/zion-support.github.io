@@ -6,6 +6,6 @@ const [id].js = ({ className }) => {
       <h1>[id].js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react',;
+import React, { useEffect, useRef } from 'react';
 interface UltraFuturisticBackground2036Props {;
   variant?: 'default' | 'quantum' | 'space' | 'ai' | 'cyber',;
   intensity?: 'low' | 'medium' | 'high';
@@ -292,6 +292,6 @@ export default function UltraFuturisticBackground2036({;
         )}
       </div>;
     </div>;
-  );
+  )
 };
 export default UltraFuturisticBackground2036;

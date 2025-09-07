@@ -1,5 +1,5 @@
-import Head from 'next/head',;
-import Link from 'next/link',;
+import Head from 'next/head';
+import Link from 'next/link';
 import { Cpu, Gauge, GitBranch, Rocket, ShieldCheck, Zap, Activity, Globe, Layers, BarChart3, Search, Link2, Palette, LineChart } from 'lucide-react',;
 import { motion, useScroll, useSpring } from 'framer-motion',;
 import { useEffect, useState } from 'react',;
@@ -456,7 +456,6 @@ export default function MainFrontIndex() {;
               <p className="mt-1 text-sm text-white/75">High‑frequency repo sync to push autonomous changes quickly.</p>
               <div className="mt-3 text-xs text-cyan-300/90">Run now ↗</div>
             </a>
-
             <a
               href="/.netlify/functions/content-freshness-runner"
               className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover"
@@ -466,7 +465,6 @@ export default function MainFrontIndex() {;
               <p className="mt-1 text-sm text-white/75">Scores pages and docs by last update; commits freshness reports.</p>
               <div className="mt-3 text-xs text-cyan-300/90">Open →</div>
             </a>
-
             <a
               href="/.netlify/functions/docs-link-audit-runner"
               className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover"
@@ -476,7 +474,6 @@ export default function MainFrontIndex() {;
               <p className="mt-1 text-sm text-white/75">Scans docs for broken relative links and commits a CSV report.</p>
               <div className="mt-3 text-xs text-cyan-300/90">Open →</div>
             </a>
-
             <a
               href="/.netlify/functions/image-dimension-audit-runner"
               className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover"
@@ -497,7 +494,6 @@ export default function MainFrontIndex() {;
             </a>
           </div>
         </motion.section>
-
         {/* Autonomous Innovations */}
         <motion.section;
           id="innovations";
@@ -1687,7 +1683,6 @@ export default function MainFrontIndex() {;
         </section>;
  {/* AUTO-GENERATED:FRONT_ADS_END */}
  ;
-
         <section id="auto-ads" className="mx-auto max-w-7xl px-6 pb-16">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Auto‑advertised Highlights</h2>
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -1704,7 +1699,6 @@ export default function MainFrontIndex() {;
           </div>
         </section>
  {/* AUTO-GENERATED: FRONT_ADS_END */}
- 
         {/* Feature Highlights (new) */}
         <motion.section;
           id="feature-highlights";

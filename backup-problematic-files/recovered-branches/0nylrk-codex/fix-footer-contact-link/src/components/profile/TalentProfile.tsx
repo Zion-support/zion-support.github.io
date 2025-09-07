@@ -1,6 +1,5 @@
-
-import React from "react",;
-import { Handshake, MessageSquare, Star } from "lucide-react",;
+import React from "react";
+import { Handshake, MessageSquare, Star } from "lucide-react";
 import { Button } from "@/components/ui/button",;
 ;
 import { HireNowCTA } from "./HireNowCTA",;
@@ -44,8 +43,8 @@ export function TalentProfile({ ;
   // Create proper projects array for ProfileProjects component;
   const projectsArray = profile.key_projects?.map((proj, i) => ({;
     id:`project-${i}`,;
-    title:proj.title,;
-    description:proj.description,;
+    title:proj.title,,
+  description:proj.description,;
     date:new Date().toISOString() // Default date since we don't have this data;
   })) || [],;
   ;
@@ -165,7 +164,7 @@ level: 3 //Default level since we don't have this data
 id: `project-$ {
   i 
 }`;
-title: proj.title;
-description: proj.description;
+title: proj.title,
+  description: proj.description;
 date: new Date () .toISOString () //Default date since we don't have this data 
 }) ) || [];

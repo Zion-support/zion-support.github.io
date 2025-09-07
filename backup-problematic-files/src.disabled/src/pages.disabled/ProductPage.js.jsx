@@ -6,6 +6,6 @@ const ProductPage.js = ({ className }) => {
       <h1>ProductPage.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

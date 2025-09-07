@@ -6,6 +6,6 @@ const Alert-dialog = ({ className }) => {
       <h1>Alert-dialog</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

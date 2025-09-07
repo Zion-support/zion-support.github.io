@@ -6,6 +6,6 @@ const InteractiveTestimonials = ({ className }) => {
       <h1>InteractiveTestimonials</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

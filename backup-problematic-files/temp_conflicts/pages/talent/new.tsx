@@ -1,5 +1,5 @@
-import { FormEvent, useState } from 'react',;
-import type { TalentProfile } from '@/utils/types/talent',;
+import { FormEvent, useState } from 'react';
+import type { TalentProfile } from '@/utils/types/talent';
 ;
 export default function NewTalentPage() {;
   const [form, setForm] = useState({;

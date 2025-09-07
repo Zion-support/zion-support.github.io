@@ -1,6 +1,6 @@
-import fs from 'fs',;
-import path from 'path',;
-import EnhancedLayout from '../../components/layout/EnhancedLayout',;
+import fs from 'fs';
+import path from 'path';
+import EnhancedLayout from "EnhancedLayout";
 ;
 export async function getStaticProps() {;
   const dir = path.join(process.cwd(), 'datareports', 'economyoptimizer'),;

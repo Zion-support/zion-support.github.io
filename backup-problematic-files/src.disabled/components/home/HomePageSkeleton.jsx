@@ -24,6 +24,6 @@ const HomePageSkeleton = ({ className }) => {
       <h1>HomePageSkeleton</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

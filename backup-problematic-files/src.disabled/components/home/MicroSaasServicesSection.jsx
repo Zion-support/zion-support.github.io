@@ -24,6 +24,6 @@ const MicroSaasServicesSection = ({ className }) => {
       <h1>MicroSaasServicesSection</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

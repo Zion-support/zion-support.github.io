@@ -1,5 +1,5 @@
-import React from 'react',;
-import FocusLock from 'react-focus-lock',;
+import React from 'react';
+import FocusLock from 'react-focus-lock';
 import {;
   Dialog,;
   DialogContent,;
@@ -19,7 +19,7 @@ import { useForm, type Resolver } from 'react-hook-form',;
 import { yupResolver } from '@hookform/resolvers/yup',;
 import * as yup from 'yup',;
 import { SendIcon, Mail } from 'lucide-react';
-import api from '@/services/apiClient',;
+import api from "api";
 import { toast } from '@/hooks/use-toast',;
 import { useAuth } from '@/hooks/useAuth',;
 import { LoginModal } from '@/components/auth/LoginModal',;

@@ -300,7 +300,6 @@ export default function UltraFuturisticBackground2037({;
               ctx.moveTo(particle1.x, particle1.y);
               ctx.lineTo(particle2.x, particle2.y);
               ctx.stroke();
-
 export default function UltraFuturisticBackground2037({ 
   intensity = 'medium',
   theme = 'quantum-neon',
@@ -310,19 +309,15 @@ export default function UltraFuturisticBackground2037({
   useEffect_(() => {
     // Only run on client side,
 if (typeof window === 'undefined') return,
-    
     const canvas = canvasRef.current,
     if (!canvas) return,
-
     const ctx = canvas.getContext('2d'),
     if (!ctx) return,
     canvas.width = window.innerWidth,
     canvas.height = window.innerHeight,
-
     let animationFrameId: number,
     let particles: Particle[] = [],
     const quantumFields: QuantumField[] = [],
-
     // Enhanced theme-based color schemes,
 const getThemeColors = () => {
       switch (theme) {
@@ -362,9 +357,7 @@ return {
             glow: ['#7c3aed#0891b2#ff0066#00ffff']
           }      }
     },
-
     const colors = getThemeColors(),
-
     // Enhanced particle system with quantum effects,
 let particles: Array<{
       x: number,
@@ -384,20 +377,17 @@ let particles: Array<{
       neonIntensity: number,
       hologramOpacity: number
     }> = [],
-
     // Initialize particles,
 const initParticles = () => {
       particles = [],
       const isSmallScreen = window.innerWidth < 768,
       const baseCount = prefersReducedMotion ? 30 : (isSmallScreen ? 120 : 300),
       const particleCount = Math.floor(baseCount * intensityMultiplier),
-
       for (let i = 0, i < particleCount, i++) {
         const particleType = Math.random() < 0.2 ? 'quantum-neon' :                           Math.random() < 0.3 ? 'hologram' :
                            Math.random() < 0.4 ? 'quantum' : 
                            Math.random() < 0.6 ? 'wave' : 
                            Math.random() < 0.8 ? 'neon' : 'particle',
-        
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
@@ -418,7 +408,6 @@ const initParticles = () => {
           hologramOpacity: Math.random() * 0.6 + 0.4
         })      }
     },
-
     // Enhanced rendering functions,
 const drawQuantumNeonParticle = (particle: any) => {
       const { x, y, size, color, quantumState, neonIntensity, rotation } = particle,      
@@ -426,7 +415,6 @@ const drawQuantumNeonParticle = (particle: any) => {
 ctx.save(),
       ctx.translate(x, y),
       ctx.rotate(rotation),
-      
       // Quantum probability cloud,
 const gradient = ctx.createRadialGradient(0, 0, 0, 0, 0, size * 3),
       gradient.addColorStop(0, `${color}${Math.floor(neonIntensity * 255).toString(16).padStart(2, '0')}`),
@@ -436,7 +424,6 @@ const gradient = ctx.createRadialGradient(0, 0, 0, 0, 0, size * 3),
       ctx.beginPath(),
       ctx.arc(0, 0, size * 3, 0, Math.PI * 2),
       ctx.fill(),
-      
       // Neon glow effect,
 ctx.shadowColor = color,
       ctx.shadowBlur = size * 4,
@@ -445,7 +432,6 @@ ctx.shadowColor = color,
       ctx.beginPath(),
       ctx.arc(0, 0, size, 0, Math.PI * 2),
       ctx.stroke(),
-      
       // Quantum interference pattern,
 for (let i = 0, i < 3, i++) {
         const angle = quantumState + (i * Math.PI * 2) / 3,
@@ -456,19 +442,16 @@ for (let i = 0, i < 3, i++) {
         ctx.fill()
       }
     }
-
     const drawHologramParticle = (particle: any) => {
       const { x, y, size, color, hologramOpacity, rotation } = particle,      
       ctx.save(),
       ctx.translate(x, y),
       ctx.rotate(rotation),
-      
       // Holographic grid effect,
 const gridSize = size * 2,
       ctx.strokeStyle = `${color}${Math.floor(hologramOpacity * 255).toString(16).padStart(2, '0')}`,
       ctx.lineWidth = 1,
       ctx.globalAlpha = hologramOpacity,
-      
       // Vertical lines,
 for (let i = -2, i <= 2, i++) {
         ctx.beginPath(),
@@ -476,7 +459,6 @@ for (let i = -2, i <= 2, i++) {
         ctx.lineTo(i * gridSize / 2, gridSize),
         ctx.stroke()
       }
-      
       // Horizontal lines,
 for (let i = -2, i <= 2, i++) {
         ctx.beginPath(),
@@ -484,7 +466,6 @@ for (let i = -2, i <= 2, i++) {
         ctx.lineTo(gridSize, i * gridSize / 2),
         ctx.stroke()
       }
-      
       // Holographic center,
 ctx.fillStyle = `${color}${Math.floor(hologramOpacity * 100).toString(16).padStart(2, '0')}`,
       ctx.beginPath(),
@@ -492,45 +473,37 @@ ctx.fillStyle = `${color}${Math.floor(hologramOpacity * 100).toString(16).padSta
       ctx.fill(),      
       ctx.restore()
     },
-
     const drawWaveParticle = (particle: any) => {
       const { x, y, size, color, waveFrequency, waveAmplitude, opacity } = particle,      
       ctx.save(),
       ctx.strokeStyle = color,
       ctx.lineWidth = 2,
       ctx.globalAlpha = opacity,
-      
       // Wave pattern,
 ctx.beginPath(),
       for (let i = 0, i < 100, i++) {
         const waveX = x + (i - 50) * 2,
         const waveY = y + Math.sin(i * waveFrequency + Date.now() * 0.01) * waveAmplitude,
-        
         if (i === 0) {
           ctx.moveTo(waveX, waveY)
         } else {
           ctx.lineTo(waveX, waveY)
         }      }
       ctx.stroke(),
-      
       ctx.restore()
     },
-
     const drawNeonParticle = (particle: any) => {
       const { x, y, size, color, neonIntensity } = particle,      
       ctx.save(),
-      
       // Neon glow effect,
 ctx.shadowColor = color,
       ctx.shadowBlur = size * 6,
       ctx.fillStyle = color,
       ctx.globalAlpha = neonIntensity,
-      
       // Main particle,
 ctx.beginPath(),
       ctx.arc(x, y, size, 0, Math.PI * 2),
       ctx.fill(),
-      
       // Neon rings,
 for (let i = 1, i <= 3, i++) {
         ctx.globalAlpha = neonIntensity * (1 - i * 0.3),
@@ -542,16 +515,13 @@ for (let i = 1, i <= 3, i++) {
       }      
       ctx.restore()
     },
-
     const drawQuantumParticle = (particle: any) => {
       const { x, y, size, color, quantumState } = particle,      
       ctx.save(),
       ctx.translate(x, y),
-      
       // Quantum uncertainty visualization,
 const uncertainty = Math.sin(quantumState) * 0.5 + 0.5,
       const radius = size * (1 + uncertainty),
-      
       // Probability distribution,
 const gradient = ctx.createRadialGradient(0, 0, 0, 0, 0, radius * 2),
       gradient.addColorStop(0, `${color}80`),
@@ -561,14 +531,12 @@ const gradient = ctx.createRadialGradient(0, 0, 0, 0, 0, radius * 2),
       ctx.beginPath(),
       ctx.arc(0, 0, radius * 2, 0, Math.PI * 2),
       ctx.fill(),
-      
       // Quantum state indicator,
 ctx.strokeStyle = color,
       ctx.lineWidth = 2,
       ctx.beginPath(),
       ctx.arc(0, 0, size, 0, Math.PI * 2),
       ctx.stroke(),
-      
       // Quantum spin,
 const spinAngle = quantumState * 3,
       ctx.beginPath(),
@@ -577,11 +545,9 @@ const spinAngle = quantumState * 3,
       ctx.stroke(),      
       ctx.restore()
     },
-
     // Main animation loop,
 const animate = () => {
       if (prefersReducedMotion) return,
-      
       ctx.clearRect(0, 0, canvas.width, canvas.height),      
       // Update and draw particles,
 particles.forEach(_(particle, index) => {
@@ -591,17 +557,14 @@ particle.x += particle.vx,
         particle.rotation += particle.rotationSpeed,
         particle.quantumState += 0.02,
         particle.life--,
-        
         // Bounce off edges,
 if (particle.x <= 0 || particle.x >= canvas.width) particle.vx *= -1,
         if (particle.y <= 0 || particle.y >= canvas.height) particle.vy *= -1,
-        
         // Wrap around edges,
 if (particle.x < 0) particle.x = canvas.width,
         if (particle.x > canvas.width) particle.x = 0,
         if (particle.y < 0) particle.y = canvas.height,
         if (particle.y > canvas.height) particle.y = 0,
-        
         // Regenerate dead particles,
 if (particle.life <= 0) {
           particle.x = Math.random() * canvas.width,
@@ -609,7 +572,6 @@ if (particle.life <= 0) {
           particle.life = particle.maxLife,
           particle.quantumState = Math.random() * Math.PI * 2
         }
-        
         // Draw based on particle type,
 switch (particle.type) {
           case 'quantum-neon':
@@ -634,7 +596,6 @@ ctx.fillStyle = particle.color,
             ctx.fill()
         }
       }),
-      
       // Add quantum entanglement effects,
 if (theme === 'quantum-neon' || theme === 'quantum') {
         particles.forEach((particle1, i) => {
@@ -676,5 +637,5 @@ if (theme === 'quantum-neon' || theme === 'quantum') {
 ref={canvasRef}
         className=&quot;w-full h-full&quot;
         style={{
-          background: 'transparent'
-          filter: theme === 'neon' ? 'brightness(1.2) contrast(1.1)' : 'none'
+          background: "background",
+    filter: theme === 'neon' ? 'brightness(1.2) contrast(1.1)' : 'none'

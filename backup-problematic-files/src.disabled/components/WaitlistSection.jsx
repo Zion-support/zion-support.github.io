@@ -6,6 +6,6 @@ const WaitlistSection = ({ className }) => {
       <h1>WaitlistSection</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

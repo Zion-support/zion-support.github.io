@@ -24,6 +24,6 @@ const CheckoutPage = ({ className }) => {
       <h1>CheckoutPage</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

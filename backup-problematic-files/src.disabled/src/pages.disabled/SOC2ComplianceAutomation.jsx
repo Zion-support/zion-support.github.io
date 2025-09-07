@@ -6,6 +6,6 @@ const SOC2ComplianceAutomation = ({ className }) => {
       <h1>SOC2ComplianceAutomation</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

@@ -6,6 +6,6 @@ const ProductSubmissionForm.js = ({ className }) => {
       <h1>ProductSubmissionForm.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

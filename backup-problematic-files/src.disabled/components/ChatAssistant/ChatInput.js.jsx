@@ -6,6 +6,6 @@ const ChatInput.js = ({ className }) => {
       <h1>ChatInput.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

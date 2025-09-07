@@ -1,11 +1,10 @@
-
-import { useState } from "react",;
-import { GradientHeading } from "@/components/GradientHeading",;
+import { useState } from "react";
+import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
 import { toast } from "@/components/ui/use-toast",;
-import z from "zod",;
+import z from "z";
 import { Mail } from 'lucide-react';
 ;
 export function ContactSection() {;
@@ -50,8 +49,8 @@ export function ContactSection() {;
       }
       setErrors(fieldErrors),;
       toast({;
-        title:"Form Validation Error",;
-        description:result.error.errors[0]?.message || "Please check your form and try again",;
+        title:"Form Validation Error",,
+  description:result.error.errors[0]?.message || "Please check your form and try again",;
         variant:"destructive"}),;
       return,;
     }
@@ -70,8 +69,8 @@ export function ContactSection() {;
           throw new Error(data.error || "Failed to send message"),;
         }
         toast({;
-          title:"Message Sent",;
-          description:"We've received your message and will get back to you soon."}),;
+          title:"Message Sent",,
+  description:"We've received your message and will get back to you soon."}),;
         setSubmitted(true),;
         setTimeout(() => setSubmitted(false), 2000),;
         setFormData({ name:"", email:"", subject:"", message:"" }),;
@@ -79,8 +78,8 @@ export function ContactSection() {;
       .catch((err) => {;
         setIsSubmitting(false),;
         toast({;
-          title:"Submission Error",;
-          description:err.message,;
+          title:"Submission Error",,
+  description:err.message,;
           variant:"destructive"}),;
       }),;
   },;
@@ -223,15 +222,14 @@ setFormData ( (prev) => ({;
 }) );
 setErrors ( (prev) => ({;
   ...prev, [name]: undefined ;
-}) ) ;
+}) ) 
 };
 const handleSubmit = (e: React.FormEvent) => {;
   e.preventDefault ();
 const schema = z.object ({;
   const result = schema.safeParse (formData);
 if (!result.success) {;
-  const fieldErrors: Record<string string> = {;
-  ;
+  const fieldErrors: Record<string string> = {
 };
 for (const err of result.error.errors) {;
   if (err.path[0]) {;
@@ -247,9 +245,9 @@ setIsSubmitting (true);
 }) .catch ( (err) => {;
   setIsSubmitting (false);
 toast ({;
-  title: "Submission Error";
-description: err.message;
-});
+  title: "Submission Error",
+  description: err.message;
+})
 };";
 }</div> <div> <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1" > Email </label> <Input) ";
 }</div> </div> <div> <label htmlFor="subject" className="block text-sm font-medium text-zion-slate-light mb-1" > Subject </label> <Input) ";

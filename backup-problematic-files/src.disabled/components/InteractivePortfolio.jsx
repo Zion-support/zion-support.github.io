@@ -6,6 +6,6 @@ const InteractivePortfolio = ({ className }) => {
       <h1>InteractivePortfolio</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

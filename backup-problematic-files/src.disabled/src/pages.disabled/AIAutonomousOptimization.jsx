@@ -6,6 +6,6 @@ const AIAutonomousOptimization = ({ className }) => {
       <h1>AIAutonomousOptimization</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

@@ -63,8 +63,8 @@ class: AppHealthMonitor {
       try {'
         const outdated = execSync('npm outdated --json', {'
           "encoding": 'utf8',
-          "cwd": this.projectRoot
-          stdio: 'pipe'
+          "cwd": this.projectRoot;
+    stdio: 'pipe'
         });
         const outdatedDeps = JSON.parse(outdated);
         if (Object.keys(outdatedDeps).length > 0) {

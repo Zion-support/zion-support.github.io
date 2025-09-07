@@ -8,13 +8,6 @@ const fs = // // require('fs');
 const path = // // require('path');
 const { execSync } = // // require('child_process');
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 class TypeScriptErrorFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -38,13 +31,6 @@ class TypeScriptErrorFixer {}
       service: 'typescript-error-fixer'
     };
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     if (level === 'error') {}
       console.error(`[${timestamp}] ERROR: ${message}`, data)} else if (level === 'warn') {`}
       console.warn(`[${timestamp}] WARN: ${message}`, data)} else if (level === 'info') {`}
@@ -68,13 +54,6 @@ class TypeScriptErrorFixer {}
       
       this.log('info', 'TypeScript Error Fixer Service started successfully');
 <<<<<<< HEAD
-<<<<<<< HEAD
-      
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-      
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
       setInterval(async () => {}
         await this.performTypeScriptFixes()}, this.fixInterval)} catch (error) {}
       this.log('error', 'Failed to start TypeScript Error Fixer Service', error);
@@ -184,13 +163,6 @@ class TypeScriptErrorFixer {}
         this.fixesApplied++;
         this.fixedFiles.add(error.file);
 <<<<<<< HEAD
-<<<<<<< HEAD
-        
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-        
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
         this.log('info', `Successfully fixed TypeScript error in: ${error.file}:${error.line}`)} else {`}
         this.fixesSkipped++};
     } catch (error) {}
@@ -222,13 +194,6 @@ class TypeScriptErrorFixer {}
     
     const undefinedName = nameMatch[1];
 <<<<<<< HEAD
-<<<<<<< HEAD
-    
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     // Try to find the name in the file;
     const namePattern = new RegExp(`\\b${undefinedName}\\b`, 'g');
     const matches = line.match(namePattern);
@@ -262,13 +227,6 @@ class TypeScriptErrorFixer {}
     
     const moduleName = moduleMatch[1];
 <<<<<<< HEAD
-<<<<<<< HEAD
-    
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     // Try to fix common module issues;
     if (moduleName.startsWith('@/')) {}
       const fixedModule = moduleName.replace('@/', './src/');
@@ -282,13 +240,6 @@ class TypeScriptErrorFixer {}
     
     const propertyName = propertyMatch[1];
 <<<<<<< HEAD
-<<<<<<< HEAD
-    
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     // Add type assertion;
     if (line.includes('.' + propertyName)) {}
       return line.replace(new RegExp(`\\.${propertyName}`), `['${propertyName}']`)};
@@ -311,13 +262,6 @@ class TypeScriptErrorFixer {}
     let firstUsage = -1;
     let declaration = -1;
 <<<<<<< HEAD
-<<<<<<< HEAD
-    
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     allLines.forEach((line, index) => {}
       if (namePattern.test(line)) {}
         if (firstUsage === -1) firstUsage = index;
@@ -432,10 +376,4 @@ fixer.start().catch(error => {})
   fixer.log('error', 'Failed to start service', error);
   process.exit(1)}
 <<<<<<< HEAD
-<<<<<<< HEAD
 });
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-});
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

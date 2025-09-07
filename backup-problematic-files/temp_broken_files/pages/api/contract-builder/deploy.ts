@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { Interface } from 'ethers',;
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { Interface } from 'ethers';
 ;
 // Simple ABI for demonstration (release/refund);
 const abi = [;
@@ -34,13 +34,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
   }
-
   const { bytecode, constructorArgs } = req.body || {},
-
   if (!bytecode || !constructorArgs) {
     return res.status(400).json({ error: 'bytecode and constructorArgs are required' })
   }
-
   try {
     const iface = new Interface(abi),
     const data = iface.encodeDeploy(constructorArgs),

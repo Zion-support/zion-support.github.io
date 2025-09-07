@@ -6,6 +6,6 @@ const PageLoader = ({ className }) => {
       <h1>PageLoader</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

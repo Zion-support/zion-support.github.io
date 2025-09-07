@@ -8,28 +8,28 @@ import {ShoppingCart,, Users,, BarChart3,, Smartphone,, CheckCircle,, ArrowRight
 const features = [;
   {}
     icon: ShoppingCart,;
-    title: 'E-commerce Platforms,',;
-    description: 'Custom e-commerce solutions that provide seamless shopping experiences across all devices.'',;
+    title: 'E-commerce Platforms,',,
+  description: 'Custom e-commerce solutions that provide seamless shopping experiences across all devices.'',;
   },;
   {}
     icon: Users,;
-    title: 'Customer Analytics,',;
-    description: 'Advanced customer behavior analytics to optimize marketing and improve conversion rates.'',;
+    title: 'Customer Analytics,',,
+  description: 'Advanced customer behavior analytics to optimize marketing and improve conversion rates.'',;
   },;
   {}
     icon: BarChart,;
-    title: 'Inventory Management,',;
-    description: 'Real-time inventory tracking and management systems to optimize stock levels and reduce costs.'',;
+    title: 'Inventory Management,',,
+  description: 'Real-time inventory tracking and management systems to optimize stock levels and reduce costs.'',;
   },;
   {}
     icon: Smartphone,;
-    title: 'Mobile Commerce,',;
-    description: 'Mobile-first shopping experiences with native apps and progressive web applications.'',;
+    title: 'Mobile Commerce,',,
+  description: 'Mobile-first shopping experiences with native apps and progressive web applications.'',;
   },;
   {}
     icon: Package,;
-    title: 'Supply Chain Optimization,',;
-    description: 'End-to-end supply chain visibility and optimization using AI and machine learning.'';
+    title: 'Supply Chain Optimization,',,
+  description: 'End-to-end supply chain visibility and optimization using AI and machine learning.'';
     title: 'E-commerce Platform',
     description: 'Complete online shopping experience with advanced features'
   },
@@ -56,34 +56,34 @@ const features = [;
   {
     icon: ArrowRight,
     title: 'Omnichannel',
-    description: 'Seamless integration across all sales channels'
-    title: 'E-commerce Platform',;
-    description: 'Complete online shopping experience with advanced features';
+    description: "description",
+    title: 'E-commerce Platform',,
+  description: 'Complete online shopping experience with advanced features';
   },;
   {;
     icon: Users,;
-    title: 'Customer Management',;
-    description: 'Comprehensive customer relationship management system';
+    title: 'Customer Management',,
+  description: 'Comprehensive customer relationship management system';
   },;
   {;
     icon: BarChart3,;
-    title: 'Analytics & Insights',;
-    description: 'Advanced analytics for sales, inventory, and customer behavior';
+    title: 'Analytics & Insights',,
+  description: 'Advanced analytics for sales, inventory, and customer behavior';
   },;
   {;
     icon: Smartphone,;
-    title: 'Mobile Commerce',;
-    description: 'Mobile-first shopping experience and mobile app solutions';
+    title: 'Mobile Commerce',,
+  description: 'Mobile-first shopping experience and mobile app solutions';
   },;
   {;
     icon: CheckCircle,;
-    title: 'Inventory Management',;
-    description: 'Real-time inventory tracking and automated reordering';
+    title: 'Inventory Management',,
+  description: 'Real-time inventory tracking and automated reordering';
   },;
   {;
     icon: ArrowRight,;
-    title: 'Omnichannel',;
-    description: 'Seamless integration across all sales channels';
+    title: 'Omnichannel',,
+  description: 'Seamless integration across all sales channels';
   }
 ;];
 const solutions = [;
@@ -165,8 +165,8 @@ const benefits = [;
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
     icon: ArrowRight,;
-    title: 'Omnichannel',;
-    description: 'Seamless integration across all sales channels';
+    title: 'Omnichannel',,
+  description: 'Seamless integration across all sales channels';
   }
 ;];
 const solutions = [;
@@ -355,7 +355,6 @@ export default function RetailSolutions() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -467,7 +466,6 @@ export default function RetailSolutions() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

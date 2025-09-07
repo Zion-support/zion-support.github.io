@@ -6,6 +6,6 @@ const ChatAssistantTrigger = ({ className }) => {
       <h1>ChatAssistantTrigger</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

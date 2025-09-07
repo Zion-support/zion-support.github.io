@@ -24,6 +24,6 @@ const AppTestimonials = ({ className }) => {
       <h1>AppTestimonials</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

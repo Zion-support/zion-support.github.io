@@ -6,6 +6,6 @@ const Index.js = ({ className }) => {
       <h1>Index.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

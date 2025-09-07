@@ -6,6 +6,6 @@ const Textarea = ({ className }) => {
       <h1>Textarea</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

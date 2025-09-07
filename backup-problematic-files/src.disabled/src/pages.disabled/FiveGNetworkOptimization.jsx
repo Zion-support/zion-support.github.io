@@ -6,6 +6,6 @@ const FiveGNetworkOptimization = ({ className }) => {
       <h1>FiveGNetworkOptimization</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

@@ -6,6 +6,6 @@ const GovernmentSolutions = ({ className }) => {
       <h1>GovernmentSolutions</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

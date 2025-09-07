@@ -6,6 +6,6 @@ const InstallPrompt = ({ className }) => {
       <h1>InstallPrompt</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

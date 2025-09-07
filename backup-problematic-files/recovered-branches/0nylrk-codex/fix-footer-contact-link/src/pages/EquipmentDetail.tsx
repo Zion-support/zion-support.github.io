@@ -1,6 +1,5 @@
-
-import { useState } from "react",;
-import { useParams } from "react-router-dom",;
+import { useState } from "react";
+import { useParams } from "react-router-dom";
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { Badge } from "@/components/ui/badge",;
@@ -16,7 +15,7 @@ interface EquipmentSpecification {;
 ;
 interface EquipmentDetails {;
   id:string,;
-  name:string,;
+  name:string,,
   description:string,;
   brand:string,;
   category:string,;
@@ -38,8 +37,8 @@ interface EquipmentDetails {;
 const SAMPLE_EQUIPMENT:{ [key:string]:EquipmentDetails } = {;
   "pro-camera-x1000":{;
     id:"pro-camera-x1000",;
-    name:"Pro Camera X1000",;
-    description:"Professional-grade cinema camera with 8K resolution, advanced color science, and exceptional low-light window.window.window.performance. Designed for feature films, high-end commercials, and documentary production. Includes comprehensive shooting modes, customizable settings, and industry-leading dynamic range.",;
+    name:"Pro Camera X1000",,
+  description:"Professional-grade cinema camera with 8K resolution, advanced color science, and exceptional low-light window.window.window.performance. Designed for feature films, high-end commercials, and documentary production. Includes comprehensive shooting modes, customizable settings, and industry-leading dynamic range.",;
     brand:"CineTech",;
     category:"Equipment",;
     subcategory:"Cameras",;
@@ -83,8 +82,8 @@ const SAMPLE_EQUIPMENT:{ [key:string]:EquipmentDetails } = {;
   },;
   "audio-mixer-pro":{;
     id:"audio-mixer-pro",;
-    name:"AudioMixer Pro Digital Mixing Console",;
-    description:"Professional digital mixing console designed for studio recording, live sound mixing, and post-production applications. Features 32 channels, premium preamps, extensive routing options, and intuitive control interface.",;
+    name:"AudioMixer Pro Digital Mixing Console",,
+  description:"Professional digital mixing console designed for studio recording, live sound mixing, and post-production applications. Features 32 channels, premium preamps, extensive routing options, and intuitive control interface.",;
     brand:"AudioTech",;
     category:"Equipment",;
     subcategory:"Audio",;
@@ -158,8 +157,8 @@ export default function EquipmentDetail() {;
     setTimeout(() => {;
       setIsAdding(false),;
       toast({;
-        title:"Added to cart",;
-        description:`${quantity}x ${equipment.name} added to your cart.`}),;
+        title:"Added to cart",,
+  description:`${quantity}x ${equipment.name} added to your cart.`}),;
     }, 800),;
   },;
 ;
@@ -170,8 +169,8 @@ export default function EquipmentDetail() {;
     setTimeout(() => {;
       setIsAdding(false),;
       toast({;
-        title:"Proceeding to checkout",;
-        description:`Preparing your order for ${equipment.name}.`}),;
+        title:"Proceeding to checkout",,
+  description:`Preparing your order for ${equipment.name}.`}),;
     }, 800),;
   },;
 ;
@@ -419,8 +418,8 @@ export default function EquipmentDetail() {;
 value: string 
 }interface EquipmentDetails {
   id: string;
-name: string;
-description: string;
+name: string,
+  description: string;
 brand: string;
 category: string;
 subcategory?: string;
@@ -505,9 +504,9 @@ returnPolicy: "21-day return policy for items in original condition"
 };
 if (!equipment) {
   return (<> <Header /> <div className="min-h-screen bg-zion-blue py-12 px-4" > <div className="container mx-auto" > <div className="text-center py-20" > <h1 className="text-3xl font-bold text-white mb-4" >Equipment Not Found</h1> <p className="text-zion-slate-light mb-8" >The equipment you're looking for doesn't exist or has been removed.</p> </div> </div> </div> <Footer /> </> 
-}, 800);
+}, 800)
 };
-}, 800);
+}, 800)
 };
 }</div>) 
 }</div> Description </TabsTrigger> <TabsTrigger value="specifications" className="py-3 data-[state=active]:bg-zion-purple/10" > Specifications </TabsTrigger> <TabsTrigger value="features" className="py-3 data-[state=active]:bg-zion-purple/10" > Features </TabsTrigger> </TabsList> </p> </div> </TabsContent> </div> </div>) ) 

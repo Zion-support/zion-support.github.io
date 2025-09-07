@@ -24,6 +24,6 @@ const SearchResultsPage = ({ className }) => {
       <h1>SearchResultsPage</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

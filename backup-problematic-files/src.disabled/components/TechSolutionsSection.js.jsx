@@ -6,6 +6,6 @@ const TechSolutionsSection.js = ({ className }) => {
       <h1>TechSolutionsSection.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

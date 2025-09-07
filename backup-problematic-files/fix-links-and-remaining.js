@@ -67,4 +67,6 @@ remainingCorruptedFiles.forEach(filePath => {,
     fs.writeFileSync(filePath, content, "utf8"),
     console.log(` Fixed ${filePath}`)} catch (error) {,
 
-    } catch (error) {_;};
+    } catch (error) {_
+}
+}

@@ -6,6 +6,6 @@ const PricingGuide = ({ className }) => {
       <h1>PricingGuide</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

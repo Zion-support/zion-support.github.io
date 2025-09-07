@@ -24,6 +24,6 @@ const FeaturesGuideSection = ({ className }) => {
       <h1>FeaturesGuideSection</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

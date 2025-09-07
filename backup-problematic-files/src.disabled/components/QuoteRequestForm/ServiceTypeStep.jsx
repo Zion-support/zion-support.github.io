@@ -6,6 +6,6 @@ const ServiceTypeStep = ({ className }) => {
       <h1>ServiceTypeStep</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

@@ -1,6 +1,5 @@
-
-import React, { useState, useRef, useEffect } from "react",;
-import { Button } from "@/components/ui/button",;
+import React, { useState, useRef, useEffect } from "react";
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input",;
 import { ScrollArea } from "@/components/ui/scroll-area",;
 import { Separator } from "@/components/ui/separator",;
@@ -93,8 +92,8 @@ export function ChatBotPanel() {;
       console.error("Error in AI chat:", error),;
       toast({;
         variant:"destructive",;
-        title:"Communication Error",;
-        description:"We're having trouble connecting to our support service."}),;
+        title:"Communication Error",,
+  description:"We're having trouble connecting to our support service."}),;
       ;
       setFailedAttempts((prev) => prev + 1),;
       if (failedAttempts >= 2) {;
@@ -189,8 +188,8 @@ export function ChatBotPanel() {;
     ;
     // In a real implementation, this would trigger a live chat request;
     toast({;
-      title:"Support request submitted",;
-      description:"A support agent will be with you shortly."}),;
+      title:"Support request submitted",,
+  description:"A support agent will be with you shortly."}),;
   },;
 ;
   const handleEmailSupport = () => {;
@@ -345,7 +344,6 @@ headers: {
   "Content-Type" : "application/json" 
 };
 body: JSON.stringify ({
-  
 }) 
 });
 }const data = await response.json ();
@@ -354,7 +352,6 @@ return {
 message: data.message 
 }
 }catch (error) {
-  
 }
 };
 const suggestEscalation = () => {
@@ -373,7 +370,6 @@ timestamp: m.timestamp
 }) ) 
 }) 
 }catch (error) {
-  
 }
 };
 const handleQuickReply = (text: string) => {
@@ -390,7 +386,7 @@ timestamp: new Date ()
 timestamp: new Date () 
 }]);
 //In a real implementation, this would trigger a live chat request 
-};
+}
 };
 timestamp: new Date () 
 }]) 

@@ -65,7 +65,7 @@ import { useState } from 'react';
 import { useState } from 'react';
 interface OptimizedImageProps {;
   "src": string;
-  al
+  al;
     t: string;
   width?: number;
   height?: number;

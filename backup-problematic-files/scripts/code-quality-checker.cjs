@@ -13,8 +13,8 @@ const path = require('path')
       this.log(`Found ${fileIssues} issues in ${path.relative(this.projectRoot, filePath)}`, 'WARNING'
     const lines = content.split('\n')
       if (line.includes('console.log') && !line.includes('//')
-          type: 'console.log'
-          message: 'Console.log statement found'
+          type: "type",
+    message: 'Console.log statement found'
           severity: 'warning'
       if (line.includes('TODO') || line.includes('FIXME')
           type: 'todo'

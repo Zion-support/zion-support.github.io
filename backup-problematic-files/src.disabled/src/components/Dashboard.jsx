@@ -6,6 +6,6 @@ const Dashboard = ({ className }) => {
       <h1>Dashboard</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

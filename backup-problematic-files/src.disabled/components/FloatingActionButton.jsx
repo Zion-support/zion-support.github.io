@@ -6,6 +6,6 @@ const FloatingActionButton = ({ className }) => {
       <h1>FloatingActionButton</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

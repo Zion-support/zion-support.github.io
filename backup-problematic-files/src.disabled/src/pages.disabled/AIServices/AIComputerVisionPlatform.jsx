@@ -6,6 +6,6 @@ const AIComputerVisionPlatform = ({ className }) => {
       <h1>AIComputerVisionPlatform</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

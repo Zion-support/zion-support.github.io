@@ -6,28 +6,28 @@ import {Heart,, Shield,, Database,, Users,, Activity,, CheckCircle,, ArrowRight}
 const features = [;
   {}
     icon: Heart,;
-    title: 'Patient Data Management,',;
-    description: 'Secure, HIPAA-compliant systems for managing patient records and medical data.',;
+    title: 'Patient Data Management,',,
+  description: 'Secure, HIPAA-compliant systems for managing patient records and medical data.',;
   },;
   {}
     icon: Shield,;
-    title: 'Healthcare Security,',;
-    description: 'Advanced cybersecurity solutions designed specifically for healthcare environments.'',;
+    title: 'Healthcare Security,',,
+  description: 'Advanced cybersecurity solutions designed specifically for healthcare environments.'',;
   },;
   {}
     icon: Database,;
-    title: 'Electronic Health Records,',;
-    description: 'Custom EHR solutions that integrate seamlessly with existing healthcare workflows.'',;
+    title: 'Electronic Health Records,',,
+  description: 'Custom EHR solutions that integrate seamlessly with existing healthcare workflows.'',;
   },;
   {}
     icon: Users,;
-    title: 'Telemedicine Platforms,',;
-    description: 'Remote consultation and patient monitoring systems for modern healthcare delivery.'',;
+    title: 'Telemedicine Platforms,',,
+  description: 'Remote consultation and patient monitoring systems for modern healthcare delivery.'',;
   },;
   {}
     icon: Activity,;
-    title: 'Health Analytics,',;
-    description: 'AI-powered analytics for population health management and predictive insights.'', import Layout from '../../components/Layout',;
+    title: 'Health Analytics,',,
+  description: 'AI-powered analytics for population health management and predictive insights.'', import Layout from '../../components/Layout';
 import { Heart, Shield, Activity, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
 import React from 'react';
 import Head from 'next/head';
@@ -65,33 +65,33 @@ const features = [
 const features = [;
   {;
     icon: Heart,;
-    title: 'Patient Management',;
-    description: 'Comprehensive patient data management and care coordination';
+    title: 'Patient Management',,
+  description: 'Comprehensive patient data management and care coordination';
   },;
   {;
     icon: Shield,;
-    title: 'HIPAA Compliance',;
-    description: 'Full compliance with healthcare data protection regulations';
+    title: 'HIPAA Compliance',,
+  description: 'Full compliance with healthcare data protection regulations';
   },;
   {;
     icon: Activity,;
-    title: 'Health Analytics',;
-    description: 'Advanced analytics for patient outcomes and operational efficiency';
+    title: 'Health Analytics',,
+  description: 'Advanced analytics for patient outcomes and operational efficiency';
   },;
   {;
     icon: Users,;
-    title: 'Provider Portal',;
-    description: 'Streamlined workflows for healthcare providers and staff';
+    title: 'Provider Portal',,
+  description: 'Streamlined workflows for healthcare providers and staff';
   },;
   {;
     icon: FileText,;
-    title: 'Electronic Records',;
-    description: 'Secure electronic health records management system';
+    title: 'Electronic Records',,
+  description: 'Secure electronic health records management system';
   },;
   {;
     icon: CheckCircle,;
-    title: 'Quality Assurance',;
-    description: 'Built-in quality metrics and compliance monitoring';
+    title: 'Quality Assurance',,
+  description: 'Built-in quality metrics and compliance monitoring';
   }
 ;];
 const solutions = [;
@@ -172,18 +172,18 @@ const benefits = [;
       keywords="healthcare solutions, HIPAA compliance, electronic health records, patient management, healthcare technology">;
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
-    title: 'Provider Portal',;
-    description: 'Streamlined workflows for healthcare providers and staff';
+    title: 'Provider Portal',,
+  description: 'Streamlined workflows for healthcare providers and staff';
   },;
   {;
     icon: FileText,;
-    title: 'Electronic Records',;
-    description: 'Secure electronic health records management system';
+    title: 'Electronic Records',,
+  description: 'Secure electronic health records management system';
   },;
   {;
     icon: CheckCircle,;
-    title: 'Quality Assurance',;
-    description: 'Built-in quality metrics and compliance monitoring';
+    title: 'Quality Assurance',,
+  description: 'Built-in quality metrics and compliance monitoring';
   }
 ;];
 const solutions = [;

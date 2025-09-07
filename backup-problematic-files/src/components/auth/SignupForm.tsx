@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react',;
-import { useForm } from 'react-hook-form',;
+import React, { useState, useEffect } from 'react';
+import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod',;
 import { z } from 'zod',;
 import { Button } from '@/components/ui/button',;
@@ -204,8 +204,8 @@ export default function SignupForm({ onSuccess, onError } SignupFormProps) {;
 ;
       // Success;
       toast({;
-        title:"Account Created Successfully!",;
-        description:result.emailVerificationRequired ;
+        title:"Account Created Successfully!",,
+  description:result.emailVerificationRequired ;
           ? "Please check your email to verify your account before logging in.";
           :"You can now log in to your account."}),;
 ;
@@ -224,8 +224,8 @@ export default function SignupForm({ onSuccess, onError } SignupFormProps) {;
       onError?.(errorMessage),;
 ;
       toast({;
-        title:"Signup Failed",;
-        description:errorMessage,;
+        title:"Signup Failed",,
+  description:errorMessage,;
         variant:"destructive"}),;
     } finally {;
       setIsSubmitting(false),;
@@ -432,7 +432,7 @@ export default function SignupForm({ onSuccess, onError } SignupFormProps) {;
     </form>;
   ),; const {;
   register, handleSubmit, formState: {;
-  errors,  isValid, touchedFields ;
+  errors,  isValid, touchedFields 
 };
 setError;
 reset;
@@ -445,11 +445,11 @@ if (state?.isValidating) {;
   return <CheckCircle className="h-4 w-4 text-green-500" />;
 }if (state?.error) {";
   return <AlertCircle className="h-4 w-4 text-red-500" />;
-}return null;
+}return null
 };
 if (!isTouched) return '';
 if (state?.isValidating) {';
-  return '' ;
+  return '' 
 };
 password.length >= 8;
 /[A-Z]/.test (password);

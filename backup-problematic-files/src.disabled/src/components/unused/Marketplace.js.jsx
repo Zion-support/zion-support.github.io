@@ -6,6 +6,6 @@ const Marketplace.js = ({ className }) => {
       <h1>Marketplace.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

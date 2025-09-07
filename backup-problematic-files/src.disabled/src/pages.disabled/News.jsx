@@ -6,6 +6,6 @@ const News = ({ className }) => {
       <h1>News</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

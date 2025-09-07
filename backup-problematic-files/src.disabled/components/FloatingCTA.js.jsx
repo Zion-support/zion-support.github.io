@@ -6,6 +6,6 @@ const FloatingCTA.js = ({ className }) => {
       <h1>FloatingCTA.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

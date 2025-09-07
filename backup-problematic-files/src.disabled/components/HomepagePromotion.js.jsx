@@ -6,6 +6,6 @@ const HomepagePromotion.js = ({ className }) => {
       <h1>HomepagePromotion.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

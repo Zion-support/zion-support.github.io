@@ -6,6 +6,6 @@ const TalentSkeleton.js = ({ className }) => {
       <h1>TalentSkeleton.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

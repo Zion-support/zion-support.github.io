@@ -6,6 +6,6 @@ const Payments = ({ className }) => {
       <h1>Payments</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

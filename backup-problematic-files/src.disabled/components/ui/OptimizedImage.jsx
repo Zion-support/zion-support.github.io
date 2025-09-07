@@ -6,6 +6,6 @@ const OptimizedImage = ({ className }) => {
       <h1>OptimizedImage</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

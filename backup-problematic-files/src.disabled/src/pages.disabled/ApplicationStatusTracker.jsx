@@ -6,6 +6,6 @@ const ApplicationStatusTracker = ({ className }) => {
       <h1>ApplicationStatusTracker</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

@@ -243,7 +243,7 @@ class AutomationDashboard {;
     const report = {
   "timestamp": new Date().toISOString()
       summary: {
-        totalProcesse
+        totalProcesse;
     s: this && this.processes.length
         onlineProcesses: this && this.processes.filter(p => p && p.pm2_env.status ===
   online').length

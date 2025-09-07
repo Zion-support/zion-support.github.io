@@ -6,6 +6,6 @@ const AIAutonomousVirtualAssistant = ({ className }) => {
       <h1>AIAutonomousVirtualAssistant</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

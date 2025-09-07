@@ -1,5 +1,5 @@
-import fs from 'fs',;
-import path from 'path',;
+import fs from 'fs';
+import path from 'path';
 import type { GetStaticProps } from 'next',;
 interface Report {;
   generatedAt: string,;
@@ -20,7 +20,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {;
     return { props: { report: null }, revalidate: 3600 }
   }
 },
-
 export default function RepoHealth({ report }: Props) {
   if (!report) return <div>No report yet. Check back soon.</div>,
   return (

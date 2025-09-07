@@ -1,8 +1,8 @@
-import React from 'react',;
-import Head from 'next/head',;
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',;
-import Card from '../components/ui/Card',;
-import Link from 'next/link',;
+import React from 'react';
+import Head from 'next/head';
+import UltraFuturisticBackground from "UltraFuturisticBackground";
+import Card from "Card";
+import Link from "Link";
 ;
 export default function DocsPage() {;
 	return (;

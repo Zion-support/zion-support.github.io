@@ -6,6 +6,6 @@ const BackToTopButton = ({ className }) => {
       <h1>BackToTopButton</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

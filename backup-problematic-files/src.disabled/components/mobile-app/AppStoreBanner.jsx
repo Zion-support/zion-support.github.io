@@ -24,6 +24,6 @@ const AppStoreBanner = ({ className }) => {
       <h1>AppStoreBanner</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

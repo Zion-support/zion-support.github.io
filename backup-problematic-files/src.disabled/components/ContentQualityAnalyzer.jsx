@@ -6,6 +6,6 @@ const ContentQualityAnalyzer = ({ className }) => {
       <h1>ContentQualityAnalyzer</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

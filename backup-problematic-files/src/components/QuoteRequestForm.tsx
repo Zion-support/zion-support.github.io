@@ -1,6 +1,5 @@
-
-import { useState } from "react",;
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger',;
+import { useState } from "react";
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
 import { useToast } from "@/hooks/use-toast",;
 import { useRouter } from 'next/router',;
 import { Button } from "@/components/ui/button",;
@@ -67,8 +66,8 @@ export function QuoteRequestForm() {;
           specificItem:formData.specificItem}),;
         if (!result.success) {;
           toast({;
-            title:"Service Required",;
-            description:"Please select a service before continuing.",;
+            title:"Service Required",,
+  description:"Please select a service before continuing.",;
             variant:"destructive"}),;
           return,;
         }
@@ -117,15 +116,15 @@ export function QuoteRequestForm() {;
       await new Promise(resolve => setTimeout(resolve, 1500)),;
       ;
       toast({;
-        title:"Quote Request Submitted",;
-        description:"We've received your request and will get back to you soon."}),;
+        title:"Quote Request Submitted",,
+  description:"We've received your request and will get back to you soon."}),;
       ;
       // Redirect to confirmation page or homepage;
       router.push("/"),;
     } catch (error) {;
       toast({;
-        title:"Submission Failed",;
-        description:"There was an error submitting your request. Please try again.",;
+        title:"Submission Failed",,
+  description:"There was an error submitting your request. Please try again.",;
         variant:"destructive"}),;
     } finally {;
       setIsSubmitting(false),;
@@ -154,8 +153,8 @@ export function QuoteRequestForm() {;
     } catch (err) {;
       logErrorToProduction("Auto-fill API error", err as Error, { component:'QuoteRequestForm', projectDescription:description }),;
       toast({;
-        title:"Auto-fill Failed",;
-        description:"We couldn't process your request. Please try again.",;
+        title:"Auto-fill Failed",,
+  description:"We couldn't process your request. Please try again.",;
         variant:"destructive"}),;
     } finally {;
       setAutoFillLoading(false),;

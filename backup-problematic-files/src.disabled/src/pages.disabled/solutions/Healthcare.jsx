@@ -6,6 +6,6 @@ const Healthcare = ({ className }) => {
       <h1>Healthcare</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

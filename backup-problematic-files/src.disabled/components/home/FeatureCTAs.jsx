@@ -24,6 +24,6 @@ const FeatureCTAs = ({ className }) => {
       <h1>FeatureCTAs</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

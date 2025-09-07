@@ -6,6 +6,6 @@ const ContactInfo = ({ className }) => {
       <h1>ContactInfo</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

@@ -6,6 +6,6 @@ const RetailSolutions = ({ className }) => {
       <h1>RetailSolutions</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

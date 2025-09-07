@@ -6,6 +6,6 @@ const AdvancedPerformanceMonitor.js = ({ className }) => {
       <h1>AdvancedPerformanceMonitor.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

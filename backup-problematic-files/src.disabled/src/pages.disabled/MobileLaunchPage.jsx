@@ -6,6 +6,6 @@ const MobileLaunchPage = ({ className }) => {
       <h1>MobileLaunchPage</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

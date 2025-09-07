@@ -1,5 +1,5 @@
-import React, { useState } from "react",;
-import { MessageCircle } from "lucide-react",;
+import React, { useState } from "react";
+import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
@@ -168,7 +168,7 @@ body: newBody
 ...posts]);
 setNewTitle ("");
 setNewBody ("");
-setShowNew (false);
+setShowNew (false)
 };
   newTitle 
 }onChange= {
@@ -187,4 +187,5 @@ setShowNew (false);
   post.body 
 }</p> </div> </CardContent> </Card>) ) 
 }</div> <div className="mt-8 text-xs text-zion-slate-dark text-center">  Stay engaged! Top contributors are regularly featured on the homepage. </div> </div>) 
-};
+}
+}

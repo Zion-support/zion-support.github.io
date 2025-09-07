@@ -6,6 +6,6 @@ const WhitelabelContext = ({ className }) => {
       <h1>WhitelabelContext</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

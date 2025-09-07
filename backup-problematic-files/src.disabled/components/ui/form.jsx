@@ -6,6 +6,6 @@ const Form = ({ className }) => {
       <h1>Form</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

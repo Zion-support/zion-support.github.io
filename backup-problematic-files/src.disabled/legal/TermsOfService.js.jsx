@@ -6,6 +6,6 @@ const TermsOfService.js = ({ className }) => {
       <h1>TermsOfService.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

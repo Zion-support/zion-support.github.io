@@ -32,7 +32,7 @@ import Layout from '../../components/Layout';';
     icon: Settings,
     href: '/industries/manufacturing',
     features: ['IoT Integration', 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],
-    color: 'from-blue-500 to-cyan-500'
+    color: "color",
     href: '/industries/manufacturing,',
     features: ['IoT Integration, 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],',
     color: 'from-blue-500 to-cyan-500'';
@@ -74,8 +74,8 @@ import SimpleLayout from '../../components/SimpleLayout';
 import Layout from '../../components/Layout';';
 const industries = [;
   {;
-    name: 'Healthcare',;
-    description: 'Transform healthcare delivery with AI-powered diagnostics, telemedicine platforms, and patient management systems.',;
+    name: 'Healthcare',,
+  description: 'Transform healthcare delivery with AI-powered diagnostics, telemedicine platforms, and patient management systems.',;
     icon: Heart,;
     href: '/industries/healthcare',;
     features: ['AI Diagnostics', 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],;
@@ -85,8 +85,8 @@ const industries = [;
     color: 'from-red-500 to-pink-500'',;
   },;
   {;
-    name: 'Finance',;
-    description: 'Secure financial services with blockchain technology, fraud detection, and automated trading systems.',;
+    name: 'Finance',,
+  description: 'Secure financial services with blockchain technology, fraud detection, and automated trading systems.',;
     icon: DollarSign,;
     href: '/industries/finance',;
     features: ['Blockchain Solutions', 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],;
@@ -102,8 +102,8 @@ const industries = [;
     color: 'from-green-500 to-emerald-500'',;
   },;
   {;
-    name: 'Manufacturing',;
-    description: 'Optimize production with IoT sensors, predictive maintenance, and smart factory solutions.',;
+    name: 'Manufacturing',,
+  description: 'Optimize production with IoT sensors, predictive maintenance, and smart factory solutions.',;
     icon: Settings,;
     href: '/industries/manufacturing',;
     features: ['IoT Integration', 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],;
@@ -119,8 +119,8 @@ const industries = [;
     color: 'from-blue-500 to-cyan-500'',;
   },;
   {;
-    name: 'Retail',;
-    description: 'Enhance customer experience with personalized recommendations, inventory management, and omnichannel solutions.',;
+    name: 'Retail',,
+  description: 'Enhance customer experience with personalized recommendations, inventory management, and omnichannel solutions.',;
     icon: ShoppingCart,;
     href: '/industries/retail',;
     features: ['Personalization', 'Inventory Management', 'Omnichannel', 'Customer Analytics'],;
@@ -136,8 +136,8 @@ const industries = [;
     color: 'from-purple-500 to-violet-500'',;
   },;
   {;
-    name: 'Education',;
-    description: 'Revolutionize learning with AI tutoring, virtual classrooms, and personalized education platforms.',;
+    name: 'Education',,
+  description: 'Revolutionize learning with AI tutoring, virtual classrooms, and personalized education platforms.',;
     icon: BookOpen,;
     href: '/industries/education',;
     features: ['AI Tutoring', 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],;
@@ -153,8 +153,8 @@ const industries = [;
     color: 'from-orange-500 to-yellow-500'',;
   },;
   {;
-    name: 'Government',;
-    description: 'Modernize public services with secure citizen portals, data analytics, and digital transformation.',;
+    name: 'Government',,
+  description: 'Modernize public services with secure citizen portals, data analytics, and digital transformation.',;
     icon: Building,;
     href: '/industries/government',;
     features: ['Citizen Portals', 'Data Analytics', 'Digital Services', 'Security Compliance'],;
@@ -175,7 +175,6 @@ const stats = [;
     color: 'from-gray-500 to-slate-500'',;
   }
 ;];
-
 const stats = [;
   { number: '500+, label: 'Industry Projects' },',;
   { number: '50+, label: 'Fortune 500 Clients' },',;
@@ -449,11 +448,9 @@ import Layout from '../../components/Layout';
                     <div className="text-blue-400 mb-6 group-hover:text-blue-300 transition-colors">
                       <IconComponent className="w-12 h-12" />
                     </div>
-                    
                     <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-300 transition-colors">
                       {industry.title}
                     </h3>
-                    
                     <p className="text-gray-300 mb-6 leading-relaxed">
                       {industry.description}
                     </p>
@@ -507,7 +504,6 @@ import Layout from '../../components/Layout';
                         </div>
                       ))}
                     </div>
-                    
                     <Link href={industry.href}>
                       <a className="inline-flex items-center text-blue-400 hover:text-blue-300 font-semibold group-hover:text-blue-200 transition-colors">
                         Learn More
@@ -739,7 +735,6 @@ import Layout from '../../components/Layout';
             </div>;
           </div>;
         </section>;
-
         {/* CTA Section */}
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">";

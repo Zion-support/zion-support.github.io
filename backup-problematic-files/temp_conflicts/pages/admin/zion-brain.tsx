@@ -1,6 +1,6 @@
-import { useEffect, useMemo, useState } from 'react',;
-import Head from 'next/head',;
-import EnhancedNavigation from '@/components/layout/EnhancedNavigation',;
+import { useEffect, useMemo, useState } from 'react';
+import Head from 'next/head';
+import EnhancedNavigation from "EnhancedNavigation";
 ;
 type LogsSummary = { entries:any[], byModule:Record<string number>, byType:Record<string number>, total:number },;
 ;

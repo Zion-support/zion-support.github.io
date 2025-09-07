@@ -6,6 +6,6 @@ const CaseStudiesSection.js = ({ className }) => {
       <h1>CaseStudiesSection.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

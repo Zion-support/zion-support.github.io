@@ -6,6 +6,6 @@ const ApiPlayground.js = ({ className }) => {
       <h1>ApiPlayground.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

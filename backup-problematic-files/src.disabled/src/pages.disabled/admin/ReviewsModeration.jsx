@@ -24,6 +24,6 @@ const ReviewsModeration = ({ className }) => {
       <h1>ReviewsModeration</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

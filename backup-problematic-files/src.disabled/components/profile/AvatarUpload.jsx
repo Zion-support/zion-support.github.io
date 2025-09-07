@@ -6,6 +6,6 @@ const AvatarUpload = ({ className }) => {
       <h1>AvatarUpload</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

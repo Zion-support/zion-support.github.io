@@ -1,5 +1,5 @@
-import Link from "next/link",;
-import { useRouter } from "next/router",;
+import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react",;
 import { cn } from "@/lib/utils",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -292,32 +292,32 @@ const handleCartClick = (e: React.MouseEvent) => {;
   e.preventDefault ();
 setLoginOpen (true);
 return ;
-}setIsMobileMenuOpen (false) ;
+}setIsMobileMenuOpen (false) 
 };';
 const baseLinks = [ {';';
   key: 'home';';';
 href: '/';';';
-matches: (path: string) => path === '/' ;
+matches: (path: string) => path === '/' 
 };';
 {';';
   key: 'marketplace';';';
 href: '/marketplace';';';
-matches: (path: string) => path.startsWith ('/marketplace') ;
+matches: (path: string) => path.startsWith ('/marketplace') 
 };';
 {';';
   key: 'categories';';';
 href: '/categories';';';
-matches: (path: string) => path.startsWith ('/categories') ;
+matches: (path: string) => path.startsWith ('/categories') 
 };';
 {';';
   key: 'talent';';';
 href: '/talent';';';
-matches: (path: string) => path.startsWith ('/talent') && !path.includes ('/talent-dashboard') ;
+matches: (path: string) => path.startsWith ('/talent') && !path.includes ('/talent-dashboard') 
 };';
 {';';
   key: 'equipment';';';
 href: '/equipment';';';
-matches: (path: string) => path.startsWith ('/equipment') ;
+matches: (path: string) => path.startsWith ('/equipment') 
 };';
 {';';
   key: 'community';';';

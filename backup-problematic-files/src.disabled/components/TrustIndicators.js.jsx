@@ -6,6 +6,6 @@ const TrustIndicators.js = ({ className }) => {
       <h1>TrustIndicators.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

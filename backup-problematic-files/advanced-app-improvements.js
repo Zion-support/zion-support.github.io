@@ -1,4 +1,4 @@
-  addCheck(name, checkFunction) {
+addCheck(name, checkFunction) {
     this && this.checks.set(name, checkFunction);
   }
   async runAllChecks() {
@@ -97,8 +97,8 @@ export class HealthChecker {
       error => new Date(error.timestamp) > new Date(Date.now() - 24 * 60 * 60 * 1000);
     );
         return {      timestamp: new Date().toISOString()
-      context
-      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'
+      context;
+    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'
       url: typeof window !== 'undefined' ? window.location.href : 'unknown'
     }
     this.errors.push(errorInfo);
@@ -280,7 +280,6 @@ export class AnalyticsTracker {
   }
   track(event, properties = {}) {
     const eventData = {
-
     // Send to analytics service (implement as needed)
     this && this.sendToAnalytics(eventData);
   }
@@ -297,7 +296,6 @@ export class AnalyticsTracker {
     this.connections = [];
     this.availableConnections = [];
     this.usedConnections = new Set();
-
   }
     this.connections = [];
     this.available_connections = [];
@@ -394,7 +392,6 @@ export const connectionPool = new ConnectionPool();`
   }
 }
 main();// Run if called directly
-
 }
 }
 }

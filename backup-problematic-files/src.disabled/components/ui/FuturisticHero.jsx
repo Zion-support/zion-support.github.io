@@ -6,6 +6,6 @@ const FuturisticHero = ({ className }) => {
       <h1>FuturisticHero</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

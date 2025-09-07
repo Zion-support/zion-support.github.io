@@ -6,6 +6,6 @@ const API = ({ className }) => {
       <h1>API</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

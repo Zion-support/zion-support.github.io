@@ -6,6 +6,6 @@ const IndustrySolutions = ({ className }) => {
       <h1>IndustrySolutions</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

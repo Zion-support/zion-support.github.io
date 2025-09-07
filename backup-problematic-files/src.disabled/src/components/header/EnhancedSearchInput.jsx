@@ -6,6 +6,6 @@ const EnhancedSearchInput = ({ className }) => {
       <h1>EnhancedSearchInput</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

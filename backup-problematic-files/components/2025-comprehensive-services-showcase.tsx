@@ -1,5 +1,5 @@
-import React, { useState } from 'react',;
-import SEO from '../components/SEO',;
+import React, { useState } from 'react';
+import SEO from '../components/SEO';
 import { motion } from 'framer-motion',;
 import {;
   Brain, Building, Target, Cpu, Shield,;
@@ -336,7 +336,6 @@ const allServices = [;
                             <span className="text-sm font-medium">Popular</span>
                           </div>
                         )}
-
                         {/* Price and Features */}
                         <div className="lg:w-1/3">;
                           <div className="text-right mb-4">;

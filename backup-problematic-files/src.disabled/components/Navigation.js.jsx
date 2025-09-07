@@ -6,6 +6,6 @@ const Navigation.js = ({ className }) => {
       <h1>Navigation.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

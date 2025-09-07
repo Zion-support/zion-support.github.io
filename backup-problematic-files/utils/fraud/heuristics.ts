@@ -1,22 +1,16 @@
 function containsSuspiciousPhrase(text: string): string[] {
-
   const lower = text && text.toLowerCase();
   return suspiciousPhrases && suspiciousPhrases.filter(p => lower && lower.includes(p));
-
-
 function containsVagueJobClaims(text: string): string[] {
   const lower = text && text.toLowerCase();
   const reasons: string[] = [];
-  
   vagueScammyJobPhrases.forEach(phrase => {
     if (lower.includes(phrase)) {
       reasons.push(`vague_job_claim:"${phrase}"`);
     }
   });
-  
   return reasons;
 }
-
 ;
 const suspiciousLinkHosts = [;
   'paypal.me',
@@ -80,8 +74,8 @@ function containsVagueJobClaims (text: string): string[] {
   return reasons;
 }
 export async function evaluateHeuristics(
-  event: FraudEvent
-  deps: HeuristicDeps
+  event: FraudEvent;
+    deps: HeuristicDeps
 ): Promise<HeuristicEvaluation> {
   const reasons: string[] = [];
   let severity: HeuristicEvaluation['severity'] = 'low';
@@ -129,7 +123,6 @@ export interface HeuristicResult {
   reasons: string[];
   severity: 'low' | 'medium' | 'high';
 }
-
 export function runHeuristics(data: any): HeuristicResult {
   // Mock implementation - in production, this would run actual fraud detection heuristics
   const flags = new Set<string>();
@@ -141,7 +134,6 @@ export function runHeuristics(data: any): HeuristicResult {
   const label = flags.size > 0 ? 'SUSPICIOUS' : 'SAFE';
   return {
   }
-
 }
 ;
   return {;

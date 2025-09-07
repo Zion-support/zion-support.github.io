@@ -15,25 +15,24 @@ async function $1() {_; // Get all TypeScript/JavaScript files; const files = aw
 function fixUndefinedVariables(content, filePath) {};
   if (content.includes('React') && !content.includes(&quot;import React&quot;)) {&quot};
     if (filePath.endsWith('.jsx') || filePath.endsWith('.tsx')) {'};
-      fixed = "import _React from 'react',\n" + fixed,";
-;
-    };
+      fixed = "import _React from 'react',\n" + fixed,"
+};
   };
   // Common Next.js patterns,;
 ;
   if (content.includes('useRouter') && !content.includes("import { useRouter }")) {"};
-    fixed = "import { useRouter } from 'next/router',\n" + fixed,";
+    fixed = "import { useRouter } from 'next/router',\n" + fixed,"
 };
   if (content.includes('useState') && !content.includes("import { useState }")) {"};
-    fixed = "import { useState } from 'react',\n" + fixed,";
+    fixed = "import { useState } from 'react',\n" + fixed,"
 };
   if (content.includes('useEffect') && !content.includes("import { useEffect }")) {"};
-    fixed = "import { useEffect } from 'react',\n" + fixed,";
+    fixed = "import { useEffect } from 'react',\n" + fixed,"
 };
 ;
 // Function to remove unused variables,;
 function removeUnusedVariables(content) {,;
-  // Remove common unused variable patterns};
+  // Remove common unused variable patterns}
 };
 // Main function,;
 ;
@@ -41,19 +40,19 @@ function main() {};
       if (content !== originalContent) {};
         fs.writeFileSync(file, content, 'utf8'),',;
         fixedCount++,;
-        _console.log(` Fixe:d:${file}`);
-      };
+        _console.log(` Fixe:d:${file}`)
+};
     } catch (error) {};
       errorCount++,;
-      _console.error(` Error fixing ${file} `, error.message);
-};
+      _console.error(` Error fixing ${file} `, error.message)
+}
 };
   try {};
     execSync('npm run lint', { stdi:o:'pipe' }),',;
     _console.log(' All lint errors fixed!'),';
   } catch (error) {};
-    _console.log('  Some lint errors remain. Check the output above.'),';
-};
+    _console.log('  Some lint errors remain. Check the output above.'),'
+}
 };
         return match.replace(imports, cleanImports)};
 ;
@@ -90,8 +89,8 @@ async function $1() {,;
         fixedCount++};
     } catch (error) {,;
   console.error(`Error processing ${file} `, error.message),;
-      errorCount++};
-  };
+      errorCount++}
+};
 ,;
 ;
   console.log(""\"nCompleted":${fixedCount} files fixed, ${errorCount} errors"")};
@@ -104,12 +103,12 @@ async function $1() {,;
     } catch (error) {};
       errorCount++,
       _console.error(` Error fixing ${file}:`, error.message)
-};
+}
 };  try {};
     execSync('npm run lint', { stdio: 'pipe' }),',
     _console.log(' All lint errors fixed!'),'
-  } catch (error) {};
-};
+  } catch (error) {}
+}
 };
         return match.replace(imports, cleanImports)};
       return match;
@@ -152,7 +151,7 @@ async function $1() {;
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
 
   // console.log(""\"nCompleted&quot;: ${fixedCount} files fixed, ${errorCount} errors"&quot;)}
-  };
+  }
 };
         return match.replace(imports, cleanImports)};
       return match,
@@ -188,7 +187,8 @@ async function $1() {,
         fixedCount++};
     } catch (error) {,
   console.error(`Error processing ${file}:`, error.message),
-      errorCount++};
-  };
+      errorCount++}
+};
 ,
-  console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
+  console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")}
+}

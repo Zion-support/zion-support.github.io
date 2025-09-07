@@ -24,6 +24,6 @@ const SignUp = ({ className }) => {
       <h1>SignUp</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

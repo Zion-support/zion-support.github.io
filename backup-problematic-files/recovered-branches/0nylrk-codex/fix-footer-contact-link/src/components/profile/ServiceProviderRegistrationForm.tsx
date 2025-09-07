@@ -1,6 +1,5 @@
-
-import React, { useState } from "react",;
-import { useForm } from "react-hook-form",;
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { z } from "zod",;
 import { Button } from "@/components/ui/button",;
@@ -100,8 +99,8 @@ export function ServiceProviderRegistrationForm() {;
     const formData = form.getValues(),;
     if (!formData.bio || formData.bio.length < 20) {;
       toast({;
-        title:"More information needed",;
-        description:"Please provide at least a detailed bio before generating enhanced content."}),;
+        title:"More information needed",,
+  description:"Please provide at least a detailed bio before generating enhanced content."}),;
       return,;
     }
 ;
@@ -128,14 +127,14 @@ export function ServiceProviderRegistrationForm() {;
       setGeneratedContent(data as { summary:string, services:string[] }),;
       ;
       toast({;
-        title:"Enhanced Profile Generated",;
-        description:"AI has created a professional bio and suggested additional services for your profile."}),;
+        title:"Enhanced Profile Generated",,
+  description:"AI has created a professional bio and suggested additional services for your profile."}),;
       ;
     } catch (error:any) {;
       console.error("Error generating enhanced profile:", error),;
       toast({;
-        title:"Generation failed",;
-        description:error.message || "There was an error generating your enhanced profile. Please try again.",;
+        title:"Generation failed",,
+  description:error.message || "There was an error generating your enhanced profile. Please try again.",;
         variant:"destructive"}),;
     } finally {;
       setIsGenerating(false),;
@@ -163,8 +162,8 @@ export function ServiceProviderRegistrationForm() {;
   const onSubmit = async (values:ServiceFormValues) => {;
     if (serviceTags.length === 0) {;
       toast({;
-        title:"Services required",;
-        description:"Please add at least one service to your profile.",;
+        title:"Services required",,
+  description:"Please add at least one service to your profile.",;
         variant:"destructive"}),;
       return,;
     }
@@ -275,8 +274,8 @@ export function ServiceProviderRegistrationForm() {;
       }
       ;
       toast({;
-        title:"Profile Created Successfully",;
-        description:"Your service provider profile has been published and is now visible in the directory."}),;
+        title:"Profile Created Successfully",,
+  description:"Your service provider profile has been published and is now visible in the directory."}),;
 ;
       // Redirect to service provider dashboard or profile page;
       setTimeout(() => {;
@@ -286,8 +285,8 @@ export function ServiceProviderRegistrationForm() {;
     } catch (error:any) {;
       console.error("Error creating profile:", error),;
       toast({;
-        title:"Error Creating Profile",;
-        description:error.message || "There was an error creating your profile. Please try again.",;
+        title:"Error Creating Profile",,
+  description:error.message || "There was an error creating your profile. Please try again.",;
         variant:"destructive"}),;
     } finally {;
       setIsSubmitting(false),;
@@ -734,7 +733,6 @@ FormLabel;
   setServiceTags (serviceTags.filter ( (s) => s !== service) ) 
 };
 //Handle key press in services input (add on enter) const handleServiceKeyPress = (e: React.KeyboardEvent) => {
-  
 }
 };
 //Handle avatar upload const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -765,7 +763,6 @@ reader.readAsDataURL (file)
   if (generatedContent) {
   const newServices = generatedContent.services.filter (service => typeof service === 'string' && service && !serviceTags.includes (service) );
 if (newServices.length > 0) {
-  
 }
 }
 };
@@ -776,7 +773,6 @@ if (newServices.length > 0) {
 }setIsSubmitting (true);
 try {
   //For actual implementation with Supabase if (!user?.id) {
-  
 }//Enhance profile if not already done let finalSummary = values.bio;
 let finalServices = serviceTags;
 try {
@@ -814,7 +810,6 @@ if (error) throw error;
 }//Continue with submission even if email fails 
 }
 }toast ({
-  
 }finally {
   setIsSubmitting (false) 
 }

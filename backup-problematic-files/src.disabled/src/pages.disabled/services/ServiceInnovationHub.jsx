@@ -6,6 +6,6 @@ const ServiceInnovationHub = ({ className }) => {
       <h1>ServiceInnovationHub</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

@@ -1,5 +1,5 @@
-import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react',;
-import { useTranslation } from 'react-i18next',;
+import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
+import { useTranslation } from 'react-i18next';
 import { supabase } from '../integrations/supabase/client',;
 import { toast } from '../components/ui/use-toast',;
 ;
@@ -104,8 +104,8 @@ export const LanguageProvider:React.FC<LanguageProviderProps> = ({ ;
       ;
       // Get language name for toast;
       const langName = supportedLanguages.find(l => l.code === lang)?.name || lang,;
-      toast({;
-        description:t('language.language_changed', { language:langName });
+      toast({,
+  description:t('language.language_changed', { language:langName });
       }),;
       ;
       // If user is authenticated, update their profile;
@@ -138,7 +138,6 @@ export const LanguageProvider:React.FC<LanguageProviderProps> = ({ ;
   ),;},
  const defaultLanguageContext: LanguageContextType = {
   currentLanguage: 'en', changeLanguage: async () => {
-  
 };
 isRTL: false;
 supportedLanguages 
@@ -166,4 +165,5 @@ syncLanguageWithProfile ()
 }> {
   children 
 }</LanguageContext.Provider>) 
-};
+}
+}

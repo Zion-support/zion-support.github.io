@@ -270,8 +270,8 @@ echo "✅ Deployment completed successfully!";";
 // Function to create CI/CD pipeline
 function createCICDPipeline() {
   console.log('\n🔄 Creating CI/CD Pipeline...');
-  const githubActions = `"name": CI/CD Pipeline
-on:
+  const githubActions = `"name": CI/CD Pipeline;
+    on:
   push:
     branches: [main, develop ]
   "pull_request": branches: [main ]
@@ -283,8 +283,8 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '18'
-        cache: 'npm'
+        node-version: "version",
+    cache: 'npm'
     - name: Install dependencies
       run: npm ci
     - name: Run linting

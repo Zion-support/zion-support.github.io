@@ -25,4 +25,5 @@ export const trackUserAction = (action, category, label) => {
       "event_category": category,
       "event_label": label
     })}
-};
+}
+}

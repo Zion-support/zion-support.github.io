@@ -6,6 +6,6 @@ const AIChatbot = ({ className }) => {
       <h1>AIChatbot</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

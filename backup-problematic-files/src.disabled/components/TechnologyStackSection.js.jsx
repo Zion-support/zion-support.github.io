@@ -6,6 +6,6 @@ const TechnologyStackSection.js = ({ className }) => {
       <h1>TechnologyStackSection.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

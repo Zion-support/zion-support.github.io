@@ -1,5 +1,5 @@
-import { useState } from "react",;
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",;
+import { useState } from "react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",;
 import { Button } from "@/components/ui/button",;
 import { Save } from 'lucide-react';
@@ -139,7 +139,7 @@ onContractGenerated ;
 const [templateManagerOpen,  setTemplateManagerOpen] = useState (false);
 const [showSmartContractBuilder, setShowSmartContractBuilder] = useState (false);
 const handleLoadTemplate = (templateData: ContractFormValues) => {;
-  setFormValues (templateData) ;
+  setFormValues (templateData) 
 };
 const handleContractGenerated = (contract: string) => {;
   if (onContractGenerated) {;

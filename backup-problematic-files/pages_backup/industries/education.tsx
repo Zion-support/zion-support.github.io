@@ -30,13 +30,13 @@ const services = [
       'Course management,',
       'Student tracking',',
       'Assessment tools',',
-    title: 'Learning Management Systems,',;
-    description: 'Comprehensive LMS platforms for educational institutions and corporate training.,',;
+    title: 'Learning Management Systems,',,
+  description: 'Comprehensive LMS platforms for educational institutions and corporate training.,',;
 import Layout from '../../components/Layout';
 const services = [;
   {;
-    title: 'Learning Management Systems',;
-    description: 'Comprehensive LMS platforms for educational institutions and corporate training.',;
+    title: 'Learning Management Systems',,
+  description: 'Comprehensive LMS platforms for educational institutions and corporate training.',;
     icon: BookOpen,;
     features: [,;
       'Course management,',;
@@ -46,8 +46,8 @@ const services = [;
     ];
   },;
   {}
-    title: 'Virtual Classrooms,',;
-    description: 'Advanced virtual learning environments with interactive features.,',;
+    title: 'Virtual Classrooms,',,
+  description: 'Advanced virtual learning environments with interactive features.,',;
     icon: Video,;
     features: [,;
       'Live video streaming,',;
@@ -57,8 +57,8 @@ const services = [;
     ];
   },;
   {}
-    title: 'Educational AI Tutors,',;
-    description: 'AI-powered tutoring systems for personalized learning experiences.,',;
+    title: 'Educational AI Tutors,',,
+  description: 'AI-powered tutoring systems for personalized learning experiences.,',;
     icon: Brain,;
     features: [,;
       'Adaptive learning paths,',;
@@ -68,8 +68,8 @@ const services = [;
     ];
   },;
   {}
-    title: 'Student Analytics,',;
-    description: 'Data-driven insights into student performance and engagement.,',;
+    title: 'Student Analytics,',,
+  description: 'Data-driven insights into student performance and engagement.,',;
     icon: BarChart3,;
     features: [,;
       'Performance tracking,',;
@@ -79,8 +79,8 @@ const services = [;
     ];
   },;
   {}
-    title: 'Online Assessment Tools,',;
-    description: 'Secure and comprehensive online testing and evaluation systems.,',;
+    title: 'Online Assessment Tools,',,
+  description: 'Secure and comprehensive online testing and evaluation systems.,',;
     icon: FileText,;
     features: [,;
       'Automated grading,',;
@@ -90,8 +90,8 @@ const services = [;
     ];
   },;
   {}
-    title: 'Content Management Systems,',;
-    description: 'Digital content creation and management platforms for educators.,',;
+    title: 'Content Management Systems,',,
+  description: 'Digital content creation and management platforms for educators.,',;
     icon: Database,;
     features: [,;
       'Content creation tools,',;
@@ -103,29 +103,29 @@ const services = [;
 ;];
 const benefits = [;
   {}
-    title: 'Improved Learning Outcomes,',;
-    description: 'Personalized learning experiences lead to better student performance.,',;
+    title: 'Improved Learning Outcomes,',,
+  description: 'Personalized learning experiences lead to better student performance.,',;
     icon: GraduationCap;
 ];
 const benefits = [;
   {;
-    title: 'Improved Learning Outcomes',;
-    description: 'Personalized learning experiences lead to better student performance.',;
+    title: 'Improved Learning Outcomes',,
+  description: 'Personalized learning experiences lead to better student performance.',;
     icon: GraduationCap;
   },;
   {}
-    title: 'Enhanced Engagement,',;
-    description: 'Interactive tools and gamification increase student participation.,',;
+    title: 'Enhanced Engagement,',,
+  description: 'Interactive tools and gamification increase student participation.,',;
     icon: Users,;
   },;
   {}
-    title: 'Better Accessibility,',;
-    description: 'Online platforms make education accessible to more students.,',;
+    title: 'Better Accessibility,',,
+  description: 'Online platforms make education accessible to more students.,',;
     icon: Globe,;
   },;
   {}
-    title: 'Data-Driven Insights,',;
-    description: 'Analytics help educators make informed decisions about teaching methods.,',;
+    title: 'Data-Driven Insights,',,
+  description: 'Analytics help educators make informed decisions about teaching methods.,',;
     icon: BarChart3,;
   }
 ;];
@@ -459,6 +459,6 @@ export default function EducationPage() {;
         </section>
       </div>
     </Layout>
-  );
-};
-
+  )
+}
+}

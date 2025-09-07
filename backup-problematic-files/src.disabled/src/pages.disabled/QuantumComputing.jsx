@@ -6,6 +6,6 @@ const QuantumComputing = ({ className }) => {
       <h1>QuantumComputing</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

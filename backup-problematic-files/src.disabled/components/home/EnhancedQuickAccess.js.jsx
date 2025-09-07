@@ -6,6 +6,6 @@ const EnhancedQuickAccess.js = ({ className }) => {
       <h1>EnhancedQuickAccess.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

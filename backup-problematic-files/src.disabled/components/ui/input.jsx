@@ -24,6 +24,6 @@ const Input = ({ className }) => {
       <h1>Input</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

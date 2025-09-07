@@ -23,8 +23,8 @@ class IntelligentErrorFixer {
   }
   initializeErrorPatterns() {
     return {
-      // Syntax errors
-      missingBraces: {
+      // Syntax errors;
+    missingBraces: {
         pattern: /return\(\s*$/m,
         fix: (content) => content.replace(/return\(\s*$/gm, 'return (')
       },
@@ -178,7 +178,6 @@ class IntelligentErrorFixer {
       });
     }
     scanDirectory(pagesDir);
-
     // Remove duplicate .js files if .tsx exists
           fs.unlinkSync(duplicate);
         }

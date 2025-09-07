@@ -1,5 +1,5 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
+import React, { useState } from 'react';
+import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion',;
 import { ;
   Star, TrendingUp, Zap, Brain, Rocket, Shield, ;
@@ -8,8 +8,8 @@ import { ;
   Grid, List, ChevronDown, ChevronUp, Sparkles,;
   Crown, Award, Target, Globe, Cpu, Database;
 } from 'lucide-react',;
-import UltraAdvancedFuturisticMatrixBackground from '../components/ui/UltraAdvancedFuturisticMatrixBackground',;
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard',;
+import UltraAdvancedFuturisticMatrixBackground from "UltraAdvancedFuturisticMatrixBackground";
+import UltraFuturisticCard from "UltraFuturisticCard";
 import { nextGenerationAIServices } from '../data/next-generation-ai-services',;
 import { cuttingEdgeITServices } from '../data/cutting-edge-it-services',;
 import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2',;
@@ -133,20 +133,20 @@ export default function EnhancedServicesShowcase() {;
 ;
   const featuredServices = [;
     {;
-      title:' ArrowRight-Generation AI Services',;
-      description:'Revolutionary AI platforms that push the boundaries of what\'s possible',;
+      title:' ArrowRight-Generation AI Services',,
+  description:'Revolutionary AI platforms that push the boundaries of what\'s possible',;
       services:nextGenerationAIServices.slice(0, 3),;
       color:'from-purple-500 to-pink-600';
     },;
     {;
-      title:' Cutting-Edge IT Infrastructure',;
-      description:'Advanced infrastructure solutions for the modern enterprise',;
+      title:' Cutting-Edge IT Infrastructure',,
+  description:'Advanced infrastructure solutions for the modern enterprise',;
       services:cuttingEdgeITServices.slice(0, 3),;
       color:'from-blue-500 to-cyan-600';
     },;
     {;
-      title:' Innovative Micro SaaS Solutions',;
-      description:'Creative and practical SaaS tools for every business need',;
+      title:' Innovative Micro SaaS Solutions',,
+  description:'Creative and practical SaaS tools for every business need',;
       services:innovativeMicroSaasV2Services.slice(0, 3),;
       color:'from-green-500 to-emerald-600';
     }

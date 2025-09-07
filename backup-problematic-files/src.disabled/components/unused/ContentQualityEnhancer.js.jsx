@@ -6,6 +6,6 @@ const ContentQualityEnhancer.js = ({ className }) => {
       <h1>ContentQualityEnhancer.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

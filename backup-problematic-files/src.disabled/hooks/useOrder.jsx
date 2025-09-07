@@ -6,6 +6,6 @@ const UseOrder = ({ className }) => {
       <h1>UseOrder</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

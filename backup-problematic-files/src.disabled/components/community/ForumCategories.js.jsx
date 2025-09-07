@@ -6,6 +6,6 @@ const ForumCategories.js = ({ className }) => {
       <h1>ForumCategories.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

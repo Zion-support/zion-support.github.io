@@ -1,7 +1,6 @@
-
-import { useState } from "react",;
+import { useState } from "react";
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react';
-import { format } from "date-fns",;
+import { format } from "date-fns";
 import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",;
 ;
 import { Button } from "@/components/ui/button",;
@@ -15,7 +14,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",;
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",;
 ;
-import CodeBlock from "./CodeBlock",;
+import CodeBlock from "CodeBlock";
 ;
 export function ApiKeysManager() {;
   const { ;
@@ -405,16 +404,16 @@ setShowCreateDialog (false);
 //Toggle a scope selection const toggleScope = (scope: ApiKeyScope) => {";
   setSelectedScopes (prev => prev.includes (scope) ? prev.filter (s => s !== scope) -H "Authorization: Bearer $ {;
   key ";
-}" \\ -H "Content-Type: application/json"` ;
+}" \\ -H "Content-Type: application/json"` 
 };
 //Reset form when dialog closes const handleDialogClose = () => {";
   setKeyName ("");
 setSelectedScopes ([]);
-setShowCreateDialog (false) ;
+setShowCreateDialog (false) 
 };";
  return `curl -X GET " https://api.ziontechgroup.com/v1/jobs"\\ -H " Authorization: Bearer $ {;
   key ";
-}"\\ -H " Content-Type: application/json"`;
+}"\\ -H " Content-Type: application/json"`
 };";
 //Reset form when dialog closes </CardTitle> <CardDescription className=" text-zinc-400"> Create and manage API keys for accessing the Zion APIs. </CardDescription> </CardHeader> <CardContent> </p> <Dialog open= {;
   showCreateDialog ;

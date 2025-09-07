@@ -1,5 +1,5 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
+import React, { useState } from 'react';
+import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion',;
 import { ;
   ArrowRight, Check, Star, Users, Zap, Shield, Globe, ;
@@ -8,8 +8,8 @@ import { ;
   ChevronRight, Search, Filter, Grid, List, Phone, Mail, MapPin,;
   DollarSign, Target as TargetIcon, BarChart3, Users as UsersIcon;
 } from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation',;
-import EnhancedFooter from '../components/EnhancedFooter',;
+import EnhancedNavigation from "EnhancedNavigation";
+import EnhancedFooter from "EnhancedFooter";
 import { advancedMicroSaasServices2026 } from '../data/2026-advanced-micro-saas-expansion',;
 import { specializedIndustrySolutions2026 } from '../data/2026-specialized-industry-solutions',;
 ;

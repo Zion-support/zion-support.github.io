@@ -1,6 +1,5 @@
-
-import React, { useState } from 'react',;
-import { Button } from "@/components/ui/button",;
+import React, { useState } from 'react';
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
@@ -275,11 +274,11 @@ if (onToggleVideo) {;
 }</Button> <Button >{;
   isScreenSharing ? <ScreenShareOff /> : <ScreenShare /> ;
 :temp_broken_files/video/VideoCallRoom.tsx
-}</Button> <Button >{;"  isAudioOnly ? <VolumeX /> : <Volume2 /> ";"}</Button> <Button > <Phone className="rotate-135" /> </Button> </div> </CardContent> </Card>) ;
+}</Button> <Button >{;"  isAudioOnly ? <VolumeX /> : <Volume2 /> ";"}</Button> <Button > <Phone className="rotate-135" /> </Button> </div> </CardContent> </Card>) 
 };"'"
 }</Button> <Button > {;
   isAudioOnly ? <VolumeX /> : <Volume2 /> ";
-}</Button> <Button > <Phone className="rotate-135" /> </Button> </div> </CardContent> </Card>) ;
+}</Button> <Button > <Phone className="rotate-135" /> </Button> </div> </CardContent> </Card>) 
 };
 '"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/video/VideoCallRoom.tsx

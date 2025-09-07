@@ -6,6 +6,6 @@ const CloudDevOpsServices = ({ className }) => {
       <h1>CloudDevOpsServices</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

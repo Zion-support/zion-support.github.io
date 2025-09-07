@@ -1,6 +1,5 @@
-
-import React, { useState, useEffect } from "react",;
-import { useParams, useNavigate } from "react-router-dom",;
+import React, { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import { useDisputes } from "@/hooks/useDisputes",;
 import { disputeReasonLabels, DisputeMessage, DisputeStatus } from "@/types/disputes",;
 import { Button } from "@/components/ui/button",;
@@ -553,12 +552,10 @@ const loadDisputeData = async () => {
 try {
   const disputeData = await getDisputeById (disputeId);
 if (!disputeData) {
-  
 }setDispute (disputeData);
 const messagesData = await getDisputeMessages (disputeId);
 setMessages (messagesData) 
 }catch (error) {
-  
 }finally {
   setIsLoading (false) 
 }
@@ -579,7 +576,6 @@ resolved at: new Date () .toISOString ()
 };
 setIsSending (true);
 try {
-  
 }finally {
   setIsSending (false) 
 }

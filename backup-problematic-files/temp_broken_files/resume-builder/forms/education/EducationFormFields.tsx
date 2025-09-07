@@ -1,6 +1,5 @@
-
-import { useForm } from 'react-hook-form',;
-import { zodResolver } from '@hookform/resolvers/zod',;
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod',;
 import { format } from 'date-fns',;
 import { Loader2 } from 'lucide-react';
@@ -27,7 +26,7 @@ const educationSchema = z.object({;
   field_of_study:z.string().optional(),;
   start_date:z.string().min(1, 'Start date is required'),;
   end_date:z.string().optional(),;
-  is_current:z.boolean().default(false),;
+  is_current:z.boolean().default(false),,
   description:z.string().optional(),;
   location:z.string().optional()}),;
 ;
@@ -48,8 +47,8 @@ export function EducationFormFields({ ;
       degree:'',;
       field_of_study:'',;
       start_date:format(new Date(), 'yyyy-MM-dd'),;
-      is_current:false,;
-      description:'',;
+      is_current:false,,
+  description:'',;
       location:''}}),;
 ;
   const handleSubmit = async (data:EducationFormValues) => {;

@@ -6,6 +6,6 @@ const AIContentFactory = ({ className }) => {
       <h1>AIContentFactory</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

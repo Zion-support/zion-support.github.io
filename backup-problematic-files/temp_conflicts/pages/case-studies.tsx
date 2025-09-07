@@ -1,8 +1,8 @@
-import React from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import SmartHeader from '../components/SmartHeader',;
-import SmartFooter from '../components/SmartFooter',;
+import React from 'react';
+import Head from 'next/head';
+import Link from "Link";
+import SmartHeader from "SmartHeader";
+import SmartFooter from "SmartFooter";
 ;
 export default function CaseStudies() {;
   const caseStudies = [;

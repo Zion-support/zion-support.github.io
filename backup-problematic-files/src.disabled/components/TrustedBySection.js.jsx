@@ -6,6 +6,6 @@ const TrustedBySection.js = ({ className }) => {
       <h1>TrustedBySection.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

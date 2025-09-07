@@ -6,6 +6,6 @@ const Developer = ({ className }) => {
       <h1>Developer</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

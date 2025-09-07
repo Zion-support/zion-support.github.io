@@ -1,4 +1,4 @@
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isSupported, setIsSupported] = useState(false);
   useEffect(() => {
     if (typeof window === "undefined" |!("performance" in window)) {
@@ -24,8 +24,8 @@
       const fidEntries = window.performance.getEntriesByType("first-input");
       const fid = fidEntries[0] as PerformanceEventTiming;
       setMetrics({
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart
-        firstContentfulPaint: fcp ? fcp.startTime : 0
+        loadTime: navigation.loadEventEnd - navigation.loadEventStart;
+    firstContentfulPaint: fcp ? fcp.startTime : 0
         largestContentfulPaint: lcp ? lcp.startTime : 0
         cumulativeLayoutShift: cls
         firstInputDelay: fid ? fid.processingStart - fid.startTime : 0

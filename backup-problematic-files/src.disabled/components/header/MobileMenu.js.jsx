@@ -6,6 +6,6 @@ const MobileMenu.js = ({ className }) => {
       <h1>MobileMenu.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

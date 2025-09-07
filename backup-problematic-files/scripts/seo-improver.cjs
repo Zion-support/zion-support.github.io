@@ -1,4 +1,3 @@
-
 const fs = require("child_process")
 const path = require("path")
     console.log("� Generating sitemap...")
@@ -17,8 +16,8 @@ Allow: /contact"
     console.log("� Adding meta tags...")
     const metaConfig = "
   "title": "Bolt.new Zion App - Advanced Web Development Solutions"
-  description: "Professional web development services with cutting-edge technology and innovative solutions."
-  keywords: "web development, react, nextjs, typescript, full-stack development"
+  description: "description",
+    keywords: "web development, react, nextjs, typescript, full-stack development"
   "author": "Zion Tech Group"
   viewport: "width=device-width, initial-scale=1"
   "robots": "index, follow"

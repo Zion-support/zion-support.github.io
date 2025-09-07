@@ -1,7 +1,7 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import Card from '../components/ui/Card',;
-import Button from '../components/ui/Button',;
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Card from "Card";
+import Button from "Button";
 import { Mail, CheckCircle, XCircle, AlertTriangle, ArrowRight, Copy, RefreshCw, Shield, Zap, BarChart3 } from 'lucide-react',;
 export default function EmailValidatorPage() {;
   const [emails, setEmails] = useState(''),;
@@ -60,25 +60,20 @@ import Head from 'next/head',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button',
 import { Mail, CheckCircle, XCircle, AlertTriangle, ArrowRight, Copy, RefreshCw, Shield, Zap, BarChart3 } from 'lucide-react',
-
 export default function EmailValidatorPage() {
   const [emails, setEmails] = useState(''),
   const [validationResults, setValidationResults] = useState<any[]>([]),
   const [isValidating, setIsValidating] = useState(false),
   const [bulkMode, setBulkMode] = useState(false),
-
   const validateEmails = async () => {
     if (!emails.trim()) return,    
     setIsValidating(true),
     setValidationResults([]),
-    
     const emailList = emails.split('\n').filter(email => email.trim()),
     const results = [],
-    
     // Simulate email validation with realistic results,
 for (let i = 0, i < emailList.length, i++) {
       await new Promise(resolve => setTimeout(resolve, 200)),
-      
       const email = emailList[i].trim(),
       const result = validateSingleEmail(email),
       results.push(result)
@@ -86,17 +81,14 @@ for (let i = 0, i < emailList.length, i++) {
     setValidationResults(results),
     setIsValidating(false)
   },
-
   const validateSingleEmail = (email: string) => {
     // Basic email regex,
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-    
     // Check for common disposable email domains,
 const disposableDomains = [
       'tempmail.orgguerrillamail.commailinator.com10minutemail.com',
       'throwaway.emailtemp-mail.orgsharklasers.comgetairmail.com'
     ],
-    
     // Check for common typos,
 const commonTypos = {
       'gmail.com': ['gmial.comgamil.comgmai.com'],
@@ -104,16 +96,13 @@ const commonTypos = {
       'hotmail.com': ['hotmai.comhotmial.comhotmeil.com'],
       'outlook.com': ['outlok.comoutloook.comoutlok.com']
     },
-    
     const domain = email.split('@')[1],
     const isDisposable = disposableDomains.includes(domain),
     const hasTypo = Object.entries(commonTypos).some(([correct, typos]) =>       typos.includes(domain)
     ),
-    
     let status = 'valid',
     let score = 100,
     const issues = [],
-    
     if (!emailRegex.test(email)) {
       status = 'invalid',
       score = 0,
@@ -127,7 +116,6 @@ const commonTypos = {
       score = 60,
       issues.push('Possible typo in domain')
     }
-    
     // Additional checks,
 if (email.length > 254) {
       status = 'invalid',
@@ -297,13 +285,11 @@ variant=&quot;outline & quot;
                   </Button>)}
               </div>;
               {stats && (
-
                       className={`p - 4 rounded - lg border ${
                         result.status === 'valid' ? 'border - green - 500 / 30 bg - green - 500 / 10' :;
                         result.status === 'suspicious' ? 'border - yellow - 500 / 30 bg - yellow - 500 / 10' :;
                         result.status === 'disposable' ? 'border - orange - 500 / 30 bg - orange - 500 / 10' :;
                         'border - red - 500 / 30 bg - red - 500 / 10';
-
                       }`}
 >;
                       <div className=&quot;flex items - center justify - between mb - 2&quot;>;
@@ -329,14 +315,12 @@ key={index}
                         </div>
                         <span className={_`text-sm font-medium ${getScoreColor(result.score)}`}>
                           Score: {result.score}
-
 </span>;
                       </div>;
                       <div className=&quot;text - sm text - gray - 300 mb - 2&quot;>;
                         <span className=&quot;text - gray - 400 & quot;>Domain:</span>;
                         <span className=&quot;ml - 2&quot;>{result.domain}</span>;
                       </div>;
-
                       {result.issues.length > 0 && (
                         </div>
                       )}

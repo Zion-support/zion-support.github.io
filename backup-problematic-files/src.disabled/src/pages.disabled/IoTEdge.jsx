@@ -6,6 +6,6 @@ const IoTEdge = ({ className }) => {
       <h1>IoTEdge</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

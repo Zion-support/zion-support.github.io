@@ -24,6 +24,6 @@ const AccountSettings = ({ className }) => {
       <h1>AccountSettings</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

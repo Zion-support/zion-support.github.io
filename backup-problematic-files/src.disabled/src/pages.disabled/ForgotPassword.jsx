@@ -24,6 +24,6 @@ const ForgotPassword = ({ className }) => {
       <h1>ForgotPassword</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

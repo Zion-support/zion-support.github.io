@@ -6,6 +6,6 @@ const HowItWorksSection.js = ({ className }) => {
       <h1>HowItWorksSection.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

@@ -24,6 +24,6 @@ const SavedTalentsPage = ({ className }) => {
       <h1>SavedTalentsPage</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

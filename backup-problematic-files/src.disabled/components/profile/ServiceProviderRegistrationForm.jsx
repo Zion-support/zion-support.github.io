@@ -6,6 +6,6 @@ const ServiceProviderRegistrationForm = ({ className }) => {
       <h1>ServiceProviderRegistrationForm</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

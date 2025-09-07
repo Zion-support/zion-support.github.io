@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react",;
-import { useParams, useNavigate, Link } from "react-router-dom",;
+import { useState, useEffect } from "react";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import { format } from "date-fns",;
 import { useAuth } from "@/hooks/useAuth",;
 import { useProjects } from "@/hooks/useProjects",;
@@ -79,8 +79,8 @@ function ProjectDetailsContent() {;
         fetchProjectNotes(projectId),;
       } else {;
         toast({;
-          title:"Project not found",;
-          description:"The requested project could not be found.",;
+          title:"Project not found",,
+  description:"The requested project could not be found.",;
           variant:"destructive"}),;
         navigate("/dashboard"),;
       }
@@ -131,13 +131,13 @@ function ProjectDetailsContent() {;
       setNewNote(""),;
       ;
       toast({;
-        title:"Note added",;
-        description:"Your note has been added to the project."}),;
+        title:"Note added",,
+  description:"Your note has been added to the project."}),;
     } catch (err:any) {;
       console.error("Error adding note:", err),;
       toast({;
-        title:"Failed to add note",;
-        description:err.message || "An error occurred while adding your note.",;
+        title:"Failed to add note",,
+  description:err.message || "An error occurred while adding your note.",;
         variant:"destructive"}),;
     } finally {;
       setIsSubmittingNote(false),;
@@ -157,8 +157,8 @@ function ProjectDetailsContent() {;
       // If offer was accepted, show a special toast;
       if (newStatus === "offer_accepted") {;
         toast({;
-          title:"Offer Accepted! ",;
-          description:"The project is now in progress. Congratulations!"}),;
+          title:"Offer Accepted! ",,
+  description:"The project is now in progress. Congratulations!"}),;
       }
     }
   },;
@@ -786,7 +786,6 @@ status: newStatus
 });
 //If offer was accepted, show a special toast if (newStatus === "offer accepted") {
   toast ({
-  
 }
 }
 };
@@ -868,4 +867,4 @@ default: return <Badge variant="outline"> {
 }</p> </CardFooter>) 
 }</Card> </div> </div> </main> <Footer /> </>) 
 }export default function ProjectDetails () {
-  return (<ProtectedRoute> <ProjectDetailsContent /> </ProtectedRoute> 
+  return (<ProtectedRoute> <ProjectDetailsContent /> </ProtectedRoute>

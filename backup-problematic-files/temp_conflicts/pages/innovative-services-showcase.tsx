@@ -1,5 +1,5 @@
-import React from 'react',;
-import Head from 'next/head',;
+import React from 'react';
+import Head from 'next/head';
 import { motion } from 'framer-motion',;
 import { ;
   Brain, Rocket, Dna, Globe, TrendingUp, Shield, ;
@@ -9,7 +9,7 @@ import { ;
 } from 'lucide-react',;
 import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services',;
 import { emergingTechServices } from '../data/emerging-tech-services',;
-import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground',;
+import UltraFuturisticMatrixBackground from "UltraFuturisticMatrixBackground";
 ;
 export default function InnovativeServicesShowcase() {;
   const allServices = [...innovativeMicroSaasServices, ...emergingTechServices],;

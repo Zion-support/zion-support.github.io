@@ -24,6 +24,6 @@ const DisputeDashboard = ({ className }) => {
       <h1>DisputeDashboard</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

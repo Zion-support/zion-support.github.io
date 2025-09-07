@@ -6,6 +6,6 @@ const PartnersSection.js = ({ className }) => {
       <h1>PartnersSection.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

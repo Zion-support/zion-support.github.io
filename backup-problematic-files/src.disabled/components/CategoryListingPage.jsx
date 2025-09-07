@@ -6,6 +6,6 @@ const CategoryListingPage = ({ className }) => {
       <h1>CategoryListingPage</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

@@ -1,7 +1,7 @@
-import React from 'react',;
-import Head from 'next/head',;
-import Card from '../components/ui/Card',;
-import Button from '../components/ui/Button',;
+import React from 'react';
+import Head from 'next/head';
+import Card from "Card";
+import Button from "Button";
 import { ;
   Brain,;
   MessageSquare, ;
@@ -21,8 +21,8 @@ export default function AiToolsPage() {;
   const aiTools = [;
     {;
       icon:<Brain className="w-8 h-8 text-white" />,;
-      title:'ChatGPT Plus',;
-      description:'Advanced AI chatbot with enhanced reasoning, web browsing, and plugin capabilities for professional use.',;
+      title:'ChatGPT Plus',,
+  description:'Advanced AI chatbot with enhanced reasoning, web browsing, and plugin capabilities for professional use.',;
       features:[;
         'Advanced reasoning & analysisWeb browsing & real-time info',;
         'Plugin ecosystem accessCode generation & debugging',;
@@ -39,8 +39,8 @@ export default function AiToolsPage() {;
     },;
     {;
       icon:<Image className="w-8 h-8 text-white" />,;
-      title:'Midjourney',;
-      description:'State-of-the-art AI image generation with exceptional quality and artistic control for creative professionals.',;
+      title:'Midjourney',,
+  description:'State-of-the-art AI image generation with exceptional quality and artistic control for creative professionals.',;
       features:[;
         'High-quality image generationArtistic style control',;
         'Commercial usage rightsCommunity features',;
@@ -57,8 +57,8 @@ export default function AiToolsPage() {;
     },;
     {;
       icon:<Code className="w-8 h-8 text-white" />,;
-      title:'GitHub Copilot',;
-      description:'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.',;
+      title:'GitHub Copilot',,
+  description:'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.',;
       features:[;
         'Intelligent code completionMulti-language support',;
         'IDE integrationCode explanation',;
@@ -75,8 +75,8 @@ export default function AiToolsPage() {;
     },;
     {;
       icon:<Video className="w-8 h-8 text-white" />,;
-      title:'Runway ML',;
-      description:'Professional AI video generation and editing tools for filmmakers, marketers, and content creators.',;
+      title:'Runway ML',,
+  description:'Professional AI video generation and editing tools for filmmakers, marketers, and content creators.',;
       features:[;
         'AI video generationVideo editing tools',;
         'Motion trackingGreen screen removal',;
@@ -93,8 +93,8 @@ export default function AiToolsPage() {;
     },;
     {;
       icon:<MessageSquare className="w-8 h-8 text-white" />,;
-      title:'Claude Pro',;
-      description:'Anthropic\'s advanced AI assistant with superior reasoning, analysis, and document processing capabilities.',;
+      title:'Claude Pro',,
+  description:'Anthropic\'s advanced AI assistant with superior reasoning, analysis, and document processing capabilities.',;
       features:[;
         'Advanced reasoning abilitiesDocument analysis',;
         'Code generationCreative writing',;
@@ -111,8 +111,8 @@ export default function AiToolsPage() {;
     },;
     {;
       icon:<FileText className="w-8 h-8 text-white" />,;
-      title:'Jasper AI',;
-      description:'AI-powered content creation platform for marketers, writers, and businesses with enterprise features.',;
+      title:'Jasper AI',,
+  description:'AI-powered content creation platform for marketers, writers, and businesses with enterprise features.',;
       features:[;
         'Content generationBrand voice training',;
         'SEO optimizationTeam collaboration',;
@@ -133,57 +133,57 @@ export default function AiToolsPage() {;
     {;
       title:'AI Market Size',;
       value:'$136.6B',;
-      growth:'+37% YoY',;
-      description:'Global AI market value in 2024';
+      growth:'+37% YoY',,
+  description:'Global AI market value in 2024';
     },;
     {;
       title:'AI Adoption Rate',;
       value:'35%',;
-      growth:'+12% YoY',;
-      description:'Businesses actively using AI tools';
+      growth:'+12% YoY',,
+  description:'Businesses actively using AI tools';
     },;
     {;
       title:'AI Investment',;
       value:'$93.5B',;
-      growth:'+28% YoY',;
-      description:'Global AI investment in 2024';
+      growth:'+28% YoY',,
+  description:'Global AI investment in 2024';
     },;
     {;
       title:'AI Productivity Gain',;
       value:'40%',;
-      growth:'+15% YoY',;
-      description:'Average productivity improvement';
+      growth:'+15% YoY',,
+  description:'Average productivity improvement';
     }
   ],;
 ;
   const aiCategories = [;
     {;
-      name:'Conversational AI',;
-      description:'Chatbots, virtual assistants, and language models',;
+      name:'Conversational AI',,
+  description:'Chatbots, virtual assistants, and language models',;
       tools:3,;
       avgPrice:'$20/month';
     },;
     {;
-      name:'Image Generation',;
-      description:'AI-powered art, design, and visual content creation',;
+      name:'Image Generation',,
+  description:'AI-powered art, design, and visual content creation',;
       tools:1,;
       avgPrice:'$20/month';
     },;
     {;
-      name:'Code Generation',;
-      description:'AI-assisted programming and development tools',;
+      name:'Code Generation',,
+  description:'AI-assisted programming and development tools',;
       tools:1,;
       avgPrice:'$10/month';
     },;
     {;
-      name:'Video Generation',;
-      description:'AI video creation and editing tools',;
+      name:'Video Generation',,
+  description:'AI video creation and editing tools',;
       tools:1,;
       avgPrice:'$44/month';
     },;
     {;
-      name:'Content Creation',;
-      description:'AI-powered writing and content generation',;
+      name:'Content Creation',,
+  description:'AI-powered writing and content generation',;
       tools:1,;
       avgPrice:'$82/month';
     }

@@ -112,8 +112,8 @@ module.exports = {
       instances: 1,
       exec_mode: "fork",
       env: {
-        NODE_ENV: "production"
-        PORT: 3000
+        NODE_ENV: "NODE_ENV",
+    PORT: 3000
       }
       env_development: {
         "npm install && npm run build && pm2 reload ecosystem.config.js --env staging"

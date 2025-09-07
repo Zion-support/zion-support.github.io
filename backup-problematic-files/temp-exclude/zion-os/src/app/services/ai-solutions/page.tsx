@@ -1,10 +1,10 @@
 "use client",;
 ;
-import { useState } from "react",;
+import { useState } from "react";
 ;
 interface AIService {;
   id:string,;
-  name:string,;
+  name:string,,
   description:string,;
   technicalSpecs:string[],;
   useCases:string[],;
@@ -18,8 +18,8 @@ interface AIService {;
 const aiServices:AIService[] = [;
   {;
     id:"zion-gpt-enterprise",;
-    name:"ZionGPT Enterprise",;
-    description:"Enterprise-grade AI assistant with custom knowledge base integration, advanced reasoning, and compliance features.",;
+    name:"ZionGPT Enterprise",,
+  description:"Enterprise-grade AI assistant with custom knowledge base integration, advanced reasoning, and compliance features.",;
     technicalSpecs:[;
       "GPT-4/Claude-3 integration",;
       "Custom fine-tuning capabilities",;
@@ -60,8 +60,8 @@ const aiServices:AIService[] = [;
   },;
   {;
     id:"ai-content-generation",;
-    name:"AI Content Generation Suite",;
-    description:"Comprehensive content creation platform for marketing, documentation, and creative writing with brand voice consistency.",;
+    name:"AI Content Generation Suite",,
+  description:"Comprehensive content creation platform for marketing, documentation, and creative writing with brand voice consistency.",;
     technicalSpecs:[;
       "Multi-model AI integration",;
       "Brand voice training",;
@@ -102,8 +102,8 @@ const aiServices:AIService[] = [;
   },;
   {;
     id:"ai-data-analytics",;
-    name:"AI-Powered Business Intelligence",;
-    description:"Advanced analytics platform with predictive modeling, natural language queries, and automated insights generation.",;
+    name:"AI-Powered Business Intelligence",,
+  description:"Advanced analytics platform with predictive modeling, natural language queries, and automated insights generation.",;
     technicalSpecs:[;
       "Machine learning models",;
       "Real-time data processing",;
@@ -144,8 +144,8 @@ const aiServices:AIService[] = [;
   },;
   {;
     id:"ai-automation",;
-    name:"AI Process Automation",;
-    description:"Intelligent automation platform for business processes, workflows, and repetitive tasks with learning capabilities.",;
+    name:"AI Process Automation",,
+  description:"Intelligent automation platform for business processes, workflows, and repetitive tasks with learning capabilities.",;
     technicalSpecs:[;
       "RPA with AI enhancement",;
       "Process mining",;

@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react',;
+import React, { Suspense, lazy } from 'react';
 interface LazyComponentProps {;
   component: () => Promise<{ default: React.ComponentType<any> }>,;
   fallback?: React.ReactNode,;

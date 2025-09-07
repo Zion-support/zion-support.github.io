@@ -1,2 +1,3 @@
 // Auto-generated module
-export {};
+export {}
+}

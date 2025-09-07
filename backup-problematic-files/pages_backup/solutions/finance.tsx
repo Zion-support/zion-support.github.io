@@ -6,28 +6,28 @@ import {DollarSign,, Shield,, TrendingUp,, Users,, Database,, CheckCircle,, Arro
 const features = [;
   {}
     icon: DollarSign,;
-    title: 'Financial Data Management,',;
-    description: 'Secure, real-time financial data processing and analytics for informed decision making.',;
+    title: 'Financial Data Management,',,
+  description: 'Secure, real-time financial data processing and analytics for informed decision making.',;
   },;
   {}
     icon: Shield,;
-    title: 'Regulatory Compliance,',;
-    description: 'SOX, PCI DSS, and other financial compliance solutions to meet industry standards.',;
+    title: 'Regulatory Compliance,',,
+  description: 'SOX, PCI DSS, and other financial compliance solutions to meet industry standards.',;
   },;
   {}
     icon: TrendingUp,;
-    title: 'Risk Management,',;
-    description: 'Advanced risk assessment and management tools powered by AI and machine learning.'',;
+    title: 'Risk Management,',,
+  description: 'Advanced risk assessment and management tools powered by AI and machine learning.'',;
   },;
   {}
     icon: Users,;
-    title: 'Customer Experience,',;
-    description: 'Digital banking and financial services platforms that enhance customer engagement.'',;
+    title: 'Customer Experience,',,
+  description: 'Digital banking and financial services platforms that enhance customer engagement.'',;
   },;
   {}
     icon: Database,;
-    title: 'Fraud Detection,',;
-    description: 'Real-time fraud detection and prevention systems using advanced analytics.'', import Layout from '../../components/Layout',;
+    title: 'Fraud Detection,',,
+  description: 'Real-time fraud detection and prevention systems using advanced analytics.'', import Layout from '../../components/Layout';
 import { DollarSign, Shield, TrendingUp, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
 import React from 'react';
 import Head from 'next/head';
@@ -65,33 +65,33 @@ const features = [
 const features = [;
   {;
     icon: DollarSign,;
-    title: 'Financial Analytics',;
-    description: 'Advanced analytics and reporting for financial institutions';
+    title: 'Financial Analytics',,
+  description: 'Advanced analytics and reporting for financial institutions';
   },;
   {;
     icon: Shield,;
-    title: 'Security & Compliance',;
-    description: 'Bank-grade security with regulatory compliance built-in';
+    title: 'Security & Compliance',,
+  description: 'Bank-grade security with regulatory compliance built-in';
   },;
   {;
     icon: TrendingUp,;
-    title: 'Risk Management',;
-    description: 'Comprehensive risk assessment and management tools';
+    title: 'Risk Management',,
+  description: 'Comprehensive risk assessment and management tools';
   },;
   {;
     icon: Users,;
-    title: 'Customer Portal',;
-    description: 'Secure customer-facing applications and services';
+    title: 'Customer Portal',,
+  description: 'Secure customer-facing applications and services';
   },;
   {;
     icon: FileText,;
-    title: 'Regulatory Reporting',;
-    description: 'Automated compliance and regulatory reporting';
+    title: 'Regulatory Reporting',,
+  description: 'Automated compliance and regulatory reporting';
   },;
   {;
     icon: CheckCircle,;
-    title: 'Audit Trail',;
-    description: 'Complete transaction and activity audit trails';
+    title: 'Audit Trail',,
+  description: 'Complete transaction and activity audit trails';
   }
 ;];
 const solutions = [;
@@ -172,18 +172,18 @@ const benefits = [;
       keywords="finance solutions, fintech, banking technology, financial services, regulatory compliance, risk management">;
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
-    title: 'Customer Portal',;
-    description: 'Secure customer-facing applications and services';
+    title: 'Customer Portal',,
+  description: 'Secure customer-facing applications and services';
   },;
   {;
     icon: FileText,;
-    title: 'Regulatory Reporting',;
-    description: 'Automated compliance and regulatory reporting';
+    title: 'Regulatory Reporting',,
+  description: 'Automated compliance and regulatory reporting';
   },;
   {;
     icon: CheckCircle,;
-    title: 'Audit Trail',;
-    description: 'Complete transaction and activity audit trails';
+    title: 'Audit Trail',,
+  description: 'Complete transaction and activity audit trails';
   }
 ;];
 const solutions = [;

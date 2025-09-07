@@ -22,8 +22,8 @@ import { Cloud,
 import Layout from "../../components/Layout";";
 const phases = [;
   {}
-    title: 'Assessment & Planning,',;
-    description: 'Comprehensive analysis of current infrastructure and migration strategy development.,',;
+    title: 'Assessment & Planning,',,
+  description: 'Comprehensive analysis of current infrastructure and migration strategy development.,',;
     icon: BarChart3,;
     steps: [,;
       'Infrastructure audit,',;
@@ -33,8 +33,8 @@ const phases = [;
     ];
   },;
   {}
-    title: 'Design & Architecture,',;
-    description: 'Cloud-native architecture design and security framework implementation.,',;
+    title: 'Design & Architecture,',,
+  description: 'Cloud-native architecture design and security framework implementation.,',;
     icon: Settings,;
     steps: [,;
       'Cloud architecture design,',;
@@ -44,8 +44,8 @@ const phases = [;
     ];
   },;
   {}
-    title: 'Migration Execution,',;
-    description: 'Phased migration with minimal downtime and comprehensive testing.,',;
+    title: 'Migration Execution,',,
+  description: 'Phased migration with minimal downtime and comprehensive testing.,',;
     icon: Cloud,;
     steps: [,;
       'Data migration,',;
@@ -55,8 +55,8 @@ const phases = [;
     ];
   },;
   {}
-    title: 'Optimization,',;
-    description: 'Continuous monitoring and optimization for peak performance.,',;
+    title: 'Optimization,',,
+  description: 'Continuous monitoring and optimization for peak performance.,',;
     icon: Zap,;
     steps: [,;
       'Performance monitoring,',;
@@ -69,8 +69,8 @@ const phases = [;
 
 const services = [;
   {}
-    title: 'AWS Migration,',;
-    description: 'Complete migration to Amazon Web Services with best practices and optimization.,',;
+    title: 'AWS Migration,',,
+  description: 'Complete migration to Amazon Web Services with best practices and optimization.,',;
     icon: Cloud,;
     features: [,;
       'EC2 instance migration,',;
@@ -80,8 +80,8 @@ const services = [;
     ];
   },;
   {}
-    title: 'Azure Migration,',;
-    description: 'Microsoft Azure cloud migration with enterprise-grade security and compliance.,',;
+    title: 'Azure Migration,',,
+  description: 'Microsoft Azure cloud migration with enterprise-grade security and compliance.,',;
     icon: Shield,;
     features: [,;
       'Azure Virtual Machines,',;
@@ -91,8 +91,8 @@ const services = [;
     ];
   },;
   {}
-    title: 'Google Cloud Migration,',;
-    description: 'Google Cloud Platform migration with advanced AI and analytics capabilities.,',;
+    title: 'Google Cloud Migration,',,
+  description: 'Google Cloud Platform migration with advanced AI and analytics capabilities.,',;
     icon: Brain,;
     features: [,;
       'Compute Engine migration,',;
@@ -102,8 +102,8 @@ const services = [;
     ];
   },;
   {}
-    title: 'Multi-Cloud Strategy,',;
-    description: 'Hybrid and multi-cloud solutions for maximum flexibility and redundancy.,',;
+    title: 'Multi-Cloud Strategy,',,
+  description: 'Hybrid and multi-cloud solutions for maximum flexibility and redundancy.,',;
     icon: Globe,;
     features: [,;
       'Cross-cloud integration,',;
@@ -116,23 +116,23 @@ const services = [;
 
 const benefits = [;
   {}
-    title: 'Cost Reduction,',;
-    description: 'Reduce infrastructure costs by up to 40% with cloud optimization.,',;
+    title: 'Cost Reduction,',,
+  description: 'Reduce infrastructure costs by up to 40% with cloud optimization.,',;
     icon: BarChart3,;
   },;
   {}
-    title: 'Enhanced Security,',;
-    description: 'Enterprise-grade security with automated updates and monitoring.,',;
+    title: 'Enhanced Security,',,
+  description: 'Enterprise-grade security with automated updates and monitoring.,',;
     icon: Shield,;
   },;
   {}
-    title: 'Improved Scalability,',;
-    description: 'Scale resources up or down based on demand automatically.,',;
+    title: 'Improved Scalability,',,
+  description: 'Scale resources up or down based on demand automatically.,',;
     icon: Zap,;
   },;
   {}
-    title: 'Better Performance,',;
-    description: 'Faster load times and improved application performance.,',;
+    title: 'Better Performance,',,
+  description: 'Faster load times and improved application performance.,',;
     icon: Smartphone,;
   }
 ;];
@@ -339,6 +339,6 @@ const benefits = [;
         </section>
       </div>
     </Layout>
-  );
-};
-
+  )
+}
+}

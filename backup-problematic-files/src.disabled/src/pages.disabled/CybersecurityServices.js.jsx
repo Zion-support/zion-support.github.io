@@ -6,6 +6,6 @@ const CybersecurityServices.js = ({ className }) => {
       <h1>CybersecurityServices.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

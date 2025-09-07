@@ -6,6 +6,6 @@ const FeatureCTAsSection = ({ className }) => {
       <h1>FeatureCTAsSection</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

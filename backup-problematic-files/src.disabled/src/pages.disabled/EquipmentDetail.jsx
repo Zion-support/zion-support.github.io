@@ -24,6 +24,6 @@ const EquipmentDetail = ({ className }) => {
       <h1>EquipmentDetail</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

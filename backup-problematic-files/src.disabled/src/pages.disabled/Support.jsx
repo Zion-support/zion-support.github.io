@@ -6,6 +6,6 @@ const Support = ({ className }) => {
       <h1>Support</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

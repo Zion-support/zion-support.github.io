@@ -1,5 +1,5 @@
-import React, { useState } from "react",;
-import { useToast } from "@/hooks/use-toast",;
+import React, { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
@@ -9,7 +9,7 @@ import { Sparkles, ArrowRight } from "@/components/icons",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Badge } from "@/components/ui/badge",;
 ;
-interface GeneratedContent {;
+interface GeneratedContent {,
   description:string,;
   tags:string[],;
   suggestedPrice:{;
@@ -58,8 +58,8 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} } AILi
   const handleGenerate = async () => {;
     if (!title || !category) {;
       toast({;
-        title:"Missing required fields",;
-        description:"Please provide at least a title and category.",;
+        title:"Missing required fields",,
+  description:"Please provide at least a title and category.",;
         variant:"destructive";
       }),;
       return,;
@@ -82,14 +82,14 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} } AILi
 ;
       setGeneratedContent(data.generated),;
       toast({;
-        title:"Content Generated",;
-        description:"AI has created optimized listing content for you.";
+        title:"Content Generated",,
+  description:"AI has created optimized listing content for you.";
       }),;
     } catch (error) {;
       console.error("Error generating content:", error),;
       toast({;
-        title:"Generation Failed",;
-        description:error instanceof Error ? error.message :"Failed to generate content. Please try again.",;
+        title:"Generation Failed",,
+  description:error instanceof Error ? error.message :"Failed to generate content. Please try again.",;
         variant:"destructive";
       }),;
     } finally {;
@@ -101,8 +101,8 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} } AILi
     if (generatedContent && onApplyGenerated) {;
       onApplyGenerated(generatedContent),;
       toast({;
-        title:"Content Applied",;
-        description:"The generated content has been applied to your listing.";
+        title:"Content Applied",,
+  description:"The generated content has been applied to your listing.";
       }),;
     }
   },;

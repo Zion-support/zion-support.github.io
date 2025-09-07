@@ -1,6 +1,6 @@
-import React from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
+import React from 'react';
+import Head from 'next/head';
+import Link from "Link";
 import { motion } from 'framer-motion',;
 import { Home, Search, ArrowLeft, AlertTriangle, Map, Users, Rocket } from 'lucide-react',;
 ;

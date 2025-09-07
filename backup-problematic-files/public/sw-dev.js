@@ -145,7 +145,7 @@ self && self.addEventListener(
         return Promise && Promise.allSettled(
           STATIC_FILES && STATIC_FILES.map(url =>;
             cache && cache.add(url).catch(error => {'
-              // // // // // // // console && console.warn(`Dev S
+              // // // // // // // console && console.warn(`Dev S;
     W: Failed to cache ${url}:`, error);
 return null;return null})))})
       .then((results) => {

@@ -6,6 +6,6 @@ const MobileEmailCapture.js = ({ className }) => {
       <h1>MobileEmailCapture.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

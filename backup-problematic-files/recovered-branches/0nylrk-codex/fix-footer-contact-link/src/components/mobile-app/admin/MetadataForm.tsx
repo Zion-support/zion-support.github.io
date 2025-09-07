@@ -1,6 +1,5 @@
-
-import React from "react",;
-import { UseFormReturn } from "react-hook-form",;
+import React from "react";
+import { UseFormReturn } from "react-hook-form";
 import { AppMetadataValues } from "./MetadataManager",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
@@ -163,6 +162,6 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
   e.preventDefault ();
 const value = e.currentTarget.value.trim ();
 if (value && !keywords.includes (value) ) {
-  
 }
-};
+}
+}

@@ -6,6 +6,6 @@ const EnterpriseHero.js = ({ className }) => {
       <h1>EnterpriseHero.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

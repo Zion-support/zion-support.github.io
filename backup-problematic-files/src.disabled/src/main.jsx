@@ -6,6 +6,6 @@ const Main = ({ className }) => {
       <h1>Main</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

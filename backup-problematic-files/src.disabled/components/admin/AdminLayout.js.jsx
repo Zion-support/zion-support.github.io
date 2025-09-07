@@ -6,6 +6,6 @@ const AdminLayout.js = ({ className }) => {
       <h1>AdminLayout.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

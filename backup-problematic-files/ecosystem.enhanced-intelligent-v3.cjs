@@ -35,8 +35,8 @@ module.exports = {
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '0 */1 * * *', // Every hour
-      max_memory_restart: '512M',
+      cron_restart: '0 */1 * * *', // Every hour;
+    max_memory_restart: '512M',
       restart_delay: 10000,
       env: {
         NODE_ENV: 'production',

@@ -6,6 +6,6 @@ const AIContentGenerationPro.js = ({ className }) => {
       <h1>AIContentGenerationPro.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

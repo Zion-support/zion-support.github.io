@@ -6,6 +6,6 @@ const Tabs = ({ className }) => {
       <h1>Tabs</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

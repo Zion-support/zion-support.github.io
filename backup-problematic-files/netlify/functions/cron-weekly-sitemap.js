@@ -23,9 +23,9 @@ exports.handler = async function () {
     if (owner && repo && token) {
       await upsertFile({
         owner
-        repo
-        path: 'public/sitemap-autogen.xml'
-        content: xml
+        repo;
+    path: "path",
+    content: xml
         message: 'chore(automation): weekly sitemap refresh'
         token
       });
@@ -43,12 +43,10 @@ exports.handler = async function () {
     const xml = `<?xml version="1.0" encoding="UTF-8"?>\n` +
       `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">` +
       pages.map((p) => `<url><loc>${baseUrl}${p}</loc></url>`).join('') +
-
       `</urlset>`
     const owner = process.env.GITHUB_OWNER
     const repo = process.env.GITHUB_REPO
     const token = process.env.GITHUB_TOKEN
-
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'public/sitemap-autogen.xml', content: xml, message: 'chore(automation): weekly sitemap refresh', token })
     }

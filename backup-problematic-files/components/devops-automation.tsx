@@ -35,8 +35,8 @@ export default function DevOpsAutomationPage() {
     {;
       name: 'Starter',;
       price: '$39',;
-      period: '/month',;
-      description: 'Perfect for small teams and startups',;
+      period: '/month',,
+  description: 'Perfect for small teams and startups',;
       features: [;
         'Up to 5 repositoriesBasic CI/CD pipelinesGitHub integrationEmail notificationsBasic security scanningCommunity support';
       ],;
@@ -47,8 +47,8 @@ export default function DevOpsAutomationPage() {
     {;
       name: 'Professional',;
       price: '$129',;
-      period: '/month',;
-      description: 'Ideal for growing development teams',;
+      period: '/month',,
+  description: 'Ideal for growing development teams',;
       features: [;
         'Up to 25 repositoriesAdvanced CI/CD workflowsMulti-cloud deploymentSlack & Teams integrationAdvanced security suitePriority supportCustom pipelinesTeam collaboration';
       ],;
@@ -59,8 +59,8 @@ export default function DevOpsAutomationPage() {
     {;
       name: 'Enterprise',;
       price: '$399',;
-      period: '/month',;
-      description: 'For large-scale development operations',;
+      period: '/month',,
+  description: 'For large-scale development operations',;
       features: [;
         'Unlimited repositoriesEnterprise CI/CDAdvanced IaC automationCustom integrations24/7 dedicated supportSLA guaranteesOn-premise optionsCustom security policies';
       ],;
@@ -120,26 +120,26 @@ export default function DevOpsAutomationPage() {
   ],;
   const automationExamples = [;
     {;
-      title: 'Automated Testing',;
-      description: 'Run comprehensive test suites on every commit',;
+      title: 'Automated Testing',,
+  description: 'Run comprehensive test suites on every commit',;
       icon: '',;
       color: 'from-green-500 to-emerald-600';
     },;
     {;
-      title: 'Security Scanning',;
-      description: 'Automated vulnerability detection and compliance checks',;
+      title: 'Security Scanning',,
+  description: 'Automated vulnerability detection and compliance checks',;
       icon: '',;
       color: 'from-red-500 to-pink-600';
     },;
     {;
-      title: 'Deployment Automation',;
-      description: 'Zero-downtime deployments with rollback capabilities',;
+      title: 'Deployment Automation',,
+  description: 'Zero-downtime deployments with rollback capabilities',;
       icon: '',;
       color: 'from-blue-500 to-cyan-600';
     },;
     {;
-      title: 'Infrastructure Management',;
-      description: 'Automated scaling and resource optimization',;
+      title: 'Infrastructure Management',,
+  description: 'Automated scaling and resource optimization',;
       icon: '',;
       color: 'from-purple-500 to-indigo-600';
     }
@@ -460,4 +460,4 @@ export default function DevOpsAutomationPage() {
     </>;
   );
 }
-;
+}

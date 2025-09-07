@@ -6,6 +6,6 @@ const HiringTracker = ({ className }) => {
       <h1>HiringTracker</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

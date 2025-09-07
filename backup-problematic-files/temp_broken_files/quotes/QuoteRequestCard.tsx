@@ -1,6 +1,5 @@
-
-import React from "react",;
-import { format } from "date-fns",;
+import React from "react";
+import { format } from "date-fns";
 import { ;
   Card,;
   CardContent, ;
@@ -111,7 +110,7 @@ CardDescription type QuoteRequestCardProps = {;
   quote: QuoteRequest;
 onViewDetails: (quote: QuoteRequest) => void;
 onMarkAsResponded?: (id: string) => void;
-onToggleArchive: (id: string, isArchived: boolean) => void ;
+onToggleArchive: (id: string, isArchived: boolean) => void 
 };
 quote, onViewDetails, onMarkAsResponded, onToggleArchive ;
 }) => {;

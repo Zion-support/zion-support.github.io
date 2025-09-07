@@ -46,18 +46,18 @@ export type {;
 // Service categories for easy discovery;
 export const SERVICE_CATEGORIES = {;
   UTILITIES:{;
-    name:'Utility Tools',;
-    description:'Essential tools for everyday tasks',;
+    name:'Utility Tools',,
+  description:'Essential tools for everyday tasks',;
     services:['urlShortenerpasswordGenerator', 'qrCodeGenerator'];
   },;
   MEDIA:{;
-    name:'Media & Files',;
-    description:'File conversion and media processing tools',;
+    name:'Media & Files',,
+  description:'File conversion and media processing tools',;
     services:['fileConverter'];
   },;
   ANALYSIS:{;
-    name:'Analysis & Insights',;
-    description:'Text analysis and content insights',;
+    name:'Analysis & Insights',,
+  description:'Text analysis and content insights',;
     services:['textAnalysis'];
   }
 } as const,;
@@ -65,8 +65,8 @@ export const SERVICE_CATEGORIES = {;
 // Service metadata for the application;
 export const SERVICES_METADATA = {;
   urlShortener:{;
-    name:'URL Shortener',;
-    description:'Create short, trackable URLs with analytics',;
+    name:'URL Shortener',,
+  description:'Create short, trackable URLs with analytics',;
     icon:'',;
     category:'UTILITIES',;
     features:[;
@@ -78,8 +78,8 @@ export const SERVICES_METADATA = {;
     apiEndpoint:'/api/url-shortener';
   },;
   passwordGenerator:{;
-    name:'Password Generator',;
-    description:'Generate secure passwords with strength analysis',;
+    name:'Password Generator',,
+  description:'Generate secure passwords with strength analysis',;
     icon:'',;
     category:'UTILITIES',;
     features:[;
@@ -91,8 +91,8 @@ export const SERVICES_METADATA = {;
     apiEndpoint:'/api/password-generator';
   },;
   qrCodeGenerator:{;
-    name:'QR Code Generator',;
-    description:'Create QR codes for various purposes',;
+    name:'QR Code Generator',,
+  description:'Create QR codes for various purposes',;
     icon:'',;
     category:'UTILITIES',;
     features:[;
@@ -104,8 +104,8 @@ export const SERVICES_METADATA = {;
     apiEndpoint:'/api/qr-code-generator';
   },;
   fileConverter:{;
-    name:'File Converter',;
-    description:'Convert files between different formats',;
+    name:'File Converter',,
+  description:'Convert files between different formats',;
     icon:'',;
     category:'MEDIA',;
     features:[;
@@ -117,8 +117,8 @@ export const SERVICES_METADATA = {;
     apiEndpoint:'/api/file-converter';
   },;
   textAnalysis:{;
-    name:'Text Analysis',;
-    description:'Analyze text for insights and optimization',;
+    name:'Text Analysis',,
+  description:'Analyze text for insights and optimization',;
     icon:'',;
     category:'ANALYSIS',;
     features:[;
@@ -176,4 +176,5 @@ textAnalysis: {
 }
 }
 }
-};
+}
+}

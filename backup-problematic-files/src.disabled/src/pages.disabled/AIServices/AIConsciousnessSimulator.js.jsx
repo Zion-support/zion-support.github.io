@@ -6,6 +6,6 @@ const AIConsciousnessSimulator.js = ({ className }) => {
       <h1>AIConsciousnessSimulator.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

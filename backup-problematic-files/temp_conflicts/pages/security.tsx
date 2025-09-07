@@ -1,9 +1,9 @@
-import React from 'react',;
-import Head from 'next/head',;
+import React from 'react';
+import Head from 'next/head';
 import { motion } from 'framer-motion',;
 import { Shield, Lock, Eye, Database, Server, Key, CheckCircle, Mail, Phone, MapPin } from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation',;
-import EnhancedFooter from '../components/EnhancedFooter',;
+import EnhancedNavigation from "EnhancedNavigation";
+import EnhancedFooter from "EnhancedFooter";
 ;
 export default function Security() {;
   const securityMeasures = [;

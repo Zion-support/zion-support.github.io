@@ -6,6 +6,6 @@ const ITInfrastructure = ({ className }) => {
       <h1>ITInfrastructure</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

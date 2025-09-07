@@ -1,11 +1,11 @@
-import { useEffect, useMemo, useState } from 'react',;
+import { useEffect, useMemo, useState } from 'react';
 ;
 export type QuoteRequest = {;
   id:string,;
   name:string,;
   email:string,;
   budget:string,;
-  timeline:string,;
+  timeline:string,,
   description:string,;
   talentSlug:string | null,;
   aiSummary:string,;

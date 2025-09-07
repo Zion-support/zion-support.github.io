@@ -30,13 +30,13 @@ const services = [
       'Custom storefront development,',
       'Payment gateway integration',',
       'Inventory management',',
-    title: 'E-commerce Platforms,',;
-    description: 'Custom e-commerce solutions with advanced features and seamless user experience.,',;
+    title: 'E-commerce Platforms,',,
+  description: 'Custom e-commerce solutions with advanced features and seamless user experience.,',;
 import Layout from '../../components/Layout';
 const services = [;
   {;
-    title: 'E-commerce Platforms',;
-    description: 'Custom e-commerce solutions with advanced features and seamless user experience.',;
+    title: 'E-commerce Platforms',,
+  description: 'Custom e-commerce solutions with advanced features and seamless user experience.',;
     icon: Globe,;
     features: [,;
       'Custom storefront development,',;
@@ -46,8 +46,8 @@ const services = [;
     ];
   },;
   {}
-    title: 'Inventory Management AI,',;
-    description: 'AI-powered inventory optimization and demand forecasting systems.,',;
+    title: 'Inventory Management AI,',,
+  description: 'AI-powered inventory optimization and demand forecasting systems.,',;
     icon: Brain,;
     features: [,;
       'Demand forecasting,',;
@@ -57,8 +57,8 @@ const services = [;
     ];
   },;
   {}
-    title: 'Customer Analytics,',;
-    description: 'Advanced analytics to understand customer behavior and preferences.,',;
+    title: 'Customer Analytics,',,
+  description: 'Advanced analytics to understand customer behavior and preferences.,',;
     icon: BarChart3,;
     features: [,;
       'Customer segmentation,',;
@@ -68,8 +68,8 @@ const services = [;
     ];
   },;
   {}
-    title: 'Personalized Recommendations,',;
-    description: 'AI-driven product recommendation systems for enhanced customer experience.,',;
+    title: 'Personalized Recommendations,',,
+  description: 'AI-driven product recommendation systems for enhanced customer experience.,',;
     icon: Users,;
     features: [,;
       'Machine learning algorithms,',;
@@ -79,8 +79,8 @@ const services = [;
     ];
   },;
   {}
-    title: 'Supply Chain Optimization,',;
-    description: 'End-to-end supply chain management with AI optimization.,',;
+    title: 'Supply Chain Optimization,',,
+  description: 'End-to-end supply chain management with AI optimization.,',;
     icon: Package,;
     features: [,;
       'Supplier management,',;
@@ -90,8 +90,8 @@ const services = [;
     ];
   },;
   {}
-    title: 'Omnichannel Solutions,',;
-    description: 'Seamless integration across all sales channels and touchpoints.,',;
+    title: 'Omnichannel Solutions,',,
+  description: 'Seamless integration across all sales channels and touchpoints.,',;
     icon: Smartphone,;
     features: [,;
       'Unified customer experience,',;
@@ -103,29 +103,29 @@ const services = [;
 ;];
 const benefits = [;
   {}
-    title: 'Increased Sales,',;
-    description: 'Personalized experiences and optimized inventory drive higher conversion rates.,',;
+    title: 'Increased Sales,',,
+  description: 'Personalized experiences and optimized inventory drive higher conversion rates.,',;
     icon: ShoppingCart;
 ];
 const benefits = [;
   {;
-    title: 'Increased Sales',;
-    description: 'Personalized experiences and optimized inventory drive higher conversion rates.',;
+    title: 'Increased Sales',,
+  description: 'Personalized experiences and optimized inventory drive higher conversion rates.',;
     icon: ShoppingCart;
   },;
   {}
-    title: 'Better Customer Experience,',;
-    description: 'Seamless omnichannel experiences keep customers engaged and satisfied.,',;
+    title: 'Better Customer Experience,',,
+  description: 'Seamless omnichannel experiences keep customers engaged and satisfied.,',;
     icon: Users,;
   },;
   {}
-    title: 'Reduced Costs,',;
-    description: 'Optimized inventory and supply chain reduce operational costs significantly.,',;
+    title: 'Reduced Costs,',,
+  description: 'Optimized inventory and supply chain reduce operational costs significantly.,',;
     icon: BarChart3,;
   },;
   {}
-    title: 'Data-Driven Insights,',;
-    description: 'Advanced analytics provide actionable insights for business growth.,',;
+    title: 'Data-Driven Insights,',,
+  description: 'Advanced analytics provide actionable insights for business growth.,',;
     icon: Database,;
   }
 ;];
@@ -459,6 +459,6 @@ export default function RetailPage() {;
         </section>
       </div>
     </Layout>
-  );
-};
-
+  )
+}
+}

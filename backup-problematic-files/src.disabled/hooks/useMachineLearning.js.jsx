@@ -6,6 +6,6 @@ const UseMachineLearning.js = ({ className }) => {
       <h1>UseMachineLearning.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

@@ -6,6 +6,6 @@ const AIBrainComputerInterface.js = ({ className }) => {
       <h1>AIBrainComputerInterface.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

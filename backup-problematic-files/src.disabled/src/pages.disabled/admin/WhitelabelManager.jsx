@@ -6,6 +6,6 @@ const WhitelabelManager = ({ className }) => {
       <h1>WhitelabelManager</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

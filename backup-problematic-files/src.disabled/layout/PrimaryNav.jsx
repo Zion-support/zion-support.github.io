@@ -6,6 +6,6 @@ const PrimaryNav = ({ className }) => {
       <h1>PrimaryNav</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

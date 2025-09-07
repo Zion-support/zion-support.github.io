@@ -6,6 +6,6 @@ const EnhancedServicesOverview = ({ className }) => {
       <h1>EnhancedServicesOverview</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

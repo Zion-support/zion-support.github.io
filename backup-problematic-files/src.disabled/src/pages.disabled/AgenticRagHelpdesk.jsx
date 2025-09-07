@@ -6,6 +6,6 @@ const AgenticRagHelpdesk = ({ className }) => {
       <h1>AgenticRagHelpdesk</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

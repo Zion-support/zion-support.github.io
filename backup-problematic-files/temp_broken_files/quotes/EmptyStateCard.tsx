@@ -1,6 +1,5 @@
-
-import React from "react",;
-import { Card, CardContent } from "@/components/ui/card",;
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
 import { MessageSquare, ArchiveIcon } from 'lucide-react';
 ;
 type EmptyStateCardProps = {;
@@ -37,7 +36,7 @@ export const EmptyStateCard:React.FC<EmptyStateCardProps> = ({ type }) => {;
   {;
   MessageSquare, ArchiveIcon ;
 }from 'lucide-react' type EmptyStateCardProps = {';
-  type: 'active' | 'archived' ;
+  type: 'active' | 'archived' 
 };
 export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({;
   type ;

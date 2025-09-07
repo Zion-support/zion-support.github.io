@@ -1,6 +1,5 @@
-
-import { useState } from 'react',;
-import { zodResolver } from "@hookform/resolvers/zod",;
+import { useState } from 'react';
+import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form",;
 import { z } from "zod",;
 import { WorkExperience } from "@/types/resume",;
@@ -24,7 +23,7 @@ const formSchema = z.object({;
   start_date:z.date({;
     required_error:"Start date is required"}),;
   end_date:z.date().optional(),;
-  is_current:z.boolean().default(false),;
+  is_current:z.boolean().default(false),,
   description:z.string().optional(),;
   location:z.string().optional()}),;
 ;
@@ -50,8 +49,8 @@ export function WorkExperienceItemForm({;
       role_title:initialData?.role_title || "",;
       start_date:initialData?.start_date ? new Date(initialData.start_date) :new Date(),;
       end_date:initialData?.end_date ? new Date(initialData.end_date) :undefined,;
-      is_current:initialData?.is_current || false,;
-      description:initialData?.description || "",;
+      is_current:initialData?.is_current || false,,
+  description:initialData?.description || "",;
       location:initialData?.location || ""}}),;
   ;
   const { isSubmitting } = form.formState,;
@@ -67,8 +66,8 @@ export function WorkExperienceItemForm({;
       role_title:values.role_title,      // Required;
       start_date:values.start_date,      // Required;
       end_date:values.end_date,          // Optional;
-      is_current:values.is_current,      // Required;
-      description:values.description,    // Optional;
+      is_current:values.is_current,      // Required,
+  description:values.description,    // Optional;
       location:values.location,          // Optional;
     },;
     ;
@@ -320,15 +319,15 @@ export function WorkExperienceItemForm({;
       />;
     </>;
   ),;}
- is current: z.boolean () .default (false);
-description: z.string () .optional ();
+ is current: z.boolean () .default (false),
+  description: z.string () .optional ();
 location: z.string () .optional () 
 });
 type FormValues = z.infer<typeof formSchema>;
 //Create a properly typed WorkExperience object with all required fields const workExperience: WorkExperience = {
   await onSubmit (workExperience) 
 };
-setIsEnhancementDialogOpen (false);
+setIsEnhancementDialogOpen (false)
 };
 }/> <FormField </FormControl> <FormMessage /> </FormItem>) 
 }/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField </FormControl> <FormMessage /> </FormItem>) 

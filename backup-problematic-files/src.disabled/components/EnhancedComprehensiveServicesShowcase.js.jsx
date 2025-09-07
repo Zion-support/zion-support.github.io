@@ -6,6 +6,6 @@ const EnhancedComprehensiveServicesShowcase.js = ({ className }) => {
       <h1>EnhancedComprehensiveServicesShowcase.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

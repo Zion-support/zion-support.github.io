@@ -6,6 +6,6 @@ const OnsiteSupport = ({ className }) => {
       <h1>OnsiteSupport</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

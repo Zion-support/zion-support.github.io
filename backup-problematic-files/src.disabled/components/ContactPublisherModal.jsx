@@ -6,6 +6,6 @@ const ContactPublisherModal = ({ className }) => {
       <h1>ContactPublisherModal</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

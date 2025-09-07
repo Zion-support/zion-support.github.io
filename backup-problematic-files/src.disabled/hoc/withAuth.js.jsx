@@ -6,6 +6,6 @@ const WithAuth.js = ({ className }) => {
       <h1>WithAuth.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

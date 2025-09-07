@@ -6,6 +6,6 @@ const Popover = ({ className }) => {
       <h1>Popover</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

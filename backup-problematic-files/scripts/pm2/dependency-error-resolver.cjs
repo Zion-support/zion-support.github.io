@@ -31,7 +31,7 @@ class DependencyErrorResolver {
     const report = {
       "timestamp": new Date().toISOString()
       dependencies: {
-        missin
+        missin;
     g: []
         outdated: []
         vulnerable: []

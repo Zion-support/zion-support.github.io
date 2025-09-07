@@ -6,6 +6,6 @@ const DigitalTransformation.js = ({ className }) => {
       <h1>DigitalTransformation.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

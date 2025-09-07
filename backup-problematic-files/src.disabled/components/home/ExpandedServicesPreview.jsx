@@ -6,6 +6,6 @@ const ExpandedServicesPreview = ({ className }) => {
       <h1>ExpandedServicesPreview</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

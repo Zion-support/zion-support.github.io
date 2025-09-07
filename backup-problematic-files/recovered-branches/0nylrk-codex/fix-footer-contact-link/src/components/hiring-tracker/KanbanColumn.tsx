@@ -1,13 +1,12 @@
-
-import { Droppable } from "react-beautiful-dnd",;
-import { JobApplication } from "@/types/jobs",;
+import { Droppable } from "react-beautiful-dnd";
+import { JobApplication } from "@/types/jobs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 import { CandidateCard } from "./CandidateCard",;
 ;
 interface KanbanColumnProps {;
   id:string,;
-  title:string,;
+  title:string,,
   description:string,;
   applications:JobApplication[],;
   count:number;

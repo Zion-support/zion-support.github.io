@@ -1,6 +1,5 @@
-
-import React, { useState, useEffect } from 'react',;
-import { useParams, useNavigate } from 'react-router-dom',;
+import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import { Header } from '@/components/Header',;
 import { Footer } from '@/components/Footer',;
 import { Button } from '@/components/ui/button',;
@@ -10,7 +9,7 @@ import { Calendar, Clock, DollarSign, Tag, Users, Briefcase } from '@/components
 import { formatDistanceToNow } from 'date-fns',;
 import { toast } from 'sonner',;
 import { useAuth } from '@/hooks/useAuth',;
-import useJobDetails from '@/hooks/useJobDetails',;
+import useJobDetails from "useJobDetails";
 import { ApplyToJobModal } from '@/components/messaging/job-application',;
 import { SEO } from '@/components/SEO',;
 import { useWhitelabel } from '@/context/WhitelabelContext',;
@@ -185,8 +184,8 @@ export default function JobDetails() {;
         <ApplyToJobModal;
           job={{;
             id:job.id,;
-            title:job.title,;
-            description:job.description,;
+            title:job.title,,
+  description:job.description,;
             company_name:job.company_name || "Company",;
             budget:job.budget,;
             client_id:job.client_id;

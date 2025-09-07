@@ -6,6 +6,6 @@ const ErrorPage = ({ className }) => {
       <h1>ErrorPage</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

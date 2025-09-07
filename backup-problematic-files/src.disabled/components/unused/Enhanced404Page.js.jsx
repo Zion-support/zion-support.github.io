@@ -6,6 +6,6 @@ const Enhanced404Page.js = ({ className }) => {
       <h1>Enhanced404Page.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

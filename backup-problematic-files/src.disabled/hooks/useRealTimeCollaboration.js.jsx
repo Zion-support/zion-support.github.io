@@ -6,6 +6,6 @@ const UseRealTimeCollaboration.js = ({ className }) => {
       <h1>UseRealTimeCollaboration.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

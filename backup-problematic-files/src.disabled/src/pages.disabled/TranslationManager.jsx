@@ -24,6 +24,6 @@ const TranslationManager = ({ className }) => {
       <h1>TranslationManager</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

@@ -1,9 +1,9 @@
-import React from 'react',;
-import Head from 'next/head',;
+import React from 'react';
+import Head from 'next/head';
 import { motion } from 'framer-motion',;
 import { Mail, Phone, MapPin, Clock } from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation',;
-import EnhancedFooter from '../components/EnhancedFooter',;
+import EnhancedNavigation from "EnhancedNavigation";
+import EnhancedFooter from "EnhancedFooter";
 ;
 export default function ContactPage() {;
   const [formData, setFormData] = React.useState({;

@@ -1,7 +1,7 @@
-import React, { useEffect, useMemo, useState } from 'react',;
-import ModuleCard from '../../components/academy/ModuleCard',;
-import ProgressTracker from '../../components/academy/ProgressTracker',;
-import CertificateView from '../../components/academy/CertificateView',;
+import React, { useEffect, useMemo, useState } from 'react';
+import ModuleCard from '../../components/academy/ModuleCard';
+import ProgressTracker from "ProgressTracker";
+import CertificateView from "CertificateView";
 import { founderCourseModules } from '../../components/academy/courseData',;
 ;
 const STORAGE_KEY = 'founder_course_progress_v1',;

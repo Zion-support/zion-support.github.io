@@ -6,6 +6,6 @@ const Settings = ({ className }) => {
       <h1>Settings</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

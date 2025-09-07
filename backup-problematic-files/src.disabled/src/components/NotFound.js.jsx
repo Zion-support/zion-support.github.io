@@ -6,6 +6,6 @@ const NotFound.js = ({ className }) => {
       <h1>NotFound.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

@@ -1,9 +1,9 @@
-import React, { useEffect, useMemo, useState } from "react",;
-import { useRouter } from "next/router",;
+import React, { useEffect, useMemo, useState } from "react";
+import { useRouter } from "next/router";
 import { supabase } from "../../../utils/supabase/client",;
-import HiringBoard from "../../../components/hiring/HiringBoard",;
-import TalentCard from "../../../components/hiring/TalentCard",;
-import Filters from "../../../components/hiring/Filters",;
+import HiringBoard from "HiringBoard";
+import TalentCard from "TalentCard";
+import Filters from "Filters";
 import type { ApplicationFilters, CandidateStatus, JobApplication } from "../../../utils/types/hiring",;
 import {;
   fetchJobApplications,;

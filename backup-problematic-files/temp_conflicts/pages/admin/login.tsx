@@ -1,5 +1,5 @@
-import { useState } from 'react',;
-import { useRouter } from 'next/router',;
+import { useState } from 'react';
+import { useRouter } from 'next/router';
 ;
 export default function AdminLoginPage() {;
   const router = useRouter(),;

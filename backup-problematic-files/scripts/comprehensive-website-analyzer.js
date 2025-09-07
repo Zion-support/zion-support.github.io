@@ -531,8 +531,8 @@ class ComprehensiveWebsiteAnalyzer {;
       console && console.log(`"Checking": ${url}`);
       const response = await axios && axios.get(url, {
         "timeout": 10000,
-        "validateStatus": status => status < 500
-        headers: {
+        "validateStatus": status => status < 500;
+    headers: {
           'User-Agent': 'Mozilla/5 && 5.0 (compatible, ZionTechGroup-Analyzer/1 && 1.0)'
         }
       });
@@ -980,8 +980,8 @@ class ComprehensiveWebsiteAnalyzer {;
     const recommendations = [];
         type: ;
   critical',;
-        title: 'Fix Broken Links,;
-        description: `Found ${this && this.brokenLinks.length} broken links that need immediate attention.`,;
+        title: 'Fix Broken Links,,
+  description: `Found ${this && this.brokenLinks.length} broken links that need immediate attention.`,;
         actions: this && this.brokenLinks.map(link => ({,
           url: link && link.url,;
           action:  ,
@@ -1077,8 +1077,8 @@ if: (require && require.main === module) {
       recommendations && recommendations.push({;
         type:  ,
   warning',;
-        title: 'Expand Content,;
-        description: ;
+        title: 'Expand Content,,
+  description: ;
   Website has limited content. Consider adding more pages and services.',;
         actions: [{ action:';Add more service pages, priority: ;
   medium' },;

@@ -1,12 +1,12 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
+import React, { useState } from 'react';
+import Head from 'next/head';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react',;
-import Button from '../components/ui/Button',;
-import Card from '../components/ui/Card',;
-import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground',;
-import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard',;
-import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground',;
-import QuantumHolographicCard from '../components/ui/QuantumHolographicCard',;
+import Button from "Button";
+import Card from "Card";
+import EnhancedFuturisticBackground from "EnhancedFuturisticBackground";
+import EnhancedFuturisticCard from "EnhancedFuturisticCard";
+import QuantumHolographicBackground from "QuantumHolographicBackground";
+import QuantumHolographicCard from "QuantumHolographicCard";
 import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services',;
 export default function InnovativeServicesPage() {;
   const [selectedCategory, setSelectedCategory] = useState('All'),;
@@ -76,17 +76,14 @@ export default function InnovativeServicesPage() {;
         }
     }
   }),
-
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   },
-
   const popularServices = getPopularInnovativeServices(),
   const categories = getInnovativeServiceCategories(),
-
   return (
     <>
       <Head>
@@ -99,7 +96,6 @@ export default function InnovativeServicesPage() {;
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/innovative-services" />
       </Head>
-
       <QuantumHolographicBackground>
         <div className="min-h-screen">
           {/* Hero Section */}
@@ -114,7 +110,6 @@ export default function InnovativeServicesPage() {;
                   From quantum AI to autonomous systems, we're redefining what's possible.
                 </p>
               </div>
-
               {/* Innovation Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
                 <div className="text-center">
@@ -134,7 +129,6 @@ export default function InnovativeServicesPage() {;
                   <div className="text-gray-400">Accuracy Rate</div>
                 </div>
               </div>
-
               {/* Contact Information */}
               <div className="bg-black/20 backdrop-blur-lg rounded-2xl p-6 mb-12 border border-white/10">
                 <h3 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h3>
@@ -155,7 +149,6 @@ export default function InnovativeServicesPage() {;
               </div>
             </div>
           </section>
-
           {/* Filters and Search */}
           <section className="px-4 sm:px-6 lg:px-8 mb-12">
             <div className="max-w-7xl mx-auto">
@@ -174,7 +167,6 @@ export default function InnovativeServicesPage() {;
                       />
                     </div>
                   </div>
-
                   {/* Category Filter */}
                   <div className="flex-shrink-0">
                     <select
@@ -243,7 +235,6 @@ export default function InnovativeServicesPage() {;
               </div>
             </div>
           </section>
-
           {/* Services Grid/List */}
           <section className="px-4 sm:px-6 lg:px-8 mb-20">
             <div className="max-w-7xl mx-auto">
@@ -277,10 +268,8 @@ export default function InnovativeServicesPage() {;
                         </div>;
                         {/* Tagline */}
                         <p className="text-gray-300 mb-4 font-medium">{service.tagline}</p>
-
                         {/* Description */}
                         <p className="text-gray-400 text-sm mb-6 leading-relaxed">{service.description}</p>
-
                         {/* Innovation Level */}
                         <div className="mb-4">
                           <div className="flex items-center space-x-2 mb-2">
@@ -302,7 +291,6 @@ export default function InnovativeServicesPage() {;
                             <div className="text-xs text-gray-400">average ROI</div>
                           </div>
                         </div>
-
                         {/* Key Features */}
                         <div className="mb-6">
                           <h4 className="text-sm font-semibold text-white mb-3">Key Features</h4>
@@ -331,7 +319,6 @@ export default function InnovativeServicesPage() {;
                             <div className="text-white font-medium">{service.growthRate}</div>
                           </div>
                         </div>
-
                         {/* CTA Buttons */}
                         <div className="flex space-x-3">
                           <Button
@@ -350,7 +337,6 @@ export default function InnovativeServicesPage() {;
                             <Mail className="w-4 h-4" />
                           </Button>
                         </div>
-
                         {/* Contact Info */}
                         <div className="mt-4 pt-4 border-t border-white/10 text-xs text-gray-400 text-center">
                           <div>Contact: {contactInfo.mobile} | {contactInfo.email}</div>

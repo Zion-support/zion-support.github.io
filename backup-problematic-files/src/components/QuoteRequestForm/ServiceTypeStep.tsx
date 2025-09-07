@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react",;
-import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",;
+import { useEffect, useState } from "react";
+import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";
 import { Input } from "@/components/ui/input",;
 import { Card } from "@/components/ui/card",;
 import { Search } from 'lucide-react';
 import { ListingScoreCard } from "@/components/ListingScoreCard",;
 import { captureException } from "@/utils/sentry",;
-import Skeleton from "@/components/ui/skeleton",;
+import Skeleton from "Skeleton";
 import { useDebounce } from "@/hooks/useDebounce",;
 import { useIsMounted } from "@/hooks/useIsMounted",;
 import { z } from "zod",;

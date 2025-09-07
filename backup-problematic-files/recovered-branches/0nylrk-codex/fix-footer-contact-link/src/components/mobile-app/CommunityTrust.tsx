@@ -1,6 +1,5 @@
-
-import React from "react",;
-import { Star } from "lucide-react",;
+import React from "react";
+import { Star } from "lucide-react";
 ;
 export const CommunityTrust:React.FC = () => {;
   // Stats display with social proof;
@@ -33,8 +32,7 @@ export const CommunityTrust:React.FC = () => {;
         </div>;
         ;
         {/* Rating display */}
-
-import React from "react",;
+import React from "React";
 import { Star } from "lucide-react",;
 ;
 export const CommunityTrust:React.FC = () => {;

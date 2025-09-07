@@ -6,6 +6,6 @@ const AIAutonomousPrediction = ({ className }) => {
       <h1>AIAutonomousPrediction</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

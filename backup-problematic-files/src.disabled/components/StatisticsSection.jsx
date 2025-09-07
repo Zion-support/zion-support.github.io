@@ -24,6 +24,6 @@ const StatisticsSection = ({ className }) => {
       <h1>StatisticsSection</h1>
       <p>This component is under development.</p>
     </div>
-  );
-};
-
+  )
+}
+}

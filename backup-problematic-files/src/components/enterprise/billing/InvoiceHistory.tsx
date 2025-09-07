@@ -1,5 +1,4 @@
-
-import React from "react",;
+import React from "react";
 import {;
   Table,;
   TableBody,;
@@ -7,7 +6,7 @@ import {;
   TableHead,;
   TableHeader,;
   TableRow} from "@/components/ui/table",;
-import { Button } from "@/components/ui/button",;
+import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge",;
 import { Download, FileText, Search } from 'lucide-react';
 import { Input } from "@/components/ui/input",;
@@ -56,8 +55,8 @@ export function InvoiceHistory() {;
   const handleDownloadInvoice = (invoiceId:string) => {;
     // In a real app, this would trigger a download of the invoice PDF;
     toast({;
-      title:"Downloading invoice",;
-      description:`Downloading invoice ${invoiceId} as PDF.`}),;
+      title:"Downloading invoice",,
+  description:`Downloading invoice ${invoiceId} as PDF.`}),;
   },;
 ;
   const getBadgeForStatus = (status:string) => {;
@@ -157,35 +156,35 @@ export function InvoiceHistory () {;
 date: "May 1,  2025";";
 amount: "$1, 999.00";";
 status: "paid";";
-period: "May 2025" ;
+period: "May 2025" 
 };
 {";
   id: "INV-1233";";
 date: "Apr 1,  2025";";
 amount: "$1, 999.00";";
 status: "paid";";
-period: "Apr 2025" ;
+period: "Apr 2025" 
 };
 {";
   id: "INV-1232";";
 date: "Mar 1,  2025";";
 amount: "$1, 999.00";";
 status: "paid";";
-period: "Mar 2025" ;
+period: "Mar 2025" 
 };
 {";
   id: "INV-1231";";
 date: "Feb 1,  2025";";
 amount: "$1, 999.00";";
 status: "paid";";
-period: "Feb 2025" ;
+period: "Feb 2025" 
 };
 {";
   id: "INV-1230";";
 date: "Jan 1,  2025";";
 amount: "$1, 999.00";";
 status: "paid";";
-period: "Jan 2025" ;
+period: "Jan 2025" 
 };
 {;
   //In a real app, this would trigger a download of the invoice PDF toast ({";

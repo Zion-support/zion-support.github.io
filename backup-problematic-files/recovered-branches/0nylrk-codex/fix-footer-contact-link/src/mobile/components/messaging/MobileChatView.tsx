@@ -1,6 +1,5 @@
-
-import React, { useState } from "react",;
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
+import React, { useState } from "react";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lucide-react",;
@@ -48,8 +47,8 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
   ;
   const startVideoCall = () => {;
     const roomId = `mobile-${contact.id}`,;
-    toast.success("Starting video call", {;
-      description:`Connecting with ${contact.name}...`;
+    toast.success("Starting video call", {,
+  description:`Connecting with ${contact.name}...`;
     }),;
     ;
     // Navigate to video call page;
@@ -58,8 +57,8 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
   ;
   const startAudioCall = () => {;
     const roomId = `mobile-audio-${contact.id}`,;
-    toast.success("Starting audio call", {;
-      description:`Connecting with ${contact.name}...`;
+    toast.success("Starting audio call", {,
+  description:`Connecting with ${contact.name}...`;
     }),;
     ;
     // Navigate to video call page with audio-only flag;
