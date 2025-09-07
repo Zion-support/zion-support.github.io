@@ -71,6 +71,10 @@ async log(message, type = "INFO")
   "pattern": /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*{\s*return\s*null;\s*}/g", replacement": (match", "componentName) => {return "}
   )}"
   console.error(""Error": ")
+
+  console.error(""Error": ")
+  console.error(""Error": ")
+  console.error(""Error": ")
   console.error(""Error": ")
           this.fixes.push({ file, "type": "export", "description": "Added missing default export" }")"
 

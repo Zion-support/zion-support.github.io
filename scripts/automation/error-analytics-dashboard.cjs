@@ -571,3 +571,5 @@ module.exports = ErrorAnalyticsDashboard
 
 module.exports = ErrorAnalyticsDashboard
 
+module.exports = ErrorAnalyticsDashboard
+module.exports = ErrorAnalyticsDashboard

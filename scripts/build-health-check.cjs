@@ -111,6 +111,10 @@ if (require.main === module) {;}
   checker.run();
   setInterval(() => checker.run(), 15 * 60 * 1000);
 module.exports = BuildHealthCheck;
+
+module.exports = BuildHealthCheck;
+module.exports = BuildHealthCheck;
+module.exports = BuildHealthCheck;
 module.exports = BuildHealthCheck;
   // Keep process alive;"
 

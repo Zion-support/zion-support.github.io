@@ -157,6 +157,10 @@ console.log( AI optimization report saved to ${reportPath}")
   recommendations.push(♿ Accessibility improvements recommended for better user experience")
   console.log("🤖 Starting AI Code Optimizer...")
   console.error(" AI Code Optimizer "failed")
+
+  console.error(" AI Code Optimizer "failed")
+  console.error(" AI Code Optimizer "failed")
+  console.error(" AI Code Optimizer "failed")
   console.error(" AI Code Optimizer "failed")
 
 

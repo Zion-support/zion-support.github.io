@@ -1,4 +1,23 @@
 import React from 'react';
+import MainLayout from '../../components/layout/MainLayout';
+
+export default function SolutionsPage() {
+  return (
+    <MainLayout title="Solutions - Zion Tech Group">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-8">Our Solutions</h1>
+        <p className="text-lg text-gray-700">
+          This is a placeholder for the solutions page.
+        </p>
+      </div>
+    </MainLayout>
+  );
+}
+<<<<<<< HEAD:pages_backup/solutions/index.tsx
+
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -50,6 +69,7 @@ const solutions = [
   }
 ];
 
+origin/cursor/automate-test-improve-and-merge-code-2533
 const stats = [
   { number: '500+', label: 'Projects Delivered' },
   { number: '50+', label: 'Enterprise Clients' },

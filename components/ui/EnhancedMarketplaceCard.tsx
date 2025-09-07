@@ -1,8 +1,45 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import Image from 'next/image';
 import { Star, Heart, ShoppingCart } from 'lucide-react';
+=======
+import React from 'react';
+import Link from 'next/link';
+ursor/automate-test-improve-and-merge-code-646c;
+
+        <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
+      </div>;
+      <p className="text-sm text-gray-600 mb-4">{description}</p>;
+      <div className="mt-auto flex items-center justify-between">;
+        {price && <span className="text-sm font-medium text-blue-600">{price}</span>}
+import Link from 'next/link';
+import Image from 'next/image';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import Link from 'next/link'
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+interface EnhancedMarketplaceCardProps {
+  title: string, description: string
+  price?: string;
+
+        <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
+      </div>;
+      <p className="text-sm text-gray-600 mb-4">{description}</p>;
+      <div className="mt-auto flex items-center justify-between">;
+        {price && <span className="text-sm font-medium text-blue-600">{price}</span>}
+import Link from 'next/link';
+import Image from 'next/image';
+interface EnhancedMarketplaceCardProps {
+  title: string, description: string
+  price?: string;
+  href: string, image?: string
+  href: string, image?: string
+>>>>>>> origin/main
 
 interface MarketplaceCardProps {
   title: string,
@@ -14,6 +51,7 @@ interface MarketplaceCardProps {
   onFavorite?: () => void;
 }
 
+<<<<<<< HEAD
 const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
   title;
   description;
@@ -21,12 +59,27 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
   rating;
   image;
   onAddToCart;
+=======
+}
+export default EnhancedMarketplaceCard;
+const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
+  title,
+  description,
+  price,
+  rating,
+  image,
+  onAddToCart,
+>>>>>>> origin/main
   onFavorite
 }) => {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
       <div className="relative">
+<<<<<<< HEAD
         <Image src={image} alt={title} width={400} height={192} className="w-full h-48 object-cover" />
+=======
+        <img src={image} alt={title} className="w-full h-48 object-cover" />
+>>>>>>> origin/main
         <button
           onClick={onFavorite}
           className="absolute top-2 right-2 p-2 bg-white rounded-full shadow-md hover:bg-gray-100"
@@ -55,12 +108,17 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
           Add to Cart
         </button>
       </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
     </div>
   );
 };
 
 export default EnhancedMarketplaceCard;
 =======
+<<<<<<< HEAD
 
           <div className="h-12 w-12 rounded bg-gray-200" />)};
         <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
@@ -77,6 +135,16 @@ export type MarketplaceCardProps = {
   footer?: React.ReactNode
 };
 
+=======
+</div>
+  );
+};
+}
+
+export default EnhancedMarketplaceCard;
+
+          <div className;
+>>>>>>> origin/main
 export default function EnhancedMarketplaceCard({ title, subtitle, description, footer }: MarketplaceCardProps) {
   return (
     <EnhancedCard className="p-5">
@@ -91,6 +159,7 @@ export default function EnhancedMarketplaceCard({ title, subtitle, description, 
     </EnhancedCard>
   )
 }
+<<<<<<< HEAD
 >>>>>>> pr-11992
 =======
           <div className="h-12 w-12 roundedbg-gray-200" />)};
@@ -101,3 +170,14 @@ export default function EnhancedMarketplaceCard({ title, subtitle, description, 
         {price && <span className=" text-smfont-mediumtext-blue-600">{price}</span>};
 <div className = "h-12 w-12 rounded bg-gray-200" />)}; <h3 className = "text-lg font-semibold text-gray-900">{title}</h3>; </div>; <p className = "text-sm text-gray-600 mb-4">{description}</p>; <div className = "mt-auto flex items-center justify-between">; {price && <span className = "text-sm font-medium text-blue-600">{price}</span>};
 >>>>>>> origin/merge-automation-changes
+=======
+=======
+<div className="h-12 w-12 rounded bg-gray-200" />)}
+        <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
+      </div>
+      <p className="text-sm text-gray-600 mb-4">{description}</p>
+      <div className="mt-auto flex items-center justify-between">
+        {price && <span className="text-sm font-medium text-blue-600">{price}</span>}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+>>>>>>> origin/main

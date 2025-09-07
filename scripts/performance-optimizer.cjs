@@ -618,6 +618,59 @@ function main() {
     process.exit(1)}
 }
 
+    const report = {
+      timestamp: new Date().toISOString(),
+      metrics: this.metrics,
+      optimizations: this.optimizations,
+      recommendations: this.generateRecommendations(),,
+}
+    const reportPath = path.join(this.reportsDir, "performance-optimizer-report.json")
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))
+    this.log(`📄 Report saved to: ${reportPath}`, "SUCCESS")
+    return report,,
+}
+  generateRecommendations() {
+    const recommendations = []
+    if (this.optimizations.length === 0) {
+      recommendations.push("Performance looks good! No major optimizations needed."),,
+} else {
+      this.optimizations.forEach(opt => {
+        recommendations.push(`${opt.type}: ${opt.description}`),,
+}),,
+}
+    recommendations.push("Consider running Lighthouse audit for detailed performance metrics")
+    recommendations.push("Monitor Core Web Vitals in production")
+    return recommendations,,
+}
+  printSummary() {
+    this.log("\n📊 Performance Analysis Summary: ", "INFO")
+    this.log("=".repeat(50), "INFO")
+    this.log(`📦 Bundle Size: ${(this.metrics.bundleSize / 1024 / 1024).toFixed(2)}MB`, "INFO")
+    this.log(`⏱️ Build Time: ${(this.metrics.buildTime / 1000).toFixed(2)}s`, "INFO")
+    this.log(`📁 Files: ${this.metrics.fileCount}`, "INFO")
+    this.log(`📦 Dependencies: ${this.metrics.dependencies}`, "INFO")
+    this.log(`💡 Optimizations: ${this.optimizations.length}`, "INFO")
+    if (this.optimizations.length > 0) {
+      this.log("\n🔍 Optimization Recommendations: ", "INFO")
+      this.optimizations.forEach((opt, index) => {
+        this.log(`  ${index + 1}. [${opt.impact.toUpperCase()}] ${opt.description}`, "INFO"),,
+})
+      this.log(`❌ Performance script creation failed: ${error.message}`)
+
+}
+  }
+  async run() {
+    this.log("🚀 Starting performance optimization...")
+    await this.optimizeImages()
+    await this.optimizeBundle()
+    await this.createPerformanceScripts()
+    this.log(`🎉 Performance optimization completed with ${this.optimizations.length} optimizations`)
+    this.optimizations.forEach(opt => this.log(`  - ${opt}`)),,
+}
+}
+const optimizer = new PerformanceOptimizer()
+optimizer.run().catch(console.error)
+
 // Main execution
 if (require.main === module) {
   const optimizer = new PerformanceOptimizer();

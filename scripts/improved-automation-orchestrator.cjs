@@ -1,8 +1,16 @@
 
+
+
+
+
+
+
+
+
+
+
 #!/usr/bin/env node;
-=======
 ///usr/bin/env node
->>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -32,7 +40,6 @@ const { execSync } = require('child_process')
       return { "status": 'completed', "message"}
         "status"
         "status"
-<<<<<<< HEAD
     console.error(' Improved automation "failed")
 
 

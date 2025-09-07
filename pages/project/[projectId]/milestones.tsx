@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
@@ -73,12 +74,20 @@ export default function ProjectMilestonesPage() {
     const status = $2;
     const res = await updateMilestoneStatus($2);
     setMilestones((prev) => prev.map((m) => (m.id = $2;
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function milestones() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
-    <div>
+    <Layout>
       <Head>
-        <title>Project Milestones</title>
-        <meta name="description" content="Track project deliverables and milestone payments" />
+        <title>Milestones - Zion Tech Group</title>
+        <meta name="description" content="Milestones solutions and services." />
       </Head>
+<<<<<<< HEAD
 
       <div className="max-w-5xl mx-auto px-4 py-8">
         <div className="mb-6">
@@ -116,4 +125,17 @@ export default function ProjectMilestonesPage() {
       </div>
     </div>
   )
+=======
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Milestones</h1>
+          <p className="text-lg text-gray-600">
+            Professional milestones solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

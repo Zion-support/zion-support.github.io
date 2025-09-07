@@ -612,3 +612,5 @@ module.exports = PM2SyncMonitor;
 
 module.exports = PM2SyncMonitor;
 
+module.exports = PM2SyncMonitor;
+module.exports = PM2SyncMonitor;

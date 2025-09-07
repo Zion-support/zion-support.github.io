@@ -1,3 +1,14 @@
+interface ProductActions.testProps {
+  // Add props here as needed
+}
+export default function ProductActions.test({}: ProductActions.testProps) {
+  return (
+    <div>
+      <h1>ProductActions.test</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { describe, it, expect, vi } from 'vitest';

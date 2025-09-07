@@ -21,6 +21,10 @@ class DependencyMonitor {}
     this.intervalId = setInterval(() => {}
       this.runDependencyCheck()}, this.interval);
     
+
+    
+    
+    
     
 
 
@@ -62,6 +66,8 @@ class DependencyMonitor {}
 
 
 
+
+
       child.on('close', (code) => {}
         if ( {})
 
@@ -82,6 +88,11 @@ class DependencyMonitor {}
     const outdatedPackages = lines.filter(line => )
       line.includes('→') && !line.includes('Package');
    ;);
+    
+
+    
+    
+    if ( {})
     
     
 
@@ -112,6 +123,8 @@ class DependencyMonitor {}
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
+
+
 
 
 
@@ -150,6 +163,9 @@ module.exports = DependencyMonitor;
   
   monitor.start().catch(console.error)};
 
+module.exports = DependencyMonitor;
+
+module.exports = DependencyMonitor;
 module.exports = DependencyMonitor;
 module.exports = DependencyMonitor;
   // Handle graceful shutdown;

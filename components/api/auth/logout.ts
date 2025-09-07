@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const cookie = clearSessionCookie();
@@ -8,10 +9,33 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   res.setHeader('Set-Cookie', cookie);
   res.status(200).json({ ok: true })
 
+
+
+
+
+
+
+
+
+
+
+}
+
+
   const cookie = clearSessionCookie();
   res.setHeader('Set-Cookie', cookie);
   res.status(200).json({ ok: true })
 }
+
+
+
+
+
+
+
+
+
+
 
 import { clearSessionCookie } from '../../../utils / auth - utils';
 ;
@@ -29,4 +53,48 @@ function handler() {
   res.set_header ('Set - Cookie', cookie);
   res.status (200).json ({ ok: true });
 }
+
+
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+import { clearSessionCookie } from '../../../utils/auth-utils';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const cookie = clearSessionCookie();
+  res.setHeader('Set-Cookie', cookie);
+  res.status(200).json({ ok: true });
+  const cookie = clearSessionCookie();
+  res.setHeader('Set-Cookie', cookie);
+  res.status(200).json({ ok: true });
+origin/cursor/automate-test-improve-and-merge-code-2533
+  const cookie = null;
+<<<<<<< HEAD
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const cookie = clearSessionCookie();
+  res.setHeader('Set-Cookie', cookie);
+  res.status(200).json({ ok: true });export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const cookie = clearSessionCookie();
+  res.setHeader('Set-Cookie', cookie);
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+  res.status(200).json({ ok: true })
+}
+}
+
+}
+
+
+  const cookie = clearSessionCookie();
+  res.setHeader('Set-Cookie', cookie);
+  res.status(200).json({ ok: true });
 

@@ -18,6 +18,11 @@ describe('AccessibilityManager', () => {'}
     render(<AccessibilityManager />);,
   });
 });
+});
+});
+});
+});
+});
 import _React from 'react'
 '
 import '@testing-library/jest-dom';

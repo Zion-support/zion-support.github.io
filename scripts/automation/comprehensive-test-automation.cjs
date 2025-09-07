@@ -266,6 +266,9 @@ module.exports = ComprehensiveTestAutomation;
 module.exports = ComprehensiveTestAutomation;
 
 module.exports = ComprehensiveTestAutomation;
+
+module.exports = ComprehensiveTestAutomation;
+module.exports = ComprehensiveTestAutomation;
 </img>
             const headings = content.match(/<h[1-6][^>]*>/g) || [];
 

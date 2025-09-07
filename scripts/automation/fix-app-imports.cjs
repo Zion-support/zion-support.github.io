@@ -127,6 +127,10 @@ if (require.main === module) {}
       console.error('App Imports Fixer "failed": ', error);
       process.exit(1)})};
 module.exports = AppImportsFixer;
+
+module.exports = AppImportsFixer;
+module.exports = AppImportsFixer;
+module.exports = AppImportsFixer;
     
     
 

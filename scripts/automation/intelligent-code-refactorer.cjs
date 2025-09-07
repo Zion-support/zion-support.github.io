@@ -215,6 +215,10 @@ process.on("SIGINT")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
   console.error(" Failed to start intelligent code "refactorer")
+
+  console.error(" Failed to start intelligent code "refactorer")
+  console.error(" Failed to start intelligent code "refactorer")
+  console.error(" Failed to start intelligent code "refactorer")
   console.error(" Failed to start intelligent code "refactorer")
 
 

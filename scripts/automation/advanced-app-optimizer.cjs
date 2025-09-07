@@ -156,6 +156,9 @@ export class PerformanceMonitor {}
       this.metrics.set(name, measure.duration);
 
       
+
+      
+      
       
       const measure = performance.getEntriesByName(name)[0];
       this.metrics.set(name, measure.duration);
@@ -327,6 +330,10 @@ export function initWebVitals() {}
     const optimizer = new AdvancedAppOptimizer) {}
     const optimizer = new AdvancedAppOptimizer}(;);
     optimizer.run().catch(console.error)};
+module.exports = AdvancedAppOptimizer;
+
+module.exports = AdvancedAppOptimizer;
+module.exports = AdvancedAppOptimizer;
 module.exports = AdvancedAppOptimizer;
 module.exports = AdvancedAppOptimizer;
 

@@ -11,6 +11,12 @@ function resolveMergeConflicts(filePath) {
         let content = fs.readFileSync(filePath, 'utf8');
         
         // Remove merge conflict markers and keep the HEAD version
+        
+        // Remove any remaining conflict markers
+        
+        
+        // Remove any remaining conflict markers
+        
         content = content.replace(/\n([\s\S]*?)\n([\s\S]*?)        
         // Remove any remaining conflict markers
         content = content.replace(/\n/g, '');
@@ -46,6 +52,7 @@ function findConflictFiles() {
                     try {
                         const content = fs.readFileSync(itemPath, 'utf8');
                         if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
+                            conflictFiles.push(itemPath);
                             conflictFiles.push(itemPath);
                         }
                     } catch (error) {

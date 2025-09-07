@@ -126,6 +126,10 @@ process.on("SIGINT")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
   console.error(" Failed to start master error "fixer": ")
+
+  console.error(" Failed to start master error "fixer": ")
+  console.error(" Failed to start master error "fixer": ")
+  console.error(" Failed to start master error "fixer": ")
   console.error(" Failed to start master error "fixer": ")
 
 

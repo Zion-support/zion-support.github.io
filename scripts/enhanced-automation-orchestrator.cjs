@@ -66,6 +66,10 @@ const { execSync } = require("child_process")
     this.log(" Starting Enhanced Automation Orchestrator...")
       this.log(" Enhanced Automation Orchestrator completed!")
       this.log(` Fatal "error": ${error.message}`, "ERROR"`)
+
+      this.log(` Fatal "error": ${error.message}`, "ERROR"`)
+      this.log(` Fatal "error": ${error.message}`, "ERROR"`)
+      this.log(` Fatal "error": ${error.message}`, "ERROR"`)
       this.log(` Fatal "error": ${error.message}`, "ERROR"`)
 
       const duration = Date.now() - startTime

@@ -184,3 +184,5 @@ const monitor = new SecurityMonitor();
 
 monitor.run().catch(console.error);
 
+monitor.run().catch(console.error);
+monitor.run().catch(console.error);

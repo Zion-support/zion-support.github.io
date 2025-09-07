@@ -299,6 +299,9 @@ module.exports = EnhancedAppOptimizer;
 module.exports = EnhancedAppOptimizer;
 
 module.exports = EnhancedAppOptimizer;
+
+module.exports = EnhancedAppOptimizer;
+module.exports = EnhancedAppOptimizer;
           const files = this.findReactFiles(dir})
 
 

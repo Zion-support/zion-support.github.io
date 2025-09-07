@@ -34,6 +34,9 @@ function processFile(filePath) {
 
       return removedCount}
 
+
+
+function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
   let results = [];
   const list = fs.readdirSync(dir);
   list.forEach(file => {)
@@ -50,6 +53,9 @@ ursor/expand-services-advertise-and-build-project-0033
   return results;
 
 function main() {
+ursor/expand-services-advertise-and-build-project-0033
+
+
 
 
 
@@ -77,6 +83,7 @@ function main() {
     console.log(`\n✨ No console statements found to remove.`);
   }
 ursor/expand-services-advertise-and-build-project-0033
+ursor/expand-services-advertise-and-build-project-0033
 
 
 
@@ -85,6 +92,14 @@ ursor/expand-services-advertise-and-build-project-0033
 
 module.exports = { removeConsoleStatements, processFile };
 
+
+
+module.exports = { removeConsoleStatements, processFile };
+
+
+
+module.exports = { removeConsoleStatements, processFile };
+module.exports = { removeConsoleStatements, processFile };
 module.exports = { removeConsoleStatements, processFile };
 
 

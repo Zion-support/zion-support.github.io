@@ -3,6 +3,13 @@ const path = require("path")
 
 
 
+
+const fs = require("child_process")
+const path = require("path")
+const fs = require("child_process")
+const path = require("path")
+    console.log("� Generating sitemap...")
+
     console.log("� Generating sitemap...")
 
 const fs = require("child_process")
@@ -41,3 +48,9 @@ Allow: /contact"
 // console.log(" Meta tags configuration created")
     console.log(" SEO improvement completed!")
 
+    fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
+// console.log(" Meta tags configuration created")
+    console.log(" SEO improvement completed!")
+    fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
+// console.log(" Meta tags configuration created")
+    console.log(" SEO improvement completed!")

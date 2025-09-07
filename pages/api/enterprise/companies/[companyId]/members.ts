@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/members.ts
+}
+
+
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/members.ts
+origin/cursor/integrate-build-improve-and-re-verify-2156
 
 
 import type { NextApiRequest, NextApiResponse } from './next';
@@ -78,6 +85,7 @@ import { store } from "../../../../../utils/data/enterpriseStore";
 import type { EnterpriseRole } from "../../../../../utils/types/enterprise";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { companyId } = req.query;
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/members.ts
 
   if (!companyId |typeof companyId !== "string") {
     return res.status(400).json({ error: "companyId required" });
@@ -94,12 +102,24 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   $2
 }
     const r: EnterpriseRole = role || "viewer";
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/members.ts
+    const member = store.add_member (company_id, name, email, r);
+    return res.status (201).json (member);
+    const member = store.add_member (company_id, name, email, r);
+    return res.status (201).json (member);
+
 
   }
   // Check condition
 if ( {) {
   $2
 }
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/members.ts
+import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ members: [] });
@@ -130,6 +150,11 @@ if ( {) {
       .status (ok ? 200 : 404);
       .json (ok ? { success: true } : { error: "member_not_found" });
   }
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/members.ts
+  return res.status (405).json ({ error: "method_not_allowed" });
+}
+
+
 
   if (req.method === 'PATCH') {
     const { memberId, role } = req.body || {},
@@ -144,6 +169,13 @@ if ( {) {
     return res.status(ok ? 200 : 404).json(ok ? { success: true} : { error: 'member_not_found' })
   }
 }
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/members.ts
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
 
 ;
   if (req.method === 'GET') {
@@ -157,6 +189,13 @@ if ( {) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/members.ts
+  if (!companyId || typeof companyId !== 'string') {
+    return res.status(400).json({ error: 'companyId required' })
+  }
+  const company = null;
+    return res.status(ok ? 200 : 404).json(ok ? { success: true } : { error: 'member_not_found' })
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
   } catch (error) {
@@ -167,6 +206,7 @@ if ( {) {
 ;
   if (req.method === 'GET') {
     const { memberId } = req.query;
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/members.ts
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     const ok = store.removeMember(companyId, memberId);
     return res.status(ok ? 200 : 404).json(ok ? { success: true } : { error: 'member_not_found' });
@@ -197,4 +237,38 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/members.ts
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/members.ts
+ursor/fix-website-loading-errors-and-merge-6662
+}
+}
 
+
+
+if (!memberId || typeof memberId !== 'string')
+      return res.status(400).json({ error: 'memberId required' });
+    const ok = store.removeMember(companyId, memberId);
+    return res
+      .status(ok ? 200 : 404)
+      .json(ok ? { success: true } : { error: "member_not_found" });
+  }
+
+  return res.status(405).json({ error: 'method_not_allowed' });
+
+}
+}
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end('Method Not Allowed');
+  }
+  
+  res.status(200).json({ message: 'Endpoint working' });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

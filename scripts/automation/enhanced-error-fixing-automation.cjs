@@ -1,4 +1,14 @@
 
+          this.log(`Fixing merge conflicts in ${file}`);
+          
+          // Simple merge conflict resolution - keep the HEAD version
+          const lines = content.split("\n");
+          const newLines = [];
+          let inConflict = false;
+          
+          for (const line of lines) {
+              continue;
+            } else if (line.includes("")) {
 
 
 
@@ -70,6 +80,11 @@ if (require.main === module) {
   automation.run().catch(console.error);
 
 module.exports = EnhancedErrorFixingAutomation;
+#!/usr/bin/env node;
+#!/usr/bin/env node;
+
+
+#!/usr/bin/env node;
 
 
 
@@ -311,6 +326,13 @@ export default function"
       "summary"
         "typescriptFixes": this.fixesApplied.filter(f => f.type === "typescript_error")
         "eslintFixes": this.fixesApplied.filter(f => f.type === "eslint_error" || f.type === "eslint_auto_fix")
+        "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
+
+
+        "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
+
+        "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
+
         "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
         "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
 

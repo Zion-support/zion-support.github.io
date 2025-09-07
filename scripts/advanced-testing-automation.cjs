@@ -10,6 +10,10 @@ const path = require('path')
 const { execSync } = require('child_process')
   log(message, type = 'INFO')
     console.error('Advanced testing automation "failed")
+
+    console.error('Advanced testing automation "failed")
+    console.error('Advanced testing automation "failed")
+    console.error('Advanced testing automation "failed")
     console.error('Advanced testing automation "failed")
 
 </script>"

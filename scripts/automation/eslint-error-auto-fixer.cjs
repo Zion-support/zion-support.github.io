@@ -344,5 +344,9 @@ this.log('Starting ESLint error auto-fixer...')
 
     process.exit(1)})};
 module.exports = ESLintErrorAutoFixer;
+
+module.exports = ESLintErrorAutoFixer;
+module.exports = ESLintErrorAutoFixer;
+module.exports = ESLintErrorAutoFixer;
 module.exports = ESLintErrorAutoFixer;
 

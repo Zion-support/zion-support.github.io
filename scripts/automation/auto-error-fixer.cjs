@@ -1,4 +1,8 @@
 #!/usr/bin/env node;
+
+#!/usr/bin/env node;
+#!/usr/bin/env node;
+#!/usr/bin/env node;
 #!/usr/bin/env node;
 
 
@@ -154,6 +158,10 @@ const { execSync } = require("child_process")
       "logFile"
   process.on("SIGINT")
   process.on("SIGINT")
+  process.on(")
+
+  process.on(")
+  process.on(")
   process.on(")
   process.on(")
 

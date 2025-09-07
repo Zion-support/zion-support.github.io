@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../../utils/supabase/server';
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
@@ -21,5 +22,21 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
     return res.status(200).json({ partners: data })
   } catch (e: any) {
     return res.status(500).json({ error: e?.message })
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    if (req.method !== 'GET') {
+      res.setHeader('Allow', ['GET']);
+      return res.status(405).end('Method Not Allowed');
+    }
+    
+    return res.status(200).json({
+      partners: []
+    });
+  } catch (error) {
+    return res.status(500).json({ error: 'Internal server error' });
+>>>>>>> origin/main
   }
 }

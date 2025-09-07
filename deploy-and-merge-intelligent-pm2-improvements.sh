@@ -1163,6 +1163,7 @@ show_final_status() {
     echo "  ./maintenance.sh            - Maintenance"
 main
 
+
 }
 
 # Main execution
@@ -1318,6 +1319,7 @@ trap 'echo -e "\n${RED}Script interrupted. Current state preserved.${NC}"; exit 
 }
 
 main
+
 
 # Run main function
 main "$@"

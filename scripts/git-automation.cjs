@@ -242,6 +242,8 @@ if (require.main === module) {
         process.exit(1);
 
 module.exports = GitAutomation;
+
+
 #!/usr/bin/env node;
       console.log("Usage: node git-automation.cjs [status|add|commit|push|merge|workflow]")
       process.exit(1)

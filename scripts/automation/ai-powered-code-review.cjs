@@ -250,6 +250,10 @@ this.logError("Code review failed")
         .map(line => line.split(" ")
         .filter(file => file && !file.startsWith(".")
   const content = fs.readFileSync(filePath, ")
+
+  const content = fs.readFileSync(filePath, ")
+  const content = fs.readFileSync(filePath, ")
+  const content = fs.readFileSync(filePath, ")
   const content = fs.readFileSync(filePath, ")
 
         .map(line => line.split(" ")"

@@ -522,3 +522,5 @@ module.exports = AdvancedPerformanceMonitor;
 
 module.exports = AdvancedPerformanceMonitor;
 
+module.exports = AdvancedPerformanceMonitor;
+module.exports = AdvancedPerformanceMonitor;

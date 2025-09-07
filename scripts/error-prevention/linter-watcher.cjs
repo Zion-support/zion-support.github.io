@@ -23,6 +23,10 @@ class LinterWatcher {}
     this.intervalId = setInterval(() => {}
       this.runLint()}, this.interval);
     
+
+    
+    
+    
     
 
 
@@ -68,6 +72,8 @@ class LinterWatcher {}
 
 
 
+
+
       child.on('close', (code) => {}
         if ( {})
 
@@ -95,6 +101,8 @@ console.log('Lint check failed ✗')
         "stdio": 'inherit',
         "cwd": process.cwd();
       };);
+
+
 
 
 
@@ -139,6 +147,9 @@ module.exports = LinterWatcher;
   
   watcher.start().catch(console.error)};
 
+module.exports = LinterWatcher;
+
+module.exports = LinterWatcher;
 module.exports = LinterWatcher;
 module.exports = LinterWatcher;
   // Handle graceful shutdown;

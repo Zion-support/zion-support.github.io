@@ -1,5 +1,32 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Server, Clock, MapPin } from "lucide-react";
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Server, Clock, MapPin} from "lucide-react";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Server, Clock, MapPin } from "lucide-react",
+
+interface ServiceDetailsProps {
+  country: string
+}
+// Component to show service details for the selected country
+export function ServiceDetails({ country }: ServiceDetailsProps) {
+  // Get datacenters for regions (simplified - in production this would come from a real database)
+
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Server, Clock, MapPin} from "lucide-react";
+
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Server, Clock, MapPin } from "lucide-react",
+
+// Component to show service details for the selected country;
+export /**
+ * ServiceDetails - Function description
+ */
+function ServiceDetails() {
+  // Get datacenters for regions (simplified - in production this would come from a real database);
+  const get_datacenters = (country: string): string[] => {
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Server, Clock, MapPin } from "lucide-react";
 interface ServiceDetailsProps {
   country: string}
 
@@ -15,6 +42,17 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
       "Australia": ["Sydney", "Melbourne", "Perth"];
       "Singapore": ["Singapore Central"];
       "Canada": ["Toronto", "Montreal", "Vancouver"];
+    const data_centers: Record < string, string[]> = {    const dataCenters: Record<string string[]> = {
+      "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],
+      "United Kingdom": ["London", "Manchester", "Birmingham"],
+      "Germany": ["Frankfurt", "Berlin", "Munich"],
+      "Japan": ["Tokyo", "Osaka"],
+      "Australia": ["Sydney", "Melbourne", "Perth"],
+      "Singapore": ["Singapore Central"],
+      "Canada": ["Toronto", "Montreal", "Vancouver"],
+    }
+    return regions[country] |regions["default"]
+  }    },
       // Default for other countries
       "default": ["Major metropolitan areas"]
     },
@@ -22,6 +60,27 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
     return dataCenters[country] || dataCenters["default"]
   },
   
+  // Get region-specific image
+  const getRegionalImage = (country: string): string => {
+    // In a real app, you'd have specific images for each region
+    const regions: Record<string, string> = {
+      "United States": "https://source.unsplash.com/featured/900x700/?datacenter,usa";
+      "United Kingdom": "https://source.unsplash.com/featured/900x700/?datacenter,uk";
+      "Germany": "https://source.unsplash.com/featured/900x700/?datacenter,germany";
+      "Japan": "https://source.unsplash.com/featured/900x700/?datacenter,japan";
+      "Australia": "https://source.unsplash.com/featured/900x700/?datacenter,australia";
+      "Singapore": "https://source.unsplash.com/featured/900x700/?datacenter,singapore";
+      // Default placeholder
+      "default": "https://source.unsplash.com/featured/900x700/?datacenter"
+      "United States": "EST/CST/PST depending on location";
+      "United Kingdom": "GMT/BST";
+      "Germany": "CET/CEST";      "Japan": "JST";
+      "Australia": "AEST / ACDT / AWST depending on location";
+      "Singapore": "SGT";
+
+    }
+    return regions[country] |regions["default"]
+  }
   // Get region-specific image
   const getRegionalImage = (country: string): string => {
     // In a real app, you'd have specific images for each region
@@ -69,6 +128,18 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
         </CardTitle>
         <CardDescription className="text-zion-slate-light">
           Details about our service locations and capabilities in {country}
+            src={getRegionalImage(country)}
+            alt={`Datacenter in ${country}`}
+            className="w-full object-cover h-48 transform transition-transform duration-500 hover:scale-110"
+              {datacenters.map((dc, idx) => (;
+                <div;
+                  key={idx} ;
+                  className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light";
+                >;                </div>;
+              ))}
+
+            </div>;
+          </div>;
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">

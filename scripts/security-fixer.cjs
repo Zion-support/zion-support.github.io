@@ -9,6 +9,10 @@ const { execSync } = require('child_process')
     this.log(' Fixing dependency vulnerabilities')
       execSync('npm audit fix --force')
         "failed"
+
+        "failed"
+        "failed"
+        "failed"
         "failed"
 
 

@@ -531,6 +531,8 @@ export default function AccessibilityPage() {
                   </p>
 =
                 </div>
+=                </div>
+                </div>
 >:pages-disabled/accessibility.tsx.disabled
               </motion.div>
             </div>

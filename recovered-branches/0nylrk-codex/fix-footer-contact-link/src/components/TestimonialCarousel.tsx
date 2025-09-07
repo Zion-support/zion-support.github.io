@@ -1,10 +1,25 @@
 
+import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel";
+import {Card, CardContent} from "@/components/ui/card";
+import {Avatar} from "@/components/ui/avatar";
+import {Quote} from "lucide-react";
+  {
+    quote: "Their green IT recycling program helped us meet our sustainability goals while upgrading our server infrastructure."
+    author: "Thomas Klein"
+    role: "Operations Manager, EcoTech Systems";
+
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious} from "@/components/ui/carousel",
+const testimonials = [
+  {
+    quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!",
+    author: "Sarah Chen",
+    role: "CTO, DataMind Solutions",
+    avatar: "https://i.pravatar.cc/150?img=32",
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar } from "@/components/ui/avatar";
 import { Quote } from "lucide-react";
@@ -29,6 +44,16 @@ const testimonials = $2;
     quote: "Their green IT recycling program helped us meet our sustainability goals while upgrading our server infrastructure.",
     author: "Thomas Klein",
     role: "Operations Manager, EcoTech Systems",
+export function TestimonialCarousel() {
+  return (
+    <section className="py-20 bg-zion-blue-dark">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h3 className="text-3xl font-bold text-white mb-3">What Our Users Say</h3>
+          <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
+            Discover how Zion is transforming the tech and AI marketplace ecosystem
+          </p>
+        </div>
     avatar: "https://i.pravatar.cc/150?img = $2;
     company: "EcoTech"}],
 
@@ -70,5 +95,12 @@ export function TestimonialCarousel() {
       </div>
     </section>
   )
+        <div className="max-w-5xl mx-auto px-8">            </div>;
+          </Carousel>;
+        </div>;
+      </div>;
+
+    </section>);}
+;
 }
 ;

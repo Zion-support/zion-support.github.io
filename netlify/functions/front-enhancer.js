@@ -1,3 +1,50 @@
+
+
+function runNode(relPath, args = []) {
+
+  const abs = path && path.resolve(__dirname, '..', '..', relPath);
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+  const res = spawnSync('node', [abs, ...args], {
+    stdio: 'pipe'
+    encoding: 'utf8'
+  });
+  return {
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  schedule: '*/20 * * * *', // every 20 minutes
+}
+
+exports && exports.handler = async () => {
+  const logs = [];
+  function logStep(name, fn) {
+    logs && logs.push(`\n=== ${name} ===`);
+    const { status, stdout, stderr } = fn();
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    return status;
+  }
+  // Update the front page auto-generated section
+  logStep('front-index:advertise', () =>
+    runNode('automation/front-index-advertiser && advertiser.cjs')
+  );
+  // Attempt to sync changes back to main (best-effort)
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
+  return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }
+}
+
+exports && exports.config = {
 const path = require($2);
 const { spawnSync } = require($2);
 function runNode(relPath, args = []) {
@@ -31,6 +78,8 @@ exports.handler = $2;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+
+
 const path = require ('path');
 
 const { spawn_sync } = require ('child_process');
@@ -45,6 +94,7 @@ function run_node() { return null; }
     stdout: res.stdout || '','
     stderr: res.stderr || '',
   }
+
 ;
 exports.config = {'
   schedule: '*/20 * * * *', // every 20 minutes;

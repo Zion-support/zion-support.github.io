@@ -7,6 +7,21 @@ export const metadata: Metadata = {
   keywords: 'business automation, services, business, technology'
 }
 
+function FeatureCard({ title, details }: { title: string; details: string[] }) {
+  return (
+    <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-sm hover:shadow-md transition-shadow">
+      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
+      <ul className="space-y-2 text-gray-600">
+        {details.map((detail, index) => (
+          <li key={index} className="flex items-center">
+            <span className="text-orange-500 mr-2">•</span> {detail}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 export default function ServicePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">

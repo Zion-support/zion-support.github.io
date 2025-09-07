@@ -1,8 +1,16 @@
 
+
+
+
+
+
+
+
+
+
+
 #!/usr/bin/env node;
-=======
 ///usr/bin/env node
->>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -22,7 +30,6 @@ runDeploymentStep('Create Robots.txt', 'echo "User-"agent": *\nAllow: /\nSitemap
 // console.log('\n� Phase "7")
 console.log('\n� Phase "8")
   "criticalFailures"
-<<<<<<< HEAD
 console.log('� Deployment summary saved "to")
 
 

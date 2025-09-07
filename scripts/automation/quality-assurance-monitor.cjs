@@ -126,6 +126,10 @@ if (require.main === module) {}
   const monitor = new QualityAssuranceMonitor();
   monitor.run().catch(console.error)};
 module.exports = QualityAssuranceMonitor;
+
+module.exports = QualityAssuranceMonitor;
+module.exports = QualityAssuranceMonitor;
+module.exports = QualityAssuranceMonitor;
 module.exports = QualityAssuranceMonitor;
 
 

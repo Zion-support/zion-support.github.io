@@ -283,6 +283,12 @@ class $1 {}
 
     process.exit(1)})};
 module.exports = IntelligentConflictResolver;
+
+
+module.exports = IntelligentConflictResolver;
+
+module.exports = IntelligentConflictResolver;
+module.exports = IntelligentConflictResolver;
 module.exports = IntelligentConflictResolver;
 
 module.exports = IntelligentConflictResolver;

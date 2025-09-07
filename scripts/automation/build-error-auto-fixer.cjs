@@ -427,5 +427,9 @@ this.log('Starting build error auto-fixer...')
 
     process.exit(1)})};
 module.exports = BuildErrorAutoFixer;
+
+module.exports = BuildErrorAutoFixer;
+module.exports = BuildErrorAutoFixer;
+module.exports = BuildErrorAutoFixer;
 module.exports = BuildErrorAutoFixer;
 

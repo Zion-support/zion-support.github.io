@@ -201,6 +201,10 @@ process.on("SIGINT")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
   console.error(" Failed to start code quality "automation": ")
+
+  console.error(" Failed to start code quality "automation": ")
+  console.error(" Failed to start code quality "automation": ")
+  console.error(" Failed to start code quality "automation": ")
   console.error(" Failed to start code quality "automation": ")
 
 // Get automation interval from environment variable ("default")"

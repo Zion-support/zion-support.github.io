@@ -254,6 +254,10 @@ return report}
     const fixer = new TypeScriptSyntaxFixer}(;);
     fixer.run().catch(console.error)};
 module.exports = TypeScriptSyntaxFixer;
+
+module.exports = TypeScriptSyntaxFixer;
+module.exports = TypeScriptSyntaxFixer;
+module.exports = TypeScriptSyntaxFixer;
 module.exports = TypeScriptSyntaxFixer;
 
 

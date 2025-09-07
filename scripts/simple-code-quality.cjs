@@ -9,4 +9,8 @@ const path = require('path')
   results.checks.push({ "name": 'prettier-config', "status"})
   results.checks.push({ "name": 'prettier-config', "status"})
 
+  results.checks.push({ "name": 'prettier-config', "status"})
+
+  results.checks.push({ "name": 'prettier-config', "status"})
+  results.checks.push({ "name": 'prettier-config', "status"})
 

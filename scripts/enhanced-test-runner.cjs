@@ -1,4 +1,14 @@
 
+
+
+
+
+
+
+
+
+
+
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -8,15 +18,11 @@ const { execSync, spawn } = require('child_process');
 
 
 
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
-=======
 ///usr/bin/env node
 const fs = require('fs')
 const path = require('path')
 const { execSync, spawn } = require('child_process')
->>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   "summary": {}"
     total: 0,"
     "passed": 0,
@@ -28,16 +34,6 @@ const { execSync, spawn } = require('child_process')
   "recommendations": [];"
 }
 function log(level, message) {}
-<<<<<<< HEAD
-  const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-<<<<<<< HEAD
-  console.log(`[${timestamp}] [${level.toUpperCase()}] ${message})};
-async function runJestTests() {}"
-
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`)};
 async function runJestTests() {}
   log('info', 'Running Jest tests');
@@ -47,10 +43,6 @@ async function runJestTests() {}
     const output = execSync('npm test -- --coverage --json', { })
       "encoding": 'utf8',
       "stdio": 'pipe'
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     }
 });
     const endTime = Date.now();
@@ -58,23 +50,12 @@ async function runJestTests() {}
     const result = JSON.parse(output);
     
     testReport.tests.push({})
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      "result": result;"
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       "framework": 'jest',
       "duration": endTime - startTime,
       "result": result;
     }
 });
     
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     testReport.summary.total += result.numTotalTests;
     testReport.summary.passed += result.numPassedTests;
     testReport.summary.failed += result.numFailedTests;
@@ -82,18 +63,6 @@ async function runJestTests() {}
     testReport.summary.duration += endTime - startTime;
     
     if (result.coverageMap) {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-    testReport.summary.total += result.total;
-    testReport.summary.passed += result.passed;
-    testReport.summary.failed += result.failed;
-
-
-      "result": { passed: true, output };"
-    testReport.summary.passed++;
-=======
 const timestamp = new Date().toISOString()
   console.log(`[${timestamp}] [${level.toUpperCase()}] ${message})}
 async function runJestTests() {}"
@@ -115,16 +84,10 @@ async function runJestTests() {}"
     testReport.summary.failed += result.failed
       "result": { passed: true, output };"
     testReport.summary.passed++
->>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
     "
 
       "result": { passed: false, "error": error.message };"
     testReport.summary.failed++;"
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       testReport.summary.coverage = result.coverageMap.getCoverageSummary().lines.pct};
     log('info', `Jest tests "completed": ${result.numPassedTests}/${result.numTotalTests} passed`)} catch (error) {`}
     log('warn', 'Jest tests failed or not configured', error.message)};
@@ -253,24 +216,11 @@ async function runTypeTests() {}
     testReport.summary.failed++;
     log('warn', 'TypeScript type tests failed', error.message)};
 };
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-=======
->>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 function generateRecommendations() {}
   const recommendations = []
   const { total, passed, failed, coverage } = testReport.summary
   if($2) {}
     recommendations.push({})
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       "priority": 'high',
       "message": 'No tests found',
       "action": 'Implement comprehensive test suite'
@@ -305,10 +255,6 @@ async function main() {}
   try {}
     log('info', 'Starting enhanced test runner');
     
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     await runJestTests();
     await runPlaywrightTests();
     await runCypressTests();
@@ -319,15 +265,6 @@ async function main() {}
     testReport.recommendations = generateRecommendations();
     
     // Display summary;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    process.exit(1)};
-main();
-`;
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     log('info', 'Enhanced Test Runner Summary');
     log('info', '');
     log('info', `Total "tests": ${testReport.summary.total}`);
@@ -359,11 +296,6 @@ main();
     process.exit(1)};
 };
 main();
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-=======
 await runJestTests()
     await runPlaywrightTests()
     await runCypressTests()
@@ -375,4 +307,3 @@ await runJestTests()
     process.exit(1)}
 main()
 `
->>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

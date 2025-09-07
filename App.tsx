@@ -42,6 +42,7 @@ import SEOHead from './components/SEOHead';
 import AccessibilityProvider from './components/AccessibilityProvider';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
+<<<<<<< HEAD
 interface Service {
   title: string,
   description: string,
@@ -389,3 +390,24 @@ export default function App(): JSX.Element {
     </AccessibilityProvider>
   );
 }
+=======
+export default function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>Zion Tech Group</h1>
+        <p>Welcome to our application</p>
+      </header>
+    <div className="min-h-screen bg-gray-50">
+      <h1 className="text-4xl font-bold text-center py-20">
+        Zion Tech Group
+      </h1>
+      <p className="text-center text-gray-600">
+        This is a Next.js application. Please navigate to the appropriate pages using the Next.js routing system.
+      </p>
+    </div>
+  );
+}
+
+export default App;
+>>>>>>> origin/main

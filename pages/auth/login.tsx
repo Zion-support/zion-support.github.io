@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import { useEffect, useState, FormEvent } from 'react';
 import Link from 'next/link';
@@ -345,10 +346,19 @@ const LoginPage = () => {
     return null, // Or a minimal loader/empty div
   }
 
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+
+export default function Login() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
-    <>
+    <Layout>
       <Head>
+<<<<<<< HEAD
         <title>{`${t('auth.sign_in')} - Zion Tech Marketplace`}</title>
+<<<<<<< HEAD
         <meta name="description" content="Sign in to your Zion Tech Marketplace account" />
       </Head>
       
@@ -417,3 +427,24 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
+=======
+        <meta name = $2;
+export default LoginPage,
+=======
+        <title>Login - Zion Tech Group</title>
+        <meta name="description" content="Login page." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Login</h1>
+          <p className="text-lg text-gray-600">
+            Login functionality coming soon.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+>>>>>>> origin/main

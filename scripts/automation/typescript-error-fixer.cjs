@@ -82,6 +82,10 @@ const { execSync, spawn } = require("child_process")
             /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{/g,const $"1": React.FC = () => {"}
       this.log(`TypeScript Error Fixer "failed"`)
   console.error(" Failed to start TypeScript error "fixer")
+
+  console.error(" Failed to start TypeScript error "fixer")
+  console.error(" Failed to start TypeScript error "fixer")
+  console.error(" Failed to start TypeScript error "fixer")
   console.error(" Failed to start TypeScript error "fixer")
 
 

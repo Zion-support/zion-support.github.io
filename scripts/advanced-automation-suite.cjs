@@ -1,4 +1,14 @@
 
+
+
+
+
+
+
+
+
+
+
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -10,7 +20,6 @@ console.log();
 function fixESLintConfiguration() {
 
   },
-=======
 ///usr/bin/env node
 
 const fs = require('fs')
@@ -20,7 +29,6 @@ console.log('🚀 Advanced Automation Suite')
 console.log()
 // Function to create ESLint configuration fix
 function fixESLintConfiguration()
->>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   "env": {"
     browser: true,"
     "node": true,
@@ -75,17 +83,10 @@ class AutomatedTestFramework {
         await test.testFn()
         this.results.passed++
       } catch (error) {
-<<<<<<< HEAD
-        this.results.failed++;
-    this.results.total = this.tests.length;
-    this.generateReport();
-  generateReport() {
-=======
 this.results.failed++
     this.results.total = this.tests.length
     this.generateReport()
   generateReport($2) {
->>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
     const report = {
       ...this.results,
       successRate: (this.results.passed / this.results.total) * 100
@@ -264,22 +265,8 @@ async function main() {
   const duration = endTime - startTi;m;e
   const report = {"
 
-<<<<<<< HEAD
-main().catch(console.error);
-// Run the automation suite;
-const automation = new AdvancedAutomationSuite();
-automation.runAllAutomations().catch(console.error);
-<<<<<<< HEAD
-<<<<<<< HEAD
-`;
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-=======
 main().catch(console.error)
 // Run the automation suite
 const automation = new AdvancedAutomationSuite()
 automation.runAllAutomations().catch(console.error)
 `
->>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

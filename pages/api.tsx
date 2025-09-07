@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   Code,
   Check,
@@ -264,6 +265,16 @@ import Layout from '../components/Layout';
 
 export default function APIPage() {
   
+=======
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../components/Layout'
+export default function APIPage() {
+  return (
+    <Layout 
+      title="API Services - Zion Tech Group"
+      description="Comprehensive API solutions for modern applications"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     >
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
@@ -278,6 +289,7 @@ export default function APIPage() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 
       </div>
     </Layout>
@@ -318,3 +330,9 @@ export default function APIPage() {
       </div>;
     </MainLayout>);
 }
+=======
+      </div>
+    </Layout>
+  )
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

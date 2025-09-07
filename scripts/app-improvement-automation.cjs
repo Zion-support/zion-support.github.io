@@ -394,6 +394,10 @@ if (document.readyState === "loading")
     console.log(" "Report": ")
     console.error(" App improvement automation "failed": ")
 
+    console.error(" App improvement automation "failed": ")
+    console.error(" App improvement automation "failed": ")
+    console.error(" App improvement automation "failed": ")
+
     }
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))
     this.log(`Report saved to ${this.reportFile}`)

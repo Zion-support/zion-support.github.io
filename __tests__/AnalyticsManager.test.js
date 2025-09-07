@@ -18,6 +18,11 @@ describe('AnalyticsManager', () => {'}
     render(<AnalyticsManager />);,
   });
 });
+});
+});
+});
+});
+});
 import _React from 'react'
 '
 import '@testing-library/jest-dom';

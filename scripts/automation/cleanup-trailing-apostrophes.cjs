@@ -87,6 +87,11 @@ function $1() {}
         changed += 1}
     } catch (e) {}
   
+
+  
+  
+} catch (e) {}
+  
   
 
 
@@ -94,6 +99,10 @@ function $1() {}
   // ignore file-level errors};
   console.log(`Cleaned ${changed} files.`)};
 if (require.main === module) {}
+  main()};
+
+  main()};
+  main()};
   main()};
   main()};
 

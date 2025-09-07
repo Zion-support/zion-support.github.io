@@ -366,3 +366,5 @@ module.exports = TypeScriptErrorMonitor
 
 module.exports = TypeScriptErrorMonitor
 
+module.exports = TypeScriptErrorMonitor
+module.exports = TypeScriptErrorMonitor

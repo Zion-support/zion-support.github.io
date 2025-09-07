@@ -308,3 +308,5 @@ module.exports = DependencyErrorResolver
 
 module.exports = DependencyErrorResolver
 
+module.exports = DependencyErrorResolver
+module.exports = DependencyErrorResolver

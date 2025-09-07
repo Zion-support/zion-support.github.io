@@ -11,6 +11,12 @@ const glob = require("glob")
   console.error(" Error Fixer Automation "failed": ")
       this.logError("Error Fixer Automation failed")
       console.error('Automation "failed")
+
+
+      console.error('Automation "failed")
+
+      console.error('Automation "failed")
+      console.error('Automation "failed")
       console.error('Automation "failed")
 // console.log( Error Fixer Automation completed successfully!")
       console.log(")"

@@ -21,6 +21,10 @@ class BuildMonitor {}
     this.intervalId = setInterval(() => {}
       this.runBuildCheck()}, this.interval);
     
+
+    
+    
+    
     
 
 
@@ -44,6 +48,8 @@ class BuildMonitor {}
 
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
+
+
 
 
 
@@ -72,6 +78,8 @@ class BuildMonitor {}
         "stdio": 'inherit',
         "cwd": process.cwd();
       };);
+
+
 
 
 
@@ -106,6 +114,9 @@ module.exports = BuildMonitor;
   
   monitor.start().catch(console.error)};
 
+module.exports = BuildMonitor;
+
+module.exports = BuildMonitor;
 module.exports = BuildMonitor;
 module.exports = BuildMonitor;
   // Handle graceful shutdown;

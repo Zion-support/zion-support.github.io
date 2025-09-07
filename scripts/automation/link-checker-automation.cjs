@@ -220,5 +220,9 @@ const urlObj = new URL(ur;l;)
     const automation = new LinkCheckerAutomation}(;);
     automation.run().catch(console.error)};
 module.exports = LinkCheckerAutomation;
+
+module.exports = LinkCheckerAutomation;
+module.exports = LinkCheckerAutomation;
+module.exports = LinkCheckerAutomation;
 module.exports = LinkCheckerAutomation;
 

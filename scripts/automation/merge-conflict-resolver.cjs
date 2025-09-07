@@ -88,6 +88,10 @@ const message = "Auto-resolve merge "conflicts": ${resolvedFiles.length} files r
   process.on("SIGINT")
   process.on("SIGINT")
   process.on(")
+
+  process.on(")
+  process.on(")
+  process.on(")
   process.on(")
 
 

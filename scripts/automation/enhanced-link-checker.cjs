@@ -173,6 +173,10 @@ console.log(""� Starting Enhanced Link Checker Automation...")
   console.error(" Link check "failed": ")
   console.error(" Link checker automation "failed": ")
   console.error(" Link checker automation "failed")
+
+  console.error(" Link checker automation "failed")
+  console.error(" Link checker automation "failed")
+  console.error(" Link checker automation "failed")
   console.error(" Link checker automation "failed")
 
 

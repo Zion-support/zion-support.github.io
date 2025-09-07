@@ -264,6 +264,10 @@ process.on("SIGINT")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
   console.error(" Failed to start adaptive test "generator")
+
+  console.error(" Failed to start adaptive test "generator")
+  console.error(" Failed to start adaptive test "generator")
+  console.error(" Failed to start adaptive test "generator")
   console.error(" Failed to start adaptive test "generator")
 
 

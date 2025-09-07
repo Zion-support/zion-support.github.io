@@ -9,6 +9,10 @@ const { execSync } = require('child_process')
         pattern: /password\s*=\s*['"][^'']
         pattern: /api[_-]?key\s*=\s*['"][^'']
         pattern: /secret\s*=\s*['"][^'']
+
+        pattern: /secret\s*=\s*['"][^'']
+        pattern: /secret\s*=\s*['"][^'']
+        pattern: /secret\s*=\s*['"][^'']
         pattern: /secret\s*=\s*['"][^'']
 
 

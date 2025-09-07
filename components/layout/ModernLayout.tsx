@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Head from "next/head";
 import { ReactNode } from "react";
 
@@ -48,3 +49,10 @@ const ModernLayout = ({
 };
 
 export default ModernLayout;
+=======
+        {children}
+      </div>
+</>),
+
+export default ModernLayout;"
+>>>>>>> origin/main

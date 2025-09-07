@@ -190,8 +190,15 @@ export default function ContactPage() {
                     onChange={handleChange}
                     required
                     rows={6}
+<<<<<<< HEAD
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Tell us about your project or how we can help..."
+=======
+                    value={formData.message}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="Tell us about your project or requirements..."
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                   />
                 </div>
 

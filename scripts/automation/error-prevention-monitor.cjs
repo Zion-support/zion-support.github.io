@@ -344,6 +344,10 @@ class ErrorPreventionMonitor {
     // Schedule periodic health checks
     setInterval(() => {
 monitor.run();
+
+monitor.run();
+monitor.run();
+monitor.run();
 monitor.run();
       this.checkProjectHealth()}, 15 * 60 * 1000); // Every 15 minutes;
 

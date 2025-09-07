@@ -43,10 +43,6 @@ class SecurityAuditor {
     await this.generateReport();
   }
 }
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 if (require.main === module) {
   const auditor = new SecurityAuditor();
@@ -59,6 +55,19 @@ if (require.main === module) {
       process.exit(1)})}
 
 module.exports = SecurityAuditor;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #!/usr/bin/env node;
 const fs = require('fs')

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -102,6 +103,7 @@ export default function ToolPage() {
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                   {questions.map((q, index) => (
+<<<<<<< HEAD
                     <div key={q.id} className="bg-white/10 rounded-lg p-4 border border-white/20">
                       <h3 className="font-semibold text-cyan-400 mb-2">{q.question}</h3>
                       <p className="text-white/80 text-sm">Score: {answers[q.id] || 0}/5</p>
@@ -133,13 +135,24 @@ export default function ToolPage() {
 
   const currentQ = questions[currentQuestion];
 
+=======
+                    <div key = $2;
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+
+export default function automationassessment() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+>>>>>>> origin/main
   return (
-    <>
+    <Layout>
       <Head>
-        <title>Automation Readiness Assessment | Zion Tech Group</title>
-        <meta name="description" content="Evaluate your organization's readiness for AI automation implementation with our interactive assessment tool." />
+        <title>Automation Assessment - Zion Tech Group</title>
+        <meta name="description" content="Automation Assessment solutions and services." />
       </Head>
       
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <div className="max-w-4xl mx-auto">
@@ -199,4 +212,16 @@ export default function ToolPage() {
       </div>
     </>
   )
+=======
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Automation Assessment</h1>
+          <p className="text-lg text-gray-600">
+            Professional automation assessment solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

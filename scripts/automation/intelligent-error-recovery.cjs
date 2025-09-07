@@ -7,9 +7,17 @@
 
 
 
+
+
+const fs = require('fs')
+const path = require('path')
             execSync('npm run "lint")
             execSync('npm run "lint")
 
 const { execSync } = require('child_process')
 
+            execSync('npm run "lint")
+
+            execSync('npm run "lint")
+            execSync('npm run "lint")
 

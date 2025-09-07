@@ -373,5 +373,9 @@ this.log('Starting TypeScript error auto-fixer...')
 
     process.exit(1)})};
 module.exports = TypeScriptErrorAutoFixer;
+
+module.exports = TypeScriptErrorAutoFixer;
+module.exports = TypeScriptErrorAutoFixer;
+module.exports = TypeScriptErrorAutoFixer;
 module.exports = TypeScriptErrorAutoFixer;
 

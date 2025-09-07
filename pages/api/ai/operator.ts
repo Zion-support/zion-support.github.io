@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/main
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
@@ -62,4 +67,32 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error('Operator error', err);
     return res.status(500).json({ error: 'Internal Server Error' });
   }
+<<<<<<< HEAD
 }
+=======
+};
+
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    if (req.method !== 'POST') {
+      res.setHeader('Allow', ['POST']);
+      return res.status(405).end('Method Not Allowed');
+    }
+    
+    const { sys, prompt, temperature } = req.body;
+    
+    // Mock completion for now
+    const completion = {
+      choices: [{ message: { content: 'Mock response' } }]
+    };
+    
+    res.status(200).json({ response: completion.choices[0].message.content });
+  } catch (error) {
+    res.status(500).json({ error: 'Internal server error' });
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+>>>>>>> origin/main

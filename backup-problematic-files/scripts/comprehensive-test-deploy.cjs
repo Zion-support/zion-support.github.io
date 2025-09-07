@@ -1,3 +1,4 @@
+
     this.log(`Tests: ${this.results.tests.passed}/${this.results.tests.total} passed`);
     this.log(`Builds: ${this.results.builds.success} successful, ${this.results.builds.failed} failed`);
     this.log(`Errors: ${this.results.errors.length}`);
@@ -14,6 +15,7 @@
 
 // Run the comprehensive suite
 const suite = new ComprehensiveTestDeploy();
+
 suite.runComprehensiveSuite().catch(console.error);#!/usr/bin/env node;
 #!/usr/bin/env node;
 const fs = require('fs')

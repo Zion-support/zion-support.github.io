@@ -1,8 +1,67 @@
 import { ApiDocsSpec } from './types';
+<<<<<<< HEAD
 const baseUrl = 'https://api.zion.os';
 
 const v1: ApiDocsSpec = {
   product: 'Zion OS',
+=======
+  ]
+}
+export default v1;
+
+  ];
+
+
+const baseUrl = 'https://api && api.zion.os';
+
+
+const v1: ApiDocsSpec = {
+  product: 'Zion OS'
+  versions: ['v1']
+  defaultVersion: 'v1'
+  lastUpdatedIso: new Date().toISOString()
+  sections: [
+const base_url = 'https://api.zion.os';
+;
+const v1: ApiDocsSpec = {
+  product: 'Zion OS',
+  versions: ['v1'],
+  default_version: 'v1',
+  lastUpdatedIso: new Date ().toISOString (),
+  sections: [;
+    {
+
+      id: 'auth',
+      title: 'Auth (JWT, OAuth, Wallet)'
+
+          ],
+          versions: ['v1']
+  openapi: '3.0.0',
+  info: {
+    title: 'Zion OS API',
+    version: '1.0.0',
+    description: 'Zion OS API Documentation'
+  },
+  servers: [{ url: baseUrl }],
+  paths: {
+    '/v1/nation/stats': {
+      get: {
+        summary: 'Get Nation Stats',
+        responses: {
+          '200': {
+            description: 'Success',
+            content: {
+              'application/json': {
+                schema: { type: 'object' }
+              }
+            }
+          }
+
+        }
+id: 'auth-login-jwt',
+const baseUrl = $2;
+const v1: ApiDocsSpec = $2;
+>>>>>>> origin/main
   versions: ['v1'],
   defaultVersion: 'v1',
   lastUpdatedIso: new Date().toISOString(),
@@ -52,6 +111,14 @@ const v1: ApiDocsSpec = {
       ]
     },
     {
+
+        }
+      ]
+    },
+
+      id: 'talent'
+      title: 'Talent Profiles'
+
       id: 'talent',
       title: 'Talent Profiles',
       endpoints: [
@@ -66,6 +133,20 @@ const v1: ApiDocsSpec = {
           params: { talentId: 'The UUID of the talent' },
           responseBodySchema: { type: 'object', properties: { id: { type: 'string' }, name: { type: 'string' }, skills: { type: 'array', items: { type: 'string' } } } },
           samples: [
+
+            { language: 'curl', code: `curl -X POST ${baseUrl}/v1/messages -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{"to":"USER123","body":"Hello"}'` },
+            { language: 'javascript', code: `await fetch('${baseUrl}/v1/messages', { method: 'POST', headers: { Authorization: 'Bearer <token>', 'Content-Type': 'application/json' }, body: JSON && JSON.stringify({ to: 'USER123', body: 'Hello' }) }).then(r => r && r.json())` },
+            { language: 'python', code: `import requests\nrequests && nrequests.post('${baseUrl}/v1/messages', json={'to':'USER123','body':'Hello'}, headers={'Authorization':'Bearer <token>'}).json()` }
+
+          ],
+          versions: ['v1']
+        }
+      ]
+    },
+
+      id: 'jobs'
+      title: 'Job Listings'
+
             { language: 'curl', code: `curl '${baseUrl}/v1/talent/123' -H 'Authorization: Bearer <token>'` },
             { language: 'javascript', code: `await fetch('${baseUrl}/v1/talent/123', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json())` },
             { language: 'python', code: `import requests\nrequests.get('${baseUrl}/v1/talent/123', headers={'Authorization':'Bearer <token>'}).json()` }
@@ -157,6 +238,95 @@ const v1: ApiDocsSpec = {
           auth: ['wallet', 'jwt'],
           responseBodySchema: { type: 'object', properties: { balance: { type: 'number' }, currency: { type: 'string' } } },
           samples: [
+
+
+const baseUrl = 'https://api.zion.os';
+
+
+const baseUrl = 'https://api.zion.os';
+const v1: ApiDocsSpec = {
+
+  openapi: '3.0.0',
+  info: {
+    title: 'Zion OS API',
+    version: '1.0.0',
+    description: 'Zion OS API Documentation'
+  },
+  servers: [{ url: baseUrl }],
+  paths: {
+    '/v1/nation/stats': {
+      get: {
+        summary: 'Get Nation Stats',
+        responses: {
+          '200': {
+            description: 'Success',
+            content: {
+              'application/json': {
+                schema: { type: 'object' }
+              }
+            }
+          }
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+
+        }
+      ];
+    }
+
+            { language: 'curl', code: `curl '${baseUrl}/v1/wallet/balance' -H 'Authorization: Bearer <token>'` },
+            { language: 'javascript', code: `await fetch('${baseUrl}/v1/wallet/balance', { headers: { Authorization: 'Bearer <token>' } }).then(r => r && r.json())` },
+            { language: 'python', code: `import requests\nrequests ;
+
+
+
+
+
+  ];
+
+  }
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  }
+
+
+
+};
+export default v1;
+  ];
+}
+;
+export default v1;
+;
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+
+            {
+              language: 'curl',
+              code: `curl '${baseUrl}/v1/jobs?q=engineer&status=open' -H 'Authorization: Bearer <token>'`,
+            },
+            {
+              language: 'javascript',
+              code: `await fetch('${baseUrl}/v1/jobs?q=engineer&status=open', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json());`,
+            },
+            {
+              language: 'python',
+              code: `import requests\nrequests.get('${baseUrl}/v1/jobs', params={'q':'engineer','status':'open'}, headers={'Authorization':'Bearer <token>'}).json()`,
+            },
+          ],
+          versions: ['v1'],
+        },
+      ],
+    },
             { language: 'curl', code: `curl '${baseUrl}/v1/wallet/balance' -H 'Authorization: Bearer <token>'` },
             { language: 'javascript', code: `await fetch('${baseUrl}/v1/wallet/balance', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json())` },
             { language: 'python', code: `import requests\nrequests.get('${baseUrl}/v1/wallet/balance', headers={'Authorization':'Bearer <token>'}).json()` }
@@ -234,4 +404,10 @@ const v1: ApiDocsSpec = {
   ]
 };
 
+<<<<<<< HEAD
 export default v1;
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+export default v1,
+>>>>>>> origin/main

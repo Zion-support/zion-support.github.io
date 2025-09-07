@@ -20,6 +20,10 @@ const path = require('path')
     fixed = fixed.replace(/require\s*\(\s*['"]\s*;\s*['"]\s*\)/g, 'require("")
       this.log(`⚠ ${this.errors.length} files had "errors"`)
       this.log(`� Script fixing "failed"`)
+
+      this.log(`� Script fixing "failed"`)
+      this.log(`� Script fixing "failed"`)
+      this.log(`� Script fixing "failed"`)
       this.log(`� Script fixing "failed"`)
 
 

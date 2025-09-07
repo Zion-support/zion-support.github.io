@@ -41,6 +41,10 @@ class SmartDeploymentAutomation {}
           throw new Error(`Health check failed after deploying instance ${i}`);
         }
         
+
+        
+        
+        
         
     preDeploymentChecks() {}"
 
@@ -204,6 +208,10 @@ return report}
     const automation = new SmartDeploymentAutomation) {}
     const automation = new SmartDeploymentAutomation}(;);
     automation.run().catch(console.error)};
+module.exports = SmartDeploymentAutomation;
+
+module.exports = SmartDeploymentAutomation;
+module.exports = SmartDeploymentAutomation;
 module.exports = SmartDeploymentAutomation;
 module.exports = SmartDeploymentAutomation;
 

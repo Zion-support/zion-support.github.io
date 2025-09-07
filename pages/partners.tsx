@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -111,10 +112,18 @@ export default function PartnersPage() {
     { number: "300%", label: "Growth Rate", icon: TrendingUp}
   ],
 
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function partners() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+    <Layout>
       <Head>
         <title>Partners - Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name="description" content="Strategic partnerships and collaboration opportunities with Zion Tech Group. Join our ecosystem of technology leaders and innovators." />
         <meta property="og:title" content="Partners - Zion Tech Group" />
         <meta property="og:description" content="Strategic partnerships and collaboration opportunities." />
@@ -427,3 +436,19 @@ export default function PartnersPage() {
 }
 ;
 
+=======
+        <meta name="description" content="Partners solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Partners</h1>
+          <p className="text-lg text-gray-600">
+            Professional partners solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

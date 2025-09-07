@@ -8,6 +8,8 @@
 
 
 
+
+
   console.error('Failed to write maintenance "summary")
   console.error('Failed to write maintenance "summary")
 
@@ -15,4 +17,8 @@ const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
 
+  console.error('Failed to write maintenance "summary")
+
+  console.error('Failed to write maintenance "summary")
+  console.error('Failed to write maintenance "summary")
 

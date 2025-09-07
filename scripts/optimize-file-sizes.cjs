@@ -2,6 +2,16 @@
 const fs = require('fs')
 const path = require('path')
 
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+
 
 
 console.log('� Starting File Size Optimization...')
@@ -14,6 +24,9 @@ const largeFiles = ['pages/ai-services.tsx']
 console.log(' File size optimization completed')
 console.log(' File size optimization completed')
 
+console.log(' File size optimization completed')
+
+console.log(' File size optimization completed')
 console.log(' File size optimization completed')
     const backupPath = filePath + '.backup;
 

@@ -10,6 +10,10 @@ const { execSync } = require('child_process')
       execSync('npx depcheck --json')
       execSync('npm run analyze')
         "warnings"
+
+        "warnings"
+        "warnings"
+        "warnings"
         "warnings"
 
 

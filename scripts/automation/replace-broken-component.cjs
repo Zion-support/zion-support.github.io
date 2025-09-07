@@ -194,6 +194,8 @@ const [messages, setMessages] = useState<ChatMessage[]>([])
 
 
 
+
+
   return ()
 "
   const handleFileUpload = useCallback(("e": React.ChangeEvent<HTMLInputElement>) => {}"
@@ -419,6 +421,10 @@ if (require.main === module) {}
     .then(() => {}"
 
       process.exit(1)})};
+module.exports = ComponentReplacer;
+
+module.exports = ComponentReplacer;
+module.exports = ComponentReplacer;
 module.exports = ComponentReplacer;
 module.exports = ComponentReplacer;
 

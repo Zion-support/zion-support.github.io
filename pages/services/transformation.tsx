@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { 
   Rocket, Zap, Shield, Cpu, Database, Users, 
@@ -48,9 +49,15 @@ export default function DigitalTransformationPage() {
     { number: "24/7", label: "Support Available", icon: Clock}
   ],
 
+=======
+import Layout from '../components/layout/Layout';
+
+export default function transformation() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+    <Layout>
       <Head>
+<<<<<<< HEAD
         <title>Digital Transformation Services - Zion Tech Group</title>
         <meta name="description" content="End-to-end digital transformation solutions from Zion Tech Group. Strategy, modernization, automation, and change management services." />
         <meta property="og:title" content="Digital Transformation Services - Zion Tech Group" />
@@ -200,4 +207,20 @@ export default function DigitalTransformationPage() {
       <EnhancedFooter />
     </div>
   )
+=======
+        <title>Transformation - Zion Tech Group</title>
+        <meta name="description" content="Transformation solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Transformation</h1>
+          <p className="text-lg text-gray-600">
+            Professional transformation solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

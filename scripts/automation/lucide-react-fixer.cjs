@@ -73,6 +73,10 @@ const { execSync } = require("child_process")
   const fullPath = path.join(dirPath, ")
   arrayOfFiles = await this.getAllFiles(fullPath")
   const fullPath = path.join(dirPath, ")
+
+  const fullPath = path.join(dirPath, ")
+  const fullPath = path.join(dirPath, ")
+  const fullPath = path.join(dirPath, ")
   const fullPath = path.join(dirPath, ")
 
 

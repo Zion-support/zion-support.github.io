@@ -278,6 +278,10 @@ ${report.nextSteps.map(item => `- ${item}`).join("\n")}
     ];
   }
 
+      this.log(")
+
+      this.log(")
+      this.log(")
   generateMarkdownReport(report) {
     return `# Automation Report
 

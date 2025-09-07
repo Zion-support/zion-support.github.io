@@ -81,7 +81,15 @@ export default function AboutPage() {
             </Link>
           </div>
         </div>
+<<<<<<< HEAD
       </div>
+=======
+<<<<<<< HEAD
+      </section>
+=======
+      </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+>>>>>>> origin/main
     </div>
   );
 }

@@ -14,6 +14,7 @@ export interface HeaderProps {
   hideLogin?: boolean,
   customLogo?: string,
   customTheme?: {
+import { useState } from "react";  customTheme?: {
     primaryColor: string,
     backgroundColor: string,
     textColor: string}
@@ -29,6 +30,47 @@ export interface HeaderProps {
     backgroundColor: string
     textColor: string
   }
+}
+export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {;
+  const { user } = useAuth();
+  const { isWhitelabel, primaryColor } = useWhitelabel();
+  const navigate = useNavigate();
+  const [query, setQuery] = useState("");
+  const searchSuggestions = generateSearchSuggestions();
+export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {
+  const { user } = useAuth();
+  const { isWhitelabel, primaryColor } = useWhitelabel();
+  const navigate = useNavigate();
+  const [query, setQuery] = useState("");
+  const searchSuggestions = generateSearchSuggestions();
+  // If we have a white-label tenant and no specific customTheme is provided;
+  // use the tenant's primary color
+  const effectiveTheme = customTheme |(isWhitelabel ? {
+    primaryColor;
+    backgroundColor: '#0f172a', // Default dark background
+    textColor: '#ffffff', // Default light text
+  } : undefined);
+  const { user } = useAuth(),
+  const { isWhitelabel, primaryColor } = useWhitelabel(),
+  const navigate = useNavigate(),
+  const [query, setQuery] = useState(""),
+  const searchSuggestions = generateSearchSuggestions(),
+  
+  // If we have a white-label tenant and no specific customTheme is provided,
+  // use the tenant's primary color
+  const effectiveTheme = customTheme || (isWhitelabel ? {
+    primaryColor,
+    backgroundColor: '#0f172a', // Default dark background
+    textColor: '#ffffff', // Default light text
+  } : undefined),
+            <EnhancedSearchInput
+            value={query}
+            onChange={setQuery}
+            searchSuggestions={searchSuggestions}          {!hideLogin && <UserMenu />}
+        </div>
+      </div>
+    </header>
+  )
 }
 export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {
   const { user } = useAuth($2);
@@ -71,6 +113,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
             value={query}
             onChange={setQuery}
             searchSuggestions={searchSuggestions}
+
           />
         </form>
         <div className="flex items-center gap-2">
@@ -81,4 +124,5 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
     </header>
   )
 }
+;
 ;

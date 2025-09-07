@@ -1,4 +1,117 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+import React, { ReactNode } from 'react';
+main
+React from
+  'react'
+import Header from 'react'
+  './Header';import Footer from 'react'
+  './Footer'
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+import React from 'react';
+import Head from 'next/head';
+import React, { ReactNode } from 'react';
+React from;
+  'react';
+import Header from 'react';
+  './Header';import Footer from 'react';
+  './Footer';
+
+import Header from '../Header';
+import Footer from '../Footer';
+import Header from './Header';
+import Footer from './Footer';interface LayoutProps  {children: React.ReactNode;
+interface LayoutProps  {children: React && React.ReactNode;
+  title?: string;
+  description?: string;
+  keywords?: string;
+export default function Layout() {return (<div className="min-h-screen bg-white">;
+export default /**;
+ * Layout - Function description;
+ */;
+function Layout() {return (<div className="min - h-screen bg - white">;
+      <Header />;
+      <main>;"./Footer"import Footer  from "react./Footer,export default function Layout() {return (<div className="min-h-screen flex flex-col>      <Header />"      <main className="flex-1 pt-16>        {children}"      </main><Footer />;
+    </div>;
+  )"; type: LayoutProps = { children: React.ReactNode }export default function Layout({ children }: LayoutProps) { return <div>{children}</div>; type LayoutProps = { children: React.ReactNode }export default function Layout({ children }: LayoutProps) { return <div>{children}</div> } " ;
+  )"; type: LayoutProps = { children: React.ReactNode }export default function Layout({ children }: LayoutProps) { return <div>{children}</div>; type LayoutProps = { children: React.ReactNode }export default function Layout({ children }: LayoutProps) { return <div>{children}</div> } " ;
+}}
+    <div className="min-h-screen bg-white">;
+export default /**;
+ * Layout - Function description;
+ */;
+function Layout() {return (<div className="min - h-screen bg - white">;
+      <Header />;
+      <main>{children}
+      </main>;
+      <Footer />;
+export default Layout;
+import React from 'react;
+import Header from './Header;
+import Footer from './Footer;
+export: default /**;
+ * Layout - Function description;
+ */;
+function Layout() {return: <div>{children}</div>;
+React from';
+  "react""import Footer from './react';
+  "./Footer"import Footer  from "react./Footer,export default /**;
+ * Layout - Function description;
+ */;
+function Layout() {return (<div className="min - h-screen flex flex - col>      <Header />"      <main className="flex - 1 pt - 16>        {children}"      </main><Footer />;
+    </div>)"; type: LayoutProps = { children: React.ReactNode } export default /**;
+ * Layout - Function description;
+ */;
+function Layout() { return <div>{children}</div>; type LayoutProps = { children: React.ReactNode } export default /**;
+    </div>)"; type: LayoutProps = { children: React.ReactNode } export default /**;
+ * Layout - Function description;
+ */;
+function Layout() { return <div>{children}</div>; type LayoutProps = { children: React.ReactNode } export default /**;
+ * Layout - Function description;
+ */;
+function Layout() { return <div>{children}</div> } " ;
+}}ursor/automate-test-improve-and-merge-code-646c;
+interface LayoutProps  {children: React.ReactNode;
+  title?: string;
+  description?: string;}export default function Layout() {return (<>;
+      <Head>;
+        <title>{title}</title>;
+        <meta name="description" content={description} />;
+        <meta name="viewport" content="width=device-width, initial-scale=1" />;
+        <link rel="icon" href="/favicon.ico" />;
+      </Head>;
+      <div className="min-h-screen bg-gray-50">;
+        {children}
+      </div>;
+    </>;
+  )}
+  keywords?: string;
+}export default function Layout() {return (<div className="min-h-screen bg-gray-50">;
+      {children}
+    </div>;
+  )}interface LayoutProps  {children: ReactNode;
+}const Layout: React.FC<LayoutProps> = ({ children }) => {return (<div className="min-h-screen flex flex-col">;
+      <Header />;
+      <main className="flex-1">;
+        {children}
+      </main>;
+      <Footer />;
+    </div>;
+  )}export default Layout;ursor/automate-test-improve-and-merge-code-646c;
+}}
+
+main
+
+
+
+
+
+
+>>>>>>> origin/main
 
 interface LayoutProps {
   children: React.ReactNode,
@@ -7,12 +120,120 @@ interface LayoutProps {
   keywords?: string;
 }
 
+<<<<<<< HEAD
 export default function Layout({
   children;
 }: LayoutProps) {
+=======
+export default function Layout({ 
+  children, 
+  title = "Zion Tech Group", 
+  description = "Leading technology solutions provider",
+  keywords = "technology, AI, cloud, micro SaaS"
+}: LayoutProps) {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { ReactNode } from 'react';
+import Head from 'next/head';
+=======
+import React from 'react';
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import Header from '../Header';
+import Footer from '../Footer';
+
+interface LayoutProps {
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  noIndex?: boolean;
+}
+
+export default function Layout({
+
+  children
+  title = "Zion Tech Group - AI, IT & Micro SaaS Solutions"
+  description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses."
+  keywords = "AI services, IT solutions, micro SaaS, technology consulting, digital transformation"
+  canonical
+  ogTitle
+  ogDescription
+  ogImage
+  noIndex = false
+
+}: LayoutProps) {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <main className="flex-1">
+        {children}
+      </main>
+      <Footer />
+    </div>;
+  );
+<<<<<<< HEAD
+=======
+import React, { ReactNode } from 'react'
+import Header from '../Header'
+import Footer from './Footer'
+interface LayoutProps {
+  children: ReactNode
+}
+
+export default function Layout({ children }: LayoutProps) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+>>>>>>> origin/main
   return (
     <div className="min-h-screen bg-gray-50">
       {children}
     </div>
+<<<<<<< HEAD
   );
 }
+=======
+<<<<<<< HEAD
+  );
+}
+import React, { ReactNode } from 'react';
+import Header from '../Header';
+import Footer from './Footer';
+
+
+
+
+
+main
+
+main
+
+
+=======
+  )
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+}
+=======
+}
+export default Layout;
+import React from 'react;
+import Header from './Header;
+import Footer from './Footer;
+type LayoutProps = {children: React.ReactNode;
+}
+  children: React.ReactNode}
+export: default function Layout() {return: <div>{children}</div>;
+React from";
+  "react""import Footer from "react";
+  "./Footer"import Footer  from "react./Footer
+export default function Layout({ children }: LayoutProps) {return (;
+<div className="min-h-screen flex flex-col>      <Header />"      <main className="flex-1 pt-16>        {children}"      </main><Footer />;
+    </div>;
+  )"; type: LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div>; type LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div> } " ;
+}}
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+>>>>>>> origin/main

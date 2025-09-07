@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -56,6 +57,7 @@ const TalentProfile: NextPage = () => {
             <ul className="space-y-1 text-sm">
               {responseLog.length === 0 && <li className="opacity-70">No responses yet.</li>}
               {responseLog.map((r, idx) => (
+<<<<<<< HEAD
                 <li key={idx} className="flex items-center justify-between">
                   <span>{r.action}</span>
                   <span className="opacity-70">{new Date(r.at).toLocaleString()}</span>
@@ -70,3 +72,32 @@ const TalentProfile: NextPage = () => {
 };
 
 export default TalentProfile;
+=======
+                <li key = $2;
+export default TalentProfile,
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+
+export default function [slug]() {
+  return (
+    <Layout>
+      <Head>
+        <title>[Slug] - Zion Tech Group</title>
+        <meta name="description" content="[Slug] solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">[Slug]</h1>
+          <p className="text-lg text-gray-600">
+            Professional [slug] solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+>>>>>>> origin/main

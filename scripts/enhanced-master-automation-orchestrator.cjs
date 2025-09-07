@@ -1,29 +1,76 @@
 
+
+main
+
+    log('info', `Total "tasks": ${masterReport.summary.totalTasks}`);
+    log('info', `"Successful": ${masterReport.summary.successful}`);
+    log('info', `"Failed": ${masterReport.summary.failed}`);
+    log('info', `"Warnings": ${masterReport.summary.warnings}`);
+    log('info', `Skipped (cached): ${masterReport.summary.skipped}`);
+    log('info', `Success "rate": ${masterReport.metrics.successRate}%`);
+    log('info', `Performance "score": ${masterReport.metrics.performanceScore}/100`);
+    log('info', `Total "duration": ${Math.round(masterReport.metrics.totalDuration / 1000)}s`);
+    
+    if (masterReport.recommendations.length > 0) {
+      log('info', '"Recommendations": ');
+      masterReport.recommendations.forEach(rec => {
+        log('info', `- [${rec.priority.toUpperCase()}] ${rec.message}`);
+        log('info', `  "Action": ${rec.action}`)})}
+    
+    // Save comprehensive report
+    const reportPath = path.join(process.cwd(), `enhanced-master-automation-report-${masterReport.sessionId}.json`);
+    fs.writeFileSync(reportPath, JSON.stringify(masterReport, null, 2));
+    
+    log('info', `Enhanced automation report saved "to": enhanced-master-automation-report-${masterReport.sessionId}.json`);
+    
+    // Determine exit status
+    if (masterReport.summary.failed > 0) {
+      log('error', 'Enhanced automation completed with critical failures');
+      process.exit(1)} else if (masterReport.summary.warnings > 0) {
+      log('warn', 'Enhanced automation completed with warnings');
+      process.exit(0)} else {
+      log('info', 'Enhanced automation completed successfully!');
+      process.exit(0)}
+    
+  } catch (error) {
+    log('error', 'Fatal error in enhanced automation orchestrator', error.message);
+    process.exit(1)}
+}
+
+// Run the enhanced orchestrator
+main();#!/usr/bin/env node;
+
+main();
+
+
+#!/usr/bin/env node;
+main();#!/usr/bin/env node;
+
+main
+
+main();
+
 #!/usr/bin/env node;
 
-=======
 
 
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 #!/usr/bin/env node;
 
 main();#!/usr/bin/env node;
 
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+main();
+
+
+
+
+#!/usr/bin/env node;
+
+main();#!/usr/bin/env node;
+
 const fs = require('fs')
 const path = require('path')
 const { execSync, spawn } = require('child_process')
 const os = require('os')
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 // console.log(' Enhanced Master Automation Orchestrator v2.0')
 console.log('======')
   "logLevel"
@@ -76,11 +123,6 @@ console.log('======')
     const phase5Tasks = [{ name: 'Metrics Generation', "command": 'echo "Generating final metrics..."}]
       { "name": 'Report Generation', "command": 'echo "Generating comprehensive report..."}
       log('info', '"Recommendations")
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-=======
 main
     log('info', `Total "tasks": ${masterReport.summary.totalTasks}`)
     log('info', `"Successful": ${masterReport.summary.successful}`)
@@ -105,4 +147,3 @@ const fs = require('fs')
 const path = require('path')
 const { execSync, spawn } = require('child_process')
 const os = require('os')
->>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

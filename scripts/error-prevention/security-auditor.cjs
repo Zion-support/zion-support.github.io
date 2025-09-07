@@ -21,6 +21,10 @@ class SecurityAuditor {}
     this.intervalId = setInterval(() => {}
       this.runSecurityCheck()}, this.interval);
     
+
+    
+    
+    
     
 
 
@@ -48,6 +52,8 @@ class SecurityAuditor {}
 
 
 
+
+
       child.on('close', (code) => {}
         if ( {})
 
@@ -70,6 +76,8 @@ class SecurityAuditor {}
         "stdio": 'inherit',
         "cwd": process.cwd();
       };);
+
+
 
 
 
@@ -112,6 +120,9 @@ module.exports = SecurityAuditor;
   
   auditor.start().catch(console.error)};
 
+module.exports = SecurityAuditor;
+
+module.exports = SecurityAuditor;
 module.exports = SecurityAuditor;
 module.exports = SecurityAuditor;
   // Handle graceful shutdown;

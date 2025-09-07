@@ -80,6 +80,10 @@ const { exec } = require("$1")
     "default"
   process.on("SIGINT")
   process.on(")
+
+  process.on(")
+  process.on(")
+  process.on(")
   process.on(")
 
 

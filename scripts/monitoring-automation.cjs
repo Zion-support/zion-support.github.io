@@ -9,6 +9,10 @@ const fs = require('fs')
 const path = require('path')
   log(message, type = 'INFO')
     console.error('Monitoring automation "failed")
+
+    console.error('Monitoring automation "failed")
+    console.error('Monitoring automation "failed")
+    console.error('Monitoring automation "failed")
     console.error('Monitoring automation "failed")
 
 

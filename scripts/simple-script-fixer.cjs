@@ -171,6 +171,10 @@ if (require.main === module) {}
   const fixer = new SimpleScriptFixer();
   fixer.run().catch(console.error)};
 module.exports = SimpleScriptFixer;
+
+module.exports = SimpleScriptFixer;
+module.exports = SimpleScriptFixer;
+module.exports = SimpleScriptFixer;
 module.exports = SimpleScriptFixer;
 
 

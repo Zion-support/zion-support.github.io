@@ -1,3 +1,7 @@
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
+import { Badge } from '@/components / ui / badge';
+import { Crown, Medal, Trophy } from './lucide-react';
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -12,11 +16,40 @@ interface LeaderboardEntry {
   earnings: number,
   badges: string[]
 }
+  badges: string[]
+}
 
 export function PartnerLeaderboard() {
   // Placeholder data - would come from API in real implementation
   const leaderboard: LeaderboardEntry[] = [
     {
+      avatar: "", // URL would be here    {
+
+      id: "2"
+      rank: 2
+      name: "Machine Learning Hub"
+      avatar: ""
+      referrals: 145
+      earnings: 3625
+
+      badges: ["silver"]
+
+    },
+    {
+
+      id: "4"
+      rank: 4
+      name: "AI Career Insights"
+      avatar: ""
+      referrals: 98
+      earnings: 2450
+
+      badges: []
+
+    }
+  ];
+  // Function to render rank badge
+
       id: "1",
       rank: 1,
       name: "AI Tech Guru",
@@ -85,6 +118,55 @@ export function PartnerLeaderboard() {
           <div className="space-y-4">
             {leaderboard.length > 0 ? (
               leaderboard.map(entry => (
+export function PartnerLeaderboard() {;
+  // Placeholder data - would come from API in real implementation;
+  const leaderboard: LeaderboardEntry[] = [;
+    {;
+      id: "1",;
+      rank: 1,;
+      name: "AI Tech Guru",;
+      avatar: "", // URL would be here;
+      referrals: 178,;
+      earnings: 4500,;
+      badges: ["gold", "trending"]
+};    };
+    {;
+      id: "2",;
+      rank: 2,;
+      name: "Machine Learning Hub",;
+      avatar: "",;
+      referrals: 145,;
+      earnings: 3625,;
+      badges: ["silver"]
+};    };
+    {;
+      id: "3",;
+      rank: 3,;
+      name: "Neural Networks Pro",;
+      avatar: "",;
+      referrals: 124,;
+      earnings: 3100,;
+      badges: ["bronze"]
+};    };
+    {;
+      id: "4",;
+      rank: 4,;
+      name: "AI Career Insights",;
+      avatar: "",;
+      referrals: 98,;
+      earnings: 2450,;
+      badges: []
+};    };
+    {;
+      id: "5",;
+      rank: 5,;
+      name: "Deep Learning Daily",;
+      avatar: "",;
+      referrals: 87,;
+      earnings: 2175,;
+      badges: ["newcomer"];
+    }
+  ];                  }`}
                 <div 
                   key={entry.id} 
                   className={`flex items-center justify-between p-3 rounded-md ${
@@ -135,6 +217,10 @@ export function PartnerLeaderboard() {
                   Start referring to earn your spot on the leaderboard
                 </p>
               </div>
+                        </Badge>            )}
+          </div>
+        </CardContent>
+      </Card>
             )}
           </div>
         </CardContent>
@@ -195,4 +281,11 @@ export function PartnerLeaderboard() {
       </Card>
     </div>
   )
+}
+      </Card>;            </ul>;
+          </div>;
+        </CardContent>;
+      </Card>;
+
+    </div>);
 }

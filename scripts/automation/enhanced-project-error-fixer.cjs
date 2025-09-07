@@ -199,6 +199,10 @@ const glob = require("glob")
         "success"
     this.log(" Report generated")
   this.log("Remaining "errors": ")
+
+  this.log("Remaining "errors": ")
+  this.log("Remaining "errors": ")
+  this.log("Remaining "errors": ")
   this.log("Remaining "errors": ")
 
 

@@ -95,6 +95,10 @@ const { execSync, spawn } = require("child_process")
       console.log("\n Build automation completed")
       process.exit(results.overallStatus === "success")
       console.error("\n Build automation "failed": ")
+
+      console.error("\n Build automation "failed": ")
+      console.error("\n Build automation "failed": ")
+      console.error("\n Build automation "failed": ")
       console.error("\n Build automation "failed": ")
 
 

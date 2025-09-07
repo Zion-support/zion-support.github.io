@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -202,27 +203,28 @@ const SolutionsPage: NextPage = () => {
       ]
     }
   ];
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+>>>>>>> origin/main
 
+export default function index() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-purple-50">
+    <Layout>
       <Head>
-        <title>Industry Solutions - Zion Tech Group | Tailored Technology Solutions</title>
-        <meta name="description" content="Discover industry-specific technology solutions for healthcare, finance, manufacturing, retail, education, and government sectors. Tailored solutions for your business needs." />
-        <meta name="keywords" content="healthcare solutions, fintech, manufacturing 4.0, retail technology, education tech, government solutions, industry solutions" />
+        <title>Index - Zion Tech Group</title>
+        <meta name="description" content="Index solutions and services." />
       </Head>
       
-      <main className="container mx-auto px-4 py-16">
-        {/* Header Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            Industry-Specific Solutions
-          </h1>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-            We deliver tailored technology solutions designed specifically for your industry. 
-            From healthcare AI to smart manufacturing, our solutions address real business challenges 
-            and drive measurable results.
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Index</h1>
+          <p className="text-lg text-gray-600">
+            Professional index solutions tailored to your business needs.
           </p>
         </div>
+<<<<<<< HEAD
 
         {/* Solutions Grid */}
         <div className="space-y-16">
@@ -393,3 +395,9 @@ const SolutionsPage: NextPage = () => {
 };
 
 export default SolutionsPage;
+=======
+      </div>
+    </Layout>
+  );
+}
+>>>>>>> origin/main

@@ -120,6 +120,10 @@ this.log(`Error in JSX Syntax "Fixer": ${error.message}`)
       console.error('JSX Syntax Fixer "failed": ', error);
       process.exit(1)})};
 module.exports = JSXSyntaxFixer;
+
+module.exports = JSXSyntaxFixer;
+module.exports = JSXSyntaxFixer;
+module.exports = JSXSyntaxFixer;
 module.exports = JSXSyntaxFixer;
 
 

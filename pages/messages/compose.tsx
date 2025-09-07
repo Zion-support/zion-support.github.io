@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import { useCurrentUser } from '../../hooks/useCurrentUser';
 export default function ComposePage() {
@@ -47,8 +48,14 @@ export default function ComposePage() {
     setSending($2);
     if (data?.conversation?.id) router.replace(`/messages/${data.conversation.id}`)
   },
+=======
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
+export default function compose() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-2xl mx-auto p-4">
         <div className="bg-white rounded-xl shadow-sm">
@@ -77,4 +84,22 @@ export default function ComposePage() {
       </div>
     </div>
   )
+=======
+    <Layout>
+      <Head>
+        <title>Compose - Zion Tech Group</title>
+        <meta name="description" content="Compose solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Compose</h1>
+          <p className="text-lg text-gray-600">
+            Professional compose solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

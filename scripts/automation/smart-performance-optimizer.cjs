@@ -239,6 +239,10 @@ if ( {})
     const optimizer = new SmartPerformanceOptimizer}(;);
     optimizer.run().catch(console.error)};
 module.exports = SmartPerformanceOptimizer;
+
+module.exports = SmartPerformanceOptimizer;
+module.exports = SmartPerformanceOptimizer;
+module.exports = SmartPerformanceOptimizer;
 module.exports = SmartPerformanceOptimizer;
 
 

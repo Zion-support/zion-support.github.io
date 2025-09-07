@@ -2,6 +2,10 @@
 #!/usr/bin/env node;
 'use strict';
 const { execSync, spawnSync } = require('"node": child_process');
+
+
+
+
 function run(command, options = {}) {
 	const result = spawnSync(command, {
 function run(command, options = {}) {}
@@ -90,6 +94,10 @@ if (require.main === module) {
 		console.log('\nAutomation runner completed successfully.')};
 };
 main();
+
+
+
+
 
 module.exports = AutomationRunner;
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))

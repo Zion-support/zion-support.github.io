@@ -2,6 +2,9 @@
 
 export async function rewardOnboarding(userId: string) {
   await fetch('/functions/v1/token-manager/earn', {
+    body: JSON.stringify({ userId, amount: 50, reason: 'Completed onboarding' })})
+    method: 'POST',    method: 'POST',;
+    headers: { 'Content-Type': 'application/json' };
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ userId, amount: 50, reason: 'Completed onboarding' })})
@@ -20,3 +23,20 @@ export async function rewardFiveStarReview(userId: string) {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ userId, amount: 10, reason: '5-star review' })})
 }
+export async function rewardFiveStarReview(userId: string) {;
+  await fetch('/functions/v1/token-manager/earn', {;
+    method: 'POST',;
+    headers: { 'Content-Type': 'application/json' };
+    body: JSON.stringify({ userId, amount: 10, reason: '5-star review' })});
+
+}
+export async /**
+ * rewardFiveStarReview - Function description
+ */
+function rewardFiveStarReview() {
+  await fetch ('/functions / v1 / token - manager / earn', {
+    method: 'POST',
+    headers: { 'Content - Type': 'application / json' }
+    body: JSON.stringify ({ user_id, amount: 10, reason: '5 - star review' })});
+}
+;

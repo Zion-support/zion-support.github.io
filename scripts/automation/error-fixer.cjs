@@ -102,6 +102,10 @@ const { execSync } = require("child_process")
     this.log(` Report "generated"`)
   this.log(" Starting Error Fixer Automation")
       this.log(")
+
+      this.log(")
+      this.log(")
+      this.log(")
       this.log(")
 
         if (content.includes("<Helmet>") && !content.includes("<>")"

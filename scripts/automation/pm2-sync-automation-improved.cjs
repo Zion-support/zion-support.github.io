@@ -503,5 +503,9 @@ if (require.main === module) {}
       // Process is healthy;
   }, 60000)};
 module.exports = ImprovedPM2SyncAutomation;
+
+module.exports = ImprovedPM2SyncAutomation;
+module.exports = ImprovedPM2SyncAutomation;
+module.exports = ImprovedPM2SyncAutomation;
 module.exports = ImprovedPM2SyncAutomation;
 

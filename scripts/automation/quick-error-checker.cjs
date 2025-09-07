@@ -65,6 +65,10 @@ const { execSync } = require("child_process")
           "timestamp"
   type: "eslint-config-fix"
           "file": "
+
+          "file": "
+          "file": "
+          "file": "
           "file": "
 
 

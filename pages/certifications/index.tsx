@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import CertificatePreview from '../../components/learn/CertificatePreview';
 export default function Certifications() {
@@ -32,4 +33,28 @@ export default function Certifications() {
       </div>
     </div>
   )
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+
+export default function CertificationsIndex() {
+  return (
+    <Layout>
+      <Head>
+        <title>Certifications - Zion Tech Group</title>
+        <meta name="description" content="Certifications solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Certifications</h1>
+          <p className="text-lg text-gray-600">
+            Professional certifications solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

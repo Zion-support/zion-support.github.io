@@ -106,6 +106,12 @@ this.log(" Resolved conflicts "in")
         "conflictsResolved"
         "errors"
       "successRate"
+
+
+      "successRate"
+
+      "successRate"
+      "successRate"
       "successRate"
 
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json($2);
@@ -7,3 +8,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const tx = revokeTokens(userId, Math.floor(amount), reason || "admin_revoke"),
     return res.status(200).json({ tx })
 
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    if (req.method !== 'POST') {
+      res.setHeader('Allow', ['POST']);
+      return res.status(405).end('Method Not Allowed');
+    }
+    
+    res.status(200).json({ message: 'Token revoked' });
+  } catch (err: any) {
+    return res.status(400).json({
+      error: err.message
+    });
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

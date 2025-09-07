@@ -1,12 +1,14 @@
 
+
+
+
+
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
-=======
 ///usr/bin/env node
 const { execSync } = require('child_process')
 const fs = require('fs')
->>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 function sh(cmd) {}
   return execSync(cmd, { "stdio": 'pipe', "encoding": 'utf8' }).trim()}
 function getToken() {}
@@ -28,24 +30,6 @@ async function gh(path, method = 'GET') {}
     "headers": {}
       Authorization: `token ${token}`,`
       "Accept": 'application/vnd.github.v3+json',
-<<<<<<< HEAD
-      'User-Agent': 'force-merge-script'
-
-
-
-
-
-
-    };
-  }
-});
-  const text = await res.text();
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   let data; try { data = text ? JSON.parse(text) : undefined} catch { data = { "raw": text }};
   if (!res.ok) throw new Error(data && data.message ? data.message : `HTTP ${res.status}`);
   return data};
@@ -72,18 +56,12 @@ async function main() {}
   sh('git fetch origin');
   sh('git checkout main');
   sh('git pull --ff-only origin main');
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   const prs = await gh(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`);
   let mergedCount = 0; let attempted = 0;
   for (const pr of prs) {}
     attempted++;
     const head = pr.head && pr.head.ref;
-=======
 "User-Agent": "force-merge-script"
->>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
     }
 })
@@ -94,15 +72,6 @@ async function main() {}
     attempted++
     const head = pr.head && pr.head.ref
     console.log(`Merging head into "main": PR #${pr.number} (${head})`);"
-<<<<<<< HEAD
-    try {}`;
-      sh(`git fetch origin ${head}:${head} || true`);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       try {}
         sh(`git merge --no-ff --no-edit origin/${head}`)} catch (e) {`}
         console.log('Conflicts detected. Attempting auto-resolution...');
@@ -120,11 +89,5 @@ async function main() {}
 };
 main().catch(err => { console.error('"Error": ', err.message); process.exit(1)}
 });
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-=======
 try {}`
       sh(`git fetch origin ${head}:${head} || true`)
->>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

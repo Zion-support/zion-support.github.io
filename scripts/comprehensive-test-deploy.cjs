@@ -1,3 +1,28 @@
+    this.log(`Tests: ${this.results.tests.passed}/${this.results.tests.total} passed`);
+    this.log(`Builds: ${this.results.builds.success} successful, ${this.results.builds.failed} failed`);
+    this.log(`Errors: ${this.results.errors.length}`);
+    
+    const recommendations = this.generateRecommendations();
+    this.log('\n💡 Recommendations:');
+    recommendations.forEach((rec, index) => {
+      this.log(`  ${index + 1}. ${rec}`);
+    });
+
+    this.log('\\n🎉 Comprehensive test & deploy suite completed!');
+  }
+}
+
+// Run the comprehensive suite
+const suite = new ComprehensiveTestDeploy();
+suite.runComprehensiveSuite().catch(console.error);
+
+
+
+
+
+
+
+
 
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -10,23 +35,9 @@ console.log('=')
       recommendations.push('Fix failing tests before deployment')
       recommendations.push('Fix build issues before deployment')
       recommendations.push('Address multiple errors before deployment')
-<<<<<<< HEAD
-      recommendations.push('All checks passed - ready for deployment')
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     this.log('Starting comprehensive test & deploy suite...')
     this.log('\\n COMPREHENSIVE SUITE SUMMARY')
     this.log('===')
     this.log('\n Recommendations:')
     this.log('\\n� Comprehensive test & deploy suite completed!')
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-=======
       recommendations.push('All checks passed - ready for deployment')
->>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

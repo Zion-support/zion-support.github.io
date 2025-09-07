@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -291,6 +292,7 @@ const AIPoweredITAssetManagement = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
+<<<<<<< HEAD
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -320,3 +322,32 @@ const AIPoweredITAssetManagement = () => {
 };
 
 export default AIPoweredITAssetManagement;
+=======
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition = $2;
+export default AIPoweredITAssetManagement,
+=======
+import Layout from '../components/layout/Layout';
+
+export default function AIPoweredITAssetManagement() {
+  return (
+    <Layout>
+      <Head>
+        <title>AI Powered IT Asset Management - Zion Tech Group</title>
+        <meta name="description" content="AI Powered IT Asset Management solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">AI Powered IT Asset Management</h1>
+          <p className="text-lg text-gray-600">
+            Professional AI Powered IT Asset Management solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+>>>>>>> origin/main

@@ -55,7 +55,11 @@ export default function ServicePage() {
             Contact Sales
           </button>
         </div>
+<<<<<<< HEAD
       </div>
+=======
+      </section>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     </div>
   )
 }

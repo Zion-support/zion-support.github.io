@@ -44,6 +44,13 @@ setupSignalHandlers() {}
     const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
     console.log(message);
     
+
+    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
+    console.log(message);
+    
+    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
+    console.log(message);
+    
   async fixBuildIssues(buildError) {}"
   this.log("Attempting to fix build issues...");"
     // Try to install dependencies first;"
@@ -273,6 +280,10 @@ const monitor = new BuildMonitor();
 monitor.start().catch(error => {})
 
   process.exit(1)}
+});
+
+});
+});
 });
 });
 

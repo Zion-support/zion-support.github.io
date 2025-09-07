@@ -1,3 +1,28 @@
+const useTheme = () => ({
+  theme: "dark"
+  setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`)
+});
+  theme: "dark",
+  setTheme: (theme: string) => // // // console.log(`Theme would change to: ${theme}`)
+}),
+
+export function ModeToggle() {
+  const { theme, setTheme } = useTheme(),
+
+  const { theme, setTheme } = useTheme();
+
+  const { theme, setTheme } = useTheme();
+import { Moon, Sun } from "lucide-react";
+import { Button } from "@/components/ui/button";
+// Create a simplified theme hook for offline mode
+
+const useTheme = () => ({
+theme: "dark"
+  setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`)
+});
+export function ModeToggle() {
+  const { theme, setTheme } = useTheme(),
+
 import { Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 // Create a simplified theme hook for offline mode

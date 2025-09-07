@@ -45,6 +45,7 @@ const contact = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
 },
 
 export const nextGenAIServices2026: NextGenAIService2026[] = [
@@ -232,6 +233,8 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
+    reviews: 445
+  },
     implementationDetails: 'Production-ready code review platform with advanced AI analysis, comprehensive reporting, and seamless Git integration.',
     launchDate: '2025-01-25',
     customers: 203,

@@ -11,6 +11,8 @@ const { execSync, spawn } = // // require('child_process');
 
 
 
+
+
 class ErrorDetectionService {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -19,6 +21,8 @@ class ErrorDetectionService {}
     this.logLevel = process.env.LOG_LEVEL || 'info';
     this.maxRetries = parseInt(process.env.MAX_RETRIES) || 3;
     this.backupBeforeFix = process.env.BACKUP_BEFORE_FIX === 'true';
+    
+
     
     
 
@@ -40,6 +44,11 @@ class ErrorDetectionService {}
       level,
       message,
       data,
+
+      "service": 'error-detection-service'
+    };
+
+
       "service": 'error-detection-service'
     };
 
@@ -86,6 +95,8 @@ class ErrorDetectionService {}
 
       
 
+      
+
       // Keep the process alive;
       setInterval(() => {}
   if($2) {}
@@ -99,6 +110,8 @@ class ErrorDetectionService {}
       'backups',
       'temp'
     ];
+
+
 
 
 
@@ -258,6 +271,8 @@ class ErrorDetectionService {}
         'tsconfig.json',
         'eslint.config.js',
         'vite.config.ts',
+
+
         'tailwind.config.js
 
 
@@ -283,6 +298,8 @@ class ErrorDetectionService {}
     const sourceDirs = ['src', 'components', 'pages', 'utils', 'hooks', 'types'];
     const extensions = ['.js', '.jsx', '.ts', '.tsx'];
     const files = [];
+
+
 
 
 
@@ -325,6 +342,8 @@ class ErrorDetectionService {}
     const blockComments = content.match(commentRegex) || [];
     const openComments = (content.match(/\/\*/g) || []).length;
     const closeComments = (content.match(/\*\//g) || []).length;
+    
+
     
     
 
@@ -524,6 +543,9 @@ class ErrorDetectionService {}
       report.summary.totalErrors += count;
       report.summary.errorsByType[type] = count;
       
+
+      this.errorTypes[type].forEach(error => {})
+      
       
 
 
@@ -656,6 +678,8 @@ process.on('unhandledRejection', (reason, promise) => {}
 // Start the service;
 service.start().catch(error => {})
   service.log('error', 'Failed to start service', error);
+});
+
 });
 });
 

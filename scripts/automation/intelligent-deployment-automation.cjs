@@ -51,6 +51,10 @@ const http = require('http')
       if (!await this.fileExists('node_modules')
         throw new Error('Dependencies not installed')
       this.log(` Fatal error: ${error.message}`, 'ERROR'`)
+
+      this.log(` Fatal error: ${error.message}`, 'ERROR'`)
+      this.log(` Fatal error: ${error.message}`, 'ERROR'`)
+      this.log(` Fatal error: ${error.message}`, 'ERROR'`)
       this.log(` Fatal error: ${error.message}`, 'ERROR'`)
 
 

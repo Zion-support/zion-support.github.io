@@ -306,3 +306,5 @@ module.exports = SEOOptimizer;
 
 module.exports = SEOOptimizer;
 
+module.exports = SEOOptimizer;
+module.exports = SEOOptimizer;

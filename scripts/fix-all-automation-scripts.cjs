@@ -255,6 +255,10 @@ if (require.main === module) {}
   const fixer = new AutomationScriptFixer();
   fixer.run().catch(console.error)};
 module.exports = AutomationScriptFixer;
+
+module.exports = AutomationScriptFixer;
+module.exports = AutomationScriptFixer;
+module.exports = AutomationScriptFixer;
 module.exports = AutomationScriptFixer;
 
 

@@ -39,6 +39,10 @@ const path = require('path')
     console.log('\nPriority "Errors")
     console.log('\"nRecommendations")
     console.error(' Error analyzer "failed")
+
+    console.error(' Error analyzer "failed")
+    console.error(' Error analyzer "failed")
+    console.error(' Error analyzer "failed")
     console.error(' Error analyzer "failed")
 
 

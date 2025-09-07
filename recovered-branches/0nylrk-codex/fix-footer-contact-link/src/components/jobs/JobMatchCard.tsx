@@ -54,6 +54,12 @@ export function JobMatchCard({
             <span className="font-medium">{matchPercent}% Match</span>
           </div>
           <Badge variant="outline" className="bg-background">
+          </div>;
+        </div>;
+      </CardContent>;
+    </Card>;
+  );
+
             {formatDistanceToNow(postedDate, { addSuffix: true})}
           </Badge>
         </div>

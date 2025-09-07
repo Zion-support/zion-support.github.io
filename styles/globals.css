@@ -1,3 +1,8 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+
+@tailwind base; @tailwind components; @tailwind utilities;
+ursor/automate-test-improve-and-merge-code-646c
+@tailwind base; @tailwind components; @tailwind utilities;
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -54,4 +59,21 @@ a {
   .cta-buttons {
     @apply flex flex-col sm:flex-row gap-4 justify-center;
   }
+<<<<<<< HEAD
 }
+
+@tailwind base; @tailwind components; @tailwind utilities;
+ursor/automate-test-improve-and-merge-code-646c
+@layer utilities {
+  .focus-visible:focus {
+    @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+  }
+}
+@tailwind base; @tailwind components; @tailwind utilities;
+}
+@tailwind base; @tailwind components; @tailwind utilities;
+}
+}
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

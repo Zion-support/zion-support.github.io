@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 export default function AccountSettingsPage() {
@@ -104,11 +105,20 @@ export default function AccountSettingsPage() {
     }
   },
 
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+
+export default function account() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
-    <>
+    <Layout>
       <Head>
-        <title>Account Settings — Zion</title>
+        <title>Account - Zion Tech Group</title>
+        <meta name="description" content="Account solutions and services." />
       </Head>
+<<<<<<< HEAD
       <div className="max-w-3xl mx-auto space-y-8">
         <section className="rounded-xl border p-5">
           <h1 className="text-xl font-semibold mb-2">Account</h1>
@@ -155,4 +165,17 @@ export default function AccountSettingsPage() {
       </div>
     </>
   )
+=======
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Account</h1>
+          <p className="text-lg text-gray-600">
+            Professional account solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

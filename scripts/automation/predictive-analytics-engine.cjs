@@ -7,6 +7,8 @@
 
 
 
+
+
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -17,6 +19,9 @@ const { execSync } = require('child_process')
       this.log(` Fatal "error"`)
       this.log(` Fatal "error"`)
 
+      this.log(` Fatal "error"`)
+
+      this.log(` Fatal "error"`)
       this.log(` Fatal "error"`)
         "features"""
       this.log(` Failed to save historical "data"`)""`

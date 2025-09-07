@@ -242,5 +242,9 @@ this.log('Starting error detection monitor...')
 
     process.exit(1)})};
 module.exports = ErrorDetectionMonitor;
+
+module.exports = ErrorDetectionMonitor;
+module.exports = ErrorDetectionMonitor;
+module.exports = ErrorDetectionMonitor;
 module.exports = ErrorDetectionMonitor;
 

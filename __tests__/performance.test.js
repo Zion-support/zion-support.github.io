@@ -1,3 +1,7 @@
+});'
+});'
+});'
+
 const { test, expect } = require('@playwright/test')'
 test.describe('"Performance"
   test('"page"
@@ -6,6 +10,9 @@ test.describe('"Performance"
             "output"
   test('"bundle"
     "await"
+          resolve({ "error"'"
+          resolve({ "error"'"
+          resolve({ "error"'"
     page.on('console', "msg"
               "output"
           resolve({ "error"

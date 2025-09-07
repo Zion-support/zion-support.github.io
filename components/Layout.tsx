@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+
+;
+
+;
+
+;
+import React from 'react';
+import Head from 'next/head';
+interface LayoutProps  {children: React.ReactNode;
+  title?: string;
+  description?: string;
+}export default function Layout() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
+  static getDerivedStateFromError(error) {return { hasError: true }}
+  componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
+  render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+}
+
+export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
+main
 
 
 class ErrorBoundary extends React.Component {
@@ -19,10 +39,17 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { ReactNode } from 'react';
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React from "react";
 import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
+<<<<<<< HEAD
 interface LayoutProps {
   children: React.ReactNode;
 interface LayoutProps {;
@@ -175,7 +202,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 };
 export default Layout;
 
+
 import React, { useState } from 'react';
+=======
+import React from 'react';
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Head from 'next/head';
 import Header from './Header';
 import Footer from './Footer';
@@ -197,6 +229,7 @@ import {
 } from 'lucide-react';
 
 interface LayoutProps {
+<<<<<<< HEAD
   title?: string;
   description?: string;
   keywords?: string;
@@ -219,9 +252,109 @@ export default function Layout({
 }: LayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
+
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
+        <meta property="og:title" content={ogTitle || title} />
+        <meta property="og:description" content={ogDescription || description} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:url" content={ogUrl || "https://ziontechgroup.com"} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={ogTitle || title} />
+        <meta name="twitter:description" content={ogDescription || description} />
+        <meta name="twitter:image" content={ogImage} />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href={ogUrl || "https://ziontechgroup.com"} />
+      </Head>
+      
+      <div className="min-h-screen flex flex-col bg-gray-50">
+        <Header />
+        
+        <main className="flex-1">
+          {children}
+        </main>
+        
+        <Footer />
+        
+        <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+      </div>
+    </>
+  );
+}
+import React, { ReactNode } from 'react';
 
+interface LayoutProps {
+  children: ReactNode;
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+=======
+  children: React.ReactNode
+  title?: string
+  description?: string
+class ErrorBoundary extends React.Component<
+  { children: React.ReactNode },
+  { hasError: boolean }
+> {
+  constructor($2) {
+    super(props)
+    this.state = { hasError: false }
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true }
+  componentDidCatch($2) {
+    console.error('Error caught by boundary:', error, errorInfo)
+  render($2) {
+  if($2) {
+      return <div>Something went wrong.</div>
+    return this.props.children
+export default function Layout({ children, title, description }: LayoutProps) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Navigation />
+      <main className="flex-1">{children}</main>
+      <Footer />
+    </div>
+<<<<<<< HEAD
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+  );
+};
+
+export default Layout;
+main
+
+main
+
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+=======
+  );
+}
+<<<<<<< HEAD
+=======
+import React, { ReactNode } from "react"
+interface LayoutProps {
+  children: ReactNode
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  return (
+    <main className="min-h-screen">
+      {children}
+    </main>
+  )
+}
+export default Layout
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+export default Layout;
+  );
+};
+export default Layout;
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

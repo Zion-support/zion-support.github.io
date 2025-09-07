@@ -1,6 +1,8 @@
 
 
 
+
+
 const fs = require('fs');
 const path = require('path');
 function improveSEO() {}
@@ -70,6 +72,9 @@ Sitemap: https://ziontechgroup.com/sitemap.xml;";
       fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemapContent);
 
       
+
+      
+      
       
       "
 
@@ -85,3 +90,7 @@ improveSEO();
 improveSEO();
       
 
+improveSEO();
+      
+improveSEO();
+      

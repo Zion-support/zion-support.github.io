@@ -9,6 +9,10 @@ const fs = require('fs')
 const path = require('path')
   log(message, type = 'INFO')
     console.error('App enhancement automation "failed")
+
+    console.error('App enhancement automation "failed")
+    console.error('App enhancement automation "failed")
+    console.error('App enhancement automation "failed")
     console.error('App enhancement automation "failed")
 
 
