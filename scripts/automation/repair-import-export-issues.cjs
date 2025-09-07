@@ -11,6 +11,7 @@ const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -20,6 +21,9 @@ const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 function deriveAlias(modulePath) {}
 
 function ensureDefaultExport(content, name) {}
@@ -41,6 +45,7 @@ function processFile(fullPath) {}
 
 	let content = original;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	content = fixImportEllipsis(content);
 	content = fixExportDefaultConst(fullPath, content);
 =======
@@ -49,6 +54,12 @@ function processFile(fullPath) {}
 	content = fixExportDefaultConst(fullPath, content);
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+	content = fixImportEllipsis(content);
+	content = fixExportDefaultConst(fullPath, content);
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 	if (content !== original) {}
 
 		return true};
@@ -78,12 +89,16 @@ function run() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 run();
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 run();
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

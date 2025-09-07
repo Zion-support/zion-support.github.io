@@ -1,8 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 #!/usr/bin/env node;
 const fs = require("child_process");
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -122,12 +126,16 @@ if (require.main === module) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = FileRestorer;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = FileRestorer;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

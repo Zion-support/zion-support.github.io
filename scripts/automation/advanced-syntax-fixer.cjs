@@ -56,12 +56,16 @@ const logsDir = path.join(process.cwd(), "logs"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

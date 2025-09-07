@@ -15,6 +15,7 @@
  * Manages and updates project dependencies intelligently;
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -28,6 +29,13 @@ const { execSync } = require('child_process');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 class IntelligentDependencyManager {}
     constructor() {}
         this.projectRoot = process.cwd();
@@ -50,15 +58,18 @@ class IntelligentDependencyManager {}
         console.log(message)};
     analyzeDependencies() {}
         this.log('Analyzing current dependencies...');
+        
         try {}
             const packageJsonPath = path.join(this.projectRoot, 'package.json';);
             const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';););
+            
             const dependencies = {}
                 "production": Object.keys(packageJson.dependencies || {}),
                 "development": Object.keys(packageJson.devDependencies || {}),
                 "total": Object.keys(packageJson.dependencies || {}).length +
                        Object.keys(packageJson.devDependencies || {}).length;
            };
+<<<<<<< HEAD
 =======
         console.log(message)};
     analyzeDependencies() {}"
@@ -69,6 +80,9 @@ class IntelligentDependencyManager {}
            };
             
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+            
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
             this.log(`Found ${dependencies.total} total dependencies`);
             return dependencies} catch (error) {}
             this.log(`Dependency analysis "failed": ${error.message}`);
@@ -77,14 +91,20 @@ class IntelligentDependencyManager {}
     checkOutdatedPackages() {}
         this.log('Checking for outdated packages...');
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         try {}
             const outdatedResult = execSync('npm outdated --json', { })
                 "cwd": this.projectRoot,
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
+            
             const outdated = JSON.parse(outdatedResult;);
             const outdatedCount = Object.keys(outdated).lengt;h;
+<<<<<<< HEAD
 =======
         
         try {}
@@ -109,6 +129,9 @@ class IntelligentDependencyManager {}
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+            
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
             this.log(`Found ${outdatedCount} outdated packages`);
             return { "count": outdatedCount, "packages": outdated }} catch (error) {}"
             // npm outdated returns exit code 1 when packages are outdated;
@@ -131,6 +154,7 @@ class IntelligentDependencyManager {}
     checkSecurityVulnerabilities() {}
         this.log('Checking for security vulnerabilities...');
 <<<<<<< HEAD
+<<<<<<< HEAD
         try {}
             const auditResult = execSync('npm audit --json', { })
                 "cwd": this.projectRoot,
@@ -140,6 +164,8 @@ class IntelligentDependencyManager {}
             const auditData = JSON.parse(auditResult;);
             const vulnerabilities = auditData.vulnerabilities?.total ||;0;
 =======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         
         try {}
             const auditResult = execSync('npm audit --json', { })
@@ -151,7 +177,10 @@ class IntelligentDependencyManager {}
             const auditData = JSON.parse(auditResult;);
             const vulnerabilities = auditData.vulnerabilities?.total ||;0;
             
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
             this.log(`Found ${vulnerabilities} security vulnerabilities`);
             return {;}
                 "vulnerabilities": vulnerabilities,
@@ -164,6 +193,7 @@ class IntelligentDependencyManager {}
     updateDependencies() {}
         this.log('Updating dependencies...');
 <<<<<<< HEAD
+<<<<<<< HEAD
         try {}
             // Update minor and patch versions;
             execSync('npm update', { })
@@ -172,6 +202,8 @@ class IntelligentDependencyManager {}
             }
 });
 =======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         
         try {}
             // Update minor and patch versions;
@@ -181,7 +213,10 @@ class IntelligentDependencyManager {}
             }
 });
             
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
             this.log('Dependencies updated successfully');
             return { "status": 'success' }} catch (error) {}
             this.log(`Dependency update "failed": ${error.message}`);
@@ -190,6 +225,7 @@ class IntelligentDependencyManager {}
     fixSecurityIssues() {}
         this.log('Fixing security issues...');
 <<<<<<< HEAD
+<<<<<<< HEAD
         try {}
             execSync('npm audit fix', { })
                 "cwd": this.projectRoot,
@@ -197,6 +233,8 @@ class IntelligentDependencyManager {}
             }
 });
 =======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         
         try {}
             execSync('npm audit fix', { })
@@ -205,7 +243,10 @@ class IntelligentDependencyManager {}
             }
 });
             
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
             this.log('Security issues fixed successfully');
             return { "status": 'success' }} catch (error) {}
             this.log(`Security fix "failed": ${error.message}`);
@@ -214,9 +255,13 @@ class IntelligentDependencyManager {}
     generateDependencyReport() {}
         this.log('Generating dependency management report...');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         const report = {}
             "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
@@ -232,6 +277,7 @@ class IntelligentDependencyManager {}
             "recommendations": this.generateRecommendations();
        };
 <<<<<<< HEAD
+<<<<<<< HEAD
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Dependency report saved to ${this.reportFile}`);
 =======
@@ -240,6 +286,12 @@ class IntelligentDependencyManager {}
         this.log(`Dependency report saved to ${this.reportFile}`);
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+        this.log(`Dependency report saved to ${this.reportFile}`);
+        
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         return report};
     generateRecommendations() {}
         return [;]
@@ -254,9 +306,13 @@ class IntelligentDependencyManager {}
     async run() {}
         this.log('Intelligent Dependency Manager started');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         try {}
             const report = this.generateDependencyReport(;);
             this.log('Intelligent Dependency Manager completed successfully');
@@ -296,12 +352,16 @@ class IntelligentDependencyManager {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = IntelligentDependencyManager;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = IntelligentDependencyManager;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

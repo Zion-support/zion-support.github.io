@@ -12,6 +12,7 @@ const { execSync, spawn } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -22,6 +23,9 @@ const { execSync, spawn } = require("child_process");
 const fs = require("fs");
 const path = require("path");"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 class $1 {}
   constructor() {}"
   this.projectRoot = path.resolve(__dirname, "../../");"
@@ -56,6 +60,7 @@ class $1 {}
     // Append to log file;
     fs.appendFileSync(this.logFile, logEntry + "\n");
 <<<<<<< HEAD
+<<<<<<< HEAD
   log(message, level = "INFO") {}
   const timestamp = new Date().toISOString();
     const logEntry = "[${timestamp}] [${level}] ${message}";
@@ -67,6 +72,14 @@ class $1 {}
     
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+  log(message, level = "INFO") {}
+  const timestamp = new Date().toISOString();
+    const logEntry = "[${timestamp}] [${level}] ${message}";
+    
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     // Append to log file;
     fs.appendFileSync(this.logFile, logEntry + "\n")};
 ;
@@ -107,9 +120,13 @@ class $1 {}
 });
       child.on("error", error => {this.log("Command "error": ${error.message}", "ERROR");
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       child.on("error", error => {this.log("Command "error": ${error.message}", "ERROR");
 =======
     return new Promise((resolve, reject) => {this.log(Running "command": ${command}");"
@@ -138,9 +155,13 @@ class $1 {}
   await this.runCommand("npm run lint");
       this.log("Linting completed successfully");
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   async runLint() {}
   this.log("Running linting...");
     try {}
@@ -165,9 +186,13 @@ class $1 {}
   await this.runCommand("npm run build");
       this.log("Build completed successfully");
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   async runBuild() {}
   this.log("Building project...");
     try {}
@@ -232,6 +257,7 @@ class $1 {}
 ;
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));this.log("Report "generated": ${this.reportFile}");
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -239,6 +265,9 @@ class $1 {}
         "failed": results.filter(r => !r.success).length}};"
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));this.log("Report "generated": ${this.reportFile}");"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     return report};
   async run() {}"
   this.log("Starting CI automation...");"
@@ -251,9 +280,15 @@ class $1 {}
 <<<<<<< HEAD
       "timestamp": new Date().toISOString(),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   async run() {}
   this.log("Starting CI automation...");
+
     const results = [];
+<<<<<<< HEAD
 =======
 
   async run() {}
@@ -265,15 +300,22 @@ class $1 {}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     // Install dependencies;
 
       "timestamp": new Date().toISOString()}"
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     if (!depsResult) {}
   this.log(Skipping remaining steps due to dependency installation failure",)
         "WARN";
@@ -294,9 +336,13 @@ class $1 {}
       "timestamp": new Date().toISOString()}
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     // Run type check;
     const typeCheckResult = await this.runTypeCheck();
     results.push({})
@@ -337,9 +383,13 @@ this.log("CI automation completed. "Status": ${report.status}");this.log(Passed"
 <<<<<<< HEAD
   this.log("CI automation failed. Check the report for details.", "ERROR");
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     if (buildResult) {}
   // Verify build output;
       const verifyResult = await this.verifyBuildOutput();
@@ -349,9 +399,13 @@ this.log("CI automation completed. "Status": ${report.status}");this.log(Passed"
         "timestamp": new Date().toISOString()}
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       // Run tests;
       const testResult = await this.runTests();
       results.push({})
@@ -363,9 +417,13 @@ this.log("CI automation completed. "Status": ${report.status}");this.log(Passed"
     const report = await this.generateReport(results);
 this.log("CI automation completed. "Status": ${report.status}");this.log(""Passed": ${report.summary.passed}/${report.summary.total}`);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     if (report.status === "FAILED") {}
   this.log("CI automation failed. Check the report for details.", "ERROR");
 =======
@@ -385,12 +443,16 @@ if (require.main === module) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = CIAutomation;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = CIAutomation;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8,6 +9,8 @@
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -45,7 +48,36 @@ async function gh(path, method = 'GET') {}
   }
 });
   const text = await res.text();
+<<<<<<< HEAD
 
+=======
+  let data; try { data = text ? JSON.parse(text) : undefined} catch { data = { "raw": text }};
+  if (!res.ok) throw new Error(data && data.message ? data.message : `HTTP ${res.status}`);
+  return data};
+function autoResolveConflicts() {}
+  const list = sh('git diff --name-only --diff-filter=U || true');
+  const files = list.split('\n').filter(Boolean);
+  for (const file of files) {}
+    if (!fs.existsSync(file)) continue;
+    const src = fs.readFileSync(file, 'utf8');
+    // Prefer incoming (theirs) content on conflict;
+    const resolved = src;
+      .replace(/<<<<<<<[\s\S]*?([\s\S]*?)>>>>>>>[\t].*\n?/g, (_, theirs) => theirs);
+      .replace(/<<<<<<<[\s\S]*?>>>>>>>[\t].*\n?/g, '');
+    fs.writeFileSync(file, resolved);
+    sh(`git add -- "${file}"`)};
+  const staged = sh('git diff --cached --name-only || true');
+  if (staged.split('\n').filter(Boolean).length) {}
+    sh('git commit -m ""chore": auto-resolve conflicts while force-merging PR heads into main"')};
+};
+async function main() {}
+  const { owner, repo } = getRepo();
+  
+  const startBranch = sh('git rev-parse --abbrev-ref HEAD');
+  sh('git fetch origin');
+  sh('git checkout main');
+  sh('git pull --ff-only origin main');
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   const prs = await gh(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`);
   let mergedCount = 0; let attempted = 0;
   for (const pr of prs) {}
@@ -55,4 +87,24 @@ async function gh(path, method = 'GET') {}
     console.log(`Merging head into "main": PR #${pr.number} (${head})`);"
     try {}`;
       sh(`git fetch origin ${head}:${head} || true`);
+<<<<<<< HEAD
 
+=======
+      try {}
+        sh(`git merge --no-ff --no-edit origin/${head}`)} catch (e) {`}
+        console.log('Conflicts detected. Attempting auto-resolution...');
+        autoResolveConflicts()};
+      mergedCount++} catch (e) {}
+      console.log(`Skip PR #${pr.number} (${head}): ${e.message}`);
+      // Abort merge if in progress;
+      try { sh('git merge --abort')} catch {};
+    };
+  };
+  console.log(`Pushing main with ${mergedCount}/${attempted} merged heads...`);
+  sh('git push origin main');
+  // return to original branch;
+  try { sh(`git checkout ${startBranch}`)} catch {};
+};
+main().catch(err => { console.error('"Error": ', err.message); process.exit(1)}
+});
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb

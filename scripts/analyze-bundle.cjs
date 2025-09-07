@@ -7,6 +7,7 @@
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -14,6 +15,8 @@
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -27,6 +30,7 @@ async function analyzeBundle() {}
     // Run bundle analysis;
     execSync('ANALYZE=true npm run build', { "stdio": 'inherit' }
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -67,3 +71,7 @@ analyzeBundle();
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb

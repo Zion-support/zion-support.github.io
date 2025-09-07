@@ -15,6 +15,7 @@
  * Fixes TypeScript syntax errors and improves code quality;
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -28,6 +29,13 @@ const { execSync } = require('child_process');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 class TypeScriptSyntaxFixer {}
     constructor() {}
         this.projectRoot = process.cwd();
@@ -50,6 +58,7 @@ class TypeScriptSyntaxFixer {}
         console.log(message)};
     runTypeScriptCheck() {}
         this.log('Running TypeScript type check...');
+        
         try {}
             const result = execSync('npm run type-check', { })
                 "cwd": this.projectRoot,
@@ -69,7 +78,10 @@ class TypeScriptSyntaxFixer {}
                 "stdio": 'pipe'
             };);
             
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
             this.log('TypeScript type check passed');
             return {;}
                 "status": 'success',
@@ -94,6 +106,7 @@ class TypeScriptSyntaxFixer {}
     runESLintFix() {}
         this.log('Running ESLint with auto-fix...');
 <<<<<<< HEAD
+<<<<<<< HEAD
         try {}
             const result = execSync('npm run "lint": fix', { })
                 "cwd": this.projectRoot,
@@ -101,6 +114,8 @@ class TypeScriptSyntaxFixer {}
                 "stdio": 'pipe'
             };);
 =======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         
         try {}
             const result = execSync('npm run "lint": fix', { })
@@ -109,7 +124,10 @@ class TypeScriptSyntaxFixer {}
                 "stdio": 'pipe'
             };);
             
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
             this.log('ESLint auto-fix completed');
             return {;}
                 "status": 'success',
@@ -126,11 +144,17 @@ class TypeScriptSyntaxFixer {}
     findTypeScriptFiles() {}
         this.log('Finding TypeScript files...');
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         const files = [];
         const extensions = ['.ts', '.tsx'];
+        
         const scanDirectory = (dir) => {}
             if () retu) {}
     ) retu}r;n;
+<<<<<<< HEAD
 =======
         
         const files = [];
@@ -151,15 +175,22 @@ class TypeScriptSyntaxFixer {}
             if () retu) {}
     ) retu}r;n;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+            
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
             const items = fs.readdirSync(dir;);
             for (const item of items) {}
                 const fullPath = path.join(dir, item;);
                 const stat = fs.statSync(fullPath;);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+                
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
                 if (&& !item.startsWith('.') && item !== 'node_modules') {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
                     files.push(fullPath)};
@@ -176,6 +207,7 @@ class TypeScriptSyntaxFixer {}
     fixCommonSyntaxIssues() {}
         this.log('Fixing common syntax issues...');
 <<<<<<< HEAD
+<<<<<<< HEAD
         const files = this.findTypeScriptFiles(;);
         let fixedCount = ;0;
         const fixes = [];
@@ -192,9 +224,17 @@ class TypeScriptSyntaxFixer {}
         let fixedCount = ;0;
         const fixes = [];
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+        
+        const files = this.findTypeScriptFiles(;);
+        let fixedCount = ;0;
+        const fixes = [];
+        
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         for (const file of files) {}
 
                 let originalContent = conte;n;t;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -202,6 +242,9 @@ class TypeScriptSyntaxFixer {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+                
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
                 // Fix common issues;
                 content = this.fixTrailingCommas(content);
                 content = this.fixSemicolons(content);
@@ -209,11 +252,15 @@ class TypeScriptSyntaxFixer {}
                 content = this.fixIndentation(content);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+                
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
                 if ( {})
                     fs.writeFileSync(file, content)) {}
      {}
@@ -235,12 +282,16 @@ class TypeScriptSyntaxFixer {}
 <<<<<<< HEAD
     return '}';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+            
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
             const indent = line.length - line.trimStart().lengt;h;
             const spaces = Math.floor(indent / 2) *;2;
             return ' '.repeat(spaces) + trimmed}).join('\n')};
@@ -248,6 +299,7 @@ class TypeScriptSyntaxFixer {}
 <<<<<<< HEAD
         this.log('Generating TypeScript syntax fix report...');
 <<<<<<< HEAD
+<<<<<<< HEAD
         const typeCheck = this.runTypeScriptCheck(;);
         const eslintFix = this.runESLintFix(;);
         const syntaxFixes = this.fixCommonSyntaxIssues(;);
@@ -258,6 +310,13 @@ class TypeScriptSyntaxFixer {}
         const syntaxFixes = this.fixCommonSyntaxIssues(;);
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        
+        const typeCheck = this.runTypeScriptCheck(;);
+        const eslintFix = this.runESLintFix(;);
+        const syntaxFixes = this.fixCommonSyntaxIssues(;);
+        
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         const report = {}
             "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
@@ -269,6 +328,7 @@ class TypeScriptSyntaxFixer {}
             "recommendations": this.generateSyntaxRecommendations();
        };
 <<<<<<< HEAD
+<<<<<<< HEAD
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`TypeScript syntax fix report saved to ${this.reportFile}`);
 =======
@@ -277,6 +337,12 @@ class TypeScriptSyntaxFixer {}
         this.log(`TypeScript syntax fix report saved to ${this.reportFile}`);
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+        this.log(`TypeScript syntax fix report saved to ${this.reportFile}`);
+        
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         return report};
     generateSyntaxRecommendations() {}
         return [;]
@@ -291,9 +357,13 @@ class TypeScriptSyntaxFixer {}
     async run() {}
         this.log('TypeScript Syntax Fixer started');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         try {}
             const report = this.generateSyntaxReport(;);
             this.log('TypeScript Syntax Fixer completed successfully');
@@ -327,12 +397,16 @@ class TypeScriptSyntaxFixer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = TypeScriptSyntaxFixer;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = TypeScriptSyntaxFixer;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

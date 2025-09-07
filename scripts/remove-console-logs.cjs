@@ -7,13 +7,16 @@
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 #!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 const { glob } = require('glob');
+
 /**
  * Script to remove console.log statements from production builds;
  * This helps improve performance and security;
  */
+
 const CONSOLE_PATTERNS = [/console\.log\([^)]*\);?/g,
   /console\.debug\([^)]*\);?/g,
   /console\.info\([^)]*\);?/g,
@@ -21,6 +24,10 @@ const CONSOLE_PATTERNS = [/console\.log\([^)]*\);?/g,
   // Keep console.error for debugging;
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 const EXCLUDE_PATTERNS = ['node_modules',
   '.next',
   'dist',
@@ -30,6 +37,7 @@ const EXCLUDE_PATTERNS = ['node_modules',
   '*.test.*',
   '*.spec.*'
 ];
+
 function shouldProcessFile(filePath) {
   return !EXCLUDE_PATTERNS.some(pattern => {
     if (pattern.includes('*')) {
@@ -38,23 +46,32 @@ function shouldProcessFile(filePath) {
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return filePath.includes(pattern)})}
+
 function removeConsoleStatements(content) {
   let modifiedContent = content;
   let removedCount = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   CONSOLE_PATTERNS.forEach(pattern => {
     const matches = modifiedContent.match(pattern);
     if (matches) {
       removedCount += matches.length;
       modifiedContent = modifiedContent.replace(pattern, '')}
   });
+
   return { "content": modifiedContent, removedCount }}
+
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     const { "content": newContent, removedCount } = removeConsoleStatements(content);
+    
     if (removedCount > 0) {
       fs.writeFileSync(filePath, newContent, 'utf8');
+<<<<<<< HEAD
 =======
 
   CONSOLE_PATTERNS.forEach(pattern => {)
@@ -69,21 +86,33 @@ function processFile(filePath) {
 }"
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+      
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       return removedCount}
+    
     return 0} catch (error) {
     console.error(`✗ Error processing ${filePath}:`, error.message);
     return 0}
 }
 
+<<<<<<< HEAD
   let results = [];
   const list = fs.readdirSync(dir);
 <<<<<<< HEAD
+=======
+function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
+  let results = [];
+  const list = fs.readdirSync(dir);
+  
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   list.forEach(file => {
 =======
   list.forEach(file => {)
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
+    
     if (stat && stat.isDirectory()) {
       results = results.concat(getAllFiles(filePath, extensions));
     } else {
@@ -95,9 +124,12 @@ function processFile(filePath) {
       }
     }
   });
+  
   return results;
 }
+
 function main() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -117,12 +149,18 @@ function main() {
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   const srcDir = path.join(process.cwd(), 'src');
 <<<<<<< HEAD
   const pagesDir = path.join(process.cwd(), 'pages');
+  
   const patterns = [`${srcDir}/**/*.{js,jsx,ts,tsx}`,
     `${pagesDir}/**/*.{js,jsx,ts,tsx}`
   ];
+<<<<<<< HEAD
 =======
   const pagesDir = path.join(process.cwd(), 'pages');`;
   const patterns = [`${srcDir}/**/*.{js,jsx,ts,tsx}`,`;
@@ -130,10 +168,15 @@ function main() {
     `${pagesDir}/**/*.{js,jsx,ts,tsx}`]
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   let totalRemoved = 0;
   let filesProcessed = 0;
+
   for (const pattern of patterns) {
     const files = await glob(pattern);
+    
     for (const file of files) {
       if (shouldProcessFile(file)) {
         const removed = processFile(file);
@@ -146,9 +189,11 @@ function main() {
 <<<<<<< HEAD
     }
   }
+
   console.log("\n📊 Summary: ");
   console.log(`   Files processed: ${filesProcessed}`);
   console.log(`   Console statements "removed": ${totalRemoved}`);
+  
   if (totalRemoved > 0) {
 <<<<<<< HEAD
 
@@ -158,6 +203,7 @@ function main() {
   } else {
     console.log(`\n✨ No console statements found to remove.`);
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -174,13 +220,20 @@ ursor/expand-services-advertise-and-build-project-0033
 
 <<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 }
+
 if (require.main === module) {
   main().catch(console.error)}
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = { removeConsoleStatements, processFile };
 <<<<<<< HEAD
 <<<<<<< HEAD

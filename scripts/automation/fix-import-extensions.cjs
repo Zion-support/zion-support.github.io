@@ -11,6 +11,10 @@ const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 class ImportExtensionFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -37,6 +41,7 @@ class ImportExtensionFixer {}
   async fixImportExtensions() {}
     this.log('Fixing import extensions...');
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Find all TypeScript and JavaScript files;
     const files = glob.sync('src/**/*.{ts,tsx,js,jsx}', { "cwd": this.projectRoot }
 });
@@ -51,21 +56,37 @@ class ImportExtensionFixer {}
 
 });
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+    
+    // Find all TypeScript and JavaScript files;
+    const files = glob.sync('src/**/*.{ts,tsx,js,jsx}', { "cwd": this.projectRoot }
+});
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     for (const file of files) {}
       const filePath = path.join(this.projectRoot, file);"
 
       let modified = false;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       // Fix .ts extensions in import statements;
       const originalContent = content;
+      
       // Fix imports like 'react.ts' -> 'react'
       content = content.replace(/from\s+['"]([^'"]+)\.ts['"]/g, "from '$1'");
+      
       // Fix imports like 'react-router-dom.ts' -> 'react-router-dom'
       content = content.replace(/from\s+['"]([^'"]+)\.ts['"]/g, "from '$1'");
+      
       // Fix imports like 'framer-motion.ts' -> 'framer-motion'
       content = content.replace(/from\s+['"]([^'"]+)\.ts['"]/g, "from '$1'");
+      
       // Fix imports like 'lucide-react.ts' -> 'lucide-react'
       content = content.replace(/from\s+['"]([^'"]+)\.ts['"]/g, "from '$1'");
+<<<<<<< HEAD
 =======
 
       // Fix .ts extensions in import statements;
@@ -73,6 +94,9 @@ class ImportExtensionFixer {}
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       if (content !== originalContent) {}
         fs.writeFileSync(filePath, content);
         modified = true;
@@ -84,6 +108,7 @@ class ImportExtensionFixer {}
   async run() {}
     this.log('Starting Import Extension Fixer...');
 <<<<<<< HEAD
+<<<<<<< HEAD
     try {}
       await this.fixImportExtensions();
 =======
@@ -92,6 +117,12 @@ class ImportExtensionFixer {}
       await this.fixImportExtensions();
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    
+    try {}
+      await this.fixImportExtensions();
+      
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       this.log("Import Extension Fixer completed successfully!");
       this.log(`Fixed ${this.fixesApplied} files`)} catch (error) {`}
       this.log(`Error in Import Extension "Fixer": ${error.message}`);
@@ -120,12 +151,16 @@ if (require.main === module) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = ImportExtensionFixer;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = ImportExtensionFixer;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

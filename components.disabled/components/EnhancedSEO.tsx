@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
@@ -104,3 +105,9 @@ const EnhancedSEO: React.FC<SEOProps> = ({
 
 export default EnhancedSEO;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+
+
+
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb

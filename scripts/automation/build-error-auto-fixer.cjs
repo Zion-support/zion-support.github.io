@@ -11,9 +11,13 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 class BuildErrorAutoFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -21,6 +25,7 @@ class BuildErrorAutoFixer {}
     this.logsDir = path.join(this.projectRoot, 'automation/logs');
     this.fixInterval = parseInt(process.env.BUILD_CHECK_INTERVAL) || 900000; // 15 minutes;
     this.autoFixEnabled = process.env.AUTO_FIX_ENABLED === 'true';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     
@@ -35,6 +40,9 @@ class BuildErrorAutoFixer {}
     this.projectRoot = process.cwd();
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     // Ensure directories exist;
     [this.reportsDir, this.logsDir].forEach(dir => {})
       if (!fs.existsSync(dir)) {}
@@ -43,11 +51,15 @@ class BuildErrorAutoFixer {}
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     this.fixesApplied = 0;
     this.buildHistory = []};"
   log(message, level = 'INFO') {}
@@ -75,6 +87,7 @@ class BuildErrorAutoFixer {}
     );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     const errors = [];
     let currentError = null;
 =======
@@ -87,6 +100,12 @@ class BuildErrorAutoFixer {}
     const errors = [];
     let currentError = null;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+    
+    const errors = [];
+    let currentError = null;
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     for (const line of errorLines) {}
 
         const match = line.match(/([^:]+):(\d+):(\d+)/);
@@ -99,11 +118,15 @@ class BuildErrorAutoFixer {}
     let fixesApplied = 0;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     for (const error of errors) {}
         if (await this.fixSingleBuildError(error)) {}
           fixesApplied++};
@@ -113,11 +136,15 @@ class BuildErrorAutoFixer {}
     const message = error.message.toLowerCase();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     // Fix common build errors;
     if (message.includes('module not found') || message.includes('cannot find module')) {}
       return await this.fixModuleNotFoundError(error)};
@@ -134,9 +161,13 @@ class BuildErrorAutoFixer {}
 <<<<<<< HEAD
     this.log('Attempting to fix module not found error...', 'INFO');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     try {}
       // Try to install missing dependencies;
       const moduleMatch = error.message.match(/Cannot find module ['"]([^'"]+)['"]/);
@@ -161,13 +192,18 @@ class BuildErrorAutoFixer {}
   async fixSyntaxError(error) {}
     this.log('Attempting to fix syntax error...', 'INFO');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     try {}
       if (error.file && error.file !== 'unknown') {}
         const content = fs.readFileSync(error.file, 'utf8');
         const lines = content.split('\n');
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         
@@ -176,12 +212,16 @@ class BuildErrorAutoFixer {}
 
         const lines = content.split('\n');
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+        
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         // Basic syntax fixes;
         const fixes = [this.fixMissingSemicolons.bind(this)]
           this.fixUnclosedBrackets.bind(this),
           this.fixUnclosedQuotes.bind(this),
           this.fixTrailingCommas.bind(this);
         ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         let originalContent = content;
@@ -196,6 +236,12 @@ class BuildErrorAutoFixer {}
         let originalContent = content;
         let modifiedContent = content;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+        
+        let originalContent = content;
+        let modifiedContent = content;
+        
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         for (const fix of fixes) {}
             const result = fix(lines, error);
             if (result.modified) {}
@@ -216,17 +262,25 @@ class BuildErrorAutoFixer {}
   async fixMemoryError(error) {}
     this.log('Attempting to fix memory error...', 'INFO');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     try {}
       // Clean build artifacts;
       execSync('rm -rf .next out dist build', { "stdio": 'pipe' }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+      
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       // Increase Node.js memory limit for build;
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
       if (packageJson.scripts && packageJson.scripts.build) {}
@@ -241,9 +295,13 @@ class BuildErrorAutoFixer {}
   async fixPermissionError(error) {}
     this.log('Attempting to fix permission error...', 'INFO');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     try {}
       // Fix file permissions;
       execSync('chmod -R 755 .', { "stdio": 'pipe' }
@@ -258,13 +316,18 @@ class BuildErrorAutoFixer {}
   async fixDependencyError(error) {}
     this.log('Attempting to fix dependency error...', 'INFO');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     try {}
       // Try to fix peer dependency issues;
       execSync('npm install --legacy-peer-deps', { "stdio": 'pipe' }
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
       // If that doesn't work, try to update dependencies;
       execSync('npm update', { "stdio": 'pipe' }
@@ -276,6 +339,13 @@ class BuildErrorAutoFixer {}
 });
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+      
+      // If that doesn't work, try to update dependencies;
+      execSync('npm update', { "stdio": 'pipe' }
+});
+      
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       this.log('Fixed dependency issues', 'INFO');
       return true} catch (fixError) {}
       this.log(`Failed to fix dependency "error": ${fixError.message}`, 'ERROR');
@@ -300,9 +370,13 @@ class BuildErrorAutoFixer {}
       const closeBrackets = (line.match(/[\)\]\}]/g) || []).length;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+      
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       if (openBrackets > closeBrackets) {}
         const missingBrackets = openBrackets - closeBrackets;
         const closingBrackets = ')}]'.slice(0, missingBrackets);
@@ -321,9 +395,13 @@ class BuildErrorAutoFixer {}
       const singleQuotes = (line.match(/'/g) || []).length;
       const doubleQuotes = (line.match(/"/g) || []).length;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+      
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       if (singleQuotes % 2 !== 0) {}
         lines[lineIndex] = line + "'";
         return {}
@@ -356,6 +434,7 @@ class BuildErrorAutoFixer {}
   async runAutoFix() {}
     this.log('Starting build error auto-fix...');
 <<<<<<< HEAD
+<<<<<<< HEAD
     try {}
       // Get current build errors;
       const checkResult = await this.runBuildCheck();
@@ -366,16 +445,30 @@ class BuildErrorAutoFixer {}
       const checkResult = await this.runBuildCheck();
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    
+    try {}
+      // Get current build errors;
+      const checkResult = await this.runBuildCheck();
+      
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       if (checkResult.success) {}
         this.log('No build errors found - no fixes needed', 'INFO');
         return};
       this.log(`Found ${checkResult.errors.length} build errors, attempting to fix...`, 'INFO');
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       // Apply fixes;
       const fixesApplied = await this.fixBuildErrors(checkResult.errors);
+      
       this.log(`Applied ${fixesApplied} fixes out of ${checkResult.errors.length} errors`, 'INFO');
+      
       // Run build check again to see if fixes worked;
       const postCheckResult = await this.runBuildCheck();
+<<<<<<< HEAD
 =======
       
       // Apply fixes;
@@ -403,6 +496,9 @@ class BuildErrorAutoFixer {}
       // Run build check again to see if fixes worked;
       const postCheckResult = await this.runBuildCheck();
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+      
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       const report = {}
 
         "initialErrors": checkResult.errors.length,"
@@ -411,6 +507,7 @@ class BuildErrorAutoFixer {}
 <<<<<<< HEAD
         "success": postCheckResult.success;
       };
+<<<<<<< HEAD
 <<<<<<< HEAD
       // Save report;
       const reportPath = path.join(this.reportsDir, `build-fix-report-${Date.now()}.json`);
@@ -422,6 +519,13 @@ class BuildErrorAutoFixer {}
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+      
+      // Save report;
+      const reportPath = path.join(this.reportsDir, `build-fix-report-${Date.now()}.json`);
+      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+      
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       // Update build history;
       this.buildHistory.push(report);
       if (this.buildHistory.length > 50) {}
@@ -432,6 +536,7 @@ class BuildErrorAutoFixer {}
   async startAutoFixer() {}
     this.log('Starting build error auto-fixer...');
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Run initial fix;
     await this.runAutoFix();
 =======
@@ -440,12 +545,19 @@ class BuildErrorAutoFixer {}
     await this.runAutoFix();
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    
+    // Run initial fix;
+    await this.runAutoFix();
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     // Set up periodic fixing;
     setInterval(async () => {}
       try {}
         await this.runAutoFix()} catch (error) {}
         this.log(`Error in periodic "fix": ${error.message}`, 'ERROR')};
     }, this.fixInterval);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -466,6 +578,9 @@ class BuildErrorAutoFixer {}
 
     }, this.fixInterval);
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     this.log(`Build error auto-fixer started. Running every ${this.fixInterval / 1000} seconds.`)};
   getStatus() {}
 
@@ -475,26 +590,38 @@ if (require.main === module) {}
   const fixer = new BuildErrorAutoFixer();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+  
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   // Handle graceful shutdown;
   process.on('SIGINT', () => {}
     fixer.log('Shutting down build error auto-fixer...');
     process.exit(0)}
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   process.on('SIGTERM', () => {}
     fixer.log('Shutting down build error auto-fixer...');
     process.exit(0)}
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   // Start auto-fixer;
   fixer.startAutoFixer().catch(error => {})
     fixer.log(`Failed to start auto-"fixer": ${error.message}`, 'ERROR');
@@ -506,12 +633,16 @@ if (require.main === module) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = BuildErrorAutoFixer;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = BuildErrorAutoFixer;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

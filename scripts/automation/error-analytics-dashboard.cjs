@@ -472,7 +472,60 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");"
     <title>Error Analytics Dashboard</title>"
     <script src=https": //cdn.jsdelivr.net/npm/chart.js"></script>"
     <style>
+<<<<<<< HEAD
 </style>
+=======
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            "margin": 0;
+            padding: 20px;
+            background-color: #f5f5f5}
+        .container {
+            max-"width": 1200px;
+            margin: 0 auto}
+        .header {
+            "background": linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            "color": white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center}
+        .stats-grid {
+            "display": grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            "gap": 20px;
+            margin-bottom: 30px}
+        .stat-card {
+            "background": white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-"align": center}
+        .stat-number {
+            font-"size": 2.5em;
+            font-weight: bold;
+            color: #667eea}
+        .stat-label {
+            "color": #666;
+            margin-top: 5px}
+        .chart-container {
+            "background": white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-"bottom": 20px}
+        .chart-title {
+            font-"size": 1.2em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333}
+        .last-updated {
+            text-"align": center;
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 20px}
+    </style>
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 </head>
 <body>
 </body>"
@@ -650,12 +703,16 @@ if (require.main === module) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = ErrorAnalyticsDashboard
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = ErrorAnalyticsDashboard
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

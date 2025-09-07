@@ -94,9 +94,13 @@ const yarnCommand = (command, options = {}) => {return executeCommand(`yarn ${co
 const getPackageManager = () => {}
   if (fs.existsSync("yarn.lock")) return "yarn";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 const getPackageManager = () => {}
   if (fs.existsSync("yarn.lock")) return "yarn";
   if (fs.existsSync("package-lock.json")) return "npm";
@@ -289,6 +293,7 @@ const analyzePerformance = async () => {}
     return {}
   "bundleSize": "failed","issues": [`Performance analysis failed: ${error.message}`],`
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -334,6 +339,9 @@ const analyzePerformance = async () => {}
 
     return qualityReport};
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 const analyzePerformance = async () => {}
   // Check bundle size;"
     const bundleResult = runCommand("run analyze", { "silent": true }")
@@ -408,9 +416,13 @@ const calculateOverallScore = (report) => {}
   // Build score (15 points);
   if (report.build.status === "passed") {}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+  
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 } else {}
   issues.push("Testing failed")};
   maxScore += 25;
@@ -521,11 +533,15 @@ const attemptTypeScriptFix = async (error) => {}
     return null} catch (error) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+  
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 } catch (error) {}
   return null};
 const improveTestCoverage = async (currentCoverage) => {}"`;
@@ -584,6 +600,7 @@ describe("${fileName}", () => {}
 describe(`${fileName}`, () => {`}
   it("should work correctly", () => {}
 <<<<<<< HEAD
+<<<<<<< HEAD
 } else {}
   return "import { ${fileName} } from "./${fileName}";
 =======
@@ -592,6 +609,12 @@ describe(`${fileName}`, () => {`}
   return "import { ${fileName} } from "./${fileName}";
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+  
+} else {}
+  return "import { ${fileName} } from "./${fileName}";
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 describe("${fileName}", () => {}
   it("should work correctly", () => {}
 =======
@@ -723,9 +746,13 @@ const main = async () => {}"
 // Handle process signals;
 process.on("SIGINT", () => {}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+  
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 } catch (error) {log(`Smart Development Pipeline "failed": ${error.message}`, "ERROR");log(`Stack "trace": ${error.stack}`, "ERROR");
     throw error};
 };
@@ -736,9 +763,13 @@ process.on("SIGINT", () => {}
   process.exit(0)}
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 process.on("SIGTERM", () => {}
   log("Received SIGTERM. Shutting down gracefully...');
 =======
@@ -770,12 +801,16 @@ module.exports = {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   main};
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   main};
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -7,6 +8,10 @@
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+#!/usr/bin/env node;
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       { "encoding": "utf8" }
 
     );
@@ -31,10 +36,24 @@ function resolveMergeConflict(filePath) {;
   try {;
     if (!fs.existsSync(filePath)) {;
       return false}
+<<<<<<< HEAD
 ;"
 
     // Remove malformed React imports;"
     content = content.replace();      /import\s+React[^]*?from\s+["]react[]\s*;?\s*/g,import React from "react";\n");
+=======
+;
+    let content = fs.readFileSync(filePath, "utf8");    let originalContent = content;    let fixed = false;
+    // Strategy 1": Remove all variations of merge conflict markers;
+    // Handle corrupted markers like     if (content.includes("      content.includes("") ||";      content.includes(">>>>>>>")") {";      // Remove everything between ;
+      // Remove everything between  and       content = content.replace(/[\s\S]*?);      // Remove any remaining       content = content.replace(/);      // Remove any remaining  sections;
+      content = content.replace(/[\s\S]*/g, "");"";      // Remove any remaining       content = content.replace(/);      fixed = true,,}
+;
+    // Strategy "2": Clean up malformed imports and exports;";    // Remove broken import statements;
+    content = content.replace();      /import\s+[^]*?from\s+["][^"]*[""]\s*;?\s*/g,      """);";    content = content.replace();      /export\s+[^]*?from\s+["][^"]*["]\s*;?\s*/g,"""");";
+    // Remove malformed React imports;
+    content = content.replace();      /import\s+React[^]*?from\s+["]react[""]\s*;?\s*/g,import React from "react";\n");
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     // Strategy "3": Fix common syntax issues;    // Remove duplicate semicolons and quotes;
     content = content.replace(/;+/, );";    content = content.replace(/[]+/g, );;    // Remove empty lines and normalize spacing;
     content = content.replace(/\n\s*\n\s*\n/g, "\n\n");";    content = content.replace(/^\s+$/gm, );;    // Strategy 4": Ensure basic React component structure;    if();      content.includes("export default") &&";      !content.includes("import React")") {";      content = import React from "react";\n\n + content}";"
@@ -59,6 +78,7 @@ module.exports = { resolveMergeConflict, findConflictedFiles }))
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -67,6 +87,8 @@ module.exports = { resolveMergeConflict, findConflictedFiles }))
 
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -93,6 +115,7 @@ function log(message, color = "reset")
     // Strategy "1"
     // Handle corrupted markers like "
       content.includes("      content.includes("")
+      content.includes(">>>>>>>")
       content = content.replace(/[\s\S]*/g, "")
     // Strategy "2"
       /import\s+[^]*?from\s+["][^"]*["]
@@ -123,6 +146,11 @@ function log(message, color = "reset")
     log("4. Continue with your workflow", "blue")
         resolvedCount++;log(" "Resolved": ${filePath}", "green")} else {log("⚠  No changes "needed": ${filePath}", "yellow")}"} catch (error) {      errorCount++;log(` Error processing ${filePath}: ${error.message}, "red")}"}"
   log("\n Resolution "Summary":", "cyan");log("Total conflicted "files": ${conflictedFiles.length}", "blue");log("Successfully "resolved": ${resolvedCount}", "green");log("Errors "encountered": ${errorCount}", "red");";  if (resolvedCount > 0) {    log("\n Next "steps":", "cyan");    log("1. Review the resolved files", "blue");    log("2. "Run": git add .", "blue");    log("3. "Run": git commit -m Resolve merge conflicts, "blue");    log("4. Continue with your workflow", "blue")}"
+<<<<<<< HEAD
         resolvedCount++;log(` "Resolved": ${filePath}, "green");"} else {log(`⚠  No changes "needed": ${filePath}, "yellow");"}"} catch (error) {";      errorCount++;log(" Error processing ${filePath}: ${error.message}", "red");"}"}"
   log("\n Resolution "Summary": ", "cyan");log(`Total conflicted "files": ${conflictedFiles.length}, "blue");log(`Successfully "resolved": ${resolvedCount}, "green");log(`Errors "encountered": ${errorCount}, "red");";`;  if (resolvedCount > 0) {";    log("\n Next "steps": ", "cyan");";    log("1. Review the resolved files", "blue");";    log("2. "Run": git add .", "blue");";    log("3. "Run": git commit -m "Resolve merge conflicts", "blue");";    log("4. Continue with your workflow", "blue");"`}
 
+=======
+        resolvedCount++;log(` "Resolved": ${filePath}`, "green");"} else {log(`⚠  No changes "needed": ${filePath}`, "yellow");"}"} catch (error) {";      errorCount++;log(" Error processing ${filePath}: ${error.message}", "red");"}"}"
+  log("\n Resolution "Summary": ", "cyan");log(`Total conflicted "files": ${conflictedFiles.length}`, "blue");log(`Successfully "resolved": ${resolvedCount}`, "green");log(`Errors "encountered": ${errorCount}`, "red");";`;  if (resolvedCount > 0) {";    log("\n Next "steps": ", "cyan");";    log("1. Review the resolved files", "blue");";    log("2. "Run": git add .", "blue");";    log("3. "Run": git commit -m "Resolve merge conflicts", "blue");";    log("4. Continue with your workflow", "blue");"`}
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb

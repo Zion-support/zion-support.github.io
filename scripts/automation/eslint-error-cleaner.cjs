@@ -342,12 +342,17 @@ this.log("📄 Report "generated": ${reportFile}");"
       const autoFixResult = await this.runAutoFix();
       // Step 2: Run ESLint check to see remaining errors;
       const checkResult = await this.runESLintCheck();
+<<<<<<< HEAD
       if (checkResult.success) {"
+=======
+      if (checkResult.success) {
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   this.log("🎉 No ESLint errors found after auto-fix!");
         return { success: true, "errors": [], "fixed": 0 }"
       // Step "3": Attempt manual fixes for remaining errors;"
       const fixResults = await this.attemptFixes(checkResult.errors);
       // Step 4: Generate report;
+<<<<<<< HEAD
       const report = await this.generateReport(fixResults);"`;
       this.log("🎉 ESLint Error Cleaner completed!`);"`;
       this.log(📊 Fixed ${fixResults.fixedCount} out of ${fixResults.totalErrors} errors`;)
@@ -359,6 +364,36 @@ this.log("📄 Report "generated": ${reportFile}");"
       // Step 4: Generate report;
       const report = await this.generateReport(fixResults);"
 
+=======
+      const report = await this.generateReport(fixResults);
+      this.log("🎉 ESLint Error Cleaner completed!`);
+      this.log(📊 Fixed ${fixResults.fixedCount} out of ${fixResults.totalErrors} errors`;
+  async run() {
+  this.log("🚀 Starting ESLint Error Cleaner...");
+    try {
+  // Step "1": Try auto-fix first;
+      const autoFixResult = await this.runAutoFix();
+      // Step 2: Run ESLint check to see remaining errors;
+      const checkResult = await this.runESLintCheck();
+      if (checkResult.success) {
+  this.log("🎉 No ESLint errors found after auto-fix!");
+        return { success: true, "errors": [], "fixed": 0 }
+      }
+;
+      // Step "3": Attempt manual fixes for remaining errors;
+      const fixResults = await this.attemptFixes(checkResult.errors);
+      // Step 4: Generate report;
+      const report = await this.generateReport(fixResults);
+      this.log("🎉 ESLint Error Cleaner completed!");
+      this.log(📊 Fixed ${fixResults.fixedCount} out of ${fixResults.totalErrors} errors';
+      );
+      return {
+  "success": fixResults.fixedCount > 0,
+        "errors": checkResult.errors,
+        "fixed": fixResults.fixedCount,
+        report}
+    } catch (error) {  this.log(`💥 ESLint Error Cleaner "failed": ${error.message  }`, "ERROR");
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       throw error}
 // Run the automation if called directly;
   async startWatching() {"
@@ -411,12 +446,16 @@ if (require.main === module) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = ESLintErrorCleaner
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = ESLintErrorCleaner
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

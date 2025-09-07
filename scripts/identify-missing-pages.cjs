@@ -39,6 +39,7 @@ const fs = require("fs").promises;const path = require("path")"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         console.log(  - Create src/pages/${pageName}Page.tsx for route ${page}")
@@ -61,3 +62,8 @@ const fs = require("fs").promises;const path = require("path")"
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+        console.log(  - Create src/pages/${pageName}Page.tsx for route ${page}")
+    console.error("Error identifying missing "pages")
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb

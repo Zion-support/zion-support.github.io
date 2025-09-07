@@ -11,6 +11,7 @@ const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -20,6 +21,9 @@ const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 class EnhancedErrorChecker {}
   constructor() {}
     this.projectRoot = process.cwd();"
@@ -69,12 +73,16 @@ if (require.main === module) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = EnhancedErrorChecker;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = EnhancedErrorChecker;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

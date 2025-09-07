@@ -31,6 +31,7 @@ class LinterWatcher {}
     console.log('Starting Linter Watcher...');
     this.isRunning = true;
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Initial lint check;
     await this.runLint();
 =======
@@ -61,6 +62,16 @@ class LinterWatcher {}
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
+=======
+    
+    // Initial lint check;
+    await this.runLint();
+    
+    // Set up interval for periodic checks;
+    this.intervalId = setInterval(() => {}
+      this.runLint()}, this.interval);
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -90,11 +101,17 @@ class LinterWatcher {}
       };);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       let output = ;';';
       let errorOutput = ;';';
+
       child.stdout.on('data', (data) => {}
         output += data.toString()}
 });
+
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
@@ -113,6 +130,7 @@ class LinterWatcher {}
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -121,6 +139,8 @@ class LinterWatcher {}
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       child.on('close', (code) => {}
         if ( {})
 
@@ -132,9 +152,13 @@ class LinterWatcher {}
           console.log('"Output": ', output);
           console.log('"Errors": ', errorOutput);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
           
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+          
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
           // Attempt to auto-fix;
           this.attemptAutoFix()};
       })} catch (error) {}
@@ -167,11 +191,14 @@ class LinterWatcher {}
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       child.on('close', (code) => {}
         if ( {})
 =======
@@ -189,11 +216,15 @@ class LinterWatcher {}
     this.isRunning = false;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     if ( {})
       clearInterval(this.intervalId)};
     console.log('Linter Watcher stopped')) {}
@@ -207,22 +238,31 @@ class LinterWatcher {}
   const watcher = new LinterWatcher}(;);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+  
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   // Handle graceful shutdown;
   process.on('SIGINT', () => {}
     watcher.stop();
     process.exit(0)}
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+  
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   process.on('SIGTERM', () => {}
     watcher.stop();
     process.exit(0)}
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
   watcher.start().catch(console.error)};
 <<<<<<< HEAD
@@ -233,6 +273,10 @@ module.exports = LinterWatcher;
 =======
   
   watcher.start().catch(console.error)};
+=======
+  
+  watcher.start().catch(console.error)};
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 
 module.exports = LinterWatcher;
 <<<<<<< HEAD

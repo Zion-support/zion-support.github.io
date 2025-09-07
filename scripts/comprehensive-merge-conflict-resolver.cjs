@@ -46,8 +46,31 @@ class ComprehensiveMergeConflictResolver {}
         if (file) {}
           filesWithConflicts.push(path.join(this.projectRoot, file))};
       };
+<<<<<<< HEAD
 
       const entries = await fs.readdir(dir, { "withFileTypes": true }")
+=======
+    } catch (error) {}
+      await this.log(`Git command failed, scanning files "manually": ${error.message}`, 'WARN')};
+    // Also scan for files with merge conflict markers;
+    const allFiles = await this.getAllFiles(this.projectRoot);
+    for (const file of allFiles) {}
+      try {}
+        const content = await fs.readFile(file, 'utf8');
+        if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {}
+          if (!filesWithConflicts.includes(file)) {}
+            filesWithConflicts.push(file)};
+        };
+      } catch (error) {}
+        // Skip files that can't be read;
+      };
+    };
+    return filesWithConflicts};
+  async getAllFiles(dir) {}
+    const files = [];
+    try {}
+      const entries = await fs.readdir(dir, { "withFileTypes": true }
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 });
       for (const entry of entries) {}
         const fullPath = path.join(dir, entry.name);
@@ -90,12 +113,17 @@ if (require.main === module) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = ComprehensiveMergeConflictResolver;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = ComprehensiveMergeConflictResolver;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -119,6 +120,8 @@ module.exports = EnhancedErrorFixingAutomation;
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 
 #!/usr/bin/env node;
 #!/usr/bin/env node;
@@ -303,6 +306,7 @@ export default function"
 =======
         "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -323,3 +327,6 @@ export default function"
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb

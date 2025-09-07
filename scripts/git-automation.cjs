@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   async runCommand(command, options = {}) {
     try {
       const { stdout, stderr } = await execAsync(command, {
@@ -344,10 +347,14 @@ module.exports = GitAutomation;
 
 module.exports = GitAutomation;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 #!/usr/bin/env node;
 /**
  * Git Automation Script;
@@ -382,12 +389,16 @@ const path = require('path')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       this.log(" Git automation workflow "failed": ${error.message}")
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       this.log(" Git automation workflow "failed": ${error.message}")
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

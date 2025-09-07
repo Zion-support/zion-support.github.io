@@ -23,12 +23,16 @@ const { execSync, spawn } = require("child_process");
 <<<<<<< HEAD
 const os = require("os");
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 const os = require("os");"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 class $1 {}
   constructor() {}
   this.projectRoot = process.cwd();
@@ -117,6 +121,7 @@ class $1 {}
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Store metrics in history;
     this.performanceHistory.push(metrics);
 =======
@@ -126,24 +131,38 @@ class $1 {}
     // Store metrics in history;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+    // Store metrics in history;
+    this.performanceHistory.push(metrics);
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     // Keep only last 100 entries;
     // Analyze metrics for issues;
 <<<<<<< HEAD
     const issues = await this.analyzeMetrics(metrics);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     // Generate alerts for critical issues;
     // Auto-fix critical issues if enabled;
     // Save metrics;
     await this.saveMetrics(metrics);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     return metrics};
   async collectSystemMetrics() {}
   "cpu": {}"
@@ -200,11 +219,15 @@ class $1 {}
   this.log(Failed to collect application "metrics": ${error.message  }",)
         "WARN`;`
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   async collectApplicationMetrics() {}
   "pm2": {}"
   processes: 0,"
@@ -258,9 +281,13 @@ class $1 {}
       metrics.responseTime = Math.random() * 1000; // Simulated response time;
       metrics.throughput = Math.random() * 1000000; // Simulated throughput} catch (error) {  this.log(`Failed to collect network "metrics": ${error.message  }`, "WARN");
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     try {}
   // This would typically involve monitoring actual network requests;
       // For now, we"ll use placeholder values;
@@ -285,6 +312,7 @@ class $1 {}
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       const lines = result.split("\n");
       const data = lines[1].split(/\s+/);
 =======
@@ -293,6 +321,12 @@ class $1 {}
       const data = lines[1].split(/\s+/);
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+      const lines = result.split("\n");
+      const data = lines[1].split(/\s+/);
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       return {}
 =======
 "
@@ -322,6 +356,7 @@ class $1 {}
         "stdio": "pipe"}
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
       const processes = JSON.parse(result);
       let totalMemory = 0;
       let totalCPU = 0;
@@ -335,15 +370,26 @@ class $1 {}
       let totalCPU = 0;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+      const processes = JSON.parse(result);
+      let totalMemory = 0;
+      let totalCPU = 0;
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       processes.forEach(proc => {})
   totalMemory += proc.monit.memory || 0;
         totalCPU += proc.monit.cpu || 0}
 <<<<<<< HEAD
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       return {}
   "processes": processes.length,
         "memory": totalMemory,
@@ -384,6 +430,7 @@ class $1 {}
   try {}
   const distPath = path.join(this.projectRoot, "dist");
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -394,9 +441,13 @@ class $1 {}
 
     return { "treeShaking": false, "codeSplitting": false, "minification": true };"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   async measureBundleSize() {}
   const distPath = path.join(this.projectRoot, "dist");"
       if (!fs.existsSync(distPath)) return 0;
+<<<<<<< HEAD
 <<<<<<< HEAD
       let totalSize = 0;
       const files = this.getAllFilesRecursive(distPath);
@@ -406,10 +457,17 @@ class $1 {}
       const files = this.getAllFilesRecursive(distPath);
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+      let totalSize = 0;
+      const files = this.getAllFilesRecursive(distPath);
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       for (const file of files) {}
   const stats = fs.statSync(file);
         totalSize += stats.size};
       return totalSize} catch (error) {}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -417,6 +475,9 @@ class $1 {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+  
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 } catch (error) {}
   return 0} catch (error) {}
   async countDependencies() {}
@@ -429,6 +490,7 @@ class $1 {}
   getAllFilesRecursive(dir, files = []) {}
   const items = fs.readdirSync(dir);
 <<<<<<< HEAD
+<<<<<<< HEAD
     for (const item of items) {}
   const fullPath = path.join(dir, "item);
       const stat = fs.statSync(fullPath);
@@ -440,6 +502,13 @@ class $1 {}
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+    for (const item of items) {}
+  const fullPath = path.join(dir, "item);
+      const stat = fs.statSync(fullPath);
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       if (stat.isDirectory()) {}
   this.getAllFilesRecursive(fullPath", files)} else {}
 =======
@@ -482,6 +551,7 @@ class $1 {}
       this.alertHistory.push(alert);this.log(`"ALERT": ${issue.type} - ${issue.description}`, issue.severity)};
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
   const alert = {}"
@@ -489,6 +559,9 @@ class $1 {}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     // Save alerts;
     await this.saveAlerts()};
   getRecommendations(issue) {}
@@ -511,6 +584,7 @@ class $1 {}
       issue => issue.severity === "CRITICAL";
     );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
   const criticalIssues = issues.filter(;)"
@@ -518,6 +592,9 @@ class $1 {}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     for (const issue of criticalIssues) {}
   const result = await this.applyAutoFix(issue);
 <<<<<<< HEAD
@@ -571,9 +648,13 @@ class $1 {}
         "stdio": "pipe"}
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       return { "success": true, "message": "Disk space cleaned up successfully" };
     } catch (error) {}
   return { "success": false, "message": error.message   };
@@ -638,10 +719,14 @@ if (metrics.system.cpu.usage > 95) {}"
   getPerformanceSummary() {}
   const recentMetrics = this.performanceHistory.slice(-10);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     if (recentMetrics.length === 0) {}
   return { "message": "No performance data available" };
     };
@@ -660,9 +745,13 @@ if (metrics.system.cpu.usage > 95) {}"
 <<<<<<< HEAD
       recentMetrics.length;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     return {}
   "timestamp": new Date().toISOString(),
       "averages": {}
@@ -716,12 +805,16 @@ if (require.main === module) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = AdvancedPerformanceMonitor;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = AdvancedPerformanceMonitor;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
